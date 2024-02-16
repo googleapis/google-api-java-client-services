@@ -30,14 +30,40 @@ package com.google.api.services.walletobjects.model;
 public final class AppLinkDataAppLinkInfoAppTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * URI for AppTarget. The description on the URI must be set.
+   * Package name for AppTarget. For example: com.google.android.gm
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String packageName;
+
+  /**
+   * URI for AppTarget. The description on the URI must be set. Prefer setting package field
+   * instead, if this target is defined for your application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Uri targetUri;
 
   /**
-   * URI for AppTarget. The description on the URI must be set.
+   * Package name for AppTarget. For example: com.google.android.gm
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPackageName() {
+    return packageName;
+  }
+
+  /**
+   * Package name for AppTarget. For example: com.google.android.gm
+   * @param packageName packageName or {@code null} for none
+   */
+  public AppLinkDataAppLinkInfoAppTarget setPackageName(java.lang.String packageName) {
+    this.packageName = packageName;
+    return this;
+  }
+
+  /**
+   * URI for AppTarget. The description on the URI must be set. Prefer setting package field
+   * instead, if this target is defined for your application.
    * @return value or {@code null} for none
    */
   public Uri getTargetUri() {
@@ -45,7 +71,8 @@ public final class AppLinkDataAppLinkInfoAppTarget extends com.google.api.client
   }
 
   /**
-   * URI for AppTarget. The description on the URI must be set.
+   * URI for AppTarget. The description on the URI must be set. Prefer setting package field
+   * instead, if this target is defined for your application.
    * @param targetUri targetUri or {@code null} for none
    */
   public AppLinkDataAppLinkInfoAppTarget setTargetUri(Uri targetUri) {

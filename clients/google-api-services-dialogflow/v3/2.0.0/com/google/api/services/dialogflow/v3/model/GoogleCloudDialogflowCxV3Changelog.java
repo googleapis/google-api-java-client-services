@@ -51,6 +51,13 @@ public final class GoogleCloudDialogflowCxV3Changelog extends com.google.api.cli
   private java.lang.String displayName;
 
   /**
+   * The affected language code of the change.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
+
+  /**
    * The unique identifier of the changelog. Format: `projects//locations//agents//changelogs/`.
    * The value may be {@code null}.
    */
@@ -126,6 +133,23 @@ public final class GoogleCloudDialogflowCxV3Changelog extends com.google.api.cli
    */
   public GoogleCloudDialogflowCxV3Changelog setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * The affected language code of the change.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * The affected language code of the change.
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Changelog setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
     return this;
   }
 

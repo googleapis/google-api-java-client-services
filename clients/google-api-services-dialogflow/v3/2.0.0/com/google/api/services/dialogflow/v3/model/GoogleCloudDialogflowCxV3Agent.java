@@ -142,8 +142,8 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   private GoogleCloudDialogflowCxV3SpeechToTextSettings speechToTextSettings;
 
   /**
-   * Name of the start flow in this agent. A start flow will be automatically created when the agent
-   * is created, and can only be deleted by deleting the agent. Format:
+   * Immutable. Name of the start flow in this agent. A start flow will be automatically created
+   * when the agent is created, and can only be deleted by deleting the agent. Format:
    * `projects//locations//agents//flows/`. Currently only the default start flow with id
    * "00000000-0000-0000-0000-000000000000" is allowed.
    * The value may be {@code null}.
@@ -432,8 +432,8 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   }
 
   /**
-   * Name of the start flow in this agent. A start flow will be automatically created when the agent
-   * is created, and can only be deleted by deleting the agent. Format:
+   * Immutable. Name of the start flow in this agent. A start flow will be automatically created
+   * when the agent is created, and can only be deleted by deleting the agent. Format:
    * `projects//locations//agents//flows/`. Currently only the default start flow with id
    * "00000000-0000-0000-0000-000000000000" is allowed.
    * @return value or {@code null} for none
@@ -443,8 +443,8 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   }
 
   /**
-   * Name of the start flow in this agent. A start flow will be automatically created when the agent
-   * is created, and can only be deleted by deleting the agent. Format:
+   * Immutable. Name of the start flow in this agent. A start flow will be automatically created
+   * when the agent is created, and can only be deleted by deleting the agent. Format:
    * `projects//locations//agents//flows/`. Currently only the default start flow with id
    * "00000000-0000-0000-0000-000000000000" is allowed.
    * @param startFlow startFlow or {@code null} for none

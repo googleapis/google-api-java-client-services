@@ -4916,6 +4916,22 @@ public class Books extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
+        /** Optional. String to identify the originator of this request. */
+        @com.google.api.client.util.Key
+        private java.lang.String source;
+
+        /** Optional. String to identify the originator of this request.
+         */
+        public java.lang.String getSource() {
+          return source;
+        }
+
+        /** Optional. String to identify the originator of this request. */
+        public Summary setSource(java.lang.String source) {
+          this.source = source;
+          return this;
+        }
+
         @Override
         public Summary set(String parameterName, Object value) {
           return (Summary) super.set(parameterName, value);

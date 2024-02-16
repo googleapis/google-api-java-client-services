@@ -44,6 +44,14 @@ public final class PerAndroidVersionInfo extends com.google.api.client.json.Gene
   private DirectAccessVersionInfo directAccessVersionInfo;
 
   /**
+   * Output only. The estimated wait time for a single interactive device session using Direct
+   * Access.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String interactiveDeviceAvailabilityEstimate;
+
+  /**
    * An Android version.
    * The value may be {@code null}.
    */
@@ -81,6 +89,25 @@ public final class PerAndroidVersionInfo extends com.google.api.client.json.Gene
    */
   public PerAndroidVersionInfo setDirectAccessVersionInfo(DirectAccessVersionInfo directAccessVersionInfo) {
     this.directAccessVersionInfo = directAccessVersionInfo;
+    return this;
+  }
+
+  /**
+   * Output only. The estimated wait time for a single interactive device session using Direct
+   * Access.
+   * @return value or {@code null} for none
+   */
+  public String getInteractiveDeviceAvailabilityEstimate() {
+    return interactiveDeviceAvailabilityEstimate;
+  }
+
+  /**
+   * Output only. The estimated wait time for a single interactive device session using Direct
+   * Access.
+   * @param interactiveDeviceAvailabilityEstimate interactiveDeviceAvailabilityEstimate or {@code null} for none
+   */
+  public PerAndroidVersionInfo setInteractiveDeviceAvailabilityEstimate(String interactiveDeviceAvailabilityEstimate) {
+    this.interactiveDeviceAvailabilityEstimate = interactiveDeviceAvailabilityEstimate;
     return this;
   }
 

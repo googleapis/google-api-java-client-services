@@ -3711,6 +3711,143 @@ public class Walletobjects extends com.google.api.client.googleapis.services.jso
   public class Genericclass {
 
     /**
+     * Adds a message to the generic class referenced by the given class ID.
+     *
+     * Create a request for the method "genericclass.addmessage".
+     *
+     * This request holds the parameters needed by the walletobjects server.  After setting any optional
+     * parameters, call the {@link Addmessage#execute()} method to invoke the remote operation.
+     *
+     * @param resourceId The unique identifier for a class. This ID must be unique across all classes from an issuer. This
+     *        value should follow the format issuer ID. identifier where the former is issued by Google
+     *        and latter is chosen by you. Your unique identifier should only include alphanumeric
+     *        characters, '.', '_', or '-'.
+     * @param content the {@link com.google.api.services.walletobjects.model.AddMessageRequest}
+     * @return the request
+     */
+    public Addmessage addmessage(java.lang.String resourceId, com.google.api.services.walletobjects.model.AddMessageRequest content) throws java.io.IOException {
+      Addmessage result = new Addmessage(resourceId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Addmessage extends WalletobjectsRequest<com.google.api.services.walletobjects.model.GenericClassAddMessageResponse> {
+
+      private static final String REST_PATH = "walletobjects/v1/genericClass/{resourceId}/addMessage";
+
+      /**
+       * Adds a message to the generic class referenced by the given class ID.
+       *
+       * Create a request for the method "genericclass.addmessage".
+       *
+       * This request holds the parameters needed by the the walletobjects server.  After setting any
+       * optional parameters, call the {@link Addmessage#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Addmessage#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resourceId The unique identifier for a class. This ID must be unique across all classes from an issuer. This
+     *        value should follow the format issuer ID. identifier where the former is issued by Google
+     *        and latter is chosen by you. Your unique identifier should only include alphanumeric
+     *        characters, '.', '_', or '-'.
+       * @param content the {@link com.google.api.services.walletobjects.model.AddMessageRequest}
+       * @since 1.13
+       */
+      protected Addmessage(java.lang.String resourceId, com.google.api.services.walletobjects.model.AddMessageRequest content) {
+        super(Walletobjects.this, "POST", REST_PATH, content, com.google.api.services.walletobjects.model.GenericClassAddMessageResponse.class);
+        this.resourceId = com.google.api.client.util.Preconditions.checkNotNull(resourceId, "Required parameter resourceId must be specified.");
+      }
+
+      @Override
+      public Addmessage set$Xgafv(java.lang.String $Xgafv) {
+        return (Addmessage) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Addmessage setAccessToken(java.lang.String accessToken) {
+        return (Addmessage) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Addmessage setAlt(java.lang.String alt) {
+        return (Addmessage) super.setAlt(alt);
+      }
+
+      @Override
+      public Addmessage setCallback(java.lang.String callback) {
+        return (Addmessage) super.setCallback(callback);
+      }
+
+      @Override
+      public Addmessage setFields(java.lang.String fields) {
+        return (Addmessage) super.setFields(fields);
+      }
+
+      @Override
+      public Addmessage setKey(java.lang.String key) {
+        return (Addmessage) super.setKey(key);
+      }
+
+      @Override
+      public Addmessage setOauthToken(java.lang.String oauthToken) {
+        return (Addmessage) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Addmessage setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Addmessage) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Addmessage setQuotaUser(java.lang.String quotaUser) {
+        return (Addmessage) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Addmessage setUploadType(java.lang.String uploadType) {
+        return (Addmessage) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Addmessage setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Addmessage) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The unique identifier for a class. This ID must be unique across all classes from an
+       * issuer. This value should follow the format issuer ID. identifier where the former is
+       * issued by Google and latter is chosen by you. Your unique identifier should only include
+       * alphanumeric characters, '.', '_', or '-'.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceId;
+
+      /** The unique identifier for a class. This ID must be unique across all classes from an issuer. This
+     value should follow the format issuer ID. identifier where the former is issued by Google and
+     latter is chosen by you. Your unique identifier should only include alphanumeric characters, '.',
+     '_', or '-'.
+       */
+      public java.lang.String getResourceId() {
+        return resourceId;
+      }
+
+      /**
+       * The unique identifier for a class. This ID must be unique across all classes from an
+       * issuer. This value should follow the format issuer ID. identifier where the former is
+       * issued by Google and latter is chosen by you. Your unique identifier should only include
+       * alphanumeric characters, '.', '_', or '-'.
+       */
+      public Addmessage setResourceId(java.lang.String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+      }
+
+      @Override
+      public Addmessage set(String parameterName, Object value) {
+        return (Addmessage) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns the generic class with the given class ID.
      *
      * Create a request for the method "genericclass.get".

@@ -142,20 +142,22 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   private GoogleCloudDialogflowCxV3beta1SpeechToTextSettings speechToTextSettings;
 
   /**
-   * Name of the start flow in this agent. A start flow will be automatically created when the agent
-   * is created, and can only be deleted by deleting the agent. Format:
+   * Optional. Name of the start flow in this agent. A start flow will be automatically created when
+   * the agent is created, and can only be deleted by deleting the agent. Format:
    * `projects//locations//agents//flows/`. Currently only the default start flow with id
-   * "00000000-0000-0000-0000-000000000000" is allowed.
+   * "00000000-0000-0000-0000-000000000000" is allowed. Only one of `start_flow` or `start_playbook`
+   * should be set, but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String startFlow;
 
   /**
-   * Name of the start playbook in this agent. A start playbook will be automatically created when
-   * the agent is created, and can only be deleted by deleting the agent. Format:
+   * Optional. Name of the start playbook in this agent. A start playbook will be automatically
+   * created when the agent is created, and can only be deleted by deleting the agent. Format:
    * `projects//locations//agents//playbooks/`. Currently only the default playbook with id
-   * "00000000-0000-0000-0000-000000000000" is allowed.
+   * "00000000-0000-0000-0000-000000000000" is allowed. Only one of `start_flow` or `start_playbook`
+   * should be set, but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -442,10 +444,11 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Name of the start flow in this agent. A start flow will be automatically created when the agent
-   * is created, and can only be deleted by deleting the agent. Format:
+   * Optional. Name of the start flow in this agent. A start flow will be automatically created when
+   * the agent is created, and can only be deleted by deleting the agent. Format:
    * `projects//locations//agents//flows/`. Currently only the default start flow with id
-   * "00000000-0000-0000-0000-000000000000" is allowed.
+   * "00000000-0000-0000-0000-000000000000" is allowed. Only one of `start_flow` or `start_playbook`
+   * should be set, but not both.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartFlow() {
@@ -453,10 +456,11 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Name of the start flow in this agent. A start flow will be automatically created when the agent
-   * is created, and can only be deleted by deleting the agent. Format:
+   * Optional. Name of the start flow in this agent. A start flow will be automatically created when
+   * the agent is created, and can only be deleted by deleting the agent. Format:
    * `projects//locations//agents//flows/`. Currently only the default start flow with id
-   * "00000000-0000-0000-0000-000000000000" is allowed.
+   * "00000000-0000-0000-0000-000000000000" is allowed. Only one of `start_flow` or `start_playbook`
+   * should be set, but not both.
    * @param startFlow startFlow or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setStartFlow(java.lang.String startFlow) {
@@ -465,10 +469,11 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Name of the start playbook in this agent. A start playbook will be automatically created when
-   * the agent is created, and can only be deleted by deleting the agent. Format:
+   * Optional. Name of the start playbook in this agent. A start playbook will be automatically
+   * created when the agent is created, and can only be deleted by deleting the agent. Format:
    * `projects//locations//agents//playbooks/`. Currently only the default playbook with id
-   * "00000000-0000-0000-0000-000000000000" is allowed.
+   * "00000000-0000-0000-0000-000000000000" is allowed. Only one of `start_flow` or `start_playbook`
+   * should be set, but not both.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartPlaybook() {
@@ -476,10 +481,11 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Name of the start playbook in this agent. A start playbook will be automatically created when
-   * the agent is created, and can only be deleted by deleting the agent. Format:
+   * Optional. Name of the start playbook in this agent. A start playbook will be automatically
+   * created when the agent is created, and can only be deleted by deleting the agent. Format:
    * `projects//locations//agents//playbooks/`. Currently only the default playbook with id
-   * "00000000-0000-0000-0000-000000000000" is allowed.
+   * "00000000-0000-0000-0000-000000000000" is allowed. Only one of `start_flow` or `start_playbook`
+   * should be set, but not both.
    * @param startPlaybook startPlaybook or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setStartPlaybook(java.lang.String startPlaybook) {

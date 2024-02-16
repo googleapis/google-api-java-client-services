@@ -318,8 +318,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Creates a new advertiser. Returns the newly created advertiser if successful. This method can
-     * take up to 180 seconds to complete.
+     * Creates a new advertiser. Returns the newly created advertiser if successful. **This method
+     * regularly experiences high latency.** We recommend [increasing your default timeout](/display-
+     * video/api/guides/best-practices/timeouts#client_library_timeout) to avoid errors.
      *
      * Create a request for the method "advertisers.create".
      *
@@ -340,8 +341,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v3/advertisers";
 
       /**
-       * Creates a new advertiser. Returns the newly created advertiser if successful. This method can
-       * take up to 180 seconds to complete.
+       * Creates a new advertiser. Returns the newly created advertiser if successful. **This method
+       * regularly experiences high latency.** We recommend [increasing your default timeout](/display-
+       * video/api/guides/best-practices/timeouts#client_library_timeout) to avoid errors.
        *
        * Create a request for the method "advertisers.create".
        *
@@ -3566,6 +3568,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /**
        * Permanently deletes a campaign. A deleted campaign cannot be recovered. The campaign should be
        * archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
+       * **This method regularly experiences high latency.** We recommend [increasing your default timeout
+       * ](/display-video/api/guides/best-practices/timeouts#client_library_timeout) to avoid errors.
        *
        * Create a request for the method "campaigns.delete".
        *
@@ -3595,6 +3599,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /**
          * Permanently deletes a campaign. A deleted campaign cannot be recovered. The campaign should be
          * archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
+         * **This method regularly experiences high latency.** We recommend [increasing your default
+         * timeout](/display-video/api/guides/best-practices/timeouts#client_library_timeout) to avoid
+         * errors.
          *
          * Create a request for the method "campaigns.delete".
          *
@@ -6783,7 +6790,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
         /**
          * Replaces all of the sites under a single channel. The operation will replace the sites under a
-         * channel with the sites provided in ReplaceSitesRequest.new_sites.
+         * channel with the sites provided in ReplaceSitesRequest.new_sites. **This method regularly
+         * experiences high latency.** We recommend [increasing your default timeout](/display-
+         * video/api/guides/best-practices/timeouts#client_library_timeout) to avoid errors.
          *
          * Create a request for the method "sites.replace".
          *
@@ -6810,7 +6819,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
           /**
            * Replaces all of the sites under a single channel. The operation will replace the sites under a
-           * channel with the sites provided in ReplaceSitesRequest.new_sites.
+           * channel with the sites provided in ReplaceSitesRequest.new_sites. **This method regularly
+           * experiences high latency.** We recommend [increasing your default timeout](/display-
+           * video/api/guides/best-practices/timeouts#client_library_timeout) to avoid errors.
            *
            * Create a request for the method "sites.replace".
            *
@@ -11522,7 +11533,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
       /**
        * Duplicates a line item. Returns the ID of the created line item if successful. YouTube & Partners
-       * line items cannot be created or updated using the API.
+       * line items cannot be created or updated using the API. **This method regularly experiences high
+       * latency.** We recommend [increasing your default timeout](/display-video/api/guides/best-
+       * practices/timeouts#client_library_timeout) to avoid errors.
        *
        * Create a request for the method "lineItems.duplicate".
        *
@@ -11552,7 +11565,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Duplicates a line item. Returns the ID of the created line item if successful. YouTube &
-         * Partners line items cannot be created or updated using the API.
+         * Partners line items cannot be created or updated using the API. **This method regularly
+         * experiences high latency.** We recommend [increasing your default timeout](/display-
+         * video/api/guides/best-practices/timeouts#client_library_timeout) to avoid errors.
          *
          * Create a request for the method "lineItems.duplicate".
          *
@@ -12225,7 +12240,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * endpoint cannot be made concurrently with the following requests updating the same line item: *
        * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * assignedTargetingOptions.create *
        * assignedTargetingOptions.delete YouTube & Partners line items cannot be created or updated using
-       * the API.
+       * the API. **This method regularly experiences high latency.** We recommend [increasing your
+       * default timeout](/display-video/api/guides/best-practices/timeouts#client_library_timeout) to
+       * avoid errors.
        *
        * Create a request for the method "lineItems.patch".
        *
@@ -12258,7 +12275,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * endpoint cannot be made concurrently with the following requests updating the same line item: *
          * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * assignedTargetingOptions.create *
          * assignedTargetingOptions.delete YouTube & Partners line items cannot be created or updated
-         * using the API.
+         * using the API. **This method regularly experiences high latency.** We recommend [increasing
+         * your default timeout](/display-video/api/guides/best-practices/timeouts#client_library_timeout)
+         * to avoid errors.
          *
          * Create a request for the method "lineItems.patch".
          *
@@ -29021,7 +29040,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
         /**
          * Replaces all of the sites under a single channel. The operation will replace the sites under a
-         * channel with the sites provided in ReplaceSitesRequest.new_sites.
+         * channel with the sites provided in ReplaceSitesRequest.new_sites. **This method regularly
+         * experiences high latency.** We recommend [increasing your default timeout](/display-
+         * video/api/guides/best-practices/timeouts#client_library_timeout) to avoid errors.
          *
          * Create a request for the method "sites.replace".
          *
@@ -29048,7 +29069,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
           /**
            * Replaces all of the sites under a single channel. The operation will replace the sites under a
-           * channel with the sites provided in ReplaceSitesRequest.new_sites.
+           * channel with the sites provided in ReplaceSitesRequest.new_sites. **This method regularly
+           * experiences high latency.** We recommend [increasing your default timeout](/display-
+           * video/api/guides/best-practices/timeouts#client_library_timeout) to avoid errors.
            *
            * Create a request for the method "sites.replace".
            *

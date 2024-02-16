@@ -30,14 +30,6 @@ package com.google.api.services.trafficdirector.v3.model;
 public final class ClientConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * For xDS clients, the scope in which the data is used. For example, gRPC indicates the data
-   * plane target or that the data is associated with gRPC server(s).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String clientScope;
-
-  /**
    * Represents generic xDS config and the exact config structure depends on the type URL (like
    * Cluster if it is CDS)
    * The value may be {@code null}.
@@ -59,25 +51,6 @@ public final class ClientConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<PerXdsConfig> xdsConfig;
-
-  /**
-   * For xDS clients, the scope in which the data is used. For example, gRPC indicates the data
-   * plane target or that the data is associated with gRPC server(s).
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getClientScope() {
-    return clientScope;
-  }
-
-  /**
-   * For xDS clients, the scope in which the data is used. For example, gRPC indicates the data
-   * plane target or that the data is associated with gRPC server(s).
-   * @param clientScope clientScope or {@code null} for none
-   */
-  public ClientConfig setClientScope(java.lang.String clientScope) {
-    this.clientScope = clientScope;
-    return this;
-  }
 
   /**
    * Represents generic xDS config and the exact config structure depends on the type URL (like

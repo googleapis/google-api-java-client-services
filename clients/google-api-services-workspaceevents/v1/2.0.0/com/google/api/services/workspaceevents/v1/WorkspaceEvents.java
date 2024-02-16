@@ -134,6 +134,1224 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Operations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code WorkspaceEvents workspaceevents = new WorkspaceEvents(...);}
+   *   {@code WorkspaceEvents.Operations.List request = workspaceevents.operations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Operations operations() {
+    return new Operations();
+  }
+
+  /**
+   * The "operations" collection of methods.
+   */
+  public class Operations {
+
+    /**
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
+     * operation result at intervals as recommended by the API service.
+     *
+     * Create a request for the method "operations.get".
+     *
+     * This request holds the parameters needed by the workspaceevents server.  After setting any
+     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name The name of the operation resource.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^operations/.*$");
+
+      /**
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
+       * operation result at intervals as recommended by the API service.
+       *
+       * Create a request for the method "operations.get".
+       *
+       * This request holds the parameters needed by the the workspaceevents server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The name of the operation resource.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(WorkspaceEvents.this, "GET", REST_PATH, null, com.google.api.services.workspaceevents.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^operations/.*$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The name of the operation resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the operation resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The name of the operation resource. */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^operations/.*$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Subscriptions collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code WorkspaceEvents workspaceevents = new WorkspaceEvents(...);}
+   *   {@code WorkspaceEvents.Subscriptions.List request = workspaceevents.subscriptions().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Subscriptions subscriptions() {
+    return new Subscriptions();
+  }
+
+  /**
+   * The "subscriptions" collection of methods.
+   */
+  public class Subscriptions {
+
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Creates a Google Workspace
+     * subscription. To learn how to use this method, see [Create a Google Workspace
+     * subscription](https://developers.google.com/workspace/events/guides/create-subscription).
+     *
+     * Create a request for the method "subscriptions.create".
+     *
+     * This request holds the parameters needed by the workspaceevents server.  After setting any
+     * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.workspaceevents.v1.model.Subscription}
+     * @return the request
+     */
+    public Create create(com.google.api.services.workspaceevents.v1.model.Subscription content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/subscriptions";
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Creates a Google
+       * Workspace subscription. To learn how to use this method, see [Create a Google Workspace
+       * subscription](https://developers.google.com/workspace/events/guides/create-subscription).
+       *
+       * Create a request for the method "subscriptions.create".
+       *
+       * This request holds the parameters needed by the the workspaceevents server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.workspaceevents.v1.model.Subscription}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.workspaceevents.v1.model.Subscription content) {
+        super(WorkspaceEvents.this, "POST", REST_PATH, content, com.google.api.services.workspaceevents.v1.model.Operation.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. If set to `true`, validates and previews the request, but doesn't create the
+       * subscription.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean validateOnly;
+
+      /** Optional. If set to `true`, validates and previews the request, but doesn't create the
+     subscription.
+       */
+      public java.lang.Boolean getValidateOnly() {
+        return validateOnly;
+      }
+
+      /**
+       * Optional. If set to `true`, validates and previews the request, but doesn't create the
+       * subscription.
+       */
+      public Create setValidateOnly(java.lang.Boolean validateOnly) {
+        this.validateOnly = validateOnly;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a Google Workspace
+     * subscription. To learn how to use this method, see [Delete a Google Workspace
+     * subscription](https://developers.google.com/workspace/events/guides/delete-subscription).
+     *
+     * Create a request for the method "subscriptions.delete".
+     *
+     * This request holds the parameters needed by the workspaceevents server.  After setting any
+     * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Resource name of the subscription to delete. Format: `subscriptions/{subscription}`
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^subscriptions/[^/]+$");
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a Google
+       * Workspace subscription. To learn how to use this method, see [Delete a Google Workspace
+       * subscription](https://developers.google.com/workspace/events/guides/delete-subscription).
+       *
+       * Create a request for the method "subscriptions.delete".
+       *
+       * This request holds the parameters needed by the the workspaceevents server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Resource name of the subscription to delete. Format: `subscriptions/{subscription}`
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(WorkspaceEvents.this, "DELETE", REST_PATH, null, com.google.api.services.workspaceevents.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^subscriptions/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Resource name of the subscription to delete. Format:
+       * `subscriptions/{subscription}`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Resource name of the subscription to delete. Format: `subscriptions/{subscription}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Resource name of the subscription to delete. Format:
+       * `subscriptions/{subscription}`
+       */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^subscriptions/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. If set to `true` and the subscription isn't found, the request succeeds but
+       * doesn't delete the subscription.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean allowMissing;
+
+      /** Optional. If set to `true` and the subscription isn't found, the request succeeds but doesn't
+     delete the subscription.
+       */
+      public java.lang.Boolean getAllowMissing() {
+        return allowMissing;
+      }
+
+      /**
+       * Optional. If set to `true` and the subscription isn't found, the request succeeds but
+       * doesn't delete the subscription.
+       */
+      public Delete setAllowMissing(java.lang.Boolean allowMissing) {
+        this.allowMissing = allowMissing;
+        return this;
+      }
+
+      /**
+       * Optional. Etag of the subscription. If present, it must match with the server's etag.
+       * Otherwise, request fails with the status `ABORTED`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String etag;
+
+      /** Optional. Etag of the subscription. If present, it must match with the server's etag. Otherwise,
+     request fails with the status `ABORTED`.
+       */
+      public java.lang.String getEtag() {
+        return etag;
+      }
+
+      /**
+       * Optional. Etag of the subscription. If present, it must match with the server's etag.
+       * Otherwise, request fails with the status `ABORTED`.
+       */
+      public Delete setEtag(java.lang.String etag) {
+        this.etag = etag;
+        return this;
+      }
+
+      /**
+       * Optional. If set to `true`, validates and previews the request, but doesn't delete the
+       * subscription.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean validateOnly;
+
+      /** Optional. If set to `true`, validates and previews the request, but doesn't delete the
+     subscription.
+       */
+      public java.lang.Boolean getValidateOnly() {
+        return validateOnly;
+      }
+
+      /**
+       * Optional. If set to `true`, validates and previews the request, but doesn't delete the
+       * subscription.
+       */
+      public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+        this.validateOnly = validateOnly;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Gets details about a Google
+     * Workspace subscription. To learn how to use this method, see [Get details about a Google
+     * Workspace subscription](https://developers.google.com/workspace/events/guides/get-subscription).
+     *
+     * Create a request for the method "subscriptions.get".
+     *
+     * This request holds the parameters needed by the workspaceevents server.  After setting any
+     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Resource name of the subscription. Format: `subscriptions/{subscription}`
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.Subscription> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^subscriptions/[^/]+$");
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Gets details about a
+       * Google Workspace subscription. To learn how to use this method, see [Get details about a Google
+       * Workspace subscription](https://developers.google.com/workspace/events/guides/get-
+       * subscription).
+       *
+       * Create a request for the method "subscriptions.get".
+       *
+       * This request holds the parameters needed by the the workspaceevents server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Resource name of the subscription. Format: `subscriptions/{subscription}`
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(WorkspaceEvents.this, "GET", REST_PATH, null, com.google.api.services.workspaceevents.v1.model.Subscription.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^subscriptions/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Resource name of the subscription. Format: `subscriptions/{subscription}` */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Resource name of the subscription. Format: `subscriptions/{subscription}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. Resource name of the subscription. Format: `subscriptions/{subscription}` */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^subscriptions/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Lists Google Workspace
+     * subscriptions. To learn how to use this method, see [List Google Workspace
+     * subscriptions](https://developers.google.com/workspace/events/guides/list-subscriptions).
+     *
+     * Create a request for the method "subscriptions.list".
+     *
+     * This request holds the parameters needed by the workspaceevents server.  After setting any
+     * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.ListSubscriptionsResponse> {
+
+      private static final String REST_PATH = "v1/subscriptions";
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Lists Google Workspace
+       * subscriptions. To learn how to use this method, see [List Google Workspace
+       * subscriptions](https://developers.google.com/workspace/events/guides/list-subscriptions).
+       *
+       * Create a request for the method "subscriptions.list".
+       *
+       * This request holds the parameters needed by the the workspaceevents server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(WorkspaceEvents.this, "GET", REST_PATH, null, com.google.api.services.workspaceevents.v1.model.ListSubscriptionsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. A query filter. You can filter subscriptions by event type (`event_types`) and
+       * target resource (`target_resource`). You must specify at least one event type in your
+       * query. To filter for multiple event types, use the `OR` operator. To filter by both event
+       * type and target resource, use the `AND` operator and specify the full resource name, such
+       * as `//chat.googleapis.com/spaces/{space}`. For example, the following queries are valid:
+       * ``` event_types:"google.workspace.chat.membership.v1.updated" OR
+       * event_types:"google.workspace.chat.message.v1.created"
+       * event_types:"google.workspace.chat.message.v1.created" AND
+       * target_resource="//chat.googleapis.com/spaces/{space}" (
+       * event_types:"google.workspace.chat.membership.v1.updated" OR
+       * event_types:"google.workspace.chat.message.v1.created" ) AND
+       * target_resource="//chat.googleapis.com/spaces/{space}" ``` The server rejects invalid
+       * queries with an `INVALID_ARGUMENT` error.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Required. A query filter. You can filter subscriptions by event type (`event_types`) and target
+     resource (`target_resource`). You must specify at least one event type in your query. To filter for
+     multiple event types, use the `OR` operator. To filter by both event type and target resource, use
+     the `AND` operator and specify the full resource name, such as
+     `//chat.googleapis.com/spaces/{space}`. For example, the following queries are valid: ```
+     event_types:"google.workspace.chat.membership.v1.updated" OR
+     event_types:"google.workspace.chat.message.v1.created"
+     event_types:"google.workspace.chat.message.v1.created" AND
+     target_resource="//chat.googleapis.com/spaces/{space}" (
+     event_types:"google.workspace.chat.membership.v1.updated" OR
+     event_types:"google.workspace.chat.message.v1.created" ) AND
+     target_resource="//chat.googleapis.com/spaces/{space}" ``` The server rejects invalid queries with
+     an `INVALID_ARGUMENT` error.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Required. A query filter. You can filter subscriptions by event type (`event_types`) and
+       * target resource (`target_resource`). You must specify at least one event type in your
+       * query. To filter for multiple event types, use the `OR` operator. To filter by both event
+       * type and target resource, use the `AND` operator and specify the full resource name, such
+       * as `//chat.googleapis.com/spaces/{space}`. For example, the following queries are valid:
+       * ``` event_types:"google.workspace.chat.membership.v1.updated" OR
+       * event_types:"google.workspace.chat.message.v1.created"
+       * event_types:"google.workspace.chat.message.v1.created" AND
+       * target_resource="//chat.googleapis.com/spaces/{space}" (
+       * event_types:"google.workspace.chat.membership.v1.updated" OR
+       * event_types:"google.workspace.chat.message.v1.created" ) AND
+       * target_resource="//chat.googleapis.com/spaces/{space}" ``` The server rejects invalid
+       * queries with an `INVALID_ARGUMENT` error.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Optional. The maximum number of subscriptions to return. The service might return fewer
+       * than this value. If unspecified or set to `0`, up to 50 subscriptions are returned. The
+       * maximum value is 100. If you specify a value more than 100, the system only returns 100
+       * subscriptions.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of subscriptions to return. The service might return fewer than this
+     value. If unspecified or set to `0`, up to 50 subscriptions are returned. The maximum value is 100.
+     If you specify a value more than 100, the system only returns 100 subscriptions.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of subscriptions to return. The service might return fewer
+       * than this value. If unspecified or set to `0`, up to 50 subscriptions are returned. The
+       * maximum value is 100. If you specify a value more than 100, the system only returns 100
+       * subscriptions.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A page token, received from a previous list subscriptions call. Provide this
+       * parameter to retrieve the subsequent page. When paginating, the filter value should match
+       * the call that provided the page token. Passing a different value might lead to unexpected
+       * results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A page token, received from a previous list subscriptions call. Provide this parameter to
+     retrieve the subsequent page. When paginating, the filter value should match the call that provided
+     the page token. Passing a different value might lead to unexpected results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A page token, received from a previous list subscriptions call. Provide this
+       * parameter to retrieve the subsequent page. When paginating, the filter value should match
+       * the call that provided the page token. Passing a different value might lead to unexpected
+       * results.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Updates or renews a Google
+     * Workspace subscription. To learn how to use this method, see [Update or renew a Google Workspace
+     * subscription](https://developers.google.com/workspace/events/guides/update-subscription).
+     *
+     * Create a request for the method "subscriptions.patch".
+     *
+     * This request holds the parameters needed by the workspaceevents server.  After setting any
+     * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param name Optional. Immutable. Identifier. Resource name of the subscription. Format:
+     *        `subscriptions/{subscription}`
+     * @param content the {@link com.google.api.services.workspaceevents.v1.model.Subscription}
+     * @return the request
+     */
+    public Patch patch(java.lang.String name, com.google.api.services.workspaceevents.v1.model.Subscription content) throws java.io.IOException {
+      Patch result = new Patch(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^subscriptions/[^/]+$");
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Updates or renews a
+       * Google Workspace subscription. To learn how to use this method, see [Update or renew a Google
+       * Workspace subscription](https://developers.google.com/workspace/events/guides/update-
+       * subscription).
+       *
+       * Create a request for the method "subscriptions.patch".
+       *
+       * This request holds the parameters needed by the the workspaceevents server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Optional. Immutable. Identifier. Resource name of the subscription. Format:
+     *        `subscriptions/{subscription}`
+       * @param content the {@link com.google.api.services.workspaceevents.v1.model.Subscription}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String name, com.google.api.services.workspaceevents.v1.model.Subscription content) {
+        super(WorkspaceEvents.this, "PATCH", REST_PATH, content, com.google.api.services.workspaceevents.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^subscriptions/[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. Immutable. Identifier. Resource name of the subscription. Format:
+       * `subscriptions/{subscription}`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Optional. Immutable. Identifier. Resource name of the subscription. Format:
+     `subscriptions/{subscription}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Optional. Immutable. Identifier. Resource name of the subscription. Format:
+       * `subscriptions/{subscription}`
+       */
+      public Patch setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^subscriptions/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. Required. The field to update. You can update one of the following fields in a
+       * subscription: * `expire_time`: The timestamp when the subscription expires. * `ttl`: The
+       * time-to-live (TTL) or duration of the subscription.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. Required. The field to update. You can update one of the following fields in a
+     subscription: * `expire_time`: The timestamp when the subscription expires. * `ttl`: The time-to-
+     live (TTL) or duration of the subscription.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Optional. Required. The field to update. You can update one of the following fields in a
+       * subscription: * `expire_time`: The timestamp when the subscription expires. * `ttl`: The
+       * time-to-live (TTL) or duration of the subscription.
+       */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      /**
+       * Optional. If set to `true`, validates and previews the request, but doesn't update the
+       * subscription.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean validateOnly;
+
+      /** Optional. If set to `true`, validates and previews the request, but doesn't update the
+     subscription.
+       */
+      public java.lang.Boolean getValidateOnly() {
+        return validateOnly;
+      }
+
+      /**
+       * Optional. If set to `true`, validates and previews the request, but doesn't update the
+       * subscription.
+       */
+      public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+        this.validateOnly = validateOnly;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Reactivates a suspended
+     * Google Workspace subscription. This method resets your subscription's `State` field to `ACTIVE`.
+     * Before you use this method, you must fix the error that suspended the subscription. To learn how
+     * to use this method, see [Reactivate a Google Workspace
+     * subscription](https://developers.google.com/workspace/events/guides/reactivate-subscription).
+     *
+     * Create a request for the method "subscriptions.reactivate".
+     *
+     * This request holds the parameters needed by the workspaceevents server.  After setting any
+     * optional parameters, call the {@link Reactivate#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Resource name of the subscription. Format: `subscriptions/{subscription}`
+     * @param content the {@link com.google.api.services.workspaceevents.v1.model.ReactivateSubscriptionRequest}
+     * @return the request
+     */
+    public Reactivate reactivate(java.lang.String name, com.google.api.services.workspaceevents.v1.model.ReactivateSubscriptionRequest content) throws java.io.IOException {
+      Reactivate result = new Reactivate(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Reactivate extends WorkspaceEventsRequest<com.google.api.services.workspaceevents.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}:reactivate";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^subscriptions/[^/]+$");
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Reactivates a suspended
+       * Google Workspace subscription. This method resets your subscription's `State` field to
+       * `ACTIVE`. Before you use this method, you must fix the error that suspended the subscription.
+       * To learn how to use this method, see [Reactivate a Google Workspace
+       * subscription](https://developers.google.com/workspace/events/guides/reactivate-subscription).
+       *
+       * Create a request for the method "subscriptions.reactivate".
+       *
+       * This request holds the parameters needed by the the workspaceevents server.  After setting any
+       * optional parameters, call the {@link Reactivate#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Reactivate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Resource name of the subscription. Format: `subscriptions/{subscription}`
+       * @param content the {@link com.google.api.services.workspaceevents.v1.model.ReactivateSubscriptionRequest}
+       * @since 1.13
+       */
+      protected Reactivate(java.lang.String name, com.google.api.services.workspaceevents.v1.model.ReactivateSubscriptionRequest content) {
+        super(WorkspaceEvents.this, "POST", REST_PATH, content, com.google.api.services.workspaceevents.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^subscriptions/[^/]+$");
+        }
+      }
+
+      @Override
+      public Reactivate set$Xgafv(java.lang.String $Xgafv) {
+        return (Reactivate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Reactivate setAccessToken(java.lang.String accessToken) {
+        return (Reactivate) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Reactivate setAlt(java.lang.String alt) {
+        return (Reactivate) super.setAlt(alt);
+      }
+
+      @Override
+      public Reactivate setCallback(java.lang.String callback) {
+        return (Reactivate) super.setCallback(callback);
+      }
+
+      @Override
+      public Reactivate setFields(java.lang.String fields) {
+        return (Reactivate) super.setFields(fields);
+      }
+
+      @Override
+      public Reactivate setKey(java.lang.String key) {
+        return (Reactivate) super.setKey(key);
+      }
+
+      @Override
+      public Reactivate setOauthToken(java.lang.String oauthToken) {
+        return (Reactivate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Reactivate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Reactivate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Reactivate setQuotaUser(java.lang.String quotaUser) {
+        return (Reactivate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Reactivate setUploadType(java.lang.String uploadType) {
+        return (Reactivate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Reactivate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Reactivate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Resource name of the subscription. Format: `subscriptions/{subscription}` */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Resource name of the subscription. Format: `subscriptions/{subscription}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. Resource name of the subscription. Format: `subscriptions/{subscription}` */
+      public Reactivate setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^subscriptions/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Reactivate set(String parameterName, Object value) {
+        return (Reactivate) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link WorkspaceEvents}.
    *
    * <p>

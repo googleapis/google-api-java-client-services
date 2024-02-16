@@ -154,8 +154,9 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
   public class Hashes {
 
     /**
-     * Search for full hashes matching the specified prefixes. This is a custom method as described by
-     * guidance at https://google.aip.dev/136
+     * Search for full hashes matching the specified prefixes. This is a custom method as defined by
+     * https://google.aip.dev/136 (the custom method refers to this method having a custom name within
+     * Google's general API development nomenclature; it does not refer to using a custom HTTP method).
      *
      * Create a request for the method "hashes.search".
      *
@@ -175,8 +176,10 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v5/hashes:search";
 
       /**
-       * Search for full hashes matching the specified prefixes. This is a custom method as described by
-       * guidance at https://google.aip.dev/136
+       * Search for full hashes matching the specified prefixes. This is a custom method as defined by
+       * https://google.aip.dev/136 (the custom method refers to this method having a custom name within
+       * Google's general API development nomenclature; it does not refer to using a custom HTTP
+       * method).
        *
        * Create a request for the method "hashes.search".
        *
@@ -257,17 +260,30 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
         return (Search) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The hash prefixes to be looked up. */
+      /**
+       * Required. The hash prefixes to be looked up. Clients MUST NOT send more than 1000 hash
+       * prefixes. However, following the URL processing procedure, clients SHOULD NOT need to send
+       * more than 30 hash prefixes. Currently each hash prefix is required to be exactly 4 bytes
+       * long. This MAY be relaxed in the future.
+       */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> hashPrefixes;
 
-      /** Required. The hash prefixes to be looked up.
+      /** Required. The hash prefixes to be looked up. Clients MUST NOT send more than 1000 hash prefixes.
+     However, following the URL processing procedure, clients SHOULD NOT need to send more than 30 hash
+     prefixes. Currently each hash prefix is required to be exactly 4 bytes long. This MAY be relaxed in
+     the future.
        */
       public java.util.List<java.lang.String> getHashPrefixes() {
         return hashPrefixes;
       }
 
-      /** Required. The hash prefixes to be looked up. */
+      /**
+       * Required. The hash prefixes to be looked up. Clients MUST NOT send more than 1000 hash
+       * prefixes. However, following the URL processing procedure, clients SHOULD NOT need to send
+       * more than 30 hash prefixes. Currently each hash prefix is required to be exactly 4 bytes
+       * long. This MAY be relaxed in the future.
+       */
       public Search setHashPrefixes(java.util.List<java.lang.String> hashPrefixes) {
         this.hashPrefixes = hashPrefixes;
         return this;

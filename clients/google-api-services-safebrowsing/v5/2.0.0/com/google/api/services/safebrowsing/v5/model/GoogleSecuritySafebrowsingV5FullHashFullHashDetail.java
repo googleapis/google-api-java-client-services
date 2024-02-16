@@ -20,11 +20,12 @@ package com.google.api.services.safebrowsing.v5.model;
  * Details about a matching full hash. An important note about forward compatibility: new threat
  * types and threat attributes may be added by the server at any time; those additions are
  * considered minor version changes. It is Google's policy not to expose minor version numbers in
- * APIs (see https://cloud.google.com/apis/design/versioning), so clients MUST be prepared to
- * receive FullHashDetail messages containing ThreatType enum values or ThreatAttribute enum values
- * that are considered invalid by the client. Therefore, it is the client's responsibility to check
- * for the validity of all ThreatType and ThreatAttribute enum values; if any value is considered
- * invalid, the client MUST disregard the entire FullHashDetail message.
+ * APIs (see https://cloud.google.com/apis/design/versioning for the versioning policy), so clients
+ * MUST be prepared to receive `FullHashDetail` messages containing `ThreatType` enum values or
+ * `ThreatAttribute` enum values that are considered invalid by the client. Therefore, it is the
+ * client's responsibility to check for the validity of all `ThreatType` and `ThreatAttribute` enum
+ * values; if any value is considered invalid, the client MUST disregard the entire `FullHashDetail`
+ * message.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Safe Browsing API. For a detailed explanation see:

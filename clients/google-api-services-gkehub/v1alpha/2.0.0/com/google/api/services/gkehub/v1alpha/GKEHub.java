@@ -8534,6 +8534,200 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
+         * Lists permitted Scopes.
+         *
+         * Create a request for the method "scopes.listPermitted".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link ListPermitted#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent (project and location) where the Scope will be listed. Specified in the format
+         *        `projects/locations`.
+         * @return the request
+         */
+        public ListPermitted listPermitted(java.lang.String parent) throws java.io.IOException {
+          ListPermitted result = new ListPermitted(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class ListPermitted extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.ListPermittedScopesResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/scopes:listPermitted";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists permitted Scopes.
+           *
+           * Create a request for the method "scopes.listPermitted".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link ListPermitted#execute()} method to invoke the remote operation. <p>
+           * {@link ListPermitted#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+           * equest)} must be called to initialize this instance immediately after invoking the constructor.
+           * </p>
+           *
+           * @param parent Required. The parent (project and location) where the Scope will be listed. Specified in the format
+         *        `projects/locations`.
+           * @since 1.13
+           */
+          protected ListPermitted(java.lang.String parent) {
+            super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v1alpha.model.ListPermittedScopesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListPermitted set$Xgafv(java.lang.String $Xgafv) {
+            return (ListPermitted) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListPermitted setAccessToken(java.lang.String accessToken) {
+            return (ListPermitted) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListPermitted setAlt(java.lang.String alt) {
+            return (ListPermitted) super.setAlt(alt);
+          }
+
+          @Override
+          public ListPermitted setCallback(java.lang.String callback) {
+            return (ListPermitted) super.setCallback(callback);
+          }
+
+          @Override
+          public ListPermitted setFields(java.lang.String fields) {
+            return (ListPermitted) super.setFields(fields);
+          }
+
+          @Override
+          public ListPermitted setKey(java.lang.String key) {
+            return (ListPermitted) super.setKey(key);
+          }
+
+          @Override
+          public ListPermitted setOauthToken(java.lang.String oauthToken) {
+            return (ListPermitted) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListPermitted setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListPermitted) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListPermitted setQuotaUser(java.lang.String quotaUser) {
+            return (ListPermitted) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListPermitted setUploadType(java.lang.String uploadType) {
+            return (ListPermitted) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListPermitted setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListPermitted) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent (project and location) where the Scope will be listed. Specified
+           * in the format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent (project and location) where the Scope will be listed. Specified in the format
+         `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent (project and location) where the Scope will be listed. Specified
+           * in the format `projects/locations`.
+           */
+          public ListPermitted setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. When requesting a 'page' of resources, `page_size` specifies number of
+           * resources to return. If unspecified or set to 0, all resources will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. When requesting a 'page' of resources, `page_size` specifies number of resources to
+         return. If unspecified or set to 0, all resources will be returned.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. When requesting a 'page' of resources, `page_size` specifies number of
+           * resources to return. If unspecified or set to 0, all resources will be returned.
+           */
+          public ListPermitted setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Token returned by previous call to `ListPermittedScopes` which specifies the
+           * position in the list from where to continue listing the resources.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Token returned by previous call to `ListPermittedScopes` which specifies the position in
+         the list from where to continue listing the resources.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Token returned by previous call to `ListPermittedScopes` which specifies the
+           * position in the list from where to continue listing the resources.
+           */
+          public ListPermitted setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListPermitted set(String parameterName, Object value) {
+            return (ListPermitted) super.set(parameterName, value);
+          }
+        }
+        /**
          * Updates a scopes.
          *
          * Create a request for the method "scopes.patch".

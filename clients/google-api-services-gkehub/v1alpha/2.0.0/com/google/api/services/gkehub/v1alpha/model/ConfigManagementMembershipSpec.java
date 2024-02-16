@@ -64,6 +64,13 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   private ConfigManagementHierarchyControllerConfig hierarchyController;
 
   /**
+   * Enables automatic Feature management.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String management;
+
+  /**
    * Policy Controller configuration for the cluster.
    * The value may be {@code null}.
    */
@@ -152,6 +159,23 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
    */
   public ConfigManagementMembershipSpec setHierarchyController(ConfigManagementHierarchyControllerConfig hierarchyController) {
     this.hierarchyController = hierarchyController;
+    return this;
+  }
+
+  /**
+   * Enables automatic Feature management.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getManagement() {
+    return management;
+  }
+
+  /**
+   * Enables automatic Feature management.
+   * @param management management or {@code null} for none
+   */
+  public ConfigManagementMembershipSpec setManagement(java.lang.String management) {
+    this.management = management;
     return this;
   }
 

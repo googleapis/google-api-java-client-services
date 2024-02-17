@@ -196,6 +196,13 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String projectId;
 
   /**
+   * Specifies the configuration of queued provisioning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QueuedProvisioning queuedProvisioning;
+
+  /**
    * The resource labels for the node pool to use to annotate any related Google Compute Engine
    * resources.
    * The value may be {@code null}.
@@ -647,6 +654,23 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Specifies the configuration of queued provisioning.
+   * @return value or {@code null} for none
+   */
+  public QueuedProvisioning getQueuedProvisioning() {
+    return queuedProvisioning;
+  }
+
+  /**
+   * Specifies the configuration of queued provisioning.
+   * @param queuedProvisioning queuedProvisioning or {@code null} for none
+   */
+  public UpdateNodePoolRequest setQueuedProvisioning(QueuedProvisioning queuedProvisioning) {
+    this.queuedProvisioning = queuedProvisioning;
     return this;
   }
 

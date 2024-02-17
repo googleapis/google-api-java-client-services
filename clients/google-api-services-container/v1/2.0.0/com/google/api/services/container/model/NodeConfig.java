@@ -87,6 +87,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String diskType;
 
   /**
+   * Optional. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableConfidentialStorage;
+
+  /**
    * Parameters for the node ephemeral storage using Local SSDs. If unspecified, ephemeral storage
    * is backed by the boot disk.
    * The value may be {@code null}.
@@ -445,6 +452,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Optional. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableConfidentialStorage() {
+    return enableConfidentialStorage;
+  }
+
+  /**
+   * Optional. Reserved for future use.
+   * @param enableConfidentialStorage enableConfidentialStorage or {@code null} for none
+   */
+  public NodeConfig setEnableConfidentialStorage(java.lang.Boolean enableConfidentialStorage) {
+    this.enableConfidentialStorage = enableConfidentialStorage;
     return this;
   }
 

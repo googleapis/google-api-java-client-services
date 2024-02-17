@@ -137,8 +137,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Optional. Information about the external metadata storage where the dataset is defined. Filled
-   * out when the dataset type is EXTERNAL.
+   * Optional. Reference to a read-only external dataset defined in data catalogs outside of
+   * BigQuery. Filled out when the dataset type is EXTERNAL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -502,8 +502,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information about the external metadata storage where the dataset is defined. Filled
-   * out when the dataset type is EXTERNAL.
+   * Optional. Reference to a read-only external dataset defined in data catalogs outside of
+   * BigQuery. Filled out when the dataset type is EXTERNAL.
    * @return value or {@code null} for none
    */
   public ExternalDatasetReference getExternalDatasetReference() {
@@ -511,8 +511,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information about the external metadata storage where the dataset is defined. Filled
-   * out when the dataset type is EXTERNAL.
+   * Optional. Reference to a read-only external dataset defined in data catalogs outside of
+   * BigQuery. Filled out when the dataset type is EXTERNAL.
    * @param externalDatasetReference externalDatasetReference or {@code null} for none
    */
   public Dataset setExternalDatasetReference(ExternalDatasetReference externalDatasetReference) {

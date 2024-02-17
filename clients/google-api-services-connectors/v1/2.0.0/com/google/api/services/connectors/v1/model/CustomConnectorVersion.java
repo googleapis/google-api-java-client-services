@@ -105,6 +105,13 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   private java.lang.String specLocation;
 
   /**
+   * Output only. State of the custom connector version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Output only. Updated time.
    * The value may be {@code null}.
    */
@@ -273,6 +280,23 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
    */
   public CustomConnectorVersion setSpecLocation(java.lang.String specLocation) {
     this.specLocation = specLocation;
+    return this;
+  }
+
+  /**
+   * Output only. State of the custom connector version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. State of the custom connector version.
+   * @param state state or {@code null} for none
+   */
+  public CustomConnectorVersion setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

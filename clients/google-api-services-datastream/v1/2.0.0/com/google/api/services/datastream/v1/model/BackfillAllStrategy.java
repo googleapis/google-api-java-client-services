@@ -52,6 +52,13 @@ public final class BackfillAllStrategy extends com.google.api.client.json.Generi
   private PostgresqlRdbms postgresqlExcludedObjects;
 
   /**
+   * SQLServer data source objects to avoid backfilling
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerRdbms sqlServerExcludedObjects;
+
+  /**
    * MySQL data source objects to avoid backfilling.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class BackfillAllStrategy extends com.google.api.client.json.Generi
    */
   public BackfillAllStrategy setPostgresqlExcludedObjects(PostgresqlRdbms postgresqlExcludedObjects) {
     this.postgresqlExcludedObjects = postgresqlExcludedObjects;
+    return this;
+  }
+
+  /**
+   * SQLServer data source objects to avoid backfilling
+   * @return value or {@code null} for none
+   */
+  public SqlServerRdbms getSqlServerExcludedObjects() {
+    return sqlServerExcludedObjects;
+  }
+
+  /**
+   * SQLServer data source objects to avoid backfilling
+   * @param sqlServerExcludedObjects sqlServerExcludedObjects or {@code null} for none
+   */
+  public BackfillAllStrategy setSqlServerExcludedObjects(SqlServerRdbms sqlServerExcludedObjects) {
+    this.sqlServerExcludedObjects = sqlServerExcludedObjects;
     return this;
   }
 

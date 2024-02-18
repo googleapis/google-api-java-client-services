@@ -59,6 +59,13 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceConnectionProfile;
 
   /**
+   * SQLServer data source configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerSourceConfig sqlServerSourceConfig;
+
+  /**
    * MySQL data source configuration.
    * @return value or {@code null} for none
    */
@@ -125,6 +132,23 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
    */
   public SourceConfig setSourceConnectionProfile(java.lang.String sourceConnectionProfile) {
     this.sourceConnectionProfile = sourceConnectionProfile;
+    return this;
+  }
+
+  /**
+   * SQLServer data source configuration.
+   * @return value or {@code null} for none
+   */
+  public SqlServerSourceConfig getSqlServerSourceConfig() {
+    return sqlServerSourceConfig;
+  }
+
+  /**
+   * SQLServer data source configuration.
+   * @param sqlServerSourceConfig sqlServerSourceConfig or {@code null} for none
+   */
+  public SourceConfig setSqlServerSourceConfig(SqlServerSourceConfig sqlServerSourceConfig) {
+    this.sqlServerSourceConfig = sqlServerSourceConfig;
     return this;
   }
 

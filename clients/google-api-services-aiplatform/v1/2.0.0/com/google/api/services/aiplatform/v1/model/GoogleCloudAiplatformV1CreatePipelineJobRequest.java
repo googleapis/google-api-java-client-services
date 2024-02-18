@@ -54,14 +54,6 @@ public final class GoogleCloudAiplatformV1CreatePipelineJobRequest extends com.g
   private java.lang.String pipelineJobId;
 
   /**
-   * Optional. Whether to do component level validations before job creation. Currently we only
-   * support Google First Party Component/Pipelines.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean preflightValidations;
-
-  /**
    * Required. The resource name of the Location to create the PipelineJob in. Format:
    * `projects/{project}/locations/{location}`
    * @return value or {@code null} for none
@@ -115,25 +107,6 @@ public final class GoogleCloudAiplatformV1CreatePipelineJobRequest extends com.g
    */
   public GoogleCloudAiplatformV1CreatePipelineJobRequest setPipelineJobId(java.lang.String pipelineJobId) {
     this.pipelineJobId = pipelineJobId;
-    return this;
-  }
-
-  /**
-   * Optional. Whether to do component level validations before job creation. Currently we only
-   * support Google First Party Component/Pipelines.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getPreflightValidations() {
-    return preflightValidations;
-  }
-
-  /**
-   * Optional. Whether to do component level validations before job creation. Currently we only
-   * support Google First Party Component/Pipelines.
-   * @param preflightValidations preflightValidations or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1CreatePipelineJobRequest setPreflightValidations(java.lang.Boolean preflightValidations) {
-    this.preflightValidations = preflightValidations;
     return this;
   }
 

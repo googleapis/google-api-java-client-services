@@ -37,7 +37,8 @@ public final class LearningGenaiRecitationRecitationResult extends com.google.ap
 
   /**
    * The recitation action for one given input. When its segments contain different actions, the
-   * overall action will be returned in the precedence of BLOCK > CITE > NO_ACTION.
+   * overall action will be returned in the precedence of BLOCK > CITE > NO_ACTION. When the given
+   * input is not found in any source, the recitation action will be NO_ACTION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +67,8 @@ public final class LearningGenaiRecitationRecitationResult extends com.google.ap
 
   /**
    * The recitation action for one given input. When its segments contain different actions, the
-   * overall action will be returned in the precedence of BLOCK > CITE > NO_ACTION.
+   * overall action will be returned in the precedence of BLOCK > CITE > NO_ACTION. When the given
+   * input is not found in any source, the recitation action will be NO_ACTION.
    * @return value or {@code null} for none
    */
   public java.lang.String getRecitationAction() {
@@ -75,7 +77,8 @@ public final class LearningGenaiRecitationRecitationResult extends com.google.ap
 
   /**
    * The recitation action for one given input. When its segments contain different actions, the
-   * overall action will be returned in the precedence of BLOCK > CITE > NO_ACTION.
+   * overall action will be returned in the precedence of BLOCK > CITE > NO_ACTION. When the given
+   * input is not found in any source, the recitation action will be NO_ACTION.
    * @param recitationAction recitationAction or {@code null} for none
    */
   public LearningGenaiRecitationRecitationResult setRecitationAction(java.lang.String recitationAction) {

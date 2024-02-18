@@ -63,6 +63,13 @@ public final class GoogleCloudAiplatformV1FeatureViewSync extends com.google.api
   private GoogleTypeInterval runTime;
 
   /**
+   * Output only. Summary of the sync job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1FeatureViewSyncSyncSummary syncSummary;
+
+  /**
    * Output only. Time when this FeatureViewSync is created. Creation of a FeatureViewSync means
    * that the job is pending / waiting for sufficient resources but may not have started the actual
    * data transfer yet.
@@ -135,6 +142,23 @@ public final class GoogleCloudAiplatformV1FeatureViewSync extends com.google.api
    */
   public GoogleCloudAiplatformV1FeatureViewSync setRunTime(GoogleTypeInterval runTime) {
     this.runTime = runTime;
+    return this;
+  }
+
+  /**
+   * Output only. Summary of the sync job.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureViewSyncSyncSummary getSyncSummary() {
+    return syncSummary;
+  }
+
+  /**
+   * Output only. Summary of the sync job.
+   * @param syncSummary syncSummary or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureViewSync setSyncSummary(GoogleCloudAiplatformV1FeatureViewSyncSyncSummary syncSummary) {
+    this.syncSummary = syncSummary;
     return this;
   }
 

@@ -14,10 +14,11 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.aiplatform.v1beta1.model;
+package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Response message of EndpointService.ExportEndpoint operation.
+ * Retrieve from Vertex AI Search datastore for grounding. See https://cloud.google.com/vertex-ai-
+ * search-and-conversation
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,40 +28,43 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1ExportEndpointResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1VertexAISearch extends com.google.api.client.json.GenericJson {
 
   /**
-   * Information further describing the output of this Endpoint export.
+   * Required. Fully-qualified Vertex AI Search's datastore resource ID.
+   * projects/<>/locations/<>/collections/<>/dataStores/<>
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1ExportEndpointResponseOutputInfo outputInfo;
+  private java.lang.String datastore;
 
   /**
-   * Information further describing the output of this Endpoint export.
+   * Required. Fully-qualified Vertex AI Search's datastore resource ID.
+   * projects/<>/locations/<>/collections/<>/dataStores/<>
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1ExportEndpointResponseOutputInfo getOutputInfo() {
-    return outputInfo;
+  public java.lang.String getDatastore() {
+    return datastore;
   }
 
   /**
-   * Information further describing the output of this Endpoint export.
-   * @param outputInfo outputInfo or {@code null} for none
+   * Required. Fully-qualified Vertex AI Search's datastore resource ID.
+   * projects/<>/locations/<>/collections/<>/dataStores/<>
+   * @param datastore datastore or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1ExportEndpointResponse setOutputInfo(GoogleCloudAiplatformV1beta1ExportEndpointResponseOutputInfo outputInfo) {
-    this.outputInfo = outputInfo;
+  public GoogleCloudAiplatformV1VertexAISearch setDatastore(java.lang.String datastore) {
+    this.datastore = datastore;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ExportEndpointResponse set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1ExportEndpointResponse) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1VertexAISearch set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1VertexAISearch) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ExportEndpointResponse clone() {
-    return (GoogleCloudAiplatformV1beta1ExportEndpointResponse) super.clone();
+  public GoogleCloudAiplatformV1VertexAISearch clone() {
+    return (GoogleCloudAiplatformV1VertexAISearch) super.clone();
   }
 
 }

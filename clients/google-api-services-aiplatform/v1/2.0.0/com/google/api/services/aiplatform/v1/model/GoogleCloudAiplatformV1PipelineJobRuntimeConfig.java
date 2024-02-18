@@ -30,15 +30,6 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1PipelineJobRuntimeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The default runtime for the PipelineJob. If not provided, Vertex Custom Job is used
-   * as the runtime. For Vertex Custom Job, please refer to https://cloud.google.com/vertex-
-   * ai/docs/training/overview
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1PipelineJobRuntimeConfigDefaultRuntime defaultRuntime;
-
-  /**
    * Represents the failure policy of a pipeline. Currently, the default of a pipeline is that the
    * pipeline will continue to run until no more tasks can be executed, also known as
    * PIPELINE_FAILURE_POLICY_FAIL_SLOW. However, if a pipeline is set to
@@ -88,27 +79,6 @@ public final class GoogleCloudAiplatformV1PipelineJobRuntimeConfig extends com.g
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudAiplatformV1Value> parameters;
-
-  /**
-   * Optional. The default runtime for the PipelineJob. If not provided, Vertex Custom Job is used
-   * as the runtime. For Vertex Custom Job, please refer to https://cloud.google.com/vertex-
-   * ai/docs/training/overview
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1PipelineJobRuntimeConfigDefaultRuntime getDefaultRuntime() {
-    return defaultRuntime;
-  }
-
-  /**
-   * Optional. The default runtime for the PipelineJob. If not provided, Vertex Custom Job is used
-   * as the runtime. For Vertex Custom Job, please refer to https://cloud.google.com/vertex-
-   * ai/docs/training/overview
-   * @param defaultRuntime defaultRuntime or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1PipelineJobRuntimeConfig setDefaultRuntime(GoogleCloudAiplatformV1PipelineJobRuntimeConfigDefaultRuntime defaultRuntime) {
-    this.defaultRuntime = defaultRuntime;
-    return this;
-  }
 
   /**
    * Represents the failure policy of a pipeline. Currently, the default of a pipeline is that the

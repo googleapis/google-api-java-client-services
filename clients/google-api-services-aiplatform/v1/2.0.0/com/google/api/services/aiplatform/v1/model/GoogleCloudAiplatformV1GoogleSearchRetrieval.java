@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * The default runtime for the PipelineJob.
+ * Tool to retrieve public web data for grounding, powered by Google.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,40 +27,43 @@ package com.google.api.services.aiplatform.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1PipelineJobRuntimeConfigDefaultRuntime extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1GoogleSearchRetrieval extends com.google.api.client.json.GenericJson {
 
   /**
-   * Persistent resource based runtime detail.
+   * Optional. Disable using the result from this tool in detecting grounding attribution. This does
+   * not affect how the result is given to the model for generation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1PipelineJobRuntimeConfigPersistentResourceRuntimeDetail persistentResourceRuntimeDetail;
+  private java.lang.Boolean disableAttribution;
 
   /**
-   * Persistent resource based runtime detail.
+   * Optional. Disable using the result from this tool in detecting grounding attribution. This does
+   * not affect how the result is given to the model for generation.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1PipelineJobRuntimeConfigPersistentResourceRuntimeDetail getPersistentResourceRuntimeDetail() {
-    return persistentResourceRuntimeDetail;
+  public java.lang.Boolean getDisableAttribution() {
+    return disableAttribution;
   }
 
   /**
-   * Persistent resource based runtime detail.
-   * @param persistentResourceRuntimeDetail persistentResourceRuntimeDetail or {@code null} for none
+   * Optional. Disable using the result from this tool in detecting grounding attribution. This does
+   * not affect how the result is given to the model for generation.
+   * @param disableAttribution disableAttribution or {@code null} for none
    */
-  public GoogleCloudAiplatformV1PipelineJobRuntimeConfigDefaultRuntime setPersistentResourceRuntimeDetail(GoogleCloudAiplatformV1PipelineJobRuntimeConfigPersistentResourceRuntimeDetail persistentResourceRuntimeDetail) {
-    this.persistentResourceRuntimeDetail = persistentResourceRuntimeDetail;
+  public GoogleCloudAiplatformV1GoogleSearchRetrieval setDisableAttribution(java.lang.Boolean disableAttribution) {
+    this.disableAttribution = disableAttribution;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1PipelineJobRuntimeConfigDefaultRuntime set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1PipelineJobRuntimeConfigDefaultRuntime) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1GoogleSearchRetrieval set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1GoogleSearchRetrieval) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1PipelineJobRuntimeConfigDefaultRuntime clone() {
-    return (GoogleCloudAiplatformV1PipelineJobRuntimeConfigDefaultRuntime) super.clone();
+  public GoogleCloudAiplatformV1GoogleSearchRetrieval clone() {
+    return (GoogleCloudAiplatformV1GoogleSearchRetrieval) super.clone();
   }
 
 }

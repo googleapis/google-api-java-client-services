@@ -85,6 +85,13 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
   private LearningGenaiRootGroundingMetadata groundingMetadata;
 
   /**
+   * Applies to streaming response message only. Whether the message is a code.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isCode;
+
+  /**
    * Applies to Response message only. Indicates whether the message is a fallback and the response
    * would have otherwise been empty.
    * The value may be {@code null}.
@@ -319,6 +326,23 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
    */
   public LearningServingLlmMessageMetadata setGroundingMetadata(LearningGenaiRootGroundingMetadata groundingMetadata) {
     this.groundingMetadata = groundingMetadata;
+    return this;
+  }
+
+  /**
+   * Applies to streaming response message only. Whether the message is a code.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsCode() {
+    return isCode;
+  }
+
+  /**
+   * Applies to streaming response message only. Whether the message is a code.
+   * @param isCode isCode or {@code null} for none
+   */
+  public LearningServingLlmMessageMetadata setIsCode(java.lang.Boolean isCode) {
+    this.isCode = isCode;
     return this;
   }
 

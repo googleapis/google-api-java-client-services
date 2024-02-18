@@ -22663,7 +22663,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * resource, not the full request. A field will be overwritten if it is in the mask. If
              * the user does not provide a mask then only the non-empty fields present in the
              * request will be overwritten. Set the update_mask to `*` to override all fields.
-             * Updatable fields: * `labels`
+             * Updatable fields: * `labels` * `serviceAgentType`
              */
             @com.google.api.client.util.Key
             private String updateMask;
@@ -22672,7 +22672,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            update. The fields specified in the update_mask are relative to the resource, not the full request.
            A field will be overwritten if it is in the mask. If the user does not provide a mask then only the
            non-empty fields present in the request will be overwritten. Set the update_mask to `*` to override
-           all fields. Updatable fields: * `labels`
+           all fields. Updatable fields: * `labels` * `serviceAgentType`
              */
             public String getUpdateMask() {
               return updateMask;
@@ -22684,7 +22684,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * resource, not the full request. A field will be overwritten if it is in the mask. If
              * the user does not provide a mask then only the non-empty fields present in the
              * request will be overwritten. Set the update_mask to `*` to override all fields.
-             * Updatable fields: * `labels`
+             * Updatable fields: * `labels` * `serviceAgentType`
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -60269,29 +60269,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            */
           public Create setPipelineJobId(java.lang.String pipelineJobId) {
             this.pipelineJobId = pipelineJobId;
-            return this;
-          }
-
-          /**
-           * Optional. Whether to do component level validations before job creation. Currently we
-           * only support Google First Party Component/Pipelines.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean preflightValidations;
-
-          /** Optional. Whether to do component level validations before job creation. Currently we only support
-         Google First Party Component/Pipelines.
-           */
-          public java.lang.Boolean getPreflightValidations() {
-            return preflightValidations;
-          }
-
-          /**
-           * Optional. Whether to do component level validations before job creation. Currently we
-           * only support Google First Party Component/Pipelines.
-           */
-          public Create setPreflightValidations(java.lang.Boolean preflightValidations) {
-            this.preflightValidations = preflightValidations;
             return this;
           }
 

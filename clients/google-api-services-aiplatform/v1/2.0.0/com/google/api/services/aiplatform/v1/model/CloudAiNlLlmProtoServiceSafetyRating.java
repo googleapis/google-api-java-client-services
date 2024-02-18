@@ -44,11 +44,39 @@ public final class CloudAiNlLlmProtoServiceSafetyRating extends com.google.api.c
   private java.lang.String category;
 
   /**
+   * The influential terms that could potentially block the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CloudAiNlLlmProtoServiceSafetyRatingInfluentialTerm> influentialTerms;
+
+  /**
    * Harm probability levels in the content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String probability;
+
+  /**
+   * Harm probability score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float probabilityScore;
+
+  /**
+   * Harm severity levels in the content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String severity;
+
+  /**
+   * Harm severity score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float severityScore;
 
   /**
    * Indicates whether the content was filtered out because of this rating.
@@ -85,6 +113,23 @@ public final class CloudAiNlLlmProtoServiceSafetyRating extends com.google.api.c
   }
 
   /**
+   * The influential terms that could potentially block the response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CloudAiNlLlmProtoServiceSafetyRatingInfluentialTerm> getInfluentialTerms() {
+    return influentialTerms;
+  }
+
+  /**
+   * The influential terms that could potentially block the response.
+   * @param influentialTerms influentialTerms or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServiceSafetyRating setInfluentialTerms(java.util.List<CloudAiNlLlmProtoServiceSafetyRatingInfluentialTerm> influentialTerms) {
+    this.influentialTerms = influentialTerms;
+    return this;
+  }
+
+  /**
    * Harm probability levels in the content.
    * @return value or {@code null} for none
    */
@@ -98,6 +143,57 @@ public final class CloudAiNlLlmProtoServiceSafetyRating extends com.google.api.c
    */
   public CloudAiNlLlmProtoServiceSafetyRating setProbability(java.lang.String probability) {
     this.probability = probability;
+    return this;
+  }
+
+  /**
+   * Harm probability score.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getProbabilityScore() {
+    return probabilityScore;
+  }
+
+  /**
+   * Harm probability score.
+   * @param probabilityScore probabilityScore or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServiceSafetyRating setProbabilityScore(java.lang.Float probabilityScore) {
+    this.probabilityScore = probabilityScore;
+    return this;
+  }
+
+  /**
+   * Harm severity levels in the content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSeverity() {
+    return severity;
+  }
+
+  /**
+   * Harm severity levels in the content.
+   * @param severity severity or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServiceSafetyRating setSeverity(java.lang.String severity) {
+    this.severity = severity;
+    return this;
+  }
+
+  /**
+   * Harm severity score.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getSeverityScore() {
+    return severityScore;
+  }
+
+  /**
+   * Harm severity score.
+   * @param severityScore severityScore or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServiceSafetyRating setSeverityScore(java.lang.Float severityScore) {
+    this.severityScore = severityScore;
     return this;
   }
 

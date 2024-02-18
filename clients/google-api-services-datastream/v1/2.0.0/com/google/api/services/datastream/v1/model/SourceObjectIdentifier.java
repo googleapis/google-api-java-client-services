@@ -51,6 +51,13 @@ public final class SourceObjectIdentifier extends com.google.api.client.json.Gen
   private PostgresqlObjectIdentifier postgresqlIdentifier;
 
   /**
+   * SQLServer data source object identifier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerObjectIdentifier sqlServerIdentifier;
+
+  /**
    * Mysql data source object identifier.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class SourceObjectIdentifier extends com.google.api.client.json.Gen
    */
   public SourceObjectIdentifier setPostgresqlIdentifier(PostgresqlObjectIdentifier postgresqlIdentifier) {
     this.postgresqlIdentifier = postgresqlIdentifier;
+    return this;
+  }
+
+  /**
+   * SQLServer data source object identifier.
+   * @return value or {@code null} for none
+   */
+  public SqlServerObjectIdentifier getSqlServerIdentifier() {
+    return sqlServerIdentifier;
+  }
+
+  /**
+   * SQLServer data source object identifier.
+   * @param sqlServerIdentifier sqlServerIdentifier or {@code null} for none
+   */
+  public SourceObjectIdentifier setSqlServerIdentifier(SqlServerObjectIdentifier sqlServerIdentifier) {
+    this.sqlServerIdentifier = sqlServerIdentifier;
     return this;
   }
 

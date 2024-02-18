@@ -107,6 +107,13 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private PrivateConnectivity privateConnectivity;
 
   /**
+   * SQLServer Connection Profile configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerProfile sqlServerProfile;
+
+  /**
    * Static Service IP connectivity.
    * The value may be {@code null}.
    */
@@ -304,6 +311,23 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
    */
   public ConnectionProfile setPrivateConnectivity(PrivateConnectivity privateConnectivity) {
     this.privateConnectivity = privateConnectivity;
+    return this;
+  }
+
+  /**
+   * SQLServer Connection Profile configuration.
+   * @return value or {@code null} for none
+   */
+  public SqlServerProfile getSqlServerProfile() {
+    return sqlServerProfile;
+  }
+
+  /**
+   * SQLServer Connection Profile configuration.
+   * @param sqlServerProfile sqlServerProfile or {@code null} for none
+   */
+  public ConnectionProfile setSqlServerProfile(SqlServerProfile sqlServerProfile) {
+    this.sqlServerProfile = sqlServerProfile;
     return this;
   }
 

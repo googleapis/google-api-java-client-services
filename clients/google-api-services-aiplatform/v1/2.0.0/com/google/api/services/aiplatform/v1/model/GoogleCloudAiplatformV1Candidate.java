@@ -60,6 +60,13 @@ public final class GoogleCloudAiplatformV1Candidate extends com.google.api.clien
   private java.lang.String finishReason;
 
   /**
+   * Output only. Metadata specifies sources used to ground generated content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1GroundingMetadata groundingMetadata;
+
+  /**
    * Output only. Index of the candidate.
    * The value may be {@code null}.
    */
@@ -143,6 +150,23 @@ public final class GoogleCloudAiplatformV1Candidate extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1Candidate setFinishReason(java.lang.String finishReason) {
     this.finishReason = finishReason;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata specifies sources used to ground generated content.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GroundingMetadata getGroundingMetadata() {
+    return groundingMetadata;
+  }
+
+  /**
+   * Output only. Metadata specifies sources used to ground generated content.
+   * @param groundingMetadata groundingMetadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Candidate setGroundingMetadata(GoogleCloudAiplatformV1GroundingMetadata groundingMetadata) {
+    this.groundingMetadata = groundingMetadata;
     return this;
   }
 

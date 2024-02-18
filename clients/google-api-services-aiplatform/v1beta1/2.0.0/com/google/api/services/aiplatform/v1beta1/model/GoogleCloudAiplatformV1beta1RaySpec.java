@@ -52,6 +52,13 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
   private java.lang.String imageUri;
 
   /**
+   * Optional. Ray metrics configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RayMetricSpec rayMetricSpec;
+
+  /**
    * Optional. Required if image_uri isn't set. A map of resource_pool_id to prebuild Ray image if
    * user need to use different images for different head/worker pools. This map needs to cover all
    * the resource pool ids. Example: { "ray_head_node_pool": "head image" "ray_worker_node_pool1":
@@ -104,6 +111,23 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1RaySpec setImageUri(java.lang.String imageUri) {
     this.imageUri = imageUri;
+    return this;
+  }
+
+  /**
+   * Optional. Ray metrics configurations.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RayMetricSpec getRayMetricSpec() {
+    return rayMetricSpec;
+  }
+
+  /**
+   * Optional. Ray metrics configurations.
+   * @param rayMetricSpec rayMetricSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RaySpec setRayMetricSpec(GoogleCloudAiplatformV1beta1RayMetricSpec rayMetricSpec) {
+    this.rayMetricSpec = rayMetricSpec;
     return this;
   }
 

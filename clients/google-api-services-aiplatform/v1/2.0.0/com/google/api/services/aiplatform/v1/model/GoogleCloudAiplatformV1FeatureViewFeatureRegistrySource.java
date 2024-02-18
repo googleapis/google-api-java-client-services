@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1FeatureViewFeatureRegistrySource exten
   private java.util.List<GoogleCloudAiplatformV1FeatureViewFeatureRegistrySourceFeatureGroup> featureGroups;
 
   /**
+   * Optional. The project number of the parent project of the Feature Groups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long projectNumber;
+
+  /**
    * Required. List of features that need to be synced to Online Store.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudAiplatformV1FeatureViewFeatureRegistrySource exten
    */
   public GoogleCloudAiplatformV1FeatureViewFeatureRegistrySource setFeatureGroups(java.util.List<GoogleCloudAiplatformV1FeatureViewFeatureRegistrySourceFeatureGroup> featureGroups) {
     this.featureGroups = featureGroups;
+    return this;
+  }
+
+  /**
+   * Optional. The project number of the parent project of the Feature Groups.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProjectNumber() {
+    return projectNumber;
+  }
+
+  /**
+   * Optional. The project number of the parent project of the Feature Groups.
+   * @param projectNumber projectNumber or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureViewFeatureRegistrySource setProjectNumber(java.lang.Long projectNumber) {
+    this.projectNumber = projectNumber;
     return this;
   }
 

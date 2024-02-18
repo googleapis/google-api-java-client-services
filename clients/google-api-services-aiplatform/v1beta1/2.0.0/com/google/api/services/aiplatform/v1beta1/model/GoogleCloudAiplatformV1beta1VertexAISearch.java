@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Describes the output of the ExportEndpoint.
+ * Retrieve from Vertex AI Search datastore for grounding. See https://cloud.google.com/vertex-ai-
+ * search-and-conversation
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,43 +28,43 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1ExportEndpointResponseOutputInfo extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1VertexAISearch extends com.google.api.client.json.GenericJson {
 
   /**
-   * If the Endpoint is being exported to BigQuery this is the full path of the BigQuery ML model
-   * created.
+   * Required. Fully-qualified Vertex AI Search's datastore resource ID.
+   * projects/<>/locations/<>/collections/<>/dataStores/<>
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1BigQueryDestination bigQueryDestination;
+  private java.lang.String datastore;
 
   /**
-   * If the Endpoint is being exported to BigQuery this is the full path of the BigQuery ML model
-   * created.
+   * Required. Fully-qualified Vertex AI Search's datastore resource ID.
+   * projects/<>/locations/<>/collections/<>/dataStores/<>
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1BigQueryDestination getBigQueryDestination() {
-    return bigQueryDestination;
+  public java.lang.String getDatastore() {
+    return datastore;
   }
 
   /**
-   * If the Endpoint is being exported to BigQuery this is the full path of the BigQuery ML model
-   * created.
-   * @param bigQueryDestination bigQueryDestination or {@code null} for none
+   * Required. Fully-qualified Vertex AI Search's datastore resource ID.
+   * projects/<>/locations/<>/collections/<>/dataStores/<>
+   * @param datastore datastore or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1ExportEndpointResponseOutputInfo setBigQueryDestination(GoogleCloudAiplatformV1beta1BigQueryDestination bigQueryDestination) {
-    this.bigQueryDestination = bigQueryDestination;
+  public GoogleCloudAiplatformV1beta1VertexAISearch setDatastore(java.lang.String datastore) {
+    this.datastore = datastore;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ExportEndpointResponseOutputInfo set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1ExportEndpointResponseOutputInfo) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1VertexAISearch set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1VertexAISearch) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ExportEndpointResponseOutputInfo clone() {
-    return (GoogleCloudAiplatformV1beta1ExportEndpointResponseOutputInfo) super.clone();
+  public GoogleCloudAiplatformV1beta1VertexAISearch clone() {
+    return (GoogleCloudAiplatformV1beta1VertexAISearch) super.clone();
   }
 
 }

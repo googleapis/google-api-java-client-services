@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Details of EndpointService.ExportEndpoint operation.
+ * Configuration for the Ray metrics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1ExportEndpointOperationMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1RayMetricSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The common part of the operation metadata.
+   * Optional. Flag to disable the Ray metrics collection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1GenericOperationMetadata genericMetadata;
+  private java.lang.Boolean disabled;
 
   /**
-   * The common part of the operation metadata.
+   * Optional. Flag to disable the Ray metrics collection.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1GenericOperationMetadata getGenericMetadata() {
-    return genericMetadata;
+  public java.lang.Boolean getDisabled() {
+    return disabled;
   }
 
   /**
-   * The common part of the operation metadata.
-   * @param genericMetadata genericMetadata or {@code null} for none
+   * Optional. Flag to disable the Ray metrics collection.
+   * @param disabled disabled or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1ExportEndpointOperationMetadata setGenericMetadata(GoogleCloudAiplatformV1beta1GenericOperationMetadata genericMetadata) {
-    this.genericMetadata = genericMetadata;
+  public GoogleCloudAiplatformV1beta1RayMetricSpec setDisabled(java.lang.Boolean disabled) {
+    this.disabled = disabled;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ExportEndpointOperationMetadata set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1ExportEndpointOperationMetadata) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1RayMetricSpec set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1RayMetricSpec) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ExportEndpointOperationMetadata clone() {
-    return (GoogleCloudAiplatformV1beta1ExportEndpointOperationMetadata) super.clone();
+  public GoogleCloudAiplatformV1beta1RayMetricSpec clone() {
+    return (GoogleCloudAiplatformV1beta1RayMetricSpec) super.clone();
   }
 
 }

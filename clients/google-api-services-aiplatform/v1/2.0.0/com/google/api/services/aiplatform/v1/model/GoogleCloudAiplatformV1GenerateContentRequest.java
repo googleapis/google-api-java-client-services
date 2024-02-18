@@ -62,8 +62,7 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
   /**
    * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
    * piece of code that enables the system to interact with external systems to perform an action,
-   * or set of actions, outside of knowledge and scope of the model. The only supported tool is
-   * currently `Function`
+   * or set of actions, outside of knowledge and scope of the model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,8 +128,7 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
   /**
    * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
    * piece of code that enables the system to interact with external systems to perform an action,
-   * or set of actions, outside of knowledge and scope of the model. The only supported tool is
-   * currently `Function`
+   * or set of actions, outside of knowledge and scope of the model.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1Tool> getTools() {
@@ -140,8 +138,7 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
   /**
    * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
    * piece of code that enables the system to interact with external systems to perform an action,
-   * or set of actions, outside of knowledge and scope of the model. The only supported tool is
-   * currently `Function`
+   * or set of actions, outside of knowledge and scope of the model.
    * @param tools tools or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentRequest setTools(java.util.List<GoogleCloudAiplatformV1Tool> tools) {

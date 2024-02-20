@@ -44,6 +44,13 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
   private Date deprecationDate;
 
   /**
+   * User-friendly display name, e.g. 'Node.js 12', etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Date when Runtime is end of support.
    * The value may be {@code null}.
    */
@@ -116,6 +123,23 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
    */
   public Runtime setDeprecationDate(Date deprecationDate) {
     this.deprecationDate = deprecationDate;
+    return this;
+  }
+
+  /**
+   * User-friendly display name, e.g. 'Node.js 12', etc.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * User-friendly display name, e.g. 'Node.js 12', etc.
+   * @param displayName displayName or {@code null} for none
+   */
+  public Runtime setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 

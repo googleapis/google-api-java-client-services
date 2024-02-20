@@ -32,7 +32,7 @@ public final class AttributionSettings extends com.google.api.client.json.Generi
 
   /**
    * Required. Lookback windows (in days) used for attribution in this source. Supported values are
-   * 7, 30, 60, 90.
+   * 7, 30, 40.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class AttributionSettings extends com.google.api.client.json.Generi
 
   /**
    * Required. Lookback windows (in days) used for attribution in this source. Supported values are
-   * 7, 30, 60, 90.
+   * 7, 30, 40.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAttributionLookbackWindowInDays() {
@@ -65,7 +65,7 @@ public final class AttributionSettings extends com.google.api.client.json.Generi
 
   /**
    * Required. Lookback windows (in days) used for attribution in this source. Supported values are
-   * 7, 30, 60, 90.
+   * 7, 30, 40.
    * @param attributionLookbackWindowInDays attributionLookbackWindowInDays or {@code null} for none
    */
   public AttributionSettings setAttributionLookbackWindowInDays(java.lang.Integer attributionLookbackWindowInDays) {

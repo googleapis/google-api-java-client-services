@@ -32,7 +32,7 @@ public final class RegionalTaxRateInfo extends com.google.api.client.json.Generi
 
   /**
    * You must tell us if your app contains streaming products to correctly charge US state and local
-   * sales tax. Field only supported in United States.
+   * sales tax. Field only supported in the United States.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class RegionalTaxRateInfo extends com.google.api.client.json.Generi
 
   /**
    * You must tell us if your app contains streaming products to correctly charge US state and local
-   * sales tax. Field only supported in United States.
+   * sales tax. Field only supported in the United States.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEligibleForStreamingServiceTaxRate() {
@@ -67,7 +67,7 @@ public final class RegionalTaxRateInfo extends com.google.api.client.json.Generi
 
   /**
    * You must tell us if your app contains streaming products to correctly charge US state and local
-   * sales tax. Field only supported in United States.
+   * sales tax. Field only supported in the United States.
    * @param eligibleForStreamingServiceTaxRate eligibleForStreamingServiceTaxRate or {@code null} for none
    */
   public RegionalTaxRateInfo setEligibleForStreamingServiceTaxRate(java.lang.Boolean eligibleForStreamingServiceTaxRate) {

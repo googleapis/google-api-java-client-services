@@ -31,9 +31,7 @@ package com.google.api.services.androidpublisher.model;
 public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Whether this subscription is archived. Archived subscriptions are not available to
-   * any subscriber any longer, cannot be updated, and are not returned in list requests unless the
-   * show archived flag is passed in.
+   * Output only. Deprecated: subscription archiving is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,9 +84,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private SubscriptionTaxAndComplianceSettings taxAndComplianceSettings;
 
   /**
-   * Output only. Whether this subscription is archived. Archived subscriptions are not available to
-   * any subscriber any longer, cannot be updated, and are not returned in list requests unless the
-   * show archived flag is passed in.
+   * Output only. Deprecated: subscription archiving is not supported.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getArchived() {
@@ -96,9 +92,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether this subscription is archived. Archived subscriptions are not available to
-   * any subscriber any longer, cannot be updated, and are not returned in list requests unless the
-   * show archived flag is passed in.
+   * Output only. Deprecated: subscription archiving is not supported.
    * @param archived archived or {@code null} for none
    */
   public Subscription setArchived(java.lang.Boolean archived) {

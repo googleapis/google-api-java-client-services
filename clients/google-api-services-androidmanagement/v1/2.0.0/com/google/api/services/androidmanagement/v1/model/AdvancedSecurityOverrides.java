@@ -60,6 +60,15 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   private java.lang.String googlePlayProtectVerifyApps;
 
   /**
+   * Optional. Controls Memory Tagging Extension (MTE)
+   * (https://source.android.com/docs/security/test/memory-safety/arm-mte) on the device. The device
+   * needs to be rebooted to apply changes to the MTE policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mtePolicy;
+
+  /**
    * Personal apps that can read work profile notifications using a NotificationListenerService (htt
    * ps://developer.android.com/reference/android/service/notification/NotificationListenerService).
    * By default, no personal apps (aside from system apps) can read work notifications. Each value
@@ -141,6 +150,27 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
    */
   public AdvancedSecurityOverrides setGooglePlayProtectVerifyApps(java.lang.String googlePlayProtectVerifyApps) {
     this.googlePlayProtectVerifyApps = googlePlayProtectVerifyApps;
+    return this;
+  }
+
+  /**
+   * Optional. Controls Memory Tagging Extension (MTE)
+   * (https://source.android.com/docs/security/test/memory-safety/arm-mte) on the device. The device
+   * needs to be rebooted to apply changes to the MTE policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMtePolicy() {
+    return mtePolicy;
+  }
+
+  /**
+   * Optional. Controls Memory Tagging Extension (MTE)
+   * (https://source.android.com/docs/security/test/memory-safety/arm-mte) on the device. The device
+   * needs to be rebooted to apply changes to the MTE policy.
+   * @param mtePolicy mtePolicy or {@code null} for none
+   */
+  public AdvancedSecurityOverrides setMtePolicy(java.lang.String mtePolicy) {
+    this.mtePolicy = mtePolicy;
     return this;
   }
 

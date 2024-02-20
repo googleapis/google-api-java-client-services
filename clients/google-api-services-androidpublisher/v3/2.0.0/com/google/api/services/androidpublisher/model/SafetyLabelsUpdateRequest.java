@@ -33,9 +33,9 @@ public final class SafetyLabelsUpdateRequest extends com.google.api.client.json.
   /**
    * Required. Contents of the CSV file containing Data Safety responses. For the format of this
    * file, see the Help Center documentation at https://support.google.com/googleplay/android-
-   * developer/answer/10787469?hl=en#zippy=%2Cunderstand-the-csv-format To download an up to date
+   * developer/answer/10787469?#zippy=%2Cunderstand-the-csv-format To download an up to date
    * template, follow the steps at https://support.google.com/googleplay/android-
-   * developer/answer/10787469?hl=en#zippy=%2Cexport-to-a-csv-file
+   * developer/answer/10787469?#zippy=%2Cexport-to-a-csv-file
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,9 +44,9 @@ public final class SafetyLabelsUpdateRequest extends com.google.api.client.json.
   /**
    * Required. Contents of the CSV file containing Data Safety responses. For the format of this
    * file, see the Help Center documentation at https://support.google.com/googleplay/android-
-   * developer/answer/10787469?hl=en#zippy=%2Cunderstand-the-csv-format To download an up to date
+   * developer/answer/10787469?#zippy=%2Cunderstand-the-csv-format To download an up to date
    * template, follow the steps at https://support.google.com/googleplay/android-
-   * developer/answer/10787469?hl=en#zippy=%2Cexport-to-a-csv-file
+   * developer/answer/10787469?#zippy=%2Cexport-to-a-csv-file
    * @return value or {@code null} for none
    */
   public java.lang.String getSafetyLabels() {
@@ -56,9 +56,9 @@ public final class SafetyLabelsUpdateRequest extends com.google.api.client.json.
   /**
    * Required. Contents of the CSV file containing Data Safety responses. For the format of this
    * file, see the Help Center documentation at https://support.google.com/googleplay/android-
-   * developer/answer/10787469?hl=en#zippy=%2Cunderstand-the-csv-format To download an up to date
+   * developer/answer/10787469?#zippy=%2Cunderstand-the-csv-format To download an up to date
    * template, follow the steps at https://support.google.com/googleplay/android-
-   * developer/answer/10787469?hl=en#zippy=%2Cexport-to-a-csv-file
+   * developer/answer/10787469?#zippy=%2Cexport-to-a-csv-file
    * @param safetyLabels safetyLabels or {@code null} for none
    */
   public SafetyLabelsUpdateRequest setSafetyLabels(java.lang.String safetyLabels) {

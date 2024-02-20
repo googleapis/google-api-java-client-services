@@ -11153,9 +11153,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public class Subscriptions {
 
       /**
-       * Archives a subscription. Can only be done if at least one base plan was active in the past, and
-       * no base plan is available for new or existing subscribers currently. This action is irreversible,
-       * and the subscription ID will remain reserved.
+       * Deprecated: subscription archiving is not supported.
        *
        * Create a request for the method "subscriptions.archive".
        *
@@ -11178,9 +11176,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/subscriptions/{productId}:archive";
 
         /**
-         * Archives a subscription. Can only be done if at least one base plan was active in the past, and
-         * no base plan is available for new or existing subscribers currently. This action is
-         * irreversible, and the subscription ID will remain reserved.
+         * Deprecated: subscription archiving is not supported.
          *
          * Create a request for the method "subscriptions.archive".
          *
@@ -12223,21 +12219,17 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * Whether archived subscriptions should be included in the response. Defaults to false.
-         */
+        /** Deprecated: subscription archiving is not supported. */
         @com.google.api.client.util.Key
         private java.lang.Boolean showArchived;
 
-        /** Whether archived subscriptions should be included in the response. Defaults to false.
+        /** Deprecated: subscription archiving is not supported.
          */
         public java.lang.Boolean getShowArchived() {
           return showArchived;
         }
 
-        /**
-         * Whether archived subscriptions should be included in the response. Defaults to false.
-         */
+        /** Deprecated: subscription archiving is not supported. */
         public List setShowArchived(java.lang.Boolean showArchived) {
           this.showArchived = showArchived;
           return this;

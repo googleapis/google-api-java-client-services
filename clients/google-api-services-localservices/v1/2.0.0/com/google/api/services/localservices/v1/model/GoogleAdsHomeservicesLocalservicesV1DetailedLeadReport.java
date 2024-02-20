@@ -87,6 +87,13 @@ public final class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport extend
   private java.lang.String geo;
 
   /**
+   * Unique identifier of a Detailed Lead Report.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long googleAdsLeadId;
+
+  /**
    * Lead category (e.g. hvac, plumber)
    * The value may be {@code null}.
    */
@@ -101,7 +108,7 @@ public final class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport extend
   private String leadCreationTimestamp;
 
   /**
-   * Unique identifier of a Detailed Lead Report.
+   * Deprecated in favor of google_ads_lead_id. Unique identifier of a Detailed Lead Report.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -279,6 +286,23 @@ public final class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport extend
   }
 
   /**
+   * Unique identifier of a Detailed Lead Report.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getGoogleAdsLeadId() {
+    return googleAdsLeadId;
+  }
+
+  /**
+   * Unique identifier of a Detailed Lead Report.
+   * @param googleAdsLeadId googleAdsLeadId or {@code null} for none
+   */
+  public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport setGoogleAdsLeadId(java.lang.Long googleAdsLeadId) {
+    this.googleAdsLeadId = googleAdsLeadId;
+    return this;
+  }
+
+  /**
    * Lead category (e.g. hvac, plumber)
    * @return value or {@code null} for none
    */
@@ -313,7 +337,7 @@ public final class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport extend
   }
 
   /**
-   * Unique identifier of a Detailed Lead Report.
+   * Deprecated in favor of google_ads_lead_id. Unique identifier of a Detailed Lead Report.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLeadId() {
@@ -321,7 +345,7 @@ public final class GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport extend
   }
 
   /**
-   * Unique identifier of a Detailed Lead Report.
+   * Deprecated in favor of google_ads_lead_id. Unique identifier of a Detailed Lead Report.
    * @param leadId leadId or {@code null} for none
    */
   public GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport setLeadId(java.lang.Long leadId) {

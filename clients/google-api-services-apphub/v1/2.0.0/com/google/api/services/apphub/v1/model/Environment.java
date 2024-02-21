@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.apphub.v1alpha.model;
+package com.google.api.services.apphub.v1.model;
 
 /**
  * Environment of the Application, Service, or Workload
@@ -30,38 +30,11 @@ package com.google.api.services.apphub.v1alpha.model;
 public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Environment name. Can contain only lowercase letters, numeric characters,
-   * underscores, and dashes. Can have a maximum length of 63 characters.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String environment;
-
-  /**
    * Required. Environment Type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
-
-  /**
-   * Optional. Environment name. Can contain only lowercase letters, numeric characters,
-   * underscores, and dashes. Can have a maximum length of 63 characters.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEnvironment() {
-    return environment;
-  }
-
-  /**
-   * Optional. Environment name. Can contain only lowercase letters, numeric characters,
-   * underscores, and dashes. Can have a maximum length of 63 characters.
-   * @param environment environment or {@code null} for none
-   */
-  public Environment setEnvironment(java.lang.String environment) {
-    this.environment = environment;
-    return this;
-  }
 
   /**
    * Required. Environment Type.

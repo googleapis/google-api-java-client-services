@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.apphub.v1alpha.model;
+package com.google.api.services.apphub.v1.model;
 
 /**
  * Application defines the governance boundary for App Hub Entities that perform a logical end-to-

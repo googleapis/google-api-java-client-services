@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.apphub.v1alpha.model;
+package com.google.api.services.apphub.v1.model;
 
 /**
- * Contact information of stakeholders.
+ * Response for ListServices.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Hub API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.apphub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ContactInfo extends com.google.api.client.json.GenericJson {
+public final class ListServicesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Communication channel of the contacts.
+   * A token identifying a page of results the server should return.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Channel channel;
+  private java.lang.String nextPageToken;
 
   /**
-   * Optional. Contact's name. Can have a maximum length of 63 characters.
+   * List of Services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String displayName;
+  private java.util.List<Service> services;
 
   /**
-   * Required. Email address of the contacts.
+   * Locations that could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String email;
+  private java.util.List<java.lang.String> unreachable;
 
   /**
-   * Optional. Communication channel of the contacts.
+   * A token identifying a page of results the server should return.
    * @return value or {@code null} for none
    */
-  public Channel getChannel() {
-    return channel;
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
   }
 
   /**
-   * Optional. Communication channel of the contacts.
-   * @param channel channel or {@code null} for none
+   * A token identifying a page of results the server should return.
+   * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ContactInfo setChannel(Channel channel) {
-    this.channel = channel;
+  public ListServicesResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * Optional. Contact's name. Can have a maximum length of 63 characters.
+   * List of Services.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDisplayName() {
-    return displayName;
+  public java.util.List<Service> getServices() {
+    return services;
   }
 
   /**
-   * Optional. Contact's name. Can have a maximum length of 63 characters.
-   * @param displayName displayName or {@code null} for none
+   * List of Services.
+   * @param services services or {@code null} for none
    */
-  public ContactInfo setDisplayName(java.lang.String displayName) {
-    this.displayName = displayName;
+  public ListServicesResponse setServices(java.util.List<Service> services) {
+    this.services = services;
     return this;
   }
 
   /**
-   * Required. Email address of the contacts.
+   * Locations that could not be reached.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEmail() {
-    return email;
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
   }
 
   /**
-   * Required. Email address of the contacts.
-   * @param email email or {@code null} for none
+   * Locations that could not be reached.
+   * @param unreachable unreachable or {@code null} for none
    */
-  public ContactInfo setEmail(java.lang.String email) {
-    this.email = email;
+  public ListServicesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 
   @Override
-  public ContactInfo set(String fieldName, Object value) {
-    return (ContactInfo) super.set(fieldName, value);
+  public ListServicesResponse set(String fieldName, Object value) {
+    return (ListServicesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ContactInfo clone() {
-    return (ContactInfo) super.clone();
+  public ListServicesResponse clone() {
+    return (ListServicesResponse) super.clone();
   }
 
 }

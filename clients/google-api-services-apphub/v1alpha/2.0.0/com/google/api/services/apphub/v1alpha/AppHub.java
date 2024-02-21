@@ -935,17 +935,26 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
-          /** Required. The Application identifier. */
+          /**
+           * Required. The Application identifier. Must contain only lowercase letters, numbers or
+           * hyphens, with the first character a letter, the last a letter or a number, and a 63
+           * character maximum.
+           */
           @com.google.api.client.util.Key
           private java.lang.String applicationId;
 
-          /** Required. The Application identifier.
+          /** Required. The Application identifier. Must contain only lowercase letters, numbers or hyphens, with
+         the first character a letter, the last a letter or a number, and a 63 character maximum.
            */
           public java.lang.String getApplicationId() {
             return applicationId;
           }
 
-          /** Required. The Application identifier. */
+          /**
+           * Required. The Application identifier. Must contain only lowercase letters, numbers or
+           * hyphens, with the first character a letter, the last a letter or a number, and a 63
+           * character maximum.
+           */
           public Create setApplicationId(java.lang.String applicationId) {
             this.applicationId = applicationId;
             return this;
@@ -2419,17 +2428,26 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               return this;
             }
 
-            /** Required. The Service identifier. */
+            /**
+             * Required. The Service identifier. Must contain only lowercase letters, numbers or
+             * hyphens, with the first character a letter, the last a letter or a number, and a 63
+             * character maximum.
+             */
             @com.google.api.client.util.Key
             private java.lang.String serviceId;
 
-            /** Required. The Service identifier.
+            /** Required. The Service identifier. Must contain only lowercase letters, numbers or hyphens, with the
+           first character a letter, the last a letter or a number, and a 63 character maximum.
              */
             public java.lang.String getServiceId() {
               return serviceId;
             }
 
-            /** Required. The Service identifier. */
+            /**
+             * Required. The Service identifier. Must contain only lowercase letters, numbers or
+             * hyphens, with the first character a letter, the last a letter or a number, and a 63
+             * character maximum.
+             */
             public Create setServiceId(java.lang.String serviceId) {
               this.serviceId = serviceId;
               return this;
@@ -3367,17 +3385,26 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               return this;
             }
 
-            /** Required. The Workload identifier. */
+            /**
+             * Required. The Workload identifier. Must contain only lowercase letters, numbers or
+             * hyphens, with the first character a letter, the last a letter or a number, and a 63
+             * character maximum.
+             */
             @com.google.api.client.util.Key
             private java.lang.String workloadId;
 
-            /** Required. The Workload identifier.
+            /** Required. The Workload identifier. Must contain only lowercase letters, numbers or hyphens, with
+           the first character a letter, the last a letter or a number, and a 63 character maximum.
              */
             public java.lang.String getWorkloadId() {
               return workloadId;
             }
 
-            /** Required. The Workload identifier. */
+            /**
+             * Required. The Workload identifier. Must contain only lowercase letters, numbers or
+             * hyphens, with the first character a letter, the last a letter or a number, and a 63
+             * character maximum.
+             */
             public Create setWorkloadId(java.lang.String workloadId) {
               this.workloadId = workloadId;
               return this;
@@ -4497,7 +4524,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Lists discovered services in a host project and location.
+         * Lists discovered services that can be added to an application in a host project and location.
          *
          * Create a request for the method "discoveredServices.list".
          *
@@ -4521,7 +4548,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists discovered services in a host project and location.
+           * Lists discovered services that can be added to an application in a host project and location.
            *
            * Create a request for the method "discoveredServices.list".
            *
@@ -5076,7 +5103,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Lists discovered workloads in a host project and location.
+         * Lists discovered workloads that can be added to an application in a host project and location.
          *
          * Create a request for the method "discoveredWorkloads.list".
          *
@@ -5100,7 +5127,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists discovered workloads in a host project and location.
+           * Lists discovered workloads that can be added to an application in a host project and location.
            *
            * Create a request for the method "discoveredWorkloads.list".
            *

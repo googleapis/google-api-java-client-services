@@ -30,21 +30,30 @@ package com.google.api.services.apphub.v1alpha.model;
 public final class Criticality extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Criticality level.
+   * Optional. Criticality level. Can contain only lowercase letters, numeric characters,
+   * underscores, and dashes. Can have a maximum length of 63 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String level;
 
   /**
-   * Required. Indicates mission-critical Application, Service, or Workload.
+   * Optional. Indicates mission-critical Application, Service, or Workload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean missionCritical;
 
   /**
-   * Required. Criticality level.
+   * Required. Criticality Type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
+   * Optional. Criticality level. Can contain only lowercase letters, numeric characters,
+   * underscores, and dashes. Can have a maximum length of 63 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getLevel() {
@@ -52,7 +61,8 @@ public final class Criticality extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Criticality level.
+   * Optional. Criticality level. Can contain only lowercase letters, numeric characters,
+   * underscores, and dashes. Can have a maximum length of 63 characters.
    * @param level level or {@code null} for none
    */
   public Criticality setLevel(java.lang.String level) {
@@ -61,7 +71,7 @@ public final class Criticality extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Indicates mission-critical Application, Service, or Workload.
+   * Optional. Indicates mission-critical Application, Service, or Workload.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMissionCritical() {
@@ -69,11 +79,28 @@ public final class Criticality extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Indicates mission-critical Application, Service, or Workload.
+   * Optional. Indicates mission-critical Application, Service, or Workload.
    * @param missionCritical missionCritical or {@code null} for none
    */
   public Criticality setMissionCritical(java.lang.Boolean missionCritical) {
     this.missionCritical = missionCritical;
+    return this;
+  }
+
+  /**
+   * Required. Criticality Type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Required. Criticality Type.
+   * @param type type or {@code null} for none
+   */
+  public Criticality setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.apphub.v1alpha.model;
+package com.google.api.services.apphub.v1.model;
 
 /**
  * Service is an App Hub data model that contains a discovered service, which represents a

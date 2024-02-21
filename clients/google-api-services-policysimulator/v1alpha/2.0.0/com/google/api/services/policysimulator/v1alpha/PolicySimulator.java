@@ -1875,154 +1875,6 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
     public class Locations {
 
       /**
-       * GenerateOrgPolicyViolationsPreview generates an OrgPolicyViolationsPreview for the proposed
-       * changes in the provided OrgPolicyViolationsPreview.OrgPolicyOverlay. The changes to OrgPolicy are
-       * specified by this `OrgPolicyOverlay`. The resources to scan are inferred from these specified
-       * changes.
-       *
-       * Create a request for the method "locations.orgPolicyViolationsPreviews".
-       *
-       * This request holds the parameters needed by the policysimulator server.  After setting any
-       * optional parameters, call the {@link OrgPolicyViolationsPreviewsRequest#execute()} method to
-       * invoke the remote operation.
-       *
-       * @param parent Required. The organization under which this OrgPolicyViolationsPreview will be created. Example:
-       *        `organizations/my-example-org/locations/global`
-       * @param content the {@link com.google.api.services.policysimulator.v1alpha.model.GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreview}
-       * @return the request
-       */
-      public OrgPolicyViolationsPreviewsRequest orgPolicyViolationsPreviews(java.lang.String parent, com.google.api.services.policysimulator.v1alpha.model.GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreview content) throws java.io.IOException {
-        OrgPolicyViolationsPreviewsRequest result = new OrgPolicyViolationsPreviewsRequest(parent, content);
-        initialize(result);
-        return result;
-      }
-
-      public class OrgPolicyViolationsPreviewsRequest extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation> {
-
-        private static final String REST_PATH = "v1alpha/{+parent}/orgPolicyViolationsPreviews";
-
-        private final java.util.regex.Pattern PARENT_PATTERN =
-            java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
-
-        /**
-         * GenerateOrgPolicyViolationsPreview generates an OrgPolicyViolationsPreview for the proposed
-         * changes in the provided OrgPolicyViolationsPreview.OrgPolicyOverlay. The changes to OrgPolicy
-         * are specified by this `OrgPolicyOverlay`. The resources to scan are inferred from these
-         * specified changes.
-         *
-         * Create a request for the method "locations.orgPolicyViolationsPreviews".
-         *
-         * This request holds the parameters needed by the the policysimulator server.  After setting any
-         * optional parameters, call the {@link OrgPolicyViolationsPreviewsRequest#execute()} method to
-         * invoke the remote operation. <p> {@link OrgPolicyViolationsPreviewsRequest#initialize(com.googl
-         * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
-         * this instance immediately after invoking the constructor. </p>
-         *
-         * @param parent Required. The organization under which this OrgPolicyViolationsPreview will be created. Example:
-       *        `organizations/my-example-org/locations/global`
-         * @param content the {@link com.google.api.services.policysimulator.v1alpha.model.GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreview}
-         * @since 1.13
-         */
-        protected OrgPolicyViolationsPreviewsRequest(java.lang.String parent, com.google.api.services.policysimulator.v1alpha.model.GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreview content) {
-          super(PolicySimulator.this, "POST", REST_PATH, content, com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation.class);
-          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^organizations/[^/]+/locations/[^/]+$");
-          }
-        }
-
-        @Override
-        public OrgPolicyViolationsPreviewsRequest set$Xgafv(java.lang.String $Xgafv) {
-          return (OrgPolicyViolationsPreviewsRequest) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public OrgPolicyViolationsPreviewsRequest setAccessToken(java.lang.String accessToken) {
-          return (OrgPolicyViolationsPreviewsRequest) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public OrgPolicyViolationsPreviewsRequest setAlt(java.lang.String alt) {
-          return (OrgPolicyViolationsPreviewsRequest) super.setAlt(alt);
-        }
-
-        @Override
-        public OrgPolicyViolationsPreviewsRequest setCallback(java.lang.String callback) {
-          return (OrgPolicyViolationsPreviewsRequest) super.setCallback(callback);
-        }
-
-        @Override
-        public OrgPolicyViolationsPreviewsRequest setFields(java.lang.String fields) {
-          return (OrgPolicyViolationsPreviewsRequest) super.setFields(fields);
-        }
-
-        @Override
-        public OrgPolicyViolationsPreviewsRequest setKey(java.lang.String key) {
-          return (OrgPolicyViolationsPreviewsRequest) super.setKey(key);
-        }
-
-        @Override
-        public OrgPolicyViolationsPreviewsRequest setOauthToken(java.lang.String oauthToken) {
-          return (OrgPolicyViolationsPreviewsRequest) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public OrgPolicyViolationsPreviewsRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (OrgPolicyViolationsPreviewsRequest) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public OrgPolicyViolationsPreviewsRequest setQuotaUser(java.lang.String quotaUser) {
-          return (OrgPolicyViolationsPreviewsRequest) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public OrgPolicyViolationsPreviewsRequest setUploadType(java.lang.String uploadType) {
-          return (OrgPolicyViolationsPreviewsRequest) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public OrgPolicyViolationsPreviewsRequest setUploadProtocol(java.lang.String uploadProtocol) {
-          return (OrgPolicyViolationsPreviewsRequest) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * Required. The organization under which this OrgPolicyViolationsPreview will be created.
-         * Example: `organizations/my-example-org/locations/global`
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** Required. The organization under which this OrgPolicyViolationsPreview will be created. Example:
-       `organizations/my-example-org/locations/global`
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /**
-         * Required. The organization under which this OrgPolicyViolationsPreview will be created.
-         * Example: `organizations/my-example-org/locations/global`
-         */
-        public OrgPolicyViolationsPreviewsRequest setParent(java.lang.String parent) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^organizations/[^/]+/locations/[^/]+$");
-          }
-          this.parent = parent;
-          return this;
-        }
-
-        @Override
-        public OrgPolicyViolationsPreviewsRequest set(String parameterName, Object value) {
-          return (OrgPolicyViolationsPreviewsRequest) super.set(parameterName, value);
-        }
-      }
-
-      /**
        * An accessor for creating requests from the OrgPolicyViolationsPreviews collection.
        *
        * <p>The typical use is:</p>
@@ -2042,6 +1894,175 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
        */
       public class OrgPolicyViolationsPreviews {
 
+        /**
+         * CreateOrgPolicyViolationsPreview creates an OrgPolicyViolationsPreview for the proposed changes
+         * in the provided OrgPolicyViolationsPreview.OrgPolicyOverlay. The changes to OrgPolicy are
+         * specified by this `OrgPolicyOverlay`. The resources to scan are inferred from these specified
+         * changes.
+         *
+         * Create a request for the method "orgPolicyViolationsPreviews.create".
+         *
+         * This request holds the parameters needed by the policysimulator server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The organization under which this OrgPolicyViolationsPreview will be created. Example:
+         *        `organizations/my-example-org/locations/global`
+         * @param content the {@link com.google.api.services.policysimulator.v1alpha.model.GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreview}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.policysimulator.v1alpha.model.GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreview content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends PolicySimulatorRequest<com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/orgPolicyViolationsPreviews";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * CreateOrgPolicyViolationsPreview creates an OrgPolicyViolationsPreview for the proposed changes
+           * in the provided OrgPolicyViolationsPreview.OrgPolicyOverlay. The changes to OrgPolicy are
+           * specified by this `OrgPolicyOverlay`. The resources to scan are inferred from these specified
+           * changes.
+           *
+           * Create a request for the method "orgPolicyViolationsPreviews.create".
+           *
+           * This request holds the parameters needed by the the policysimulator server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The organization under which this OrgPolicyViolationsPreview will be created. Example:
+         *        `organizations/my-example-org/locations/global`
+           * @param content the {@link com.google.api.services.policysimulator.v1alpha.model.GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreview}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.policysimulator.v1alpha.model.GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreview content) {
+            super(PolicySimulator.this, "POST", REST_PATH, content, com.google.api.services.policysimulator.v1alpha.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The organization under which this OrgPolicyViolationsPreview will be created.
+           * Example: `organizations/my-example-org/locations/global`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The organization under which this OrgPolicyViolationsPreview will be created. Example:
+         `organizations/my-example-org/locations/global`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The organization under which this OrgPolicyViolationsPreview will be created.
+           * Example: `organizations/my-example-org/locations/global`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An optional user-specified ID for the OrgPolicyViolationsPreview. If not
+           * provided, a random ID will be generated.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orgPolicyViolationsPreviewId;
+
+          /** Optional. An optional user-specified ID for the OrgPolicyViolationsPreview. If not provided, a
+         random ID will be generated.
+           */
+          public java.lang.String getOrgPolicyViolationsPreviewId() {
+            return orgPolicyViolationsPreviewId;
+          }
+
+          /**
+           * Optional. An optional user-specified ID for the OrgPolicyViolationsPreview. If not
+           * provided, a random ID will be generated.
+           */
+          public Create setOrgPolicyViolationsPreviewId(java.lang.String orgPolicyViolationsPreviewId) {
+            this.orgPolicyViolationsPreviewId = orgPolicyViolationsPreviewId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
         /**
          * GenerateOrgPolicyViolationsPreview generates an OrgPolicyViolationsPreview for the proposed
          * changes in the provided OrgPolicyViolationsPreview.OrgPolicyOverlay. The changes to OrgPolicy are

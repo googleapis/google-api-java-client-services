@@ -530,9 +530,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * @param scope Required. Only IAM policies on or below the scope will be returned. This can only be an organization
      *        number (such as "organizations/123"), a folder number (such as "folders/123"), a project
      *        ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To
-     *        know how to get organization id, visit [here ](https://cloud.google.com/resource-
+     *        know how to get organization ID, visit [here ](https://cloud.google.com/resource-
      *        manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how
-     *        to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs
+     *        to get folder or project ID, visit [here ](https://cloud.google.com/resource-manager/docs
      *        /creating-managing-folders#viewing_or_listing_folders_and_projects).
      * @return the request
      */
@@ -563,9 +563,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * @param scope Required. Only IAM policies on or below the scope will be returned. This can only be an organization
      *        number (such as "organizations/123"), a folder number (such as "folders/123"), a project
      *        ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To
-     *        know how to get organization id, visit [here ](https://cloud.google.com/resource-
+     *        know how to get organization ID, visit [here ](https://cloud.google.com/resource-
      *        manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how
-     *        to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs
+     *        to get folder or project ID, visit [here ](https://cloud.google.com/resource-manager/docs
      *        /creating-managing-folders#viewing_or_listing_folders_and_projects).
        * @since 1.13
        */
@@ -648,9 +648,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. Only IAM policies on or below the scope will be returned. This can only be an
        * organization number (such as "organizations/123"), a folder number (such as "folders/123"),
        * a project ID (such as "projects/my-project-id"), or a project number (such as
-       * "projects/12345"). To know how to get organization id, visit [here
+       * "projects/12345"). To know how to get organization ID, visit [here
        * ](https://cloud.google.com/resource-manager/docs/creating-managing-
-       * organization#retrieving_your_organization_id). To know how to get folder or project id,
+       * organization#retrieving_your_organization_id). To know how to get folder or project ID,
        * visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
        * folders#viewing_or_listing_folders_and_projects).
        */
@@ -660,9 +660,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /** Required. Only IAM policies on or below the scope will be returned. This can only be an
      organization number (such as "organizations/123"), a folder number (such as "folders/123"), a
      project ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To
-     know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs
+     know how to get organization ID, visit [here ](https://cloud.google.com/resource-manager/docs
      /creating-managing-organization#retrieving_your_organization_id). To know how to get folder or
-     project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     project ID, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
      folders#viewing_or_listing_folders_and_projects).
        */
       public java.lang.String getScope() {
@@ -673,9 +673,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. Only IAM policies on or below the scope will be returned. This can only be an
        * organization number (such as "organizations/123"), a folder number (such as "folders/123"),
        * a project ID (such as "projects/my-project-id"), or a project number (such as
-       * "projects/12345"). To know how to get organization id, visit [here
+       * "projects/12345"). To know how to get organization ID, visit [here
        * ](https://cloud.google.com/resource-manager/docs/creating-managing-
-       * organization#retrieving_your_organization_id). To know how to get folder or project id,
+       * organization#retrieving_your_organization_id). To know how to get folder or project ID,
        * visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
        * folders#viewing_or_listing_folders_and_projects).
        */
@@ -2600,9 +2600,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * @param scope Required. The relative name of the root asset. Only resources and IAM policies within the scope will
      *        be analyzed. This can only be an organization number (such as "organizations/123"), a
      *        folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or
-     *        a project number (such as "projects/12345"). To know how to get organization id, visit
+     *        a project number (such as "projects/12345"). To know how to get organization ID, visit
      *        [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
-     *        organization#retrieving_your_organization_id). To know how to get folder or project id,
+     *        organization#retrieving_your_organization_id). To know how to get folder or project ID,
      *        visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
      *        folders#viewing_or_listing_folders_and_projects).
      * @return the request
@@ -2634,9 +2634,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * @param scope Required. The relative name of the root asset. Only resources and IAM policies within the scope will
      *        be analyzed. This can only be an organization number (such as "organizations/123"), a
      *        folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or
-     *        a project number (such as "projects/12345"). To know how to get organization id, visit
+     *        a project number (such as "projects/12345"). To know how to get organization ID, visit
      *        [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
-     *        organization#retrieving_your_organization_id). To know how to get folder or project id,
+     *        organization#retrieving_your_organization_id). To know how to get folder or project ID,
      *        visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
      *        folders#viewing_or_listing_folders_and_projects).
        * @since 1.13
@@ -2721,9 +2721,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * scope will be analyzed. This can only be an organization number (such as
        * "organizations/123"), a folder number (such as "folders/123"), a project ID (such as
        * "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to
-       * get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
+       * get organization ID, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
        * managing-organization#retrieving_your_organization_id). To know how to get folder or
-       * project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * project ID, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
        * folders#viewing_or_listing_folders_and_projects).
        */
       @com.google.api.client.util.Key
@@ -2732,9 +2732,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /** Required. The relative name of the root asset. Only resources and IAM policies within the scope
      will be analyzed. This can only be an organization number (such as "organizations/123"), a folder
      number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a project
-     number (such as "projects/12345"). To know how to get organization id, visit [here
+     number (such as "projects/12345"). To know how to get organization ID, visit [here
      ](https://cloud.google.com/resource-manager/docs/creating-managing-
-     organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here
+     organization#retrieving_your_organization_id). To know how to get folder or project ID, visit [here
      ](https://cloud.google.com/resource-manager/docs/creating-managing-
      folders#viewing_or_listing_folders_and_projects).
        */
@@ -2747,9 +2747,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * scope will be analyzed. This can only be an organization number (such as
        * "organizations/123"), a folder number (such as "folders/123"), a project ID (such as
        * "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to
-       * get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
+       * get organization ID, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
        * managing-organization#retrieving_your_organization_id). To know how to get folder or
-       * project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * project ID, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
        * folders#viewing_or_listing_folders_and_projects).
        */
       public AnalyzeIamPolicy setScope(java.lang.String scope) {
@@ -3214,9 +3214,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * @param scope Required. The relative name of the root asset. Only resources and IAM policies within the scope will
      *        be analyzed. This can only be an organization number (such as "organizations/123"), a
      *        folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or
-     *        a project number (such as "projects/12345"). To know how to get organization id, visit
+     *        a project number (such as "projects/12345"). To know how to get organization ID, visit
      *        [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
-     *        organization#retrieving_your_organization_id). To know how to get folder or project id,
+     *        organization#retrieving_your_organization_id). To know how to get folder or project ID,
      *        visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
      *        folders#viewing_or_listing_folders_and_projects).
      * @param content the {@link com.google.api.services.cloudasset.v1.model.AnalyzeIamPolicyLongrunningRequest}
@@ -3255,9 +3255,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * @param scope Required. The relative name of the root asset. Only resources and IAM policies within the scope will
      *        be analyzed. This can only be an organization number (such as "organizations/123"), a
      *        folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or
-     *        a project number (such as "projects/12345"). To know how to get organization id, visit
+     *        a project number (such as "projects/12345"). To know how to get organization ID, visit
      *        [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
-     *        organization#retrieving_your_organization_id). To know how to get folder or project id,
+     *        organization#retrieving_your_organization_id). To know how to get folder or project ID,
      *        visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
      *        folders#viewing_or_listing_folders_and_projects).
        * @param content the {@link com.google.api.services.cloudasset.v1.model.AnalyzeIamPolicyLongrunningRequest}
@@ -3333,9 +3333,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * scope will be analyzed. This can only be an organization number (such as
        * "organizations/123"), a folder number (such as "folders/123"), a project ID (such as
        * "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to
-       * get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
+       * get organization ID, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
        * managing-organization#retrieving_your_organization_id). To know how to get folder or
-       * project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * project ID, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
        * folders#viewing_or_listing_folders_and_projects).
        */
       @com.google.api.client.util.Key
@@ -3344,9 +3344,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /** Required. The relative name of the root asset. Only resources and IAM policies within the scope
      will be analyzed. This can only be an organization number (such as "organizations/123"), a folder
      number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a project
-     number (such as "projects/12345"). To know how to get organization id, visit [here
+     number (such as "projects/12345"). To know how to get organization ID, visit [here
      ](https://cloud.google.com/resource-manager/docs/creating-managing-
-     organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here
+     organization#retrieving_your_organization_id). To know how to get folder or project ID, visit [here
      ](https://cloud.google.com/resource-manager/docs/creating-managing-
      folders#viewing_or_listing_folders_and_projects).
        */
@@ -3359,9 +3359,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * scope will be analyzed. This can only be an organization number (such as
        * "organizations/123"), a folder number (such as "folders/123"), a project ID (such as
        * "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to
-       * get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
+       * get organization ID, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
        * managing-organization#retrieving_your_organization_id). To know how to get folder or
-       * project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * project ID, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
        * folders#viewing_or_listing_folders_and_projects).
        */
       public AnalyzeIamPolicyLongrunning setScope(java.lang.String scope) {

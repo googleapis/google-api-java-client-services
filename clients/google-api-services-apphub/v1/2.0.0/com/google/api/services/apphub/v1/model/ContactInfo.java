@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.apphub.v1alpha.model;
+package com.google.api.services.apphub.v1.model;
 
 /**
  * Contact information of stakeholders.
@@ -30,13 +30,6 @@ package com.google.api.services.apphub.v1alpha.model;
 public final class ContactInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Communication channel of the contacts.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Channel channel;
-
-  /**
    * Optional. Contact's name. Can have a maximum length of 63 characters.
    * The value may be {@code null}.
    */
@@ -49,23 +42,6 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String email;
-
-  /**
-   * Optional. Communication channel of the contacts.
-   * @return value or {@code null} for none
-   */
-  public Channel getChannel() {
-    return channel;
-  }
-
-  /**
-   * Optional. Communication channel of the contacts.
-   * @param channel channel or {@code null} for none
-   */
-  public ContactInfo setChannel(Channel channel) {
-    this.channel = channel;
-    return this;
-  }
 
   /**
    * Optional. Contact's name. Can have a maximum length of 63 characters.

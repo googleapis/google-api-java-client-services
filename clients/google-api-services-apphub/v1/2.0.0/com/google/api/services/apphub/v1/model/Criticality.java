@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.apphub.v1alpha.model;
+package com.google.api.services.apphub.v1.model;
 
 /**
- * Environment of the Application, Service, or Workload
+ * Criticality of the Application, Service, or Workload
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Hub API. For a detailed explanation see:
@@ -27,44 +27,17 @@ package com.google.api.services.apphub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Environment extends com.google.api.client.json.GenericJson {
+public final class Criticality extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Environment name. Can contain only lowercase letters, numeric characters,
-   * underscores, and dashes. Can have a maximum length of 63 characters.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String environment;
-
-  /**
-   * Required. Environment Type.
+   * Required. Criticality Type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. Environment name. Can contain only lowercase letters, numeric characters,
-   * underscores, and dashes. Can have a maximum length of 63 characters.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEnvironment() {
-    return environment;
-  }
-
-  /**
-   * Optional. Environment name. Can contain only lowercase letters, numeric characters,
-   * underscores, and dashes. Can have a maximum length of 63 characters.
-   * @param environment environment or {@code null} for none
-   */
-  public Environment setEnvironment(java.lang.String environment) {
-    this.environment = environment;
-    return this;
-  }
-
-  /**
-   * Required. Environment Type.
+   * Required. Criticality Type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -72,22 +45,22 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Environment Type.
+   * Required. Criticality Type.
    * @param type type or {@code null} for none
    */
-  public Environment setType(java.lang.String type) {
+  public Criticality setType(java.lang.String type) {
     this.type = type;
     return this;
   }
 
   @Override
-  public Environment set(String fieldName, Object value) {
-    return (Environment) super.set(fieldName, value);
+  public Criticality set(String fieldName, Object value) {
+    return (Criticality) super.set(fieldName, value);
   }
 
   @Override
-  public Environment clone() {
-    return (Environment) super.clone();
+  public Criticality clone() {
+    return (Criticality) super.clone();
   }
 
 }

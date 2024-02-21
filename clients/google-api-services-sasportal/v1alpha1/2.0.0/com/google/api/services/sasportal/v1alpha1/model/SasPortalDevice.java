@@ -65,6 +65,7 @@ public final class SasPortalDevice extends com.google.api.client.json.GenericJso
 
   /**
    * The FCC identifier of the device. Refer to https://www.fcc.gov/oet/ea/fccid for FccID format.
+   * Accept underscores and periods because some test-SAS customers use them.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,6 +183,7 @@ public final class SasPortalDevice extends com.google.api.client.json.GenericJso
 
   /**
    * The FCC identifier of the device. Refer to https://www.fcc.gov/oet/ea/fccid for FccID format.
+   * Accept underscores and periods because some test-SAS customers use them.
    * @return value or {@code null} for none
    */
   public java.lang.String getFccId() {
@@ -190,6 +192,7 @@ public final class SasPortalDevice extends com.google.api.client.json.GenericJso
 
   /**
    * The FCC identifier of the device. Refer to https://www.fcc.gov/oet/ea/fccid for FccID format.
+   * Accept underscores and periods because some test-SAS customers use them.
    * @param fccId fccId or {@code null} for none
    */
   public SasPortalDevice setFccId(java.lang.String fccId) {

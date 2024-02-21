@@ -17,7 +17,7 @@
 package com.google.api.services.language.v1.model;
 
 /**
- * Model hyper-parameters for a model.
+ * Options for the V2 model.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Natural Language API. For a detailed
@@ -28,37 +28,40 @@ package com.google.api.services.language.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class XPSTablesModelStructureModelParameters extends com.google.api.client.json.GenericJson {
+public final class V2Model extends com.google.api.client.json.GenericJson {
 
   /**
+   * The content categories used for classification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<XPSTablesModelStructureModelParametersParameter> hyperparameters;
+  private java.lang.String contentCategoriesVersion;
 
   /**
+   * The content categories used for classification.
    * @return value or {@code null} for none
    */
-  public java.util.List<XPSTablesModelStructureModelParametersParameter> getHyperparameters() {
-    return hyperparameters;
+  public java.lang.String getContentCategoriesVersion() {
+    return contentCategoriesVersion;
   }
 
   /**
-   * @param hyperparameters hyperparameters or {@code null} for none
+   * The content categories used for classification.
+   * @param contentCategoriesVersion contentCategoriesVersion or {@code null} for none
    */
-  public XPSTablesModelStructureModelParameters setHyperparameters(java.util.List<XPSTablesModelStructureModelParametersParameter> hyperparameters) {
-    this.hyperparameters = hyperparameters;
+  public V2Model setContentCategoriesVersion(java.lang.String contentCategoriesVersion) {
+    this.contentCategoriesVersion = contentCategoriesVersion;
     return this;
   }
 
   @Override
-  public XPSTablesModelStructureModelParameters set(String fieldName, Object value) {
-    return (XPSTablesModelStructureModelParameters) super.set(fieldName, value);
+  public V2Model set(String fieldName, Object value) {
+    return (V2Model) super.set(fieldName, value);
   }
 
   @Override
-  public XPSTablesModelStructureModelParameters clone() {
-    return (XPSTablesModelStructureModelParameters) super.clone();
+  public V2Model clone() {
+    return (V2Model) super.clone();
   }
 
 }

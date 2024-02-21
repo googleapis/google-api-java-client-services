@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * The key and value for a [tag](https://cloud.google.com/resource-manager/docs/tags/tags-overview),
+ * The key and value for a [tag](https://cloud.google.com/resource-manager/docs/tags/tags-overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:

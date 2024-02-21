@@ -48,10 +48,11 @@ public final class GoogleCloudAssetV1Rule extends com.google.api.client.json.Gen
 
   /**
    * The condition evaluation result for this rule. Only populated if it meets all the following
-   * criteria: * there is a condition defined for this rule * this rule is within a
-   * consolidated_policy * the consolidated_policy is within
-   * AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer or
-   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource
+   * criteria: * There is a condition defined for this rule. * This rule is within
+   * AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer.consolidated_policy, or
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.consolidated_policy when the
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset has
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.governed_resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +75,7 @@ public final class GoogleCloudAssetV1Rule extends com.google.api.client.json.Gen
   private java.lang.Boolean enforce;
 
   /**
-   * List of values to be used for this PolicyRule. This field can be set only in Policies for list
+   * List of values to be used for this policy rule. This field can be set only in policies for list
    * constraints.
    * The value may be {@code null}.
    */
@@ -119,10 +120,11 @@ public final class GoogleCloudAssetV1Rule extends com.google.api.client.json.Gen
 
   /**
    * The condition evaluation result for this rule. Only populated if it meets all the following
-   * criteria: * there is a condition defined for this rule * this rule is within a
-   * consolidated_policy * the consolidated_policy is within
-   * AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer or
-   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource
+   * criteria: * There is a condition defined for this rule. * This rule is within
+   * AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer.consolidated_policy, or
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.consolidated_policy when the
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset has
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.governed_resource.
    * @return value or {@code null} for none
    */
   public ConditionEvaluation getConditionEvaluation() {
@@ -131,10 +133,11 @@ public final class GoogleCloudAssetV1Rule extends com.google.api.client.json.Gen
 
   /**
    * The condition evaluation result for this rule. Only populated if it meets all the following
-   * criteria: * there is a condition defined for this rule * this rule is within a
-   * consolidated_policy * the consolidated_policy is within
-   * AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer or
-   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource
+   * criteria: * There is a condition defined for this rule. * This rule is within
+   * AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer.consolidated_policy, or
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.consolidated_policy when the
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset has
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.governed_resource.
    * @param conditionEvaluation conditionEvaluation or {@code null} for none
    */
   public GoogleCloudAssetV1Rule setConditionEvaluation(ConditionEvaluation conditionEvaluation) {
@@ -181,7 +184,7 @@ public final class GoogleCloudAssetV1Rule extends com.google.api.client.json.Gen
   }
 
   /**
-   * List of values to be used for this PolicyRule. This field can be set only in Policies for list
+   * List of values to be used for this policy rule. This field can be set only in policies for list
    * constraints.
    * @return value or {@code null} for none
    */
@@ -190,7 +193,7 @@ public final class GoogleCloudAssetV1Rule extends com.google.api.client.json.Gen
   }
 
   /**
-   * List of values to be used for this PolicyRule. This field can be set only in Policies for list
+   * List of values to be used for this policy rule. This field can be set only in policies for list
    * constraints.
    * @param values values or {@code null} for none
    */

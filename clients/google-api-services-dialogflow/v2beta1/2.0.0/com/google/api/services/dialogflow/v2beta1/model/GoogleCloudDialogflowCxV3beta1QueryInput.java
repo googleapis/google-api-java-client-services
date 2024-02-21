@@ -78,13 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInput extends com.google.a
   private GoogleCloudDialogflowCxV3beta1TextInput text;
 
   /**
-   * The results of a tool executed by the client.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDialogflowCxV3beta1ToolCallResult toolCallResult;
-
-  /**
    * The natural language speech audio to be processed.
    * @return value or {@code null} for none
    */
@@ -189,23 +182,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInput extends com.google.a
    */
   public GoogleCloudDialogflowCxV3beta1QueryInput setText(GoogleCloudDialogflowCxV3beta1TextInput text) {
     this.text = text;
-    return this;
-  }
-
-  /**
-   * The results of a tool executed by the client.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDialogflowCxV3beta1ToolCallResult getToolCallResult() {
-    return toolCallResult;
-  }
-
-  /**
-   * The results of a tool executed by the client.
-   * @param toolCallResult toolCallResult or {@code null} for none
-   */
-  public GoogleCloudDialogflowCxV3beta1QueryInput setToolCallResult(GoogleCloudDialogflowCxV3beta1ToolCallResult toolCallResult) {
-    this.toolCallResult = toolCallResult;
     return this;
   }
 

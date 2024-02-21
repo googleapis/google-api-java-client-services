@@ -41,13 +41,6 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
   private java.lang.String displayName;
 
   /**
-   * The LLM model settings.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDialogflowCxV3beta1LlmModelSettings llmModelSettings;
-
-  /**
    * The unique identifier of the generator. Must be set for the Generators.UpdateGenerator method.
    * Generators.CreateGenerate populates the name automatically. Format:
    * `projects//locations//agents//generators/`.
@@ -88,23 +81,6 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
    */
   public GoogleCloudDialogflowCxV3beta1Generator setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
-    return this;
-  }
-
-  /**
-   * The LLM model settings.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDialogflowCxV3beta1LlmModelSettings getLlmModelSettings() {
-    return llmModelSettings;
-  }
-
-  /**
-   * The LLM model settings.
-   * @param llmModelSettings llmModelSettings or {@code null} for none
-   */
-  public GoogleCloudDialogflowCxV3beta1Generator setLlmModelSettings(GoogleCloudDialogflowCxV3beta1LlmModelSettings llmModelSettings) {
-    this.llmModelSettings = llmModelSettings;
     return this;
   }
 

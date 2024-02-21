@@ -49,14 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
   private java.lang.Boolean allowAnswerFeedback;
 
   /**
-   * The current Flow. Some, not all fields are filled in this message, including but not limited to
-   * `name` and `display_name`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDialogflowCxV3beta1Flow currentFlow;
-
-  /**
    * The current Page. Some, not all fields are filled in this message, including but not limited to
    * `name` and `display_name`.
    * The value may be {@code null}.
@@ -86,13 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1DtmfInput dtmf;
-
-  /**
-   * The information of a query if handled by generative agent resources.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDialogflowCxV3beta1GenerativeInfo generativeInfo;
 
   /**
    * The Intent that matched the conversational query. Some, not all fields are filled in this
@@ -277,25 +262,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
   }
 
   /**
-   * The current Flow. Some, not all fields are filled in this message, including but not limited to
-   * `name` and `display_name`.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDialogflowCxV3beta1Flow getCurrentFlow() {
-    return currentFlow;
-  }
-
-  /**
-   * The current Flow. Some, not all fields are filled in this message, including but not limited to
-   * `name` and `display_name`.
-   * @param currentFlow currentFlow or {@code null} for none
-   */
-  public GoogleCloudDialogflowCxV3beta1QueryResult setCurrentFlow(GoogleCloudDialogflowCxV3beta1Flow currentFlow) {
-    this.currentFlow = currentFlow;
-    return this;
-  }
-
-  /**
    * The current Page. Some, not all fields are filled in this message, including but not limited to
    * `name` and `display_name`.
    * @return value or {@code null} for none
@@ -363,23 +329,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
    */
   public GoogleCloudDialogflowCxV3beta1QueryResult setDtmf(GoogleCloudDialogflowCxV3beta1DtmfInput dtmf) {
     this.dtmf = dtmf;
-    return this;
-  }
-
-  /**
-   * The information of a query if handled by generative agent resources.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDialogflowCxV3beta1GenerativeInfo getGenerativeInfo() {
-    return generativeInfo;
-  }
-
-  /**
-   * The information of a query if handled by generative agent resources.
-   * @param generativeInfo generativeInfo or {@code null} for none
-   */
-  public GoogleCloudDialogflowCxV3beta1QueryResult setGenerativeInfo(GoogleCloudDialogflowCxV3beta1GenerativeInfo generativeInfo) {
-    this.generativeInfo = generativeInfo;
     return this;
   }
 

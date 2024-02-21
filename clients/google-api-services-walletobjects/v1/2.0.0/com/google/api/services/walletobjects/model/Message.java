@@ -85,7 +85,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private LocalizedString localizedHeader;
 
   /**
-   * The type of the message. Currently, this can only be set for offers.
+   * The message type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,7 +223,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the message. Currently, this can only be set for offers.
+   * The message type.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageType() {
@@ -231,7 +231,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the message. Currently, this can only be set for offers.
+   * The message type.
    * @param messageType messageType or {@code null} for none
    */
   public Message setMessageType(java.lang.String messageType) {

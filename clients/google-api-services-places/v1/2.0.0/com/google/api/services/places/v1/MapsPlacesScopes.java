@@ -29,6 +29,9 @@ public class MapsPlacesScopes {
   /** Private Service: https://www.googleapis.com/auth/maps-platform.places. */
   public static final String MAPS_PLATFORM_PLACES = "https://www.googleapis.com/auth/maps-platform.places";
 
+  /** Private Service: https://www.googleapis.com/auth/maps-platform.places.autocomplete. */
+  public static final String MAPS_PLATFORM_PLACES_AUTOCOMPLETE = "https://www.googleapis.com/auth/maps-platform.places.autocomplete";
+
   /** Private Service: https://www.googleapis.com/auth/maps-platform.places.details. */
   public static final String MAPS_PLATFORM_PLACES_DETAILS = "https://www.googleapis.com/auth/maps-platform.places.details";
 
@@ -47,6 +50,7 @@ public class MapsPlacesScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
     set.add(MAPS_PLATFORM_PLACES);
+    set.add(MAPS_PLATFORM_PLACES_AUTOCOMPLETE);
     set.add(MAPS_PLATFORM_PLACES_DETAILS);
     set.add(MAPS_PLATFORM_PLACES_NEARBYSEARCH);
     set.add(MAPS_PLATFORM_PLACES_TEXTSEARCH);

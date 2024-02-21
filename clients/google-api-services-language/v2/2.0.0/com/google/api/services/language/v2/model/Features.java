@@ -29,7 +29,7 @@ package com.google.api.services.language.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AnnotateTextRequestFeatures extends com.google.api.client.json.GenericJson {
+public final class Features extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Classify the full document into categories.
@@ -71,7 +71,7 @@ public final class AnnotateTextRequestFeatures extends com.google.api.client.jso
    * Optional. Classify the full document into categories.
    * @param classifyText classifyText or {@code null} for none
    */
-  public AnnotateTextRequestFeatures setClassifyText(java.lang.Boolean classifyText) {
+  public Features setClassifyText(java.lang.Boolean classifyText) {
     this.classifyText = classifyText;
     return this;
   }
@@ -88,7 +88,7 @@ public final class AnnotateTextRequestFeatures extends com.google.api.client.jso
    * Optional. Extract document-level sentiment.
    * @param extractDocumentSentiment extractDocumentSentiment or {@code null} for none
    */
-  public AnnotateTextRequestFeatures setExtractDocumentSentiment(java.lang.Boolean extractDocumentSentiment) {
+  public Features setExtractDocumentSentiment(java.lang.Boolean extractDocumentSentiment) {
     this.extractDocumentSentiment = extractDocumentSentiment;
     return this;
   }
@@ -105,7 +105,7 @@ public final class AnnotateTextRequestFeatures extends com.google.api.client.jso
    * Optional. Extract entities.
    * @param extractEntities extractEntities or {@code null} for none
    */
-  public AnnotateTextRequestFeatures setExtractEntities(java.lang.Boolean extractEntities) {
+  public Features setExtractEntities(java.lang.Boolean extractEntities) {
     this.extractEntities = extractEntities;
     return this;
   }
@@ -122,19 +122,19 @@ public final class AnnotateTextRequestFeatures extends com.google.api.client.jso
    * Optional. Moderate the document for harmful and sensitive categories.
    * @param moderateText moderateText or {@code null} for none
    */
-  public AnnotateTextRequestFeatures setModerateText(java.lang.Boolean moderateText) {
+  public Features setModerateText(java.lang.Boolean moderateText) {
     this.moderateText = moderateText;
     return this;
   }
 
   @Override
-  public AnnotateTextRequestFeatures set(String fieldName, Object value) {
-    return (AnnotateTextRequestFeatures) super.set(fieldName, value);
+  public Features set(String fieldName, Object value) {
+    return (Features) super.set(fieldName, value);
   }
 
   @Override
-  public AnnotateTextRequestFeatures clone() {
-    return (AnnotateTextRequestFeatures) super.clone();
+  public Features clone() {
+    return (Features) super.clone();
   }
 
 }

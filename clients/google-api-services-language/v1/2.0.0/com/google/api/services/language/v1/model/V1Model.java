@@ -14,11 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.language.v2.model;
+package com.google.api.services.language.v1.model;
 
 /**
- * A correlation statistics between two series of DataType values. The series may have differing
- * DataType-s, but within a single series the DataType must be the same.
+ * Options for the V1 model.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Natural Language API. For a detailed
@@ -29,40 +28,16 @@ package com.google.api.services.language.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class XPSCorrelationStats extends com.google.api.client.json.GenericJson {
+public final class V1Model extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The correlation value using the Cramer's V measure.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Double cramersV;
-
-  /**
-   * The correlation value using the Cramer's V measure.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Double getCramersV() {
-    return cramersV;
-  }
-
-  /**
-   * The correlation value using the Cramer's V measure.
-   * @param cramersV cramersV or {@code null} for none
-   */
-  public XPSCorrelationStats setCramersV(java.lang.Double cramersV) {
-    this.cramersV = cramersV;
-    return this;
+  @Override
+  public V1Model set(String fieldName, Object value) {
+    return (V1Model) super.set(fieldName, value);
   }
 
   @Override
-  public XPSCorrelationStats set(String fieldName, Object value) {
-    return (XPSCorrelationStats) super.set(fieldName, value);
-  }
-
-  @Override
-  public XPSCorrelationStats clone() {
-    return (XPSCorrelationStats) super.clone();
+  public V1Model clone() {
+    return (V1Model) super.clone();
   }
 
 }

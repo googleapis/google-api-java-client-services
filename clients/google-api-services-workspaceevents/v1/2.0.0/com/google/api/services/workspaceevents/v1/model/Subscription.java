@@ -19,7 +19,7 @@ package com.google.api.services.workspaceevents.v1.model;
 /**
  * [Developer Preview](https://developers.google.com/workspace/preview). A subscription to receive
  * events about a Google Workspace resource. To learn more about subscriptions, see the [Google
- * Workspace Events API overview](https://developers.google.com/workspace/events/guides).
+ * Workspace Events API overview](https://developers.google.com/workspace/events).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Workspace Events API. For a detailed
@@ -59,10 +59,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. Unordered list. Input for creating a subscription. Otherwise, output only.
    * One or more types of events to receive about the target resource. Formatted according to the
-   * CloudEvents specification. For a list of supported event types, see the following
-   * documentation: * [Google Chat events](https://developers.google.com/workspace/events/guides
-   * /events-chat) * [Google Meet events](https://developers.google.com/workspace/events/guides
-   * /events-meet) By default, you also receive events about the [lifecycle of your
+   * CloudEvents specification. The supported event types depend on the target resource of your
+   * subscription. For details, see [Supported Google Workspace
+   * events](https://developers.google.com/workspace/events/guides#supported-events). By default,
+   * you also receive events about the [lifecycle of your
    * subscription](https://developers.google.com/workspace/events/guides/events-lifecycle). You
    * don't need to specify lifecycle events for this field. If you specify an event type that
    * doesn't exist for the target resource, the request returns an HTTP `400 Bad Request` status
@@ -130,10 +130,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. The Google Workspace resource that's monitored for events, formatted as
    * the [full resource name](https://google.aip.dev/122#full-resource-names). To learn about target
-   * resources, see [Supported Google Workspace
-   * resources](https://developers.google.com/workspace/events/guides#supported-resources). A user
-   * can only authorize your app to create one subscription for a given target resource. If your app
-   * tries to create another subscription with the same user credentials, the request returns an
+   * resources and the events that they support, see [Supported Google Workspace
+   * events](https://developers.google.com/workspace/events#supported-events). A user can only
+   * authorize your app to create one subscription for a given target resource. If your app tries to
+   * create another subscription with the same user credentials, the request returns an
    * `ALREADY_EXISTS` error.
    * The value may be {@code null}.
    */
@@ -222,10 +222,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. Unordered list. Input for creating a subscription. Otherwise, output only.
    * One or more types of events to receive about the target resource. Formatted according to the
-   * CloudEvents specification. For a list of supported event types, see the following
-   * documentation: * [Google Chat events](https://developers.google.com/workspace/events/guides
-   * /events-chat) * [Google Meet events](https://developers.google.com/workspace/events/guides
-   * /events-meet) By default, you also receive events about the [lifecycle of your
+   * CloudEvents specification. The supported event types depend on the target resource of your
+   * subscription. For details, see [Supported Google Workspace
+   * events](https://developers.google.com/workspace/events/guides#supported-events). By default,
+   * you also receive events about the [lifecycle of your
    * subscription](https://developers.google.com/workspace/events/guides/events-lifecycle). You
    * don't need to specify lifecycle events for this field. If you specify an event type that
    * doesn't exist for the target resource, the request returns an HTTP `400 Bad Request` status
@@ -239,10 +239,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. Unordered list. Input for creating a subscription. Otherwise, output only.
    * One or more types of events to receive about the target resource. Formatted according to the
-   * CloudEvents specification. For a list of supported event types, see the following
-   * documentation: * [Google Chat events](https://developers.google.com/workspace/events/guides
-   * /events-chat) * [Google Meet events](https://developers.google.com/workspace/events/guides
-   * /events-meet) By default, you also receive events about the [lifecycle of your
+   * CloudEvents specification. The supported event types depend on the target resource of your
+   * subscription. For details, see [Supported Google Workspace
+   * events](https://developers.google.com/workspace/events/guides#supported-events). By default,
+   * you also receive events about the [lifecycle of your
    * subscription](https://developers.google.com/workspace/events/guides/events-lifecycle). You
    * don't need to specify lifecycle events for this field. If you specify an event type that
    * doesn't exist for the target resource, the request returns an HTTP `400 Bad Request` status
@@ -388,10 +388,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. The Google Workspace resource that's monitored for events, formatted as
    * the [full resource name](https://google.aip.dev/122#full-resource-names). To learn about target
-   * resources, see [Supported Google Workspace
-   * resources](https://developers.google.com/workspace/events/guides#supported-resources). A user
-   * can only authorize your app to create one subscription for a given target resource. If your app
-   * tries to create another subscription with the same user credentials, the request returns an
+   * resources and the events that they support, see [Supported Google Workspace
+   * events](https://developers.google.com/workspace/events#supported-events). A user can only
+   * authorize your app to create one subscription for a given target resource. If your app tries to
+   * create another subscription with the same user credentials, the request returns an
    * `ALREADY_EXISTS` error.
    * @return value or {@code null} for none
    */
@@ -402,10 +402,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Required. Immutable. The Google Workspace resource that's monitored for events, formatted as
    * the [full resource name](https://google.aip.dev/122#full-resource-names). To learn about target
-   * resources, see [Supported Google Workspace
-   * resources](https://developers.google.com/workspace/events/guides#supported-resources). A user
-   * can only authorize your app to create one subscription for a given target resource. If your app
-   * tries to create another subscription with the same user credentials, the request returns an
+   * resources and the events that they support, see [Supported Google Workspace
+   * events](https://developers.google.com/workspace/events#supported-events). A user can only
+   * authorize your app to create one subscription for a given target resource. If your app tries to
+   * create another subscription with the same user credentials, the request returns an
    * `ALREADY_EXISTS` error.
    * @param targetResource targetResource or {@code null} for none
    */

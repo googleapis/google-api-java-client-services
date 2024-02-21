@@ -276,7 +276,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private GoogleMapsPlacesV1PlacePaymentOptions paymentOptions;
 
   /**
-   * Information (including references) about photos of this place.
+   * Information (including references) about photos of this place. A maximum of 10 photos can be
+   * returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -361,7 +362,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.Boolean restroom;
 
   /**
-   * List of reviews about this place, sorted by relevance.
+   * List of reviews about this place, sorted by relevance. A maximum of 5 reviews can be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1088,7 +1089,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Information (including references) about photos of this place.
+   * Information (including references) about photos of this place. A maximum of 10 photos can be
+   * returned.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1Photo> getPhotos() {
@@ -1096,7 +1098,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Information (including references) about photos of this place.
+   * Information (including references) about photos of this place. A maximum of 10 photos can be
+   * returned.
    * @param photos photos or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setPhotos(java.util.List<GoogleMapsPlacesV1Photo> photos) {
@@ -1276,7 +1279,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * List of reviews about this place, sorted by relevance.
+   * List of reviews about this place, sorted by relevance. A maximum of 5 reviews can be returned.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1Review> getReviews() {
@@ -1284,7 +1287,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * List of reviews about this place, sorted by relevance.
+   * List of reviews about this place, sorted by relevance. A maximum of 5 reviews can be returned.
    * @param reviews reviews or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setReviews(java.util.List<GoogleMapsPlacesV1Review> reviews) {

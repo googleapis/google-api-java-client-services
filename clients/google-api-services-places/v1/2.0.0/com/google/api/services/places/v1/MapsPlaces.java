@@ -154,6 +154,105 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
   public class Places {
 
     /**
+     * Returns predictions for the given input.
+     *
+     * Create a request for the method "places.autocomplete".
+     *
+     * This request holds the parameters needed by the places server.  After setting any optional
+     * parameters, call the {@link Autocomplete#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.places.v1.model.GoogleMapsPlacesV1AutocompletePlacesRequest}
+     * @return the request
+     */
+    public Autocomplete autocomplete(com.google.api.services.places.v1.model.GoogleMapsPlacesV1AutocompletePlacesRequest content) throws java.io.IOException {
+      Autocomplete result = new Autocomplete(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Autocomplete extends MapsPlacesRequest<com.google.api.services.places.v1.model.GoogleMapsPlacesV1AutocompletePlacesResponse> {
+
+      private static final String REST_PATH = "v1/places:autocomplete";
+
+      /**
+       * Returns predictions for the given input.
+       *
+       * Create a request for the method "places.autocomplete".
+       *
+       * This request holds the parameters needed by the the places server.  After setting any optional
+       * parameters, call the {@link Autocomplete#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Autocomplete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.places.v1.model.GoogleMapsPlacesV1AutocompletePlacesRequest}
+       * @since 1.13
+       */
+      protected Autocomplete(com.google.api.services.places.v1.model.GoogleMapsPlacesV1AutocompletePlacesRequest content) {
+        super(MapsPlaces.this, "POST", REST_PATH, content, com.google.api.services.places.v1.model.GoogleMapsPlacesV1AutocompletePlacesResponse.class);
+      }
+
+      @Override
+      public Autocomplete set$Xgafv(java.lang.String $Xgafv) {
+        return (Autocomplete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Autocomplete setAccessToken(java.lang.String accessToken) {
+        return (Autocomplete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Autocomplete setAlt(java.lang.String alt) {
+        return (Autocomplete) super.setAlt(alt);
+      }
+
+      @Override
+      public Autocomplete setCallback(java.lang.String callback) {
+        return (Autocomplete) super.setCallback(callback);
+      }
+
+      @Override
+      public Autocomplete setFields(java.lang.String fields) {
+        return (Autocomplete) super.setFields(fields);
+      }
+
+      @Override
+      public Autocomplete setKey(java.lang.String key) {
+        return (Autocomplete) super.setKey(key);
+      }
+
+      @Override
+      public Autocomplete setOauthToken(java.lang.String oauthToken) {
+        return (Autocomplete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Autocomplete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Autocomplete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Autocomplete setQuotaUser(java.lang.String quotaUser) {
+        return (Autocomplete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Autocomplete setUploadType(java.lang.String uploadType) {
+        return (Autocomplete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Autocomplete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Autocomplete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Autocomplete set(String parameterName, Object value) {
+        return (Autocomplete) super.set(parameterName, value);
+      }
+    }
+    /**
      * Get the details of a place based on its resource name, which is a string in the
      * `places/{place_id}` format.
      *
@@ -340,6 +439,70 @@ public class MapsPlaces extends com.google.api.client.googleapis.services.json.A
        */
       public Get setRegionCode(java.lang.String regionCode) {
         this.regionCode = regionCode;
+        return this;
+      }
+
+      /**
+       * Optional. A string which identifies an Autocomplete session for billing purposes. Must be a
+       * URL and filename safe base64 string with at most 36 ASCII characters in length. Otherwise
+       * an INVALID_ARGUMENT error is returned. The session begins when the user starts typing a
+       * query, and concludes when they select a place and a call to Place Details or Address
+       * Validation is made. Each session can have multiple queries, followed by one Place Details
+       * or Address Validation request. The credentials used for each request within a session must
+       * belong to the same Google Cloud Console project. Once a session has concluded, the token is
+       * no longer valid; your app must generate a fresh token for each session. If the
+       * `session_token` parameter is omitted, or if you reuse a session token, the session is
+       * charged as if no session token was provided (each request is billed separately). We
+       * recommend the following guidelines: * Use session tokens for all Place Autocomplete calls.
+       * * Generate a fresh token for each session. Using a version 4 UUID is recommended. * Ensure
+       * that the credentials used for all Place Autocomplete, Place Details, and Address Validation
+       * requests within a session belong to the same Cloud Console project. * Be sure to pass a
+       * unique session token for each new session. Using the same token for more than one session
+       * will result in each request being billed individually.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String sessionToken;
+
+      /** Optional. A string which identifies an Autocomplete session for billing purposes. Must be a URL and
+     filename safe base64 string with at most 36 ASCII characters in length. Otherwise an
+     INVALID_ARGUMENT error is returned. The session begins when the user starts typing a query, and
+     concludes when they select a place and a call to Place Details or Address Validation is made. Each
+     session can have multiple queries, followed by one Place Details or Address Validation request. The
+     credentials used for each request within a session must belong to the same Google Cloud Console
+     project. Once a session has concluded, the token is no longer valid; your app must generate a fresh
+     token for each session. If the `session_token` parameter is omitted, or if you reuse a session
+     token, the session is charged as if no session token was provided (each request is billed
+     separately). We recommend the following guidelines: * Use session tokens for all Place Autocomplete
+     calls. * Generate a fresh token for each session. Using a version 4 UUID is recommended. * Ensure
+     that the credentials used for all Place Autocomplete, Place Details, and Address Validation
+     requests within a session belong to the same Cloud Console project. * Be sure to pass a unique
+     session token for each new session. Using the same token for more than one session will result in
+     each request being billed individually.
+       */
+      public java.lang.String getSessionToken() {
+        return sessionToken;
+      }
+
+      /**
+       * Optional. A string which identifies an Autocomplete session for billing purposes. Must be a
+       * URL and filename safe base64 string with at most 36 ASCII characters in length. Otherwise
+       * an INVALID_ARGUMENT error is returned. The session begins when the user starts typing a
+       * query, and concludes when they select a place and a call to Place Details or Address
+       * Validation is made. Each session can have multiple queries, followed by one Place Details
+       * or Address Validation request. The credentials used for each request within a session must
+       * belong to the same Google Cloud Console project. Once a session has concluded, the token is
+       * no longer valid; your app must generate a fresh token for each session. If the
+       * `session_token` parameter is omitted, or if you reuse a session token, the session is
+       * charged as if no session token was provided (each request is billed separately). We
+       * recommend the following guidelines: * Use session tokens for all Place Autocomplete calls.
+       * * Generate a fresh token for each session. Using a version 4 UUID is recommended. * Ensure
+       * that the credentials used for all Place Autocomplete, Place Details, and Address Validation
+       * requests within a session belong to the same Cloud Console project. * Be sure to pass a
+       * unique session token for each new session. Using the same token for more than one session
+       * will result in each request being billed individually.
+       */
+      public Get setSessionToken(java.lang.String sessionToken) {
+        this.sessionToken = sessionToken;
         return this;
       }
 

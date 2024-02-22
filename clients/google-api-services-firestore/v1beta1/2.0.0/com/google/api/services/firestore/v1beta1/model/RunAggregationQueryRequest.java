@@ -30,14 +30,6 @@ package com.google.api.services.firestore.v1beta1.model;
 public final class RunAggregationQueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Explain options for the query. If set, additional query statistics will be returned.
-   * If not, only query results will be returned.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ExplainOptions explainOptions;
-
-  /**
    * Starts a new transaction as part of the query, defaulting to read-only. The new transaction ID
    * will be returned as the first response in the stream.
    * The value may be {@code null}.
@@ -68,25 +60,6 @@ public final class RunAggregationQueryRequest extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String transaction;
-
-  /**
-   * Optional. Explain options for the query. If set, additional query statistics will be returned.
-   * If not, only query results will be returned.
-   * @return value or {@code null} for none
-   */
-  public ExplainOptions getExplainOptions() {
-    return explainOptions;
-  }
-
-  /**
-   * Optional. Explain options for the query. If set, additional query statistics will be returned.
-   * If not, only query results will be returned.
-   * @param explainOptions explainOptions or {@code null} for none
-   */
-  public RunAggregationQueryRequest setExplainOptions(ExplainOptions explainOptions) {
-    this.explainOptions = explainOptions;
-    return this;
-  }
 
   /**
    * Starts a new transaction as part of the query, defaulting to read-only. The new transaction ID

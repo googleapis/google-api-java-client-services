@@ -77,7 +77,8 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
    * "create-analysis": Notify each time an analysis is created. * "create-conversation": Notify
    * each time a conversation is created. * "export-insights-data": Notify each time an export is
    * complete. * "update-conversation": Notify each time a conversation is updated via
-   * UpdateConversation. Values are Pub/Sub topics. The format of each Pub/Sub topic is:
+   * UpdateConversation. * "upload-conversation": Notify when an UploadConversation LRO completes.
+   * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
    * projects/{project}/topics/{topic}
    * The value may be {@code null}.
    */
@@ -208,7 +209,8 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
    * "create-analysis": Notify each time an analysis is created. * "create-conversation": Notify
    * each time a conversation is created. * "export-insights-data": Notify each time an export is
    * complete. * "update-conversation": Notify each time a conversation is updated via
-   * UpdateConversation. Values are Pub/Sub topics. The format of each Pub/Sub topic is:
+   * UpdateConversation. * "upload-conversation": Notify when an UploadConversation LRO completes.
+   * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
    * projects/{project}/topics/{topic}
    * @return value or {@code null} for none
    */
@@ -223,7 +225,8 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
    * "create-analysis": Notify each time an analysis is created. * "create-conversation": Notify
    * each time a conversation is created. * "export-insights-data": Notify each time an export is
    * complete. * "update-conversation": Notify each time a conversation is updated via
-   * UpdateConversation. Values are Pub/Sub topics. The format of each Pub/Sub topic is:
+   * UpdateConversation. * "upload-conversation": Notify when an UploadConversation LRO completes.
+   * Values are Pub/Sub topics. The format of each Pub/Sub topic is:
    * projects/{project}/topics/{topic}
    * @param pubsubNotificationSettings pubsubNotificationSettings or {@code null} for none
    */

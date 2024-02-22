@@ -79,6 +79,14 @@ public final class Profile extends com.google.api.client.json.GenericJson {
   private java.lang.String profileType;
 
   /**
+   * Output only. Start time for the profile. This output is only present in response from the
+   * ListProfiles method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String startTime;
+
+  /**
    * Deployment this profile corresponds to.
    * @return value or {@code null} for none
    */
@@ -221,6 +229,25 @@ public final class Profile extends com.google.api.client.json.GenericJson {
    */
   public Profile setProfileType(java.lang.String profileType) {
     this.profileType = profileType;
+    return this;
+  }
+
+  /**
+   * Output only. Start time for the profile. This output is only present in response from the
+   * ListProfiles method.
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * Output only. Start time for the profile. This output is only present in response from the
+   * ListProfiles method.
+   * @param startTime startTime or {@code null} for none
+   */
+  public Profile setStartTime(String startTime) {
+    this.startTime = startTime;
     return this;
   }
 

@@ -43,7 +43,8 @@ public final class DirectoryChromeosdevicesIssueCommandRequest extends com.googl
    * `DEVICE_START_CRD_SESSION`: Payload is optionally a stringified JSON object in the form: {
    * "ackedUserPresence": true }. `ackedUserPresence` is a boolean. By default, `ackedUserPresence`
    * is set to `false`. To start a Chrome Remote Desktop session for an active device, set
-   * `ackedUserPresence` to `true`.
+   * `ackedUserPresence` to `true`. * `REBOOT`: Payload is a stringified JSON object in the form: {
+   * "user_session_delay_seconds": 300 }. The delay has to be in the range [0, 300].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +74,8 @@ public final class DirectoryChromeosdevicesIssueCommandRequest extends com.googl
    * `DEVICE_START_CRD_SESSION`: Payload is optionally a stringified JSON object in the form: {
    * "ackedUserPresence": true }. `ackedUserPresence` is a boolean. By default, `ackedUserPresence`
    * is set to `false`. To start a Chrome Remote Desktop session for an active device, set
-   * `ackedUserPresence` to `true`.
+   * `ackedUserPresence` to `true`. * `REBOOT`: Payload is a stringified JSON object in the form: {
+   * "user_session_delay_seconds": 300 }. The delay has to be in the range [0, 300].
    * @return value or {@code null} for none
    */
   public java.lang.String getPayload() {
@@ -87,7 +89,8 @@ public final class DirectoryChromeosdevicesIssueCommandRequest extends com.googl
    * `DEVICE_START_CRD_SESSION`: Payload is optionally a stringified JSON object in the form: {
    * "ackedUserPresence": true }. `ackedUserPresence` is a boolean. By default, `ackedUserPresence`
    * is set to `false`. To start a Chrome Remote Desktop session for an active device, set
-   * `ackedUserPresence` to `true`.
+   * `ackedUserPresence` to `true`. * `REBOOT`: Payload is a stringified JSON object in the form: {
+   * "user_session_delay_seconds": 300 }. The delay has to be in the range [0, 300].
    * @param payload payload or {@code null} for none
    */
   public DirectoryChromeosdevicesIssueCommandRequest setPayload(java.lang.String payload) {

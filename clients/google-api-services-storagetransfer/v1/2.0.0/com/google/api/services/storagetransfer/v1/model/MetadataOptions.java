@@ -92,8 +92,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   private java.lang.String temporaryHold;
 
   /**
-   * Specifies how each object's `timeCreated` metadata is preserved for transfers between Google
-   * Cloud Storage buckets. If unspecified, the default behavior is the same as TIME_CREATED_SKIP.
+   * Specifies how each object's `timeCreated` metadata is preserved for transfers. If unspecified,
+   * the default behavior is the same as TIME_CREATED_SKIP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,8 +254,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies how each object's `timeCreated` metadata is preserved for transfers between Google
-   * Cloud Storage buckets. If unspecified, the default behavior is the same as TIME_CREATED_SKIP.
+   * Specifies how each object's `timeCreated` metadata is preserved for transfers. If unspecified,
+   * the default behavior is the same as TIME_CREATED_SKIP.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeCreated() {
@@ -263,8 +263,8 @@ public final class MetadataOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies how each object's `timeCreated` metadata is preserved for transfers between Google
-   * Cloud Storage buckets. If unspecified, the default behavior is the same as TIME_CREATED_SKIP.
+   * Specifies how each object's `timeCreated` metadata is preserved for transfers. If unspecified,
+   * the default behavior is the same as TIME_CREATED_SKIP.
    * @param timeCreated timeCreated or {@code null} for none
    */
   public MetadataOptions setTimeCreated(java.lang.String timeCreated) {

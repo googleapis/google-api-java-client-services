@@ -1224,25 +1224,29 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * ID of the organizational unit to report on. Activity records will be shown only for users
-       * who belong to the specified organizational unit. Data before Dec 17, 2018 doesn't appear in
-       * the filtered results.
+       * `Deprecated`. This field is deprecated and is no longer supported. ID of the organizational
+       * unit to report on. Activity records will be shown only for users who belong to the
+       * specified organizational unit. Data before Dec 17, 2018 doesn't appear in the filtered
+       * results.
        */
       @com.google.api.client.util.Key
       private java.lang.String orgUnitID;
 
-      /** ID of the organizational unit to report on. Activity records will be shown only for users who
-     belong to the specified organizational unit. Data before Dec 17, 2018 doesn't appear in the
-     filtered results.
+      /**` Deprecated`. This field is deprecated and is no longer supported. ID of the organizational unit to
+    ` report on. Activity records will be shown only for users who belong to the specified
+    ` organizational unit. Data before Dec 17, 2018 doesn't appear in the filtered results.
+    `
+
        */
       public java.lang.String getOrgUnitID() {
         return orgUnitID;
       }
 
       /**
-       * ID of the organizational unit to report on. Activity records will be shown only for users
-       * who belong to the specified organizational unit. Data before Dec 17, 2018 doesn't appear in
-       * the filtered results.
+       * `Deprecated`. This field is deprecated and is no longer supported. ID of the organizational
+       * unit to report on. Activity records will be shown only for users who belong to the
+       * specified organizational unit. Data before Dec 17, 2018 doesn't appear in the filtered
+       * results.
        */
       public Watch setOrgUnitID(java.lang.String orgUnitID) {
         if (!getSuppressPatternChecks()) {

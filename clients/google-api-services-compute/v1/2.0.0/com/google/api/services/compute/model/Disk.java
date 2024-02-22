@@ -220,7 +220,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates how much throughput to provision for the disk. This sets the number of throughput mb
-   * per second that the disk can handle. Values must be between 1 and 7,124.
+   * per second that the disk can handle. Values must be greater than or equal to 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -358,6 +358,29 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceImageId;
+
+  /**
+   * The source instant snapshot used to create this disk. You can provide this as a partial or full
+   * URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone
+   * /instantSnapshots/instantSnapshot -
+   * projects/project/zones/zone/instantSnapshots/instantSnapshot -
+   * zones/zone/instantSnapshots/instantSnapshot
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceInstantSnapshot;
+
+  /**
+   * [Output Only] The unique ID of the instant snapshot used to create this disk. This value
+   * identifies the exact instant snapshot that was used to create this persistent disk. For
+   * example, if you created the persistent disk from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would identify the exact version
+   * of the instant snapshot that was used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceInstantSnapshotId;
 
   /**
    * The source snapshot used to create this disk. You can provide this as a partial or full URL to
@@ -902,7 +925,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates how much throughput to provision for the disk. This sets the number of throughput mb
-   * per second that the disk can handle. Values must be between 1 and 7,124.
+   * per second that the disk can handle. Values must be greater than or equal to 1.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProvisionedThroughput() {
@@ -911,7 +934,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates how much throughput to provision for the disk. This sets the number of throughput mb
-   * per second that the disk can handle. Values must be between 1 and 7,124.
+   * per second that the disk can handle. Values must be greater than or equal to 1.
    * @param provisionedThroughput provisionedThroughput or {@code null} for none
    */
   public Disk setProvisionedThroughput(java.lang.Long provisionedThroughput) {
@@ -1227,6 +1250,58 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setSourceImageId(java.lang.String sourceImageId) {
     this.sourceImageId = sourceImageId;
+    return this;
+  }
+
+  /**
+   * The source instant snapshot used to create this disk. You can provide this as a partial or full
+   * URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone
+   * /instantSnapshots/instantSnapshot -
+   * projects/project/zones/zone/instantSnapshots/instantSnapshot -
+   * zones/zone/instantSnapshots/instantSnapshot
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceInstantSnapshot() {
+    return sourceInstantSnapshot;
+  }
+
+  /**
+   * The source instant snapshot used to create this disk. You can provide this as a partial or full
+   * URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone
+   * /instantSnapshots/instantSnapshot -
+   * projects/project/zones/zone/instantSnapshots/instantSnapshot -
+   * zones/zone/instantSnapshots/instantSnapshot
+   * @param sourceInstantSnapshot sourceInstantSnapshot or {@code null} for none
+   */
+  public Disk setSourceInstantSnapshot(java.lang.String sourceInstantSnapshot) {
+    this.sourceInstantSnapshot = sourceInstantSnapshot;
+    return this;
+  }
+
+  /**
+   * [Output Only] The unique ID of the instant snapshot used to create this disk. This value
+   * identifies the exact instant snapshot that was used to create this persistent disk. For
+   * example, if you created the persistent disk from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would identify the exact version
+   * of the instant snapshot that was used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceInstantSnapshotId() {
+    return sourceInstantSnapshotId;
+  }
+
+  /**
+   * [Output Only] The unique ID of the instant snapshot used to create this disk. This value
+   * identifies the exact instant snapshot that was used to create this persistent disk. For
+   * example, if you created the persistent disk from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would identify the exact version
+   * of the instant snapshot that was used.
+   * @param sourceInstantSnapshotId sourceInstantSnapshotId or {@code null} for none
+   */
+  public Disk setSourceInstantSnapshotId(java.lang.String sourceInstantSnapshotId) {
+    this.sourceInstantSnapshotId = sourceInstantSnapshotId;
     return this;
   }
 

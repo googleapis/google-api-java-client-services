@@ -269,7 +269,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates how much throughput to provision for the disk. This sets the number of throughput mb
-   * per second that the disk can handle. Values must be between 1 and 7,124.
+   * per second that the disk can handle. Values must be greater than or equal to 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -1121,7 +1121,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates how much throughput to provision for the disk. This sets the number of throughput mb
-   * per second that the disk can handle. Values must be between 1 and 7,124.
+   * per second that the disk can handle. Values must be greater than or equal to 1.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProvisionedThroughput() {
@@ -1130,7 +1130,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates how much throughput to provision for the disk. This sets the number of throughput mb
-   * per second that the disk can handle. Values must be between 1 and 7,124.
+   * per second that the disk can handle. Values must be greater than or equal to 1.
    * @param provisionedThroughput provisionedThroughput or {@code null} for none
    */
   public Disk setProvisionedThroughput(java.lang.Long provisionedThroughput) {

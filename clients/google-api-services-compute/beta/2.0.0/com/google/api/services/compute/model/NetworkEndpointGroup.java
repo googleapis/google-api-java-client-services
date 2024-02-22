@@ -47,6 +47,13 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private NetworkEndpointGroupAppEngine appEngine;
 
   /**
+   * Only valid when networkEndpointType is GCE_VM_IP_PORT and the NEG is regional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientPortMappingMode;
+
+  /**
    * Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine or
    * cloudFunction may be set.
    * The value may be {@code null}.
@@ -226,6 +233,23 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
    */
   public NetworkEndpointGroup setAppEngine(NetworkEndpointGroupAppEngine appEngine) {
     this.appEngine = appEngine;
+    return this;
+  }
+
+  /**
+   * Only valid when networkEndpointType is GCE_VM_IP_PORT and the NEG is regional.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientPortMappingMode() {
+    return clientPortMappingMode;
+  }
+
+  /**
+   * Only valid when networkEndpointType is GCE_VM_IP_PORT and the NEG is regional.
+   * @param clientPortMappingMode clientPortMappingMode or {@code null} for none
+   */
+  public NetworkEndpointGroup setClientPortMappingMode(java.lang.String clientPortMappingMode) {
+    this.clientPortMappingMode = clientPortMappingMode;
     return this;
   }
 

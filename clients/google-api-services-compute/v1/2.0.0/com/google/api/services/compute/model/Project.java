@@ -31,6 +31,15 @@ package com.google.api.services.compute.model;
 public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] The Cloud Armor tier for this project. It can be one of the following values:
+   * CA_STANDARD, CA_ENTERPRISE_PAYGO. If this field is not specified, it is assumed to be
+   * CA_STANDARD.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudArmorTier;
+
+  /**
    * Metadata key/value pairs available to all instances contained in this project. See Custom
    * metadata for more information.
    * The value may be {@code null}.
@@ -135,6 +144,27 @@ public final class Project extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String xpnProjectStatus;
+
+  /**
+   * [Output Only] The Cloud Armor tier for this project. It can be one of the following values:
+   * CA_STANDARD, CA_ENTERPRISE_PAYGO. If this field is not specified, it is assumed to be
+   * CA_STANDARD.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudArmorTier() {
+    return cloudArmorTier;
+  }
+
+  /**
+   * [Output Only] The Cloud Armor tier for this project. It can be one of the following values:
+   * CA_STANDARD, CA_ENTERPRISE_PAYGO. If this field is not specified, it is assumed to be
+   * CA_STANDARD.
+   * @param cloudArmorTier cloudArmorTier or {@code null} for none
+   */
+  public Project setCloudArmorTier(java.lang.String cloudArmorTier) {
+    this.cloudArmorTier = cloudArmorTier;
+    return this;
+  }
 
   /**
    * Metadata key/value pairs available to all instances contained in this project. See Custom

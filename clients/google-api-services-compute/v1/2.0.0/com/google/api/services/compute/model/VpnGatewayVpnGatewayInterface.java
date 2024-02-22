@@ -60,6 +60,15 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   private java.lang.String ipAddress;
 
   /**
+   * [Output Only] IPv6 address for this VPN interface associated with the VPN gateway. The IPv6
+   * address must be a regional external IPv6 address. The format is RFC 5952 format (e.g.
+   * 2001:db8::2d9:51:0:0).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6Address;
+
+  /**
    * [Output Only] Numeric identifier for this VPN interface associated with the VPN gateway.
    * @return value or {@code null} for none
    */
@@ -125,6 +134,27 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
    */
   public VpnGatewayVpnGatewayInterface setIpAddress(java.lang.String ipAddress) {
     this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * [Output Only] IPv6 address for this VPN interface associated with the VPN gateway. The IPv6
+   * address must be a regional external IPv6 address. The format is RFC 5952 format (e.g.
+   * 2001:db8::2d9:51:0:0).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6Address() {
+    return ipv6Address;
+  }
+
+  /**
+   * [Output Only] IPv6 address for this VPN interface associated with the VPN gateway. The IPv6
+   * address must be a regional external IPv6 address. The format is RFC 5952 format (e.g.
+   * 2001:db8::2d9:51:0:0).
+   * @param ipv6Address ipv6Address or {@code null} for none
+   */
+  public VpnGatewayVpnGatewayInterface setIpv6Address(java.lang.String ipv6Address) {
+    this.ipv6Address = ipv6Address;
     return this;
   }
 

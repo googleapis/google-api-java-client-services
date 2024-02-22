@@ -255,6 +255,36 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceDiskId;
 
   /**
+   * The source instant snapshot used to create this snapshot. You can provide this as a partial or
+   * full URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone
+   * /instantSnapshots/instantSnapshot -
+   * projects/project/zones/zone/instantSnapshots/instantSnapshot -
+   * zones/zone/instantSnapshots/instantSnapshot
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceInstantSnapshot;
+
+  /**
+   * Customer provided encryption key when creating Snapshot from Instant Snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomerEncryptionKey sourceInstantSnapshotEncryptionKey;
+
+  /**
+   * [Output Only] The unique ID of the instant snapshot used to create this snapshot. This value
+   * identifies the exact instant snapshot that was used to create this persistent disk. For
+   * example, if you created the persistent disk from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would identify the exact instant
+   * snapshot that was used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceInstantSnapshotId;
+
+  /**
    * [Output Only] URL of the resource policy which created this scheduled snapshot.
    * The value may be {@code null}.
    */
@@ -853,6 +883,75 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setSourceDiskId(java.lang.String sourceDiskId) {
     this.sourceDiskId = sourceDiskId;
+    return this;
+  }
+
+  /**
+   * The source instant snapshot used to create this snapshot. You can provide this as a partial or
+   * full URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone
+   * /instantSnapshots/instantSnapshot -
+   * projects/project/zones/zone/instantSnapshots/instantSnapshot -
+   * zones/zone/instantSnapshots/instantSnapshot
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceInstantSnapshot() {
+    return sourceInstantSnapshot;
+  }
+
+  /**
+   * The source instant snapshot used to create this snapshot. You can provide this as a partial or
+   * full URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone
+   * /instantSnapshots/instantSnapshot -
+   * projects/project/zones/zone/instantSnapshots/instantSnapshot -
+   * zones/zone/instantSnapshots/instantSnapshot
+   * @param sourceInstantSnapshot sourceInstantSnapshot or {@code null} for none
+   */
+  public Snapshot setSourceInstantSnapshot(java.lang.String sourceInstantSnapshot) {
+    this.sourceInstantSnapshot = sourceInstantSnapshot;
+    return this;
+  }
+
+  /**
+   * Customer provided encryption key when creating Snapshot from Instant Snapshot.
+   * @return value or {@code null} for none
+   */
+  public CustomerEncryptionKey getSourceInstantSnapshotEncryptionKey() {
+    return sourceInstantSnapshotEncryptionKey;
+  }
+
+  /**
+   * Customer provided encryption key when creating Snapshot from Instant Snapshot.
+   * @param sourceInstantSnapshotEncryptionKey sourceInstantSnapshotEncryptionKey or {@code null} for none
+   */
+  public Snapshot setSourceInstantSnapshotEncryptionKey(CustomerEncryptionKey sourceInstantSnapshotEncryptionKey) {
+    this.sourceInstantSnapshotEncryptionKey = sourceInstantSnapshotEncryptionKey;
+    return this;
+  }
+
+  /**
+   * [Output Only] The unique ID of the instant snapshot used to create this snapshot. This value
+   * identifies the exact instant snapshot that was used to create this persistent disk. For
+   * example, if you created the persistent disk from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would identify the exact instant
+   * snapshot that was used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceInstantSnapshotId() {
+    return sourceInstantSnapshotId;
+  }
+
+  /**
+   * [Output Only] The unique ID of the instant snapshot used to create this snapshot. This value
+   * identifies the exact instant snapshot that was used to create this persistent disk. For
+   * example, if you created the persistent disk from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would identify the exact instant
+   * snapshot that was used.
+   * @param sourceInstantSnapshotId sourceInstantSnapshotId or {@code null} for none
+   */
+  public Snapshot setSourceInstantSnapshotId(java.lang.String sourceInstantSnapshotId) {
+    this.sourceInstantSnapshotId = sourceInstantSnapshotId;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class DiskSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Policy of which locations are allowed to create regional snapshots.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskSettingsAccessLocation accessLocation;
+
+  /**
    * An optional parameter for storing the default resource policies that will be used for the Disks
    * created in the given scope. The Key is a string type, provided by customers to uniquely
    * identify the default Resource Policy entry. The Value is a Default ResourcePolicyDetails Object
@@ -38,6 +45,23 @@ public final class DiskSettings extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, DiskSettingsResourcePolicyDetails> defaultResourcePolicies;
+
+  /**
+   * Policy of which locations are allowed to create regional snapshots.
+   * @return value or {@code null} for none
+   */
+  public DiskSettingsAccessLocation getAccessLocation() {
+    return accessLocation;
+  }
+
+  /**
+   * Policy of which locations are allowed to create regional snapshots.
+   * @param accessLocation accessLocation or {@code null} for none
+   */
+  public DiskSettings setAccessLocation(DiskSettingsAccessLocation accessLocation) {
+    this.accessLocation = accessLocation;
+    return this;
+  }
 
   /**
    * An optional parameter for storing the default resource policies that will be used for the Disks

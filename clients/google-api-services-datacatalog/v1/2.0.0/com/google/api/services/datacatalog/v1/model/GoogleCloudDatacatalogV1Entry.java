@@ -115,6 +115,13 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private java.lang.String displayName;
 
   /**
+   * FeatureonlineStore spec for Vertex AI Feature Store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1FeatureOnlineStoreSpec featureOnlineStoreSpec;
+
+  /**
    * Specification that applies to a fileset resource. Valid only for entries with the `FILESET`
    * type.
    * The value may be {@code null}.
@@ -465,6 +472,23 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   public GoogleCloudDatacatalogV1Entry setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * FeatureonlineStore spec for Vertex AI Feature Store.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1FeatureOnlineStoreSpec getFeatureOnlineStoreSpec() {
+    return featureOnlineStoreSpec;
+  }
+
+  /**
+   * FeatureonlineStore spec for Vertex AI Feature Store.
+   * @param featureOnlineStoreSpec featureOnlineStoreSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setFeatureOnlineStoreSpec(GoogleCloudDatacatalogV1FeatureOnlineStoreSpec featureOnlineStoreSpec) {
+    this.featureOnlineStoreSpec = featureOnlineStoreSpec;
     return this;
   }
 

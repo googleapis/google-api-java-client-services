@@ -44,6 +44,13 @@ public final class InstanceGroupManagerInstanceFlexibilityPolicy extends com.goo
   private java.util.Map<String, InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection> instanceSelections;
 
   /**
+   * Provisioning model configuration used by this managed instance group to create instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerInstanceFlexibilityPolicyProvisioningModelMix provisioningModelMix;
+
+  /**
    * Named instance selections configuring properties that the group will use when creating new VMs.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class InstanceGroupManagerInstanceFlexibilityPolicy extends com.goo
    */
   public InstanceGroupManagerInstanceFlexibilityPolicy setInstanceSelections(java.util.Map<String, InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection> instanceSelections) {
     this.instanceSelections = instanceSelections;
+    return this;
+  }
+
+  /**
+   * Provisioning model configuration used by this managed instance group to create instances.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceFlexibilityPolicyProvisioningModelMix getProvisioningModelMix() {
+    return provisioningModelMix;
+  }
+
+  /**
+   * Provisioning model configuration used by this managed instance group to create instances.
+   * @param provisioningModelMix provisioningModelMix or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceFlexibilityPolicy setProvisioningModelMix(InstanceGroupManagerInstanceFlexibilityPolicyProvisioningModelMix provisioningModelMix) {
+    this.provisioningModelMix = provisioningModelMix;
     return this;
   }
 

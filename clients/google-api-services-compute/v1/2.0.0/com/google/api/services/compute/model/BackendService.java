@@ -408,6 +408,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> serviceBindings;
 
   /**
+   * URL to networkservices.ServiceLbPolicy resource. Can only be set if load balancing scheme is
+   * EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED and the scope is global.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceLbPolicy;
+
+  /**
    * Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported
    * when the backend service is referenced by a URL map that is bound to target gRPC proxy that has
    * validateForProxyless field set to true. For more details, see: [Session
@@ -1313,6 +1321,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setServiceBindings(java.util.List<java.lang.String> serviceBindings) {
     this.serviceBindings = serviceBindings;
+    return this;
+  }
+
+  /**
+   * URL to networkservices.ServiceLbPolicy resource. Can only be set if load balancing scheme is
+   * EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED and the scope is global.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceLbPolicy() {
+    return serviceLbPolicy;
+  }
+
+  /**
+   * URL to networkservices.ServiceLbPolicy resource. Can only be set if load balancing scheme is
+   * EXTERNAL, EXTERNAL_MANAGED, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED and the scope is global.
+   * @param serviceLbPolicy serviceLbPolicy or {@code null} for none
+   */
+  public BackendService setServiceLbPolicy(java.lang.String serviceLbPolicy) {
+    this.serviceLbPolicy = serviceLbPolicy;
     return this;
   }
 

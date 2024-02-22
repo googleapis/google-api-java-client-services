@@ -121,6 +121,12 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String onHostMaintenance;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchedulingOnInstanceStopAction onInstanceStopAction;
+
+  /**
    * Defines whether the instance is preemptible. This can only be set during instance creation or
    * while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle
    * for more information on the possible instance states.
@@ -356,6 +362,21 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setOnHostMaintenance(java.lang.String onHostMaintenance) {
     this.onHostMaintenance = onHostMaintenance;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SchedulingOnInstanceStopAction getOnInstanceStopAction() {
+    return onInstanceStopAction;
+  }
+
+  /**
+   * @param onInstanceStopAction onInstanceStopAction or {@code null} for none
+   */
+  public Scheduling setOnInstanceStopAction(SchedulingOnInstanceStopAction onInstanceStopAction) {
+    this.onInstanceStopAction = onInstanceStopAction;
     return this;
   }
 

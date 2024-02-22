@@ -145,6 +145,17 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.Float maxUtilization;
 
   /**
+   * This field indicates whether this backend should be fully utilized before sending traffic to
+   * backends with default preference. The possible values are: - PREFERRED: Backends with this
+   * preference level will be filled up to their capacity limits first, based on RTT. - DEFAULT: If
+   * preferred backends don't have enough capacity, backends in this layer would be used and traffic
+   * would be assigned based on the load balancing algorithm you use. This is the default
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String preference;
+
+  /**
    * Specifies how to determine whether the backend of a load balancer can handle additional traffic
    * or is fully loaded. For usage guidelines, see Connection balancing mode. Backends must use
    * compatible balancing modes. For more information, see Supported balancing modes and target
@@ -407,6 +418,31 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    */
   public Backend setMaxUtilization(java.lang.Float maxUtilization) {
     this.maxUtilization = maxUtilization;
+    return this;
+  }
+
+  /**
+   * This field indicates whether this backend should be fully utilized before sending traffic to
+   * backends with default preference. The possible values are: - PREFERRED: Backends with this
+   * preference level will be filled up to their capacity limits first, based on RTT. - DEFAULT: If
+   * preferred backends don't have enough capacity, backends in this layer would be used and traffic
+   * would be assigned based on the load balancing algorithm you use. This is the default
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPreference() {
+    return preference;
+  }
+
+  /**
+   * This field indicates whether this backend should be fully utilized before sending traffic to
+   * backends with default preference. The possible values are: - PREFERRED: Backends with this
+   * preference level will be filled up to their capacity limits first, based on RTT. - DEFAULT: If
+   * preferred backends don't have enough capacity, backends in this layer would be used and traffic
+   * would be assigned based on the load balancing algorithm you use. This is the default
+   * @param preference preference or {@code null} for none
+   */
+  public Backend setPreference(java.lang.String preference) {
+    this.preference = preference;
     return this;
   }
 

@@ -37,6 +37,13 @@ public final class ManagedInstancePropertiesFromFlexibilityPolicy extends com.go
   private java.lang.String machineType;
 
   /**
+   * The provisioning model to be used for this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String provisioningModel;
+
+  /**
    * The machine type to be used for this instance.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class ManagedInstancePropertiesFromFlexibilityPolicy extends com.go
    */
   public ManagedInstancePropertiesFromFlexibilityPolicy setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * The provisioning model to be used for this instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProvisioningModel() {
+    return provisioningModel;
+  }
+
+  /**
+   * The provisioning model to be used for this instance.
+   * @param provisioningModel provisioningModel or {@code null} for none
+   */
+  public ManagedInstancePropertiesFromFlexibilityPolicy setProvisioningModel(java.lang.String provisioningModel) {
+    this.provisioningModel = provisioningModel;
     return this;
   }
 

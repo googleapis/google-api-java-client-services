@@ -32,9 +32,6 @@ public class DataflowScopes {
   /** View your Google Compute Engine resources. */
   public static final String COMPUTE_READONLY = "https://www.googleapis.com/auth/compute.readonly";
 
-  /** See your primary Google Account email address. */
-  public static final String USERINFO_EMAIL = "https://www.googleapis.com/auth/userinfo.email";
-
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -45,7 +42,6 @@ public class DataflowScopes {
     set.add(CLOUD_PLATFORM);
     set.add(COMPUTE);
     set.add(COMPUTE_READONLY);
-    set.add(USERINFO_EMAIL);
     return java.util.Collections.unmodifiableSet(set);
   }
 

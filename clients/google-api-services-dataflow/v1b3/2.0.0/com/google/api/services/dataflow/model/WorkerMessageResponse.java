@@ -30,6 +30,13 @@ package com.google.api.services.dataflow.model;
 public final class WorkerMessageResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Service's streaming scaling response for workers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StreamingScalingReportResponse streamingScalingReportResponse;
+
+  /**
    * The service's response to a worker's health report.
    * The value may be {@code null}.
    */
@@ -56,6 +63,23 @@ public final class WorkerMessageResponse extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private WorkerThreadScalingReportResponse workerThreadScalingReportResponse;
+
+  /**
+   * Service's streaming scaling response for workers.
+   * @return value or {@code null} for none
+   */
+  public StreamingScalingReportResponse getStreamingScalingReportResponse() {
+    return streamingScalingReportResponse;
+  }
+
+  /**
+   * Service's streaming scaling response for workers.
+   * @param streamingScalingReportResponse streamingScalingReportResponse or {@code null} for none
+   */
+  public WorkerMessageResponse setStreamingScalingReportResponse(StreamingScalingReportResponse streamingScalingReportResponse) {
+    this.streamingScalingReportResponse = streamingScalingReportResponse;
+    return this;
+  }
 
   /**
    * The service's response to a worker's health report.

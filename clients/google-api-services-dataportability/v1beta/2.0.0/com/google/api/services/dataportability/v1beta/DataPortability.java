@@ -154,7 +154,7 @@ public class DataPortability extends com.google.api.client.googleapis.services.j
   public class ArchiveJobs {
 
     /**
-     * Retrieves the state of a Takeout Archive job for the Portability API.
+     * Retrieves the state of an Archive job for the Portability API.
      *
      * Create a request for the method "archiveJobs.getPortabilityArchiveState".
      *
@@ -162,9 +162,9 @@ public class DataPortability extends com.google.api.client.googleapis.services.j
      * optional parameters, call the {@link GetPortabilityArchiveState#execute()} method to invoke the
      * remote operation.
      *
-     * @param name Required. The archive job ID that is returned when you request the state of the job from Takeout.
-     *        The format is: archiveJobs/{archive_job}/portabilityArchiveState. archive_job is the job
-     *        ID returned by the InitiatePortabilityArchiveResponse.
+     * @param name Required. The archive job ID that is returned when you request the state of the job. The format is:
+     *        archiveJobs/{archive_job}/portabilityArchiveState. archive_job is the job ID returned by
+     *        the InitiatePortabilityArchiveResponse.
      * @return the request
      */
     public GetPortabilityArchiveState getPortabilityArchiveState(java.lang.String name) throws java.io.IOException {
@@ -181,7 +181,7 @@ public class DataPortability extends com.google.api.client.googleapis.services.j
           java.util.regex.Pattern.compile("^archiveJobs/[^/]+/portabilityArchiveState$");
 
       /**
-       * Retrieves the state of a Takeout Archive job for the Portability API.
+       * Retrieves the state of an Archive job for the Portability API.
        *
        * Create a request for the method "archiveJobs.getPortabilityArchiveState".
        *
@@ -191,9 +191,9 @@ public class DataPortability extends com.google.api.client.googleapis.services.j
        * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name Required. The archive job ID that is returned when you request the state of the job from Takeout.
-     *        The format is: archiveJobs/{archive_job}/portabilityArchiveState. archive_job is the job
-     *        ID returned by the InitiatePortabilityArchiveResponse.
+       * @param name Required. The archive job ID that is returned when you request the state of the job. The format is:
+     *        archiveJobs/{archive_job}/portabilityArchiveState. archive_job is the job ID returned by
+     *        the InitiatePortabilityArchiveResponse.
        * @since 1.13
        */
       protected GetPortabilityArchiveState(java.lang.String name) {
@@ -272,25 +272,25 @@ public class DataPortability extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Required. The archive job ID that is returned when you request the state of the job from
-       * Takeout. The format is: archiveJobs/{archive_job}/portabilityArchiveState. archive_job is
-       * the job ID returned by the InitiatePortabilityArchiveResponse.
+       * Required. The archive job ID that is returned when you request the state of the job. The
+       * format is: archiveJobs/{archive_job}/portabilityArchiveState. archive_job is the job ID
+       * returned by the InitiatePortabilityArchiveResponse.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The archive job ID that is returned when you request the state of the job from Takeout.
-     The format is: archiveJobs/{archive_job}/portabilityArchiveState. archive_job is the job ID
-     returned by the InitiatePortabilityArchiveResponse.
+      /** Required. The archive job ID that is returned when you request the state of the job. The format is:
+     archiveJobs/{archive_job}/portabilityArchiveState. archive_job is the job ID returned by the
+     InitiatePortabilityArchiveResponse.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. The archive job ID that is returned when you request the state of the job from
-       * Takeout. The format is: archiveJobs/{archive_job}/portabilityArchiveState. archive_job is
-       * the job ID returned by the InitiatePortabilityArchiveResponse.
+       * Required. The archive job ID that is returned when you request the state of the job. The
+       * format is: archiveJobs/{archive_job}/portabilityArchiveState. archive_job is the job ID
+       * returned by the InitiatePortabilityArchiveResponse.
        */
       public GetPortabilityArchiveState setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -315,8 +315,8 @@ public class DataPortability extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the dataportability server.  After setting any
      * optional parameters, call the {@link Retry#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The archive job ID returned by the InitiatePortabilityArchiveResponse to be retried.
-     *        Retrying is only executed if the initial job failed.
+     * @param name Required. The Archive job ID you're retrying. This is returned by the
+     *        InitiatePortabilityArchiveResponse. Retrying is only executed if the initial job failed.
      * @param content the {@link com.google.api.services.dataportability.v1beta.model.RetryPortabilityArchiveRequest}
      * @return the request
      */
@@ -344,8 +344,8 @@ public class DataPortability extends com.google.api.client.googleapis.services.j
        * Retry#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The archive job ID returned by the InitiatePortabilityArchiveResponse to be retried.
-     *        Retrying is only executed if the initial job failed.
+       * @param name Required. The Archive job ID you're retrying. This is returned by the
+     *        InitiatePortabilityArchiveResponse. Retrying is only executed if the initial job failed.
        * @param content the {@link com.google.api.services.dataportability.v1beta.model.RetryPortabilityArchiveRequest}
        * @since 1.13
        */
@@ -415,22 +415,22 @@ public class DataPortability extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Required. The archive job ID returned by the InitiatePortabilityArchiveResponse to be
-       * retried. Retrying is only executed if the initial job failed.
+       * Required. The Archive job ID you're retrying. This is returned by the
+       * InitiatePortabilityArchiveResponse. Retrying is only executed if the initial job failed.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The archive job ID returned by the InitiatePortabilityArchiveResponse to be retried.
-     Retrying is only executed if the initial job failed.
+      /** Required. The Archive job ID you're retrying. This is returned by the
+     InitiatePortabilityArchiveResponse. Retrying is only executed if the initial job failed.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. The archive job ID returned by the InitiatePortabilityArchiveResponse to be
-       * retried. Retrying is only executed if the initial job failed.
+       * Required. The Archive job ID you're retrying. This is returned by the
+       * InitiatePortabilityArchiveResponse. Retrying is only executed if the initial job failed.
        */
       public Retry setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -472,9 +472,9 @@ public class DataPortability extends com.google.api.client.googleapis.services.j
 
     /**
      * Revokes OAuth tokens and resets exhausted scopes for a user/project pair. This method allows you
-     * to initiate a Takeout request after a new consent is granted. This method also indicates that
-     * previous archives can be garbage collected. You should call this method when all jobs are
-     * complete and all archives are downloaded. Do not call it only when you start a new job.
+     * to initiate a request after a new consent is granted. This method also indicates that previous
+     * archives can be garbage collected. You should call this method when all jobs are complete and all
+     * archives are downloaded. Do not call it only when you start a new job.
      *
      * Create a request for the method "authorization.reset".
      *
@@ -496,8 +496,8 @@ public class DataPortability extends com.google.api.client.googleapis.services.j
 
       /**
        * Revokes OAuth tokens and resets exhausted scopes for a user/project pair. This method allows
-       * you to initiate a Takeout request after a new consent is granted. This method also indicates
-       * that previous archives can be garbage collected. You should call this method when all jobs are
+       * you to initiate a request after a new consent is granted. This method also indicates that
+       * previous archives can be garbage collected. You should call this method when all jobs are
        * complete and all archives are downloaded. Do not call it only when you start a new job.
        *
        * Create a request for the method "authorization.reset".
@@ -599,7 +599,7 @@ public class DataPortability extends com.google.api.client.googleapis.services.j
   public class PortabilityArchive {
 
     /**
-     * Initiates a new Takeout Archive job for the Portability API.
+     * Initiates a new Archive job for the Portability API.
      *
      * Create a request for the method "portabilityArchive.initiate".
      *
@@ -620,7 +620,7 @@ public class DataPortability extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "v1beta/portabilityArchive:initiate";
 
       /**
-       * Initiates a new Takeout Archive job for the Portability API.
+       * Initiates a new Archive job for the Portability API.
        *
        * Create a request for the method "portabilityArchive.initiate".
        *

@@ -31,7 +31,7 @@ public final class RetryPortabilityArchiveResponse extends com.google.api.client
 
   /**
    * The archive job ID that is initiated by the retry endpoint. This can be used to get the state
-   * of the new job
+   * of the new job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class RetryPortabilityArchiveResponse extends com.google.api.client
 
   /**
    * The archive job ID that is initiated by the retry endpoint. This can be used to get the state
-   * of the new job
+   * of the new job.
    * @return value or {@code null} for none
    */
   public java.lang.String getArchiveJobId() {
@@ -48,7 +48,7 @@ public final class RetryPortabilityArchiveResponse extends com.google.api.client
 
   /**
    * The archive job ID that is initiated by the retry endpoint. This can be used to get the state
-   * of the new job
+   * of the new job.
    * @param archiveJobId archiveJobId or {@code null} for none
    */
   public RetryPortabilityArchiveResponse setArchiveJobId(java.lang.String archiveJobId) {

@@ -53,6 +53,20 @@ public final class EditCustomerMatchMembersRequest extends com.google.api.client
   private java.lang.Long advertiserId;
 
   /**
+   * Input only. A list of contact information to define the members to be removed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContactInfoList removedContactInfoList;
+
+  /**
+   * Input only. A list of mobile device IDs to define the members to be removed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MobileDeviceIdList removedMobileDeviceIdList;
+
+  /**
    * Input only. A list of contact information to define the members to be added.
    * @return value or {@code null} for none
    */
@@ -102,6 +116,40 @@ public final class EditCustomerMatchMembersRequest extends com.google.api.client
    */
   public EditCustomerMatchMembersRequest setAdvertiserId(java.lang.Long advertiserId) {
     this.advertiserId = advertiserId;
+    return this;
+  }
+
+  /**
+   * Input only. A list of contact information to define the members to be removed.
+   * @return value or {@code null} for none
+   */
+  public ContactInfoList getRemovedContactInfoList() {
+    return removedContactInfoList;
+  }
+
+  /**
+   * Input only. A list of contact information to define the members to be removed.
+   * @param removedContactInfoList removedContactInfoList or {@code null} for none
+   */
+  public EditCustomerMatchMembersRequest setRemovedContactInfoList(ContactInfoList removedContactInfoList) {
+    this.removedContactInfoList = removedContactInfoList;
+    return this;
+  }
+
+  /**
+   * Input only. A list of mobile device IDs to define the members to be removed.
+   * @return value or {@code null} for none
+   */
+  public MobileDeviceIdList getRemovedMobileDeviceIdList() {
+    return removedMobileDeviceIdList;
+  }
+
+  /**
+   * Input only. A list of mobile device IDs to define the members to be removed.
+   * @param removedMobileDeviceIdList removedMobileDeviceIdList or {@code null} for none
+   */
+  public EditCustomerMatchMembersRequest setRemovedMobileDeviceIdList(MobileDeviceIdList removedMobileDeviceIdList) {
+    this.removedMobileDeviceIdList = removedMobileDeviceIdList;
     return this;
   }
 

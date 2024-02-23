@@ -30,62 +30,11 @@ package com.google.api.services.serviceusage.v1.model;
 public final class GoogleApiServiceusageV2alphaEnableRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * The names of the categories that are enabled. Example: `categories/googleServices`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> categories;
-
-  /**
-   * The names of the service groups that are enabled. Example:
-   * `services/container.googleapis.com/groups/dependencies`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> groups;
-
-  /**
    * The names of the services that are enabled. Example: `services/storage.googleapis.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> services;
-
-  /**
-   * The names of the categories that are enabled. Example: `categories/googleServices`.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getCategories() {
-    return categories;
-  }
-
-  /**
-   * The names of the categories that are enabled. Example: `categories/googleServices`.
-   * @param categories categories or {@code null} for none
-   */
-  public GoogleApiServiceusageV2alphaEnableRule setCategories(java.util.List<java.lang.String> categories) {
-    this.categories = categories;
-    return this;
-  }
-
-  /**
-   * The names of the service groups that are enabled. Example:
-   * `services/container.googleapis.com/groups/dependencies`.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getGroups() {
-    return groups;
-  }
-
-  /**
-   * The names of the service groups that are enabled. Example:
-   * `services/container.googleapis.com/groups/dependencies`.
-   * @param groups groups or {@code null} for none
-   */
-  public GoogleApiServiceusageV2alphaEnableRule setGroups(java.util.List<java.lang.String> groups) {
-    this.groups = groups;
-    return this;
-  }
 
   /**
    * The names of the services that are enabled. Example: `services/storage.googleapis.com`.

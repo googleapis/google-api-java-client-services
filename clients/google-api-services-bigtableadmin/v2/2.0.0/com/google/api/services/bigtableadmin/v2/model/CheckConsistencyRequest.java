@@ -38,14 +38,6 @@ public final class CheckConsistencyRequest extends com.google.api.client.json.Ge
   private java.lang.String consistencyToken;
 
   /**
-   * Checks that reads using an app profile with `StandardIsolation` can see all writes committed
-   * before the token was created, even if the read and write target different clusters.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private StandardReadRemoteWrites standardReadRemoteWrites;
-
-  /**
    * Required. The token created using GenerateConsistencyToken for the Table.
    * @return value or {@code null} for none
    */
@@ -59,25 +51,6 @@ public final class CheckConsistencyRequest extends com.google.api.client.json.Ge
    */
   public CheckConsistencyRequest setConsistencyToken(java.lang.String consistencyToken) {
     this.consistencyToken = consistencyToken;
-    return this;
-  }
-
-  /**
-   * Checks that reads using an app profile with `StandardIsolation` can see all writes committed
-   * before the token was created, even if the read and write target different clusters.
-   * @return value or {@code null} for none
-   */
-  public StandardReadRemoteWrites getStandardReadRemoteWrites() {
-    return standardReadRemoteWrites;
-  }
-
-  /**
-   * Checks that reads using an app profile with `StandardIsolation` can see all writes committed
-   * before the token was created, even if the read and write target different clusters.
-   * @param standardReadRemoteWrites standardReadRemoteWrites or {@code null} for none
-   */
-  public CheckConsistencyRequest setStandardReadRemoteWrites(StandardReadRemoteWrites standardReadRemoteWrites) {
-    this.standardReadRemoteWrites = standardReadRemoteWrites;
     return this;
   }
 

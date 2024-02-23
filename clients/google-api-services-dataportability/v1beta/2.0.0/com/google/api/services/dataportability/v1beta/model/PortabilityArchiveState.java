@@ -17,7 +17,7 @@
 package com.google.api.services.dataportability.v1beta.model;
 
 /**
- * Resource that contains the state of a Takeout Archive job.
+ * Resource that contains the state of an Archive job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Portability API. For a detailed explanation see:
@@ -39,7 +39,7 @@ public final class PortabilityArchiveState extends com.google.api.client.json.Ge
   private java.lang.String name;
 
   /**
-   * Resource that represents the state of the Takeout Archive job.
+   * Resource that represents the state of the Archive job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class PortabilityArchiveState extends com.google.api.client.json.Ge
   }
 
   /**
-   * Resource that represents the state of the Takeout Archive job.
+   * Resource that represents the state of the Archive job.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -83,7 +83,7 @@ public final class PortabilityArchiveState extends com.google.api.client.json.Ge
   }
 
   /**
-   * Resource that represents the state of the Takeout Archive job.
+   * Resource that represents the state of the Archive job.
    * @param state state or {@code null} for none
    */
   public PortabilityArchiveState setState(java.lang.String state) {

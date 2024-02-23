@@ -17,7 +17,7 @@
 package com.google.api.services.dataportability.v1beta.model;
 
 /**
- * Request to kick off a Takeout Archive job.
+ * Request to kick off an Archive job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Portability API. For a detailed explanation see:

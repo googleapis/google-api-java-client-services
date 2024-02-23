@@ -17,7 +17,7 @@
 package com.google.api.services.dataportability.v1beta.model;
 
 /**
- * Response from initiating a Take Archive job.
+ * Response from initiating an Archive job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Portability API. For a detailed explanation see:
@@ -30,16 +30,14 @@ package com.google.api.services.dataportability.v1beta.model;
 public final class InitiatePortabilityArchiveResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The archive job ID that is initiated in the Takeout API. This can be used to get the state of
-   * the job.
+   * The archive job ID that is initiated in the API. This can be used to get the state of the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String archiveJobId;
 
   /**
-   * The archive job ID that is initiated in the Takeout API. This can be used to get the state of
-   * the job.
+   * The archive job ID that is initiated in the API. This can be used to get the state of the job.
    * @return value or {@code null} for none
    */
   public java.lang.String getArchiveJobId() {
@@ -47,8 +45,7 @@ public final class InitiatePortabilityArchiveResponse extends com.google.api.cli
   }
 
   /**
-   * The archive job ID that is initiated in the Takeout API. This can be used to get the state of
-   * the job.
+   * The archive job ID that is initiated in the API. This can be used to get the state of the job.
    * @param archiveJobId archiveJobId or {@code null} for none
    */
   public InitiatePortabilityArchiveResponse setArchiveJobId(java.lang.String archiveJobId) {

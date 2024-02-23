@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.alloydb.v1alpha.model;
+package com.google.api.services.alloydb.v1.model;
 
 /**
  * Common model for database resource recommendation signal data.

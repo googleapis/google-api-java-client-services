@@ -1882,6 +1882,190 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
     public class Platforms {
 
       /**
+       * An accessor for creating requests from the Gke collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code BinaryAuthorization binaryauthorization = new BinaryAuthorization(...);}
+       *   {@code BinaryAuthorization.Gke.List request = binaryauthorization.gke().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Gke gke() {
+        return new Gke();
+      }
+
+      /**
+       * The "gke" collection of methods.
+       */
+      public class Gke {
+
+        /**
+         * An accessor for creating requests from the Policies collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code BinaryAuthorization binaryauthorization = new BinaryAuthorization(...);}
+         *   {@code BinaryAuthorization.Policies.List request = binaryauthorization.policies().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Policies policies() {
+          return new Policies();
+        }
+
+        /**
+         * The "policies" collection of methods.
+         */
+        public class Policies {
+
+          /**
+           * Evaluates a Kubernetes object versus a GKE platform policy. Returns `NOT_FOUND` if the policy
+           * doesn't exist, `INVALID_ARGUMENT` if the policy or request is malformed and `PERMISSION_DENIED`
+           * if the client does not have sufficient permissions.
+           *
+           * Create a request for the method "policies.evaluate".
+           *
+           * This request holds the parameters needed by the binaryauthorization server.  After setting any
+           * optional parameters, call the {@link Evaluate#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the platform policy to evaluate in the format `projects/platforms/policies`.
+           * @param content the {@link com.google.api.services.binaryauthorization.v1.model.EvaluateGkePolicyRequest}
+           * @return the request
+           */
+          public Evaluate evaluate(java.lang.String name, com.google.api.services.binaryauthorization.v1.model.EvaluateGkePolicyRequest content) throws java.io.IOException {
+            Evaluate result = new Evaluate(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Evaluate extends BinaryAuthorizationRequest<com.google.api.services.binaryauthorization.v1.model.EvaluateGkePolicyResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:evaluate";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/platforms/gke/policies/[^/]+$");
+
+            /**
+             * Evaluates a Kubernetes object versus a GKE platform policy. Returns `NOT_FOUND` if the policy
+             * doesn't exist, `INVALID_ARGUMENT` if the policy or request is malformed and `PERMISSION_DENIED`
+             * if the client does not have sufficient permissions.
+             *
+             * Create a request for the method "policies.evaluate".
+             *
+             * This request holds the parameters needed by the the binaryauthorization server.  After setting
+             * any optional parameters, call the {@link Evaluate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Evaluate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the platform policy to evaluate in the format `projects/platforms/policies`.
+             * @param content the {@link com.google.api.services.binaryauthorization.v1.model.EvaluateGkePolicyRequest}
+             * @since 1.13
+             */
+            protected Evaluate(java.lang.String name, com.google.api.services.binaryauthorization.v1.model.EvaluateGkePolicyRequest content) {
+              super(BinaryAuthorization.this, "POST", REST_PATH, content, com.google.api.services.binaryauthorization.v1.model.EvaluateGkePolicyResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/platforms/gke/policies/[^/]+$");
+              }
+            }
+
+            @Override
+            public Evaluate set$Xgafv(java.lang.String $Xgafv) {
+              return (Evaluate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Evaluate setAccessToken(java.lang.String accessToken) {
+              return (Evaluate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Evaluate setAlt(java.lang.String alt) {
+              return (Evaluate) super.setAlt(alt);
+            }
+
+            @Override
+            public Evaluate setCallback(java.lang.String callback) {
+              return (Evaluate) super.setCallback(callback);
+            }
+
+            @Override
+            public Evaluate setFields(java.lang.String fields) {
+              return (Evaluate) super.setFields(fields);
+            }
+
+            @Override
+            public Evaluate setKey(java.lang.String key) {
+              return (Evaluate) super.setKey(key);
+            }
+
+            @Override
+            public Evaluate setOauthToken(java.lang.String oauthToken) {
+              return (Evaluate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Evaluate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Evaluate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Evaluate setQuotaUser(java.lang.String quotaUser) {
+              return (Evaluate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Evaluate setUploadType(java.lang.String uploadType) {
+              return (Evaluate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Evaluate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Evaluate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the platform policy to evaluate in the format
+             * `projects/platforms/policies`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the platform policy to evaluate in the format `projects/platforms/policies`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the platform policy to evaluate in the format
+             * `projects/platforms/policies`.
+             */
+            public Evaluate setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/platforms/gke/policies/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Evaluate set(String parameterName, Object value) {
+              return (Evaluate) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
        * An accessor for creating requests from the Policies collection.
        *
        * <p>The typical use is:</p>

@@ -73,6 +73,13 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   private StorageDatabasecenterPartnerapiV1mainCustomMetadataData customMetadata;
 
   /**
+   * Entitlements associated with the resource
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StorageDatabasecenterPartnerapiV1mainEntitlement> entitlements;
+
+  /**
    * The state that the instance is expected to be in. For example, an instance state can transition
    * to UNHEALTHY due to wrong patch update, while the expected state will remain at the HEALTHY.
    * The value may be {@code null}.
@@ -251,6 +258,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setCustomMetadata(StorageDatabasecenterPartnerapiV1mainCustomMetadataData customMetadata) {
     this.customMetadata = customMetadata;
+    return this;
+  }
+
+  /**
+   * Entitlements associated with the resource
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StorageDatabasecenterPartnerapiV1mainEntitlement> getEntitlements() {
+    return entitlements;
+  }
+
+  /**
+   * Entitlements associated with the resource
+   * @param entitlements entitlements or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setEntitlements(java.util.List<StorageDatabasecenterPartnerapiV1mainEntitlement> entitlements) {
+    this.entitlements = entitlements;
     return this;
   }
 

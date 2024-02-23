@@ -165,6 +165,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<Node> nodes;
 
   /**
+   * Optional. The configuration for Private Service Connect (PSC) for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PscInstanceConfig pscInstanceConfig;
+
+  /**
    * Output only. The public IP addresses for the Instance. This is available ONLY when
    * enable_public_ip is set. This is the connection endpoint for an end-user application.
    * The value may be {@code null}.
@@ -554,6 +561,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNodes(java.util.List<Node> nodes) {
     this.nodes = nodes;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for Private Service Connect (PSC) for the instance.
+   * @return value or {@code null} for none
+   */
+  public PscInstanceConfig getPscInstanceConfig() {
+    return pscInstanceConfig;
+  }
+
+  /**
+   * Optional. The configuration for Private Service Connect (PSC) for the instance.
+   * @param pscInstanceConfig pscInstanceConfig or {@code null} for none
+   */
+  public Instance setPscInstanceConfig(PscInstanceConfig pscInstanceConfig) {
+    this.pscInstanceConfig = pscInstanceConfig;
     return this;
   }
 

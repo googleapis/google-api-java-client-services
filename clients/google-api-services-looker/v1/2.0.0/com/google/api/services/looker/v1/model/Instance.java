@@ -158,6 +158,21 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean privateIpEnabled;
 
   /**
+   * Optional. PSC configuration. Used when `enable_private_ip` and `psc_enabled` are both true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PscConfig pscConfig;
+
+  /**
+   * Optional. Whether to use Private Service Connect (PSC) for private IP connectivity. If true,
+   * VPC peering (PSA) will not be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pscEnabled;
+
+  /**
    * Whether public IP is enabled on the Looker instance.
    * The value may be {@code null}.
    */
@@ -498,6 +513,42 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setPrivateIpEnabled(java.lang.Boolean privateIpEnabled) {
     this.privateIpEnabled = privateIpEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. PSC configuration. Used when `enable_private_ip` and `psc_enabled` are both true.
+   * @return value or {@code null} for none
+   */
+  public PscConfig getPscConfig() {
+    return pscConfig;
+  }
+
+  /**
+   * Optional. PSC configuration. Used when `enable_private_ip` and `psc_enabled` are both true.
+   * @param pscConfig pscConfig or {@code null} for none
+   */
+  public Instance setPscConfig(PscConfig pscConfig) {
+    this.pscConfig = pscConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to use Private Service Connect (PSC) for private IP connectivity. If true,
+   * VPC peering (PSA) will not be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPscEnabled() {
+    return pscEnabled;
+  }
+
+  /**
+   * Optional. Whether to use Private Service Connect (PSC) for private IP connectivity. If true,
+   * VPC peering (PSA) will not be used.
+   * @param pscEnabled pscEnabled or {@code null} for none
+   */
+  public Instance setPscEnabled(java.lang.Boolean pscEnabled) {
+    this.pscEnabled = pscEnabled;
     return this;
   }
 

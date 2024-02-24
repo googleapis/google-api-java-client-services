@@ -31,14 +31,14 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The reason of the cancellation.
+   * Output only. The reason of the cancellation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * The reason of the cancellation.
+   * Output only. The reason of the cancellation.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -46,7 +46,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancella
   }
 
   /**
-   * The reason of the cancellation.
+   * Output only. The reason of the cancellation.
    * @param reason reason or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetails setReason(java.lang.String reason) {

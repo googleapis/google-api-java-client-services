@@ -31,14 +31,14 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The service period of the ONE_TIME line item.
+   * Output only. The service period of the ONE_TIME line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod servicePeriod;
 
   /**
-   * The service period of the ONE_TIME line item.
+   * Output only. The service period of the ONE_TIME line item.
    * @return value or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod getServicePeriod() {
@@ -46,7 +46,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   }
 
   /**
-   * The service period of the ONE_TIME line item.
+   * Output only. The service period of the ONE_TIME line item.
    * @param servicePeriod servicePeriod or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails setServicePeriod(GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod servicePeriod) {

@@ -98,7 +98,8 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   private java.lang.String serviceAccount;
 
   /**
-   * Optional. Location of the custom connector spec.
+   * Optional. Location of the custom connector spec. The location can be either a public url like
+   * `https://public-url.com/spec` Or a Google Cloud Storage location like `gs:`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,7 +268,8 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Location of the custom connector spec.
+   * Optional. Location of the custom connector spec. The location can be either a public url like
+   * `https://public-url.com/spec` Or a Google Cloud Storage location like `gs:`
    * @return value or {@code null} for none
    */
   public java.lang.String getSpecLocation() {
@@ -275,7 +277,8 @@ public final class CustomConnectorVersion extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Location of the custom connector spec.
+   * Optional. Location of the custom connector spec. The location can be either a public url like
+   * `https://public-url.com/spec` Or a Google Cloud Storage location like `gs:`
    * @param specLocation specLocation or {@code null} for none
    */
   public CustomConnectorVersion setSpecLocation(java.lang.String specLocation) {

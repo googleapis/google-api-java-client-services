@@ -92,7 +92,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Integer shardCount;
 
   /**
-   * Output only. Redis memory size in GB for the entire cluster.
+   * Output only. Redis memory size in GB for the entire cluster rounded up to the next integer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,7 +275,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Redis memory size in GB for the entire cluster.
+   * Output only. Redis memory size in GB for the entire cluster rounded up to the next integer.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSizeGb() {
@@ -283,7 +283,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Redis memory size in GB for the entire cluster.
+   * Output only. Redis memory size in GB for the entire cluster rounded up to the next integer.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public Cluster setSizeGb(java.lang.Integer sizeGb) {

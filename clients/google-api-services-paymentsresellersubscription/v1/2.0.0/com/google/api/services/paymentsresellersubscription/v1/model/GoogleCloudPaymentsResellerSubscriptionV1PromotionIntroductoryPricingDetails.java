@@ -31,14 +31,14 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies the introductory pricing periods.
+   * Output only. Specifies the introductory pricing periods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec> introductoryPricingSpecs;
 
   /**
-   * Specifies the introductory pricing periods.
+   * Output only. Specifies the introductory pricing periods.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec> getIntroductoryPricingSpecs() {
@@ -46,7 +46,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductor
   }
 
   /**
-   * Specifies the introductory pricing periods.
+   * Output only. Specifies the introductory pricing periods.
    * @param introductoryPricingSpecs introductoryPricingSpecs or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails setIntroductoryPricingSpecs(java.util.List<GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec> introductoryPricingSpecs) {

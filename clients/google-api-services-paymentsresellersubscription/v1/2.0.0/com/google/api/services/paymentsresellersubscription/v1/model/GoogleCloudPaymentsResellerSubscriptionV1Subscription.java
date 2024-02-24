@@ -83,7 +83,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem> lineItems;
 
   /**
-   * Optional. Resource name of the subscription. It will have the format of
+   * Identifier. Resource name of the subscription. It will have the format of
    * "partners/{partner_id}/subscriptions/{subscription_id}". This is available for authorizeAddon,
    * but otherwise is response only.
    * The value may be {@code null}.
@@ -301,7 +301,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Optional. Resource name of the subscription. It will have the format of
+   * Identifier. Resource name of the subscription. It will have the format of
    * "partners/{partner_id}/subscriptions/{subscription_id}". This is available for authorizeAddon,
    * but otherwise is response only.
    * @return value or {@code null} for none
@@ -311,7 +311,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   }
 
   /**
-   * Optional. Resource name of the subscription. It will have the format of
+   * Identifier. Resource name of the subscription. It will have the format of
    * "partners/{partner_id}/subscriptions/{subscription_id}". This is available for authorizeAddon,
    * but otherwise is response only.
    * @param name name or {@code null} for none

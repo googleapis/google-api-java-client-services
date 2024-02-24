@@ -46,7 +46,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
   private GoogleCloudPaymentsResellerSubscriptionV1FiniteBillingCycleDetails finiteBillingCycleDetails;
 
   /**
-   * Output only. Response only. Resource name of the product. It will have the format of
+   * Identifier. Response only. Resource name of the product. It will have the format of
    * "partners/{partner_id}/products/{product_id}"
    * The value may be {@code null}.
    */
@@ -126,7 +126,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
   }
 
   /**
-   * Output only. Response only. Resource name of the product. It will have the format of
+   * Identifier. Response only. Resource name of the product. It will have the format of
    * "partners/{partner_id}/products/{product_id}"
    * @return value or {@code null} for none
    */
@@ -135,7 +135,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
   }
 
   /**
-   * Output only. Response only. Resource name of the product. It will have the format of
+   * Identifier. Response only. Resource name of the product. It will have the format of
    * "partners/{partner_id}/products/{product_id}"
    * @param name name or {@code null} for none
    */

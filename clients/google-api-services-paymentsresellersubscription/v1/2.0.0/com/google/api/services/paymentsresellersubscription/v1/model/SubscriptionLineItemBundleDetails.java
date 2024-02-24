@@ -31,7 +31,7 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class SubscriptionLineItemBundleDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The details for each element in the hard bundle.
+   * Output only. The details for each element in the hard bundle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class SubscriptionLineItemBundleDetails extends com.google.api.clie
   }
 
   /**
-   * The details for each element in the hard bundle.
+   * Output only. The details for each element in the hard bundle.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemBundleDetailsBundleElementDetails> getBundleElementDetails() {
@@ -52,7 +52,7 @@ public final class SubscriptionLineItemBundleDetails extends com.google.api.clie
   }
 
   /**
-   * The details for each element in the hard bundle.
+   * Output only. The details for each element in the hard bundle.
    * @param bundleElementDetails bundleElementDetails or {@code null} for none
    */
   public SubscriptionLineItemBundleDetails setBundleElementDetails(java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemBundleDetailsBundleElementDetails> bundleElementDetails) {

@@ -32,13 +32,10 @@ package com.google.api.services.chat.v1.model;
 public final class CommonEventObject extends com.google.api.client.json.GenericJson {
 
   /**
-   * A map containing the current values of the widgets in a card. The map keys are the string IDs
-   * assigned to each widget, and the values represent inputs to the widget. Depending on the input
-   * data type, a different object represents each input: For single-value widgets, `StringInput`.
-   * For multi-value widgets, an array of `StringInput` objects. For a date-time picker, a
-   * `DateTimeInput`. For a date-only picker, a `DateInput`. For a time-only picker, a `TimeInput`.
-   * Corresponds with the data entered by a user on a card in a
-   * [dialog](https://developers.google.com/chat/how-tos/dialogs).
+   * A map containing the values that a user inputs in a widget from a card or dialog. The map keys
+   * are the string IDs assigned to each widget, and the values represent inputs to the widget. For
+   * details, see [Process information inputted by users](https://developers.google.com/chat/ui
+   * /read-form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,13 +91,10 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   private java.lang.String userLocale;
 
   /**
-   * A map containing the current values of the widgets in a card. The map keys are the string IDs
-   * assigned to each widget, and the values represent inputs to the widget. Depending on the input
-   * data type, a different object represents each input: For single-value widgets, `StringInput`.
-   * For multi-value widgets, an array of `StringInput` objects. For a date-time picker, a
-   * `DateTimeInput`. For a date-only picker, a `DateInput`. For a time-only picker, a `TimeInput`.
-   * Corresponds with the data entered by a user on a card in a
-   * [dialog](https://developers.google.com/chat/how-tos/dialogs).
+   * A map containing the values that a user inputs in a widget from a card or dialog. The map keys
+   * are the string IDs assigned to each widget, and the values represent inputs to the widget. For
+   * details, see [Process information inputted by users](https://developers.google.com/chat/ui
+   * /read-form-data).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Inputs> getFormInputs() {
@@ -108,13 +102,10 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A map containing the current values of the widgets in a card. The map keys are the string IDs
-   * assigned to each widget, and the values represent inputs to the widget. Depending on the input
-   * data type, a different object represents each input: For single-value widgets, `StringInput`.
-   * For multi-value widgets, an array of `StringInput` objects. For a date-time picker, a
-   * `DateTimeInput`. For a date-only picker, a `DateInput`. For a time-only picker, a `TimeInput`.
-   * Corresponds with the data entered by a user on a card in a
-   * [dialog](https://developers.google.com/chat/how-tos/dialogs).
+   * A map containing the values that a user inputs in a widget from a card or dialog. The map keys
+   * are the string IDs assigned to each widget, and the values represent inputs to the widget. For
+   * details, see [Process information inputted by users](https://developers.google.com/chat/ui
+   * /read-form-data).
    * @param formInputs formInputs or {@code null} for none
    */
   public CommonEventObject setFormInputs(java.util.Map<String, Inputs> formInputs) {

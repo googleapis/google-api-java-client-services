@@ -17,9 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Types of data that users can enter on cards or dialogs. To learn how to process information from
- * users, see [Read form data input by users on cards](https://developers.google.com/chat/ui/read-
- * form-data).
+ * Types of data that users can [input on cards or dialogs](https://developers.google.com/chat/ui
+ * /read-form-data). The input type depends on the type of values that the widget accepts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -32,36 +31,45 @@ package com.google.api.services.chat.v1.model;
 public final class Inputs extends com.google.api.client.json.GenericJson {
 
   /**
-   * Date input values.
+   * Date input values from a [`DateTimePicker`](https://developers.google.com/chat/api/reference/re
+   * st/v1/cards#DateTimePicker) widget that only accepts date values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DateInput dateInput;
 
   /**
-   * Date and time input values.
+   * Date and time input values from a [`DateTimePicker`](https://developers.google.com/chat/api/ref
+   * erence/rest/v1/cards#DateTimePicker) widget that accepts both a date and time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DateTimeInput dateTimeInput;
 
   /**
-   * Input parameter for regular widgets. For single-valued widgets, it is a single value list. For
-   * multi-valued widgets, such as checkbox, all the values are presented.
+   * A list of strings that represent the values that the user inputs in a widget. If the widget
+   * only accepts one value, such as a
+   * [`TextInput`](https://developers.google.com/chat/api/reference/rest/v1/cards#TextInput) widget,
+   * the list contains one string object. If the widget accepts multiple values, such as a [`Selecti
+   * onInput`](https://developers.google.com/chat/api/reference/rest/v1/cards#selectioninput) widget
+   * of checkboxes, the list contains a string object for each value that the user inputs or
+   * selects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StringInputs stringInputs;
 
   /**
-   * Time input values.
+   * Time input values from a [`DateTimePicker`](https://developers.google.com/chat/api/reference/re
+   * st/v1/cards#DateTimePicker) widget that only accepts time values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimeInput timeInput;
 
   /**
-   * Date input values.
+   * Date input values from a [`DateTimePicker`](https://developers.google.com/chat/api/reference/re
+   * st/v1/cards#DateTimePicker) widget that only accepts date values.
    * @return value or {@code null} for none
    */
   public DateInput getDateInput() {
@@ -69,7 +77,8 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date input values.
+   * Date input values from a [`DateTimePicker`](https://developers.google.com/chat/api/reference/re
+   * st/v1/cards#DateTimePicker) widget that only accepts date values.
    * @param dateInput dateInput or {@code null} for none
    */
   public Inputs setDateInput(DateInput dateInput) {
@@ -78,7 +87,8 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date and time input values.
+   * Date and time input values from a [`DateTimePicker`](https://developers.google.com/chat/api/ref
+   * erence/rest/v1/cards#DateTimePicker) widget that accepts both a date and time.
    * @return value or {@code null} for none
    */
   public DateTimeInput getDateTimeInput() {
@@ -86,7 +96,8 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date and time input values.
+   * Date and time input values from a [`DateTimePicker`](https://developers.google.com/chat/api/ref
+   * erence/rest/v1/cards#DateTimePicker) widget that accepts both a date and time.
    * @param dateTimeInput dateTimeInput or {@code null} for none
    */
   public Inputs setDateTimeInput(DateTimeInput dateTimeInput) {
@@ -95,8 +106,13 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input parameter for regular widgets. For single-valued widgets, it is a single value list. For
-   * multi-valued widgets, such as checkbox, all the values are presented.
+   * A list of strings that represent the values that the user inputs in a widget. If the widget
+   * only accepts one value, such as a
+   * [`TextInput`](https://developers.google.com/chat/api/reference/rest/v1/cards#TextInput) widget,
+   * the list contains one string object. If the widget accepts multiple values, such as a [`Selecti
+   * onInput`](https://developers.google.com/chat/api/reference/rest/v1/cards#selectioninput) widget
+   * of checkboxes, the list contains a string object for each value that the user inputs or
+   * selects.
    * @return value or {@code null} for none
    */
   public StringInputs getStringInputs() {
@@ -104,8 +120,13 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input parameter for regular widgets. For single-valued widgets, it is a single value list. For
-   * multi-valued widgets, such as checkbox, all the values are presented.
+   * A list of strings that represent the values that the user inputs in a widget. If the widget
+   * only accepts one value, such as a
+   * [`TextInput`](https://developers.google.com/chat/api/reference/rest/v1/cards#TextInput) widget,
+   * the list contains one string object. If the widget accepts multiple values, such as a [`Selecti
+   * onInput`](https://developers.google.com/chat/api/reference/rest/v1/cards#selectioninput) widget
+   * of checkboxes, the list contains a string object for each value that the user inputs or
+   * selects.
    * @param stringInputs stringInputs or {@code null} for none
    */
   public Inputs setStringInputs(StringInputs stringInputs) {
@@ -114,7 +135,8 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time input values.
+   * Time input values from a [`DateTimePicker`](https://developers.google.com/chat/api/reference/re
+   * st/v1/cards#DateTimePicker) widget that only accepts time values.
    * @return value or {@code null} for none
    */
   public TimeInput getTimeInput() {
@@ -122,7 +144,8 @@ public final class Inputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time input values.
+   * Time input values from a [`DateTimePicker`](https://developers.google.com/chat/api/reference/re
+   * st/v1/cards#DateTimePicker) widget that only accepts time values.
    * @param timeInput timeInput or {@code null} for none
    */
   public Inputs setTimeInput(TimeInput timeInput) {

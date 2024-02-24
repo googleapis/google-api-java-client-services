@@ -1,6 +1,6 @@
 # Google Chat API Client Library for Java
 
-Enables apps to fetch information and perform actions in Google Chat. Authentication is a prerequisite for using the Google Chat REST API.
+The Google Chat API lets you build Chat apps to integrate your services with Google Chat and manage Chat resources such as spaces, members, and messages.
 
 This page contains information about getting started with the Google Chat API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-chat</artifactId>
-      <version>v1-rev20240130-2.0.0</version>
+      <version>v1-rev20240220-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-chat:v1-rev20240130-2.0.0'
+  implementation 'com.google.apis:google-api-services-chat:v1-rev20240220-2.0.0'
 }
 ```
 

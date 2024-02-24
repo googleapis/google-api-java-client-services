@@ -31,14 +31,14 @@ package com.google.api.services.chat.v1.model;
 public final class StringInputs extends com.google.api.client.json.GenericJson {
 
   /**
-   * An array of strings entered by the user.
+   * An list of strings entered by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> value;
 
   /**
-   * An array of strings entered by the user.
+   * An list of strings entered by the user.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValue() {
@@ -46,7 +46,7 @@ public final class StringInputs extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An array of strings entered by the user.
+   * An list of strings entered by the user.
    * @param value value or {@code null} for none
    */
   public StringInputs setValue(java.util.List<java.lang.String> value) {

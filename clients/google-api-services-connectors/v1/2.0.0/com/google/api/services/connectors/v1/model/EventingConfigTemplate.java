@@ -125,6 +125,19 @@ public final class EventingConfigTemplate extends com.google.api.client.json.Gen
   private DestinationConfigTemplate registrationDestinationConfig;
 
   /**
+   * Trigger Config fields that needs to be rendered
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ConfigVariableTemplate> triggerConfigVariables;
+
+  static {
+    // hack to force ProGuard to consider ConfigVariableTemplate used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ConfigVariableTemplate.class);
+  }
+
+  /**
    * Additional fields that need to be rendered.
    * @return value or {@code null} for none
    */
@@ -308,6 +321,23 @@ public final class EventingConfigTemplate extends com.google.api.client.json.Gen
    */
   public EventingConfigTemplate setRegistrationDestinationConfig(DestinationConfigTemplate registrationDestinationConfig) {
     this.registrationDestinationConfig = registrationDestinationConfig;
+    return this;
+  }
+
+  /**
+   * Trigger Config fields that needs to be rendered
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ConfigVariableTemplate> getTriggerConfigVariables() {
+    return triggerConfigVariables;
+  }
+
+  /**
+   * Trigger Config fields that needs to be rendered
+   * @param triggerConfigVariables triggerConfigVariables or {@code null} for none
+   */
+  public EventingConfigTemplate setTriggerConfigVariables(java.util.List<ConfigVariableTemplate> triggerConfigVariables) {
+    this.triggerConfigVariables = triggerConfigVariables;
     return this;
   }
 

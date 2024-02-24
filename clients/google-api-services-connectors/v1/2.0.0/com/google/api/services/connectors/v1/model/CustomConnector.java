@@ -30,6 +30,13 @@ package com.google.api.services.connectors.v1.model;
 public final class CustomConnector extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Active connector versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> activeConnectorVersions;
+
+  /**
    * Output only. Created time.
    * The value may be {@code null}.
    */
@@ -86,6 +93,23 @@ public final class CustomConnector extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Active connector versions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getActiveConnectorVersions() {
+    return activeConnectorVersions;
+  }
+
+  /**
+   * Optional. Active connector versions.
+   * @param activeConnectorVersions activeConnectorVersions or {@code null} for none
+   */
+  public CustomConnector setActiveConnectorVersions(java.util.List<java.lang.String> activeConnectorVersions) {
+    this.activeConnectorVersions = activeConnectorVersions;
+    return this;
+  }
 
   /**
    * Output only. Created time.

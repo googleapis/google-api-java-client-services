@@ -117,6 +117,14 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
   private java.lang.String name;
 
   /**
+   * Entity responsible for maintaining this feature. Can be comma separated list of email addresses
+   * or URIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pointOfContact;
+
+  /**
    * Output only. Only applicable for Vertex AI Feature Store (Legacy). Timestamp when this
    * EntityType was most recently updated.
    * The value may be {@code null}.
@@ -337,6 +345,25 @@ public final class GoogleCloudAiplatformV1beta1Feature extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1Feature setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Entity responsible for maintaining this feature. Can be comma separated list of email addresses
+   * or URIs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPointOfContact() {
+    return pointOfContact;
+  }
+
+  /**
+   * Entity responsible for maintaining this feature. Can be comma separated list of email addresses
+   * or URIs.
+   * @param pointOfContact pointOfContact or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Feature setPointOfContact(java.lang.String pointOfContact) {
+    this.pointOfContact = pointOfContact;
     return this;
   }
 

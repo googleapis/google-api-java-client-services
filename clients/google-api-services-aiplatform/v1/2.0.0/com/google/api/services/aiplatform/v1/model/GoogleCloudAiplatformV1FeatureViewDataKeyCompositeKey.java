@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Tool to retrieve public web data for grounding, powered by Google.
+ * ID that is comprised from several parts (columns).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,43 +27,43 @@ package com.google.api.services.aiplatform.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1GoogleSearchRetrieval extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Disable using the result from this tool in detecting grounding attribution. This does
-   * not affect how the result is given to the model for generation.
+   * Parts to construct Entity ID. Should match with the same ID columns as defined in FeatureView
+   * in the same order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean disableAttribution;
+  private java.util.List<java.lang.String> parts;
 
   /**
-   * Optional. Disable using the result from this tool in detecting grounding attribution. This does
-   * not affect how the result is given to the model for generation.
+   * Parts to construct Entity ID. Should match with the same ID columns as defined in FeatureView
+   * in the same order.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getDisableAttribution() {
-    return disableAttribution;
+  public java.util.List<java.lang.String> getParts() {
+    return parts;
   }
 
   /**
-   * Optional. Disable using the result from this tool in detecting grounding attribution. This does
-   * not affect how the result is given to the model for generation.
-   * @param disableAttribution disableAttribution or {@code null} for none
+   * Parts to construct Entity ID. Should match with the same ID columns as defined in FeatureView
+   * in the same order.
+   * @param parts parts or {@code null} for none
    */
-  public GoogleCloudAiplatformV1GoogleSearchRetrieval setDisableAttribution(java.lang.Boolean disableAttribution) {
-    this.disableAttribution = disableAttribution;
+  public GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey setParts(java.util.List<java.lang.String> parts) {
+    this.parts = parts;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1GoogleSearchRetrieval set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1GoogleSearchRetrieval) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1GoogleSearchRetrieval clone() {
-    return (GoogleCloudAiplatformV1GoogleSearchRetrieval) super.clone();
+  public GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey clone() {
+    return (GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey) super.clone();
   }
 
 }

@@ -17,8 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Retrieve from Vertex AI Search datastore for grounding. See https://cloud.google.com/vertex-ai-
- * search-and-conversation
+ * Stores all metadata relating to Completion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -28,43 +27,43 @@ package com.google.api.services.aiplatform.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1VertexAISearch extends com.google.api.client.json.GenericJson {
+public final class LearningGenaiRootCodeyCompletionMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Fully-qualified Vertex AI Search's datastore resource ID.
-   * projects/<>/locations/<>/collections/<>/dataStores/<>
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String datastore;
+  private java.util.List<LearningGenaiRootCodeyCheckpoint> checkpoints;
 
-  /**
-   * Required. Fully-qualified Vertex AI Search's datastore resource ID.
-   * projects/<>/locations/<>/collections/<>/dataStores/<>
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDatastore() {
-    return datastore;
+  static {
+    // hack to force ProGuard to consider LearningGenaiRootCodeyCheckpoint used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LearningGenaiRootCodeyCheckpoint.class);
   }
 
   /**
-   * Required. Fully-qualified Vertex AI Search's datastore resource ID.
-   * projects/<>/locations/<>/collections/<>/dataStores/<>
-   * @param datastore datastore or {@code null} for none
+   * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1VertexAISearch setDatastore(java.lang.String datastore) {
-    this.datastore = datastore;
+  public java.util.List<LearningGenaiRootCodeyCheckpoint> getCheckpoints() {
+    return checkpoints;
+  }
+
+  /**
+   * @param checkpoints checkpoints or {@code null} for none
+   */
+  public LearningGenaiRootCodeyCompletionMetadata setCheckpoints(java.util.List<LearningGenaiRootCodeyCheckpoint> checkpoints) {
+    this.checkpoints = checkpoints;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1VertexAISearch set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1VertexAISearch) super.set(fieldName, value);
+  public LearningGenaiRootCodeyCompletionMetadata set(String fieldName, Object value) {
+    return (LearningGenaiRootCodeyCompletionMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1VertexAISearch clone() {
-    return (GoogleCloudAiplatformV1VertexAISearch) super.clone();
+  public LearningGenaiRootCodeyCompletionMetadata clone() {
+    return (LearningGenaiRootCodeyCompletionMetadata) super.clone();
   }
 
 }

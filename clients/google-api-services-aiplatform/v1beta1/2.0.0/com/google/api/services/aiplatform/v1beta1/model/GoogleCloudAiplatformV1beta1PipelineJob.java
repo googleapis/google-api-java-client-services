@@ -116,6 +116,13 @@ public final class GoogleCloudAiplatformV1beta1PipelineJob extends com.google.ap
   private java.util.Map<String, java.lang.Object> pipelineSpec;
 
   /**
+   * Optional. Whether to do component level validations before job creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean preflightValidations;
+
+  /**
    * A list of names for the reserved ip ranges under the VPC network that can be used for this
    * Pipeline Job's workload. If set, we will deploy the Pipeline Job's workload within the provided
    * ip ranges. Otherwise, the job will be deployed to any ip ranges under the provided VPC network.
@@ -388,6 +395,23 @@ public final class GoogleCloudAiplatformV1beta1PipelineJob extends com.google.ap
    */
   public GoogleCloudAiplatformV1beta1PipelineJob setPipelineSpec(java.util.Map<String, java.lang.Object> pipelineSpec) {
     this.pipelineSpec = pipelineSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to do component level validations before job creation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPreflightValidations() {
+    return preflightValidations;
+  }
+
+  /**
+   * Optional. Whether to do component level validations before job creation.
+   * @param preflightValidations preflightValidations or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PipelineJob setPreflightValidations(java.lang.Boolean preflightValidations) {
+    this.preflightValidations = preflightValidations;
     return this;
   }
 

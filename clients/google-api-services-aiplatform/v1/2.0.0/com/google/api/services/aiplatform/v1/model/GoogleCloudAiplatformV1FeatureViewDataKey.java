@@ -30,11 +30,38 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1FeatureViewDataKey extends com.google.api.client.json.GenericJson {
 
   /**
+   * The actual Entity ID will be composed from this struct. This should match with the way ID is
+   * defined in the FeatureView spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey compositeKey;
+
+  /**
    * String key to use for lookup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
+
+  /**
+   * The actual Entity ID will be composed from this struct. This should match with the way ID is
+   * defined in the FeatureView spec.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey getCompositeKey() {
+    return compositeKey;
+  }
+
+  /**
+   * The actual Entity ID will be composed from this struct. This should match with the way ID is
+   * defined in the FeatureView spec.
+   * @param compositeKey compositeKey or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureViewDataKey setCompositeKey(GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey compositeKey) {
+    this.compositeKey = compositeKey;
+    return this;
+  }
 
   /**
    * String key to use for lookup.

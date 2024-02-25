@@ -38,6 +38,13 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
   private LearningGenaiRootClassifierOutputSummary classifierSummary;
 
   /**
+   * Contains metadata related to Codey Processors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LearningGenaiRootCodeyOutput codeyOutput;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,6 +233,23 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
    */
   public LearningServingLlmMessageMetadata setClassifierSummary(LearningGenaiRootClassifierOutputSummary classifierSummary) {
     this.classifierSummary = classifierSummary;
+    return this;
+  }
+
+  /**
+   * Contains metadata related to Codey Processors.
+   * @return value or {@code null} for none
+   */
+  public LearningGenaiRootCodeyOutput getCodeyOutput() {
+    return codeyOutput;
+  }
+
+  /**
+   * Contains metadata related to Codey Processors.
+   * @param codeyOutput codeyOutput or {@code null} for none
+   */
+  public LearningServingLlmMessageMetadata setCodeyOutput(LearningGenaiRootCodeyOutput codeyOutput) {
+    this.codeyOutput = codeyOutput;
     return this;
   }
 

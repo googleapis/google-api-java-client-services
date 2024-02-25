@@ -38,6 +38,14 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
   private java.lang.String artifactUri;
 
   /**
+   * Optional. User input field to specify the base model source. Currently it only supports
+   * specifing the Model Garden models and Genie models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ModelBaseModelSource baseModelSource;
+
+  /**
    * Input only. The specification of the container that is to be used when deploying this Model.
    * The specification is ingested upon ModelService.UploadModel, and all binaries it contains are
    * copied and stored internally by Vertex AI. Not required for AutoML Models.
@@ -315,6 +323,25 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
    */
   public GoogleCloudAiplatformV1beta1Model setArtifactUri(java.lang.String artifactUri) {
     this.artifactUri = artifactUri;
+    return this;
+  }
+
+  /**
+   * Optional. User input field to specify the base model source. Currently it only supports
+   * specifing the Model Garden models and Genie models.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ModelBaseModelSource getBaseModelSource() {
+    return baseModelSource;
+  }
+
+  /**
+   * Optional. User input field to specify the base model source. Currently it only supports
+   * specifing the Model Garden models and Genie models.
+   * @param baseModelSource baseModelSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Model setBaseModelSource(GoogleCloudAiplatformV1beta1ModelBaseModelSource baseModelSource) {
+    this.baseModelSource = baseModelSource;
     return this;
   }
 

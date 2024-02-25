@@ -68538,29 +68538,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /**
-           * Optional. Whether to do component level validations before job creation. Currently we
-           * only support Google First Party Component/Pipelines.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean preflightValidations;
-
-          /** Optional. Whether to do component level validations before job creation. Currently we only support
-         Google First Party Component/Pipelines.
-           */
-          public java.lang.Boolean getPreflightValidations() {
-            return preflightValidations;
-          }
-
-          /**
-           * Optional. Whether to do component level validations before job creation. Currently we
-           * only support Google First Party Component/Pipelines.
-           */
-          public Create setPreflightValidations(java.lang.Boolean preflightValidations) {
-            this.preflightValidations = preflightValidations;
-            return this;
-          }
-
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);

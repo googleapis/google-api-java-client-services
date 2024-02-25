@@ -44,12 +44,27 @@ public final class GoogleCloudAiplatformV1DatasetVersion extends com.google.api.
   private String createTime;
 
   /**
+   * The user-defined name of the DatasetVersion. The name can be up to 128 characters long and can
+   * consist of any UTF-8 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update
    * happens.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
+
+  /**
+   * Required. Additional information about the DatasetVersion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object metadata;
 
   /**
    * Output only. The resource name of the DatasetVersion.
@@ -100,6 +115,25 @@ public final class GoogleCloudAiplatformV1DatasetVersion extends com.google.api.
   }
 
   /**
+   * The user-defined name of the DatasetVersion. The name can be up to 128 characters long and can
+   * consist of any UTF-8 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * The user-defined name of the DatasetVersion. The name can be up to 128 characters long and can
+   * consist of any UTF-8 characters.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DatasetVersion setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
+
+  /**
    * Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update
    * happens.
    * @return value or {@code null} for none
@@ -115,6 +149,23 @@ public final class GoogleCloudAiplatformV1DatasetVersion extends com.google.api.
    */
   public GoogleCloudAiplatformV1DatasetVersion setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Required. Additional information about the DatasetVersion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Required. Additional information about the DatasetVersion.
+   * @param metadata metadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DatasetVersion setMetadata(java.lang.Object metadata) {
+    this.metadata = metadata;
     return this;
   }
 

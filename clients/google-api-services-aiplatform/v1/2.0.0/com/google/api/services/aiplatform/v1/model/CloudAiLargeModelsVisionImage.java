@@ -51,7 +51,7 @@ public final class CloudAiLargeModelsVisionImage extends com.google.api.client.j
   private CloudAiLargeModelsVisionImageRAIScores imageRaiScores;
 
   /**
-   * RAI info for image
+   * RAI info for image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,6 +63,13 @@ public final class CloudAiLargeModelsVisionImage extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private CloudAiLargeModelsVisionSemanticFilterResponse semanticFilterResponse;
+
+  /**
+   * Text/Expanded text input for imagen.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String text;
 
   /**
    * Path to another storage (typically Google Cloud Storage).
@@ -151,7 +158,7 @@ public final class CloudAiLargeModelsVisionImage extends com.google.api.client.j
   }
 
   /**
-   * RAI info for image
+   * RAI info for image.
    * @return value or {@code null} for none
    */
   public CloudAiLargeModelsVisionRaiInfo getRaiInfo() {
@@ -159,7 +166,7 @@ public final class CloudAiLargeModelsVisionImage extends com.google.api.client.j
   }
 
   /**
-   * RAI info for image
+   * RAI info for image.
    * @param raiInfo raiInfo or {@code null} for none
    */
   public CloudAiLargeModelsVisionImage setRaiInfo(CloudAiLargeModelsVisionRaiInfo raiInfo) {
@@ -181,6 +188,23 @@ public final class CloudAiLargeModelsVisionImage extends com.google.api.client.j
    */
   public CloudAiLargeModelsVisionImage setSemanticFilterResponse(CloudAiLargeModelsVisionSemanticFilterResponse semanticFilterResponse) {
     this.semanticFilterResponse = semanticFilterResponse;
+    return this;
+  }
+
+  /**
+   * Text/Expanded text input for imagen.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getText() {
+    return text;
+  }
+
+  /**
+   * Text/Expanded text input for imagen.
+   * @param text text or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionImage setText(java.lang.String text) {
+    this.text = text;
     return this;
   }
 

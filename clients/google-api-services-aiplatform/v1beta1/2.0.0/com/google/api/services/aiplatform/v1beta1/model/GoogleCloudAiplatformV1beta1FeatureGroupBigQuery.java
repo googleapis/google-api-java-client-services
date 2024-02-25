@@ -37,8 +37,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureGroupBigQuery extends com.
   private GoogleCloudAiplatformV1beta1BigQuerySource bigQuerySource;
 
   /**
-   * Optional. Columns to construct entity_id / row keys. Currently only supports 1
-   * entity_id_column. If not provided defaults to `entity_id`.
+   * Optional. Columns to construct entity_id / row keys. If not provided defaults to `entity_id`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +61,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureGroupBigQuery extends com.
   }
 
   /**
-   * Optional. Columns to construct entity_id / row keys. Currently only supports 1
-   * entity_id_column. If not provided defaults to `entity_id`.
+   * Optional. Columns to construct entity_id / row keys. If not provided defaults to `entity_id`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntityIdColumns() {
@@ -71,8 +69,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureGroupBigQuery extends com.
   }
 
   /**
-   * Optional. Columns to construct entity_id / row keys. Currently only supports 1
-   * entity_id_column. If not provided defaults to `entity_id`.
+   * Optional. Columns to construct entity_id / row keys. If not provided defaults to `entity_id`.
    * @param entityIdColumns entityIdColumns or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FeatureGroupBigQuery setEntityIdColumns(java.util.List<java.lang.String> entityIdColumns) {

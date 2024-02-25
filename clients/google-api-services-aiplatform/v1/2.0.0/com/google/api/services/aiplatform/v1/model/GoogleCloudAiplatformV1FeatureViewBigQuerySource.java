@@ -30,7 +30,7 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1FeatureViewBigQuerySource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Columns to construct entity_id / row keys. Start by supporting 1 only.
+   * Required. Columns to construct entity_id / row keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudAiplatformV1FeatureViewBigQuerySource extends com.
   private java.lang.String uri;
 
   /**
-   * Required. Columns to construct entity_id / row keys. Start by supporting 1 only.
+   * Required. Columns to construct entity_id / row keys.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntityIdColumns() {
@@ -53,7 +53,7 @@ public final class GoogleCloudAiplatformV1FeatureViewBigQuerySource extends com.
   }
 
   /**
-   * Required. Columns to construct entity_id / row keys. Start by supporting 1 only.
+   * Required. Columns to construct entity_id / row keys.
    * @param entityIdColumns entityIdColumns or {@code null} for none
    */
   public GoogleCloudAiplatformV1FeatureViewBigQuerySource setEntityIdColumns(java.util.List<java.lang.String> entityIdColumns) {

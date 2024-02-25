@@ -51,6 +51,27 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   private java.lang.String probability;
 
   /**
+   * Output only. Harm probability score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float probabilityScore;
+
+  /**
+   * Output only. Harm severity levels in the content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String severity;
+
+  /**
+   * Output only. Harm severity score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float severityScore;
+
+  /**
    * Output only. Indicates whether the content was filtered out because of this rating.
    * @return value or {@code null} for none
    */
@@ -98,6 +119,57 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
    */
   public GoogleCloudAiplatformV1beta1SafetyRating setProbability(java.lang.String probability) {
     this.probability = probability;
+    return this;
+  }
+
+  /**
+   * Output only. Harm probability score.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getProbabilityScore() {
+    return probabilityScore;
+  }
+
+  /**
+   * Output only. Harm probability score.
+   * @param probabilityScore probabilityScore or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SafetyRating setProbabilityScore(java.lang.Float probabilityScore) {
+    this.probabilityScore = probabilityScore;
+    return this;
+  }
+
+  /**
+   * Output only. Harm severity levels in the content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSeverity() {
+    return severity;
+  }
+
+  /**
+   * Output only. Harm severity levels in the content.
+   * @param severity severity or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SafetyRating setSeverity(java.lang.String severity) {
+    this.severity = severity;
+    return this;
+  }
+
+  /**
+   * Output only. Harm severity score.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getSeverityScore() {
+    return severityScore;
+  }
+
+  /**
+   * Output only. Harm severity score.
+   * @param severityScore severityScore or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SafetyRating setSeverityScore(java.lang.Float severityScore) {
+    this.severityScore = severityScore;
     return this;
   }
 

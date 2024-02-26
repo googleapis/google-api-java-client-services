@@ -100,6 +100,14 @@ public final class ConsumerPscConnection extends com.google.api.client.json.Gene
   private java.lang.String pscConnectionId;
 
   /**
+   * Output only. The URI of the selected subnetwork selected to allocate IP address for this
+   * connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String selectedSubnetwork;
+
+  /**
    * The URI of a service attachment which is the target of the PSC connection.
    * The value may be {@code null}.
    */
@@ -275,6 +283,25 @@ public final class ConsumerPscConnection extends com.google.api.client.json.Gene
    */
   public ConsumerPscConnection setPscConnectionId(java.lang.String pscConnectionId) {
     this.pscConnectionId = pscConnectionId;
+    return this;
+  }
+
+  /**
+   * Output only. The URI of the selected subnetwork selected to allocate IP address for this
+   * connection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSelectedSubnetwork() {
+    return selectedSubnetwork;
+  }
+
+  /**
+   * Output only. The URI of the selected subnetwork selected to allocate IP address for this
+   * connection.
+   * @param selectedSubnetwork selectedSubnetwork or {@code null} for none
+   */
+  public ConsumerPscConnection setSelectedSubnetwork(java.lang.String selectedSubnetwork) {
+    this.selectedSubnetwork = selectedSubnetwork;
     return this;
   }
 

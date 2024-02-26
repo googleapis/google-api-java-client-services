@@ -88,6 +88,13 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String pscConnectionId;
 
   /**
+   * Output only. The URI of the subnetwork selected to allocate IP address for this connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String selectedSubnetwork;
+
+  /**
    * State of the PSC Connection
    * The value may be {@code null}.
    */
@@ -229,6 +236,23 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
    */
   public PscConnection setPscConnectionId(java.lang.String pscConnectionId) {
     this.pscConnectionId = pscConnectionId;
+    return this;
+  }
+
+  /**
+   * Output only. The URI of the subnetwork selected to allocate IP address for this connection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSelectedSubnetwork() {
+    return selectedSubnetwork;
+  }
+
+  /**
+   * Output only. The URI of the subnetwork selected to allocate IP address for this connection.
+   * @param selectedSubnetwork selectedSubnetwork or {@code null} for none
+   */
+  public PscConnection setSelectedSubnetwork(java.lang.String selectedSubnetwork) {
+    this.selectedSubnetwork = selectedSubnetwork;
     return this;
   }
 

@@ -67,6 +67,13 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpec contentSearchSpec;
 
   /**
+   * Custom fine tuning configs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec customFineTuningSpec;
+
+  /**
    * Uses the provided embedding to do additional semantic document retrieval. The retrieval is
    * based on the dot product of SearchRequest.EmbeddingSpec.EmbeddingVector.vector and the document
    * embedding that is provided in SearchRequest.EmbeddingSpec.EmbeddingVector.field_path. If
@@ -335,6 +342,23 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setContentSearchSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpec contentSearchSpec) {
     this.contentSearchSpec = contentSearchSpec;
+    return this;
+  }
+
+  /**
+   * Custom fine tuning configs.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec getCustomFineTuningSpec() {
+    return customFineTuningSpec;
+  }
+
+  /**
+   * Custom fine tuning configs.
+   * @param customFineTuningSpec customFineTuningSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setCustomFineTuningSpec(GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec customFineTuningSpec) {
+    this.customFineTuningSpec = customFineTuningSpec;
     return this;
   }
 

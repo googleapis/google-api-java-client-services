@@ -132,6 +132,13 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
   private java.lang.Boolean enableSummarization;
 
   /**
+   * Whether to enable standalone web app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableWebApp;
+
+  /**
    * The configuration and appearance of facets in the end user view.
    * The value may be {@code null}.
    */
@@ -445,6 +452,23 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfig setEnableSummarization(java.lang.Boolean enableSummarization) {
     this.enableSummarization = enableSummarization;
+    return this;
+  }
+
+  /**
+   * Whether to enable standalone web app.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableWebApp() {
+    return enableWebApp;
+  }
+
+  /**
+   * Whether to enable standalone web app.
+   * @param enableWebApp enableWebApp or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfig setEnableWebApp(java.lang.Boolean enableWebApp) {
+    this.enableWebApp = enableWebApp;
     return this;
   }
 

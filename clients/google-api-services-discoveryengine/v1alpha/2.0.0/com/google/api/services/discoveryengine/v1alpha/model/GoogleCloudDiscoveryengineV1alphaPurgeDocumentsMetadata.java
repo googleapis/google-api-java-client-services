@@ -45,6 +45,13 @@ public final class GoogleCloudDiscoveryengineV1alphaPurgeDocumentsMetadata exten
   private java.lang.Long failureCount;
 
   /**
+   * Count of entries that were ignored as entries were not found.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long ignoredCount;
+
+  /**
    * Count of entries that were deleted successfully.
    * The value may be {@code null}.
    */
@@ -89,6 +96,23 @@ public final class GoogleCloudDiscoveryengineV1alphaPurgeDocumentsMetadata exten
    */
   public GoogleCloudDiscoveryengineV1alphaPurgeDocumentsMetadata setFailureCount(java.lang.Long failureCount) {
     this.failureCount = failureCount;
+    return this;
+  }
+
+  /**
+   * Count of entries that were ignored as entries were not found.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getIgnoredCount() {
+    return ignoredCount;
+  }
+
+  /**
+   * Count of entries that were ignored as entries were not found.
+   * @param ignoredCount ignoredCount or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaPurgeDocumentsMetadata setIgnoredCount(java.lang.Long ignoredCount) {
+    this.ignoredCount = ignoredCount;
     return this;
   }
 

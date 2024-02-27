@@ -61,7 +61,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig ext
    * Map from file type to override the default parsing configuration based on the file type.
    * Supported keys: * `pdf`: Override parsing config for PDF files, either digital parsing, ocr
    * parsing or layout parsing is supported. * `html`: Override parsing config for HTML files, only
-   * digital parsing and or layout parsing are supported.
+   * digital parsing and or layout parsing are supported. * `docx`: Override parsing config for DOCX
+   * files, only digital parsing and or layout parsing are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +133,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig ext
    * Map from file type to override the default parsing configuration based on the file type.
    * Supported keys: * `pdf`: Override parsing config for PDF files, either digital parsing, ocr
    * parsing or layout parsing is supported. * `html`: Override parsing config for HTML files, only
-   * digital parsing and or layout parsing are supported.
+   * digital parsing and or layout parsing are supported. * `docx`: Override parsing config for DOCX
+   * files, only digital parsing and or layout parsing are supported.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfig> getParsingConfigOverrides() {
@@ -143,7 +145,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig ext
    * Map from file type to override the default parsing configuration based on the file type.
    * Supported keys: * `pdf`: Override parsing config for PDF files, either digital parsing, ocr
    * parsing or layout parsing is supported. * `html`: Override parsing config for HTML files, only
-   * digital parsing and or layout parsing are supported.
+   * digital parsing and or layout parsing are supported. * `docx`: Override parsing config for DOCX
+   * files, only digital parsing and or layout parsing are supported.
    * @param parsingConfigOverrides parsingConfigOverrides or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig setParsingConfigOverrides(java.util.Map<String, GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfig> parsingConfigOverrides) {

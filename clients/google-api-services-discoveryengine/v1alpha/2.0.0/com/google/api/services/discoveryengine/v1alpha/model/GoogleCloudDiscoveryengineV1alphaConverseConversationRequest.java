@@ -30,6 +30,15 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaConverseConversationRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Boost specification to boost certain documents in search results which may affect the converse
+   * response. For more information on boosting, see
+   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec boostSpec;
+
+  /**
    * The conversation to be used by auto session only. The name field will be ignored as we
    * automatically assign new name for the conversation in auto session.
    * The value may be {@code null}.
@@ -109,6 +118,27 @@ public final class GoogleCloudDiscoveryengineV1alphaConverseConversationRequest 
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> userLabels;
+
+  /**
+   * Boost specification to boost certain documents in search results which may affect the converse
+   * response. For more information on boosting, see
+   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec getBoostSpec() {
+    return boostSpec;
+  }
+
+  /**
+   * Boost specification to boost certain documents in search results which may affect the converse
+   * response. For more information on boosting, see
+   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
+   * @param boostSpec boostSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaConverseConversationRequest setBoostSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec boostSpec) {
+    this.boostSpec = boostSpec;
+    return this;
+  }
 
   /**
    * The conversation to be used by auto session only. The name field will be ignored as we

@@ -54,6 +54,15 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   private java.lang.String id;
 
   /**
+   * Output only. The last time the document was indexed. If this field is set, the document could
+   * be returned in search results. This field is OUTPUT_ONLY. If this field is not populated, it
+   * means the document has never been indexed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String indexTime;
+
+  /**
    * The JSON string representation of the document. It should conform to the registered Schema or
    * an `INVALID_ARGUMENT` error is thrown.
    * The value may be {@code null}.
@@ -148,6 +157,27 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
    */
   public GoogleCloudDiscoveryengineV1betaDocument setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. The last time the document was indexed. If this field is set, the document could
+   * be returned in search results. This field is OUTPUT_ONLY. If this field is not populated, it
+   * means the document has never been indexed.
+   * @return value or {@code null} for none
+   */
+  public String getIndexTime() {
+    return indexTime;
+  }
+
+  /**
+   * Output only. The last time the document was indexed. If this field is set, the document could
+   * be returned in search results. This field is OUTPUT_ONLY. If this field is not populated, it
+   * means the document has never been indexed.
+   * @param indexTime indexTime or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDocument setIndexTime(String indexTime) {
+    this.indexTime = indexTime;
     return this;
   }
 

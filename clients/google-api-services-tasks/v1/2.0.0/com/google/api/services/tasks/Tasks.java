@@ -1663,21 +1663,21 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Maximum number of task lists returned on one page. Optional. The default is 20 (max
-       * allowed: 100).
+       * Maximum number of tasks returned on one page. Optional. The default is 20 (max allowed:
+       * 100).
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of task lists returned on one page. Optional. The default is 20 (max allowed: 100).
+      /** Maximum number of tasks returned on one page. Optional. The default is 20 (max allowed: 100).
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
       /**
-       * Maximum number of task lists returned on one page. Optional. The default is 20 (max
-       * allowed: 100).
+       * Maximum number of tasks returned on one page. Optional. The default is 20 (max allowed:
+       * 100).
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;

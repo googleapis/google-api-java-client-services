@@ -31,7 +31,7 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1Extension extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies the period of access the subscription should grant.
+   * Required. Specifies the period of access the subscription should grant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Extension extends co
   private java.lang.String partnerUserToken;
 
   /**
-   * Specifies the period of access the subscription should grant.
+   * Required. Specifies the period of access the subscription should grant.
    * @return value or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Duration getDuration() {
@@ -53,7 +53,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Extension extends co
   }
 
   /**
-   * Specifies the period of access the subscription should grant.
+   * Required. Specifies the period of access the subscription should grant.
    * @param duration duration or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Extension setDuration(GoogleCloudPaymentsResellerSubscriptionV1Duration duration) {

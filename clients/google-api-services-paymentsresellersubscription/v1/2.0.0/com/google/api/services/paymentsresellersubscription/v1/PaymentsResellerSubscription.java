@@ -312,11 +312,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Optional. Specifies the filters for the product results. The syntax is defined in
-         * https://google.aip.dev/160 with the following caveats: - Only the following features are
+         * https://google.aip.dev/160 with the following caveats: 1. Only the following features are
          * supported: - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) -
-         * Traversal operator `.` - Has operator `:` (no wildcards `*`) - Only the following fields
+         * Traversal operator `.` - Has operator `:` (no wildcards `*`) 2. Only the following fields
          * are supported: - `regionCodes` - `youtubePayload.partnerEligibilityId` -
-         * `youtubePayload.postalCode` - Unless explicitly mentioned above, other features are not
+         * `youtubePayload.postalCode` 3. Unless explicitly mentioned above, other features are not
          * supported. Example: `regionCodes:US AND youtubePayload.postalCode=94043 AND
          * youtubePayload.partnerEligibilityId=eligibility-id`
          */
@@ -324,11 +324,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
         private java.lang.String filter;
 
         /** Optional. Specifies the filters for the product results. The syntax is defined in
-       https://google.aip.dev/160 with the following caveats: - Only the following features are supported:
-       - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) - Traversal operator `.` -
-       Has operator `:` (no wildcards `*`) - Only the following fields are supported: - `regionCodes` -
-       `youtubePayload.partnerEligibilityId` - `youtubePayload.postalCode` - Unless explicitly mentioned
-       above, other features are not supported. Example: `regionCodes:US AND
+       https://google.aip.dev/160 with the following caveats: 1. Only the following features are
+       supported: - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) - Traversal
+       operator `.` - Has operator `:` (no wildcards `*`) 2. Only the following fields are supported: -
+       `regionCodes` - `youtubePayload.partnerEligibilityId` - `youtubePayload.postalCode` 3. Unless
+       explicitly mentioned above, other features are not supported. Example: `regionCodes:US AND
        youtubePayload.postalCode=94043 AND youtubePayload.partnerEligibilityId=eligibility-id`
          */
         public java.lang.String getFilter() {
@@ -337,11 +337,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Optional. Specifies the filters for the product results. The syntax is defined in
-         * https://google.aip.dev/160 with the following caveats: - Only the following features are
+         * https://google.aip.dev/160 with the following caveats: 1. Only the following features are
          * supported: - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) -
-         * Traversal operator `.` - Has operator `:` (no wildcards `*`) - Only the following fields
+         * Traversal operator `.` - Has operator `:` (no wildcards `*`) 2. Only the following fields
          * are supported: - `regionCodes` - `youtubePayload.partnerEligibilityId` -
-         * `youtubePayload.postalCode` - Unless explicitly mentioned above, other features are not
+         * `youtubePayload.postalCode` 3. Unless explicitly mentioned above, other features are not
          * supported. Example: `regionCodes:US AND youtubePayload.postalCode=94043 AND
          * youtubePayload.partnerEligibilityId=eligibility-id`
          */
@@ -702,11 +702,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Optional. Specifies the filters for the promotion results. The syntax is defined in
-         * https://google.aip.dev/160 with the following caveats: - Only the following features are
+         * https://google.aip.dev/160 with the following caveats: 1. Only the following features are
          * supported: - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) -
-         * Traversal operator `.` - Has operator `:` (no wildcards `*`) - Only the following fields
+         * Traversal operator `.` - Has operator `:` (no wildcards `*`) 2. Only the following fields
          * are supported: - `applicableProducts` - `regionCodes` -
-         * `youtubePayload.partnerEligibilityId` - `youtubePayload.postalCode` - Unless explicitly
+         * `youtubePayload.partnerEligibilityId` - `youtubePayload.postalCode` 3. Unless explicitly
          * mentioned above, other features are not supported. Example:
          * `applicableProducts:partners/partner1/products/product1 AND regionCodes:US AND
          * youtubePayload.postalCode=94043 AND youtubePayload.partnerEligibilityId=eligibility-id`
@@ -715,11 +715,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
         private java.lang.String filter;
 
         /** Optional. Specifies the filters for the promotion results. The syntax is defined in
-       https://google.aip.dev/160 with the following caveats: - Only the following features are supported:
-       - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) - Traversal operator `.` -
-       Has operator `:` (no wildcards `*`) - Only the following fields are supported: -
+       https://google.aip.dev/160 with the following caveats: 1. Only the following features are
+       supported: - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) - Traversal
+       operator `.` - Has operator `:` (no wildcards `*`) 2. Only the following fields are supported: -
        `applicableProducts` - `regionCodes` - `youtubePayload.partnerEligibilityId` -
-       `youtubePayload.postalCode` - Unless explicitly mentioned above, other features are not supported.
+       `youtubePayload.postalCode` 3. Unless explicitly mentioned above, other features are not supported.
        Example: `applicableProducts:partners/partner1/products/product1 AND regionCodes:US AND
        youtubePayload.postalCode=94043 AND youtubePayload.partnerEligibilityId=eligibility-id`
          */
@@ -729,11 +729,11 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Optional. Specifies the filters for the promotion results. The syntax is defined in
-         * https://google.aip.dev/160 with the following caveats: - Only the following features are
+         * https://google.aip.dev/160 with the following caveats: 1. Only the following features are
          * supported: - Logical operator `AND` - Comparison operator `=` (no wildcards `*`) -
-         * Traversal operator `.` - Has operator `:` (no wildcards `*`) - Only the following fields
+         * Traversal operator `.` - Has operator `:` (no wildcards `*`) 2. Only the following fields
          * are supported: - `applicableProducts` - `regionCodes` -
-         * `youtubePayload.partnerEligibilityId` - `youtubePayload.postalCode` - Unless explicitly
+         * `youtubePayload.partnerEligibilityId` - `youtubePayload.postalCode` 3. Unless explicitly
          * mentioned above, other features are not supported. Example:
          * `applicableProducts:partners/partner1/products/product1 AND regionCodes:US AND
          * youtubePayload.postalCode=94043 AND youtubePayload.partnerEligibilityId=eligibility-id`

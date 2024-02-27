@@ -10057,6 +10057,30 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       return result;
     }
 
+    /**
+     * Inserts a new resource into this collection.
+     *
+     * Create a request for the method "playlistImages.insert".
+     *
+     * This request holds the parameters needed by the the youtube server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * <p>
+     * This method should be used for uploading media content.
+     * </p>
+     *
+     *
+     * @param content the {@link com.google.api.services.youtube.model.PlaylistImage} media metadata or {@code null} if none
+     * @param mediaContent The media HTTP content.
+     * @return the request
+     * @throws java.io.IOException if the initialization of the request fails
+     */
+    public Insert insert(com.google.api.services.youtube.model.PlaylistImage content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+      Insert result = new Insert(content, mediaContent);
+      initialize(result);
+      return result;
+    }
+
     public class Insert extends YouTubeRequest<com.google.api.services.youtube.model.PlaylistImage> {
 
       private static final String REST_PATH = "youtube/v3/playlistImages";
@@ -10076,6 +10100,31 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        */
       protected Insert(com.google.api.services.youtube.model.PlaylistImage content) {
         super(YouTube.this, "POST", REST_PATH, content, com.google.api.services.youtube.model.PlaylistImage.class);
+      }
+
+      /**
+       * Inserts a new resource into this collection.
+       *
+       * Create a request for the method "playlistImages.insert".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * <p>
+       * This constructor should be used for uploading media content.
+       * </p>
+       *
+       *
+       * @param content the {@link com.google.api.services.youtube.model.PlaylistImage} media metadata or {@code null} if none
+       * @param mediaContent The media HTTP content.
+       * @since 1.13
+       */
+      protected Insert(com.google.api.services.youtube.model.PlaylistImage content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(YouTube.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.youtube.model.PlaylistImage.class);
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
+        initializeMediaUpload(mediaContent);
       }
 
       @Override

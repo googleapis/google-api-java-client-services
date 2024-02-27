@@ -31,8 +31,8 @@ package com.google.api.services.content.model;
 public final class SearchRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of ReportRows to retrieve in a single page. Defaults to the maximum of 1000. Values
-   * above 1000 are coerced to 1000.
+   * Number of ReportRows to retrieve in a single page. Defaults to 1000. Values above 5000 are
+   * coerced to 5000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +58,8 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
   private java.lang.String query;
 
   /**
-   * Number of ReportRows to retrieve in a single page. Defaults to the maximum of 1000. Values
-   * above 1000 are coerced to 1000.
+   * Number of ReportRows to retrieve in a single page. Defaults to 1000. Values above 5000 are
+   * coerced to 5000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -67,8 +67,8 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Number of ReportRows to retrieve in a single page. Defaults to the maximum of 1000. Values
-   * above 1000 are coerced to 1000.
+   * Number of ReportRows to retrieve in a single page. Defaults to 1000. Values above 5000 are
+   * coerced to 5000.
    * @param pageSize pageSize or {@code null} for none
    */
   public SearchRequest setPageSize(java.lang.Integer pageSize) {

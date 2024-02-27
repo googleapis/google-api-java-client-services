@@ -60,6 +60,13 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
   private java.lang.String displayName;
 
   /**
+   * Configuration for Document understanding and enrichment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaDocumentProcessingConfig documentProcessingConfig;
+
+  /**
    * Immutable. The industry vertical that the data store registers.
    * The value may be {@code null}.
    */
@@ -83,6 +90,18 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> solutionTypes;
+
+  /**
+   * The start schema to use for this DataStore when provisioning it. If unset, a default vertical
+   * specialized schema will be used. This field is only used by CreateDataStore API, and will be
+   * ignored if used in other APIs. This field will be omitted from all API responses including
+   * CreateDataStore API. To retrieve a schema of a DataStore, use SchemaService.GetSchema API
+   * instead. The provided schema will be validated against certain rules on schema. Learn more from
+   * [this doc](https://cloud.google.com/generative-ai-app-builder/docs/provide-schema).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSchema startingSchema;
 
   /**
    * Immutable. The content config of the data store. If this field is unset, the server behavior
@@ -157,6 +176,23 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
   }
 
   /**
+   * Configuration for Document understanding and enrichment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDocumentProcessingConfig getDocumentProcessingConfig() {
+    return documentProcessingConfig;
+  }
+
+  /**
+   * Configuration for Document understanding and enrichment.
+   * @param documentProcessingConfig documentProcessingConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDataStore setDocumentProcessingConfig(GoogleCloudDiscoveryengineV1betaDocumentProcessingConfig documentProcessingConfig) {
+    this.documentProcessingConfig = documentProcessingConfig;
+    return this;
+  }
+
+  /**
    * Immutable. The industry vertical that the data store registers.
    * @return value or {@code null} for none
    */
@@ -212,6 +248,33 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
    */
   public GoogleCloudDiscoveryengineV1betaDataStore setSolutionTypes(java.util.List<java.lang.String> solutionTypes) {
     this.solutionTypes = solutionTypes;
+    return this;
+  }
+
+  /**
+   * The start schema to use for this DataStore when provisioning it. If unset, a default vertical
+   * specialized schema will be used. This field is only used by CreateDataStore API, and will be
+   * ignored if used in other APIs. This field will be omitted from all API responses including
+   * CreateDataStore API. To retrieve a schema of a DataStore, use SchemaService.GetSchema API
+   * instead. The provided schema will be validated against certain rules on schema. Learn more from
+   * [this doc](https://cloud.google.com/generative-ai-app-builder/docs/provide-schema).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSchema getStartingSchema() {
+    return startingSchema;
+  }
+
+  /**
+   * The start schema to use for this DataStore when provisioning it. If unset, a default vertical
+   * specialized schema will be used. This field is only used by CreateDataStore API, and will be
+   * ignored if used in other APIs. This field will be omitted from all API responses including
+   * CreateDataStore API. To retrieve a schema of a DataStore, use SchemaService.GetSchema API
+   * instead. The provided schema will be validated against certain rules on schema. Learn more from
+   * [this doc](https://cloud.google.com/generative-ai-app-builder/docs/provide-schema).
+   * @param startingSchema startingSchema or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDataStore setStartingSchema(GoogleCloudDiscoveryengineV1betaSchema startingSchema) {
+    this.startingSchema = startingSchema;
     return this;
   }
 

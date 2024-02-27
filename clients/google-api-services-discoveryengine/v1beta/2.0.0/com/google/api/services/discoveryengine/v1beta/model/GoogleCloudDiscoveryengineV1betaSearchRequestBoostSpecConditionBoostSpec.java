@@ -47,8 +47,8 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpecConditi
   /**
    * An expression which specifies a boost condition. The syntax and supported fields are the same
    * as a filter expression. See SearchRequest.filter for detail syntax and limitations. Examples: *
-   * To boost documents with document ID "doc_1" or "doc_2", and color "Red" or "Blue": * (id:
-   * ANY("doc_1", "doc_2")) AND (color: ANY("Red","Blue"))
+   * To boost documents with document ID "doc_1" or "doc_2", and color "Red" or "Blue": *
+   * (document_id: ANY("doc_1", "doc_2")) AND (color: ANY("Red", "Blue"))
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +90,8 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpecConditi
   /**
    * An expression which specifies a boost condition. The syntax and supported fields are the same
    * as a filter expression. See SearchRequest.filter for detail syntax and limitations. Examples: *
-   * To boost documents with document ID "doc_1" or "doc_2", and color "Red" or "Blue": * (id:
-   * ANY("doc_1", "doc_2")) AND (color: ANY("Red","Blue"))
+   * To boost documents with document ID "doc_1" or "doc_2", and color "Red" or "Blue": *
+   * (document_id: ANY("doc_1", "doc_2")) AND (color: ANY("Red", "Blue"))
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -101,8 +101,8 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpecConditi
   /**
    * An expression which specifies a boost condition. The syntax and supported fields are the same
    * as a filter expression. See SearchRequest.filter for detail syntax and limitations. Examples: *
-   * To boost documents with document ID "doc_1" or "doc_2", and color "Red" or "Blue": * (id:
-   * ANY("doc_1", "doc_2")) AND (color: ANY("Red","Blue"))
+   * To boost documents with document ID "doc_1" or "doc_2", and color "Red" or "Blue": *
+   * (document_id: ANY("doc_1", "doc_2")) AND (color: ANY("Red", "Blue"))
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpecConditionBoostSpec setCondition(java.lang.String condition) {

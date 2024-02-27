@@ -32,7 +32,7 @@ public final class GoogleCloudSecuritycenterV2PolicyDriftDetails extends com.goo
 
   /**
    * The detected value that violates the deployed posture, for example, `false` or
-   * `allowed_values={"projects/22831892”}`.
+   * `allowed_values={"projects/22831892"}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class GoogleCloudSecuritycenterV2PolicyDriftDetails extends com.goo
 
   /**
    * The value of this field that was configured in a posture, for example, `true` or
-   * `allowed_values={"projects/29831892”}`.
+   * `allowed_values={"projects/29831892"}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class GoogleCloudSecuritycenterV2PolicyDriftDetails extends com.goo
 
   /**
    * The detected value that violates the deployed posture, for example, `false` or
-   * `allowed_values={"projects/22831892”}`.
+   * `allowed_values={"projects/22831892"}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetectedValue() {
@@ -64,7 +64,7 @@ public final class GoogleCloudSecuritycenterV2PolicyDriftDetails extends com.goo
 
   /**
    * The detected value that violates the deployed posture, for example, `false` or
-   * `allowed_values={"projects/22831892”}`.
+   * `allowed_values={"projects/22831892"}`.
    * @param detectedValue detectedValue or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2PolicyDriftDetails setDetectedValue(java.lang.String detectedValue) {
@@ -74,7 +74,7 @@ public final class GoogleCloudSecuritycenterV2PolicyDriftDetails extends com.goo
 
   /**
    * The value of this field that was configured in a posture, for example, `true` or
-   * `allowed_values={"projects/29831892”}`.
+   * `allowed_values={"projects/29831892"}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getExpectedValue() {
@@ -83,7 +83,7 @@ public final class GoogleCloudSecuritycenterV2PolicyDriftDetails extends com.goo
 
   /**
    * The value of this field that was configured in a posture, for example, `true` or
-   * `allowed_values={"projects/29831892”}`.
+   * `allowed_values={"projects/29831892"}`.
    * @param expectedValue expectedValue or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2PolicyDriftDetails setExpectedValue(java.lang.String expectedValue) {

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * The policy field that violates the deployed posture and its expected and and detected values.
+ * The policy field that violates the deployed posture and its expected and detected values.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,7 +32,7 @@ public final class PolicyDriftDetails extends com.google.api.client.json.Generic
 
   /**
    * The detected value that violates the deployed posture, for example, `false` or
-   * `allowed_values={"projects/22831892”}`.
+   * `allowed_values={"projects/22831892"}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class PolicyDriftDetails extends com.google.api.client.json.Generic
 
   /**
    * The value of this field that was configured in a posture, for example, `true` or
-   * `allowed_values={"projects/29831892”}`.
+   * `allowed_values={"projects/29831892"}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class PolicyDriftDetails extends com.google.api.client.json.Generic
 
   /**
    * The detected value that violates the deployed posture, for example, `false` or
-   * `allowed_values={"projects/22831892”}`.
+   * `allowed_values={"projects/22831892"}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetectedValue() {
@@ -64,7 +64,7 @@ public final class PolicyDriftDetails extends com.google.api.client.json.Generic
 
   /**
    * The detected value that violates the deployed posture, for example, `false` or
-   * `allowed_values={"projects/22831892”}`.
+   * `allowed_values={"projects/22831892"}`.
    * @param detectedValue detectedValue or {@code null} for none
    */
   public PolicyDriftDetails setDetectedValue(java.lang.String detectedValue) {
@@ -74,7 +74,7 @@ public final class PolicyDriftDetails extends com.google.api.client.json.Generic
 
   /**
    * The value of this field that was configured in a posture, for example, `true` or
-   * `allowed_values={"projects/29831892”}`.
+   * `allowed_values={"projects/29831892"}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getExpectedValue() {
@@ -83,7 +83,7 @@ public final class PolicyDriftDetails extends com.google.api.client.json.Generic
 
   /**
    * The value of this field that was configured in a posture, for example, `true` or
-   * `allowed_values={"projects/29831892”}`.
+   * `allowed_values={"projects/29831892"}`.
    * @param expectedValue expectedValue or {@code null} for none
    */
   public PolicyDriftDetails setExpectedValue(java.lang.String expectedValue) {

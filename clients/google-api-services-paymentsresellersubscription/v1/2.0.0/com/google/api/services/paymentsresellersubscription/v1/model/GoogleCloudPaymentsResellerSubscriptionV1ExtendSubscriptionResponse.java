@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Model definition for GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse.
+ * Response that contains the timestamps after the extension.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed

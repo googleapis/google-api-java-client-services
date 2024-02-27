@@ -92,6 +92,13 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   private java.lang.Integer managedZonesPerNetwork;
 
   /**
+   * Maximum number of nameservers per delegation, meant to prevent abuse
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer nameserversPerDelegation;
+
+  /**
    * Maximum allowed number of networks to which a privately scoped zone can be attached.
    * The value may be {@code null}.
    */
@@ -351,6 +358,23 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   public Quota setManagedZonesPerNetwork(java.lang.Integer managedZonesPerNetwork) {
     this.managedZonesPerNetwork = managedZonesPerNetwork;
+    return this;
+  }
+
+  /**
+   * Maximum number of nameservers per delegation, meant to prevent abuse
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNameserversPerDelegation() {
+    return nameserversPerDelegation;
+  }
+
+  /**
+   * Maximum number of nameservers per delegation, meant to prevent abuse
+   * @param nameserversPerDelegation nameserversPerDelegation or {@code null} for none
+   */
+  public Quota setNameserversPerDelegation(java.lang.Integer nameserversPerDelegation) {
+    this.nameserversPerDelegation = nameserversPerDelegation;
     return this;
   }
 

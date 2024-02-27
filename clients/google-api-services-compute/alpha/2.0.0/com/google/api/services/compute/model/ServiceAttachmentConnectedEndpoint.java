@@ -44,6 +44,14 @@ public final class ServiceAttachmentConnectedEndpoint extends com.google.api.cli
   private java.lang.String endpoint;
 
   /**
+   * The number of consumer Network Connectivity Center spokes that the connected Private Service
+   * Connect endpoint has propagated to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long propagatedConnectionCount;
+
+  /**
    * The PSC connection id of the connected endpoint.
    * The value may be {@code null}.
    */
@@ -88,6 +96,25 @@ public final class ServiceAttachmentConnectedEndpoint extends com.google.api.cli
    */
   public ServiceAttachmentConnectedEndpoint setEndpoint(java.lang.String endpoint) {
     this.endpoint = endpoint;
+    return this;
+  }
+
+  /**
+   * The number of consumer Network Connectivity Center spokes that the connected Private Service
+   * Connect endpoint has propagated to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPropagatedConnectionCount() {
+    return propagatedConnectionCount;
+  }
+
+  /**
+   * The number of consumer Network Connectivity Center spokes that the connected Private Service
+   * Connect endpoint has propagated to.
+   * @param propagatedConnectionCount propagatedConnectionCount or {@code null} for none
+   */
+  public ServiceAttachmentConnectedEndpoint setPropagatedConnectionCount(java.lang.Long propagatedConnectionCount) {
+    this.propagatedConnectionCount = propagatedConnectionCount;
     return this;
   }
 

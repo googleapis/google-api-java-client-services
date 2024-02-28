@@ -30,6 +30,15 @@ package com.google.api.services.servicecontrol.v1.model;
 public final class CheckInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The unique id of the api key in the format of "apikey:". This field will be populated when the
+   * consumer passed to Chemist is an API key and all the API key related validations are
+   * successful.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiKeyUid;
+
+  /**
    * Consumer info of this check.
    * The value may be {@code null}.
    */
@@ -43,6 +52,27 @@ public final class CheckInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unusedArguments;
+
+  /**
+   * The unique id of the api key in the format of "apikey:". This field will be populated when the
+   * consumer passed to Chemist is an API key and all the API key related validations are
+   * successful.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiKeyUid() {
+    return apiKeyUid;
+  }
+
+  /**
+   * The unique id of the api key in the format of "apikey:". This field will be populated when the
+   * consumer passed to Chemist is an API key and all the API key related validations are
+   * successful.
+   * @param apiKeyUid apiKeyUid or {@code null} for none
+   */
+  public CheckInfo setApiKeyUid(java.lang.String apiKeyUid) {
+    this.apiKeyUid = apiKeyUid;
+    return this;
+  }
 
   /**
    * Consumer info of this check.

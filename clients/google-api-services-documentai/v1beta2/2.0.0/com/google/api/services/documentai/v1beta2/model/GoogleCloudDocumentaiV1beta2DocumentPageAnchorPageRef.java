@@ -31,7 +31,8 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Identifies the bounding polygon of a layout element on the page.
+   * Optional. Identifies the bounding polygon of a layout element on the page. If `layout_type` is
+   * set, the bounding polygon must be exactly the same to the layout element it's referring to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef extends
   private java.lang.Long page;
 
   /**
-   * Optional. Identifies the bounding polygon of a layout element on the page.
+   * Optional. Identifies the bounding polygon of a layout element on the page. If `layout_type` is
+   * set, the bounding polygon must be exactly the same to the layout element it's referring to.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2BoundingPoly getBoundingPoly() {
@@ -76,7 +78,8 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef extends
   }
 
   /**
-   * Optional. Identifies the bounding polygon of a layout element on the page.
+   * Optional. Identifies the bounding polygon of a layout element on the page. If `layout_type` is
+   * set, the bounding polygon must be exactly the same to the layout element it's referring to.
    * @param boundingPoly boundingPoly or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentPageAnchorPageRef setBoundingPoly(GoogleCloudDocumentaiV1beta2BoundingPoly boundingPoly) {

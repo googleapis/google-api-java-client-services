@@ -30,7 +30,7 @@ package com.google.api.services.pubsub.model;
 public final class Topic extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Settings for managed ingestion from a data source into this topic.
+   * Optional. Settings for ingestion from a data source into this topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Optional. Settings for managed ingestion from a data source into this topic.
+   * Optional. Settings for ingestion from a data source into this topic.
    * @return value or {@code null} for none
    */
   public IngestionDataSourceSettings getIngestionDataSourceSettings() {
@@ -113,7 +113,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Settings for managed ingestion from a data source into this topic.
+   * Optional. Settings for ingestion from a data source into this topic.
    * @param ingestionDataSourceSettings ingestionDataSourceSettings or {@code null} for none
    */
   public Topic setIngestionDataSourceSettings(IngestionDataSourceSettings ingestionDataSourceSettings) {

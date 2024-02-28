@@ -31,6 +31,13 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty extends com.google.api.client.json.GenericJson {
 
   /**
+   * User defined name for the property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * The name of the property. Follows the same guidelines as the EntityType name.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty 
    */
   @com.google.api.client.util.Key
   private java.lang.String valueType;
+
+  /**
+   * User defined name for the property.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * User defined name for the property.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * The name of the property. Follows the same guidelines as the EntityType name.

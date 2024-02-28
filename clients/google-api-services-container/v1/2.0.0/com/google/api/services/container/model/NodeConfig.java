@@ -279,6 +279,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private SandboxConfig sandboxConfig;
 
   /**
+   * List of secondary boot disks attached to the nodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecondaryBootDisk> secondaryBootDisks;
+
+  /**
    * The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address
    * of the Service Account; otherwise, if no Service Account is specified, the "default" service
    * account is used.
@@ -902,6 +909,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setSandboxConfig(SandboxConfig sandboxConfig) {
     this.sandboxConfig = sandboxConfig;
+    return this;
+  }
+
+  /**
+   * List of secondary boot disks attached to the nodes.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecondaryBootDisk> getSecondaryBootDisks() {
+    return secondaryBootDisks;
+  }
+
+  /**
+   * List of secondary boot disks attached to the nodes.
+   * @param secondaryBootDisks secondaryBootDisks or {@code null} for none
+   */
+  public NodeConfig setSecondaryBootDisks(java.util.List<SecondaryBootDisk> secondaryBootDisks) {
+    this.secondaryBootDisks = secondaryBootDisks;
     return this;
   }
 

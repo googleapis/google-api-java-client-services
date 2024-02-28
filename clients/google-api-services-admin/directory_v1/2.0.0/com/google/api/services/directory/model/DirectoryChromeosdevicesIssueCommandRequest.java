@@ -44,7 +44,19 @@ public final class DirectoryChromeosdevicesIssueCommandRequest extends com.googl
    * "ackedUserPresence": true }. `ackedUserPresence` is a boolean. By default, `ackedUserPresence`
    * is set to `false`. To start a Chrome Remote Desktop session for an active device, set
    * `ackedUserPresence` to `true`. * `REBOOT`: Payload is a stringified JSON object in the form: {
-   * "user_session_delay_seconds": 300 }. The delay has to be in the range [0, 300].
+   * "user_session_delay_seconds": 300 }. The delay has to be in the range [0, 300]. *
+   * `FETCH_SUPPORT_PACKET`: Payload is optionally a stringified JSON object in the form:
+   * {"supportPacketDetails":{ "issueCaseId": optional_support_case_id_string, "issueDescription":
+   * optional_issue_description_string, "requestedDataCollectors": []}} The list of available
+   * `data_collector_enums` are as following: Chrome System Information (1), Crash IDs (2), Memory
+   * Details (3), UI Hierarchy (4), Additional ChromeOS Platform Logs (5), Device Event (6), Intel
+   * WiFi NICs Debug Dump (7), Touch Events (8), Lacros (9), Lacros System Information (10),
+   * ChromeOS Flex Logs (11), DBus Details (12), ChromeOS Network Routes (13), ChromeOS Shill
+   * (Connection Manager) Logs (14), Policies (15), ChromeOS System State and Logs (16), ChromeOS
+   * System Logs (17), ChromeOS Chrome User Logs (18), ChromeOS Bluetooth (19), ChromeOS Connected
+   * Input Devices (20), ChromeOS Traffic Counters (21), ChromeOS Virtual Keyboard (22), ChromeOS
+   * Network Health (23). See more details in [help article](https://support.google.com/chrome/a?p
+   * =remote-log).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +87,19 @@ public final class DirectoryChromeosdevicesIssueCommandRequest extends com.googl
    * "ackedUserPresence": true }. `ackedUserPresence` is a boolean. By default, `ackedUserPresence`
    * is set to `false`. To start a Chrome Remote Desktop session for an active device, set
    * `ackedUserPresence` to `true`. * `REBOOT`: Payload is a stringified JSON object in the form: {
-   * "user_session_delay_seconds": 300 }. The delay has to be in the range [0, 300].
+   * "user_session_delay_seconds": 300 }. The delay has to be in the range [0, 300]. *
+   * `FETCH_SUPPORT_PACKET`: Payload is optionally a stringified JSON object in the form:
+   * {"supportPacketDetails":{ "issueCaseId": optional_support_case_id_string, "issueDescription":
+   * optional_issue_description_string, "requestedDataCollectors": []}} The list of available
+   * `data_collector_enums` are as following: Chrome System Information (1), Crash IDs (2), Memory
+   * Details (3), UI Hierarchy (4), Additional ChromeOS Platform Logs (5), Device Event (6), Intel
+   * WiFi NICs Debug Dump (7), Touch Events (8), Lacros (9), Lacros System Information (10),
+   * ChromeOS Flex Logs (11), DBus Details (12), ChromeOS Network Routes (13), ChromeOS Shill
+   * (Connection Manager) Logs (14), Policies (15), ChromeOS System State and Logs (16), ChromeOS
+   * System Logs (17), ChromeOS Chrome User Logs (18), ChromeOS Bluetooth (19), ChromeOS Connected
+   * Input Devices (20), ChromeOS Traffic Counters (21), ChromeOS Virtual Keyboard (22), ChromeOS
+   * Network Health (23). See more details in [help article](https://support.google.com/chrome/a?p
+   * =remote-log).
    * @return value or {@code null} for none
    */
   public java.lang.String getPayload() {
@@ -90,7 +114,19 @@ public final class DirectoryChromeosdevicesIssueCommandRequest extends com.googl
    * "ackedUserPresence": true }. `ackedUserPresence` is a boolean. By default, `ackedUserPresence`
    * is set to `false`. To start a Chrome Remote Desktop session for an active device, set
    * `ackedUserPresence` to `true`. * `REBOOT`: Payload is a stringified JSON object in the form: {
-   * "user_session_delay_seconds": 300 }. The delay has to be in the range [0, 300].
+   * "user_session_delay_seconds": 300 }. The delay has to be in the range [0, 300]. *
+   * `FETCH_SUPPORT_PACKET`: Payload is optionally a stringified JSON object in the form:
+   * {"supportPacketDetails":{ "issueCaseId": optional_support_case_id_string, "issueDescription":
+   * optional_issue_description_string, "requestedDataCollectors": []}} The list of available
+   * `data_collector_enums` are as following: Chrome System Information (1), Crash IDs (2), Memory
+   * Details (3), UI Hierarchy (4), Additional ChromeOS Platform Logs (5), Device Event (6), Intel
+   * WiFi NICs Debug Dump (7), Touch Events (8), Lacros (9), Lacros System Information (10),
+   * ChromeOS Flex Logs (11), DBus Details (12), ChromeOS Network Routes (13), ChromeOS Shill
+   * (Connection Manager) Logs (14), Policies (15), ChromeOS System State and Logs (16), ChromeOS
+   * System Logs (17), ChromeOS Chrome User Logs (18), ChromeOS Bluetooth (19), ChromeOS Connected
+   * Input Devices (20), ChromeOS Traffic Counters (21), ChromeOS Virtual Keyboard (22), ChromeOS
+   * Network Health (23). See more details in [help article](https://support.google.com/chrome/a?p
+   * =remote-log).
    * @param payload payload or {@code null} for none
    */
   public DirectoryChromeosdevicesIssueCommandRequest setPayload(java.lang.String payload) {

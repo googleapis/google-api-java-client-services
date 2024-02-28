@@ -20,7 +20,7 @@ package com.google.api.services.appengine.model;
  * Containers transition between and within states based on reasons sent from various systems. CCFE
  * will provide the CLH with reasons for the current state per system.The current systems that CCFE
  * supports are: Service Management (Inception) Data Governance (Wipeout) Abuse (Ares) Billing
- * (Internal Cloud Billing API)
+ * (Internal Cloud Billing API) Service Activation (Service Controller)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Engine Admin API. For a detailed explanation see:
@@ -49,6 +49,15 @@ public final class Reasons extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String dataGovernance;
+
+  /**
+   * Consumer Container denotes if the service is active within a project or not. This information
+   * could be used to clean up resources in case service in DISABLED_FULL i.e. Service is inactive >
+   * 30 days.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceActivation;
 
   /**
    * The value may be {@code null}.
@@ -98,6 +107,27 @@ public final class Reasons extends com.google.api.client.json.GenericJson {
    */
   public Reasons setDataGovernance(java.lang.String dataGovernance) {
     this.dataGovernance = dataGovernance;
+    return this;
+  }
+
+  /**
+   * Consumer Container denotes if the service is active within a project or not. This information
+   * could be used to clean up resources in case service in DISABLED_FULL i.e. Service is inactive >
+   * 30 days.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceActivation() {
+    return serviceActivation;
+  }
+
+  /**
+   * Consumer Container denotes if the service is active within a project or not. This information
+   * could be used to clean up resources in case service in DISABLED_FULL i.e. Service is inactive >
+   * 30 days.
+   * @param serviceActivation serviceActivation or {@code null} for none
+   */
+  public Reasons setServiceActivation(java.lang.String serviceActivation) {
+    this.serviceActivation = serviceActivation;
     return this;
   }
 

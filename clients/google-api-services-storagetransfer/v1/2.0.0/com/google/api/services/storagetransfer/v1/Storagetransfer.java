@@ -2349,11 +2349,16 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      *
      * @param name Required. The name of the type being listed; must be `transferOperations`.
      * @param filter Required. A list of query parameters specified as JSON text in the form of:
-     *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
-     *        "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}`
-     *        Since `jobNames`, `operationNames`, and `transferStatuses` support multiple values, they
-     *        must be specified with array notation. `projectId` is required. `jobNames`,
-     *        `operationNames`, and `transferStatuses` are optional. The valid values for
+     *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...], "jobNamePattern":
+     *        "job_name_pattern", "operationNames":["opid1","opid2",...], "operationNamePattern":
+     *        "operation_name_pattern", "minCreationTime": "min_creation_time", "maxCreationTime":
+     *        "max_creation_time", "transferStatuses":["status1","status2",...]}` Since `jobNames`,
+     *        `operationNames`, and `transferStatuses` support multiple values, they must be specified
+     *        with array notation. `projectId` is the only argument that is required. If specified,
+     *        `jobNamePattern` and `operationNamePattern` must match the full job or operation name
+     *        respectively. '*' is a wildcard matching 0 or more characters. `minCreationTime` and
+     *        `maxCreationTime` should be timestamps encoded as a string in the [RFC
+     *        3339](https://www.ietf.org/rfc/rfc3339.txt) format. The valid values for
      *        `transferStatuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and
      *        ABORTED.
      * @return the request
@@ -2384,11 +2389,16 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        *
        * @param name Required. The name of the type being listed; must be `transferOperations`.
        * @param filter Required. A list of query parameters specified as JSON text in the form of:
-     *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
-     *        "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}`
-     *        Since `jobNames`, `operationNames`, and `transferStatuses` support multiple values, they
-     *        must be specified with array notation. `projectId` is required. `jobNames`,
-     *        `operationNames`, and `transferStatuses` are optional. The valid values for
+     *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...], "jobNamePattern":
+     *        "job_name_pattern", "operationNames":["opid1","opid2",...], "operationNamePattern":
+     *        "operation_name_pattern", "minCreationTime": "min_creation_time", "maxCreationTime":
+     *        "max_creation_time", "transferStatuses":["status1","status2",...]}` Since `jobNames`,
+     *        `operationNames`, and `transferStatuses` support multiple values, they must be specified
+     *        with array notation. `projectId` is the only argument that is required. If specified,
+     *        `jobNamePattern` and `operationNamePattern` must match the full job or operation name
+     *        respectively. '*' is a wildcard matching 0 or more characters. `minCreationTime` and
+     *        `maxCreationTime` should be timestamps encoded as a string in the [RFC
+     *        3339](https://www.ietf.org/rfc/rfc3339.txt) format. The valid values for
      *        `transferStatuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and
      *        ABORTED.
        * @since 1.13
@@ -2492,23 +2502,32 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
 
       /**
        * Required. A list of query parameters specified as JSON text in the form of:
-       * `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
-       * "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}`
-       * Since `jobNames`, `operationNames`, and `transferStatuses` support multiple values, they
-       * must be specified with array notation. `projectId` is required. `jobNames`,
-       * `operationNames`, and `transferStatuses` are optional. The valid values for
-       * `transferStatuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and ABORTED.
+       * `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...], "jobNamePattern":
+       * "job_name_pattern", "operationNames":["opid1","opid2",...], "operationNamePattern":
+       * "operation_name_pattern", "minCreationTime": "min_creation_time", "maxCreationTime":
+       * "max_creation_time", "transferStatuses":["status1","status2",...]}` Since `jobNames`,
+       * `operationNames`, and `transferStatuses` support multiple values, they must be specified
+       * with array notation. `projectId` is the only argument that is required. If specified,
+       * `jobNamePattern` and `operationNamePattern` must match the full job or operation name
+       * respectively. '*' is a wildcard matching 0 or more characters. `minCreationTime` and
+       * `maxCreationTime` should be timestamps encoded as a string in the [RFC
+       * 3339](https://www.ietf.org/rfc/rfc3339.txt) format. The valid values for `transferStatuses`
+       * are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and ABORTED.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Required. A list of query parameters specified as JSON text in the form of:
-     `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
-     "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}` Since
-     `jobNames`, `operationNames`, and `transferStatuses` support multiple values, they must be
-     specified with array notation. `projectId` is required. `jobNames`, `operationNames`, and
-     `transferStatuses` are optional. The valid values for `transferStatuses` are case-insensitive:
-     IN_PROGRESS, PAUSED, SUCCESS, FAILED, and ABORTED.
+     `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...], "jobNamePattern":
+     "job_name_pattern", "operationNames":["opid1","opid2",...], "operationNamePattern":
+     "operation_name_pattern", "minCreationTime": "min_creation_time", "maxCreationTime":
+     "max_creation_time", "transferStatuses":["status1","status2",...]}` Since `jobNames`,
+     `operationNames`, and `transferStatuses` support multiple values, they must be specified with array
+     notation. `projectId` is the only argument that is required. If specified, `jobNamePattern` and
+     `operationNamePattern` must match the full job or operation name respectively. '*' is a wildcard
+     matching 0 or more characters. `minCreationTime` and `maxCreationTime` should be timestamps encoded
+     as a string in the [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format. The valid values for
+     `transferStatuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and ABORTED.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -2516,12 +2535,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
 
       /**
        * Required. A list of query parameters specified as JSON text in the form of:
-       * `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
-       * "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}`
-       * Since `jobNames`, `operationNames`, and `transferStatuses` support multiple values, they
-       * must be specified with array notation. `projectId` is required. `jobNames`,
-       * `operationNames`, and `transferStatuses` are optional. The valid values for
-       * `transferStatuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and ABORTED.
+       * `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...], "jobNamePattern":
+       * "job_name_pattern", "operationNames":["opid1","opid2",...], "operationNamePattern":
+       * "operation_name_pattern", "minCreationTime": "min_creation_time", "maxCreationTime":
+       * "max_creation_time", "transferStatuses":["status1","status2",...]}` Since `jobNames`,
+       * `operationNames`, and `transferStatuses` support multiple values, they must be specified
+       * with array notation. `projectId` is the only argument that is required. If specified,
+       * `jobNamePattern` and `operationNamePattern` must match the full job or operation name
+       * respectively. '*' is a wildcard matching 0 or more characters. `minCreationTime` and
+       * `maxCreationTime` should be timestamps encoded as a string in the [RFC
+       * 3339](https://www.ietf.org/rfc/rfc3339.txt) format. The valid values for `transferStatuses`
+       * are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS, FAILED, and ABORTED.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;

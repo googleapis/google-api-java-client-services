@@ -30,14 +30,6 @@ package com.google.api.services.logging.v2.model;
 public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The default analytics mode of an org or folder which is inherited by all newly
-   * created child project buckets.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String analyticsMode;
-
-  /**
    * Optional. Overrides the built-in configuration for _Default sink.
    * The value may be {@code null}.
    */
@@ -104,25 +96,6 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String storageLocation;
-
-  /**
-   * Optional. The default analytics mode of an org or folder which is inherited by all newly
-   * created child project buckets.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAnalyticsMode() {
-    return analyticsMode;
-  }
-
-  /**
-   * Optional. The default analytics mode of an org or folder which is inherited by all newly
-   * created child project buckets.
-   * @param analyticsMode analyticsMode or {@code null} for none
-   */
-  public Settings setAnalyticsMode(java.lang.String analyticsMode) {
-    this.analyticsMode = analyticsMode;
-    return this;
-  }
 
   /**
    * Optional. Overrides the built-in configuration for _Default sink.

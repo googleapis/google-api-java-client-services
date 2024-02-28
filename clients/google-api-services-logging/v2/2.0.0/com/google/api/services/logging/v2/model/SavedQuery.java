@@ -83,6 +83,13 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Required. The visibility status of this query, which determines its ownership.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String visibility;
+
+  /**
    * Output only. The timestamp when the saved query was created.
    * @return value or {@code null} for none
    */
@@ -206,6 +213,23 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
    */
   public SavedQuery setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Required. The visibility status of this query, which determines its ownership.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVisibility() {
+    return visibility;
+  }
+
+  /**
+   * Required. The visibility status of this query, which determines its ownership.
+   * @param visibility visibility or {@code null} for none
+   */
+  public SavedQuery setVisibility(java.lang.String visibility) {
+    this.visibility = visibility;
     return this;
   }
 

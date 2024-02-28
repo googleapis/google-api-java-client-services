@@ -59,7 +59,7 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
   private java.lang.Integer progress;
 
   /**
-   * CopyLogEntries RPC request.
+   * CopyLogEntries RPC request. This field is deprecated and not used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +174,7 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
   }
 
   /**
-   * CopyLogEntries RPC request.
+   * CopyLogEntries RPC request. This field is deprecated and not used.
    * @return value or {@code null} for none
    */
   public CopyLogEntriesRequest getRequest() {
@@ -182,7 +182,7 @@ public final class CopyLogEntriesMetadata extends com.google.api.client.json.Gen
   }
 
   /**
-   * CopyLogEntries RPC request.
+   * CopyLogEntries RPC request. This field is deprecated and not used.
    * @param request request or {@code null} for none
    */
   public CopyLogEntriesMetadata setRequest(CopyLogEntriesRequest request) {

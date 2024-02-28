@@ -38,6 +38,20 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   private java.util.List<java.lang.String> assignees;
 
   /**
+   * The time when the case was closed, as reported by the external system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String caseCloseTime;
+
+  /**
+   * The time when the case was created, as reported by the external system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String caseCreateTime;
+
+  /**
    * The priority of the finding's corresponding case in the external system.
    * The value may be {@code null}.
    */
@@ -114,6 +128,40 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
    */
   public GoogleCloudSecuritycenterV2ExternalSystem setAssignees(java.util.List<java.lang.String> assignees) {
     this.assignees = assignees;
+    return this;
+  }
+
+  /**
+   * The time when the case was closed, as reported by the external system.
+   * @return value or {@code null} for none
+   */
+  public String getCaseCloseTime() {
+    return caseCloseTime;
+  }
+
+  /**
+   * The time when the case was closed, as reported by the external system.
+   * @param caseCloseTime caseCloseTime or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ExternalSystem setCaseCloseTime(String caseCloseTime) {
+    this.caseCloseTime = caseCloseTime;
+    return this;
+  }
+
+  /**
+   * The time when the case was created, as reported by the external system.
+   * @return value or {@code null} for none
+   */
+  public String getCaseCreateTime() {
+    return caseCreateTime;
+  }
+
+  /**
+   * The time when the case was created, as reported by the external system.
+   * @param caseCreateTime caseCreateTime or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ExternalSystem setCaseCreateTime(String caseCreateTime) {
+    this.caseCreateTime = caseCreateTime;
     return this;
   }
 

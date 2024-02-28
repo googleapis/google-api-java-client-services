@@ -37,6 +37,13 @@ public final class PrivatePoolV1Config extends com.google.api.client.json.Generi
   private NetworkConfig networkConfig;
 
   /**
+   * Immutable. Private Service Connect(PSC) Network configuration for the pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateServiceConnect privateServiceConnect;
+
+  /**
    * Machine configuration for the workers in the pool.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class PrivatePoolV1Config extends com.google.api.client.json.Generi
    */
   public PrivatePoolV1Config setNetworkConfig(NetworkConfig networkConfig) {
     this.networkConfig = networkConfig;
+    return this;
+  }
+
+  /**
+   * Immutable. Private Service Connect(PSC) Network configuration for the pool.
+   * @return value or {@code null} for none
+   */
+  public PrivateServiceConnect getPrivateServiceConnect() {
+    return privateServiceConnect;
+  }
+
+  /**
+   * Immutable. Private Service Connect(PSC) Network configuration for the pool.
+   * @param privateServiceConnect privateServiceConnect or {@code null} for none
+   */
+  public PrivatePoolV1Config setPrivateServiceConnect(PrivateServiceConnect privateServiceConnect) {
+    this.privateServiceConnect = privateServiceConnect;
     return this;
   }
 

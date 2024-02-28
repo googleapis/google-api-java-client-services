@@ -2665,6 +2665,156 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
     public class Locations {
 
       /**
+       * Returns the `DefaultServiceAccount` used by the project.
+       *
+       * Create a request for the method "locations.getDefaultServiceAccount".
+       *
+       * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+       * parameters, call the {@link GetDefaultServiceAccount#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the `DefaultServiceAccount` to retrieve. Format:
+       *        `projects/{project}/locations/{location}/defaultServiceAccount`
+       * @return the request
+       */
+      public GetDefaultServiceAccount getDefaultServiceAccount(java.lang.String name) throws java.io.IOException {
+        GetDefaultServiceAccount result = new GetDefaultServiceAccount(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetDefaultServiceAccount extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.DefaultServiceAccount> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/defaultServiceAccount$");
+
+        /**
+         * Returns the `DefaultServiceAccount` used by the project.
+         *
+         * Create a request for the method "locations.getDefaultServiceAccount".
+         *
+         * This request holds the parameters needed by the the cloudbuild server.  After setting any
+         * optional parameters, call the {@link GetDefaultServiceAccount#execute()} method to invoke the
+         * remote operation. <p> {@link GetDefaultServiceAccount#initialize(com.google.api.client.googleap
+         * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the `DefaultServiceAccount` to retrieve. Format:
+       *        `projects/{project}/locations/{location}/defaultServiceAccount`
+         * @since 1.13
+         */
+        protected GetDefaultServiceAccount(java.lang.String name) {
+          super(CloudBuild.this, "GET", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.DefaultServiceAccount.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/defaultServiceAccount$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetDefaultServiceAccount set$Xgafv(java.lang.String $Xgafv) {
+          return (GetDefaultServiceAccount) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetDefaultServiceAccount setAccessToken(java.lang.String accessToken) {
+          return (GetDefaultServiceAccount) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetDefaultServiceAccount setAlt(java.lang.String alt) {
+          return (GetDefaultServiceAccount) super.setAlt(alt);
+        }
+
+        @Override
+        public GetDefaultServiceAccount setCallback(java.lang.String callback) {
+          return (GetDefaultServiceAccount) super.setCallback(callback);
+        }
+
+        @Override
+        public GetDefaultServiceAccount setFields(java.lang.String fields) {
+          return (GetDefaultServiceAccount) super.setFields(fields);
+        }
+
+        @Override
+        public GetDefaultServiceAccount setKey(java.lang.String key) {
+          return (GetDefaultServiceAccount) super.setKey(key);
+        }
+
+        @Override
+        public GetDefaultServiceAccount setOauthToken(java.lang.String oauthToken) {
+          return (GetDefaultServiceAccount) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetDefaultServiceAccount setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetDefaultServiceAccount) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetDefaultServiceAccount setQuotaUser(java.lang.String quotaUser) {
+          return (GetDefaultServiceAccount) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetDefaultServiceAccount setUploadType(java.lang.String uploadType) {
+          return (GetDefaultServiceAccount) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetDefaultServiceAccount setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetDefaultServiceAccount) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the `DefaultServiceAccount` to retrieve. Format:
+         * `projects/{project}/locations/{location}/defaultServiceAccount`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the `DefaultServiceAccount` to retrieve. Format:
+       `projects/{project}/locations/{location}/defaultServiceAccount`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the `DefaultServiceAccount` to retrieve. Format:
+         * `projects/{project}/locations/{location}/defaultServiceAccount`
+         */
+        public GetDefaultServiceAccount setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/defaultServiceAccount$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetDefaultServiceAccount set(String parameterName, Object value) {
+          return (GetDefaultServiceAccount) super.set(parameterName, value);
+        }
+      }
+
+      /**
        * An accessor for creating requests from the BitbucketServerConfigs collection.
        *
        * <p>The typical use is:</p>

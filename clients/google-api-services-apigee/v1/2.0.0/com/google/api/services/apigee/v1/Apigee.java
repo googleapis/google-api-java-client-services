@@ -51667,6 +51667,1076 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
       }
+      /**
+       * An accessor for creating requests from the Apidocs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Apigee apigee = new Apigee(...);}
+       *   {@code Apigee.Apidocs.List request = apigee.apidocs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Apidocs apidocs() {
+        return new Apidocs();
+      }
+
+      /**
+       * The "apidocs" collection of methods.
+       */
+      public class Apidocs {
+
+        /**
+         * Creates a new catalog item.
+         *
+         * Create a request for the method "apidocs.create".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the portal. Use the following structure in your request:
+         *        `organizations/{org}/sites/{site}`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDoc}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDoc content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/apidocs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/sites/[^/]+$");
+
+          /**
+           * Creates a new catalog item.
+           *
+           * Create a request for the method "apidocs.create".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the portal. Use the following structure in your request:
+         *        `organizations/{org}/sites/{site}`
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDoc}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDoc content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the portal. Use the following structure in your request:
+           * `organizations/{org}/sites/{site}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the portal. Use the following structure in your request:
+         `organizations/{org}/sites/{site}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the portal. Use the following structure in your request:
+           * `organizations/{org}/sites/{site}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a catalog item.
+         *
+         * Create a request for the method "apidocs.delete".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the catalog item. Use the following structure in your request:
+         *        `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeleteResponse> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+$");
+
+          /**
+           * Deletes a catalog item.
+           *
+           * Create a request for the method "apidocs.delete".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the catalog item. Use the following structure in your request:
+         *        `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DeleteResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the catalog item. Use the following structure in your request:
+           * `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the catalog item. Use the following structure in your request:
+         `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the catalog item. Use the following structure in your request:
+           * `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a catalog item.
+         *
+         * Create a request for the method "apidocs.get".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the catalog item. Use the following structure in your request:
+         *        `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocResponse> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+$");
+
+          /**
+           * Gets a catalog item.
+           *
+           * Create a request for the method "apidocs.get".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the catalog item. Use the following structure in your request:
+         *        `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the catalog item. Use the following structure in your request:
+           * `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the catalog item. Use the following structure in your request:
+         `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the catalog item. Use the following structure in your request:
+           * `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the documentation for the specified catalog item.
+         *
+         * Create a request for the method "apidocs.getDocumentation".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link GetDocumentation#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the catalog item documentation. Use the following structure in your
+         *        request: `organizations/{org}/sites/{site}/apidocs/{apidoc}/documentation`
+         * @return the request
+         */
+        public GetDocumentation getDocumentation(java.lang.String name) throws java.io.IOException {
+          GetDocumentation result = new GetDocumentation(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetDocumentation extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocDocumentationResponse> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+/documentation$");
+
+          /**
+           * Gets the documentation for the specified catalog item.
+           *
+           * Create a request for the method "apidocs.getDocumentation".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link GetDocumentation#execute()} method to invoke the remote operation.
+           * <p> {@link GetDocumentation#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+           * ClientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param name Required. Resource name of the catalog item documentation. Use the following structure in your
+         *        request: `organizations/{org}/sites/{site}/apidocs/{apidoc}/documentation`
+           * @since 1.13
+           */
+          protected GetDocumentation(java.lang.String name) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocDocumentationResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+/documentation$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetDocumentation set$Xgafv(java.lang.String $Xgafv) {
+            return (GetDocumentation) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetDocumentation setAccessToken(java.lang.String accessToken) {
+            return (GetDocumentation) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetDocumentation setAlt(java.lang.String alt) {
+            return (GetDocumentation) super.setAlt(alt);
+          }
+
+          @Override
+          public GetDocumentation setCallback(java.lang.String callback) {
+            return (GetDocumentation) super.setCallback(callback);
+          }
+
+          @Override
+          public GetDocumentation setFields(java.lang.String fields) {
+            return (GetDocumentation) super.setFields(fields);
+          }
+
+          @Override
+          public GetDocumentation setKey(java.lang.String key) {
+            return (GetDocumentation) super.setKey(key);
+          }
+
+          @Override
+          public GetDocumentation setOauthToken(java.lang.String oauthToken) {
+            return (GetDocumentation) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetDocumentation setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetDocumentation) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetDocumentation setQuotaUser(java.lang.String quotaUser) {
+            return (GetDocumentation) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetDocumentation setUploadType(java.lang.String uploadType) {
+            return (GetDocumentation) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetDocumentation setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetDocumentation) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the catalog item documentation. Use the following structure
+           * in your request: `organizations/{org}/sites/{site}/apidocs/{apidoc}/documentation`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the catalog item documentation. Use the following structure in your
+         request: `organizations/{org}/sites/{site}/apidocs/{apidoc}/documentation`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the catalog item documentation. Use the following structure
+           * in your request: `organizations/{org}/sites/{site}/apidocs/{apidoc}/documentation`
+           */
+          public GetDocumentation setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+/documentation$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetDocumentation set(String parameterName, Object value) {
+            return (GetDocumentation) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns the catalog items associated with a portal.
+         *
+         * Create a request for the method "apidocs.list".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the portal. Use the following structure in your request:
+         *        `organizations/{org}/sites/{site}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListApiDocsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/apidocs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/sites/[^/]+$");
+
+          /**
+           * Returns the catalog items associated with a portal.
+           *
+           * Create a request for the method "apidocs.list".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the portal. Use the following structure in your request:
+         *        `organizations/{org}/sites/{site}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListApiDocsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the portal. Use the following structure in your request:
+           * `organizations/{org}/sites/{site}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the portal. Use the following structure in your request:
+         `organizations/{org}/sites/{site}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the portal. Use the following structure in your request:
+           * `organizations/{org}/sites/{site}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. The service may return fewer than this
+           * value. If unspecified, at most 25 books will be returned. The maximum value is 100;
+           * values above 100 will be coerced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of items to return. The service may return fewer than this value. If
+         unspecified, at most 25 books will be returned. The maximum value is 100; values above 100 will be
+         coerced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. The service may return fewer than this
+           * value. If unspecified, at most 25 books will be returned. The maximum value is 100;
+           * values above 100 will be coerced to 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListApiDocs` call. Provide this to
+           * retrieve the subsequent page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListApiDocs` call. Provide this to retrieve the
+         subsequent page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListApiDocs` call. Provide this to
+           * retrieve the subsequent page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a catalog item.
+         *
+         * Create a request for the method "apidocs.update".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the catalog item. Use the following structure in your request:
+         *        `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDoc}
+         * @return the request
+         */
+        public Update update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDoc content) throws java.io.IOException {
+          Update result = new Update(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Update extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocResponse> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+$");
+
+          /**
+           * Updates a catalog item.
+           *
+           * Create a request for the method "apidocs.update".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+           * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the catalog item. Use the following structure in your request:
+         *        `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDoc}
+           * @since 1.13
+           */
+          protected Update(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDoc content) {
+            super(Apigee.this, "PUT", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Update setAlt(java.lang.String alt) {
+            return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
+          }
+
+          @Override
+          public Update setFields(java.lang.String fields) {
+            return (Update) super.setFields(fields);
+          }
+
+          @Override
+          public Update setKey(java.lang.String key) {
+            return (Update) super.setKey(key);
+          }
+
+          @Override
+          public Update setOauthToken(java.lang.String oauthToken) {
+            return (Update) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Update) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Update setQuotaUser(java.lang.String quotaUser) {
+            return (Update) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the catalog item. Use the following structure in your request:
+           * `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the catalog item. Use the following structure in your request:
+         `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the catalog item. Use the following structure in your request:
+           * `organizations/{org}/sites/{site}/apidocs/{apidoc}`
+           */
+          public Update setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Update set(String parameterName, Object value) {
+            return (Update) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the documentation for the specified catalog item. Note that the documentation file
+         * contents will not be populated in the return message.
+         *
+         * Create a request for the method "apidocs.updateDocumentation".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link UpdateDocumentation#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the catalog item documentation. Use the following structure in your
+         *        request: `organizations/{org}/sites/{site}/apidocs/{apidoc}/documentation`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocDocumentation}
+         * @return the request
+         */
+        public UpdateDocumentation updateDocumentation(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocDocumentation content) throws java.io.IOException {
+          UpdateDocumentation result = new UpdateDocumentation(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateDocumentation extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocDocumentationResponse> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+/documentation$");
+
+          /**
+           * Updates the documentation for the specified catalog item. Note that the documentation file
+           * contents will not be populated in the return message.
+           *
+           * Create a request for the method "apidocs.updateDocumentation".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link UpdateDocumentation#execute()} method to invoke the remote
+           * operation. <p> {@link UpdateDocumentation#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the catalog item documentation. Use the following structure in your
+         *        request: `organizations/{org}/sites/{site}/apidocs/{apidoc}/documentation`
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocDocumentation}
+           * @since 1.13
+           */
+          protected UpdateDocumentation(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocDocumentation content) {
+            super(Apigee.this, "PATCH", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApiDocDocumentationResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+/documentation$");
+            }
+          }
+
+          @Override
+          public UpdateDocumentation set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateDocumentation) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateDocumentation setAccessToken(java.lang.String accessToken) {
+            return (UpdateDocumentation) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateDocumentation setAlt(java.lang.String alt) {
+            return (UpdateDocumentation) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateDocumentation setCallback(java.lang.String callback) {
+            return (UpdateDocumentation) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateDocumentation setFields(java.lang.String fields) {
+            return (UpdateDocumentation) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateDocumentation setKey(java.lang.String key) {
+            return (UpdateDocumentation) super.setKey(key);
+          }
+
+          @Override
+          public UpdateDocumentation setOauthToken(java.lang.String oauthToken) {
+            return (UpdateDocumentation) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateDocumentation setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateDocumentation) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateDocumentation setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateDocumentation) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateDocumentation setUploadType(java.lang.String uploadType) {
+            return (UpdateDocumentation) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateDocumentation setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateDocumentation) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the catalog item documentation. Use the following structure
+           * in your request: `organizations/{org}/sites/{site}/apidocs/{apidoc}/documentation`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the catalog item documentation. Use the following structure in your
+         request: `organizations/{org}/sites/{site}/apidocs/{apidoc}/documentation`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the catalog item documentation. Use the following structure
+           * in your request: `organizations/{org}/sites/{site}/apidocs/{apidoc}/documentation`
+           */
+          public UpdateDocumentation setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/sites/[^/]+/apidocs/[^/]+/documentation$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public UpdateDocumentation set(String parameterName, Object value) {
+            return (UpdateDocumentation) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

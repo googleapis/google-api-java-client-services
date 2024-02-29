@@ -367,7 +367,9 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Deletes an enterprise. Only available for EMM-managed enterprises.
+     * Permanently deletes an enterprise and all accounts and data associated with it. Warning: this
+     * will result in a cascaded deletion of all AM API devices associated with the deleted enterprise.
+     * Only available for EMM-managed enterprises.
      *
      * Create a request for the method "enterprises.delete".
      *
@@ -391,7 +393,9 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
           java.util.regex.Pattern.compile("^enterprises/[^/]+$");
 
       /**
-       * Deletes an enterprise. Only available for EMM-managed enterprises.
+       * Permanently deletes an enterprise and all accounts and data associated with it. Warning: this
+       * will result in a cascaded deletion of all AM API devices associated with the deleted
+       * enterprise. Only available for EMM-managed enterprises.
        *
        * Create a request for the method "enterprises.delete".
        *

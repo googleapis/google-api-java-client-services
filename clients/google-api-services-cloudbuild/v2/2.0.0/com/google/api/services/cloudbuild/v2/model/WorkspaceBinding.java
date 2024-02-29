@@ -53,13 +53,6 @@ public final class WorkspaceBinding extends com.google.api.client.json.GenericJs
   private java.lang.String subPath;
 
   /**
-   * Volume claim that will be created in the same namespace.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private VolumeClaim volumeClaim;
-
-  /**
    * Name of the workspace.
    * @return value or {@code null} for none
    */
@@ -109,23 +102,6 @@ public final class WorkspaceBinding extends com.google.api.client.json.GenericJs
    */
   public WorkspaceBinding setSubPath(java.lang.String subPath) {
     this.subPath = subPath;
-    return this;
-  }
-
-  /**
-   * Volume claim that will be created in the same namespace.
-   * @return value or {@code null} for none
-   */
-  public VolumeClaim getVolumeClaim() {
-    return volumeClaim;
-  }
-
-  /**
-   * Volume claim that will be created in the same namespace.
-   * @param volumeClaim volumeClaim or {@code null} for none
-   */
-  public WorkspaceBinding setVolumeClaim(VolumeClaim volumeClaim) {
-    this.volumeClaim = volumeClaim;
     return this;
   }
 

@@ -69,7 +69,7 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
   private ManagementURI managementUri;
 
   /**
-   * Output only. The resource name.
+   * Output only. Identifier. The resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,7 +221,7 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The resource name.
+   * Output only. Identifier. The resource name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -229,7 +229,7 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The resource name.
+   * Output only. Identifier. The resource name.
    * @param name name or {@code null} for none
    */
   public ManagementServer setName(java.lang.String name) {

@@ -37,6 +37,13 @@ public final class AutomationRolloutMetadata extends com.google.api.client.json.
   private java.util.List<java.lang.String> advanceAutomationRuns;
 
   /**
+   * Output only. The current AutomationRun repairing the rollout.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String currentRepairAutomationRun;
+
+  /**
    * Output only. The ID of the AutomationRun initiated by a promote release rule.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class AutomationRolloutMetadata extends com.google.api.client.json.
    */
   public AutomationRolloutMetadata setAdvanceAutomationRuns(java.util.List<java.lang.String> advanceAutomationRuns) {
     this.advanceAutomationRuns = advanceAutomationRuns;
+    return this;
+  }
+
+  /**
+   * Output only. The current AutomationRun repairing the rollout.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCurrentRepairAutomationRun() {
+    return currentRepairAutomationRun;
+  }
+
+  /**
+   * Output only. The current AutomationRun repairing the rollout.
+   * @param currentRepairAutomationRun currentRepairAutomationRun or {@code null} for none
+   */
+  public AutomationRolloutMetadata setCurrentRepairAutomationRun(java.lang.String currentRepairAutomationRun) {
+    this.currentRepairAutomationRun = currentRepairAutomationRun;
     return this;
   }
 

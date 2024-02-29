@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.api.client.json.GenericJson {
 
   /**
+   * Access control information for the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaDocumentAclInfo aclInfo;
+
+  /**
    * The unstructured data linked to this document. Content must be set if this document is under a
    * `CONTENT_REQUIRED` data store.
    * The value may be {@code null}.
@@ -102,6 +109,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> structData;
+
+  /**
+   * Access control information for the document.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDocumentAclInfo getAclInfo() {
+    return aclInfo;
+  }
+
+  /**
+   * Access control information for the document.
+   * @param aclInfo aclInfo or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDocument setAclInfo(GoogleCloudDiscoveryengineV1alphaDocumentAclInfo aclInfo) {
+    this.aclInfo = aclInfo;
+    return this;
+  }
 
   /**
    * The unstructured data linked to this document. Content must be set if this document is under a

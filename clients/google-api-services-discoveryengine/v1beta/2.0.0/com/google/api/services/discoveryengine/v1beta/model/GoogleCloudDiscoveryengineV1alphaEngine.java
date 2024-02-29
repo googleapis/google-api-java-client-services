@@ -30,6 +30,14 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the search engine can associate with multiple data stores. If true, the generic search
+   * engine can associate with one or more data stores. This is an input-only field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowMultipleDataStoresSearchEngine;
+
+  /**
    * Configurations for the Chat Engine. Only applicable if solution_type is SOLUTION_TYPE_CHAT.
    * The value may be {@code null}.
    */
@@ -140,6 +148,25 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Whether the search engine can associate with multiple data stores. If true, the generic search
+   * engine can associate with one or more data stores. This is an input-only field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowMultipleDataStoresSearchEngine() {
+    return allowMultipleDataStoresSearchEngine;
+  }
+
+  /**
+   * Whether the search engine can associate with multiple data stores. If true, the generic search
+   * engine can associate with one or more data stores. This is an input-only field.
+   * @param allowMultipleDataStoresSearchEngine allowMultipleDataStoresSearchEngine or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngine setAllowMultipleDataStoresSearchEngine(java.lang.Boolean allowMultipleDataStoresSearchEngine) {
+    this.allowMultipleDataStoresSearchEngine = allowMultipleDataStoresSearchEngine;
+    return this;
+  }
 
   /**
    * Configurations for the Chat Engine. Only applicable if solution_type is SOLUTION_TYPE_CHAT.

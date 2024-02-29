@@ -904,6 +904,308 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           return (EstimateDataSize) super.set(parameterName, value);
         }
       }
+      /**
+       * Gets the AclConfig.
+       *
+       * Create a request for the method "locations.getAclConfig".
+       *
+       * This request holds the parameters needed by the discoveryengine server.  After setting any
+       * optional parameters, call the {@link GetAclConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. Resource name of AclConfig, such as `projects/locations/aclConfig`. If the caller does not
+       *        have permission to access the AclConfig, regardless of whether or not it exists, a
+       *        PERMISSION_DENIED error is returned.
+       * @return the request
+       */
+      public GetAclConfig getAclConfig(java.lang.String name) throws java.io.IOException {
+        GetAclConfig result = new GetAclConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetAclConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAclConfig> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aclConfig$");
+
+        /**
+         * Gets the AclConfig.
+         *
+         * Create a request for the method "locations.getAclConfig".
+         *
+         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+         * optional parameters, call the {@link GetAclConfig#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * GetAclConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Resource name of AclConfig, such as `projects/locations/aclConfig`. If the caller does not
+       *        have permission to access the AclConfig, regardless of whether or not it exists, a
+       *        PERMISSION_DENIED error is returned.
+         * @since 1.13
+         */
+        protected GetAclConfig(java.lang.String name) {
+          super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAclConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/aclConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetAclConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetAclConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetAclConfig setAccessToken(java.lang.String accessToken) {
+          return (GetAclConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetAclConfig setAlt(java.lang.String alt) {
+          return (GetAclConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetAclConfig setCallback(java.lang.String callback) {
+          return (GetAclConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetAclConfig setFields(java.lang.String fields) {
+          return (GetAclConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetAclConfig setKey(java.lang.String key) {
+          return (GetAclConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetAclConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetAclConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetAclConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetAclConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetAclConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetAclConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetAclConfig setUploadType(java.lang.String uploadType) {
+          return (GetAclConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetAclConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetAclConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of AclConfig, such as `projects/locations/aclConfig`. If the
+         * caller does not have permission to access the AclConfig, regardless of whether or not it
+         * exists, a PERMISSION_DENIED error is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Resource name of AclConfig, such as `projects/locations/aclConfig`. If the caller does
+       not have permission to access the AclConfig, regardless of whether or not it exists, a
+       PERMISSION_DENIED error is returned.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Resource name of AclConfig, such as `projects/locations/aclConfig`. If the
+         * caller does not have permission to access the AclConfig, regardless of whether or not it
+         * exists, a PERMISSION_DENIED error is returned.
+         */
+        public GetAclConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/aclConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetAclConfig set(String parameterName, Object value) {
+          return (GetAclConfig) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Default Acl Configuration for use in a location of a customer's project. Updates will only
+       * reflect to new data stores. Existing data stores will still use the old value.
+       *
+       * Create a request for the method "locations.updateAclConfig".
+       *
+       * This request holds the parameters needed by the discoveryengine server.  After setting any
+       * optional parameters, call the {@link UpdateAclConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Immutable. The full resource name of the acl configuration. Format:
+       *        `projects/{project}/locations/{location}/aclConfig`. This field must be a UTF-8 encoded
+       *        string with a length limit of 1024 characters.
+       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAclConfig}
+       * @return the request
+       */
+      public UpdateAclConfig updateAclConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAclConfig content) throws java.io.IOException {
+        UpdateAclConfig result = new UpdateAclConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateAclConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAclConfig> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aclConfig$");
+
+        /**
+         * Default Acl Configuration for use in a location of a customer's project. Updates will only
+         * reflect to new data stores. Existing data stores will still use the old value.
+         *
+         * Create a request for the method "locations.updateAclConfig".
+         *
+         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+         * optional parameters, call the {@link UpdateAclConfig#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateAclConfig#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Immutable. The full resource name of the acl configuration. Format:
+       *        `projects/{project}/locations/{location}/aclConfig`. This field must be a UTF-8 encoded
+       *        string with a length limit of 1024 characters.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAclConfig}
+         * @since 1.13
+         */
+        protected UpdateAclConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAclConfig content) {
+          super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAclConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/aclConfig$");
+          }
+        }
+
+        @Override
+        public UpdateAclConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateAclConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateAclConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateAclConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateAclConfig setAlt(java.lang.String alt) {
+          return (UpdateAclConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateAclConfig setCallback(java.lang.String callback) {
+          return (UpdateAclConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateAclConfig setFields(java.lang.String fields) {
+          return (UpdateAclConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateAclConfig setKey(java.lang.String key) {
+          return (UpdateAclConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateAclConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateAclConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateAclConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateAclConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateAclConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateAclConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateAclConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateAclConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateAclConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateAclConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Immutable. The full resource name of the acl configuration. Format:
+         * `projects/{project}/locations/{location}/aclConfig`. This field must be a UTF-8 encoded
+         * string with a length limit of 1024 characters.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Immutable. The full resource name of the acl configuration. Format:
+       `projects/{project}/locations/{location}/aclConfig`. This field must be a UTF-8 encoded string with
+       a length limit of 1024 characters.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Immutable. The full resource name of the acl configuration. Format:
+         * `projects/{project}/locations/{location}/aclConfig`. This field must be a UTF-8 encoded
+         * string with a length limit of 1024 characters.
+         */
+        public UpdateAclConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/aclConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public UpdateAclConfig set(String parameterName, Object value) {
+          return (UpdateAclConfig) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the Collections collection.
@@ -4199,6 +4501,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  */
                 public Patch setAllowMissing(java.lang.Boolean allowMissing) {
                   this.allowMissing = allowMissing;
+                  return this;
+                }
+
+                /**
+                 * Indicates which fields in the provided imported 'document' to update. If not set,
+                 * will by default update all fields.
+                 */
+                @com.google.api.client.util.Key
+                private String updateMask;
+
+                /** Indicates which fields in the provided imported 'document' to update. If not set, will by default
+               update all fields.
+                 */
+                public String getUpdateMask() {
+                  return updateMask;
+                }
+
+                /**
+                 * Indicates which fields in the provided imported 'document' to update. If not set,
+                 * will by default update all fields.
+                 */
+                public Patch setUpdateMask(String updateMask) {
+                  this.updateMask = updateMask;
                   return this;
                 }
 
@@ -18624,6 +18949,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /** If set to true, and the Document is not found, a new Document will be created. */
               public Patch setAllowMissing(java.lang.Boolean allowMissing) {
                 this.allowMissing = allowMissing;
+                return this;
+              }
+
+              /**
+               * Indicates which fields in the provided imported 'document' to update. If not set,
+               * will by default update all fields.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Indicates which fields in the provided imported 'document' to update. If not set, will by default
+             update all fields.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * Indicates which fields in the provided imported 'document' to update. If not set,
+               * will by default update all fields.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
                 return this;
               }
 

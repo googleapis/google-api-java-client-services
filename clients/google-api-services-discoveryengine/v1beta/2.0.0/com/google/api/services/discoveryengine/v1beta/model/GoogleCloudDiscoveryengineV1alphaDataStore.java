@@ -30,6 +30,17 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google.api.client.json.GenericJson {
 
   /**
+   * Immutable. Whether data in the DataStore has ACL information. If set to `true`, the source data
+   * must have ACL. ACL will be ingested when data is ingested by DocumentService.ImportDocuments
+   * methods. When ACL is enabled for the DataStore, Document can't be accessed by calling
+   * DocumentService.GetDocument or DocumentService.ListDocuments. Currently ACL is only supported
+   * in `GENERIC` industry vertical with non-`PUBLIC_WEBSITE` content config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean aclEnabled;
+
+  /**
    * Immutable. The content config of the data store. If this field is unset, the server behavior
    * defaults to ContentConfig.NO_CONTENT.
    * The value may be {@code null}.
@@ -67,6 +78,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   private GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig documentProcessingConfig;
 
   /**
+   * Output only. Data store level identity provider config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaIdpConfig idpConfig;
+
+  /**
    * Immutable. The industry vertical that the data store registers.
    * The value may be {@code null}.
    */
@@ -102,6 +120,31 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaSchema startingSchema;
+
+  /**
+   * Immutable. Whether data in the DataStore has ACL information. If set to `true`, the source data
+   * must have ACL. ACL will be ingested when data is ingested by DocumentService.ImportDocuments
+   * methods. When ACL is enabled for the DataStore, Document can't be accessed by calling
+   * DocumentService.GetDocument or DocumentService.ListDocuments. Currently ACL is only supported
+   * in `GENERIC` industry vertical with non-`PUBLIC_WEBSITE` content config.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAclEnabled() {
+    return aclEnabled;
+  }
+
+  /**
+   * Immutable. Whether data in the DataStore has ACL information. If set to `true`, the source data
+   * must have ACL. ACL will be ingested when data is ingested by DocumentService.ImportDocuments
+   * methods. When ACL is enabled for the DataStore, Document can't be accessed by calling
+   * DocumentService.GetDocument or DocumentService.ListDocuments. Currently ACL is only supported
+   * in `GENERIC` industry vertical with non-`PUBLIC_WEBSITE` content config.
+   * @param aclEnabled aclEnabled or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStore setAclEnabled(java.lang.Boolean aclEnabled) {
+    this.aclEnabled = aclEnabled;
+    return this;
+  }
 
   /**
    * Immutable. The content config of the data store. If this field is unset, the server behavior
@@ -189,6 +232,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaDataStore setDocumentProcessingConfig(GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig documentProcessingConfig) {
     this.documentProcessingConfig = documentProcessingConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Data store level identity provider config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaIdpConfig getIdpConfig() {
+    return idpConfig;
+  }
+
+  /**
+   * Output only. Data store level identity provider config.
+   * @param idpConfig idpConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStore setIdpConfig(GoogleCloudDiscoveryengineV1alphaIdpConfig idpConfig) {
+    this.idpConfig = idpConfig;
     return this;
   }
 

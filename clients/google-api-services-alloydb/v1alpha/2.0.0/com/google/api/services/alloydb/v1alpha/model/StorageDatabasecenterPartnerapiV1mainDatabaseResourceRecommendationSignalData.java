@@ -30,7 +30,7 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Any other additional metadata specific to recommendation
+   * Optional. Any other additional metadata specific to recommendation
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   private java.lang.String signalType;
 
   /**
-   * Required. Any other additional metadata specific to recommendation
+   * Optional. Any other additional metadata specific to recommendation
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getAdditionalMetadata() {
@@ -103,7 +103,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. Any other additional metadata specific to recommendation
+   * Optional. Any other additional metadata specific to recommendation
    * @param additionalMetadata additionalMetadata or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData setAdditionalMetadata(java.util.Map<String, java.lang.Object> additionalMetadata) {

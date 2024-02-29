@@ -845,7 +845,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         }
       }
       /**
-       * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+       * Gets the IAM policy policy for a resource. Returns an empty policy if the resource exists and
        * does not have a policy set.
        *
        * Create a request for the method "repos.getIamPolicy".
@@ -872,8 +872,8 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
             java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
-         * Gets the access control policy for a resource. Returns an empty policy if the resource exists
-         * and does not have a policy set.
+         * Gets the IAM policy policy for a resource. Returns an empty policy if the resource exists and
+         * does not have a policy set.
          *
          * Create a request for the method "repos.getIamPolicy".
          *
@@ -1362,7 +1362,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         }
       }
       /**
-       * Sets the access control policy on the specified resource. Replaces any existing policy.
+       * Sets the IAM policy on the specified resource. Replaces any existing policy.
        *
        * Create a request for the method "repos.setIamPolicy".
        *
@@ -1389,7 +1389,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
             java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
+         * Sets the IAM policy on the specified resource. Replaces any existing policy.
          *
          * Create a request for the method "repos.setIamPolicy".
          *

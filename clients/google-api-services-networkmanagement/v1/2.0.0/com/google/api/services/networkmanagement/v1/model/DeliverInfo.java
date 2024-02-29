@@ -31,6 +31,13 @@ package com.google.api.services.networkmanagement.v1.model;
 public final class DeliverInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * IP address of the target (if applicable).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipAddress;
+
+  /**
    * URI of the resource that the packet is delivered to.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class DeliverInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String target;
+
+  /**
+   * IP address of the target (if applicable).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpAddress() {
+    return ipAddress;
+  }
+
+  /**
+   * IP address of the target (if applicable).
+   * @param ipAddress ipAddress or {@code null} for none
+   */
+  public DeliverInfo setIpAddress(java.lang.String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
 
   /**
    * URI of the resource that the packet is delivered to.

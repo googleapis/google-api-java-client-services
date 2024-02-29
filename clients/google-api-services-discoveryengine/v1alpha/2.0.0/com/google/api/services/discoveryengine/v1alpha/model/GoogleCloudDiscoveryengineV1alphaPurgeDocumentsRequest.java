@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The desired location of errors incurred during the purge.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaPurgeErrorConfig errorConfig;
+
+  /**
    * Required. Filter matching documents to purge. Only currently supported value is `*` (all
    * items).
    * The value may be {@code null}.
@@ -44,6 +51,31 @@ public final class GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequest extend
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean force;
+
+  /**
+   * Cloud Storage location for the input content. Supported `data_schema`: * `document_id`: One
+   * valid Document.id per line.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaGcsSource gcsSource;
+
+  /**
+   * The desired location of errors incurred during the purge.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaPurgeErrorConfig getErrorConfig() {
+    return errorConfig;
+  }
+
+  /**
+   * The desired location of errors incurred during the purge.
+   * @param errorConfig errorConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequest setErrorConfig(GoogleCloudDiscoveryengineV1alphaPurgeErrorConfig errorConfig) {
+    this.errorConfig = errorConfig;
+    return this;
+  }
 
   /**
    * Required. Filter matching documents to purge. Only currently supported value is `*` (all
@@ -80,6 +112,25 @@ public final class GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequest extend
    */
   public GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequest setForce(java.lang.Boolean force) {
     this.force = force;
+    return this;
+  }
+
+  /**
+   * Cloud Storage location for the input content. Supported `data_schema`: * `document_id`: One
+   * valid Document.id per line.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaGcsSource getGcsSource() {
+    return gcsSource;
+  }
+
+  /**
+   * Cloud Storage location for the input content. Supported `data_schema`: * `document_id`: One
+   * valid Document.id per line.
+   * @param gcsSource gcsSource or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaPurgeDocumentsRequest setGcsSource(GoogleCloudDiscoveryengineV1alphaGcsSource gcsSource) {
+    this.gcsSource = gcsSource;
     return this;
   }
 

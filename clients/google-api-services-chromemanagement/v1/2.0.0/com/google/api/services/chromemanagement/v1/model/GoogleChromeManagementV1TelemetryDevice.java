@@ -281,6 +281,21 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
   }
 
   /**
+   * Output only. Runtime counters reports collected device lifetime runtime, as well as the counts
+   * of S0->S3, S0->S4, and S0->S5 transitions, meaning entering into sleep, hibernation, and power-
+   * off states
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleChromeManagementV1RuntimeCountersReport> runtimeCountersReport;
+
+  static {
+    // hack to force ProGuard to consider GoogleChromeManagementV1RuntimeCountersReport used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleChromeManagementV1RuntimeCountersReport.class);
+  }
+
+  /**
    * Output only. Device serial number. This value is the same as the Admin Console's Serial Number
    * in the ChromeOS Devices tab.
    * The value may be {@code null}.
@@ -696,6 +711,27 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
    */
   public GoogleChromeManagementV1TelemetryDevice setPeripheralsReport(java.util.List<GoogleChromeManagementV1PeripheralsReport> peripheralsReport) {
     this.peripheralsReport = peripheralsReport;
+    return this;
+  }
+
+  /**
+   * Output only. Runtime counters reports collected device lifetime runtime, as well as the counts
+   * of S0->S3, S0->S4, and S0->S5 transitions, meaning entering into sleep, hibernation, and power-
+   * off states
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleChromeManagementV1RuntimeCountersReport> getRuntimeCountersReport() {
+    return runtimeCountersReport;
+  }
+
+  /**
+   * Output only. Runtime counters reports collected device lifetime runtime, as well as the counts
+   * of S0->S3, S0->S4, and S0->S5 transitions, meaning entering into sleep, hibernation, and power-
+   * off states
+   * @param runtimeCountersReport runtimeCountersReport or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryDevice setRuntimeCountersReport(java.util.List<GoogleChromeManagementV1RuntimeCountersReport> runtimeCountersReport) {
+    this.runtimeCountersReport = runtimeCountersReport;
     return this;
   }
 

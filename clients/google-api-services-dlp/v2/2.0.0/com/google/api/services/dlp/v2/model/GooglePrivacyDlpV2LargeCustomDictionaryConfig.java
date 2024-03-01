@@ -18,9 +18,9 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Configuration for a custom dictionary created from a data source of any size up to the maximum
- * size defined in the [limits](https://cloud.google.com/dlp/limits) page. The artifacts of
- * dictionary creation are stored in the specified Cloud Storage location. Consider using
- * `CustomInfoType.Dictionary` for smaller dictionaries that satisfy the size requirements.
+ * size defined in the [limits](https://cloud.google.com/sensitive-data-protection/limits) page. The
+ * artifacts of dictionary creation are stored in the specified Cloud Storage location. Consider
+ * using `CustomInfoType.Dictionary` for smaller dictionaries that satisfy the size requirements.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

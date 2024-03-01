@@ -19,8 +19,8 @@ package com.google.api.services.dlp.v2.model;
 /**
  * Configuration for discovery to scan resources for profile generation. Only one discovery
  * configuration may exist per organization, folder, or project. The generated data profiles are
- * retained according to the [data retention policy] (https://cloud.google.com/dlp/docs/data-
- * profiles#retention).
+ * retained according to the [data retention policy] (https://cloud.google.com/sensitive-data-
+ * protection/docs/data-profiles#retention).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
@@ -77,7 +77,7 @@ public final class GooglePrivacyDlpV2DiscoveryConfig extends com.google.api.clie
    * template. If no region-specific template is specified, but a "global" template is specified, it
    * will be copied to that region and used instead. If no global or region-specific template is
    * provided for a region with data, that region's data will not be scanned. For more information,
-   * see https://cloud.google.com/dlp/docs/data-profiles#data-residency.
+   * see https://cloud.google.com/sensitive-data-protection/docs/data-profiles#data-residency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,7 +206,7 @@ public final class GooglePrivacyDlpV2DiscoveryConfig extends com.google.api.clie
    * template. If no region-specific template is specified, but a "global" template is specified, it
    * will be copied to that region and used instead. If no global or region-specific template is
    * provided for a region with data, that region's data will not be scanned. For more information,
-   * see https://cloud.google.com/dlp/docs/data-profiles#data-residency.
+   * see https://cloud.google.com/sensitive-data-protection/docs/data-profiles#data-residency.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInspectTemplates() {
@@ -221,7 +221,7 @@ public final class GooglePrivacyDlpV2DiscoveryConfig extends com.google.api.clie
    * template. If no region-specific template is specified, but a "global" template is specified, it
    * will be copied to that region and used instead. If no global or region-specific template is
    * provided for a region with data, that region's data will not be scanned. For more information,
-   * see https://cloud.google.com/dlp/docs/data-profiles#data-residency.
+   * see https://cloud.google.com/sensitive-data-protection/docs/data-profiles#data-residency.
    * @param inspectTemplates inspectTemplates or {@code null} for none
    */
   public GooglePrivacyDlpV2DiscoveryConfig setInspectTemplates(java.util.List<java.lang.String> inspectTemplates) {

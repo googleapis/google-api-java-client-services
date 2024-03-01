@@ -22,8 +22,8 @@ package com.google.api.services.dlp.v2.model;
  * opposite function by reversing the surrogate back into the original identifier. The identifier
  * must be encoded as ASCII. For a given crypto key and context, the same identifier will be
  * replaced with the same surrogate. Identifiers must be at least two characters long. In the case
- * that the identifier is the empty string, it will be skipped. See
- * https://cloud.google.com/dlp/docs/pseudonymization to learn more. Note: We recommend using
+ * that the identifier is the empty string, it will be skipped. See https://cloud.google.com
+ * /sensitive-data-protection/docs/pseudonymization to learn more. Note: We recommend using
  * CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet
  * space and size, plus warrant referential integrity.
  *
@@ -92,15 +92,16 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
    * info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType
    * is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be:
    * 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content
-   * using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2
-   * /InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in
-   * free text. In order for inspection to work properly, the name of this infoType must not occur
-   * naturally anywhere in your data; otherwise, inspection may find a surrogate that does not
-   * correspond to an actual identifier. Therefore, choose your custom infoType name carefully after
-   * considering what your data looks like. One way to select a name that has a high chance of
-   * yielding reliable detection is to include one or more unicode characters that are highly
-   * improbable to exist in your data. For example, assuming your data is entered from a regular
-   * ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE
+   * using the custom infoType [`SurrogateType`](https://cloud.google.com/sensitive-data-
+   * protection/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of
+   * the surrogate when it occurs in free text. In order for inspection to work properly, the name
+   * of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find
+   * a surrogate that does not correspond to an actual identifier. Therefore, choose your custom
+   * infoType name carefully after considering what your data looks like. One way to select a name
+   * that has a high chance of yielding reliable detection is to include one or more unicode
+   * characters that are highly improbable to exist in your data. For example, assuming your data is
+   * entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used
+   * like so: ⧝MY_TOKEN_TYPE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,15 +223,16 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
    * info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType
    * is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be:
    * 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content
-   * using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2
-   * /InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in
-   * free text. In order for inspection to work properly, the name of this infoType must not occur
-   * naturally anywhere in your data; otherwise, inspection may find a surrogate that does not
-   * correspond to an actual identifier. Therefore, choose your custom infoType name carefully after
-   * considering what your data looks like. One way to select a name that has a high chance of
-   * yielding reliable detection is to include one or more unicode characters that are highly
-   * improbable to exist in your data. For example, assuming your data is entered from a regular
-   * ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE
+   * using the custom infoType [`SurrogateType`](https://cloud.google.com/sensitive-data-
+   * protection/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of
+   * the surrogate when it occurs in free text. In order for inspection to work properly, the name
+   * of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find
+   * a surrogate that does not correspond to an actual identifier. Therefore, choose your custom
+   * infoType name carefully after considering what your data looks like. One way to select a name
+   * that has a high chance of yielding reliable detection is to include one or more unicode
+   * characters that are highly improbable to exist in your data. For example, assuming your data is
+   * entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used
+   * like so: ⧝MY_TOKEN_TYPE
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2InfoType getSurrogateInfoType() {
@@ -244,15 +246,16 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
    * info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType
    * is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be:
    * 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content
-   * using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2
-   * /InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in
-   * free text. In order for inspection to work properly, the name of this infoType must not occur
-   * naturally anywhere in your data; otherwise, inspection may find a surrogate that does not
-   * correspond to an actual identifier. Therefore, choose your custom infoType name carefully after
-   * considering what your data looks like. One way to select a name that has a high chance of
-   * yielding reliable detection is to include one or more unicode characters that are highly
-   * improbable to exist in your data. For example, assuming your data is entered from a regular
-   * ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY_TOKEN_TYPE
+   * using the custom infoType [`SurrogateType`](https://cloud.google.com/sensitive-data-
+   * protection/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of
+   * the surrogate when it occurs in free text. In order for inspection to work properly, the name
+   * of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find
+   * a surrogate that does not correspond to an actual identifier. Therefore, choose your custom
+   * infoType name carefully after considering what your data looks like. One way to select a name
+   * that has a high chance of yielding reliable detection is to include one or more unicode
+   * characters that are highly improbable to exist in your data. For example, assuming your data is
+   * entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used
+   * like so: ⧝MY_TOKEN_TYPE
    * @param surrogateInfoType surrogateInfoType or {@code null} for none
    */
   public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig setSurrogateInfoType(GooglePrivacyDlpV2InfoType surrogateInfoType) {

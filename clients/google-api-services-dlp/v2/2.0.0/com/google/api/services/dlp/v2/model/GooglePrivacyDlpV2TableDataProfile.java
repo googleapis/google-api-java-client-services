@@ -59,14 +59,14 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private GooglePrivacyDlpV2DataSourceType dataSourceType;
 
   /**
-   * The BigQuery dataset ID.
+   * If the resource is BigQuery, the dataset ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String datasetId;
 
   /**
-   * The BigQuery location where the dataset's data is stored. See
+   * If supported, the location where the dataset's data is stored. See
    * https://cloud.google.com/bigquery/docs/locations for supported locations.
    * The value may be {@code null}.
    */
@@ -74,7 +74,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private java.lang.String datasetLocation;
 
   /**
-   * The Google Cloud project ID that owns the BigQuery dataset.
+   * The Google Cloud project ID that owns the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private java.lang.Long failedColumnCount;
 
   /**
-   * The resource name of the table.
+   * The resource name of the resource profiled.
    * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
@@ -215,7 +215,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private java.lang.String state;
 
   /**
-   * The BigQuery table ID.
+   * If the resource is BigQuery, the BigQuery table ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -297,7 +297,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The BigQuery dataset ID.
+   * If the resource is BigQuery, the dataset ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatasetId() {
@@ -305,7 +305,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The BigQuery dataset ID.
+   * If the resource is BigQuery, the dataset ID.
    * @param datasetId datasetId or {@code null} for none
    */
   public GooglePrivacyDlpV2TableDataProfile setDatasetId(java.lang.String datasetId) {
@@ -314,7 +314,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The BigQuery location where the dataset's data is stored. See
+   * If supported, the location where the dataset's data is stored. See
    * https://cloud.google.com/bigquery/docs/locations for supported locations.
    * @return value or {@code null} for none
    */
@@ -323,7 +323,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The BigQuery location where the dataset's data is stored. See
+   * If supported, the location where the dataset's data is stored. See
    * https://cloud.google.com/bigquery/docs/locations for supported locations.
    * @param datasetLocation datasetLocation or {@code null} for none
    */
@@ -333,7 +333,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The Google Cloud project ID that owns the BigQuery dataset.
+   * The Google Cloud project ID that owns the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatasetProjectId() {
@@ -341,7 +341,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The Google Cloud project ID that owns the BigQuery dataset.
+   * The Google Cloud project ID that owns the resource.
    * @param datasetProjectId datasetProjectId or {@code null} for none
    */
   public GooglePrivacyDlpV2TableDataProfile setDatasetProjectId(java.lang.String datasetProjectId) {
@@ -401,7 +401,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The resource name of the table.
+   * The resource name of the resource profiled.
    * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
    */
@@ -410,7 +410,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The resource name of the table.
+   * The resource name of the resource profiled.
    * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @param fullResource fullResource or {@code null} for none
    */
@@ -645,7 +645,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The BigQuery table ID.
+   * If the resource is BigQuery, the BigQuery table ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getTableId() {
@@ -653,7 +653,7 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * The BigQuery table ID.
+   * If the resource is BigQuery, the BigQuery table ID.
    * @param tableId tableId or {@code null} for none
    */
   public GooglePrivacyDlpV2TableDataProfile setTableId(java.lang.String tableId) {

@@ -32,9 +32,9 @@ public final class GooglePrivacyDlpV2InfoType extends com.google.api.client.json
 
   /**
    * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or
-   * one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when
-   * specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names
-   * should conform to the pattern `[A-Za-z0-9$_-]{1,64}`.
+   * one of the names listed at https://cloud.google.com/sensitive-data-protection/docs/infotypes-
+   * reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog,
+   * infoType names should conform to the pattern `[A-Za-z0-9$_-]{1,64}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,9 +56,9 @@ public final class GooglePrivacyDlpV2InfoType extends com.google.api.client.json
 
   /**
    * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or
-   * one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when
-   * specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names
-   * should conform to the pattern `[A-Za-z0-9$_-]{1,64}`.
+   * one of the names listed at https://cloud.google.com/sensitive-data-protection/docs/infotypes-
+   * reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog,
+   * infoType names should conform to the pattern `[A-Za-z0-9$_-]{1,64}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -67,9 +67,9 @@ public final class GooglePrivacyDlpV2InfoType extends com.google.api.client.json
 
   /**
    * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or
-   * one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when
-   * specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names
-   * should conform to the pattern `[A-Za-z0-9$_-]{1,64}`.
+   * one of the names listed at https://cloud.google.com/sensitive-data-protection/docs/infotypes-
+   * reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog,
+   * infoType names should conform to the pattern `[A-Za-z0-9$_-]{1,64}`.
    * @param name name or {@code null} for none
    */
   public GooglePrivacyDlpV2InfoType setName(java.lang.String name) {

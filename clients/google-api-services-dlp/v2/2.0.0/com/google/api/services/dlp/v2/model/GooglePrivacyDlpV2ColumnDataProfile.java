@@ -75,7 +75,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
   private java.lang.String datasetLocation;
 
   /**
-   * The Google Cloud project ID that owns the BigQuery dataset.
+   * The Google Cloud project ID that owns the profiled resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,7 +161,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
   private java.lang.String tableDataProfile;
 
   /**
-   * The resource name of the table this column is within.
+   * The resource name of the resource this column is within.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -281,7 +281,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
   }
 
   /**
-   * The Google Cloud project ID that owns the BigQuery dataset.
+   * The Google Cloud project ID that owns the profiled resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatasetProjectId() {
@@ -289,7 +289,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
   }
 
   /**
-   * The Google Cloud project ID that owns the BigQuery dataset.
+   * The Google Cloud project ID that owns the profiled resource.
    * @param datasetProjectId datasetProjectId or {@code null} for none
    */
   public GooglePrivacyDlpV2ColumnDataProfile setDatasetProjectId(java.lang.String datasetProjectId) {
@@ -489,7 +489,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
   }
 
   /**
-   * The resource name of the table this column is within.
+   * The resource name of the resource this column is within.
    * @return value or {@code null} for none
    */
   public java.lang.String getTableFullResource() {
@@ -497,7 +497,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
   }
 
   /**
-   * The resource name of the table this column is within.
+   * The resource name of the resource this column is within.
    * @param tableFullResource tableFullResource or {@code null} for none
    */
   public GooglePrivacyDlpV2ColumnDataProfile setTableFullResource(java.lang.String tableFullResource) {

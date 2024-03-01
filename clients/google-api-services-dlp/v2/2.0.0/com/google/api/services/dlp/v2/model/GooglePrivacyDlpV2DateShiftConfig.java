@@ -18,7 +18,7 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Shifts dates by random number of days, with option to be consistent for the same context. See
- * https://cloud.google.com/dlp/docs/concepts-date-shifting to learn more.
+ * https://cloud.google.com/sensitive-data-protection/docs/concepts-date-shifting to learn more.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

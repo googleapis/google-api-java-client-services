@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2RecordKey extends com.google.api.client.jso
   private GooglePrivacyDlpV2BigQueryKey bigQueryKey;
 
   /**
-   * Bigquery key
+   * BigQuery key
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class GooglePrivacyDlpV2RecordKey extends com.google.api.client.jso
   }
 
   /**
-   * Bigquery key
+   * BigQuery key
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DatastoreKey getDatastoreKey() {
@@ -78,7 +78,7 @@ public final class GooglePrivacyDlpV2RecordKey extends com.google.api.client.jso
   }
 
   /**
-   * Bigquery key
+   * BigQuery key
    * @param datastoreKey datastoreKey or {@code null} for none
    */
   public GooglePrivacyDlpV2RecordKey setDatastoreKey(GooglePrivacyDlpV2DatastoreKey datastoreKey) {

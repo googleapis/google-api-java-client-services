@@ -38,8 +38,8 @@ public final class GooglePrivacyDlpV2ContentItem extends com.google.api.client.j
   private GooglePrivacyDlpV2ByteContentItem byteItem;
 
   /**
-   * Structured content for inspection. See https://cloud.google.com/dlp/docs/inspecting-
-   * text#inspecting_a_table to learn more.
+   * Structured content for inspection. See https://cloud.google.com/sensitive-data-protection/docs
+   * /inspecting-text#inspecting_a_table to learn more.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +70,8 @@ public final class GooglePrivacyDlpV2ContentItem extends com.google.api.client.j
   }
 
   /**
-   * Structured content for inspection. See https://cloud.google.com/dlp/docs/inspecting-
-   * text#inspecting_a_table to learn more.
+   * Structured content for inspection. See https://cloud.google.com/sensitive-data-protection/docs
+   * /inspecting-text#inspecting_a_table to learn more.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2Table getTable() {
@@ -79,8 +79,8 @@ public final class GooglePrivacyDlpV2ContentItem extends com.google.api.client.j
   }
 
   /**
-   * Structured content for inspection. See https://cloud.google.com/dlp/docs/inspecting-
-   * text#inspecting_a_table to learn more.
+   * Structured content for inspection. See https://cloud.google.com/sensitive-data-protection/docs
+   * /inspecting-text#inspecting_a_table to learn more.
    * @param table table or {@code null} for none
    */
   public GooglePrivacyDlpV2ContentItem setTable(GooglePrivacyDlpV2Table table) {

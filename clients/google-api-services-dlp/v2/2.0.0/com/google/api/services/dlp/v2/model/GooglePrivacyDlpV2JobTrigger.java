@@ -17,8 +17,8 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Contains a configuration to make dlp api calls on a repeating basis. See
- * https://cloud.google.com/dlp/docs/concepts-job-triggers to learn more.
+ * Contains a configuration to make dlp api calls on a repeating basis. See https://cloud.google.com
+ * /sensitive-data-protection/docs/concepts-job-triggers to learn more.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

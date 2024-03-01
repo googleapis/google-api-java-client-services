@@ -32,7 +32,7 @@ public final class ExtensionChainMatchCondition extends com.google.api.client.js
   /**
    * Required. A Common Expression Language (CEL) expression that is used to match requests for
    * which the extension chain is executed. For more information, see [CEL matcher language
-   * reference](https://cloud.google.com/service-extensions/docs/cel-matcher-language-reference).
+   * reference](/service-extensions/docs/cel-matcher-language-reference).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class ExtensionChainMatchCondition extends com.google.api.client.js
   /**
    * Required. A Common Expression Language (CEL) expression that is used to match requests for
    * which the extension chain is executed. For more information, see [CEL matcher language
-   * reference](https://cloud.google.com/service-extensions/docs/cel-matcher-language-reference).
+   * reference](/service-extensions/docs/cel-matcher-language-reference).
    * @return value or {@code null} for none
    */
   public java.lang.String getCelExpression() {
@@ -51,7 +51,7 @@ public final class ExtensionChainMatchCondition extends com.google.api.client.js
   /**
    * Required. A Common Expression Language (CEL) expression that is used to match requests for
    * which the extension chain is executed. For more information, see [CEL matcher language
-   * reference](https://cloud.google.com/service-extensions/docs/cel-matcher-language-reference).
+   * reference](/service-extensions/docs/cel-matcher-language-reference).
    * @param celExpression celExpression or {@code null} for none
    */
   public ExtensionChainMatchCondition setCelExpression(java.lang.String celExpression) {

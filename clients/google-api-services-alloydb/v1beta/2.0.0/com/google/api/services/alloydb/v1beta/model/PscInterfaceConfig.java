@@ -42,7 +42,7 @@ public final class PscInterfaceConfig extends com.google.api.client.json.Generic
   /**
    * The NetworkAttachment resource created in the consumer VPC to which the PSC interface will be
    * linked, in the form of:
-   * "projects/${CONSUMER_PROJECT}/regions/${REGION}/networkAttachments/${NETWORK_ATTACHMENT_NAME}".
+   * `projects/${CONSUMER_PROJECT}/regions/${REGION}/networkAttachments/${NETWORK_ATTACHMENT_NAME}`.
    * NetworkAttachment has to be provided when the PSC interface is created.
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class PscInterfaceConfig extends com.google.api.client.json.Generic
   /**
    * The NetworkAttachment resource created in the consumer VPC to which the PSC interface will be
    * linked, in the form of:
-   * "projects/${CONSUMER_PROJECT}/regions/${REGION}/networkAttachments/${NETWORK_ATTACHMENT_NAME}".
+   * `projects/${CONSUMER_PROJECT}/regions/${REGION}/networkAttachments/${NETWORK_ATTACHMENT_NAME}`.
    * NetworkAttachment has to be provided when the PSC interface is created.
    * @return value or {@code null} for none
    */
@@ -82,7 +82,7 @@ public final class PscInterfaceConfig extends com.google.api.client.json.Generic
   /**
    * The NetworkAttachment resource created in the consumer VPC to which the PSC interface will be
    * linked, in the form of:
-   * "projects/${CONSUMER_PROJECT}/regions/${REGION}/networkAttachments/${NETWORK_ATTACHMENT_NAME}".
+   * `projects/${CONSUMER_PROJECT}/regions/${REGION}/networkAttachments/${NETWORK_ATTACHMENT_NAME}`.
    * NetworkAttachment has to be provided when the PSC interface is created.
    * @param networkAttachment networkAttachment or {@code null} for none
    */

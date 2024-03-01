@@ -168,7 +168,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * Required. The resource link for the VPC network in which cluster resources are created and from
    * which they are accessible via Private IP. The network must belong to the same project as the
-   * cluster. It is specified in the form: "projects/{project}/global/networks/{network_id}". This
+   * cluster. It is specified in the form: `projects/{project}/global/networks/{network_id}`. This
    * is required to create a cluster. Deprecated, use network_config.network instead.
    * The value may be {@code null}.
    */
@@ -187,6 +187,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private PrimaryConfig primaryConfig;
+
+  /**
+   * Optional. The configuration for Private Service Connect (PSC) for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PscConfig pscConfig;
 
   /**
    * Output only. Reconciling (https://google.aip.dev/128#reconciliation). Set to true if the
@@ -563,7 +570,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * Required. The resource link for the VPC network in which cluster resources are created and from
    * which they are accessible via Private IP. The network must belong to the same project as the
-   * cluster. It is specified in the form: "projects/{project}/global/networks/{network_id}". This
+   * cluster. It is specified in the form: `projects/{project}/global/networks/{network_id}`. This
    * is required to create a cluster. Deprecated, use network_config.network instead.
    * @return value or {@code null} for none
    */
@@ -574,7 +581,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * Required. The resource link for the VPC network in which cluster resources are created and from
    * which they are accessible via Private IP. The network must belong to the same project as the
-   * cluster. It is specified in the form: "projects/{project}/global/networks/{network_id}". This
+   * cluster. It is specified in the form: `projects/{project}/global/networks/{network_id}`. This
    * is required to create a cluster. Deprecated, use network_config.network instead.
    * @param network network or {@code null} for none
    */
@@ -612,6 +619,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setPrimaryConfig(PrimaryConfig primaryConfig) {
     this.primaryConfig = primaryConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for Private Service Connect (PSC) for the cluster.
+   * @return value or {@code null} for none
+   */
+  public PscConfig getPscConfig() {
+    return pscConfig;
+  }
+
+  /**
+   * Optional. The configuration for Private Service Connect (PSC) for the cluster.
+   * @param pscConfig pscConfig or {@code null} for none
+   */
+  public Cluster setPscConfig(PscConfig pscConfig) {
+    this.pscConfig = pscConfig;
     return this;
   }
 

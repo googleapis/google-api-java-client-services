@@ -37,6 +37,12 @@ public final class StorageDatabasecenterPartnerapiV1mainOperationError extends c
   private java.lang.String code;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String errorType;
+
+  /**
    * Additional information about the error encountered. REQUIRED
    * The value may be {@code null}.
    */
@@ -57,6 +63,21 @@ public final class StorageDatabasecenterPartnerapiV1mainOperationError extends c
    */
   public StorageDatabasecenterPartnerapiV1mainOperationError setCode(java.lang.String code) {
     this.code = code;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getErrorType() {
+    return errorType;
+  }
+
+  /**
+   * @param errorType errorType or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainOperationError setErrorType(java.lang.String errorType) {
+    this.errorType = errorType;
     return this;
   }
 

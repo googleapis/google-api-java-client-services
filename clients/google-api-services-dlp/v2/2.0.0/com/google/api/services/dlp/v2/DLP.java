@@ -25,7 +25,7 @@ package com.google.api.services.dlp.v2;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/dlp/docs/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/sensitive-data-protection/docs/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -155,7 +155,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
     /**
      * Returns a list of the sensitive information types that DLP API supports. See
-     * https://cloud.google.com/dlp/docs/infotypes-reference to learn more.
+     * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference to learn more.
      *
      * Create a request for the method "infoTypes.list".
      *
@@ -176,7 +176,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Returns a list of the sensitive information types that DLP API supports. See
-       * https://cloud.google.com/dlp/docs/infotypes-reference to learn more.
+       * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference to learn more.
        *
        * Create a request for the method "infoTypes.list".
        *
@@ -388,7 +388,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Returns a list of the sensitive information types that DLP API supports. See
-       * https://cloud.google.com/dlp/docs/infotypes-reference to learn more.
+       * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference to learn more.
        *
        * Create a request for the method "infoTypes.list".
        *
@@ -413,7 +413,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Returns a list of the sensitive information types that DLP API supports. See
-         * https://cloud.google.com/dlp/docs/infotypes-reference to learn more.
+         * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference to learn more.
          *
          * Create a request for the method "infoTypes.list".
          *
@@ -638,8 +638,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Creates a DeidentifyTemplate for reusing frequently used configuration for de-identifying
-       * content, images, and storage. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-       * learn more.
+       * content, images, and storage. See https://cloud.google.com/sensitive-data-protection/docs
+       * /creating-templates-deid to learn more.
        *
        * Create a request for the method "deidentifyTemplates.create".
        *
@@ -648,14 +648,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
        * @return the request
        */
@@ -674,8 +674,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Creates a DeidentifyTemplate for reusing frequently used configuration for de-identifying
-         * content, images, and storage. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * content, images, and storage. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.create".
          *
@@ -686,14 +686,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @since 1.13
          */
@@ -765,27 +765,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on the scope of the
        request (project or organization) and whether you have [specified a processing
-       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-       processing data: parent=projects/example-project/locations/europe-west3
+       location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+       scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+       specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+       specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+       location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -794,14 +794,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -819,8 +819,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Deletes a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-       * learn more.
+       * Deletes a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+       * /creating-templates-deid to learn more.
        *
        * Create a request for the method "deidentifyTemplates.delete".
        *
@@ -846,8 +846,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^organizations/[^/]+/deidentifyTemplates/[^/]+$");
 
         /**
-         * Deletes a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * Deletes a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.delete".
          *
@@ -963,8 +963,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-       * more.
+       * Gets a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * templates-deid to learn more.
        *
        * Create a request for the method "deidentifyTemplates.get".
        *
@@ -990,8 +990,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^organizations/[^/]+/deidentifyTemplates/[^/]+$");
 
         /**
-         * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * Gets a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.get".
          *
@@ -1117,8 +1117,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-       * more.
+       * Lists DeidentifyTemplates. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * templates-deid to learn more.
        *
        * Create a request for the method "deidentifyTemplates.list".
        *
@@ -1127,14 +1127,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1151,8 +1151,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * Lists DeidentifyTemplates. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.list".
          *
@@ -1163,14 +1163,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1251,27 +1251,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on the scope of the
        request (project or organization) and whether you have [specified a processing
-       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-       processing data: parent=projects/example-project/locations/europe-west3
+       location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+       scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+       specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+       specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+       location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -1280,14 +1280,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1403,8 +1403,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Updates the DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-       * learn more.
+       * Updates the DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+       * /creating-templates-deid to learn more.
        *
        * Create a request for the method "deidentifyTemplates.patch".
        *
@@ -1431,8 +1431,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^organizations/[^/]+/deidentifyTemplates/[^/]+$");
 
         /**
-         * Updates the DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid
-         * to learn more.
+         * Updates the DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.patch".
          *
@@ -1572,7 +1572,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Creates an InspectTemplate for reusing frequently used configuration for inspecting content,
-       * images, and storage. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+       * images, and storage. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * templates to learn more.
        *
        * Create a request for the method "inspectTemplates.create".
        *
@@ -1581,14 +1582,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
        * @return the request
        */
@@ -1607,7 +1608,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Creates an InspectTemplate for reusing frequently used configuration for inspecting content,
-         * images, and storage. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+         * images, and storage. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.create".
          *
@@ -1618,14 +1620,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @since 1.13
          */
@@ -1697,27 +1699,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on the scope of the
        request (project or organization) and whether you have [specified a processing
-       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-       processing data: parent=projects/example-project/locations/europe-west3
+       location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+       scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+       specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+       specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+       location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -1726,14 +1728,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1751,8 +1753,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Deletes an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-       * more.
+       * Deletes an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * templates to learn more.
        *
        * Create a request for the method "inspectTemplates.delete".
        *
@@ -1778,8 +1780,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^organizations/[^/]+/inspectTemplates/[^/]+$");
 
         /**
-         * Deletes an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-         * more.
+         * Deletes an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates to learn more.
          *
          * Create a request for the method "inspectTemplates.delete".
          *
@@ -1895,7 +1897,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+       * Gets an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * templates to learn more.
        *
        * Create a request for the method "inspectTemplates.get".
        *
@@ -1921,8 +1924,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^organizations/[^/]+/inspectTemplates/[^/]+$");
 
         /**
-         * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-         * more.
+         * Gets an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.get".
          *
@@ -2048,7 +2051,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+       * Lists InspectTemplates. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * templates to learn more.
        *
        * Create a request for the method "inspectTemplates.list".
        *
@@ -2057,14 +2061,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2081,7 +2085,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+         * Lists InspectTemplates. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.list".
          *
@@ -2092,14 +2097,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2180,27 +2185,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on the scope of the
        request (project or organization) and whether you have [specified a processing
-       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-       processing data: parent=projects/example-project/locations/europe-west3
+       location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+       scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+       specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+       specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+       location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -2209,14 +2214,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2330,8 +2335,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Updates the InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-       * more.
+       * Updates the InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+       * /creating-templates to learn more.
        *
        * Create a request for the method "inspectTemplates.patch".
        *
@@ -2358,8 +2363,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^organizations/[^/]+/inspectTemplates/[^/]+$");
 
         /**
-         * Updates the InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-         * more.
+         * Updates the InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates to learn more.
          *
          * Create a request for the method "inspectTemplates.patch".
          *
@@ -2498,6 +2503,463 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
     public class Locations {
 
       /**
+       * An accessor for creating requests from the ColumnDataProfiles collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DLP dlp = new DLP(...);}
+       *   {@code DLP.ColumnDataProfiles.List request = dlp.columnDataProfiles().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ColumnDataProfiles columnDataProfiles() {
+        return new ColumnDataProfiles();
+      }
+
+      /**
+       * The "columnDataProfiles" collection of methods.
+       */
+      public class ColumnDataProfiles {
+
+        /**
+         * Gets a column data profile.
+         *
+         * Create a request for the method "columnDataProfiles.get".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name, for example `organizations/12345/locations/us/columnDataProfiles/53234423`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ColumnDataProfile> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/columnDataProfiles/[^/]+$");
+
+          /**
+           * Gets a column data profile.
+           *
+           * Create a request for the method "columnDataProfiles.get".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name, for example `organizations/12345/locations/us/columnDataProfiles/53234423`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ColumnDataProfile.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/columnDataProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/columnDataProfiles/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name, for example
+         `organizations/12345/locations/us/columnDataProfiles/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/columnDataProfiles/53234423`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/columnDataProfiles/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists data profiles for an organization.
+         *
+         * Create a request for the method "columnDataProfiles.list".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListColumnDataProfilesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/columnDataProfiles";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists data profiles for an organization.
+           *
+           * Create a request for the method "columnDataProfiles.list".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListColumnDataProfilesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the organization or project, for example
+         `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values: - `table_data_profile_name` -
+           * The name of the related table data profile. - `project_id` - The Google Cloud project
+           * ID. (REQUIRED) - `dataset_id` - The BigQuery dataset ID. (REQUIRED) - `table_id` - The
+           * BigQuery table ID. (REQUIRED) - `field_id` - The ID of the BigQuery field. -
+           * `info_type` - The infotype detected in the resource. - `sensitivity_level` -
+           * HIGH|MEDIUM|LOW - `data_risk_level`: How much risk is associated with this data. -
+           * `status_code` - an RPC status code as defined in
+           * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+           * operator must be `=` for project_id, dataset_id, and table_id. Other filters also
+           * support `!=`. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345
+           * AND sensitivity_level = HIGH * project_id = 12345 AND info_type = STREET_ADDRESS The
+           * length of this field should be no more than 500 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+         Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+         implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         fields/values: - `table_data_profile_name` - The name of the related table data profile. -
+         `project_id` - The Google Cloud project ID. (REQUIRED) - `dataset_id` - The BigQuery dataset ID.
+         (REQUIRED) - `table_id` - The BigQuery table ID. (REQUIRED) - `field_id` - The ID of the BigQuery
+         field. - `info_type` - The infotype detected in the resource. - `sensitivity_level` -
+         HIGH|MEDIUM|LOW - `data_risk_level`: How much risk is associated with this data. - `status_code` -
+         an RPC status code as defined in
+         https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The operator must be
+         `=` for project_id, dataset_id, and table_id. Other filters also support `!=`. Examples: *
+         project_id = 12345 AND status_code = 1 * project_id = 12345 AND sensitivity_level = HIGH *
+         project_id = 12345 AND info_type = STREET_ADDRESS The length of this field should be no more than
+         500 characters.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values: - `table_data_profile_name` -
+           * The name of the related table data profile. - `project_id` - The Google Cloud project
+           * ID. (REQUIRED) - `dataset_id` - The BigQuery dataset ID. (REQUIRED) - `table_id` - The
+           * BigQuery table ID. (REQUIRED) - `field_id` - The ID of the BigQuery field. -
+           * `info_type` - The infotype detected in the resource. - `sensitivity_level` -
+           * HIGH|MEDIUM|LOW - `data_risk_level`: How much risk is associated with this data. -
+           * `status_code` - an RPC status code as defined in
+           * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+           * operator must be `=` for project_id, dataset_id, and table_id. Other filters also
+           * support `!=`. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345
+           * AND sensitivity_level = HIGH * project_id = 12345 AND info_type = STREET_ADDRESS The
+           * length of this field should be no more than 500 characters.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case insensitive. The default sorting order is ascending. Redundant space
+           * characters are insignificant. Only one order field at a time is allowed. Examples: *
+           * `project_id asc` * `table_id` * `sensitivity_level desc` Supported fields are: -
+           * `project_id`: The Google Cloud project ID. - `dataset_id`: The ID of a BigQuery
+           * dataset. - `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive
+           * the data in a column is, at most. - `data_risk_level`: How much risk is associated with
+           * this data. - `profile_last_generated`: When the profile was last updated in epoch
+           * seconds.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case
+         insensitive. The default sorting order is ascending. Redundant space characters are insignificant.
+         Only one order field at a time is allowed. Examples: * `project_id asc` * `table_id` *
+         `sensitivity_level desc` Supported fields are: - `project_id`: The Google Cloud project ID. -
+         `dataset_id`: The ID of a BigQuery dataset. - `table_id`: The ID of a BigQuery table. -
+         `sensitivity_level`: How sensitive the data in a column is, at most. - `data_risk_level`: How much
+         risk is associated with this data. - `profile_last_generated`: When the profile was last updated in
+         epoch seconds.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case insensitive. The default sorting order is ascending. Redundant space
+           * characters are insignificant. Only one order field at a time is allowed. Examples: *
+           * `project_id asc` * `table_id` * `sensitivity_level desc` Supported fields are: -
+           * `project_id`: The Google Cloud project ID. - `dataset_id`: The ID of a BigQuery
+           * dataset. - `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive
+           * the data in a column is, at most. - `data_risk_level`: How much risk is associated with
+           * this data. - `profile_last_generated`: When the profile was last updated in epoch
+           * seconds.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Size of the page. This value can be limited by the server. If zero, server returns a
+           * page of max size 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Size of the page. This value can be limited by the server. If zero, server returns a page of max
+         size 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Size of the page. This value can be limited by the server. If zero, server returns a
+           * page of max size 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Page token to continue retrieval. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Page token to continue retrieval.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Page token to continue retrieval. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the DeidentifyTemplates collection.
        *
        * <p>The typical use is:</p>
@@ -2519,8 +2981,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Creates a DeidentifyTemplate for reusing frequently used configuration for de-identifying
-         * content, images, and storage. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * content, images, and storage. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.create".
          *
@@ -2529,14 +2991,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @return the request
          */
@@ -2555,8 +3017,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Creates a DeidentifyTemplate for reusing frequently used configuration for de-identifying
-           * content, images, and storage. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-           * learn more.
+           * content, images, and storage. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates-deid to learn more.
            *
            * Create a request for the method "deidentifyTemplates.create".
            *
@@ -2567,14 +3029,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
            * @since 1.13
            */
@@ -2646,27 +3108,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on the scope of the
          request (project or organization) and whether you have [specified a processing
-         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-         processing data: parent=projects/example-project/locations/europe-west3
+         location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+         scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+         specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+         specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+         location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -2675,14 +3137,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2700,8 +3162,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Deletes a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * Deletes a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.delete".
          *
@@ -2727,8 +3189,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/deidentifyTemplates/[^/]+$");
 
           /**
-           * Deletes a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-           * learn more.
+           * Deletes a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates-deid to learn more.
            *
            * Create a request for the method "deidentifyTemplates.delete".
            *
@@ -2844,8 +3306,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-         * more.
+         * Gets a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.get".
          *
@@ -2871,8 +3333,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/deidentifyTemplates/[^/]+$");
 
           /**
-           * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-           * learn more.
+           * Gets a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates-deid to learn more.
            *
            * Create a request for the method "deidentifyTemplates.get".
            *
@@ -2998,8 +3460,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-         * more.
+         * Lists DeidentifyTemplates. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.list".
          *
@@ -3008,14 +3470,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3032,8 +3494,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-           * learn more.
+           * Lists DeidentifyTemplates. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates-deid to learn more.
            *
            * Create a request for the method "deidentifyTemplates.list".
            *
@@ -3044,14 +3506,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3132,27 +3594,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on the scope of the
          request (project or organization) and whether you have [specified a processing
-         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-         processing data: parent=projects/example-project/locations/europe-west3
+         location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+         scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+         specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+         specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+         location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -3161,14 +3623,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3284,8 +3746,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Updates the DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * Updates the DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.patch".
          *
@@ -3312,8 +3774,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/deidentifyTemplates/[^/]+$");
 
           /**
-           * Updates the DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid
-           * to learn more.
+           * Updates the DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates-deid to learn more.
            *
            * Create a request for the method "deidentifyTemplates.patch".
            *
@@ -4284,9 +4746,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       public class DlpJobs {
 
         /**
-         * Lists DlpJobs that match the specified filter in the request. See
-         * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-         * /compute-risk-analysis to learn more.
+         * Lists DlpJobs that match the specified filter in the request. See https://cloud.google.com
+         * /sensitive-data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+         * protection/docs/compute-risk-analysis to learn more.
          *
          * Create a request for the method "dlpJobs.list".
          *
@@ -4294,12 +4756,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4316,9 +4779,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists DlpJobs that match the specified filter in the request. See
-           * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-           * /compute-risk-analysis to learn more.
+           * Lists DlpJobs that match the specified filter in the request. See https://cloud.google.com
+           * /sensitive-data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+           * protection/docs/compute-risk-analysis to learn more.
            *
            * Create a request for the method "dlpJobs.list".
            *
@@ -4328,12 +4791,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4413,8 +4877,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -4425,11 +4889,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on whether you have
-         [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
-         Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
-         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
-         west3` location for processing data: parent=projects/example-project/locations/europe-west3
+         [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         /specifying-location): + Projects scope, location specified:
+         `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to
+         global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project
+         with the identifier `example-project`, and specifies the `europe-west3` location for processing
+         data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -4437,8 +4902,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -4642,7 +5107,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Creates an InspectTemplate for reusing frequently used configuration for inspecting content,
-         * images, and storage. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+         * images, and storage. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.create".
          *
@@ -4651,14 +5117,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @return the request
          */
@@ -4677,7 +5143,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Creates an InspectTemplate for reusing frequently used configuration for inspecting content,
-           * images, and storage. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+           * images, and storage. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * templates to learn more.
            *
            * Create a request for the method "inspectTemplates.create".
            *
@@ -4688,14 +5155,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
            * @since 1.13
            */
@@ -4767,27 +5234,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on the scope of the
          request (project or organization) and whether you have [specified a processing
-         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-         processing data: parent=projects/example-project/locations/europe-west3
+         location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+         scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+         specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+         specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+         location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -4796,14 +5263,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4821,8 +5288,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Deletes an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-         * more.
+         * Deletes an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.delete".
          *
@@ -4848,8 +5315,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/inspectTemplates/[^/]+$");
 
           /**
-           * Deletes an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-           * more.
+           * Deletes an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates to learn more.
            *
            * Create a request for the method "inspectTemplates.delete".
            *
@@ -4965,7 +5432,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+         * Gets an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.get".
          *
@@ -4991,8 +5459,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/inspectTemplates/[^/]+$");
 
           /**
-           * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-           * more.
+           * Gets an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * templates to learn more.
            *
            * Create a request for the method "inspectTemplates.get".
            *
@@ -5118,7 +5586,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+         * Lists InspectTemplates. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.list".
          *
@@ -5127,14 +5596,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5151,7 +5620,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+           * Lists InspectTemplates. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * templates to learn more.
            *
            * Create a request for the method "inspectTemplates.list".
            *
@@ -5162,14 +5632,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5250,27 +5720,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on the scope of the
          request (project or organization) and whether you have [specified a processing
-         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-         processing data: parent=projects/example-project/locations/europe-west3
+         location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+         scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+         specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+         specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+         location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -5279,14 +5749,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5402,8 +5872,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Updates the InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-         * more.
+         * Updates the InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates to learn more.
          *
          * Create a request for the method "inspectTemplates.patch".
          *
@@ -5430,8 +5900,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/inspectTemplates/[^/]+$");
 
           /**
-           * Updates the InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-           * more.
+           * Updates the InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates to learn more.
            *
            * Create a request for the method "inspectTemplates.patch".
            *
@@ -5571,7 +6041,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Creates a job trigger to run DLP actions such as scanning storage for sensitive information on a
-         * set schedule. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+         * set schedule. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+         * to learn more.
          *
          * Create a request for the method "jobTriggers.create".
          *
@@ -5579,12 +6050,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
          * @return the request
          */
@@ -5603,7 +6075,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Creates a job trigger to run DLP actions such as scanning storage for sensitive information on
-           * a set schedule. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+           * a set schedule. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+           * triggers to learn more.
            *
            * Create a request for the method "jobTriggers.create".
            *
@@ -5613,12 +6086,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
            * @since 1.13
            */
@@ -5689,8 +6163,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -5701,11 +6175,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on whether you have
-         [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
-         Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
-         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
-         west3` location for processing data: parent=projects/example-project/locations/europe-west3
+         [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         /specifying-location): + Projects scope, location specified:
+         `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to
+         global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project
+         with the identifier `example-project`, and specifies the `europe-west3` location for processing
+         data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -5713,8 +6188,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -5737,7 +6212,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Deletes a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+         * Deletes a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+         * triggers to learn more.
          *
          * Create a request for the method "jobTriggers.delete".
          *
@@ -5762,8 +6238,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/jobTriggers/[^/]+$");
 
           /**
-           * Deletes a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn
-           * more.
+           * Deletes a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * job-triggers to learn more.
            *
            * Create a request for the method "jobTriggers.delete".
            *
@@ -5875,7 +6351,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+         * Gets a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+         * triggers to learn more.
          *
          * Create a request for the method "jobTriggers.get".
          *
@@ -5900,7 +6377,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/jobTriggers/[^/]+$");
 
           /**
-           * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+           * Gets a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+           * triggers to learn more.
            *
            * Create a request for the method "jobTriggers.get".
            *
@@ -6022,7 +6500,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists job triggers. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+         * Lists job triggers. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+         * triggers to learn more.
          *
          * Create a request for the method "jobTriggers.list".
          *
@@ -6030,12 +6509,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -6052,7 +6532,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists job triggers. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+           * Lists job triggers. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+           * triggers to learn more.
            *
            * Create a request for the method "jobTriggers.list".
            *
@@ -6062,12 +6543,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -6147,8 +6629,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -6159,11 +6641,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on whether you have
-         [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
-         Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
-         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
-         west3` location for processing data: parent=projects/example-project/locations/europe-west3
+         [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         /specifying-location): + Projects scope, location specified:
+         `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to
+         global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project
+         with the identifier `example-project`, and specifies the `europe-west3` location for processing
+         data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -6171,8 +6654,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -6360,7 +6843,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Updates a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+         * Updates a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+         * triggers to learn more.
          *
          * Create a request for the method "jobTriggers.patch".
          *
@@ -6386,8 +6870,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/jobTriggers/[^/]+$");
 
           /**
-           * Updates a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn
-           * more.
+           * Updates a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * job-triggers to learn more.
            *
            * Create a request for the method "jobTriggers.patch".
            *
@@ -6502,6 +6986,434 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       }
       /**
+       * An accessor for creating requests from the ProjectDataProfiles collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DLP dlp = new DLP(...);}
+       *   {@code DLP.ProjectDataProfiles.List request = dlp.projectDataProfiles().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ProjectDataProfiles projectDataProfiles() {
+        return new ProjectDataProfiles();
+      }
+
+      /**
+       * The "projectDataProfiles" collection of methods.
+       */
+      public class ProjectDataProfiles {
+
+        /**
+         * Gets a project data profile.
+         *
+         * Create a request for the method "projectDataProfiles.get".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name, for example
+         *        `organizations/12345/locations/us/projectDataProfiles/53234423`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ProjectDataProfile> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/projectDataProfiles/[^/]+$");
+
+          /**
+           * Gets a project data profile.
+           *
+           * Create a request for the method "projectDataProfiles.get".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name, for example
+         *        `organizations/12345/locations/us/projectDataProfiles/53234423`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ProjectDataProfile.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/projectDataProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/projectDataProfiles/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name, for example
+         `organizations/12345/locations/us/projectDataProfiles/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/projectDataProfiles/53234423`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/projectDataProfiles/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists data profiles for an organization.
+         *
+         * Create a request for the method "projectDataProfiles.list".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. organizations/{org_id}/locations/{loc_id}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListProjectDataProfilesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/projectDataProfiles";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists data profiles for an organization.
+           *
+           * Create a request for the method "projectDataProfiles.list".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. organizations/{org_id}/locations/{loc_id}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListProjectDataProfilesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. organizations/{org_id}/locations/{loc_id} */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. organizations/{org_id}/locations/{loc_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. organizations/{org_id}/locations/{loc_id} */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values: - `sensitivity_level` -
+           * HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW - `status_code` - an RPC
+           * status code as defined in
+           * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
+           * project_id = 12345 AND sensitivity_level = HIGH The length of this field should be no
+           * more than 500 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+         Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+         implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         fields/values: - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW -
+         `status_code` - an RPC status code as defined in
+         https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The operator must be
+         `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345 AND
+         sensitivity_level = HIGH The length of this field should be no more than 500 characters.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values: - `sensitivity_level` -
+           * HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW - `status_code` - an RPC
+           * status code as defined in
+           * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
+           * project_id = 12345 AND sensitivity_level = HIGH The length of this field should be no
+           * more than 500 characters.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case insensitive. The default sorting order is ascending. Redundant space
+           * characters are insignificant. Only one order field at a time is allowed. Examples: *
+           * `project_id` * `sensitivity_level desc` Supported fields are: - `project_id`: GCP
+           * project ID - `sensitivity_level`: How sensitive the data in a project is, at most. -
+           * `data_risk_level`: How much risk is associated with this data. -
+           * `profile_last_generated`: When the profile was last updated in epoch seconds.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case
+         insensitive. The default sorting order is ascending. Redundant space characters are insignificant.
+         Only one order field at a time is allowed. Examples: * `project_id` * `sensitivity_level desc`
+         Supported fields are: - `project_id`: GCP project ID - `sensitivity_level`: How sensitive the data
+         in a project is, at most. - `data_risk_level`: How much risk is associated with this data. -
+         `profile_last_generated`: When the profile was last updated in epoch seconds.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case insensitive. The default sorting order is ascending. Redundant space
+           * characters are insignificant. Only one order field at a time is allowed. Examples: *
+           * `project_id` * `sensitivity_level desc` Supported fields are: - `project_id`: GCP
+           * project ID - `sensitivity_level`: How sensitive the data in a project is, at most. -
+           * `data_risk_level`: How much risk is associated with this data. -
+           * `profile_last_generated`: When the profile was last updated in epoch seconds.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Size of the page. This value can be limited by the server. If zero, server returns a
+           * page of max size 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Size of the page. This value can be limited by the server. If zero, server returns a page of max
+         size 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Size of the page. This value can be limited by the server. If zero, server returns a
+           * page of max size 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Page token to continue retrieval. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Page token to continue retrieval.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Page token to continue retrieval. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the StoredInfoTypes collection.
        *
        * <p>The typical use is:</p>
@@ -6522,8 +7434,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       public class StoredInfoTypes {
 
         /**
-         * Creates a pre-built stored infoType to be used for inspection. See
-         * https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
+         * Creates a pre-built stored infoType to be used for inspection. See https://cloud.google.com
+         * /sensitive-data-protection/docs/creating-stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.create".
          *
@@ -6532,14 +7444,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @return the request
          */
@@ -6557,8 +7469,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a pre-built stored infoType to be used for inspection. See
-           * https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
+           * Creates a pre-built stored infoType to be used for inspection. See https://cloud.google.com
+           * /sensitive-data-protection/docs/creating-stored-infotypes to learn more.
            *
            * Create a request for the method "storedInfoTypes.create".
            *
@@ -6569,14 +7481,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
            * @since 1.13
            */
@@ -6648,27 +7560,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on the scope of the
          request (project or organization) and whether you have [specified a processing
-         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-         processing data: parent=projects/example-project/locations/europe-west3
+         location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+         scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+         specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+         specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+         location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -6677,14 +7589,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -6702,8 +7614,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Deletes a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-         * learn more.
+         * Deletes a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.delete".
          *
@@ -6729,8 +7641,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/storedInfoTypes/[^/]+$");
 
           /**
-           * Deletes a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-           * learn more.
+           * Deletes a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-stored-infotypes to learn more.
            *
            * Create a request for the method "storedInfoTypes.delete".
            *
@@ -6846,8 +7758,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn
-         * more.
+         * Gets a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.get".
          *
@@ -6873,8 +7785,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/storedInfoTypes/[^/]+$");
 
           /**
-           * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-           * learn more.
+           * Gets a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * stored-infotypes to learn more.
            *
            * Create a request for the method "storedInfoTypes.get".
            *
@@ -7000,8 +7912,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn
-         * more.
+         * Lists stored infoTypes. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.list".
          *
@@ -7010,12 +7922,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -7032,8 +7944,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-           * learn more.
+           * Lists stored infoTypes. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * stored-infotypes to learn more.
            *
            * Create a request for the method "storedInfoTypes.list".
            *
@@ -7044,12 +7956,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7130,23 +8042,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID The following example
-           * `parent` string specifies a parent project with the identifier `example-project`, and
-           * specifies the `europe-west3` location for processing data: parent=projects/example-
-           * project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+           * following example `parent` string specifies a parent project with the identifier
+           * `example-project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on the scope of the
          request (project or organization) and whether you have [specified a processing
-         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-         (defaults to global): `projects/`PROJECT_ID The following example `parent` string specifies a
-         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-         processing data: parent=projects/example-project/locations/europe-west3
+         location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+         scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+         west3` location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -7155,12 +8067,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID The following example
-           * `parent` string specifies a parent project with the identifier `example-project`, and
-           * specifies the `europe-west3` location for processing data: parent=projects/example-
-           * project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+           * following example `parent` string specifies a parent project with the identifier
+           * `example-project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7277,8 +8189,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
         /**
          * Updates the stored infoType by creating a new version. The existing version will continue to be
-         * used until the new version is ready. See https://cloud.google.com/dlp/docs/creating-stored-
-         * infotypes to learn more.
+         * used until the new version is ready. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.patch".
          *
@@ -7306,8 +8218,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Updates the stored infoType by creating a new version. The existing version will continue to be
-           * used until the new version is ready. See https://cloud.google.com/dlp/docs/creating-stored-
-           * infotypes to learn more.
+           * used until the new version is ready. See https://cloud.google.com/sensitive-data-
+           * protection/docs/creating-stored-infotypes to learn more.
            *
            * Create a request for the method "storedInfoTypes.patch".
            *
@@ -7425,6 +8337,460 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
       }
+      /**
+       * An accessor for creating requests from the TableDataProfiles collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DLP dlp = new DLP(...);}
+       *   {@code DLP.TableDataProfiles.List request = dlp.tableDataProfiles().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public TableDataProfiles tableDataProfiles() {
+        return new TableDataProfiles();
+      }
+
+      /**
+       * The "tableDataProfiles" collection of methods.
+       */
+      public class TableDataProfiles {
+
+        /**
+         * Gets a table data profile.
+         *
+         * Create a request for the method "tableDataProfiles.get".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name, for example `organizations/12345/locations/us/tableDataProfiles/53234423`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2TableDataProfile> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/tableDataProfiles/[^/]+$");
+
+          /**
+           * Gets a table data profile.
+           *
+           * Create a request for the method "tableDataProfiles.get".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name, for example `organizations/12345/locations/us/tableDataProfiles/53234423`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2TableDataProfile.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/tableDataProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/tableDataProfiles/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name, for example `organizations/12345/locations/us/tableDataProfiles/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/tableDataProfiles/53234423`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/tableDataProfiles/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists data profiles for an organization.
+         *
+         * Create a request for the method "tableDataProfiles.list".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListTableDataProfilesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/tableDataProfiles";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists data profiles for an organization.
+           *
+           * Create a request for the method "tableDataProfiles.list".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListTableDataProfilesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the organization or project, for example
+         `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The GCP
+           * project ID. - `dataset_id` - The BigQuery dataset ID. - `table_id` - The ID of the
+           * BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
+           * HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC
+           * status code as defined in
+           * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
+           * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND
+           * resource_visibility = PUBLIC The length of this field should be no more than 500
+           * characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+         Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+         implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         fields/values: - `project_id` - The GCP project ID. - `dataset_id` - The BigQuery dataset ID. -
+         `table_id` - The ID of the BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW -
+         `data_risk_level` - HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` -
+         an RPC status code as defined in
+         https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The operator must be
+         `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345 AND
+         sensitivity_level = HIGH * project_id = 12345 AND resource_visibility = PUBLIC The length of this
+         field should be no more than 500 characters.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The GCP
+           * project ID. - `dataset_id` - The BigQuery dataset ID. - `table_id` - The ID of the
+           * BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
+           * HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC
+           * status code as defined in
+           * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
+           * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND
+           * resource_visibility = PUBLIC The length of this field should be no more than 500
+           * characters.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case insensitive. The default sorting order is ascending. Redundant space
+           * characters are insignificant. Only one order field at a time is allowed. Examples: *
+           * `project_id asc` * `table_id` * `sensitivity_level desc` Supported fields are: -
+           * `project_id`: The GCP project ID. - `dataset_id`: The ID of a BigQuery dataset. -
+           * `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive the data
+           * in a table is, at most. - `data_risk_level`: How much risk is associated with this
+           * data. - `profile_last_generated`: When the profile was last updated in epoch seconds. -
+           * `last_modified`: The last time the resource was modified. - `resource_visibility`:
+           * Visibility restriction for this resource. - `row_count`: Number of rows in this
+           * resource.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case
+         insensitive. The default sorting order is ascending. Redundant space characters are insignificant.
+         Only one order field at a time is allowed. Examples: * `project_id asc` * `table_id` *
+         `sensitivity_level desc` Supported fields are: - `project_id`: The GCP project ID. - `dataset_id`:
+         The ID of a BigQuery dataset. - `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How
+         sensitive the data in a table is, at most. - `data_risk_level`: How much risk is associated with
+         this data. - `profile_last_generated`: When the profile was last updated in epoch seconds. -
+         `last_modified`: The last time the resource was modified. - `resource_visibility`: Visibility
+         restriction for this resource. - `row_count`: Number of rows in this resource.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case insensitive. The default sorting order is ascending. Redundant space
+           * characters are insignificant. Only one order field at a time is allowed. Examples: *
+           * `project_id asc` * `table_id` * `sensitivity_level desc` Supported fields are: -
+           * `project_id`: The GCP project ID. - `dataset_id`: The ID of a BigQuery dataset. -
+           * `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive the data
+           * in a table is, at most. - `data_risk_level`: How much risk is associated with this
+           * data. - `profile_last_generated`: When the profile was last updated in epoch seconds. -
+           * `last_modified`: The last time the resource was modified. - `resource_visibility`:
+           * Visibility restriction for this resource. - `row_count`: Number of rows in this
+           * resource.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Size of the page. This value can be limited by the server. If zero, server returns a
+           * page of max size 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Size of the page. This value can be limited by the server. If zero, server returns a page of max
+         size 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Size of the page. This value can be limited by the server. If zero, server returns a
+           * page of max size 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Page token to continue retrieval. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Page token to continue retrieval.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Page token to continue retrieval. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the StoredInfoTypes collection.
@@ -7447,8 +8813,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
     public class StoredInfoTypes {
 
       /**
-       * Creates a pre-built stored infoType to be used for inspection. See
-       * https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
+       * Creates a pre-built stored infoType to be used for inspection. See https://cloud.google.com
+       * /sensitive-data-protection/docs/creating-stored-infotypes to learn more.
        *
        * Create a request for the method "storedInfoTypes.create".
        *
@@ -7457,14 +8823,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
        * @return the request
        */
@@ -7482,8 +8848,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Creates a pre-built stored infoType to be used for inspection. See
-         * https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
+         * Creates a pre-built stored infoType to be used for inspection. See https://cloud.google.com
+         * /sensitive-data-protection/docs/creating-stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.create".
          *
@@ -7494,14 +8860,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @since 1.13
          */
@@ -7573,27 +8939,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on the scope of the
        request (project or organization) and whether you have [specified a processing
-       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-       processing data: parent=projects/example-project/locations/europe-west3
+       location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+       scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+       specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+       specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+       location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -7602,14 +8968,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -7627,8 +8993,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Deletes a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-       * learn more.
+       * Deletes a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * stored-infotypes to learn more.
        *
        * Create a request for the method "storedInfoTypes.delete".
        *
@@ -7654,8 +9020,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^organizations/[^/]+/storedInfoTypes/[^/]+$");
 
         /**
-         * Deletes a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-         * learn more.
+         * Deletes a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.delete".
          *
@@ -7771,8 +9137,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn
-       * more.
+       * Gets a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * stored-infotypes to learn more.
        *
        * Create a request for the method "storedInfoTypes.get".
        *
@@ -7798,8 +9164,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^organizations/[^/]+/storedInfoTypes/[^/]+$");
 
         /**
-         * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-         * learn more.
+         * Gets a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.get".
          *
@@ -7925,8 +9291,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn
-       * more.
+       * Lists stored infoTypes. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * stored-infotypes to learn more.
        *
        * Create a request for the method "storedInfoTypes.list".
        *
@@ -7935,12 +9301,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -7957,8 +9323,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-         * learn more.
+         * Lists stored infoTypes. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.list".
          *
@@ -7969,12 +9335,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -8055,23 +9421,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         * following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on the scope of the
        request (project or organization) and whether you have [specified a processing
-       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-       (defaults to global): `projects/`PROJECT_ID The following example `parent` string specifies a
-       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-       processing data: parent=projects/example-project/locations/europe-west3
+       location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+       scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+       string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+       west3` location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -8080,12 +9446,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         * following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -8198,8 +9564,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       }
       /**
        * Updates the stored infoType by creating a new version. The existing version will continue to be
-       * used until the new version is ready. See https://cloud.google.com/dlp/docs/creating-stored-
-       * infotypes to learn more.
+       * used until the new version is ready. See https://cloud.google.com/sensitive-data-protection/docs
+       * /creating-stored-infotypes to learn more.
        *
        * Create a request for the method "storedInfoTypes.patch".
        *
@@ -8227,8 +9593,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Updates the stored infoType by creating a new version. The existing version will continue to be
-         * used until the new version is ready. See https://cloud.google.com/dlp/docs/creating-stored-
-         * infotypes to learn more.
+         * used until the new version is ready. See https://cloud.google.com/sensitive-data-
+         * protection/docs/creating-stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.patch".
          *
@@ -8390,10 +9756,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * De-identifies potentially sensitive info from a ContentItem. This method has limits on input size
-       * and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn more.
-       * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
-       * choose what detectors to run. By default this may be all types, but may change over time as
-       * detectors are updated.
+       * and output size. See https://cloud.google.com/sensitive-data-protection/docs/deidentify-
+       * sensitive-data to learn more. When no InfoTypes or CustomInfoTypes are specified in this request,
+       * the system will automatically choose what detectors to run. By default this may be all types, but
+       * may change over time as detectors are updated.
        *
        * Create a request for the method "content.deidentify".
        *
@@ -8401,12 +9767,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
        *
        * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
-       *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-       *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-       *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+       *        location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
        * @return the request
        */
@@ -8425,10 +9792,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * De-identifies potentially sensitive info from a ContentItem. This method has limits on input
-         * size and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn
-         * more. When no InfoTypes or CustomInfoTypes are specified in this request, the system will
-         * automatically choose what detectors to run. By default this may be all types, but may change
-         * over time as detectors are updated.
+         * size and output size. See https://cloud.google.com/sensitive-data-protection/docs/deidentify-
+         * sensitive-data to learn more. When no InfoTypes or CustomInfoTypes are specified in this
+         * request, the system will automatically choose what detectors to run. By default this may be all
+         * types, but may change over time as detectors are updated.
          *
          * Create a request for the method "content.deidentify".
          *
@@ -8439,12 +9806,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
-       *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-       *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-       *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+       *        location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
          * @since 1.13
          */
@@ -8515,22 +9883,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Parent resource name. The format of this value varies depending on whether you have
-         * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         * following example `parent` string specifies a parent project with the identifier
-         * `example-project`, and specifies the `europe-west3` location for processing data:
-         * parent=projects/example-project/locations/europe-west3
+         * [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         * /specifying-location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Parent resource name. The format of this value varies depending on whether you have [specified a
-       processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
-       specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string
-       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
-       location for processing data: parent=projects/example-project/locations/europe-west3
+       processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+       + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects
+       scope, no location specified (defaults to global): `projects/`PROJECT_ID The following example
+       `parent` string specifies a parent project with the identifier `example-project`, and specifies the
+       `europe-west3` location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -8538,12 +9907,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Parent resource name. The format of this value varies depending on whether you have
-         * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         * following example `parent` string specifies a parent project with the identifier
-         * `example-project`, and specifies the `europe-west3` location for processing data:
-         * parent=projects/example-project/locations/europe-west3
+         * [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         * /specifying-location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
          */
         public Deidentify setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -8564,9 +9934,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * Finds potentially sensitive info in content. This method has limits on input size, processing
        * time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the
        * system will automatically choose what detectors to run. By default this may be all types, but may
-       * change over time as detectors are updated. For how to guides, see
-       * https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs
-       * /inspecting-text,
+       * change over time as detectors are updated. For how to guides, see https://cloud.google.com
+       * /sensitive-data-protection/docs/inspecting-images and https://cloud.google.com/sensitive-data-
+       * protection/docs/inspecting-text,
        *
        * Create a request for the method "content.inspect".
        *
@@ -8574,12 +9944,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Inspect#execute()} method to invoke the remote operation.
        *
        * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
-       *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-       *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-       *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+       *        location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
        * @return the request
        */
@@ -8600,9 +9971,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Finds potentially sensitive info in content. This method has limits on input size, processing
          * time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the
          * system will automatically choose what detectors to run. By default this may be all types, but
-         * may change over time as detectors are updated. For how to guides, see
-         * https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs
-         * /inspecting-text,
+         * may change over time as detectors are updated. For how to guides, see https://cloud.google.com
+         * /sensitive-data-protection/docs/inspecting-images and https://cloud.google.com/sensitive-data-
+         * protection/docs/inspecting-text,
          *
          * Create a request for the method "content.inspect".
          *
@@ -8613,12 +9984,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
-       *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-       *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-       *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+       *        location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
          * @since 1.13
          */
@@ -8689,22 +10061,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Parent resource name. The format of this value varies depending on whether you have
-         * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         * following example `parent` string specifies a parent project with the identifier
-         * `example-project`, and specifies the `europe-west3` location for processing data:
-         * parent=projects/example-project/locations/europe-west3
+         * [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         * /specifying-location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Parent resource name. The format of this value varies depending on whether you have [specified a
-       processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
-       specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string
-       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
-       location for processing data: parent=projects/example-project/locations/europe-west3
+       processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+       + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects
+       scope, no location specified (defaults to global): `projects/`PROJECT_ID The following example
+       `parent` string specifies a parent project with the identifier `example-project`, and specifies the
+       `europe-west3` location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -8712,12 +10085,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Parent resource name. The format of this value varies depending on whether you have
-         * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         * following example `parent` string specifies a parent project with the identifier
-         * `example-project`, and specifies the `europe-west3` location for processing data:
-         * parent=projects/example-project/locations/europe-west3
+         * [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         * /specifying-location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
          */
         public Inspect setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -8735,9 +10109,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Re-identifies content that has been de-identified. See
-       * https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example to
-       * learn more.
+       * Re-identifies content that has been de-identified. See https://cloud.google.com/sensitive-data-
+       * protection/docs/pseudonymization#re-identification_in_free_text_code_example to learn more.
        *
        * Create a request for the method "content.reidentify".
        *
@@ -8745,12 +10118,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Reidentify#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-       *        following example `parent` string specifies a parent project with the identifier `example-
-       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-       *        /example-project/locations/europe-west3
+       *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       *        /specifying-location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
        * @return the request
        */
@@ -8768,9 +10142,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Re-identifies content that has been de-identified. See
-         * https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
-         * to learn more.
+         * Re-identifies content that has been de-identified. See https://cloud.google.com/sensitive-data-
+         * protection/docs/pseudonymization#re-identification_in_free_text_code_example to learn more.
          *
          * Create a request for the method "content.reidentify".
          *
@@ -8781,12 +10154,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-       *        following example `parent` string specifies a parent project with the identifier `example-
-       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-       *        /example-project/locations/europe-west3
+       *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       *        /specifying-location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
          * @since 1.13
          */
@@ -8857,8 +10231,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Required. Parent resource name. The format of this value varies depending on whether you
-         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-         * location): + Projects scope, location specified:
+         * have [specified a processing location](https://cloud.google.com/sensitive-data-
+         * protection/docs/specifying-location): + Projects scope, location specified:
          * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
          * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
          * specifies a parent project with the identifier `example-project`, and specifies the
@@ -8869,11 +10243,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on whether you have
-       [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
-       Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-       no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
-       string specifies a parent project with the identifier `example-project`, and specifies the `europe-
-       west3` location for processing data: parent=projects/example-project/locations/europe-west3
+       [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       /specifying-location): + Projects scope, location specified:
+       `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to
+       global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project
+       with the identifier `example-project`, and specifies the `europe-west3` location for processing
+       data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -8881,8 +10256,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Required. Parent resource name. The format of this value varies depending on whether you
-         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-         * location): + Projects scope, location specified:
+         * have [specified a processing location](https://cloud.google.com/sensitive-data-
+         * protection/docs/specifying-location): + Projects scope, location specified:
          * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
          * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
          * specifies a parent project with the identifier `example-project`, and specifies the
@@ -8928,8 +10303,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Creates a DeidentifyTemplate for reusing frequently used configuration for de-identifying
-       * content, images, and storage. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-       * learn more.
+       * content, images, and storage. See https://cloud.google.com/sensitive-data-protection/docs
+       * /creating-templates-deid to learn more.
        *
        * Create a request for the method "deidentifyTemplates.create".
        *
@@ -8938,14 +10313,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
        * @return the request
        */
@@ -8964,8 +10339,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Creates a DeidentifyTemplate for reusing frequently used configuration for de-identifying
-         * content, images, and storage. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * content, images, and storage. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.create".
          *
@@ -8976,14 +10351,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @since 1.13
          */
@@ -9055,27 +10430,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on the scope of the
        request (project or organization) and whether you have [specified a processing
-       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-       processing data: parent=projects/example-project/locations/europe-west3
+       location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+       scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+       specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+       specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+       location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -9084,14 +10459,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -9109,8 +10484,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Deletes a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-       * learn more.
+       * Deletes a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+       * /creating-templates-deid to learn more.
        *
        * Create a request for the method "deidentifyTemplates.delete".
        *
@@ -9136,8 +10511,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/deidentifyTemplates/[^/]+$");
 
         /**
-         * Deletes a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * Deletes a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.delete".
          *
@@ -9253,8 +10628,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-       * more.
+       * Gets a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * templates-deid to learn more.
        *
        * Create a request for the method "deidentifyTemplates.get".
        *
@@ -9280,8 +10655,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/deidentifyTemplates/[^/]+$");
 
         /**
-         * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * Gets a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.get".
          *
@@ -9407,8 +10782,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-       * more.
+       * Lists DeidentifyTemplates. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * templates-deid to learn more.
        *
        * Create a request for the method "deidentifyTemplates.list".
        *
@@ -9417,14 +10792,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -9441,8 +10816,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * Lists DeidentifyTemplates. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.list".
          *
@@ -9453,14 +10828,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -9541,27 +10916,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on the scope of the
        request (project or organization) and whether you have [specified a processing
-       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-       processing data: parent=projects/example-project/locations/europe-west3
+       location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+       scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+       specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+       specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+       location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -9570,14 +10945,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -9693,8 +11068,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Updates the DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-       * learn more.
+       * Updates the DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+       * /creating-templates-deid to learn more.
        *
        * Create a request for the method "deidentifyTemplates.patch".
        *
@@ -9721,8 +11096,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/deidentifyTemplates/[^/]+$");
 
         /**
-         * Updates the DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid
-         * to learn more.
+         * Updates the DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.patch".
          *
@@ -9862,8 +11237,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Starts asynchronous cancellation on a long-running DlpJob. The server makes a best effort to
-       * cancel the DlpJob, but success is not guaranteed. See https://cloud.google.com/dlp/docs
-       * /inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+       * cancel the DlpJob, but success is not guaranteed. See https://cloud.google.com/sensitive-data-
+       * protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-protection/docs
+       * /compute-risk-analysis to learn more.
        *
        * Create a request for the method "dlpJobs.cancel".
        *
@@ -9889,8 +11265,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Starts asynchronous cancellation on a long-running DlpJob. The server makes a best effort to
-         * cancel the DlpJob, but success is not guaranteed. See https://cloud.google.com/dlp/docs
-         * /inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+         * cancel the DlpJob, but success is not guaranteed. See https://cloud.google.com/sensitive-data-
+         * protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-protection/docs
+         * /compute-risk-analysis to learn more.
          *
          * Create a request for the method "dlpJobs.cancel".
          *
@@ -9995,11 +11372,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Creates a new job to inspect storage or calculate risk metrics. See
-       * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-       * /compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in
-       * inspect jobs, the system will automatically choose what detectors to run. By default this may be
-       * all types, but may change over time as detectors are updated.
+       * Creates a new job to inspect storage or calculate risk metrics. See https://cloud.google.com
+       * /sensitive-data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+       * protection/docs/compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are
+       * specified in inspect jobs, the system will automatically choose what detectors to run. By default
+       * this may be all types, but may change over time as detectors are updated.
        *
        * Create a request for the method "dlpJobs.create".
        *
@@ -10007,12 +11384,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-       *        following example `parent` string specifies a parent project with the identifier `example-
-       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-       *        /example-project/locations/europe-west3
+       *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       *        /specifying-location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
        * @return the request
        */
@@ -10030,11 +11408,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a new job to inspect storage or calculate risk metrics. See
-         * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-         * /compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in
-         * inspect jobs, the system will automatically choose what detectors to run. By default this may
-         * be all types, but may change over time as detectors are updated.
+         * Creates a new job to inspect storage or calculate risk metrics. See https://cloud.google.com
+         * /sensitive-data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+         * protection/docs/compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are
+         * specified in inspect jobs, the system will automatically choose what detectors to run. By
+         * default this may be all types, but may change over time as detectors are updated.
          *
          * Create a request for the method "dlpJobs.create".
          *
@@ -10044,12 +11422,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-       *        following example `parent` string specifies a parent project with the identifier `example-
-       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-       *        /example-project/locations/europe-west3
+       *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       *        /specifying-location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
          * @since 1.13
          */
@@ -10120,8 +11499,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Required. Parent resource name. The format of this value varies depending on whether you
-         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-         * location): + Projects scope, location specified:
+         * have [specified a processing location](https://cloud.google.com/sensitive-data-
+         * protection/docs/specifying-location): + Projects scope, location specified:
          * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
          * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
          * specifies a parent project with the identifier `example-project`, and specifies the
@@ -10132,11 +11511,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on whether you have
-       [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
-       Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-       no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
-       string specifies a parent project with the identifier `example-project`, and specifies the `europe-
-       west3` location for processing data: parent=projects/example-project/locations/europe-west3
+       [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       /specifying-location): + Projects scope, location specified:
+       `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to
+       global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project
+       with the identifier `example-project`, and specifies the `europe-west3` location for processing
+       data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -10144,8 +11524,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Required. Parent resource name. The format of this value varies depending on whether you
-         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-         * location): + Projects scope, location specified:
+         * have [specified a processing location](https://cloud.google.com/sensitive-data-
+         * protection/docs/specifying-location): + Projects scope, location specified:
          * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
          * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
          * specifies a parent project with the identifier `example-project`, and specifies the
@@ -10169,8 +11549,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       }
       /**
        * Deletes a long-running DlpJob. This method indicates that the client is no longer interested in
-       * the DlpJob result. The job will be canceled if possible. See https://cloud.google.com/dlp/docs
-       * /inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+       * the DlpJob result. The job will be canceled if possible. See https://cloud.google.com/sensitive-
+       * data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+       * protection/docs/compute-risk-analysis to learn more.
        *
        * Create a request for the method "dlpJobs.delete".
        *
@@ -10195,8 +11576,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Deletes a long-running DlpJob. This method indicates that the client is no longer interested in
-         * the DlpJob result. The job will be canceled if possible. See https://cloud.google.com/dlp/docs
-         * /inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+         * the DlpJob result. The job will be canceled if possible. See https://cloud.google.com
+         * /sensitive-data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+         * protection/docs/compute-risk-analysis to learn more.
          *
          * Create a request for the method "dlpJobs.delete".
          *
@@ -10300,8 +11682,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Gets the latest state of a long-running DlpJob. See https://cloud.google.com/dlp/docs/inspecting-
-       * storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+       * Gets the latest state of a long-running DlpJob. See https://cloud.google.com/sensitive-data-
+       * protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-protection/docs
+       * /compute-risk-analysis to learn more.
        *
        * Create a request for the method "dlpJobs.get".
        *
@@ -10325,8 +11708,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/dlpJobs/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running DlpJob. See https://cloud.google.com/dlp/docs
-         * /inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+         * Gets the latest state of a long-running DlpJob. See https://cloud.google.com/sensitive-data-
+         * protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-protection/docs
+         * /compute-risk-analysis to learn more.
          *
          * Create a request for the method "dlpJobs.get".
          *
@@ -10440,9 +11824,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Lists DlpJobs that match the specified filter in the request. See
-       * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-       * /compute-risk-analysis to learn more.
+       * Lists DlpJobs that match the specified filter in the request. See https://cloud.google.com
+       * /sensitive-data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+       * protection/docs/compute-risk-analysis to learn more.
        *
        * Create a request for the method "dlpJobs.list".
        *
@@ -10450,12 +11834,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-       *        following example `parent` string specifies a parent project with the identifier `example-
-       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-       *        /example-project/locations/europe-west3
+       *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       *        /specifying-location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -10472,9 +11857,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists DlpJobs that match the specified filter in the request. See
-         * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-         * /compute-risk-analysis to learn more.
+         * Lists DlpJobs that match the specified filter in the request. See https://cloud.google.com
+         * /sensitive-data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+         * protection/docs/compute-risk-analysis to learn more.
          *
          * Create a request for the method "dlpJobs.list".
          *
@@ -10484,12 +11869,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-       *        following example `parent` string specifies a parent project with the identifier `example-
-       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-       *        /example-project/locations/europe-west3
+       *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       *        /specifying-location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -10569,8 +11955,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Required. Parent resource name. The format of this value varies depending on whether you
-         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-         * location): + Projects scope, location specified:
+         * have [specified a processing location](https://cloud.google.com/sensitive-data-
+         * protection/docs/specifying-location): + Projects scope, location specified:
          * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
          * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
          * specifies a parent project with the identifier `example-project`, and specifies the
@@ -10581,11 +11967,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on whether you have
-       [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
-       Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-       no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
-       string specifies a parent project with the identifier `example-project`, and specifies the `europe-
-       west3` location for processing data: parent=projects/example-project/locations/europe-west3
+       [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       /specifying-location): + Projects scope, location specified:
+       `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to
+       global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project
+       with the identifier `example-project`, and specifies the `europe-west3` location for processing
+       data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -10593,8 +11980,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Required. Parent resource name. The format of this value varies depending on whether you
-         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-         * location): + Projects scope, location specified:
+         * have [specified a processing location](https://cloud.google.com/sensitive-data-
+         * protection/docs/specifying-location): + Projects scope, location specified:
          * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
          * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
          * specifies a parent project with the identifier `example-project`, and specifies the
@@ -10798,10 +12185,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Redacts potentially sensitive info from an image. This method has limits on input size,
-       * processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-data-
-       * images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request, the
-       * system will automatically choose what detectors to run. By default this may be all types, but may
-       * change over time as detectors are updated.
+       * processing time, and output size. See https://cloud.google.com/sensitive-data-protection/docs
+       * /redacting-sensitive-data-images to learn more. When no InfoTypes or CustomInfoTypes are
+       * specified in this request, the system will automatically choose what detectors to run. By default
+       * this may be all types, but may change over time as detectors are updated.
        *
        * Create a request for the method "image.redact".
        *
@@ -10809,12 +12196,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Redact#execute()} method to invoke the remote operation.
        *
        * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
-       *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-       *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-       *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+       *        location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
        * @return the request
        */
@@ -10833,10 +12221,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Redacts potentially sensitive info from an image. This method has limits on input size,
-         * processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-
-         * data-images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request,
-         * the system will automatically choose what detectors to run. By default this may be all types,
-         * but may change over time as detectors are updated.
+         * processing time, and output size. See https://cloud.google.com/sensitive-data-protection/docs
+         * /redacting-sensitive-data-images to learn more. When no InfoTypes or CustomInfoTypes are
+         * specified in this request, the system will automatically choose what detectors to run. By
+         * default this may be all types, but may change over time as detectors are updated.
          *
          * Create a request for the method "image.redact".
          *
@@ -10846,12 +12234,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
-       *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-       *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-       *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+       *        location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
          * @since 1.13
          */
@@ -10922,22 +12311,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Parent resource name. The format of this value varies depending on whether you have
-         * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         * following example `parent` string specifies a parent project with the identifier
-         * `example-project`, and specifies the `europe-west3` location for processing data:
-         * parent=projects/example-project/locations/europe-west3
+         * [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         * /specifying-location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Parent resource name. The format of this value varies depending on whether you have [specified a
-       processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
-       specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string
-       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
-       location for processing data: parent=projects/example-project/locations/europe-west3
+       processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+       + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects
+       scope, no location specified (defaults to global): `projects/`PROJECT_ID The following example
+       `parent` string specifies a parent project with the identifier `example-project`, and specifies the
+       `europe-west3` location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -10945,12 +12335,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Parent resource name. The format of this value varies depending on whether you have
-         * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         * following example `parent` string specifies a parent project with the identifier
-         * `example-project`, and specifies the `europe-west3` location for processing data:
-         * parent=projects/example-project/locations/europe-west3
+         * [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         * /specifying-location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
          */
         public Redact setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -10991,7 +12382,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Creates an InspectTemplate for reusing frequently used configuration for inspecting content,
-       * images, and storage. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+       * images, and storage. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * templates to learn more.
        *
        * Create a request for the method "inspectTemplates.create".
        *
@@ -11000,14 +12392,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
        * @return the request
        */
@@ -11026,7 +12418,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Creates an InspectTemplate for reusing frequently used configuration for inspecting content,
-         * images, and storage. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+         * images, and storage. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.create".
          *
@@ -11037,14 +12430,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @since 1.13
          */
@@ -11116,27 +12509,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on the scope of the
        request (project or organization) and whether you have [specified a processing
-       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-       processing data: parent=projects/example-project/locations/europe-west3
+       location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+       scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+       specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+       specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+       location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -11145,14 +12538,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -11170,8 +12563,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Deletes an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-       * more.
+       * Deletes an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * templates to learn more.
        *
        * Create a request for the method "inspectTemplates.delete".
        *
@@ -11197,8 +12590,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/inspectTemplates/[^/]+$");
 
         /**
-         * Deletes an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-         * more.
+         * Deletes an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates to learn more.
          *
          * Create a request for the method "inspectTemplates.delete".
          *
@@ -11314,7 +12707,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+       * Gets an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * templates to learn more.
        *
        * Create a request for the method "inspectTemplates.get".
        *
@@ -11340,8 +12734,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/inspectTemplates/[^/]+$");
 
         /**
-         * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-         * more.
+         * Gets an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.get".
          *
@@ -11467,7 +12861,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+       * Lists InspectTemplates. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * templates to learn more.
        *
        * Create a request for the method "inspectTemplates.list".
        *
@@ -11476,14 +12871,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -11500,7 +12895,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+         * Lists InspectTemplates. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.list".
          *
@@ -11511,14 +12907,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -11599,27 +12995,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on the scope of the
        request (project or organization) and whether you have [specified a processing
-       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-       processing data: parent=projects/example-project/locations/europe-west3
+       location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+       scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+       specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+       specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+       location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -11628,14 +13024,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -11749,8 +13145,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Updates the InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-       * more.
+       * Updates the InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+       * /creating-templates to learn more.
        *
        * Create a request for the method "inspectTemplates.patch".
        *
@@ -11777,8 +13173,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/inspectTemplates/[^/]+$");
 
         /**
-         * Updates the InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-         * more.
+         * Updates the InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates to learn more.
          *
          * Create a request for the method "inspectTemplates.patch".
          *
@@ -12060,7 +13456,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       }
       /**
        * Creates a job trigger to run DLP actions such as scanning storage for sensitive information on a
-       * set schedule. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+       * set schedule. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+       * to learn more.
        *
        * Create a request for the method "jobTriggers.create".
        *
@@ -12068,12 +13465,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-       *        following example `parent` string specifies a parent project with the identifier `example-
-       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-       *        /example-project/locations/europe-west3
+       *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       *        /specifying-location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
        * @return the request
        */
@@ -12092,7 +13490,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Creates a job trigger to run DLP actions such as scanning storage for sensitive information on
-         * a set schedule. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+         * a set schedule. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+         * triggers to learn more.
          *
          * Create a request for the method "jobTriggers.create".
          *
@@ -12102,12 +13501,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-       *        following example `parent` string specifies a parent project with the identifier `example-
-       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-       *        /example-project/locations/europe-west3
+       *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       *        /specifying-location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
          * @since 1.13
          */
@@ -12178,8 +13578,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Required. Parent resource name. The format of this value varies depending on whether you
-         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-         * location): + Projects scope, location specified:
+         * have [specified a processing location](https://cloud.google.com/sensitive-data-
+         * protection/docs/specifying-location): + Projects scope, location specified:
          * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
          * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
          * specifies a parent project with the identifier `example-project`, and specifies the
@@ -12190,11 +13590,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on whether you have
-       [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
-       Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-       no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
-       string specifies a parent project with the identifier `example-project`, and specifies the `europe-
-       west3` location for processing data: parent=projects/example-project/locations/europe-west3
+       [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       /specifying-location): + Projects scope, location specified:
+       `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to
+       global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project
+       with the identifier `example-project`, and specifies the `europe-west3` location for processing
+       data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -12202,8 +13603,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Required. Parent resource name. The format of this value varies depending on whether you
-         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-         * location): + Projects scope, location specified:
+         * have [specified a processing location](https://cloud.google.com/sensitive-data-
+         * protection/docs/specifying-location): + Projects scope, location specified:
          * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
          * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
          * specifies a parent project with the identifier `example-project`, and specifies the
@@ -12226,7 +13627,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Deletes a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+       * Deletes a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+       * triggers to learn more.
        *
        * Create a request for the method "jobTriggers.delete".
        *
@@ -12251,8 +13653,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/jobTriggers/[^/]+$");
 
         /**
-         * Deletes a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn
-         * more.
+         * Deletes a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * job-triggers to learn more.
          *
          * Create a request for the method "jobTriggers.delete".
          *
@@ -12364,7 +13766,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+       * Gets a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+       * triggers to learn more.
        *
        * Create a request for the method "jobTriggers.get".
        *
@@ -12389,7 +13792,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/jobTriggers/[^/]+$");
 
         /**
-         * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+         * Gets a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+         * triggers to learn more.
          *
          * Create a request for the method "jobTriggers.get".
          *
@@ -12511,7 +13915,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Lists job triggers. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+       * Lists job triggers. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+       * triggers to learn more.
        *
        * Create a request for the method "jobTriggers.list".
        *
@@ -12519,12 +13924,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-       *        following example `parent` string specifies a parent project with the identifier `example-
-       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-       *        /example-project/locations/europe-west3
+       *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       *        /specifying-location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -12541,7 +13947,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists job triggers. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+         * Lists job triggers. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+         * triggers to learn more.
          *
          * Create a request for the method "jobTriggers.list".
          *
@@ -12551,12 +13958,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-       *        following example `parent` string specifies a parent project with the identifier `example-
-       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-       *        /example-project/locations/europe-west3
+       *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       *        /specifying-location): + Projects scope, location specified:
+       *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       *        specifies a parent project with the identifier `example-project`, and specifies the
+       *        `europe-west3` location for processing data: parent=projects/example-project/locations
+       *        /europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -12636,8 +14044,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Required. Parent resource name. The format of this value varies depending on whether you
-         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-         * location): + Projects scope, location specified:
+         * have [specified a processing location](https://cloud.google.com/sensitive-data-
+         * protection/docs/specifying-location): + Projects scope, location specified:
          * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
          * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
          * specifies a parent project with the identifier `example-project`, and specifies the
@@ -12648,11 +14056,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on whether you have
-       [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
-       Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-       no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
-       string specifies a parent project with the identifier `example-project`, and specifies the `europe-
-       west3` location for processing data: parent=projects/example-project/locations/europe-west3
+       [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+       /specifying-location): + Projects scope, location specified:
+       `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to
+       global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project
+       with the identifier `example-project`, and specifies the `europe-west3` location for processing
+       data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -12660,8 +14069,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Required. Parent resource name. The format of this value varies depending on whether you
-         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-         * location): + Projects scope, location specified:
+         * have [specified a processing location](https://cloud.google.com/sensitive-data-
+         * protection/docs/specifying-location): + Projects scope, location specified:
          * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
          * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
          * specifies a parent project with the identifier `example-project`, and specifies the
@@ -12847,7 +14256,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Updates a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+       * Updates a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+       * triggers to learn more.
        *
        * Create a request for the method "jobTriggers.patch".
        *
@@ -12873,8 +14283,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/jobTriggers/[^/]+$");
 
         /**
-         * Updates a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn
-         * more.
+         * Updates a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * job-triggers to learn more.
          *
          * Create a request for the method "jobTriggers.patch".
          *
@@ -13009,6 +14419,463 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
     public class Locations {
 
       /**
+       * An accessor for creating requests from the ColumnDataProfiles collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DLP dlp = new DLP(...);}
+       *   {@code DLP.ColumnDataProfiles.List request = dlp.columnDataProfiles().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ColumnDataProfiles columnDataProfiles() {
+        return new ColumnDataProfiles();
+      }
+
+      /**
+       * The "columnDataProfiles" collection of methods.
+       */
+      public class ColumnDataProfiles {
+
+        /**
+         * Gets a column data profile.
+         *
+         * Create a request for the method "columnDataProfiles.get".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name, for example `organizations/12345/locations/us/columnDataProfiles/53234423`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ColumnDataProfile> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/columnDataProfiles/[^/]+$");
+
+          /**
+           * Gets a column data profile.
+           *
+           * Create a request for the method "columnDataProfiles.get".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name, for example `organizations/12345/locations/us/columnDataProfiles/53234423`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ColumnDataProfile.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/columnDataProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/columnDataProfiles/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name, for example
+         `organizations/12345/locations/us/columnDataProfiles/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/columnDataProfiles/53234423`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/columnDataProfiles/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists data profiles for an organization.
+         *
+         * Create a request for the method "columnDataProfiles.list".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListColumnDataProfilesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/columnDataProfiles";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists data profiles for an organization.
+           *
+           * Create a request for the method "columnDataProfiles.list".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListColumnDataProfilesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the organization or project, for example
+         `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values: - `table_data_profile_name` -
+           * The name of the related table data profile. - `project_id` - The Google Cloud project
+           * ID. (REQUIRED) - `dataset_id` - The BigQuery dataset ID. (REQUIRED) - `table_id` - The
+           * BigQuery table ID. (REQUIRED) - `field_id` - The ID of the BigQuery field. -
+           * `info_type` - The infotype detected in the resource. - `sensitivity_level` -
+           * HIGH|MEDIUM|LOW - `data_risk_level`: How much risk is associated with this data. -
+           * `status_code` - an RPC status code as defined in
+           * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+           * operator must be `=` for project_id, dataset_id, and table_id. Other filters also
+           * support `!=`. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345
+           * AND sensitivity_level = HIGH * project_id = 12345 AND info_type = STREET_ADDRESS The
+           * length of this field should be no more than 500 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+         Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+         implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         fields/values: - `table_data_profile_name` - The name of the related table data profile. -
+         `project_id` - The Google Cloud project ID. (REQUIRED) - `dataset_id` - The BigQuery dataset ID.
+         (REQUIRED) - `table_id` - The BigQuery table ID. (REQUIRED) - `field_id` - The ID of the BigQuery
+         field. - `info_type` - The infotype detected in the resource. - `sensitivity_level` -
+         HIGH|MEDIUM|LOW - `data_risk_level`: How much risk is associated with this data. - `status_code` -
+         an RPC status code as defined in
+         https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The operator must be
+         `=` for project_id, dataset_id, and table_id. Other filters also support `!=`. Examples: *
+         project_id = 12345 AND status_code = 1 * project_id = 12345 AND sensitivity_level = HIGH *
+         project_id = 12345 AND info_type = STREET_ADDRESS The length of this field should be no more than
+         500 characters.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values: - `table_data_profile_name` -
+           * The name of the related table data profile. - `project_id` - The Google Cloud project
+           * ID. (REQUIRED) - `dataset_id` - The BigQuery dataset ID. (REQUIRED) - `table_id` - The
+           * BigQuery table ID. (REQUIRED) - `field_id` - The ID of the BigQuery field. -
+           * `info_type` - The infotype detected in the resource. - `sensitivity_level` -
+           * HIGH|MEDIUM|LOW - `data_risk_level`: How much risk is associated with this data. -
+           * `status_code` - an RPC status code as defined in
+           * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+           * operator must be `=` for project_id, dataset_id, and table_id. Other filters also
+           * support `!=`. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345
+           * AND sensitivity_level = HIGH * project_id = 12345 AND info_type = STREET_ADDRESS The
+           * length of this field should be no more than 500 characters.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case insensitive. The default sorting order is ascending. Redundant space
+           * characters are insignificant. Only one order field at a time is allowed. Examples: *
+           * `project_id asc` * `table_id` * `sensitivity_level desc` Supported fields are: -
+           * `project_id`: The Google Cloud project ID. - `dataset_id`: The ID of a BigQuery
+           * dataset. - `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive
+           * the data in a column is, at most. - `data_risk_level`: How much risk is associated with
+           * this data. - `profile_last_generated`: When the profile was last updated in epoch
+           * seconds.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case
+         insensitive. The default sorting order is ascending. Redundant space characters are insignificant.
+         Only one order field at a time is allowed. Examples: * `project_id asc` * `table_id` *
+         `sensitivity_level desc` Supported fields are: - `project_id`: The Google Cloud project ID. -
+         `dataset_id`: The ID of a BigQuery dataset. - `table_id`: The ID of a BigQuery table. -
+         `sensitivity_level`: How sensitive the data in a column is, at most. - `data_risk_level`: How much
+         risk is associated with this data. - `profile_last_generated`: When the profile was last updated in
+         epoch seconds.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case insensitive. The default sorting order is ascending. Redundant space
+           * characters are insignificant. Only one order field at a time is allowed. Examples: *
+           * `project_id asc` * `table_id` * `sensitivity_level desc` Supported fields are: -
+           * `project_id`: The Google Cloud project ID. - `dataset_id`: The ID of a BigQuery
+           * dataset. - `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive
+           * the data in a column is, at most. - `data_risk_level`: How much risk is associated with
+           * this data. - `profile_last_generated`: When the profile was last updated in epoch
+           * seconds.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Size of the page. This value can be limited by the server. If zero, server returns a
+           * page of max size 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Size of the page. This value can be limited by the server. If zero, server returns a page of max
+         size 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Size of the page. This value can be limited by the server. If zero, server returns a
+           * page of max size 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Page token to continue retrieval. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Page token to continue retrieval.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Page token to continue retrieval. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Content collection.
        *
        * <p>The typical use is:</p>
@@ -13030,10 +14897,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * De-identifies potentially sensitive info from a ContentItem. This method has limits on input size
-         * and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn more.
-         * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
-         * choose what detectors to run. By default this may be all types, but may change over time as
-         * detectors are updated.
+         * and output size. See https://cloud.google.com/sensitive-data-protection/docs/deidentify-
+         * sensitive-data to learn more. When no InfoTypes or CustomInfoTypes are specified in this request,
+         * the system will automatically choose what detectors to run. By default this may be all types, but
+         * may change over time as detectors are updated.
          *
          * Create a request for the method "content.deidentify".
          *
@@ -13041,12 +14908,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
          *
          * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
-         *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-         *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+         *        location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
          * @return the request
          */
@@ -13065,10 +14933,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * De-identifies potentially sensitive info from a ContentItem. This method has limits on input
-           * size and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn
-           * more. When no InfoTypes or CustomInfoTypes are specified in this request, the system will
-           * automatically choose what detectors to run. By default this may be all types, but may change
-           * over time as detectors are updated.
+           * size and output size. See https://cloud.google.com/sensitive-data-protection/docs/deidentify-
+           * sensitive-data to learn more. When no InfoTypes or CustomInfoTypes are specified in this
+           * request, the system will automatically choose what detectors to run. By default this may be all
+           * types, but may change over time as detectors are updated.
            *
            * Create a request for the method "content.deidentify".
            *
@@ -13079,12 +14947,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
-         *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-         *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+         *        location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
            * @since 1.13
            */
@@ -13155,8 +15024,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Parent resource name. The format of this value varies depending on whether you have
-           * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-           * location): + Projects scope, location specified:
+           * [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -13167,11 +15036,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           private java.lang.String parent;
 
           /** Parent resource name. The format of this value varies depending on whether you have [specified a
-         processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
-         specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string
-         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
-         location for processing data: parent=projects/example-project/locations/europe-west3
+         processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+         + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects
+         scope, no location specified (defaults to global): `projects/`PROJECT_ID The following example
+         `parent` string specifies a parent project with the identifier `example-project`, and specifies the
+         `europe-west3` location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -13179,8 +15048,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Parent resource name. The format of this value varies depending on whether you have
-           * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-           * location): + Projects scope, location specified:
+           * [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -13206,9 +15075,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Finds potentially sensitive info in content. This method has limits on input size, processing
          * time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the
          * system will automatically choose what detectors to run. By default this may be all types, but may
-         * change over time as detectors are updated. For how to guides, see
-         * https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs
-         * /inspecting-text,
+         * change over time as detectors are updated. For how to guides, see https://cloud.google.com
+         * /sensitive-data-protection/docs/inspecting-images and https://cloud.google.com/sensitive-data-
+         * protection/docs/inspecting-text,
          *
          * Create a request for the method "content.inspect".
          *
@@ -13216,12 +15085,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Inspect#execute()} method to invoke the remote operation.
          *
          * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
-         *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-         *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+         *        location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
          * @return the request
          */
@@ -13242,9 +15112,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Finds potentially sensitive info in content. This method has limits on input size, processing
            * time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the
            * system will automatically choose what detectors to run. By default this may be all types, but
-           * may change over time as detectors are updated. For how to guides, see
-           * https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs
-           * /inspecting-text,
+           * may change over time as detectors are updated. For how to guides, see https://cloud.google.com
+           * /sensitive-data-protection/docs/inspecting-images and https://cloud.google.com/sensitive-data-
+           * protection/docs/inspecting-text,
            *
            * Create a request for the method "content.inspect".
            *
@@ -13255,12 +15125,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
-         *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-         *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+         *        location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
            * @since 1.13
            */
@@ -13331,8 +15202,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Parent resource name. The format of this value varies depending on whether you have
-           * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-           * location): + Projects scope, location specified:
+           * [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -13343,11 +15214,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           private java.lang.String parent;
 
           /** Parent resource name. The format of this value varies depending on whether you have [specified a
-         processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
-         specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string
-         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
-         location for processing data: parent=projects/example-project/locations/europe-west3
+         processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+         + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects
+         scope, no location specified (defaults to global): `projects/`PROJECT_ID The following example
+         `parent` string specifies a parent project with the identifier `example-project`, and specifies the
+         `europe-west3` location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -13355,8 +15226,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Parent resource name. The format of this value varies depending on whether you have
-           * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-           * location): + Projects scope, location specified:
+           * [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -13379,9 +15250,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Re-identifies content that has been de-identified. See
-         * https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example to
-         * learn more.
+         * Re-identifies content that has been de-identified. See https://cloud.google.com/sensitive-data-
+         * protection/docs/pseudonymization#re-identification_in_free_text_code_example to learn more.
          *
          * Create a request for the method "content.reidentify".
          *
@@ -13389,12 +15259,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Reidentify#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
          * @return the request
          */
@@ -13412,9 +15283,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Re-identifies content that has been de-identified. See
-           * https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
-           * to learn more.
+           * Re-identifies content that has been de-identified. See https://cloud.google.com/sensitive-data-
+           * protection/docs/pseudonymization#re-identification_in_free_text_code_example to learn more.
            *
            * Create a request for the method "content.reidentify".
            *
@@ -13425,12 +15295,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
            * @since 1.13
            */
@@ -13501,8 +15372,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -13513,11 +15384,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on whether you have
-         [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
-         Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
-         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
-         west3` location for processing data: parent=projects/example-project/locations/europe-west3
+         [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         /specifying-location): + Projects scope, location specified:
+         `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to
+         global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project
+         with the identifier `example-project`, and specifies the `europe-west3` location for processing
+         data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -13525,8 +15397,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -13572,8 +15444,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Creates a DeidentifyTemplate for reusing frequently used configuration for de-identifying
-         * content, images, and storage. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * content, images, and storage. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.create".
          *
@@ -13582,14 +15454,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @return the request
          */
@@ -13608,8 +15480,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Creates a DeidentifyTemplate for reusing frequently used configuration for de-identifying
-           * content, images, and storage. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-           * learn more.
+           * content, images, and storage. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates-deid to learn more.
            *
            * Create a request for the method "deidentifyTemplates.create".
            *
@@ -13620,14 +15492,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
            * @since 1.13
            */
@@ -13699,27 +15571,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on the scope of the
          request (project or organization) and whether you have [specified a processing
-         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-         processing data: parent=projects/example-project/locations/europe-west3
+         location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+         scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+         specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+         specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+         location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -13728,14 +15600,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -13753,8 +15625,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Deletes a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * Deletes a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.delete".
          *
@@ -13780,8 +15652,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deidentifyTemplates/[^/]+$");
 
           /**
-           * Deletes a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-           * learn more.
+           * Deletes a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates-deid to learn more.
            *
            * Create a request for the method "deidentifyTemplates.delete".
            *
@@ -13897,8 +15769,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-         * more.
+         * Gets a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.get".
          *
@@ -13924,8 +15796,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deidentifyTemplates/[^/]+$");
 
           /**
-           * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-           * learn more.
+           * Gets a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates-deid to learn more.
            *
            * Create a request for the method "deidentifyTemplates.get".
            *
@@ -14051,8 +15923,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-         * more.
+         * Lists DeidentifyTemplates. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.list".
          *
@@ -14061,14 +15933,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -14085,8 +15957,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-           * learn more.
+           * Lists DeidentifyTemplates. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates-deid to learn more.
            *
            * Create a request for the method "deidentifyTemplates.list".
            *
@@ -14097,14 +15969,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -14185,27 +16057,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on the scope of the
          request (project or organization) and whether you have [specified a processing
-         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-         processing data: parent=projects/example-project/locations/europe-west3
+         location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+         scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+         specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+         specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+         location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -14214,14 +16086,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -14337,8 +16209,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Updates the DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to
-         * learn more.
+         * Updates the DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates-deid to learn more.
          *
          * Create a request for the method "deidentifyTemplates.patch".
          *
@@ -14365,8 +16237,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deidentifyTemplates/[^/]+$");
 
           /**
-           * Updates the DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid
-           * to learn more.
+           * Updates the DeidentifyTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates-deid to learn more.
            *
            * Create a request for the method "deidentifyTemplates.patch".
            *
@@ -15338,8 +17210,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Starts asynchronous cancellation on a long-running DlpJob. The server makes a best effort to
-         * cancel the DlpJob, but success is not guaranteed. See https://cloud.google.com/dlp/docs
-         * /inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+         * cancel the DlpJob, but success is not guaranteed. See https://cloud.google.com/sensitive-data-
+         * protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-protection/docs
+         * /compute-risk-analysis to learn more.
          *
          * Create a request for the method "dlpJobs.cancel".
          *
@@ -15365,8 +17238,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Starts asynchronous cancellation on a long-running DlpJob. The server makes a best effort to
-           * cancel the DlpJob, but success is not guaranteed. See https://cloud.google.com/dlp/docs
-           * /inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+           * cancel the DlpJob, but success is not guaranteed. See https://cloud.google.com/sensitive-data-
+           * protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-protection/docs
+           * /compute-risk-analysis to learn more.
            *
            * Create a request for the method "dlpJobs.cancel".
            *
@@ -15471,11 +17345,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Creates a new job to inspect storage or calculate risk metrics. See
-         * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-         * /compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in
-         * inspect jobs, the system will automatically choose what detectors to run. By default this may be
-         * all types, but may change over time as detectors are updated.
+         * Creates a new job to inspect storage or calculate risk metrics. See https://cloud.google.com
+         * /sensitive-data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+         * protection/docs/compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are
+         * specified in inspect jobs, the system will automatically choose what detectors to run. By default
+         * this may be all types, but may change over time as detectors are updated.
          *
          * Create a request for the method "dlpJobs.create".
          *
@@ -15483,12 +17357,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
          * @return the request
          */
@@ -15506,11 +17381,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new job to inspect storage or calculate risk metrics. See
-           * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-           * /compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in
-           * inspect jobs, the system will automatically choose what detectors to run. By default this may
-           * be all types, but may change over time as detectors are updated.
+           * Creates a new job to inspect storage or calculate risk metrics. See https://cloud.google.com
+           * /sensitive-data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+           * protection/docs/compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are
+           * specified in inspect jobs, the system will automatically choose what detectors to run. By
+           * default this may be all types, but may change over time as detectors are updated.
            *
            * Create a request for the method "dlpJobs.create".
            *
@@ -15520,12 +17395,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
            * @since 1.13
            */
@@ -15596,8 +17472,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -15608,11 +17484,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on whether you have
-         [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
-         Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
-         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
-         west3` location for processing data: parent=projects/example-project/locations/europe-west3
+         [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         /specifying-location): + Projects scope, location specified:
+         `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to
+         global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project
+         with the identifier `example-project`, and specifies the `europe-west3` location for processing
+         data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -15620,8 +17497,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -15645,8 +17522,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
         /**
          * Deletes a long-running DlpJob. This method indicates that the client is no longer interested in
-         * the DlpJob result. The job will be canceled if possible. See https://cloud.google.com/dlp/docs
-         * /inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+         * the DlpJob result. The job will be canceled if possible. See https://cloud.google.com/sensitive-
+         * data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+         * protection/docs/compute-risk-analysis to learn more.
          *
          * Create a request for the method "dlpJobs.delete".
          *
@@ -15671,8 +17549,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Deletes a long-running DlpJob. This method indicates that the client is no longer interested in
-           * the DlpJob result. The job will be canceled if possible. See https://cloud.google.com/dlp/docs
-           * /inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+           * the DlpJob result. The job will be canceled if possible. See https://cloud.google.com
+           * /sensitive-data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+           * protection/docs/compute-risk-analysis to learn more.
            *
            * Create a request for the method "dlpJobs.delete".
            *
@@ -15908,8 +17787,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Gets the latest state of a long-running DlpJob. See https://cloud.google.com/dlp/docs/inspecting-
-         * storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+         * Gets the latest state of a long-running DlpJob. See https://cloud.google.com/sensitive-data-
+         * protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-protection/docs
+         * /compute-risk-analysis to learn more.
          *
          * Create a request for the method "dlpJobs.get".
          *
@@ -15933,8 +17813,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dlpJobs/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running DlpJob. See https://cloud.google.com/dlp/docs
-           * /inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
+           * Gets the latest state of a long-running DlpJob. See https://cloud.google.com/sensitive-data-
+           * protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-protection/docs
+           * /compute-risk-analysis to learn more.
            *
            * Create a request for the method "dlpJobs.get".
            *
@@ -16190,9 +18071,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists DlpJobs that match the specified filter in the request. See
-         * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-         * /compute-risk-analysis to learn more.
+         * Lists DlpJobs that match the specified filter in the request. See https://cloud.google.com
+         * /sensitive-data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+         * protection/docs/compute-risk-analysis to learn more.
          *
          * Create a request for the method "dlpJobs.list".
          *
@@ -16200,12 +18081,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -16222,9 +18104,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists DlpJobs that match the specified filter in the request. See
-           * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-           * /compute-risk-analysis to learn more.
+           * Lists DlpJobs that match the specified filter in the request. See https://cloud.google.com
+           * /sensitive-data-protection/docs/inspecting-storage and https://cloud.google.com/sensitive-data-
+           * protection/docs/compute-risk-analysis to learn more.
            *
            * Create a request for the method "dlpJobs.list".
            *
@@ -16234,12 +18116,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -16319,8 +18202,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -16331,11 +18214,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on whether you have
-         [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
-         Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
-         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
-         west3` location for processing data: parent=projects/example-project/locations/europe-west3
+         [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         /specifying-location): + Projects scope, location specified:
+         `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to
+         global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project
+         with the identifier `example-project`, and specifies the `europe-west3` location for processing
+         data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -16343,8 +18227,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -16548,10 +18432,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Redacts potentially sensitive info from an image. This method has limits on input size,
-         * processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-data-
-         * images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request, the
-         * system will automatically choose what detectors to run. By default this may be all types, but may
-         * change over time as detectors are updated.
+         * processing time, and output size. See https://cloud.google.com/sensitive-data-protection/docs
+         * /redacting-sensitive-data-images to learn more. When no InfoTypes or CustomInfoTypes are
+         * specified in this request, the system will automatically choose what detectors to run. By default
+         * this may be all types, but may change over time as detectors are updated.
          *
          * Create a request for the method "image.redact".
          *
@@ -16559,12 +18443,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Redact#execute()} method to invoke the remote operation.
          *
          * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
-         *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-         *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+         *        location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
          * @return the request
          */
@@ -16583,10 +18468,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Redacts potentially sensitive info from an image. This method has limits on input size,
-           * processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-
-           * data-images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request,
-           * the system will automatically choose what detectors to run. By default this may be all types,
-           * but may change over time as detectors are updated.
+           * processing time, and output size. See https://cloud.google.com/sensitive-data-protection/docs
+           * /redacting-sensitive-data-images to learn more. When no InfoTypes or CustomInfoTypes are
+           * specified in this request, the system will automatically choose what detectors to run. By
+           * default this may be all types, but may change over time as detectors are updated.
            *
            * Create a request for the method "image.redact".
            *
@@ -16596,12 +18481,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
-         *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-         *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+         *        location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
            * @since 1.13
            */
@@ -16672,8 +18558,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Parent resource name. The format of this value varies depending on whether you have
-           * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-           * location): + Projects scope, location specified:
+           * [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -16684,11 +18570,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           private java.lang.String parent;
 
           /** Parent resource name. The format of this value varies depending on whether you have [specified a
-         processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
-         specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string
-         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
-         location for processing data: parent=projects/example-project/locations/europe-west3
+         processing location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+         + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects
+         scope, no location specified (defaults to global): `projects/`PROJECT_ID The following example
+         `parent` string specifies a parent project with the identifier `example-project`, and specifies the
+         `europe-west3` location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -16696,8 +18582,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Parent resource name. The format of this value varies depending on whether you have
-           * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
-           * location): + Projects scope, location specified:
+           * [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -16743,7 +18629,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Creates an InspectTemplate for reusing frequently used configuration for inspecting content,
-         * images, and storage. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+         * images, and storage. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.create".
          *
@@ -16752,14 +18639,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @return the request
          */
@@ -16778,7 +18665,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Creates an InspectTemplate for reusing frequently used configuration for inspecting content,
-           * images, and storage. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+           * images, and storage. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * templates to learn more.
            *
            * Create a request for the method "inspectTemplates.create".
            *
@@ -16789,14 +18677,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
            * @since 1.13
            */
@@ -16868,27 +18756,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on the scope of the
          request (project or organization) and whether you have [specified a processing
-         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-         processing data: parent=projects/example-project/locations/europe-west3
+         location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+         scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+         specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+         specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+         location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -16897,14 +18785,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -16922,8 +18810,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Deletes an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-         * more.
+         * Deletes an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.delete".
          *
@@ -16949,8 +18837,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/inspectTemplates/[^/]+$");
 
           /**
-           * Deletes an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-           * more.
+           * Deletes an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates to learn more.
            *
            * Create a request for the method "inspectTemplates.delete".
            *
@@ -17066,7 +18954,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+         * Gets an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.get".
          *
@@ -17092,8 +18981,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/inspectTemplates/[^/]+$");
 
           /**
-           * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-           * more.
+           * Gets an InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * templates to learn more.
            *
            * Create a request for the method "inspectTemplates.get".
            *
@@ -17219,7 +19108,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+         * Lists InspectTemplates. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * templates to learn more.
          *
          * Create a request for the method "inspectTemplates.list".
          *
@@ -17228,14 +19118,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -17252,7 +19142,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+           * Lists InspectTemplates. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * templates to learn more.
            *
            * Create a request for the method "inspectTemplates.list".
            *
@@ -17263,14 +19154,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -17351,27 +19242,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on the scope of the
          request (project or organization) and whether you have [specified a processing
-         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-         processing data: parent=projects/example-project/locations/europe-west3
+         location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+         scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+         specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+         specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+         location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -17380,14 +19271,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -17503,8 +19394,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Updates the InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-         * more.
+         * Updates the InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-templates to learn more.
          *
          * Create a request for the method "inspectTemplates.patch".
          *
@@ -17531,8 +19422,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/inspectTemplates/[^/]+$");
 
           /**
-           * Updates the InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn
-           * more.
+           * Updates the InspectTemplate. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-templates to learn more.
            *
            * Create a request for the method "inspectTemplates.patch".
            *
@@ -17814,7 +19705,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
         /**
          * Creates a job trigger to run DLP actions such as scanning storage for sensitive information on a
-         * set schedule. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+         * set schedule. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-triggers
+         * to learn more.
          *
          * Create a request for the method "jobTriggers.create".
          *
@@ -17822,12 +19714,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
          * @return the request
          */
@@ -17846,7 +19739,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Creates a job trigger to run DLP actions such as scanning storage for sensitive information on
-           * a set schedule. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+           * a set schedule. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+           * triggers to learn more.
            *
            * Create a request for the method "jobTriggers.create".
            *
@@ -17856,12 +19750,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
            * @since 1.13
            */
@@ -17932,8 +19827,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -17944,11 +19839,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on whether you have
-         [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
-         Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
-         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
-         west3` location for processing data: parent=projects/example-project/locations/europe-west3
+         [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         /specifying-location): + Projects scope, location specified:
+         `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to
+         global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project
+         with the identifier `example-project`, and specifies the `europe-west3` location for processing
+         data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -17956,8 +19852,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -17980,7 +19876,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Deletes a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+         * Deletes a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+         * triggers to learn more.
          *
          * Create a request for the method "jobTriggers.delete".
          *
@@ -18005,8 +19902,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobTriggers/[^/]+$");
 
           /**
-           * Deletes a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn
-           * more.
+           * Deletes a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * job-triggers to learn more.
            *
            * Create a request for the method "jobTriggers.delete".
            *
@@ -18118,7 +20015,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+         * Gets a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+         * triggers to learn more.
          *
          * Create a request for the method "jobTriggers.get".
          *
@@ -18143,7 +20041,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobTriggers/[^/]+$");
 
           /**
-           * Gets a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+           * Gets a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+           * triggers to learn more.
            *
            * Create a request for the method "jobTriggers.get".
            *
@@ -18407,7 +20306,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists job triggers. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+         * Lists job triggers. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+         * triggers to learn more.
          *
          * Create a request for the method "jobTriggers.list".
          *
@@ -18415,12 +20315,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -18437,7 +20338,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists job triggers. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+           * Lists job triggers. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+           * triggers to learn more.
            *
            * Create a request for the method "jobTriggers.list".
            *
@@ -18447,12 +20349,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
-         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
-         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
-         *        following example `parent` string specifies a parent project with the identifier `example-
-         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
-         *        /example-project/locations/europe-west3
+         *        [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         *        /specifying-location): + Projects scope, location specified:
+         *        `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         *        (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         *        specifies a parent project with the identifier `example-project`, and specifies the
+         *        `europe-west3` location for processing data: parent=projects/example-project/locations
+         *        /europe-west3
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -18532,8 +20435,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -18544,11 +20447,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on whether you have
-         [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
-         Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
-         no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
-         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
-         west3` location for processing data: parent=projects/example-project/locations/europe-west3
+         [specified a processing location](https://cloud.google.com/sensitive-data-protection/docs
+         /specifying-location): + Projects scope, location specified:
+         `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to
+         global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project
+         with the identifier `example-project`, and specifies the `europe-west3` location for processing
+         data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -18556,8 +20460,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on whether
-           * you have [specified a processing location](https://cloud.google.com/dlp/docs
-           * /specifying-location): + Projects scope, location specified:
+           * you have [specified a processing location](https://cloud.google.com/sensitive-data-
+           * protection/docs/specifying-location): + Projects scope, location specified:
            * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
            * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
            * specifies a parent project with the identifier `example-project`, and specifies the
@@ -18745,7 +20649,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Updates a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
+         * Updates a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-job-
+         * triggers to learn more.
          *
          * Create a request for the method "jobTriggers.patch".
          *
@@ -18771,8 +20676,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobTriggers/[^/]+$");
 
           /**
-           * Updates a job trigger. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn
-           * more.
+           * Updates a job trigger. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * job-triggers to learn more.
            *
            * Create a request for the method "jobTriggers.patch".
            *
@@ -18887,6 +20792,434 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       }
       /**
+       * An accessor for creating requests from the ProjectDataProfiles collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DLP dlp = new DLP(...);}
+       *   {@code DLP.ProjectDataProfiles.List request = dlp.projectDataProfiles().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ProjectDataProfiles projectDataProfiles() {
+        return new ProjectDataProfiles();
+      }
+
+      /**
+       * The "projectDataProfiles" collection of methods.
+       */
+      public class ProjectDataProfiles {
+
+        /**
+         * Gets a project data profile.
+         *
+         * Create a request for the method "projectDataProfiles.get".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name, for example
+         *        `organizations/12345/locations/us/projectDataProfiles/53234423`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ProjectDataProfile> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/projectDataProfiles/[^/]+$");
+
+          /**
+           * Gets a project data profile.
+           *
+           * Create a request for the method "projectDataProfiles.get".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name, for example
+         *        `organizations/12345/locations/us/projectDataProfiles/53234423`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ProjectDataProfile.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/projectDataProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/projectDataProfiles/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name, for example
+         `organizations/12345/locations/us/projectDataProfiles/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/projectDataProfiles/53234423`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/projectDataProfiles/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists data profiles for an organization.
+         *
+         * Create a request for the method "projectDataProfiles.list".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. organizations/{org_id}/locations/{loc_id}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListProjectDataProfilesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/projectDataProfiles";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists data profiles for an organization.
+           *
+           * Create a request for the method "projectDataProfiles.list".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. organizations/{org_id}/locations/{loc_id}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListProjectDataProfilesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. organizations/{org_id}/locations/{loc_id} */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. organizations/{org_id}/locations/{loc_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. organizations/{org_id}/locations/{loc_id} */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values: - `sensitivity_level` -
+           * HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW - `status_code` - an RPC
+           * status code as defined in
+           * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
+           * project_id = 12345 AND sensitivity_level = HIGH The length of this field should be no
+           * more than 500 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+         Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+         implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         fields/values: - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW -
+         `status_code` - an RPC status code as defined in
+         https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The operator must be
+         `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345 AND
+         sensitivity_level = HIGH The length of this field should be no more than 500 characters.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values: - `sensitivity_level` -
+           * HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW - `status_code` - an RPC
+           * status code as defined in
+           * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
+           * project_id = 12345 AND sensitivity_level = HIGH The length of this field should be no
+           * more than 500 characters.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case insensitive. The default sorting order is ascending. Redundant space
+           * characters are insignificant. Only one order field at a time is allowed. Examples: *
+           * `project_id` * `sensitivity_level desc` Supported fields are: - `project_id`: GCP
+           * project ID - `sensitivity_level`: How sensitive the data in a project is, at most. -
+           * `data_risk_level`: How much risk is associated with this data. -
+           * `profile_last_generated`: When the profile was last updated in epoch seconds.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case
+         insensitive. The default sorting order is ascending. Redundant space characters are insignificant.
+         Only one order field at a time is allowed. Examples: * `project_id` * `sensitivity_level desc`
+         Supported fields are: - `project_id`: GCP project ID - `sensitivity_level`: How sensitive the data
+         in a project is, at most. - `data_risk_level`: How much risk is associated with this data. -
+         `profile_last_generated`: When the profile was last updated in epoch seconds.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case insensitive. The default sorting order is ascending. Redundant space
+           * characters are insignificant. Only one order field at a time is allowed. Examples: *
+           * `project_id` * `sensitivity_level desc` Supported fields are: - `project_id`: GCP
+           * project ID - `sensitivity_level`: How sensitive the data in a project is, at most. -
+           * `data_risk_level`: How much risk is associated with this data. -
+           * `profile_last_generated`: When the profile was last updated in epoch seconds.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Size of the page. This value can be limited by the server. If zero, server returns a
+           * page of max size 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Size of the page. This value can be limited by the server. If zero, server returns a page of max
+         size 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Size of the page. This value can be limited by the server. If zero, server returns a
+           * page of max size 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Page token to continue retrieval. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Page token to continue retrieval.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Page token to continue retrieval. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the StoredInfoTypes collection.
        *
        * <p>The typical use is:</p>
@@ -18907,8 +21240,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       public class StoredInfoTypes {
 
         /**
-         * Creates a pre-built stored infoType to be used for inspection. See
-         * https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
+         * Creates a pre-built stored infoType to be used for inspection. See https://cloud.google.com
+         * /sensitive-data-protection/docs/creating-stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.create".
          *
@@ -18917,14 +21250,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @return the request
          */
@@ -18942,8 +21275,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a pre-built stored infoType to be used for inspection. See
-           * https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
+           * Creates a pre-built stored infoType to be used for inspection. See https://cloud.google.com
+           * /sensitive-data-protection/docs/creating-stored-infotypes to learn more.
            *
            * Create a request for the method "storedInfoTypes.create".
            *
@@ -18954,14 +21287,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         *        The following example `parent` string specifies a parent project with the identifier
+         *        `example-project`, and specifies the `europe-west3` location for processing data:
+         *        parent=projects/example-project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
            * @since 1.13
            */
@@ -19033,27 +21366,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on the scope of the
          request (project or organization) and whether you have [specified a processing
-         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-         processing data: parent=projects/example-project/locations/europe-west3
+         location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+         scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+         specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+         specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+         location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -19062,14 +21395,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
-           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
-           * example `parent` string specifies a parent project with the identifier `example-
-           * project`, and specifies the `europe-west3` location for processing data:
-           * parent=projects/example-project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+           * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID
+           * + Organizations scope, no location specified (defaults to global):
+           * `organizations/`ORG_ID The following example `parent` string specifies a parent project
+           * with the identifier `example-project`, and specifies the `europe-west3` location for
+           * processing data: parent=projects/example-project/locations/europe-west3
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -19087,8 +21420,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Deletes a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-         * learn more.
+         * Deletes a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.delete".
          *
@@ -19114,8 +21447,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storedInfoTypes/[^/]+$");
 
           /**
-           * Deletes a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-           * learn more.
+           * Deletes a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs
+           * /creating-stored-infotypes to learn more.
            *
            * Create a request for the method "storedInfoTypes.delete".
            *
@@ -19231,8 +21564,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn
-         * more.
+         * Gets a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.get".
          *
@@ -19258,8 +21591,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storedInfoTypes/[^/]+$");
 
           /**
-           * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-           * learn more.
+           * Gets a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * stored-infotypes to learn more.
            *
            * Create a request for the method "storedInfoTypes.get".
            *
@@ -19385,8 +21718,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn
-         * more.
+         * Lists stored infoTypes. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.list".
          *
@@ -19395,12 +21728,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -19417,8 +21750,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-           * learn more.
+           * Lists stored infoTypes. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+           * stored-infotypes to learn more.
            *
            * Create a request for the method "storedInfoTypes.list".
            *
@@ -19429,12 +21762,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
          *        request (project or organization) and whether you have [specified a processing
-         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         *        location specified (defaults to global): `projects/`PROJECT_ID The following example
-         *        `parent` string specifies a parent project with the identifier `example-project`, and
-         *        specifies the `europe-west3` location for processing data: parent=projects/example-
-         *        project/locations/europe-west3
+         *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -19515,23 +21848,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID The following example
-           * `parent` string specifies a parent project with the identifier `example-project`, and
-           * specifies the `europe-west3` location for processing data: parent=projects/example-
-           * project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+           * following example `parent` string specifies a parent project with the identifier
+           * `example-project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on the scope of the
          request (project or organization) and whether you have [specified a processing
-         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-         (defaults to global): `projects/`PROJECT_ID The following example `parent` string specifies a
-         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-         processing data: parent=projects/example-project/locations/europe-west3
+         location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+         scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+         west3` location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
@@ -19540,12 +21873,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
            * of the request (project or organization) and whether you have [specified a processing
-           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-           * location specified (defaults to global): `projects/`PROJECT_ID The following example
-           * `parent` string specifies a parent project with the identifier `example-project`, and
-           * specifies the `europe-west3` location for processing data: parent=projects/example-
-           * project/locations/europe-west3
+           * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location):
+           * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+           * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+           * following example `parent` string specifies a parent project with the identifier
+           * `example-project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -19662,8 +21995,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
         /**
          * Updates the stored infoType by creating a new version. The existing version will continue to be
-         * used until the new version is ready. See https://cloud.google.com/dlp/docs/creating-stored-
-         * infotypes to learn more.
+         * used until the new version is ready. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.patch".
          *
@@ -19691,8 +22024,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Updates the stored infoType by creating a new version. The existing version will continue to be
-           * used until the new version is ready. See https://cloud.google.com/dlp/docs/creating-stored-
-           * infotypes to learn more.
+           * used until the new version is ready. See https://cloud.google.com/sensitive-data-
+           * protection/docs/creating-stored-infotypes to learn more.
            *
            * Create a request for the method "storedInfoTypes.patch".
            *
@@ -19810,6 +22143,460 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
       }
+      /**
+       * An accessor for creating requests from the TableDataProfiles collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DLP dlp = new DLP(...);}
+       *   {@code DLP.TableDataProfiles.List request = dlp.tableDataProfiles().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public TableDataProfiles tableDataProfiles() {
+        return new TableDataProfiles();
+      }
+
+      /**
+       * The "tableDataProfiles" collection of methods.
+       */
+      public class TableDataProfiles {
+
+        /**
+         * Gets a table data profile.
+         *
+         * Create a request for the method "tableDataProfiles.get".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name, for example `organizations/12345/locations/us/tableDataProfiles/53234423`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2TableDataProfile> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/tableDataProfiles/[^/]+$");
+
+          /**
+           * Gets a table data profile.
+           *
+           * Create a request for the method "tableDataProfiles.get".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name, for example `organizations/12345/locations/us/tableDataProfiles/53234423`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2TableDataProfile.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/tableDataProfiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/tableDataProfiles/53234423`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name, for example `organizations/12345/locations/us/tableDataProfiles/53234423`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name, for example
+           * `organizations/12345/locations/us/tableDataProfiles/53234423`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/tableDataProfiles/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists data profiles for an organization.
+         *
+         * Create a request for the method "tableDataProfiles.list".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListTableDataProfilesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/tableDataProfiles";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists data profiles for an organization.
+           *
+           * Create a request for the method "tableDataProfiles.list".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the organization or project, for example
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListTableDataProfilesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the organization or project, for example
+         `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of the organization or project, for example
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The GCP
+           * project ID. - `dataset_id` - The BigQuery dataset ID. - `table_id` - The ID of the
+           * BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
+           * HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC
+           * status code as defined in
+           * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
+           * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND
+           * resource_visibility = PUBLIC The length of this field should be no more than 500
+           * characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+         Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+         implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         fields/values: - `project_id` - The GCP project ID. - `dataset_id` - The BigQuery dataset ID. -
+         `table_id` - The ID of the BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW -
+         `data_risk_level` - HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` -
+         an RPC status code as defined in
+         https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The operator must be
+         `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345 AND
+         sensitivity_level = HIGH * project_id = 12345 AND resource_visibility = PUBLIC The length of this
+         field should be no more than 500 characters.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The GCP
+           * project ID. - `dataset_id` - The BigQuery dataset ID. - `table_id` - The ID of the
+           * BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
+           * HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC
+           * status code as defined in
+           * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
+           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
+           * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND
+           * resource_visibility = PUBLIC The length of this field should be no more than 500
+           * characters.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case insensitive. The default sorting order is ascending. Redundant space
+           * characters are insignificant. Only one order field at a time is allowed. Examples: *
+           * `project_id asc` * `table_id` * `sensitivity_level desc` Supported fields are: -
+           * `project_id`: The GCP project ID. - `dataset_id`: The ID of a BigQuery dataset. -
+           * `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive the data
+           * in a table is, at most. - `data_risk_level`: How much risk is associated with this
+           * data. - `profile_last_generated`: When the profile was last updated in epoch seconds. -
+           * `last_modified`: The last time the resource was modified. - `resource_visibility`:
+           * Visibility restriction for this resource. - `row_count`: Number of rows in this
+           * resource.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case
+         insensitive. The default sorting order is ascending. Redundant space characters are insignificant.
+         Only one order field at a time is allowed. Examples: * `project_id asc` * `table_id` *
+         `sensitivity_level desc` Supported fields are: - `project_id`: The GCP project ID. - `dataset_id`:
+         The ID of a BigQuery dataset. - `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How
+         sensitive the data in a table is, at most. - `data_risk_level`: How much risk is associated with
+         this data. - `profile_last_generated`: When the profile was last updated in epoch seconds. -
+         `last_modified`: The last time the resource was modified. - `resource_visibility`: Visibility
+         restriction for this resource. - `row_count`: Number of rows in this resource.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
+           * list is case insensitive. The default sorting order is ascending. Redundant space
+           * characters are insignificant. Only one order field at a time is allowed. Examples: *
+           * `project_id asc` * `table_id` * `sensitivity_level desc` Supported fields are: -
+           * `project_id`: The GCP project ID. - `dataset_id`: The ID of a BigQuery dataset. -
+           * `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive the data
+           * in a table is, at most. - `data_risk_level`: How much risk is associated with this
+           * data. - `profile_last_generated`: When the profile was last updated in epoch seconds. -
+           * `last_modified`: The last time the resource was modified. - `resource_visibility`:
+           * Visibility restriction for this resource. - `row_count`: Number of rows in this
+           * resource.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Size of the page. This value can be limited by the server. If zero, server returns a
+           * page of max size 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Size of the page. This value can be limited by the server. If zero, server returns a page of max
+         size 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Size of the page. This value can be limited by the server. If zero, server returns a
+           * page of max size 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Page token to continue retrieval. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Page token to continue retrieval.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Page token to continue retrieval. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the StoredInfoTypes collection.
@@ -19832,8 +22619,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
     public class StoredInfoTypes {
 
       /**
-       * Creates a pre-built stored infoType to be used for inspection. See
-       * https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
+       * Creates a pre-built stored infoType to be used for inspection. See https://cloud.google.com
+       * /sensitive-data-protection/docs/creating-stored-infotypes to learn more.
        *
        * Create a request for the method "storedInfoTypes.create".
        *
@@ -19842,14 +22629,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
        * @return the request
        */
@@ -19867,8 +22654,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a pre-built stored infoType to be used for inspection. See
-         * https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
+         * Creates a pre-built stored infoType to be used for inspection. See https://cloud.google.com
+         * /sensitive-data-protection/docs/creating-stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.create".
          *
@@ -19879,14 +22666,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+       *        Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+       *        Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+       *        The following example `parent` string specifies a parent project with the identifier
+       *        `example-project`, and specifies the `europe-west3` location for processing data:
+       *        parent=projects/example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @since 1.13
          */
@@ -19958,27 +22745,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on the scope of the
        request (project or organization) and whether you have [specified a processing
-       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
-       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
-       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
-       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-       processing data: parent=projects/example-project/locations/europe-west3
+       location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+       scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location
+       specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location
+       specified (defaults to global): `organizations/`ORG_ID The following example `parent` string
+       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+       location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -19987,14 +22774,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
-         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
-         * no location specified (defaults to global): `organizations/`ORG_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID +
+         * Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+         * Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID
+         * The following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -20012,8 +22799,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Deletes a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-       * learn more.
+       * Deletes a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * stored-infotypes to learn more.
        *
        * Create a request for the method "storedInfoTypes.delete".
        *
@@ -20039,8 +22826,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/storedInfoTypes/[^/]+$");
 
         /**
-         * Deletes a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-         * learn more.
+         * Deletes a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs
+         * /creating-stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.delete".
          *
@@ -20156,8 +22943,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn
-       * more.
+       * Gets a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * stored-infotypes to learn more.
        *
        * Create a request for the method "storedInfoTypes.get".
        *
@@ -20183,8 +22970,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/storedInfoTypes/[^/]+$");
 
         /**
-         * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-         * learn more.
+         * Gets a stored infoType. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.get".
          *
@@ -20310,8 +23097,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn
-       * more.
+       * Lists stored infoTypes. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+       * stored-infotypes to learn more.
        *
        * Create a request for the method "storedInfoTypes.list".
        *
@@ -20320,12 +23107,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -20342,8 +23129,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-         * learn more.
+         * Lists stored infoTypes. See https://cloud.google.com/sensitive-data-protection/docs/creating-
+         * stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.list".
          *
@@ -20354,12 +23141,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
        *        request (project or organization) and whether you have [specified a processing
-       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-       *        location specified (defaults to global): `projects/`PROJECT_ID The following example
-       *        `parent` string specifies a parent project with the identifier `example-project`, and
-       *        specifies the `europe-west3` location for processing data: parent=projects/example-
-       *        project/locations/europe-west3
+       *        location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+       *        Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -20440,23 +23227,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         * following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Parent resource name. The format of this value varies depending on the scope of the
        request (project or organization) and whether you have [specified a processing
-       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
-       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
-       (defaults to global): `projects/`PROJECT_ID The following example `parent` string specifies a
-       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
-       processing data: parent=projects/example-project/locations/europe-west3
+       location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): + Projects
+       scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+       string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+       west3` location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
@@ -20465,12 +23252,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Required. Parent resource name. The format of this value varies depending on the scope of
          * the request (project or organization) and whether you have [specified a processing
-         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
-         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
-         * location specified (defaults to global): `projects/`PROJECT_ID The following example
-         * `parent` string specifies a parent project with the identifier `example-project`, and
-         * specifies the `europe-west3` location for processing data: parent=projects/example-
-         * project/locations/europe-west3
+         * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-location): +
+         * Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         * following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -20583,8 +23370,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       }
       /**
        * Updates the stored infoType by creating a new version. The existing version will continue to be
-       * used until the new version is ready. See https://cloud.google.com/dlp/docs/creating-stored-
-       * infotypes to learn more.
+       * used until the new version is ready. See https://cloud.google.com/sensitive-data-protection/docs
+       * /creating-stored-infotypes to learn more.
        *
        * Create a request for the method "storedInfoTypes.patch".
        *
@@ -20612,8 +23399,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Updates the stored infoType by creating a new version. The existing version will continue to be
-         * used until the new version is ready. See https://cloud.google.com/dlp/docs/creating-stored-
-         * infotypes to learn more.
+         * used until the new version is ready. See https://cloud.google.com/sensitive-data-
+         * protection/docs/creating-stored-infotypes to learn more.
          *
          * Create a request for the method "storedInfoTypes.patch".
          *

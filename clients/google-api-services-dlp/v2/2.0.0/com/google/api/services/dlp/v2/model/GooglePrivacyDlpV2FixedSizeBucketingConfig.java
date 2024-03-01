@@ -24,7 +24,8 @@ package com.google.api.services.dlp.v2.model;
  * that are within this bucket will be replaced with "10-20". This can be used on data of type:
  * double, long. If the bound Value type differs from the type of data being transformed, we will
  * first attempt converting the type of the data to be transformed to match the type of the bound
- * before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more.
+ * before comparing. See https://cloud.google.com/sensitive-data-protection/docs/concepts-bucketing
+ * to learn more.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

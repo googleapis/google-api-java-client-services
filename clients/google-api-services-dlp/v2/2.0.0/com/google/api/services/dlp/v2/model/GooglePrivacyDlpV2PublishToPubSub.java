@@ -19,8 +19,8 @@ package com.google.api.services.dlp.v2.model;
 /**
  * Publish a message into a given Pub/Sub topic when DlpJob has completed. The message contains a
  * single field, `DlpJobName`, which is equal to the finished job's
- * [`DlpJob.name`](https://cloud.google.com/dlp/docs/reference/rest/v2/projects.dlpJobs#DlpJob).
- * Compatible with: Inspect, Risk
+ * [`DlpJob.name`](https://cloud.google.com/sensitive-data-
+ * protection/docs/reference/rest/v2/projects.dlpJobs#DlpJob). Compatible with: Inspect, Risk
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

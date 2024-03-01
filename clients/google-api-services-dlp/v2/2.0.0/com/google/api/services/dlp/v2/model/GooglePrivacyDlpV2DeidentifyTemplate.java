@@ -18,7 +18,7 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * DeidentifyTemplates contains instructions on how to de-identify content. See
- * https://cloud.google.com/dlp/docs/concepts-templates to learn more.
+ * https://cloud.google.com/sensitive-data-protection/docs/concepts-templates to learn more.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

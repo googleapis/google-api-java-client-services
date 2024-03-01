@@ -31,16 +31,16 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2CloudStoragePath extends com.google.api.client.json.GenericJson {
 
   /**
-   * A url representing a file or path (no wildcards) in Cloud Storage. Example:
-   * gs://[BUCKET_NAME]/dictionary.txt
+   * A URL representing a file or path (no wildcards) in Cloud Storage. Example:
+   * `gs://[BUCKET_NAME]/dictionary.txt`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * A url representing a file or path (no wildcards) in Cloud Storage. Example:
-   * gs://[BUCKET_NAME]/dictionary.txt
+   * A URL representing a file or path (no wildcards) in Cloud Storage. Example:
+   * `gs://[BUCKET_NAME]/dictionary.txt`
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -48,8 +48,8 @@ public final class GooglePrivacyDlpV2CloudStoragePath extends com.google.api.cli
   }
 
   /**
-   * A url representing a file or path (no wildcards) in Cloud Storage. Example:
-   * gs://[BUCKET_NAME]/dictionary.txt
+   * A URL representing a file or path (no wildcards) in Cloud Storage. Example:
+   * `gs://[BUCKET_NAME]/dictionary.txt`
    * @param path path or {@code null} for none
    */
   public GooglePrivacyDlpV2CloudStoragePath setPath(java.lang.String path) {

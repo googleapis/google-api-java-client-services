@@ -17,8 +17,8 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * A task to execute on the completion of a job. See https://cloud.google.com/dlp/docs/concepts-
- * actions to learn more.
+ * A task to execute on the completion of a job. See https://cloud.google.com/sensitive-data-
+ * protection/docs/concepts-actions to learn more.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

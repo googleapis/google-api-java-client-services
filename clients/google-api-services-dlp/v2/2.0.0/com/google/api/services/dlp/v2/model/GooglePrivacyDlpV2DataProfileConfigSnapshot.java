@@ -56,6 +56,20 @@ public final class GooglePrivacyDlpV2DataProfileConfigSnapshot extends com.googl
   private GooglePrivacyDlpV2InspectConfig inspectConfig;
 
   /**
+   * Timestamp when the template was modified
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String inspectTemplateModifiedTime;
+
+  /**
+   * Name of the inspection template used to generate this profile
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String inspectTemplateName;
+
+  /**
    * A copy of the configuration used to generate this profile. This is deprecated, and the
    * DiscoveryConfig field is preferred moving forward. DataProfileJobConfig will still be written
    * here for Discovery in BigQuery for backwards compatibility, but will not be updated with new
@@ -111,6 +125,40 @@ public final class GooglePrivacyDlpV2DataProfileConfigSnapshot extends com.googl
    */
   public GooglePrivacyDlpV2DataProfileConfigSnapshot setInspectConfig(GooglePrivacyDlpV2InspectConfig inspectConfig) {
     this.inspectConfig = inspectConfig;
+    return this;
+  }
+
+  /**
+   * Timestamp when the template was modified
+   * @return value or {@code null} for none
+   */
+  public String getInspectTemplateModifiedTime() {
+    return inspectTemplateModifiedTime;
+  }
+
+  /**
+   * Timestamp when the template was modified
+   * @param inspectTemplateModifiedTime inspectTemplateModifiedTime or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DataProfileConfigSnapshot setInspectTemplateModifiedTime(String inspectTemplateModifiedTime) {
+    this.inspectTemplateModifiedTime = inspectTemplateModifiedTime;
+    return this;
+  }
+
+  /**
+   * Name of the inspection template used to generate this profile
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInspectTemplateName() {
+    return inspectTemplateName;
+  }
+
+  /**
+   * Name of the inspection template used to generate this profile
+   * @param inspectTemplateName inspectTemplateName or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DataProfileConfigSnapshot setInspectTemplateName(java.lang.String inspectTemplateName) {
+    this.inspectTemplateName = inspectTemplateName;
     return this;
   }
 

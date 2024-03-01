@@ -31,18 +31,16 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2ReplaceDictionaryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of words to select from for random replacement. The
-   * [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of
-   * dictionaries.
+   * A list of words to select from for random replacement. The [limits](https://cloud.google.com
+   * /sensitive-data-protection/limits) page contains details about the size limits of dictionaries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2WordList wordList;
 
   /**
-   * A list of words to select from for random replacement. The
-   * [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of
-   * dictionaries.
+   * A list of words to select from for random replacement. The [limits](https://cloud.google.com
+   * /sensitive-data-protection/limits) page contains details about the size limits of dictionaries.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2WordList getWordList() {
@@ -50,9 +48,8 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfig extends com.google.
   }
 
   /**
-   * A list of words to select from for random replacement. The
-   * [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of
-   * dictionaries.
+   * A list of words to select from for random replacement. The [limits](https://cloud.google.com
+   * /sensitive-data-protection/limits) page contains details about the size limits of dictionaries.
    * @param wordList wordList or {@code null} for none
    */
   public GooglePrivacyDlpV2ReplaceDictionaryConfig setWordList(GooglePrivacyDlpV2WordList wordList) {

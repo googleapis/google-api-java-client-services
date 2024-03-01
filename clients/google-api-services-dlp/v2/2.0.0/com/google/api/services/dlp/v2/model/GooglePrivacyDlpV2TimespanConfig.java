@@ -71,7 +71,8 @@ public final class GooglePrivacyDlpV2TimespanConfig extends com.google.api.clien
    * entities are filtered based on the given start and end times. If an entity does not contain the
    * provided timestamp property or contains empty or invalid values, then it is included. Valid
    * data types of the provided timestamp property are: `TIMESTAMP`. See the [known
-   * issue](https://cloud.google.com/dlp/docs/known-issues#bq-timespan) related to this operation.
+   * issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#bq-timespan)
+   * related to this operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +153,8 @@ public final class GooglePrivacyDlpV2TimespanConfig extends com.google.api.clien
    * entities are filtered based on the given start and end times. If an entity does not contain the
    * provided timestamp property or contains empty or invalid values, then it is included. Valid
    * data types of the provided timestamp property are: `TIMESTAMP`. See the [known
-   * issue](https://cloud.google.com/dlp/docs/known-issues#bq-timespan) related to this operation.
+   * issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#bq-timespan)
+   * related to this operation.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2FieldId getTimestampField() {
@@ -173,7 +175,8 @@ public final class GooglePrivacyDlpV2TimespanConfig extends com.google.api.clien
    * entities are filtered based on the given start and end times. If an entity does not contain the
    * provided timestamp property or contains empty or invalid values, then it is included. Valid
    * data types of the provided timestamp property are: `TIMESTAMP`. See the [known
-   * issue](https://cloud.google.com/dlp/docs/known-issues#bq-timespan) related to this operation.
+   * issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#bq-timespan)
+   * related to this operation.
    * @param timestampField timestampField or {@code null} for none
    */
   public GooglePrivacyDlpV2TimespanConfig setTimestampField(GooglePrivacyDlpV2FieldId timestampField) {

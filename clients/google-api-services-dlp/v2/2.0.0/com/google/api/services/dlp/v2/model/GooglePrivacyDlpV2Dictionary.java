@@ -29,9 +29,9 @@ package com.google.api.services.dlp.v2.model;
  * dictionary word "jen" will match the first three letters of the text "jen123" but will return no
  * matches for "jennifer". Dictionary words containing a large number of characters that are not
  * letters or digits may result in unexpected findings because such characters are treated as
- * whitespace. The [limits](https://cloud.google.com/dlp/limits) page contains details about the
- * size limits of dictionaries. For dictionaries that do not fit within these constraints, consider
- * using `LargeCustomDictionaryConfig` in the `StoredInfoType` API.
+ * whitespace. The [limits](https://cloud.google.com/sensitive-data-protection/limits) page contains
+ * details about the size limits of dictionaries. For dictionaries that do not fit within these
+ * constraints, consider using `LargeCustomDictionaryConfig` in the `StoredInfoType` API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

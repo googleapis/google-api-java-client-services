@@ -37,13 +37,6 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String appEngineIntegrationMode;
 
   /**
-   * Optional. Presence indicates CMEK is enabled for this database.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleFirestoreAdminV1CmekConfig cmekConfig;
-
-  /**
    * The concurrency control mode to use for this database.
    * The value may be {@code null}.
    */
@@ -163,23 +156,6 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   public GoogleFirestoreAdminV1Database setAppEngineIntegrationMode(java.lang.String appEngineIntegrationMode) {
     this.appEngineIntegrationMode = appEngineIntegrationMode;
-    return this;
-  }
-
-  /**
-   * Optional. Presence indicates CMEK is enabled for this database.
-   * @return value or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1CmekConfig getCmekConfig() {
-    return cmekConfig;
-  }
-
-  /**
-   * Optional. Presence indicates CMEK is enabled for this database.
-   * @param cmekConfig cmekConfig or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1Database setCmekConfig(GoogleFirestoreAdminV1CmekConfig cmekConfig) {
-    this.cmekConfig = cmekConfig;
     return this;
   }
 

@@ -38,8 +38,15 @@ public final class AbortInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String cause;
 
   /**
-   * List of project IDs that the user has specified in the request but does not have permission to
-   * access network configs. Analysis is aborted in this case with the PERMISSION_DENIED cause.
+   * IP address that caused the abort.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipAddress;
+
+  /**
+   * List of project IDs the user specified in the request but lacks access to. In this case,
+   * analysis is aborted with the PERMISSION_DENIED cause.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +77,25 @@ public final class AbortInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of project IDs that the user has specified in the request but does not have permission to
-   * access network configs. Analysis is aborted in this case with the PERMISSION_DENIED cause.
+   * IP address that caused the abort.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpAddress() {
+    return ipAddress;
+  }
+
+  /**
+   * IP address that caused the abort.
+   * @param ipAddress ipAddress or {@code null} for none
+   */
+  public AbortInfo setIpAddress(java.lang.String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * List of project IDs the user specified in the request but lacks access to. In this case,
+   * analysis is aborted with the PERMISSION_DENIED cause.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProjectsMissingPermission() {
@@ -79,8 +103,8 @@ public final class AbortInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of project IDs that the user has specified in the request but does not have permission to
-   * access network configs. Analysis is aborted in this case with the PERMISSION_DENIED cause.
+   * List of project IDs the user specified in the request but lacks access to. In this case,
+   * analysis is aborted with the PERMISSION_DENIED cause.
    * @param projectsMissingPermission projectsMissingPermission or {@code null} for none
    */
   public AbortInfo setProjectsMissingPermission(java.util.List<java.lang.String> projectsMissingPermission) {

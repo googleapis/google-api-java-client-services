@@ -31,6 +31,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
+   * Required for Callout extensions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,11 +40,11 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   /**
    * Optional. Determines how the proxy behaves if the call to the extension fails or times out.
    * When set to `TRUE`, request or response processing continues without error. Any subsequent
-   * extensions in the extension chain are also executed. When set to `FALSE`: * If response headers
-   * have not been delivered to the downstream client, a generic 500 error is returned to the
-   * client. The error response can be tailored by configuring a custom error response in the load
-   * balancer. * If response headers have been delivered, then the HTTP stream to the downstream
-   * client is reset. Default is `FALSE`.
+   * extensions in the extension chain are also executed. When set to `FALSE` or the default setting
+   * of `FALSE` is used, one of the following happens: * If response headers have not been delivered
+   * to the downstream client, a generic 500 error is returned to the client. The error response can
+   * be tailored by configuring a custom error response in the load balancer. * If response headers
+   * have been delivered, then the HTTP stream to the downstream client is reset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +69,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   private java.lang.String name;
 
   /**
-   * Required. The reference to the service that runs the extension. Currently only Callout
-   * extensions are supported here. To configure a Callout extension, `service` must be a fully-
+   * Required. The reference to the service that runs the extension. Currently only callout
+   * extensions are supported here. To configure a callout extension, `service` must be a fully-
    * qualified reference to a [backend
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
@@ -90,8 +91,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> supportedEvents;
 
   /**
-   * Required. Specifies the timeout for each individual message on the stream. The timeout must be
-   * between 10-1000 milliseconds.
+   * Optional. Specifies the timeout for each individual message on the stream. The timeout must be
+   * between 10-1000 milliseconds. Required for Callout extensions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,6 +100,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
+   * Required for Callout extensions.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthority() {
@@ -107,6 +109,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
+   * Required for Callout extensions.
    * @param authority authority or {@code null} for none
    */
   public ExtensionChainExtension setAuthority(java.lang.String authority) {
@@ -117,11 +120,11 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   /**
    * Optional. Determines how the proxy behaves if the call to the extension fails or times out.
    * When set to `TRUE`, request or response processing continues without error. Any subsequent
-   * extensions in the extension chain are also executed. When set to `FALSE`: * If response headers
-   * have not been delivered to the downstream client, a generic 500 error is returned to the
-   * client. The error response can be tailored by configuring a custom error response in the load
-   * balancer. * If response headers have been delivered, then the HTTP stream to the downstream
-   * client is reset. Default is `FALSE`.
+   * extensions in the extension chain are also executed. When set to `FALSE` or the default setting
+   * of `FALSE` is used, one of the following happens: * If response headers have not been delivered
+   * to the downstream client, a generic 500 error is returned to the client. The error response can
+   * be tailored by configuring a custom error response in the load balancer. * If response headers
+   * have been delivered, then the HTTP stream to the downstream client is reset.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFailOpen() {
@@ -131,11 +134,11 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   /**
    * Optional. Determines how the proxy behaves if the call to the extension fails or times out.
    * When set to `TRUE`, request or response processing continues without error. Any subsequent
-   * extensions in the extension chain are also executed. When set to `FALSE`: * If response headers
-   * have not been delivered to the downstream client, a generic 500 error is returned to the
-   * client. The error response can be tailored by configuring a custom error response in the load
-   * balancer. * If response headers have been delivered, then the HTTP stream to the downstream
-   * client is reset. Default is `FALSE`.
+   * extensions in the extension chain are also executed. When set to `FALSE` or the default setting
+   * of `FALSE` is used, one of the following happens: * If response headers have not been delivered
+   * to the downstream client, a generic 500 error is returned to the client. The error response can
+   * be tailored by configuring a custom error response in the load balancer. * If response headers
+   * have been delivered, then the HTTP stream to the downstream client is reset.
    * @param failOpen failOpen or {@code null} for none
    */
   public ExtensionChainExtension setFailOpen(java.lang.Boolean failOpen) {
@@ -186,8 +189,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The reference to the service that runs the extension. Currently only Callout
-   * extensions are supported here. To configure a Callout extension, `service` must be a fully-
+   * Required. The reference to the service that runs the extension. Currently only callout
+   * extensions are supported here. To configure a callout extension, `service` must be a fully-
    * qualified reference to a [backend
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
@@ -200,8 +203,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The reference to the service that runs the extension. Currently only Callout
-   * extensions are supported here. To configure a Callout extension, `service` must be a fully-
+   * Required. The reference to the service that runs the extension. Currently only callout
+   * extensions are supported here. To configure a callout extension, `service` must be a fully-
    * qualified reference to a [backend
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
@@ -236,8 +239,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. Specifies the timeout for each individual message on the stream. The timeout must be
-   * between 10-1000 milliseconds.
+   * Optional. Specifies the timeout for each individual message on the stream. The timeout must be
+   * between 10-1000 milliseconds. Required for Callout extensions.
    * @return value or {@code null} for none
    */
   public String getTimeout() {
@@ -245,8 +248,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. Specifies the timeout for each individual message on the stream. The timeout must be
-   * between 10-1000 milliseconds.
+   * Optional. Specifies the timeout for each individual message on the stream. The timeout must be
+   * between 10-1000 milliseconds. Required for Callout extensions.
    * @param timeout timeout or {@code null} for none
    */
   public ExtensionChainExtension setTimeout(String timeout) {

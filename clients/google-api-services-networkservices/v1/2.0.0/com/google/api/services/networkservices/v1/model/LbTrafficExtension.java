@@ -72,7 +72,8 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
 
   /**
    * Optional. Set of labels associated with the `LbTrafficExtension` resource. The format must
-   * comply with [the following requirements](/compute/docs/labeling-resources#requirements).
+   * comply with [the requirements for labels](/compute/docs/labeling-resources#requirements) for
+   * Google Cloud resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,7 +184,8 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
 
   /**
    * Optional. Set of labels associated with the `LbTrafficExtension` resource. The format must
-   * comply with [the following requirements](/compute/docs/labeling-resources#requirements).
+   * comply with [the requirements for labels](/compute/docs/labeling-resources#requirements) for
+   * Google Cloud resources.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -192,7 +194,8 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
 
   /**
    * Optional. Set of labels associated with the `LbTrafficExtension` resource. The format must
-   * comply with [the following requirements](/compute/docs/labeling-resources#requirements).
+   * comply with [the requirements for labels](/compute/docs/labeling-resources#requirements) for
+   * Google Cloud resources.
    * @param labels labels or {@code null} for none
    */
   public LbTrafficExtension setLabels(java.util.Map<String, java.lang.String> labels) {

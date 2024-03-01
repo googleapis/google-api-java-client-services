@@ -100,7 +100,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   /**
    * Text that appears in the text input field when the field is empty. Use this text to prompt
    * users to enter a value. For example, `Enter a number from 0 to 100`. [Google Chat
-   * apps](https://developers.google.com/chat):
+   * apps](https://developers.google.com/workspace/chat):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -268,7 +268,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   /**
    * Text that appears in the text input field when the field is empty. Use this text to prompt
    * users to enter a value. For example, `Enter a number from 0 to 100`. [Google Chat
-   * apps](https://developers.google.com/chat):
+   * apps](https://developers.google.com/workspace/chat):
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaceholderText() {
@@ -278,7 +278,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   /**
    * Text that appears in the text input field when the field is empty. Use this text to prompt
    * users to enter a value. For example, `Enter a number from 0 to 100`. [Google Chat
-   * apps](https://developers.google.com/chat):
+   * apps](https://developers.google.com/workspace/chat):
    * @param placeholderText placeholderText or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setPlaceholderText(java.lang.String placeholderText) {

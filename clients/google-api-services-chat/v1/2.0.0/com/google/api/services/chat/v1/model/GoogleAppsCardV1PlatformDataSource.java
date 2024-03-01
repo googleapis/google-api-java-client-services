@@ -19,7 +19,7 @@ package com.google.api.services.chat.v1.model;
 /**
  * For a `SelectionInput` widget that uses a multiselect menu, a data source from Google Workspace.
  * Used to populate items in a multiselect menu. [Google Chat
- * apps](https://developers.google.com/chat):
+ * apps](https://developers.google.com/workspace/chat):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

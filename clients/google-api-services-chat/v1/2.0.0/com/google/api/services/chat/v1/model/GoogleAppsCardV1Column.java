@@ -17,7 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A column. [Google Chat apps](https://developers.google.com/chat):
+ * A column. [Google Workspace Add-ons and Chat
+ * apps](https://developers.google.com/workspace/extend): Columns for Google Workspace Add-ons are
+ * in Developer Preview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -37,16 +39,14 @@ public final class GoogleAppsCardV1Column extends com.google.api.client.json.Gen
   private java.lang.String horizontalAlignment;
 
   /**
-   * Specifies how a column fills the width of the card. [Google Chat
-   * apps](https://developers.google.com/chat):
+   * Specifies how a column fills the width of the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String horizontalSizeStyle;
 
   /**
-   * Specifies whether widgets align to the top, bottom, or center of a column. [Google Chat
-   * apps](https://developers.google.com/chat):
+   * Specifies whether widgets align to the top, bottom, or center of a column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +77,7 @@ public final class GoogleAppsCardV1Column extends com.google.api.client.json.Gen
   }
 
   /**
-   * Specifies how a column fills the width of the card. [Google Chat
-   * apps](https://developers.google.com/chat):
+   * Specifies how a column fills the width of the card.
    * @return value or {@code null} for none
    */
   public java.lang.String getHorizontalSizeStyle() {
@@ -86,8 +85,7 @@ public final class GoogleAppsCardV1Column extends com.google.api.client.json.Gen
   }
 
   /**
-   * Specifies how a column fills the width of the card. [Google Chat
-   * apps](https://developers.google.com/chat):
+   * Specifies how a column fills the width of the card.
    * @param horizontalSizeStyle horizontalSizeStyle or {@code null} for none
    */
   public GoogleAppsCardV1Column setHorizontalSizeStyle(java.lang.String horizontalSizeStyle) {
@@ -96,8 +94,7 @@ public final class GoogleAppsCardV1Column extends com.google.api.client.json.Gen
   }
 
   /**
-   * Specifies whether widgets align to the top, bottom, or center of a column. [Google Chat
-   * apps](https://developers.google.com/chat):
+   * Specifies whether widgets align to the top, bottom, or center of a column.
    * @return value or {@code null} for none
    */
   public java.lang.String getVerticalAlignment() {
@@ -105,8 +102,7 @@ public final class GoogleAppsCardV1Column extends com.google.api.client.json.Gen
   }
 
   /**
-   * Specifies whether widgets align to the top, bottom, or center of a column. [Google Chat
-   * apps](https://developers.google.com/chat):
+   * Specifies whether widgets align to the top, bottom, or center of a column.
    * @param verticalAlignment verticalAlignment or {@code null} for none
    */
   public GoogleAppsCardV1Column setVerticalAlignment(java.lang.String verticalAlignment) {

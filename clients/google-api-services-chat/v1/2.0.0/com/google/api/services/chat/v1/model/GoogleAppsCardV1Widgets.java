@@ -17,8 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * The supported widgets that you can include in a column. [Google Chat
- * apps](https://developers.google.com/chat):
+ * The supported widgets that you can include in a column. [Google Workspace Add-ons and Chat
+ * apps](https://developers.google.com/workspace/extend): Columns for Google Workspace Add-ons are
+ * in Developer Preview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

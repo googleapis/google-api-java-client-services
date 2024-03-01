@@ -49,7 +49,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
    * interactive ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can open a
    * [dialog](https://developers.google.com/chat/how-tos/dialogs). When specified, a loading
    * indicator isn't shown. If specified for an add-on, the entire card is stripped and nothing is
-   * shown in the client. [Google Chat apps](https://developers.google.com/chat):
+   * shown in the client. [Google Chat apps](https://developers.google.com/workspace/chat):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
    * interactive ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can open a
    * [dialog](https://developers.google.com/chat/how-tos/dialogs). When specified, a loading
    * indicator isn't shown. If specified for an add-on, the entire card is stripped and nothing is
-   * shown in the client. [Google Chat apps](https://developers.google.com/chat):
+   * shown in the client. [Google Chat apps](https://developers.google.com/workspace/chat):
    * @return value or {@code null} for none
    */
   public java.lang.String getInteraction() {
@@ -131,7 +131,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
    * interactive ways. For example, by setting `interaction` to `OPEN_DIALOG`, the app can open a
    * [dialog](https://developers.google.com/chat/how-tos/dialogs). When specified, a loading
    * indicator isn't shown. If specified for an add-on, the entire card is stripped and nothing is
-   * shown in the client. [Google Chat apps](https://developers.google.com/chat):
+   * shown in the client. [Google Chat apps](https://developers.google.com/workspace/chat):
    * @param interaction interaction or {@code null} for none
    */
   public GoogleAppsCardV1Action setInteraction(java.lang.String interaction) {

@@ -74,7 +74,7 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
   /**
    * Output only. The service attachment created when Private Service Connect (PSC) is enabled for
    * the instance. The name of the resource will be in the format of
-   * projects//regions//serviceAttachments/
+   * `projects//regions//serviceAttachments/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +182,7 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
   /**
    * Output only. The service attachment created when Private Service Connect (PSC) is enabled for
    * the instance. The name of the resource will be in the format of
-   * projects//regions//serviceAttachments/
+   * `projects//regions//serviceAttachments/`
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAttachmentLink() {
@@ -192,7 +192,7 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
   /**
    * Output only. The service attachment created when Private Service Connect (PSC) is enabled for
    * the instance. The name of the resource will be in the format of
-   * projects//regions//serviceAttachments/
+   * `projects//regions//serviceAttachments/`
    * @param serviceAttachmentLink serviceAttachmentLink or {@code null} for none
    */
   public PscInstanceConfig setServiceAttachmentLink(java.lang.String serviceAttachmentLink) {

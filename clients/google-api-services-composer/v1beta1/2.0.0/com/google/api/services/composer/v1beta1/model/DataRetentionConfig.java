@@ -30,11 +30,65 @@ package com.google.api.services.composer.v1beta1.model;
 public final class DataRetentionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The number of days describing for how long to store event-based records in airflow
+   * database. If the retention mechanism is enabled this value must be a positive integer
+   * otherwise, value should be set to 0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer airflowDatabaseRetentionDays;
+
+  /**
+   * Optional. The retention policy for airflow metadata database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AirflowMetadataRetentionPolicyConfig airflowMetadataRetentionConfig;
+
+  /**
    * Optional. The configuration settings for task logs retention
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TaskLogsRetentionConfig taskLogsRetentionConfig;
+
+  /**
+   * Optional. The number of days describing for how long to store event-based records in airflow
+   * database. If the retention mechanism is enabled this value must be a positive integer
+   * otherwise, value should be set to 0.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAirflowDatabaseRetentionDays() {
+    return airflowDatabaseRetentionDays;
+  }
+
+  /**
+   * Optional. The number of days describing for how long to store event-based records in airflow
+   * database. If the retention mechanism is enabled this value must be a positive integer
+   * otherwise, value should be set to 0.
+   * @param airflowDatabaseRetentionDays airflowDatabaseRetentionDays or {@code null} for none
+   */
+  public DataRetentionConfig setAirflowDatabaseRetentionDays(java.lang.Integer airflowDatabaseRetentionDays) {
+    this.airflowDatabaseRetentionDays = airflowDatabaseRetentionDays;
+    return this;
+  }
+
+  /**
+   * Optional. The retention policy for airflow metadata database.
+   * @return value or {@code null} for none
+   */
+  public AirflowMetadataRetentionPolicyConfig getAirflowMetadataRetentionConfig() {
+    return airflowMetadataRetentionConfig;
+  }
+
+  /**
+   * Optional. The retention policy for airflow metadata database.
+   * @param airflowMetadataRetentionConfig airflowMetadataRetentionConfig or {@code null} for none
+   */
+  public DataRetentionConfig setAirflowMetadataRetentionConfig(AirflowMetadataRetentionPolicyConfig airflowMetadataRetentionConfig) {
+    this.airflowMetadataRetentionConfig = airflowMetadataRetentionConfig;
+    return this;
+  }
 
   /**
    * Optional. The configuration settings for task logs retention

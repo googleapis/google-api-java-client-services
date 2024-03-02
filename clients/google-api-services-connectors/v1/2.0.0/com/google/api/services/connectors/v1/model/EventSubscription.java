@@ -87,6 +87,19 @@ public final class EventSubscription extends com.google.api.client.json.GenericJ
   private java.lang.String subscriberLink;
 
   /**
+   * Optional. Configuration for configuring the trigger
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ConfigVariable> triggerConfigVariables;
+
+  static {
+    // hack to force ProGuard to consider ConfigVariable used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ConfigVariable.class);
+  }
+
+  /**
    * Output only. Updated time.
    * The value may be {@code null}.
    */
@@ -228,6 +241,23 @@ public final class EventSubscription extends com.google.api.client.json.GenericJ
    */
   public EventSubscription setSubscriberLink(java.lang.String subscriberLink) {
     this.subscriberLink = subscriberLink;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for configuring the trigger
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ConfigVariable> getTriggerConfigVariables() {
+    return triggerConfigVariables;
+  }
+
+  /**
+   * Optional. Configuration for configuring the trigger
+   * @param triggerConfigVariables triggerConfigVariables or {@code null} for none
+   */
+  public EventSubscription setTriggerConfigVariables(java.util.List<ConfigVariable> triggerConfigVariables) {
+    this.triggerConfigVariables = triggerConfigVariables;
     return this;
   }
 

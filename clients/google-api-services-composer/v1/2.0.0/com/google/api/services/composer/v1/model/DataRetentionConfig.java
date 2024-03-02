@@ -30,11 +30,38 @@ package com.google.api.services.composer.v1.model;
 public final class DataRetentionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The retention policy for airflow metadata database. Details: go/composer-database-
+   * retention-2
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AirflowMetadataRetentionPolicyConfig airflowMetadataRetentionConfig;
+
+  /**
    * Optional. The configuration settings for task logs retention
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TaskLogsRetentionConfig taskLogsRetentionConfig;
+
+  /**
+   * Optional. The retention policy for airflow metadata database. Details: go/composer-database-
+   * retention-2
+   * @return value or {@code null} for none
+   */
+  public AirflowMetadataRetentionPolicyConfig getAirflowMetadataRetentionConfig() {
+    return airflowMetadataRetentionConfig;
+  }
+
+  /**
+   * Optional. The retention policy for airflow metadata database. Details: go/composer-database-
+   * retention-2
+   * @param airflowMetadataRetentionConfig airflowMetadataRetentionConfig or {@code null} for none
+   */
+  public DataRetentionConfig setAirflowMetadataRetentionConfig(AirflowMetadataRetentionPolicyConfig airflowMetadataRetentionConfig) {
+    this.airflowMetadataRetentionConfig = airflowMetadataRetentionConfig;
+    return this;
+  }
 
   /**
    * Optional. The configuration settings for task logs retention

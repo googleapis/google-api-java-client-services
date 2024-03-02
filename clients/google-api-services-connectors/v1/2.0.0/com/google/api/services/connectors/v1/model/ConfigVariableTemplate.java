@@ -58,6 +58,13 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   private java.util.List<EnumOption> enumOptions;
 
   /**
+   * Optional. enum source denotes the source of api to fill the enum options
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String enumSource;
+
+  /**
    * Indicates if current template is part of advanced settings
    * The value may be {@code null}.
    */
@@ -187,6 +194,23 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
    */
   public ConfigVariableTemplate setEnumOptions(java.util.List<EnumOption> enumOptions) {
     this.enumOptions = enumOptions;
+    return this;
+  }
+
+  /**
+   * Optional. enum source denotes the source of api to fill the enum options
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnumSource() {
+    return enumSource;
+  }
+
+  /**
+   * Optional. enum source denotes the source of api to fill the enum options
+   * @param enumSource enumSource or {@code null} for none
+   */
+  public ConfigVariableTemplate setEnumSource(java.lang.String enumSource) {
+    this.enumSource = enumSource;
     return this;
   }
 

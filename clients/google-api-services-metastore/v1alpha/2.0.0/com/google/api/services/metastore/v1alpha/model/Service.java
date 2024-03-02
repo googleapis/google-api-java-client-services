@@ -150,6 +150,13 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private ScalingConfig scalingConfig;
 
   /**
+   * Optional. The configuration of scheduled backup for the metastore service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ScheduledBackup scheduledBackup;
+
+  /**
    * Output only. The current state of the metastore service.
    * The value may be {@code null}.
    */
@@ -476,6 +483,23 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setScalingConfig(ScalingConfig scalingConfig) {
     this.scalingConfig = scalingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration of scheduled backup for the metastore service.
+   * @return value or {@code null} for none
+   */
+  public ScheduledBackup getScheduledBackup() {
+    return scheduledBackup;
+  }
+
+  /**
+   * Optional. The configuration of scheduled backup for the metastore service.
+   * @param scheduledBackup scheduledBackup or {@code null} for none
+   */
+  public Service setScheduledBackup(ScheduledBackup scheduledBackup) {
+    this.scheduledBackup = scheduledBackup;
     return this;
   }
 

@@ -41,6 +41,15 @@ public final class RestoreServiceRequest extends com.google.api.client.json.Gene
   private java.lang.String backup;
 
   /**
+   * Optional. A Cloud Storage URI specifying the location of the backup artifacts, namely - backup
+   * avro files under "avro/", backup_metastore.json and service.json, in the following form:gs://.
+   * Mutually exclusive with backup, and exactly one of the two must be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupLocation;
+
+  /**
    * Optional. A request ID. Specify a unique request ID to allow the server to ignore the request
    * if it has completed. The server will ignore subsequent requests that provide a duplicate
    * request ID for at least 60 minutes after the first request.For example, if an initial request
@@ -80,6 +89,27 @@ public final class RestoreServiceRequest extends com.google.api.client.json.Gene
    */
   public RestoreServiceRequest setBackup(java.lang.String backup) {
     this.backup = backup;
+    return this;
+  }
+
+  /**
+   * Optional. A Cloud Storage URI specifying the location of the backup artifacts, namely - backup
+   * avro files under "avro/", backup_metastore.json and service.json, in the following form:gs://.
+   * Mutually exclusive with backup, and exactly one of the two must be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupLocation() {
+    return backupLocation;
+  }
+
+  /**
+   * Optional. A Cloud Storage URI specifying the location of the backup artifacts, namely - backup
+   * avro files under "avro/", backup_metastore.json and service.json, in the following form:gs://.
+   * Mutually exclusive with backup, and exactly one of the two must be set.
+   * @param backupLocation backupLocation or {@code null} for none
+   */
+  public RestoreServiceRequest setBackupLocation(java.lang.String backupLocation) {
+    this.backupLocation = backupLocation;
     return this;
   }
 

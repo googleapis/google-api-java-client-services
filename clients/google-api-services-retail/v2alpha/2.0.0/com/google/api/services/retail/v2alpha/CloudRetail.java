@@ -289,6 +289,149 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
+     * Get the AlertConfig of the requested project.
+     *
+     * Create a request for the method "projects.getAlertConfig".
+     *
+     * This request holds the parameters needed by the retail server.  After setting any optional
+     * parameters, call the {@link GetAlertConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Full AlertConfig resource name. Format: projects/{project_number}/alertConfig
+     * @return the request
+     */
+    public GetAlertConfig getAlertConfig(java.lang.String name) throws java.io.IOException {
+      GetAlertConfig result = new GetAlertConfig(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetAlertConfig extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAlertConfig> {
+
+      private static final String REST_PATH = "v2alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/alertConfig$");
+
+      /**
+       * Get the AlertConfig of the requested project.
+       *
+       * Create a request for the method "projects.getAlertConfig".
+       *
+       * This request holds the parameters needed by the the retail server.  After setting any optional
+       * parameters, call the {@link GetAlertConfig#execute()} method to invoke the remote operation.
+       * <p> {@link GetAlertConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+       * ientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param name Required. Full AlertConfig resource name. Format: projects/{project_number}/alertConfig
+       * @since 1.13
+       */
+      protected GetAlertConfig(java.lang.String name) {
+        super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAlertConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/alertConfig$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetAlertConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetAlertConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetAlertConfig setAccessToken(java.lang.String accessToken) {
+        return (GetAlertConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetAlertConfig setAlt(java.lang.String alt) {
+        return (GetAlertConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetAlertConfig setCallback(java.lang.String callback) {
+        return (GetAlertConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetAlertConfig setFields(java.lang.String fields) {
+        return (GetAlertConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetAlertConfig setKey(java.lang.String key) {
+        return (GetAlertConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetAlertConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetAlertConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetAlertConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetAlertConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetAlertConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetAlertConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetAlertConfig setUploadType(java.lang.String uploadType) {
+        return (GetAlertConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetAlertConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetAlertConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Full AlertConfig resource name. Format: projects/{project_number}/alertConfig
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Full AlertConfig resource name. Format: projects/{project_number}/alertConfig
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Full AlertConfig resource name. Format: projects/{project_number}/alertConfig
+       */
+      public GetAlertConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/alertConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetAlertConfig set(String parameterName, Object value) {
+        return (GetAlertConfig) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets the LoggingConfig of the requested project.
      *
      * Create a request for the method "projects.getLoggingConfig".
@@ -717,6 +860,166 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
       @Override
       public ListEnrolledSolutions set(String parameterName, Object value) {
         return (ListEnrolledSolutions) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update the alert config of the requested project.
+     *
+     * Create a request for the method "projects.updateAlertConfig".
+     *
+     * This request holds the parameters needed by the retail server.  After setting any optional
+     * parameters, call the {@link UpdateAlertConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Immutable. The name of the AlertConfig singleton resource. Format: projects/alertConfig
+     * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAlertConfig}
+     * @return the request
+     */
+    public UpdateAlertConfig updateAlertConfig(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAlertConfig content) throws java.io.IOException {
+      UpdateAlertConfig result = new UpdateAlertConfig(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateAlertConfig extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAlertConfig> {
+
+      private static final String REST_PATH = "v2alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/alertConfig$");
+
+      /**
+       * Update the alert config of the requested project.
+       *
+       * Create a request for the method "projects.updateAlertConfig".
+       *
+       * This request holds the parameters needed by the the retail server.  After setting any optional
+       * parameters, call the {@link UpdateAlertConfig#execute()} method to invoke the remote operation.
+       * <p> {@link UpdateAlertConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+       * eClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param name Required. Immutable. The name of the AlertConfig singleton resource. Format: projects/alertConfig
+       * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAlertConfig}
+       * @since 1.13
+       */
+      protected UpdateAlertConfig(java.lang.String name, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAlertConfig content) {
+        super(CloudRetail.this, "PATCH", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaAlertConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/alertConfig$");
+        }
+      }
+
+      @Override
+      public UpdateAlertConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateAlertConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateAlertConfig setAccessToken(java.lang.String accessToken) {
+        return (UpdateAlertConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateAlertConfig setAlt(java.lang.String alt) {
+        return (UpdateAlertConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateAlertConfig setCallback(java.lang.String callback) {
+        return (UpdateAlertConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateAlertConfig setFields(java.lang.String fields) {
+        return (UpdateAlertConfig) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateAlertConfig setKey(java.lang.String key) {
+        return (UpdateAlertConfig) super.setKey(key);
+      }
+
+      @Override
+      public UpdateAlertConfig setOauthToken(java.lang.String oauthToken) {
+        return (UpdateAlertConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateAlertConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateAlertConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateAlertConfig setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateAlertConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateAlertConfig setUploadType(java.lang.String uploadType) {
+        return (UpdateAlertConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateAlertConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateAlertConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Immutable. The name of the AlertConfig singleton resource. Format:
+       * projects/alertConfig
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Immutable. The name of the AlertConfig singleton resource. Format: projects/alertConfig
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Immutable. The name of the AlertConfig singleton resource. Format:
+       * projects/alertConfig
+       */
+      public UpdateAlertConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/alertConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Indicates which fields in the provided AlertConfig to update. If not set, all supported
+       * fields are updated.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Indicates which fields in the provided AlertConfig to update. If not set, all supported fields are
+     updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Indicates which fields in the provided AlertConfig to update. If not set, all supported
+       * fields are updated.
+       */
+      public UpdateAlertConfig setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateAlertConfig set(String parameterName, Object value) {
+        return (UpdateAlertConfig) super.set(parameterName, value);
       }
     }
     /**

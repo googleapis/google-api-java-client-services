@@ -4732,6 +4732,167 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (List) super.set(parameterName, value);
           }
         }
+        /**
+         * Looks up a discovered service in a host project and location and with a given resource URI.
+         *
+         * Create a request for the method "discoveredServices.lookup".
+         *
+         * This request holds the parameters needed by the apphub server.  After setting any optional
+         * parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Value for parent.
+         * @return the request
+         */
+        public Lookup lookup(java.lang.String parent) throws java.io.IOException {
+          Lookup result = new Lookup(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Lookup extends AppHubRequest<com.google.api.services.apphub.v1alpha.model.LookupDiscoveredServiceResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/discoveredServices:lookup";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Looks up a discovered service in a host project and location and with a given resource URI.
+           *
+           * Create a request for the method "discoveredServices.lookup".
+           *
+           * This request holds the parameters needed by the the apphub server.  After setting any optional
+           * parameters, call the {@link Lookup#execute()} method to invoke the remote operation. <p> {@link
+           * Lookup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Value for parent.
+           * @since 1.13
+           */
+          protected Lookup(java.lang.String parent) {
+            super(AppHub.this, "GET", REST_PATH, null, com.google.api.services.apphub.v1alpha.model.LookupDiscoveredServiceResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Lookup set$Xgafv(java.lang.String $Xgafv) {
+            return (Lookup) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Lookup setAccessToken(java.lang.String accessToken) {
+            return (Lookup) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Lookup setAlt(java.lang.String alt) {
+            return (Lookup) super.setAlt(alt);
+          }
+
+          @Override
+          public Lookup setCallback(java.lang.String callback) {
+            return (Lookup) super.setCallback(callback);
+          }
+
+          @Override
+          public Lookup setFields(java.lang.String fields) {
+            return (Lookup) super.setFields(fields);
+          }
+
+          @Override
+          public Lookup setKey(java.lang.String key) {
+            return (Lookup) super.setKey(key);
+          }
+
+          @Override
+          public Lookup setOauthToken(java.lang.String oauthToken) {
+            return (Lookup) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Lookup setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Lookup) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Lookup setQuotaUser(java.lang.String quotaUser) {
+            return (Lookup) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Lookup setUploadType(java.lang.String uploadType) {
+            return (Lookup) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Lookup setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Lookup) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Value for parent. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Value for parent.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Value for parent. */
+          public Lookup setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. Resource URI to find service for. Accepts both project number and project id
+           * and does translation when needed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String uri;
+
+          /** Required. Resource URI to find service for. Accepts both project number and project id and does
+         translation when needed.
+           */
+          public java.lang.String getUri() {
+            return uri;
+          }
+
+          /**
+           * Required. Resource URI to find service for. Accepts both project number and project id
+           * and does translation when needed.
+           */
+          public Lookup setUri(java.lang.String uri) {
+            this.uri = uri;
+            return this;
+          }
+
+          @Override
+          public Lookup set(String parameterName, Object value) {
+            return (Lookup) super.set(parameterName, value);
+          }
+        }
 
       }
       /**
@@ -5309,6 +5470,167 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Looks up a discovered Workload in a host project and location and with a given resource URI.
+         *
+         * Create a request for the method "discoveredWorkloads.lookup".
+         *
+         * This request holds the parameters needed by the apphub server.  After setting any optional
+         * parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Value for parent.
+         * @return the request
+         */
+        public Lookup lookup(java.lang.String parent) throws java.io.IOException {
+          Lookup result = new Lookup(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Lookup extends AppHubRequest<com.google.api.services.apphub.v1alpha.model.LookupDiscoveredWorkloadResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/discoveredWorkloads:lookup";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Looks up a discovered Workload in a host project and location and with a given resource URI.
+           *
+           * Create a request for the method "discoveredWorkloads.lookup".
+           *
+           * This request holds the parameters needed by the the apphub server.  After setting any optional
+           * parameters, call the {@link Lookup#execute()} method to invoke the remote operation. <p> {@link
+           * Lookup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Value for parent.
+           * @since 1.13
+           */
+          protected Lookup(java.lang.String parent) {
+            super(AppHub.this, "GET", REST_PATH, null, com.google.api.services.apphub.v1alpha.model.LookupDiscoveredWorkloadResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Lookup set$Xgafv(java.lang.String $Xgafv) {
+            return (Lookup) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Lookup setAccessToken(java.lang.String accessToken) {
+            return (Lookup) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Lookup setAlt(java.lang.String alt) {
+            return (Lookup) super.setAlt(alt);
+          }
+
+          @Override
+          public Lookup setCallback(java.lang.String callback) {
+            return (Lookup) super.setCallback(callback);
+          }
+
+          @Override
+          public Lookup setFields(java.lang.String fields) {
+            return (Lookup) super.setFields(fields);
+          }
+
+          @Override
+          public Lookup setKey(java.lang.String key) {
+            return (Lookup) super.setKey(key);
+          }
+
+          @Override
+          public Lookup setOauthToken(java.lang.String oauthToken) {
+            return (Lookup) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Lookup setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Lookup) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Lookup setQuotaUser(java.lang.String quotaUser) {
+            return (Lookup) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Lookup setUploadType(java.lang.String uploadType) {
+            return (Lookup) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Lookup setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Lookup) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Value for parent. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Value for parent.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Value for parent. */
+          public Lookup setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. Resource URI to find workload for. Accepts both project number and project id
+           * and does translation when needed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String uri;
+
+          /** Required. Resource URI to find workload for. Accepts both project number and project id and does
+         translation when needed.
+           */
+          public java.lang.String getUri() {
+            return uri;
+          }
+
+          /**
+           * Required. Resource URI to find workload for. Accepts both project number and project id
+           * and does translation when needed.
+           */
+          public Lookup setUri(java.lang.String uri) {
+            this.uri = uri;
+            return this;
+          }
+
+          @Override
+          public Lookup set(String parameterName, Object value) {
+            return (Lookup) super.set(parameterName, value);
           }
         }
 

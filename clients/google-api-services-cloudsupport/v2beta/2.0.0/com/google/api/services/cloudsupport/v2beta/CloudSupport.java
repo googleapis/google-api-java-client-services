@@ -1245,17 +1245,24 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** The product line to request cases for. */
+      /**
+       * The product line for which to request cases for. If unspecified, only Google Cloud cases
+       * will be returned.
+       */
       @com.google.api.client.util.Key
       private java.lang.String productLine;
 
-      /** The product line to request cases for.
+      /** The product line for which to request cases for. If unspecified, only Google Cloud cases will be
+     returned.
        */
       public java.lang.String getProductLine() {
         return productLine;
       }
 
-      /** The product line to request cases for. */
+      /**
+       * The product line for which to request cases for. If unspecified, only Google Cloud cases
+       * will be returned.
+       */
       public List setProductLine(java.lang.String productLine) {
         this.productLine = productLine;
         return this;

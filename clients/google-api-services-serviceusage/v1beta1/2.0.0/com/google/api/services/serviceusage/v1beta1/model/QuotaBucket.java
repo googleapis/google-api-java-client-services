@@ -84,6 +84,14 @@ public final class QuotaBucket extends com.google.api.client.json.GenericJson {
   private ProducerQuotaPolicy producerQuotaPolicy;
 
   /**
+   * Rollout information of this quota bucket. This field is present only if the effective limit
+   * will change due to the ongoing rollout of the service config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RolloutInfo rolloutInfo;
+
+  /**
    * Admin override on this quota bucket.
    * @return value or {@code null} for none
    */
@@ -209,6 +217,25 @@ public final class QuotaBucket extends com.google.api.client.json.GenericJson {
    */
   public QuotaBucket setProducerQuotaPolicy(ProducerQuotaPolicy producerQuotaPolicy) {
     this.producerQuotaPolicy = producerQuotaPolicy;
+    return this;
+  }
+
+  /**
+   * Rollout information of this quota bucket. This field is present only if the effective limit
+   * will change due to the ongoing rollout of the service config.
+   * @return value or {@code null} for none
+   */
+  public RolloutInfo getRolloutInfo() {
+    return rolloutInfo;
+  }
+
+  /**
+   * Rollout information of this quota bucket. This field is present only if the effective limit
+   * will change due to the ongoing rollout of the service config.
+   * @param rolloutInfo rolloutInfo or {@code null} for none
+   */
+  public QuotaBucket setRolloutInfo(RolloutInfo rolloutInfo) {
+    this.rolloutInfo = rolloutInfo;
     return this;
   }
 

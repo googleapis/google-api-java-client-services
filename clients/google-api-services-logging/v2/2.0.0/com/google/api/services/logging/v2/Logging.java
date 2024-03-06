@@ -1909,12 +1909,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           @com.google.api.client.util.Key
           private java.lang.String bucketId;
 
           /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
-         characters and can include only letters, digits, underscores, hyphens, and periods.
+         characters and can include only letters, digits, underscores, hyphens, and periods. Bucket
+         identifiers must start with an alphanumeric character.
            */
           public java.lang.String getBucketId() {
             return bucketId;
@@ -1923,6 +1925,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           public Create setBucketId(java.lang.String bucketId) {
             this.bucketId = bucketId;
@@ -2078,12 +2081,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           @com.google.api.client.util.Key
           private java.lang.String bucketId;
 
           /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
-         characters and can include only letters, digits, underscores, hyphens, and periods.
+         characters and can include only letters, digits, underscores, hyphens, and periods. Bucket
+         identifiers must start with an alphanumeric character.
            */
           public java.lang.String getBucketId() {
             return bucketId;
@@ -2092,6 +2097,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           public CreateAsync setBucketId(java.lang.String bucketId) {
             this.bucketId = bucketId;
@@ -11412,12 +11418,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           @com.google.api.client.util.Key
           private java.lang.String bucketId;
 
           /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
-         characters and can include only letters, digits, underscores, hyphens, and periods.
+         characters and can include only letters, digits, underscores, hyphens, and periods. Bucket
+         identifiers must start with an alphanumeric character.
            */
           public java.lang.String getBucketId() {
             return bucketId;
@@ -11426,6 +11434,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           public Create setBucketId(java.lang.String bucketId) {
             this.bucketId = bucketId;
@@ -11581,12 +11590,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           @com.google.api.client.util.Key
           private java.lang.String bucketId;
 
           /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
-         characters and can include only letters, digits, underscores, hyphens, and periods.
+         characters and can include only letters, digits, underscores, hyphens, and periods. Bucket
+         identifiers must start with an alphanumeric character.
            */
           public java.lang.String getBucketId() {
             return bucketId;
@@ -11595,6 +11606,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           public CreateAsync setBucketId(java.lang.String bucketId) {
             this.bucketId = bucketId;
@@ -18168,12 +18180,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         /**
          * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
          * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+         * Bucket identifiers must start with an alphanumeric character.
          */
         @com.google.api.client.util.Key
         private java.lang.String bucketId;
 
         /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
-       characters and can include only letters, digits, underscores, hyphens, and periods.
+       characters and can include only letters, digits, underscores, hyphens, and periods. Bucket
+       identifiers must start with an alphanumeric character.
          */
         public java.lang.String getBucketId() {
           return bucketId;
@@ -18182,6 +18196,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         /**
          * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
          * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+         * Bucket identifiers must start with an alphanumeric character.
          */
         public Create setBucketId(java.lang.String bucketId) {
           this.bucketId = bucketId;
@@ -18337,12 +18352,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         /**
          * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
          * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+         * Bucket identifiers must start with an alphanumeric character.
          */
         @com.google.api.client.util.Key
         private java.lang.String bucketId;
 
         /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
-       characters and can include only letters, digits, underscores, hyphens, and periods.
+       characters and can include only letters, digits, underscores, hyphens, and periods. Bucket
+       identifiers must start with an alphanumeric character.
          */
         public java.lang.String getBucketId() {
           return bucketId;
@@ -18351,6 +18368,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         /**
          * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
          * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+         * Bucket identifiers must start with an alphanumeric character.
          */
         public CreateAsync setBucketId(java.lang.String bucketId) {
           this.bucketId = bucketId;
@@ -24319,12 +24337,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           @com.google.api.client.util.Key
           private java.lang.String bucketId;
 
           /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
-         characters and can include only letters, digits, underscores, hyphens, and periods.
+         characters and can include only letters, digits, underscores, hyphens, and periods. Bucket
+         identifiers must start with an alphanumeric character.
            */
           public java.lang.String getBucketId() {
             return bucketId;
@@ -24333,6 +24353,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           public Create setBucketId(java.lang.String bucketId) {
             this.bucketId = bucketId;
@@ -24488,12 +24509,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           @com.google.api.client.util.Key
           private java.lang.String bucketId;
 
           /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
-         characters and can include only letters, digits, underscores, hyphens, and periods.
+         characters and can include only letters, digits, underscores, hyphens, and periods. Bucket
+         identifiers must start with an alphanumeric character.
            */
           public java.lang.String getBucketId() {
             return bucketId;
@@ -24502,6 +24525,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           public CreateAsync setBucketId(java.lang.String bucketId) {
             this.bucketId = bucketId;
@@ -32327,12 +32351,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           @com.google.api.client.util.Key
           private java.lang.String bucketId;
 
           /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
-         characters and can include only letters, digits, underscores, hyphens, and periods.
+         characters and can include only letters, digits, underscores, hyphens, and periods. Bucket
+         identifiers must start with an alphanumeric character.
            */
           public java.lang.String getBucketId() {
             return bucketId;
@@ -32341,6 +32367,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           public Create setBucketId(java.lang.String bucketId) {
             this.bucketId = bucketId;
@@ -32496,12 +32523,14 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           @com.google.api.client.util.Key
           private java.lang.String bucketId;
 
           /** Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
-         characters and can include only letters, digits, underscores, hyphens, and periods.
+         characters and can include only letters, digits, underscores, hyphens, and periods. Bucket
+         identifiers must start with an alphanumeric character.
            */
           public java.lang.String getBucketId() {
             return bucketId;
@@ -32510,6 +32539,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to
            * 100 characters and can include only letters, digits, underscores, hyphens, and periods.
+           * Bucket identifiers must start with an alphanumeric character.
            */
           public CreateAsync setBucketId(java.lang.String bucketId) {
             this.bucketId = bucketId;

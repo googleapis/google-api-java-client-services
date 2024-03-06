@@ -30,8 +30,8 @@ package com.google.api.services.logging.v2.model;
 public final class LogBucket extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Whether log analytics is enabled for this bucket.Once enabled, log analytics features
-   * cannot be disabled.
+   * Whether log analytics is enabled for this bucket.Once enabled, log analytics features cannot be
+   * disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +128,8 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Optional. Whether log analytics is enabled for this bucket.Once enabled, log analytics features
-   * cannot be disabled.
+   * Whether log analytics is enabled for this bucket.Once enabled, log analytics features cannot be
+   * disabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAnalyticsEnabled() {
@@ -137,8 +137,8 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Whether log analytics is enabled for this bucket.Once enabled, log analytics features
-   * cannot be disabled.
+   * Whether log analytics is enabled for this bucket.Once enabled, log analytics features cannot be
+   * disabled.
    * @param analyticsEnabled analyticsEnabled or {@code null} for none
    */
   public LogBucket setAnalyticsEnabled(java.lang.Boolean analyticsEnabled) {

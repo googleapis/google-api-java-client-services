@@ -59960,6 +59960,294 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
       public class PipelineJobs {
 
         /**
+         * Batch cancel PipelineJobs. Firstly the server will check if all the jobs are in non-terminal
+         * states, and skip the jobs that are already terminated. If the operation failed, none of the
+         * pipeline jobs are cancelled. The server will poll the states of all the pipeline jobs
+         * periodically to check the cancellation status. This operation will return an LRO.
+         *
+         * Create a request for the method "pipelineJobs.batchCancel".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link BatchCancel#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the PipelineJobs' parent resource. Format:
+         *        `projects/{project}/locations/{location}`
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCancelPipelineJobsRequest}
+         * @return the request
+         */
+        public BatchCancel batchCancel(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCancelPipelineJobsRequest content) throws java.io.IOException {
+          BatchCancel result = new BatchCancel(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchCancel extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/pipelineJobs:batchCancel";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Batch cancel PipelineJobs. Firstly the server will check if all the jobs are in non-terminal
+           * states, and skip the jobs that are already terminated. If the operation failed, none of the
+           * pipeline jobs are cancelled. The server will poll the states of all the pipeline jobs
+           * periodically to check the cancellation status. This operation will return an LRO.
+           *
+           * Create a request for the method "pipelineJobs.batchCancel".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link BatchCancel#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * BatchCancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the PipelineJobs' parent resource. Format:
+         *        `projects/{project}/locations/{location}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCancelPipelineJobsRequest}
+           * @since 1.13
+           */
+          protected BatchCancel(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchCancelPipelineJobsRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchCancel set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchCancel) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchCancel setAccessToken(java.lang.String accessToken) {
+            return (BatchCancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchCancel setAlt(java.lang.String alt) {
+            return (BatchCancel) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchCancel setCallback(java.lang.String callback) {
+            return (BatchCancel) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchCancel setFields(java.lang.String fields) {
+            return (BatchCancel) super.setFields(fields);
+          }
+
+          @Override
+          public BatchCancel setKey(java.lang.String key) {
+            return (BatchCancel) super.setKey(key);
+          }
+
+          @Override
+          public BatchCancel setOauthToken(java.lang.String oauthToken) {
+            return (BatchCancel) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchCancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchCancel) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchCancel setQuotaUser(java.lang.String quotaUser) {
+            return (BatchCancel) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchCancel setUploadType(java.lang.String uploadType) {
+            return (BatchCancel) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchCancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchCancel) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the PipelineJobs' parent resource. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the PipelineJobs' parent resource. Format:
+         `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the PipelineJobs' parent resource. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          public BatchCancel setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchCancel set(String parameterName, Object value) {
+            return (BatchCancel) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Batch deletes PipelineJobs The Operation is atomic. If it fails, none of the PipelineJobs are
+         * deleted. If it succeeds, all of the PipelineJobs are deleted.
+         *
+         * Create a request for the method "pipelineJobs.batchDelete".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the PipelineJobs' parent resource. Format:
+         *        `projects/{project}/locations/{location}`
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchDeletePipelineJobsRequest}
+         * @return the request
+         */
+        public BatchDelete batchDelete(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchDeletePipelineJobsRequest content) throws java.io.IOException {
+          BatchDelete result = new BatchDelete(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchDelete extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/pipelineJobs:batchDelete";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Batch deletes PipelineJobs The Operation is atomic. If it fails, none of the PipelineJobs are
+           * deleted. If it succeeds, all of the PipelineJobs are deleted.
+           *
+           * Create a request for the method "pipelineJobs.batchDelete".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the PipelineJobs' parent resource. Format:
+         *        `projects/{project}/locations/{location}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchDeletePipelineJobsRequest}
+           * @since 1.13
+           */
+          protected BatchDelete(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1BatchDeletePipelineJobsRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchDelete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchDelete setAccessToken(java.lang.String accessToken) {
+            return (BatchDelete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchDelete setAlt(java.lang.String alt) {
+            return (BatchDelete) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchDelete setCallback(java.lang.String callback) {
+            return (BatchDelete) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchDelete setFields(java.lang.String fields) {
+            return (BatchDelete) super.setFields(fields);
+          }
+
+          @Override
+          public BatchDelete setKey(java.lang.String key) {
+            return (BatchDelete) super.setKey(key);
+          }
+
+          @Override
+          public BatchDelete setOauthToken(java.lang.String oauthToken) {
+            return (BatchDelete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchDelete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+            return (BatchDelete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchDelete setUploadType(java.lang.String uploadType) {
+            return (BatchDelete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the PipelineJobs' parent resource. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the PipelineJobs' parent resource. Format:
+         `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the PipelineJobs' parent resource. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          public BatchDelete setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchDelete set(String parameterName, Object value) {
+            return (BatchDelete) super.set(parameterName, value);
+          }
+        }
+        /**
          * Cancels a PipelineJob. Starts asynchronous cancellation on the PipelineJob. The server makes a
          * best effort to cancel the pipeline, but success is not guaranteed. Clients can use
          * PipelineService.GetPipelineJob or other methods to check whether the cancellation succeeded or

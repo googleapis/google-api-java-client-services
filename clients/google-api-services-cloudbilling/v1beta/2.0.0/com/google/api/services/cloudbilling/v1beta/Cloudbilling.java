@@ -303,6 +303,397 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
     }
 
     /**
+     * An accessor for creating requests from the Anomalies collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+     *   {@code Cloudbilling.Anomalies.List request = cloudbilling.anomalies().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Anomalies anomalies() {
+      return new Anomalies();
+    }
+
+    /**
+     * The "anomalies" collection of methods.
+     */
+    public class Anomalies {
+
+      /**
+       * Gets an anomaly for a billing account or a project.
+       *
+       * Create a request for the method "anomalies.get".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Format for project: projects/{project}/anomalies/{anomalies}. Format for billing account:
+       *        billingAccounts/{billing_account}/anomalies/{anomalies}.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingAnomaliesV1betaAnomaly> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+/anomalies/[^/]+$");
+
+        /**
+         * Gets an anomaly for a billing account or a project.
+         *
+         * Create a request for the method "anomalies.get".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Format for project: projects/{project}/anomalies/{anomalies}. Format for billing account:
+       *        billingAccounts/{billing_account}/anomalies/{anomalies}.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingAnomaliesV1betaAnomaly.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+/anomalies/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Format for project: projects/{project}/anomalies/{anomalies}. Format for
+         * billing account: billingAccounts/{billing_account}/anomalies/{anomalies}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Format for project: projects/{project}/anomalies/{anomalies}. Format for billing account:
+       billingAccounts/{billing_account}/anomalies/{anomalies}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Format for project: projects/{project}/anomalies/{anomalies}. Format for
+         * billing account: billingAccounts/{billing_account}/anomalies/{anomalies}.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^billingAccounts/[^/]+/anomalies/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists anomalies for a billing account or a project.
+       *
+       * Create a request for the method "anomalies.list".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project to list Anomaly for the project. Format for project: projects/{project}.
+       *        Format for billing account: billingAccounts/{billing_account}.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingAnomaliesV1betaListAnomaliesResponse> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/anomalies";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
+
+        /**
+         * Lists anomalies for a billing account or a project.
+         *
+         * Create a request for the method "anomalies.list".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project to list Anomaly for the project. Format for project: projects/{project}.
+       *        Format for billing account: billingAccounts/{billing_account}.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingAnomaliesV1betaListAnomaliesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project to list Anomaly for the project. Format for project:
+         * projects/{project}. Format for billing account: billingAccounts/{billing_account}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project to list Anomaly for the project. Format for project: projects/{project}.
+       Format for billing account: billingAccounts/{billing_account}.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project to list Anomaly for the project. Format for project:
+         * projects/{project}. Format for billing account: billingAccounts/{billing_account}.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^billingAccounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Options for how to filter the anomalies. Currently, only filter on `start_time`
+         * and `end_time` is supported. Only =, AND operators are supported. If start_time and/or
+         * end_time empty, we only retrieve the most recent 30 days' anomalies. Examples: -
+         * start_time = "20231201" AND end_time = "20240120" .
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Options for how to filter the anomalies. Currently, only filter on `start_time` and
+       `end_time` is supported. Only =, AND operators are supported. If start_time and/or end_time empty,
+       we only retrieve the most recent 30 days' anomalies. Examples: - start_time = "20231201" AND
+       end_time = "20240120" .
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Options for how to filter the anomalies. Currently, only filter on `start_time`
+         * and `end_time` is supported. Only =, AND operators are supported. If start_time and/or
+         * end_time empty, we only retrieve the most recent 30 days' anomalies. Examples: -
+         * start_time = "20231201" AND end_time = "20240120" .
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum number of anomalies to return. Results may return fewer than this
+         * value. Default value is 50 and maximum value is 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of anomalies to return. Results may return fewer than this value. Default
+       value is 50 and maximum value is 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Maximum number of anomalies to return. Results may return fewer than this
+         * value. Default value is 50 and maximum value is 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. Page token received from a previous ListAnomalies call to retrieve the next
+         * page of results. If this field is empty, the first page is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Page token received from a previous ListAnomalies call to retrieve the next page of
+       results. If this field is empty, the first page is returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. Page token received from a previous ListAnomalies call to retrieve the next
+         * page of results. If this field is empty, the first page is returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Services collection.
      *
      * <p>The typical use is:</p>
@@ -2210,6 +2601,419 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         }
 
       }
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+   *   {@code Cloudbilling.Projects.List request = cloudbilling.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Anomalies collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+     *   {@code Cloudbilling.Anomalies.List request = cloudbilling.anomalies().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Anomalies anomalies() {
+      return new Anomalies();
+    }
+
+    /**
+     * The "anomalies" collection of methods.
+     */
+    public class Anomalies {
+
+      /**
+       * Gets an anomaly for a billing account or a project.
+       *
+       * Create a request for the method "anomalies.get".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Format for project: projects/{project}/anomalies/{anomalies}. Format for billing account:
+       *        billingAccounts/{billing_account}/anomalies/{anomalies}.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingAnomaliesV1betaAnomaly> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/anomalies/[^/]+$");
+
+        /**
+         * Gets an anomaly for a billing account or a project.
+         *
+         * Create a request for the method "anomalies.get".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Format for project: projects/{project}/anomalies/{anomalies}. Format for billing account:
+       *        billingAccounts/{billing_account}/anomalies/{anomalies}.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingAnomaliesV1betaAnomaly.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/anomalies/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Format for project: projects/{project}/anomalies/{anomalies}. Format for
+         * billing account: billingAccounts/{billing_account}/anomalies/{anomalies}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Format for project: projects/{project}/anomalies/{anomalies}. Format for billing account:
+       billingAccounts/{billing_account}/anomalies/{anomalies}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Format for project: projects/{project}/anomalies/{anomalies}. Format for
+         * billing account: billingAccounts/{billing_account}/anomalies/{anomalies}.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/anomalies/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists anomalies for a billing account or a project.
+       *
+       * Create a request for the method "anomalies.list".
+       *
+       * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project to list Anomaly for the project. Format for project: projects/{project}.
+       *        Format for billing account: billingAccounts/{billing_account}.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingAnomaliesV1betaListAnomaliesResponse> {
+
+        private static final String REST_PATH = "v1beta/{+parent}/anomalies";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists anomalies for a billing account or a project.
+         *
+         * Create a request for the method "anomalies.list".
+         *
+         * This request holds the parameters needed by the the cloudbilling server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project to list Anomaly for the project. Format for project: projects/{project}.
+       *        Format for billing account: billingAccounts/{billing_account}.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Cloudbilling.this, "GET", REST_PATH, null, com.google.api.services.cloudbilling.v1beta.model.GoogleCloudBillingAnomaliesV1betaListAnomaliesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project to list Anomaly for the project. Format for project:
+         * projects/{project}. Format for billing account: billingAccounts/{billing_account}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project to list Anomaly for the project. Format for project: projects/{project}.
+       Format for billing account: billingAccounts/{billing_account}.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project to list Anomaly for the project. Format for project:
+         * projects/{project}. Format for billing account: billingAccounts/{billing_account}.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Options for how to filter the anomalies. Currently, only filter on `start_time`
+         * and `end_time` is supported. Only =, AND operators are supported. If start_time and/or
+         * end_time empty, we only retrieve the most recent 30 days' anomalies. Examples: -
+         * start_time = "20231201" AND end_time = "20240120" .
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Options for how to filter the anomalies. Currently, only filter on `start_time` and
+       `end_time` is supported. Only =, AND operators are supported. If start_time and/or end_time empty,
+       we only retrieve the most recent 30 days' anomalies. Examples: - start_time = "20231201" AND
+       end_time = "20240120" .
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Options for how to filter the anomalies. Currently, only filter on `start_time`
+         * and `end_time` is supported. Only =, AND operators are supported. If start_time and/or
+         * end_time empty, we only retrieve the most recent 30 days' anomalies. Examples: -
+         * start_time = "20231201" AND end_time = "20240120" .
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum number of anomalies to return. Results may return fewer than this
+         * value. Default value is 50 and maximum value is 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of anomalies to return. Results may return fewer than this value. Default
+       value is 50 and maximum value is 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Maximum number of anomalies to return. Results may return fewer than this
+         * value. Default value is 50 and maximum value is 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. Page token received from a previous ListAnomalies call to retrieve the next
+         * page of results. If this field is empty, the first page is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Page token received from a previous ListAnomalies call to retrieve the next page of
+       results. If this field is empty, the first page is returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. Page token received from a previous ListAnomalies call to retrieve the next
+         * page of results. If this field is empty, the first page is returned.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
     }
   }
 

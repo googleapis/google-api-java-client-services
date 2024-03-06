@@ -17,7 +17,7 @@
 package com.google.api.services.run.v2.model;
 
 /**
- * Scaling settings applied at the service level rather than at the revision level.
+ * Metadata for build operations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.run.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRunV2ServiceScaling extends com.google.api.client.json.GenericJson {
+public final class GoogleDevtoolsCloudbuildV1BuildOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * total min instances for the service. This number of instances is divided among all revisions
-   * with specified traffic based on the percent of traffic they are receiving. (BETA)
+   * The build that the operation is tracking.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer minInstanceCount;
+  private GoogleDevtoolsCloudbuildV1Build build;
 
   /**
-   * total min instances for the service. This number of instances is divided among all revisions
-   * with specified traffic based on the percent of traffic they are receiving. (BETA)
+   * The build that the operation is tracking.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getMinInstanceCount() {
-    return minInstanceCount;
+  public GoogleDevtoolsCloudbuildV1Build getBuild() {
+    return build;
   }
 
   /**
-   * total min instances for the service. This number of instances is divided among all revisions
-   * with specified traffic based on the percent of traffic they are receiving. (BETA)
-   * @param minInstanceCount minInstanceCount or {@code null} for none
+   * The build that the operation is tracking.
+   * @param build build or {@code null} for none
    */
-  public GoogleCloudRunV2ServiceScaling setMinInstanceCount(java.lang.Integer minInstanceCount) {
-    this.minInstanceCount = minInstanceCount;
+  public GoogleDevtoolsCloudbuildV1BuildOperationMetadata setBuild(GoogleDevtoolsCloudbuildV1Build build) {
+    this.build = build;
     return this;
   }
 
   @Override
-  public GoogleCloudRunV2ServiceScaling set(String fieldName, Object value) {
-    return (GoogleCloudRunV2ServiceScaling) super.set(fieldName, value);
+  public GoogleDevtoolsCloudbuildV1BuildOperationMetadata set(String fieldName, Object value) {
+    return (GoogleDevtoolsCloudbuildV1BuildOperationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRunV2ServiceScaling clone() {
-    return (GoogleCloudRunV2ServiceScaling) super.clone();
+  public GoogleDevtoolsCloudbuildV1BuildOperationMetadata clone() {
+    return (GoogleDevtoolsCloudbuildV1BuildOperationMetadata) super.clone();
   }
 
 }

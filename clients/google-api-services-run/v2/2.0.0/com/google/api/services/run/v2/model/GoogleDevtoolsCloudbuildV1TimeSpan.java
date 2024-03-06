@@ -17,7 +17,7 @@
 package com.google.api.services.run.v2.model;
 
 /**
- * Scaling settings applied at the service level rather than at the revision level.
+ * Start and end times for a build execution phase.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -27,43 +27,64 @@ package com.google.api.services.run.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRunV2ServiceScaling extends com.google.api.client.json.GenericJson {
+public final class GoogleDevtoolsCloudbuildV1TimeSpan extends com.google.api.client.json.GenericJson {
 
   /**
-   * total min instances for the service. This number of instances is divided among all revisions
-   * with specified traffic based on the percent of traffic they are receiving. (BETA)
+   * End of time span.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer minInstanceCount;
+  private String endTime;
 
   /**
-   * total min instances for the service. This number of instances is divided among all revisions
-   * with specified traffic based on the percent of traffic they are receiving. (BETA)
+   * Start of time span.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String startTime;
+
+  /**
+   * End of time span.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getMinInstanceCount() {
-    return minInstanceCount;
+  public String getEndTime() {
+    return endTime;
   }
 
   /**
-   * total min instances for the service. This number of instances is divided among all revisions
-   * with specified traffic based on the percent of traffic they are receiving. (BETA)
-   * @param minInstanceCount minInstanceCount or {@code null} for none
+   * End of time span.
+   * @param endTime endTime or {@code null} for none
    */
-  public GoogleCloudRunV2ServiceScaling setMinInstanceCount(java.lang.Integer minInstanceCount) {
-    this.minInstanceCount = minInstanceCount;
+  public GoogleDevtoolsCloudbuildV1TimeSpan setEndTime(String endTime) {
+    this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Start of time span.
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * Start of time span.
+   * @param startTime startTime or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1TimeSpan setStartTime(String startTime) {
+    this.startTime = startTime;
     return this;
   }
 
   @Override
-  public GoogleCloudRunV2ServiceScaling set(String fieldName, Object value) {
-    return (GoogleCloudRunV2ServiceScaling) super.set(fieldName, value);
+  public GoogleDevtoolsCloudbuildV1TimeSpan set(String fieldName, Object value) {
+    return (GoogleDevtoolsCloudbuildV1TimeSpan) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRunV2ServiceScaling clone() {
-    return (GoogleCloudRunV2ServiceScaling) super.clone();
+  public GoogleDevtoolsCloudbuildV1TimeSpan clone() {
+    return (GoogleDevtoolsCloudbuildV1TimeSpan) super.clone();
   }
 
 }

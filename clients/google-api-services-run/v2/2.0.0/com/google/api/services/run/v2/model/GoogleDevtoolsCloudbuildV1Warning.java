@@ -17,7 +17,7 @@
 package com.google.api.services.run.v2.model;
 
 /**
- * Scaling settings applied at the service level rather than at the revision level.
+ * A non-fatal problem encountered during the execution of the build.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -27,43 +27,64 @@ package com.google.api.services.run.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRunV2ServiceScaling extends com.google.api.client.json.GenericJson {
+public final class GoogleDevtoolsCloudbuildV1Warning extends com.google.api.client.json.GenericJson {
 
   /**
-   * total min instances for the service. This number of instances is divided among all revisions
-   * with specified traffic based on the percent of traffic they are receiving. (BETA)
+   * The priority for this warning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer minInstanceCount;
+  private java.lang.String priority;
 
   /**
-   * total min instances for the service. This number of instances is divided among all revisions
-   * with specified traffic based on the percent of traffic they are receiving. (BETA)
+   * Explanation of the warning generated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String text;
+
+  /**
+   * The priority for this warning.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getMinInstanceCount() {
-    return minInstanceCount;
+  public java.lang.String getPriority() {
+    return priority;
   }
 
   /**
-   * total min instances for the service. This number of instances is divided among all revisions
-   * with specified traffic based on the percent of traffic they are receiving. (BETA)
-   * @param minInstanceCount minInstanceCount or {@code null} for none
+   * The priority for this warning.
+   * @param priority priority or {@code null} for none
    */
-  public GoogleCloudRunV2ServiceScaling setMinInstanceCount(java.lang.Integer minInstanceCount) {
-    this.minInstanceCount = minInstanceCount;
+  public GoogleDevtoolsCloudbuildV1Warning setPriority(java.lang.String priority) {
+    this.priority = priority;
+    return this;
+  }
+
+  /**
+   * Explanation of the warning generated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getText() {
+    return text;
+  }
+
+  /**
+   * Explanation of the warning generated.
+   * @param text text or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1Warning setText(java.lang.String text) {
+    this.text = text;
     return this;
   }
 
   @Override
-  public GoogleCloudRunV2ServiceScaling set(String fieldName, Object value) {
-    return (GoogleCloudRunV2ServiceScaling) super.set(fieldName, value);
+  public GoogleDevtoolsCloudbuildV1Warning set(String fieldName, Object value) {
+    return (GoogleDevtoolsCloudbuildV1Warning) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRunV2ServiceScaling clone() {
-    return (GoogleCloudRunV2ServiceScaling) super.clone();
+  public GoogleDevtoolsCloudbuildV1Warning clone() {
+    return (GoogleDevtoolsCloudbuildV1Warning) super.clone();
   }
 
 }

@@ -61,7 +61,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCompleteQueryRequest extends
    * no traffic for Search API. * `user-event` - Using suggestions generated from user-imported
    * search events. * `document-completable` - Using suggestions taken directly from user-imported
    * document fields marked as completable. Default values: * `document` is the default model for
-   * regular dataStores. * `search-history` is the default model for site search dataStores.
+   * regular dataStores. * `search-history` is the default model for site search dataStores. *
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +145,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCompleteQueryRequest extends
    * no traffic for Search API. * `user-event` - Using suggestions generated from user-imported
    * search events. * `document-completable` - Using suggestions taken directly from user-imported
    * document fields marked as completable. Default values: * `document` is the default model for
-   * regular dataStores. * `search-history` is the default model for site search dataStores.
+   * regular dataStores. * `search-history` is the default model for site search dataStores. *
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryModel() {
@@ -160,7 +160,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCompleteQueryRequest extends
    * no traffic for Search API. * `user-event` - Using suggestions generated from user-imported
    * search events. * `document-completable` - Using suggestions taken directly from user-imported
    * document fields marked as completable. Default values: * `document` is the default model for
-   * regular dataStores. * `search-history` is the default model for site search dataStores.
+   * regular dataStores. * `search-history` is the default model for site search dataStores. *
    * @param queryModel queryModel or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCompleteQueryRequest setQueryModel(java.lang.String queryModel) {

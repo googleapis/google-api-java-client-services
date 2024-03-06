@@ -32,6 +32,13 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether chunking mode is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigChunkingConfig chunkingConfig;
+
+  /**
    * Configurations for default Document parser. If not specified, we will configure it as default
    * DigitalParsingConfig, and the default parsing config will be applied to all file types for
    * Document parsing.
@@ -67,6 +74,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig ext
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfig> parsingConfigOverrides;
+
+  /**
+   * Whether chunking mode is enabled.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigChunkingConfig getChunkingConfig() {
+    return chunkingConfig;
+  }
+
+  /**
+   * Whether chunking mode is enabled.
+   * @param chunkingConfig chunkingConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig setChunkingConfig(GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigChunkingConfig chunkingConfig) {
+    this.chunkingConfig = chunkingConfig;
+    return this;
+  }
 
   /**
    * Configurations for default Document parser. If not specified, we will configure it as default

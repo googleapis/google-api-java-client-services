@@ -75,6 +75,19 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   private java.lang.Long autoUpdateExpiration;
 
   /**
+   * Output only. Contains backlight information for the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BacklightInfo> backlightInfo;
+
+  static {
+    // hack to force ProGuard to consider BacklightInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BacklightInfo.class);
+  }
+
+  /**
    * The boot mode for the device. The possible values are: * `Verified`: The device is running a
    * valid version of the Chrome OS. * `Dev`: The devices's developer hardware switch is enabled.
    * When booted, the device has a command line shell. For an example of a developer switch, see the
@@ -514,6 +527,23 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   public ChromeOsDevice setAutoUpdateExpiration(java.lang.Long autoUpdateExpiration) {
     this.autoUpdateExpiration = autoUpdateExpiration;
+    return this;
+  }
+
+  /**
+   * Output only. Contains backlight information for the device.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BacklightInfo> getBacklightInfo() {
+    return backlightInfo;
+  }
+
+  /**
+   * Output only. Contains backlight information for the device.
+   * @param backlightInfo backlightInfo or {@code null} for none
+   */
+  public ChromeOsDevice setBacklightInfo(java.util.List<BacklightInfo> backlightInfo) {
+    this.backlightInfo = backlightInfo;
     return this;
   }
 

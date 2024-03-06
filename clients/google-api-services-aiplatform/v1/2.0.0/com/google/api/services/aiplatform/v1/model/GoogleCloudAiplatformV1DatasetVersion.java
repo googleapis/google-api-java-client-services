@@ -60,7 +60,7 @@ public final class GoogleCloudAiplatformV1DatasetVersion extends com.google.api.
   private java.lang.String etag;
 
   /**
-   * Required. Additional information about the DatasetVersion.
+   * Required. Output only. Additional information about the DatasetVersion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +153,7 @@ public final class GoogleCloudAiplatformV1DatasetVersion extends com.google.api.
   }
 
   /**
-   * Required. Additional information about the DatasetVersion.
+   * Required. Output only. Additional information about the DatasetVersion.
    * @return value or {@code null} for none
    */
   public java.lang.Object getMetadata() {
@@ -161,7 +161,7 @@ public final class GoogleCloudAiplatformV1DatasetVersion extends com.google.api.
   }
 
   /**
-   * Required. Additional information about the DatasetVersion.
+   * Required. Output only. Additional information about the DatasetVersion.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudAiplatformV1DatasetVersion setMetadata(java.lang.Object metadata) {

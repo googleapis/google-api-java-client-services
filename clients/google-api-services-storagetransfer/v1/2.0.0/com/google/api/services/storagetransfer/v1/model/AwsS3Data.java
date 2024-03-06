@@ -50,8 +50,10 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   private java.lang.String bucketName;
 
   /**
-   * Optional. Cloudfront domain name pointing to this bucket (as origin), to use when fetching.
-   * Format: `https://{id}.cloudfront.net` or any valid custom domain `https://...`
+   * Optional. The CloudFront distribution domain name pointing to this bucket, to use when
+   * fetching. See [Transfer from S3 via CloudFront](https://cloud.google.com/storage-
+   * transfer/docs/s3-cloudfront) for more information. Format: `https://{id}.cloudfront.net` or any
+   * valid custom domain. Must begin with `https://`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +65,7 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
    * "SECRET_ACCESS_KEY" } GoogleServiceAccount must be granted `roles/secretmanager.secretAccessor`
    * for the resource. See [Configure access to a source: Amazon S3] (https://cloud.google.com
    * /storage-transfer/docs/source-amazon-s3#secret_manager) for more information. If
-   * `credentials_secret` is specified, do not specify role_arn or aws_access_key. This feature is
-   * in [preview](https://cloud.google.com/terms/service-terms#1). Format:
+   * `credentials_secret` is specified, do not specify role_arn or aws_access_key. Format:
    * `projects/{project_number}/secrets/{secret_name}`
    * The value may be {@code null}.
    */
@@ -136,8 +137,10 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Cloudfront domain name pointing to this bucket (as origin), to use when fetching.
-   * Format: `https://{id}.cloudfront.net` or any valid custom domain `https://...`
+   * Optional. The CloudFront distribution domain name pointing to this bucket, to use when
+   * fetching. See [Transfer from S3 via CloudFront](https://cloud.google.com/storage-
+   * transfer/docs/s3-cloudfront) for more information. Format: `https://{id}.cloudfront.net` or any
+   * valid custom domain. Must begin with `https://`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudfrontDomain() {
@@ -145,8 +148,10 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Cloudfront domain name pointing to this bucket (as origin), to use when fetching.
-   * Format: `https://{id}.cloudfront.net` or any valid custom domain `https://...`
+   * Optional. The CloudFront distribution domain name pointing to this bucket, to use when
+   * fetching. See [Transfer from S3 via CloudFront](https://cloud.google.com/storage-
+   * transfer/docs/s3-cloudfront) for more information. Format: `https://{id}.cloudfront.net` or any
+   * valid custom domain. Must begin with `https://`.
    * @param cloudfrontDomain cloudfrontDomain or {@code null} for none
    */
   public AwsS3Data setCloudfrontDomain(java.lang.String cloudfrontDomain) {
@@ -160,8 +165,7 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
    * "SECRET_ACCESS_KEY" } GoogleServiceAccount must be granted `roles/secretmanager.secretAccessor`
    * for the resource. See [Configure access to a source: Amazon S3] (https://cloud.google.com
    * /storage-transfer/docs/source-amazon-s3#secret_manager) for more information. If
-   * `credentials_secret` is specified, do not specify role_arn or aws_access_key. This feature is
-   * in [preview](https://cloud.google.com/terms/service-terms#1). Format:
+   * `credentials_secret` is specified, do not specify role_arn or aws_access_key. Format:
    * `projects/{project_number}/secrets/{secret_name}`
    * @return value or {@code null} for none
    */
@@ -175,8 +179,7 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
    * "SECRET_ACCESS_KEY" } GoogleServiceAccount must be granted `roles/secretmanager.secretAccessor`
    * for the resource. See [Configure access to a source: Amazon S3] (https://cloud.google.com
    * /storage-transfer/docs/source-amazon-s3#secret_manager) for more information. If
-   * `credentials_secret` is specified, do not specify role_arn or aws_access_key. This feature is
-   * in [preview](https://cloud.google.com/terms/service-terms#1). Format:
+   * `credentials_secret` is specified, do not specify role_arn or aws_access_key. Format:
    * `projects/{project_number}/secrets/{secret_name}`
    * @param credentialsSecret credentialsSecret or {@code null} for none
    */

@@ -39,7 +39,8 @@ public final class CreateBucketRequest extends com.google.api.client.json.Generi
 
   /**
    * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
-   * characters and can include only letters, digits, underscores, hyphens, and periods.
+   * characters and can include only letters, digits, underscores, hyphens, and periods. Bucket
+   * identifiers must start with an alphanumeric character.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +76,8 @@ public final class CreateBucketRequest extends com.google.api.client.json.Generi
 
   /**
    * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
-   * characters and can include only letters, digits, underscores, hyphens, and periods.
+   * characters and can include only letters, digits, underscores, hyphens, and periods. Bucket
+   * identifiers must start with an alphanumeric character.
    * @return value or {@code null} for none
    */
   public java.lang.String getBucketId() {
@@ -84,7 +86,8 @@ public final class CreateBucketRequest extends com.google.api.client.json.Generi
 
   /**
    * Required. A client-assigned identifier such as "my-bucket". Identifiers are limited to 100
-   * characters and can include only letters, digits, underscores, hyphens, and periods.
+   * characters and can include only letters, digits, underscores, hyphens, and periods. Bucket
+   * identifiers must start with an alphanumeric character.
    * @param bucketId bucketId or {@code null} for none
    */
   public CreateBucketRequest setBucketId(java.lang.String bucketId) {

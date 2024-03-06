@@ -40,10 +40,11 @@ public final class GcsData extends com.google.api.client.json.GenericJson {
   private java.lang.String bucketName;
 
   /**
-   * Transfer managed folders is in public preview. This option is only applicable to the Cloud
-   * Storage source bucket. If set to true: - The source managed folder will be transferred to the
-   * destination bucket - The destination managed folder will always be overwritten, other OVERWRITE
-   * options will not be supported
+   * Preview. Enables the transfer of managed folders between Cloud Storage buckets. Set this option
+   * on the gcs_data_source. If set to true: - Managed folders in the source bucket are transferred
+   * to the destination bucket. - Managed folders in the destination bucket are overwritten. Other
+   * OVERWRITE options are not supported. See [Transfer Cloud Storage managed folders](/storage-
+   * transfer/docs/managed-folders).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,10 +79,11 @@ public final class GcsData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Transfer managed folders is in public preview. This option is only applicable to the Cloud
-   * Storage source bucket. If set to true: - The source managed folder will be transferred to the
-   * destination bucket - The destination managed folder will always be overwritten, other OVERWRITE
-   * options will not be supported
+   * Preview. Enables the transfer of managed folders between Cloud Storage buckets. Set this option
+   * on the gcs_data_source. If set to true: - Managed folders in the source bucket are transferred
+   * to the destination bucket. - Managed folders in the destination bucket are overwritten. Other
+   * OVERWRITE options are not supported. See [Transfer Cloud Storage managed folders](/storage-
+   * transfer/docs/managed-folders).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getManagedFolderTransferEnabled() {
@@ -89,10 +91,11 @@ public final class GcsData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Transfer managed folders is in public preview. This option is only applicable to the Cloud
-   * Storage source bucket. If set to true: - The source managed folder will be transferred to the
-   * destination bucket - The destination managed folder will always be overwritten, other OVERWRITE
-   * options will not be supported
+   * Preview. Enables the transfer of managed folders between Cloud Storage buckets. Set this option
+   * on the gcs_data_source. If set to true: - Managed folders in the source bucket are transferred
+   * to the destination bucket. - Managed folders in the destination bucket are overwritten. Other
+   * OVERWRITE options are not supported. See [Transfer Cloud Storage managed folders](/storage-
+   * transfer/docs/managed-folders).
    * @param managedFolderTransferEnabled managedFolderTransferEnabled or {@code null} for none
    */
   public GcsData setManagedFolderTransferEnabled(java.lang.Boolean managedFolderTransferEnabled) {

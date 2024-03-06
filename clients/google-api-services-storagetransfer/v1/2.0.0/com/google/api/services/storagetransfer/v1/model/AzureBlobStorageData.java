@@ -56,8 +56,7 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
    * granted `roles/secretmanager.secretAccessor` for the resource. See [Configure access to a
    * source: Microsoft Azure Blob Storage] (https://cloud.google.com/storage-transfer/docs/source-
    * microsoft-azure#secret_manager) for more information. If `credentials_secret` is specified, do
-   * not specify azure_credentials. This feature is in [preview](https://cloud.google.com/terms
-   * /service-terms#1). Format: `projects/{project_number}/secrets/{secret_name}`
+   * not specify azure_credentials. Format: `projects/{project_number}/secrets/{secret_name}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,8 +121,7 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
    * granted `roles/secretmanager.secretAccessor` for the resource. See [Configure access to a
    * source: Microsoft Azure Blob Storage] (https://cloud.google.com/storage-transfer/docs/source-
    * microsoft-azure#secret_manager) for more information. If `credentials_secret` is specified, do
-   * not specify azure_credentials. This feature is in [preview](https://cloud.google.com/terms
-   * /service-terms#1). Format: `projects/{project_number}/secrets/{secret_name}`
+   * not specify azure_credentials. Format: `projects/{project_number}/secrets/{secret_name}`
    * @return value or {@code null} for none
    */
   public java.lang.String getCredentialsSecret() {
@@ -136,8 +134,7 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
    * granted `roles/secretmanager.secretAccessor` for the resource. See [Configure access to a
    * source: Microsoft Azure Blob Storage] (https://cloud.google.com/storage-transfer/docs/source-
    * microsoft-azure#secret_manager) for more information. If `credentials_secret` is specified, do
-   * not specify azure_credentials. This feature is in [preview](https://cloud.google.com/terms
-   * /service-terms#1). Format: `projects/{project_number}/secrets/{secret_name}`
+   * not specify azure_credentials. Format: `projects/{project_number}/secrets/{secret_name}`
    * @param credentialsSecret credentialsSecret or {@code null} for none
    */
   public AzureBlobStorageData setCredentialsSecret(java.lang.String credentialsSecret) {

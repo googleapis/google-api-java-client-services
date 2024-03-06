@@ -37,6 +37,13 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   private String createTime;
 
   /**
+   * Optional. Whether the association is disabled. True indicates that traffic won't be intercepted
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disabled;
+
+  /**
    * Required. The URL of the FirewallEndpoint that is being associated.
    * The value may be {@code null}.
    */
@@ -106,6 +113,23 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
    */
   public FirewallEndpointAssociation setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the association is disabled. True indicates that traffic won't be intercepted
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisabled() {
+    return disabled;
+  }
+
+  /**
+   * Optional. Whether the association is disabled. True indicates that traffic won't be intercepted
+   * @param disabled disabled or {@code null} for none
+   */
+  public FirewallEndpointAssociation setDisabled(java.lang.Boolean disabled) {
+    this.disabled = disabled;
     return this;
   }
 

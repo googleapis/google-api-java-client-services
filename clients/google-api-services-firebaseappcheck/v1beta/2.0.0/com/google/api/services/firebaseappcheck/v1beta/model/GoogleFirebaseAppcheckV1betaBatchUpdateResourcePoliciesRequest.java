@@ -39,7 +39,7 @@ public final class GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesReques
   private java.util.List<GoogleFirebaseAppcheckV1betaUpdateResourcePolicyRequest> requests;
 
   /**
-   * Optional. A comma-separated list of names of fields in the ResourceConfigurations to update.
+   * Optional. A comma-separated list of names of fields in the ResourcePolicy objects to update.
    * Example: `enforcement_mode`. If this field is present, the `update_mask` field in the
    * UpdateResourcePolicyRequest messages must all match this field, or the entire batch fails and
    * no updates will be committed.
@@ -68,7 +68,7 @@ public final class GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesReques
   }
 
   /**
-   * Optional. A comma-separated list of names of fields in the ResourceConfigurations to update.
+   * Optional. A comma-separated list of names of fields in the ResourcePolicy objects to update.
    * Example: `enforcement_mode`. If this field is present, the `update_mask` field in the
    * UpdateResourcePolicyRequest messages must all match this field, or the entire batch fails and
    * no updates will be committed.
@@ -79,7 +79,7 @@ public final class GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesReques
   }
 
   /**
-   * Optional. A comma-separated list of names of fields in the ResourceConfigurations to update.
+   * Optional. A comma-separated list of names of fields in the ResourcePolicy objects to update.
    * Example: `enforcement_mode`. If this field is present, the `update_mask` field in the
    * UpdateResourcePolicyRequest messages must all match this field, or the entire batch fails and
    * no updates will be committed.

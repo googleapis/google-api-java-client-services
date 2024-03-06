@@ -33,8 +33,8 @@ public final class GoogleFirebaseAppcheckV1betaListResourcePoliciesResponse exte
   /**
    * If the result list is too large to fit in a single response, then a token is returned. If the
    * string is empty or omitted, then this response is the last page of results. This token can be
-   * used in a subsequent call to ListResourcePolicies to find the next group of ResourcePolicys.
-   * Page tokens are short-lived and should not be persisted.
+   * used in a subsequent call to ListResourcePolicies to find the next group of ResourcePolicy
+   * objects. Page tokens are short-lived and should not be persisted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +50,8 @@ public final class GoogleFirebaseAppcheckV1betaListResourcePoliciesResponse exte
   /**
    * If the result list is too large to fit in a single response, then a token is returned. If the
    * string is empty or omitted, then this response is the last page of results. This token can be
-   * used in a subsequent call to ListResourcePolicies to find the next group of ResourcePolicys.
-   * Page tokens are short-lived and should not be persisted.
+   * used in a subsequent call to ListResourcePolicies to find the next group of ResourcePolicy
+   * objects. Page tokens are short-lived and should not be persisted.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -61,8 +61,8 @@ public final class GoogleFirebaseAppcheckV1betaListResourcePoliciesResponse exte
   /**
    * If the result list is too large to fit in a single response, then a token is returned. If the
    * string is empty or omitted, then this response is the last page of results. This token can be
-   * used in a subsequent call to ListResourcePolicies to find the next group of ResourcePolicys.
-   * Page tokens are short-lived and should not be persisted.
+   * used in a subsequent call to ListResourcePolicies to find the next group of ResourcePolicy
+   * objects. Page tokens are short-lived and should not be persisted.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaListResourcePoliciesResponse setNextPageToken(java.lang.String nextPageToken) {

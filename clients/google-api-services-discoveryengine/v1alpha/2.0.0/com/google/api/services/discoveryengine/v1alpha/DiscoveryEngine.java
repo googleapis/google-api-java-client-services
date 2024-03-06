@@ -1822,7 +1822,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * `document-completable` - Using suggestions taken directly from user-imported document
              * fields marked as completable. Default values: * `document` is the default model for
              * regular dataStores. * `search-history` is the default model for site search
-             * dataStores.
+             * dataStores. *
              */
             @com.google.api.client.util.Key
             private java.lang.String queryModel;
@@ -1834,7 +1834,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            traffic for Search API. * `user-event` - Using suggestions generated from user-imported search
            events. * `document-completable` - Using suggestions taken directly from user-imported document
            fields marked as completable. Default values: * `document` is the default model for regular
-           dataStores. * `search-history` is the default model for site search dataStores.
+           dataStores. * `search-history` is the default model for site search dataStores. *
              */
             public java.lang.String getQueryModel() {
               return queryModel;
@@ -1850,7 +1850,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * `document-completable` - Using suggestions taken directly from user-imported document
              * fields marked as completable. Default values: * `document` is the default model for
              * regular dataStores. * `search-history` is the default model for site search
-             * dataStores.
+             * dataStores. *
              */
             public CompleteQuery setQueryModel(java.lang.String queryModel) {
               this.queryModel = queryModel;
@@ -16423,7 +16423,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Using suggestions generated from user-imported search events. * `document-completable`
            * - Using suggestions taken directly from user-imported document fields marked as
            * completable. Default values: * `document` is the default model for regular dataStores.
-           * * `search-history` is the default model for site search dataStores.
+           * * `search-history` is the default model for site search dataStores. *
            */
           @com.google.api.client.util.Key
           private java.lang.String queryModel;
@@ -16435,7 +16435,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          traffic for Search API. * `user-event` - Using suggestions generated from user-imported search
          events. * `document-completable` - Using suggestions taken directly from user-imported document
          fields marked as completable. Default values: * `document` is the default model for regular
-         dataStores. * `search-history` is the default model for site search dataStores.
+         dataStores. * `search-history` is the default model for site search dataStores. *
            */
           public java.lang.String getQueryModel() {
             return queryModel;
@@ -16450,7 +16450,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Using suggestions generated from user-imported search events. * `document-completable`
            * - Using suggestions taken directly from user-imported document fields marked as
            * completable. Default values: * `document` is the default model for regular dataStores.
-           * * `search-history` is the default model for site search dataStores.
+           * * `search-history` is the default model for site search dataStores. *
            */
           public CompleteQuery setQueryModel(java.lang.String queryModel) {
             this.queryModel = queryModel;

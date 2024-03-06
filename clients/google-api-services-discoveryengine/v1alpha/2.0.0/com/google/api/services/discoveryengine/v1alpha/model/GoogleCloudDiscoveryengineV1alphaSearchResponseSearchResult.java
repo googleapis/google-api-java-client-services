@@ -30,6 +30,14 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaSearchResponseSearchResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * The chunk data in the search response if the SearchRequest.ContentSearchSpec.search_result_mode
+   * is set to CHUNKS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaChunk chunk;
+
+  /**
    * The document data snippet in the search response. Only fields that are marked as retrievable
    * are populated.
    * The value may be {@code null}.
@@ -55,6 +63,25 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponseSearchResult e
     // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1alphaDoubleList used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1alphaDoubleList.class);
+  }
+
+  /**
+   * The chunk data in the search response if the SearchRequest.ContentSearchSpec.search_result_mode
+   * is set to CHUNKS.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaChunk getChunk() {
+    return chunk;
+  }
+
+  /**
+   * The chunk data in the search response if the SearchRequest.ContentSearchSpec.search_result_mode
+   * is set to CHUNKS.
+   * @param chunk chunk or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchResponseSearchResult setChunk(GoogleCloudDiscoveryengineV1alphaChunk chunk) {
+    this.chunk = chunk;
+    return this;
   }
 
   /**

@@ -1401,6 +1401,37 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return this;
           }
 
+          /**
+           * Optional. The optional version of the 1st gen function whose details should be
+           * obtained. The version of a 1st gen function is an integer that starts from 1 and gets
+           * incremented on redeployments. GCF may keep historical configs for old versions of 1st
+           * gen function. This field can be specified to fetch the historical configs. This field
+           * is valid only for GCF 1st gen function.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String revision;
+
+          /** Optional. The optional version of the 1st gen function whose details should be obtained. The
+         version of a 1st gen function is an integer that starts from 1 and gets incremented on
+         redeployments. GCF may keep historical configs for old versions of 1st gen function. This field can
+         be specified to fetch the historical configs. This field is valid only for GCF 1st gen function.
+           */
+          public java.lang.String getRevision() {
+            return revision;
+          }
+
+          /**
+           * Optional. The optional version of the 1st gen function whose details should be
+           * obtained. The version of a 1st gen function is an integer that starts from 1 and gets
+           * incremented on redeployments. GCF may keep historical configs for old versions of 1st
+           * gen function. This field can be specified to fetch the historical configs. This field
+           * is valid only for GCF 1st gen function.
+           */
+          public Get setRevision(java.lang.String revision) {
+            this.revision = revision;
+            return this;
+          }
+
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);

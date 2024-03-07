@@ -44,7 +44,8 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings 
   private java.lang.String audioFormat;
 
   /**
-   * Enable audio redaction if it is true.
+   * Enable audio redaction if it is true. Note that this only redacts end-user audio data;
+   * Synthesised audio from the virtual agent is not redacted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +95,8 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings 
   }
 
   /**
-   * Enable audio redaction if it is true.
+   * Enable audio redaction if it is true. Note that this only redacts end-user audio data;
+   * Synthesised audio from the virtual agent is not redacted.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAudioRedaction() {
@@ -102,7 +104,8 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings 
   }
 
   /**
-   * Enable audio redaction if it is true.
+   * Enable audio redaction if it is true. Note that this only redacts end-user audio data;
+   * Synthesised audio from the virtual agent is not redacted.
    * @param enableAudioRedaction enableAudioRedaction or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings setEnableAudioRedaction(java.lang.Boolean enableAudioRedaction) {

@@ -44,6 +44,13 @@ public final class SqlInstancesVerifyExternalSyncSettingsRequest extends com.goo
   private java.lang.String syncMode;
 
   /**
+   * Optional. Parallel level for initial data sync. Currently only applicable for PostgreSQL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String syncParallelLevel;
+
+  /**
    * Flag to enable verifying connection only
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class SqlInstancesVerifyExternalSyncSettingsRequest extends com.goo
    */
   public SqlInstancesVerifyExternalSyncSettingsRequest setSyncMode(java.lang.String syncMode) {
     this.syncMode = syncMode;
+    return this;
+  }
+
+  /**
+   * Optional. Parallel level for initial data sync. Currently only applicable for PostgreSQL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSyncParallelLevel() {
+    return syncParallelLevel;
+  }
+
+  /**
+   * Optional. Parallel level for initial data sync. Currently only applicable for PostgreSQL.
+   * @param syncParallelLevel syncParallelLevel or {@code null} for none
+   */
+  public SqlInstancesVerifyExternalSyncSettingsRequest setSyncParallelLevel(java.lang.String syncParallelLevel) {
+    this.syncParallelLevel = syncParallelLevel;
     return this;
   }
 

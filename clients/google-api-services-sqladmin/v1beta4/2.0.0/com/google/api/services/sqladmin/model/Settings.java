@@ -176,6 +176,13 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String edition;
 
   /**
+   * Optional. Configuration to enable Cloud SQL Vertex AI Integration
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableGoogleMlIntegration;
+
+  /**
    * Insights configuration, for now relevant only for Postgres.
    * The value may be {@code null}.
    */
@@ -607,6 +614,23 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setEdition(java.lang.String edition) {
     this.edition = edition;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration to enable Cloud SQL Vertex AI Integration
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableGoogleMlIntegration() {
+    return enableGoogleMlIntegration;
+  }
+
+  /**
+   * Optional. Configuration to enable Cloud SQL Vertex AI Integration
+   * @param enableGoogleMlIntegration enableGoogleMlIntegration or {@code null} for none
+   */
+  public Settings setEnableGoogleMlIntegration(java.lang.Boolean enableGoogleMlIntegration) {
+    this.enableGoogleMlIntegration = enableGoogleMlIntegration;
     return this;
   }
 

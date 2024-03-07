@@ -31,6 +31,13 @@ package com.google.api.services.sqladmin.model;
 public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
+   * The context for acquire SSRS lease operation, if applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AcquireSsrsLeaseContext acquireSsrsLeaseContext;
+
+  /**
    * An Admin API warning message.
    * The value may be {@code null}.
    */
@@ -153,6 +160,23 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String user;
+
+  /**
+   * The context for acquire SSRS lease operation, if applicable.
+   * @return value or {@code null} for none
+   */
+  public AcquireSsrsLeaseContext getAcquireSsrsLeaseContext() {
+    return acquireSsrsLeaseContext;
+  }
+
+  /**
+   * The context for acquire SSRS lease operation, if applicable.
+   * @param acquireSsrsLeaseContext acquireSsrsLeaseContext or {@code null} for none
+   */
+  public Operation setAcquireSsrsLeaseContext(AcquireSsrsLeaseContext acquireSsrsLeaseContext) {
+    this.acquireSsrsLeaseContext = acquireSsrsLeaseContext;
+    return this;
+  }
 
   /**
    * An Admin API warning message.

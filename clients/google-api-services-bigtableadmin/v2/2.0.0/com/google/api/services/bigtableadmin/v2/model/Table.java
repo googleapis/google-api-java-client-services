@@ -32,6 +32,14 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
+   * If specified, automated backups are enabled for this table. Otherwise, automated backups are
+   * disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutomatedBackupPolicy automatedBackupPolicy;
+
+  /**
    * If specified, enable the change stream on this table. Otherwise, the change stream is disabled
    * and the change stream is not retained.
    * The value may be {@code null}.
@@ -113,6 +121,25 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TableStats stats;
+
+  /**
+   * If specified, automated backups are enabled for this table. Otherwise, automated backups are
+   * disabled.
+   * @return value or {@code null} for none
+   */
+  public AutomatedBackupPolicy getAutomatedBackupPolicy() {
+    return automatedBackupPolicy;
+  }
+
+  /**
+   * If specified, automated backups are enabled for this table. Otherwise, automated backups are
+   * disabled.
+   * @param automatedBackupPolicy automatedBackupPolicy or {@code null} for none
+   */
+  public Table setAutomatedBackupPolicy(AutomatedBackupPolicy automatedBackupPolicy) {
+    this.automatedBackupPolicy = automatedBackupPolicy;
+    return this;
+  }
 
   /**
    * If specified, enable the change stream on this table. Otherwise, the change stream is disabled

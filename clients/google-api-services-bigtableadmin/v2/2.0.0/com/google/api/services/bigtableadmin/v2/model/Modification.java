@@ -61,6 +61,15 @@ public final class Modification extends com.google.api.client.json.GenericJson {
   private ColumnFamily update;
 
   /**
+   * Optional. A mask specifying which fields (e.g. `gc_rule`) in the `update` mod should be
+   * updated, ignored for other modification types. If unset or empty, we treat it as updating
+   * `gc_rule` to be backward compatible.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateMask;
+
+  /**
    * Create a new column family with the specified schema, or fail if one already exists with the
    * given ID.
    * @return value or {@code null} for none
@@ -129,6 +138,27 @@ public final class Modification extends com.google.api.client.json.GenericJson {
    */
   public Modification setUpdate(ColumnFamily update) {
     this.update = update;
+    return this;
+  }
+
+  /**
+   * Optional. A mask specifying which fields (e.g. `gc_rule`) in the `update` mod should be
+   * updated, ignored for other modification types. If unset or empty, we treat it as updating
+   * `gc_rule` to be backward compatible.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateMask() {
+    return updateMask;
+  }
+
+  /**
+   * Optional. A mask specifying which fields (e.g. `gc_rule`) in the `update` mod should be
+   * updated, ignored for other modification types. If unset or empty, we treat it as updating
+   * `gc_rule` to be backward compatible.
+   * @param updateMask updateMask or {@code null} for none
+   */
+  public Modification setUpdateMask(String updateMask) {
+    this.updateMask = updateMask;
     return this;
   }
 

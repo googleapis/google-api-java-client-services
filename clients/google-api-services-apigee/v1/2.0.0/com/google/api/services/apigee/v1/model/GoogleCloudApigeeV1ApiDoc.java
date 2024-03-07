@@ -19,7 +19,8 @@ package com.google.api.services.apigee.v1.model;
 /**
  * `ApiDoc` represents an API catalog item. Catalog items are used in two ways in a portal: - Users
  * can browse and interact with a visual representation of the API documentation - The
- * `api_product_name` field provides a link to a backing API product. Through this link, portal
+ * `api_product_name` field provides a link to a backing [API product]
+ * (/apigee/docs/reference/apis/apigee/rest/v1/organizations.apiproducts). Through this link, portal
  * users can create and manage developer apps linked to one or more API products.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

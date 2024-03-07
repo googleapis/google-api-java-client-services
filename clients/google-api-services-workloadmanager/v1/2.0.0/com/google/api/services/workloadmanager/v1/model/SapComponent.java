@@ -30,6 +30,14 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapComponent extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of host URIs that are part of the HA configuration if present. An empty list indicates
+   * the component is not configured for HA.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> haHosts;
+
+  /**
    * Output only. resources in the component
    * The value may be {@code null}.
    */
@@ -48,6 +56,32 @@ public final class SapComponent extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String sid;
+
+  /**
+   * The detected topology of the component.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String topologyType;
+
+  /**
+   * A list of host URIs that are part of the HA configuration if present. An empty list indicates
+   * the component is not configured for HA.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getHaHosts() {
+    return haHosts;
+  }
+
+  /**
+   * A list of host URIs that are part of the HA configuration if present. An empty list indicates
+   * the component is not configured for HA.
+   * @param haHosts haHosts or {@code null} for none
+   */
+  public SapComponent setHaHosts(java.util.List<java.lang.String> haHosts) {
+    this.haHosts = haHosts;
+    return this;
+  }
 
   /**
    * Output only. resources in the component
@@ -80,6 +114,23 @@ public final class SapComponent extends com.google.api.client.json.GenericJson {
    */
   public SapComponent setSid(java.lang.String sid) {
     this.sid = sid;
+    return this;
+  }
+
+  /**
+   * The detected topology of the component.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTopologyType() {
+    return topologyType;
+  }
+
+  /**
+   * The detected topology of the component.
+   * @param topologyType topologyType or {@code null} for none
+   */
+  public SapComponent setTopologyType(java.lang.String topologyType) {
+    this.topologyType = topologyType;
     return this;
   }
 

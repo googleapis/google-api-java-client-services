@@ -2236,6 +2236,157 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
   public class Instances {
 
     /**
+     * Acquire a lease for the setup of SQL Server Reporting Services (SSRS).
+     *
+     * Create a request for the method "instances.acquireSsrsLease".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link AcquireSsrsLease#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. Project ID of the project that contains the instance (Example: project-id).
+     * @param instance Required. Cloud SQL instance ID. This doesn't include the project ID. It's composed of lowercase
+     *        letters, numbers, and hyphens, and it must start with a letter. The total length must be
+     *        98 characters or less (Example: instance-id).
+     * @param content the {@link com.google.api.services.sqladmin.model.InstancesAcquireSsrsLeaseRequest}
+     * @return the request
+     */
+    public AcquireSsrsLease acquireSsrsLease(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.InstancesAcquireSsrsLeaseRequest content) throws java.io.IOException {
+      AcquireSsrsLease result = new AcquireSsrsLease(project, instance, content);
+      initialize(result);
+      return result;
+    }
+
+    public class AcquireSsrsLease extends SQLAdminRequest<com.google.api.services.sqladmin.model.SqlInstancesAcquireSsrsLeaseResponse> {
+
+      private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/acquireSsrsLease";
+
+      /**
+       * Acquire a lease for the setup of SQL Server Reporting Services (SSRS).
+       *
+       * Create a request for the method "instances.acquireSsrsLease".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link AcquireSsrsLease#execute()} method to invoke the remote
+       * operation. <p> {@link AcquireSsrsLease#initialize(com.google.api.client.googleapis.services.Abs
+       * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Required. Project ID of the project that contains the instance (Example: project-id).
+       * @param instance Required. Cloud SQL instance ID. This doesn't include the project ID. It's composed of lowercase
+     *        letters, numbers, and hyphens, and it must start with a letter. The total length must be
+     *        98 characters or less (Example: instance-id).
+       * @param content the {@link com.google.api.services.sqladmin.model.InstancesAcquireSsrsLeaseRequest}
+       * @since 1.13
+       */
+      protected AcquireSsrsLease(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.InstancesAcquireSsrsLeaseRequest content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.SqlInstancesAcquireSsrsLeaseResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public AcquireSsrsLease set$Xgafv(java.lang.String $Xgafv) {
+        return (AcquireSsrsLease) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AcquireSsrsLease setAccessToken(java.lang.String accessToken) {
+        return (AcquireSsrsLease) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AcquireSsrsLease setAlt(java.lang.String alt) {
+        return (AcquireSsrsLease) super.setAlt(alt);
+      }
+
+      @Override
+      public AcquireSsrsLease setCallback(java.lang.String callback) {
+        return (AcquireSsrsLease) super.setCallback(callback);
+      }
+
+      @Override
+      public AcquireSsrsLease setFields(java.lang.String fields) {
+        return (AcquireSsrsLease) super.setFields(fields);
+      }
+
+      @Override
+      public AcquireSsrsLease setKey(java.lang.String key) {
+        return (AcquireSsrsLease) super.setKey(key);
+      }
+
+      @Override
+      public AcquireSsrsLease setOauthToken(java.lang.String oauthToken) {
+        return (AcquireSsrsLease) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AcquireSsrsLease setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AcquireSsrsLease) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AcquireSsrsLease setQuotaUser(java.lang.String quotaUser) {
+        return (AcquireSsrsLease) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AcquireSsrsLease setUploadType(java.lang.String uploadType) {
+        return (AcquireSsrsLease) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AcquireSsrsLease setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AcquireSsrsLease) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the project that contains the instance (Example: project-id). */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID of the project that contains the instance (Example: project-id).
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID of the project that contains the instance (Example: project-id). */
+      public AcquireSsrsLease setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * Required. Cloud SQL instance ID. This doesn't include the project ID. It's composed of
+       * lowercase letters, numbers, and hyphens, and it must start with a letter. The total length
+       * must be 98 characters or less (Example: instance-id).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Required. Cloud SQL instance ID. This doesn't include the project ID. It's composed of lowercase
+     letters, numbers, and hyphens, and it must start with a letter. The total length must be 98
+     characters or less (Example: instance-id).
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /**
+       * Required. Cloud SQL instance ID. This doesn't include the project ID. It's composed of
+       * lowercase letters, numbers, and hyphens, and it must start with a letter. The total length
+       * must be 98 characters or less (Example: instance-id).
+       */
+      public AcquireSsrsLease setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public AcquireSsrsLease set(String parameterName, Object value) {
+        return (AcquireSsrsLease) super.set(parameterName, value);
+      }
+    }
+    /**
      * Adds a new trusted Certificate Authority (CA) version for the specified instance. Required to
      * prepare for a certificate rotation. If a CA version was previously added but never used in a
      * certificate rotation, this operation replaces that version. There cannot be more than one CA
@@ -4411,6 +4562,155 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public Reencrypt set(String parameterName, Object value) {
         return (Reencrypt) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Release a lease for the setup of SQL Server Reporting Services (SSRS).
+     *
+     * Create a request for the method "instances.releaseSsrsLease".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link ReleaseSsrsLease#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. The project ID that contains the instance.
+     * @param instance Required. The Cloud SQL instance ID. This doesn't include the project ID. The instance ID contains
+     *        lowercase letters, numbers, and hyphens, and it must start with a letter. This ID can have
+     *        a maximum length of 98 characters.
+     * @return the request
+     */
+    public ReleaseSsrsLease releaseSsrsLease(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+      ReleaseSsrsLease result = new ReleaseSsrsLease(project, instance);
+      initialize(result);
+      return result;
+    }
+
+    public class ReleaseSsrsLease extends SQLAdminRequest<com.google.api.services.sqladmin.model.SqlInstancesReleaseSsrsLeaseResponse> {
+
+      private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/releaseSsrsLease";
+
+      /**
+       * Release a lease for the setup of SQL Server Reporting Services (SSRS).
+       *
+       * Create a request for the method "instances.releaseSsrsLease".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link ReleaseSsrsLease#execute()} method to invoke the remote
+       * operation. <p> {@link ReleaseSsrsLease#initialize(com.google.api.client.googleapis.services.Abs
+       * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Required. The project ID that contains the instance.
+       * @param instance Required. The Cloud SQL instance ID. This doesn't include the project ID. The instance ID contains
+     *        lowercase letters, numbers, and hyphens, and it must start with a letter. This ID can have
+     *        a maximum length of 98 characters.
+       * @since 1.13
+       */
+      protected ReleaseSsrsLease(java.lang.String project, java.lang.String instance) {
+        super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sqladmin.model.SqlInstancesReleaseSsrsLeaseResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public ReleaseSsrsLease set$Xgafv(java.lang.String $Xgafv) {
+        return (ReleaseSsrsLease) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ReleaseSsrsLease setAccessToken(java.lang.String accessToken) {
+        return (ReleaseSsrsLease) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ReleaseSsrsLease setAlt(java.lang.String alt) {
+        return (ReleaseSsrsLease) super.setAlt(alt);
+      }
+
+      @Override
+      public ReleaseSsrsLease setCallback(java.lang.String callback) {
+        return (ReleaseSsrsLease) super.setCallback(callback);
+      }
+
+      @Override
+      public ReleaseSsrsLease setFields(java.lang.String fields) {
+        return (ReleaseSsrsLease) super.setFields(fields);
+      }
+
+      @Override
+      public ReleaseSsrsLease setKey(java.lang.String key) {
+        return (ReleaseSsrsLease) super.setKey(key);
+      }
+
+      @Override
+      public ReleaseSsrsLease setOauthToken(java.lang.String oauthToken) {
+        return (ReleaseSsrsLease) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ReleaseSsrsLease setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ReleaseSsrsLease) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ReleaseSsrsLease setQuotaUser(java.lang.String quotaUser) {
+        return (ReleaseSsrsLease) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ReleaseSsrsLease setUploadType(java.lang.String uploadType) {
+        return (ReleaseSsrsLease) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ReleaseSsrsLease setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ReleaseSsrsLease) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The project ID that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. The project ID that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. The project ID that contains the instance. */
+      public ReleaseSsrsLease setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * Required. The Cloud SQL instance ID. This doesn't include the project ID. The instance ID
+       * contains lowercase letters, numbers, and hyphens, and it must start with a letter. This ID
+       * can have a maximum length of 98 characters.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Required. The Cloud SQL instance ID. This doesn't include the project ID. The instance ID contains
+     lowercase letters, numbers, and hyphens, and it must start with a letter. This ID can have a
+     maximum length of 98 characters.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /**
+       * Required. The Cloud SQL instance ID. This doesn't include the project ID. The instance ID
+       * contains lowercase letters, numbers, and hyphens, and it must start with a letter. This ID
+       * can have a maximum length of 98 characters.
+       */
+      public ReleaseSsrsLease setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public ReleaseSsrsLease set(String parameterName, Object value) {
+        return (ReleaseSsrsLease) super.set(parameterName, value);
       }
     }
     /**

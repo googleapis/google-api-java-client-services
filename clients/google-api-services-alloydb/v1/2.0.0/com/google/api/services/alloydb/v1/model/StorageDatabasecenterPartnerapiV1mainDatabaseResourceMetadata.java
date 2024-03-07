@@ -111,7 +111,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   /**
    * Identifier for this resource's immediate parent/primary resource if the current resource is a
    * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
-   * immediate parent exists when first time resource is getting ingested
+   * immediate parent exists when first time resource is getting ingested, otherwise optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -351,7 +351,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   /**
    * Identifier for this resource's immediate parent/primary resource if the current resource is a
    * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
-   * immediate parent exists when first time resource is getting ingested
+   * immediate parent exists when first time resource is getting ingested, otherwise optional.
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId getPrimaryResourceId() {
@@ -361,7 +361,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   /**
    * Identifier for this resource's immediate parent/primary resource if the current resource is a
    * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
-   * immediate parent exists when first time resource is getting ingested
+   * immediate parent exists when first time resource is getting ingested, otherwise optional.
    * @param primaryResourceId primaryResourceId or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setPrimaryResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId primaryResourceId) {

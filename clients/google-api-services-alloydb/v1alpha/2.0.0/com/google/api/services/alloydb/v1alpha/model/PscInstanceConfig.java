@@ -54,6 +54,14 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> outgoingServiceAttachmentLinks;
 
   /**
+   * Output only. The DNS name of the instance for PSC connectivity. Name convention: ...alloydb-
+   * psc.goog
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscDnsName;
+
+  /**
    * Optional. Whether PSC connectivity is enabled for this instance. This is populated by
    * referencing the value from the parent cluster.
    * The value may be {@code null}.
@@ -134,6 +142,25 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
    */
   public PscInstanceConfig setOutgoingServiceAttachmentLinks(java.util.List<java.lang.String> outgoingServiceAttachmentLinks) {
     this.outgoingServiceAttachmentLinks = outgoingServiceAttachmentLinks;
+    return this;
+  }
+
+  /**
+   * Output only. The DNS name of the instance for PSC connectivity. Name convention: ...alloydb-
+   * psc.goog
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscDnsName() {
+    return pscDnsName;
+  }
+
+  /**
+   * Output only. The DNS name of the instance for PSC connectivity. Name convention: ...alloydb-
+   * psc.goog
+   * @param pscDnsName pscDnsName or {@code null} for none
+   */
+  public PscInstanceConfig setPscDnsName(java.lang.String pscDnsName) {
+    this.pscDnsName = pscDnsName;
     return this;
   }
 

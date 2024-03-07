@@ -72,7 +72,7 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig extend
   private GoogleCloudBeyondcorpPartnerservicesV1alphaRoutingInfo routingInfo;
 
   /**
-   * Required. Transport layer information to verify for the proxy server.
+   * Optional. Transport layer information to verify for the proxy server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,7 +188,7 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig extend
   }
 
   /**
-   * Required. Transport layer information to verify for the proxy server.
+   * Optional. Transport layer information to verify for the proxy server.
    * @return value or {@code null} for none
    */
   public GoogleCloudBeyondcorpPartnerservicesV1alphaTransportInfo getTransportInfo() {
@@ -196,7 +196,7 @@ public final class GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig extend
   }
 
   /**
-   * Required. Transport layer information to verify for the proxy server.
+   * Optional. Transport layer information to verify for the proxy server.
    * @param transportInfo transportInfo or {@code null} for none
    */
   public GoogleCloudBeyondcorpPartnerservicesV1alphaProxyConfig setTransportInfo(GoogleCloudBeyondcorpPartnerservicesV1alphaTransportInfo transportInfo) {

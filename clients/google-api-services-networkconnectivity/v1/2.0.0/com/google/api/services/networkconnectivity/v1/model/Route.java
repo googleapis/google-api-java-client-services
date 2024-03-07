@@ -62,7 +62,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The location of the route. Uses the following form:
+   * Output only. The origin location of the route. Uses the following form:
    * "projects/{project}/locations/{location}" Example: projects/1234/locations/us-central1
    * The value may be {@code null}.
    */
@@ -197,7 +197,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The location of the route. Uses the following form:
+   * Output only. The origin location of the route. Uses the following form:
    * "projects/{project}/locations/{location}" Example: projects/1234/locations/us-central1
    * @return value or {@code null} for none
    */
@@ -206,7 +206,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The location of the route. Uses the following form:
+   * Output only. The origin location of the route. Uses the following form:
    * "projects/{project}/locations/{location}" Example: projects/1234/locations/us-central1
    * @param location location or {@code null} for none
    */

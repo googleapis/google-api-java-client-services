@@ -164,6 +164,13 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   private PipelineSpec resolvedPipelineSpec;
 
   /**
+   * Optional. Output only. List of results written out by the pipeline's containers
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PipelineRunResult> results;
+
+  /**
    * Optional. Security configuration.
    * The value may be {@code null}.
    */
@@ -518,6 +525,23 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    */
   public PipelineRun setResolvedPipelineSpec(PipelineSpec resolvedPipelineSpec) {
     this.resolvedPipelineSpec = resolvedPipelineSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. List of results written out by the pipeline's containers
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PipelineRunResult> getResults() {
+    return results;
+  }
+
+  /**
+   * Optional. Output only. List of results written out by the pipeline's containers
+   * @param results results or {@code null} for none
+   */
+  public PipelineRun setResults(java.util.List<PipelineRunResult> results) {
+    this.results = results;
     return this;
   }
 

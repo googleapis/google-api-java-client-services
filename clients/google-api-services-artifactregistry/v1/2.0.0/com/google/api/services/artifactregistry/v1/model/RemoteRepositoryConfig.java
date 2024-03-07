@@ -45,6 +45,14 @@ public final class RemoteRepositoryConfig extends com.google.api.client.json.Gen
   private java.lang.String description;
 
   /**
+   * Input only. A create/update remote repo option to avoid making a HEAD/GET request to validate a
+   * remote repo and any supplied upstream credentials.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableUpstreamValidation;
+
+  /**
    * Specific settings for a Docker remote repository.
    * The value may be {@code null}.
    */
@@ -117,6 +125,25 @@ public final class RemoteRepositoryConfig extends com.google.api.client.json.Gen
    */
   public RemoteRepositoryConfig setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Input only. A create/update remote repo option to avoid making a HEAD/GET request to validate a
+   * remote repo and any supplied upstream credentials.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableUpstreamValidation() {
+    return disableUpstreamValidation;
+  }
+
+  /**
+   * Input only. A create/update remote repo option to avoid making a HEAD/GET request to validate a
+   * remote repo and any supplied upstream credentials.
+   * @param disableUpstreamValidation disableUpstreamValidation or {@code null} for none
+   */
+  public RemoteRepositoryConfig setDisableUpstreamValidation(java.lang.Boolean disableUpstreamValidation) {
+    this.disableUpstreamValidation = disableUpstreamValidation;
     return this;
   }
 

@@ -31,6 +31,13 @@ package com.google.api.services.artifactregistry.v1beta2.model;
 public final class ArtifactRegistryPackage extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Client specified annotations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
+
+  /**
    * The time when the package was created.
    * The value may be {@code null}.
    */
@@ -60,6 +67,23 @@ public final class ArtifactRegistryPackage extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Client specified annotations.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Optional. Client specified annotations.
+   * @param annotations annotations or {@code null} for none
+   */
+  public ArtifactRegistryPackage setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * The time when the package was created.

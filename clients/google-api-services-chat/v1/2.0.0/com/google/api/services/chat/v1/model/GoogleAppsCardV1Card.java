@@ -29,14 +29,14 @@ package com.google.api.services.chat.v1.model;
  * message in Google Chat, use the following JSON: ``` { "cardsV2": [ { "cardId": "unique-card-id",
  * "card": { "header": { "title": "Sasha", "subtitle": "Software Engineer", "imageUrl":
  * "https://developers.google.com/chat/images/quickstart-app-avatar.png", "imageType": "CIRCLE",
- * "imageAltText": "Avatar for Sasha", }, "sections": [ { "header": "Contact Info", "collapsible":
+ * "imageAltText": "Avatar for Sasha" }, "sections": [ { "header": "Contact Info", "collapsible":
  * true, "uncollapsibleWidgetsCount": 1, "widgets": [ { "decoratedText": { "startIcon": {
- * "knownIcon": "EMAIL", }, "text": "sasha@example.com", } }, { "decoratedText": { "startIcon": {
- * "knownIcon": "PERSON", }, "text": "Online", }, }, { "decoratedText": { "startIcon": {
- * "knownIcon": "PHONE", }, "text": "+1 (555) 555-1234", } }, { "buttonList": { "buttons": [ {
- * "text": "Share", "onClick": { "openLink": { "url": "https://example.com/share", } } }, { "text":
- * "Edit", "onClick": { "action": { "function": "goToView", "parameters": [ { "key": "viewType",
- * "value": "EDIT", } ], } } }, ], } }, ], }, ], }, } ], } ```
+ * "knownIcon": "EMAIL" }, "text": "sasha@example.com" } }, { "decoratedText": { "startIcon": {
+ * "knownIcon": "PERSON" }, "text": "Online" } }, { "decoratedText": { "startIcon": { "knownIcon":
+ * "PHONE" }, "text": "+1 (555) 555-1234" } }, { "buttonList": { "buttons": [ { "text": "Share",
+ * "onClick": { "openLink": { "url": "https://example.com/share" } } }, { "text": "Edit", "onClick":
+ * { "action": { "function": "goToView", "parameters": [ { "key": "viewType", "value": "EDIT" } ] }
+ * } } ] } } ] } ] } } ] } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

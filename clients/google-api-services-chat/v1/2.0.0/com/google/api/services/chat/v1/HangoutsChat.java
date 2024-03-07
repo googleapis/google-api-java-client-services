@@ -1421,17 +1421,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * Optional. The maximum number of spaces to return. The service might return fewer than this
-       * value. If unspecified, at most 100 spaces are returned. The maximum value is 1,000. If you
-       * use a value more than 1,000, it's automatically changed to 1,000. Negative values return an
+       * value. If unspecified, at most 100 spaces are returned. The maximum value is 1000. If you
+       * use a value more than 1000, it's automatically changed to 1000. Negative values return an
        * `INVALID_ARGUMENT` error.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. The maximum number of spaces to return. The service might return fewer than this value.
-     If unspecified, at most 100 spaces are returned. The maximum value is 1,000. If you use a value
-     more than 1,000, it's automatically changed to 1,000. Negative values return an `INVALID_ARGUMENT`
-     error.
+     If unspecified, at most 100 spaces are returned. The maximum value is 1000. If you use a value more
+     than 1000, it's automatically changed to 1000. Negative values return an `INVALID_ARGUMENT` error.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -1439,8 +1438,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * Optional. The maximum number of spaces to return. The service might return fewer than this
-       * value. If unspecified, at most 100 spaces are returned. The maximum value is 1,000. If you
-       * use a value more than 1,000, it's automatically changed to 1,000. Negative values return an
+       * value. If unspecified, at most 100 spaces are returned. The maximum value is 1000. If you
+       * use a value more than 1000, it's automatically changed to 1000. Negative values return an
        * `INVALID_ARGUMENT` error.
        */
       public List setPageSize(java.lang.Integer pageSize) {
@@ -2580,15 +2579,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Optional. The maximum number of memberships to return. The service might return fewer
          * than this value. If unspecified, at most 100 memberships are returned. The maximum value
-         * is 1,000. If you use a value more than 1,000, it's automatically changed to 1,000.
-         * Negative values return an `INVALID_ARGUMENT` error.
+         * is 1000. If you use a value more than 1000, it's automatically changed to 1000. Negative
+         * values return an `INVALID_ARGUMENT` error.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional. The maximum number of memberships to return. The service might return fewer than this
-       value. If unspecified, at most 100 memberships are returned. The maximum value is 1,000. If you use
-       a value more than 1,000, it's automatically changed to 1,000. Negative values return an
+       value. If unspecified, at most 100 memberships are returned. The maximum value is 1000. If you use
+       a value more than 1000, it's automatically changed to 1000. Negative values return an
        `INVALID_ARGUMENT` error.
          */
         public java.lang.Integer getPageSize() {
@@ -2598,8 +2597,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Optional. The maximum number of memberships to return. The service might return fewer
          * than this value. If unspecified, at most 100 memberships are returned. The maximum value
-         * is 1,000. If you use a value more than 1,000, it's automatically changed to 1,000.
-         * Negative values return an `INVALID_ARGUMENT` error.
+         * is 1000. If you use a value more than 1000, it's automatically changed to 1000. Negative
+         * values return an `INVALID_ARGUMENT` error.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -3567,16 +3566,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * The maximum number of messages returned. The service might return fewer messages than
-         * this value. If unspecified, at most 25 are returned. The maximum value is 1,000. If you
-         * use a value more than 1,000, it's automatically changed to 1,000. Negative values return
-         * an `INVALID_ARGUMENT` error.
+         * this value. If unspecified, at most 25 are returned. The maximum value is 1000. If you
+         * use a value more than 1000, it's automatically changed to 1000. Negative values return an
+         * `INVALID_ARGUMENT` error.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** The maximum number of messages returned. The service might return fewer messages than this value.
-       If unspecified, at most 25 are returned. The maximum value is 1,000. If you use a value more than
-       1,000, it's automatically changed to 1,000. Negative values return an `INVALID_ARGUMENT` error.
+       If unspecified, at most 25 are returned. The maximum value is 1000. If you use a value more than
+       1000, it's automatically changed to 1000. Negative values return an `INVALID_ARGUMENT` error.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -3584,9 +3583,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * The maximum number of messages returned. The service might return fewer messages than
-         * this value. If unspecified, at most 25 are returned. The maximum value is 1,000. If you
-         * use a value more than 1,000, it's automatically changed to 1,000. Negative values return
-         * an `INVALID_ARGUMENT` error.
+         * this value. If unspecified, at most 25 are returned. The maximum value is 1000. If you
+         * use a value more than 1000, it's automatically changed to 1000. Negative values return an
+         * `INVALID_ARGUMENT` error.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;

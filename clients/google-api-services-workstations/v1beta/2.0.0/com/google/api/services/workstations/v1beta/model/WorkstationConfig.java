@@ -87,9 +87,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Disables support for plain TCP connections in the workstation. By default the service
-   * supports TCP connections via a websocket relay. Setting this option to true disables that
-   * relay, which prevents the usage of services that require plain tcp connections, such as ssh.
-   * When enabled, all communication must occur over https or wss.
+   * supports TCP connections through a websocket relay. Setting this option to true disables that
+   * relay, which prevents the usage of services that require plain TCP connections, such as SSH.
+   * When enabled, all communication must occur over HTTPS or WSS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -369,9 +369,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Disables support for plain TCP connections in the workstation. By default the service
-   * supports TCP connections via a websocket relay. Setting this option to true disables that
-   * relay, which prevents the usage of services that require plain tcp connections, such as ssh.
-   * When enabled, all communication must occur over https or wss.
+   * supports TCP connections through a websocket relay. Setting this option to true disables that
+   * relay, which prevents the usage of services that require plain TCP connections, such as SSH.
+   * When enabled, all communication must occur over HTTPS or WSS.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableTcpConnections() {
@@ -380,9 +380,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Disables support for plain TCP connections in the workstation. By default the service
-   * supports TCP connections via a websocket relay. Setting this option to true disables that
-   * relay, which prevents the usage of services that require plain tcp connections, such as ssh.
-   * When enabled, all communication must occur over https or wss.
+   * supports TCP connections through a websocket relay. Setting this option to true disables that
+   * relay, which prevents the usage of services that require plain TCP connections, such as SSH.
+   * When enabled, all communication must occur over HTTPS or WSS.
    * @param disableTcpConnections disableTcpConnections or {@code null} for none
    */
   public WorkstationConfig setDisableTcpConnections(java.lang.Boolean disableTcpConnections) {

@@ -31,6 +31,13 @@ package com.google.api.services.workstations.v1beta.model;
 public final class StartWorkstationRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If set, the workstation starts using the boost configuration with the specified ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String boostConfig;
+
+  /**
    * Optional. If set, the request will be rejected if the latest version of the workstation on the
    * server does not have this ETag.
    * The value may be {@code null}.
@@ -44,6 +51,23 @@ public final class StartWorkstationRequest extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean validateOnly;
+
+  /**
+   * Optional. If set, the workstation starts using the boost configuration with the specified ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBoostConfig() {
+    return boostConfig;
+  }
+
+  /**
+   * Optional. If set, the workstation starts using the boost configuration with the specified ID.
+   * @param boostConfig boostConfig or {@code null} for none
+   */
+  public StartWorkstationRequest setBoostConfig(java.lang.String boostConfig) {
+    this.boostConfig = boostConfig;
+    return this;
+  }
 
   /**
    * Optional. If set, the request will be rejected if the latest version of the workstation on the

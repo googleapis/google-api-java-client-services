@@ -61,7 +61,7 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String gitCommitish;
 
   /**
-   * Output only. The release config's name.
+   * Identifier. The release config's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +172,7 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The release config's name.
+   * Identifier. The release config's name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -180,7 +180,7 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The release config's name.
+   * Identifier. The release config's name.
    * @param name name or {@code null} for none
    */
   public ReleaseConfig setName(java.lang.String name) {

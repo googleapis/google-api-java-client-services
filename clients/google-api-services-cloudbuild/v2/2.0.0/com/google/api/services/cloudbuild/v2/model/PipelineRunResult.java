@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.cloudbuild.v1.model;
+package com.google.api.services.cloudbuild.v2.model;
 
 /**
- * Configuration for a V1 `PrivatePool`.
+ * PipelineRunResult used to describe the results of a pipeline
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.cloudbuild.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PrivatePoolV1Config extends com.google.api.client.json.GenericJson {
+public final class PipelineRunResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Network configuration for the pool.
+   * Output only. Name of the TaskRun
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private NetworkConfig networkConfig;
+  private java.lang.String name;
 
   /**
-   * Machine configuration for the workers in the pool.
+   * Output only. Value of the result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private WorkerConfig workerConfig;
+  private ResultValue value;
 
   /**
-   * Network configuration for the pool.
+   * Output only. Name of the TaskRun
    * @return value or {@code null} for none
    */
-  public NetworkConfig getNetworkConfig() {
-    return networkConfig;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Network configuration for the pool.
-   * @param networkConfig networkConfig or {@code null} for none
+   * Output only. Name of the TaskRun
+   * @param name name or {@code null} for none
    */
-  public PrivatePoolV1Config setNetworkConfig(NetworkConfig networkConfig) {
-    this.networkConfig = networkConfig;
+  public PipelineRunResult setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   /**
-   * Machine configuration for the workers in the pool.
+   * Output only. Value of the result.
    * @return value or {@code null} for none
    */
-  public WorkerConfig getWorkerConfig() {
-    return workerConfig;
+  public ResultValue getValue() {
+    return value;
   }
 
   /**
-   * Machine configuration for the workers in the pool.
-   * @param workerConfig workerConfig or {@code null} for none
+   * Output only. Value of the result.
+   * @param value value or {@code null} for none
    */
-  public PrivatePoolV1Config setWorkerConfig(WorkerConfig workerConfig) {
-    this.workerConfig = workerConfig;
+  public PipelineRunResult setValue(ResultValue value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public PrivatePoolV1Config set(String fieldName, Object value) {
-    return (PrivatePoolV1Config) super.set(fieldName, value);
+  public PipelineRunResult set(String fieldName, Object value) {
+    return (PipelineRunResult) super.set(fieldName, value);
   }
 
   @Override
-  public PrivatePoolV1Config clone() {
-    return (PrivatePoolV1Config) super.clone();
+  public PipelineRunResult clone() {
+    return (PipelineRunResult) super.clone();
   }
 
 }

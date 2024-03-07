@@ -59,6 +59,19 @@ public final class PipelineSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Output only. List of results written out by the pipeline's containers
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PipelineResult> results;
+
+  static {
+    // hack to force ProGuard to consider PipelineResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PipelineResult.class);
+  }
+
+  /**
    * List of Tasks that execute when this Pipeline is run.
    * The value may be {@code null}.
    */
@@ -125,6 +138,23 @@ public final class PipelineSpec extends com.google.api.client.json.GenericJson {
    */
   public PipelineSpec setParams(java.util.List<ParamSpec> params) {
     this.params = params;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. List of results written out by the pipeline's containers
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PipelineResult> getResults() {
+    return results;
+  }
+
+  /**
+   * Optional. Output only. List of results written out by the pipeline's containers
+   * @param results results or {@code null} for none
+   */
+  public PipelineSpec setResults(java.util.List<PipelineResult> results) {
+    this.results = results;
     return this;
   }
 

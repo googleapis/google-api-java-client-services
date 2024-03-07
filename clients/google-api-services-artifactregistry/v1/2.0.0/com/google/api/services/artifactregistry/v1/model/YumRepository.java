@@ -31,11 +31,35 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class YumRepository extends com.google.api.client.json.GenericJson {
 
   /**
+   * Customer-specified remote repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryCustomRepository customRepository;
+
+  /**
    * One of the publicly available Yum repositories supported by Artifact Registry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryPublicRepository publicRepository;
+
+  /**
+   * Customer-specified remote repository.
+   * @return value or {@code null} for none
+   */
+  public GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryCustomRepository getCustomRepository() {
+    return customRepository;
+  }
+
+  /**
+   * Customer-specified remote repository.
+   * @param customRepository customRepository or {@code null} for none
+   */
+  public YumRepository setCustomRepository(GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryCustomRepository customRepository) {
+    this.customRepository = customRepository;
+    return this;
+  }
 
   /**
    * One of the publicly available Yum repositories supported by Artifact Registry.

@@ -31,11 +31,35 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class MavenRepository extends com.google.api.client.json.GenericJson {
 
   /**
+   * Customer-specified remote repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigMavenRepositoryCustomRepository customRepository;
+
+  /**
    * One of the publicly available Maven repositories supported by Artifact Registry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String publicRepository;
+
+  /**
+   * Customer-specified remote repository.
+   * @return value or {@code null} for none
+   */
+  public GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigMavenRepositoryCustomRepository getCustomRepository() {
+    return customRepository;
+  }
+
+  /**
+   * Customer-specified remote repository.
+   * @param customRepository customRepository or {@code null} for none
+   */
+  public MavenRepository setCustomRepository(GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigMavenRepositoryCustomRepository customRepository) {
+    this.customRepository = customRepository;
+    return this;
+  }
 
   /**
    * One of the publicly available Maven repositories supported by Artifact Registry.

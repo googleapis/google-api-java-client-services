@@ -17,7 +17,7 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * A PersistentDirectory backed by a Compute Engine regional persistent disk. The
+ * A Persistent Directory backed by a Compute Engine regional persistent disk. The
  * persistent_directories field is repeated, but it may contain only one entry. It creates a
  * [persistent disk](https://cloud.google.com/compute/docs/disks/persistent-disks) that mounts to
  * the workstation VM at `/home` when the session starts and detaches when the session ends. If this

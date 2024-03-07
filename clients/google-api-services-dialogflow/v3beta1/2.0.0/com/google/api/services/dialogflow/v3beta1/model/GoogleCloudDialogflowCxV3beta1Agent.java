@@ -127,6 +127,13 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   private java.lang.String name;
 
   /**
+   * Optional. Settings for end user personalization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1AgentPersonalizationSettings personalizationSettings;
+
+  /**
    * Name of the SecuritySettings reference for the agent. Format:
    * `projects//locations//securitySettings/`.
    * The value may be {@code null}.
@@ -391,6 +398,23 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
    */
   public GoogleCloudDialogflowCxV3beta1Agent setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for end user personalization.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1AgentPersonalizationSettings getPersonalizationSettings() {
+    return personalizationSettings;
+  }
+
+  /**
+   * Optional. Settings for end user personalization.
+   * @param personalizationSettings personalizationSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Agent setPersonalizationSettings(GoogleCloudDialogflowCxV3beta1AgentPersonalizationSettings personalizationSettings) {
+    this.personalizationSettings = personalizationSettings;
     return this;
   }
 

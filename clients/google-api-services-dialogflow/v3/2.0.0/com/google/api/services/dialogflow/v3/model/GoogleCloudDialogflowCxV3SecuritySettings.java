@@ -129,7 +129,9 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
    * Retains the data for the specified number of days. User must set a value lower than
    * Dialogflow's default 365d TTL (30 days for Agent Assist traffic), higher value will be ignored
    * and use default. Setting a value higher than that has no effect. A missing value or setting to
-   * 0 also means we use default TTL.
+   * 0 also means we use default TTL. When data retention configuration is changed, it only applies
+   * to the data created after the change; the TTL of existing data created before the change stays
+   * intact.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -357,7 +359,9 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
    * Retains the data for the specified number of days. User must set a value lower than
    * Dialogflow's default 365d TTL (30 days for Agent Assist traffic), higher value will be ignored
    * and use default. Setting a value higher than that has no effect. A missing value or setting to
-   * 0 also means we use default TTL.
+   * 0 also means we use default TTL. When data retention configuration is changed, it only applies
+   * to the data created after the change; the TTL of existing data created before the change stays
+   * intact.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRetentionWindowDays() {
@@ -368,7 +372,9 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
    * Retains the data for the specified number of days. User must set a value lower than
    * Dialogflow's default 365d TTL (30 days for Agent Assist traffic), higher value will be ignored
    * and use default. Setting a value higher than that has no effect. A missing value or setting to
-   * 0 also means we use default TTL.
+   * 0 also means we use default TTL. When data retention configuration is changed, it only applies
+   * to the data created after the change; the TTL of existing data created before the change stays
+   * intact.
    * @param retentionWindowDays retentionWindowDays or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettings setRetentionWindowDays(java.lang.Integer retentionWindowDays) {

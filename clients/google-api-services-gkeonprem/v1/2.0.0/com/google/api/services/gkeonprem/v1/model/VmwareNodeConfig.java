@@ -59,8 +59,8 @@ public final class VmwareNodeConfig extends com.google.api.client.json.GenericJs
   private java.lang.String image;
 
   /**
-   * Required. The OS image to be used for each node in a node pool. Currently `cos`, `ubuntu`,
-   * `ubuntu_containerd` and `windows` are supported.
+   * Required. The OS image to be used for each node in a node pool. Currently `cos`, `cos_cgv2`,
+   * `ubuntu`, `ubuntu_cgv2`, `ubuntu_containerd` and `windows` are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,8 +183,8 @@ public final class VmwareNodeConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The OS image to be used for each node in a node pool. Currently `cos`, `ubuntu`,
-   * `ubuntu_containerd` and `windows` are supported.
+   * Required. The OS image to be used for each node in a node pool. Currently `cos`, `cos_cgv2`,
+   * `ubuntu`, `ubuntu_cgv2`, `ubuntu_containerd` and `windows` are supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageType() {
@@ -192,8 +192,8 @@ public final class VmwareNodeConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The OS image to be used for each node in a node pool. Currently `cos`, `ubuntu`,
-   * `ubuntu_containerd` and `windows` are supported.
+   * Required. The OS image to be used for each node in a node pool. Currently `cos`, `cos_cgv2`,
+   * `ubuntu`, `ubuntu_cgv2`, `ubuntu_containerd` and `windows` are supported.
    * @param imageType imageType or {@code null} for none
    */
   public VmwareNodeConfig setImageType(java.lang.String imageType) {

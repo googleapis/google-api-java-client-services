@@ -39,11 +39,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private ConfidentialInstanceConfig confidentialInstanceConfig;
 
   /**
-   * Optional. If true, all instances in the cluster will only have internal IP addresses. By
-   * default, clusters are not restricted to internal IP addresses, and will have ephemeral external
-   * IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled
-   * for subnetwork enabled networks, and all off-cluster dependencies must be configured to be
-   * accessible without external IP addresses.
+   * Optional. This setting applies to subnetwork-enabled networks. It is set to true by default in
+   * clusters created with image versions 2.2.x.When set to true: All cluster VMs have internal IP
+   * addresses. Google Private Access (https://cloud.google.com/vpc/docs/private-google-access) must
+   * be enabled to access Dataproc and other Google Cloud APIs. Off-cluster dependencies must be
+   * configured to be accessible without external IP addresses.When set to false: Cluster VMs are
+   * not restricted to internal IP addresses. Ephemeral external IP addresses are assigned to each
+   * cluster VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,11 +179,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. If true, all instances in the cluster will only have internal IP addresses. By
-   * default, clusters are not restricted to internal IP addresses, and will have ephemeral external
-   * IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled
-   * for subnetwork enabled networks, and all off-cluster dependencies must be configured to be
-   * accessible without external IP addresses.
+   * Optional. This setting applies to subnetwork-enabled networks. It is set to true by default in
+   * clusters created with image versions 2.2.x.When set to true: All cluster VMs have internal IP
+   * addresses. Google Private Access (https://cloud.google.com/vpc/docs/private-google-access) must
+   * be enabled to access Dataproc and other Google Cloud APIs. Off-cluster dependencies must be
+   * configured to be accessible without external IP addresses.When set to false: Cluster VMs are
+   * not restricted to internal IP addresses. Ephemeral external IP addresses are assigned to each
+   * cluster VM.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInternalIpOnly() {
@@ -189,11 +193,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. If true, all instances in the cluster will only have internal IP addresses. By
-   * default, clusters are not restricted to internal IP addresses, and will have ephemeral external
-   * IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled
-   * for subnetwork enabled networks, and all off-cluster dependencies must be configured to be
-   * accessible without external IP addresses.
+   * Optional. This setting applies to subnetwork-enabled networks. It is set to true by default in
+   * clusters created with image versions 2.2.x.When set to true: All cluster VMs have internal IP
+   * addresses. Google Private Access (https://cloud.google.com/vpc/docs/private-google-access) must
+   * be enabled to access Dataproc and other Google Cloud APIs. Off-cluster dependencies must be
+   * configured to be accessible without external IP addresses.When set to false: Cluster VMs are
+   * not restricted to internal IP addresses. Ephemeral external IP addresses are assigned to each
+   * cluster VM.
    * @param internalIpOnly internalIpOnly or {@code null} for none
    */
   public GceClusterConfig setInternalIpOnly(java.lang.Boolean internalIpOnly) {

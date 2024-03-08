@@ -290,6 +290,14 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Long numTotalPhysicalBytes;
 
   /**
+   * Output only. The partition information for all table formats, including managed partitioned
+   * tables, hive partitioned tables, and iceberg partitioned tables.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PartitioningDefinition partitionDefinition;
+
+  /**
    * If specified, configures range partitioning for this table.
    * The value may be {@code null}.
    */
@@ -1017,6 +1025,25 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setNumTotalPhysicalBytes(java.lang.Long numTotalPhysicalBytes) {
     this.numTotalPhysicalBytes = numTotalPhysicalBytes;
+    return this;
+  }
+
+  /**
+   * Output only. The partition information for all table formats, including managed partitioned
+   * tables, hive partitioned tables, and iceberg partitioned tables.
+   * @return value or {@code null} for none
+   */
+  public PartitioningDefinition getPartitionDefinition() {
+    return partitionDefinition;
+  }
+
+  /**
+   * Output only. The partition information for all table formats, including managed partitioned
+   * tables, hive partitioned tables, and iceberg partitioned tables.
+   * @param partitionDefinition partitionDefinition or {@code null} for none
+   */
+  public Table setPartitionDefinition(PartitioningDefinition partitionDefinition) {
+    this.partitionDefinition = partitionDefinition;
     return this;
   }
 

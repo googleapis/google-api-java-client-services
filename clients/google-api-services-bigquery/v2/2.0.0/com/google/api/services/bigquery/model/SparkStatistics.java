@@ -38,11 +38,12 @@ public final class SparkStatistics extends com.google.api.client.json.GenericJso
   private java.util.Map<String, java.lang.String> endpoints;
 
   /**
-   * Output only. The Google Cloud Storage bucket that is used as the default filesystem by the
-   * Spark application. This fields is only filled when the Spark procedure uses the INVOKER
-   * security mode. It is inferred from the system variable @@spark_proc_properties.staging_bucket
-   * if it is provided. Otherwise, BigQuery creates a default staging bucket for the job and returns
-   * the bucket name in this field. Example: * `gs://[bucket_name]`
+   * Output only. The Google Cloud Storage bucket that is used as the default file system by the
+   * Spark application. This field is only filled when the Spark procedure uses the invoker security
+   * mode. The `gcsStagingBucket` bucket is inferred from the
+   * `@@spark_proc_properties.staging_bucket` system variable (if it is provided). Otherwise,
+   * BigQuery creates a default staging bucket for the job and returns the bucket name in this
+   * field. Example: * `gs://[bucket_name]`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,13 +51,12 @@ public final class SparkStatistics extends com.google.api.client.json.GenericJso
 
   /**
    * Output only. The Cloud KMS encryption key that is used to protect the resources created by the
-   * Spark job. If the Spark procedure uses DEFINER security mode, the Cloud KMS key is inferred
-   * from the Spark connection associated with the procedure if it is provided. Otherwise the key is
-   * inferred from the default key of the Spark connection's project if the CMEK organization policy
-   * is enforced. If the Spark procedure uses INVOKER security mode, the Cloud KMS encryption key is
-   * inferred from the system variable @@spark_proc_properties.kms_key_name if it is provided.
-   * Otherwise, the key is inferred fromt he default key of the BigQuery job's project if the CMEK
-   * organization policy is enforced. Example: *
+   * Spark job. If the Spark procedure uses the invoker security mode, the Cloud KMS encryption key
+   * is either inferred from the provided system variable, `@@spark_proc_properties.kms_key_name`,
+   * or the default key of the BigQuery job's project (if the CMEK organization policy is enforced).
+   * Otherwise, the Cloud KMS key is either inferred from the Spark connection associated with the
+   * procedure (if it is provided), or from the default key of the Spark connection's project if the
+   * CMEK organization policy is enforced. Example: *
    * `projects/[kms_project_id]/locations/[region]/keyRings/[key_region]/cryptoKeys/[key]`
    * The value may be {@code null}.
    */
@@ -105,11 +105,12 @@ public final class SparkStatistics extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The Google Cloud Storage bucket that is used as the default filesystem by the
-   * Spark application. This fields is only filled when the Spark procedure uses the INVOKER
-   * security mode. It is inferred from the system variable @@spark_proc_properties.staging_bucket
-   * if it is provided. Otherwise, BigQuery creates a default staging bucket for the job and returns
-   * the bucket name in this field. Example: * `gs://[bucket_name]`
+   * Output only. The Google Cloud Storage bucket that is used as the default file system by the
+   * Spark application. This field is only filled when the Spark procedure uses the invoker security
+   * mode. The `gcsStagingBucket` bucket is inferred from the
+   * `@@spark_proc_properties.staging_bucket` system variable (if it is provided). Otherwise,
+   * BigQuery creates a default staging bucket for the job and returns the bucket name in this
+   * field. Example: * `gs://[bucket_name]`
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsStagingBucket() {
@@ -117,11 +118,12 @@ public final class SparkStatistics extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The Google Cloud Storage bucket that is used as the default filesystem by the
-   * Spark application. This fields is only filled when the Spark procedure uses the INVOKER
-   * security mode. It is inferred from the system variable @@spark_proc_properties.staging_bucket
-   * if it is provided. Otherwise, BigQuery creates a default staging bucket for the job and returns
-   * the bucket name in this field. Example: * `gs://[bucket_name]`
+   * Output only. The Google Cloud Storage bucket that is used as the default file system by the
+   * Spark application. This field is only filled when the Spark procedure uses the invoker security
+   * mode. The `gcsStagingBucket` bucket is inferred from the
+   * `@@spark_proc_properties.staging_bucket` system variable (if it is provided). Otherwise,
+   * BigQuery creates a default staging bucket for the job and returns the bucket name in this
+   * field. Example: * `gs://[bucket_name]`
    * @param gcsStagingBucket gcsStagingBucket or {@code null} for none
    */
   public SparkStatistics setGcsStagingBucket(java.lang.String gcsStagingBucket) {
@@ -131,13 +133,12 @@ public final class SparkStatistics extends com.google.api.client.json.GenericJso
 
   /**
    * Output only. The Cloud KMS encryption key that is used to protect the resources created by the
-   * Spark job. If the Spark procedure uses DEFINER security mode, the Cloud KMS key is inferred
-   * from the Spark connection associated with the procedure if it is provided. Otherwise the key is
-   * inferred from the default key of the Spark connection's project if the CMEK organization policy
-   * is enforced. If the Spark procedure uses INVOKER security mode, the Cloud KMS encryption key is
-   * inferred from the system variable @@spark_proc_properties.kms_key_name if it is provided.
-   * Otherwise, the key is inferred fromt he default key of the BigQuery job's project if the CMEK
-   * organization policy is enforced. Example: *
+   * Spark job. If the Spark procedure uses the invoker security mode, the Cloud KMS encryption key
+   * is either inferred from the provided system variable, `@@spark_proc_properties.kms_key_name`,
+   * or the default key of the BigQuery job's project (if the CMEK organization policy is enforced).
+   * Otherwise, the Cloud KMS key is either inferred from the Spark connection associated with the
+   * procedure (if it is provided), or from the default key of the Spark connection's project if the
+   * CMEK organization policy is enforced. Example: *
    * `projects/[kms_project_id]/locations/[region]/keyRings/[key_region]/cryptoKeys/[key]`
    * @return value or {@code null} for none
    */
@@ -147,13 +148,12 @@ public final class SparkStatistics extends com.google.api.client.json.GenericJso
 
   /**
    * Output only. The Cloud KMS encryption key that is used to protect the resources created by the
-   * Spark job. If the Spark procedure uses DEFINER security mode, the Cloud KMS key is inferred
-   * from the Spark connection associated with the procedure if it is provided. Otherwise the key is
-   * inferred from the default key of the Spark connection's project if the CMEK organization policy
-   * is enforced. If the Spark procedure uses INVOKER security mode, the Cloud KMS encryption key is
-   * inferred from the system variable @@spark_proc_properties.kms_key_name if it is provided.
-   * Otherwise, the key is inferred fromt he default key of the BigQuery job's project if the CMEK
-   * organization policy is enforced. Example: *
+   * Spark job. If the Spark procedure uses the invoker security mode, the Cloud KMS encryption key
+   * is either inferred from the provided system variable, `@@spark_proc_properties.kms_key_name`,
+   * or the default key of the BigQuery job's project (if the CMEK organization policy is enforced).
+   * Otherwise, the Cloud KMS key is either inferred from the Spark connection associated with the
+   * procedure (if it is provided), or from the default key of the Spark connection's project if the
+   * CMEK organization policy is enforced. Example: *
    * `projects/[kms_project_id]/locations/[region]/keyRings/[key_region]/cryptoKeys/[key]`
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */

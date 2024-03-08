@@ -200,6 +200,16 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private CustomerEncryptionKey sourceSnapshotEncryptionKey;
 
   /**
+   * The storage pool in which the new disk is created. You can provide this as a partial or full
+   * URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /storagePools/storagePool -
+   * projects/project/zones/zone/storagePools/storagePool - zones/zone/storagePools/storagePool
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storagePool;
+
+  /**
    * The architecture of the attached disk. Valid values are arm64 or x86_64.
    * @return value or {@code null} for none
    */
@@ -582,6 +592,29 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setSourceSnapshotEncryptionKey(CustomerEncryptionKey sourceSnapshotEncryptionKey) {
     this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
+    return this;
+  }
+
+  /**
+   * The storage pool in which the new disk is created. You can provide this as a partial or full
+   * URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /storagePools/storagePool -
+   * projects/project/zones/zone/storagePools/storagePool - zones/zone/storagePools/storagePool
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStoragePool() {
+    return storagePool;
+  }
+
+  /**
+   * The storage pool in which the new disk is created. You can provide this as a partial or full
+   * URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /storagePools/storagePool -
+   * projects/project/zones/zone/storagePools/storagePool - zones/zone/storagePools/storagePool
+   * @param storagePool storagePool or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setStoragePool(java.lang.String storagePool) {
+    this.storagePool = storagePool;
     return this;
   }
 

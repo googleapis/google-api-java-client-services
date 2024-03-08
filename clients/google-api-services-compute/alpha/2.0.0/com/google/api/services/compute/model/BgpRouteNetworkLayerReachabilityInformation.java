@@ -30,13 +30,6 @@ package com.google.api.services.compute.model;
 public final class BgpRouteNetworkLayerReachabilityInformation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human readable CIDR notation for a prefix. E.g. 10.42.0.0/16. Deprecated in favor of prefix.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String destination;
-
-  /**
    * If the BGP session supports multiple paths (RFC 7911), the path identifier for this route.
    * The value may be {@code null}.
    */
@@ -49,23 +42,6 @@ public final class BgpRouteNetworkLayerReachabilityInformation extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String prefix;
-
-  /**
-   * Human readable CIDR notation for a prefix. E.g. 10.42.0.0/16. Deprecated in favor of prefix.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDestination() {
-    return destination;
-  }
-
-  /**
-   * Human readable CIDR notation for a prefix. E.g. 10.42.0.0/16. Deprecated in favor of prefix.
-   * @param destination destination or {@code null} for none
-   */
-  public BgpRouteNetworkLayerReachabilityInformation setDestination(java.lang.String destination) {
-    this.destination = destination;
-    return this;
-  }
 
   /**
    * If the BGP session supports multiple paths (RFC 7911), the path identifier for this route.

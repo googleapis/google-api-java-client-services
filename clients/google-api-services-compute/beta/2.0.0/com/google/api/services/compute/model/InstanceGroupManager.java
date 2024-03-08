@@ -174,6 +174,14 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.util.List<NamedPort> namedPorts;
 
   /**
+   * Input only. Additional params passed with the request, but not persisted as part of resource
+   * payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerParams params;
+
+  /**
    * [Output Only] The URL of the region where the managed instance group resides (for regional
    * resources).
    * The value may be {@code null}.
@@ -650,6 +658,25 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setNamedPorts(java.util.List<NamedPort> namedPorts) {
     this.namedPorts = namedPorts;
+    return this;
+  }
+
+  /**
+   * Input only. Additional params passed with the request, but not persisted as part of resource
+   * payload.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. Additional params passed with the request, but not persisted as part of resource
+   * payload.
+   * @param params params or {@code null} for none
+   */
+  public InstanceGroupManager setParams(InstanceGroupManagerParams params) {
+    this.params = params;
     return this;
   }
 

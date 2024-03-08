@@ -39,6 +39,14 @@ public final class NetworkEndpointGroupPscData extends com.google.api.client.jso
   private java.lang.String consumerPscAddress;
 
   /**
+   * The psc producer port is used to connect PSC NEG with specific port on the PSC Producer side;
+   * should only be used for the PRIVATE_SERVICE_CONNECT NEG type
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer producerPort;
+
+  /**
    * [Output Only] The PSC connection id of the PSC Network Endpoint Group Consumer.
    * The value may be {@code null}.
    */
@@ -68,6 +76,25 @@ public final class NetworkEndpointGroupPscData extends com.google.api.client.jso
    */
   public NetworkEndpointGroupPscData setConsumerPscAddress(java.lang.String consumerPscAddress) {
     this.consumerPscAddress = consumerPscAddress;
+    return this;
+  }
+
+  /**
+   * The psc producer port is used to connect PSC NEG with specific port on the PSC Producer side;
+   * should only be used for the PRIVATE_SERVICE_CONNECT NEG type
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getProducerPort() {
+    return producerPort;
+  }
+
+  /**
+   * The psc producer port is used to connect PSC NEG with specific port on the PSC Producer side;
+   * should only be used for the PRIVATE_SERVICE_CONNECT NEG type
+   * @param producerPort producerPort or {@code null} for none
+   */
+  public NetworkEndpointGroupPscData setProducerPort(java.lang.Integer producerPort) {
+    this.producerPort = producerPort;
     return this;
   }
 

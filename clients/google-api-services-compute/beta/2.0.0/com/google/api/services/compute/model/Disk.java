@@ -469,6 +469,16 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
+   * The storage pool in which the new disk is created. You can provide this as a partial or full
+   * URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /storagePools/storagePool -
+   * projects/project/zones/zone/storagePools/storagePool - zones/zone/storagePools/storagePool
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storagePool;
+
+  /**
    * [Deprecated] Storage type of the persistent disk.
    * The value may be {@code null}.
    */
@@ -1556,6 +1566,29 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * The storage pool in which the new disk is created. You can provide this as a partial or full
+   * URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /storagePools/storagePool -
+   * projects/project/zones/zone/storagePools/storagePool - zones/zone/storagePools/storagePool
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStoragePool() {
+    return storagePool;
+  }
+
+  /**
+   * The storage pool in which the new disk is created. You can provide this as a partial or full
+   * URL to the resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone /storagePools/storagePool -
+   * projects/project/zones/zone/storagePools/storagePool - zones/zone/storagePools/storagePool
+   * @param storagePool storagePool or {@code null} for none
+   */
+  public Disk setStoragePool(java.lang.String storagePool) {
+    this.storagePool = storagePool;
     return this;
   }
 

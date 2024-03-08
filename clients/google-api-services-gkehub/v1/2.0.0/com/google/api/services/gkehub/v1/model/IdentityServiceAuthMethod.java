@@ -66,6 +66,13 @@ public final class IdentityServiceAuthMethod extends com.google.api.client.json.
   private java.lang.String proxy;
 
   /**
+   * SAML specific configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityServiceSamlConfig samlConfig;
+
+  /**
    * AzureAD specific Configuration.
    * @return value or {@code null} for none
    */
@@ -147,6 +154,23 @@ public final class IdentityServiceAuthMethod extends com.google.api.client.json.
    */
   public IdentityServiceAuthMethod setProxy(java.lang.String proxy) {
     this.proxy = proxy;
+    return this;
+  }
+
+  /**
+   * SAML specific configuration.
+   * @return value or {@code null} for none
+   */
+  public IdentityServiceSamlConfig getSamlConfig() {
+    return samlConfig;
+  }
+
+  /**
+   * SAML specific configuration.
+   * @param samlConfig samlConfig or {@code null} for none
+   */
+  public IdentityServiceAuthMethod setSamlConfig(IdentityServiceSamlConfig samlConfig) {
+    this.samlConfig = samlConfig;
     return this;
   }
 

@@ -52,6 +52,13 @@ public final class IdentityServiceAzureADConfig extends com.google.api.client.js
   private java.lang.String encryptedClientSecret;
 
   /**
+   * Optional. Format of the AzureAD groups that the client wants for auth.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String groupFormat;
+
+  /**
    * The redirect URL that kubectl uses for authorization.
    * The value may be {@code null}.
    */
@@ -65,6 +72,13 @@ public final class IdentityServiceAzureADConfig extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.lang.String tenant;
+
+  /**
+   * Optional. Claim in the AzureAD ID Token that holds the user details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userClaim;
 
   /**
    * ID for the registered client application that makes authentication requests to the Azure AD
@@ -148,6 +162,23 @@ public final class IdentityServiceAzureADConfig extends com.google.api.client.js
   }
 
   /**
+   * Optional. Format of the AzureAD groups that the client wants for auth.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGroupFormat() {
+    return groupFormat;
+  }
+
+  /**
+   * Optional. Format of the AzureAD groups that the client wants for auth.
+   * @param groupFormat groupFormat or {@code null} for none
+   */
+  public IdentityServiceAzureADConfig setGroupFormat(java.lang.String groupFormat) {
+    this.groupFormat = groupFormat;
+    return this;
+  }
+
+  /**
    * The redirect URL that kubectl uses for authorization.
    * @return value or {@code null} for none
    */
@@ -180,6 +211,23 @@ public final class IdentityServiceAzureADConfig extends com.google.api.client.js
    */
   public IdentityServiceAzureADConfig setTenant(java.lang.String tenant) {
     this.tenant = tenant;
+    return this;
+  }
+
+  /**
+   * Optional. Claim in the AzureAD ID Token that holds the user details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserClaim() {
+    return userClaim;
+  }
+
+  /**
+   * Optional. Claim in the AzureAD ID Token that holds the user details.
+   * @param userClaim userClaim or {@code null} for none
+   */
+  public IdentityServiceAzureADConfig setUserClaim(java.lang.String userClaim) {
+    this.userClaim = userClaim;
     return this;
   }
 

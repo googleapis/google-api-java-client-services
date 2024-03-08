@@ -154,6 +154,1597 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
   public class Projects {
 
     /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ContainerAnalysis containeranalysis = new ContainerAnalysis(...);}
+     *   {@code ContainerAnalysis.Locations.List request = containeranalysis.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Notes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ContainerAnalysis containeranalysis = new ContainerAnalysis(...);}
+       *   {@code ContainerAnalysis.Notes.List request = containeranalysis.notes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Notes notes() {
+        return new Notes();
+      }
+
+      /**
+       * The "notes" collection of methods.
+       */
+      public class Notes {
+
+        /**
+         * Gets the specified note.
+         *
+         * Create a request for the method "notes.get".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1beta1.model.Note> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notes/[^/]+$");
+
+          /**
+           * Gets the specified note.
+           *
+           * Create a request for the method "notes.get".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(ContainerAnalysis.this, "GET", REST_PATH, null, com.google.api.services.containeranalysis.v1beta1.model.Note.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notes/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/notes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists notes for the specified project.
+         *
+         * Create a request for the method "notes.list".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the project to list notes for in the form of `projects/[PROJECT_ID]`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1beta1.model.ListNotesResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/notes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists notes for the specified project.
+           *
+           * Create a request for the method "notes.list".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the project to list notes for in the form of `projects/[PROJECT_ID]`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(ContainerAnalysis.this, "GET", REST_PATH, null, com.google.api.services.containeranalysis.v1beta1.model.ListNotesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the project to list notes for in the form of
+           * `projects/[PROJECT_ID]`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the project to list notes for in the form of `projects/[PROJECT_ID]`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the project to list notes for in the form of
+           * `projects/[PROJECT_ID]`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The filter expression. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter expression.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The filter expression. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Number of notes to return in the list. Must be positive. Max allowed page size is 1000.
+           * If not specified, page size defaults to 20.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Number of notes to return in the list. Must be positive. Max allowed page size is 1000. If not
+         specified, page size defaults to 20.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Number of notes to return in the list. Must be positive. Max allowed page size is 1000.
+           * If not specified, page size defaults to 20.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Token to provide to skip to a particular spot in the list. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Token to provide to skip to a particular spot in the list.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Token to provide to skip to a particular spot in the list. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Occurrences collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ContainerAnalysis containeranalysis = new ContainerAnalysis(...);}
+         *   {@code ContainerAnalysis.Occurrences.List request = containeranalysis.occurrences().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Occurrences occurrences() {
+          return new Occurrences();
+        }
+
+        /**
+         * The "occurrences" collection of methods.
+         */
+        public class Occurrences {
+
+          /**
+           * Lists occurrences referencing the specified note. Provider projects can use this method to get
+           * all occurrences across consumer projects referencing the specified note.
+           *
+           * Create a request for the method "occurrences.list".
+           *
+           * This request holds the parameters needed by the containeranalysis server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the note to list occurrences for in the form of
+           *        `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+           * @return the request
+           */
+          public List list(java.lang.String name) throws java.io.IOException {
+            List result = new List(name);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1beta1.model.ListNoteOccurrencesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+name}/occurrences";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notes/[^/]+$");
+
+            /**
+             * Lists occurrences referencing the specified note. Provider projects can use this method to get
+             * all occurrences across consumer projects referencing the specified note.
+             *
+             * Create a request for the method "occurrences.list".
+             *
+             * This request holds the parameters needed by the the containeranalysis server.  After setting
+             * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the note to list occurrences for in the form of
+           *        `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+             * @since 1.13
+             */
+            protected List(java.lang.String name) {
+              super(ContainerAnalysis.this, "GET", REST_PATH, null, com.google.api.services.containeranalysis.v1beta1.model.ListNoteOccurrencesResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/notes/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the note to list occurrences for in the form of
+             * `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the note to list occurrences for in the form of
+           `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the note to list occurrences for in the form of
+             * `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+             */
+            public List setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/notes/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** The filter expression. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** The filter expression.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** The filter expression. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Number of occurrences to return in the list. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Number of occurrences to return in the list.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Number of occurrences to return in the list. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Token to provide to skip to a particular spot in the list. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Token to provide to skip to a particular spot in the list.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Token to provide to skip to a particular spot in the list. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
+       * An accessor for creating requests from the Occurrences collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ContainerAnalysis containeranalysis = new ContainerAnalysis(...);}
+       *   {@code ContainerAnalysis.Occurrences.List request = containeranalysis.occurrences().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Occurrences occurrences() {
+        return new Occurrences();
+      }
+
+      /**
+       * The "occurrences" collection of methods.
+       */
+      public class Occurrences {
+
+        /**
+         * Gets the specified occurrence.
+         *
+         * Create a request for the method "occurrences.get".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the occurrence in the form of
+         *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1beta1.model.Occurrence> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/occurrences/[^/]+$");
+
+          /**
+           * Gets the specified occurrence.
+           *
+           * Create a request for the method "occurrences.get".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the occurrence in the form of
+         *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(ContainerAnalysis.this, "GET", REST_PATH, null, com.google.api.services.containeranalysis.v1beta1.model.Occurrence.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/occurrences/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the occurrence in the form of
+           * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the occurrence in the form of
+         `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the occurrence in the form of
+           * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/occurrences/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the note attached to the specified occurrence. Consumer projects can use this method to get
+         * a note that belongs to a provider project.
+         *
+         * Create a request for the method "occurrences.getNotes".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link GetNotes#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the occurrence in the form of
+         *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+         * @return the request
+         */
+        public GetNotes getNotes(java.lang.String name) throws java.io.IOException {
+          GetNotes result = new GetNotes(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetNotes extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1beta1.model.Note> {
+
+          private static final String REST_PATH = "v1beta1/{+name}/notes";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/occurrences/[^/]+$");
+
+          /**
+           * Gets the note attached to the specified occurrence. Consumer projects can use this method to
+           * get a note that belongs to a provider project.
+           *
+           * Create a request for the method "occurrences.getNotes".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link GetNotes#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetNotes#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the occurrence in the form of
+         *        `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           * @since 1.13
+           */
+          protected GetNotes(java.lang.String name) {
+            super(ContainerAnalysis.this, "GET", REST_PATH, null, com.google.api.services.containeranalysis.v1beta1.model.Note.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/occurrences/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetNotes set$Xgafv(java.lang.String $Xgafv) {
+            return (GetNotes) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetNotes setAccessToken(java.lang.String accessToken) {
+            return (GetNotes) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetNotes setAlt(java.lang.String alt) {
+            return (GetNotes) super.setAlt(alt);
+          }
+
+          @Override
+          public GetNotes setCallback(java.lang.String callback) {
+            return (GetNotes) super.setCallback(callback);
+          }
+
+          @Override
+          public GetNotes setFields(java.lang.String fields) {
+            return (GetNotes) super.setFields(fields);
+          }
+
+          @Override
+          public GetNotes setKey(java.lang.String key) {
+            return (GetNotes) super.setKey(key);
+          }
+
+          @Override
+          public GetNotes setOauthToken(java.lang.String oauthToken) {
+            return (GetNotes) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetNotes setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetNotes) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetNotes setQuotaUser(java.lang.String quotaUser) {
+            return (GetNotes) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetNotes setUploadType(java.lang.String uploadType) {
+            return (GetNotes) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetNotes setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetNotes) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the occurrence in the form of
+           * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the occurrence in the form of
+         `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the occurrence in the form of
+           * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+           */
+          public GetNotes setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/occurrences/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetNotes set(String parameterName, Object value) {
+            return (GetNotes) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a summary of the number and severity of occurrences.
+         *
+         * Create a request for the method "occurrences.getVulnerabilitySummary".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link GetVulnerabilitySummary#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param parent Required. The name of the project to get a vulnerability summary for in the form of
+         *        `projects/[PROJECT_ID]`.
+         * @return the request
+         */
+        public GetVulnerabilitySummary getVulnerabilitySummary(java.lang.String parent) throws java.io.IOException {
+          GetVulnerabilitySummary result = new GetVulnerabilitySummary(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class GetVulnerabilitySummary extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1beta1.model.VulnerabilityOccurrencesSummary> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/occurrences:vulnerabilitySummary";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Gets a summary of the number and severity of occurrences.
+           *
+           * Create a request for the method "occurrences.getVulnerabilitySummary".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link GetVulnerabilitySummary#execute()} method to invoke
+           * the remote operation. <p> {@link GetVulnerabilitySummary#initialize(com.google.api.client.googl
+           * eapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the project to get a vulnerability summary for in the form of
+         *        `projects/[PROJECT_ID]`.
+           * @since 1.13
+           */
+          protected GetVulnerabilitySummary(java.lang.String parent) {
+            super(ContainerAnalysis.this, "GET", REST_PATH, null, com.google.api.services.containeranalysis.v1beta1.model.VulnerabilityOccurrencesSummary.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetVulnerabilitySummary set$Xgafv(java.lang.String $Xgafv) {
+            return (GetVulnerabilitySummary) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetVulnerabilitySummary setAccessToken(java.lang.String accessToken) {
+            return (GetVulnerabilitySummary) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetVulnerabilitySummary setAlt(java.lang.String alt) {
+            return (GetVulnerabilitySummary) super.setAlt(alt);
+          }
+
+          @Override
+          public GetVulnerabilitySummary setCallback(java.lang.String callback) {
+            return (GetVulnerabilitySummary) super.setCallback(callback);
+          }
+
+          @Override
+          public GetVulnerabilitySummary setFields(java.lang.String fields) {
+            return (GetVulnerabilitySummary) super.setFields(fields);
+          }
+
+          @Override
+          public GetVulnerabilitySummary setKey(java.lang.String key) {
+            return (GetVulnerabilitySummary) super.setKey(key);
+          }
+
+          @Override
+          public GetVulnerabilitySummary setOauthToken(java.lang.String oauthToken) {
+            return (GetVulnerabilitySummary) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetVulnerabilitySummary setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetVulnerabilitySummary) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetVulnerabilitySummary setQuotaUser(java.lang.String quotaUser) {
+            return (GetVulnerabilitySummary) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetVulnerabilitySummary setUploadType(java.lang.String uploadType) {
+            return (GetVulnerabilitySummary) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetVulnerabilitySummary setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetVulnerabilitySummary) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the project to get a vulnerability summary for in the form of
+           * `projects/[PROJECT_ID]`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the project to get a vulnerability summary for in the form of
+         `projects/[PROJECT_ID]`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the project to get a vulnerability summary for in the form of
+           * `projects/[PROJECT_ID]`.
+           */
+          public GetVulnerabilitySummary setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The filter expression. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter expression.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The filter expression. */
+          public GetVulnerabilitySummary setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          @Override
+          public GetVulnerabilitySummary set(String parameterName, Object value) {
+            return (GetVulnerabilitySummary) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists occurrences for the specified project.
+         *
+         * Create a request for the method "occurrences.list".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the project to list occurrences for in the form of `projects/[PROJECT_ID]`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1beta1.model.ListOccurrencesResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/occurrences";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists occurrences for the specified project.
+           *
+           * Create a request for the method "occurrences.list".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the project to list occurrences for in the form of `projects/[PROJECT_ID]`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(ContainerAnalysis.this, "GET", REST_PATH, null, com.google.api.services.containeranalysis.v1beta1.model.ListOccurrencesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the project to list occurrences for in the form of
+           * `projects/[PROJECT_ID]`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the project to list occurrences for in the form of `projects/[PROJECT_ID]`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the project to list occurrences for in the form of
+           * `projects/[PROJECT_ID]`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The filter expression. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter expression.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The filter expression. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Number of occurrences to return in the list. Must be positive. Max allowed page size is
+           * 1000. If not specified, page size defaults to 20.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Number of occurrences to return in the list. Must be positive. Max allowed page size is 1000. If
+         not specified, page size defaults to 20.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Number of occurrences to return in the list. Must be positive. Max allowed page size is
+           * 1000. If not specified, page size defaults to 20.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Token to provide to skip to a particular spot in the list. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Token to provide to skip to a particular spot in the list.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Token to provide to skip to a particular spot in the list. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Resources collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ContainerAnalysis containeranalysis = new ContainerAnalysis(...);}
+       *   {@code ContainerAnalysis.Resources.List request = containeranalysis.resources().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Resources resources() {
+        return new Resources();
+      }
+
+      /**
+       * The "resources" collection of methods.
+       */
+      public class Resources {
+
+        /**
+         * Generates an SBOM and other dependency information for the given resource.
+         *
+         * Create a request for the method "resources.exportSBOM".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link ExportSBOM#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the resource in the form of `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+         * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.ExportSBOMRequest}
+         * @return the request
+         */
+        public ExportSBOM exportSBOM(java.lang.String name, com.google.api.services.containeranalysis.v1beta1.model.ExportSBOMRequest content) throws java.io.IOException {
+          ExportSBOM result = new ExportSBOM(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ExportSBOM extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1beta1.model.ExportSBOMResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:exportSBOM";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/resources/.*$");
+
+          /**
+           * Generates an SBOM and other dependency information for the given resource.
+           *
+           * Create a request for the method "resources.exportSBOM".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link ExportSBOM#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ExportSBOM#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the resource in the form of `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+           * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.ExportSBOMRequest}
+           * @since 1.13
+           */
+          protected ExportSBOM(java.lang.String name, com.google.api.services.containeranalysis.v1beta1.model.ExportSBOMRequest content) {
+            super(ContainerAnalysis.this, "POST", REST_PATH, content, com.google.api.services.containeranalysis.v1beta1.model.ExportSBOMResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/resources/.*$");
+            }
+          }
+
+          @Override
+          public ExportSBOM set$Xgafv(java.lang.String $Xgafv) {
+            return (ExportSBOM) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ExportSBOM setAccessToken(java.lang.String accessToken) {
+            return (ExportSBOM) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ExportSBOM setAlt(java.lang.String alt) {
+            return (ExportSBOM) super.setAlt(alt);
+          }
+
+          @Override
+          public ExportSBOM setCallback(java.lang.String callback) {
+            return (ExportSBOM) super.setCallback(callback);
+          }
+
+          @Override
+          public ExportSBOM setFields(java.lang.String fields) {
+            return (ExportSBOM) super.setFields(fields);
+          }
+
+          @Override
+          public ExportSBOM setKey(java.lang.String key) {
+            return (ExportSBOM) super.setKey(key);
+          }
+
+          @Override
+          public ExportSBOM setOauthToken(java.lang.String oauthToken) {
+            return (ExportSBOM) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ExportSBOM setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ExportSBOM) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ExportSBOM setQuotaUser(java.lang.String quotaUser) {
+            return (ExportSBOM) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ExportSBOM setUploadType(java.lang.String uploadType) {
+            return (ExportSBOM) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ExportSBOM setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ExportSBOM) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the resource in the form of
+           * `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the resource in the form of `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the resource in the form of
+           * `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+           */
+          public ExportSBOM setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/resources/.*$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ExportSBOM set(String parameterName, Object value) {
+            return (ExportSBOM) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a summary of the packages within a given resource.
+         *
+         * Create a request for the method "resources.generatePackagesSummary".
+         *
+         * This request holds the parameters needed by the containeranalysis server.  After setting any
+         * optional parameters, call the {@link GeneratePackagesSummary#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The name of the resource to get a packages summary for in the form of
+         *        `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+         * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.GeneratePackagesSummaryRequest}
+         * @return the request
+         */
+        public GeneratePackagesSummary generatePackagesSummary(java.lang.String name, com.google.api.services.containeranalysis.v1beta1.model.GeneratePackagesSummaryRequest content) throws java.io.IOException {
+          GeneratePackagesSummary result = new GeneratePackagesSummary(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GeneratePackagesSummary extends ContainerAnalysisRequest<com.google.api.services.containeranalysis.v1beta1.model.PackagesSummaryResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:generatePackagesSummary";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/resources/.*$");
+
+          /**
+           * Gets a summary of the packages within a given resource.
+           *
+           * Create a request for the method "resources.generatePackagesSummary".
+           *
+           * This request holds the parameters needed by the the containeranalysis server.  After setting
+           * any optional parameters, call the {@link GeneratePackagesSummary#execute()} method to invoke
+           * the remote operation. <p> {@link GeneratePackagesSummary#initialize(com.google.api.client.googl
+           * eapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the resource to get a packages summary for in the form of
+         *        `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+           * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.GeneratePackagesSummaryRequest}
+           * @since 1.13
+           */
+          protected GeneratePackagesSummary(java.lang.String name, com.google.api.services.containeranalysis.v1beta1.model.GeneratePackagesSummaryRequest content) {
+            super(ContainerAnalysis.this, "POST", REST_PATH, content, com.google.api.services.containeranalysis.v1beta1.model.PackagesSummaryResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/resources/.*$");
+            }
+          }
+
+          @Override
+          public GeneratePackagesSummary set$Xgafv(java.lang.String $Xgafv) {
+            return (GeneratePackagesSummary) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GeneratePackagesSummary setAccessToken(java.lang.String accessToken) {
+            return (GeneratePackagesSummary) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GeneratePackagesSummary setAlt(java.lang.String alt) {
+            return (GeneratePackagesSummary) super.setAlt(alt);
+          }
+
+          @Override
+          public GeneratePackagesSummary setCallback(java.lang.String callback) {
+            return (GeneratePackagesSummary) super.setCallback(callback);
+          }
+
+          @Override
+          public GeneratePackagesSummary setFields(java.lang.String fields) {
+            return (GeneratePackagesSummary) super.setFields(fields);
+          }
+
+          @Override
+          public GeneratePackagesSummary setKey(java.lang.String key) {
+            return (GeneratePackagesSummary) super.setKey(key);
+          }
+
+          @Override
+          public GeneratePackagesSummary setOauthToken(java.lang.String oauthToken) {
+            return (GeneratePackagesSummary) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GeneratePackagesSummary setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GeneratePackagesSummary) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GeneratePackagesSummary setQuotaUser(java.lang.String quotaUser) {
+            return (GeneratePackagesSummary) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GeneratePackagesSummary setUploadType(java.lang.String uploadType) {
+            return (GeneratePackagesSummary) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GeneratePackagesSummary setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GeneratePackagesSummary) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the resource to get a packages summary for in the form of
+           * `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the resource to get a packages summary for in the form of
+         `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the resource to get a packages summary for in the form of
+           * `projects/[PROJECT_ID]/resources/[RESOURCE_URL]`.
+           */
+          public GeneratePackagesSummary setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/resources/.*$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GeneratePackagesSummary set(String parameterName, Object value) {
+            return (GeneratePackagesSummary) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the Notes collection.
      *
      * <p>The typical use is:</p>

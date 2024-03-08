@@ -10190,7 +10190,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the monitoring server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+     * @param name Identifier. Resource name for this Service. The format is:
+     *        projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
      * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
      * @return the request
      */
@@ -10218,7 +10219,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+       * @param name Identifier. Resource name for this Service. The format is:
+     *        projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
        * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
        * @since 1.13
        */
@@ -10288,13 +10290,13 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Resource name for this Service. The format is:
+       * Identifier. Resource name for this Service. The format is:
        * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Resource name for this Service. The format is:
+      /** Identifier. Resource name for this Service. The format is:
      projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
        */
       public java.lang.String getName() {
@@ -10302,7 +10304,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Resource name for this Service. The format is:
+       * Identifier. Resource name for this Service. The format is:
        * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
        */
       public Patch setName(java.lang.String name) {
@@ -11088,7 +11090,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name for this ServiceLevelObjective. The format is:
+       * @param name Identifier. Resource name for this ServiceLevelObjective. The format is:
        *        projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
        * @param content the {@link com.google.api.services.monitoring.v3.model.ServiceLevelObjective}
        * @return the request
@@ -11117,7 +11119,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name for this ServiceLevelObjective. The format is:
+         * @param name Identifier. Resource name for this ServiceLevelObjective. The format is:
        *        projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
          * @param content the {@link com.google.api.services.monitoring.v3.model.ServiceLevelObjective}
          * @since 1.13
@@ -11188,13 +11190,13 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Resource name for this ServiceLevelObjective. The format is:
+         * Identifier. Resource name for this ServiceLevelObjective. The format is:
          * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name for this ServiceLevelObjective. The format is:
+        /** Identifier. Resource name for this ServiceLevelObjective. The format is:
        projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
          */
         public java.lang.String getName() {
@@ -11202,7 +11204,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Resource name for this ServiceLevelObjective. The format is:
+         * Identifier. Resource name for this ServiceLevelObjective. The format is:
          * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
          */
         public Patch setName(java.lang.String name) {

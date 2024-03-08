@@ -119,7 +119,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private MeshIstio meshIstio;
 
   /**
-   * Resource name for this Service. The format is:
+   * Identifier. Resource name for this Service. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
    * The value may be {@code null}.
    */
@@ -355,7 +355,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name for this Service. The format is:
+   * Identifier. Resource name for this Service. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
    * @return value or {@code null} for none
    */
@@ -364,7 +364,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name for this Service. The format is:
+   * Identifier. Resource name for this Service. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
    * @param name name or {@code null} for none
    */

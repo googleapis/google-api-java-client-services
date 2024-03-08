@@ -112,7 +112,7 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
   /**
    * Identifier for this resource's immediate parent/primary resource if the current resource is a
    * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
-   * immediate parent exists when first time resource is getting ingested
+   * immediate parent exists when first time resource is getting ingested, otherwise optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -352,7 +352,7 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
   /**
    * Identifier for this resource's immediate parent/primary resource if the current resource is a
    * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
-   * immediate parent exists when first time resource is getting ingested
+   * immediate parent exists when first time resource is getting ingested, otherwise optional.
    * @return value or {@code null} for none
    */
   public DatabaseResourceId getPrimaryResourceId() {
@@ -362,7 +362,7 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
   /**
    * Identifier for this resource's immediate parent/primary resource if the current resource is a
    * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
-   * immediate parent exists when first time resource is getting ingested
+   * immediate parent exists when first time resource is getting ingested, otherwise optional.
    * @param primaryResourceId primaryResourceId or {@code null} for none
    */
   public DatabaseResourceMetadata setPrimaryResourceId(DatabaseResourceId primaryResourceId) {

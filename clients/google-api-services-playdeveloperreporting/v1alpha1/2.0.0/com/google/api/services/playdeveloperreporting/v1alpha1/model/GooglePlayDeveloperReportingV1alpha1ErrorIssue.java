@@ -132,6 +132,14 @@ public final class GooglePlayDeveloperReportingV1alpha1ErrorIssue extends com.go
   private java.lang.String name;
 
   /**
+   * Output only. Sample error reports which belong to this ErrorIssue. *Note:* currently a maximum
+   * of 1 per ErrorIssue is supported. Format: "apps/{app}/{report}"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sampleErrorReports;
+
+  /**
    * Type of the errors grouped in this issue.
    * The value may be {@code null}.
    */
@@ -363,6 +371,25 @@ public final class GooglePlayDeveloperReportingV1alpha1ErrorIssue extends com.go
    */
   public GooglePlayDeveloperReportingV1alpha1ErrorIssue setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Sample error reports which belong to this ErrorIssue. *Note:* currently a maximum
+   * of 1 per ErrorIssue is supported. Format: "apps/{app}/{report}"
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSampleErrorReports() {
+    return sampleErrorReports;
+  }
+
+  /**
+   * Output only. Sample error reports which belong to this ErrorIssue. *Note:* currently a maximum
+   * of 1 per ErrorIssue is supported. Format: "apps/{app}/{report}"
+   * @param sampleErrorReports sampleErrorReports or {@code null} for none
+   */
+  public GooglePlayDeveloperReportingV1alpha1ErrorIssue setSampleErrorReports(java.util.List<java.lang.String> sampleErrorReports) {
+    this.sampleErrorReports = sampleErrorReports;
     return this;
   }
 

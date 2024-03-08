@@ -50,6 +50,12 @@ public class WorkspaceEventsScopes {
   /** View chat and spaces in Google Chat. */
   public static final String CHAT_SPACES_READONLY = "https://www.googleapis.com/auth/chat.spaces.readonly";
 
+  /** Create, edit, and see information about your Google Meet conferences created by the app.. */
+  public static final String MEETINGS_SPACE_CREATED = "https://www.googleapis.com/auth/meetings.space.created";
+
+  /** Read information about any of your Google Meet conferences. */
+  public static final String MEETINGS_SPACE_READONLY = "https://www.googleapis.com/auth/meetings.space.readonly";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -66,6 +72,8 @@ public class WorkspaceEventsScopes {
     set.add(CHAT_MESSAGES_READONLY);
     set.add(CHAT_SPACES);
     set.add(CHAT_SPACES_READONLY);
+    set.add(MEETINGS_SPACE_CREATED);
+    set.add(MEETINGS_SPACE_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

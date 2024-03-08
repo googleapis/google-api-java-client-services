@@ -57,7 +57,7 @@ public final class ServiceLevelObjective extends com.google.api.client.json.Gene
   private java.lang.Double goal;
 
   /**
-   * Resource name for this ServiceLevelObjective. The format is:
+   * Identifier. Resource name for this ServiceLevelObjective. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
    * The value may be {@code null}.
    */
@@ -147,7 +147,7 @@ public final class ServiceLevelObjective extends com.google.api.client.json.Gene
   }
 
   /**
-   * Resource name for this ServiceLevelObjective. The format is:
+   * Identifier. Resource name for this ServiceLevelObjective. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
    * @return value or {@code null} for none
    */
@@ -156,7 +156,7 @@ public final class ServiceLevelObjective extends com.google.api.client.json.Gene
   }
 
   /**
-   * Resource name for this ServiceLevelObjective. The format is:
+   * Identifier. Resource name for this ServiceLevelObjective. The format is:
    * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
    * @param name name or {@code null} for none
    */

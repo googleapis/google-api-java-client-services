@@ -44,6 +44,12 @@ public final class ComplianceNote extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String impact;
+
+  /**
    * A rationale for the existence of this compliance check.
    * The value may be {@code null}.
    */
@@ -107,6 +113,21 @@ public final class ComplianceNote extends com.google.api.client.json.GenericJson
    */
   public ComplianceNote setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImpact() {
+    return impact;
+  }
+
+  /**
+   * @param impact impact or {@code null} for none
+   */
+  public ComplianceNote setImpact(java.lang.String impact) {
+    this.impact = impact;
     return this;
   }
 

@@ -31,12 +31,12 @@ public final class InterconnectRemoteLocationConstraints extends com.google.api.
 
   /**
    * [Output Only] Port pair remote location constraints, which can take one of the following
-   * values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION, PORT_PAIR_MATCHING_REMOTE_LOCATION. GCP's API
-   * refers only to individual ports, but the UI uses this field when ordering a pair of ports, to
-   * prevent users from accidentally ordering something that is incompatible with their cloud
-   * provider. Specifically, when ordering a redundant pair of Cross-Cloud Interconnect ports, and
-   * one of them uses a remote location with portPairMatchingRemoteLocation set to matching, the UI
-   * requires that both ports use the same remote location.
+   * values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION, PORT_PAIR_MATCHING_REMOTE_LOCATION. Google
+   * Cloud API refers only to individual ports, but the UI uses this field when ordering a pair of
+   * ports, to prevent users from accidentally ordering something that is incompatible with their
+   * cloud provider. Specifically, when ordering a redundant pair of Cross-Cloud Interconnect ports,
+   * and one of them uses a remote location with portPairMatchingRemoteLocation set to matching, the
+   * UI requires that both ports use the same remote location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,12 +63,12 @@ public final class InterconnectRemoteLocationConstraints extends com.google.api.
 
   /**
    * [Output Only] Port pair remote location constraints, which can take one of the following
-   * values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION, PORT_PAIR_MATCHING_REMOTE_LOCATION. GCP's API
-   * refers only to individual ports, but the UI uses this field when ordering a pair of ports, to
-   * prevent users from accidentally ordering something that is incompatible with their cloud
-   * provider. Specifically, when ordering a redundant pair of Cross-Cloud Interconnect ports, and
-   * one of them uses a remote location with portPairMatchingRemoteLocation set to matching, the UI
-   * requires that both ports use the same remote location.
+   * values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION, PORT_PAIR_MATCHING_REMOTE_LOCATION. Google
+   * Cloud API refers only to individual ports, but the UI uses this field when ordering a pair of
+   * ports, to prevent users from accidentally ordering something that is incompatible with their
+   * cloud provider. Specifically, when ordering a redundant pair of Cross-Cloud Interconnect ports,
+   * and one of them uses a remote location with portPairMatchingRemoteLocation set to matching, the
+   * UI requires that both ports use the same remote location.
    * @return value or {@code null} for none
    */
   public java.lang.String getPortPairRemoteLocation() {
@@ -77,12 +77,12 @@ public final class InterconnectRemoteLocationConstraints extends com.google.api.
 
   /**
    * [Output Only] Port pair remote location constraints, which can take one of the following
-   * values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION, PORT_PAIR_MATCHING_REMOTE_LOCATION. GCP's API
-   * refers only to individual ports, but the UI uses this field when ordering a pair of ports, to
-   * prevent users from accidentally ordering something that is incompatible with their cloud
-   * provider. Specifically, when ordering a redundant pair of Cross-Cloud Interconnect ports, and
-   * one of them uses a remote location with portPairMatchingRemoteLocation set to matching, the UI
-   * requires that both ports use the same remote location.
+   * values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION, PORT_PAIR_MATCHING_REMOTE_LOCATION. Google
+   * Cloud API refers only to individual ports, but the UI uses this field when ordering a pair of
+   * ports, to prevent users from accidentally ordering something that is incompatible with their
+   * cloud provider. Specifically, when ordering a redundant pair of Cross-Cloud Interconnect ports,
+   * and one of them uses a remote location with portPairMatchingRemoteLocation set to matching, the
+   * UI requires that both ports use the same remote location.
    * @param portPairRemoteLocation portPairRemoteLocation or {@code null} for none
    */
   public InterconnectRemoteLocationConstraints setPortPairRemoteLocation(java.lang.String portPairRemoteLocation) {

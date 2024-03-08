@@ -193,6 +193,13 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.Long lastModifiedTime;
 
   /**
+   * Output only. Metadata about the LinkedDataset. Filled out when the dataset type is LINKED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LinkedDatasetMetadata linkedDatasetMetadata;
+
+  /**
    * Optional. The source dataset reference when the dataset is of type LINKED. For all other
    * dataset types it is not set. This field cannot be updated once it is set. Any attempt to update
    * this field using Update and Patch API Operations will be ignored.
@@ -631,6 +638,23 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setLastModifiedTime(java.lang.Long lastModifiedTime) {
     this.lastModifiedTime = lastModifiedTime;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata about the LinkedDataset. Filled out when the dataset type is LINKED.
+   * @return value or {@code null} for none
+   */
+  public LinkedDatasetMetadata getLinkedDatasetMetadata() {
+    return linkedDatasetMetadata;
+  }
+
+  /**
+   * Output only. Metadata about the LinkedDataset. Filled out when the dataset type is LINKED.
+   * @param linkedDatasetMetadata linkedDatasetMetadata or {@code null} for none
+   */
+  public Dataset setLinkedDatasetMetadata(LinkedDatasetMetadata linkedDatasetMetadata) {
+    this.linkedDatasetMetadata = linkedDatasetMetadata;
     return this;
   }
 

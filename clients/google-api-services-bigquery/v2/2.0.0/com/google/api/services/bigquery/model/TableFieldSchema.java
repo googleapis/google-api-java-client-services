@@ -147,8 +147,8 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   /**
    * Required. The field data type. Possible values include: * STRING * BYTES * INTEGER (or INT64) *
    * FLOAT (or FLOAT64) * BOOLEAN (or BOOL) * TIMESTAMP * DATE * TIME * DATETIME * GEOGRAPHY *
-   * NUMERIC * BIGNUMERIC * JSON * RECORD (or STRUCT) Use of RECORD/STRUCT indicates that the field
-   * contains a nested schema.
+   * NUMERIC * BIGNUMERIC * JSON * RECORD (or STRUCT) * RANGE ([Preview](/products/#product-launch-
+   * stages)) Use of RECORD/STRUCT indicates that the field contains a nested schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -426,8 +426,8 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   /**
    * Required. The field data type. Possible values include: * STRING * BYTES * INTEGER (or INT64) *
    * FLOAT (or FLOAT64) * BOOLEAN (or BOOL) * TIMESTAMP * DATE * TIME * DATETIME * GEOGRAPHY *
-   * NUMERIC * BIGNUMERIC * JSON * RECORD (or STRUCT) Use of RECORD/STRUCT indicates that the field
-   * contains a nested schema.
+   * NUMERIC * BIGNUMERIC * JSON * RECORD (or STRUCT) * RANGE ([Preview](/products/#product-launch-
+   * stages)) Use of RECORD/STRUCT indicates that the field contains a nested schema.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -437,8 +437,8 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   /**
    * Required. The field data type. Possible values include: * STRING * BYTES * INTEGER (or INT64) *
    * FLOAT (or FLOAT64) * BOOLEAN (or BOOL) * TIMESTAMP * DATE * TIME * DATETIME * GEOGRAPHY *
-   * NUMERIC * BIGNUMERIC * JSON * RECORD (or STRUCT) Use of RECORD/STRUCT indicates that the field
-   * contains a nested schema.
+   * NUMERIC * BIGNUMERIC * JSON * RECORD (or STRUCT) * RANGE ([Preview](/products/#product-launch-
+   * stages)) Use of RECORD/STRUCT indicates that the field contains a nested schema.
    * @param type type or {@code null} for none
    */
   public TableFieldSchema setType(java.lang.String type) {
@@ -548,14 +548,14 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   public static final class RangeElementType extends com.google.api.client.json.GenericJson {
 
     /**
-     * Required. The type of a field element. See TableFieldSchema.type.
+     * Required. The type of a field element. For more information, see TableFieldSchema.type.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String type;
 
     /**
-     * Required. The type of a field element. See TableFieldSchema.type.
+     * Required. The type of a field element. For more information, see TableFieldSchema.type.
      * @return value or {@code null} for none
      */
     public java.lang.String getType() {
@@ -563,7 +563,7 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
     }
 
     /**
-     * Required. The type of a field element. See TableFieldSchema.type.
+     * Required. The type of a field element. For more information, see TableFieldSchema.type.
      * @param type type or {@code null} for none
      */
     public RangeElementType setType(java.lang.String type) {

@@ -178,13 +178,14 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * Output only. Contains the message `text` with markups added to communicate formatting. This
    * field might not capture all formatting visible in the UI, but includes the following: * [Markup
    * syntax](https://developers.google.com/chat/format-messages) for bold, italic, strikethrough,
-   * monospace, and monospace block. * [User mentions](https://developers.google.com/chat/format-
-   * messages#messages-@mention) using the format ``. * Custom hyperlinks using the format
-   * `<{url}|{rendered_text}>` where the first string is the URL and the second is the rendered
-   * text—for example, ``. * Custom emoji using the format `:{emoji_name}:`—for example, `:smile:`.
-   * This doesn't apply to Unicode emoji, such as `U+1F600` for a grinning face emoji. For more
-   * information, see [View text formatting sent in a message](https://developers.google.com/chat
-   * /format-messages#view_text_formatting_sent_in_a_message)
+   * monospace, monospace block, and bulleted list. * [User
+   * mentions](https://developers.google.com/chat/format-messages#messages-@mention) using the
+   * format ``. * Custom hyperlinks using the format `<{url}|{rendered_text}>` where the first
+   * string is the URL and the second is the rendered text—for example, ``. * Custom emoji using the
+   * format `:{emoji_name}:`—for example, `:smile:`. This doesn't apply to Unicode emoji, such as
+   * `U+1F600` for a grinning face emoji. For more information, see [View text formatting sent in a
+   * message](https://developers.google.com/chat/format-
+   * messages#view_text_formatting_sent_in_a_message)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -557,13 +558,14 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * Output only. Contains the message `text` with markups added to communicate formatting. This
    * field might not capture all formatting visible in the UI, but includes the following: * [Markup
    * syntax](https://developers.google.com/chat/format-messages) for bold, italic, strikethrough,
-   * monospace, and monospace block. * [User mentions](https://developers.google.com/chat/format-
-   * messages#messages-@mention) using the format ``. * Custom hyperlinks using the format
-   * `<{url}|{rendered_text}>` where the first string is the URL and the second is the rendered
-   * text—for example, ``. * Custom emoji using the format `:{emoji_name}:`—for example, `:smile:`.
-   * This doesn't apply to Unicode emoji, such as `U+1F600` for a grinning face emoji. For more
-   * information, see [View text formatting sent in a message](https://developers.google.com/chat
-   * /format-messages#view_text_formatting_sent_in_a_message)
+   * monospace, monospace block, and bulleted list. * [User
+   * mentions](https://developers.google.com/chat/format-messages#messages-@mention) using the
+   * format ``. * Custom hyperlinks using the format `<{url}|{rendered_text}>` where the first
+   * string is the URL and the second is the rendered text—for example, ``. * Custom emoji using the
+   * format `:{emoji_name}:`—for example, `:smile:`. This doesn't apply to Unicode emoji, such as
+   * `U+1F600` for a grinning face emoji. For more information, see [View text formatting sent in a
+   * message](https://developers.google.com/chat/format-
+   * messages#view_text_formatting_sent_in_a_message)
    * @return value or {@code null} for none
    */
   public java.lang.String getFormattedText() {
@@ -574,13 +576,14 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * Output only. Contains the message `text` with markups added to communicate formatting. This
    * field might not capture all formatting visible in the UI, but includes the following: * [Markup
    * syntax](https://developers.google.com/chat/format-messages) for bold, italic, strikethrough,
-   * monospace, and monospace block. * [User mentions](https://developers.google.com/chat/format-
-   * messages#messages-@mention) using the format ``. * Custom hyperlinks using the format
-   * `<{url}|{rendered_text}>` where the first string is the URL and the second is the rendered
-   * text—for example, ``. * Custom emoji using the format `:{emoji_name}:`—for example, `:smile:`.
-   * This doesn't apply to Unicode emoji, such as `U+1F600` for a grinning face emoji. For more
-   * information, see [View text formatting sent in a message](https://developers.google.com/chat
-   * /format-messages#view_text_formatting_sent_in_a_message)
+   * monospace, monospace block, and bulleted list. * [User
+   * mentions](https://developers.google.com/chat/format-messages#messages-@mention) using the
+   * format ``. * Custom hyperlinks using the format `<{url}|{rendered_text}>` where the first
+   * string is the URL and the second is the rendered text—for example, ``. * Custom emoji using the
+   * format `:{emoji_name}:`—for example, `:smile:`. This doesn't apply to Unicode emoji, such as
+   * `U+1F600` for a grinning face emoji. For more information, see [View text formatting sent in a
+   * message](https://developers.google.com/chat/format-
+   * messages#view_text_formatting_sent_in_a_message)
    * @param formattedText formattedText or {@code null} for none
    */
   public Message setFormattedText(java.lang.String formattedText) {

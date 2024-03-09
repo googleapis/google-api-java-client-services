@@ -2436,8 +2436,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the file server.  After setting any optional
          * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
          *
-         * @param name Required. `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The resource name
-         *        of the instance, in the format
+         * @param name Required. The resource name of the instance, in the format
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
          * @param content the {@link com.google.api.services.file.v1.model.RevertInstanceRequest}
          * @return the request
          */
@@ -2464,8 +2464,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The resource name
-         *        of the instance, in the format
+           * @param name Required. The resource name of the instance, in the format
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
            * @param content the {@link com.google.api.services.file.v1.model.RevertInstanceRequest}
            * @since 1.13
            */
@@ -2535,22 +2535,22 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required. `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The
-           * resource name of the instance, in the format
+           * Required. The resource name of the instance, in the format
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The resource
-         name of the instance, in the format
+          /** Required. The resource name of the instance, in the format
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The
-           * resource name of the instance, in the format
+           * Required. The resource name of the instance, in the format
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
            */
           public Revert setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

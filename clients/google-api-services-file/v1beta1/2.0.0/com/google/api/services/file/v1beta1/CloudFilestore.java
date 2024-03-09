@@ -2257,14 +2257,14 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
            * The elements of the repeated paths field may only include these fields: * "description"
-           * * "file_shares" * "labels"
+           * * "directory_services" * "file_shares" * "labels"
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Required. Mask of fields to update. At least one path must be supplied in this field. The elements
-         of the repeated paths field may only include these fields: * "description" * "file_shares" *
-         "labels"
+         of the repeated paths field may only include these fields: * "description" * "directory_services" *
+         "file_shares" * "labels"
            */
           public String getUpdateMask() {
             return updateMask;
@@ -2273,7 +2273,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
            * The elements of the repeated paths field may only include these fields: * "description"
-           * * "file_shares" * "labels"
+           * * "directory_services" * "file_shares" * "labels"
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -2283,6 +2283,146 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Promote an standby instance (replica).
+         *
+         * Create a request for the method "instances.promoteReplica".
+         *
+         * This request holds the parameters needed by the file server.  After setting any optional
+         * parameters, call the {@link PromoteReplica#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the instance, in the format
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+         * @param content the {@link com.google.api.services.file.v1beta1.model.PromoteReplicaRequest}
+         * @return the request
+         */
+        public PromoteReplica promoteReplica(java.lang.String name, com.google.api.services.file.v1beta1.model.PromoteReplicaRequest content) throws java.io.IOException {
+          PromoteReplica result = new PromoteReplica(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class PromoteReplica extends CloudFilestoreRequest<com.google.api.services.file.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:promoteReplica";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Promote an standby instance (replica).
+           *
+           * Create a request for the method "instances.promoteReplica".
+           *
+           * This request holds the parameters needed by the the file server.  After setting any optional
+           * parameters, call the {@link PromoteReplica#execute()} method to invoke the remote operation.
+           * <p> {@link PromoteReplica#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+           * ientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param name Required. The resource name of the instance, in the format
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+           * @param content the {@link com.google.api.services.file.v1beta1.model.PromoteReplicaRequest}
+           * @since 1.13
+           */
+          protected PromoteReplica(java.lang.String name, com.google.api.services.file.v1beta1.model.PromoteReplicaRequest content) {
+            super(CloudFilestore.this, "POST", REST_PATH, content, com.google.api.services.file.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public PromoteReplica set$Xgafv(java.lang.String $Xgafv) {
+            return (PromoteReplica) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public PromoteReplica setAccessToken(java.lang.String accessToken) {
+            return (PromoteReplica) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public PromoteReplica setAlt(java.lang.String alt) {
+            return (PromoteReplica) super.setAlt(alt);
+          }
+
+          @Override
+          public PromoteReplica setCallback(java.lang.String callback) {
+            return (PromoteReplica) super.setCallback(callback);
+          }
+
+          @Override
+          public PromoteReplica setFields(java.lang.String fields) {
+            return (PromoteReplica) super.setFields(fields);
+          }
+
+          @Override
+          public PromoteReplica setKey(java.lang.String key) {
+            return (PromoteReplica) super.setKey(key);
+          }
+
+          @Override
+          public PromoteReplica setOauthToken(java.lang.String oauthToken) {
+            return (PromoteReplica) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public PromoteReplica setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (PromoteReplica) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public PromoteReplica setQuotaUser(java.lang.String quotaUser) {
+            return (PromoteReplica) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public PromoteReplica setUploadType(java.lang.String uploadType) {
+            return (PromoteReplica) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public PromoteReplica setUploadProtocol(java.lang.String uploadProtocol) {
+            return (PromoteReplica) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the instance, in the format
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the instance, in the format
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the instance, in the format
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+           */
+          public PromoteReplica setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public PromoteReplica set(String parameterName, Object value) {
+            return (PromoteReplica) super.set(parameterName, value);
           }
         }
         /**
@@ -2437,8 +2577,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the file server.  After setting any optional
          * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
          *
-         * @param name Required. `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The resource name
-         *        of the instance, in the format
+         * @param name Required. The resource name of the instance, in the format
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
          * @param content the {@link com.google.api.services.file.v1beta1.model.RevertInstanceRequest}
          * @return the request
          */
@@ -2465,8 +2605,8 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The resource name
-         *        of the instance, in the format
+           * @param name Required. The resource name of the instance, in the format
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
            * @param content the {@link com.google.api.services.file.v1beta1.model.RevertInstanceRequest}
            * @since 1.13
            */
@@ -2536,22 +2676,22 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Required. `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The
-           * resource name of the instance, in the format
+           * Required. The resource name of the instance, in the format
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The resource
-         name of the instance, in the format
+          /** Required. The resource name of the instance, in the format
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The
-           * resource name of the instance, in the format
+           * Required. The resource name of the instance, in the format
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
            */
           public Revert setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

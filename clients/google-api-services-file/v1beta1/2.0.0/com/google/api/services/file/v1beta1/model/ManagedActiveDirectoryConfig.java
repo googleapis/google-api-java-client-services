@@ -31,25 +31,26 @@ package com.google.api.services.file.v1beta1.model;
 public final class ManagedActiveDirectoryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The computer name is used as a prefix to the mount remote target. Example: if the computer_name
-   * is `my-computer`, the mount command will look like: `$mount -o vers=4,sec=krb5 my-
-   * computer.filestore.:`.
+   * Required. The computer name is used as a prefix to the mount remote target. Example: if the
+   * computer is `my-computer`, the mount command will look like: `$mount -o vers=4.1,sec=krb5 my-
+   * computer.filestore.: `.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String computer;
 
   /**
-   * Fully qualified domain name.
+   * Required. The domain resource name, in the format
+   * `projects/{project_id}/locations/global/domains/{domain}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String domain;
 
   /**
-   * The computer name is used as a prefix to the mount remote target. Example: if the computer_name
-   * is `my-computer`, the mount command will look like: `$mount -o vers=4,sec=krb5 my-
-   * computer.filestore.:`.
+   * Required. The computer name is used as a prefix to the mount remote target. Example: if the
+   * computer is `my-computer`, the mount command will look like: `$mount -o vers=4.1,sec=krb5 my-
+   * computer.filestore.: `.
    * @return value or {@code null} for none
    */
   public java.lang.String getComputer() {
@@ -57,9 +58,9 @@ public final class ManagedActiveDirectoryConfig extends com.google.api.client.js
   }
 
   /**
-   * The computer name is used as a prefix to the mount remote target. Example: if the computer_name
-   * is `my-computer`, the mount command will look like: `$mount -o vers=4,sec=krb5 my-
-   * computer.filestore.:`.
+   * Required. The computer name is used as a prefix to the mount remote target. Example: if the
+   * computer is `my-computer`, the mount command will look like: `$mount -o vers=4.1,sec=krb5 my-
+   * computer.filestore.: `.
    * @param computer computer or {@code null} for none
    */
   public ManagedActiveDirectoryConfig setComputer(java.lang.String computer) {
@@ -68,7 +69,8 @@ public final class ManagedActiveDirectoryConfig extends com.google.api.client.js
   }
 
   /**
-   * Fully qualified domain name.
+   * Required. The domain resource name, in the format
+   * `projects/{project_id}/locations/global/domains/{domain}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -76,7 +78,8 @@ public final class ManagedActiveDirectoryConfig extends com.google.api.client.js
   }
 
   /**
-   * Fully qualified domain name.
+   * Required. The domain resource name, in the format
+   * `projects/{project_id}/locations/global/domains/{domain}`.
    * @param domain domain or {@code null} for none
    */
   public ManagedActiveDirectoryConfig setDomain(java.lang.String domain) {

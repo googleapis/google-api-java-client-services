@@ -37,6 +37,13 @@ public final class GoogleCloudDataplexV1DataQualitySpecPostScanActions extends c
   private GoogleCloudDataplexV1DataQualitySpecPostScanActionsBigQueryExport bigqueryExport;
 
   /**
+   * Optional. If set, results will be sent to the provided notification receipts upon triggers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataQualitySpecPostScanActionsNotificationReport notificationReport;
+
+  /**
    * Optional. If set, results will be exported to the provided BigQuery table.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudDataplexV1DataQualitySpecPostScanActions extends c
    */
   public GoogleCloudDataplexV1DataQualitySpecPostScanActions setBigqueryExport(GoogleCloudDataplexV1DataQualitySpecPostScanActionsBigQueryExport bigqueryExport) {
     this.bigqueryExport = bigqueryExport;
+    return this;
+  }
+
+  /**
+   * Optional. If set, results will be sent to the provided notification receipts upon triggers.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualitySpecPostScanActionsNotificationReport getNotificationReport() {
+    return notificationReport;
+  }
+
+  /**
+   * Optional. If set, results will be sent to the provided notification receipts upon triggers.
+   * @param notificationReport notificationReport or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualitySpecPostScanActions setNotificationReport(GoogleCloudDataplexV1DataQualitySpecPostScanActionsNotificationReport notificationReport) {
+    this.notificationReport = notificationReport;
     return this;
   }
 

@@ -59,6 +59,14 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettings extends com.go
   private GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings loggingSettings;
 
   /**
+   * Settings for speech to text detection. Exposed at the following levels: - Agent level - Flow
+   * level - Page level - Parameter level
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings speechSettings;
+
+  /**
    * If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage
    * destination. Exposed at the following levels: - Agent level - Flow level
    * @return value or {@code null} for none
@@ -112,6 +120,25 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettings extends com.go
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettings setLoggingSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings loggingSettings) {
     this.loggingSettings = loggingSettings;
+    return this;
+  }
+
+  /**
+   * Settings for speech to text detection. Exposed at the following levels: - Agent level - Flow
+   * level - Page level - Parameter level
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings getSpeechSettings() {
+    return speechSettings;
+  }
+
+  /**
+   * Settings for speech to text detection. Exposed at the following levels: - Agent level - Flow
+   * level - Page level - Parameter level
+   * @param speechSettings speechSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1AdvancedSettings setSpeechSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings speechSettings) {
+    this.speechSettings = speechSettings;
     return this;
   }
 

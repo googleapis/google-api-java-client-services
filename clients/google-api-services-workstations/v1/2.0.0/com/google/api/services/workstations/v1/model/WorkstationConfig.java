@@ -129,6 +129,19 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private CustomerEncryptionKey encryptionKey;
 
   /**
+   * Optional. Ephemeral directories which won't persist across workstation sessions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EphemeralDirectory> ephemeralDirectories;
+
+  static {
+    // hack to force ProGuard to consider EphemeralDirectory used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EphemeralDirectory.class);
+  }
+
+  /**
    * Optional. Checksum computed by the server. May be sent on update and delete requests to make
    * sure that the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
@@ -449,6 +462,23 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   public WorkstationConfig setEncryptionKey(CustomerEncryptionKey encryptionKey) {
     this.encryptionKey = encryptionKey;
+    return this;
+  }
+
+  /**
+   * Optional. Ephemeral directories which won't persist across workstation sessions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EphemeralDirectory> getEphemeralDirectories() {
+    return ephemeralDirectories;
+  }
+
+  /**
+   * Optional. Ephemeral directories which won't persist across workstation sessions.
+   * @param ephemeralDirectories ephemeralDirectories or {@code null} for none
+   */
+  public WorkstationConfig setEphemeralDirectories(java.util.List<EphemeralDirectory> ephemeralDirectories) {
+    this.ephemeralDirectories = ephemeralDirectories;
     return this;
   }
 

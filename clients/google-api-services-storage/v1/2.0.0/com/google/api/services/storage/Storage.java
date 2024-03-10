@@ -11181,11 +11181,10 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
      *        Encoding URI Path Parts.
      * @param generation Selects a specific revision of this object.
-     * @param content the {@link com.google.api.services.storage.model.StorageObject}
      * @return the request
      */
-    public Restore restore(java.lang.String bucket, java.lang.String object__, java.lang.Long generation, com.google.api.services.storage.model.StorageObject content) throws java.io.IOException {
-      Restore result = new Restore(bucket, object__, generation, content);
+    public Restore restore(java.lang.String bucket, java.lang.String object__, java.lang.Long generation) throws java.io.IOException {
+      Restore result = new Restore(bucket, object__, generation);
       initialize(result);
       return result;
     }
@@ -11209,11 +11208,10 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
      *        Encoding URI Path Parts.
        * @param generation Selects a specific revision of this object.
-       * @param content the {@link com.google.api.services.storage.model.StorageObject}
        * @since 1.13
        */
-      protected Restore(java.lang.String bucket, java.lang.String object__, java.lang.Long generation, com.google.api.services.storage.model.StorageObject content) {
-        super(Storage.this, "POST", REST_PATH, content, com.google.api.services.storage.model.StorageObject.class);
+      protected Restore(java.lang.String bucket, java.lang.String object__, java.lang.Long generation) {
+        super(Storage.this, "POST", REST_PATH, null, com.google.api.services.storage.model.StorageObject.class);
         this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
         this.object__ = com.google.api.client.util.Preconditions.checkNotNull(object__, "Required parameter object__ must be specified.");
         this.generation = com.google.api.client.util.Preconditions.checkNotNull(generation, "Required parameter generation must be specified.");

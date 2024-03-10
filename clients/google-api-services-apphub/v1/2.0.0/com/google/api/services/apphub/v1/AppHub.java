@@ -174,8 +174,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
     public class Locations {
 
       /**
-       * Detaches a service project from a host project. You can call this API from either a host or
-       * service project.
+       * Detaches a service project from a host project. You can call this API from any service project
+       * without needing access to the host project that it is attached to.
        *
        * Create a request for the method "locations.detachServiceProjectAttachment".
        *
@@ -183,7 +183,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link DetachServiceProjectAttachment#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Required. Value for name.
+       * @param name Required. Service project id and location to detach from a host project. Only global location is
+       *        supported. Expected format: `projects/{project}/locations/{location}`.
        * @param content the {@link com.google.api.services.apphub.v1.model.DetachServiceProjectAttachmentRequest}
        * @return the request
        */
@@ -201,8 +202,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Detaches a service project from a host project. You can call this API from either a host or
-         * service project.
+         * Detaches a service project from a host project. You can call this API from any service project
+         * without needing access to the host project that it is attached to.
          *
          * Create a request for the method "locations.detachServiceProjectAttachment".
          *
@@ -212,7 +213,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
          * ogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
          * immediately after invoking the constructor. </p>
          *
-         * @param name Required. Value for name.
+         * @param name Required. Service project id and location to detach from a host project. Only global location is
+       *        supported. Expected format: `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.apphub.v1.model.DetachServiceProjectAttachmentRequest}
          * @since 1.13
          */
@@ -281,17 +283,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           return (DetachServiceProjectAttachment) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Value for name. */
+        /**
+         * Required. Service project id and location to detach from a host project. Only global
+         * location is supported. Expected format: `projects/{project}/locations/{location}`.
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Value for name.
+        /** Required. Service project id and location to detach from a host project. Only global location is
+       supported. Expected format: `projects/{project}/locations/{location}`.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. Value for name. */
+        /**
+         * Required. Service project id and location to detach from a host project. Only global
+         * location is supported. Expected format: `projects/{project}/locations/{location}`.
+         */
         public DetachServiceProjectAttachment setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -648,8 +657,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Looks up a service project attachment. You can call this API from either a host or service
-       * project.
+       * Lists a service project attachment for a given service project. You can call this API from any
+       * project to find if it is attached to a host project.
        *
        * Create a request for the method "locations.lookupServiceProjectAttachment".
        *
@@ -657,7 +666,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link LookupServiceProjectAttachment#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Required. Value for name.
+       * @param name Required. Service project ID and location to lookup service project attachment for. Only global
+       *        location is supported. Expected format: `projects/{project}/locations/{location}`.
        * @return the request
        */
       public LookupServiceProjectAttachment lookupServiceProjectAttachment(java.lang.String name) throws java.io.IOException {
@@ -674,8 +684,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Looks up a service project attachment. You can call this API from either a host or service
-         * project.
+         * Lists a service project attachment for a given service project. You can call this API from any
+         * project to find if it is attached to a host project.
          *
          * Create a request for the method "locations.lookupServiceProjectAttachment".
          *
@@ -685,7 +695,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
          * ogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
          * immediately after invoking the constructor. </p>
          *
-         * @param name Required. Value for name.
+         * @param name Required. Service project ID and location to lookup service project attachment for. Only global
+       *        location is supported. Expected format: `projects/{project}/locations/{location}`.
          * @since 1.13
          */
         protected LookupServiceProjectAttachment(java.lang.String name) {
@@ -763,17 +774,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           return (LookupServiceProjectAttachment) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Value for name. */
+        /**
+         * Required. Service project ID and location to lookup service project attachment for. Only
+         * global location is supported. Expected format: `projects/{project}/locations/{location}`.
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Value for name.
+        /** Required. Service project ID and location to lookup service project attachment for. Only global
+       location is supported. Expected format: `projects/{project}/locations/{location}`.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. Value for name. */
+        /**
+         * Required. Service project ID and location to lookup service project attachment for. Only
+         * global location is supported. Expected format: `projects/{project}/locations/{location}`.
+         */
         public LookupServiceProjectAttachment setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -818,7 +836,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. Project and location to create Application in. Expected format:
+         *        `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.apphub.v1.model.Application}
          * @return the request
          */
@@ -845,7 +864,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Project and location to create Application in. Expected format:
+         *        `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.apphub.v1.model.Application}
            * @since 1.13
            */
@@ -914,17 +934,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Project and location to create Application in. Expected format:
+           * `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. Project and location to create Application in. Expected format:
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Project and location to create Application in. Expected format:
+           * `projects/{project}/locations/{location}`.
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1016,7 +1043,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Value for name.
+         * @param name Required. Fully qualified name of the Application to delete. Expected format:
+         *        `projects/{project}/locations/{location}/applications/{application}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1042,7 +1070,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Value for name.
+           * @param name Required. Fully qualified name of the Application to delete. Expected format:
+         *        `projects/{project}/locations/{location}/applications/{application}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1110,17 +1139,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for name. */
+          /**
+           * Required. Fully qualified name of the Application to delete. Expected format:
+           * `projects/{project}/locations/{location}/applications/{application}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Value for name.
+          /** Required. Fully qualified name of the Application to delete. Expected format:
+         `projects/{project}/locations/{location}/applications/{application}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Value for name. */
+          /**
+           * Required. Fully qualified name of the Application to delete. Expected format:
+           * `projects/{project}/locations/{location}/applications/{application}`.
+           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1187,7 +1223,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Value for name.
+         * @param name Required. Fully qualified name of the Application to fetch. Expected format:
+         *        `projects/{project}/locations/{location}/applications/{application}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1213,7 +1250,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Value for name.
+           * @param name Required. Fully qualified name of the Application to fetch. Expected format:
+         *        `projects/{project}/locations/{location}/applications/{application}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1291,17 +1329,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for name. */
+          /**
+           * Required. Fully qualified name of the Application to fetch. Expected format:
+           * `projects/{project}/locations/{location}/applications/{application}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Value for name.
+          /** Required. Fully qualified name of the Application to fetch. Expected format:
+         `projects/{project}/locations/{location}/applications/{application}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Value for name. */
+          /**
+           * Required. Fully qualified name of the Application to fetch. Expected format:
+           * `projects/{project}/locations/{location}/applications/{application}`.
+           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1523,7 +1568,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. Project and location to list Applications on. Expected format:
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1549,7 +1595,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Project and location to list Applications on. Expected format:
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1627,17 +1674,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Project and location to list Applications on. Expected format:
+           * `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. Project and location to list Applications on. Expected format:
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Project and location to list Applications on. Expected format:
+           * `projects/{project}/locations/{location}`.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1648,33 +1702,33 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filtering results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results
+          /** Optional. Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -2268,7 +2322,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the apphub server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Fully qualified name of the parent Application to create the Service in. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}`.
            * @param content the {@link com.google.api.services.apphub.v1.model.Service}
            * @return the request
            */
@@ -2295,7 +2350,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Value for parent.
+             * @param parent Required. Fully qualified name of the parent Application to create the Service in. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}`.
              * @param content the {@link com.google.api.services.apphub.v1.model.Service}
              * @since 1.13
              */
@@ -2364,17 +2420,26 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Value for parent. */
+            /**
+             * Required. Fully qualified name of the parent Application to create the Service in.
+             * Expected format:
+             * `projects/{project}/locations/{location}/applications/{application}`.
+             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Value for parent.
+            /** Required. Fully qualified name of the parent Application to create the Service in. Expected format:
+           `projects/{project}/locations/{location}/applications/{application}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. Value for parent. */
+            /**
+             * Required. Fully qualified name of the parent Application to create the Service in.
+             * Expected format:
+             * `projects/{project}/locations/{location}/applications/{application}`.
+             */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2459,14 +2524,15 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             }
           }
           /**
-           * Deletes a Service in an Application.
+           * Deletes a Service from an Application.
            *
            * Create a request for the method "services.delete".
            *
            * This request holds the parameters needed by the apphub server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Value for name.
+           * @param name Required. Fully qualified name of the Service to delete from an Application. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}/services/{service}`.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2483,7 +2549,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/applications/[^/]+/services/[^/]+$");
 
             /**
-             * Deletes a Service in an Application.
+             * Deletes a Service from an Application.
              *
              * Create a request for the method "services.delete".
              *
@@ -2492,7 +2558,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Value for name.
+             * @param name Required. Fully qualified name of the Service to delete from an Application. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}/services/{service}`.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -2560,17 +2627,26 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Value for name. */
+            /**
+             * Required. Fully qualified name of the Service to delete from an Application. Expected
+             * format: `projects/{project}/locations/{location}/applications/{application}/services/
+             * {service}`.
+             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Value for name.
+            /** Required. Fully qualified name of the Service to delete from an Application. Expected format:
+           `projects/{project}/locations/{location}/applications/{application}/services/{service}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. Value for name. */
+            /**
+             * Required. Fully qualified name of the Service to delete from an Application. Expected
+             * format: `projects/{project}/locations/{location}/applications/{application}/services/
+             * {service}`.
+             */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2637,7 +2713,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the apphub server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Value for name.
+           * @param name Required. Fully qualified name of the Service to fetch. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}/services/{service}`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2663,7 +2740,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Value for name.
+             * @param name Required. Fully qualified name of the Service to fetch. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}/services/{service}`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2741,17 +2819,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Value for name. */
+            /**
+             * Required. Fully qualified name of the Service to fetch. Expected format: `projects/{p
+             * roject}/locations/{location}/applications/{application}/services/{service}`.
+             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Value for name.
+            /** Required. Fully qualified name of the Service to fetch. Expected format:
+           `projects/{project}/locations/{location}/applications/{application}/services/{service}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. Value for name. */
+            /**
+             * Required. Fully qualified name of the Service to fetch. Expected format: `projects/{p
+             * roject}/locations/{location}/applications/{application}/services/{service}`.
+             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2768,14 +2853,15 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             }
           }
           /**
-           * List Services in an Application.
+           * Lists Services in an Application.
            *
            * Create a request for the method "services.list".
            *
            * This request holds the parameters needed by the apphub server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Fully qualified name of the parent Application to list Services for. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2792,7 +2878,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/applications/[^/]+$");
 
             /**
-             * List Services in an Application.
+             * Lists Services in an Application.
              *
              * Create a request for the method "services.list".
              *
@@ -2801,7 +2887,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Value for parent.
+             * @param parent Required. Fully qualified name of the parent Application to list Services for. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2879,17 +2966,26 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Value for parent. */
+            /**
+             * Required. Fully qualified name of the parent Application to list Services for.
+             * Expected format:
+             * `projects/{project}/locations/{location}/applications/{application}`.
+             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Value for parent.
+            /** Required. Fully qualified name of the parent Application to list Services for. Expected format:
+           `projects/{project}/locations/{location}/applications/{application}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. Value for parent. */
+            /**
+             * Required. Fully qualified name of the parent Application to list Services for.
+             * Expected format:
+             * `projects/{project}/locations/{location}/applications/{application}`.
+             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3225,7 +3321,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the apphub server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Fully qualified name of the Application to create Workload in. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}`.
            * @param content the {@link com.google.api.services.apphub.v1.model.Workload}
            * @return the request
            */
@@ -3252,7 +3349,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Value for parent.
+             * @param parent Required. Fully qualified name of the Application to create Workload in. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}`.
              * @param content the {@link com.google.api.services.apphub.v1.model.Workload}
              * @since 1.13
              */
@@ -3321,17 +3419,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Value for parent. */
+            /**
+             * Required. Fully qualified name of the Application to create Workload in. Expected
+             * format: `projects/{project}/locations/{location}/applications/{application}`.
+             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Value for parent.
+            /** Required. Fully qualified name of the Application to create Workload in. Expected format:
+           `projects/{project}/locations/{location}/applications/{application}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. Value for parent. */
+            /**
+             * Required. Fully qualified name of the Application to create Workload in. Expected
+             * format: `projects/{project}/locations/{location}/applications/{application}`.
+             */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3416,14 +3521,15 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             }
           }
           /**
-           * Deletes a Workload in an Application.
+           * Deletes a Workload from an Application.
            *
            * Create a request for the method "workloads.delete".
            *
            * This request holds the parameters needed by the apphub server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Value for name.
+           * @param name Required. Fully qualified name of the Workload to delete from an Application. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}/workloads/{workload}`.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3440,7 +3546,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/applications/[^/]+/workloads/[^/]+$");
 
             /**
-             * Deletes a Workload in an Application.
+             * Deletes a Workload from an Application.
              *
              * Create a request for the method "workloads.delete".
              *
@@ -3449,7 +3555,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Value for name.
+             * @param name Required. Fully qualified name of the Workload to delete from an Application. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}/workloads/{workload}`.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -3517,17 +3624,26 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Value for name. */
+            /**
+             * Required. Fully qualified name of the Workload to delete from an Application.
+             * Expected format: `projects/{project}/locations/{location}/applications/{application}/
+             * workloads/{workload}`.
+             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Value for name.
+            /** Required. Fully qualified name of the Workload to delete from an Application. Expected format:
+           `projects/{project}/locations/{location}/applications/{application}/workloads/{workload}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. Value for name. */
+            /**
+             * Required. Fully qualified name of the Workload to delete from an Application.
+             * Expected format: `projects/{project}/locations/{location}/applications/{application}/
+             * workloads/{workload}`.
+             */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3594,7 +3710,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the apphub server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Value for name.
+           * @param name Required. Fully qualified name of the Workload to fetch. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}/workloads/{workload}`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -3620,7 +3737,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Value for name.
+             * @param name Required. Fully qualified name of the Workload to fetch. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}/workloads/{workload}`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -3698,17 +3816,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Value for name. */
+            /**
+             * Required. Fully qualified name of the Workload to fetch. Expected format: `projects/{
+             * project}/locations/{location}/applications/{application}/workloads/{workload}`.
+             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Value for name.
+            /** Required. Fully qualified name of the Workload to fetch. Expected format:
+           `projects/{project}/locations/{location}/applications/{application}/workloads/{workload}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. Value for name. */
+            /**
+             * Required. Fully qualified name of the Workload to fetch. Expected format: `projects/{
+             * project}/locations/{location}/applications/{application}/workloads/{workload}`.
+             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3732,7 +3857,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the apphub server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Fully qualified name of the parent Application to list Workloads for. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3758,7 +3884,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Value for parent.
+             * @param parent Required. Fully qualified name of the parent Application to list Workloads for. Expected format:
+           *        `projects/{project}/locations/{location}/applications/{application}`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3836,17 +3963,26 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Value for parent. */
+            /**
+             * Required. Fully qualified name of the parent Application to list Workloads for.
+             * Expected format:
+             * `projects/{project}/locations/{location}/applications/{application}`.
+             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Value for parent.
+            /** Required. Fully qualified name of the parent Application to list Workloads for. Expected format:
+           `projects/{project}/locations/{location}/applications/{application}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. Value for parent. */
+            /**
+             * Required. Fully qualified name of the parent Application to list Workloads for.
+             * Expected format:
+             * `projects/{project}/locations/{location}/applications/{application}`.
+             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3857,33 +3993,33 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               return this;
             }
 
-            /** Optional. Filtering results */
+            /** Optional. Filtering results. */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filtering results
+            /** Optional. Filtering results.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Optional. Filtering results */
+            /** Optional. Filtering results. */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /** Optional. Hint for how to order the results */
+            /** Optional. Hint for how to order the results. */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. Hint for how to order the results
+            /** Optional. Hint for how to order the results.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
-            /** Optional. Hint for how to order the results */
+            /** Optional. Hint for how to order the results. */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
               return this;
@@ -4176,14 +4312,15 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
       public class DiscoveredServices {
 
         /**
-         * Gets a discovered service in a host project and location.
+         * Gets a Discovered Service in a host project and location.
          *
          * Create a request for the method "discoveredServices.get".
          *
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Value for name.
+         * @param name Required. Fully qualified name of the Discovered Service to fetch. Expected format:
+         *        `projects/{project}/locations/{location}/discoveredServices/{discoveredService}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -4200,7 +4337,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/discoveredServices/[^/]+$");
 
           /**
-           * Gets a discovered service in a host project and location.
+           * Gets a Discovered Service in a host project and location.
            *
            * Create a request for the method "discoveredServices.get".
            *
@@ -4209,7 +4346,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Value for name.
+           * @param name Required. Fully qualified name of the Discovered Service to fetch. Expected format:
+         *        `projects/{project}/locations/{location}/discoveredServices/{discoveredService}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -4287,17 +4425,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for name. */
+          /**
+           * Required. Fully qualified name of the Discovered Service to fetch. Expected format:
+           * `projects/{project}/locations/{location}/discoveredServices/{discoveredService}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Value for name.
+          /** Required. Fully qualified name of the Discovered Service to fetch. Expected format:
+         `projects/{project}/locations/{location}/discoveredServices/{discoveredService}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Value for name. */
+          /**
+           * Required. Fully qualified name of the Discovered Service to fetch. Expected format:
+           * `projects/{project}/locations/{location}/discoveredServices/{discoveredService}`.
+           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4314,14 +4459,15 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Lists discovered services that can be added to an application in a host project and location.
+         * Lists Discovered Services that can be added to an Application in a host project and location.
          *
          * Create a request for the method "discoveredServices.list".
          *
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. Project and location to list Discovered Services on. Expected format:
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4338,7 +4484,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists discovered services that can be added to an application in a host project and location.
+           * Lists Discovered Services that can be added to an Application in a host project and location.
            *
            * Create a request for the method "discoveredServices.list".
            *
@@ -4347,7 +4493,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Project and location to list Discovered Services on. Expected format:
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4425,17 +4572,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Project and location to list Discovered Services on. Expected format:
+           * `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. Project and location to list Discovered Services on. Expected format:
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Project and location to list Discovered Services on. Expected format:
+           * `projects/{project}/locations/{location}`.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4446,33 +4600,33 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filtering results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results
+          /** Optional. Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -4523,14 +4677,15 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Looks up a discovered service in a host project and location and with a given resource URI.
+         * Lists a Discovered Service in a host project and location, with a given resource URI.
          *
          * Create a request for the method "discoveredServices.lookup".
          *
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. Host project ID and location to lookup Discovered Service in. Expected format:
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public Lookup lookup(java.lang.String parent) throws java.io.IOException {
@@ -4547,7 +4702,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Looks up a discovered service in a host project and location and with a given resource URI.
+           * Lists a Discovered Service in a host project and location, with a given resource URI.
            *
            * Create a request for the method "discoveredServices.lookup".
            *
@@ -4556,7 +4711,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * Lookup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Host project ID and location to lookup Discovered Service in. Expected format:
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected Lookup(java.lang.String parent) {
@@ -4634,17 +4790,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Lookup) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Host project ID and location to lookup Discovered Service in. Expected
+           * format: `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. Host project ID and location to lookup Discovered Service in. Expected format:
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Host project ID and location to lookup Discovered Service in. Expected
+           * format: `projects/{project}/locations/{location}`.
+           */
           public Lookup setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4656,22 +4819,22 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. Resource URI to find service for. Accepts both project number and project id
-           * and does translation when needed.
+           * Required. Resource URI to find DiscoveredService for. Accepts both project number and
+           * project ID and does translation when needed.
            */
           @com.google.api.client.util.Key
           private java.lang.String uri;
 
-          /** Required. Resource URI to find service for. Accepts both project number and project id and does
-         translation when needed.
+          /** Required. Resource URI to find DiscoveredService for. Accepts both project number and project ID
+         and does translation when needed.
            */
           public java.lang.String getUri() {
             return uri;
           }
 
           /**
-           * Required. Resource URI to find service for. Accepts both project number and project id
-           * and does translation when needed.
+           * Required. Resource URI to find DiscoveredService for. Accepts both project number and
+           * project ID and does translation when needed.
            */
           public Lookup setUri(java.lang.String uri) {
             this.uri = uri;
@@ -4706,14 +4869,15 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
       public class DiscoveredWorkloads {
 
         /**
-         * Gets a discovered workload in a host project and location.
+         * Gets a Discovered Workload in a host project and location.
          *
          * Create a request for the method "discoveredWorkloads.get".
          *
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Value for name.
+         * @param name Required. Fully qualified name of the Discovered Workload to fetch. Expected format:
+         *        `projects/{project}/locations/{location}/discoveredWorkloads/{discoveredWorkload}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -4730,7 +4894,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/discoveredWorkloads/[^/]+$");
 
           /**
-           * Gets a discovered workload in a host project and location.
+           * Gets a Discovered Workload in a host project and location.
            *
            * Create a request for the method "discoveredWorkloads.get".
            *
@@ -4739,7 +4903,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Value for name.
+           * @param name Required. Fully qualified name of the Discovered Workload to fetch. Expected format:
+         *        `projects/{project}/locations/{location}/discoveredWorkloads/{discoveredWorkload}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -4817,17 +4982,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for name. */
+          /**
+           * Required. Fully qualified name of the Discovered Workload to fetch. Expected format:
+           * `projects/{project}/locations/{location}/discoveredWorkloads/{discoveredWorkload}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Value for name.
+          /** Required. Fully qualified name of the Discovered Workload to fetch. Expected format:
+         `projects/{project}/locations/{location}/discoveredWorkloads/{discoveredWorkload}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Value for name. */
+          /**
+           * Required. Fully qualified name of the Discovered Workload to fetch. Expected format:
+           * `projects/{project}/locations/{location}/discoveredWorkloads/{discoveredWorkload}`.
+           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4844,14 +5016,15 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Lists discovered workloads that can be added to an application in a host project and location.
+         * Lists Discovered Workloads that can be added to an Application in a host project and location.
          *
          * Create a request for the method "discoveredWorkloads.list".
          *
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. Project and location to list Discovered Workloads on. Expected format:
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4868,7 +5041,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists discovered workloads that can be added to an application in a host project and location.
+           * Lists Discovered Workloads that can be added to an Application in a host project and location.
            *
            * Create a request for the method "discoveredWorkloads.list".
            *
@@ -4877,7 +5050,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Project and location to list Discovered Workloads on. Expected format:
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4955,17 +5129,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Project and location to list Discovered Workloads on. Expected format:
+           * `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. Project and location to list Discovered Workloads on. Expected format:
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Project and location to list Discovered Workloads on. Expected format:
+           * `projects/{project}/locations/{location}`.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4976,33 +5157,33 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filtering results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results
+          /** Optional. Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -5053,14 +5234,15 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Looks up a discovered Workload in a host project and location and with a given resource URI.
+         * Lists a Discovered Workload in a host project and location, with a given resource URI.
          *
          * Create a request for the method "discoveredWorkloads.lookup".
          *
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. Host project ID and location to lookup Discovered Workload in. Expected format:
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public Lookup lookup(java.lang.String parent) throws java.io.IOException {
@@ -5077,7 +5259,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Looks up a discovered Workload in a host project and location and with a given resource URI.
+           * Lists a Discovered Workload in a host project and location, with a given resource URI.
            *
            * Create a request for the method "discoveredWorkloads.lookup".
            *
@@ -5086,7 +5268,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * Lookup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Host project ID and location to lookup Discovered Workload in. Expected format:
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected Lookup(java.lang.String parent) {
@@ -5164,17 +5347,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Lookup) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Host project ID and location to lookup Discovered Workload in. Expected
+           * format: `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. Host project ID and location to lookup Discovered Workload in. Expected format:
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Host project ID and location to lookup Discovered Workload in. Expected
+           * format: `projects/{project}/locations/{location}`.
+           */
           public Lookup setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5186,22 +5376,22 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. Resource URI to find workload for. Accepts both project number and project id
-           * and does translation when needed.
+           * Required. Resource URI to find Discovered Workload for. Accepts both project number and
+           * project ID and does translation when needed.
            */
           @com.google.api.client.util.Key
           private java.lang.String uri;
 
-          /** Required. Resource URI to find workload for. Accepts both project number and project id and does
-         translation when needed.
+          /** Required. Resource URI to find Discovered Workload for. Accepts both project number and project ID
+         and does translation when needed.
            */
           public java.lang.String getUri() {
             return uri;
           }
 
           /**
-           * Required. Resource URI to find workload for. Accepts both project number and project id
-           * and does translation when needed.
+           * Required. Resource URI to find Discovered Workload for. Accepts both project number and
+           * project ID and does translation when needed.
            */
           public Lookup setUri(java.lang.String uri) {
             this.uri = uri;
@@ -5867,7 +6057,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. Host project ID and location to which service project is being attached. Only global
+         *        location is supported. Expected format: `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.apphub.v1.model.ServiceProjectAttachment}
          * @return the request
          */
@@ -5894,7 +6085,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Host project ID and location to which service project is being attached. Only global
+         *        location is supported. Expected format: `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.apphub.v1.model.ServiceProjectAttachment}
            * @since 1.13
            */
@@ -5963,17 +6155,26 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Host project ID and location to which service project is being attached. Only
+           * global location is supported. Expected format:
+           * `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. Host project ID and location to which service project is being attached. Only global
+         location is supported. Expected format: `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Host project ID and location to which service project is being attached. Only
+           * global location is supported. Expected format:
+           * `projects/{project}/locations/{location}`.
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6028,25 +6229,22 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The service project attachment identifier must contain the project_id of the
+           * Required. The service project attachment identifier must contain the project id of the
            * service project specified in the service_project_attachment.service_project field.
-           * Hint: "projects/{project_id}"
            */
           @com.google.api.client.util.Key
           private java.lang.String serviceProjectAttachmentId;
 
-          /** Required. The service project attachment identifier must contain the project_id of the service
-         project specified in the service_project_attachment.service_project field. Hint:
-         "projects/{project_id}"
+          /** Required. The service project attachment identifier must contain the project id of the service
+         project specified in the service_project_attachment.service_project field.
            */
           public java.lang.String getServiceProjectAttachmentId() {
             return serviceProjectAttachmentId;
           }
 
           /**
-           * Required. The service project attachment identifier must contain the project_id of the
+           * Required. The service project attachment identifier must contain the project id of the
            * service project specified in the service_project_attachment.service_project field.
-           * Hint: "projects/{project_id}"
            */
           public Create setServiceProjectAttachmentId(java.lang.String serviceProjectAttachmentId) {
             this.serviceProjectAttachmentId = serviceProjectAttachmentId;
@@ -6059,14 +6257,16 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Deletes a service project attached to the host project.
+         * Deletes a service project attachment.
          *
          * Create a request for the method "serviceProjectAttachments.delete".
          *
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Value for name.
+         * @param name Required. Fully qualified name of the service project attachment to delete. Expected format:
+         *        `projects/{project}/locations/{location}/serviceProjectAttachments/{serviceProjectAttachme
+         *        nt}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6083,7 +6283,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/serviceProjectAttachments/[^/]+$");
 
           /**
-           * Deletes a service project attached to the host project.
+           * Deletes a service project attachment.
            *
            * Create a request for the method "serviceProjectAttachments.delete".
            *
@@ -6092,7 +6292,9 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Value for name.
+           * @param name Required. Fully qualified name of the service project attachment to delete. Expected format:
+         *        `projects/{project}/locations/{location}/serviceProjectAttachments/{serviceProjectAttachme
+         *        nt}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -6160,17 +6362,26 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for name. */
+          /**
+           * Required. Fully qualified name of the service project attachment to delete. Expected
+           * format: `projects/{project}/locations/{location}/serviceProjectAttachments/{serviceProj
+           * ectAttachment}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Value for name.
+          /** Required. Fully qualified name of the service project attachment to delete. Expected format:
+         `projects/{project}/locations/{location}/serviceProjectAttachments/{serviceProjectAttachment}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Value for name. */
+          /**
+           * Required. Fully qualified name of the service project attachment to delete. Expected
+           * format: `projects/{project}/locations/{location}/serviceProjectAttachments/{serviceProj
+           * ectAttachment}`.
+           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6230,14 +6441,16 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Gets a service project attached to the host project.
+         * Gets a service project attachment.
          *
          * Create a request for the method "serviceProjectAttachments.get".
          *
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Value for name.
+         * @param name Required. Fully qualified name of the service project attachment to retrieve. Expected format:
+         *        `projects/{project}/locations/{location}/serviceProjectAttachments/{serviceProjectAttachme
+         *        nt}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -6254,7 +6467,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/serviceProjectAttachments/[^/]+$");
 
           /**
-           * Gets a service project attached to the host project.
+           * Gets a service project attachment.
            *
            * Create a request for the method "serviceProjectAttachments.get".
            *
@@ -6263,7 +6476,9 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Value for name.
+           * @param name Required. Fully qualified name of the service project attachment to retrieve. Expected format:
+         *        `projects/{project}/locations/{location}/serviceProjectAttachments/{serviceProjectAttachme
+         *        nt}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -6341,17 +6556,26 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for name. */
+          /**
+           * Required. Fully qualified name of the service project attachment to retrieve. Expected
+           * format: `projects/{project}/locations/{location}/serviceProjectAttachments/{serviceProj
+           * ectAttachment}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Value for name.
+          /** Required. Fully qualified name of the service project attachment to retrieve. Expected format:
+         `projects/{project}/locations/{location}/serviceProjectAttachments/{serviceProjectAttachment}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Value for name. */
+          /**
+           * Required. Fully qualified name of the service project attachment to retrieve. Expected
+           * format: `projects/{project}/locations/{location}/serviceProjectAttachments/{serviceProj
+           * ectAttachment}`.
+           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6368,14 +6592,15 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * List service projects attached to the host project.
+         * Lists service projects attached to the host project.
          *
          * Create a request for the method "serviceProjectAttachments.list".
          *
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. Host project ID and location to list service project attachments. Only global location is
+         *        supported. Expected format: `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -6392,7 +6617,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * List service projects attached to the host project.
+           * Lists service projects attached to the host project.
            *
            * Create a request for the method "serviceProjectAttachments.list".
            *
@@ -6401,7 +6626,8 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Host project ID and location to list service project attachments. Only global location is
+         *        supported. Expected format: `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -6479,17 +6705,24 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Host project ID and location to list service project attachments. Only global
+           * location is supported. Expected format: `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. Host project ID and location to list service project attachments. Only global location is
+         supported. Expected format: `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Host project ID and location to list service project attachments. Only global
+           * location is supported. Expected format: `projects/{project}/locations/{location}`.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6500,33 +6733,33 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filtering results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results
+          /** Optional. Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;

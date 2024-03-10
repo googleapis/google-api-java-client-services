@@ -30,7 +30,7 @@ package com.google.api.services.apphub.v1alpha.model;
 public final class FindUnregisteredWorkloadsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of discovered workloads.
+   * List of Discovered Workloads.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class FindUnregisteredWorkloadsResponse extends com.google.api.clie
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * List of discovered workloads.
+   * List of Discovered Workloads.
    * @return value or {@code null} for none
    */
   public java.util.List<DiscoveredWorkload> getDiscoveredWorkloads() {
@@ -65,7 +65,7 @@ public final class FindUnregisteredWorkloadsResponse extends com.google.api.clie
   }
 
   /**
-   * List of discovered workloads.
+   * List of Discovered Workloads.
    * @param discoveredWorkloads discoveredWorkloads or {@code null} for none
    */
   public FindUnregisteredWorkloadsResponse setDiscoveredWorkloads(java.util.List<DiscoveredWorkload> discoveredWorkloads) {

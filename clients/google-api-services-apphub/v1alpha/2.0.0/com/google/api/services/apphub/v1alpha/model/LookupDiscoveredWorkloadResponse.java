@@ -30,14 +30,14 @@ package com.google.api.services.apphub.v1alpha.model;
 public final class LookupDiscoveredWorkloadResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Discovered workload if exists, empty otherwise.
+   * Discovered Workload if exists, empty otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DiscoveredWorkload discoveredWorkload;
 
   /**
-   * Discovered workload if exists, empty otherwise.
+   * Discovered Workload if exists, empty otherwise.
    * @return value or {@code null} for none
    */
   public DiscoveredWorkload getDiscoveredWorkload() {
@@ -45,7 +45,7 @@ public final class LookupDiscoveredWorkloadResponse extends com.google.api.clien
   }
 
   /**
-   * Discovered workload if exists, empty otherwise.
+   * Discovered Workload if exists, empty otherwise.
    * @param discoveredWorkload discoveredWorkload or {@code null} for none
    */
   public LookupDiscoveredWorkloadResponse setDiscoveredWorkload(DiscoveredWorkload discoveredWorkload) {

@@ -30,7 +30,7 @@ package com.google.api.services.apphub.v1alpha.model;
 public final class ListDiscoveredServicesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of discovered services.
+   * List of Discovered Services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class ListDiscoveredServicesResponse extends com.google.api.client.
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * List of discovered services.
+   * List of Discovered Services.
    * @return value or {@code null} for none
    */
   public java.util.List<DiscoveredService> getDiscoveredServices() {
@@ -65,7 +65,7 @@ public final class ListDiscoveredServicesResponse extends com.google.api.client.
   }
 
   /**
-   * List of discovered services.
+   * List of Discovered Services.
    * @param discoveredServices discoveredServices or {@code null} for none
    */
   public ListDiscoveredServicesResponse setDiscoveredServices(java.util.List<DiscoveredService> discoveredServices) {

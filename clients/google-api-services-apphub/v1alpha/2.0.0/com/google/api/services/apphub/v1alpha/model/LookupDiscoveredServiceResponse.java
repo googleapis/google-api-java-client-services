@@ -30,14 +30,14 @@ package com.google.api.services.apphub.v1alpha.model;
 public final class LookupDiscoveredServiceResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Discovered service if exists, empty otherwise.
+   * Discovered Service if exists, empty otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DiscoveredService discoveredService;
 
   /**
-   * Discovered service if exists, empty otherwise.
+   * Discovered Service if exists, empty otherwise.
    * @return value or {@code null} for none
    */
   public DiscoveredService getDiscoveredService() {
@@ -45,7 +45,7 @@ public final class LookupDiscoveredServiceResponse extends com.google.api.client
   }
 
   /**
-   * Discovered service if exists, empty otherwise.
+   * Discovered Service if exists, empty otherwise.
    * @param discoveredService discoveredService or {@code null} for none
    */
   public LookupDiscoveredServiceResponse setDiscoveredService(DiscoveredService discoveredService) {

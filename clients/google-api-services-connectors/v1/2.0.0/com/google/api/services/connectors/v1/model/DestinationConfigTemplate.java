@@ -30,6 +30,13 @@ package com.google.api.services.connectors.v1.model;
 public final class DestinationConfigTemplate extends com.google.api.client.json.GenericJson {
 
   /**
+   * Autocomplete suggestions for destination URL field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> autocompleteSuggestions;
+
+  /**
    * The default port.
    * The value may be {@code null}.
    */
@@ -91,6 +98,23 @@ public final class DestinationConfigTemplate extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String regexPattern;
+
+  /**
+   * Autocomplete suggestions for destination URL field.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAutocompleteSuggestions() {
+    return autocompleteSuggestions;
+  }
+
+  /**
+   * Autocomplete suggestions for destination URL field.
+   * @param autocompleteSuggestions autocompleteSuggestions or {@code null} for none
+   */
+  public DestinationConfigTemplate setAutocompleteSuggestions(java.util.List<java.lang.String> autocompleteSuggestions) {
+    this.autocompleteSuggestions = autocompleteSuggestions;
+    return this;
+  }
 
   /**
    * The default port.

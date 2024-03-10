@@ -5058,6 +5058,160 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
+       * An accessor for creating requests from the CustomConnectors collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Connectors connectors = new Connectors(...);}
+       *   {@code Connectors.CustomConnectors.List request = connectors.customConnectors().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public CustomConnectors customConnectors() {
+        return new CustomConnectors();
+      }
+
+      /**
+       * The "customConnectors" collection of methods.
+       */
+      public class CustomConnectors {
+
+        /**
+         * Validates a Custom Connector Spec.
+         *
+         * Create a request for the method "customConnectors.validateCustomConnectorSpec".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link ValidateCustomConnectorSpec#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. Location at which the custom connector is being created.
+         * @param content the {@link com.google.api.services.connectors.v1.model.ValidateCustomConnectorSpecRequest}
+         * @return the request
+         */
+        public ValidateCustomConnectorSpec validateCustomConnectorSpec(java.lang.String parent, com.google.api.services.connectors.v1.model.ValidateCustomConnectorSpecRequest content) throws java.io.IOException {
+          ValidateCustomConnectorSpec result = new ValidateCustomConnectorSpec(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ValidateCustomConnectorSpec extends ConnectorsRequest<com.google.api.services.connectors.v1.model.ValidateCustomConnectorSpecResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/customConnectors:validateCustomConnectorSpec";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Validates a Custom Connector Spec.
+           *
+           * Create a request for the method "customConnectors.validateCustomConnectorSpec".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link ValidateCustomConnectorSpec#execute()} method to invoke
+           * the remote operation. <p> {@link ValidateCustomConnectorSpec#initialize(com.google.api.client.g
+           * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Location at which the custom connector is being created.
+           * @param content the {@link com.google.api.services.connectors.v1.model.ValidateCustomConnectorSpecRequest}
+           * @since 1.13
+           */
+          protected ValidateCustomConnectorSpec(java.lang.String parent, com.google.api.services.connectors.v1.model.ValidateCustomConnectorSpecRequest content) {
+            super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v1.model.ValidateCustomConnectorSpecResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public ValidateCustomConnectorSpec set$Xgafv(java.lang.String $Xgafv) {
+            return (ValidateCustomConnectorSpec) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ValidateCustomConnectorSpec setAccessToken(java.lang.String accessToken) {
+            return (ValidateCustomConnectorSpec) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ValidateCustomConnectorSpec setAlt(java.lang.String alt) {
+            return (ValidateCustomConnectorSpec) super.setAlt(alt);
+          }
+
+          @Override
+          public ValidateCustomConnectorSpec setCallback(java.lang.String callback) {
+            return (ValidateCustomConnectorSpec) super.setCallback(callback);
+          }
+
+          @Override
+          public ValidateCustomConnectorSpec setFields(java.lang.String fields) {
+            return (ValidateCustomConnectorSpec) super.setFields(fields);
+          }
+
+          @Override
+          public ValidateCustomConnectorSpec setKey(java.lang.String key) {
+            return (ValidateCustomConnectorSpec) super.setKey(key);
+          }
+
+          @Override
+          public ValidateCustomConnectorSpec setOauthToken(java.lang.String oauthToken) {
+            return (ValidateCustomConnectorSpec) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ValidateCustomConnectorSpec setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ValidateCustomConnectorSpec) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ValidateCustomConnectorSpec setQuotaUser(java.lang.String quotaUser) {
+            return (ValidateCustomConnectorSpec) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ValidateCustomConnectorSpec setUploadType(java.lang.String uploadType) {
+            return (ValidateCustomConnectorSpec) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ValidateCustomConnectorSpec setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ValidateCustomConnectorSpec) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Location at which the custom connector is being created. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Location at which the custom connector is being created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Location at which the custom connector is being created. */
+          public ValidateCustomConnectorSpec setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public ValidateCustomConnectorSpec set(String parameterName, Object value) {
+            return (ValidateCustomConnectorSpec) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the EndpointAttachments collection.
        *
        * <p>The typical use is:</p>
@@ -7219,144 +7373,6 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Deletes a single CustomConnectorVersion.
-             *
-             * Create a request for the method "customConnectorVersions.delete".
-             *
-             * This request holds the parameters needed by the connectors server.  After setting any optional
-             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-             *
-             * @param name Required. Resource name of the form: `projects/{project}/locations/{location}/customConnectors/{cust
-             *        om_connector}/customConnectorVersions/{custom_connector_version}`
-             * @return the request
-             */
-            public Delete delete(java.lang.String name) throws java.io.IOException {
-              Delete result = new Delete(name);
-              initialize(result);
-              return result;
-            }
-
-            public class Delete extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Operation> {
-
-              private static final String REST_PATH = "v1/{+name}";
-
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
-
-              /**
-               * Deletes a single CustomConnectorVersion.
-               *
-               * Create a request for the method "customConnectorVersions.delete".
-               *
-               * This request holds the parameters needed by the the connectors server.  After setting any
-               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-               * <p> {@link
-               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-               * be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param name Required. Resource name of the form: `projects/{project}/locations/{location}/customConnectors/{cust
-             *        om_connector}/customConnectorVersions/{custom_connector_version}`
-               * @since 1.13
-               */
-              protected Delete(java.lang.String name) {
-                super(Connectors.this, "DELETE", REST_PATH, null, com.google.api.services.connectors.v1.model.Operation.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
-                }
-              }
-
-              @Override
-              public Delete set$Xgafv(java.lang.String $Xgafv) {
-                return (Delete) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public Delete setAccessToken(java.lang.String accessToken) {
-                return (Delete) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public Delete setAlt(java.lang.String alt) {
-                return (Delete) super.setAlt(alt);
-              }
-
-              @Override
-              public Delete setCallback(java.lang.String callback) {
-                return (Delete) super.setCallback(callback);
-              }
-
-              @Override
-              public Delete setFields(java.lang.String fields) {
-                return (Delete) super.setFields(fields);
-              }
-
-              @Override
-              public Delete setKey(java.lang.String key) {
-                return (Delete) super.setKey(key);
-              }
-
-              @Override
-              public Delete setOauthToken(java.lang.String oauthToken) {
-                return (Delete) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Delete) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public Delete setQuotaUser(java.lang.String quotaUser) {
-                return (Delete) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public Delete setUploadType(java.lang.String uploadType) {
-                return (Delete) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Delete) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /**
-               * Required. Resource name of the form: `projects/{project}/locations/{location}/custo
-               * mConnectors/{custom_connector}/customConnectorVersions/{custom_connector_version}`
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String name;
-
-              /** Required. Resource name of the form: `projects/{project}/locations/{location}/customConnectors/{cus
-             tom_connector}/customConnectorVersions/{custom_connector_version}`
-               */
-              public java.lang.String getName() {
-                return name;
-              }
-
-              /**
-               * Required. Resource name of the form: `projects/{project}/locations/{location}/custo
-               * mConnectors/{custom_connector}/customConnectorVersions/{custom_connector_version}`
-               */
-              public Delete setName(java.lang.String name) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
-                }
-                this.name = name;
-                return this;
-              }
-
-              @Override
-              public Delete set(String parameterName, Object value) {
-                return (Delete) super.set(parameterName, value);
-              }
-            }
-            /**
              * Gets details of a single CustomConnectorVersion.
              *
              * Create a request for the method "customConnectorVersions.get".
@@ -7680,179 +7696,6 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               @Override
               public List set(String parameterName, Object value) {
                 return (List) super.set(parameterName, value);
-              }
-            }
-            /**
-             * Updates the parameters of a CustomConnectorVersion.
-             *
-             * Create a request for the method "customConnectorVersions.patch".
-             *
-             * This request holds the parameters needed by the connectors server.  After setting any optional
-             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-             *
-             * @param name Output only. Identifier. Resource name of the Version. Format: projects/{project}/locations/{locatio
-             *        n}/customConnectors/{custom_connector}/customConnectorVersions/{custom_connector_version}
-             * @param content the {@link com.google.api.services.connectors.v1.model.CustomConnectorVersion}
-             * @return the request
-             */
-            public Patch patch(java.lang.String name, com.google.api.services.connectors.v1.model.CustomConnectorVersion content) throws java.io.IOException {
-              Patch result = new Patch(name, content);
-              initialize(result);
-              return result;
-            }
-
-            public class Patch extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Operation> {
-
-              private static final String REST_PATH = "v1/{+name}";
-
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
-
-              /**
-               * Updates the parameters of a CustomConnectorVersion.
-               *
-               * Create a request for the method "customConnectorVersions.patch".
-               *
-               * This request holds the parameters needed by the the connectors server.  After setting any
-               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-               * <p> {@link
-               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-               * be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param name Output only. Identifier. Resource name of the Version. Format: projects/{project}/locations/{locatio
-             *        n}/customConnectors/{custom_connector}/customConnectorVersions/{custom_connector_version}
-               * @param content the {@link com.google.api.services.connectors.v1.model.CustomConnectorVersion}
-               * @since 1.13
-               */
-              protected Patch(java.lang.String name, com.google.api.services.connectors.v1.model.CustomConnectorVersion content) {
-                super(Connectors.this, "PATCH", REST_PATH, content, com.google.api.services.connectors.v1.model.Operation.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
-                }
-              }
-
-              @Override
-              public Patch set$Xgafv(java.lang.String $Xgafv) {
-                return (Patch) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public Patch setAccessToken(java.lang.String accessToken) {
-                return (Patch) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public Patch setAlt(java.lang.String alt) {
-                return (Patch) super.setAlt(alt);
-              }
-
-              @Override
-              public Patch setCallback(java.lang.String callback) {
-                return (Patch) super.setCallback(callback);
-              }
-
-              @Override
-              public Patch setFields(java.lang.String fields) {
-                return (Patch) super.setFields(fields);
-              }
-
-              @Override
-              public Patch setKey(java.lang.String key) {
-                return (Patch) super.setKey(key);
-              }
-
-              @Override
-              public Patch setOauthToken(java.lang.String oauthToken) {
-                return (Patch) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Patch) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public Patch setQuotaUser(java.lang.String quotaUser) {
-                return (Patch) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public Patch setUploadType(java.lang.String uploadType) {
-                return (Patch) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Patch) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /**
-               * Output only. Identifier. Resource name of the Version. Format: projects/{project}/l
-               * ocations/{location}/customConnectors/{custom_connector}/customConnectorVersions/{cu
-               * stom_connector_version}
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String name;
-
-              /** Output only. Identifier. Resource name of the Version. Format: projects/{project}/locations/{locati
-             on}/customConnectors/{custom_connector}/customConnectorVersions/{custom_connector_version}
-               */
-              public java.lang.String getName() {
-                return name;
-              }
-
-              /**
-               * Output only. Identifier. Resource name of the Version. Format: projects/{project}/l
-               * ocations/{location}/customConnectors/{custom_connector}/customConnectorVersions/{cu
-               * stom_connector_version}
-               */
-              public Patch setName(java.lang.String name) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/global/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
-                }
-                this.name = name;
-                return this;
-              }
-
-              /**
-               * Required. Field mask is used to specify the fields to be overwritten in the
-               * Connector resource by the update. The fields specified in the update_mask are
-               * relative to the resource, not the full request. A field will be overwritten if it
-               * is in the mask. Set the mask as "*" for full replacement, which means all fields
-               * will be overwritten.
-               */
-              @com.google.api.client.util.Key
-              private String updateMask;
-
-              /** Required. Field mask is used to specify the fields to be overwritten in the Connector resource by
-             the update. The fields specified in the update_mask are relative to the resource, not the full
-             request. A field will be overwritten if it is in the mask. Set the mask as "*" for full
-             replacement, which means all fields will be overwritten.
-               */
-              public String getUpdateMask() {
-                return updateMask;
-              }
-
-              /**
-               * Required. Field mask is used to specify the fields to be overwritten in the
-               * Connector resource by the update. The fields specified in the update_mask are
-               * relative to the resource, not the full request. A field will be overwritten if it
-               * is in the mask. Set the mask as "*" for full replacement, which means all fields
-               * will be overwritten.
-               */
-              public Patch setUpdateMask(String updateMask) {
-                this.updateMask = updateMask;
-                return this;
-              }
-
-              @Override
-              public Patch set(String parameterName, Object value) {
-                return (Patch) super.set(parameterName, value);
               }
             }
 

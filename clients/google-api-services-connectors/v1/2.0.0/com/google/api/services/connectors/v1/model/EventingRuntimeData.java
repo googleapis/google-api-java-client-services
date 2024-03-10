@@ -53,6 +53,13 @@ public final class EventingRuntimeData extends com.google.api.client.json.Generi
   private EventingStatus status;
 
   /**
+   * Output only. Webhook data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WebhookData webhookData;
+
+  /**
    * Output only. Events listener endpoint. The value will populated after provisioning the events
    * listener.
    * @return value or {@code null} for none
@@ -104,6 +111,23 @@ public final class EventingRuntimeData extends com.google.api.client.json.Generi
    */
   public EventingRuntimeData setStatus(EventingStatus status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Output only. Webhook data.
+   * @return value or {@code null} for none
+   */
+  public WebhookData getWebhookData() {
+    return webhookData;
+  }
+
+  /**
+   * Output only. Webhook data.
+   * @param webhookData webhookData or {@code null} for none
+   */
+  public EventingRuntimeData setWebhookData(WebhookData webhookData) {
+    this.webhookData = webhookData;
     return this;
   }
 

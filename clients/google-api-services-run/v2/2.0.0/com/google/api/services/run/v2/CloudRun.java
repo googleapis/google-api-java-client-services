@@ -4592,6 +4592,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /** Optional. The list of fields to be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. The list of fields to be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
           /**
            * Indicates that the request should be validated and default values populated, without
            * persisting the request or updating any resources.

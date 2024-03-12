@@ -30,6 +30,13 @@ package com.google.api.services.youtube.model;
 public final class LiveChatMessageListResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Set when there is an active poll.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LiveChatMessage activePollItem;
+
+  /**
    * Etag of this resource.
    * The value may be {@code null}.
    */
@@ -102,6 +109,23 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String visitorId;
+
+  /**
+   * Set when there is an active poll.
+   * @return value or {@code null} for none
+   */
+  public LiveChatMessage getActivePollItem() {
+    return activePollItem;
+  }
+
+  /**
+   * Set when there is an active poll.
+   * @param activePollItem activePollItem or {@code null} for none
+   */
+  public LiveChatMessageListResponse setActivePollItem(LiveChatMessage activePollItem) {
+    this.activePollItem = activePollItem;
+    return this;
+  }
 
   /**
    * Etag of this resource.

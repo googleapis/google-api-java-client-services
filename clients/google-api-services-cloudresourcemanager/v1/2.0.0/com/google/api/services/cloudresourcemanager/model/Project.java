@@ -95,7 +95,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Input only. Immutable. Tag keys/values directly bound to this project. Each item in
    * the map must be expressed as " : ". For example: "123/environment" : "production",
-   * "123/costCenter" : "marketing"
+   * "123/costCenter" : "marketing" Note: Currently this field is in Preview.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -247,7 +247,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Input only. Immutable. Tag keys/values directly bound to this project. Each item in
    * the map must be expressed as " : ". For example: "123/environment" : "production",
-   * "123/costCenter" : "marketing"
+   * "123/costCenter" : "marketing" Note: Currently this field is in Preview.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getTags() {
@@ -257,7 +257,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Input only. Immutable. Tag keys/values directly bound to this project. Each item in
    * the map must be expressed as " : ". For example: "123/environment" : "production",
-   * "123/costCenter" : "marketing"
+   * "123/costCenter" : "marketing" Note: Currently this field is in Preview.
    * @param tags tags or {@code null} for none
    */
   public Project setTags(java.util.Map<String, java.lang.String> tags) {

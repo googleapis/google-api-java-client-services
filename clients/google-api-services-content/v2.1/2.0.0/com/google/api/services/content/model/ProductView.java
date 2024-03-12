@@ -100,6 +100,22 @@ public final class ProductView extends com.google.api.client.json.GenericJson {
   private java.lang.String channel;
 
   /**
+   * Estimated performance potential compared to highest performing products of the merchant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clickPotential;
+
+  /**
+   * Rank of the product based on its click potential. A product with `click_potential_rank` 1 has
+   * the highest click potential among the merchant's products that fulfill the search query
+   * conditions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long clickPotentialRank;
+
+  /**
    * Condition of the product.
    * The value may be {@code null}.
    */
@@ -394,6 +410,44 @@ public final class ProductView extends com.google.api.client.json.GenericJson {
    */
   public ProductView setChannel(java.lang.String channel) {
     this.channel = channel;
+    return this;
+  }
+
+  /**
+   * Estimated performance potential compared to highest performing products of the merchant.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClickPotential() {
+    return clickPotential;
+  }
+
+  /**
+   * Estimated performance potential compared to highest performing products of the merchant.
+   * @param clickPotential clickPotential or {@code null} for none
+   */
+  public ProductView setClickPotential(java.lang.String clickPotential) {
+    this.clickPotential = clickPotential;
+    return this;
+  }
+
+  /**
+   * Rank of the product based on its click potential. A product with `click_potential_rank` 1 has
+   * the highest click potential among the merchant's products that fulfill the search query
+   * conditions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getClickPotentialRank() {
+    return clickPotentialRank;
+  }
+
+  /**
+   * Rank of the product based on its click potential. A product with `click_potential_rank` 1 has
+   * the highest click potential among the merchant's products that fulfill the search query
+   * conditions.
+   * @param clickPotentialRank clickPotentialRank or {@code null} for none
+   */
+  public ProductView setClickPotentialRank(java.lang.Long clickPotentialRank) {
+    this.clickPotentialRank = clickPotentialRank;
     return this;
   }
 

@@ -278,9 +278,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String energyEfficiencyClass;
 
   /**
-   * The list of destinations to exclude for this target (corresponds to cleared check boxes in
-   * Merchant Center). Products that are excluded from all destinations for more than 7 days are
-   * automatically deleted.
+   * The list of [destinations to exclude](//support.google.com/merchants/answer/6324486) for this
+   * target (corresponds to cleared check boxes in Merchant Center). Products that are excluded from
+   * all destinations for more than 7 days are automatically deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -361,9 +361,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String imageLink;
 
   /**
-   * The list of destinations to include for this target (corresponds to checked check boxes in
-   * Merchant Center). Default destinations are always included unless provided in
-   * `excludedDestinations`.
+   * The list of [destinations to include](//support.google.com/merchants/answer/7501026) for this
+   * target (corresponds to checked check boxes in Merchant Center). Default destinations are always
+   * included unless provided in `excludedDestinations`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1328,9 +1328,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of destinations to exclude for this target (corresponds to cleared check boxes in
-   * Merchant Center). Products that are excluded from all destinations for more than 7 days are
-   * automatically deleted.
+   * The list of [destinations to exclude](//support.google.com/merchants/answer/6324486) for this
+   * target (corresponds to cleared check boxes in Merchant Center). Products that are excluded from
+   * all destinations for more than 7 days are automatically deleted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedDestinations() {
@@ -1338,9 +1338,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of destinations to exclude for this target (corresponds to cleared check boxes in
-   * Merchant Center). Products that are excluded from all destinations for more than 7 days are
-   * automatically deleted.
+   * The list of [destinations to exclude](//support.google.com/merchants/answer/6324486) for this
+   * target (corresponds to cleared check boxes in Merchant Center). Products that are excluded from
+   * all destinations for more than 7 days are automatically deleted.
    * @param excludedDestinations excludedDestinations or {@code null} for none
    */
   public Product setExcludedDestinations(java.util.List<java.lang.String> excludedDestinations) {
@@ -1524,9 +1524,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of destinations to include for this target (corresponds to checked check boxes in
-   * Merchant Center). Default destinations are always included unless provided in
-   * `excludedDestinations`.
+   * The list of [destinations to include](//support.google.com/merchants/answer/7501026) for this
+   * target (corresponds to checked check boxes in Merchant Center). Default destinations are always
+   * included unless provided in `excludedDestinations`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludedDestinations() {
@@ -1534,9 +1534,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of destinations to include for this target (corresponds to checked check boxes in
-   * Merchant Center). Default destinations are always included unless provided in
-   * `excludedDestinations`.
+   * The list of [destinations to include](//support.google.com/merchants/answer/7501026) for this
+   * target (corresponds to checked check boxes in Merchant Center). Default destinations are always
+   * included unless provided in `excludedDestinations`.
    * @param includedDestinations includedDestinations or {@code null} for none
    */
   public Product setIncludedDestinations(java.util.List<java.lang.String> includedDestinations) {

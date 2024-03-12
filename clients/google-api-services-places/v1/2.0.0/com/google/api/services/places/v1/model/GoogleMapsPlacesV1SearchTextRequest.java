@@ -30,6 +30,13 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Set the searchable EV options of a place search request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1SearchTextRequestEVOptions evOptions;
+
+  /**
    * The requested place type. Full list of types supported:
    * https://developers.google.com/maps/documentation/places/web-service/place-types. Only support
    * one included type.
@@ -130,6 +137,23 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.String textQuery;
+
+  /**
+   * Optional. Set the searchable EV options of a place search request.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchTextRequestEVOptions getEvOptions() {
+    return evOptions;
+  }
+
+  /**
+   * Optional. Set the searchable EV options of a place search request.
+   * @param evOptions evOptions or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchTextRequest setEvOptions(GoogleMapsPlacesV1SearchTextRequestEVOptions evOptions) {
+    this.evOptions = evOptions;
+    return this;
+  }
 
   /**
    * The requested place type. Full list of types supported:

@@ -20,7 +20,7 @@ package com.google.api.services.marketingplatformadmin.v1alpha;
  * Service definition for GoogleMarketingPlatformAdminAPI (v1alpha).
  *
  * <p>
- * marketingplatformadmin.googleapis.com API.
+ * The Google Marketing Platform Admin API allows for programmatic access to the Google Marketing Platform configuration data. You can use the Google Marketing Platform Admin API to manage links between your Google Marketing Platform organization and Google Analytics accounts, set the service level of your GA4 properties.
  * </p>
  *
  * <p>

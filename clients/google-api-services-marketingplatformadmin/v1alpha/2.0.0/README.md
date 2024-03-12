@@ -1,6 +1,6 @@
 # Google Marketing Platform Admin API Client Library for Java
 
-marketingplatformadmin.googleapis.com API.
+The Google Marketing Platform Admin API allows for programmatic access to the Google Marketing Platform configuration data. You can use the Google Marketing Platform Admin API to manage links between your Google Marketing Platform organization and Google Analytics accounts, set the service level of your GA4 properties.
 
 This page contains information about getting started with the Google Marketing Platform Admin API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-marketingplatformadmin</artifactId>
-      <version>v1alpha-rev20240229-2.0.0</version>
+      <version>v1alpha-rev20240311-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-marketingplatformadmin:v1alpha-rev20240229-2.0.0'
+  implementation 'com.google.apis:google-api-services-marketingplatformadmin:v1alpha-rev20240311-2.0.0'
 }
 ```
 

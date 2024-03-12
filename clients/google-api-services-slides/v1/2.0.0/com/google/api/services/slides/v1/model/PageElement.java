@@ -88,6 +88,13 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
   private Size size;
 
   /**
+   * A Speaker Spotlight.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpeakerSpotlight speakerSpotlight;
+
+  /**
    * A table page element.
    * The value may be {@code null}.
    */
@@ -264,6 +271,23 @@ public final class PageElement extends com.google.api.client.json.GenericJson {
    */
   public PageElement setSize(Size size) {
     this.size = size;
+    return this;
+  }
+
+  /**
+   * A Speaker Spotlight.
+   * @return value or {@code null} for none
+   */
+  public SpeakerSpotlight getSpeakerSpotlight() {
+    return speakerSpotlight;
+  }
+
+  /**
+   * A Speaker Spotlight.
+   * @param speakerSpotlight speakerSpotlight or {@code null} for none
+   */
+  public PageElement setSpeakerSpotlight(SpeakerSpotlight speakerSpotlight) {
+    this.speakerSpotlight = speakerSpotlight;
     return this;
   }
 

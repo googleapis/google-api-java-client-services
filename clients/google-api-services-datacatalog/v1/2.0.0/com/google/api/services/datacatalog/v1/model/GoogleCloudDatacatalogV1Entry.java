@@ -196,8 +196,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private GoogleCloudDatacatalogV1ModelSpec modelSpec;
 
   /**
-   * Output only. The resource name of an entry in URL format. Note: The entry itself and its child
-   * resources might not be stored in the location specified in its name.
+   * Output only. Identifier. The resource name of an entry in URL format. Note: The entry itself
+   * and its child resources might not be stored in the location specified in its name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -665,8 +665,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * Output only. The resource name of an entry in URL format. Note: The entry itself and its child
-   * resources might not be stored in the location specified in its name.
+   * Output only. Identifier. The resource name of an entry in URL format. Note: The entry itself
+   * and its child resources might not be stored in the location specified in its name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -674,8 +674,8 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   }
 
   /**
-   * Output only. The resource name of an entry in URL format. Note: The entry itself and its child
-   * resources might not be stored in the location specified in its name.
+   * Output only. Identifier. The resource name of an entry in URL format. Note: The entry itself
+   * and its child resources might not be stored in the location specified in its name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDatacatalogV1Entry setName(java.lang.String name) {

@@ -52,7 +52,7 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.goo
   private java.lang.Boolean isRequired;
 
   /**
-   * Output only. The resource name of the tag template field in URL format. Example: *
+   * Output only. Identifier. The resource name of the tag template field in URL format. Example: *
    * projects/{project_id}/locations/{location}/tagTemplates/{tag_template}/fields/{field} Note that
    * this TagTemplateField may not actually be stored in the location in this name.
    * The value may be {@code null}.
@@ -128,7 +128,7 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.goo
   }
 
   /**
-   * Output only. The resource name of the tag template field in URL format. Example: *
+   * Output only. Identifier. The resource name of the tag template field in URL format. Example: *
    * projects/{project_id}/locations/{location}/tagTemplates/{tag_template}/fields/{field} Note that
    * this TagTemplateField may not actually be stored in the location in this name.
    * @return value or {@code null} for none
@@ -138,7 +138,7 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplateField extends com.goo
   }
 
   /**
-   * Output only. The resource name of the tag template field in URL format. Example: *
+   * Output only. Identifier. The resource name of the tag template field in URL format. Example: *
    * projects/{project_id}/locations/{location}/tagTemplates/{tag_template}/fields/{field} Note that
    * this TagTemplateField may not actually be stored in the location in this name.
    * @param name name or {@code null} for none

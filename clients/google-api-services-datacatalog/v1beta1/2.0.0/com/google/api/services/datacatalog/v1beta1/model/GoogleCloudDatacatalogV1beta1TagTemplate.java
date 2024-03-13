@@ -55,7 +55,7 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplate extends com.google.a
   private java.util.Map<String, GoogleCloudDatacatalogV1beta1TagTemplateField> fields;
 
   /**
-   * The resource name of the tag template in URL format. Example: *
+   * Identifier. The resource name of the tag template in URL format. Example: *
    * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} Note that this
    * TagTemplate and its child resources may not actually be stored in the location in this name.
    * The value may be {@code null}.
@@ -108,7 +108,7 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplate extends com.google.a
   }
 
   /**
-   * The resource name of the tag template in URL format. Example: *
+   * Identifier. The resource name of the tag template in URL format. Example: *
    * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} Note that this
    * TagTemplate and its child resources may not actually be stored in the location in this name.
    * @return value or {@code null} for none
@@ -118,7 +118,7 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplate extends com.google.a
   }
 
   /**
-   * The resource name of the tag template in URL format. Example: *
+   * Identifier. The resource name of the tag template in URL format. Example: *
    * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} Note that this
    * TagTemplate and its child resources may not actually be stored in the location in this name.
    * @param name name or {@code null} for none

@@ -30,8 +30,9 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class ComputeEnginePreferences extends com.google.api.client.json.GenericJson {
 
   /**
-   * License type to consider when calculating costs for virtual machine insights and
-   * recommendations. If unspecified, costs are calculated based on the default licensing plan.
+   * Overridden by os_pricing_preferences if specified. License type to consider when calculating
+   * costs for virtual machine insights and recommendations. If unspecified, costs are calculated
+   * based on the default licensing plan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +54,9 @@ public final class ComputeEnginePreferences extends com.google.api.client.json.G
   private java.lang.String persistentDiskType;
 
   /**
-   * License type to consider when calculating costs for virtual machine insights and
-   * recommendations. If unspecified, costs are calculated based on the default licensing plan.
+   * Overridden by os_pricing_preferences if specified. License type to consider when calculating
+   * costs for virtual machine insights and recommendations. If unspecified, costs are calculated
+   * based on the default licensing plan.
    * @return value or {@code null} for none
    */
   public java.lang.String getLicenseType() {
@@ -62,8 +64,9 @@ public final class ComputeEnginePreferences extends com.google.api.client.json.G
   }
 
   /**
-   * License type to consider when calculating costs for virtual machine insights and
-   * recommendations. If unspecified, costs are calculated based on the default licensing plan.
+   * Overridden by os_pricing_preferences if specified. License type to consider when calculating
+   * costs for virtual machine insights and recommendations. If unspecified, costs are calculated
+   * based on the default licensing plan.
    * @param licenseType licenseType or {@code null} for none
    */
   public ComputeEnginePreferences setLicenseType(java.lang.String licenseType) {

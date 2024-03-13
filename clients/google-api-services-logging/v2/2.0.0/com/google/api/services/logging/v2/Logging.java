@@ -7553,6 +7553,40 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
+         * Optional. A filter expression to constrain the sinks returned. Today, this only supports
+         * the following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")',
+         * 'in_scope("DEFAULT")'.Description of scopes below. ALL: Includes all of the sinks which
+         * can be returned in any other scope. ANCESTOR: Includes intercepting sinks owned by
+         * ancestor resources. DEFAULT: Includes sinks owned by parent.When the empty string is
+         * provided, then the filter 'in_scope("DEFAULT")' is applied.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. A filter expression to constrain the sinks returned. Today, this only supports the
+       following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")', 'in_scope("DEFAULT")'.Description
+       of scopes below. ALL: Includes all of the sinks which can be returned in any other scope. ANCESTOR:
+       Includes intercepting sinks owned by ancestor resources. DEFAULT: Includes sinks owned by
+       parent.When the empty string is provided, then the filter 'in_scope("DEFAULT")' is applied.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. A filter expression to constrain the sinks returned. Today, this only supports
+         * the following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")',
+         * 'in_scope("DEFAULT")'.Description of scopes below. ALL: Includes all of the sinks which
+         * can be returned in any other scope. ANCESTOR: Includes intercepting sinks owned by
+         * ancestor resources. DEFAULT: Includes sinks owned by parent.When the empty string is
+         * provided, then the filter 'in_scope("DEFAULT")' is applied.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * Optional. The maximum number of results to return from this request. Non-positive values
          * are ignored. The presence of nextPageToken in the response indicates that more results
          * might be available.
@@ -17058,6 +17092,40 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
                 "^folders/[^/]+$");
           }
           this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. A filter expression to constrain the sinks returned. Today, this only supports
+         * the following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")',
+         * 'in_scope("DEFAULT")'.Description of scopes below. ALL: Includes all of the sinks which
+         * can be returned in any other scope. ANCESTOR: Includes intercepting sinks owned by
+         * ancestor resources. DEFAULT: Includes sinks owned by parent.When the empty string is
+         * provided, then the filter 'in_scope("DEFAULT")' is applied.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. A filter expression to constrain the sinks returned. Today, this only supports the
+       following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")', 'in_scope("DEFAULT")'.Description
+       of scopes below. ALL: Includes all of the sinks which can be returned in any other scope. ANCESTOR:
+       Includes intercepting sinks owned by ancestor resources. DEFAULT: Includes sinks owned by
+       parent.When the empty string is provided, then the filter 'in_scope("DEFAULT")' is applied.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. A filter expression to constrain the sinks returned. Today, this only supports
+         * the following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")',
+         * 'in_scope("DEFAULT")'.Description of scopes below. ALL: Includes all of the sinks which
+         * can be returned in any other scope. ANCESTOR: Includes intercepting sinks owned by
+         * ancestor resources. DEFAULT: Includes sinks owned by parent.When the empty string is
+         * provided, then the filter 'in_scope("DEFAULT")' is applied.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
           return this;
         }
 
@@ -29981,6 +30049,40 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
+         * Optional. A filter expression to constrain the sinks returned. Today, this only supports
+         * the following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")',
+         * 'in_scope("DEFAULT")'.Description of scopes below. ALL: Includes all of the sinks which
+         * can be returned in any other scope. ANCESTOR: Includes intercepting sinks owned by
+         * ancestor resources. DEFAULT: Includes sinks owned by parent.When the empty string is
+         * provided, then the filter 'in_scope("DEFAULT")' is applied.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. A filter expression to constrain the sinks returned. Today, this only supports the
+       following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")', 'in_scope("DEFAULT")'.Description
+       of scopes below. ALL: Includes all of the sinks which can be returned in any other scope. ANCESTOR:
+       Includes intercepting sinks owned by ancestor resources. DEFAULT: Includes sinks owned by
+       parent.When the empty string is provided, then the filter 'in_scope("DEFAULT")' is applied.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. A filter expression to constrain the sinks returned. Today, this only supports
+         * the following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")',
+         * 'in_scope("DEFAULT")'.Description of scopes below. ALL: Includes all of the sinks which
+         * can be returned in any other scope. ANCESTOR: Includes intercepting sinks owned by
+         * ancestor resources. DEFAULT: Includes sinks owned by parent.When the empty string is
+         * provided, then the filter 'in_scope("DEFAULT")' is applied.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * Optional. The maximum number of results to return from this request. Non-positive values
          * are ignored. The presence of nextPageToken in the response indicates that more results
          * might be available.
@@ -38770,6 +38872,40 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
+         * Optional. A filter expression to constrain the sinks returned. Today, this only supports
+         * the following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")',
+         * 'in_scope("DEFAULT")'.Description of scopes below. ALL: Includes all of the sinks which
+         * can be returned in any other scope. ANCESTOR: Includes intercepting sinks owned by
+         * ancestor resources. DEFAULT: Includes sinks owned by parent.When the empty string is
+         * provided, then the filter 'in_scope("DEFAULT")' is applied.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. A filter expression to constrain the sinks returned. Today, this only supports the
+       following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")', 'in_scope("DEFAULT")'.Description
+       of scopes below. ALL: Includes all of the sinks which can be returned in any other scope. ANCESTOR:
+       Includes intercepting sinks owned by ancestor resources. DEFAULT: Includes sinks owned by
+       parent.When the empty string is provided, then the filter 'in_scope("DEFAULT")' is applied.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. A filter expression to constrain the sinks returned. Today, this only supports
+         * the following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")',
+         * 'in_scope("DEFAULT")'.Description of scopes below. ALL: Includes all of the sinks which
+         * can be returned in any other scope. ANCESTOR: Includes intercepting sinks owned by
+         * ancestor resources. DEFAULT: Includes sinks owned by parent.When the empty string is
+         * provided, then the filter 'in_scope("DEFAULT")' is applied.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * Optional. The maximum number of results to return from this request. Non-positive values
          * are ignored. The presence of nextPageToken in the response indicates that more results
          * might be available.
@@ -40058,6 +40194,40 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
               "^[^/]+/[^/]+$");
         }
         this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Optional. A filter expression to constrain the sinks returned. Today, this only supports
+       * the following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")',
+       * 'in_scope("DEFAULT")'.Description of scopes below. ALL: Includes all of the sinks which can
+       * be returned in any other scope. ANCESTOR: Includes intercepting sinks owned by ancestor
+       * resources. DEFAULT: Includes sinks owned by parent.When the empty string is provided, then
+       * the filter 'in_scope("DEFAULT")' is applied.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Optional. A filter expression to constrain the sinks returned. Today, this only supports the
+     following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")', 'in_scope("DEFAULT")'.Description
+     of scopes below. ALL: Includes all of the sinks which can be returned in any other scope. ANCESTOR:
+     Includes intercepting sinks owned by ancestor resources. DEFAULT: Includes sinks owned by
+     parent.When the empty string is provided, then the filter 'in_scope("DEFAULT")' is applied.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Optional. A filter expression to constrain the sinks returned. Today, this only supports
+       * the following strings: '' 'in_scope("ALL")', 'in_scope("ANCESTOR")',
+       * 'in_scope("DEFAULT")'.Description of scopes below. ALL: Includes all of the sinks which can
+       * be returned in any other scope. ANCESTOR: Includes intercepting sinks owned by ancestor
+       * resources. DEFAULT: Includes sinks owned by parent.When the empty string is provided, then
+       * the filter 'in_scope("DEFAULT")' is applied.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
         return this;
       }
 

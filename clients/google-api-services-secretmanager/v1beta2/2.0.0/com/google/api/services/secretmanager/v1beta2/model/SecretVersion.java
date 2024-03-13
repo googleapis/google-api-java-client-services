@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.secretmanager.v1.model;
+package com.google.api.services.secretmanager.v1beta2.model;
 
 /**
  * A secret version resource in the Secret Manager API.

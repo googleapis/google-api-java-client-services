@@ -52,7 +52,7 @@ public final class GoogleCloudBillingAnomaliesV1betaCause extends com.google.api
 
   /**
    * The resource name of the cause. project: projects/{project}. service: services/{service}. sku:
-   * services/{service}/skus/{sku}.
+   * services/{service}/skus/{sku}. location: locations/{location}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +118,7 @@ public final class GoogleCloudBillingAnomaliesV1betaCause extends com.google.api
 
   /**
    * The resource name of the cause. project: projects/{project}. service: services/{service}. sku:
-   * services/{service}/skus/{sku}.
+   * services/{service}/skus/{sku}. location: locations/{location}.
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -127,7 +127,7 @@ public final class GoogleCloudBillingAnomaliesV1betaCause extends com.google.api
 
   /**
    * The resource name of the cause. project: projects/{project}. service: services/{service}. sku:
-   * services/{service}/skus/{sku}.
+   * services/{service}/skus/{sku}. location: locations/{location}.
    * @param resource resource or {@code null} for none
    */
   public GoogleCloudBillingAnomaliesV1betaCause setResource(java.lang.String resource) {

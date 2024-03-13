@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.secretmanager.v1.model;
+package com.google.api.services.secretmanager.v1beta2.model;
 
 /**
  * A Secret is a logical secret whose value and versions can be accessed. A Secret is made up of
@@ -129,7 +129,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    * the hyphen (`-`) and underscore ('_') characters. An alias string must start with a letter and
    * cannot be the string 'latest' or 'NEW'. No more than 50 aliases can be assigned to a given
    * secret. Version-Alias pairs will be viewable via GetSecret and modifiable via UpdateSecret.
-   * Access by alias is only be supported on GetSecretVersion and AccessSecretVersion.
+   * Access by alias is only supported for GetSecretVersion and AccessSecretVersion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -370,7 +370,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    * the hyphen (`-`) and underscore ('_') characters. An alias string must start with a letter and
    * cannot be the string 'latest' or 'NEW'. No more than 50 aliases can be assigned to a given
    * secret. Version-Alias pairs will be viewable via GetSecret and modifiable via UpdateSecret.
-   * Access by alias is only be supported on GetSecretVersion and AccessSecretVersion.
+   * Access by alias is only supported for GetSecretVersion and AccessSecretVersion.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Long> getVersionAliases() {
@@ -383,7 +383,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    * the hyphen (`-`) and underscore ('_') characters. An alias string must start with a letter and
    * cannot be the string 'latest' or 'NEW'. No more than 50 aliases can be assigned to a given
    * secret. Version-Alias pairs will be viewable via GetSecret and modifiable via UpdateSecret.
-   * Access by alias is only be supported on GetSecretVersion and AccessSecretVersion.
+   * Access by alias is only supported for GetSecretVersion and AccessSecretVersion.
    * @param versionAliases versionAliases or {@code null} for none
    */
   public Secret setVersionAliases(java.util.Map<String, java.lang.Long> versionAliases) {

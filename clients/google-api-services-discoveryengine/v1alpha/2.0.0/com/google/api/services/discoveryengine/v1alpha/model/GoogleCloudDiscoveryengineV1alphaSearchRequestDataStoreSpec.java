@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * ACL Information of the Document.
+ * A struct to define data stores to filter on in a search call.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -27,40 +27,43 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaDocumentAclInfo extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Readers of the document.
+   * Required. Full resource name of DataStore, such as `projects/{project}/locations/{location}/col
+   * lections/{collection_id}/dataStores/{data_store_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDiscoveryengineV1alphaDocumentAclInfoAccessRestriction> readers;
+  private java.lang.String dataStore;
 
   /**
-   * Readers of the document.
+   * Required. Full resource name of DataStore, such as `projects/{project}/locations/{location}/col
+   * lections/{collection_id}/dataStores/{data_store_id}`.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudDiscoveryengineV1alphaDocumentAclInfoAccessRestriction> getReaders() {
-    return readers;
+  public java.lang.String getDataStore() {
+    return dataStore;
   }
 
   /**
-   * Readers of the document.
-   * @param readers readers or {@code null} for none
+   * Required. Full resource name of DataStore, such as `projects/{project}/locations/{location}/col
+   * lections/{collection_id}/dataStores/{data_store_id}`.
+   * @param dataStore dataStore or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaDocumentAclInfo setReaders(java.util.List<GoogleCloudDiscoveryengineV1alphaDocumentAclInfoAccessRestriction> readers) {
-    this.readers = readers;
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec setDataStore(java.lang.String dataStore) {
+    this.dataStore = dataStore;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaDocumentAclInfo set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaDocumentAclInfo) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaDocumentAclInfo clone() {
-    return (GoogleCloudDiscoveryengineV1alphaDocumentAclInfo) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec clone() {
+    return (GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec) super.clone();
   }
 
 }

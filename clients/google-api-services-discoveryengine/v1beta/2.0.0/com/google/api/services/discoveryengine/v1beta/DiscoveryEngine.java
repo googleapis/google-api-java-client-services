@@ -788,7 +788,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * `document-completable` - Using suggestions taken directly from user-imported document
              * fields marked as completable. Default values: * `document` is the default model for
              * regular dataStores. * `search-history` is the default model for site search
-             * dataStores. *
+             * dataStores.
              */
             @com.google.api.client.util.Key
             private java.lang.String queryModel;
@@ -800,7 +800,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            traffic for Search API. * `user-event` - Using suggestions generated from user-imported search
            events. * `document-completable` - Using suggestions taken directly from user-imported document
            fields marked as completable. Default values: * `document` is the default model for regular
-           dataStores. * `search-history` is the default model for site search dataStores. *
+           dataStores. * `search-history` is the default model for site search dataStores.
              */
             public java.lang.String getQueryModel() {
               return queryModel;
@@ -816,7 +816,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * `document-completable` - Using suggestions taken directly from user-imported document
              * fields marked as completable. Default values: * `document` is the default model for
              * regular dataStores. * `search-history` is the default model for site search
-             * dataStores. *
+             * dataStores.
              */
             public CompleteQuery setQueryModel(java.lang.String queryModel) {
               this.queryModel = queryModel;
@@ -6489,8 +6489,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
              * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-             *        s/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_conf
-             *        ig_id}`
+             *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -6517,8 +6516,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-             *        s/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_conf
-             *        ig_id}`
+             *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -6598,14 +6596,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the ServingConfig to get. Format: `projects/{project
-               * _number}/locations/{location}/collections/{collection}/dataStores/{data_store}/serv
-               * ingConfigs/{serving_config_id}`
+               * _number}/locations/{location}/collections/{collection}/engines/{engine}/servingConf
+               * igs/{serving_config_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/locatio
-             ns/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_config_id}`
+             ns/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
                */
               public java.lang.String getName() {
                 return name;
@@ -6613,8 +6611,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the ServingConfig to get. Format: `projects/{project
-               * _number}/locations/{location}/collections/{collection}/dataStores/{data_store}/serv
-               * ingConfigs/{serving_config_id}`
+               * _number}/locations/{location}/collections/{collection}/engines/{engine}/servingConf
+               * igs/{serving_config_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -6639,9 +6637,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The dataStore resource name. Format:
-             *        `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_
-             *        store}`
+             * @param parent Required. Full resource name of the parent resource. Format:
+             *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -6667,9 +6664,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The dataStore resource name. Format:
-             *        `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_
-             *        store}`
+               * @param parent Required. Full resource name of the parent resource. Format:
+             *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -6748,22 +6744,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The dataStore resource name. Format: `projects/{project_number}/locations
-               * /{location}/collections/{collection}/dataStores/{data_store}`
+               * Required. Full resource name of the parent resource. Format: `projects/{project_num
+               * ber}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The dataStore resource name. Format:
-             `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+              /** Required. Full resource name of the parent resource. Format:
+             `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The dataStore resource name. Format: `projects/{project_number}/locations
-               * /{location}/collections/{collection}/dataStores/{data_store}`
+               * Required. Full resource name of the parent resource. Format: `projects/{project_num
+               * ber}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -6835,7 +6831,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id}
-             *        /dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             *        /engines/{engine_id}/servingConfigs/{serving_config_id}`
              * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaServingConfig}
              * @return the request
              */
@@ -6864,7 +6860,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id}
-             *        /dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             *        /engines/{engine_id}/servingConfigs/{serving_config_id}`
                * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaServingConfig}
                * @since 1.13
                */
@@ -6935,13 +6931,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Immutable. Fully qualified name `projects/{project}/locations/{location}/collection
-               * s/{collection_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+               * s/{collection_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id
-             }/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             }/engines/{engine_id}/servingConfigs/{serving_config_id}`
                */
               public java.lang.String getName() {
                 return name;
@@ -6949,7 +6945,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Immutable. Fully qualified name `projects/{project}/locations/{location}/collection
-               * s/{collection_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+               * s/{collection_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -12918,8 +12914,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
              * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-             *        s/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_conf
-             *        ig_id}`
+             *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -12946,8 +12941,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-             *        s/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_conf
-             *        ig_id}`
+             *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -13027,14 +13021,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the ServingConfig to get. Format: `projects/{project
-               * _number}/locations/{location}/collections/{collection}/dataStores/{data_store}/serv
-               * ingConfigs/{serving_config_id}`
+               * _number}/locations/{location}/collections/{collection}/engines/{engine}/servingConf
+               * igs/{serving_config_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/locatio
-             ns/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_config_id}`
+             ns/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
                */
               public java.lang.String getName() {
                 return name;
@@ -13042,8 +13036,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the ServingConfig to get. Format: `projects/{project
-               * _number}/locations/{location}/collections/{collection}/dataStores/{data_store}/serv
-               * ingConfigs/{serving_config_id}`
+               * _number}/locations/{location}/collections/{collection}/engines/{engine}/servingConf
+               * igs/{serving_config_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -13068,9 +13062,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The dataStore resource name. Format:
-             *        `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_
-             *        store}`
+             * @param parent Required. Full resource name of the parent resource. Format:
+             *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -13096,9 +13089,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The dataStore resource name. Format:
-             *        `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_
-             *        store}`
+               * @param parent Required. Full resource name of the parent resource. Format:
+             *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -13177,22 +13169,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The dataStore resource name. Format: `projects/{project_number}/locations
-               * /{location}/collections/{collection}/dataStores/{data_store}`
+               * Required. Full resource name of the parent resource. Format: `projects/{project_num
+               * ber}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The dataStore resource name. Format:
-             `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+              /** Required. Full resource name of the parent resource. Format:
+             `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The dataStore resource name. Format: `projects/{project_number}/locations
-               * /{location}/collections/{collection}/dataStores/{data_store}`
+               * Required. Full resource name of the parent resource. Format: `projects/{project_num
+               * ber}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -13264,7 +13256,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id}
-             *        /dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             *        /engines/{engine_id}/servingConfigs/{serving_config_id}`
              * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaServingConfig}
              * @return the request
              */
@@ -13293,7 +13285,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id}
-             *        /dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             *        /engines/{engine_id}/servingConfigs/{serving_config_id}`
                * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaServingConfig}
                * @since 1.13
                */
@@ -13364,13 +13356,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Immutable. Fully qualified name `projects/{project}/locations/{location}/collection
-               * s/{collection_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+               * s/{collection_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id
-             }/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             }/engines/{engine_id}/servingConfigs/{serving_config_id}`
                */
               public java.lang.String getName() {
                 return name;
@@ -13378,7 +13370,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Immutable. Fully qualified name `projects/{project}/locations/{location}/collection
-               * s/{collection_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+               * s/{collection_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -14319,7 +14311,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Using suggestions generated from user-imported search events. * `document-completable`
            * - Using suggestions taken directly from user-imported document fields marked as
            * completable. Default values: * `document` is the default model for regular dataStores.
-           * * `search-history` is the default model for site search dataStores. *
+           * * `search-history` is the default model for site search dataStores.
            */
           @com.google.api.client.util.Key
           private java.lang.String queryModel;
@@ -14331,7 +14323,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          traffic for Search API. * `user-event` - Using suggestions generated from user-imported search
          events. * `document-completable` - Using suggestions taken directly from user-imported document
          fields marked as completable. Default values: * `document` is the default model for regular
-         dataStores. * `search-history` is the default model for site search dataStores. *
+         dataStores. * `search-history` is the default model for site search dataStores.
            */
           public java.lang.String getQueryModel() {
             return queryModel;
@@ -14346,7 +14338,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Using suggestions generated from user-imported search events. * `document-completable`
            * - Using suggestions taken directly from user-imported document fields marked as
            * completable. Default values: * `document` is the default model for regular dataStores.
-           * * `search-history` is the default model for site search dataStores. *
+           * * `search-history` is the default model for site search dataStores.
            */
           public CompleteQuery setQueryModel(java.lang.String queryModel) {
             this.queryModel = queryModel;
@@ -19661,8 +19653,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-           *        s/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_conf
-           *        ig_id}`
+           *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -19689,8 +19680,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-           *        s/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_conf
-           *        ig_id}`
+           *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -19770,14 +19760,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource name of the ServingConfig to get. Format: `projects/{project_n
-             * umber}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingC
-             * onfigs/{serving_config_id}`
+             * umber}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/
+             * {serving_config_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/locatio
-           ns/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_config_id}`
+           ns/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
              */
             public java.lang.String getName() {
               return name;
@@ -19785,8 +19775,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource name of the ServingConfig to get. Format: `projects/{project_n
-             * umber}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingC
-             * onfigs/{serving_config_id}`
+             * umber}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/
+             * {serving_config_id}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -19811,9 +19801,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The dataStore resource name. Format:
-           *        `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_
-           *        store}`
+           * @param parent Required. Full resource name of the parent resource. Format:
+           *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -19839,9 +19828,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The dataStore resource name. Format:
-           *        `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_
-           *        store}`
+             * @param parent Required. Full resource name of the parent resource. Format:
+           *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -19920,22 +19908,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The dataStore resource name. Format: `projects/{project_number}/locations/{
-             * location}/collections/{collection}/dataStores/{data_store}`
+             * Required. Full resource name of the parent resource. Format: `projects/{project_numbe
+             * r}/locations/{location}/collections/{collection}/engines/{engine}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The dataStore resource name. Format:
-           `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+            /** Required. Full resource name of the parent resource. Format:
+           `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The dataStore resource name. Format: `projects/{project_number}/locations/{
-             * location}/collections/{collection}/dataStores/{data_store}`
+             * Required. Full resource name of the parent resource. Format: `projects/{project_numbe
+             * r}/locations/{location}/collections/{collection}/engines/{engine}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -20007,7 +19995,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id}
-           *        /dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+           *        /engines/{engine_id}/servingConfigs/{serving_config_id}`
            * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaServingConfig}
            * @return the request
            */
@@ -20036,7 +20024,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id}
-           *        /dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+           *        /engines/{engine_id}/servingConfigs/{serving_config_id}`
              * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaServingConfig}
              * @since 1.13
              */
@@ -20107,13 +20095,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/
-             * {collection_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             * {collection_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id
-           }/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+           }/engines/{engine_id}/servingConfigs/{serving_config_id}`
              */
             public java.lang.String getName() {
               return name;
@@ -20121,7 +20109,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/
-             * {collection_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             * {collection_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

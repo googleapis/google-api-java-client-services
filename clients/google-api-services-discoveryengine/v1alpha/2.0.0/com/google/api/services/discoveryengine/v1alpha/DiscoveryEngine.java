@@ -1822,7 +1822,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * `document-completable` - Using suggestions taken directly from user-imported document
              * fields marked as completable. Default values: * `document` is the default model for
              * regular dataStores. * `search-history` is the default model for site search
-             * dataStores. *
+             * dataStores.
              */
             @com.google.api.client.util.Key
             private java.lang.String queryModel;
@@ -1834,7 +1834,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            traffic for Search API. * `user-event` - Using suggestions generated from user-imported search
            events. * `document-completable` - Using suggestions taken directly from user-imported document
            fields marked as completable. Default values: * `document` is the default model for regular
-           dataStores. * `search-history` is the default model for site search dataStores. *
+           dataStores. * `search-history` is the default model for site search dataStores.
              */
             public java.lang.String getQueryModel() {
               return queryModel;
@@ -1850,7 +1850,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * `document-completable` - Using suggestions taken directly from user-imported document
              * fields marked as completable. Default values: * `document` is the default model for
              * regular dataStores. * `search-history` is the default model for site search
-             * dataStores. *
+             * dataStores.
              */
             public CompleteQuery setQueryModel(java.lang.String queryModel) {
               this.queryModel = queryModel;
@@ -4681,6 +4681,426 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 }
               }
 
+              /**
+               * An accessor for creating requests from the Chunks collection.
+               *
+               * <p>The typical use is:</p>
+               * <pre>
+               *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+               *   {@code DiscoveryEngine.Chunks.List request = discoveryengine.chunks().list(parameters ...)}
+               * </pre>
+               *
+               * @return the resource collection
+               */
+              public Chunks chunks() {
+                return new Chunks();
+              }
+
+              /**
+               * The "chunks" collection of methods.
+               */
+              public class Chunks {
+
+                /**
+                 * Gets a Document.
+                 *
+                 * Create a request for the method "chunks.get".
+                 *
+                 * This request holds the parameters needed by the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+                 *
+                 * @param name Required. Full resource name of Chunk, such as `projects/{project}/locations/{location}/collections/
+                 *        {collection}/dataStores/{data_store}/branches/{branch}/documents/{document}/chunks/{chunk}
+                 *        `. If the caller does not have permission to access the Chunk, regardless of whether or
+                 *        not it exists, a `PERMISSION_DENIED` error is returned. If the requested Chunk does not
+                 *        exist, a `NOT_FOUND` error is returned.
+                 * @return the request
+                 */
+                public Get get(java.lang.String name) throws java.io.IOException {
+                  Get result = new Get(name);
+                  initialize(result);
+                  return result;
+                }
+
+                public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaChunk> {
+
+                  private static final String REST_PATH = "v1alpha/{+name}";
+
+                  private final java.util.regex.Pattern NAME_PATTERN =
+                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+/chunks/[^/]+$");
+
+                  /**
+                   * Gets a Document.
+                   *
+                   * Create a request for the method "chunks.get".
+                   *
+                   * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                   * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                   * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                   * must be called to initialize this instance immediately after invoking the constructor. </p>
+                   *
+                   * @param name Required. Full resource name of Chunk, such as `projects/{project}/locations/{location}/collections/
+                 *        {collection}/dataStores/{data_store}/branches/{branch}/documents/{document}/chunks/{chunk}
+                 *        `. If the caller does not have permission to access the Chunk, regardless of whether or
+                 *        not it exists, a `PERMISSION_DENIED` error is returned. If the requested Chunk does not
+                 *        exist, a `NOT_FOUND` error is returned.
+                   * @since 1.13
+                   */
+                  protected Get(java.lang.String name) {
+                    super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaChunk.class);
+                    this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                          "Parameter name must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+/chunks/[^/]+$");
+                    }
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                    return super.executeUsingHead();
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                    return super.buildHttpRequestUsingHead();
+                  }
+
+                  @Override
+                  public Get set$Xgafv(java.lang.String $Xgafv) {
+                    return (Get) super.set$Xgafv($Xgafv);
+                  }
+
+                  @Override
+                  public Get setAccessToken(java.lang.String accessToken) {
+                    return (Get) super.setAccessToken(accessToken);
+                  }
+
+                  @Override
+                  public Get setAlt(java.lang.String alt) {
+                    return (Get) super.setAlt(alt);
+                  }
+
+                  @Override
+                  public Get setCallback(java.lang.String callback) {
+                    return (Get) super.setCallback(callback);
+                  }
+
+                  @Override
+                  public Get setFields(java.lang.String fields) {
+                    return (Get) super.setFields(fields);
+                  }
+
+                  @Override
+                  public Get setKey(java.lang.String key) {
+                    return (Get) super.setKey(key);
+                  }
+
+                  @Override
+                  public Get setOauthToken(java.lang.String oauthToken) {
+                    return (Get) super.setOauthToken(oauthToken);
+                  }
+
+                  @Override
+                  public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                    return (Get) super.setPrettyPrint(prettyPrint);
+                  }
+
+                  @Override
+                  public Get setQuotaUser(java.lang.String quotaUser) {
+                    return (Get) super.setQuotaUser(quotaUser);
+                  }
+
+                  @Override
+                  public Get setUploadType(java.lang.String uploadType) {
+                    return (Get) super.setUploadType(uploadType);
+                  }
+
+                  @Override
+                  public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                    return (Get) super.setUploadProtocol(uploadProtocol);
+                  }
+
+                  /**
+                   * Required. Full resource name of Chunk, such as `projects/{project}/locations/{l
+                   * ocation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/doc
+                   * uments/{document}/chunks/{chunk}`. If the caller does not have permission to
+                   * access the Chunk, regardless of whether or not it exists, a `PERMISSION_DENIED`
+                   * error is returned. If the requested Chunk does not exist, a `NOT_FOUND` error
+                   * is returned.
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String name;
+
+                  /** Required. Full resource name of Chunk, such as `projects/{project}/locations/{location}/collections
+                 /{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}/chunks/{chunk}`. If
+                 the caller does not have permission to access the Chunk, regardless of whether or not it exists, a
+                 `PERMISSION_DENIED` error is returned. If the requested Chunk does not exist, a `NOT_FOUND` error
+                 is returned.
+                   */
+                  public java.lang.String getName() {
+                    return name;
+                  }
+
+                  /**
+                   * Required. Full resource name of Chunk, such as `projects/{project}/locations/{l
+                   * ocation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/doc
+                   * uments/{document}/chunks/{chunk}`. If the caller does not have permission to
+                   * access the Chunk, regardless of whether or not it exists, a `PERMISSION_DENIED`
+                   * error is returned. If the requested Chunk does not exist, a `NOT_FOUND` error
+                   * is returned.
+                   */
+                  public Get setName(java.lang.String name) {
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                          "Parameter name must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+/chunks/[^/]+$");
+                    }
+                    this.name = name;
+                    return this;
+                  }
+
+                  @Override
+                  public Get set(String parameterName, Object value) {
+                    return (Get) super.set(parameterName, value);
+                  }
+                }
+                /**
+                 * Gets a list of Chunks.
+                 *
+                 * Create a request for the method "chunks.list".
+                 *
+                 * This request holds the parameters needed by the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+                 *
+                 * @param parent Required. The parent document resource name, such as `projects/{project}/locations/{location}/collec
+                 *        tions/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+                 *        caller does not have permission to list Chunks under this document, regardless of whether
+                 *        or not this document exists, a `PERMISSION_DENIED` error is returned.
+                 * @param documentsId
+                 * @return the request
+                 */
+                public List list(java.lang.String parent, java.lang.String documentsId) throws java.io.IOException {
+                  List result = new List(parent, documentsId);
+                  initialize(result);
+                  return result;
+                }
+
+                public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListChunksResponse> {
+
+                  private static final String REST_PATH = "v1alpha/{+parent}/documents/{documentsId}/chunks";
+
+                  private final java.util.regex.Pattern PARENT_PATTERN =
+                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+
+                  /**
+                   * Gets a list of Chunks.
+                   *
+                   * Create a request for the method "chunks.list".
+                   *
+                   * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                   * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                   * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                   * must be called to initialize this instance immediately after invoking the constructor. </p>
+                   *
+                   * @param parent Required. The parent document resource name, such as `projects/{project}/locations/{location}/collec
+                 *        tions/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+                 *        caller does not have permission to list Chunks under this document, regardless of whether
+                 *        or not this document exists, a `PERMISSION_DENIED` error is returned.
+                   * @param documentsId
+                   * @since 1.13
+                   */
+                  protected List(java.lang.String parent, java.lang.String documentsId) {
+                    super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListChunksResponse.class);
+                    this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                          "Parameter parent must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                    }
+                    this.documentsId = com.google.api.client.util.Preconditions.checkNotNull(documentsId, "Required parameter documentsId must be specified.");
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                    return super.executeUsingHead();
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                    return super.buildHttpRequestUsingHead();
+                  }
+
+                  @Override
+                  public List set$Xgafv(java.lang.String $Xgafv) {
+                    return (List) super.set$Xgafv($Xgafv);
+                  }
+
+                  @Override
+                  public List setAccessToken(java.lang.String accessToken) {
+                    return (List) super.setAccessToken(accessToken);
+                  }
+
+                  @Override
+                  public List setAlt(java.lang.String alt) {
+                    return (List) super.setAlt(alt);
+                  }
+
+                  @Override
+                  public List setCallback(java.lang.String callback) {
+                    return (List) super.setCallback(callback);
+                  }
+
+                  @Override
+                  public List setFields(java.lang.String fields) {
+                    return (List) super.setFields(fields);
+                  }
+
+                  @Override
+                  public List setKey(java.lang.String key) {
+                    return (List) super.setKey(key);
+                  }
+
+                  @Override
+                  public List setOauthToken(java.lang.String oauthToken) {
+                    return (List) super.setOauthToken(oauthToken);
+                  }
+
+                  @Override
+                  public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                    return (List) super.setPrettyPrint(prettyPrint);
+                  }
+
+                  @Override
+                  public List setQuotaUser(java.lang.String quotaUser) {
+                    return (List) super.setQuotaUser(quotaUser);
+                  }
+
+                  @Override
+                  public List setUploadType(java.lang.String uploadType) {
+                    return (List) super.setUploadType(uploadType);
+                  }
+
+                  @Override
+                  public List setUploadProtocol(java.lang.String uploadProtocol) {
+                    return (List) super.setUploadProtocol(uploadProtocol);
+                  }
+
+                  /**
+                   * Required. The parent document resource name, such as `projects/{project}/locati
+                   * ons/{location}/collections/{collection}/dataStores/{data_store}/branches/{branc
+                   * h}/documents/{document}`. If the caller does not have permission to list Chunks
+                   * under this document, regardless of whether or not this document exists, a
+                   * `PERMISSION_DENIED` error is returned.
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String parent;
+
+                  /** Required. The parent document resource name, such as `projects/{project}/locations/{location}/colle
+                 ctions/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the caller
+                 does not have permission to list Chunks under this document, regardless of whether or not this
+                 document exists, a `PERMISSION_DENIED` error is returned.
+                   */
+                  public java.lang.String getParent() {
+                    return parent;
+                  }
+
+                  /**
+                   * Required. The parent document resource name, such as `projects/{project}/locati
+                   * ons/{location}/collections/{collection}/dataStores/{data_store}/branches/{branc
+                   * h}/documents/{document}`. If the caller does not have permission to list Chunks
+                   * under this document, regardless of whether or not this document exists, a
+                   * `PERMISSION_DENIED` error is returned.
+                   */
+                  public List setParent(java.lang.String parent) {
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                          "Parameter parent must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                    }
+                    this.parent = parent;
+                    return this;
+                  }
+
+                  @com.google.api.client.util.Key
+                  private java.lang.String documentsId;
+
+                  /**
+
+                   */
+                  public java.lang.String getDocumentsId() {
+                    return documentsId;
+                  }
+
+                  public List setDocumentsId(java.lang.String documentsId) {
+                    this.documentsId = documentsId;
+                    return this;
+                  }
+
+                  /**
+                   * Maximum number of Chunks to return. If unspecified, defaults to 100. The
+                   * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If
+                   * this field is negative, an `INVALID_ARGUMENT` error is returned.
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.Integer pageSize;
+
+                  /** Maximum number of Chunks to return. If unspecified, defaults to 100. The maximum allowed value is
+                 1000. Values above 1000 will be coerced to 1000. If this field is negative, an `INVALID_ARGUMENT`
+                 error is returned.
+                   */
+                  public java.lang.Integer getPageSize() {
+                    return pageSize;
+                  }
+
+                  /**
+                   * Maximum number of Chunks to return. If unspecified, defaults to 100. The
+                   * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If
+                   * this field is negative, an `INVALID_ARGUMENT` error is returned.
+                   */
+                  public List setPageSize(java.lang.Integer pageSize) {
+                    this.pageSize = pageSize;
+                    return this;
+                  }
+
+                  /**
+                   * A page token ListChunksResponse.next_page_token, received from a previous
+                   * ChunkService.ListChunks call. Provide this to retrieve the subsequent page.
+                   * When paginating, all other parameters provided to ChunkService.ListChunks must
+                   * match the call that provided the page token. Otherwise, an `INVALID_ARGUMENT`
+                   * error is returned.
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String pageToken;
+
+                  /** A page token ListChunksResponse.next_page_token, received from a previous ChunkService.ListChunks
+                 call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided
+                 to ChunkService.ListChunks must match the call that provided the page token. Otherwise, an
+                 `INVALID_ARGUMENT` error is returned.
+                   */
+                  public java.lang.String getPageToken() {
+                    return pageToken;
+                  }
+
+                  /**
+                   * A page token ListChunksResponse.next_page_token, received from a previous
+                   * ChunkService.ListChunks call. Provide this to retrieve the subsequent page.
+                   * When paginating, all other parameters provided to ChunkService.ListChunks must
+                   * match the call that provided the page token. Otherwise, an `INVALID_ARGUMENT`
+                   * error is returned.
+                   */
+                  public List setPageToken(java.lang.String pageToken) {
+                    this.pageToken = pageToken;
+                    return this;
+                  }
+
+                  @Override
+                  public List set(String parameterName, Object value) {
+                    return (List) super.set(parameterName, value);
+                  }
+                }
+
+              }
             }
             /**
              * An accessor for creating requests from the Operations collection.
@@ -8016,8 +8436,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
              * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-             *        s/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_conf
-             *        ig_id}`
+             *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -8044,8 +8463,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-             *        s/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_conf
-             *        ig_id}`
+             *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -8125,14 +8543,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the ServingConfig to get. Format: `projects/{project
-               * _number}/locations/{location}/collections/{collection}/dataStores/{data_store}/serv
-               * ingConfigs/{serving_config_id}`
+               * _number}/locations/{location}/collections/{collection}/engines/{engine}/servingConf
+               * igs/{serving_config_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/locatio
-             ns/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_config_id}`
+             ns/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
                */
               public java.lang.String getName() {
                 return name;
@@ -8140,8 +8558,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the ServingConfig to get. Format: `projects/{project
-               * _number}/locations/{location}/collections/{collection}/dataStores/{data_store}/serv
-               * ingConfigs/{serving_config_id}`
+               * _number}/locations/{location}/collections/{collection}/engines/{engine}/servingConf
+               * igs/{serving_config_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -8166,9 +8584,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The dataStore resource name. Format:
-             *        `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_
-             *        store}`
+             * @param parent Required. Full resource name of the parent resource. Format:
+             *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -8194,9 +8611,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The dataStore resource name. Format:
-             *        `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_
-             *        store}`
+               * @param parent Required. Full resource name of the parent resource. Format:
+             *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -8275,22 +8691,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The dataStore resource name. Format: `projects/{project_number}/locations
-               * /{location}/collections/{collection}/dataStores/{data_store}`
+               * Required. Full resource name of the parent resource. Format: `projects/{project_num
+               * ber}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The dataStore resource name. Format:
-             `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+              /** Required. Full resource name of the parent resource. Format:
+             `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The dataStore resource name. Format: `projects/{project_number}/locations
-               * /{location}/collections/{collection}/dataStores/{data_store}`
+               * Required. Full resource name of the parent resource. Format: `projects/{project_num
+               * ber}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -8362,7 +8778,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id}
-             *        /dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             *        /engines/{engine_id}/servingConfigs/{serving_config_id}`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig}
              * @return the request
              */
@@ -8391,7 +8807,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id}
-             *        /dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             *        /engines/{engine_id}/servingConfigs/{serving_config_id}`
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig}
                * @since 1.13
                */
@@ -8462,13 +8878,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Immutable. Fully qualified name `projects/{project}/locations/{location}/collection
-               * s/{collection_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+               * s/{collection_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id
-             }/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             }/engines/{engine_id}/servingConfigs/{serving_config_id}`
                */
               public java.lang.String getName() {
                 return name;
@@ -8476,7 +8892,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Immutable. Fully qualified name `projects/{project}/locations/{location}/collection
-               * s/{collection_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+               * s/{collection_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -15022,8 +15438,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
              * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-             *        s/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_conf
-             *        ig_id}`
+             *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -15050,8 +15465,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-             *        s/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_conf
-             *        ig_id}`
+             *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -15131,14 +15545,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the ServingConfig to get. Format: `projects/{project
-               * _number}/locations/{location}/collections/{collection}/dataStores/{data_store}/serv
-               * ingConfigs/{serving_config_id}`
+               * _number}/locations/{location}/collections/{collection}/engines/{engine}/servingConf
+               * igs/{serving_config_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/locatio
-             ns/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_config_id}`
+             ns/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
                */
               public java.lang.String getName() {
                 return name;
@@ -15146,8 +15560,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Required. The resource name of the ServingConfig to get. Format: `projects/{project
-               * _number}/locations/{location}/collections/{collection}/dataStores/{data_store}/serv
-               * ingConfigs/{serving_config_id}`
+               * _number}/locations/{location}/collections/{collection}/engines/{engine}/servingConf
+               * igs/{serving_config_id}`
                */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -15172,9 +15586,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The dataStore resource name. Format:
-             *        `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_
-             *        store}`
+             * @param parent Required. Full resource name of the parent resource. Format:
+             *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -15200,9 +15613,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The dataStore resource name. Format:
-             *        `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_
-             *        store}`
+               * @param parent Required. Full resource name of the parent resource. Format:
+             *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -15281,22 +15693,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The dataStore resource name. Format: `projects/{project_number}/locations
-               * /{location}/collections/{collection}/dataStores/{data_store}`
+               * Required. Full resource name of the parent resource. Format: `projects/{project_num
+               * ber}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The dataStore resource name. Format:
-             `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+              /** Required. Full resource name of the parent resource. Format:
+             `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The dataStore resource name. Format: `projects/{project_number}/locations
-               * /{location}/collections/{collection}/dataStores/{data_store}`
+               * Required. Full resource name of the parent resource. Format: `projects/{project_num
+               * ber}/locations/{location}/collections/{collection}/engines/{engine}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -15368,7 +15780,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id}
-             *        /dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             *        /engines/{engine_id}/servingConfigs/{serving_config_id}`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig}
              * @return the request
              */
@@ -15397,7 +15809,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id}
-             *        /dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             *        /engines/{engine_id}/servingConfigs/{serving_config_id}`
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig}
                * @since 1.13
                */
@@ -15468,13 +15880,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Immutable. Fully qualified name `projects/{project}/locations/{location}/collection
-               * s/{collection_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+               * s/{collection_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id
-             }/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             }/engines/{engine_id}/servingConfigs/{serving_config_id}`
                */
               public java.lang.String getName() {
                 return name;
@@ -15482,7 +15894,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Immutable. Fully qualified name `projects/{project}/locations/{location}/collection
-               * s/{collection_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+               * s/{collection_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -16423,7 +16835,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Using suggestions generated from user-imported search events. * `document-completable`
            * - Using suggestions taken directly from user-imported document fields marked as
            * completable. Default values: * `document` is the default model for regular dataStores.
-           * * `search-history` is the default model for site search dataStores. *
+           * * `search-history` is the default model for site search dataStores.
            */
           @com.google.api.client.util.Key
           private java.lang.String queryModel;
@@ -16435,7 +16847,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          traffic for Search API. * `user-event` - Using suggestions generated from user-imported search
          events. * `document-completable` - Using suggestions taken directly from user-imported document
          fields marked as completable. Default values: * `document` is the default model for regular
-         dataStores. * `search-history` is the default model for site search dataStores. *
+         dataStores. * `search-history` is the default model for site search dataStores.
            */
           public java.lang.String getQueryModel() {
             return queryModel;
@@ -16450,7 +16862,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Using suggestions generated from user-imported search events. * `document-completable`
            * - Using suggestions taken directly from user-imported document fields marked as
            * completable. Default values: * `document` is the default model for regular dataStores.
-           * * `search-history` is the default model for site search dataStores. *
+           * * `search-history` is the default model for site search dataStores.
            */
           public CompleteQuery setQueryModel(java.lang.String queryModel) {
             this.queryModel = queryModel;
@@ -19129,6 +19541,424 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
             }
 
+            /**
+             * An accessor for creating requests from the Chunks collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+             *   {@code DiscoveryEngine.Chunks.List request = discoveryengine.chunks().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Chunks chunks() {
+              return new Chunks();
+            }
+
+            /**
+             * The "chunks" collection of methods.
+             */
+            public class Chunks {
+
+              /**
+               * Gets a Document.
+               *
+               * Create a request for the method "chunks.get".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. Full resource name of Chunk, such as `projects/{project}/locations/{location}/collections/
+               *        {collection}/dataStores/{data_store}/branches/{branch}/documents/{document}/chunks/{chunk}
+               *        `. If the caller does not have permission to access the Chunk, regardless of whether or
+               *        not it exists, a `PERMISSION_DENIED` error is returned. If the requested Chunk does not
+               *        exist, a `NOT_FOUND` error is returned.
+               * @return the request
+               */
+              public Get get(java.lang.String name) throws java.io.IOException {
+                Get result = new Get(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaChunk> {
+
+                private static final String REST_PATH = "v1alpha/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+/chunks/[^/]+$");
+
+                /**
+                 * Gets a Document.
+                 *
+                 * Create a request for the method "chunks.get".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                 * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. Full resource name of Chunk, such as `projects/{project}/locations/{location}/collections/
+               *        {collection}/dataStores/{data_store}/branches/{branch}/documents/{document}/chunks/{chunk}
+               *        `. If the caller does not have permission to access the Chunk, regardless of whether or
+               *        not it exists, a `PERMISSION_DENIED` error is returned. If the requested Chunk does not
+               *        exist, a `NOT_FOUND` error is returned.
+                 * @since 1.13
+                 */
+                protected Get(java.lang.String name) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaChunk.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+/chunks/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public Get set$Xgafv(java.lang.String $Xgafv) {
+                  return (Get) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Get setAccessToken(java.lang.String accessToken) {
+                  return (Get) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Get setAlt(java.lang.String alt) {
+                  return (Get) super.setAlt(alt);
+                }
+
+                @Override
+                public Get setCallback(java.lang.String callback) {
+                  return (Get) super.setCallback(callback);
+                }
+
+                @Override
+                public Get setFields(java.lang.String fields) {
+                  return (Get) super.setFields(fields);
+                }
+
+                @Override
+                public Get setKey(java.lang.String key) {
+                  return (Get) super.setKey(key);
+                }
+
+                @Override
+                public Get setOauthToken(java.lang.String oauthToken) {
+                  return (Get) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Get) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Get setQuotaUser(java.lang.String quotaUser) {
+                  return (Get) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Get setUploadType(java.lang.String uploadType) {
+                  return (Get) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Get) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. Full resource name of Chunk, such as `projects/{project}/locations/{loc
+                 * ation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documen
+                 * ts/{document}/chunks/{chunk}`. If the caller does not have permission to access
+                 * the Chunk, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
+                 * returned. If the requested Chunk does not exist, a `NOT_FOUND` error is returned.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. Full resource name of Chunk, such as `projects/{project}/locations/{location}/collections
+               /{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}/chunks/{chunk}`. If
+               the caller does not have permission to access the Chunk, regardless of whether or not it exists, a
+               `PERMISSION_DENIED` error is returned. If the requested Chunk does not exist, a `NOT_FOUND` error
+               is returned.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. Full resource name of Chunk, such as `projects/{project}/locations/{loc
+                 * ation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documen
+                 * ts/{document}/chunks/{chunk}`. If the caller does not have permission to access
+                 * the Chunk, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
+                 * returned. If the requested Chunk does not exist, a `NOT_FOUND` error is returned.
+                 */
+                public Get setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+/chunks/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Get set(String parameterName, Object value) {
+                  return (Get) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Gets a list of Chunks.
+               *
+               * Create a request for the method "chunks.list".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The parent document resource name, such as `projects/{project}/locations/{location}/collec
+               *        tions/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+               *        caller does not have permission to list Chunks under this document, regardless of whether
+               *        or not this document exists, a `PERMISSION_DENIED` error is returned.
+               * @param documentsId
+               * @return the request
+               */
+              public List list(java.lang.String parent, java.lang.String documentsId) throws java.io.IOException {
+                List result = new List(parent, documentsId);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListChunksResponse> {
+
+                private static final String REST_PATH = "v1alpha/{+parent}/documents/{documentsId}/chunks";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+
+                /**
+                 * Gets a list of Chunks.
+                 *
+                 * Create a request for the method "chunks.list".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The parent document resource name, such as `projects/{project}/locations/{location}/collec
+               *        tions/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+               *        caller does not have permission to list Chunks under this document, regardless of whether
+               *        or not this document exists, a `PERMISSION_DENIED` error is returned.
+                 * @param documentsId
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent, java.lang.String documentsId) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListChunksResponse.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                  }
+                  this.documentsId = com.google.api.client.util.Preconditions.checkNotNull(documentsId, "Required parameter documentsId must be specified.");
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The parent document resource name, such as `projects/{project}/location
+                 * s/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/d
+                 * ocuments/{document}`. If the caller does not have permission to list Chunks under
+                 * this document, regardless of whether or not this document exists, a
+                 * `PERMISSION_DENIED` error is returned.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The parent document resource name, such as `projects/{project}/locations/{location}/colle
+               ctions/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the caller
+               does not have permission to list Chunks under this document, regardless of whether or not this
+               document exists, a `PERMISSION_DENIED` error is returned.
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The parent document resource name, such as `projects/{project}/location
+                 * s/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/d
+                 * ocuments/{document}`. If the caller does not have permission to list Chunks under
+                 * this document, regardless of whether or not this document exists, a
+                 * `PERMISSION_DENIED` error is returned.
+                 */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                @com.google.api.client.util.Key
+                private java.lang.String documentsId;
+
+                /**
+
+                 */
+                public java.lang.String getDocumentsId() {
+                  return documentsId;
+                }
+
+                public List setDocumentsId(java.lang.String documentsId) {
+                  this.documentsId = documentsId;
+                  return this;
+                }
+
+                /**
+                 * Maximum number of Chunks to return. If unspecified, defaults to 100. The maximum
+                 * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field
+                 * is negative, an `INVALID_ARGUMENT` error is returned.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Integer pageSize;
+
+                /** Maximum number of Chunks to return. If unspecified, defaults to 100. The maximum allowed value is
+               1000. Values above 1000 will be coerced to 1000. If this field is negative, an `INVALID_ARGUMENT`
+               error is returned.
+                 */
+                public java.lang.Integer getPageSize() {
+                  return pageSize;
+                }
+
+                /**
+                 * Maximum number of Chunks to return. If unspecified, defaults to 100. The maximum
+                 * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field
+                 * is negative, an `INVALID_ARGUMENT` error is returned.
+                 */
+                public List setPageSize(java.lang.Integer pageSize) {
+                  this.pageSize = pageSize;
+                  return this;
+                }
+
+                /**
+                 * A page token ListChunksResponse.next_page_token, received from a previous
+                 * ChunkService.ListChunks call. Provide this to retrieve the subsequent page. When
+                 * paginating, all other parameters provided to ChunkService.ListChunks must match
+                 * the call that provided the page token. Otherwise, an `INVALID_ARGUMENT` error is
+                 * returned.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String pageToken;
+
+                /** A page token ListChunksResponse.next_page_token, received from a previous ChunkService.ListChunks
+               call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided
+               to ChunkService.ListChunks must match the call that provided the page token. Otherwise, an
+               `INVALID_ARGUMENT` error is returned.
+                 */
+                public java.lang.String getPageToken() {
+                  return pageToken;
+                }
+
+                /**
+                 * A page token ListChunksResponse.next_page_token, received from a previous
+                 * ChunkService.ListChunks call. Provide this to retrieve the subsequent page. When
+                 * paginating, all other parameters provided to ChunkService.ListChunks must match
+                 * the call that provided the page token. Otherwise, an `INVALID_ARGUMENT` error is
+                 * returned.
+                 */
+                public List setPageToken(java.lang.String pageToken) {
+                  this.pageToken = pageToken;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+
+            }
           }
           /**
            * An accessor for creating requests from the Operations collection.
@@ -22112,8 +22942,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-           *        s/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_conf
-           *        ig_id}`
+           *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -22140,8 +22969,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/location
-           *        s/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_conf
-           *        ig_id}`
+           *        s/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -22221,14 +23049,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource name of the ServingConfig to get. Format: `projects/{project_n
-             * umber}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingC
-             * onfigs/{serving_config_id}`
+             * umber}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/
+             * {serving_config_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the ServingConfig to get. Format: `projects/{project_number}/locatio
-           ns/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{serving_config_id}`
+           ns/{location}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config_id}`
              */
             public java.lang.String getName() {
               return name;
@@ -22236,8 +23064,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource name of the ServingConfig to get. Format: `projects/{project_n
-             * umber}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingC
-             * onfigs/{serving_config_id}`
+             * umber}/locations/{location}/collections/{collection}/engines/{engine}/servingConfigs/
+             * {serving_config_id}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -22262,9 +23090,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The dataStore resource name. Format:
-           *        `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_
-           *        store}`
+           * @param parent Required. Full resource name of the parent resource. Format:
+           *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -22290,9 +23117,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The dataStore resource name. Format:
-           *        `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_
-           *        store}`
+             * @param parent Required. Full resource name of the parent resource. Format:
+           *        `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -22371,22 +23197,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The dataStore resource name. Format: `projects/{project_number}/locations/{
-             * location}/collections/{collection}/dataStores/{data_store}`
+             * Required. Full resource name of the parent resource. Format: `projects/{project_numbe
+             * r}/locations/{location}/collections/{collection}/engines/{engine}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The dataStore resource name. Format:
-           `projects/{project_number}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+            /** Required. Full resource name of the parent resource. Format:
+           `projects/{project_number}/locations/{location}/collections/{collection}/engines/{engine}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The dataStore resource name. Format: `projects/{project_number}/locations/{
-             * location}/collections/{collection}/dataStores/{data_store}`
+             * Required. Full resource name of the parent resource. Format: `projects/{project_numbe
+             * r}/locations/{location}/collections/{collection}/engines/{engine}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -22458,7 +23284,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id}
-           *        /dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+           *        /engines/{engine_id}/servingConfigs/{serving_config_id}`
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig}
            * @return the request
            */
@@ -22487,7 +23313,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id}
-           *        /dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+           *        /engines/{engine_id}/servingConfigs/{serving_config_id}`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaServingConfig}
              * @since 1.13
              */
@@ -22558,13 +23384,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/
-             * {collection_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             * {collection_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collection_id
-           }/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+           }/engines/{engine_id}/servingConfigs/{serving_config_id}`
              */
             public java.lang.String getName() {
               return name;
@@ -22572,7 +23398,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/
-             * {collection_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+             * {collection_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

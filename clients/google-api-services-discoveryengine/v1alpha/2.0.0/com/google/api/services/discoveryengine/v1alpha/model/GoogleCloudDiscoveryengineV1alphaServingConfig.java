@@ -142,7 +142,7 @@ public final class GoogleCloudDiscoveryengineV1alphaServingConfig extends com.go
 
   /**
    * Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collectio
-   * n_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+   * n_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -475,7 +475,7 @@ public final class GoogleCloudDiscoveryengineV1alphaServingConfig extends com.go
 
   /**
    * Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collectio
-   * n_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+   * n_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -484,7 +484,7 @@ public final class GoogleCloudDiscoveryengineV1alphaServingConfig extends com.go
 
   /**
    * Immutable. Fully qualified name `projects/{project}/locations/{location}/collections/{collectio
-   * n_id}/dataStores/{data_store_id}/servingConfigs/{serving_config_id}`
+   * n_id}/engines/{engine_id}/servingConfigs/{serving_config_id}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaServingConfig setName(java.lang.String name) {

@@ -56,15 +56,6 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig ext
   private java.lang.String name;
 
   /**
-   * [DEPRECATED] This field is deprecated. To specify OCR parsing config, please specify
-   * `ocr_parsing_config` in `default_parsing_config` field The OCR config. Currently it only
-   * applies to PDFs.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1alphaOcrConfig ocrConfig;
-
-  /**
    * Map from file type to override the default parsing configuration based on the file type.
    * Supported keys: * `pdf`: Override parsing config for PDF files, either digital parsing, ocr
    * parsing or layout parsing is supported. * `html`: Override parsing config for HTML files, only
@@ -129,27 +120,6 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig ext
    */
   public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * [DEPRECATED] This field is deprecated. To specify OCR parsing config, please specify
-   * `ocr_parsing_config` in `default_parsing_config` field The OCR config. Currently it only
-   * applies to PDFs.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaOcrConfig getOcrConfig() {
-    return ocrConfig;
-  }
-
-  /**
-   * [DEPRECATED] This field is deprecated. To specify OCR parsing config, please specify
-   * `ocr_parsing_config` in `default_parsing_config` field The OCR config. Currently it only
-   * applies to PDFs.
-   * @param ocrConfig ocrConfig or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig setOcrConfig(GoogleCloudDiscoveryengineV1alphaOcrConfig ocrConfig) {
-    this.ocrConfig = ocrConfig;
     return this;
   }
 

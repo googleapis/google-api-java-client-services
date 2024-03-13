@@ -92,7 +92,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
 
   /**
    * The number of top results to generate the summary from. If the number of results returned is
-   * less than `summaryResultCount`, the summary is generated from all of the results. At most five
+   * less than `summaryResultCount`, the summary is generated from all of the results. At most 10
    * results can be used to generate a summary.
    * The value may be {@code null}.
    */
@@ -241,7 +241,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
 
   /**
    * The number of top results to generate the summary from. If the number of results returned is
-   * less than `summaryResultCount`, the summary is generated from all of the results. At most five
+   * less than `summaryResultCount`, the summary is generated from all of the results. At most 10
    * results can be used to generate a summary.
    * @return value or {@code null} for none
    */
@@ -251,7 +251,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
 
   /**
    * The number of top results to generate the summary from. If the number of results returned is
-   * less than `summaryResultCount`, the summary is generated from all of the results. At most five
+   * less than `summaryResultCount`, the summary is generated from all of the results. At most 10
    * results can be used to generate a summary.
    * @param summaryResultCount summaryResultCount or {@code null} for none
    */

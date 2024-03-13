@@ -7760,6 +7760,946 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
           }
         }
 
+        /**
+         * An accessor for creating requests from the AuthorizedViews collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code BigtableAdmin bigtableadmin = new BigtableAdmin(...);}
+         *   {@code BigtableAdmin.AuthorizedViews.List request = bigtableadmin.authorizedViews().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AuthorizedViews authorizedViews() {
+          return new AuthorizedViews();
+        }
+
+        /**
+         * The "authorizedViews" collection of methods.
+         */
+        public class AuthorizedViews {
+
+          /**
+           * Creates a new AuthorizedView in a table.
+           *
+           * Create a request for the method "authorizedViews.create".
+           *
+           * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. This is the name of the table the AuthorizedView belongs to. Values are of the form
+           *        `projects/{project}/instances/{instance}/tables/{table}`.
+           * @param content the {@link com.google.api.services.bigtableadmin.v2.model.AuthorizedView}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.bigtableadmin.v2.model.AuthorizedView content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends BigtableAdminRequest<com.google.api.services.bigtableadmin.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+parent}/authorizedViews";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
+
+            /**
+             * Creates a new AuthorizedView in a table.
+             *
+             * Create a request for the method "authorizedViews.create".
+             *
+             * This request holds the parameters needed by the the bigtableadmin server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. This is the name of the table the AuthorizedView belongs to. Values are of the form
+           *        `projects/{project}/instances/{instance}/tables/{table}`.
+             * @param content the {@link com.google.api.services.bigtableadmin.v2.model.AuthorizedView}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.bigtableadmin.v2.model.AuthorizedView content) {
+              super(BigtableAdmin.this, "POST", REST_PATH, content, com.google.api.services.bigtableadmin.v2.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. This is the name of the table the AuthorizedView belongs to. Values are of
+             * the form `projects/{project}/instances/{instance}/tables/{table}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. This is the name of the table the AuthorizedView belongs to. Values are of the form
+           `projects/{project}/instances/{instance}/tables/{table}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. This is the name of the table the AuthorizedView belongs to. Values are of
+             * the form `projects/{project}/instances/{instance}/tables/{table}`.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The id of the AuthorizedView to create. This AuthorizedView must not
+             * already exist. The `authorized_view_id` appended to `parent` forms the full
+             * AuthorizedView name of the form `projects/{project}/instances/{instance}/tables/{tabl
+             * e}/authorizedView/{authorized_view}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String authorizedViewId;
+
+            /** Required. The id of the AuthorizedView to create. This AuthorizedView must not already exist. The
+           `authorized_view_id` appended to `parent` forms the full AuthorizedView name of the form
+           `projects/{project}/instances/{instance}/tables/{table}/authorizedView/{authorized_view}`.
+             */
+            public java.lang.String getAuthorizedViewId() {
+              return authorizedViewId;
+            }
+
+            /**
+             * Required. The id of the AuthorizedView to create. This AuthorizedView must not
+             * already exist. The `authorized_view_id` appended to `parent` forms the full
+             * AuthorizedView name of the form `projects/{project}/instances/{instance}/tables/{tabl
+             * e}/authorizedView/{authorized_view}`.
+             */
+            public Create setAuthorizedViewId(java.lang.String authorizedViewId) {
+              this.authorizedViewId = authorizedViewId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Permanently deletes a specified AuthorizedView.
+           *
+           * Create a request for the method "authorizedViews.delete".
+           *
+           * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The unique name of the AuthorizedView to be deleted. Values are of the form
+           *        `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`
+           *        .
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends BigtableAdminRequest<com.google.api.services.bigtableadmin.v2.model.Empty> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+$");
+
+            /**
+             * Permanently deletes a specified AuthorizedView.
+             *
+             * Create a request for the method "authorizedViews.delete".
+             *
+             * This request holds the parameters needed by the the bigtableadmin server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The unique name of the AuthorizedView to be deleted. Values are of the form
+           *        `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`
+           *        .
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(BigtableAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.bigtableadmin.v2.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The unique name of the AuthorizedView to be deleted. Values are of the form
+             * `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_v
+             * iew}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The unique name of the AuthorizedView to be deleted. Values are of the form
+           `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The unique name of the AuthorizedView to be deleted. Values are of the form
+             * `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_v
+             * iew}`.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. The current etag of the AuthorizedView. If an etag is provided and does not
+             * match the current etag of the AuthorizedView, deletion will be blocked and an ABORTED
+             * error will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String etag;
+
+            /** Optional. The current etag of the AuthorizedView. If an etag is provided and does not match the
+           current etag of the AuthorizedView, deletion will be blocked and an ABORTED error will be returned.
+             */
+            public java.lang.String getEtag() {
+              return etag;
+            }
+
+            /**
+             * Optional. The current etag of the AuthorizedView. If an etag is provided and does not
+             * match the current etag of the AuthorizedView, deletion will be blocked and an ABORTED
+             * error will be returned.
+             */
+            public Delete setEtag(java.lang.String etag) {
+              this.etag = etag;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets information from a specified AuthorizedView.
+           *
+           * Create a request for the method "authorizedViews.get".
+           *
+           * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The unique name of the requested AuthorizedView. Values are of the form
+           *        `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`
+           *        .
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends BigtableAdminRequest<com.google.api.services.bigtableadmin.v2.model.AuthorizedView> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+$");
+
+            /**
+             * Gets information from a specified AuthorizedView.
+             *
+             * Create a request for the method "authorizedViews.get".
+             *
+             * This request holds the parameters needed by the the bigtableadmin server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The unique name of the requested AuthorizedView. Values are of the form
+           *        `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`
+           *        .
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(BigtableAdmin.this, "GET", REST_PATH, null, com.google.api.services.bigtableadmin.v2.model.AuthorizedView.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The unique name of the requested AuthorizedView. Values are of the form `pr
+             * ojects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view
+             * }`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The unique name of the requested AuthorizedView. Values are of the form
+           `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The unique name of the requested AuthorizedView. Values are of the form `pr
+             * ojects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view
+             * }`.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. The resource_view to be applied to the returned AuthorizedView's fields.
+             * Default to BASIC.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. The resource_view to be applied to the returned AuthorizedView's fields. Default to
+           BASIC.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. The resource_view to be applied to the returned AuthorizedView's fields.
+             * Default to BASIC.
+             */
+            public Get setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all AuthorizedViews from a specific table.
+           *
+           * Create a request for the method "authorizedViews.list".
+           *
+           * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The unique name of the table for which AuthorizedViews should be listed. Values are of the
+           *        form `projects/{project}/instances/{instance}/tables/{table}`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends BigtableAdminRequest<com.google.api.services.bigtableadmin.v2.model.ListAuthorizedViewsResponse> {
+
+            private static final String REST_PATH = "v2/{+parent}/authorizedViews";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
+
+            /**
+             * Lists all AuthorizedViews from a specific table.
+             *
+             * Create a request for the method "authorizedViews.list".
+             *
+             * This request holds the parameters needed by the the bigtableadmin server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The unique name of the table for which AuthorizedViews should be listed. Values are of the
+           *        form `projects/{project}/instances/{instance}/tables/{table}`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(BigtableAdmin.this, "GET", REST_PATH, null, com.google.api.services.bigtableadmin.v2.model.ListAuthorizedViewsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The unique name of the table for which AuthorizedViews should be listed.
+             * Values are of the form `projects/{project}/instances/{instance}/tables/{table}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The unique name of the table for which AuthorizedViews should be listed. Values are of
+           the form `projects/{project}/instances/{instance}/tables/{table}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The unique name of the table for which AuthorizedViews should be listed.
+             * Values are of the form `projects/{project}/instances/{instance}/tables/{table}`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of results per page. A page_size of zero lets the server
+             * choose the number of items to return. A page_size which is strictly positive will
+             * return at most that many items. A negative page_size will cause an error. Following
+             * the first request, subsequent paginated calls are not required to pass a page_size.
+             * If a page_size is set in subsequent calls, it must match the page_size given in the
+             * first request.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of results per page. A page_size of zero lets the server choose the number
+           of items to return. A page_size which is strictly positive will return at most that many items. A
+           negative page_size will cause an error. Following the first request, subsequent paginated calls are
+           not required to pass a page_size. If a page_size is set in subsequent calls, it must match the
+           page_size given in the first request.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of results per page. A page_size of zero lets the server
+             * choose the number of items to return. A page_size which is strictly positive will
+             * return at most that many items. A negative page_size will cause an error. Following
+             * the first request, subsequent paginated calls are not required to pass a page_size.
+             * If a page_size is set in subsequent calls, it must match the page_size given in the
+             * first request.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. The value of `next_page_token` returned by a previous call. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The value of `next_page_token` returned by a previous call.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. The value of `next_page_token` returned by a previous call. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Optional. The resource_view to be applied to the returned views' fields. Default to
+             * NAME_ONLY.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. The resource_view to be applied to the returned views' fields. Default to NAME_ONLY.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. The resource_view to be applied to the returned views' fields. Default to
+             * NAME_ONLY.
+             */
+            public List setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an AuthorizedView in a table.
+           *
+           * Create a request for the method "authorizedViews.patch".
+           *
+           * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Identifier. The name of this AuthorizedView. Values are of the form
+           *        `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`
+           * @param content the {@link com.google.api.services.bigtableadmin.v2.model.AuthorizedView}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.bigtableadmin.v2.model.AuthorizedView content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends BigtableAdminRequest<com.google.api.services.bigtableadmin.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+$");
+
+            /**
+             * Updates an AuthorizedView in a table.
+             *
+             * Create a request for the method "authorizedViews.patch".
+             *
+             * This request holds the parameters needed by the the bigtableadmin server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Identifier. The name of this AuthorizedView. Values are of the form
+           *        `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`
+             * @param content the {@link com.google.api.services.bigtableadmin.v2.model.AuthorizedView}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.bigtableadmin.v2.model.AuthorizedView content) {
+              super(BigtableAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.bigtableadmin.v2.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Identifier. The name of this AuthorizedView. Values are of the form `projects/{projec
+             * t}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Identifier. The name of this AuthorizedView. Values are of the form
+           `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Identifier. The name of this AuthorizedView. Values are of the form `projects/{projec
+             * t}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Optional. If true, ignore the safety checks when updating the AuthorizedView. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean ignoreWarnings;
+
+            /** Optional. If true, ignore the safety checks when updating the AuthorizedView.
+             */
+            public java.lang.Boolean getIgnoreWarnings() {
+              return ignoreWarnings;
+            }
+
+            /** Optional. If true, ignore the safety checks when updating the AuthorizedView. */
+            public Patch setIgnoreWarnings(java.lang.Boolean ignoreWarnings) {
+              this.ignoreWarnings = ignoreWarnings;
+              return this;
+            }
+
+            /**
+             * Optional. The list of fields to update. A mask specifying which fields in the
+             * AuthorizedView resource should be updated. This mask is relative to the
+             * AuthorizedView resource, not to the request message. A field will be overwritten if
+             * it is in the mask. If empty, all fields set in the request will be overwritten. A
+             * special value `*` means to overwrite all fields (including fields not set in the
+             * request).
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Optional. The list of fields to update. A mask specifying which fields in the AuthorizedView
+           resource should be updated. This mask is relative to the AuthorizedView resource, not to the
+           request message. A field will be overwritten if it is in the mask. If empty, all fields set in the
+           request will be overwritten. A special value `*` means to overwrite all fields (including fields
+           not set in the request).
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Optional. The list of fields to update. A mask specifying which fields in the
+             * AuthorizedView resource should be updated. This mask is relative to the
+             * AuthorizedView resource, not to the request message. A field will be overwritten if
+             * it is in the mask. If empty, all fields set in the request will be overwritten. A
+             * special value `*` means to overwrite all fields (including fields not set in the
+             * request).
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
     }
     /**

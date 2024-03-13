@@ -57,6 +57,15 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
   private GoogleCloudDialogflowCxV3beta1Page currentPage;
 
   /**
+   * Optional. Data store connection feature output signals. Filled only when data stores are
+   * involved in serving the query and DetectIntentRequest.populate
+   * data_store_connection_quality_signals is set to true in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals dataStoreConnectionSignals;
+
+  /**
    * The free-form diagnostic info. For example, this field could contain webhook call latency. The
    * fields of this data can change without notice, so you should not write code that depends on its
    * structure. One of the fields is called "Alternative Matched Intents", which may aid with
@@ -277,6 +286,27 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
    */
   public GoogleCloudDialogflowCxV3beta1QueryResult setCurrentPage(GoogleCloudDialogflowCxV3beta1Page currentPage) {
     this.currentPage = currentPage;
+    return this;
+  }
+
+  /**
+   * Optional. Data store connection feature output signals. Filled only when data stores are
+   * involved in serving the query and DetectIntentRequest.populate
+   * data_store_connection_quality_signals is set to true in the request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals getDataStoreConnectionSignals() {
+    return dataStoreConnectionSignals;
+  }
+
+  /**
+   * Optional. Data store connection feature output signals. Filled only when data stores are
+   * involved in serving the query and DetectIntentRequest.populate
+   * data_store_connection_quality_signals is set to true in the request.
+   * @param dataStoreConnectionSignals dataStoreConnectionSignals or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1QueryResult setDataStoreConnectionSignals(GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals dataStoreConnectionSignals) {
+    this.dataStoreConnectionSignals = dataStoreConnectionSignals;
     return this;
   }
 

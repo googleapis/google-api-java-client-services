@@ -120,6 +120,15 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   private java.util.Map<String, java.lang.Object> payload;
 
   /**
+   * Optional. If set to true and data stores are involved in serving the request then
+   * DetectIntentResponse.query_result.data_store_connection_signals will be filled with data that
+   * can help evaluations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean populateDataStoreConnectionSignals;
+
+  /**
    * Optional. Search configuration for UCS search queries.
    * The value may be {@code null}.
    */
@@ -368,6 +377,27 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setPayload(java.util.Map<String, java.lang.Object> payload) {
     this.payload = payload;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true and data stores are involved in serving the request then
+   * DetectIntentResponse.query_result.data_store_connection_signals will be filled with data that
+   * can help evaluations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPopulateDataStoreConnectionSignals() {
+    return populateDataStoreConnectionSignals;
+  }
+
+  /**
+   * Optional. If set to true and data stores are involved in serving the request then
+   * DetectIntentResponse.query_result.data_store_connection_signals will be filled with data that
+   * can help evaluations.
+   * @param populateDataStoreConnectionSignals populateDataStoreConnectionSignals or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1QueryParameters setPopulateDataStoreConnectionSignals(java.lang.Boolean populateDataStoreConnectionSignals) {
+    this.populateDataStoreConnectionSignals = populateDataStoreConnectionSignals;
     return this;
   }
 

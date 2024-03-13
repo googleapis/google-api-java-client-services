@@ -39,7 +39,8 @@ public final class Options extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean includeOnlyTargetedUserLists;
 
   /**
-   * Options that contain Path Filters and Custom Channel Groupings.
+   * Options that contain Path Filters and Custom Channel Groupings. This field is deprecated and
+   * will sunset on **May 1, 2024**. After sunset, requests using this field will return an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +66,8 @@ public final class Options extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Options that contain Path Filters and Custom Channel Groupings.
+   * Options that contain Path Filters and Custom Channel Groupings. This field is deprecated and
+   * will sunset on **May 1, 2024**. After sunset, requests using this field will return an error.
    * @return value or {@code null} for none
    */
   public PathQueryOptions getPathQueryOptions() {
@@ -73,7 +75,8 @@ public final class Options extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Options that contain Path Filters and Custom Channel Groupings.
+   * Options that contain Path Filters and Custom Channel Groupings. This field is deprecated and
+   * will sunset on **May 1, 2024**. After sunset, requests using this field will return an error.
    * @param pathQueryOptions pathQueryOptions or {@code null} for none
    */
   public Options setPathQueryOptions(PathQueryOptions pathQueryOptions) {

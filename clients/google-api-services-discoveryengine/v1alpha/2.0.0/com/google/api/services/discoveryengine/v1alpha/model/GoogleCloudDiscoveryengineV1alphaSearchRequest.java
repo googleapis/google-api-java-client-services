@@ -74,6 +74,13 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec customFineTuningSpec;
 
   /**
+   * A list of data store specs to apply on a search call.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> dataStoreSpecs;
+
+  /**
    * Uses the provided embedding to do additional semantic document retrieval. The retrieval is
    * based on the dot product of SearchRequest.EmbeddingSpec.EmbeddingVector.vector and the document
    * embedding that is provided in SearchRequest.EmbeddingSpec.EmbeddingVector.field_path. If
@@ -359,6 +366,23 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setCustomFineTuningSpec(GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec customFineTuningSpec) {
     this.customFineTuningSpec = customFineTuningSpec;
+    return this;
+  }
+
+  /**
+   * A list of data store specs to apply on a search call.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> getDataStoreSpecs() {
+    return dataStoreSpecs;
+  }
+
+  /**
+   * A list of data store specs to apply on a search call.
+   * @param dataStoreSpecs dataStoreSpecs or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setDataStoreSpecs(java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> dataStoreSpecs) {
+    this.dataStoreSpecs = dataStoreSpecs;
     return this;
   }
 

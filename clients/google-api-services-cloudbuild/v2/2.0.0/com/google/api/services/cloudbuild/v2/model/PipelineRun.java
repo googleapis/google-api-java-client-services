@@ -178,7 +178,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   private Security security;
 
   /**
-   * Service account used in the Pipeline.
+   * Service account used in the Pipeline. Deprecated; please use security.service_account instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -563,7 +563,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Service account used in the Pipeline.
+   * Service account used in the Pipeline. Deprecated; please use security.service_account instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -571,7 +571,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Service account used in the Pipeline.
+   * Service account used in the Pipeline. Deprecated; please use security.service_account instead.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public PipelineRun setServiceAccount(java.lang.String serviceAccount) {

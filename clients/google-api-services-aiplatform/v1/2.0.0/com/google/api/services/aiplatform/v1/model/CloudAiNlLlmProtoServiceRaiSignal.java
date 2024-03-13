@@ -45,6 +45,13 @@ public final class CloudAiNlLlmProtoServiceRaiSignal extends com.google.api.clie
   private java.lang.Boolean flagged;
 
   /**
+   * The influential terms that could potentially block the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CloudAiNlLlmProtoServiceRaiSignalInfluentialTerm> influentialTerms;
+
+  /**
    * The RAI category.
    * The value may be {@code null}.
    */
@@ -91,6 +98,23 @@ public final class CloudAiNlLlmProtoServiceRaiSignal extends com.google.api.clie
    */
   public CloudAiNlLlmProtoServiceRaiSignal setFlagged(java.lang.Boolean flagged) {
     this.flagged = flagged;
+    return this;
+  }
+
+  /**
+   * The influential terms that could potentially block the response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CloudAiNlLlmProtoServiceRaiSignalInfluentialTerm> getInfluentialTerms() {
+    return influentialTerms;
+  }
+
+  /**
+   * The influential terms that could potentially block the response.
+   * @param influentialTerms influentialTerms or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServiceRaiSignal setInfluentialTerms(java.util.List<CloudAiNlLlmProtoServiceRaiSignalInfluentialTerm> influentialTerms) {
+    this.influentialTerms = influentialTerms;
     return this;
   }
 

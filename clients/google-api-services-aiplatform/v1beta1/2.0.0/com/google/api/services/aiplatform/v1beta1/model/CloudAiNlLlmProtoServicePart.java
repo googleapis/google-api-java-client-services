@@ -30,6 +30,15 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class CloudAiNlLlmProtoServicePart extends com.google.api.client.json.GenericJson {
 
   /**
+   * Document metadata. The metadata should only be used by the Cloud LLM when supporting document
+   * mime types. It will only be populated when this image input part is converted from a document
+   * input part.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiNlLlmProtoServicePartDocumentMetadata documentMetadata;
+
+  /**
    * URI-based data.
    * The value may be {@code null}.
    */
@@ -71,6 +80,27 @@ public final class CloudAiNlLlmProtoServicePart extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private CloudAiNlLlmProtoServicePartVideoMetadata videoMetadata;
+
+  /**
+   * Document metadata. The metadata should only be used by the Cloud LLM when supporting document
+   * mime types. It will only be populated when this image input part is converted from a document
+   * input part.
+   * @return value or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServicePartDocumentMetadata getDocumentMetadata() {
+    return documentMetadata;
+  }
+
+  /**
+   * Document metadata. The metadata should only be used by the Cloud LLM when supporting document
+   * mime types. It will only be populated when this image input part is converted from a document
+   * input part.
+   * @param documentMetadata documentMetadata or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServicePart setDocumentMetadata(CloudAiNlLlmProtoServicePartDocumentMetadata documentMetadata) {
+    this.documentMetadata = documentMetadata;
+    return this;
+  }
 
   /**
    * URI-based data.

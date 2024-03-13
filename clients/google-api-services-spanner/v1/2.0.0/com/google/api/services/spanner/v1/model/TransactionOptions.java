@@ -180,6 +180,21 @@ package com.google.api.services.spanner.v1.model;
 public final class TransactionOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * When `exclude_txn_from_change_streams` is set to `true`: * Mutations from this transaction will
+   * not be recorded in change streams with DDL option `allow_txn_exclusion=true` that are tracking
+   * columns modified by these transactions. * Mutations from this transaction will be recorded in
+   * change streams with DDL option `allow_txn_exclusion=false or not set` that are tracking columns
+   * modified by these transactions. When `exclude_txn_from_change_streams` is set to `false` or not
+   * set, mutations from this transaction will be recorded in all change streams that are tracking
+   * columns modified by these transactions. `exclude_txn_from_change_streams` may only be specified
+   * for read-write or partitioned-dml transactions, otherwise the API will return an
+   * `INVALID_ARGUMENT` error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean excludeTxnFromChangeStreams;
+
+  /**
    * Partitioned DML transaction. Authorization to begin a Partitioned DML transaction requires
    * `spanner.databases.beginPartitionedDmlTransaction` permission on the `session` resource.
    * The value may be {@code null}.
@@ -202,6 +217,39 @@ public final class TransactionOptions extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private ReadWrite readWrite;
+
+  /**
+   * When `exclude_txn_from_change_streams` is set to `true`: * Mutations from this transaction will
+   * not be recorded in change streams with DDL option `allow_txn_exclusion=true` that are tracking
+   * columns modified by these transactions. * Mutations from this transaction will be recorded in
+   * change streams with DDL option `allow_txn_exclusion=false or not set` that are tracking columns
+   * modified by these transactions. When `exclude_txn_from_change_streams` is set to `false` or not
+   * set, mutations from this transaction will be recorded in all change streams that are tracking
+   * columns modified by these transactions. `exclude_txn_from_change_streams` may only be specified
+   * for read-write or partitioned-dml transactions, otherwise the API will return an
+   * `INVALID_ARGUMENT` error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExcludeTxnFromChangeStreams() {
+    return excludeTxnFromChangeStreams;
+  }
+
+  /**
+   * When `exclude_txn_from_change_streams` is set to `true`: * Mutations from this transaction will
+   * not be recorded in change streams with DDL option `allow_txn_exclusion=true` that are tracking
+   * columns modified by these transactions. * Mutations from this transaction will be recorded in
+   * change streams with DDL option `allow_txn_exclusion=false or not set` that are tracking columns
+   * modified by these transactions. When `exclude_txn_from_change_streams` is set to `false` or not
+   * set, mutations from this transaction will be recorded in all change streams that are tracking
+   * columns modified by these transactions. `exclude_txn_from_change_streams` may only be specified
+   * for read-write or partitioned-dml transactions, otherwise the API will return an
+   * `INVALID_ARGUMENT` error.
+   * @param excludeTxnFromChangeStreams excludeTxnFromChangeStreams or {@code null} for none
+   */
+  public TransactionOptions setExcludeTxnFromChangeStreams(java.lang.Boolean excludeTxnFromChangeStreams) {
+    this.excludeTxnFromChangeStreams = excludeTxnFromChangeStreams;
+    return this;
+  }
 
   /**
    * Partitioned DML transaction. Authorization to begin a Partitioned DML transaction requires

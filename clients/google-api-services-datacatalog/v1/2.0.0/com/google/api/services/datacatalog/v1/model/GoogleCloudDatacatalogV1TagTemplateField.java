@@ -54,7 +54,7 @@ public final class GoogleCloudDatacatalogV1TagTemplateField extends com.google.a
   private java.lang.Boolean isRequired;
 
   /**
-   * Output only. The resource name of the tag template field in URL format. Example:
+   * Identifier. The resource name of the tag template field in URL format. Example:
    * `projects/{PROJECT_ID}/locations/{LOCATION}/tagTemplates/{TAG_TEMPLATE}/fields/{FIELD}` Note:
    * The tag template field itself might not be stored in the location specified in its name. The
    * name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start
@@ -136,7 +136,7 @@ public final class GoogleCloudDatacatalogV1TagTemplateField extends com.google.a
   }
 
   /**
-   * Output only. The resource name of the tag template field in URL format. Example:
+   * Identifier. The resource name of the tag template field in URL format. Example:
    * `projects/{PROJECT_ID}/locations/{LOCATION}/tagTemplates/{TAG_TEMPLATE}/fields/{FIELD}` Note:
    * The tag template field itself might not be stored in the location specified in its name. The
    * name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start
@@ -148,7 +148,7 @@ public final class GoogleCloudDatacatalogV1TagTemplateField extends com.google.a
   }
 
   /**
-   * Output only. The resource name of the tag template field in URL format. Example:
+   * Identifier. The resource name of the tag template field in URL format. Example:
    * `projects/{PROJECT_ID}/locations/{LOCATION}/tagTemplates/{TAG_TEMPLATE}/fields/{FIELD}` Note:
    * The tag template field itself might not be stored in the location specified in its name. The
    * name must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_), and must start

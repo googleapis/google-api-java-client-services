@@ -50,8 +50,8 @@ public final class GoogleCloudDatacatalogV1Tag extends com.google.api.client.jso
   private java.util.Map<String, GoogleCloudDatacatalogV1TagField> fields;
 
   /**
-   * The resource name of the tag in URL format where tag ID is a system-generated identifier. Note:
-   * The tag itself might not be stored in the location specified in its name.
+   * Identifier. The resource name of the tag in URL format where tag ID is a system-generated
+   * identifier. Note: The tag itself might not be stored in the location specified in its name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,8 +114,8 @@ public final class GoogleCloudDatacatalogV1Tag extends com.google.api.client.jso
   }
 
   /**
-   * The resource name of the tag in URL format where tag ID is a system-generated identifier. Note:
-   * The tag itself might not be stored in the location specified in its name.
+   * Identifier. The resource name of the tag in URL format where tag ID is a system-generated
+   * identifier. Note: The tag itself might not be stored in the location specified in its name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -123,8 +123,8 @@ public final class GoogleCloudDatacatalogV1Tag extends com.google.api.client.jso
   }
 
   /**
-   * The resource name of the tag in URL format where tag ID is a system-generated identifier. Note:
-   * The tag itself might not be stored in the location specified in its name.
+   * Identifier. The resource name of the tag in URL format where tag ID is a system-generated
+   * identifier. Note: The tag itself might not be stored in the location specified in its name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDatacatalogV1Tag setName(java.lang.String name) {

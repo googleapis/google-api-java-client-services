@@ -1388,7 +1388,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the datacatalog server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the entry group in URL format. Example: *
+         * @param name Identifier. The resource name of the entry group in URL format. Example: *
          *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this
          *        EntryGroup and its child resources may not actually be stored in the location in this
          *        name.
@@ -1421,7 +1421,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the entry group in URL format. Example: *
+           * @param name Identifier. The resource name of the entry group in URL format. Example: *
          *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this
          *        EntryGroup and its child resources may not actually be stored in the location in this
          *        name.
@@ -1494,7 +1494,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * The resource name of the entry group in URL format. Example: *
+           * Identifier. The resource name of the entry group in URL format. Example: *
            * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this
            * EntryGroup and its child resources may not actually be stored in the location in this
            * name.
@@ -1502,7 +1502,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the entry group in URL format. Example: *
+          /** Identifier. The resource name of the entry group in URL format. Example: *
          projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this EntryGroup
          and its child resources may not actually be stored in the location in this name.
            */
@@ -1511,7 +1511,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * The resource name of the entry group in URL format. Example: *
+           * Identifier. The resource name of the entry group in URL format. Example: *
            * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this
            * EntryGroup and its child resources may not actually be stored in the location in this
            * name.
@@ -2735,7 +2735,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the datacatalog server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. The Data Catalog resource name of the entry in URL format. Example: *
+           * @param name Output only. Identifier. The Data Catalog resource name of the entry in URL format. Example: *
            *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
            *        Note that this Entry and its child resources may not actually be stored in the location in
            *        this name.
@@ -2768,7 +2768,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. The Data Catalog resource name of the entry in URL format. Example: *
+             * @param name Output only. Identifier. The Data Catalog resource name of the entry in URL format. Example: *
            *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
            *        Note that this Entry and its child resources may not actually be stored in the location in
            *        this name.
@@ -2841,15 +2841,15 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Output only. The Data Catalog resource name of the entry in URL format. Example: * pr
-             * ojects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_
-             * id} Note that this Entry and its child resources may not actually be stored in the
-             * location in this name.
+             * Output only. Identifier. The Data Catalog resource name of the entry in URL format.
+             * Example: * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/en
+             * tries/{entry_id} Note that this Entry and its child resources may not actually be
+             * stored in the location in this name.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. The Data Catalog resource name of the entry in URL format. Example: *
+            /** Output only. Identifier. The Data Catalog resource name of the entry in URL format. Example: *
            projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id} Note
            that this Entry and its child resources may not actually be stored in the location in this name.
              */
@@ -2858,10 +2858,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Output only. The Data Catalog resource name of the entry in URL format. Example: * pr
-             * ojects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_
-             * id} Note that this Entry and its child resources may not actually be stored in the
-             * location in this name.
+             * Output only. Identifier. The Data Catalog resource name of the entry in URL format.
+             * Example: * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/en
+             * tries/{entry_id} Note that this Entry and its child resources may not actually be
+             * stored in the location in this name.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3592,10 +3592,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * This request holds the parameters needed by the datacatalog server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{location}/en
-             *        trygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a system-
-             *        generated identifier. Note that this Tag may not actually be stored in the location in
-             *        this name.
+             * @param name Identifier. The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{
+             *        location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is
+             *        a system-generated identifier. Note that this Tag may not actually be stored in the
+             *        location in this name.
              * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag}
              * @return the request
              */
@@ -3623,10 +3623,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{location}/en
-             *        trygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a system-
-             *        generated identifier. Note that this Tag may not actually be stored in the location in
-             *        this name.
+               * @param name Identifier. The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{
+             *        location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is
+             *        a system-generated identifier. Note that this Tag may not actually be stored in the
+             *        location in this name.
                * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag}
                * @since 1.13
                */
@@ -3696,27 +3696,28 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
               }
 
               /**
-               * The resource name of the tag in URL format. Example: * projects/{project_id}/locati
-               * ons/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where
-               * `tag_id` is a system-generated identifier. Note that this Tag may not actually be
-               * stored in the location in this name.
+               * Identifier. The resource name of the tag in URL format. Example: * projects/{projec
+               * t_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{ta
+               * g_id} where `tag_id` is a system-generated identifier. Note that this Tag may not
+               * actually be stored in the location in this name.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{location}/e
-             ntrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a system-generated
-             identifier. Note that this Tag may not actually be stored in the location in this name.
+              /** Identifier. The resource name of the tag in URL format. Example: * projects/{project_id}/locations/
+             {location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a
+             system-generated identifier. Note that this Tag may not actually be stored in the location in this
+             name.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * The resource name of the tag in URL format. Example: * projects/{project_id}/locati
-               * ons/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where
-               * `tag_id` is a system-generated identifier. Note that this Tag may not actually be
-               * stored in the location in this name.
+               * Identifier. The resource name of the tag in URL format. Example: * projects/{projec
+               * t_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{ta
+               * g_id} where `tag_id` is a system-generated identifier. Note that this Tag may not
+               * actually be stored in the location in this name.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -4287,10 +4288,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the datacatalog server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{location}/en
-           *        trygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a system-
-           *        generated identifier. Note that this Tag may not actually be stored in the location in
-           *        this name.
+           * @param name Identifier. The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{
+           *        location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is
+           *        a system-generated identifier. Note that this Tag may not actually be stored in the
+           *        location in this name.
            * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag}
            * @return the request
            */
@@ -4318,10 +4319,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{location}/en
-           *        trygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a system-
-           *        generated identifier. Note that this Tag may not actually be stored in the location in
-           *        this name.
+             * @param name Identifier. The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{
+           *        location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is
+           *        a system-generated identifier. Note that this Tag may not actually be stored in the
+           *        location in this name.
              * @param content the {@link com.google.api.services.datacatalog.v1beta1.model.GoogleCloudDatacatalogV1beta1Tag}
              * @since 1.13
              */
@@ -4391,27 +4392,28 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * The resource name of the tag in URL format. Example: * projects/{project_id}/location
-             * s/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where
-             * `tag_id` is a system-generated identifier. Note that this Tag may not actually be
-             * stored in the location in this name.
+             * Identifier. The resource name of the tag in URL format. Example: * projects/{project_
+             * id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id
+             * } where `tag_id` is a system-generated identifier. Note that this Tag may not
+             * actually be stored in the location in this name.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{location}/e
-           ntrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a system-generated
-           identifier. Note that this Tag may not actually be stored in the location in this name.
+            /** Identifier. The resource name of the tag in URL format. Example: * projects/{project_id}/locations/
+           {location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a
+           system-generated identifier. Note that this Tag may not actually be stored in the location in this
+           name.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * The resource name of the tag in URL format. Example: * projects/{project_id}/location
-             * s/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where
-             * `tag_id` is a system-generated identifier. Note that this Tag may not actually be
-             * stored in the location in this name.
+             * Identifier. The resource name of the tag in URL format. Example: * projects/{project_
+             * id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id
+             * } where `tag_id` is a system-generated identifier. Note that this Tag may not
+             * actually be stored in the location in this name.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -5129,7 +5131,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the datacatalog server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the tag template in URL format. Example: *
+         * @param name Identifier. The resource name of the tag template in URL format. Example: *
          *        projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} Note that this
          *        TagTemplate and its child resources may not actually be stored in the location in this
          *        name.
@@ -5164,7 +5166,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the tag template in URL format. Example: *
+           * @param name Identifier. The resource name of the tag template in URL format. Example: *
          *        projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} Note that this
          *        TagTemplate and its child resources may not actually be stored in the location in this
          *        name.
@@ -5237,7 +5239,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * The resource name of the tag template in URL format. Example: *
+           * Identifier. The resource name of the tag template in URL format. Example: *
            * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} Note that
            * this TagTemplate and its child resources may not actually be stored in the location in
            * this name.
@@ -5245,7 +5247,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the tag template in URL format. Example: *
+          /** Identifier. The resource name of the tag template in URL format. Example: *
          projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} Note that this
          TagTemplate and its child resources may not actually be stored in the location in this name.
            */
@@ -5254,7 +5256,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * The resource name of the tag template in URL format. Example: *
+           * Identifier. The resource name of the tag template in URL format. Example: *
            * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} Note that
            * this TagTemplate and its child resources may not actually be stored in the location in
            * this name.

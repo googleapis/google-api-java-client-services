@@ -55,7 +55,7 @@ public final class GoogleCloudDatacatalogV1beta1EntryGroup extends com.google.ap
   private java.lang.String displayName;
 
   /**
-   * The resource name of the entry group in URL format. Example: *
+   * Identifier. The resource name of the entry group in URL format. Example: *
    * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this
    * EntryGroup and its child resources may not actually be stored in the location in this name.
    * The value may be {@code null}.
@@ -119,7 +119,7 @@ public final class GoogleCloudDatacatalogV1beta1EntryGroup extends com.google.ap
   }
 
   /**
-   * The resource name of the entry group in URL format. Example: *
+   * Identifier. The resource name of the entry group in URL format. Example: *
    * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this
    * EntryGroup and its child resources may not actually be stored in the location in this name.
    * @return value or {@code null} for none
@@ -129,7 +129,7 @@ public final class GoogleCloudDatacatalogV1beta1EntryGroup extends com.google.ap
   }
 
   /**
-   * The resource name of the entry group in URL format. Example: *
+   * Identifier. The resource name of the entry group in URL format. Example: *
    * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this
    * EntryGroup and its child resources may not actually be stored in the location in this name.
    * @param name name or {@code null} for none

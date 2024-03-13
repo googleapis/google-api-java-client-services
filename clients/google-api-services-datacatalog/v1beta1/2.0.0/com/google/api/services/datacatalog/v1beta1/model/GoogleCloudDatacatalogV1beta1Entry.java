@@ -95,7 +95,7 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   private java.lang.String linkedResource;
 
   /**
-   * Output only. The Data Catalog resource name of the entry in URL format. Example: *
+   * Output only. Identifier. The Data Catalog resource name of the entry in URL format. Example: *
    * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id} Note
    * that this Entry and its child resources may not actually be stored in the location in this
    * name.
@@ -299,7 +299,7 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   }
 
   /**
-   * Output only. The Data Catalog resource name of the entry in URL format. Example: *
+   * Output only. Identifier. The Data Catalog resource name of the entry in URL format. Example: *
    * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id} Note
    * that this Entry and its child resources may not actually be stored in the location in this
    * name.
@@ -310,7 +310,7 @@ public final class GoogleCloudDatacatalogV1beta1Entry extends com.google.api.cli
   }
 
   /**
-   * Output only. The Data Catalog resource name of the entry in URL format. Example: *
+   * Output only. Identifier. The Data Catalog resource name of the entry in URL format. Example: *
    * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id} Note
    * that this Entry and its child resources may not actually be stored in the location in this
    * name.

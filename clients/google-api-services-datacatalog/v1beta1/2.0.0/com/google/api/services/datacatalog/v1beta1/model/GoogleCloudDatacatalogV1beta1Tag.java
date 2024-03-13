@@ -51,10 +51,10 @@ public final class GoogleCloudDatacatalogV1beta1Tag extends com.google.api.clien
   private java.util.Map<String, GoogleCloudDatacatalogV1beta1TagField> fields;
 
   /**
-   * The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{locatio
-   * n}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a system-
-   * generated identifier. Note that this Tag may not actually be stored in the location in this
-   * name.
+   * Identifier. The resource name of the tag in URL format. Example: * projects/{project_id}/locati
+   * ons/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is
+   * a system-generated identifier. Note that this Tag may not actually be stored in the location in
+   * this name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,10 +119,10 @@ public final class GoogleCloudDatacatalogV1beta1Tag extends com.google.api.clien
   }
 
   /**
-   * The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{locatio
-   * n}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a system-
-   * generated identifier. Note that this Tag may not actually be stored in the location in this
-   * name.
+   * Identifier. The resource name of the tag in URL format. Example: * projects/{project_id}/locati
+   * ons/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is
+   * a system-generated identifier. Note that this Tag may not actually be stored in the location in
+   * this name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -130,10 +130,10 @@ public final class GoogleCloudDatacatalogV1beta1Tag extends com.google.api.clien
   }
 
   /**
-   * The resource name of the tag in URL format. Example: * projects/{project_id}/locations/{locatio
-   * n}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is a system-
-   * generated identifier. Note that this Tag may not actually be stored in the location in this
-   * name.
+   * Identifier. The resource name of the tag in URL format. Example: * projects/{project_id}/locati
+   * ons/{location}/entrygroups/{entry_group_id}/entries/{entry_id}/tags/{tag_id} where `tag_id` is
+   * a system-generated identifier. Note that this Tag may not actually be stored in the location in
+   * this name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDatacatalogV1beta1Tag setName(java.lang.String name) {

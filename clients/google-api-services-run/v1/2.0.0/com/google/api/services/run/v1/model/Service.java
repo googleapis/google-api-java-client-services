@@ -56,7 +56,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
    * Cloud Run-specific annotations are accepted in Service.metadata.annotations. *
    * `run.googleapis.com/binary-authorization-breakglass` * `run.googleapis.com/binary-
    * authorization` * `run.googleapis.com/client-name` * `run.googleapis.com/custom-audiences` *
-   * `run.googleapis.com/default-url-disabled`: Service. * `run.googleapis.com/description` *
+   * `run.googleapis.com/default-url-disabled` * `run.googleapis.com/description` *
    * `run.googleapis.com/gc-traffic-tags` * `run.googleapis.com/ingress` *
    * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress
    * settings documentation](/run/docs/securing/ingress) for details on configuring ingress
@@ -126,7 +126,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
    * Cloud Run-specific annotations are accepted in Service.metadata.annotations. *
    * `run.googleapis.com/binary-authorization-breakglass` * `run.googleapis.com/binary-
    * authorization` * `run.googleapis.com/client-name` * `run.googleapis.com/custom-audiences` *
-   * `run.googleapis.com/default-url-disabled`: Service. * `run.googleapis.com/description` *
+   * `run.googleapis.com/default-url-disabled` * `run.googleapis.com/description` *
    * `run.googleapis.com/gc-traffic-tags` * `run.googleapis.com/ingress` *
    * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress
    * settings documentation](/run/docs/securing/ingress) for details on configuring ingress
@@ -149,7 +149,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
    * Cloud Run-specific annotations are accepted in Service.metadata.annotations. *
    * `run.googleapis.com/binary-authorization-breakglass` * `run.googleapis.com/binary-
    * authorization` * `run.googleapis.com/client-name` * `run.googleapis.com/custom-audiences` *
-   * `run.googleapis.com/default-url-disabled`: Service. * `run.googleapis.com/description` *
+   * `run.googleapis.com/default-url-disabled` * `run.googleapis.com/description` *
    * `run.googleapis.com/gc-traffic-tags` * `run.googleapis.com/ingress` *
    * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress
    * settings documentation](/run/docs/securing/ingress) for details on configuring ingress

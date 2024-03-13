@@ -54,6 +54,13 @@ public final class GoogleCloudDocumentaiV1TrainProcessorVersionRequest extends c
   private GoogleCloudDocumentaiV1DocumentSchema documentSchema;
 
   /**
+   * Options to control foundation model tuning of a processor.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1TrainProcessorVersionRequestFoundationModelTuningOptions foundationModelTuningOptions;
+
+  /**
    * Optional. The input data used to train the ProcessorVersion.
    * The value may be {@code null}.
    */
@@ -119,6 +126,23 @@ public final class GoogleCloudDocumentaiV1TrainProcessorVersionRequest extends c
    */
   public GoogleCloudDocumentaiV1TrainProcessorVersionRequest setDocumentSchema(GoogleCloudDocumentaiV1DocumentSchema documentSchema) {
     this.documentSchema = documentSchema;
+    return this;
+  }
+
+  /**
+   * Options to control foundation model tuning of a processor.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1TrainProcessorVersionRequestFoundationModelTuningOptions getFoundationModelTuningOptions() {
+    return foundationModelTuningOptions;
+  }
+
+  /**
+   * Options to control foundation model tuning of a processor.
+   * @param foundationModelTuningOptions foundationModelTuningOptions or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1TrainProcessorVersionRequest setFoundationModelTuningOptions(GoogleCloudDocumentaiV1TrainProcessorVersionRequestFoundationModelTuningOptions foundationModelTuningOptions) {
+    this.foundationModelTuningOptions = foundationModelTuningOptions;
     return this;
   }
 

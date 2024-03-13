@@ -63,6 +63,17 @@ public final class Session extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. If true, specifies a multiplexed session. A multiplexed session may be used for
+   * multiple, concurrent read-only operations but can not be used for read-write transactions,
+   * partitioned reads, or partitioned queries. Multiplexed sessions can be created via
+   * CreateSession but not via BatchCreateSessions. Multiplexed sessions may not be deleted nor
+   * listed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean multiplexed;
+
+  /**
    * Output only. The name of the session. This is always system-assigned.
    * The value may be {@code null}.
    */
@@ -144,6 +155,31 @@ public final class Session extends com.google.api.client.json.GenericJson {
    */
   public Session setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. If true, specifies a multiplexed session. A multiplexed session may be used for
+   * multiple, concurrent read-only operations but can not be used for read-write transactions,
+   * partitioned reads, or partitioned queries. Multiplexed sessions can be created via
+   * CreateSession but not via BatchCreateSessions. Multiplexed sessions may not be deleted nor
+   * listed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMultiplexed() {
+    return multiplexed;
+  }
+
+  /**
+   * Optional. If true, specifies a multiplexed session. A multiplexed session may be used for
+   * multiple, concurrent read-only operations but can not be used for read-write transactions,
+   * partitioned reads, or partitioned queries. Multiplexed sessions can be created via
+   * CreateSession but not via BatchCreateSessions. Multiplexed sessions may not be deleted nor
+   * listed.
+   * @param multiplexed multiplexed or {@code null} for none
+   */
+  public Session setMultiplexed(java.lang.Boolean multiplexed) {
+    this.multiplexed = multiplexed;
     return this;
   }
 

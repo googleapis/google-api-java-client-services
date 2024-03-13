@@ -114,6 +114,19 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean includeChildren;
 
   /**
+   * Optional. This field applies only to sinks owned by organizations and folders.When the value of
+   * 'intercept_children' is true, the following restrictions apply: The sink must have the
+   * include_children flag set to true. The sink destination must be a Cloud project.Also, the
+   * following behaviors apply: Any logs matched by the sink won't be included by non-_Required
+   * sinks owned by child resources. The sink appears in the results of a ListSinks call from a
+   * child resource if the value of the filter field in its request is either 'in_scope("ALL")' or
+   * 'in_scope("ANCESTOR")'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean interceptChildren;
+
+  /**
    * Output only. The client-assigned sink identifier, unique within the project.For example: "my-
    * syslog-errors-to-pubsub".Sink identifiers are limited to 100 characters and can include only
    * the following characters: upper and lower-case alphanumeric characters, underscores, hyphens,
@@ -129,6 +142,16 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String outputVersionFormat;
+
+  /**
+   * Output only. The resource name of the sink. "projects/[PROJECT_ID]/sinks/[SINK_NAME]
+   * "organizations/[ORGANIZATION_ID]/sinks/[SINK_NAME]
+   * "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_NAME] "folders/[FOLDER_ID]/sinks/[SINK_NAME]
+   * For example: projects/my_project/sinks/SINK_NAME
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceName;
 
   /**
    * Output only. The last update timestamp of the sink.This field may not be present for older
@@ -329,6 +352,35 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. This field applies only to sinks owned by organizations and folders.When the value of
+   * 'intercept_children' is true, the following restrictions apply: The sink must have the
+   * include_children flag set to true. The sink destination must be a Cloud project.Also, the
+   * following behaviors apply: Any logs matched by the sink won't be included by non-_Required
+   * sinks owned by child resources. The sink appears in the results of a ListSinks call from a
+   * child resource if the value of the filter field in its request is either 'in_scope("ALL")' or
+   * 'in_scope("ANCESTOR")'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInterceptChildren() {
+    return interceptChildren;
+  }
+
+  /**
+   * Optional. This field applies only to sinks owned by organizations and folders.When the value of
+   * 'intercept_children' is true, the following restrictions apply: The sink must have the
+   * include_children flag set to true. The sink destination must be a Cloud project.Also, the
+   * following behaviors apply: Any logs matched by the sink won't be included by non-_Required
+   * sinks owned by child resources. The sink appears in the results of a ListSinks call from a
+   * child resource if the value of the filter field in its request is either 'in_scope("ALL")' or
+   * 'in_scope("ANCESTOR")'.
+   * @param interceptChildren interceptChildren or {@code null} for none
+   */
+  public LogSink setInterceptChildren(java.lang.Boolean interceptChildren) {
+    this.interceptChildren = interceptChildren;
+    return this;
+  }
+
+  /**
    * Output only. The client-assigned sink identifier, unique within the project.For example: "my-
    * syslog-errors-to-pubsub".Sink identifiers are limited to 100 characters and can include only
    * the following characters: upper and lower-case alphanumeric characters, underscores, hyphens,
@@ -365,6 +417,29 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
    */
   public LogSink setOutputVersionFormat(java.lang.String outputVersionFormat) {
     this.outputVersionFormat = outputVersionFormat;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the sink. "projects/[PROJECT_ID]/sinks/[SINK_NAME]
+   * "organizations/[ORGANIZATION_ID]/sinks/[SINK_NAME]
+   * "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_NAME] "folders/[FOLDER_ID]/sinks/[SINK_NAME]
+   * For example: projects/my_project/sinks/SINK_NAME
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceName() {
+    return resourceName;
+  }
+
+  /**
+   * Output only. The resource name of the sink. "projects/[PROJECT_ID]/sinks/[SINK_NAME]
+   * "organizations/[ORGANIZATION_ID]/sinks/[SINK_NAME]
+   * "billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_NAME] "folders/[FOLDER_ID]/sinks/[SINK_NAME]
+   * For example: projects/my_project/sinks/SINK_NAME
+   * @param resourceName resourceName or {@code null} for none
+   */
+  public LogSink setResourceName(java.lang.String resourceName) {
+    this.resourceName = resourceName;
     return this;
   }
 

@@ -31,8 +31,8 @@ public final class CallbackOptions extends com.google.api.client.json.GenericJso
 
   /**
    * URL for the merchant endpoint that would be called to request updates. The URL should be hosted
-   * on HTTPS and robots.txt should allow the URL path to be accessible by UserAgent:Google-
-   * Valuables. Deprecated.
+   * on HTTPS and robots.txt should allow the URL path to be accessible by UserAgent:Googlebot.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class CallbackOptions extends com.google.api.client.json.GenericJso
 
   /**
    * The HTTPS url configured by the merchant. The URL should be hosted on HTTPS and robots.txt
-   * should allow the URL path to be accessible by UserAgent:Google-Valuables.
+   * should allow the URL path to be accessible by UserAgent:Googlebot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +48,8 @@ public final class CallbackOptions extends com.google.api.client.json.GenericJso
 
   /**
    * URL for the merchant endpoint that would be called to request updates. The URL should be hosted
-   * on HTTPS and robots.txt should allow the URL path to be accessible by UserAgent:Google-
-   * Valuables. Deprecated.
+   * on HTTPS and robots.txt should allow the URL path to be accessible by UserAgent:Googlebot.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdateRequestUrl() {
@@ -58,8 +58,8 @@ public final class CallbackOptions extends com.google.api.client.json.GenericJso
 
   /**
    * URL for the merchant endpoint that would be called to request updates. The URL should be hosted
-   * on HTTPS and robots.txt should allow the URL path to be accessible by UserAgent:Google-
-   * Valuables. Deprecated.
+   * on HTTPS and robots.txt should allow the URL path to be accessible by UserAgent:Googlebot.
+   * Deprecated.
    * @param updateRequestUrl updateRequestUrl or {@code null} for none
    */
   public CallbackOptions setUpdateRequestUrl(java.lang.String updateRequestUrl) {
@@ -69,7 +69,7 @@ public final class CallbackOptions extends com.google.api.client.json.GenericJso
 
   /**
    * The HTTPS url configured by the merchant. The URL should be hosted on HTTPS and robots.txt
-   * should allow the URL path to be accessible by UserAgent:Google-Valuables.
+   * should allow the URL path to be accessible by UserAgent:Googlebot.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -78,7 +78,7 @@ public final class CallbackOptions extends com.google.api.client.json.GenericJso
 
   /**
    * The HTTPS url configured by the merchant. The URL should be hosted on HTTPS and robots.txt
-   * should allow the URL path to be accessible by UserAgent:Google-Valuables.
+   * should allow the URL path to be accessible by UserAgent:Googlebot.
    * @param url url or {@code null} for none
    */
   public CallbackOptions setUrl(java.lang.String url) {

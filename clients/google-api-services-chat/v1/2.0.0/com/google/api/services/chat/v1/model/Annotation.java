@@ -42,6 +42,13 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   private java.lang.Integer length;
 
   /**
+   * The metadata for a rich link.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RichLinkMetadata richLinkMetadata;
+
+  /**
    * The metadata for a slash command.
    * The value may be {@code null}.
    */
@@ -83,6 +90,23 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
    */
   public Annotation setLength(java.lang.Integer length) {
     this.length = length;
+    return this;
+  }
+
+  /**
+   * The metadata for a rich link.
+   * @return value or {@code null} for none
+   */
+  public RichLinkMetadata getRichLinkMetadata() {
+    return richLinkMetadata;
+  }
+
+  /**
+   * The metadata for a rich link.
+   * @param richLinkMetadata richLinkMetadata or {@code null} for none
+   */
+  public Annotation setRichLinkMetadata(RichLinkMetadata richLinkMetadata) {
+    this.richLinkMetadata = richLinkMetadata;
     return this;
   }
 

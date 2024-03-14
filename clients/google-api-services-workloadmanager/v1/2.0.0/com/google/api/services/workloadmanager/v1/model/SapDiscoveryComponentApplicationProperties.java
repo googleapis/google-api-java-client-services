@@ -52,6 +52,13 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
   private java.lang.String ascsUri;
 
   /**
+   * Optional. Instance number of the SAP instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceNumber;
+
+  /**
    * Optional. Kernel version for Netweaver running in the system.
    * The value may be {@code null}.
    */
@@ -116,6 +123,23 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
    */
   public SapDiscoveryComponentApplicationProperties setAscsUri(java.lang.String ascsUri) {
     this.ascsUri = ascsUri;
+    return this;
+  }
+
+  /**
+   * Optional. Instance number of the SAP instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceNumber() {
+    return instanceNumber;
+  }
+
+  /**
+   * Optional. Instance number of the SAP instance.
+   * @param instanceNumber instanceNumber or {@code null} for none
+   */
+  public SapDiscoveryComponentApplicationProperties setInstanceNumber(java.lang.String instanceNumber) {
+    this.instanceNumber = instanceNumber;
     return this;
   }
 

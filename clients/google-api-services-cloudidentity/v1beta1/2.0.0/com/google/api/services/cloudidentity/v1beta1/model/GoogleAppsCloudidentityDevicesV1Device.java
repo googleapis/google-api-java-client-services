@@ -122,6 +122,14 @@ public final class GoogleAppsCloudidentityDevicesV1Device extends com.google.api
   private java.lang.String encryptionState;
 
   /**
+   * Output only. Attributes specific to [Endpoint Verification](https://cloud.google.com/endpoint-
+   * verification/docs/overview) devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsCloudidentityDevicesV1EndpointVerificationSpecificAttributes endpointVerificationSpecificAttributes;
+
+  /**
    * Host name of the device.
    * The value may be {@code null}.
    */
@@ -462,6 +470,25 @@ public final class GoogleAppsCloudidentityDevicesV1Device extends com.google.api
    */
   public GoogleAppsCloudidentityDevicesV1Device setEncryptionState(java.lang.String encryptionState) {
     this.encryptionState = encryptionState;
+    return this;
+  }
+
+  /**
+   * Output only. Attributes specific to [Endpoint Verification](https://cloud.google.com/endpoint-
+   * verification/docs/overview) devices.
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsCloudidentityDevicesV1EndpointVerificationSpecificAttributes getEndpointVerificationSpecificAttributes() {
+    return endpointVerificationSpecificAttributes;
+  }
+
+  /**
+   * Output only. Attributes specific to [Endpoint Verification](https://cloud.google.com/endpoint-
+   * verification/docs/overview) devices.
+   * @param endpointVerificationSpecificAttributes endpointVerificationSpecificAttributes or {@code null} for none
+   */
+  public GoogleAppsCloudidentityDevicesV1Device setEndpointVerificationSpecificAttributes(GoogleAppsCloudidentityDevicesV1EndpointVerificationSpecificAttributes endpointVerificationSpecificAttributes) {
+    this.endpointVerificationSpecificAttributes = endpointVerificationSpecificAttributes;
     return this;
   }
 

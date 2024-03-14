@@ -40,6 +40,15 @@ public final class BigQueryDatasetSource extends com.google.api.client.json.Gene
   private java.lang.String dataset;
 
   /**
+   * Optional. Resources in this dataset that are selectively shared. If this field is empty, then
+   * the entire dataset (all resources) are shared. This field is only valid for data clean room
+   * exchanges.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SelectedResource> selectedResources;
+
+  /**
    * Resource name of the dataset source for this listing. e.g. `projects/myproject/datasets/123`
    * @return value or {@code null} for none
    */
@@ -53,6 +62,27 @@ public final class BigQueryDatasetSource extends com.google.api.client.json.Gene
    */
   public BigQueryDatasetSource setDataset(java.lang.String dataset) {
     this.dataset = dataset;
+    return this;
+  }
+
+  /**
+   * Optional. Resources in this dataset that are selectively shared. If this field is empty, then
+   * the entire dataset (all resources) are shared. This field is only valid for data clean room
+   * exchanges.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SelectedResource> getSelectedResources() {
+    return selectedResources;
+  }
+
+  /**
+   * Optional. Resources in this dataset that are selectively shared. If this field is empty, then
+   * the entire dataset (all resources) are shared. This field is only valid for data clean room
+   * exchanges.
+   * @param selectedResources selectedResources or {@code null} for none
+   */
+  public BigQueryDatasetSource setSelectedResources(java.util.List<SelectedResource> selectedResources) {
+    this.selectedResources = selectedResources;
     return this;
   }
 

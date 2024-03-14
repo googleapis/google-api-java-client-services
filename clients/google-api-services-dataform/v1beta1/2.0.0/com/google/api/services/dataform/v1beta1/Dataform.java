@@ -2545,7 +2545,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataform server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The repository's name.
+         * @param name Identifier. The repository's name.
          * @param content the {@link com.google.api.services.dataform.v1beta1.model.Repository}
          * @return the request
          */
@@ -2573,7 +2573,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The repository's name.
+           * @param name Identifier. The repository's name.
            * @param content the {@link com.google.api.services.dataform.v1beta1.model.Repository}
            * @since 1.13
            */
@@ -2642,17 +2642,17 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Output only. The repository's name. */
+          /** Identifier. The repository's name. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The repository's name.
+          /** Identifier. The repository's name.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Output only. The repository's name. */
+          /** Identifier. The repository's name. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

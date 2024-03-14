@@ -30,14 +30,14 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class Workspace extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The workspace's name.
+   * Identifier. The workspace's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The workspace's name.
+   * Identifier. The workspace's name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -45,7 +45,7 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The workspace's name.
+   * Identifier. The workspace's name.
    * @param name name or {@code null} for none
    */
   public Workspace setName(java.lang.String name) {

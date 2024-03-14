@@ -150,6 +150,13 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.String updated;
 
   /**
+   * An absolute link to the task in the Google Tasks Web UI. This field is read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String webViewLink;
+
+  /**
    * Completion date of the task (as a RFC 3339 timestamp). This field is omitted if the task has
    * not been completed.
    * @return value or {@code null} for none
@@ -419,6 +426,23 @@ public final class Task extends com.google.api.client.json.GenericJson {
    */
   public Task setUpdated(java.lang.String updated) {
     this.updated = updated;
+    return this;
+  }
+
+  /**
+   * An absolute link to the task in the Google Tasks Web UI. This field is read-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWebViewLink() {
+    return webViewLink;
+  }
+
+  /**
+   * An absolute link to the task in the Google Tasks Web UI. This field is read-only.
+   * @param webViewLink webViewLink or {@code null} for none
+   */
+  public Task setWebViewLink(java.lang.String webViewLink) {
+    this.webViewLink = webViewLink;
     return this;
   }
 

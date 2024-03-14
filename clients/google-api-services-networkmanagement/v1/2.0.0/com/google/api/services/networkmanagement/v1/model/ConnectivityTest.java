@@ -31,6 +31,13 @@ package com.google.api.services.networkmanagement.v1.model;
 public final class ConnectivityTest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the test should skip firewall checking. If not provided, we assume false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean bypassFirewallChecks;
+
+  /**
    * Output only. The time the test was created.
    * The value may be {@code null}.
    */
@@ -136,6 +143,23 @@ public final class ConnectivityTest extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Whether the test should skip firewall checking. If not provided, we assume false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBypassFirewallChecks() {
+    return bypassFirewallChecks;
+  }
+
+  /**
+   * Whether the test should skip firewall checking. If not provided, we assume false.
+   * @param bypassFirewallChecks bypassFirewallChecks or {@code null} for none
+   */
+  public ConnectivityTest setBypassFirewallChecks(java.lang.Boolean bypassFirewallChecks) {
+    this.bypassFirewallChecks = bypassFirewallChecks;
+    return this;
+  }
 
   /**
    * Output only. The time the test was created.

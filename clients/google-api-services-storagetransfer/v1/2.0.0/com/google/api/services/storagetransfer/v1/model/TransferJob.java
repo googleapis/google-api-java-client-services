@@ -113,6 +113,13 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
+   * Replication specification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReplicationSpec replicationSpec;
+
+  /**
    * Specifies schedule for the transfer job. This is an optional field. When the field is not set,
    * the job never executes a transfer, unless you invoke RunTransferJob or update the job to have a
    * non-empty schedule.
@@ -331,6 +338,23 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
    */
   public TransferJob setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Replication specification.
+   * @return value or {@code null} for none
+   */
+  public ReplicationSpec getReplicationSpec() {
+    return replicationSpec;
+  }
+
+  /**
+   * Replication specification.
+   * @param replicationSpec replicationSpec or {@code null} for none
+   */
+  public TransferJob setReplicationSpec(ReplicationSpec replicationSpec) {
+    this.replicationSpec = replicationSpec;
     return this;
   }
 

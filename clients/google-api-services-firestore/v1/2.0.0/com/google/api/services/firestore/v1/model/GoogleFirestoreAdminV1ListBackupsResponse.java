@@ -30,7 +30,7 @@ package com.google.api.services.firestore.v1.model;
 public final class GoogleFirestoreAdminV1ListBackupsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of all backups for the project. Ordered by `location ASC, create_time DESC, name ASC`.
+   * List of all backups for the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class GoogleFirestoreAdminV1ListBackupsResponse extends com.google.
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * List of all backups for the project. Ordered by `location ASC, create_time DESC, name ASC`.
+   * List of all backups for the project.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleFirestoreAdminV1Backup> getBackups() {
@@ -61,7 +61,7 @@ public final class GoogleFirestoreAdminV1ListBackupsResponse extends com.google.
   }
 
   /**
-   * List of all backups for the project. Ordered by `location ASC, create_time DESC, name ASC`.
+   * List of all backups for the project.
    * @param backups backups or {@code null} for none
    */
   public GoogleFirestoreAdminV1ListBackupsResponse setBackups(java.util.List<GoogleFirestoreAdminV1Backup> backups) {

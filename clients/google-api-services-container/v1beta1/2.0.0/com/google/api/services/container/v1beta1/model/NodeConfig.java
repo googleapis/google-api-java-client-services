@@ -296,6 +296,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private SandboxConfig sandboxConfig;
 
   /**
+   * Secondary boot disk update strategy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecondaryBootDiskUpdateStrategy secondaryBootDiskUpdateStrategy;
+
+  /**
    * List of secondary boot disks attached to the nodes.
    * The value may be {@code null}.
    */
@@ -966,6 +973,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setSandboxConfig(SandboxConfig sandboxConfig) {
     this.sandboxConfig = sandboxConfig;
+    return this;
+  }
+
+  /**
+   * Secondary boot disk update strategy.
+   * @return value or {@code null} for none
+   */
+  public SecondaryBootDiskUpdateStrategy getSecondaryBootDiskUpdateStrategy() {
+    return secondaryBootDiskUpdateStrategy;
+  }
+
+  /**
+   * Secondary boot disk update strategy.
+   * @param secondaryBootDiskUpdateStrategy secondaryBootDiskUpdateStrategy or {@code null} for none
+   */
+  public NodeConfig setSecondaryBootDiskUpdateStrategy(SecondaryBootDiskUpdateStrategy secondaryBootDiskUpdateStrategy) {
+    this.secondaryBootDiskUpdateStrategy = secondaryBootDiskUpdateStrategy;
     return this;
   }
 

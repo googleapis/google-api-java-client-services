@@ -110,11 +110,25 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private DNSConfig desiredDnsConfig;
 
   /**
+   * Enable/Disable Cilium Clusterwide Network Policy for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean desiredEnableCiliumClusterwideNetworkPolicy;
+
+  /**
    * Enable/Disable FQDN Network Policy for the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean desiredEnableFqdnNetworkPolicy;
+
+  /**
+   * Enable/Disable Multi-Networking for the cluster
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean desiredEnableMultiNetworking;
 
   /**
    * Enable/Disable private endpoint for the cluster's master.
@@ -619,6 +633,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Enable/Disable Cilium Clusterwide Network Policy for the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDesiredEnableCiliumClusterwideNetworkPolicy() {
+    return desiredEnableCiliumClusterwideNetworkPolicy;
+  }
+
+  /**
+   * Enable/Disable Cilium Clusterwide Network Policy for the cluster.
+   * @param desiredEnableCiliumClusterwideNetworkPolicy desiredEnableCiliumClusterwideNetworkPolicy or {@code null} for none
+   */
+  public ClusterUpdate setDesiredEnableCiliumClusterwideNetworkPolicy(java.lang.Boolean desiredEnableCiliumClusterwideNetworkPolicy) {
+    this.desiredEnableCiliumClusterwideNetworkPolicy = desiredEnableCiliumClusterwideNetworkPolicy;
+    return this;
+  }
+
+  /**
    * Enable/Disable FQDN Network Policy for the cluster.
    * @return value or {@code null} for none
    */
@@ -632,6 +663,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredEnableFqdnNetworkPolicy(java.lang.Boolean desiredEnableFqdnNetworkPolicy) {
     this.desiredEnableFqdnNetworkPolicy = desiredEnableFqdnNetworkPolicy;
+    return this;
+  }
+
+  /**
+   * Enable/Disable Multi-Networking for the cluster
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDesiredEnableMultiNetworking() {
+    return desiredEnableMultiNetworking;
+  }
+
+  /**
+   * Enable/Disable Multi-Networking for the cluster
+   * @param desiredEnableMultiNetworking desiredEnableMultiNetworking or {@code null} for none
+   */
+  public ClusterUpdate setDesiredEnableMultiNetworking(java.lang.Boolean desiredEnableMultiNetworking) {
+    this.desiredEnableMultiNetworking = desiredEnableMultiNetworking;
     return this;
   }
 

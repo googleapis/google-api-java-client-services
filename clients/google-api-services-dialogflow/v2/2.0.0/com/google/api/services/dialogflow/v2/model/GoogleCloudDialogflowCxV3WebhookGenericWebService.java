@@ -50,6 +50,15 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   private java.lang.String httpMethod;
 
   /**
+   * Optional. The OAuth configuration of the webhook. If specified, Dialogflow will initiate the
+   * OAuth client credential flow to exchange an access token from the 3rd party platform and put it
+   * in the auth header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3WebhookGenericWebServiceOAuthConfig oauthConfig;
+
+  /**
    * Optional. Maps the values extracted from specific fields of the flexible webhook response into
    * session parameters. - Key: session parameter name - Value: field path in the webhook response
    * The value may be {@code null}.
@@ -77,6 +86,15 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> requestHeaders;
+
+  /**
+   * Optional. Indicate the auth token type generated from the [Diglogflow service
+   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
+   * generated token is sent in the Authorization header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAgentAuth;
 
   /**
    * Required. The webhook URI for receiving POST requests. It must use https protocol.
@@ -142,6 +160,27 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setHttpMethod(java.lang.String httpMethod) {
     this.httpMethod = httpMethod;
+    return this;
+  }
+
+  /**
+   * Optional. The OAuth configuration of the webhook. If specified, Dialogflow will initiate the
+   * OAuth client credential flow to exchange an access token from the 3rd party platform and put it
+   * in the auth header.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3WebhookGenericWebServiceOAuthConfig getOauthConfig() {
+    return oauthConfig;
+  }
+
+  /**
+   * Optional. The OAuth configuration of the webhook. If specified, Dialogflow will initiate the
+   * OAuth client credential flow to exchange an access token from the 3rd party platform and put it
+   * in the auth header.
+   * @param oauthConfig oauthConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3WebhookGenericWebService setOauthConfig(GoogleCloudDialogflowCxV3WebhookGenericWebServiceOAuthConfig oauthConfig) {
+    this.oauthConfig = oauthConfig;
     return this;
   }
 
@@ -212,6 +251,27 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setRequestHeaders(java.util.Map<String, java.lang.String> requestHeaders) {
     this.requestHeaders = requestHeaders;
+    return this;
+  }
+
+  /**
+   * Optional. Indicate the auth token type generated from the [Diglogflow service
+   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
+   * generated token is sent in the Authorization header.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAgentAuth() {
+    return serviceAgentAuth;
+  }
+
+  /**
+   * Optional. Indicate the auth token type generated from the [Diglogflow service
+   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
+   * generated token is sent in the Authorization header.
+   * @param serviceAgentAuth serviceAgentAuth or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3WebhookGenericWebService setServiceAgentAuth(java.lang.String serviceAgentAuth) {
+    this.serviceAgentAuth = serviceAgentAuth;
     return this;
   }
 

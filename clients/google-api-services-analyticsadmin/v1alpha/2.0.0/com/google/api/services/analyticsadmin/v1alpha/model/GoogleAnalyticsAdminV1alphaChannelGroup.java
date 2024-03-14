@@ -60,6 +60,16 @@ public final class GoogleAnalyticsAdminV1alphaChannelGroup extends com.google.ap
   private java.lang.String name;
 
   /**
+   * Optional. If true, this channel group will be used as the default channel group for reports.
+   * Only one channel group can be set as `primary` at any time. If the `primary` field gets set on
+   * a channel group, it will get unset on the previous primary channel group. The Google Analytics
+   * predefined channel group is the primary by default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean primary;
+
+  /**
    * Output only. If true, then this channel group is the Default Channel Group predefined by Google
    * Analytics. Display name and grouping rules cannot be updated for this channel group.
    * The value may be {@code null}.
@@ -134,6 +144,29 @@ public final class GoogleAnalyticsAdminV1alphaChannelGroup extends com.google.ap
    */
   public GoogleAnalyticsAdminV1alphaChannelGroup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. If true, this channel group will be used as the default channel group for reports.
+   * Only one channel group can be set as `primary` at any time. If the `primary` field gets set on
+   * a channel group, it will get unset on the previous primary channel group. The Google Analytics
+   * predefined channel group is the primary by default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPrimary() {
+    return primary;
+  }
+
+  /**
+   * Optional. If true, this channel group will be used as the default channel group for reports.
+   * Only one channel group can be set as `primary` at any time. If the `primary` field gets set on
+   * a channel group, it will get unset on the previous primary channel group. The Google Analytics
+   * predefined channel group is the primary by default.
+   * @param primary primary or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChannelGroup setPrimary(java.lang.Boolean primary) {
+    this.primary = primary;
     return this;
   }
 

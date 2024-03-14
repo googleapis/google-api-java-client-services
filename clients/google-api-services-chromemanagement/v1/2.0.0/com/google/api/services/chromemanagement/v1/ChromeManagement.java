@@ -393,6 +393,454 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           return (CountChromeAppRequests) super.set(parameterName, value);
         }
       }
+      /**
+       * Get a list of devices that have requested to install an extension.
+       *
+       * Create a request for the method "apps.fetchDevicesRequestingExtension".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link FetchDevicesRequestingExtension#execute()} method to invoke
+       * the remote operation.
+       *
+       * @param customer Required. The customer ID or "my_customer" prefixed with "customers/".
+       * @return the request
+       */
+      public FetchDevicesRequestingExtension fetchDevicesRequestingExtension(java.lang.String customer) throws java.io.IOException {
+        FetchDevicesRequestingExtension result = new FetchDevicesRequestingExtension(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class FetchDevicesRequestingExtension extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1FetchDevicesRequestingExtensionResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/apps:fetchDevicesRequestingExtension";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Get a list of devices that have requested to install an extension.
+         *
+         * Create a request for the method "apps.fetchDevicesRequestingExtension".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link FetchDevicesRequestingExtension#execute()} method to
+         * invoke the remote operation. <p> {@link FetchDevicesRequestingExtension#initialize(com.google.a
+         * pi.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+         * instance immediately after invoking the constructor. </p>
+         *
+         * @param customer Required. The customer ID or "my_customer" prefixed with "customers/".
+         * @since 1.13
+         */
+        protected FetchDevicesRequestingExtension(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1FetchDevicesRequestingExtensionResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public FetchDevicesRequestingExtension set$Xgafv(java.lang.String $Xgafv) {
+          return (FetchDevicesRequestingExtension) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public FetchDevicesRequestingExtension setAccessToken(java.lang.String accessToken) {
+          return (FetchDevicesRequestingExtension) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public FetchDevicesRequestingExtension setAlt(java.lang.String alt) {
+          return (FetchDevicesRequestingExtension) super.setAlt(alt);
+        }
+
+        @Override
+        public FetchDevicesRequestingExtension setCallback(java.lang.String callback) {
+          return (FetchDevicesRequestingExtension) super.setCallback(callback);
+        }
+
+        @Override
+        public FetchDevicesRequestingExtension setFields(java.lang.String fields) {
+          return (FetchDevicesRequestingExtension) super.setFields(fields);
+        }
+
+        @Override
+        public FetchDevicesRequestingExtension setKey(java.lang.String key) {
+          return (FetchDevicesRequestingExtension) super.setKey(key);
+        }
+
+        @Override
+        public FetchDevicesRequestingExtension setOauthToken(java.lang.String oauthToken) {
+          return (FetchDevicesRequestingExtension) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public FetchDevicesRequestingExtension setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (FetchDevicesRequestingExtension) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public FetchDevicesRequestingExtension setQuotaUser(java.lang.String quotaUser) {
+          return (FetchDevicesRequestingExtension) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public FetchDevicesRequestingExtension setUploadType(java.lang.String uploadType) {
+          return (FetchDevicesRequestingExtension) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public FetchDevicesRequestingExtension setUploadProtocol(java.lang.String uploadProtocol) {
+          return (FetchDevicesRequestingExtension) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/". */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/".
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/". */
+        public FetchDevicesRequestingExtension setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /** Required. The extension for which we want to find requesting devices. */
+        @com.google.api.client.util.Key
+        private java.lang.String extensionId;
+
+        /** Required. The extension for which we want to find requesting devices.
+         */
+        public java.lang.String getExtensionId() {
+          return extensionId;
+        }
+
+        /** Required. The extension for which we want to find requesting devices. */
+        public FetchDevicesRequestingExtension setExtensionId(java.lang.String extensionId) {
+          this.extensionId = extensionId;
+          return this;
+        }
+
+        /**
+         * The ID of the organizational unit. Only consider devices that directly belong to this org
+         * unit, i.e. sub-orgunits are not counted. If omitted, all data will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orgUnitId;
+
+        /** The ID of the organizational unit. Only consider devices that directly belong to this org unit,
+       i.e. sub-orgunits are not counted. If omitted, all data will be returned.
+         */
+        public java.lang.String getOrgUnitId() {
+          return orgUnitId;
+        }
+
+        /**
+         * The ID of the organizational unit. Only consider devices that directly belong to this org
+         * unit, i.e. sub-orgunits are not counted. If omitted, all data will be returned.
+         */
+        public FetchDevicesRequestingExtension setOrgUnitId(java.lang.String orgUnitId) {
+          this.orgUnitId = orgUnitId;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum number of results to return. Maximum and default are 50. Any page size
+         * larger than 50 will be coerced to 50.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of results to return. Maximum and default are 50. Any page size larger
+       than 50 will be coerced to 50.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Maximum number of results to return. Maximum and default are 50. Any page size
+         * larger than 50 will be coerced to 50.
+         */
+        public FetchDevicesRequestingExtension setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. Token to specify the page of the request to be returned. Token expires after 1
+         * day.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Token to specify the page of the request to be returned. Token expires after 1 day.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. Token to specify the page of the request to be returned. Token expires after 1
+         * day.
+         */
+        public FetchDevicesRequestingExtension setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public FetchDevicesRequestingExtension set(String parameterName, Object value) {
+          return (FetchDevicesRequestingExtension) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get a list of users that have requested to install an extension.
+       *
+       * Create a request for the method "apps.fetchUsersRequestingExtension".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link FetchUsersRequestingExtension#execute()} method to invoke
+       * the remote operation.
+       *
+       * @param customer Required. The customer ID or "my_customer" prefixed with "customers/".
+       * @return the request
+       */
+      public FetchUsersRequestingExtension fetchUsersRequestingExtension(java.lang.String customer) throws java.io.IOException {
+        FetchUsersRequestingExtension result = new FetchUsersRequestingExtension(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class FetchUsersRequestingExtension extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1FetchUsersRequestingExtensionResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/apps:fetchUsersRequestingExtension";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Get a list of users that have requested to install an extension.
+         *
+         * Create a request for the method "apps.fetchUsersRequestingExtension".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link FetchUsersRequestingExtension#execute()} method to invoke
+         * the remote operation. <p> {@link FetchUsersRequestingExtension#initialize(com.google.api.client
+         * .googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param customer Required. The customer ID or "my_customer" prefixed with "customers/".
+         * @since 1.13
+         */
+        protected FetchUsersRequestingExtension(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1FetchUsersRequestingExtensionResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public FetchUsersRequestingExtension set$Xgafv(java.lang.String $Xgafv) {
+          return (FetchUsersRequestingExtension) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public FetchUsersRequestingExtension setAccessToken(java.lang.String accessToken) {
+          return (FetchUsersRequestingExtension) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public FetchUsersRequestingExtension setAlt(java.lang.String alt) {
+          return (FetchUsersRequestingExtension) super.setAlt(alt);
+        }
+
+        @Override
+        public FetchUsersRequestingExtension setCallback(java.lang.String callback) {
+          return (FetchUsersRequestingExtension) super.setCallback(callback);
+        }
+
+        @Override
+        public FetchUsersRequestingExtension setFields(java.lang.String fields) {
+          return (FetchUsersRequestingExtension) super.setFields(fields);
+        }
+
+        @Override
+        public FetchUsersRequestingExtension setKey(java.lang.String key) {
+          return (FetchUsersRequestingExtension) super.setKey(key);
+        }
+
+        @Override
+        public FetchUsersRequestingExtension setOauthToken(java.lang.String oauthToken) {
+          return (FetchUsersRequestingExtension) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public FetchUsersRequestingExtension setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (FetchUsersRequestingExtension) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public FetchUsersRequestingExtension setQuotaUser(java.lang.String quotaUser) {
+          return (FetchUsersRequestingExtension) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public FetchUsersRequestingExtension setUploadType(java.lang.String uploadType) {
+          return (FetchUsersRequestingExtension) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public FetchUsersRequestingExtension setUploadProtocol(java.lang.String uploadProtocol) {
+          return (FetchUsersRequestingExtension) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/". */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/".
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /** Required. The customer ID or "my_customer" prefixed with "customers/". */
+        public FetchUsersRequestingExtension setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /** Required. The extension for which we want to find the requesting users. */
+        @com.google.api.client.util.Key
+        private java.lang.String extensionId;
+
+        /** Required. The extension for which we want to find the requesting users.
+         */
+        public java.lang.String getExtensionId() {
+          return extensionId;
+        }
+
+        /** Required. The extension for which we want to find the requesting users. */
+        public FetchUsersRequestingExtension setExtensionId(java.lang.String extensionId) {
+          this.extensionId = extensionId;
+          return this;
+        }
+
+        /**
+         * The ID of the organizational unit. Only consider devices that directly belong to this org
+         * unit, i.e. sub-orgunits are not counted. If omitted, all data will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orgUnitId;
+
+        /** The ID of the organizational unit. Only consider devices that directly belong to this org unit,
+       i.e. sub-orgunits are not counted. If omitted, all data will be returned.
+         */
+        public java.lang.String getOrgUnitId() {
+          return orgUnitId;
+        }
+
+        /**
+         * The ID of the organizational unit. Only consider devices that directly belong to this org
+         * unit, i.e. sub-orgunits are not counted. If omitted, all data will be returned.
+         */
+        public FetchUsersRequestingExtension setOrgUnitId(java.lang.String orgUnitId) {
+          this.orgUnitId = orgUnitId;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum number of results to return. Maximum and default are 50. Any page size
+         * larger than 50 will be coerced to 50.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of results to return. Maximum and default are 50. Any page size larger
+       than 50 will be coerced to 50.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Maximum number of results to return. Maximum and default are 50. Any page size
+         * larger than 50 will be coerced to 50.
+         */
+        public FetchUsersRequestingExtension setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. Token to specify the page of the request to be returned. Token expires after 1
+         * day.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Token to specify the page of the request to be returned. Token expires after 1 day.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. Token to specify the page of the request to be returned. Token expires after 1
+         * day.
+         */
+        public FetchUsersRequestingExtension setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public FetchUsersRequestingExtension set(String parameterName, Object value) {
+          return (FetchUsersRequestingExtension) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the Android collection.

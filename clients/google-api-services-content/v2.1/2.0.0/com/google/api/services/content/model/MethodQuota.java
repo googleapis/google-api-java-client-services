@@ -31,30 +31,38 @@ package com.google.api.services.content.model;
 public final class MethodQuota extends com.google.api.client.json.GenericJson {
 
   /**
-   * The method name, for example `products.list`. Method name does not contain version because
-   * quota can be shared between different API versions of the same method.
+   * Output only. The method name, for example `products.list`. Method name does not contain version
+   * because quota can be shared between different API versions of the same method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String method;
 
   /**
-   * The current quota limit per day, meaning the maximum number of calls for the method.
+   * Output only. The maximum number of calls allowed per day for the method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long quotaLimit;
 
   /**
-   * The current quota usage, meaning the number of calls already made to the method.
+   * Output only. The maximum number of calls allowed per minute for the method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long quotaMinuteLimit;
+
+  /**
+   * Output only. The current quota usage, meaning the number of calls already made to the method
+   * per day. Usage is reset every day at 12 PM midday UTC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long quotaUsage;
 
   /**
-   * The method name, for example `products.list`. Method name does not contain version because
-   * quota can be shared between different API versions of the same method.
+   * Output only. The method name, for example `products.list`. Method name does not contain version
+   * because quota can be shared between different API versions of the same method.
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -62,8 +70,8 @@ public final class MethodQuota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The method name, for example `products.list`. Method name does not contain version because
-   * quota can be shared between different API versions of the same method.
+   * Output only. The method name, for example `products.list`. Method name does not contain version
+   * because quota can be shared between different API versions of the same method.
    * @param method method or {@code null} for none
    */
   public MethodQuota setMethod(java.lang.String method) {
@@ -72,7 +80,7 @@ public final class MethodQuota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current quota limit per day, meaning the maximum number of calls for the method.
+   * Output only. The maximum number of calls allowed per day for the method.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuotaLimit() {
@@ -80,7 +88,7 @@ public final class MethodQuota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current quota limit per day, meaning the maximum number of calls for the method.
+   * Output only. The maximum number of calls allowed per day for the method.
    * @param quotaLimit quotaLimit or {@code null} for none
    */
   public MethodQuota setQuotaLimit(java.lang.Long quotaLimit) {
@@ -89,7 +97,25 @@ public final class MethodQuota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current quota usage, meaning the number of calls already made to the method.
+   * Output only. The maximum number of calls allowed per minute for the method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getQuotaMinuteLimit() {
+    return quotaMinuteLimit;
+  }
+
+  /**
+   * Output only. The maximum number of calls allowed per minute for the method.
+   * @param quotaMinuteLimit quotaMinuteLimit or {@code null} for none
+   */
+  public MethodQuota setQuotaMinuteLimit(java.lang.Long quotaMinuteLimit) {
+    this.quotaMinuteLimit = quotaMinuteLimit;
+    return this;
+  }
+
+  /**
+   * Output only. The current quota usage, meaning the number of calls already made to the method
+   * per day. Usage is reset every day at 12 PM midday UTC.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuotaUsage() {
@@ -97,7 +123,8 @@ public final class MethodQuota extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current quota usage, meaning the number of calls already made to the method.
+   * Output only. The current quota usage, meaning the number of calls already made to the method
+   * per day. Usage is reset every day at 12 PM midday UTC.
    * @param quotaUsage quotaUsage or {@code null} for none
    */
   public MethodQuota setQuotaUsage(java.lang.Long quotaUsage) {

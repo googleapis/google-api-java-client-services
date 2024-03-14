@@ -152,6 +152,13 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
   private String updationTime;
 
   /**
+   * User-provided labels associated with the resource
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UserLabels userLabelSet;
+
+  /**
    * User-provided labels, represented as a dictionary where each label is a single key value pair.
    * The value may be {@code null}.
    */
@@ -445,6 +452,23 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   public DatabaseResourceMetadata setUpdationTime(String updationTime) {
     this.updationTime = updationTime;
+    return this;
+  }
+
+  /**
+   * User-provided labels associated with the resource
+   * @return value or {@code null} for none
+   */
+  public UserLabels getUserLabelSet() {
+    return userLabelSet;
+  }
+
+  /**
+   * User-provided labels associated with the resource
+   * @param userLabelSet userLabelSet or {@code null} for none
+   */
+  public DatabaseResourceMetadata setUserLabelSet(UserLabels userLabelSet) {
+    this.userLabelSet = userLabelSet;
     return this;
   }
 

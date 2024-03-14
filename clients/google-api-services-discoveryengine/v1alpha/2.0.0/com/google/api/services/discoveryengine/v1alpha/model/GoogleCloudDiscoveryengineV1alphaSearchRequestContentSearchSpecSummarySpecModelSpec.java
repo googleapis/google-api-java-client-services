@@ -31,9 +31,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
 
   /**
    * The model version used to generate the summary. Supported values are: * `stable`: string.
-   * Default value when no value is specified. Uses a generally available, fine-tuned version of the
-   * text-bison@001 model. * `preview`: string. (Public preview) Uses a fine-tuned version of the
-   * text-bison@002 model. This model works only for summaries in English.
+   * Default value when no value is specified. Uses a generally available, fine-tuned model. For
+   * more information, see [Answer generation model versions and lifecycle](https://cloud.google.com
+   * /generative-ai-app-builder/docs/answer-generation-models). * `preview`: string. (Public
+   * preview) Uses a preview model. For more information, see [Answer generation model versions and
+   * lifecycle](https://cloud.google.com/generative-ai-app-builder/docs/answer-generation-models).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,9 +43,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
 
   /**
    * The model version used to generate the summary. Supported values are: * `stable`: string.
-   * Default value when no value is specified. Uses a generally available, fine-tuned version of the
-   * text-bison@001 model. * `preview`: string. (Public preview) Uses a fine-tuned version of the
-   * text-bison@002 model. This model works only for summaries in English.
+   * Default value when no value is specified. Uses a generally available, fine-tuned model. For
+   * more information, see [Answer generation model versions and lifecycle](https://cloud.google.com
+   * /generative-ai-app-builder/docs/answer-generation-models). * `preview`: string. (Public
+   * preview) Uses a preview model. For more information, see [Answer generation model versions and
+   * lifecycle](https://cloud.google.com/generative-ai-app-builder/docs/answer-generation-models).
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -52,9 +56,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
 
   /**
    * The model version used to generate the summary. Supported values are: * `stable`: string.
-   * Default value when no value is specified. Uses a generally available, fine-tuned version of the
-   * text-bison@001 model. * `preview`: string. (Public preview) Uses a fine-tuned version of the
-   * text-bison@002 model. This model works only for summaries in English.
+   * Default value when no value is specified. Uses a generally available, fine-tuned model. For
+   * more information, see [Answer generation model versions and lifecycle](https://cloud.google.com
+   * /generative-ai-app-builder/docs/answer-generation-models). * `preview`: string. (Public
+   * preview) Uses a preview model. For more information, see [Answer generation model versions and
+   * lifecycle](https://cloud.google.com/generative-ai-app-builder/docs/answer-generation-models).
    * @param version version or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpecModelSpec setVersion(java.lang.String version) {

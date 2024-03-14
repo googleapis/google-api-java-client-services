@@ -69,6 +69,15 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
   private java.lang.Integer numPreviousSegments;
 
   /**
+   * Specifies whether to return the confidence score from the extractive segments in each search
+   * result. This feature is available only for new or allowlisted data stores. To allowlist your
+   * data store, please contact your Customer Engineer. The default value is `false`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean returnExtractiveSegmentScore;
+
+  /**
    * The maximum number of extractive answers returned in each search result. An extractive answer
    * is a verbatim answer extracted from the original document, which provides a precise and
    * contextually relevant answer to the search query. If the number of matching answers is less
@@ -155,6 +164,27 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecExtractiveContentSpec setNumPreviousSegments(java.lang.Integer numPreviousSegments) {
     this.numPreviousSegments = numPreviousSegments;
+    return this;
+  }
+
+  /**
+   * Specifies whether to return the confidence score from the extractive segments in each search
+   * result. This feature is available only for new or allowlisted data stores. To allowlist your
+   * data store, please contact your Customer Engineer. The default value is `false`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReturnExtractiveSegmentScore() {
+    return returnExtractiveSegmentScore;
+  }
+
+  /**
+   * Specifies whether to return the confidence score from the extractive segments in each search
+   * result. This feature is available only for new or allowlisted data stores. To allowlist your
+   * data store, please contact your Customer Engineer. The default value is `false`.
+   * @param returnExtractiveSegmentScore returnExtractiveSegmentScore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecExtractiveContentSpec setReturnExtractiveSegmentScore(java.lang.Boolean returnExtractiveSegmentScore) {
+    this.returnExtractiveSegmentScore = returnExtractiveSegmentScore;
     return this;
   }
 

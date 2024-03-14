@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.discoveryengine.v1beta.model;
+package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
  * The digital parsing configurations for documents.
@@ -27,16 +27,16 @@ package com.google.api.services.discoveryengine.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1DigitalParsingConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigDigitalParsingConfig extends com.google.api.client.json.GenericJson {
 
   @Override
-  public GoogleCloudDiscoveryengineV1DigitalParsingConfig set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1DigitalParsingConfig) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigDigitalParsingConfig set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigDigitalParsingConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1DigitalParsingConfig clone() {
-    return (GoogleCloudDiscoveryengineV1DigitalParsingConfig) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigDigitalParsingConfig clone() {
+    return (GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigDigitalParsingConfig) super.clone();
   }
 
 }

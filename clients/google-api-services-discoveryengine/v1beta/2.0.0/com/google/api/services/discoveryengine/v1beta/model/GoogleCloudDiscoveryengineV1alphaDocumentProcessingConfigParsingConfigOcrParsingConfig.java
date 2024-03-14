@@ -27,7 +27,7 @@ package com.google.api.services.discoveryengine.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1betaOcrParsingConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigOcrParsingConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Apply additional enhanced OCR processing to a list of document elements. Supported values: *
@@ -58,7 +58,7 @@ public final class GoogleCloudDiscoveryengineV1betaOcrParsingConfig extends com.
    * `table`: advanced table parsing model.
    * @param enhancedDocumentElements enhancedDocumentElements or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1betaOcrParsingConfig setEnhancedDocumentElements(java.util.List<java.lang.String> enhancedDocumentElements) {
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigOcrParsingConfig setEnhancedDocumentElements(java.util.List<java.lang.String> enhancedDocumentElements) {
     this.enhancedDocumentElements = enhancedDocumentElements;
     return this;
   }
@@ -75,19 +75,19 @@ public final class GoogleCloudDiscoveryengineV1betaOcrParsingConfig extends com.
    * If true, will use native text instead of OCR text on pages containing native text.
    * @param useNativeText useNativeText or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1betaOcrParsingConfig setUseNativeText(java.lang.Boolean useNativeText) {
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigOcrParsingConfig setUseNativeText(java.lang.Boolean useNativeText) {
     this.useNativeText = useNativeText;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1betaOcrParsingConfig set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1betaOcrParsingConfig) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigOcrParsingConfig set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigOcrParsingConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1betaOcrParsingConfig clone() {
-    return (GoogleCloudDiscoveryengineV1betaOcrParsingConfig) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigOcrParsingConfig clone() {
+    return (GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigOcrParsingConfig) super.clone();
   }
 
 }

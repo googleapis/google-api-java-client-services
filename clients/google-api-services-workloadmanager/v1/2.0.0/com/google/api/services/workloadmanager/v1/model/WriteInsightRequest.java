@@ -30,6 +30,13 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class WriteInsightRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The agent version collected this data point.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentVersion;
+
+  /**
    * Required. The metrics data details.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class WriteInsightRequest extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
+
+  /**
+   * Optional. The agent version collected this data point.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentVersion() {
+    return agentVersion;
+  }
+
+  /**
+   * Optional. The agent version collected this data point.
+   * @param agentVersion agentVersion or {@code null} for none
+   */
+  public WriteInsightRequest setAgentVersion(java.lang.String agentVersion) {
+    this.agentVersion = agentVersion;
+    return this;
+  }
 
   /**
    * Required. The metrics data details.

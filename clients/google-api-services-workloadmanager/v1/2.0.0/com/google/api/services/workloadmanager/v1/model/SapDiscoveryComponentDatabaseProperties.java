@@ -44,6 +44,13 @@ public final class SapDiscoveryComponentDatabaseProperties extends com.google.ap
   private java.lang.String databaseVersion;
 
   /**
+   * Optional. Instance number of the SAP instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceNumber;
+
+  /**
    * Required. URI of the recognized primary instance of the database.
    * The value may be {@code null}.
    */
@@ -89,6 +96,23 @@ public final class SapDiscoveryComponentDatabaseProperties extends com.google.ap
    */
   public SapDiscoveryComponentDatabaseProperties setDatabaseVersion(java.lang.String databaseVersion) {
     this.databaseVersion = databaseVersion;
+    return this;
+  }
+
+  /**
+   * Optional. Instance number of the SAP instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceNumber() {
+    return instanceNumber;
+  }
+
+  /**
+   * Optional. Instance number of the SAP instance.
+   * @param instanceNumber instanceNumber or {@code null} for none
+   */
+  public SapDiscoveryComponentDatabaseProperties setInstanceNumber(java.lang.String instanceNumber) {
+    this.instanceNumber = instanceNumber;
     return this;
   }
 

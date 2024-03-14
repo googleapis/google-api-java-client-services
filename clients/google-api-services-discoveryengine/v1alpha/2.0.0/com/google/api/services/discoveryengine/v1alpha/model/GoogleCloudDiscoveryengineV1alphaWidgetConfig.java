@@ -46,6 +46,15 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
   private java.util.List<java.lang.String> allowlistedDomains;
 
   /**
+   * Output only. Collection components that lists all collections and child data stores associated
+   * with the widget config, those data sources can be used for filtering in widget service APIs,
+   * users can return results that from selected data sources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionComponent> collectionComponents;
+
+  /**
    * Output only. Unique obfuscated identifier of a WidgetConfig.
    * The value may be {@code null}.
    */
@@ -72,6 +81,13 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
    */
   @com.google.api.client.util.Key
   private java.lang.String dataStoreType;
+
+  /**
+   * Configurable UI configurations per data store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreUiConfig> dataStoreUiConfigs;
 
   /**
    * Required. The human readable widget config display name. Used in Discovery UI. This field must
@@ -248,6 +264,27 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
   }
 
   /**
+   * Output only. Collection components that lists all collections and child data stores associated
+   * with the widget config, those data sources can be used for filtering in widget service APIs,
+   * users can return results that from selected data sources.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionComponent> getCollectionComponents() {
+    return collectionComponents;
+  }
+
+  /**
+   * Output only. Collection components that lists all collections and child data stores associated
+   * with the widget config, those data sources can be used for filtering in widget service APIs,
+   * users can return results that from selected data sources.
+   * @param collectionComponents collectionComponents or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfig setCollectionComponents(java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionComponent> collectionComponents) {
+    this.collectionComponents = collectionComponents;
+    return this;
+  }
+
+  /**
    * Output only. Unique obfuscated identifier of a WidgetConfig.
    * @return value or {@code null} for none
    */
@@ -312,6 +349,23 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfig setDataStoreType(java.lang.String dataStoreType) {
     this.dataStoreType = dataStoreType;
+    return this;
+  }
+
+  /**
+   * Configurable UI configurations per data store.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreUiConfig> getDataStoreUiConfigs() {
+    return dataStoreUiConfigs;
+  }
+
+  /**
+   * Configurable UI configurations per data store.
+   * @param dataStoreUiConfigs dataStoreUiConfigs or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfig setDataStoreUiConfigs(java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreUiConfig> dataStoreUiConfigs) {
+    this.dataStoreUiConfigs = dataStoreUiConfigs;
     return this;
   }
 

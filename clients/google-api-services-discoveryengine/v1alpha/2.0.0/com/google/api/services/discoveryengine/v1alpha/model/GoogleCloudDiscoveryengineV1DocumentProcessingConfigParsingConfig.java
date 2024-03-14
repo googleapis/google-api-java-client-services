@@ -34,20 +34,20 @@ public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingCo
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1DigitalParsingConfig digitalParsingConfig;
+  private GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigDigitalParsingConfig digitalParsingConfig;
 
   /**
    * Configurations applied to OCR parser. Currently it only applies to PDFs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1OcrParsingConfig ocrParsingConfig;
+  private GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigOcrParsingConfig ocrParsingConfig;
 
   /**
    * Configurations applied to digital parser.
    * @return value or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1DigitalParsingConfig getDigitalParsingConfig() {
+  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigDigitalParsingConfig getDigitalParsingConfig() {
     return digitalParsingConfig;
   }
 
@@ -55,7 +55,7 @@ public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingCo
    * Configurations applied to digital parser.
    * @param digitalParsingConfig digitalParsingConfig or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig setDigitalParsingConfig(GoogleCloudDiscoveryengineV1DigitalParsingConfig digitalParsingConfig) {
+  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig setDigitalParsingConfig(GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigDigitalParsingConfig digitalParsingConfig) {
     this.digitalParsingConfig = digitalParsingConfig;
     return this;
   }
@@ -64,7 +64,7 @@ public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingCo
    * Configurations applied to OCR parser. Currently it only applies to PDFs.
    * @return value or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1OcrParsingConfig getOcrParsingConfig() {
+  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigOcrParsingConfig getOcrParsingConfig() {
     return ocrParsingConfig;
   }
 
@@ -72,7 +72,7 @@ public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingCo
    * Configurations applied to OCR parser. Currently it only applies to PDFs.
    * @param ocrParsingConfig ocrParsingConfig or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig setOcrParsingConfig(GoogleCloudDiscoveryengineV1OcrParsingConfig ocrParsingConfig) {
+  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig setOcrParsingConfig(GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigOcrParsingConfig ocrParsingConfig) {
     this.ocrParsingConfig = ocrParsingConfig;
     return this;
   }

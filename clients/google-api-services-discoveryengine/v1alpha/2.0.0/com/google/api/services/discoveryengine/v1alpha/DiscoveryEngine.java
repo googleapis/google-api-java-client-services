@@ -4877,21 +4877,20 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  *        tions/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
                  *        caller does not have permission to list Chunks under this document, regardless of whether
                  *        or not this document exists, a `PERMISSION_DENIED` error is returned.
-                 * @param documentsId
                  * @return the request
                  */
-                public List list(java.lang.String parent, java.lang.String documentsId) throws java.io.IOException {
-                  List result = new List(parent, documentsId);
+                public List list(java.lang.String parent) throws java.io.IOException {
+                  List result = new List(parent);
                   initialize(result);
                   return result;
                 }
 
                 public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListChunksResponse> {
 
-                  private static final String REST_PATH = "v1alpha/{+parent}/documents/{documentsId}/chunks";
+                  private static final String REST_PATH = "v1alpha/{+parent}/chunks";
 
                   private final java.util.regex.Pattern PARENT_PATTERN =
-                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
 
                   /**
                    * Gets a list of Chunks.
@@ -4907,18 +4906,16 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                  *        tions/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
                  *        caller does not have permission to list Chunks under this document, regardless of whether
                  *        or not this document exists, a `PERMISSION_DENIED` error is returned.
-                   * @param documentsId
                    * @since 1.13
                    */
-                  protected List(java.lang.String parent, java.lang.String documentsId) {
+                  protected List(java.lang.String parent) {
                     super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListChunksResponse.class);
                     this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                     if (!getSuppressPatternChecks()) {
                       com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                           "Parameter parent must conform to the pattern " +
-                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
                     }
-                    this.documentsId = com.google.api.client.util.Preconditions.checkNotNull(documentsId, "Required parameter documentsId must be specified.");
                   }
 
                   @Override
@@ -5016,24 +5013,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                     if (!getSuppressPatternChecks()) {
                       com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                           "Parameter parent must conform to the pattern " +
-                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
                     }
                     this.parent = parent;
-                    return this;
-                  }
-
-                  @com.google.api.client.util.Key
-                  private java.lang.String documentsId;
-
-                  /**
-
-                   */
-                  public java.lang.String getDocumentsId() {
-                    return documentsId;
-                  }
-
-                  public List setDocumentsId(java.lang.String documentsId) {
-                    this.documentsId = documentsId;
                     return this;
                   }
 
@@ -19735,21 +19717,20 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                *        tions/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
                *        caller does not have permission to list Chunks under this document, regardless of whether
                *        or not this document exists, a `PERMISSION_DENIED` error is returned.
-               * @param documentsId
                * @return the request
                */
-              public List list(java.lang.String parent, java.lang.String documentsId) throws java.io.IOException {
-                List result = new List(parent, documentsId);
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
                 initialize(result);
                 return result;
               }
 
               public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListChunksResponse> {
 
-                private static final String REST_PATH = "v1alpha/{+parent}/documents/{documentsId}/chunks";
+                private static final String REST_PATH = "v1alpha/{+parent}/chunks";
 
                 private final java.util.regex.Pattern PARENT_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
 
                 /**
                  * Gets a list of Chunks.
@@ -19765,18 +19746,16 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                *        tions/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
                *        caller does not have permission to list Chunks under this document, regardless of whether
                *        or not this document exists, a `PERMISSION_DENIED` error is returned.
-                 * @param documentsId
                  * @since 1.13
                  */
-                protected List(java.lang.String parent, java.lang.String documentsId) {
+                protected List(java.lang.String parent) {
                   super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListChunksResponse.class);
                   this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                         "Parameter parent must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                        "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
                   }
-                  this.documentsId = com.google.api.client.util.Preconditions.checkNotNull(documentsId, "Required parameter documentsId must be specified.");
                 }
 
                 @Override
@@ -19874,24 +19853,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                         "Parameter parent must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+$");
+                        "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
                   }
                   this.parent = parent;
-                  return this;
-                }
-
-                @com.google.api.client.util.Key
-                private java.lang.String documentsId;
-
-                /**
-
-                 */
-                public java.lang.String getDocumentsId() {
-                  return documentsId;
-                }
-
-                public List setDocumentsId(java.lang.String documentsId) {
-                  this.documentsId = documentsId;
                   return this;
                 }
 

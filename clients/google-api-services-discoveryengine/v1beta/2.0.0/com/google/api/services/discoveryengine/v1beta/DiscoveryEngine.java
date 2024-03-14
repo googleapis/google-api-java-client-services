@@ -1937,6 +1937,152 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               return (Patch) super.set(parameterName, value);
             }
           }
+          /**
+           * Trains a custom model.
+           *
+           * Create a request for the method "dataStores.trainCustomModel".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link TrainCustomModel#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param dataStore Required. The resource name of the Data Store, such as
+           *        `projects/locations/global/collections/default_collection/dataStores/default_data_store`.
+           *        This field is used to identify the data store where to train the models.
+           * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaTrainCustomModelRequest}
+           * @return the request
+           */
+          public TrainCustomModel trainCustomModel(java.lang.String dataStore, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaTrainCustomModelRequest content) throws java.io.IOException {
+            TrainCustomModel result = new TrainCustomModel(dataStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TrainCustomModel extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta/{+dataStore}:trainCustomModel";
+
+            private final java.util.regex.Pattern DATA_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+            /**
+             * Trains a custom model.
+             *
+             * Create a request for the method "dataStores.trainCustomModel".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link TrainCustomModel#execute()} method to invoke the remote
+             * operation. <p> {@link TrainCustomModel#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param dataStore Required. The resource name of the Data Store, such as
+           *        `projects/locations/global/collections/default_collection/dataStores/default_data_store`.
+           *        This field is used to identify the data store where to train the models.
+             * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaTrainCustomModelRequest}
+             * @since 1.13
+             */
+            protected TrainCustomModel(java.lang.String dataStore, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaTrainCustomModelRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation.class);
+              this.dataStore = com.google.api.client.util.Preconditions.checkNotNull(dataStore, "Required parameter dataStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                    "Parameter dataStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public TrainCustomModel set$Xgafv(java.lang.String $Xgafv) {
+              return (TrainCustomModel) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TrainCustomModel setAccessToken(java.lang.String accessToken) {
+              return (TrainCustomModel) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TrainCustomModel setAlt(java.lang.String alt) {
+              return (TrainCustomModel) super.setAlt(alt);
+            }
+
+            @Override
+            public TrainCustomModel setCallback(java.lang.String callback) {
+              return (TrainCustomModel) super.setCallback(callback);
+            }
+
+            @Override
+            public TrainCustomModel setFields(java.lang.String fields) {
+              return (TrainCustomModel) super.setFields(fields);
+            }
+
+            @Override
+            public TrainCustomModel setKey(java.lang.String key) {
+              return (TrainCustomModel) super.setKey(key);
+            }
+
+            @Override
+            public TrainCustomModel setOauthToken(java.lang.String oauthToken) {
+              return (TrainCustomModel) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TrainCustomModel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TrainCustomModel) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TrainCustomModel setQuotaUser(java.lang.String quotaUser) {
+              return (TrainCustomModel) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TrainCustomModel setUploadType(java.lang.String uploadType) {
+              return (TrainCustomModel) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TrainCustomModel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TrainCustomModel) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Data Store, such as `projects/locations/global/col
+             * lections/default_collection/dataStores/default_data_store`. This field is used to
+             * identify the data store where to train the models.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataStore;
+
+            /** Required. The resource name of the Data Store, such as
+           `projects/locations/global/collections/default_collection/dataStores/default_data_store`. This
+           field is used to identify the data store where to train the models.
+             */
+            public java.lang.String getDataStore() {
+              return dataStore;
+            }
+
+            /**
+             * Required. The resource name of the Data Store, such as `projects/locations/global/col
+             * lections/default_collection/dataStores/default_data_store`. This field is used to
+             * identify the data store where to train the models.
+             */
+            public TrainCustomModel setDataStore(java.lang.String dataStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                    "Parameter dataStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+              }
+              this.dataStore = dataStore;
+              return this;
+            }
+
+            @Override
+            public TrainCustomModel set(String parameterName, Object value) {
+              return (TrainCustomModel) super.set(parameterName, value);
+            }
+          }
 
           /**
            * An accessor for creating requests from the Branches collection.

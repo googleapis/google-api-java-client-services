@@ -27,16 +27,16 @@ package com.google.api.services.discoveryengine.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaDigitalParsingConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigDigitalParsingConfig extends com.google.api.client.json.GenericJson {
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaDigitalParsingConfig set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaDigitalParsingConfig) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigDigitalParsingConfig set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigDigitalParsingConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaDigitalParsingConfig clone() {
-    return (GoogleCloudDiscoveryengineV1alphaDigitalParsingConfig) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigDigitalParsingConfig clone() {
+    return (GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigDigitalParsingConfig) super.clone();
   }
 
 }

@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.discoveryengine.v1alpha.model;
+package com.google.api.services.discoveryengine.v1beta.model;
 
 /**
- * The digital parsing configurations for documents.
+ * The layout parsing configurations for documents.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -27,16 +27,16 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaDigitalParsingConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigLayoutParsingConfig extends com.google.api.client.json.GenericJson {
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaDigitalParsingConfig set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaDigitalParsingConfig) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigLayoutParsingConfig set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigLayoutParsingConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaDigitalParsingConfig clone() {
-    return (GoogleCloudDiscoveryengineV1alphaDigitalParsingConfig) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigLayoutParsingConfig clone() {
+    return (GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigLayoutParsingConfig) super.clone();
   }
 
 }

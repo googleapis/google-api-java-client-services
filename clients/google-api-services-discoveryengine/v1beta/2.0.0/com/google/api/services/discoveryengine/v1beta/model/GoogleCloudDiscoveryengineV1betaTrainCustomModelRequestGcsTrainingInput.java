@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.discoveryengine.v1alpha.model;
+package com.google.api.services.discoveryengine.v1beta.model;
 
 /**
  * Cloud Storage training data input.
@@ -27,7 +27,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1betaTrainCustomModelRequestGcsTrainingInput extends com.google.api.client.json.GenericJson {
 
   /**
    * The Cloud Storage corpus data which could be associated in train data. The data path format is
@@ -85,7 +85,7 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTr
    * text"}`
    * @param corpusDataPath corpusDataPath or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput setCorpusDataPath(java.lang.String corpusDataPath) {
+  public GoogleCloudDiscoveryengineV1betaTrainCustomModelRequestGcsTrainingInput setCorpusDataPath(java.lang.String corpusDataPath) {
     this.corpusDataPath = corpusDataPath;
     return this;
   }
@@ -106,7 +106,7 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTr
    * text. Example: {"_id": "query1", "text": "example query"}
    * @param queryDataPath queryDataPath or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput setQueryDataPath(java.lang.String queryDataPath) {
+  public GoogleCloudDiscoveryengineV1betaTrainCustomModelRequestGcsTrainingInput setQueryDataPath(java.lang.String queryDataPath) {
     this.queryDataPath = queryDataPath;
     return this;
   }
@@ -125,7 +125,7 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTr
    * train/test split will be performed on train_data_path.
    * @param testDataPath testDataPath or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput setTestDataPath(java.lang.String testDataPath) {
+  public GoogleCloudDiscoveryengineV1betaTrainCustomModelRequestGcsTrainingInput setTestDataPath(java.lang.String testDataPath) {
     this.testDataPath = testDataPath;
     return this;
   }
@@ -150,19 +150,19 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTr
    * `query-id\tcorpus-id\tscore` * `query1\tdoc1\t1`
    * @param trainDataPath trainDataPath or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput setTrainDataPath(java.lang.String trainDataPath) {
+  public GoogleCloudDiscoveryengineV1betaTrainCustomModelRequestGcsTrainingInput setTrainDataPath(java.lang.String trainDataPath) {
     this.trainDataPath = trainDataPath;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1betaTrainCustomModelRequestGcsTrainingInput set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1betaTrainCustomModelRequestGcsTrainingInput) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput clone() {
-    return (GoogleCloudDiscoveryengineV1alphaTrainCustomModelRequestGcsTrainingInput) super.clone();
+  public GoogleCloudDiscoveryengineV1betaTrainCustomModelRequestGcsTrainingInput clone() {
+    return (GoogleCloudDiscoveryengineV1betaTrainCustomModelRequestGcsTrainingInput) super.clone();
   }
 
 }

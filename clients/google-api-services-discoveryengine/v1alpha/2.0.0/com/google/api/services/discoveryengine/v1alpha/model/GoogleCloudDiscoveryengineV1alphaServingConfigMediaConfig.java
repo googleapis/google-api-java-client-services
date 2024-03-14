@@ -45,13 +45,6 @@ public final class GoogleCloudDiscoveryengineV1alphaServingConfigMediaConfig ext
   private java.lang.Integer contentFreshnessCutoffDays;
 
   /**
-   * Specifies the content watched minutes threshold for demotion.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float contentWatchedMinutesThreshold;
-
-  /**
    * Specifies the content watched percentage threshold for demotion. Threshold value must be
    * between [0, 1.0] inclusive.
    * The value may be {@code null}.
@@ -92,23 +85,6 @@ public final class GoogleCloudDiscoveryengineV1alphaServingConfigMediaConfig ext
    */
   public GoogleCloudDiscoveryengineV1alphaServingConfigMediaConfig setContentFreshnessCutoffDays(java.lang.Integer contentFreshnessCutoffDays) {
     this.contentFreshnessCutoffDays = contentFreshnessCutoffDays;
-    return this;
-  }
-
-  /**
-   * Specifies the content watched minutes threshold for demotion.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getContentWatchedMinutesThreshold() {
-    return contentWatchedMinutesThreshold;
-  }
-
-  /**
-   * Specifies the content watched minutes threshold for demotion.
-   * @param contentWatchedMinutesThreshold contentWatchedMinutesThreshold or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaServingConfigMediaConfig setContentWatchedMinutesThreshold(java.lang.Float contentWatchedMinutesThreshold) {
-    this.contentWatchedMinutesThreshold = contentWatchedMinutesThreshold;
     return this;
   }
 

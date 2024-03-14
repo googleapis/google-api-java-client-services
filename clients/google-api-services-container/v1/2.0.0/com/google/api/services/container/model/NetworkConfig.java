@@ -55,6 +55,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private DNSConfig dnsConfig;
 
   /**
+   * Whether CiliumClusterwideNetworkPolicy is enabled on this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableCiliumClusterwideNetworkPolicy;
+
+  /**
    * Whether FQDN Network Policy is enabled on this cluster.
    * The value may be {@code null}.
    */
@@ -191,6 +198,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setDnsConfig(DNSConfig dnsConfig) {
     this.dnsConfig = dnsConfig;
+    return this;
+  }
+
+  /**
+   * Whether CiliumClusterwideNetworkPolicy is enabled on this cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableCiliumClusterwideNetworkPolicy() {
+    return enableCiliumClusterwideNetworkPolicy;
+  }
+
+  /**
+   * Whether CiliumClusterwideNetworkPolicy is enabled on this cluster.
+   * @param enableCiliumClusterwideNetworkPolicy enableCiliumClusterwideNetworkPolicy or {@code null} for none
+   */
+  public NetworkConfig setEnableCiliumClusterwideNetworkPolicy(java.lang.Boolean enableCiliumClusterwideNetworkPolicy) {
+    this.enableCiliumClusterwideNetworkPolicy = enableCiliumClusterwideNetworkPolicy;
     return this;
   }
 

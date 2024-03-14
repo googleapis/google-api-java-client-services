@@ -17,7 +17,7 @@
 package com.google.api.services.memcache.v1beta2.model;
 
 /**
- * LINT.IfChange Defines policies to service maintenance events.
+ * Defines policies to service maintenance events.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Memorystore for Memcached API. For a detailed

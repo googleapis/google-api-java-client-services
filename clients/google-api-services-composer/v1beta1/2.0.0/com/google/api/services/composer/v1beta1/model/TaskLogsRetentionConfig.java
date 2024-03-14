@@ -30,16 +30,14 @@ package com.google.api.services.composer.v1beta1.model;
 public final class TaskLogsRetentionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The mode of storage for Airflow workers task logs. For details, see go/composer-
-   * store-task-logs-in-cloud-logging-only-design-doc
+   * Optional. The mode of storage for Airflow workers task logs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String storageMode;
 
   /**
-   * Optional. The mode of storage for Airflow workers task logs. For details, see go/composer-
-   * store-task-logs-in-cloud-logging-only-design-doc
+   * Optional. The mode of storage for Airflow workers task logs.
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageMode() {
@@ -47,8 +45,7 @@ public final class TaskLogsRetentionConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. The mode of storage for Airflow workers task logs. For details, see go/composer-
-   * store-task-logs-in-cloud-logging-only-design-doc
+   * Optional. The mode of storage for Airflow workers task logs.
    * @param storageMode storageMode or {@code null} for none
    */
   public TaskLogsRetentionConfig setStorageMode(java.lang.String storageMode) {

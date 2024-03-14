@@ -102,7 +102,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    * when maintenance is planned, it will be scheduled during the window. The maintenance window
    * period must encompass at least 12 hours per week. This may be split into multiple chunks, each
    * with a size of at least 4 hours. If this value is omitted, the default value for maintenance
-   * window will be applied. The default value is Saturday and Sunday 00-06 GMT.
+   * window is applied. By default, maintenance windows are from 00:00:00 to 04:00:00 (GMT) on
+   * Friday, Saturday, and Sunday every week.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -351,7 +352,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    * when maintenance is planned, it will be scheduled during the window. The maintenance window
    * period must encompass at least 12 hours per week. This may be split into multiple chunks, each
    * with a size of at least 4 hours. If this value is omitted, the default value for maintenance
-   * window will be applied. The default value is Saturday and Sunday 00-06 GMT.
+   * window is applied. By default, maintenance windows are from 00:00:00 to 04:00:00 (GMT) on
+   * Friday, Saturday, and Sunday every week.
    * @return value or {@code null} for none
    */
   public MaintenanceWindow getMaintenanceWindow() {
@@ -365,7 +367,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    * when maintenance is planned, it will be scheduled during the window. The maintenance window
    * period must encompass at least 12 hours per week. This may be split into multiple chunks, each
    * with a size of at least 4 hours. If this value is omitted, the default value for maintenance
-   * window will be applied. The default value is Saturday and Sunday 00-06 GMT.
+   * window is applied. By default, maintenance windows are from 00:00:00 to 04:00:00 (GMT) on
+   * Friday, Saturday, and Sunday every week.
    * @param maintenanceWindow maintenanceWindow or {@code null} for none
    */
   public EnvironmentConfig setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {

@@ -58,7 +58,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The repository's name.
+   * Identifier. The repository's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,7 +168,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The repository's name.
+   * Identifier. The repository's name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -176,7 +176,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The repository's name.
+   * Identifier. The repository's name.
    * @param name name or {@code null} for none
    */
   public Repository setName(java.lang.String name) {

@@ -47,6 +47,20 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   private GoogleCloudDataplexV1DataSource data;
 
   /**
+   * Output only. The result of the data documentation scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDocumentationResult dataDocumentationResult;
+
+  /**
+   * DataDocumentationScan related setting.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDocumentationSpec dataDocumentationSpec;
+
+  /**
    * Output only. The result of the data profile scan.
    * The value may be {@code null}.
    */
@@ -179,6 +193,40 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
    */
   public GoogleCloudDataplexV1DataScan setData(GoogleCloudDataplexV1DataSource data) {
     this.data = data;
+    return this;
+  }
+
+  /**
+   * Output only. The result of the data documentation scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationResult getDataDocumentationResult() {
+    return dataDocumentationResult;
+  }
+
+  /**
+   * Output only. The result of the data documentation scan.
+   * @param dataDocumentationResult dataDocumentationResult or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScan setDataDocumentationResult(GoogleCloudDataplexV1DataDocumentationResult dataDocumentationResult) {
+    this.dataDocumentationResult = dataDocumentationResult;
+    return this;
+  }
+
+  /**
+   * DataDocumentationScan related setting.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationSpec getDataDocumentationSpec() {
+    return dataDocumentationSpec;
+  }
+
+  /**
+   * DataDocumentationScan related setting.
+   * @param dataDocumentationSpec dataDocumentationSpec or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScan setDataDocumentationSpec(GoogleCloudDataplexV1DataDocumentationSpec dataDocumentationSpec) {
+    this.dataDocumentationSpec = dataDocumentationSpec;
     return this;
   }
 

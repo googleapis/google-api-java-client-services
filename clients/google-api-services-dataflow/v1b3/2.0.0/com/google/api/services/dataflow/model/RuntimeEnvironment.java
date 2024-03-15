@@ -126,7 +126,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
    * Optional. Specifies the Streaming Engine message processing guarantees. Reduces cost and
    * latency but might result in duplicate messages committed to storage. Designed to run simple
    * mapping streaming ETL jobs at the lowest cost. For example, Change Data Capture (CDC) to
-   * BigQuery is a canonical use case.
+   * BigQuery is a canonical use case. For more information, see [Set the pipeline streaming
+   * mode](https://cloud.google.com/dataflow/docs/guides/streaming-modes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -407,7 +408,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
    * Optional. Specifies the Streaming Engine message processing guarantees. Reduces cost and
    * latency but might result in duplicate messages committed to storage. Designed to run simple
    * mapping streaming ETL jobs at the lowest cost. For example, Change Data Capture (CDC) to
-   * BigQuery is a canonical use case.
+   * BigQuery is a canonical use case. For more information, see [Set the pipeline streaming
+   * mode](https://cloud.google.com/dataflow/docs/guides/streaming-modes).
    * @return value or {@code null} for none
    */
   public java.lang.String getStreamingMode() {
@@ -418,7 +420,8 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
    * Optional. Specifies the Streaming Engine message processing guarantees. Reduces cost and
    * latency but might result in duplicate messages committed to storage. Designed to run simple
    * mapping streaming ETL jobs at the lowest cost. For example, Change Data Capture (CDC) to
-   * BigQuery is a canonical use case.
+   * BigQuery is a canonical use case. For more information, see [Set the pipeline streaming
+   * mode](https://cloud.google.com/dataflow/docs/guides/streaming-modes).
    * @param streamingMode streamingMode or {@code null} for none
    */
   public RuntimeEnvironment setStreamingMode(java.lang.String streamingMode) {

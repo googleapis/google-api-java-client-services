@@ -513,6 +513,466 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Looks up a single entry.
+       *
+       * Create a request for the method "locations.lookupEntry".
+       *
+       * This request holds the parameters needed by the dataplex server.  After setting any optional
+       * parameters, call the {@link LookupEntry#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The project to which the request should be attributed in the following form:
+       *        projects/{project}/locations/{location}.
+       * @return the request
+       */
+      public LookupEntry lookupEntry(java.lang.String name) throws java.io.IOException {
+        LookupEntry result = new LookupEntry(name);
+        initialize(result);
+        return result;
+      }
+
+      public class LookupEntry extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry> {
+
+        private static final String REST_PATH = "v1/{+name}:lookupEntry";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Looks up a single entry.
+         *
+         * Create a request for the method "locations.lookupEntry".
+         *
+         * This request holds the parameters needed by the the dataplex server.  After setting any
+         * optional parameters, call the {@link LookupEntry#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * LookupEntry#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The project to which the request should be attributed in the following form:
+       *        projects/{project}/locations/{location}.
+         * @since 1.13
+         */
+        protected LookupEntry(java.lang.String name) {
+          super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public LookupEntry set$Xgafv(java.lang.String $Xgafv) {
+          return (LookupEntry) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public LookupEntry setAccessToken(java.lang.String accessToken) {
+          return (LookupEntry) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public LookupEntry setAlt(java.lang.String alt) {
+          return (LookupEntry) super.setAlt(alt);
+        }
+
+        @Override
+        public LookupEntry setCallback(java.lang.String callback) {
+          return (LookupEntry) super.setCallback(callback);
+        }
+
+        @Override
+        public LookupEntry setFields(java.lang.String fields) {
+          return (LookupEntry) super.setFields(fields);
+        }
+
+        @Override
+        public LookupEntry setKey(java.lang.String key) {
+          return (LookupEntry) super.setKey(key);
+        }
+
+        @Override
+        public LookupEntry setOauthToken(java.lang.String oauthToken) {
+          return (LookupEntry) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public LookupEntry setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (LookupEntry) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public LookupEntry setQuotaUser(java.lang.String quotaUser) {
+          return (LookupEntry) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public LookupEntry setUploadType(java.lang.String uploadType) {
+          return (LookupEntry) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public LookupEntry setUploadProtocol(java.lang.String uploadProtocol) {
+          return (LookupEntry) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project to which the request should be attributed in the following form:
+         * projects/{project}/locations/{location}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The project to which the request should be attributed in the following form:
+       projects/{project}/locations/{location}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The project to which the request should be attributed in the following form:
+         * projects/{project}/locations/{location}.
+         */
+        public LookupEntry setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. Limits the aspects returned to the provided aspect types. Only works if the
+         * CUSTOM view is selected.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> aspectTypes;
+
+        /** Optional. Limits the aspects returned to the provided aspect types. Only works if the CUSTOM view
+       is selected.
+         */
+        public java.util.List<java.lang.String> getAspectTypes() {
+          return aspectTypes;
+        }
+
+        /**
+         * Optional. Limits the aspects returned to the provided aspect types. Only works if the
+         * CUSTOM view is selected.
+         */
+        public LookupEntry setAspectTypes(java.util.List<java.lang.String> aspectTypes) {
+          this.aspectTypes = aspectTypes;
+          return this;
+        }
+
+        /**
+         * Required. The resource name of the Entry:
+         * projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+         */
+        @com.google.api.client.util.Key("entry")
+        private java.lang.String entry__;
+
+        /** Required. The resource name of the Entry:
+       projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+         */
+        public java.lang.String getEntry() {
+          return entry__;
+        }
+
+        /**
+         * Required. The resource name of the Entry:
+         * projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+         */
+        public LookupEntry setEntry(java.lang.String entry__) {
+          this.entry__ = entry__;
+          return this;
+        }
+
+        /**
+         * Optional. Limits the aspects returned to those associated with the provided paths within
+         * the Entry. Only works if the CUSTOM view is selected.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> paths;
+
+        /** Optional. Limits the aspects returned to those associated with the provided paths within the Entry.
+       Only works if the CUSTOM view is selected.
+         */
+        public java.util.List<java.lang.String> getPaths() {
+          return paths;
+        }
+
+        /**
+         * Optional. Limits the aspects returned to those associated with the provided paths within
+         * the Entry. Only works if the CUSTOM view is selected.
+         */
+        public LookupEntry setPaths(java.util.List<java.lang.String> paths) {
+          this.paths = paths;
+          return this;
+        }
+
+        /** Optional. View for controlling which parts of an entry are to be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Optional. View for controlling which parts of an entry are to be returned.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /** Optional. View for controlling which parts of an entry are to be returned. */
+        public LookupEntry setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public LookupEntry set(String parameterName, Object value) {
+          return (LookupEntry) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Searches for entries matching given query and scope.
+       *
+       * Create a request for the method "locations.searchEntries".
+       *
+       * This request holds the parameters needed by the dataplex server.  After setting any optional
+       * parameters, call the {@link SearchEntries#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The project to which the request should be attributed in the following form:
+       *        projects/{project}/locations/{location}.
+       * @return the request
+       */
+      public SearchEntries searchEntries(java.lang.String name) throws java.io.IOException {
+        SearchEntries result = new SearchEntries(name);
+        initialize(result);
+        return result;
+      }
+
+      public class SearchEntries extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1SearchEntriesResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:searchEntries";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Searches for entries matching given query and scope.
+         *
+         * Create a request for the method "locations.searchEntries".
+         *
+         * This request holds the parameters needed by the the dataplex server.  After setting any
+         * optional parameters, call the {@link SearchEntries#execute()} method to invoke the remote
+         * operation. <p> {@link SearchEntries#initialize(com.google.api.client.googleapis.services.Abstra
+         * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. The project to which the request should be attributed in the following form:
+       *        projects/{project}/locations/{location}.
+         * @since 1.13
+         */
+        protected SearchEntries(java.lang.String name) {
+          super(CloudDataplex.this, "POST", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1SearchEntriesResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public SearchEntries set$Xgafv(java.lang.String $Xgafv) {
+          return (SearchEntries) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SearchEntries setAccessToken(java.lang.String accessToken) {
+          return (SearchEntries) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SearchEntries setAlt(java.lang.String alt) {
+          return (SearchEntries) super.setAlt(alt);
+        }
+
+        @Override
+        public SearchEntries setCallback(java.lang.String callback) {
+          return (SearchEntries) super.setCallback(callback);
+        }
+
+        @Override
+        public SearchEntries setFields(java.lang.String fields) {
+          return (SearchEntries) super.setFields(fields);
+        }
+
+        @Override
+        public SearchEntries setKey(java.lang.String key) {
+          return (SearchEntries) super.setKey(key);
+        }
+
+        @Override
+        public SearchEntries setOauthToken(java.lang.String oauthToken) {
+          return (SearchEntries) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SearchEntries setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SearchEntries) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SearchEntries setQuotaUser(java.lang.String quotaUser) {
+          return (SearchEntries) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SearchEntries setUploadType(java.lang.String uploadType) {
+          return (SearchEntries) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SearchEntries setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SearchEntries) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project to which the request should be attributed in the following form:
+         * projects/{project}/locations/{location}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The project to which the request should be attributed in the following form:
+       projects/{project}/locations/{location}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The project to which the request should be attributed in the following form:
+         * projects/{project}/locations/{location}.
+         */
+        public SearchEntries setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. Ordering of the results. Supported options to be added later. */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. Ordering of the results. Supported options to be added later.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /** Optional. Ordering of the results. Supported options to be added later. */
+        public SearchEntries setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /** Optional. Pagination. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Pagination.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Optional. Pagination. */
+        public SearchEntries setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /**
+
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        public SearchEntries setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /** Required. The query against which entries in scope should be matched. */
+        @com.google.api.client.util.Key
+        private java.lang.String query;
+
+        /** Required. The query against which entries in scope should be matched.
+         */
+        public java.lang.String getQuery() {
+          return query;
+        }
+
+        /** Required. The query against which entries in scope should be matched. */
+        public SearchEntries setQuery(java.lang.String query) {
+          this.query = query;
+          return this;
+        }
+
+        /**
+         * Optional. The scope under which the search should be operating. Should either be
+         * organizations/ or projects/. If left unspecified, it will default to the organization
+         * where the project provided in name is located.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String scope;
+
+        /** Optional. The scope under which the search should be operating. Should either be organizations/ or
+       projects/. If left unspecified, it will default to the organization where the project provided in
+       name is located.
+         */
+        public java.lang.String getScope() {
+          return scope;
+        }
+
+        /**
+         * Optional. The scope under which the search should be operating. Should either be
+         * organizations/ or projects/. If left unspecified, it will default to the organization
+         * where the project provided in name is located.
+         */
+        public SearchEntries setScope(java.lang.String scope) {
+          this.scope = scope;
+          return this;
+        }
+
+        @Override
+        public SearchEntries set(String parameterName, Object value) {
+          return (SearchEntries) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the AspectTypes collection.
@@ -534,6 +994,496 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
        */
       public class AspectTypes {
 
+        /**
+         * Creates an AspectType
+         *
+         * Create a request for the method "aspectTypes.create".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the AspectType, of the form:
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1AspectType}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1AspectType content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/aspectTypes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates an AspectType
+           *
+           * Create a request for the method "aspectTypes.create".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the AspectType, of the form:
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1AspectType}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1AspectType content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the AspectType, of the form:
+           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+           * region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the AspectType, of the form:
+         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the AspectType, of the form:
+           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+           * region.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. AspectType identifier. */
+          @com.google.api.client.util.Key
+          private java.lang.String aspectTypeId;
+
+          /** Required. AspectType identifier.
+           */
+          public java.lang.String getAspectTypeId() {
+            return aspectTypeId;
+          }
+
+          /** Required. AspectType identifier. */
+          public Create setAspectTypeId(java.lang.String aspectTypeId) {
+            this.aspectTypeId = aspectTypeId;
+            return this;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Only validate the request, but do not perform mutations. The default is false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a AspectType resource.
+         *
+         * Create a request for the method "aspectTypes.delete".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the AspectType:
+         *        projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aspectTypes/[^/]+$");
+
+          /**
+           * Deletes a AspectType resource.
+           *
+           * Create a request for the method "aspectTypes.delete".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the AspectType:
+         *        projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudDataplex.this, "DELETE", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/aspectTypes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the AspectType:
+           * projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the AspectType:
+         projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the AspectType:
+           * projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/aspectTypes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If the client provided etag value does not match the current etag value, the
+           * DeleteAspectTypeRequest method returns an ABORTED error response
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. If the client provided etag value does not match the current etag value, the
+         DeleteAspectTypeRequest method returns an ABORTED error response
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. If the client provided etag value does not match the current etag value, the
+           * DeleteAspectTypeRequest method returns an ABORTED error response
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves a AspectType resource.
+         *
+         * Create a request for the method "aspectTypes.get".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the AspectType:
+         *        projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1AspectType> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aspectTypes/[^/]+$");
+
+          /**
+           * Retrieves a AspectType resource.
+           *
+           * Create a request for the method "aspectTypes.get".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the AspectType:
+         *        projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1AspectType.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/aspectTypes/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the AspectType:
+           * projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the AspectType:
+         projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the AspectType:
+           * projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/aspectTypes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
         /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
@@ -729,6 +1679,436 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists AspectType resources in a project and location.
+         *
+         * Create a request for the method "aspectTypes.list".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the AspectType location, of the form:
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListAspectTypesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/aspectTypes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists AspectType resources in a project and location.
+           *
+           * Create a request for the method "aspectTypes.list".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the AspectType location, of the form:
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListAspectTypesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the AspectType location, of the form:
+           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+           * region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the AspectType location, of the form:
+         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the AspectType location, of the form:
+           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+           * region.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter request. Filters are case-sensitive. The following formats are
+           * supported:labels.key1 = "value1" labels:key1 name = "value" These restrictions can be
+           * coinjoined with AND, OR and NOT conjunctions.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter request. Filters are case-sensitive. The following formats are
+         supported:labels.key1 = "value1" labels:key1 name = "value" These restrictions can be coinjoined
+         with AND, OR and NOT conjunctions.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter request. Filters are case-sensitive. The following formats are
+           * supported:labels.key1 = "value1" labels:key1 name = "value" These restrictions can be
+           * coinjoined with AND, OR and NOT conjunctions.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Order by fields (name or create_time) for the result. If not specified, the
+           * ordering is undefined.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Order by fields (name or create_time) for the result. If not specified, the ordering is
+         undefined.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Order by fields (name or create_time) for the result. If not specified, the
+           * ordering is undefined.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of AspectTypes to return. The service may return fewer than
+           * this value. If unspecified, at most 10 AspectTypes will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of AspectTypes to return. The service may return fewer than this value. If
+         unspecified, at most 10 AspectTypes will be returned. The maximum value is 1000; values above 1000
+         will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of AspectTypes to return. The service may return fewer than
+           * this value. If unspecified, at most 10 AspectTypes will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Page token received from a previous ListAspectTypes call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * ListAspectTypes must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token received from a previous ListAspectTypes call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to ListAspectTypes must match the
+         call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Page token received from a previous ListAspectTypes call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * ListAspectTypes must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a AspectType resource.
+         *
+         * Create a request for the method "aspectTypes.patch".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The relative resource name of the AspectType, of the form:
+         *        projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1AspectType}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1AspectType content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aspectTypes/[^/]+$");
+
+          /**
+           * Updates a AspectType resource.
+           *
+           * Create a request for the method "aspectTypes.patch".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The relative resource name of the AspectType, of the form:
+         *        projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1AspectType}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1AspectType content) {
+            super(CloudDataplex.this, "PATCH", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/aspectTypes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The relative resource name of the AspectType, of the form:
+           * projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The relative resource name of the AspectType, of the form:
+         projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The relative resource name of the AspectType, of the form:
+           * projects/{project_number}/locations/{location_id}/aspectTypes/{aspect_type_id}.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/aspectTypes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. Mask of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Mask of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Required. Mask of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Only validate the request, but do not perform mutations. The default is false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**
@@ -2823,6 +4203,149 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
+         * Generates recommended DataQualityRule from a data profiling DataScan.
+         *
+         * Create a request for the method "dataScans.generateDataQualityRules".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link GenerateDataQualityRules#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The name should be either * the name of a datascan with at least one successful completed
+         *        data profiling job, or * the name of a successful completed data profiling datascan job.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesRequest}
+         * @return the request
+         */
+        public GenerateDataQualityRules generateDataQualityRules(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesRequest content) throws java.io.IOException {
+          GenerateDataQualityRules result = new GenerateDataQualityRules(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateDataQualityRules extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:generateDataQualityRules";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+
+          /**
+           * Generates recommended DataQualityRule from a data profiling DataScan.
+           *
+           * Create a request for the method "dataScans.generateDataQualityRules".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link GenerateDataQualityRules#execute()} method to invoke the
+           * remote operation. <p> {@link GenerateDataQualityRules#initialize(com.google.api.client.googleap
+           * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name should be either * the name of a datascan with at least one successful completed
+         *        data profiling job, or * the name of a successful completed data profiling datascan job.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesRequest}
+           * @since 1.13
+           */
+          protected GenerateDataQualityRules(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesRequest content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateDataQualityRules set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateDataQualityRules) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateDataQualityRules setAccessToken(java.lang.String accessToken) {
+            return (GenerateDataQualityRules) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateDataQualityRules setAlt(java.lang.String alt) {
+            return (GenerateDataQualityRules) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateDataQualityRules setCallback(java.lang.String callback) {
+            return (GenerateDataQualityRules) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateDataQualityRules setFields(java.lang.String fields) {
+            return (GenerateDataQualityRules) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateDataQualityRules setKey(java.lang.String key) {
+            return (GenerateDataQualityRules) super.setKey(key);
+          }
+
+          @Override
+          public GenerateDataQualityRules setOauthToken(java.lang.String oauthToken) {
+            return (GenerateDataQualityRules) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateDataQualityRules setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateDataQualityRules) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateDataQualityRules setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateDataQualityRules) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateDataQualityRules setUploadType(java.lang.String uploadType) {
+            return (GenerateDataQualityRules) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateDataQualityRules setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateDataQualityRules) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name should be either * the name of a datascan with at least one
+           * successful completed data profiling job, or * the name of a successful completed data
+           * profiling datascan job.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name should be either * the name of a datascan with at least one successful completed
+         data profiling job, or * the name of a successful completed data profiling datascan job.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name should be either * the name of a datascan with at least one
+           * successful completed data profiling job, or * the name of a successful completed data
+           * profiling datascan job.
+           */
+          public GenerateDataQualityRules setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GenerateDataQualityRules set(String parameterName, Object value) {
+            return (GenerateDataQualityRules) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets a DataScan resource.
          *
          * Create a request for the method "dataScans.get".
@@ -4076,6 +5599,149 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          */
         public class Jobs {
 
+          /**
+           * Generates recommended DataQualityRule from a data profiling DataScan.
+           *
+           * Create a request for the method "jobs.generateDataQualityRules".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link GenerateDataQualityRules#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The name should be either * the name of a datascan with at least one successful completed
+           *        data profiling job, or * the name of a successful completed data profiling datascan job.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesRequest}
+           * @return the request
+           */
+          public GenerateDataQualityRules generateDataQualityRules(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesRequest content) throws java.io.IOException {
+            GenerateDataQualityRules result = new GenerateDataQualityRules(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class GenerateDataQualityRules extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:generateDataQualityRules";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+/jobs/[^/]+$");
+
+            /**
+             * Generates recommended DataQualityRule from a data profiling DataScan.
+             *
+             * Create a request for the method "jobs.generateDataQualityRules".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link GenerateDataQualityRules#execute()} method to invoke the
+             * remote operation. <p> {@link GenerateDataQualityRules#initialize(com.google.api.client.googleap
+             * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name should be either * the name of a datascan with at least one successful completed
+           *        data profiling job, or * the name of a successful completed data profiling datascan job.
+             * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesRequest}
+             * @since 1.13
+             */
+            protected GenerateDataQualityRules(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesRequest content) {
+              super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+/jobs/[^/]+$");
+              }
+            }
+
+            @Override
+            public GenerateDataQualityRules set$Xgafv(java.lang.String $Xgafv) {
+              return (GenerateDataQualityRules) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GenerateDataQualityRules setAccessToken(java.lang.String accessToken) {
+              return (GenerateDataQualityRules) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GenerateDataQualityRules setAlt(java.lang.String alt) {
+              return (GenerateDataQualityRules) super.setAlt(alt);
+            }
+
+            @Override
+            public GenerateDataQualityRules setCallback(java.lang.String callback) {
+              return (GenerateDataQualityRules) super.setCallback(callback);
+            }
+
+            @Override
+            public GenerateDataQualityRules setFields(java.lang.String fields) {
+              return (GenerateDataQualityRules) super.setFields(fields);
+            }
+
+            @Override
+            public GenerateDataQualityRules setKey(java.lang.String key) {
+              return (GenerateDataQualityRules) super.setKey(key);
+            }
+
+            @Override
+            public GenerateDataQualityRules setOauthToken(java.lang.String oauthToken) {
+              return (GenerateDataQualityRules) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GenerateDataQualityRules setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GenerateDataQualityRules) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GenerateDataQualityRules setQuotaUser(java.lang.String quotaUser) {
+              return (GenerateDataQualityRules) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GenerateDataQualityRules setUploadType(java.lang.String uploadType) {
+              return (GenerateDataQualityRules) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GenerateDataQualityRules setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GenerateDataQualityRules) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name should be either * the name of a datascan with at least one
+             * successful completed data profiling job, or * the name of a successful completed data
+             * profiling datascan job.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name should be either * the name of a datascan with at least one successful completed
+           data profiling job, or * the name of a successful completed data profiling datascan job.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name should be either * the name of a datascan with at least one
+             * successful completed data profiling job, or * the name of a successful completed data
+             * profiling datascan job.
+             */
+            public GenerateDataQualityRules setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+/jobs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GenerateDataQualityRules set(String parameterName, Object value) {
+              return (GenerateDataQualityRules) super.set(parameterName, value);
+            }
+          }
           /**
            * Gets a DataScanJob resource.
            *
@@ -7363,6 +9029,496 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
       public class EntryGroups {
 
         /**
+         * Creates an EntryGroup
+         *
+         * Create a request for the method "entryGroups.create".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the entryGroup, of the form:
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/entryGroups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates an EntryGroup
+           *
+           * Create a request for the method "entryGroups.create".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the entryGroup, of the form:
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the entryGroup, of the form:
+           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+           * region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the entryGroup, of the form:
+         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the entryGroup, of the form:
+           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+           * region.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. EntryGroup identifier. */
+          @com.google.api.client.util.Key
+          private java.lang.String entryGroupId;
+
+          /** Required. EntryGroup identifier.
+           */
+          public java.lang.String getEntryGroupId() {
+            return entryGroupId;
+          }
+
+          /** Required. EntryGroup identifier. */
+          public Create setEntryGroupId(java.lang.String entryGroupId) {
+            this.entryGroupId = entryGroupId;
+            return this;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Only validate the request, but do not perform mutations. The default is false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a EntryGroup resource.
+         *
+         * Create a request for the method "entryGroups.delete".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the EntryGroup:
+         *        projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+
+          /**
+           * Deletes a EntryGroup resource.
+           *
+           * Create a request for the method "entryGroups.delete".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the EntryGroup:
+         *        projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudDataplex.this, "DELETE", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the EntryGroup:
+           * projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the EntryGroup:
+         projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the EntryGroup:
+           * projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If the client provided etag value does not match the current etag value, the
+           * DeleteEntryGroupRequest method returns an ABORTED error response
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. If the client provided etag value does not match the current etag value, the
+         DeleteEntryGroupRequest method returns an ABORTED error response
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. If the client provided etag value does not match the current etag value, the
+           * DeleteEntryGroupRequest method returns an ABORTED error response
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves a EntryGroup resource.
+         *
+         * Create a request for the method "entryGroups.get".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the EntryGroup:
+         *        projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+
+          /**
+           * Retrieves a EntryGroup resource.
+           *
+           * Create a request for the method "entryGroups.get".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the EntryGroup:
+         *        projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the EntryGroup:
+           * projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the EntryGroup:
+         projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the EntryGroup:
+           * projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -7557,6 +9713,419 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists EntryGroup resources in a project and location.
+         *
+         * Create a request for the method "entryGroups.list".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the entryGroup location, of the form:
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListEntryGroupsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/entryGroups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists EntryGroup resources in a project and location.
+           *
+           * Create a request for the method "entryGroups.list".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the entryGroup location, of the form:
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListEntryGroupsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the entryGroup location, of the form:
+           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+           * region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the entryGroup location, of the form:
+         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the entryGroup location, of the form:
+           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+           * region.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filter request. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter request.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filter request. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Order by fields for the result. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Order by fields for the result.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Order by fields for the result. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of EntryGroups to return. The service may return fewer than
+           * this value. If unspecified, at most 10 EntryGroups will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of EntryGroups to return. The service may return fewer than this value. If
+         unspecified, at most 10 EntryGroups will be returned. The maximum value is 1000; values above 1000
+         will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of EntryGroups to return. The service may return fewer than
+           * this value. If unspecified, at most 10 EntryGroups will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Page token received from a previous ListEntryGroups call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * ListEntryGroups must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token received from a previous ListEntryGroups call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to ListEntryGroups must match the
+         call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Page token received from a previous ListEntryGroups call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * ListEntryGroups must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a EntryGroup resource.
+         *
+         * Create a request for the method "entryGroups.patch".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The relative resource name of the EntryGroup, of the form:
+         *        projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+
+          /**
+           * Updates a EntryGroup resource.
+           *
+           * Create a request for the method "entryGroups.patch".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The relative resource name of the EntryGroup, of the form:
+         *        projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup content) {
+            super(CloudDataplex.this, "PATCH", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The relative resource name of the EntryGroup, of the form:
+           * projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The relative resource name of the EntryGroup, of the form:
+         projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The relative resource name of the EntryGroup, of the form:
+           * projects/{project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. Mask of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Mask of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Required. Mask of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Only validate the request, but do not perform mutations. The default is false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**
@@ -7856,6 +10425,1021 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
 
+        /**
+         * An accessor for creating requests from the Entries collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudDataplex dataplex = new CloudDataplex(...);}
+         *   {@code CloudDataplex.Entries.List request = dataplex.entries().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Entries entries() {
+          return new Entries();
+        }
+
+        /**
+         * The "entries" collection of methods.
+         */
+        public class Entries {
+
+          /**
+           * Creates an Entry.
+           *
+           * Create a request for the method "entries.create".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the parent Entry Group:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry> {
+
+            private static final String REST_PATH = "v1/{+parent}/entries";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+
+            /**
+             * Creates an Entry.
+             *
+             * Create a request for the method "entries.create".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the parent Entry Group:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry content) {
+              super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the parent Entry Group:
+             * projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the parent Entry Group:
+           projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the parent Entry Group:
+             * projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. Entry identifier. It has to be unique within an Entry Group.Entries
+             * corresponding to Google Cloud resources use Entry ID format based on Full Resource
+             * Names (https://cloud.google.com/apis/design/resource_names#full_resource_name). The
+             * format is a Full Resource Name of the resource without the prefix double slashes in
+             * the API Service Name part of Full Resource Name. This allows retrieval of entries
+             * using their associated resource name.For example if the Full Resource Name of a
+             * resource is //library.googleapis.com/shelves/shelf1/books/book2, then the suggested
+             * entry_id is library.googleapis.com/shelves/shelf1/books/book2.It is also suggested to
+             * follow the same convention for entries corresponding to resources from other
+             * providers or systems than Google Cloud.The maximum size of the field is 4000
+             * characters.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String entryId;
+
+            /** Required. Entry identifier. It has to be unique within an Entry Group.Entries corresponding to
+           Google Cloud resources use Entry ID format based on Full Resource Names
+           (https://cloud.google.com/apis/design/resource_names#full_resource_name). The format is a Full
+           Resource Name of the resource without the prefix double slashes in the API Service Name part of
+           Full Resource Name. This allows retrieval of entries using their associated resource name.For
+           example if the Full Resource Name of a resource is
+           //library.googleapis.com/shelves/shelf1/books/book2, then the suggested entry_id is
+           library.googleapis.com/shelves/shelf1/books/book2.It is also suggested to follow the same
+           convention for entries corresponding to resources from other providers or systems than Google
+           Cloud.The maximum size of the field is 4000 characters.
+             */
+            public java.lang.String getEntryId() {
+              return entryId;
+            }
+
+            /**
+             * Required. Entry identifier. It has to be unique within an Entry Group.Entries
+             * corresponding to Google Cloud resources use Entry ID format based on Full Resource
+             * Names (https://cloud.google.com/apis/design/resource_names#full_resource_name). The
+             * format is a Full Resource Name of the resource without the prefix double slashes in
+             * the API Service Name part of Full Resource Name. This allows retrieval of entries
+             * using their associated resource name.For example if the Full Resource Name of a
+             * resource is //library.googleapis.com/shelves/shelf1/books/book2, then the suggested
+             * entry_id is library.googleapis.com/shelves/shelf1/books/book2.It is also suggested to
+             * follow the same convention for entries corresponding to resources from other
+             * providers or systems than Google Cloud.The maximum size of the field is 4000
+             * characters.
+             */
+            public Create setEntryId(java.lang.String entryId) {
+              this.entryId = entryId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an Entry.
+           *
+           * Create a request for the method "entries.delete".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Entry:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/.*$");
+
+            /**
+             * Deletes an Entry.
+             *
+             * Create a request for the method "entries.delete".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Entry:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudDataplex.this, "DELETE", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/.*$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Entry:
+             * projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Entry:
+           projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Entry:
+             * projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a single entry.
+           *
+           * Create a request for the method "entries.get".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Entry:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/.*$");
+
+            /**
+             * Gets a single entry.
+             *
+             * Create a request for the method "entries.get".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Entry:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/.*$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Entry:
+             * projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Entry:
+           projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Entry:
+             * projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Limits the aspects returned to the provided aspect types. Only works if the
+             * CUSTOM view is selected.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> aspectTypes;
+
+            /** Optional. Limits the aspects returned to the provided aspect types. Only works if the CUSTOM view
+           is selected.
+             */
+            public java.util.List<java.lang.String> getAspectTypes() {
+              return aspectTypes;
+            }
+
+            /**
+             * Optional. Limits the aspects returned to the provided aspect types. Only works if the
+             * CUSTOM view is selected.
+             */
+            public Get setAspectTypes(java.util.List<java.lang.String> aspectTypes) {
+              this.aspectTypes = aspectTypes;
+              return this;
+            }
+
+            /**
+             * Optional. Limits the aspects returned to those associated with the provided paths
+             * within the Entry. Only works if the CUSTOM view is selected.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> paths;
+
+            /** Optional. Limits the aspects returned to those associated with the provided paths within the Entry.
+           Only works if the CUSTOM view is selected.
+             */
+            public java.util.List<java.lang.String> getPaths() {
+              return paths;
+            }
+
+            /**
+             * Optional. Limits the aspects returned to those associated with the provided paths
+             * within the Entry. Only works if the CUSTOM view is selected.
+             */
+            public Get setPaths(java.util.List<java.lang.String> paths) {
+              this.paths = paths;
+              return this;
+            }
+
+            /** Optional. View for controlling which parts of an entry are to be returned. */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. View for controlling which parts of an entry are to be returned.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /** Optional. View for controlling which parts of an entry are to be returned. */
+            public Get setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists entries within an entry group.
+           *
+           * Create a request for the method "entries.list".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the parent Entry Group:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListEntriesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/entries";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+
+            /**
+             * Lists entries within an entry group.
+             *
+             * Create a request for the method "entries.list".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the parent Entry Group:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListEntriesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the parent Entry Group:
+             * projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the parent Entry Group:
+           projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the parent Entry Group:
+             * projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. A filter on the entries to return. Filters are case-sensitive. The request
+             * can be filtered by the following fields: entry_type, display_name. The comparison
+             * operators are =, !=, <, >, <=, >= (strings are compared according to lexical order)
+             * The logical operators AND, OR, NOT can be used in the filter. Example filter
+             * expressions: "display_name=AnExampleDisplayName" "entry_type=projects/example-
+             * project/locations/global/entryTypes/example-entry_type" "entry_type=projects/a* OR
+             * "entry_type=projects/k*" "NOT display_name=AnotherExampleDisplayName"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. A filter on the entries to return. Filters are case-sensitive. The request can be
+           filtered by the following fields: entry_type, display_name. The comparison operators are =, !=, <,
+           >, <=, >= (strings are compared according to lexical order) The logical operators AND, OR, NOT can
+           be used in the filter. Example filter expressions: "display_name=AnExampleDisplayName"
+           "entry_type=projects/example-project/locations/global/entryTypes/example-entry_type"
+           "entry_type=projects/a* OR "entry_type=projects/k*" "NOT display_name=AnotherExampleDisplayName"
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. A filter on the entries to return. Filters are case-sensitive. The request
+             * can be filtered by the following fields: entry_type, display_name. The comparison
+             * operators are =, !=, <, >, <=, >= (strings are compared according to lexical order)
+             * The logical operators AND, OR, NOT can be used in the filter. Example filter
+             * expressions: "display_name=AnExampleDisplayName" "entry_type=projects/example-
+             * project/locations/global/entryTypes/example-entry_type" "entry_type=projects/a* OR
+             * "entry_type=projects/k*" "NOT display_name=AnotherExampleDisplayName"
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /**
+
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. The pagination token returned by a previous request. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The pagination token returned by a previous request.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. The pagination token returned by a previous request. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an Entry.
+           *
+           * Create a request for the method "entries.patch".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Identifier. The relative resource name of the Entry, of the form:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/.*$");
+
+            /**
+             * Updates an Entry.
+             *
+             * Create a request for the method "entries.patch".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Identifier. The relative resource name of the Entry, of the form:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+             * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry content) {
+              super(CloudDataplex.this, "PATCH", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Entry.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/.*$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Identifier. The relative resource name of the Entry, of the form:
+             * projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Identifier. The relative resource name of the Entry, of the form:
+           projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Identifier. The relative resource name of the Entry, of the form:
+             * projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Optional. If set to true and the entry does not exist, it will be created. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean allowMissing;
+
+            /** Optional. If set to true and the entry does not exist, it will be created.
+             */
+            public java.lang.Boolean getAllowMissing() {
+              return allowMissing;
+            }
+
+            /** Optional. If set to true and the entry does not exist, it will be created. */
+            public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+              this.allowMissing = allowMissing;
+              return this;
+            }
+
+            /**
+             * Optional. The map keys of the Aspects which should be modified. Supports the
+             * following syntaxes: * - matches aspect on given type and empty path * @path - matches
+             * aspect on given type and specified path * * - matches aspects on given type for all
+             * paths * *@path - matches aspects of all types on the given pathExisting aspects
+             * matching the syntax will not be removed unless delete_missing_aspects is set to
+             * true.If this field is left empty, it will be treated as specifying exactly those
+             * Aspects present in the request.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> aspectKeys;
+
+            /** Optional. The map keys of the Aspects which should be modified. Supports the following syntaxes: *
+           - matches aspect on given type and empty path * @path - matches aspect on given type and specified
+           path * * - matches aspects on given type for all paths * *@path - matches aspects of all types on
+           the given pathExisting aspects matching the syntax will not be removed unless
+           delete_missing_aspects is set to true.If this field is left empty, it will be treated as specifying
+           exactly those Aspects present in the request.
+             */
+            public java.util.List<java.lang.String> getAspectKeys() {
+              return aspectKeys;
+            }
+
+            /**
+             * Optional. The map keys of the Aspects which should be modified. Supports the
+             * following syntaxes: * - matches aspect on given type and empty path * @path - matches
+             * aspect on given type and specified path * * - matches aspects on given type for all
+             * paths * *@path - matches aspects of all types on the given pathExisting aspects
+             * matching the syntax will not be removed unless delete_missing_aspects is set to
+             * true.If this field is left empty, it will be treated as specifying exactly those
+             * Aspects present in the request.
+             */
+            public Patch setAspectKeys(java.util.List<java.lang.String> aspectKeys) {
+              this.aspectKeys = aspectKeys;
+              return this;
+            }
+
+            /**
+             * Optional. If set to true and the aspect_keys specify aspect ranges, any existing
+             * aspects from that range not provided in the request will be deleted.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean deleteMissingAspects;
+
+            /** Optional. If set to true and the aspect_keys specify aspect ranges, any existing aspects from that
+           range not provided in the request will be deleted.
+             */
+            public java.lang.Boolean getDeleteMissingAspects() {
+              return deleteMissingAspects;
+            }
+
+            /**
+             * Optional. If set to true and the aspect_keys specify aspect ranges, any existing
+             * aspects from that range not provided in the request will be deleted.
+             */
+            public Patch setDeleteMissingAspects(java.lang.Boolean deleteMissingAspects) {
+              this.deleteMissingAspects = deleteMissingAspects;
+              return this;
+            }
+
+            /**
+             * Optional. Mask of fields to update. To update Aspects, the update_mask must contain
+             * the value "aspects".If the update_mask is empty, all modifiable fields present in the
+             * request will be updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Optional. Mask of fields to update. To update Aspects, the update_mask must contain the value
+           "aspects".If the update_mask is empty, all modifiable fields present in the request will be
+           updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Optional. Mask of fields to update. To update Aspects, the update_mask must contain
+             * the value "aspects".If the update_mask is empty, all modifiable fields present in the
+             * request will be updated.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the EntryTypes collection.
@@ -7877,6 +11461,496 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
        */
       public class EntryTypes {
 
+        /**
+         * Creates an EntryType
+         *
+         * Create a request for the method "entryTypes.create".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the EntryType, of the form:
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryType}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryType content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/entryTypes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates an EntryType
+           *
+           * Create a request for the method "entryTypes.create".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the EntryType, of the form:
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryType}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryType content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the EntryType, of the form:
+           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+           * region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the EntryType, of the form:
+         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the EntryType, of the form:
+           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+           * region.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. EntryType identifier. */
+          @com.google.api.client.util.Key
+          private java.lang.String entryTypeId;
+
+          /** Required. EntryType identifier.
+           */
+          public java.lang.String getEntryTypeId() {
+            return entryTypeId;
+          }
+
+          /** Required. EntryType identifier. */
+          public Create setEntryTypeId(java.lang.String entryTypeId) {
+            this.entryTypeId = entryTypeId;
+            return this;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Only validate the request, but do not perform mutations. The default is false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a EntryType resource.
+         *
+         * Create a request for the method "entryTypes.delete".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the EntryType:
+         *        projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryTypes/[^/]+$");
+
+          /**
+           * Deletes a EntryType resource.
+           *
+           * Create a request for the method "entryTypes.delete".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the EntryType:
+         *        projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudDataplex.this, "DELETE", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryTypes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the EntryType:
+           * projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the EntryType:
+         projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the EntryType:
+           * projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryTypes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If the client provided etag value does not match the current etag value, the
+           * DeleteEntryTypeRequest method returns an ABORTED error response
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. If the client provided etag value does not match the current etag value, the
+         DeleteEntryTypeRequest method returns an ABORTED error response
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. If the client provided etag value does not match the current etag value, the
+           * DeleteEntryTypeRequest method returns an ABORTED error response
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves a EntryType resource.
+         *
+         * Create a request for the method "entryTypes.get".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the EntryType:
+         *        projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryType> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryTypes/[^/]+$");
+
+          /**
+           * Retrieves a EntryType resource.
+           *
+           * Create a request for the method "entryTypes.get".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the EntryType:
+         *        projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryType.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryTypes/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the EntryType:
+           * projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the EntryType:
+         projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the EntryType:
+           * projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryTypes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
         /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
@@ -8072,6 +12146,436 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists EntryType resources in a project and location.
+         *
+         * Create a request for the method "entryTypes.list".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the EntryType location, of the form:
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListEntryTypesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/entryTypes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists EntryType resources in a project and location.
+           *
+           * Create a request for the method "entryTypes.list".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the EntryType location, of the form:
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListEntryTypesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the EntryType location, of the form:
+           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+           * region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the EntryType location, of the form:
+         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the EntryType location, of the form:
+           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
+           * region.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter request. Filters are case-sensitive. The following formats are
+           * supported:labels.key1 = "value1" labels:key1 name = "value" These restrictions can be
+           * coinjoined with AND, OR and NOT conjunctions.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter request. Filters are case-sensitive. The following formats are
+         supported:labels.key1 = "value1" labels:key1 name = "value" These restrictions can be coinjoined
+         with AND, OR and NOT conjunctions.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter request. Filters are case-sensitive. The following formats are
+           * supported:labels.key1 = "value1" labels:key1 name = "value" These restrictions can be
+           * coinjoined with AND, OR and NOT conjunctions.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Order by fields (name or create_time) for the result. If not specified, the
+           * ordering is undefined.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Order by fields (name or create_time) for the result. If not specified, the ordering is
+         undefined.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Order by fields (name or create_time) for the result. If not specified, the
+           * ordering is undefined.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of EntryTypes to return. The service may return fewer than
+           * this value. If unspecified, at most 10 EntryTypes will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of EntryTypes to return. The service may return fewer than this value. If
+         unspecified, at most 10 EntryTypes will be returned. The maximum value is 1000; values above 1000
+         will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of EntryTypes to return. The service may return fewer than
+           * this value. If unspecified, at most 10 EntryTypes will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Page token received from a previous ListEntryTypes call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * ListEntryTypes must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token received from a previous ListEntryTypes call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to ListEntryTypes must match the
+         call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Page token received from a previous ListEntryTypes call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * ListEntryTypes must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a EntryType resource.
+         *
+         * Create a request for the method "entryTypes.patch".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The relative resource name of the EntryType, of the form:
+         *        projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryType}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryType content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryTypes/[^/]+$");
+
+          /**
+           * Updates a EntryType resource.
+           *
+           * Create a request for the method "entryTypes.patch".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The relative resource name of the EntryType, of the form:
+         *        projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryType}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryType content) {
+            super(CloudDataplex.this, "PATCH", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryTypes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The relative resource name of the EntryType, of the form:
+           * projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The relative resource name of the EntryType, of the form:
+         projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The relative resource name of the EntryType, of the form:
+           * projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryTypes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. Mask of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Mask of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Required. Mask of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Only validate the request, but do not perform mutations. The default is false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * false.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**

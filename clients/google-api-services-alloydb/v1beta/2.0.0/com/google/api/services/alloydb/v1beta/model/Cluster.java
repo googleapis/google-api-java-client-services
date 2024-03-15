@@ -133,6 +133,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Optional. Configuration parameters related to the Gemini in Databases add-on. See go/prd-
+   * enable-duet-ai-databases for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeminiClusterConfig geminiConfig;
+
+  /**
    * Input only. Initial user to setup during cluster creation. Required. If used in
    * `RestoreCluster` this is ignored.
    * The value may be {@code null}.
@@ -146,6 +154,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Optional. The maintenance update policy determines when to allow or deny updates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaintenanceUpdatePolicy maintenanceUpdatePolicy;
 
   /**
    * Output only. Cluster created via DMS migration.
@@ -490,6 +505,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Configuration parameters related to the Gemini in Databases add-on. See go/prd-
+   * enable-duet-ai-databases for more details.
+   * @return value or {@code null} for none
+   */
+  public GeminiClusterConfig getGeminiConfig() {
+    return geminiConfig;
+  }
+
+  /**
+   * Optional. Configuration parameters related to the Gemini in Databases add-on. See go/prd-
+   * enable-duet-ai-databases for more details.
+   * @param geminiConfig geminiConfig or {@code null} for none
+   */
+  public Cluster setGeminiConfig(GeminiClusterConfig geminiConfig) {
+    this.geminiConfig = geminiConfig;
+    return this;
+  }
+
+  /**
    * Input only. Initial user to setup during cluster creation. Required. If used in
    * `RestoreCluster` this is ignored.
    * @return value or {@code null} for none
@@ -522,6 +556,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. The maintenance update policy determines when to allow or deny updates.
+   * @return value or {@code null} for none
+   */
+  public MaintenanceUpdatePolicy getMaintenanceUpdatePolicy() {
+    return maintenanceUpdatePolicy;
+  }
+
+  /**
+   * Optional. The maintenance update policy determines when to allow or deny updates.
+   * @param maintenanceUpdatePolicy maintenanceUpdatePolicy or {@code null} for none
+   */
+  public Cluster setMaintenanceUpdatePolicy(MaintenanceUpdatePolicy maintenanceUpdatePolicy) {
+    this.maintenanceUpdatePolicy = maintenanceUpdatePolicy;
     return this;
   }
 

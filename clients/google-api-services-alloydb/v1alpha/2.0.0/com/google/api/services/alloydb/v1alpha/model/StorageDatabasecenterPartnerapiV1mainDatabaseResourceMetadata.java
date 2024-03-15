@@ -151,6 +151,13 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   private String updationTime;
 
   /**
+   * User-provided labels associated with the resource
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageDatabasecenterPartnerapiV1mainUserLabels userLabelSet;
+
+  /**
    * User-provided labels, represented as a dictionary where each label is a single key value pair.
    * The value may be {@code null}.
    */
@@ -444,6 +451,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setUpdationTime(String updationTime) {
     this.updationTime = updationTime;
+    return this;
+  }
+
+  /**
+   * User-provided labels associated with the resource
+   * @return value or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainUserLabels getUserLabelSet() {
+    return userLabelSet;
+  }
+
+  /**
+   * User-provided labels associated with the resource
+   * @param userLabelSet userLabelSet or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setUserLabelSet(StorageDatabasecenterPartnerapiV1mainUserLabels userLabelSet) {
+    this.userLabelSet = userLabelSet;
     return this;
   }
 

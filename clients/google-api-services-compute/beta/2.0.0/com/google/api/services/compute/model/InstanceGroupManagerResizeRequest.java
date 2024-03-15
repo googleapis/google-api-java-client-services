@@ -33,7 +33,8 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerResizeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The count of instances to create as part of this resize request.
+   * This field is deprecated, please use resize_by instead. The count of instances to create as
+   * part of this resize request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +130,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.lang.String zone;
 
   /**
-   * The count of instances to create as part of this resize request.
+   * This field is deprecated, please use resize_by instead. The count of instances to create as
+   * part of this resize request.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCount() {
@@ -137,7 +139,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * The count of instances to create as part of this resize request.
+   * This field is deprecated, please use resize_by instead. The count of instances to create as
+   * part of this resize request.
    * @param count count or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setCount(java.lang.Integer count) {

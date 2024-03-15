@@ -54,10 +54,10 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowMethods;
 
   /**
-   * Specifies a regular expression that matches allowed origins. For more information about the
-   * regular expression syntax, see Syntax. An origin is allowed if it matches either an item in
-   * allowOrigins or an item in allowOriginRegexes. Regular expressions can only be used when the
-   * loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
+   * Specifies a regular expression that matches allowed origins. For more information, see regular
+   * expression syntax . An origin is allowed if it matches either an item in allowOrigins or an
+   * item in allowOriginRegexes. Regular expressions can only be used when the loadBalancingScheme
+   * is set to INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +72,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowOrigins;
 
   /**
-   * If true, the setting specifies the CORS policy is disabled. The default value of false, which
-   * indicates that the CORS policy is in effect.
+   * If true, disables the CORS policy. The default value is false, which indicates that the CORS
+   * policy is in effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,10 +150,10 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies a regular expression that matches allowed origins. For more information about the
-   * regular expression syntax, see Syntax. An origin is allowed if it matches either an item in
-   * allowOrigins or an item in allowOriginRegexes. Regular expressions can only be used when the
-   * loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
+   * Specifies a regular expression that matches allowed origins. For more information, see regular
+   * expression syntax . An origin is allowed if it matches either an item in allowOrigins or an
+   * item in allowOriginRegexes. Regular expressions can only be used when the loadBalancingScheme
+   * is set to INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowOriginRegexes() {
@@ -161,10 +161,10 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies a regular expression that matches allowed origins. For more information about the
-   * regular expression syntax, see Syntax. An origin is allowed if it matches either an item in
-   * allowOrigins or an item in allowOriginRegexes. Regular expressions can only be used when the
-   * loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
+   * Specifies a regular expression that matches allowed origins. For more information, see regular
+   * expression syntax . An origin is allowed if it matches either an item in allowOrigins or an
+   * item in allowOriginRegexes. Regular expressions can only be used when the loadBalancingScheme
+   * is set to INTERNAL_SELF_MANAGED.
    * @param allowOriginRegexes allowOriginRegexes or {@code null} for none
    */
   public CorsPolicy setAllowOriginRegexes(java.util.List<java.lang.String> allowOriginRegexes) {
@@ -192,8 +192,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, the setting specifies the CORS policy is disabled. The default value of false, which
-   * indicates that the CORS policy is in effect.
+   * If true, disables the CORS policy. The default value is false, which indicates that the CORS
+   * policy is in effect.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -201,8 +201,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, the setting specifies the CORS policy is disabled. The default value of false, which
-   * indicates that the CORS policy is in effect.
+   * If true, disables the CORS policy. The default value is false, which indicates that the CORS
+   * policy is in effect.
    * @param disabled disabled or {@code null} for none
    */
   public CorsPolicy setDisabled(java.lang.Boolean disabled) {

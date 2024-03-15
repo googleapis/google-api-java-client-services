@@ -141,6 +141,16 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String networkFirewallPolicyEnforcementOrder;
 
   /**
+   * A full or partial URL of the network placement to apply to this network. This field can be set
+   * only at resource creation time. For example, the following are valid URLs: - https://www.google
+   * apis.com/compute/alpha/projects/{project_id}/global/networkPlacements/{network_placement_name}
+   * - projects/{project_id}/global/networkPlacements/{network_placement_name}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkPlacement;
+
+  /**
    * [Output Only] A list of network peerings for the resource.
    * The value may be {@code null}.
    */
@@ -441,6 +451,29 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setNetworkFirewallPolicyEnforcementOrder(java.lang.String networkFirewallPolicyEnforcementOrder) {
     this.networkFirewallPolicyEnforcementOrder = networkFirewallPolicyEnforcementOrder;
+    return this;
+  }
+
+  /**
+   * A full or partial URL of the network placement to apply to this network. This field can be set
+   * only at resource creation time. For example, the following are valid URLs: - https://www.google
+   * apis.com/compute/alpha/projects/{project_id}/global/networkPlacements/{network_placement_name}
+   * - projects/{project_id}/global/networkPlacements/{network_placement_name}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkPlacement() {
+    return networkPlacement;
+  }
+
+  /**
+   * A full or partial URL of the network placement to apply to this network. This field can be set
+   * only at resource creation time. For example, the following are valid URLs: - https://www.google
+   * apis.com/compute/alpha/projects/{project_id}/global/networkPlacements/{network_placement_name}
+   * - projects/{project_id}/global/networkPlacements/{network_placement_name}
+   * @param networkPlacement networkPlacement or {@code null} for none
+   */
+  public Network setNetworkPlacement(java.lang.String networkPlacement) {
+    this.networkPlacement = networkPlacement;
     return this;
   }
 

@@ -33,7 +33,8 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerResizeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The count of instances to create as part of this resize request.
+   * This field is deprecated, please use resize_by instead. The count of instances to create as
+   * part of this resize request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +78,10 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.lang.String name;
 
   /**
-   * When set, defines queing parameters for the requested deferred capacity. When unset, the
-   * request starts provisioning immediately, or fails if immediate provisioning is not possible.
+   * This field is deprecated, ResizeRequests would not be provisioned immediately and would stay in
+   * the queue until explicitly cancelled. When set, defines queing parameters for the requested
+   * deferred capacity. When unset, the request starts provisioning immediately, or fails if
+   * immediate provisioning is not possible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +140,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.lang.String zone;
 
   /**
-   * The count of instances to create as part of this resize request.
+   * This field is deprecated, please use resize_by instead. The count of instances to create as
+   * part of this resize request.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCount() {
@@ -145,7 +149,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * The count of instances to create as part of this resize request.
+   * This field is deprecated, please use resize_by instead. The count of instances to create as
+   * part of this resize request.
    * @param count count or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setCount(java.lang.Integer count) {
@@ -243,8 +248,10 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * When set, defines queing parameters for the requested deferred capacity. When unset, the
-   * request starts provisioning immediately, or fails if immediate provisioning is not possible.
+   * This field is deprecated, ResizeRequests would not be provisioned immediately and would stay in
+   * the queue until explicitly cancelled. When set, defines queing parameters for the requested
+   * deferred capacity. When unset, the request starts provisioning immediately, or fails if
+   * immediate provisioning is not possible.
    * @return value or {@code null} for none
    */
   public QueuingPolicy getQueuingPolicy() {
@@ -252,8 +259,10 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * When set, defines queing parameters for the requested deferred capacity. When unset, the
-   * request starts provisioning immediately, or fails if immediate provisioning is not possible.
+   * This field is deprecated, ResizeRequests would not be provisioned immediately and would stay in
+   * the queue until explicitly cancelled. When set, defines queing parameters for the requested
+   * deferred capacity. When unset, the request starts provisioning immediately, or fails if
+   * immediate provisioning is not possible.
    * @param queuingPolicy queuingPolicy or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setQueuingPolicy(QueuingPolicy queuingPolicy) {

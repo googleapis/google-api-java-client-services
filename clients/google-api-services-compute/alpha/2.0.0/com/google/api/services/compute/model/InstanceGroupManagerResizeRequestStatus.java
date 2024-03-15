@@ -52,8 +52,8 @@ public final class InstanceGroupManagerResizeRequestStatus extends com.google.ap
   private InstanceGroupManagerResizeRequestStatusLastAttempt lastAttempt;
 
   /**
-   * Constraints for the time when the instances start provisioning. Always exposed as absolute
-   * time.
+   * This field is deprecated, setting queueing policy is no longer supported. Constraints for the
+   * time when the instances start provisioning. Always exposed as absolute time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +110,8 @@ public final class InstanceGroupManagerResizeRequestStatus extends com.google.ap
   }
 
   /**
-   * Constraints for the time when the instances start provisioning. Always exposed as absolute
-   * time.
+   * This field is deprecated, setting queueing policy is no longer supported. Constraints for the
+   * time when the instances start provisioning. Always exposed as absolute time.
    * @return value or {@code null} for none
    */
   public QueuingPolicy getQueuingPolicy() {
@@ -119,8 +119,8 @@ public final class InstanceGroupManagerResizeRequestStatus extends com.google.ap
   }
 
   /**
-   * Constraints for the time when the instances start provisioning. Always exposed as absolute
-   * time.
+   * This field is deprecated, setting queueing policy is no longer supported. Constraints for the
+   * time when the instances start provisioning. Always exposed as absolute time.
    * @param queuingPolicy queuingPolicy or {@code null} for none
    */
   public InstanceGroupManagerResizeRequestStatus setQueuingPolicy(QueuingPolicy queuingPolicy) {

@@ -59,7 +59,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
 
   /**
    * [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
-   * NETWORK_REGIONAL.
+   * NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +118,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
 
   /**
    * [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
-   * NETWORK_REGIONAL.
+   * NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -127,7 +127,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
 
   /**
    * [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
-   * NETWORK_REGIONAL.
+   * NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
    * @param type type or {@code null} for none
    */
   public RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setType(java.lang.String type) {

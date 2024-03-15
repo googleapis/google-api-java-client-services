@@ -73,6 +73,14 @@ public final class Region extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * [Output Only] Warning of fetching the `quotas` field for this region. This field is populated
+   * only if fetching of the `quotas` field fails.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QuotaStatusWarning quotaStatusWarning;
+
+  /**
    * [Output Only] Quotas assigned to this region.
    * The value may be {@code null}.
    */
@@ -223,6 +231,25 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] Warning of fetching the `quotas` field for this region. This field is populated
+   * only if fetching of the `quotas` field fails.
+   * @return value or {@code null} for none
+   */
+  public QuotaStatusWarning getQuotaStatusWarning() {
+    return quotaStatusWarning;
+  }
+
+  /**
+   * [Output Only] Warning of fetching the `quotas` field for this region. This field is populated
+   * only if fetching of the `quotas` field fails.
+   * @param quotaStatusWarning quotaStatusWarning or {@code null} for none
+   */
+  public Region setQuotaStatusWarning(QuotaStatusWarning quotaStatusWarning) {
+    this.quotaStatusWarning = quotaStatusWarning;
+    return this;
+  }
+
+  /**
    * [Output Only] Quotas assigned to this region.
    * @return value or {@code null} for none
    */
@@ -332,6 +359,187 @@ public final class Region extends com.google.api.client.json.GenericJson {
   @Override
   public Region clone() {
     return (Region) super.clone();
+  }
+
+  /**
+   * [Output Only] Warning of fetching the `quotas` field for this region. This field is populated
+   * only if fetching of the `quotas` field fails.
+   */
+  public static final class QuotaStatusWarning extends com.google.api.client.json.GenericJson {
+
+    /**
+     * [Output Only] A warning code, if applicable. For example, Compute Engine returns
+     * NO_RESULTS_ON_PAGE if there are no results in the response.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String code;
+
+    /**
+     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
+     * "scope", "value": "zones/us-east1-d" }
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<Data> data;
+
+    static {
+      // hack to force ProGuard to consider Data used, since otherwise it would be stripped out
+      // see https://github.com/google/google-api-java-client/issues/543
+      com.google.api.client.util.Data.nullOf(Data.class);
+    }
+
+    /**
+     * [Output Only] A human-readable description of the warning code.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String message;
+
+    /**
+     * [Output Only] A warning code, if applicable. For example, Compute Engine returns
+     * NO_RESULTS_ON_PAGE if there are no results in the response.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getCode() {
+      return code;
+    }
+
+    /**
+     * [Output Only] A warning code, if applicable. For example, Compute Engine returns
+     * NO_RESULTS_ON_PAGE if there are no results in the response.
+     * @param code code or {@code null} for none
+     */
+    public QuotaStatusWarning setCode(java.lang.String code) {
+      this.code = code;
+      return this;
+    }
+
+    /**
+     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
+     * "scope", "value": "zones/us-east1-d" }
+     * @return value or {@code null} for none
+     */
+    public java.util.List<Data> getData() {
+      return data;
+    }
+
+    /**
+     * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
+     * "scope", "value": "zones/us-east1-d" }
+     * @param data data or {@code null} for none
+     */
+    public QuotaStatusWarning setData(java.util.List<Data> data) {
+      this.data = data;
+      return this;
+    }
+
+    /**
+     * [Output Only] A human-readable description of the warning code.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getMessage() {
+      return message;
+    }
+
+    /**
+     * [Output Only] A human-readable description of the warning code.
+     * @param message message or {@code null} for none
+     */
+    public QuotaStatusWarning setMessage(java.lang.String message) {
+      this.message = message;
+      return this;
+    }
+
+    @Override
+    public QuotaStatusWarning set(String fieldName, Object value) {
+      return (QuotaStatusWarning) super.set(fieldName, value);
+    }
+
+    @Override
+    public QuotaStatusWarning clone() {
+      return (QuotaStatusWarning) super.clone();
+    }
+
+    /**
+     * Model definition for RegionQuotaStatusWarningData.
+     */
+    public static final class Data extends com.google.api.client.json.GenericJson {
+
+      /**
+       * [Output Only] A key that provides more detail on the warning being returned. For example, for
+       * warnings where there are no results in a list request for a particular zone, this key might be
+       * scope and the key value might be the zone name. Other examples might be a key indicating a
+       * deprecated resource and a suggested replacement, or a warning about invalid network settings
+       * (for example, if an instance attempts to perform IP forwarding but is not enabled for IP
+       * forwarding).
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String key;
+
+      /**
+       * [Output Only] A warning data value corresponding to the key.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String value;
+
+      /**
+       * [Output Only] A key that provides more detail on the warning being returned. For example, for
+       * warnings where there are no results in a list request for a particular zone, this key might be
+       * scope and the key value might be the zone name. Other examples might be a key indicating a
+       * deprecated resource and a suggested replacement, or a warning about invalid network settings
+       * (for example, if an instance attempts to perform IP forwarding but is not enabled for IP
+       * forwarding).
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getKey() {
+        return key;
+      }
+
+      /**
+       * [Output Only] A key that provides more detail on the warning being returned. For example, for
+       * warnings where there are no results in a list request for a particular zone, this key might be
+       * scope and the key value might be the zone name. Other examples might be a key indicating a
+       * deprecated resource and a suggested replacement, or a warning about invalid network settings
+       * (for example, if an instance attempts to perform IP forwarding but is not enabled for IP
+       * forwarding).
+       * @param key key or {@code null} for none
+       */
+      public Data setKey(java.lang.String key) {
+        this.key = key;
+        return this;
+      }
+
+      /**
+       * [Output Only] A warning data value corresponding to the key.
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getValue() {
+        return value;
+      }
+
+      /**
+       * [Output Only] A warning data value corresponding to the key.
+       * @param value value or {@code null} for none
+       */
+      public Data setValue(java.lang.String value) {
+        this.value = value;
+        return this;
+      }
+
+      @Override
+      public Data set(String fieldName, Object value) {
+        return (Data) super.set(fieldName, value);
+      }
+
+      @Override
+      public Data clone() {
+        return (Data) super.clone();
+      }
+
+    }
   }
 
 }

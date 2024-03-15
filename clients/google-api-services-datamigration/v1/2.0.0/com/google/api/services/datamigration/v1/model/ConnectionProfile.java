@@ -112,6 +112,13 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private java.lang.String provider;
 
   /**
+   * Connection profile for a SQL Server data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerConnectionProfile sqlserver;
+
+  /**
    * The current connection profile state (e.g. DRAFT, READY, or FAILED).
    * The value may be {@code null}.
    */
@@ -318,6 +325,23 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
    */
   public ConnectionProfile setProvider(java.lang.String provider) {
     this.provider = provider;
+    return this;
+  }
+
+  /**
+   * Connection profile for a SQL Server data source.
+   * @return value or {@code null} for none
+   */
+  public SqlServerConnectionProfile getSqlserver() {
+    return sqlserver;
+  }
+
+  /**
+   * Connection profile for a SQL Server data source.
+   * @param sqlserver sqlserver or {@code null} for none
+   */
+  public ConnectionProfile setSqlserver(SqlServerConnectionProfile sqlserver) {
+    this.sqlserver = sqlserver;
     return this;
   }
 

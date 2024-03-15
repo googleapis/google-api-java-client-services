@@ -180,6 +180,13 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   private DatabaseType sourceDatabase;
 
   /**
+   * Optional. Configuration for SQL Server homogeneous migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerHomogeneousMigrationJobConfig sqlserverHomogeneousMigrationJobConfig;
+
+  /**
    * The current migration job state.
    * The value may be {@code null}.
    */
@@ -567,6 +574,23 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
    */
   public MigrationJob setSourceDatabase(DatabaseType sourceDatabase) {
     this.sourceDatabase = sourceDatabase;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for SQL Server homogeneous migration.
+   * @return value or {@code null} for none
+   */
+  public SqlServerHomogeneousMigrationJobConfig getSqlserverHomogeneousMigrationJobConfig() {
+    return sqlserverHomogeneousMigrationJobConfig;
+  }
+
+  /**
+   * Optional. Configuration for SQL Server homogeneous migration.
+   * @param sqlserverHomogeneousMigrationJobConfig sqlserverHomogeneousMigrationJobConfig or {@code null} for none
+   */
+  public MigrationJob setSqlserverHomogeneousMigrationJobConfig(SqlServerHomogeneousMigrationJobConfig sqlserverHomogeneousMigrationJobConfig) {
+    this.sqlserverHomogeneousMigrationJobConfig = sqlserverHomogeneousMigrationJobConfig;
     return this;
   }
 

@@ -49,7 +49,8 @@ public final class RuntimeUpdatableParams extends com.google.api.client.json.Gen
   /**
    * Target worker utilization, compared against the aggregate utilization of the worker pool by
    * autoscaler, to determine upscaling and downscaling when absent other constraints such as
-   * backlog.
+   * backlog. For more information, see [Update an existing
+   * pipeline](https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +97,8 @@ public final class RuntimeUpdatableParams extends com.google.api.client.json.Gen
   /**
    * Target worker utilization, compared against the aggregate utilization of the worker pool by
    * autoscaler, to determine upscaling and downscaling when absent other constraints such as
-   * backlog.
+   * backlog. For more information, see [Update an existing
+   * pipeline](https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline).
    * @return value or {@code null} for none
    */
   public java.lang.Double getWorkerUtilizationHint() {
@@ -106,7 +108,8 @@ public final class RuntimeUpdatableParams extends com.google.api.client.json.Gen
   /**
    * Target worker utilization, compared against the aggregate utilization of the worker pool by
    * autoscaler, to determine upscaling and downscaling when absent other constraints such as
-   * backlog.
+   * backlog. For more information, see [Update an existing
+   * pipeline](https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline).
    * @param workerUtilizationHint workerUtilizationHint or {@code null} for none
    */
   public RuntimeUpdatableParams setWorkerUtilizationHint(java.lang.Double workerUtilizationHint) {

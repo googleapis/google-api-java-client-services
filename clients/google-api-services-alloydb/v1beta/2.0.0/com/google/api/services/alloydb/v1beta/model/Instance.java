@@ -108,6 +108,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String gceZone;
 
   /**
+   * Optional. Configuration parameters related to the Gemini in Databases add-on. See go/prd-
+   * enable-duet-ai-databases for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeminiInstanceConfig geminiConfig;
+
+  /**
    * Required. The type of the instance. Specified at creation time.
    * The value may be {@code null}.
    */
@@ -163,6 +171,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Node> nodes;
+
+  /**
+   * Configuration for observability.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ObservabilityInstanceConfig observabilityConfig;
 
   /**
    * Optional. The configuration for Private Service Connect (PSC) for the instance.
@@ -430,6 +445,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Configuration parameters related to the Gemini in Databases add-on. See go/prd-
+   * enable-duet-ai-databases for more details.
+   * @return value or {@code null} for none
+   */
+  public GeminiInstanceConfig getGeminiConfig() {
+    return geminiConfig;
+  }
+
+  /**
+   * Optional. Configuration parameters related to the Gemini in Databases add-on. See go/prd-
+   * enable-duet-ai-databases for more details.
+   * @param geminiConfig geminiConfig or {@code null} for none
+   */
+  public Instance setGeminiConfig(GeminiInstanceConfig geminiConfig) {
+    this.geminiConfig = geminiConfig;
+    return this;
+  }
+
+  /**
    * Required. The type of the instance. Specified at creation time.
    * @return value or {@code null} for none
    */
@@ -561,6 +595,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNodes(java.util.List<Node> nodes) {
     this.nodes = nodes;
+    return this;
+  }
+
+  /**
+   * Configuration for observability.
+   * @return value or {@code null} for none
+   */
+  public ObservabilityInstanceConfig getObservabilityConfig() {
+    return observabilityConfig;
+  }
+
+  /**
+   * Configuration for observability.
+   * @param observabilityConfig observabilityConfig or {@code null} for none
+   */
+  public Instance setObservabilityConfig(ObservabilityInstanceConfig observabilityConfig) {
+    this.observabilityConfig = observabilityConfig;
     return this;
   }
 

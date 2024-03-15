@@ -2668,7 +2668,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists data profiles for an organization.
+         * Lists column data profiles for an organization.
          *
          * Create a request for the method "columnDataProfiles.list".
          *
@@ -2676,7 +2676,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Resource name of the organization or project, for example
-         *        `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2693,7 +2693,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists data profiles for an organization.
+           * Lists column data profiles for an organization.
            *
            * Create a request for the method "columnDataProfiles.list".
            *
@@ -2703,7 +2703,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Resource name of the organization or project, for example
-         *        `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2783,13 +2783,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name of the organization or project, for example
-           * `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Resource name of the organization or project, for example
-         `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+         `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -2797,7 +2797,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name of the organization or project, for example
-           * `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7153,7 +7153,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists data profiles for an organization.
+         * Lists project data profiles for an organization.
          *
          * Create a request for the method "projectDataProfiles.list".
          *
@@ -7177,7 +7177,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists data profiles for an organization.
+           * Lists project data profiles for an organization.
            *
            * Create a request for the method "projectDataProfiles.list".
            *
@@ -7293,8 +7293,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW - `status_code` - an RPC
            * status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
-           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
-           * project_id = 12345 AND sensitivity_level = HIGH The length of this field should be no
+           * operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` *
+           * `project_id = 12345 AND sensitivity_level = HIGH` The length of this field should be no
            * more than 500 characters.
            */
           @com.google.api.client.util.Key
@@ -7306,8 +7306,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          fields/values: - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW -
          `status_code` - an RPC status code as defined in
          https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The operator must be
-         `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345 AND
-         sensitivity_level = HIGH The length of this field should be no more than 500 characters.
+         `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
+         sensitivity_level = HIGH` The length of this field should be no more than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -7321,8 +7321,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW - `status_code` - an RPC
            * status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
-           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
-           * project_id = 12345 AND sensitivity_level = HIGH The length of this field should be no
+           * operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` *
+           * `project_id = 12345 AND sensitivity_level = HIGH` The length of this field should be no
            * more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
@@ -7334,9 +7334,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case insensitive. The default sorting order is ascending. Redundant space
            * characters are insignificant. Only one order field at a time is allowed. Examples: *
-           * `project_id` * `sensitivity_level desc` Supported fields are: - `project_id`: GCP
-           * project ID - `sensitivity_level`: How sensitive the data in a project is, at most. -
-           * `data_risk_level`: How much risk is associated with this data. -
+           * `project_id` * `sensitivity_level desc` Supported fields are: - `project_id`: Google
+           * Cloud project ID - `sensitivity_level`: How sensitive the data in a project is, at
+           * most. - `data_risk_level`: How much risk is associated with this data. -
            * `profile_last_generated`: When the profile was last updated in epoch seconds.
            */
           @com.google.api.client.util.Key
@@ -7345,9 +7345,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case
          insensitive. The default sorting order is ascending. Redundant space characters are insignificant.
          Only one order field at a time is allowed. Examples: * `project_id` * `sensitivity_level desc`
-         Supported fields are: - `project_id`: GCP project ID - `sensitivity_level`: How sensitive the data
-         in a project is, at most. - `data_risk_level`: How much risk is associated with this data. -
-         `profile_last_generated`: When the profile was last updated in epoch seconds.
+         Supported fields are: - `project_id`: Google Cloud project ID - `sensitivity_level`: How sensitive
+         the data in a project is, at most. - `data_risk_level`: How much risk is associated with this data.
+         - `profile_last_generated`: When the profile was last updated in epoch seconds.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -7357,9 +7357,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case insensitive. The default sorting order is ascending. Redundant space
            * characters are insignificant. Only one order field at a time is allowed. Examples: *
-           * `project_id` * `sensitivity_level desc` Supported fields are: - `project_id`: GCP
-           * project ID - `sensitivity_level`: How sensitive the data in a project is, at most. -
-           * `data_risk_level`: How much risk is associated with this data. -
+           * `project_id` * `sensitivity_level desc` Supported fields are: - `project_id`: Google
+           * Cloud project ID - `sensitivity_level`: How sensitive the data in a project is, at
+           * most. - `data_risk_level`: How much risk is associated with this data. -
            * `profile_last_generated`: When the profile was last updated in epoch seconds.
            */
           public List setOrderBy(java.lang.String orderBy) {
@@ -8502,7 +8502,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists data profiles for an organization.
+         * Lists table data profiles for an organization.
          *
          * Create a request for the method "tableDataProfiles.list".
          *
@@ -8527,7 +8527,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists data profiles for an organization.
+           * Lists table data profiles for an organization.
            *
            * Create a request for the method "tableDataProfiles.list".
            *
@@ -8647,15 +8647,15 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
            * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
            * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
-           * `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The GCP
-           * project ID. - `dataset_id` - The BigQuery dataset ID. - `table_id` - The ID of the
-           * BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
+           * `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The Google
+           * Cloud project ID. - `dataset_id` - The BigQuery dataset ID. - `table_id` - The ID of
+           * the BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
            * HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC
            * status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
-           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
-           * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND
-           * resource_visibility = PUBLIC The length of this field should be no more than 500
+           * operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` *
+           * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND
+           * resource_visibility = PUBLIC` The length of this field should be no more than 500
            * characters.
            */
           @com.google.api.client.util.Key
@@ -8664,14 +8664,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
          Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
          implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-         fields/values: - `project_id` - The GCP project ID. - `dataset_id` - The BigQuery dataset ID. -
-         `table_id` - The ID of the BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW -
+         fields/values: - `project_id` - The Google Cloud project ID. - `dataset_id` - The BigQuery dataset
+         ID. - `table_id` - The ID of the BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW -
          `data_risk_level` - HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` -
          an RPC status code as defined in
          https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The operator must be
-         `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345 AND
-         sensitivity_level = HIGH * project_id = 12345 AND resource_visibility = PUBLIC The length of this
-         field should be no more than 500 characters.
+         `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
+         sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` The length of
+         this field should be no more than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -8681,15 +8681,15 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
            * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
            * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
-           * `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The GCP
-           * project ID. - `dataset_id` - The BigQuery dataset ID. - `table_id` - The ID of the
-           * BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
+           * `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The Google
+           * Cloud project ID. - `dataset_id` - The BigQuery dataset ID. - `table_id` - The ID of
+           * the BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
            * HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC
            * status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
-           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
-           * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND
-           * resource_visibility = PUBLIC The length of this field should be no more than 500
+           * operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` *
+           * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND
+           * resource_visibility = PUBLIC` The length of this field should be no more than 500
            * characters.
            */
           public List setFilter(java.lang.String filter) {
@@ -8702,13 +8702,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * list is case insensitive. The default sorting order is ascending. Redundant space
            * characters are insignificant. Only one order field at a time is allowed. Examples: *
            * `project_id asc` * `table_id` * `sensitivity_level desc` Supported fields are: -
-           * `project_id`: The GCP project ID. - `dataset_id`: The ID of a BigQuery dataset. -
-           * `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive the data
-           * in a table is, at most. - `data_risk_level`: How much risk is associated with this
-           * data. - `profile_last_generated`: When the profile was last updated in epoch seconds. -
-           * `last_modified`: The last time the resource was modified. - `resource_visibility`:
-           * Visibility restriction for this resource. - `row_count`: Number of rows in this
-           * resource.
+           * `project_id`: The Google Cloud project ID. - `dataset_id`: The ID of a BigQuery
+           * dataset. - `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive
+           * the data in a table is, at most. - `data_risk_level`: How much risk is associated with
+           * this data. - `profile_last_generated`: When the profile was last updated in epoch
+           * seconds. - `last_modified`: The last time the resource was modified. -
+           * `resource_visibility`: Visibility restriction for this resource. - `row_count`: Number
+           * of rows in this resource.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
@@ -8716,12 +8716,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case
          insensitive. The default sorting order is ascending. Redundant space characters are insignificant.
          Only one order field at a time is allowed. Examples: * `project_id asc` * `table_id` *
-         `sensitivity_level desc` Supported fields are: - `project_id`: The GCP project ID. - `dataset_id`:
-         The ID of a BigQuery dataset. - `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How
-         sensitive the data in a table is, at most. - `data_risk_level`: How much risk is associated with
-         this data. - `profile_last_generated`: When the profile was last updated in epoch seconds. -
-         `last_modified`: The last time the resource was modified. - `resource_visibility`: Visibility
-         restriction for this resource. - `row_count`: Number of rows in this resource.
+         `sensitivity_level desc` Supported fields are: - `project_id`: The Google Cloud project ID. -
+         `dataset_id`: The ID of a BigQuery dataset. - `table_id`: The ID of a BigQuery table. -
+         `sensitivity_level`: How sensitive the data in a table is, at most. - `data_risk_level`: How much
+         risk is associated with this data. - `profile_last_generated`: When the profile was last updated in
+         epoch seconds. - `last_modified`: The last time the resource was modified. - `resource_visibility`:
+         Visibility restriction for this resource. - `row_count`: Number of rows in this resource.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -8732,13 +8732,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * list is case insensitive. The default sorting order is ascending. Redundant space
            * characters are insignificant. Only one order field at a time is allowed. Examples: *
            * `project_id asc` * `table_id` * `sensitivity_level desc` Supported fields are: -
-           * `project_id`: The GCP project ID. - `dataset_id`: The ID of a BigQuery dataset. -
-           * `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive the data
-           * in a table is, at most. - `data_risk_level`: How much risk is associated with this
-           * data. - `profile_last_generated`: When the profile was last updated in epoch seconds. -
-           * `last_modified`: The last time the resource was modified. - `resource_visibility`:
-           * Visibility restriction for this resource. - `row_count`: Number of rows in this
-           * resource.
+           * `project_id`: The Google Cloud project ID. - `dataset_id`: The ID of a BigQuery
+           * dataset. - `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive
+           * the data in a table is, at most. - `data_risk_level`: How much risk is associated with
+           * this data. - `profile_last_generated`: When the profile was last updated in epoch
+           * seconds. - `last_modified`: The last time the resource was modified. -
+           * `resource_visibility`: Visibility restriction for this resource. - `row_count`: Number
+           * of rows in this resource.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -14584,7 +14584,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists data profiles for an organization.
+         * Lists column data profiles for an organization.
          *
          * Create a request for the method "columnDataProfiles.list".
          *
@@ -14592,7 +14592,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Resource name of the organization or project, for example
-         *        `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -14609,7 +14609,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists data profiles for an organization.
+           * Lists column data profiles for an organization.
            *
            * Create a request for the method "columnDataProfiles.list".
            *
@@ -14619,7 +14619,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Resource name of the organization or project, for example
-         *        `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -14699,13 +14699,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name of the organization or project, for example
-           * `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Resource name of the organization or project, for example
-         `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+         `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -14713,7 +14713,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name of the organization or project, for example
-           * `organizations/433245324/locations/europe` or projects/project-id/locations/asia.
+           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -20959,7 +20959,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists data profiles for an organization.
+         * Lists project data profiles for an organization.
          *
          * Create a request for the method "projectDataProfiles.list".
          *
@@ -20983,7 +20983,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists data profiles for an organization.
+           * Lists project data profiles for an organization.
            *
            * Create a request for the method "projectDataProfiles.list".
            *
@@ -21099,8 +21099,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW - `status_code` - an RPC
            * status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
-           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
-           * project_id = 12345 AND sensitivity_level = HIGH The length of this field should be no
+           * operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` *
+           * `project_id = 12345 AND sensitivity_level = HIGH` The length of this field should be no
            * more than 500 characters.
            */
           @com.google.api.client.util.Key
@@ -21112,8 +21112,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          fields/values: - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW -
          `status_code` - an RPC status code as defined in
          https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The operator must be
-         `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345 AND
-         sensitivity_level = HIGH The length of this field should be no more than 500 characters.
+         `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
+         sensitivity_level = HIGH` The length of this field should be no more than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -21127,8 +21127,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * HIGH|MODERATE|LOW - `data_risk_level` - HIGH|MODERATE|LOW - `status_code` - an RPC
            * status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
-           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
-           * project_id = 12345 AND sensitivity_level = HIGH The length of this field should be no
+           * operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` *
+           * `project_id = 12345 AND sensitivity_level = HIGH` The length of this field should be no
            * more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
@@ -21140,9 +21140,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case insensitive. The default sorting order is ascending. Redundant space
            * characters are insignificant. Only one order field at a time is allowed. Examples: *
-           * `project_id` * `sensitivity_level desc` Supported fields are: - `project_id`: GCP
-           * project ID - `sensitivity_level`: How sensitive the data in a project is, at most. -
-           * `data_risk_level`: How much risk is associated with this data. -
+           * `project_id` * `sensitivity_level desc` Supported fields are: - `project_id`: Google
+           * Cloud project ID - `sensitivity_level`: How sensitive the data in a project is, at
+           * most. - `data_risk_level`: How much risk is associated with this data. -
            * `profile_last_generated`: When the profile was last updated in epoch seconds.
            */
           @com.google.api.client.util.Key
@@ -21151,9 +21151,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case
          insensitive. The default sorting order is ascending. Redundant space characters are insignificant.
          Only one order field at a time is allowed. Examples: * `project_id` * `sensitivity_level desc`
-         Supported fields are: - `project_id`: GCP project ID - `sensitivity_level`: How sensitive the data
-         in a project is, at most. - `data_risk_level`: How much risk is associated with this data. -
-         `profile_last_generated`: When the profile was last updated in epoch seconds.
+         Supported fields are: - `project_id`: Google Cloud project ID - `sensitivity_level`: How sensitive
+         the data in a project is, at most. - `data_risk_level`: How much risk is associated with this data.
+         - `profile_last_generated`: When the profile was last updated in epoch seconds.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -21163,9 +21163,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case insensitive. The default sorting order is ascending. Redundant space
            * characters are insignificant. Only one order field at a time is allowed. Examples: *
-           * `project_id` * `sensitivity_level desc` Supported fields are: - `project_id`: GCP
-           * project ID - `sensitivity_level`: How sensitive the data in a project is, at most. -
-           * `data_risk_level`: How much risk is associated with this data. -
+           * `project_id` * `sensitivity_level desc` Supported fields are: - `project_id`: Google
+           * Cloud project ID - `sensitivity_level`: How sensitive the data in a project is, at
+           * most. - `data_risk_level`: How much risk is associated with this data. -
            * `profile_last_generated`: When the profile was last updated in epoch seconds.
            */
           public List setOrderBy(java.lang.String orderBy) {
@@ -22308,7 +22308,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists data profiles for an organization.
+         * Lists table data profiles for an organization.
          *
          * Create a request for the method "tableDataProfiles.list".
          *
@@ -22333,7 +22333,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists data profiles for an organization.
+           * Lists table data profiles for an organization.
            *
            * Create a request for the method "tableDataProfiles.list".
            *
@@ -22453,15 +22453,15 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
            * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
            * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
-           * `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The GCP
-           * project ID. - `dataset_id` - The BigQuery dataset ID. - `table_id` - The ID of the
-           * BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
+           * `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The Google
+           * Cloud project ID. - `dataset_id` - The BigQuery dataset ID. - `table_id` - The ID of
+           * the BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
            * HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC
            * status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
-           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
-           * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND
-           * resource_visibility = PUBLIC The length of this field should be no more than 500
+           * operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` *
+           * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND
+           * resource_visibility = PUBLIC` The length of this field should be no more than 500
            * characters.
            */
           @com.google.api.client.util.Key
@@ -22470,14 +22470,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
          Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
          implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-         fields/values: - `project_id` - The GCP project ID. - `dataset_id` - The BigQuery dataset ID. -
-         `table_id` - The ID of the BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW -
+         fields/values: - `project_id` - The Google Cloud project ID. - `dataset_id` - The BigQuery dataset
+         ID. - `table_id` - The ID of the BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW -
          `data_risk_level` - HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` -
          an RPC status code as defined in
          https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The operator must be
-         `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 * project_id = 12345 AND
-         sensitivity_level = HIGH * project_id = 12345 AND resource_visibility = PUBLIC The length of this
-         field should be no more than 500 characters.
+         `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345 AND
+         sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility = PUBLIC` The length of
+         this field should be no more than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -22487,15 +22487,15 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
            * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
            * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
-           * `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The GCP
-           * project ID. - `dataset_id` - The BigQuery dataset ID. - `table_id` - The ID of the
-           * BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
+           * `{field} {operator} {value}`. * Supported fields/values: - `project_id` - The Google
+           * Cloud project ID. - `dataset_id` - The BigQuery dataset ID. - `table_id` - The ID of
+           * the BigQuery table. - `sensitivity_level` - HIGH|MODERATE|LOW - `data_risk_level` -
            * HIGH|MODERATE|LOW - `resource_visibility`: PUBLIC|RESTRICTED - `status_code` - an RPC
            * status code as defined in
            * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto * The
-           * operator must be `=` or `!=`. Examples: * project_id = 12345 AND status_code = 1 *
-           * project_id = 12345 AND sensitivity_level = HIGH * project_id = 12345 AND
-           * resource_visibility = PUBLIC The length of this field should be no more than 500
+           * operator must be `=` or `!=`. Examples: * `project_id = 12345 AND status_code = 1` *
+           * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND
+           * resource_visibility = PUBLIC` The length of this field should be no more than 500
            * characters.
            */
           public List setFilter(java.lang.String filter) {
@@ -22508,13 +22508,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * list is case insensitive. The default sorting order is ascending. Redundant space
            * characters are insignificant. Only one order field at a time is allowed. Examples: *
            * `project_id asc` * `table_id` * `sensitivity_level desc` Supported fields are: -
-           * `project_id`: The GCP project ID. - `dataset_id`: The ID of a BigQuery dataset. -
-           * `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive the data
-           * in a table is, at most. - `data_risk_level`: How much risk is associated with this
-           * data. - `profile_last_generated`: When the profile was last updated in epoch seconds. -
-           * `last_modified`: The last time the resource was modified. - `resource_visibility`:
-           * Visibility restriction for this resource. - `row_count`: Number of rows in this
-           * resource.
+           * `project_id`: The Google Cloud project ID. - `dataset_id`: The ID of a BigQuery
+           * dataset. - `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive
+           * the data in a table is, at most. - `data_risk_level`: How much risk is associated with
+           * this data. - `profile_last_generated`: When the profile was last updated in epoch
+           * seconds. - `last_modified`: The last time the resource was modified. -
+           * `resource_visibility`: Visibility restriction for this resource. - `row_count`: Number
+           * of rows in this resource.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
@@ -22522,12 +22522,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case
          insensitive. The default sorting order is ascending. Redundant space characters are insignificant.
          Only one order field at a time is allowed. Examples: * `project_id asc` * `table_id` *
-         `sensitivity_level desc` Supported fields are: - `project_id`: The GCP project ID. - `dataset_id`:
-         The ID of a BigQuery dataset. - `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How
-         sensitive the data in a table is, at most. - `data_risk_level`: How much risk is associated with
-         this data. - `profile_last_generated`: When the profile was last updated in epoch seconds. -
-         `last_modified`: The last time the resource was modified. - `resource_visibility`: Visibility
-         restriction for this resource. - `row_count`: Number of rows in this resource.
+         `sensitivity_level desc` Supported fields are: - `project_id`: The Google Cloud project ID. -
+         `dataset_id`: The ID of a BigQuery dataset. - `table_id`: The ID of a BigQuery table. -
+         `sensitivity_level`: How sensitive the data in a table is, at most. - `data_risk_level`: How much
+         risk is associated with this data. - `profile_last_generated`: When the profile was last updated in
+         epoch seconds. - `last_modified`: The last time the resource was modified. - `resource_visibility`:
+         Visibility restriction for this resource. - `row_count`: Number of rows in this resource.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -22538,13 +22538,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * list is case insensitive. The default sorting order is ascending. Redundant space
            * characters are insignificant. Only one order field at a time is allowed. Examples: *
            * `project_id asc` * `table_id` * `sensitivity_level desc` Supported fields are: -
-           * `project_id`: The GCP project ID. - `dataset_id`: The ID of a BigQuery dataset. -
-           * `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive the data
-           * in a table is, at most. - `data_risk_level`: How much risk is associated with this
-           * data. - `profile_last_generated`: When the profile was last updated in epoch seconds. -
-           * `last_modified`: The last time the resource was modified. - `resource_visibility`:
-           * Visibility restriction for this resource. - `row_count`: Number of rows in this
-           * resource.
+           * `project_id`: The Google Cloud project ID. - `dataset_id`: The ID of a BigQuery
+           * dataset. - `table_id`: The ID of a BigQuery table. - `sensitivity_level`: How sensitive
+           * the data in a table is, at most. - `data_risk_level`: How much risk is associated with
+           * this data. - `profile_last_generated`: When the profile was last updated in epoch
+           * seconds. - `last_modified`: The last time the resource was modified. -
+           * `resource_visibility`: Visibility restriction for this resource. - `row_count`: Number
+           * of rows in this resource.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;

@@ -1574,6 +1574,216 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Get a count of Chrome crash events.
+       *
+       * Create a request for the method "reports.countChromeCrashEvents".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link CountChromeCrashEvents#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param customer Customer ID.
+       * @return the request
+       */
+      public CountChromeCrashEvents countChromeCrashEvents(java.lang.String customer) throws java.io.IOException {
+        CountChromeCrashEvents result = new CountChromeCrashEvents(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class CountChromeCrashEvents extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeCrashEventsResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/reports:countChromeCrashEvents";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Get a count of Chrome crash events.
+         *
+         * Create a request for the method "reports.countChromeCrashEvents".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link CountChromeCrashEvents#execute()} method to invoke the
+         * remote operation. <p> {@link CountChromeCrashEvents#initialize(com.google.api.client.googleapis
+         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param customer Customer ID.
+         * @since 1.13
+         */
+        protected CountChromeCrashEvents(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeCrashEventsResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public CountChromeCrashEvents set$Xgafv(java.lang.String $Xgafv) {
+          return (CountChromeCrashEvents) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CountChromeCrashEvents setAccessToken(java.lang.String accessToken) {
+          return (CountChromeCrashEvents) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CountChromeCrashEvents setAlt(java.lang.String alt) {
+          return (CountChromeCrashEvents) super.setAlt(alt);
+        }
+
+        @Override
+        public CountChromeCrashEvents setCallback(java.lang.String callback) {
+          return (CountChromeCrashEvents) super.setCallback(callback);
+        }
+
+        @Override
+        public CountChromeCrashEvents setFields(java.lang.String fields) {
+          return (CountChromeCrashEvents) super.setFields(fields);
+        }
+
+        @Override
+        public CountChromeCrashEvents setKey(java.lang.String key) {
+          return (CountChromeCrashEvents) super.setKey(key);
+        }
+
+        @Override
+        public CountChromeCrashEvents setOauthToken(java.lang.String oauthToken) {
+          return (CountChromeCrashEvents) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CountChromeCrashEvents setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CountChromeCrashEvents) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CountChromeCrashEvents setQuotaUser(java.lang.String quotaUser) {
+          return (CountChromeCrashEvents) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CountChromeCrashEvents setUploadType(java.lang.String uploadType) {
+          return (CountChromeCrashEvents) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CountChromeCrashEvents setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CountChromeCrashEvents) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Customer ID. */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Customer ID.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /** Customer ID. */
+        public CountChromeCrashEvents setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /**
+         * Query string to filter results, AND-separated fields in EBNF syntax. Supported filter
+         * fields: * major_browser_version * minor_browser_version * browser_channel *
+         * device_platform * past_number_days Example: `major_browser_version = 'M115' AND
+         * past_number_days = '28'`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Query string to filter results, AND-separated fields in EBNF syntax. Supported filter fields: *
+       major_browser_version * minor_browser_version * browser_channel * device_platform *
+       past_number_days Example: `major_browser_version = 'M115' AND past_number_days = '28'`.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Query string to filter results, AND-separated fields in EBNF syntax. Supported filter
+         * fields: * major_browser_version * minor_browser_version * browser_channel *
+         * device_platform * past_number_days Example: `major_browser_version = 'M115' AND
+         * past_number_days = '28'`.
+         */
+        public CountChromeCrashEvents setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Field used to order results. Supported order by fields: * browser_version * count * date
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Field used to order results. Supported order by fields: * browser_version * count * date
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Field used to order results. Supported order by fields: * browser_version * count * date
+         */
+        public CountChromeCrashEvents setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * If specified, only count the number of crash events of the devices in this organizational
+         * unit.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orgUnitId;
+
+        /** If specified, only count the number of crash events of the devices in this organizational unit.
+         */
+        public java.lang.String getOrgUnitId() {
+          return orgUnitId;
+        }
+
+        /**
+         * If specified, only count the number of crash events of the devices in this organizational
+         * unit.
+         */
+        public CountChromeCrashEvents setOrgUnitId(java.lang.String orgUnitId) {
+          this.orgUnitId = orgUnitId;
+          return this;
+        }
+
+        @Override
+        public CountChromeCrashEvents set(String parameterName, Object value) {
+          return (CountChromeCrashEvents) super.set(parameterName, value);
+        }
+      }
+      /**
        * Generate report of the number of devices expiring in each month of the selected time frame.
        * Devices are grouped by auto update expiration date and model. Further information can be found
        * [here](https://support.google.com/chrome/a/answer/10564947).

@@ -12106,6 +12106,344 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
+       * An accessor for creating requests from the InstancePartitionOperations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Spanner spanner = new Spanner(...);}
+       *   {@code Spanner.InstancePartitionOperations.List request = spanner.instancePartitionOperations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public InstancePartitionOperations instancePartitionOperations() {
+        return new InstancePartitionOperations();
+      }
+
+      /**
+       * The "instancePartitionOperations" collection of methods.
+       */
+      public class InstancePartitionOperations {
+
+        /**
+         * Lists instance partition long-running operations in the given instance. An instance partition
+         * operation has a name of the form `projects//instances//instancePartitions//operations/`. The
+         * long-running operation metadata field type `metadata.type_url` describes the type of the
+         * metadata. Operations returned include those that have completed/failed/canceled within the last 7
+         * days, and pending operations. Operations returned are ordered by
+         * `operation.metadata.value.start_time` in descending order starting from the most recently started
+         * operation. Authorization requires `spanner.instancePartitionOperations.list` permission on the
+         * resource parent.
+         *
+         * Create a request for the method "instancePartitionOperations.list".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent instance of the instance partition operations. Values are of the form
+         *        `projects//instances/`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SpannerRequest<com.google.api.services.spanner.v1.model.ListInstancePartitionOperationsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/instancePartitionOperations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
+
+          /**
+           * Lists instance partition long-running operations in the given instance. An instance partition
+           * operation has a name of the form `projects//instances//instancePartitions//operations/`. The
+           * long-running operation metadata field type `metadata.type_url` describes the type of the
+           * metadata. Operations returned include those that have completed/failed/canceled within the last
+           * 7 days, and pending operations. Operations returned are ordered by
+           * `operation.metadata.value.start_time` in descending order starting from the most recently
+           * started operation. Authorization requires `spanner.instancePartitionOperations.list` permission
+           * on the resource parent.
+           *
+           * Create a request for the method "instancePartitionOperations.list".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent instance of the instance partition operations. Values are of the form
+         *        `projects//instances/`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.ListInstancePartitionOperationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent instance of the instance partition operations. Values are of the
+           * form `projects//instances/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent instance of the instance partition operations. Values are of the form
+         `projects//instances/`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent instance of the instance partition operations. Values are of the
+           * form `projects//instances/`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An expression that filters the list of returned operations. A filter
+           * expression consists of a field name, a comparison operator, and a value for filtering.
+           * The value must be a string, a number, or a boolean. The comparison operator must be one
+           * of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter
+           * rules are not case sensitive. The following fields in the Operation are eligible for
+           * filtering: * `name` - The name of the long-running operation * `done` - False if the
+           * operation is in progress, else true. * `metadata.@type` - the type of metadata. For
+           * example, the type string for CreateInstancePartitionMetadata is
+           * `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstancePartitionMetadata`.
+           * * `metadata.` - any field in metadata.value. `metadata.@type` must be specified first,
+           * if filtering on metadata fields. * `error` - Error associated with the long-running
+           * operation. * `response.@type` - the type of response. * `response.` - any field in
+           * response.value. You can combine multiple expressions by enclosing each expression in
+           * parentheses. By default, expressions are combined with AND logic. However, you can
+           * specify AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true` - The
+           * operation is complete. * `(metadata.@type=` \
+           * `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstancePartitionMetadata)
+           * AND` \ `(metadata.instance_partition.name:custom-instance-partition) AND` \
+           * `(metadata.start_time < \"2021-03-28T14:50:00Z\") AND` \ `(error:*)` - Return
+           * operations where: * The operation's metadata type is CreateInstancePartitionMetadata. *
+           * The instance partition name contains "custom-instance-partition". * The operation
+           * started before 2021-03-28T14:50:00Z. * The operation resulted in an error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An expression that filters the list of returned operations. A filter expression consists
+         of a field name, a comparison operator, and a value for filtering. The value must be a string, a
+         number, or a boolean. The comparison operator must be one of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or
+         `:`. Colon `:` is the contains operator. Filter rules are not case sensitive. The following fields
+         in the Operation are eligible for filtering: * `name` - The name of the long-running operation *
+         `done` - False if the operation is in progress, else true. * `metadata.@type` - the type of
+         metadata. For example, the type string for CreateInstancePartitionMetadata is
+         `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstancePartitionMetadata`. *
+         `metadata.` - any field in metadata.value. `metadata.@type` must be specified first, if filtering
+         on metadata fields. * `error` - Error associated with the long-running operation. *
+         `response.@type` - the type of response. * `response.` - any field in response.value. You can
+         combine multiple expressions by enclosing each expression in parentheses. By default, expressions
+         are combined with AND logic. However, you can specify AND, OR, and NOT logic explicitly. Here are a
+         few examples: * `done:true` - The operation is complete. * `(metadata.@type=` \
+         `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstancePartitionMetadata) AND` \
+         `(metadata.instance_partition.name:custom-instance-partition) AND` \ `(metadata.start_time <
+         \"2021-03-28T14:50:00Z\") AND` \ `(error:*)` - Return operations where: * The operation's metadata
+         type is CreateInstancePartitionMetadata. * The instance partition name contains "custom-instance-
+         partition". * The operation started before 2021-03-28T14:50:00Z. * The operation resulted in an
+         error.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. An expression that filters the list of returned operations. A filter
+           * expression consists of a field name, a comparison operator, and a value for filtering.
+           * The value must be a string, a number, or a boolean. The comparison operator must be one
+           * of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter
+           * rules are not case sensitive. The following fields in the Operation are eligible for
+           * filtering: * `name` - The name of the long-running operation * `done` - False if the
+           * operation is in progress, else true. * `metadata.@type` - the type of metadata. For
+           * example, the type string for CreateInstancePartitionMetadata is
+           * `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstancePartitionMetadata`.
+           * * `metadata.` - any field in metadata.value. `metadata.@type` must be specified first,
+           * if filtering on metadata fields. * `error` - Error associated with the long-running
+           * operation. * `response.@type` - the type of response. * `response.` - any field in
+           * response.value. You can combine multiple expressions by enclosing each expression in
+           * parentheses. By default, expressions are combined with AND logic. However, you can
+           * specify AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true` - The
+           * operation is complete. * `(metadata.@type=` \
+           * `type.googleapis.com/google.spanner.admin.instance.v1.CreateInstancePartitionMetadata)
+           * AND` \ `(metadata.instance_partition.name:custom-instance-partition) AND` \
+           * `(metadata.start_time < \"2021-03-28T14:50:00Z\") AND` \ `(error:*)` - Return
+           * operations where: * The operation's metadata type is CreateInstancePartitionMetadata. *
+           * The instance partition name contains "custom-instance-partition". * The operation
+           * started before 2021-03-28T14:50:00Z. * The operation resulted in an error.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Deadline used while retrieving metadata for instance partition operations.
+           * Instance partitions whose operation metadata cannot be retrieved within this deadline
+           * will be added to unreachable in ListInstancePartitionOperationsResponse.
+           */
+          @com.google.api.client.util.Key
+          private String instancePartitionDeadline;
+
+          /** Optional. Deadline used while retrieving metadata for instance partition operations. Instance
+         partitions whose operation metadata cannot be retrieved within this deadline will be added to
+         unreachable in ListInstancePartitionOperationsResponse.
+           */
+          public String getInstancePartitionDeadline() {
+            return instancePartitionDeadline;
+          }
+
+          /**
+           * Optional. Deadline used while retrieving metadata for instance partition operations.
+           * Instance partitions whose operation metadata cannot be retrieved within this deadline
+           * will be added to unreachable in ListInstancePartitionOperationsResponse.
+           */
+          public List setInstancePartitionDeadline(String instancePartitionDeadline) {
+            this.instancePartitionDeadline = instancePartitionDeadline;
+            return this;
+          }
+
+          /**
+           * Optional. Number of operations to be returned in the response. If 0 or less, defaults
+           * to the server's maximum allowed page size.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Number of operations to be returned in the response. If 0 or less, defaults to the
+         server's maximum allowed page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Number of operations to be returned in the response. If 0 or less, defaults
+           * to the server's maximum allowed page size.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If non-empty, `page_token` should contain a next_page_token from a previous
+           * ListInstancePartitionOperationsResponse to the same `parent` and with the same
+           * `filter`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If non-empty, `page_token` should contain a next_page_token from a previous
+         ListInstancePartitionOperationsResponse to the same `parent` and with the same `filter`.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If non-empty, `page_token` should contain a next_page_token from a previous
+           * ListInstancePartitionOperationsResponse to the same `parent` and with the same
+           * `filter`.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the InstancePartitions collection.
        *
        * <p>The typical use is:</p>
@@ -12124,6 +12462,891 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        * The "instancePartitions" collection of methods.
        */
       public class InstancePartitions {
+
+        /**
+         * Creates an instance partition and begins preparing it to be used. The returned long-running
+         * operation can be used to track the progress of preparing the new instance partition. The instance
+         * partition name is assigned by the caller. If the named instance partition already exists,
+         * `CreateInstancePartition` returns `ALREADY_EXISTS`. Immediately upon completion of this request:
+         * * The instance partition is readable via the API, with all requested attributes but no allocated
+         * resources. Its state is `CREATING`. Until completion of the returned operation: * Cancelling the
+         * operation renders the instance partition immediately unreadable via the API. * The instance
+         * partition can be deleted. * All other attempts to modify the instance partition are rejected.
+         * Upon completion of the returned operation: * Billing for all successfully-allocated resources
+         * begins (some types may have lower than the requested levels). * Databases can start using this
+         * instance partition. * The instance partition's allocated resource levels are readable via the
+         * API. * The instance partition's state becomes `READY`. The returned long-running operation will
+         * have a name of the format `/operations/` and can be used to track creation of the instance
+         * partition. The metadata field type is CreateInstancePartitionMetadata. The response field type is
+         * InstancePartition, if successful.
+         *
+         * Create a request for the method "instancePartitions.create".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the instance in which to create the instance partition. Values are of the form
+         *        `projects//instances/`.
+         * @param content the {@link com.google.api.services.spanner.v1.model.CreateInstancePartitionRequest}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.spanner.v1.model.CreateInstancePartitionRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends SpannerRequest<com.google.api.services.spanner.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/instancePartitions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
+
+          /**
+           * Creates an instance partition and begins preparing it to be used. The returned long-running
+           * operation can be used to track the progress of preparing the new instance partition. The
+           * instance partition name is assigned by the caller. If the named instance partition already
+           * exists, `CreateInstancePartition` returns `ALREADY_EXISTS`. Immediately upon completion of this
+           * request: * The instance partition is readable via the API, with all requested attributes but no
+           * allocated resources. Its state is `CREATING`. Until completion of the returned operation: *
+           * Cancelling the operation renders the instance partition immediately unreadable via the API. *
+           * The instance partition can be deleted. * All other attempts to modify the instance partition
+           * are rejected. Upon completion of the returned operation: * Billing for all successfully-
+           * allocated resources begins (some types may have lower than the requested levels). * Databases
+           * can start using this instance partition. * The instance partition's allocated resource levels
+           * are readable via the API. * The instance partition's state becomes `READY`. The returned long-
+           * running operation will have a name of the format `/operations/` and can be used to track
+           * creation of the instance partition. The metadata field type is CreateInstancePartitionMetadata.
+           * The response field type is InstancePartition, if successful.
+           *
+           * Create a request for the method "instancePartitions.create".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the instance in which to create the instance partition. Values are of the form
+         *        `projects//instances/`.
+           * @param content the {@link com.google.api.services.spanner.v1.model.CreateInstancePartitionRequest}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.spanner.v1.model.CreateInstancePartitionRequest content) {
+            super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the instance in which to create the instance partition. Values
+           * are of the form `projects//instances/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the instance in which to create the instance partition. Values are of the
+         form `projects//instances/`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the instance in which to create the instance partition. Values
+           * are of the form `projects//instances/`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an existing instance partition. Requires that the instance partition is not used by any
+         * database or backup and is not the default instance partition of an instance. Authorization
+         * requires `spanner.instancePartitions.delete` permission on the resource name.
+         *
+         * Create a request for the method "instancePartitions.delete".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the instance partition to be deleted. Values are of the form
+         *        `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends SpannerRequest<com.google.api.services.spanner.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/instancePartitions/[^/]+$");
+
+          /**
+           * Deletes an existing instance partition. Requires that the instance partition is not used by any
+           * database or backup and is not the default instance partition of an instance. Authorization
+           * requires `spanner.instancePartitions.delete` permission on the resource name.
+           *
+           * Create a request for the method "instancePartitions.delete".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the instance partition to be deleted. Values are of the form
+         *        `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Spanner.this, "DELETE", REST_PATH, null, com.google.api.services.spanner.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/instancePartitions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the instance partition to be deleted. Values are of the form
+           * `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the instance partition to be deleted. Values are of the form
+         `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the instance partition to be deleted. Values are of the form
+           * `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/instancePartitions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If not empty, the API only deletes the instance partition when the etag
+           * provided matches the current status of the requested instance partition. Otherwise,
+           * deletes the instance partition without checking the current status of the requested
+           * instance partition.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. If not empty, the API only deletes the instance partition when the etag provided matches
+         the current status of the requested instance partition. Otherwise, deletes the instance partition
+         without checking the current status of the requested instance partition.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. If not empty, the API only deletes the instance partition when the etag
+           * provided matches the current status of the requested instance partition. Otherwise,
+           * deletes the instance partition without checking the current status of the requested
+           * instance partition.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets information about a particular instance partition.
+         *
+         * Create a request for the method "instancePartitions.get".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the requested instance partition. Values are of the form
+         *        `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends SpannerRequest<com.google.api.services.spanner.v1.model.InstancePartition> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/instancePartitions/[^/]+$");
+
+          /**
+           * Gets information about a particular instance partition.
+           *
+           * Create a request for the method "instancePartitions.get".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the requested instance partition. Values are of the form
+         *        `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.InstancePartition.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/instancePartitions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the requested instance partition. Values are of the form
+           * `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the requested instance partition. Values are of the form
+         `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the requested instance partition. Values are of the form
+           * `projects/{project}/instances/{instance}/instancePartitions/{instance_partition}`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/instancePartitions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all instance partitions for the given instance.
+         *
+         * Create a request for the method "instancePartitions.list".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The instance whose instance partitions should be listed. Values are of the form
+         *        `projects//instances/`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SpannerRequest<com.google.api.services.spanner.v1.model.ListInstancePartitionsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/instancePartitions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
+
+          /**
+           * Lists all instance partitions for the given instance.
+           *
+           * Create a request for the method "instancePartitions.list".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The instance whose instance partitions should be listed. Values are of the form
+         *        `projects//instances/`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Spanner.this, "GET", REST_PATH, null, com.google.api.services.spanner.v1.model.ListInstancePartitionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The instance whose instance partitions should be listed. Values are of the
+           * form `projects//instances/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The instance whose instance partitions should be listed. Values are of the form
+         `projects//instances/`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The instance whose instance partitions should be listed. Values are of the
+           * form `projects//instances/`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Deadline used while retrieving metadata for instance partitions. Instance
+           * partitions whose metadata cannot be retrieved within this deadline will be added to
+           * unreachable in ListInstancePartitionsResponse.
+           */
+          @com.google.api.client.util.Key
+          private String instancePartitionDeadline;
+
+          /** Optional. Deadline used while retrieving metadata for instance partitions. Instance partitions
+         whose metadata cannot be retrieved within this deadline will be added to unreachable in
+         ListInstancePartitionsResponse.
+           */
+          public String getInstancePartitionDeadline() {
+            return instancePartitionDeadline;
+          }
+
+          /**
+           * Optional. Deadline used while retrieving metadata for instance partitions. Instance
+           * partitions whose metadata cannot be retrieved within this deadline will be added to
+           * unreachable in ListInstancePartitionsResponse.
+           */
+          public List setInstancePartitionDeadline(String instancePartitionDeadline) {
+            this.instancePartitionDeadline = instancePartitionDeadline;
+            return this;
+          }
+
+          /**
+           * Number of instance partitions to be returned in the response. If 0 or less, defaults to
+           * the server's maximum allowed page size.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Number of instance partitions to be returned in the response. If 0 or less, defaults to the
+         server's maximum allowed page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Number of instance partitions to be returned in the response. If 0 or less, defaults to
+           * the server's maximum allowed page size.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * If non-empty, `page_token` should contain a next_page_token from a previous
+           * ListInstancePartitionsResponse.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** If non-empty, `page_token` should contain a next_page_token from a previous
+         ListInstancePartitionsResponse.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * If non-empty, `page_token` should contain a next_page_token from a previous
+           * ListInstancePartitionsResponse.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an instance partition, and begins allocating or releasing resources as requested. The
+         * returned long-running operation can be used to track the progress of updating the instance
+         * partition. If the named instance partition does not exist, returns `NOT_FOUND`. Immediately upon
+         * completion of this request: * For resource types for which a decrease in the instance partition's
+         * allocation has been requested, billing is based on the newly-requested level. Until completion of
+         * the returned operation: * Cancelling the operation sets its metadata's cancel_time, and begins
+         * restoring resources to their pre-request values. The operation is guaranteed to succeed at
+         * undoing all resource changes, after which point it terminates with a `CANCELLED` status. * All
+         * other attempts to modify the instance partition are rejected. * Reading the instance partition
+         * via the API continues to give the pre-request resource levels. Upon completion of the returned
+         * operation: * Billing begins for all successfully-allocated resources (some types may have lower
+         * than the requested levels). * All newly-reserved resources are available for serving the instance
+         * partition's tables. * The instance partition's new resource levels are readable via the API. The
+         * returned long-running operation will have a name of the format `/operations/` and can be used to
+         * track the instance partition modification. The metadata field type is
+         * UpdateInstancePartitionMetadata. The response field type is InstancePartition, if successful.
+         * Authorization requires `spanner.instancePartitions.update` permission on the resource name.
+         *
+         * Create a request for the method "instancePartitions.patch".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A unique identifier for the instance partition. Values are of the form
+         *        `projects//instances//instancePartitions/a-z*[a-z0-9]`. The final segment of the name must
+         *        be between 2 and 64 characters in length. An instance partition's name cannot be changed
+         *        after the instance partition is created.
+         * @param content the {@link com.google.api.services.spanner.v1.model.UpdateInstancePartitionRequest}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.spanner.v1.model.UpdateInstancePartitionRequest content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends SpannerRequest<com.google.api.services.spanner.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/instancePartitions/[^/]+$");
+
+          /**
+           * Updates an instance partition, and begins allocating or releasing resources as requested. The
+           * returned long-running operation can be used to track the progress of updating the instance
+           * partition. If the named instance partition does not exist, returns `NOT_FOUND`. Immediately
+           * upon completion of this request: * For resource types for which a decrease in the instance
+           * partition's allocation has been requested, billing is based on the newly-requested level. Until
+           * completion of the returned operation: * Cancelling the operation sets its metadata's
+           * cancel_time, and begins restoring resources to their pre-request values. The operation is
+           * guaranteed to succeed at undoing all resource changes, after which point it terminates with a
+           * `CANCELLED` status. * All other attempts to modify the instance partition are rejected. *
+           * Reading the instance partition via the API continues to give the pre-request resource levels.
+           * Upon completion of the returned operation: * Billing begins for all successfully-allocated
+           * resources (some types may have lower than the requested levels). * All newly-reserved resources
+           * are available for serving the instance partition's tables. * The instance partition's new
+           * resource levels are readable via the API. The returned long-running operation will have a name
+           * of the format `/operations/` and can be used to track the instance partition modification. The
+           * metadata field type is UpdateInstancePartitionMetadata. The response field type is
+           * InstancePartition, if successful. Authorization requires `spanner.instancePartitions.update`
+           * permission on the resource name.
+           *
+           * Create a request for the method "instancePartitions.patch".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A unique identifier for the instance partition. Values are of the form
+         *        `projects//instances//instancePartitions/a-z*[a-z0-9]`. The final segment of the name must
+         *        be between 2 and 64 characters in length. An instance partition's name cannot be changed
+         *        after the instance partition is created.
+           * @param content the {@link com.google.api.services.spanner.v1.model.UpdateInstancePartitionRequest}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.spanner.v1.model.UpdateInstancePartitionRequest content) {
+            super(Spanner.this, "PATCH", REST_PATH, content, com.google.api.services.spanner.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/instancePartitions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A unique identifier for the instance partition. Values are of the form
+           * `projects//instances//instancePartitions/a-z*[a-z0-9]`. The final segment of the name
+           * must be between 2 and 64 characters in length. An instance partition's name cannot be
+           * changed after the instance partition is created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A unique identifier for the instance partition. Values are of the form
+         `projects//instances//instancePartitions/a-z*[a-z0-9]`. The final segment of the name must be
+         between 2 and 64 characters in length. An instance partition's name cannot be changed after the
+         instance partition is created.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A unique identifier for the instance partition. Values are of the form
+           * `projects//instances//instancePartitions/a-z*[a-z0-9]`. The final segment of the name
+           * must be between 2 and 64 characters in length. An instance partition's name cannot be
+           * changed after the instance partition is created.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/instancePartitions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Operations collection.

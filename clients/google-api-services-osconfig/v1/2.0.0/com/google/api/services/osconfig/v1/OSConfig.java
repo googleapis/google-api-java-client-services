@@ -174,6 +174,335 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
     public class Locations {
 
       /**
+       * An accessor for creating requests from the Global collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code OSConfig osconfig = new OSConfig(...);}
+       *   {@code OSConfig.Global.List request = osconfig.global().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Global global() {
+        return new Global();
+      }
+
+      /**
+       * The "global" collection of methods.
+       */
+      public class Global {
+
+        /**
+         * GetProjectFeatureSettings returns the feature settings for a project
+         *
+         * Create a request for the method "global.getProjectFeatureSettings".
+         *
+         * This request holds the parameters needed by the osconfig server.  After setting any optional
+         * parameters, call the {@link GetProjectFeatureSettings#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Name of the billing config. "projects//locations/global/projectFeatureSettings"
+         * @return the request
+         */
+        public GetProjectFeatureSettings getProjectFeatureSettings(java.lang.String name) throws java.io.IOException {
+          GetProjectFeatureSettings result = new GetProjectFeatureSettings(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetProjectFeatureSettings extends OSConfigRequest<com.google.api.services.osconfig.v1.model.ProjectFeatureSettings> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/projectFeatureSettings$");
+
+          /**
+           * GetProjectFeatureSettings returns the feature settings for a project
+           *
+           * Create a request for the method "global.getProjectFeatureSettings".
+           *
+           * This request holds the parameters needed by the the osconfig server.  After setting any
+           * optional parameters, call the {@link GetProjectFeatureSettings#execute()} method to invoke the
+           * remote operation. <p> {@link GetProjectFeatureSettings#initialize(com.google.api.client.googlea
+           * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the billing config. "projects//locations/global/projectFeatureSettings"
+           * @since 1.13
+           */
+          protected GetProjectFeatureSettings(java.lang.String name) {
+            super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v1.model.ProjectFeatureSettings.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/global/projectFeatureSettings$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetProjectFeatureSettings set$Xgafv(java.lang.String $Xgafv) {
+            return (GetProjectFeatureSettings) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetProjectFeatureSettings setAccessToken(java.lang.String accessToken) {
+            return (GetProjectFeatureSettings) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetProjectFeatureSettings setAlt(java.lang.String alt) {
+            return (GetProjectFeatureSettings) super.setAlt(alt);
+          }
+
+          @Override
+          public GetProjectFeatureSettings setCallback(java.lang.String callback) {
+            return (GetProjectFeatureSettings) super.setCallback(callback);
+          }
+
+          @Override
+          public GetProjectFeatureSettings setFields(java.lang.String fields) {
+            return (GetProjectFeatureSettings) super.setFields(fields);
+          }
+
+          @Override
+          public GetProjectFeatureSettings setKey(java.lang.String key) {
+            return (GetProjectFeatureSettings) super.setKey(key);
+          }
+
+          @Override
+          public GetProjectFeatureSettings setOauthToken(java.lang.String oauthToken) {
+            return (GetProjectFeatureSettings) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetProjectFeatureSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetProjectFeatureSettings) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetProjectFeatureSettings setQuotaUser(java.lang.String quotaUser) {
+            return (GetProjectFeatureSettings) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetProjectFeatureSettings setUploadType(java.lang.String uploadType) {
+            return (GetProjectFeatureSettings) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetProjectFeatureSettings setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetProjectFeatureSettings) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the billing config.
+           * "projects//locations/global/projectFeatureSettings"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the billing config. "projects//locations/global/projectFeatureSettings"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the billing config.
+           * "projects//locations/global/projectFeatureSettings"
+           */
+          public GetProjectFeatureSettings setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/global/projectFeatureSettings$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetProjectFeatureSettings set(String parameterName, Object value) {
+            return (GetProjectFeatureSettings) super.set(parameterName, value);
+          }
+        }
+        /**
+         * UpdateProjectFeatureSettings sets the feature settings for a project.
+         *
+         * Create a request for the method "global.updateProjectFeatureSettings".
+         *
+         * This request holds the parameters needed by the osconfig server.  After setting any optional
+         * parameters, call the {@link UpdateProjectFeatureSettings#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Immutable. Name of the config, e.g. projects/12345/locations/global/projectFeatureSettings
+         * @param content the {@link com.google.api.services.osconfig.v1.model.ProjectFeatureSettings}
+         * @return the request
+         */
+        public UpdateProjectFeatureSettings updateProjectFeatureSettings(java.lang.String name, com.google.api.services.osconfig.v1.model.ProjectFeatureSettings content) throws java.io.IOException {
+          UpdateProjectFeatureSettings result = new UpdateProjectFeatureSettings(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateProjectFeatureSettings extends OSConfigRequest<com.google.api.services.osconfig.v1.model.ProjectFeatureSettings> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/projectFeatureSettings$");
+
+          /**
+           * UpdateProjectFeatureSettings sets the feature settings for a project.
+           *
+           * Create a request for the method "global.updateProjectFeatureSettings".
+           *
+           * This request holds the parameters needed by the the osconfig server.  After setting any
+           * optional parameters, call the {@link UpdateProjectFeatureSettings#execute()} method to invoke
+           * the remote operation. <p> {@link UpdateProjectFeatureSettings#initialize(com.google.api.client.
+           * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Immutable. Name of the config, e.g. projects/12345/locations/global/projectFeatureSettings
+           * @param content the {@link com.google.api.services.osconfig.v1.model.ProjectFeatureSettings}
+           * @since 1.13
+           */
+          protected UpdateProjectFeatureSettings(java.lang.String name, com.google.api.services.osconfig.v1.model.ProjectFeatureSettings content) {
+            super(OSConfig.this, "PATCH", REST_PATH, content, com.google.api.services.osconfig.v1.model.ProjectFeatureSettings.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/global/projectFeatureSettings$");
+            }
+          }
+
+          @Override
+          public UpdateProjectFeatureSettings set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateProjectFeatureSettings) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateProjectFeatureSettings setAccessToken(java.lang.String accessToken) {
+            return (UpdateProjectFeatureSettings) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateProjectFeatureSettings setAlt(java.lang.String alt) {
+            return (UpdateProjectFeatureSettings) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateProjectFeatureSettings setCallback(java.lang.String callback) {
+            return (UpdateProjectFeatureSettings) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateProjectFeatureSettings setFields(java.lang.String fields) {
+            return (UpdateProjectFeatureSettings) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateProjectFeatureSettings setKey(java.lang.String key) {
+            return (UpdateProjectFeatureSettings) super.setKey(key);
+          }
+
+          @Override
+          public UpdateProjectFeatureSettings setOauthToken(java.lang.String oauthToken) {
+            return (UpdateProjectFeatureSettings) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateProjectFeatureSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateProjectFeatureSettings) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateProjectFeatureSettings setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateProjectFeatureSettings) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateProjectFeatureSettings setUploadType(java.lang.String uploadType) {
+            return (UpdateProjectFeatureSettings) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateProjectFeatureSettings setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateProjectFeatureSettings) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Immutable. Name of the config, e.g.
+           * projects/12345/locations/global/projectFeatureSettings
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Immutable. Name of the config, e.g.
+         projects/12345/locations/global/projectFeatureSettings
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Immutable. Name of the config, e.g.
+           * projects/12345/locations/global/projectFeatureSettings
+           */
+          public UpdateProjectFeatureSettings setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/global/projectFeatureSettings$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Field mask that controls which fields of the ProjectFeatureSettings should be
+           * updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Field mask that controls which fields of the ProjectFeatureSettings should be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Field mask that controls which fields of the ProjectFeatureSettings should be
+           * updated.
+           */
+          public UpdateProjectFeatureSettings setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateProjectFeatureSettings set(String parameterName, Object value) {
+            return (UpdateProjectFeatureSettings) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Instances collection.
        *
        * <p>The typical use is:</p>

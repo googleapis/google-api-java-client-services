@@ -104,8 +104,8 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   private Segments segments;
 
   /**
-   * Topic trends fields requested by the merchant in the query. Field values are only set if the
-   * merchant queries `TopicTrendsView`. https://support.google.com/merchants/answer/13542370.
+   * [Topic trends](https://support.google.com/merchants/answer/13542370) fields requested by the
+   * merchant in the query. Field values are only set if the merchant queries `TopicTrendsView`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,8 +285,8 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Topic trends fields requested by the merchant in the query. Field values are only set if the
-   * merchant queries `TopicTrendsView`. https://support.google.com/merchants/answer/13542370.
+   * [Topic trends](https://support.google.com/merchants/answer/13542370) fields requested by the
+   * merchant in the query. Field values are only set if the merchant queries `TopicTrendsView`.
    * @return value or {@code null} for none
    */
   public TopicTrends getTopicTrends() {
@@ -294,8 +294,8 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Topic trends fields requested by the merchant in the query. Field values are only set if the
-   * merchant queries `TopicTrendsView`. https://support.google.com/merchants/answer/13542370.
+   * [Topic trends](https://support.google.com/merchants/answer/13542370) fields requested by the
+   * merchant in the query. Field values are only set if the merchant queries `TopicTrendsView`.
    * @param topicTrends topicTrends or {@code null} for none
    */
   public ReportRow setTopicTrends(TopicTrends topicTrends) {

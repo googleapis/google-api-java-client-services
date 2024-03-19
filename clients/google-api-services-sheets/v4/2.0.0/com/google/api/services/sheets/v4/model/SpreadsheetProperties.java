@@ -45,6 +45,14 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
   private CellFormat defaultFormat;
 
   /**
+   * Whether to allow external url access for image and import functions. Read only when true. When
+   * false, you can set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean importFunctionsExternalUrlAccessAllowed;
+
+  /**
    * Determines whether and how circular references are resolved with iterative calculation. Absence
    * of this field means that circular references result in calculation errors.
    * The value may be {@code null}.
@@ -117,6 +125,25 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
    */
   public SpreadsheetProperties setDefaultFormat(CellFormat defaultFormat) {
     this.defaultFormat = defaultFormat;
+    return this;
+  }
+
+  /**
+   * Whether to allow external url access for image and import functions. Read only when true. When
+   * false, you can set to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getImportFunctionsExternalUrlAccessAllowed() {
+    return importFunctionsExternalUrlAccessAllowed;
+  }
+
+  /**
+   * Whether to allow external url access for image and import functions. Read only when true. When
+   * false, you can set to true.
+   * @param importFunctionsExternalUrlAccessAllowed importFunctionsExternalUrlAccessAllowed or {@code null} for none
+   */
+  public SpreadsheetProperties setImportFunctionsExternalUrlAccessAllowed(java.lang.Boolean importFunctionsExternalUrlAccessAllowed) {
+    this.importFunctionsExternalUrlAccessAllowed = importFunctionsExternalUrlAccessAllowed;
     return this;
   }
 

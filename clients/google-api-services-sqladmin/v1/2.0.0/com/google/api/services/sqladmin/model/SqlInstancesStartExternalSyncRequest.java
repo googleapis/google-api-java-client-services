@@ -30,6 +30,14 @@ package com.google.api.services.sqladmin.model;
 public final class SqlInstancesStartExternalSyncRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. MigrationType decides if the migration is a physical file based migration or logical
+   * migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String migrationType;
+
+  /**
    * MySQL-specific settings for start external sync.
    * The value may be {@code null}.
    */
@@ -56,6 +64,25 @@ public final class SqlInstancesStartExternalSyncRequest extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.String syncParallelLevel;
+
+  /**
+   * Optional. MigrationType decides if the migration is a physical file based migration or logical
+   * migration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMigrationType() {
+    return migrationType;
+  }
+
+  /**
+   * Optional. MigrationType decides if the migration is a physical file based migration or logical
+   * migration.
+   * @param migrationType migrationType or {@code null} for none
+   */
+  public SqlInstancesStartExternalSyncRequest setMigrationType(java.lang.String migrationType) {
+    this.migrationType = migrationType;
+    return this;
+  }
 
   /**
    * MySQL-specific settings for start external sync.

@@ -626,8 +626,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * example: `POST
        * https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
        * **Note:** [Error Reporting] (https://cloud.google.com/error-reporting) is a global service built
-       * on Cloud Logging and doesn't analyze logs stored in regional log buckets or logs routed to other
-       * Google Cloud projects.
+       * on Cloud Logging and doesn't analyze logs stored in regional log buckets.
        *
        * Create a request for the method "events.report".
        *
@@ -661,8 +660,7 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * For example: `POST
          * https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
          * **Note:** [Error Reporting] (https://cloud.google.com/error-reporting) is a global service
-         * built on Cloud Logging and doesn't analyze logs stored in regional log buckets or logs routed
-         * to other Google Cloud projects.
+         * built on Cloud Logging and doesn't analyze logs stored in regional log buckets.
          *
          * Create a request for the method "events.report".
          *

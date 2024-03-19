@@ -3169,17 +3169,17 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /** Optional. Number of results to return in the list. Default to 100. */
+            /** Optional. Number of results to return in the list. Default to 20. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. Number of results to return in the list. Default to 100.
+            /** Optional. Number of results to return in the list. Default to 20.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** Optional. Number of results to return in the list. Default to 100. */
+            /** Optional. Number of results to return in the list. Default to 20. */
             public FetchGitRefs setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;

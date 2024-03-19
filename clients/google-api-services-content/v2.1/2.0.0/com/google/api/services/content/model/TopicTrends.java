@@ -18,7 +18,13 @@ package com.google.api.services.content.model;
 
 /**
  * Topic trends fields requested by the merchant in the query. Field values are only set if the
- * merchant queries `TopicTrendsView`.
+ * merchant queries `TopicTrendsView`. Forecast data can be queried up to 13 weeks by passing a
+ * future date in the `date` field. Historical data is measured daily, and forecasted data is
+ * projected weekly. All data points are normalized based on the highest data points returned in the
+ * response. If you make separate queries with different date ranges, you might see different values
+ * for the same date in each response. The recommended way to get a trend score of a topic is
+ * `last7_days_search_interest / last{$day}_days_search_interest - 1`. You can view trends for up to
+ * eight topics at a time.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

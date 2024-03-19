@@ -7991,15 +7991,15 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /**
        * Required. The id to use for the external transaction. Must be unique across all other
        * transactions for the app. This value should be 1-63 characters and valid characters are
-       * /a-z0-9_-/. Do not use this field to store any Personally Identifiable Information (PII)
+       * /a-zA-Z0-9_-/. Do not use this field to store any Personally Identifiable Information (PII)
        * such as emails. Attempting to store PII in this field may result in requests being blocked.
        */
       @com.google.api.client.util.Key
       private java.lang.String externalTransactionId;
 
       /** Required. The id to use for the external transaction. Must be unique across all other transactions
-     for the app. This value should be 1-63 characters and valid characters are /a-z0-9_-/. Do not use
-     this field to store any Personally Identifiable Information (PII) such as emails. Attempting to
+     for the app. This value should be 1-63 characters and valid characters are /a-zA-Z0-9_-/. Do not
+     use this field to store any Personally Identifiable Information (PII) such as emails. Attempting to
      store PII in this field may result in requests being blocked.
        */
       public java.lang.String getExternalTransactionId() {
@@ -8009,7 +8009,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /**
        * Required. The id to use for the external transaction. Must be unique across all other
        * transactions for the app. This value should be 1-63 characters and valid characters are
-       * /a-z0-9_-/. Do not use this field to store any Personally Identifiable Information (PII)
+       * /a-zA-Z0-9_-/. Do not use this field to store any Personally Identifiable Information (PII)
        * such as emails. Attempting to store PII in this field may result in requests being blocked.
        */
       public Createexternaltransaction setExternalTransactionId(java.lang.String externalTransactionId) {

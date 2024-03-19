@@ -1159,15 +1159,16 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
       /**
        * Indicates which fields in the provided LoggingConfig to update. The following are the only
-       * supported fields: * default_log_generation_rule * per_service_log_generation_rules If not
-       * set, all supported fields are updated.
+       * supported fields: * LoggingConfig.default_log_generation_rule *
+       * LoggingConfig.per_service_log_generation_rules If not set, all supported fields are
+       * updated.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
       /** Indicates which fields in the provided LoggingConfig to update. The following are the only
-     supported fields: * default_log_generation_rule * per_service_log_generation_rules If not set, all
-     supported fields are updated.
+     supported fields: * LoggingConfig.default_log_generation_rule *
+     LoggingConfig.per_service_log_generation_rules If not set, all supported fields are updated.
        */
       public String getUpdateMask() {
         return updateMask;
@@ -1175,8 +1176,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
       /**
        * Indicates which fields in the provided LoggingConfig to update. The following are the only
-       * supported fields: * default_log_generation_rule * per_service_log_generation_rules If not
-       * set, all supported fields are updated.
+       * supported fields: * LoggingConfig.default_log_generation_rule *
+       * LoggingConfig.per_service_log_generation_rules If not set, all supported fields are
+       * updated.
        */
       public UpdateLoggingConfig setUpdateMask(String updateMask) {
         this.updateMask = updateMask;

@@ -31,7 +31,7 @@ package com.google.api.services.retail.v2beta.model;
 public final class GoogleCloudRetailV2betaExperimentInfoServingConfigExperiment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fully qualified resource name of the serving config VariantArm.serving_config_id
+   * The fully qualified resource name of the serving config Experiment.VariantArm.serving_config_id
    * responsible for generating the search response. For example:
    * `projects/locations/catalogs/servingConfigs`.
    * The value may be {@code null}.
@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2betaExperimentInfoServingConfigExperiment 
   private java.lang.String originalServingConfig;
 
   /**
-   * The fully qualified resource name of the serving config VariantArm.serving_config_id
+   * The fully qualified resource name of the serving config Experiment.VariantArm.serving_config_id
    * responsible for generating the search response. For example:
    * `projects/locations/catalogs/servingConfigs`.
    * @return value or {@code null} for none
@@ -59,7 +59,7 @@ public final class GoogleCloudRetailV2betaExperimentInfoServingConfigExperiment 
   }
 
   /**
-   * The fully qualified resource name of the serving config VariantArm.serving_config_id
+   * The fully qualified resource name of the serving config Experiment.VariantArm.serving_config_id
    * responsible for generating the search response. For example:
    * `projects/locations/catalogs/servingConfigs`.
    * @param experimentServingConfig experimentServingConfig or {@code null} for none

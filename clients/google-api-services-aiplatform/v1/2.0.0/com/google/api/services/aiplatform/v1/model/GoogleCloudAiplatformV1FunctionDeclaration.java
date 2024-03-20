@@ -42,7 +42,7 @@ public final class GoogleCloudAiplatformV1FunctionDeclaration extends com.google
 
   /**
    * Required. The name of the function to call. Must start with a letter or an underscore. Must be
-   * a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 64.
+   * a-z, A-Z, 0-9, or contain underscores, dots and dashes, with a maximum length of 64.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,10 @@ public final class GoogleCloudAiplatformV1FunctionDeclaration extends com.google
    * Optional. Describes the parameters to this function in JSON Schema Object format. Reflects the
    * Open API 3.03 Parameter Object. string Key: the name of the parameter. Parameter names are case
    * sensitive. Schema Value: the Schema defining the type used for the parameter. For function with
-   * no parameters, this can be left unset. Example with 1 required and 1 optional parameter: type:
-   * OBJECT properties: param1: type: STRING param2: type: INTEGER required: - param1
+   * no parameters, this can be left unset. Parameter names must start with a letter or an
+   * underscore and must only contain chars a-z, A-Z, 0-9, or underscores with a maximum length of
+   * 64. Example with 1 required and 1 optional parameter: type: OBJECT properties: param1: type:
+   * STRING param2: type: INTEGER required: - param1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +82,7 @@ public final class GoogleCloudAiplatformV1FunctionDeclaration extends com.google
 
   /**
    * Required. The name of the function to call. Must start with a letter or an underscore. Must be
-   * a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 64.
+   * a-z, A-Z, 0-9, or contain underscores, dots and dashes, with a maximum length of 64.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -89,7 +91,7 @@ public final class GoogleCloudAiplatformV1FunctionDeclaration extends com.google
 
   /**
    * Required. The name of the function to call. Must start with a letter or an underscore. Must be
-   * a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 64.
+   * a-z, A-Z, 0-9, or contain underscores, dots and dashes, with a maximum length of 64.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1FunctionDeclaration setName(java.lang.String name) {
@@ -101,8 +103,10 @@ public final class GoogleCloudAiplatformV1FunctionDeclaration extends com.google
    * Optional. Describes the parameters to this function in JSON Schema Object format. Reflects the
    * Open API 3.03 Parameter Object. string Key: the name of the parameter. Parameter names are case
    * sensitive. Schema Value: the Schema defining the type used for the parameter. For function with
-   * no parameters, this can be left unset. Example with 1 required and 1 optional parameter: type:
-   * OBJECT properties: param1: type: STRING param2: type: INTEGER required: - param1
+   * no parameters, this can be left unset. Parameter names must start with a letter or an
+   * underscore and must only contain chars a-z, A-Z, 0-9, or underscores with a maximum length of
+   * 64. Example with 1 required and 1 optional parameter: type: OBJECT properties: param1: type:
+   * STRING param2: type: INTEGER required: - param1
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1Schema getParameters() {
@@ -113,8 +117,10 @@ public final class GoogleCloudAiplatformV1FunctionDeclaration extends com.google
    * Optional. Describes the parameters to this function in JSON Schema Object format. Reflects the
    * Open API 3.03 Parameter Object. string Key: the name of the parameter. Parameter names are case
    * sensitive. Schema Value: the Schema defining the type used for the parameter. For function with
-   * no parameters, this can be left unset. Example with 1 required and 1 optional parameter: type:
-   * OBJECT properties: param1: type: STRING param2: type: INTEGER required: - param1
+   * no parameters, this can be left unset. Parameter names must start with a letter or an
+   * underscore and must only contain chars a-z, A-Z, 0-9, or underscores with a maximum length of
+   * 64. Example with 1 required and 1 optional parameter: type: OBJECT properties: param1: type:
+   * STRING param2: type: INTEGER required: - param1
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudAiplatformV1FunctionDeclaration setParameters(GoogleCloudAiplatformV1Schema parameters) {

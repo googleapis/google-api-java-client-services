@@ -60,6 +60,19 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
   private java.util.List<GoogleCloudAiplatformV1SafetySetting> safetySettings;
 
   /**
+   * Optional. The user provided system instructions for the model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1Content> systemInstructions;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1Content used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1Content.class);
+  }
+
+  /**
    * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
    * piece of code that enables the system to interact with external systems to perform an action,
    * or set of actions, outside of knowledge and scope of the model.
@@ -122,6 +135,23 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
    */
   public GoogleCloudAiplatformV1GenerateContentRequest setSafetySettings(java.util.List<GoogleCloudAiplatformV1SafetySetting> safetySettings) {
     this.safetySettings = safetySettings;
+    return this;
+  }
+
+  /**
+   * Optional. The user provided system instructions for the model.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1Content> getSystemInstructions() {
+    return systemInstructions;
+  }
+
+  /**
+   * Optional. The user provided system instructions for the model.
+   * @param systemInstructions systemInstructions or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentRequest setSystemInstructions(java.util.List<GoogleCloudAiplatformV1Content> systemInstructions) {
+    this.systemInstructions = systemInstructions;
     return this;
   }
 

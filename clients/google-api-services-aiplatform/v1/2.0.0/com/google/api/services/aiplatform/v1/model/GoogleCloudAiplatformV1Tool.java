@@ -50,6 +50,23 @@ public final class GoogleCloudAiplatformV1Tool extends com.google.api.client.jso
   }
 
   /**
+   * Optional. GoogleSearchRetrieval tool type. Specialized retrieval tool that is powered by Google
+   * search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1GoogleSearchRetrieval googleSearchRetrieval;
+
+  /**
+   * Optional. Retrieval tool type. System will always execute the provided retrieval tool(s) to get
+   * external knowledge to answer the prompt. Retrieval results are presented to the model for
+   * generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1Retrieval retrieval;
+
+  /**
    * Optional. Function tool type. One or more function declarations to be passed to the model along
    * with the current user query. Model may decide to call a subset of these functions by populating
    * FunctionCall in the response. User should provide a FunctionResponse for each function call in
@@ -71,6 +88,46 @@ public final class GoogleCloudAiplatformV1Tool extends com.google.api.client.jso
    */
   public GoogleCloudAiplatformV1Tool setFunctionDeclarations(java.util.List<GoogleCloudAiplatformV1FunctionDeclaration> functionDeclarations) {
     this.functionDeclarations = functionDeclarations;
+    return this;
+  }
+
+  /**
+   * Optional. GoogleSearchRetrieval tool type. Specialized retrieval tool that is powered by Google
+   * search.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GoogleSearchRetrieval getGoogleSearchRetrieval() {
+    return googleSearchRetrieval;
+  }
+
+  /**
+   * Optional. GoogleSearchRetrieval tool type. Specialized retrieval tool that is powered by Google
+   * search.
+   * @param googleSearchRetrieval googleSearchRetrieval or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Tool setGoogleSearchRetrieval(GoogleCloudAiplatformV1GoogleSearchRetrieval googleSearchRetrieval) {
+    this.googleSearchRetrieval = googleSearchRetrieval;
+    return this;
+  }
+
+  /**
+   * Optional. Retrieval tool type. System will always execute the provided retrieval tool(s) to get
+   * external knowledge to answer the prompt. Retrieval results are presented to the model for
+   * generation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Retrieval getRetrieval() {
+    return retrieval;
+  }
+
+  /**
+   * Optional. Retrieval tool type. System will always execute the provided retrieval tool(s) to get
+   * external knowledge to answer the prompt. Retrieval results are presented to the model for
+   * generation.
+   * @param retrieval retrieval or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Tool setRetrieval(GoogleCloudAiplatformV1Retrieval retrieval) {
+    this.retrieval = retrieval;
     return this;
   }
 

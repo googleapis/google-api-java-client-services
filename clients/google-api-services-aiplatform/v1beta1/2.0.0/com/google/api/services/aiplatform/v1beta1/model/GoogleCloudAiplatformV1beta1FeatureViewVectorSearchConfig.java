@@ -40,8 +40,10 @@ public final class GoogleCloudAiplatformV1beta1FeatureViewVectorSearchConfig ext
 
   /**
    * Optional. Column of crowding. This column contains crowding attribute which is a constraint on
-   * a neighbor list produced by nearest neighbor search requiring that no more than some value k'
-   * of the k neighbors returned have the same value of crowding_attribute.
+   * a neighbor list produced by FeatureOnlineStoreService.SearchNearestEntities to diversify search
+   * results. If NearestNeighborQuery.per_crowding_attribute_neighbor_count is set to K in
+   * SearchNearestEntitiesRequest, it's guaranteed that no more than K entities of the same crowding
+   * attribute are returned in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,8 +109,10 @@ public final class GoogleCloudAiplatformV1beta1FeatureViewVectorSearchConfig ext
 
   /**
    * Optional. Column of crowding. This column contains crowding attribute which is a constraint on
-   * a neighbor list produced by nearest neighbor search requiring that no more than some value k'
-   * of the k neighbors returned have the same value of crowding_attribute.
+   * a neighbor list produced by FeatureOnlineStoreService.SearchNearestEntities to diversify search
+   * results. If NearestNeighborQuery.per_crowding_attribute_neighbor_count is set to K in
+   * SearchNearestEntitiesRequest, it's guaranteed that no more than K entities of the same crowding
+   * attribute are returned in the response.
    * @return value or {@code null} for none
    */
   public java.lang.String getCrowdingColumn() {
@@ -117,8 +121,10 @@ public final class GoogleCloudAiplatformV1beta1FeatureViewVectorSearchConfig ext
 
   /**
    * Optional. Column of crowding. This column contains crowding attribute which is a constraint on
-   * a neighbor list produced by nearest neighbor search requiring that no more than some value k'
-   * of the k neighbors returned have the same value of crowding_attribute.
+   * a neighbor list produced by FeatureOnlineStoreService.SearchNearestEntities to diversify search
+   * results. If NearestNeighborQuery.per_crowding_attribute_neighbor_count is set to K in
+   * SearchNearestEntitiesRequest, it's guaranteed that no more than K entities of the same crowding
+   * attribute are returned in the response.
    * @param crowdingColumn crowdingColumn or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FeatureViewVectorSearchConfig setCrowdingColumn(java.lang.String crowdingColumn) {

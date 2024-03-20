@@ -63,8 +63,8 @@ public final class Role extends com.google.api.client.json.GenericJson {
    * The name of the role. When `Role` is used in `CreateRole`, the role name must not be set. When
    * `Role` is used in output and other input such as `UpdateRole`, the role name is the complete
    * path. For example, `roles/logging.viewer` for predefined roles,
-   * `organizations/{ORGANIZATION_ID}/roles/my-role` for organization-level custom roles, and
-   * `projects/{PROJECT_ID}/roles/my-role` for project-level custom roles.
+   * `organizations/{ORGANIZATION_ID}/roles/myRole` for organization-level custom roles, and
+   * `projects/{PROJECT_ID}/roles/myRole` for project-level custom roles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,8 +187,8 @@ public final class Role extends com.google.api.client.json.GenericJson {
    * The name of the role. When `Role` is used in `CreateRole`, the role name must not be set. When
    * `Role` is used in output and other input such as `UpdateRole`, the role name is the complete
    * path. For example, `roles/logging.viewer` for predefined roles,
-   * `organizations/{ORGANIZATION_ID}/roles/my-role` for organization-level custom roles, and
-   * `projects/{PROJECT_ID}/roles/my-role` for project-level custom roles.
+   * `organizations/{ORGANIZATION_ID}/roles/myRole` for organization-level custom roles, and
+   * `projects/{PROJECT_ID}/roles/myRole` for project-level custom roles.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -199,8 +199,8 @@ public final class Role extends com.google.api.client.json.GenericJson {
    * The name of the role. When `Role` is used in `CreateRole`, the role name must not be set. When
    * `Role` is used in output and other input such as `UpdateRole`, the role name is the complete
    * path. For example, `roles/logging.viewer` for predefined roles,
-   * `organizations/{ORGANIZATION_ID}/roles/my-role` for organization-level custom roles, and
-   * `projects/{PROJECT_ID}/roles/my-role` for project-level custom roles.
+   * `organizations/{ORGANIZATION_ID}/roles/myRole` for organization-level custom roles, and
+   * `projects/{PROJECT_ID}/roles/myRole` for project-level custom roles.
    * @param name name or {@code null} for none
    */
   public Role setName(java.lang.String name) {

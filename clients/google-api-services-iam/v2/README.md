@@ -1,6 +1,6 @@
 # Identity and Access Management (IAM) API Client Library for Java
 
-Manages identity and access control for Google Cloud Platform resources, including the creation of service accounts, which you can use to authenticate to Google and make API calls. 
+Manages identity and access control for Google Cloud resources, including the creation of service accounts, which you can use to authenticate to Google and make API calls. Enabling this API also enables the IAM Service Account Credentials API (iamcredentials.googleapis.com). However, disabling this API doesn't disable the IAM Service Account Credentials API. 
 
 This page contains information about getting started with the Identity and Access Management (IAM) API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-iam</artifactId>
-      <version>v2-rev20240220-2.0.0</version>
+      <version>v2-rev20240314-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-iam:v2-rev20240220-2.0.0'
+  implementation 'com.google.apis:google-api-services-iam:v2-rev20240314-2.0.0'
 }
 ```
 

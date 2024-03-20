@@ -94,6 +94,14 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   private java.lang.Integer transactionLogRetentionDays;
 
   /**
+   * Output only. This value contains the storage location of transactional logs for the database
+   * for point-in-time recovery.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transactionalLogStorageState;
+
+  /**
    * Backup retention settings.
    * @return value or {@code null} for none
    */
@@ -245,6 +253,25 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
    */
   public BackupConfiguration setTransactionLogRetentionDays(java.lang.Integer transactionLogRetentionDays) {
     this.transactionLogRetentionDays = transactionLogRetentionDays;
+    return this;
+  }
+
+  /**
+   * Output only. This value contains the storage location of transactional logs for the database
+   * for point-in-time recovery.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransactionalLogStorageState() {
+    return transactionalLogStorageState;
+  }
+
+  /**
+   * Output only. This value contains the storage location of transactional logs for the database
+   * for point-in-time recovery.
+   * @param transactionalLogStorageState transactionalLogStorageState or {@code null} for none
+   */
+  public BackupConfiguration setTransactionalLogStorageState(java.lang.String transactionalLogStorageState) {
+    this.transactionalLogStorageState = transactionalLogStorageState;
     return this;
   }
 

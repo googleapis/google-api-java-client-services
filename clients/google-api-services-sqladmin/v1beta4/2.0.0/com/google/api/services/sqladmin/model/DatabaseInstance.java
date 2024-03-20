@@ -132,6 +132,13 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String gceZone;
 
   /**
+   * Gemini instance configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeminiInstanceConfig geminiConfig;
+
+  /**
    * The instance type.
    * The value may be {@code null}.
    */
@@ -249,6 +256,15 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> replicaNames;
+
+  /**
+   * The pair of a primary instance and disaster recovery (DR) replica. A DR replica is a cross-
+   * region replica that you designate for failover in the event that the primary instance has
+   * regional failure.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReplicationCluster replicationCluster;
 
   /**
    * Initial root password. Use only on creation. You must set root passwords before you can connect
@@ -581,6 +597,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Gemini instance configuration.
+   * @return value or {@code null} for none
+   */
+  public GeminiInstanceConfig getGeminiConfig() {
+    return geminiConfig;
+  }
+
+  /**
+   * Gemini instance configuration.
+   * @param geminiConfig geminiConfig or {@code null} for none
+   */
+  public DatabaseInstance setGeminiConfig(GeminiInstanceConfig geminiConfig) {
+    this.geminiConfig = geminiConfig;
+    return this;
+  }
+
+  /**
    * The instance type.
    * @return value or {@code null} for none
    */
@@ -863,6 +896,27 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setReplicaNames(java.util.List<java.lang.String> replicaNames) {
     this.replicaNames = replicaNames;
+    return this;
+  }
+
+  /**
+   * The pair of a primary instance and disaster recovery (DR) replica. A DR replica is a cross-
+   * region replica that you designate for failover in the event that the primary instance has
+   * regional failure.
+   * @return value or {@code null} for none
+   */
+  public ReplicationCluster getReplicationCluster() {
+    return replicationCluster;
+  }
+
+  /**
+   * The pair of a primary instance and disaster recovery (DR) replica. A DR replica is a cross-
+   * region replica that you designate for failover in the event that the primary instance has
+   * regional failure.
+   * @param replicationCluster replicationCluster or {@code null} for none
+   */
+  public DatabaseInstance setReplicationCluster(ReplicationCluster replicationCluster) {
+    this.replicationCluster = replicationCluster;
     return this;
   }
 

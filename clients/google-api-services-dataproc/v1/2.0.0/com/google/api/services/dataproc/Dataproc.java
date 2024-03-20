@@ -1532,6 +1532,146 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
       public class Batches {
 
         /**
+         * Analyze a Batch for possible recommendations and insights.
+         *
+         * Create a request for the method "batches.analyze".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Analyze#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The fully qualified name of the batch to analyze in the format
+         *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+         * @param content the {@link com.google.api.services.dataproc.model.AnalyzeBatchRequest}
+         * @return the request
+         */
+        public Analyze analyze(java.lang.String name, com.google.api.services.dataproc.model.AnalyzeBatchRequest content) throws java.io.IOException {
+          Analyze result = new Analyze(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Analyze extends DataprocRequest<com.google.api.services.dataproc.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:analyze";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+$");
+
+          /**
+           * Analyze a Batch for possible recommendations and insights.
+           *
+           * Create a request for the method "batches.analyze".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Analyze#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Analyze#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The fully qualified name of the batch to analyze in the format
+         *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+           * @param content the {@link com.google.api.services.dataproc.model.AnalyzeBatchRequest}
+           * @since 1.13
+           */
+          protected Analyze(java.lang.String name, com.google.api.services.dataproc.model.AnalyzeBatchRequest content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/batches/[^/]+$");
+            }
+          }
+
+          @Override
+          public Analyze set$Xgafv(java.lang.String $Xgafv) {
+            return (Analyze) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Analyze setAccessToken(java.lang.String accessToken) {
+            return (Analyze) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Analyze setAlt(java.lang.String alt) {
+            return (Analyze) super.setAlt(alt);
+          }
+
+          @Override
+          public Analyze setCallback(java.lang.String callback) {
+            return (Analyze) super.setCallback(callback);
+          }
+
+          @Override
+          public Analyze setFields(java.lang.String fields) {
+            return (Analyze) super.setFields(fields);
+          }
+
+          @Override
+          public Analyze setKey(java.lang.String key) {
+            return (Analyze) super.setKey(key);
+          }
+
+          @Override
+          public Analyze setOauthToken(java.lang.String oauthToken) {
+            return (Analyze) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Analyze setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Analyze) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Analyze setQuotaUser(java.lang.String quotaUser) {
+            return (Analyze) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Analyze setUploadType(java.lang.String uploadType) {
+            return (Analyze) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Analyze setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Analyze) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The fully qualified name of the batch to analyze in the format
+           * "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The fully qualified name of the batch to analyze in the format
+         "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The fully qualified name of the batch to analyze in the format
+           * "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
+           */
+          public Analyze setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/batches/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Analyze set(String parameterName, Object value) {
+            return (Analyze) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a batch workload that executes asynchronously.
          *
          * Create a request for the method "batches.create".
@@ -15391,6 +15531,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
     public Builder setGoogleClientRequestInitializer(
         com.google.api.client.googleapis.services.GoogleClientRequestInitializer googleClientRequestInitializer) {
       return (Builder) super.setGoogleClientRequestInitializer(googleClientRequestInitializer);
+    }
+
+    @Override
+    public Builder setUniverseDomain(String universeDomain) {
+      return (Builder) super.setUniverseDomain(universeDomain);
     }
   }
 }

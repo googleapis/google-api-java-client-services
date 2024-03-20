@@ -18,9 +18,13 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * A Google Chat app interaction event. To learn about interaction events, see [Receive and respond
- * to interactions with your Google Chat app](https://developers.google.com/chat/api/guides/message-
- * formats). To learn about event types and for example event payloads, see [Types of Google Chat
- * app interaction events](https://developers.google.com/chat/api/guides/message-formats/events).
+ * to interactions with your Google Chat
+ * app](https://developers.google.com/workspace/chat/api/guides/message-formats). To learn about
+ * event types and for example event payloads, see [Types of Google Chat app interaction
+ * events](https://developers.google.com/workspace/chat/events). In addition to receiving events
+ * from user interactions, Chat apps can receive events about changes to spaces, such as when a new
+ * member is added to a space. To learn about space events, see [Work with events from Google
+ * Chat](https://developers.google.com/workspace/chat/events-overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -120,7 +124,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
 
   /**
    * The type of interaction event. For details, see [Types of Google Chat app interaction
-   * events](https://developers.google.com/chat/api/guides/message-formats/events).
+   * events](https://developers.google.com/workspace/chat/events).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -337,7 +341,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
 
   /**
    * The type of interaction event. For details, see [Types of Google Chat app interaction
-   * events](https://developers.google.com/chat/api/guides/message-formats/events).
+   * events](https://developers.google.com/workspace/chat/events).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -346,7 +350,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
 
   /**
    * The type of interaction event. For details, see [Types of Google Chat app interaction
-   * events](https://developers.google.com/chat/api/guides/message-formats/events).
+   * events](https://developers.google.com/workspace/chat/events).
    * @param type type or {@code null} for none
    */
   public DeprecatedEvent setType(java.lang.String type) {

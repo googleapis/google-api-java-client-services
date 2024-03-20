@@ -36,6 +36,13 @@ package com.google.api.services.datacatalog.v1beta1.model;
 public final class GoogleCloudDatacatalogV1beta1TagTemplate extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Transfer status of the TagTemplate
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataplexTransferStatus;
+
+  /**
    * The display name for this template. Defaults to an empty string.
    * The value may be {@code null}.
    */
@@ -62,6 +69,23 @@ public final class GoogleCloudDatacatalogV1beta1TagTemplate extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. Transfer status of the TagTemplate
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataplexTransferStatus() {
+    return dataplexTransferStatus;
+  }
+
+  /**
+   * Output only. Transfer status of the TagTemplate
+   * @param dataplexTransferStatus dataplexTransferStatus or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1beta1TagTemplate setDataplexTransferStatus(java.lang.String dataplexTransferStatus) {
+    this.dataplexTransferStatus = dataplexTransferStatus;
+    return this;
+  }
 
   /**
    * The display name for this template. Defaults to an empty string.

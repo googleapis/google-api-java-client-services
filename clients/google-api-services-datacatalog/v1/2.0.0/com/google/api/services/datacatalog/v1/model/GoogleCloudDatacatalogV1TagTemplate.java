@@ -36,6 +36,13 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1TagTemplate extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Transfer status of the TagTemplate
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataplexTransferStatus;
+
+  /**
    * Display name for this template. Defaults to an empty string. The name must contain only Unicode
    * letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can't start or end with
    * spaces. The maximum length is 200 characters.
@@ -72,6 +79,23 @@ public final class GoogleCloudDatacatalogV1TagTemplate extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Transfer status of the TagTemplate
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataplexTransferStatus() {
+    return dataplexTransferStatus;
+  }
+
+  /**
+   * Optional. Transfer status of the TagTemplate
+   * @param dataplexTransferStatus dataplexTransferStatus or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1TagTemplate setDataplexTransferStatus(java.lang.String dataplexTransferStatus) {
+    this.dataplexTransferStatus = dataplexTransferStatus;
+    return this;
+  }
 
   /**
    * Display name for this template. Defaults to an empty string. The name must contain only Unicode

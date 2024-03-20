@@ -37,6 +37,14 @@ public final class GoogleCloudAiplatformV1SafetySetting extends com.google.api.c
   private java.lang.String category;
 
   /**
+   * Optional. Specify if the threshold is used for probability or severity score. If not specified,
+   * the threshold is used for probability score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String method;
+
+  /**
    * Required. The harm block threshold.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class GoogleCloudAiplatformV1SafetySetting extends com.google.api.c
    */
   public GoogleCloudAiplatformV1SafetySetting setCategory(java.lang.String category) {
     this.category = category;
+    return this;
+  }
+
+  /**
+   * Optional. Specify if the threshold is used for probability or severity score. If not specified,
+   * the threshold is used for probability score.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMethod() {
+    return method;
+  }
+
+  /**
+   * Optional. Specify if the threshold is used for probability or severity score. If not specified,
+   * the threshold is used for probability score.
+   * @param method method or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SafetySetting setMethod(java.lang.String method) {
+    this.method = method;
     return this;
   }
 

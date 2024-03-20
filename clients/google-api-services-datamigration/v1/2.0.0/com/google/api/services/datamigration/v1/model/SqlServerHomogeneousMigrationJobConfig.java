@@ -35,10 +35,10 @@ public final class SqlServerHomogeneousMigrationJobConfig extends com.google.api
    * should ensure lexicographical order of backups. The pattern must define one of the following
    * capture group sets: Capture group set #1 yy/yyyy - year, 2 or 4 digits mm - month number, 1-12
    * dd - day of month, 1-31 hh - hour of day, 00-23 mi - minutes, 00-59 ss - seconds, 00-59
-   * Example: For backup file TestDB_backup_20230802_155400.trn, use pattern:
+   * Example: For backup file TestDB_20230802_155400.trn, use pattern:
    * (?.*)_backup_(?\d{4})(?\d{2})(?\d{2})_(?\d{2})(?\d{2})(?\d{2}).trn Capture group set #2
-   * timestamp - unix timestamp Example: For backup file TestDB_backup_1691448254.trn, use pattern:
-   * (?.*)_backup_(?.*).trn
+   * timestamp - unix timestamp Example: For backup file TestDB.1691448254.trn, use pattern:
+   * (?.*)\.(?\d*).trn or (?.*)\.(?\d*).trn
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,10 +62,10 @@ public final class SqlServerHomogeneousMigrationJobConfig extends com.google.api
    * should ensure lexicographical order of backups. The pattern must define one of the following
    * capture group sets: Capture group set #1 yy/yyyy - year, 2 or 4 digits mm - month number, 1-12
    * dd - day of month, 1-31 hh - hour of day, 00-23 mi - minutes, 00-59 ss - seconds, 00-59
-   * Example: For backup file TestDB_backup_20230802_155400.trn, use pattern:
+   * Example: For backup file TestDB_20230802_155400.trn, use pattern:
    * (?.*)_backup_(?\d{4})(?\d{2})(?\d{2})_(?\d{2})(?\d{2})(?\d{2}).trn Capture group set #2
-   * timestamp - unix timestamp Example: For backup file TestDB_backup_1691448254.trn, use pattern:
-   * (?.*)_backup_(?.*).trn
+   * timestamp - unix timestamp Example: For backup file TestDB.1691448254.trn, use pattern:
+   * (?.*)\.(?\d*).trn or (?.*)\.(?\d*).trn
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupFilePattern() {
@@ -77,10 +77,10 @@ public final class SqlServerHomogeneousMigrationJobConfig extends com.google.api
    * should ensure lexicographical order of backups. The pattern must define one of the following
    * capture group sets: Capture group set #1 yy/yyyy - year, 2 or 4 digits mm - month number, 1-12
    * dd - day of month, 1-31 hh - hour of day, 00-23 mi - minutes, 00-59 ss - seconds, 00-59
-   * Example: For backup file TestDB_backup_20230802_155400.trn, use pattern:
+   * Example: For backup file TestDB_20230802_155400.trn, use pattern:
    * (?.*)_backup_(?\d{4})(?\d{2})(?\d{2})_(?\d{2})(?\d{2})(?\d{2}).trn Capture group set #2
-   * timestamp - unix timestamp Example: For backup file TestDB_backup_1691448254.trn, use pattern:
-   * (?.*)_backup_(?.*).trn
+   * timestamp - unix timestamp Example: For backup file TestDB.1691448254.trn, use pattern:
+   * (?.*)\.(?\d*).trn or (?.*)\.(?\d*).trn
    * @param backupFilePattern backupFilePattern or {@code null} for none
    */
   public SqlServerHomogeneousMigrationJobConfig setBackupFilePattern(java.lang.String backupFilePattern) {

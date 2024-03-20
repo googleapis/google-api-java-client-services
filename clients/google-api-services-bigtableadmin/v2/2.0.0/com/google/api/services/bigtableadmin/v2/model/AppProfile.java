@@ -32,6 +32,13 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class AppProfile extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies that this app profile is intended for read-only usage via the Data Boost feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataBoostIsolationReadOnly dataBoostIsolationReadOnly;
+
+  /**
    * Long form description of the use case for this AppProfile.
    * The value may be {@code null}.
    */
@@ -86,6 +93,23 @@ public final class AppProfile extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private StandardIsolation standardIsolation;
+
+  /**
+   * Specifies that this app profile is intended for read-only usage via the Data Boost feature.
+   * @return value or {@code null} for none
+   */
+  public DataBoostIsolationReadOnly getDataBoostIsolationReadOnly() {
+    return dataBoostIsolationReadOnly;
+  }
+
+  /**
+   * Specifies that this app profile is intended for read-only usage via the Data Boost feature.
+   * @param dataBoostIsolationReadOnly dataBoostIsolationReadOnly or {@code null} for none
+   */
+  public AppProfile setDataBoostIsolationReadOnly(DataBoostIsolationReadOnly dataBoostIsolationReadOnly) {
+    this.dataBoostIsolationReadOnly = dataBoostIsolationReadOnly;
+    return this;
+  }
 
   /**
    * Long form description of the use case for this AppProfile.

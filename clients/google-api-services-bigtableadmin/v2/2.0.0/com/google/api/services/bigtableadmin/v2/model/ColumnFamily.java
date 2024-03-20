@@ -48,6 +48,17 @@ public final class ColumnFamily extends com.google.api.client.json.GenericJson {
   private ColumnFamilyStats stats;
 
   /**
+   * The type of data stored in each of this family's cell values, including its full encoding. If
+   * omitted, the family only serves raw untyped bytes. For now, only the `Aggregate` type is
+   * supported. `Aggregate` can only be set at family creation and is immutable afterwards. If
+   * `value_type` is `Aggregate`, written data must be compatible with: * `value_type.input_type`
+   * for `AddInput` mutations
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Type valueType;
+
+  /**
    * Garbage collection rule specified as a protobuf. Must serialize to at most 500 bytes. NOTE:
    * Garbage collection executes opportunistically in the background, and so it's possible for reads
    * to return a cell even if it matches the active GC expression for its family.
@@ -84,6 +95,31 @@ public final class ColumnFamily extends com.google.api.client.json.GenericJson {
    */
   public ColumnFamily setStats(ColumnFamilyStats stats) {
     this.stats = stats;
+    return this;
+  }
+
+  /**
+   * The type of data stored in each of this family's cell values, including its full encoding. If
+   * omitted, the family only serves raw untyped bytes. For now, only the `Aggregate` type is
+   * supported. `Aggregate` can only be set at family creation and is immutable afterwards. If
+   * `value_type` is `Aggregate`, written data must be compatible with: * `value_type.input_type`
+   * for `AddInput` mutations
+   * @return value or {@code null} for none
+   */
+  public Type getValueType() {
+    return valueType;
+  }
+
+  /**
+   * The type of data stored in each of this family's cell values, including its full encoding. If
+   * omitted, the family only serves raw untyped bytes. For now, only the `Aggregate` type is
+   * supported. `Aggregate` can only be set at family creation and is immutable afterwards. If
+   * `value_type` is `Aggregate`, written data must be compatible with: * `value_type.input_type`
+   * for `AddInput` mutations
+   * @param valueType valueType or {@code null} for none
+   */
+  public ColumnFamily setValueType(Type valueType) {
+    this.valueType = valueType;
     return this;
   }
 

@@ -61,8 +61,8 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    * referenced in IAM bindings. * `google.profile_photo`: The URL that specifies the authenticated
    * user's thumbnail photo. This is an optional field. When set, the image will be visible as the
    * user's profile picture. If not set, a generic user icon will be displayed instead. This
-   * attribute cannot be referenced in IAM bindings. * `google.posix_username`: The linux username
-   * used by OS login. This is an optional field and the mapped posix username cannot exceed 32
+   * attribute cannot be referenced in IAM bindings. * `google.posix_username`: The Linux username
+   * used by OS Login. This is an optional field and the mapped POSIX username cannot exceed 32
    * characters, The key must match the regex "^a-zA-Z0-9._{0,31}$". This attribute cannot be
    * referenced in IAM bindings. You can also provide custom attributes by specifying
    * `attribute.{custom_attribute}`, where {custom_attribute} is the name of the custom attribute to
@@ -198,8 +198,8 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    * referenced in IAM bindings. * `google.profile_photo`: The URL that specifies the authenticated
    * user's thumbnail photo. This is an optional field. When set, the image will be visible as the
    * user's profile picture. If not set, a generic user icon will be displayed instead. This
-   * attribute cannot be referenced in IAM bindings. * `google.posix_username`: The linux username
-   * used by OS login. This is an optional field and the mapped posix username cannot exceed 32
+   * attribute cannot be referenced in IAM bindings. * `google.posix_username`: The Linux username
+   * used by OS Login. This is an optional field and the mapped POSIX username cannot exceed 32
    * characters, The key must match the regex "^a-zA-Z0-9._{0,31}$". This attribute cannot be
    * referenced in IAM bindings. You can also provide custom attributes by specifying
    * `attribute.{custom_attribute}`, where {custom_attribute} is the name of the custom attribute to
@@ -240,8 +240,8 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    * referenced in IAM bindings. * `google.profile_photo`: The URL that specifies the authenticated
    * user's thumbnail photo. This is an optional field. When set, the image will be visible as the
    * user's profile picture. If not set, a generic user icon will be displayed instead. This
-   * attribute cannot be referenced in IAM bindings. * `google.posix_username`: The linux username
-   * used by OS login. This is an optional field and the mapped posix username cannot exceed 32
+   * attribute cannot be referenced in IAM bindings. * `google.posix_username`: The Linux username
+   * used by OS Login. This is an optional field and the mapped POSIX username cannot exceed 32
    * characters, The key must match the regex "^a-zA-Z0-9._{0,31}$". This attribute cannot be
    * referenced in IAM bindings. You can also provide custom attributes by specifying
    * `attribute.{custom_attribute}`, where {custom_attribute} is the name of the custom attribute to

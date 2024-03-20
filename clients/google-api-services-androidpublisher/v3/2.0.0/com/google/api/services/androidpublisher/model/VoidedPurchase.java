@@ -61,6 +61,15 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
   private java.lang.String purchaseToken;
 
   /**
+   * The voided quantity as the result of a quantity-based partial refund. Voided purchases of
+   * quantity-based partial refunds may only be returned when includeQuantityBasedPartialRefund is
+   * set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer voidedQuantity;
+
+  /**
    * The reason why the purchase was voided, possible values are: 0. Other 1. Remorse 2.
    * Not_received 3. Defective 4. Accidental_purchase 5. Fraud 6. Friendly_fraud 7. Chargeback
    * The value may be {@code null}.
@@ -152,6 +161,27 @@ public final class VoidedPurchase extends com.google.api.client.json.GenericJson
    */
   public VoidedPurchase setPurchaseToken(java.lang.String purchaseToken) {
     this.purchaseToken = purchaseToken;
+    return this;
+  }
+
+  /**
+   * The voided quantity as the result of a quantity-based partial refund. Voided purchases of
+   * quantity-based partial refunds may only be returned when includeQuantityBasedPartialRefund is
+   * set to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getVoidedQuantity() {
+    return voidedQuantity;
+  }
+
+  /**
+   * The voided quantity as the result of a quantity-based partial refund. Voided purchases of
+   * quantity-based partial refunds may only be returned when includeQuantityBasedPartialRefund is
+   * set to true.
+   * @param voidedQuantity voidedQuantity or {@code null} for none
+   */
+  public VoidedPurchase setVoidedQuantity(java.lang.Integer voidedQuantity) {
+    this.voidedQuantity = voidedQuantity;
     return this;
   }
 

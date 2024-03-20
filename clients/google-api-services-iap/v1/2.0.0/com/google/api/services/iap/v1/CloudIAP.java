@@ -3076,7 +3076,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Validates a given CEL expression conforms to IAP restrictions.
+     * Validates that a given CEL expression conforms to IAP restrictions.
      *
      * Create a request for the method "v1.validateAttributeExpression".
      *
@@ -3101,7 +3101,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^.*$");
 
       /**
-       * Validates a given CEL expression conforms to IAP restrictions.
+       * Validates that a given CEL expression conforms to IAP restrictions.
        *
        * Create a request for the method "v1.validateAttributeExpression".
        *
@@ -3202,15 +3202,15 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Required. User input string expression. Should be of the form
-       * 'attributes.saml_attributes.filter(attribute, attribute.name in ['{attribute_name}',
-       * '{attribute_name}'])'
+       * `attributes.saml_attributes.filter(attribute, attribute.name in ['{attribute_name}',
+       * '{attribute_name}'])`
        */
       @com.google.api.client.util.Key
       private java.lang.String expression;
 
       /** Required. User input string expression. Should be of the form
-     'attributes.saml_attributes.filter(attribute, attribute.name in ['{attribute_name}',
-     '{attribute_name}'])'
+     `attributes.saml_attributes.filter(attribute, attribute.name in ['{attribute_name}',
+     '{attribute_name}'])`
        */
       public java.lang.String getExpression() {
         return expression;
@@ -3218,8 +3218,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Required. User input string expression. Should be of the form
-       * 'attributes.saml_attributes.filter(attribute, attribute.name in ['{attribute_name}',
-       * '{attribute_name}'])'
+       * `attributes.saml_attributes.filter(attribute, attribute.name in ['{attribute_name}',
+       * '{attribute_name}'])`
        */
       public ValidateAttributeExpression setExpression(java.lang.String expression) {
         this.expression = expression;
@@ -3351,6 +3351,11 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
     public Builder setGoogleClientRequestInitializer(
         com.google.api.client.googleapis.services.GoogleClientRequestInitializer googleClientRequestInitializer) {
       return (Builder) super.setGoogleClientRequestInitializer(googleClientRequestInitializer);
+    }
+
+    @Override
+    public Builder setUniverseDomain(String universeDomain) {
+      return (Builder) super.setUniverseDomain(universeDomain);
     }
   }
 }

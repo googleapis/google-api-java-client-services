@@ -17842,6 +17842,35 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
+         * Optional. Whether to include voided purchases of quantity-based partial refunds, which
+         * are applicable only to multi-quantity purchases. If true, additional voided purchases may
+         * be returned with voidedQuantity that indicates the refund quantity of a quantity-based
+         * partial refund. The default value is false.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean includeQuantityBasedPartialRefund;
+
+        /** Optional. Whether to include voided purchases of quantity-based partial refunds, which are
+       applicable only to multi-quantity purchases. If true, additional voided purchases may be returned
+       with voidedQuantity that indicates the refund quantity of a quantity-based partial refund. The
+       default value is false.
+         */
+        public java.lang.Boolean getIncludeQuantityBasedPartialRefund() {
+          return includeQuantityBasedPartialRefund;
+        }
+
+        /**
+         * Optional. Whether to include voided purchases of quantity-based partial refunds, which
+         * are applicable only to multi-quantity purchases. If true, additional voided purchases may
+         * be returned with voidedQuantity that indicates the refund quantity of a quantity-based
+         * partial refund. The default value is false.
+         */
+        public List setIncludeQuantityBasedPartialRefund(java.lang.Boolean includeQuantityBasedPartialRefund) {
+          this.includeQuantityBasedPartialRefund = includeQuantityBasedPartialRefund;
+          return this;
+        }
+
+        /**
          * Defines how many results the list operation should return. The default number depends on
          * the resource collection.
          */
@@ -19906,6 +19935,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public Builder setGoogleClientRequestInitializer(
         com.google.api.client.googleapis.services.GoogleClientRequestInitializer googleClientRequestInitializer) {
       return (Builder) super.setGoogleClientRequestInitializer(googleClientRequestInitializer);
+    }
+
+    @Override
+    public Builder setUniverseDomain(String universeDomain) {
+      return (Builder) super.setUniverseDomain(universeDomain);
     }
   }
 }

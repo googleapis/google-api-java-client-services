@@ -30,6 +30,15 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1Instance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Access logging configuration enables the access logging feature at the instance.
+   * Apigee customers can enable access logging to ship the access logs to their own project's cloud
+   * logging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1AccessLoggingConfig accessLoggingConfig;
+
+  /**
    * Optional. Customer accept list represents the list of projects (id/number) on customer side
    * that can privately connect to the service attachment. It is an optional field which the
    * customers can provide during the instance creation. By default, the customer project associated
@@ -152,6 +161,27 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Optional. Access logging configuration enables the access logging feature at the instance.
+   * Apigee customers can enable access logging to ship the access logs to their own project's cloud
+   * logging.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1AccessLoggingConfig getAccessLoggingConfig() {
+    return accessLoggingConfig;
+  }
+
+  /**
+   * Optional. Access logging configuration enables the access logging feature at the instance.
+   * Apigee customers can enable access logging to ship the access logs to their own project's cloud
+   * logging.
+   * @param accessLoggingConfig accessLoggingConfig or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Instance setAccessLoggingConfig(GoogleCloudApigeeV1AccessLoggingConfig accessLoggingConfig) {
+    this.accessLoggingConfig = accessLoggingConfig;
+    return this;
+  }
 
   /**
    * Optional. Customer accept list represents the list of projects (id/number) on customer side

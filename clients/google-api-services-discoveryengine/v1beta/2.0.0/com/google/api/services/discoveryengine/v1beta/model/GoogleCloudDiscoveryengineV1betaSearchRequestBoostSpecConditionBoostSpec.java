@@ -38,7 +38,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpecConditi
    * your heavily favored but irrelevant documents. Setting to -1.0 gives the document a big
    * demotion. However, results that are deeply relevant might still be shown. The document will
    * have an upstream battle to get a fairly high ranking, but it is not blocked out completely.
-   * Setting to 0.0 means no boost applied. The boosting condition is ignored.
+   * Setting to 0.0 means no boost applied. The boosting condition is ignored. Only one of the
+   * (condition, boost) combination or the boost_control_spec below are set. If both are set then
+   * the global boost is ignored and the more fine-grained boost_control_spec is applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +65,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpecConditi
    * your heavily favored but irrelevant documents. Setting to -1.0 gives the document a big
    * demotion. However, results that are deeply relevant might still be shown. The document will
    * have an upstream battle to get a fairly high ranking, but it is not blocked out completely.
-   * Setting to 0.0 means no boost applied. The boosting condition is ignored.
+   * Setting to 0.0 means no boost applied. The boosting condition is ignored. Only one of the
+   * (condition, boost) combination or the boost_control_spec below are set. If both are set then
+   * the global boost is ignored and the more fine-grained boost_control_spec is applied.
    * @return value or {@code null} for none
    */
   public java.lang.Float getBoost() {
@@ -79,7 +83,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpecConditi
    * your heavily favored but irrelevant documents. Setting to -1.0 gives the document a big
    * demotion. However, results that are deeply relevant might still be shown. The document will
    * have an upstream battle to get a fairly high ranking, but it is not blocked out completely.
-   * Setting to 0.0 means no boost applied. The boosting condition is ignored.
+   * Setting to 0.0 means no boost applied. The boosting condition is ignored. Only one of the
+   * (condition, boost) combination or the boost_control_spec below are set. If both are set then
+   * the global boost is ignored and the more fine-grained boost_control_spec is applied.
    * @param boost boost or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpecConditionBoostSpec setBoost(java.lang.Float boost) {

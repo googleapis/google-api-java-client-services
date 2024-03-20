@@ -100,6 +100,16 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
   private java.lang.Integer summaryResultCount;
 
   /**
+   * If true, answer will be generated from most relevant chunks from top search results. This
+   * feature will improve summary quality. Please note that with this feature enabled, not all top
+   * search results will be referenced and included in the reference list, so the citation source
+   * index only points to the search results listed in the reference list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useSemanticChunks;
+
+  /**
    * Specifies whether to filter out adversarial queries. The default value is `false`. Google
    * employs search-query classification to detect adversarial queries. No summary is returned if
    * the search query is classified as an adversarial query. For example, a user might ask a
@@ -257,6 +267,29 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec setSummaryResultCount(java.lang.Integer summaryResultCount) {
     this.summaryResultCount = summaryResultCount;
+    return this;
+  }
+
+  /**
+   * If true, answer will be generated from most relevant chunks from top search results. This
+   * feature will improve summary quality. Please note that with this feature enabled, not all top
+   * search results will be referenced and included in the reference list, so the citation source
+   * index only points to the search results listed in the reference list.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseSemanticChunks() {
+    return useSemanticChunks;
+  }
+
+  /**
+   * If true, answer will be generated from most relevant chunks from top search results. This
+   * feature will improve summary quality. Please note that with this feature enabled, not all top
+   * search results will be referenced and included in the reference list, so the citation source
+   * index only points to the search results listed in the reference list.
+   * @param useSemanticChunks useSemanticChunks or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec setUseSemanticChunks(java.lang.Boolean useSemanticChunks) {
+    this.useSemanticChunks = useSemanticChunks;
     return this;
   }
 

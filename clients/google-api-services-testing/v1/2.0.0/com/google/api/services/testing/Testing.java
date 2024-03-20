@@ -25,7 +25,7 @@ package com.google.api.services.testing;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/cloud-test-lab/" target="_blank">API Documentation</a>
+ * <a href="https://firebase.google.com/docs/test-lab/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -1855,6 +1855,11 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
     public Builder setGoogleClientRequestInitializer(
         com.google.api.client.googleapis.services.GoogleClientRequestInitializer googleClientRequestInitializer) {
       return (Builder) super.setGoogleClientRequestInitializer(googleClientRequestInitializer);
+    }
+
+    @Override
+    public Builder setUniverseDomain(String universeDomain) {
+      return (Builder) super.setUniverseDomain(universeDomain);
     }
   }
 }

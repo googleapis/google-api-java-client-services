@@ -3975,6 +3975,202 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 }
               }
               /**
+               * Gets the parsed layout information for a Document.
+               *
+               * Create a request for the method "documents.getProcessedDocument".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link GetProcessedDocument#execute()} method to invoke the remote
+               * operation.
+               *
+               * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
+               *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+               *        caller does not have permission to access the Document, regardless of whether or not it
+               *        exists, a `PERMISSION_DENIED` error is returned. If the requested Document does not exist,
+               *        a `NOT_FOUND` error is returned.
+               * @return the request
+               */
+              public GetProcessedDocument getProcessedDocument(java.lang.String name) throws java.io.IOException {
+                GetProcessedDocument result = new GetProcessedDocument(name);
+                initialize(result);
+                return result;
+              }
+
+              public class GetProcessedDocument extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProcessedDocument> {
+
+                private static final String REST_PATH = "v1alpha/{+name}:getProcessedDocument";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+
+                /**
+                 * Gets the parsed layout information for a Document.
+                 *
+                 * Create a request for the method "documents.getProcessedDocument".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link GetProcessedDocument#execute()} method to invoke the
+                 * remote operation. <p> {@link GetProcessedDocument#initialize(com.google.api.client.googleapis.s
+                 * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+                 * after invoking the constructor. </p>
+                 *
+                 * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
+               *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+               *        caller does not have permission to access the Document, regardless of whether or not it
+               *        exists, a `PERMISSION_DENIED` error is returned. If the requested Document does not exist,
+               *        a `NOT_FOUND` error is returned.
+                 * @since 1.13
+                 */
+                protected GetProcessedDocument(java.lang.String name) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProcessedDocument.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public GetProcessedDocument set$Xgafv(java.lang.String $Xgafv) {
+                  return (GetProcessedDocument) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public GetProcessedDocument setAccessToken(java.lang.String accessToken) {
+                  return (GetProcessedDocument) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public GetProcessedDocument setAlt(java.lang.String alt) {
+                  return (GetProcessedDocument) super.setAlt(alt);
+                }
+
+                @Override
+                public GetProcessedDocument setCallback(java.lang.String callback) {
+                  return (GetProcessedDocument) super.setCallback(callback);
+                }
+
+                @Override
+                public GetProcessedDocument setFields(java.lang.String fields) {
+                  return (GetProcessedDocument) super.setFields(fields);
+                }
+
+                @Override
+                public GetProcessedDocument setKey(java.lang.String key) {
+                  return (GetProcessedDocument) super.setKey(key);
+                }
+
+                @Override
+                public GetProcessedDocument setOauthToken(java.lang.String oauthToken) {
+                  return (GetProcessedDocument) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public GetProcessedDocument setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (GetProcessedDocument) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public GetProcessedDocument setQuotaUser(java.lang.String quotaUser) {
+                  return (GetProcessedDocument) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public GetProcessedDocument setUploadType(java.lang.String uploadType) {
+                  return (GetProcessedDocument) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public GetProcessedDocument setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (GetProcessedDocument) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. Full resource name of Document, such as `projects/{project}/locations/{
+                 * location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/docu
+                 * ments/{document}`. If the caller does not have permission to access the Document,
+                 * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned.
+                 * If the requested Document does not exist, a `NOT_FOUND` error is returned.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collecti
+               ons/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the caller
+               does not have permission to access the Document, regardless of whether or not it exists, a
+               `PERMISSION_DENIED` error is returned. If the requested Document does not exist, a `NOT_FOUND`
+               error is returned.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. Full resource name of Document, such as `projects/{project}/locations/{
+                 * location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/docu
+                 * ments/{document}`. If the caller does not have permission to access the Document,
+                 * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned.
+                 * If the requested Document does not exist, a `NOT_FOUND` error is returned.
+                 */
+                public GetProcessedDocument setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                /** What format output should be. If unspecified, defaults to JSON. */
+                @com.google.api.client.util.Key
+                private java.lang.String processedDocumentFormat;
+
+                /** What format output should be. If unspecified, defaults to JSON.
+                 */
+                public java.lang.String getProcessedDocumentFormat() {
+                  return processedDocumentFormat;
+                }
+
+                /** What format output should be. If unspecified, defaults to JSON. */
+                public GetProcessedDocument setProcessedDocumentFormat(java.lang.String processedDocumentFormat) {
+                  this.processedDocumentFormat = processedDocumentFormat;
+                  return this;
+                }
+
+                /** Required. What type of processing to return. */
+                @com.google.api.client.util.Key
+                private java.lang.String processedDocumentType;
+
+                /** Required. What type of processing to return.
+                 */
+                public java.lang.String getProcessedDocumentType() {
+                  return processedDocumentType;
+                }
+
+                /** Required. What type of processing to return. */
+                public GetProcessedDocument setProcessedDocumentType(java.lang.String processedDocumentType) {
+                  this.processedDocumentType = processedDocumentType;
+                  return this;
+                }
+
+                @Override
+                public GetProcessedDocument set(String parameterName, Object value) {
+                  return (GetProcessedDocument) super.set(parameterName, value);
+                }
+              }
+              /**
                * Bulk import of multiple Documents. Request processing may be synchronous. Non-existing items will
                * be created. Note: It is possible for a subset of the Documents to be successfully updated.
                *
@@ -18823,6 +19019,202 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
             }
             /**
+             * Gets the parsed layout information for a Document.
+             *
+             * Create a request for the method "documents.getProcessedDocument".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link GetProcessedDocument#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
+             *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+             *        caller does not have permission to access the Document, regardless of whether or not it
+             *        exists, a `PERMISSION_DENIED` error is returned. If the requested Document does not exist,
+             *        a `NOT_FOUND` error is returned.
+             * @return the request
+             */
+            public GetProcessedDocument getProcessedDocument(java.lang.String name) throws java.io.IOException {
+              GetProcessedDocument result = new GetProcessedDocument(name);
+              initialize(result);
+              return result;
+            }
+
+            public class GetProcessedDocument extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProcessedDocument> {
+
+              private static final String REST_PATH = "v1alpha/{+name}:getProcessedDocument";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+
+              /**
+               * Gets the parsed layout information for a Document.
+               *
+               * Create a request for the method "documents.getProcessedDocument".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link GetProcessedDocument#execute()} method to invoke the
+               * remote operation. <p> {@link GetProcessedDocument#initialize(com.google.api.client.googleapis.s
+               * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+               * after invoking the constructor. </p>
+               *
+               * @param name Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collectio
+             *        ns/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the
+             *        caller does not have permission to access the Document, regardless of whether or not it
+             *        exists, a `PERMISSION_DENIED` error is returned. If the requested Document does not exist,
+             *        a `NOT_FOUND` error is returned.
+               * @since 1.13
+               */
+              protected GetProcessedDocument(java.lang.String name) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProcessedDocument.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public GetProcessedDocument set$Xgafv(java.lang.String $Xgafv) {
+                return (GetProcessedDocument) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public GetProcessedDocument setAccessToken(java.lang.String accessToken) {
+                return (GetProcessedDocument) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public GetProcessedDocument setAlt(java.lang.String alt) {
+                return (GetProcessedDocument) super.setAlt(alt);
+              }
+
+              @Override
+              public GetProcessedDocument setCallback(java.lang.String callback) {
+                return (GetProcessedDocument) super.setCallback(callback);
+              }
+
+              @Override
+              public GetProcessedDocument setFields(java.lang.String fields) {
+                return (GetProcessedDocument) super.setFields(fields);
+              }
+
+              @Override
+              public GetProcessedDocument setKey(java.lang.String key) {
+                return (GetProcessedDocument) super.setKey(key);
+              }
+
+              @Override
+              public GetProcessedDocument setOauthToken(java.lang.String oauthToken) {
+                return (GetProcessedDocument) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public GetProcessedDocument setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (GetProcessedDocument) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public GetProcessedDocument setQuotaUser(java.lang.String quotaUser) {
+                return (GetProcessedDocument) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public GetProcessedDocument setUploadType(java.lang.String uploadType) {
+                return (GetProcessedDocument) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public GetProcessedDocument setUploadProtocol(java.lang.String uploadProtocol) {
+                return (GetProcessedDocument) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Full resource name of Document, such as `projects/{project}/locations/{lo
+               * cation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/document
+               * s/{document}`. If the caller does not have permission to access the Document,
+               * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned. If
+               * the requested Document does not exist, a `NOT_FOUND` error is returned.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Full resource name of Document, such as `projects/{project}/locations/{location}/collecti
+             ons/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document}`. If the caller
+             does not have permission to access the Document, regardless of whether or not it exists, a
+             `PERMISSION_DENIED` error is returned. If the requested Document does not exist, a `NOT_FOUND`
+             error is returned.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. Full resource name of Document, such as `projects/{project}/locations/{lo
+               * cation}/collections/{collection}/dataStores/{data_store}/branches/{branch}/document
+               * s/{document}`. If the caller does not have permission to access the Document,
+               * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned. If
+               * the requested Document does not exist, a `NOT_FOUND` error is returned.
+               */
+              public GetProcessedDocument setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+/documents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** What format output should be. If unspecified, defaults to JSON. */
+              @com.google.api.client.util.Key
+              private java.lang.String processedDocumentFormat;
+
+              /** What format output should be. If unspecified, defaults to JSON.
+               */
+              public java.lang.String getProcessedDocumentFormat() {
+                return processedDocumentFormat;
+              }
+
+              /** What format output should be. If unspecified, defaults to JSON. */
+              public GetProcessedDocument setProcessedDocumentFormat(java.lang.String processedDocumentFormat) {
+                this.processedDocumentFormat = processedDocumentFormat;
+                return this;
+              }
+
+              /** Required. What type of processing to return. */
+              @com.google.api.client.util.Key
+              private java.lang.String processedDocumentType;
+
+              /** Required. What type of processing to return.
+               */
+              public java.lang.String getProcessedDocumentType() {
+                return processedDocumentType;
+              }
+
+              /** Required. What type of processing to return. */
+              public GetProcessedDocument setProcessedDocumentType(java.lang.String processedDocumentType) {
+                this.processedDocumentType = processedDocumentType;
+                return this;
+              }
+
+              @Override
+              public GetProcessedDocument set(String parameterName, Object value) {
+                return (GetProcessedDocument) super.set(parameterName, value);
+              }
+            }
+            /**
              * Bulk import of multiple Documents. Request processing may be synchronous. Non-existing items will
              * be created. Note: It is possible for a subset of the Documents to be successfully updated.
              *
@@ -26966,6 +27358,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
     public Builder setGoogleClientRequestInitializer(
         com.google.api.client.googleapis.services.GoogleClientRequestInitializer googleClientRequestInitializer) {
       return (Builder) super.setGoogleClientRequestInitializer(googleClientRequestInitializer);
+    }
+
+    @Override
+    public Builder setUniverseDomain(String universeDomain) {
+      return (Builder) super.setUniverseDomain(universeDomain);
     }
   }
 }

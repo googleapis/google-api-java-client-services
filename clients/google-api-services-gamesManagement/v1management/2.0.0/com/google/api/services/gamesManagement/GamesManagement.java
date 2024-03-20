@@ -2423,5 +2423,10 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
         com.google.api.client.googleapis.services.GoogleClientRequestInitializer googleClientRequestInitializer) {
       return (Builder) super.setGoogleClientRequestInitializer(googleClientRequestInitializer);
     }
+
+    @Override
+    public Builder setUniverseDomain(String universeDomain) {
+      return (Builder) super.setUniverseDomain(universeDomain);
+    }
   }
 }

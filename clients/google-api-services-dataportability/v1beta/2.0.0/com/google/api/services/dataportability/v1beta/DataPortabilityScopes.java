@@ -23,6 +23,9 @@ package com.google.api.services.dataportability.v1beta;
  */
 public class DataPortabilityScopes {
 
+  /** Move a copy of the Google Alerts subscriptions you created.. */
+  public static final String DATAPORTABILITY_ALERTS_SUBSCRIPTIONS = "https://www.googleapis.com/auth/dataportability.alerts.subscriptions";
+
   /** Move a copy of messages between you and the businesses you have conversations with across Google services.. */
   public static final String DATAPORTABILITY_BUSINESSMESSAGING_CONVERSATIONS = "https://www.googleapis.com/auth/dataportability.businessmessaging.conversations";
 
@@ -47,6 +50,18 @@ public class DataPortabilityScopes {
   /** Move a copy of your settings in Chrome.. */
   public static final String DATAPORTABILITY_CHROME_SETTINGS = "https://www.googleapis.com/auth/dataportability.chrome.settings";
 
+  /** Move a copy of searches and sites you follow, saved by Discover.. */
+  public static final String DATAPORTABILITY_DISCOVER_FOLLOWS = "https://www.googleapis.com/auth/dataportability.discover.follows";
+
+  /** Move a copy of links to your liked documents, saved by Discover.. */
+  public static final String DATAPORTABILITY_DISCOVER_LIKES = "https://www.googleapis.com/auth/dataportability.discover.likes";
+
+  /** Move a copy of content you marked as not interested, saved by Discover.. */
+  public static final String DATAPORTABILITY_DISCOVER_NOT_INTERESTED = "https://www.googleapis.com/auth/dataportability.discover.not_interested";
+
+  /** Move a copy of the places you labeled on Maps.. */
+  public static final String DATAPORTABILITY_MAPS_ALIASED_PLACES = "https://www.googleapis.com/auth/dataportability.maps.aliased_places";
+
   /** Move a copy of your pinned trips on Maps.. */
   public static final String DATAPORTABILITY_MAPS_COMMUTE_ROUTES = "https://www.googleapis.com/auth/dataportability.maps.commute_routes";
 
@@ -56,11 +71,20 @@ public class DataPortabilityScopes {
   /** Move a copy of your electric vehicle profile on Maps.. */
   public static final String DATAPORTABILITY_MAPS_EV_PROFILE = "https://www.googleapis.com/auth/dataportability.maps.ev_profile";
 
+  /** Move a copy of the corrections you made to places or map information on Maps.. */
+  public static final String DATAPORTABILITY_MAPS_FACTUAL_CONTRIBUTIONS = "https://www.googleapis.com/auth/dataportability.maps.factual_contributions";
+
   /** Move a copy of your updates to places on Maps.. */
   public static final String DATAPORTABILITY_MAPS_OFFERING_CONTRIBUTIONS = "https://www.googleapis.com/auth/dataportability.maps.offering_contributions";
 
   /** Move a copy of the photos and videos you posted on Maps.. */
   public static final String DATAPORTABILITY_MAPS_PHOTOS_VIDEOS = "https://www.googleapis.com/auth/dataportability.maps.photos_videos";
+
+  /** Move a copy of feedback you gave after completing trips using Maps directions.. */
+  public static final String DATAPORTABILITY_MAPS_POST_TRIP_FEEDBACK = "https://www.googleapis.com/auth/dataportability.maps.post_trip_feedback";
+
+  /** Move a copy of the questions and answers you posted on Maps.. */
+  public static final String DATAPORTABILITY_MAPS_QUESTIONS_ANSWERS = "https://www.googleapis.com/auth/dataportability.maps.questions_answers";
 
   /** Move a copy of your reviews and posts on Maps.. */
   public static final String DATAPORTABILITY_MAPS_REVIEWS = "https://www.googleapis.com/auth/dataportability.maps.reviews";
@@ -71,6 +95,12 @@ public class DataPortabilityScopes {
   /** Move a copy of your Maps activity.. */
   public static final String DATAPORTABILITY_MYACTIVITY_MAPS = "https://www.googleapis.com/auth/dataportability.myactivity.maps";
 
+  /** Move a copy of your My Ad Center activity.. */
+  public static final String DATAPORTABILITY_MYACTIVITY_MYADCENTER = "https://www.googleapis.com/auth/dataportability.myactivity.myadcenter";
+
+  /** Move a copy of your Google Play activity.. */
+  public static final String DATAPORTABILITY_MYACTIVITY_PLAY = "https://www.googleapis.com/auth/dataportability.myactivity.play";
+
   /** Move a copy of your Google Search activity.. */
   public static final String DATAPORTABILITY_MYACTIVITY_SEARCH = "https://www.googleapis.com/auth/dataportability.myactivity.search";
 
@@ -80,14 +110,71 @@ public class DataPortabilityScopes {
   /** Move a copy of your YouTube activity.. */
   public static final String DATAPORTABILITY_MYACTIVITY_YOUTUBE = "https://www.googleapis.com/auth/dataportability.myactivity.youtube";
 
+  /** Move a copy of the maps you created in My Maps.. */
+  public static final String DATAPORTABILITY_MYMAPS_MAPS = "https://www.googleapis.com/auth/dataportability.mymaps.maps";
+
+  /** Move a copy of your food purchase and reservation activity.. */
+  public static final String DATAPORTABILITY_ORDER_RESERVE_PURCHASES_RESERVATIONS = "https://www.googleapis.com/auth/dataportability.order_reserve.purchases_reservations";
+
+  /** Move a copy of information about your devices with Google Play Store installed.. */
+  public static final String DATAPORTABILITY_PLAY_DEVICES = "https://www.googleapis.com/auth/dataportability.play.devices";
+
+  /** Move a copy of your Google Play Store Grouping tags created by app developers.. */
+  public static final String DATAPORTABILITY_PLAY_GROUPING = "https://www.googleapis.com/auth/dataportability.play.grouping";
+
+  /** Move a copy of your Google Play Store app installations.. */
+  public static final String DATAPORTABILITY_PLAY_INSTALLS = "https://www.googleapis.com/auth/dataportability.play.installs";
+
+  /** Move a copy of your Google Play Store downloads, including books, games, and apps.. */
+  public static final String DATAPORTABILITY_PLAY_LIBRARY = "https://www.googleapis.com/auth/dataportability.play.library";
+
+  /** Move a copy of information about your Google Play Store Points.. */
+  public static final String DATAPORTABILITY_PLAY_PLAYPOINTS = "https://www.googleapis.com/auth/dataportability.play.playpoints";
+
+  /** Move a copy of information about your Google Play Store promotions.. */
+  public static final String DATAPORTABILITY_PLAY_PROMOTIONS = "https://www.googleapis.com/auth/dataportability.play.promotions";
+
+  /** Move a copy of your Google Play Store purchases.. */
+  public static final String DATAPORTABILITY_PLAY_PURCHASES = "https://www.googleapis.com/auth/dataportability.play.purchases";
+
+  /** Move a copy of your Google Play Store redemption activities.. */
+  public static final String DATAPORTABILITY_PLAY_REDEMPTIONS = "https://www.googleapis.com/auth/dataportability.play.redemptions";
+
+  /** Move a copy of your Google Play Store subscriptions.. */
+  public static final String DATAPORTABILITY_PLAY_SUBSCRIPTIONS = "https://www.googleapis.com/auth/dataportability.play.subscriptions";
+
+  /** Move a copy of your Google Play Store user settings and preferences.. */
+  public static final String DATAPORTABILITY_PLAY_USERSETTINGS = "https://www.googleapis.com/auth/dataportability.play.usersettings";
+
   /** Move a copy of your saved links, images, places, and collections from your use of Google services.. */
   public static final String DATAPORTABILITY_SAVED_COLLECTIONS = "https://www.googleapis.com/auth/dataportability.saved.collections";
+
+  /** Move a copy of your media reviews on Google Search.. */
+  public static final String DATAPORTABILITY_SEARCH_UGC_MEDIA_REVIEWS_AND_STARS = "https://www.googleapis.com/auth/dataportability.search_ugc.media.reviews_and_stars";
+
+  /** Move a copy of your self-reported video streaming provider preferences from Google Search and Google TV.. */
+  public static final String DATAPORTABILITY_SEARCH_UGC_MEDIA_STREAMING_VIDEO_PROVIDERS = "https://www.googleapis.com/auth/dataportability.search_ugc.media.streaming_video_providers";
+
+  /** Move a copy of your indicated thumbs up and thumbs down on media in Google Search and Google TV.. */
+  public static final String DATAPORTABILITY_SEARCH_UGC_MEDIA_THUMBS = "https://www.googleapis.com/auth/dataportability.search_ugc.media.thumbs";
+
+  /** Move a copy of information about the movies and TV shows you marked as watched on Google Search and Google TV.. */
+  public static final String DATAPORTABILITY_SEARCH_UGC_MEDIA_WATCHED = "https://www.googleapis.com/auth/dataportability.search_ugc.media.watched";
+
+  /** Move a copy of your notification settings on the Google Search app.. */
+  public static final String DATAPORTABILITY_SEARCHNOTIFICATIONS_SETTINGS = "https://www.googleapis.com/auth/dataportability.searchnotifications.settings";
+
+  /** Move a copy of your notification subscriptions on Google Search app.. */
+  public static final String DATAPORTABILITY_SEARCHNOTIFICATIONS_SUBSCRIPTIONS = "https://www.googleapis.com/auth/dataportability.searchnotifications.subscriptions";
 
   /** Move a copy of your shipping information on Shopping.. */
   public static final String DATAPORTABILITY_SHOPPING_ADDRESSES = "https://www.googleapis.com/auth/dataportability.shopping.addresses";
 
   /** Move a copy of reviews you wrote about products or online stores on Google Search.. */
   public static final String DATAPORTABILITY_SHOPPING_REVIEWS = "https://www.googleapis.com/auth/dataportability.shopping.reviews";
+
+  /** Move a copy of the images and videos you uploaded to Street View.. */
+  public static final String DATAPORTABILITY_STREETVIEW_IMAGERY = "https://www.googleapis.com/auth/dataportability.streetview.imagery";
 
   /** Move a copy of information about your YouTube channel.. */
   public static final String DATAPORTABILITY_YOUTUBE_CHANNEL = "https://www.googleapis.com/auth/dataportability.youtube.channel";
@@ -138,6 +225,7 @@ public class DataPortabilityScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(DATAPORTABILITY_ALERTS_SUBSCRIPTIONS);
     set.add(DATAPORTABILITY_BUSINESSMESSAGING_CONVERSATIONS);
     set.add(DATAPORTABILITY_CHROME_AUTOFILL);
     set.add(DATAPORTABILITY_CHROME_BOOKMARKS);
@@ -146,20 +234,48 @@ public class DataPortabilityScopes {
     set.add(DATAPORTABILITY_CHROME_HISTORY);
     set.add(DATAPORTABILITY_CHROME_READING_LIST);
     set.add(DATAPORTABILITY_CHROME_SETTINGS);
+    set.add(DATAPORTABILITY_DISCOVER_FOLLOWS);
+    set.add(DATAPORTABILITY_DISCOVER_LIKES);
+    set.add(DATAPORTABILITY_DISCOVER_NOT_INTERESTED);
+    set.add(DATAPORTABILITY_MAPS_ALIASED_PLACES);
     set.add(DATAPORTABILITY_MAPS_COMMUTE_ROUTES);
     set.add(DATAPORTABILITY_MAPS_COMMUTE_SETTINGS);
     set.add(DATAPORTABILITY_MAPS_EV_PROFILE);
+    set.add(DATAPORTABILITY_MAPS_FACTUAL_CONTRIBUTIONS);
     set.add(DATAPORTABILITY_MAPS_OFFERING_CONTRIBUTIONS);
     set.add(DATAPORTABILITY_MAPS_PHOTOS_VIDEOS);
+    set.add(DATAPORTABILITY_MAPS_POST_TRIP_FEEDBACK);
+    set.add(DATAPORTABILITY_MAPS_QUESTIONS_ANSWERS);
     set.add(DATAPORTABILITY_MAPS_REVIEWS);
     set.add(DATAPORTABILITY_MAPS_STARRED_PLACES);
     set.add(DATAPORTABILITY_MYACTIVITY_MAPS);
+    set.add(DATAPORTABILITY_MYACTIVITY_MYADCENTER);
+    set.add(DATAPORTABILITY_MYACTIVITY_PLAY);
     set.add(DATAPORTABILITY_MYACTIVITY_SEARCH);
     set.add(DATAPORTABILITY_MYACTIVITY_SHOPPING);
     set.add(DATAPORTABILITY_MYACTIVITY_YOUTUBE);
+    set.add(DATAPORTABILITY_MYMAPS_MAPS);
+    set.add(DATAPORTABILITY_ORDER_RESERVE_PURCHASES_RESERVATIONS);
+    set.add(DATAPORTABILITY_PLAY_DEVICES);
+    set.add(DATAPORTABILITY_PLAY_GROUPING);
+    set.add(DATAPORTABILITY_PLAY_INSTALLS);
+    set.add(DATAPORTABILITY_PLAY_LIBRARY);
+    set.add(DATAPORTABILITY_PLAY_PLAYPOINTS);
+    set.add(DATAPORTABILITY_PLAY_PROMOTIONS);
+    set.add(DATAPORTABILITY_PLAY_PURCHASES);
+    set.add(DATAPORTABILITY_PLAY_REDEMPTIONS);
+    set.add(DATAPORTABILITY_PLAY_SUBSCRIPTIONS);
+    set.add(DATAPORTABILITY_PLAY_USERSETTINGS);
     set.add(DATAPORTABILITY_SAVED_COLLECTIONS);
+    set.add(DATAPORTABILITY_SEARCH_UGC_MEDIA_REVIEWS_AND_STARS);
+    set.add(DATAPORTABILITY_SEARCH_UGC_MEDIA_STREAMING_VIDEO_PROVIDERS);
+    set.add(DATAPORTABILITY_SEARCH_UGC_MEDIA_THUMBS);
+    set.add(DATAPORTABILITY_SEARCH_UGC_MEDIA_WATCHED);
+    set.add(DATAPORTABILITY_SEARCHNOTIFICATIONS_SETTINGS);
+    set.add(DATAPORTABILITY_SEARCHNOTIFICATIONS_SUBSCRIPTIONS);
     set.add(DATAPORTABILITY_SHOPPING_ADDRESSES);
     set.add(DATAPORTABILITY_SHOPPING_REVIEWS);
+    set.add(DATAPORTABILITY_STREETVIEW_IMAGERY);
     set.add(DATAPORTABILITY_YOUTUBE_CHANNEL);
     set.add(DATAPORTABILITY_YOUTUBE_COMMENTS);
     set.add(DATAPORTABILITY_YOUTUBE_LIVE_CHAT);

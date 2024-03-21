@@ -38,8 +38,8 @@ public final class StorageInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource whose storage info is returned. For example, to specify the resource path of a
-   * DICOM Instance: `projects/{projectid}/datasets/{datasetid}/dicomStores/{dicom_store_id}/dicomWe
-   * b/studi/{study_uid}/series/{series_uid}/instances/{instance_uid}`
+   * DICOM Instance: `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{
+   * dicom_store_id}/dicomWeb/studi/{study_uid}/series/{series_uid}/instances/{instance_uid}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class StorageInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource whose storage info is returned. For example, to specify the resource path of a
-   * DICOM Instance: `projects/{projectid}/datasets/{datasetid}/dicomStores/{dicom_store_id}/dicomWe
-   * b/studi/{study_uid}/series/{series_uid}/instances/{instance_uid}`
+   * DICOM Instance: `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{
+   * dicom_store_id}/dicomWeb/studi/{study_uid}/series/{series_uid}/instances/{instance_uid}`
    * @return value or {@code null} for none
    */
   public java.lang.String getReferencedResource() {
@@ -81,8 +81,8 @@ public final class StorageInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource whose storage info is returned. For example, to specify the resource path of a
-   * DICOM Instance: `projects/{projectid}/datasets/{datasetid}/dicomStores/{dicom_store_id}/dicomWe
-   * b/studi/{study_uid}/series/{series_uid}/instances/{instance_uid}`
+   * DICOM Instance: `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{
+   * dicom_store_id}/dicomWeb/studi/{study_uid}/series/{series_uid}/instances/{instance_uid}`
    * @param referencedResource referencedResource or {@code null} for none
    */
   public StorageInfo setReferencedResource(java.lang.String referencedResource) {

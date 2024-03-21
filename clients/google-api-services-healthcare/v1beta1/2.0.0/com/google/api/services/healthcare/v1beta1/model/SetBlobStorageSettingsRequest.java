@@ -40,7 +40,7 @@ public final class SetBlobStorageSettingsRequest extends com.google.api.client.j
   /**
    * Optional. A filter configuration. If `filter_config` is specified, set the value of `resource`
    * to the resource name of a DICOM store in the format
-   * `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+   * `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class SetBlobStorageSettingsRequest extends com.google.api.client.j
   /**
    * Optional. A filter configuration. If `filter_config` is specified, set the value of `resource`
    * to the resource name of a DICOM store in the format
-   * `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+   * `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
    * @return value or {@code null} for none
    */
   public DicomFilterConfig getFilterConfig() {
@@ -78,7 +78,7 @@ public final class SetBlobStorageSettingsRequest extends com.google.api.client.j
   /**
    * Optional. A filter configuration. If `filter_config` is specified, set the value of `resource`
    * to the resource name of a DICOM store in the format
-   * `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+   * `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
    * @param filterConfig filterConfig or {@code null} for none
    */
   public SetBlobStorageSettingsRequest setFilterConfig(DicomFilterConfig filterConfig) {

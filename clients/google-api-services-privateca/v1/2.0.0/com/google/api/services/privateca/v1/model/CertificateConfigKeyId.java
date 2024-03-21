@@ -31,7 +31,7 @@ package com.google.api.services.privateca.v1.model;
 public final class CertificateConfigKeyId extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160
+   * Required. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160
    * bit SHA-1 hash of the public key.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class CertificateConfigKeyId extends com.google.api.client.json.Gen
   private java.lang.String keyId;
 
   /**
-   * Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160
+   * Required. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160
    * bit SHA-1 hash of the public key.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class CertificateConfigKeyId extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160
+   * Required. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160
    * bit SHA-1 hash of the public key.
    * @param keyId keyId or {@code null} for none
    */

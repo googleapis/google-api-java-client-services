@@ -20,7 +20,7 @@ package com.google.api.services.batch.v1;
  * Service definition for Batch (v1).
  *
  * <p>
- * An API to manage the running of batch resources on Google Cloud Platform.
+ * An API to manage the running of Batch resources on Google Cloud Platform.
  * </p>
  *
  * <p>

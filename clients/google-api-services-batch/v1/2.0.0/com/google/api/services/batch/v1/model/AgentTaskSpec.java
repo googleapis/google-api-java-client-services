@@ -38,7 +38,7 @@ public final class AgentTaskSpec extends com.google.api.client.json.GenericJson 
 
   /**
    * Maximum duration the task should run. The task will be killed and marked as FAILED if over this
-   * limit.
+   * limit. The valid value range for max_run_duration in seconds is [0, 315576000000.999999999],
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class AgentTaskSpec extends com.google.api.client.json.GenericJson 
 
   /**
    * Maximum duration the task should run. The task will be killed and marked as FAILED if over this
-   * limit.
+   * limit. The valid value range for max_run_duration in seconds is [0, 315576000000.999999999],
    * @return value or {@code null} for none
    */
   public String getMaxRunDuration() {
@@ -93,7 +93,7 @@ public final class AgentTaskSpec extends com.google.api.client.json.GenericJson 
 
   /**
    * Maximum duration the task should run. The task will be killed and marked as FAILED if over this
-   * limit.
+   * limit. The valid value range for max_run_duration in seconds is [0, 315576000000.999999999],
    * @param maxRunDuration maxRunDuration or {@code null} for none
    */
   public AgentTaskSpec setMaxRunDuration(String maxRunDuration) {

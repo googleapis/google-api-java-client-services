@@ -13616,14 +13616,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link SetBlobStorageSettings#execute()} method to invoke the remote
            * operation.
            *
-           * @param resource Required. The path of the resource to update the blob storage settings in the format of
-           *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{st
-           *        udyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
-           *        tudies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/datasets/{datasetID}/dico
-           *        mStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{instanceU
-           *        ID}`. If `filter_config` is specified, set the value of `resource` to the resource name of
-           *        a DICOM store in the format
-           *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+           * @param resource Required. The path of the resource to update the blob storage settings in the format of `projects/{p
+           *        rojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/
+           *        studies/{studyUID}`, `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dic
+           *        omStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{pr
+           *        ojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
+           *        tudies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
+           *        specified, set the value of `resource` to the resource name of a DICOM store in the format
+           *        `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+           *        D}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetBlobStorageSettingsRequest}
            * @return the request
            */
@@ -13651,14 +13652,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param resource Required. The path of the resource to update the blob storage settings in the format of
-           *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{st
-           *        udyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
-           *        tudies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/datasets/{datasetID}/dico
-           *        mStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{instanceU
-           *        ID}`. If `filter_config` is specified, set the value of `resource` to the resource name of
-           *        a DICOM store in the format
-           *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+             * @param resource Required. The path of the resource to update the blob storage settings in the format of `projects/{p
+           *        rojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/
+           *        studies/{studyUID}`, `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dic
+           *        omStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{pr
+           *        ojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
+           *        tudies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
+           *        specified, set the value of `resource` to the resource name of a DICOM store in the format
+           *        `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+           *        D}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetBlobStorageSettingsRequest}
              * @since 1.13
              */
@@ -13729,24 +13731,26 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The path of the resource to update the blob storage settings in the format
-             * of `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/stu
-             * dies/{studyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreI
-             * D}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/dataset
-             * s/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUI
-             * D}/instances/{instanceUID}`. If `filter_config` is specified, set the value of
-             * `resource` to the resource name of a DICOM store in the format
-             * `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+             * of `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dic
+             * omStoreID}/dicomWeb/studies/{studyUID}`, `projects/{projectID}/locations/{locationID}
+             * /datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{
+             * seriesUID}/`, or `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/di
+             * comStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{in
+             * stanceUID}`. If `filter_config` is specified, set the value of `resource` to the
+             * resource name of a DICOM store in the format `projects/{projectID}/locations/{locatio
+             * nID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String resource;
 
-            /** Required. The path of the resource to update the blob storage settings in the format of
-           `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}`,
-           `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/s
-           eries/{seriesUID}/`, or `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicom
-           Web/studies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
-           specified, set the value of `resource` to the resource name of a DICOM store in the format
-           `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+            /** Required. The path of the resource to update the blob storage settings in the format of `projects/{
+           projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/
+           {studyUID}`, `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomSt
+           oreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/locations/{locati
+           onID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID
+           }/instances/{instanceUID}`. If `filter_config` is specified, set the value of `resource` to the
+           resource name of a DICOM store in the format
+           `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
              */
             public java.lang.String getResource() {
               return resource;
@@ -13754,13 +13758,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The path of the resource to update the blob storage settings in the format
-             * of `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/stu
-             * dies/{studyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreI
-             * D}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/dataset
-             * s/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUI
-             * D}/instances/{instanceUID}`. If `filter_config` is specified, set the value of
-             * `resource` to the resource name of a DICOM store in the format
-             * `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+             * of `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dic
+             * omStoreID}/dicomWeb/studies/{studyUID}`, `projects/{projectID}/locations/{locationID}
+             * /datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{
+             * seriesUID}/`, or `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/di
+             * comStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{in
+             * stanceUID}`. If `filter_config` is specified, set the value of `resource` to the
+             * resource name of a DICOM store in the format `projects/{projectID}/locations/{locatio
+             * nID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
              */
             public SetBlobStorageSettings setResource(java.lang.String resource) {
               if (!getSuppressPatternChecks()) {
@@ -14472,14 +14477,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * parameters, call the {@link SetBlobStorageSettings#execute()} method to invoke the remote
                * operation.
                *
-               * @param resource Required. The path of the resource to update the blob storage settings in the format of
-               *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{st
-               *        udyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
-               *        tudies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/datasets/{datasetID}/dico
-               *        mStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{instanceU
-               *        ID}`. If `filter_config` is specified, set the value of `resource` to the resource name of
-               *        a DICOM store in the format
-               *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+               * @param resource Required. The path of the resource to update the blob storage settings in the format of `projects/{p
+               *        rojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/
+               *        studies/{studyUID}`, `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dic
+               *        omStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{pr
+               *        ojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
+               *        tudies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
+               *        specified, set the value of `resource` to the resource name of a DICOM store in the format
+               *        `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+               *        D}`.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetBlobStorageSettingsRequest}
                * @return the request
                */
@@ -14507,14 +14513,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
                  * after invoking the constructor. </p>
                  *
-                 * @param resource Required. The path of the resource to update the blob storage settings in the format of
-               *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{st
-               *        udyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
-               *        tudies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/datasets/{datasetID}/dico
-               *        mStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{instanceU
-               *        ID}`. If `filter_config` is specified, set the value of `resource` to the resource name of
-               *        a DICOM store in the format
-               *        `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+                 * @param resource Required. The path of the resource to update the blob storage settings in the format of `projects/{p
+               *        rojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/
+               *        studies/{studyUID}`, `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dic
+               *        omStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{pr
+               *        ojectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/s
+               *        tudies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
+               *        specified, set the value of `resource` to the resource name of a DICOM store in the format
+               *        `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+               *        D}`.
                  * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetBlobStorageSettingsRequest}
                  * @since 1.13
                  */
@@ -14585,25 +14592,27 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * Required. The path of the resource to update the blob storage settings in the
-                 * format of `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/d
-                 * icomWeb/studies/{studyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStor
-                 * es/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/
-                 * {projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{stu
-                 * dyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
-                 * specified, set the value of `resource` to the resource name of a DICOM store in
-                 * the format
-                 * `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+                 * format of `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicom
+                 * Stores/{dicomStoreID}/dicomWeb/studies/{studyUID}`, `projects/{projectID}/locatio
+                 * ns/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/
+                 * {studyUID}/series/{seriesUID}/`, or `projects/{projectID}/locations/{locationID}/
+                 * datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/serie
+                 * s/{seriesUID}/instances/{instanceUID}`. If `filter_config` is specified, set the
+                 * value of `resource` to the resource name of a DICOM store in the format `projects
+                 * /{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+                 * D}`.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String resource;
 
-                /** Required. The path of the resource to update the blob storage settings in the format of
-               `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}`,
-               `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/s
-               eries/{seriesUID}/`, or `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicom
-               Web/studies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
-               specified, set the value of `resource` to the resource name of a DICOM store in the format
-               `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+                /** Required. The path of the resource to update the blob storage settings in the format of `projects/{
+               projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/
+               {studyUID}`, `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomSt
+               oreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/{projectID}/locations/{locati
+               onID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID
+               }/instances/{instanceUID}`. If `filter_config` is specified, set the value of `resource` to the
+               resource name of a DICOM store in the format
+               `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
                  */
                 public java.lang.String getResource() {
                   return resource;
@@ -14611,14 +14620,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * Required. The path of the resource to update the blob storage settings in the
-                 * format of `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/d
-                 * icomWeb/studies/{studyUID}`, `projects/{projectID}/datasets/{datasetID}/dicomStor
-                 * es/{dicomStoreID}/dicomWeb/studies/{studyUID}/series/{seriesUID}/`, or `projects/
-                 * {projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{stu
-                 * dyUID}/series/{seriesUID}/instances/{instanceUID}`. If `filter_config` is
-                 * specified, set the value of `resource` to the resource name of a DICOM store in
-                 * the format
-                 * `projects/{projectID}/datasets/{datasetID}/dicomStores/{dicomStoreID}`.
+                 * format of `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicom
+                 * Stores/{dicomStoreID}/dicomWeb/studies/{studyUID}`, `projects/{projectID}/locatio
+                 * ns/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/
+                 * {studyUID}/series/{seriesUID}/`, or `projects/{projectID}/locations/{locationID}/
+                 * datasets/{datasetID}/dicomStores/{dicomStoreID}/dicomWeb/studies/{studyUID}/serie
+                 * s/{seriesUID}/instances/{instanceUID}`. If `filter_config` is specified, set the
+                 * value of `resource` to the resource name of a DICOM store in the format `projects
+                 * /{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreI
+                 * D}`.
                  */
                 public SetBlobStorageSettings setResource(java.lang.String resource) {
                   if (!getSuppressPatternChecks()) {
@@ -14838,8 +14848,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * parameters, call the {@link GetStorageInfo#execute()} method to invoke the remote operation.
                    *
                    * @param resource Required. The path of the resource for which the storage info is requested (for exaxmple for a DICOM
-                   *        Instance: `projects/{projectid}/datasets/{datasetid}/dicomStores/{dicomStoreId}/dicomWeb/s
-                   *        tudies/{study_uid}/series/{series_uid}/instances/{instance_uid}`)
+                   *        Instance: `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{d
+                   *        icomStoreId}/dicomWeb/studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`)
                    * @return the request
                    */
                   public GetStorageInfo getStorageInfo(java.lang.String resource) throws java.io.IOException {
@@ -14867,8 +14877,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * the constructor. </p>
                      *
                      * @param resource Required. The path of the resource for which the storage info is requested (for exaxmple for a DICOM
-                   *        Instance: `projects/{projectid}/datasets/{datasetid}/dicomStores/{dicomStoreId}/dicomWeb/s
-                   *        tudies/{study_uid}/series/{series_uid}/instances/{instance_uid}`)
+                   *        Instance: `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{d
+                   *        icomStoreId}/dicomWeb/studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`)
                      * @since 1.13
                      */
                     protected GetStorageInfo(java.lang.String resource) {
@@ -14948,16 +14958,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                     /**
                      * Required. The path of the resource for which the storage info is requested
-                     * (for exaxmple for a DICOM Instance: `projects/{projectid}/datasets/{datasetid
-                     * }/dicomStores/{dicomStoreId}/dicomWeb/studies/{study_uid}/series/{series_uid}
-                     * /instances/{instance_uid}`)
+                     * (for exaxmple for a DICOM Instance: `projects/{projectID}/locations/{location
+                     * ID}/datasets/{datasetID}/dicomStores/{dicomStoreId}/dicomWeb/studies/{study_u
+                     * id}/series/{series_uid}/instances/{instance_uid}`)
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String resource;
 
                     /** Required. The path of the resource for which the storage info is requested (for exaxmple for a
-                   DICOM Instance: `projects/{projectid}/datasets/{datasetid}/dicomStores/{dicomStoreId}/dicomWeb/stud
-                   ies/{study_uid}/series/{series_uid}/instances/{instance_uid}`)
+                   DICOM Instance: `projects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dico
+                   mStoreId}/dicomWeb/studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`)
                      */
                     public java.lang.String getResource() {
                       return resource;
@@ -14965,9 +14975,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                     /**
                      * Required. The path of the resource for which the storage info is requested
-                     * (for exaxmple for a DICOM Instance: `projects/{projectid}/datasets/{datasetid
-                     * }/dicomStores/{dicomStoreId}/dicomWeb/studies/{study_uid}/series/{series_uid}
-                     * /instances/{instance_uid}`)
+                     * (for exaxmple for a DICOM Instance: `projects/{projectID}/locations/{location
+                     * ID}/datasets/{datasetID}/dicomStores/{dicomStoreId}/dicomWeb/studies/{study_u
+                     * id}/series/{series_uid}/instances/{instance_uid}`)
                      */
                     public GetStorageInfo setResource(java.lang.String resource) {
                       if (!getSuppressPatternChecks()) {

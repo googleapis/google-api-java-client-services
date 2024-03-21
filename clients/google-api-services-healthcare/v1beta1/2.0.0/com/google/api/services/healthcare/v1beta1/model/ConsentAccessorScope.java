@@ -40,14 +40,14 @@ public final class ConsentAccessorScope extends com.google.api.client.json.Gener
 
   /**
    * An abstract identifier that describes the environment or conditions under which the accessor is
-   * acting. Can be “*” if it applies to all environments.
+   * acting. Can be "*" if it applies to all environments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String environment;
 
   /**
-   * The intent of data use. Can be “*” if it applies to all purposes.
+   * The intent of data use. Can be "*" if it applies to all purposes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class ConsentAccessorScope extends com.google.api.client.json.Gener
 
   /**
    * An abstract identifier that describes the environment or conditions under which the accessor is
-   * acting. Can be “*” if it applies to all environments.
+   * acting. Can be "*" if it applies to all environments.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironment() {
@@ -85,7 +85,7 @@ public final class ConsentAccessorScope extends com.google.api.client.json.Gener
 
   /**
    * An abstract identifier that describes the environment or conditions under which the accessor is
-   * acting. Can be “*” if it applies to all environments.
+   * acting. Can be "*" if it applies to all environments.
    * @param environment environment or {@code null} for none
    */
   public ConsentAccessorScope setEnvironment(java.lang.String environment) {
@@ -94,7 +94,7 @@ public final class ConsentAccessorScope extends com.google.api.client.json.Gener
   }
 
   /**
-   * The intent of data use. Can be “*” if it applies to all purposes.
+   * The intent of data use. Can be "*" if it applies to all purposes.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurpose() {
@@ -102,7 +102,7 @@ public final class ConsentAccessorScope extends com.google.api.client.json.Gener
   }
 
   /**
-   * The intent of data use. Can be “*” if it applies to all purposes.
+   * The intent of data use. Can be "*" if it applies to all purposes.
    * @param purpose purpose or {@code null} for none
    */
   public ConsentAccessorScope setPurpose(java.lang.String purpose) {

@@ -58,8 +58,8 @@ public final class RollbackFhirResourcesRequest extends com.google.api.client.js
   private java.lang.Boolean force;
 
   /**
-   * Optional. GCS object containing list of {resourceType}/{resourceId} lines, identifying
-   * resources to be reverted
+   * Optional. Cloud Storage object containing list of {resourceType}/{resourceId} lines,
+   * identifying resources to be reverted
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,8 +155,8 @@ public final class RollbackFhirResourcesRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. GCS object containing list of {resourceType}/{resourceId} lines, identifying
-   * resources to be reverted
+   * Optional. Cloud Storage object containing list of {resourceType}/{resourceId} lines,
+   * identifying resources to be reverted
    * @return value or {@code null} for none
    */
   public java.lang.String getInputGcsObject() {
@@ -164,8 +164,8 @@ public final class RollbackFhirResourcesRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. GCS object containing list of {resourceType}/{resourceId} lines, identifying
-   * resources to be reverted
+   * Optional. Cloud Storage object containing list of {resourceType}/{resourceId} lines,
+   * identifying resources to be reverted
    * @param inputGcsObject inputGcsObject or {@code null} for none
    */
   public RollbackFhirResourcesRequest setInputGcsObject(java.lang.String inputGcsObject) {

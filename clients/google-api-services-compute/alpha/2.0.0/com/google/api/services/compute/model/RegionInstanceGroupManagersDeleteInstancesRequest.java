@@ -38,15 +38,6 @@ public final class RegionInstanceGroupManagersDeleteInstancesRequest extends com
   private java.util.List<java.lang.String> instances;
 
   /**
-   * Skip instances which cannot be deleted (instances not belonging to this managed group, already
-   * being deleted or being abandoned). If `false`, fail whole flow, if such instance is passed.
-   * DEPRECATED: Use skip_instances_on_validation_error instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean skipInapplicableInstances;
-
-  /**
    * Specifies whether the request should proceed despite the inclusion of instances that are not
    * members of the group or that are already in the process of being deleted or abandoned. If this
    * field is set to `false` and such an instance is specified in the request, the operation fails.
@@ -73,27 +64,6 @@ public final class RegionInstanceGroupManagersDeleteInstancesRequest extends com
    */
   public RegionInstanceGroupManagersDeleteInstancesRequest setInstances(java.util.List<java.lang.String> instances) {
     this.instances = instances;
-    return this;
-  }
-
-  /**
-   * Skip instances which cannot be deleted (instances not belonging to this managed group, already
-   * being deleted or being abandoned). If `false`, fail whole flow, if such instance is passed.
-   * DEPRECATED: Use skip_instances_on_validation_error instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getSkipInapplicableInstances() {
-    return skipInapplicableInstances;
-  }
-
-  /**
-   * Skip instances which cannot be deleted (instances not belonging to this managed group, already
-   * being deleted or being abandoned). If `false`, fail whole flow, if such instance is passed.
-   * DEPRECATED: Use skip_instances_on_validation_error instead.
-   * @param skipInapplicableInstances skipInapplicableInstances or {@code null} for none
-   */
-  public RegionInstanceGroupManagersDeleteInstancesRequest setSkipInapplicableInstances(java.lang.Boolean skipInapplicableInstances) {
-    this.skipInapplicableInstances = skipInapplicableInstances;
     return this;
   }
 

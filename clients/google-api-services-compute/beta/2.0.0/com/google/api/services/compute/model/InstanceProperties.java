@@ -155,6 +155,14 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private NetworkPerformanceConfig networkPerformanceConfig;
 
   /**
+   * Partner Metadata assigned to the instance properties. A map from a subdomain (namespace) to
+   * entries map.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, StructuredEntries> partnerMetadata;
+
+  /**
    * PostKeyRevocationActionType of the instance.
    * The value may be {@code null}.
    */
@@ -498,6 +506,25 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setNetworkPerformanceConfig(NetworkPerformanceConfig networkPerformanceConfig) {
     this.networkPerformanceConfig = networkPerformanceConfig;
+    return this;
+  }
+
+  /**
+   * Partner Metadata assigned to the instance properties. A map from a subdomain (namespace) to
+   * entries map.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, StructuredEntries> getPartnerMetadata() {
+    return partnerMetadata;
+  }
+
+  /**
+   * Partner Metadata assigned to the instance properties. A map from a subdomain (namespace) to
+   * entries map.
+   * @param partnerMetadata partnerMetadata or {@code null} for none
+   */
+  public InstanceProperties setPartnerMetadata(java.util.Map<String, StructuredEntries> partnerMetadata) {
+    this.partnerMetadata = partnerMetadata;
     return this;
   }
 

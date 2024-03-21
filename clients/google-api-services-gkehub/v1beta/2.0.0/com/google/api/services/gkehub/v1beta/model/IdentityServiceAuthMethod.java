@@ -45,6 +45,13 @@ public final class IdentityServiceAuthMethod extends com.google.api.client.json.
   private IdentityServiceGoogleConfig googleConfig;
 
   /**
+   * LDAP specific configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityServiceLdapConfig ldapConfig;
+
+  /**
    * Identifier for auth config.
    * The value may be {@code null}.
    */
@@ -103,6 +110,23 @@ public final class IdentityServiceAuthMethod extends com.google.api.client.json.
    */
   public IdentityServiceAuthMethod setGoogleConfig(IdentityServiceGoogleConfig googleConfig) {
     this.googleConfig = googleConfig;
+    return this;
+  }
+
+  /**
+   * LDAP specific configuration.
+   * @return value or {@code null} for none
+   */
+  public IdentityServiceLdapConfig getLdapConfig() {
+    return ldapConfig;
+  }
+
+  /**
+   * LDAP specific configuration.
+   * @param ldapConfig ldapConfig or {@code null} for none
+   */
+  public IdentityServiceAuthMethod setLdapConfig(IdentityServiceLdapConfig ldapConfig) {
+    this.ldapConfig = ldapConfig;
     return this;
   }
 

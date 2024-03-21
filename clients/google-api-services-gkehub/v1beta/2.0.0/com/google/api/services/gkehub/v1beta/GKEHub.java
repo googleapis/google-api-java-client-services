@@ -8155,6 +8155,426 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
+         * Lists Memberships bound to a Scope. The response includes relevant Memberships from all regions.
+         *
+         * Create a request for the method "scopes.listMemberships".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link ListMemberships#execute()} method to invoke the remote operation.
+         *
+         * @param scopeName Required. Name of the Scope, in the format `projects/locations/global/scopes`, to which the
+         *        Memberships are bound.
+         * @return the request
+         */
+        public ListMemberships listMemberships(java.lang.String scopeName) throws java.io.IOException {
+          ListMemberships result = new ListMemberships(scopeName);
+          initialize(result);
+          return result;
+        }
+
+        public class ListMemberships extends GKEHubRequest<com.google.api.services.gkehub.v1beta.model.ListBoundMembershipsResponse> {
+
+          private static final String REST_PATH = "v1beta/{+scopeName}:listMemberships";
+
+          private final java.util.regex.Pattern SCOPE_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/scopes/[^/]+$");
+
+          /**
+           * Lists Memberships bound to a Scope. The response includes relevant Memberships from all
+           * regions.
+           *
+           * Create a request for the method "scopes.listMemberships".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link ListMemberships#execute()} method to invoke the remote operation.
+           * <p> {@link ListMemberships#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+           * lientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param scopeName Required. Name of the Scope, in the format `projects/locations/global/scopes`, to which the
+         *        Memberships are bound.
+           * @since 1.13
+           */
+          protected ListMemberships(java.lang.String scopeName) {
+            super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v1beta.model.ListBoundMembershipsResponse.class);
+            this.scopeName = com.google.api.client.util.Preconditions.checkNotNull(scopeName, "Required parameter scopeName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SCOPE_NAME_PATTERN.matcher(scopeName).matches(),
+                  "Parameter scopeName must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/scopes/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListMemberships set$Xgafv(java.lang.String $Xgafv) {
+            return (ListMemberships) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListMemberships setAccessToken(java.lang.String accessToken) {
+            return (ListMemberships) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListMemberships setAlt(java.lang.String alt) {
+            return (ListMemberships) super.setAlt(alt);
+          }
+
+          @Override
+          public ListMemberships setCallback(java.lang.String callback) {
+            return (ListMemberships) super.setCallback(callback);
+          }
+
+          @Override
+          public ListMemberships setFields(java.lang.String fields) {
+            return (ListMemberships) super.setFields(fields);
+          }
+
+          @Override
+          public ListMemberships setKey(java.lang.String key) {
+            return (ListMemberships) super.setKey(key);
+          }
+
+          @Override
+          public ListMemberships setOauthToken(java.lang.String oauthToken) {
+            return (ListMemberships) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListMemberships setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListMemberships) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListMemberships setQuotaUser(java.lang.String quotaUser) {
+            return (ListMemberships) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListMemberships setUploadType(java.lang.String uploadType) {
+            return (ListMemberships) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListMemberships setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListMemberships) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the Scope, in the format `projects/locations/global/scopes`, to which
+           * the Memberships are bound.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String scopeName;
+
+          /** Required. Name of the Scope, in the format `projects/locations/global/scopes`, to which the
+         Memberships are bound.
+           */
+          public java.lang.String getScopeName() {
+            return scopeName;
+          }
+
+          /**
+           * Required. Name of the Scope, in the format `projects/locations/global/scopes`, to which
+           * the Memberships are bound.
+           */
+          public ListMemberships setScopeName(java.lang.String scopeName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SCOPE_NAME_PATTERN.matcher(scopeName).matches(),
+                  "Parameter scopeName must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/scopes/[^/]+$");
+            }
+            this.scopeName = scopeName;
+            return this;
+          }
+
+          /**
+           * Optional. Lists Memberships that match the filter expression, following the syntax
+           * outlined in https://google.aip.dev/160. Currently, filtering can be done only based on
+           * Memberships's `name`, `labels`, `create_time`, `update_time`, and `unique_id`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Lists Memberships that match the filter expression, following the syntax outlined in
+         https://google.aip.dev/160. Currently, filtering can be done only based on Memberships's `name`,
+         `labels`, `create_time`, `update_time`, and `unique_id`.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Lists Memberships that match the filter expression, following the syntax
+           * outlined in https://google.aip.dev/160. Currently, filtering can be done only based on
+           * Memberships's `name`, `labels`, `create_time`, `update_time`, and `unique_id`.
+           */
+          public ListMemberships setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. When requesting a 'page' of resources, `page_size` specifies number of
+           * resources to return. If unspecified or set to 0, all resources will be returned.
+           * Pagination is currently not supported; therefore, setting this field does not have any
+           * impact for now.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. When requesting a 'page' of resources, `page_size` specifies number of resources to
+         return. If unspecified or set to 0, all resources will be returned. Pagination is currently not
+         supported; therefore, setting this field does not have any impact for now.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. When requesting a 'page' of resources, `page_size` specifies number of
+           * resources to return. If unspecified or set to 0, all resources will be returned.
+           * Pagination is currently not supported; therefore, setting this field does not have any
+           * impact for now.
+           */
+          public ListMemberships setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Token returned by previous call to `ListBoundMemberships` which specifies the
+           * position in the list from where to continue listing the resources.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Token returned by previous call to `ListBoundMemberships` which specifies the position in
+         the list from where to continue listing the resources.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Token returned by previous call to `ListBoundMemberships` which specifies the
+           * position in the list from where to continue listing the resources.
+           */
+          public ListMemberships setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListMemberships set(String parameterName, Object value) {
+            return (ListMemberships) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists permitted Scopes.
+         *
+         * Create a request for the method "scopes.listPermitted".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link ListPermitted#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent (project and location) where the Scope will be listed. Specified in the format
+         *        `projects/locations`.
+         * @return the request
+         */
+        public ListPermitted listPermitted(java.lang.String parent) throws java.io.IOException {
+          ListPermitted result = new ListPermitted(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class ListPermitted extends GKEHubRequest<com.google.api.services.gkehub.v1beta.model.ListPermittedScopesResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/scopes:listPermitted";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists permitted Scopes.
+           *
+           * Create a request for the method "scopes.listPermitted".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link ListPermitted#execute()} method to invoke the remote operation. <p>
+           * {@link ListPermitted#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+           * equest)} must be called to initialize this instance immediately after invoking the constructor.
+           * </p>
+           *
+           * @param parent Required. The parent (project and location) where the Scope will be listed. Specified in the format
+         *        `projects/locations`.
+           * @since 1.13
+           */
+          protected ListPermitted(java.lang.String parent) {
+            super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v1beta.model.ListPermittedScopesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListPermitted set$Xgafv(java.lang.String $Xgafv) {
+            return (ListPermitted) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListPermitted setAccessToken(java.lang.String accessToken) {
+            return (ListPermitted) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListPermitted setAlt(java.lang.String alt) {
+            return (ListPermitted) super.setAlt(alt);
+          }
+
+          @Override
+          public ListPermitted setCallback(java.lang.String callback) {
+            return (ListPermitted) super.setCallback(callback);
+          }
+
+          @Override
+          public ListPermitted setFields(java.lang.String fields) {
+            return (ListPermitted) super.setFields(fields);
+          }
+
+          @Override
+          public ListPermitted setKey(java.lang.String key) {
+            return (ListPermitted) super.setKey(key);
+          }
+
+          @Override
+          public ListPermitted setOauthToken(java.lang.String oauthToken) {
+            return (ListPermitted) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListPermitted setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListPermitted) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListPermitted setQuotaUser(java.lang.String quotaUser) {
+            return (ListPermitted) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListPermitted setUploadType(java.lang.String uploadType) {
+            return (ListPermitted) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListPermitted setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListPermitted) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent (project and location) where the Scope will be listed. Specified
+           * in the format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent (project and location) where the Scope will be listed. Specified in the format
+         `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent (project and location) where the Scope will be listed. Specified
+           * in the format `projects/locations`.
+           */
+          public ListPermitted setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. When requesting a 'page' of resources, `page_size` specifies number of
+           * resources to return. If unspecified or set to 0, all resources will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. When requesting a 'page' of resources, `page_size` specifies number of resources to
+         return. If unspecified or set to 0, all resources will be returned.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. When requesting a 'page' of resources, `page_size` specifies number of
+           * resources to return. If unspecified or set to 0, all resources will be returned.
+           */
+          public ListPermitted setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Token returned by previous call to `ListPermittedScopes` which specifies the
+           * position in the list from where to continue listing the resources.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Token returned by previous call to `ListPermittedScopes` which specifies the position in
+         the list from where to continue listing the resources.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Token returned by previous call to `ListPermittedScopes` which specifies the
+           * position in the list from where to continue listing the resources.
+           */
+          public ListPermitted setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public ListPermitted set(String parameterName, Object value) {
+            return (ListPermitted) super.set(parameterName, value);
+          }
+        }
+        /**
          * Updates a scopes.
          *
          * Create a request for the method "scopes.patch".

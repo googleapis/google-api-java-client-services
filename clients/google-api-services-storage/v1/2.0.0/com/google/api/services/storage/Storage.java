@@ -11322,6 +11322,22 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Selects a specific revision of this object. */
+      @com.google.api.client.util.Key
+      private java.lang.Long generation;
+
+      /** Selects a specific revision of this object.
+       */
+      public java.lang.Long getGeneration() {
+        return generation;
+      }
+
+      /** Selects a specific revision of this object. */
+      public Restore setGeneration(java.lang.Long generation) {
+        this.generation = generation;
+        return this;
+      }
+
       /**
        * If true, copies the source object's ACL; otherwise, uses the bucket's default object ACL.
        * The default is false.
@@ -11342,22 +11358,6 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public Restore setCopySourceAcl(java.lang.Boolean copySourceAcl) {
         this.copySourceAcl = copySourceAcl;
-        return this;
-      }
-
-      /** Selects a specific revision of this object. */
-      @com.google.api.client.util.Key
-      private java.lang.Long generation;
-
-      /** Selects a specific revision of this object.
-       */
-      public java.lang.Long getGeneration() {
-        return generation;
-      }
-
-      /** Selects a specific revision of this object. */
-      public Restore setGeneration(java.lang.Long generation) {
-        this.generation = generation;
         return this;
       }
 

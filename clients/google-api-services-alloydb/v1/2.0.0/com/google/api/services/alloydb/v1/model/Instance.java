@@ -150,12 +150,27 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Instance level network configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceNetworkConfig networkConfig;
+
+  /**
    * Output only. List of available read-only VMs in this instance, including the standby for a
    * PRIMARY instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Node> nodes;
+
+  /**
+   * Output only. The public IP addresses for the Instance. This is available ONLY when
+   * enable_public_ip is set. This is the connection endpoint for an end-user application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String publicIpAddress;
 
   /**
    * Configuration for query insights.
@@ -498,6 +513,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Instance level network configuration.
+   * @return value or {@code null} for none
+   */
+  public InstanceNetworkConfig getNetworkConfig() {
+    return networkConfig;
+  }
+
+  /**
+   * Optional. Instance level network configuration.
+   * @param networkConfig networkConfig or {@code null} for none
+   */
+  public Instance setNetworkConfig(InstanceNetworkConfig networkConfig) {
+    this.networkConfig = networkConfig;
+    return this;
+  }
+
+  /**
    * Output only. List of available read-only VMs in this instance, including the standby for a
    * PRIMARY instance.
    * @return value or {@code null} for none
@@ -513,6 +545,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNodes(java.util.List<Node> nodes) {
     this.nodes = nodes;
+    return this;
+  }
+
+  /**
+   * Output only. The public IP addresses for the Instance. This is available ONLY when
+   * enable_public_ip is set. This is the connection endpoint for an end-user application.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublicIpAddress() {
+    return publicIpAddress;
+  }
+
+  /**
+   * Output only. The public IP addresses for the Instance. This is available ONLY when
+   * enable_public_ip is set. This is the connection endpoint for an end-user application.
+   * @param publicIpAddress publicIpAddress or {@code null} for none
+   */
+  public Instance setPublicIpAddress(java.lang.String publicIpAddress) {
+    this.publicIpAddress = publicIpAddress;
     return this;
   }
 

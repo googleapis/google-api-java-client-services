@@ -281,6 +281,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private InstanceParams params;
 
   /**
+   * Partner Metadata assigned to the instance. A map from a subdomain (namespace) to entries map.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, StructuredEntries> partnerMetadata;
+
+  /**
    * PostKeyRevocationActionType of the instance.
    * The value may be {@code null}.
    */
@@ -1069,6 +1076,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setParams(InstanceParams params) {
     this.params = params;
+    return this;
+  }
+
+  /**
+   * Partner Metadata assigned to the instance. A map from a subdomain (namespace) to entries map.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, StructuredEntries> getPartnerMetadata() {
+    return partnerMetadata;
+  }
+
+  /**
+   * Partner Metadata assigned to the instance. A map from a subdomain (namespace) to entries map.
+   * @param partnerMetadata partnerMetadata or {@code null} for none
+   */
+  public Instance setPartnerMetadata(java.util.Map<String, StructuredEntries> partnerMetadata) {
+    this.partnerMetadata = partnerMetadata;
     return this;
   }
 

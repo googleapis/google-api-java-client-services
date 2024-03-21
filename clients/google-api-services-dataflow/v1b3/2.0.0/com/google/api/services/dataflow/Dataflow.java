@@ -7026,22 +7026,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Path to dynamic template spec file on Cloud Storage. The file must be a Json serialized
-           * DynamicTemplateFieSpec object.
+           * Path to the dynamic template specification file on Cloud Storage. The file must be a
+           * JSON serialized `DynamicTemplateFileSpec` object.
            */
           @com.google.api.client.util.Key("dynamicTemplate.gcsPath")
           private java.lang.String dynamicTemplateGcsPath;
 
-          /** Path to dynamic template spec file on Cloud Storage. The file must be a Json serialized
-         DynamicTemplateFieSpec object.
+          /** Path to the dynamic template specification file on Cloud Storage. The file must be a JSON
+         serialized `DynamicTemplateFileSpec` object.
            */
           public java.lang.String getDynamicTemplateGcsPath() {
             return dynamicTemplateGcsPath;
           }
 
           /**
-           * Path to dynamic template spec file on Cloud Storage. The file must be a Json serialized
-           * DynamicTemplateFieSpec object.
+           * Path to the dynamic template specification file on Cloud Storage. The file must be a
+           * JSON serialized `DynamicTemplateFileSpec` object.
            */
           public Launch setDynamicTemplateGcsPath(java.lang.String dynamicTemplateGcsPath) {
             this.dynamicTemplateGcsPath = dynamicTemplateGcsPath;
@@ -7072,22 +7072,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * A Cloud Storage path to the template from which to create the job. Must be valid Cloud
-           * Storage URL, beginning with 'gs://'.
+           * A Cloud Storage path to the template to use to create the job. Must be valid Cloud
+           * Storage URL, beginning with `gs://`.
            */
           @com.google.api.client.util.Key
           private java.lang.String gcsPath;
 
-          /** A Cloud Storage path to the template from which to create the job. Must be valid Cloud Storage URL,
-         beginning with 'gs://'.
+          /** A Cloud Storage path to the template to use to create the job. Must be valid Cloud Storage URL,
+         beginning with `gs://`.
            */
           public java.lang.String getGcsPath() {
             return gcsPath;
           }
 
           /**
-           * A Cloud Storage path to the template from which to create the job. Must be valid Cloud
-           * Storage URL, beginning with 'gs://'.
+           * A Cloud Storage path to the template to use to create the job. Must be valid Cloud
+           * Storage URL, beginning with `gs://`.
            */
           public Launch setGcsPath(java.lang.String gcsPath) {
             this.gcsPath = gcsPath;
@@ -7898,22 +7898,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Path to dynamic template spec file on Cloud Storage. The file must be a Json serialized
-         * DynamicTemplateFieSpec object.
+         * Path to the dynamic template specification file on Cloud Storage. The file must be a JSON
+         * serialized `DynamicTemplateFileSpec` object.
          */
         @com.google.api.client.util.Key("dynamicTemplate.gcsPath")
         private java.lang.String dynamicTemplateGcsPath;
 
-        /** Path to dynamic template spec file on Cloud Storage. The file must be a Json serialized
-       DynamicTemplateFieSpec object.
+        /** Path to the dynamic template specification file on Cloud Storage. The file must be a JSON
+       serialized `DynamicTemplateFileSpec` object.
          */
         public java.lang.String getDynamicTemplateGcsPath() {
           return dynamicTemplateGcsPath;
         }
 
         /**
-         * Path to dynamic template spec file on Cloud Storage. The file must be a Json serialized
-         * DynamicTemplateFieSpec object.
+         * Path to the dynamic template specification file on Cloud Storage. The file must be a JSON
+         * serialized `DynamicTemplateFileSpec` object.
          */
         public Launch setDynamicTemplateGcsPath(java.lang.String dynamicTemplateGcsPath) {
           this.dynamicTemplateGcsPath = dynamicTemplateGcsPath;
@@ -7944,22 +7944,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * A Cloud Storage path to the template from which to create the job. Must be valid Cloud
-         * Storage URL, beginning with 'gs://'.
+         * A Cloud Storage path to the template to use to create the job. Must be valid Cloud
+         * Storage URL, beginning with `gs://`.
          */
         @com.google.api.client.util.Key
         private java.lang.String gcsPath;
 
-        /** A Cloud Storage path to the template from which to create the job. Must be valid Cloud Storage URL,
-       beginning with 'gs://'.
+        /** A Cloud Storage path to the template to use to create the job. Must be valid Cloud Storage URL,
+       beginning with `gs://`.
          */
         public java.lang.String getGcsPath() {
           return gcsPath;
         }
 
         /**
-         * A Cloud Storage path to the template from which to create the job. Must be valid Cloud
-         * Storage URL, beginning with 'gs://'.
+         * A Cloud Storage path to the template to use to create the job. Must be valid Cloud
+         * Storage URL, beginning with `gs://`.
          */
         public Launch setGcsPath(java.lang.String gcsPath) {
           this.gcsPath = gcsPath;

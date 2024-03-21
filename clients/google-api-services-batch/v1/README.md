@@ -1,6 +1,6 @@
 # Batch API Client Library for Java
 
-An API to manage the running of batch resources on Google Cloud Platform.
+An API to manage the running of Batch resources on Google Cloud Platform.
 
 This page contains information about getting started with the Batch API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-batch</artifactId>
-      <version>v1-rev20240206-2.0.0</version>
+      <version>v1-rev20240315-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-batch:v1-rev20240206-2.0.0'
+  implementation 'com.google.apis:google-api-services-batch:v1-rev20240315-2.0.0'
 }
 ```
 

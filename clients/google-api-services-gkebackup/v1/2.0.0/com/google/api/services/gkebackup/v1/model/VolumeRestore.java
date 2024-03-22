@@ -17,7 +17,7 @@
 package com.google.api.services.gkebackup.v1.model;
 
 /**
- * Represents the operation of restoring a volume from a VolumeBackup. Next id: 13
+ * Represents the operation of restoring a volume from a VolumeBackup.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup for GKE API. For a detailed explanation see:

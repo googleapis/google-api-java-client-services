@@ -19,7 +19,7 @@ package com.google.api.services.gkebackup.v1.model;
 /**
  * Represents a request to perform a single point-in-time capture of some portion of the state of a
  * GKE cluster, the record of the backup operation itself, and an anchor for the underlying
- * artifacts that comprise the Backup (the config backup and VolumeBackups). Next id: 29
+ * artifacts that comprise the Backup (the config backup and VolumeBackups).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup for GKE API. For a detailed explanation see:

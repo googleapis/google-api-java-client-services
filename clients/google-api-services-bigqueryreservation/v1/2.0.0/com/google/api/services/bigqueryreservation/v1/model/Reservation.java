@@ -92,6 +92,36 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. The original primary location of the reservation which is set only during its
+   * creation and remains unchanged afterwards. It can be used by the customer to answer questions
+   * about disaster recovery billing. The field is output only for customers and should not be
+   * specified, however, the google.api.field_behavior is not set to OUTPUT_ONLY since these fields
+   * are set in rerouted requests sent across regions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String originalPrimaryLocation;
+
+  /**
+   * Optional. The primary location of the reservation. The field is only meaningful for reservation
+   * used for cross region disaster recovery. The field is output only for customers and should not
+   * be specified, however, the google.api.field_behavior is not set to OUTPUT_ONLY since these
+   * fields are set in rerouted requests sent across regions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String primaryLocation;
+
+  /**
+   * Optional. The secondary location of the reservation which is used for cross region disaster
+   * recovery purposes. Customer can set this in create/update reservation calls to create a
+   * failover reservation or convert a non-failover reservation to a failover reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secondaryLocation;
+
+  /**
    * Baseline slots available to this reservation. A slot is a unit of computational power in
    * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
    * slots during runtime if ignore_idle_slots is set to false, or autoscaling is enabled. If
@@ -256,6 +286,75 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The original primary location of the reservation which is set only during its
+   * creation and remains unchanged afterwards. It can be used by the customer to answer questions
+   * about disaster recovery billing. The field is output only for customers and should not be
+   * specified, however, the google.api.field_behavior is not set to OUTPUT_ONLY since these fields
+   * are set in rerouted requests sent across regions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOriginalPrimaryLocation() {
+    return originalPrimaryLocation;
+  }
+
+  /**
+   * Optional. The original primary location of the reservation which is set only during its
+   * creation and remains unchanged afterwards. It can be used by the customer to answer questions
+   * about disaster recovery billing. The field is output only for customers and should not be
+   * specified, however, the google.api.field_behavior is not set to OUTPUT_ONLY since these fields
+   * are set in rerouted requests sent across regions.
+   * @param originalPrimaryLocation originalPrimaryLocation or {@code null} for none
+   */
+  public Reservation setOriginalPrimaryLocation(java.lang.String originalPrimaryLocation) {
+    this.originalPrimaryLocation = originalPrimaryLocation;
+    return this;
+  }
+
+  /**
+   * Optional. The primary location of the reservation. The field is only meaningful for reservation
+   * used for cross region disaster recovery. The field is output only for customers and should not
+   * be specified, however, the google.api.field_behavior is not set to OUTPUT_ONLY since these
+   * fields are set in rerouted requests sent across regions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrimaryLocation() {
+    return primaryLocation;
+  }
+
+  /**
+   * Optional. The primary location of the reservation. The field is only meaningful for reservation
+   * used for cross region disaster recovery. The field is output only for customers and should not
+   * be specified, however, the google.api.field_behavior is not set to OUTPUT_ONLY since these
+   * fields are set in rerouted requests sent across regions.
+   * @param primaryLocation primaryLocation or {@code null} for none
+   */
+  public Reservation setPrimaryLocation(java.lang.String primaryLocation) {
+    this.primaryLocation = primaryLocation;
+    return this;
+  }
+
+  /**
+   * Optional. The secondary location of the reservation which is used for cross region disaster
+   * recovery purposes. Customer can set this in create/update reservation calls to create a
+   * failover reservation or convert a non-failover reservation to a failover reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecondaryLocation() {
+    return secondaryLocation;
+  }
+
+  /**
+   * Optional. The secondary location of the reservation which is used for cross region disaster
+   * recovery purposes. Customer can set this in create/update reservation calls to create a
+   * failover reservation or convert a non-failover reservation to a failover reservation.
+   * @param secondaryLocation secondaryLocation or {@code null} for none
+   */
+  public Reservation setSecondaryLocation(java.lang.String secondaryLocation) {
+    this.secondaryLocation = secondaryLocation;
     return this;
   }
 

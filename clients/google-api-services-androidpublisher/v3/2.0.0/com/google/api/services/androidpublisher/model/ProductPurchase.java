@@ -132,6 +132,14 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   private java.lang.Integer quantity;
 
   /**
+   * The quantity eligible for refund, i.e. quantity that hasn't been refunded. The value reflects
+   * quantity-based partial refunds and full refunds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer refundableQuantity;
+
+  /**
    * ISO 3166-1 alpha-2 billing region code of the user at the time the product was granted.
    * The value may be {@code null}.
    */
@@ -376,6 +384,25 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
    */
   public ProductPurchase setQuantity(java.lang.Integer quantity) {
     this.quantity = quantity;
+    return this;
+  }
+
+  /**
+   * The quantity eligible for refund, i.e. quantity that hasn't been refunded. The value reflects
+   * quantity-based partial refunds and full refunds.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRefundableQuantity() {
+    return refundableQuantity;
+  }
+
+  /**
+   * The quantity eligible for refund, i.e. quantity that hasn't been refunded. The value reflects
+   * quantity-based partial refunds and full refunds.
+   * @param refundableQuantity refundableQuantity or {@code null} for none
+   */
+  public ProductPurchase setRefundableQuantity(java.lang.Integer refundableQuantity) {
+    this.refundableQuantity = refundableQuantity;
     return this;
   }
 

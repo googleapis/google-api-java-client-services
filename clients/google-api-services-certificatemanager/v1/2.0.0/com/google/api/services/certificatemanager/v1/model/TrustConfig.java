@@ -31,6 +31,21 @@ package com.google.api.services.certificatemanager.v1.model;
 public final class TrustConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A certificate matching an allowlisted certificate is always considered valid as long
+   * as the certificate is parseable, proof of private key possession is established, and
+   * constraints on the certificate’s SAN field are met.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AllowlistedCertificate> allowlistedCertificates;
+
+  static {
+    // hack to force ProGuard to consider AllowlistedCertificate used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AllowlistedCertificate.class);
+  }
+
+  /**
    * Output only. The creation timestamp of a TrustConfig.
    * The value may be {@code null}.
    */
@@ -82,6 +97,27 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. A certificate matching an allowlisted certificate is always considered valid as long
+   * as the certificate is parseable, proof of private key possession is established, and
+   * constraints on the certificate’s SAN field are met.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AllowlistedCertificate> getAllowlistedCertificates() {
+    return allowlistedCertificates;
+  }
+
+  /**
+   * Optional. A certificate matching an allowlisted certificate is always considered valid as long
+   * as the certificate is parseable, proof of private key possession is established, and
+   * constraints on the certificate’s SAN field are met.
+   * @param allowlistedCertificates allowlistedCertificates or {@code null} for none
+   */
+  public TrustConfig setAllowlistedCertificates(java.util.List<AllowlistedCertificate> allowlistedCertificates) {
+    this.allowlistedCertificates = allowlistedCertificates;
+    return this;
+  }
 
   /**
    * Output only. The creation timestamp of a TrustConfig.

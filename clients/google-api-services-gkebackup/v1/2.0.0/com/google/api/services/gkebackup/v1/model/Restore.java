@@ -18,7 +18,7 @@ package com.google.api.services.gkebackup.v1.model;
 
 /**
  * Represents both a request to Restore some portion of a Backup into a target GKE cluster and a
- * record of the restore operation itself. Next id: 20
+ * record of the restore operation itself.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup for GKE API. For a detailed explanation see:

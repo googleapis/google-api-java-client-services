@@ -18,7 +18,7 @@ package com.google.api.services.gkebackup.v1.model;
 
 /**
  * The configuration of a potential series of Restore operations to be performed against Backups
- * belong to a particular BackupPlan. Next id: 13
+ * belong to a particular BackupPlan.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup for GKE API. For a detailed explanation see:

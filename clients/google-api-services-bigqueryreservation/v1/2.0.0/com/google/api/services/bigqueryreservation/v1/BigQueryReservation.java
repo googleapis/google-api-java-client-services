@@ -2403,6 +2403,153 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
         }
         /**
+         * Failover a reservation to the secondary location. The operation should be done in the current
+         * secondary location, which will be promoted to the new primary location for the reservation.
+         * Attempting to failover a reservation in the current primary location will fail with the error
+         * code `google.rpc.Code.FAILED_PRECONDITION`.
+         *
+         * Create a request for the method "reservations.failoverReservation".
+         *
+         * This request holds the parameters needed by the bigqueryreservation server.  After setting any
+         * optional parameters, call the {@link FailoverReservation#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Resource name of the reservation to failover. E.g.,
+         *        `projects/myproject/locations/US/reservations/team1-prod`
+         * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.FailoverReservationRequest}
+         * @return the request
+         */
+        public FailoverReservation failoverReservation(java.lang.String name, com.google.api.services.bigqueryreservation.v1.model.FailoverReservationRequest content) throws java.io.IOException {
+          FailoverReservation result = new FailoverReservation(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class FailoverReservation extends BigQueryReservationRequest<com.google.api.services.bigqueryreservation.v1.model.Reservation> {
+
+          private static final String REST_PATH = "v1/{+name}:failoverReservation";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservations/[^/]+$");
+
+          /**
+           * Failover a reservation to the secondary location. The operation should be done in the current
+           * secondary location, which will be promoted to the new primary location for the reservation.
+           * Attempting to failover a reservation in the current primary location will fail with the error
+           * code `google.rpc.Code.FAILED_PRECONDITION`.
+           *
+           * Create a request for the method "reservations.failoverReservation".
+           *
+           * This request holds the parameters needed by the the bigqueryreservation server.  After setting
+           * any optional parameters, call the {@link FailoverReservation#execute()} method to invoke the
+           * remote operation. <p> {@link FailoverReservation#initialize(com.google.api.client.googleapis.se
+           * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the reservation to failover. E.g.,
+         *        `projects/myproject/locations/US/reservations/team1-prod`
+           * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.FailoverReservationRequest}
+           * @since 1.13
+           */
+          protected FailoverReservation(java.lang.String name, com.google.api.services.bigqueryreservation.v1.model.FailoverReservationRequest content) {
+            super(BigQueryReservation.this, "POST", REST_PATH, content, com.google.api.services.bigqueryreservation.v1.model.Reservation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/reservations/[^/]+$");
+            }
+          }
+
+          @Override
+          public FailoverReservation set$Xgafv(java.lang.String $Xgafv) {
+            return (FailoverReservation) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FailoverReservation setAccessToken(java.lang.String accessToken) {
+            return (FailoverReservation) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FailoverReservation setAlt(java.lang.String alt) {
+            return (FailoverReservation) super.setAlt(alt);
+          }
+
+          @Override
+          public FailoverReservation setCallback(java.lang.String callback) {
+            return (FailoverReservation) super.setCallback(callback);
+          }
+
+          @Override
+          public FailoverReservation setFields(java.lang.String fields) {
+            return (FailoverReservation) super.setFields(fields);
+          }
+
+          @Override
+          public FailoverReservation setKey(java.lang.String key) {
+            return (FailoverReservation) super.setKey(key);
+          }
+
+          @Override
+          public FailoverReservation setOauthToken(java.lang.String oauthToken) {
+            return (FailoverReservation) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FailoverReservation setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FailoverReservation) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FailoverReservation setQuotaUser(java.lang.String quotaUser) {
+            return (FailoverReservation) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FailoverReservation setUploadType(java.lang.String uploadType) {
+            return (FailoverReservation) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FailoverReservation setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FailoverReservation) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the reservation to failover. E.g.,
+           * `projects/myproject/locations/US/reservations/team1-prod`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the reservation to failover. E.g.,
+         `projects/myproject/locations/US/reservations/team1-prod`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the reservation to failover. E.g.,
+           * `projects/myproject/locations/US/reservations/team1-prod`
+           */
+          public FailoverReservation setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/reservations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public FailoverReservation set(String parameterName, Object value) {
+            return (FailoverReservation) super.set(parameterName, value);
+          }
+        }
+        /**
          * Returns information about the reservation.
          *
          * Create a request for the method "reservations.get".

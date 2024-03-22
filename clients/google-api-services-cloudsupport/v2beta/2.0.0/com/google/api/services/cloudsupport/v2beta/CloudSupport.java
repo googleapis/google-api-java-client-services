@@ -317,38 +317,6 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** The Product Line of the Product. */
-      @com.google.api.client.util.Key("product.productLine")
-      private java.lang.String productProductLine;
-
-      /** The Product Line of the Product.
-       */
-      public java.lang.String getProductProductLine() {
-        return productProductLine;
-      }
-
-      /** The Product Line of the Product. */
-      public Search setProductProductLine(java.lang.String productProductLine) {
-        this.productProductLine = productProductLine;
-        return this;
-      }
-
-      /** The Product Subline of the Product, such as "Maps Billing". */
-      @com.google.api.client.util.Key("product.productSubline")
-      private java.lang.String productProductSubline;
-
-      /** The Product Subline of the Product, such as "Maps Billing".
-       */
-      public java.lang.String getProductProductSubline() {
-        return productProductSubline;
-      }
-
-      /** The Product Subline of the Product, such as "Maps Billing". */
-      public Search setProductProductSubline(java.lang.String productProductSubline) {
-        this.productProductSubline = productProductSubline;
-        return this;
-      }
-
       /**
        * An expression used to filter case classifications. If it's an empty string, then no
        * filtering happens. Otherwise, case classifications will be returned that match the filter.
@@ -1242,29 +1210,6 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * The product line for which to request cases for. If unspecified, only Google Cloud cases
-       * will be returned.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String productLine;
-
-      /** The product line for which to request cases for. If unspecified, only Google Cloud cases will be
-     returned.
-       */
-      public java.lang.String getProductLine() {
-        return productLine;
-      }
-
-      /**
-       * The product line for which to request cases for. If unspecified, only Google Cloud cases
-       * will be returned.
-       */
-      public List setProductLine(java.lang.String productLine) {
-        this.productLine = productLine;
         return this;
       }
 

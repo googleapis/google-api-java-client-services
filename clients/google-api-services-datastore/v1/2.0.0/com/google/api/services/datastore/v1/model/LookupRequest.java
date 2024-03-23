@@ -51,6 +51,15 @@ public final class LookupRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The properties to return. Defaults to returning all properties. If this field is set and an
+   * entity has a property not referenced in the mask, it will be absent from
+   * LookupResponse.found.entity.properties. The entity's key is always returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PropertyMask propertyMask;
+
+  /**
    * The options for this lookup request.
    * The value may be {@code null}.
    */
@@ -90,6 +99,27 @@ public final class LookupRequest extends com.google.api.client.json.GenericJson 
    */
   public LookupRequest setKeys(java.util.List<Key> keys) {
     this.keys = keys;
+    return this;
+  }
+
+  /**
+   * The properties to return. Defaults to returning all properties. If this field is set and an
+   * entity has a property not referenced in the mask, it will be absent from
+   * LookupResponse.found.entity.properties. The entity's key is always returned.
+   * @return value or {@code null} for none
+   */
+  public PropertyMask getPropertyMask() {
+    return propertyMask;
+  }
+
+  /**
+   * The properties to return. Defaults to returning all properties. If this field is set and an
+   * entity has a property not referenced in the mask, it will be absent from
+   * LookupResponse.found.entity.properties. The entity's key is always returned.
+   * @param propertyMask propertyMask or {@code null} for none
+   */
+  public LookupRequest setPropertyMask(PropertyMask propertyMask) {
+    this.propertyMask = propertyMask;
     return this;
   }
 

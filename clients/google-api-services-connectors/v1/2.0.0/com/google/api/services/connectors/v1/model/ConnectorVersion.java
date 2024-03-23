@@ -43,6 +43,13 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Output only. Flag to mark the dynamic auth override.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean authOverrideEnabled;
+
+  /**
    * Output only. List of config variables needed to create a connection.
    * The value may be {@code null}.
    */
@@ -143,6 +150,13 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   private java.util.List<RoleGrant> roleGrants;
 
   /**
+   * Connection Schema Refresh Config
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchemaRefreshConfig schemaRefreshConfig;
+
+  /**
    * Output only. Ssl configuration supported by the Connector.
    * The value may be {@code null}.
    */
@@ -184,6 +198,23 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
    */
   public ConnectorVersion setAuthConfigTemplates(java.util.List<AuthConfigTemplate> authConfigTemplates) {
     this.authConfigTemplates = authConfigTemplates;
+    return this;
+  }
+
+  /**
+   * Output only. Flag to mark the dynamic auth override.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAuthOverrideEnabled() {
+    return authOverrideEnabled;
+  }
+
+  /**
+   * Output only. Flag to mark the dynamic auth override.
+   * @param authOverrideEnabled authOverrideEnabled or {@code null} for none
+   */
+  public ConnectorVersion setAuthOverrideEnabled(java.lang.Boolean authOverrideEnabled) {
+    this.authOverrideEnabled = authOverrideEnabled;
     return this;
   }
 
@@ -411,6 +442,23 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
    */
   public ConnectorVersion setRoleGrants(java.util.List<RoleGrant> roleGrants) {
     this.roleGrants = roleGrants;
+    return this;
+  }
+
+  /**
+   * Connection Schema Refresh Config
+   * @return value or {@code null} for none
+   */
+  public SchemaRefreshConfig getSchemaRefreshConfig() {
+    return schemaRefreshConfig;
+  }
+
+  /**
+   * Connection Schema Refresh Config
+   * @param schemaRefreshConfig schemaRefreshConfig or {@code null} for none
+   */
+  public ConnectorVersion setSchemaRefreshConfig(SchemaRefreshConfig schemaRefreshConfig) {
+    this.schemaRefreshConfig = schemaRefreshConfig;
     return this;
   }
 

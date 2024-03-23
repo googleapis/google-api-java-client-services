@@ -54,6 +54,16 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
   private Entity insert;
 
   /**
+   * The properties to write in this mutation. None of the properties in the mask may have a
+   * reserved name, except for `__key__`. This field is ignored for `delete`. If the entity already
+   * exists, only properties referenced in the mask are updated, others are left untouched.
+   * Properties referenced in the mask but not in the entity are deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PropertyMask propertyMask;
+
+  /**
    * The entity to update. The entity must already exist. Must have a complete key path.
    * The value may be {@code null}.
    */
@@ -130,6 +140,29 @@ public final class Mutation extends com.google.api.client.json.GenericJson {
    */
   public Mutation setInsert(Entity insert) {
     this.insert = insert;
+    return this;
+  }
+
+  /**
+   * The properties to write in this mutation. None of the properties in the mask may have a
+   * reserved name, except for `__key__`. This field is ignored for `delete`. If the entity already
+   * exists, only properties referenced in the mask are updated, others are left untouched.
+   * Properties referenced in the mask but not in the entity are deleted.
+   * @return value or {@code null} for none
+   */
+  public PropertyMask getPropertyMask() {
+    return propertyMask;
+  }
+
+  /**
+   * The properties to write in this mutation. None of the properties in the mask may have a
+   * reserved name, except for `__key__`. This field is ignored for `delete`. If the entity already
+   * exists, only properties referenced in the mask are updated, others are left untouched.
+   * Properties referenced in the mask but not in the entity are deleted.
+   * @param propertyMask propertyMask or {@code null} for none
+   */
+  public Mutation setPropertyMask(PropertyMask propertyMask) {
+    this.propertyMask = propertyMask;
     return this;
   }
 

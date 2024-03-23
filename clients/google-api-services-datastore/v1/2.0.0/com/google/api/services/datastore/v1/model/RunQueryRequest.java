@@ -38,6 +38,14 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   private java.lang.String databaseId;
 
   /**
+   * Optional. Explain options for the query. If set, additional query statistics will be returned.
+   * If not, only query results will be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExplainOptions explainOptions;
+
+  /**
    * The GQL query to run. This query must be a non-aggregation query.
    * The value may be {@code null}.
    */
@@ -52,6 +60,14 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private PartitionId partitionId;
+
+  /**
+   * The properties to return. This field must not be set for a projection query. See
+   * LookupRequest.property_mask.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PropertyMask propertyMask;
 
   /**
    * The query to run.
@@ -83,6 +99,25 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
    */
   public RunQueryRequest setDatabaseId(java.lang.String databaseId) {
     this.databaseId = databaseId;
+    return this;
+  }
+
+  /**
+   * Optional. Explain options for the query. If set, additional query statistics will be returned.
+   * If not, only query results will be returned.
+   * @return value or {@code null} for none
+   */
+  public ExplainOptions getExplainOptions() {
+    return explainOptions;
+  }
+
+  /**
+   * Optional. Explain options for the query. If set, additional query statistics will be returned.
+   * If not, only query results will be returned.
+   * @param explainOptions explainOptions or {@code null} for none
+   */
+  public RunQueryRequest setExplainOptions(ExplainOptions explainOptions) {
+    this.explainOptions = explainOptions;
     return this;
   }
 
@@ -121,6 +156,25 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
    */
   public RunQueryRequest setPartitionId(PartitionId partitionId) {
     this.partitionId = partitionId;
+    return this;
+  }
+
+  /**
+   * The properties to return. This field must not be set for a projection query. See
+   * LookupRequest.property_mask.
+   * @return value or {@code null} for none
+   */
+  public PropertyMask getPropertyMask() {
+    return propertyMask;
+  }
+
+  /**
+   * The properties to return. This field must not be set for a projection query. See
+   * LookupRequest.property_mask.
+   * @param propertyMask propertyMask or {@code null} for none
+   */
+  public RunQueryRequest setPropertyMask(PropertyMask propertyMask) {
+    this.propertyMask = propertyMask;
     return this;
   }
 

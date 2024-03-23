@@ -32,6 +32,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Default value of the data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("default")
+  private java.lang.Object default__;
+
+  /**
    * Optional. The description of the data.
    * The value may be {@code null}.
    */
@@ -55,19 +62,76 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   private java.lang.Object example;
 
   /**
-   * Optional. The format of the data. Supported formats: for NUMBER type: float, double for INTEGER
-   * type: int32, int64
+   * Optional. The format of the data. Supported formats: for NUMBER type: "float", "double" for
+   * INTEGER type: "int32", "int64" for STRING type: "email", "byte", etc
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String format;
 
   /**
-   * Optional. Schema of the elements of Type.ARRAY.
+   * Optional. SCHEMA FIELDS FOR TYPE ARRAY Schema of the elements of Type.ARRAY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1Schema items;
+
+  /**
+   * Optional. Maximum number of the elements for Type.ARRAY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxItems;
+
+  /**
+   * Optional. Maximum length of the Type.STRING
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxLength;
+
+  /**
+   * Optional. Maximum number of the properties for Type.OBJECT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxProperties;
+
+  /**
+   * Optional. Maximum value of the Type.INTEGER and Type.NUMBER
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double maximum;
+
+  /**
+   * Optional. Minimum number of the elements for Type.ARRAY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long minItems;
+
+  /**
+   * Optional. SCHEMA FIELDS FOR TYPE STRING Minimum length of the Type.STRING
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long minLength;
+
+  /**
+   * Optional. Minimum number of the properties for Type.OBJECT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long minProperties;
+
+  /**
+   * Optional. SCHEMA FIELDS FOR TYPE INTEGER and NUMBER Minimum value of the Type.INTEGER and
+   * Type.NUMBER
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double minimum;
 
   /**
    * Optional. Indicates if the value may be null.
@@ -77,7 +141,14 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   private java.lang.Boolean nullable;
 
   /**
-   * Optional. Properties of Type.OBJECT.
+   * Optional. Pattern of the Type.STRING to restrict a string to a regular expression.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pattern;
+
+  /**
+   * Optional. SCHEMA FIELDS FOR TYPE OBJECT Properties of Type.OBJECT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,11 +162,35 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   private java.util.List<java.lang.String> required;
 
   /**
+   * Optional. The title of the Schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String title;
+
+  /**
    * Optional. The type of the data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Optional. Default value of the data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getDefault() {
+    return default__;
+  }
+
+  /**
+   * Optional. Default value of the data.
+   * @param default__ default__ or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setDefault(java.lang.Object default__) {
+    this.default__ = default__;
+    return this;
+  }
 
   /**
    * Optional. The description of the data.
@@ -153,8 +248,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The format of the data. Supported formats: for NUMBER type: float, double for INTEGER
-   * type: int32, int64
+   * Optional. The format of the data. Supported formats: for NUMBER type: "float", "double" for
+   * INTEGER type: "int32", "int64" for STRING type: "email", "byte", etc
    * @return value or {@code null} for none
    */
   public java.lang.String getFormat() {
@@ -162,8 +257,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The format of the data. Supported formats: for NUMBER type: float, double for INTEGER
-   * type: int32, int64
+   * Optional. The format of the data. Supported formats: for NUMBER type: "float", "double" for
+   * INTEGER type: "int32", "int64" for STRING type: "email", "byte", etc
    * @param format format or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setFormat(java.lang.String format) {
@@ -172,7 +267,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Schema of the elements of Type.ARRAY.
+   * Optional. SCHEMA FIELDS FOR TYPE ARRAY Schema of the elements of Type.ARRAY.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema getItems() {
@@ -180,11 +275,149 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Schema of the elements of Type.ARRAY.
+   * Optional. SCHEMA FIELDS FOR TYPE ARRAY Schema of the elements of Type.ARRAY.
    * @param items items or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setItems(GoogleCloudAiplatformV1beta1Schema items) {
     this.items = items;
+    return this;
+  }
+
+  /**
+   * Optional. Maximum number of the elements for Type.ARRAY.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxItems() {
+    return maxItems;
+  }
+
+  /**
+   * Optional. Maximum number of the elements for Type.ARRAY.
+   * @param maxItems maxItems or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setMaxItems(java.lang.Long maxItems) {
+    this.maxItems = maxItems;
+    return this;
+  }
+
+  /**
+   * Optional. Maximum length of the Type.STRING
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxLength() {
+    return maxLength;
+  }
+
+  /**
+   * Optional. Maximum length of the Type.STRING
+   * @param maxLength maxLength or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setMaxLength(java.lang.Long maxLength) {
+    this.maxLength = maxLength;
+    return this;
+  }
+
+  /**
+   * Optional. Maximum number of the properties for Type.OBJECT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxProperties() {
+    return maxProperties;
+  }
+
+  /**
+   * Optional. Maximum number of the properties for Type.OBJECT.
+   * @param maxProperties maxProperties or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setMaxProperties(java.lang.Long maxProperties) {
+    this.maxProperties = maxProperties;
+    return this;
+  }
+
+  /**
+   * Optional. Maximum value of the Type.INTEGER and Type.NUMBER
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getMaximum() {
+    return maximum;
+  }
+
+  /**
+   * Optional. Maximum value of the Type.INTEGER and Type.NUMBER
+   * @param maximum maximum or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setMaximum(java.lang.Double maximum) {
+    this.maximum = maximum;
+    return this;
+  }
+
+  /**
+   * Optional. Minimum number of the elements for Type.ARRAY.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinItems() {
+    return minItems;
+  }
+
+  /**
+   * Optional. Minimum number of the elements for Type.ARRAY.
+   * @param minItems minItems or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setMinItems(java.lang.Long minItems) {
+    this.minItems = minItems;
+    return this;
+  }
+
+  /**
+   * Optional. SCHEMA FIELDS FOR TYPE STRING Minimum length of the Type.STRING
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinLength() {
+    return minLength;
+  }
+
+  /**
+   * Optional. SCHEMA FIELDS FOR TYPE STRING Minimum length of the Type.STRING
+   * @param minLength minLength or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setMinLength(java.lang.Long minLength) {
+    this.minLength = minLength;
+    return this;
+  }
+
+  /**
+   * Optional. Minimum number of the properties for Type.OBJECT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinProperties() {
+    return minProperties;
+  }
+
+  /**
+   * Optional. Minimum number of the properties for Type.OBJECT.
+   * @param minProperties minProperties or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setMinProperties(java.lang.Long minProperties) {
+    this.minProperties = minProperties;
+    return this;
+  }
+
+  /**
+   * Optional. SCHEMA FIELDS FOR TYPE INTEGER and NUMBER Minimum value of the Type.INTEGER and
+   * Type.NUMBER
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getMinimum() {
+    return minimum;
+  }
+
+  /**
+   * Optional. SCHEMA FIELDS FOR TYPE INTEGER and NUMBER Minimum value of the Type.INTEGER and
+   * Type.NUMBER
+   * @param minimum minimum or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setMinimum(java.lang.Double minimum) {
+    this.minimum = minimum;
     return this;
   }
 
@@ -206,7 +439,24 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Properties of Type.OBJECT.
+   * Optional. Pattern of the Type.STRING to restrict a string to a regular expression.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPattern() {
+    return pattern;
+  }
+
+  /**
+   * Optional. Pattern of the Type.STRING to restrict a string to a regular expression.
+   * @param pattern pattern or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setPattern(java.lang.String pattern) {
+    this.pattern = pattern;
+    return this;
+  }
+
+  /**
+   * Optional. SCHEMA FIELDS FOR TYPE OBJECT Properties of Type.OBJECT.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> getProperties() {
@@ -214,7 +464,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Properties of Type.OBJECT.
+   * Optional. SCHEMA FIELDS FOR TYPE OBJECT Properties of Type.OBJECT.
    * @param properties properties or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setProperties(java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> properties) {
@@ -236,6 +486,23 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1beta1Schema setRequired(java.util.List<java.lang.String> required) {
     this.required = required;
+    return this;
+  }
+
+  /**
+   * Optional. The title of the Schema.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTitle() {
+    return title;
+  }
+
+  /**
+   * Optional. The title of the Schema.
+   * @param title title or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setTitle(java.lang.String title) {
+    this.title = title;
     return this;
   }
 

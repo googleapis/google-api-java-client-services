@@ -110,6 +110,16 @@ public final class GoogleCloudAiplatformV1CustomJobSpec extends com.google.api.c
   private java.lang.String network;
 
   /**
+   * Optional. The ID of the PersistentResource in the same Project and Location which to run If
+   * this is specified, the job will be run on existing machines held by the PersistentResource
+   * instead of on-demand short-live machines. The network and CMEK configs on the job should be
+   * consistent with those on the PersistentResource, otherwise, the job will be rejected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String persistentResourceId;
+
+  /**
    * The ID of the location to store protected artifacts. e.g. us-central1. Populate only when the
    * location is different than CustomJob location. List of supported locations:
    * https://cloud.google.com/vertex-ai/docs/general/locations
@@ -338,6 +348,29 @@ public final class GoogleCloudAiplatformV1CustomJobSpec extends com.google.api.c
    */
   public GoogleCloudAiplatformV1CustomJobSpec setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. The ID of the PersistentResource in the same Project and Location which to run If
+   * this is specified, the job will be run on existing machines held by the PersistentResource
+   * instead of on-demand short-live machines. The network and CMEK configs on the job should be
+   * consistent with those on the PersistentResource, otherwise, the job will be rejected.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPersistentResourceId() {
+    return persistentResourceId;
+  }
+
+  /**
+   * Optional. The ID of the PersistentResource in the same Project and Location which to run If
+   * this is specified, the job will be run on existing machines held by the PersistentResource
+   * instead of on-demand short-live machines. The network and CMEK configs on the job should be
+   * consistent with those on the PersistentResource, otherwise, the job will be rejected.
+   * @param persistentResourceId persistentResourceId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CustomJobSpec setPersistentResourceId(java.lang.String persistentResourceId) {
+    this.persistentResourceId = persistentResourceId;
     return this;
   }
 

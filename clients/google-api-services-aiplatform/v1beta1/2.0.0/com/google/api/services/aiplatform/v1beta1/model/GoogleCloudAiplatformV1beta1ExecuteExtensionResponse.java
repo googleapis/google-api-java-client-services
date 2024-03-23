@@ -38,15 +38,6 @@ public final class GoogleCloudAiplatformV1beta1ExecuteExtensionResponse extends 
   private java.lang.String content;
 
   /**
-   * Output from the extension. The output should be conformant to the extension's manifest/OpenAPI
-   * spec. The output can contain values for keys like "content", "headers", etc. This field is
-   * deprecated, please use content field below for the extension execution result.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> output;
-
-  /**
    * Response content from the extension. The content should be conformant to the response.content
    * schema in the extension's manifest/OpenAPI spec.
    * @return value or {@code null} for none
@@ -62,27 +53,6 @@ public final class GoogleCloudAiplatformV1beta1ExecuteExtensionResponse extends 
    */
   public GoogleCloudAiplatformV1beta1ExecuteExtensionResponse setContent(java.lang.String content) {
     this.content = content;
-    return this;
-  }
-
-  /**
-   * Output from the extension. The output should be conformant to the extension's manifest/OpenAPI
-   * spec. The output can contain values for keys like "content", "headers", etc. This field is
-   * deprecated, please use content field below for the extension execution result.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.Object> getOutput() {
-    return output;
-  }
-
-  /**
-   * Output from the extension. The output should be conformant to the extension's manifest/OpenAPI
-   * spec. The output can contain values for keys like "content", "headers", etc. This field is
-   * deprecated, please use content field below for the extension execution result.
-   * @param output output or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1ExecuteExtensionResponse setOutput(java.util.Map<String, java.lang.Object> output) {
-    this.output = output;
     return this;
   }
 

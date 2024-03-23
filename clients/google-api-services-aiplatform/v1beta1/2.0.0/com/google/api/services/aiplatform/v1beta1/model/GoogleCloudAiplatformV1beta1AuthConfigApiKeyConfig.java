@@ -31,7 +31,10 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig extends co
 
   /**
    * Required. The name of the SecretManager secret version resource storing the API key. Format:
-   * `projects/{project}/secrets/{secrete}/versions/{version}`
+   * `projects/{project}/secrets/{secrete}/versions/{version}` - If specified, the
+   * `secretmanager.versions.access` permission should be granted to Vertex AI Extension Service
+   * Agent (https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents) on the
+   * specified resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +57,10 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig extends co
 
   /**
    * Required. The name of the SecretManager secret version resource storing the API key. Format:
-   * `projects/{project}/secrets/{secrete}/versions/{version}`
+   * `projects/{project}/secrets/{secrete}/versions/{version}` - If specified, the
+   * `secretmanager.versions.access` permission should be granted to Vertex AI Extension Service
+   * Agent (https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents) on the
+   * specified resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiKeySecret() {
@@ -63,7 +69,10 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig extends co
 
   /**
    * Required. The name of the SecretManager secret version resource storing the API key. Format:
-   * `projects/{project}/secrets/{secrete}/versions/{version}`
+   * `projects/{project}/secrets/{secrete}/versions/{version}` - If specified, the
+   * `secretmanager.versions.access` permission should be granted to Vertex AI Extension Service
+   * Agent (https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents) on the
+   * specified resource.
    * @param apiKeySecret apiKeySecret or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig setApiKeySecret(java.lang.String apiKeySecret) {

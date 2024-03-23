@@ -30,7 +30,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ExecuteExtensionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The operation to be executed in this extension as defined in
+   * Required. The desired ID of the operation to be executed in this extension as defined in
    * ExtensionOperation.operation_id.
    * The value may be {@code null}.
    */
@@ -57,7 +57,7 @@ public final class GoogleCloudAiplatformV1beta1ExecuteExtensionRequest extends c
   private GoogleCloudAiplatformV1beta1AuthConfig runtimeAuthConfig;
 
   /**
-   * Required. The operation to be executed in this extension as defined in
+   * Required. The desired ID of the operation to be executed in this extension as defined in
    * ExtensionOperation.operation_id.
    * @return value or {@code null} for none
    */
@@ -66,7 +66,7 @@ public final class GoogleCloudAiplatformV1beta1ExecuteExtensionRequest extends c
   }
 
   /**
-   * Required. The operation to be executed in this extension as defined in
+   * Required. The desired ID of the operation to be executed in this extension as defined in
    * ExtensionOperation.operation_id.
    * @param operationId operationId or {@code null} for none
    */

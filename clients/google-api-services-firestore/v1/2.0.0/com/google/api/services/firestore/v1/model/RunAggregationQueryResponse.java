@@ -30,6 +30,14 @@ package com.google.api.services.firestore.v1.model;
 public final class RunAggregationQueryResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Query explain metrics. This is only present when the RunAggregationQueryRequest.explain_options
+   * is provided, and it is sent only once with the last response in the stream.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExplainMetrics explainMetrics;
+
+  /**
    * The time at which the aggregate result was computed. This is always monotonically increasing;
    * in this case, the previous AggregationResult in the result stream are guaranteed not to have
    * changed between their `read_time` and this one. If the query returns no results, a response
@@ -54,6 +62,25 @@ public final class RunAggregationQueryResponse extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String transaction;
+
+  /**
+   * Query explain metrics. This is only present when the RunAggregationQueryRequest.explain_options
+   * is provided, and it is sent only once with the last response in the stream.
+   * @return value or {@code null} for none
+   */
+  public ExplainMetrics getExplainMetrics() {
+    return explainMetrics;
+  }
+
+  /**
+   * Query explain metrics. This is only present when the RunAggregationQueryRequest.explain_options
+   * is provided, and it is sent only once with the last response in the stream.
+   * @param explainMetrics explainMetrics or {@code null} for none
+   */
+  public RunAggregationQueryResponse setExplainMetrics(ExplainMetrics explainMetrics) {
+    this.explainMetrics = explainMetrics;
+    return this;
+  }
 
   /**
    * The time at which the aggregate result was computed. This is always monotonically increasing;

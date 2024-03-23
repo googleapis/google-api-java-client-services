@@ -45,6 +45,14 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
   private java.lang.Boolean done;
 
   /**
+   * Query explain metrics. This is only present when the RunQueryRequest.explain_options is
+   * provided, and it is sent only once with the last response in the stream.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExplainMetrics explainMetrics;
+
+  /**
    * The time at which the document was read. This may be monotonically increasing; in this case,
    * the previous documents in the result stream are guaranteed not to have changed between their
    * `read_time` and this one. If the query returns no results, a response with `read_time` and no
@@ -104,6 +112,25 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
    */
   public RunQueryResponse setDone(java.lang.Boolean done) {
     this.done = done;
+    return this;
+  }
+
+  /**
+   * Query explain metrics. This is only present when the RunQueryRequest.explain_options is
+   * provided, and it is sent only once with the last response in the stream.
+   * @return value or {@code null} for none
+   */
+  public ExplainMetrics getExplainMetrics() {
+    return explainMetrics;
+  }
+
+  /**
+   * Query explain metrics. This is only present when the RunQueryRequest.explain_options is
+   * provided, and it is sent only once with the last response in the stream.
+   * @param explainMetrics explainMetrics or {@code null} for none
+   */
+  public RunQueryResponse setExplainMetrics(ExplainMetrics explainMetrics) {
+    this.explainMetrics = explainMetrics;
     return this;
   }
 

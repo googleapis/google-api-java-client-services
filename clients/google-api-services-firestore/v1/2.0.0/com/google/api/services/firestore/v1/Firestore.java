@@ -1517,7 +1517,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of backup schedule. Format
+         * @param name Required. The name of the backup schedule. Format
          *        `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
          * @return the request
          */
@@ -1545,7 +1545,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of backup schedule. Format
+           * @param name Required. The name of the backup schedule. Format
          *        `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
            * @since 1.13
            */
@@ -1615,13 +1615,13 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The name of backup schedule. Format
+           * Required. The name of the backup schedule. Format
            * `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of backup schedule. Format
+          /** Required. The name of the backup schedule. Format
          `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
            */
           public java.lang.String getName() {
@@ -1629,7 +1629,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The name of backup schedule. Format
+           * Required. The name of the backup schedule. Format
            * `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
            */
           public Delete setName(java.lang.String name) {

@@ -31,6 +31,21 @@ package com.google.api.services.container.v1beta1.model;
 public final class DatabaseEncryption extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The current state of etcd encryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String currentState;
+
+  /**
+   * Output only. Keys in use by the cluster for decrypting existing objects, in addition to the key
+   * in `key_name`. Each item is a CloudKMS key resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> decryptionKeys;
+
+  /**
    * Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-
    * project/locations/global/keyRings/my-ring/cryptoKeys/my-key
    * The value may be {@code null}.
@@ -39,11 +54,54 @@ public final class DatabaseEncryption extends com.google.api.client.json.Generic
   private java.lang.String keyName;
 
   /**
+   * Output only. Records errors seen during DatabaseEncryption update operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<OperationError> lastOperationErrors;
+
+  /**
    * The desired state of etcd encryption.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. The current state of etcd encryption.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCurrentState() {
+    return currentState;
+  }
+
+  /**
+   * Output only. The current state of etcd encryption.
+   * @param currentState currentState or {@code null} for none
+   */
+  public DatabaseEncryption setCurrentState(java.lang.String currentState) {
+    this.currentState = currentState;
+    return this;
+  }
+
+  /**
+   * Output only. Keys in use by the cluster for decrypting existing objects, in addition to the key
+   * in `key_name`. Each item is a CloudKMS key resource.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDecryptionKeys() {
+    return decryptionKeys;
+  }
+
+  /**
+   * Output only. Keys in use by the cluster for decrypting existing objects, in addition to the key
+   * in `key_name`. Each item is a CloudKMS key resource.
+   * @param decryptionKeys decryptionKeys or {@code null} for none
+   */
+  public DatabaseEncryption setDecryptionKeys(java.util.List<java.lang.String> decryptionKeys) {
+    this.decryptionKeys = decryptionKeys;
+    return this;
+  }
 
   /**
    * Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-
@@ -61,6 +119,23 @@ public final class DatabaseEncryption extends com.google.api.client.json.Generic
    */
   public DatabaseEncryption setKeyName(java.lang.String keyName) {
     this.keyName = keyName;
+    return this;
+  }
+
+  /**
+   * Output only. Records errors seen during DatabaseEncryption update operations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<OperationError> getLastOperationErrors() {
+    return lastOperationErrors;
+  }
+
+  /**
+   * Output only. Records errors seen during DatabaseEncryption update operations.
+   * @param lastOperationErrors lastOperationErrors or {@code null} for none
+   */
+  public DatabaseEncryption setLastOperationErrors(java.util.List<OperationError> lastOperationErrors) {
+    this.lastOperationErrors = lastOperationErrors;
     return this;
   }
 

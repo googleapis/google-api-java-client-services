@@ -30,8 +30,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class LearningGenaiRootGroundingMetadataCitation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Index in the prediction output where the citation ends (exclusive). Must be > start_index and <
-   * len(output).
+   * Index in the prediction output where the citation ends (exclusive). Must be > start_index and
+   * <= len(output).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +61,8 @@ public final class LearningGenaiRootGroundingMetadataCitation extends com.google
   private java.lang.Integer startIndex;
 
   /**
-   * Index in the prediction output where the citation ends (exclusive). Must be > start_index and <
-   * len(output).
+   * Index in the prediction output where the citation ends (exclusive). Must be > start_index and
+   * <= len(output).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEndIndex() {
@@ -70,8 +70,8 @@ public final class LearningGenaiRootGroundingMetadataCitation extends com.google
   }
 
   /**
-   * Index in the prediction output where the citation ends (exclusive). Must be > start_index and <
-   * len(output).
+   * Index in the prediction output where the citation ends (exclusive). Must be > start_index and
+   * <= len(output).
    * @param endIndex endIndex or {@code null} for none
    */
   public LearningGenaiRootGroundingMetadataCitation setEndIndex(java.lang.Integer endIndex) {

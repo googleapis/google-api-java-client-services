@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1FetchFeatureValuesResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The data key associated with this response. Will only be populated for
+   * FeatureOnlineStoreService.StreamingFetchFeatureValues RPCs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1FeatureViewDataKey dataKey;
+
+  /**
    * Feature values in KeyValue format.
    * The value may be {@code null}.
    */
@@ -42,6 +50,25 @@ public final class GoogleCloudAiplatformV1FetchFeatureValuesResponse extends com
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> protoStruct;
+
+  /**
+   * The data key associated with this response. Will only be populated for
+   * FeatureOnlineStoreService.StreamingFetchFeatureValues RPCs.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureViewDataKey getDataKey() {
+    return dataKey;
+  }
+
+  /**
+   * The data key associated with this response. Will only be populated for
+   * FeatureOnlineStoreService.StreamingFetchFeatureValues RPCs.
+   * @param dataKey dataKey or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FetchFeatureValuesResponse setDataKey(GoogleCloudAiplatformV1FeatureViewDataKey dataKey) {
+    this.dataKey = dataKey;
+    return this;
+  }
 
   /**
    * Feature values in KeyValue format.

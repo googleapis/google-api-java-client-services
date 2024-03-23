@@ -31,17 +31,17 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigOauthConfig extends com
 
   /**
    * Access token for extension endpoint. Only used to propagate token from
-   * ExecuteExtensionRequest.runtime_auth_config at request time.
+   * [[ExecuteExtensionRequest.runtime_auth_config]] at request time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accessToken;
 
   /**
-   * The service account that the extension execution service will use to query extension. Used for
-   * generating OAuth token on behalf of provided service account. - If the service account is
-   * provided, the service account should grant Vertex AI Service Agent
-   * `iam.serviceAccounts.getAccessToken` permission.
+   * The service account used to generate access tokens for executing the Extension. - If the
+   * service account is specified, the `iam.serviceAccounts.getAccessToken` permission should be
+   * granted to Vertex AI Extension Service Agent (https://cloud.google.com/vertex-ai/docs/general
+   * /access-control#service-agents) on the provided service account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigOauthConfig extends com
 
   /**
    * Access token for extension endpoint. Only used to propagate token from
-   * ExecuteExtensionRequest.runtime_auth_config at request time.
+   * [[ExecuteExtensionRequest.runtime_auth_config]] at request time.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessToken() {
@@ -58,7 +58,7 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigOauthConfig extends com
 
   /**
    * Access token for extension endpoint. Only used to propagate token from
-   * ExecuteExtensionRequest.runtime_auth_config at request time.
+   * [[ExecuteExtensionRequest.runtime_auth_config]] at request time.
    * @param accessToken accessToken or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AuthConfigOauthConfig setAccessToken(java.lang.String accessToken) {
@@ -67,10 +67,10 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigOauthConfig extends com
   }
 
   /**
-   * The service account that the extension execution service will use to query extension. Used for
-   * generating OAuth token on behalf of provided service account. - If the service account is
-   * provided, the service account should grant Vertex AI Service Agent
-   * `iam.serviceAccounts.getAccessToken` permission.
+   * The service account used to generate access tokens for executing the Extension. - If the
+   * service account is specified, the `iam.serviceAccounts.getAccessToken` permission should be
+   * granted to Vertex AI Extension Service Agent (https://cloud.google.com/vertex-ai/docs/general
+   * /access-control#service-agents) on the provided service account.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -78,10 +78,10 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigOauthConfig extends com
   }
 
   /**
-   * The service account that the extension execution service will use to query extension. Used for
-   * generating OAuth token on behalf of provided service account. - If the service account is
-   * provided, the service account should grant Vertex AI Service Agent
-   * `iam.serviceAccounts.getAccessToken` permission.
+   * The service account used to generate access tokens for executing the Extension. - If the
+   * service account is specified, the `iam.serviceAccounts.getAccessToken` permission should be
+   * granted to Vertex AI Extension Service Agent (https://cloud.google.com/vertex-ai/docs/general
+   * /access-control#service-agents) on the provided service account.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AuthConfigOauthConfig setServiceAccount(java.lang.String serviceAccount) {

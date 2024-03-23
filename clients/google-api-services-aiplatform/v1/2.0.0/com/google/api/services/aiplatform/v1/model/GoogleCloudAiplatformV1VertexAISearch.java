@@ -31,16 +31,16 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1VertexAISearch extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Fully-qualified Vertex AI Search's datastore resource ID.
-   * projects/<>/locations/<>/collections/<>/dataStores/<>
+   * Required. Fully-qualified Vertex AI Search's datastore resource ID. Format:
+   * projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String datastore;
 
   /**
-   * Required. Fully-qualified Vertex AI Search's datastore resource ID.
-   * projects/<>/locations/<>/collections/<>/dataStores/<>
+   * Required. Fully-qualified Vertex AI Search's datastore resource ID. Format:
+   * projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}
    * @return value or {@code null} for none
    */
   public java.lang.String getDatastore() {
@@ -48,8 +48,8 @@ public final class GoogleCloudAiplatformV1VertexAISearch extends com.google.api.
   }
 
   /**
-   * Required. Fully-qualified Vertex AI Search's datastore resource ID.
-   * projects/<>/locations/<>/collections/<>/dataStores/<>
+   * Required. Fully-qualified Vertex AI Search's datastore resource ID. Format:
+   * projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}
    * @param datastore datastore or {@code null} for none
    */
   public GoogleCloudAiplatformV1VertexAISearch setDatastore(java.lang.String datastore) {

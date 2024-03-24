@@ -37,6 +37,13 @@ public final class SapDiscoveryResourceInstanceProperties extends com.google.api
   private java.util.List<java.lang.String> clusterInstances;
 
   /**
+   * Optional. The VM's instance number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long instanceNumber;
+
+  /**
    * Optional. A virtual hostname of the instance if it has one.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class SapDiscoveryResourceInstanceProperties extends com.google.api
    */
   public SapDiscoveryResourceInstanceProperties setClusterInstances(java.util.List<java.lang.String> clusterInstances) {
     this.clusterInstances = clusterInstances;
+    return this;
+  }
+
+  /**
+   * Optional. The VM's instance number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getInstanceNumber() {
+    return instanceNumber;
+  }
+
+  /**
+   * Optional. The VM's instance number.
+   * @param instanceNumber instanceNumber or {@code null} for none
+   */
+  public SapDiscoveryResourceInstanceProperties setInstanceNumber(java.lang.Long instanceNumber) {
+    this.instanceNumber = instanceNumber;
     return this;
   }
 

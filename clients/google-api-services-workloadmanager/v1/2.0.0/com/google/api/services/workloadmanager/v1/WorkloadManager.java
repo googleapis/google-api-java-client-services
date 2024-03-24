@@ -857,6 +857,22 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /** Optional. Followed the best practice from https://aip.dev/135#cascading-delete */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. Followed the best practice from https://aip.dev/135#cascading-delete
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /** Optional. Followed the best practice from https://aip.dev/135#cascading-delete */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
            * that if you must retry your request, the server will know to ignore the request if it

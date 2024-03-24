@@ -30,6 +30,13 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapDiscoveryComponentDatabaseProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. SID of the system database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseSid;
+
+  /**
    * Required. Type of the database. HANA, DB2, etc.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class SapDiscoveryComponentDatabaseProperties extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.String sharedNfsUri;
+
+  /**
+   * Optional. SID of the system database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseSid() {
+    return databaseSid;
+  }
+
+  /**
+   * Optional. SID of the system database.
+   * @param databaseSid databaseSid or {@code null} for none
+   */
+  public SapDiscoveryComponentDatabaseProperties setDatabaseSid(java.lang.String databaseSid) {
+    this.databaseSid = databaseSid;
+    return this;
+  }
 
   /**
    * Required. Type of the database. HANA, DB2, etc.

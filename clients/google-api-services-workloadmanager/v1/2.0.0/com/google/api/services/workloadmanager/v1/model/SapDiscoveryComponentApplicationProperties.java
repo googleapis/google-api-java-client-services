@@ -38,6 +38,13 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
   private java.lang.Boolean abap;
 
   /**
+   * Optional. Instance number of the SAP application instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appInstanceNumber;
+
+  /**
    * Required. Type of the application. Netweaver, etc.
    * The value may be {@code null}.
    */
@@ -45,18 +52,18 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
   private java.lang.String applicationType;
 
   /**
+   * Optional. Instance number of the ASCS instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ascsInstanceNumber;
+
+  /**
    * Optional. Resource URI of the recognized ASCS host of the application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ascsUri;
-
-  /**
-   * Optional. Instance number of the SAP instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String instanceNumber;
 
   /**
    * Optional. Kernel version for Netweaver running in the system.
@@ -93,6 +100,23 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
   }
 
   /**
+   * Optional. Instance number of the SAP application instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppInstanceNumber() {
+    return appInstanceNumber;
+  }
+
+  /**
+   * Optional. Instance number of the SAP application instance.
+   * @param appInstanceNumber appInstanceNumber or {@code null} for none
+   */
+  public SapDiscoveryComponentApplicationProperties setAppInstanceNumber(java.lang.String appInstanceNumber) {
+    this.appInstanceNumber = appInstanceNumber;
+    return this;
+  }
+
+  /**
    * Required. Type of the application. Netweaver, etc.
    * @return value or {@code null} for none
    */
@@ -110,6 +134,23 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
   }
 
   /**
+   * Optional. Instance number of the ASCS instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAscsInstanceNumber() {
+    return ascsInstanceNumber;
+  }
+
+  /**
+   * Optional. Instance number of the ASCS instance.
+   * @param ascsInstanceNumber ascsInstanceNumber or {@code null} for none
+   */
+  public SapDiscoveryComponentApplicationProperties setAscsInstanceNumber(java.lang.String ascsInstanceNumber) {
+    this.ascsInstanceNumber = ascsInstanceNumber;
+    return this;
+  }
+
+  /**
    * Optional. Resource URI of the recognized ASCS host of the application.
    * @return value or {@code null} for none
    */
@@ -123,23 +164,6 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
    */
   public SapDiscoveryComponentApplicationProperties setAscsUri(java.lang.String ascsUri) {
     this.ascsUri = ascsUri;
-    return this;
-  }
-
-  /**
-   * Optional. Instance number of the SAP instance.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getInstanceNumber() {
-    return instanceNumber;
-  }
-
-  /**
-   * Optional. Instance number of the SAP instance.
-   * @param instanceNumber instanceNumber or {@code null} for none
-   */
-  public SapDiscoveryComponentApplicationProperties setInstanceNumber(java.lang.String instanceNumber) {
-    this.instanceNumber = instanceNumber;
     return this;
   }
 

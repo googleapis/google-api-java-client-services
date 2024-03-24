@@ -62,6 +62,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Persistence config (RDB, AOF) for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterPersistenceConfig persistenceConfig;
+
+  /**
    * Required. Each PscConfig configures the consumer network where IPs will be designated to the
    * cluster for client access through Private Service Connect Automation. Currently, only one
    * PscConfig is supported.
@@ -76,6 +83,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<PscConnection> pscConnections;
+
+  /**
+   * Optional. Key/Value pairs of customer overrides for mutable Redis Configs
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> redisConfigs;
 
   /**
    * Optional. The number of replica nodes per shard.
@@ -203,6 +217,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Persistence config (RDB, AOF) for the cluster.
+   * @return value or {@code null} for none
+   */
+  public ClusterPersistenceConfig getPersistenceConfig() {
+    return persistenceConfig;
+  }
+
+  /**
+   * Optional. Persistence config (RDB, AOF) for the cluster.
+   * @param persistenceConfig persistenceConfig or {@code null} for none
+   */
+  public Cluster setPersistenceConfig(ClusterPersistenceConfig persistenceConfig) {
+    this.persistenceConfig = persistenceConfig;
+    return this;
+  }
+
+  /**
    * Required. Each PscConfig configures the consumer network where IPs will be designated to the
    * cluster for client access through Private Service Connect Automation. Currently, only one
    * PscConfig is supported.
@@ -237,6 +268,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setPscConnections(java.util.List<PscConnection> pscConnections) {
     this.pscConnections = pscConnections;
+    return this;
+  }
+
+  /**
+   * Optional. Key/Value pairs of customer overrides for mutable Redis Configs
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getRedisConfigs() {
+    return redisConfigs;
+  }
+
+  /**
+   * Optional. Key/Value pairs of customer overrides for mutable Redis Configs
+   * @param redisConfigs redisConfigs or {@code null} for none
+   */
+  public Cluster setRedisConfigs(java.util.Map<String, java.lang.String> redisConfigs) {
+    this.redisConfigs = redisConfigs;
     return this;
   }
 

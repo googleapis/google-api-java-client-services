@@ -96,7 +96,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notes describing the task. Optional.
+   * Notes describing the task. Optional. Maximum length allowed: 8192 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +136,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * Title of the task.
+   * Title of the task. Maximum length allowed: 1024 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -301,7 +301,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notes describing the task. Optional.
+   * Notes describing the task. Optional. Maximum length allowed: 8192 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -309,7 +309,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notes describing the task. Optional.
+   * Notes describing the task. Optional. Maximum length allowed: 8192 characters.
    * @param notes notes or {@code null} for none
    */
   public Task setNotes(java.lang.String notes) {
@@ -396,7 +396,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the task.
+   * Title of the task. Maximum length allowed: 1024 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -404,7 +404,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the task.
+   * Title of the task. Maximum length allowed: 1024 characters.
    * @param title title or {@code null} for none
    */
   public Task setTitle(java.lang.String title) {

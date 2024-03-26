@@ -4064,6 +4064,368 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
 
     }
     /**
+     * An accessor for creating requests from the PolicyIssues collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Adsense adsense = new Adsense(...);}
+     *   {@code Adsense.PolicyIssues.List request = adsense.policyIssues().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public PolicyIssues policyIssues() {
+      return new PolicyIssues();
+    }
+
+    /**
+     * The "policyIssues" collection of methods.
+     */
+    public class PolicyIssues {
+
+      /**
+       * Gets information about the selected policy issue.
+       *
+       * Create a request for the method "policyIssues.get".
+       *
+       * This request holds the parameters needed by the adsense server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the policy issue. Format: accounts/{account}/policyIssues/{policy_issue}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AdsenseRequest<com.google.api.services.adsense.v2.model.PolicyIssue> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/policyIssues/[^/]+$");
+
+        /**
+         * Gets information about the selected policy issue.
+         *
+         * Create a request for the method "policyIssues.get".
+         *
+         * This request holds the parameters needed by the the adsense server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the policy issue. Format: accounts/{account}/policyIssues/{policy_issue}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Adsense.this, "GET", REST_PATH, null, com.google.api.services.adsense.v2.model.PolicyIssue.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/policyIssues/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the policy issue. Format:
+         * accounts/{account}/policyIssues/{policy_issue}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the policy issue. Format: accounts/{account}/policyIssues/{policy_issue}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the policy issue. Format:
+         * accounts/{account}/policyIssues/{policy_issue}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/policyIssues/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all the policy issues for the specified account.
+       *
+       * Create a request for the method "policyIssues.list".
+       *
+       * This request holds the parameters needed by the adsense server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The account for which policy issues are being retrieved. Format: accounts/{account}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AdsenseRequest<com.google.api.services.adsense.v2.model.ListPolicyIssuesResponse> {
+
+        private static final String REST_PATH = "v2/{+parent}/policyIssues";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Lists all the policy issues for the specified account.
+         *
+         * Create a request for the method "policyIssues.list".
+         *
+         * This request holds the parameters needed by the the adsense server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The account for which policy issues are being retrieved. Format: accounts/{account}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Adsense.this, "GET", REST_PATH, null, com.google.api.services.adsense.v2.model.ListPolicyIssuesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The account for which policy issues are being retrieved. Format:
+         * accounts/{account}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The account for which policy issues are being retrieved. Format: accounts/{account}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The account for which policy issues are being retrieved. Format:
+         * accounts/{account}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of policy issues to include in the response, used for paging. If
+         * unspecified, at most 10000 policy issues will be returned. The maximum value is 10000;
+         * values above 10000 will be coerced to 10000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of policy issues to include in the response, used for paging. If unspecified, at
+       most 10000 policy issues will be returned. The maximum value is 10000; values above 10000 will be
+       coerced to 10000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of policy issues to include in the response, used for paging. If
+         * unspecified, at most 10000 policy issues will be returned. The maximum value is 10000;
+         * values above 10000 will be coerced to 10000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `ListPolicyIssues` call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to `ListPolicyIssues`
+         * must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `ListPolicyIssues` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListPolicyIssues` must match
+       the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `ListPolicyIssues` call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to `ListPolicyIssues`
+         * must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Reports collection.
      *
      * <p>The typical use is:</p>

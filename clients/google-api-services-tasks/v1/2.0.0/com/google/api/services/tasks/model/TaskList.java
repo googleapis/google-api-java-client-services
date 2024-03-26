@@ -58,7 +58,7 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * Title of the task list.
+   * Title of the task list. Maximum length allowed: 1024 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +140,7 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the task list.
+   * Title of the task list. Maximum length allowed: 1024 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -148,7 +148,7 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Title of the task list.
+   * Title of the task list. Maximum length allowed: 1024 characters.
    * @param title title or {@code null} for none
    */
   public TaskList setTitle(java.lang.String title) {

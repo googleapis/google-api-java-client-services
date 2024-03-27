@@ -26888,6 +26888,167 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
 
       }
+      /**
+       * An accessor for creating requests from the RankingConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+       *   {@code DiscoveryEngine.RankingConfigs.List request = discoveryengine.rankingConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public RankingConfigs rankingConfigs() {
+        return new RankingConfigs();
+      }
+
+      /**
+       * The "rankingConfigs" collection of methods.
+       */
+      public class RankingConfigs {
+
+        /**
+         * Ranks a list of text records based on the given input query.
+         *
+         * Create a request for the method "rankingConfigs.rank".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Rank#execute()} method to invoke the remote operation.
+         *
+         * @param rankingConfig Required. The resource name of the rank service config, such as
+         *        `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRankRequest}
+         * @return the request
+         */
+        public Rank rank(java.lang.String rankingConfig, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRankRequest content) throws java.io.IOException {
+          Rank result = new Rank(rankingConfig, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Rank extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRankResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+rankingConfig}:rank";
+
+          private final java.util.regex.Pattern RANKING_CONFIG_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/rankingConfigs/[^/]+$");
+
+          /**
+           * Ranks a list of text records based on the given input query.
+           *
+           * Create a request for the method "rankingConfigs.rank".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Rank#execute()} method to invoke the remote operation. <p>
+           * {@link Rank#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param rankingConfig Required. The resource name of the rank service config, such as
+         *        `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRankRequest}
+           * @since 1.13
+           */
+          protected Rank(java.lang.String rankingConfig, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRankRequest content) {
+            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRankResponse.class);
+            this.rankingConfig = com.google.api.client.util.Preconditions.checkNotNull(rankingConfig, "Required parameter rankingConfig must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RANKING_CONFIG_PATTERN.matcher(rankingConfig).matches(),
+                  "Parameter rankingConfig must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rankingConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Rank set$Xgafv(java.lang.String $Xgafv) {
+            return (Rank) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Rank setAccessToken(java.lang.String accessToken) {
+            return (Rank) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Rank setAlt(java.lang.String alt) {
+            return (Rank) super.setAlt(alt);
+          }
+
+          @Override
+          public Rank setCallback(java.lang.String callback) {
+            return (Rank) super.setCallback(callback);
+          }
+
+          @Override
+          public Rank setFields(java.lang.String fields) {
+            return (Rank) super.setFields(fields);
+          }
+
+          @Override
+          public Rank setKey(java.lang.String key) {
+            return (Rank) super.setKey(key);
+          }
+
+          @Override
+          public Rank setOauthToken(java.lang.String oauthToken) {
+            return (Rank) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Rank setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Rank) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Rank setQuotaUser(java.lang.String quotaUser) {
+            return (Rank) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Rank setUploadType(java.lang.String uploadType) {
+            return (Rank) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Rank setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Rank) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the rank service config, such as
+           * `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String rankingConfig;
+
+          /** Required. The resource name of the rank service config, such as
+         `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+           */
+          public java.lang.String getRankingConfig() {
+            return rankingConfig;
+          }
+
+          /**
+           * Required. The resource name of the rank service config, such as
+           * `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+           */
+          public Rank setRankingConfig(java.lang.String rankingConfig) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RANKING_CONFIG_PATTERN.matcher(rankingConfig).matches(),
+                  "Parameter rankingConfig must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rankingConfigs/[^/]+$");
+            }
+            this.rankingConfig = rankingConfig;
+            return this;
+          }
+
+          @Override
+          public Rank set(String parameterName, Object value) {
+            return (Rank) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Operations collection.

@@ -30,6 +30,14 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies the chunk spec to be returned from the search response. Only available if the
+   * SearchRequest.ContentSearchSpec.search_result_mode is set to CHUNKS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecChunkSpec chunkSpec;
+
+  /**
    * If there is no extractive_content_spec provided, there will be no extractive answer in the
    * search response.
    * The value may be {@code null}.
@@ -60,6 +68,25 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpec summarySpec;
+
+  /**
+   * Specifies the chunk spec to be returned from the search response. Only available if the
+   * SearchRequest.ContentSearchSpec.search_result_mode is set to CHUNKS
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecChunkSpec getChunkSpec() {
+    return chunkSpec;
+  }
+
+  /**
+   * Specifies the chunk spec to be returned from the search response. Only available if the
+   * SearchRequest.ContentSearchSpec.search_result_mode is set to CHUNKS
+   * @param chunkSpec chunkSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpec setChunkSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecChunkSpec chunkSpec) {
+    this.chunkSpec = chunkSpec;
+    return this;
+  }
 
   /**
    * If there is no extractive_content_spec provided, there will be no extractive answer in the

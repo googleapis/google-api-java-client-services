@@ -45,6 +45,13 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelResponse ext
   private java.util.List<GoogleRpcStatus> errorSamples;
 
   /**
+   * The metrics of the trained model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Double> metrics;
+
+  /**
    * The trained model status. Possible values are: * **bad-data**: The training data quality is
    * bad. * **no-improvement**: Tuning didn't improve performance. Won't deploy. * **in-progress**:
    * Model training is in progress. * **ready**: The model is ready for serving.
@@ -84,6 +91,23 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelResponse ext
    */
   public GoogleCloudDiscoveryengineV1alphaTrainCustomModelResponse setErrorSamples(java.util.List<GoogleRpcStatus> errorSamples) {
     this.errorSamples = errorSamples;
+    return this;
+  }
+
+  /**
+   * The metrics of the trained model.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Double> getMetrics() {
+    return metrics;
+  }
+
+  /**
+   * The metrics of the trained model.
+   * @param metrics metrics or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaTrainCustomModelResponse setMetrics(java.util.Map<String, java.lang.Double> metrics) {
+    this.metrics = metrics;
     return this;
   }
 

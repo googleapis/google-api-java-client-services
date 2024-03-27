@@ -47,8 +47,9 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreCompone
 
   /**
    * The name of the data store. It should be data store resource name Format: `projects/{project_nu
-   * mber}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`. For widget
-   * service usage, such look up widget config, returned name should be skipped.
+   * mber}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`. For APIs
+   * under WidgetService, such as LookUpWidgetConfig, the project number and location part is erased
+   * in this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +93,9 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreCompone
 
   /**
    * The name of the data store. It should be data store resource name Format: `projects/{project_nu
-   * mber}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`. For widget
-   * service usage, such look up widget config, returned name should be skipped.
+   * mber}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`. For APIs
+   * under WidgetService, such as LookUpWidgetConfig, the project number and location part is erased
+   * in this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -102,8 +104,9 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreCompone
 
   /**
    * The name of the data store. It should be data store resource name Format: `projects/{project_nu
-   * mber}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`. For widget
-   * service usage, such look up widget config, returned name should be skipped.
+   * mber}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`. For APIs
+   * under WidgetService, such as LookUpWidgetConfig, the project number and location part is erased
+   * in this field.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigDataStoreComponent setName(java.lang.String name) {

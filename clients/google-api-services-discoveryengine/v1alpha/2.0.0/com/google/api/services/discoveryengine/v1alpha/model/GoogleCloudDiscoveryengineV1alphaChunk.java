@@ -31,6 +31,13 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaChunk extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Metadata of the current chunk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaChunkChunkMetadata chunkMetadata;
+
+  /**
    * Content is a string from a document (parsed content).
    * The value may be {@code null}.
    */
@@ -67,6 +74,30 @@ public final class GoogleCloudDiscoveryengineV1alphaChunk extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Page span of the chunk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaChunkPageSpan pageSpan;
+
+  /**
+   * Output only. Metadata of the current chunk.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaChunkChunkMetadata getChunkMetadata() {
+    return chunkMetadata;
+  }
+
+  /**
+   * Output only. Metadata of the current chunk.
+   * @param chunkMetadata chunkMetadata or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaChunk setChunkMetadata(GoogleCloudDiscoveryengineV1alphaChunkChunkMetadata chunkMetadata) {
+    this.chunkMetadata = chunkMetadata;
+    return this;
+  }
 
   /**
    * Content is a string from a document (parsed content).
@@ -156,6 +187,23 @@ public final class GoogleCloudDiscoveryengineV1alphaChunk extends com.google.api
    */
   public GoogleCloudDiscoveryengineV1alphaChunk setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Page span of the chunk.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaChunkPageSpan getPageSpan() {
+    return pageSpan;
+  }
+
+  /**
+   * Page span of the chunk.
+   * @param pageSpan pageSpan or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaChunk setPageSpan(GoogleCloudDiscoveryengineV1alphaChunkPageSpan pageSpan) {
+    this.pageSpan = pageSpan;
     return this;
   }
 

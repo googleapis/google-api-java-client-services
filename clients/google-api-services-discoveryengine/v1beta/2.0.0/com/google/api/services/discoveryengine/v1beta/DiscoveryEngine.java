@@ -11649,6 +11649,435 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               return (Patch) super.set(parameterName, value);
             }
           }
+          /**
+           * Pauses the training of an existing engine. Only applicable if SolutionType is
+           * SOLUTION_TYPE_RECOMMENDATION.
+           *
+           * Create a request for the method "engines.pause".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Pause#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the engine to pause. Format:
+           *        `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{en
+           *        gine_id}`
+           * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPauseEngineRequest}
+           * @return the request
+           */
+          public Pause pause(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPauseEngineRequest content) throws java.io.IOException {
+            Pause result = new Pause(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Pause extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaEngine> {
+
+            private static final String REST_PATH = "v1beta/{+name}:pause";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+
+            /**
+             * Pauses the training of an existing engine. Only applicable if SolutionType is
+             * SOLUTION_TYPE_RECOMMENDATION.
+             *
+             * Create a request for the method "engines.pause".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Pause#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the engine to pause. Format:
+           *        `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{en
+           *        gine_id}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPauseEngineRequest}
+             * @since 1.13
+             */
+            protected Pause(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaPauseEngineRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaEngine.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+            }
+
+            @Override
+            public Pause set$Xgafv(java.lang.String $Xgafv) {
+              return (Pause) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Pause setAccessToken(java.lang.String accessToken) {
+              return (Pause) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Pause setAlt(java.lang.String alt) {
+              return (Pause) super.setAlt(alt);
+            }
+
+            @Override
+            public Pause setCallback(java.lang.String callback) {
+              return (Pause) super.setCallback(callback);
+            }
+
+            @Override
+            public Pause setFields(java.lang.String fields) {
+              return (Pause) super.setFields(fields);
+            }
+
+            @Override
+            public Pause setKey(java.lang.String key) {
+              return (Pause) super.setKey(key);
+            }
+
+            @Override
+            public Pause setOauthToken(java.lang.String oauthToken) {
+              return (Pause) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Pause setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Pause) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Pause setQuotaUser(java.lang.String quotaUser) {
+              return (Pause) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Pause setUploadType(java.lang.String uploadType) {
+              return (Pause) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Pause setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Pause) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the engine to pause. Format: `projects/{project_number}/locatio
+             * ns/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the engine to pause. Format:
+           `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the engine to pause. Format: `projects/{project_number}/locatio
+             * ns/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             */
+            public Pause setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Pause set(String parameterName, Object value) {
+              return (Pause) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Resumes the training of an existing engine. Only applicable if SolutionType is
+           * SOLUTION_TYPE_RECOMMENDATION.
+           *
+           * Create a request for the method "engines.resume".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the engine to resume. Format:
+           *        `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{en
+           *        gine_id}`
+           * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaResumeEngineRequest}
+           * @return the request
+           */
+          public Resume resume(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaResumeEngineRequest content) throws java.io.IOException {
+            Resume result = new Resume(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Resume extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaEngine> {
+
+            private static final String REST_PATH = "v1beta/{+name}:resume";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+
+            /**
+             * Resumes the training of an existing engine. Only applicable if SolutionType is
+             * SOLUTION_TYPE_RECOMMENDATION.
+             *
+             * Create a request for the method "engines.resume".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the engine to resume. Format:
+           *        `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{en
+           *        gine_id}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaResumeEngineRequest}
+             * @since 1.13
+             */
+            protected Resume(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaResumeEngineRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaEngine.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+            }
+
+            @Override
+            public Resume set$Xgafv(java.lang.String $Xgafv) {
+              return (Resume) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Resume setAccessToken(java.lang.String accessToken) {
+              return (Resume) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Resume setAlt(java.lang.String alt) {
+              return (Resume) super.setAlt(alt);
+            }
+
+            @Override
+            public Resume setCallback(java.lang.String callback) {
+              return (Resume) super.setCallback(callback);
+            }
+
+            @Override
+            public Resume setFields(java.lang.String fields) {
+              return (Resume) super.setFields(fields);
+            }
+
+            @Override
+            public Resume setKey(java.lang.String key) {
+              return (Resume) super.setKey(key);
+            }
+
+            @Override
+            public Resume setOauthToken(java.lang.String oauthToken) {
+              return (Resume) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Resume setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Resume) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Resume setQuotaUser(java.lang.String quotaUser) {
+              return (Resume) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Resume setUploadType(java.lang.String uploadType) {
+              return (Resume) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Resume setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Resume) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the engine to resume. Format: `projects/{project_number}/locati
+             * ons/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the engine to resume. Format:
+           `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the engine to resume. Format: `projects/{project_number}/locati
+             * ons/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             */
+            public Resume setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Resume set(String parameterName, Object value) {
+              return (Resume) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Tunes an existing engine. Only applicable if SolutionType is SOLUTION_TYPE_RECOMMENDATION.
+           *
+           * Create a request for the method "engines.tune".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Tune#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the engine to tune. Format:
+           *        `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{en
+           *        gine_id}`
+           * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaTuneEngineRequest}
+           * @return the request
+           */
+          public Tune tune(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaTuneEngineRequest content) throws java.io.IOException {
+            Tune result = new Tune(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Tune extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1beta/{+name}:tune";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+
+            /**
+             * Tunes an existing engine. Only applicable if SolutionType is SOLUTION_TYPE_RECOMMENDATION.
+             *
+             * Create a request for the method "engines.tune".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Tune#execute()} method to invoke the remote operation. <p>
+             * {@link Tune#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the engine to tune. Format:
+           *        `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{en
+           *        gine_id}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaTuneEngineRequest}
+             * @since 1.13
+             */
+            protected Tune(java.lang.String name, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaTuneEngineRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+            }
+
+            @Override
+            public Tune set$Xgafv(java.lang.String $Xgafv) {
+              return (Tune) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Tune setAccessToken(java.lang.String accessToken) {
+              return (Tune) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Tune setAlt(java.lang.String alt) {
+              return (Tune) super.setAlt(alt);
+            }
+
+            @Override
+            public Tune setCallback(java.lang.String callback) {
+              return (Tune) super.setCallback(callback);
+            }
+
+            @Override
+            public Tune setFields(java.lang.String fields) {
+              return (Tune) super.setFields(fields);
+            }
+
+            @Override
+            public Tune setKey(java.lang.String key) {
+              return (Tune) super.setKey(key);
+            }
+
+            @Override
+            public Tune setOauthToken(java.lang.String oauthToken) {
+              return (Tune) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Tune setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Tune) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Tune setQuotaUser(java.lang.String quotaUser) {
+              return (Tune) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Tune setUploadType(java.lang.String uploadType) {
+              return (Tune) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Tune setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Tune) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the engine to tune. Format: `projects/{project_number}
+             * /locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the engine to tune. Format:
+           `projects/{project_number}/locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the engine to tune. Format: `projects/{project_number}
+             * /locations/{location_id}/collections/{collection_id}/engines/{engine_id}`
+             */
+            public Tune setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Tune set(String parameterName, Object value) {
+              return (Tune) super.set(parameterName, value);
+            }
+          }
 
           /**
            * An accessor for creating requests from the Conversations collection.
@@ -23237,6 +23666,167 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the RankingConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+       *   {@code DiscoveryEngine.RankingConfigs.List request = discoveryengine.rankingConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public RankingConfigs rankingConfigs() {
+        return new RankingConfigs();
+      }
+
+      /**
+       * The "rankingConfigs" collection of methods.
+       */
+      public class RankingConfigs {
+
+        /**
+         * Ranks a list of text records based on the given input query.
+         *
+         * Create a request for the method "rankingConfigs.rank".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Rank#execute()} method to invoke the remote operation.
+         *
+         * @param rankingConfig Required. The resource name of the rank service config, such as
+         *        `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaRankRequest}
+         * @return the request
+         */
+        public Rank rank(java.lang.String rankingConfig, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaRankRequest content) throws java.io.IOException {
+          Rank result = new Rank(rankingConfig, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Rank extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaRankResponse> {
+
+          private static final String REST_PATH = "v1beta/{+rankingConfig}:rank";
+
+          private final java.util.regex.Pattern RANKING_CONFIG_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/rankingConfigs/[^/]+$");
+
+          /**
+           * Ranks a list of text records based on the given input query.
+           *
+           * Create a request for the method "rankingConfigs.rank".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Rank#execute()} method to invoke the remote operation. <p>
+           * {@link Rank#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param rankingConfig Required. The resource name of the rank service config, such as
+         *        `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaRankRequest}
+           * @since 1.13
+           */
+          protected Rank(java.lang.String rankingConfig, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaRankRequest content) {
+            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaRankResponse.class);
+            this.rankingConfig = com.google.api.client.util.Preconditions.checkNotNull(rankingConfig, "Required parameter rankingConfig must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RANKING_CONFIG_PATTERN.matcher(rankingConfig).matches(),
+                  "Parameter rankingConfig must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rankingConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Rank set$Xgafv(java.lang.String $Xgafv) {
+            return (Rank) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Rank setAccessToken(java.lang.String accessToken) {
+            return (Rank) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Rank setAlt(java.lang.String alt) {
+            return (Rank) super.setAlt(alt);
+          }
+
+          @Override
+          public Rank setCallback(java.lang.String callback) {
+            return (Rank) super.setCallback(callback);
+          }
+
+          @Override
+          public Rank setFields(java.lang.String fields) {
+            return (Rank) super.setFields(fields);
+          }
+
+          @Override
+          public Rank setKey(java.lang.String key) {
+            return (Rank) super.setKey(key);
+          }
+
+          @Override
+          public Rank setOauthToken(java.lang.String oauthToken) {
+            return (Rank) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Rank setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Rank) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Rank setQuotaUser(java.lang.String quotaUser) {
+            return (Rank) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Rank setUploadType(java.lang.String uploadType) {
+            return (Rank) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Rank setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Rank) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the rank service config, such as
+           * `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String rankingConfig;
+
+          /** Required. The resource name of the rank service config, such as
+         `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+           */
+          public java.lang.String getRankingConfig() {
+            return rankingConfig;
+          }
+
+          /**
+           * Required. The resource name of the rank service config, such as
+           * `projects/{project_num}/locations/{location_id}/rankingConfigs/default_ranking_config`.
+           */
+          public Rank setRankingConfig(java.lang.String rankingConfig) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RANKING_CONFIG_PATTERN.matcher(rankingConfig).matches(),
+                  "Parameter rankingConfig must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rankingConfigs/[^/]+$");
+            }
+            this.rankingConfig = rankingConfig;
+            return this;
+          }
+
+          @Override
+          public Rank set(String parameterName, Object value) {
+            return (Rank) super.set(parameterName, value);
           }
         }
 

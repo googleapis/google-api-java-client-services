@@ -46,6 +46,15 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   private java.lang.String bucket;
 
   /**
+   * Optional. User-provided format string specifying how to represent datetimes in Cloud Storage
+   * filenames. See the [datetime format guidance](https://cloud.google.com/pubsub/docs/create-
+   * cloudstorage-subscription#file_names).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filenameDatetimeFormat;
+
+  /**
    * Optional. User-provided prefix for Cloud Storage filename. See the [object naming
    * requirements](https://cloud.google.com/storage/docs/objects#naming).
    * The value may be {@code null}.
@@ -140,6 +149,27 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
    */
   public CloudStorageConfig setBucket(java.lang.String bucket) {
     this.bucket = bucket;
+    return this;
+  }
+
+  /**
+   * Optional. User-provided format string specifying how to represent datetimes in Cloud Storage
+   * filenames. See the [datetime format guidance](https://cloud.google.com/pubsub/docs/create-
+   * cloudstorage-subscription#file_names).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilenameDatetimeFormat() {
+    return filenameDatetimeFormat;
+  }
+
+  /**
+   * Optional. User-provided format string specifying how to represent datetimes in Cloud Storage
+   * filenames. See the [datetime format guidance](https://cloud.google.com/pubsub/docs/create-
+   * cloudstorage-subscription#file_names).
+   * @param filenameDatetimeFormat filenameDatetimeFormat or {@code null} for none
+   */
+  public CloudStorageConfig setFilenameDatetimeFormat(java.lang.String filenameDatetimeFormat) {
+    this.filenameDatetimeFormat = filenameDatetimeFormat;
     return this;
   }
 

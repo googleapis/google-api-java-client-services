@@ -166,7 +166,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link EnrollDataSources#execute()} method to invoke the remote
      * operation.
      *
-     * @param name The name of the project resource in the form: `projects/{project_id}`
+     * @param name Required. The name of the project resource in the form: `projects/{project_id}`
      * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.EnrollDataSourcesRequest}
      * @return the request
      */
@@ -198,7 +198,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name The name of the project resource in the form: `projects/{project_id}`
+       * @param name Required. The name of the project resource in the form: `projects/{project_id}`
        * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.EnrollDataSourcesRequest}
        * @since 1.13
        */
@@ -267,17 +267,17 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         return (EnrollDataSources) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The name of the project resource in the form: `projects/{project_id}` */
+      /** Required. The name of the project resource in the form: `projects/{project_id}` */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The name of the project resource in the form: `projects/{project_id}`
+      /** Required. The name of the project resource in the form: `projects/{project_id}`
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** The name of the project resource in the form: `projects/{project_id}` */
+      /** Required. The name of the project resource in the form: `projects/{project_id}` */
       public EnrollDataSources setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -837,7 +837,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link EnrollDataSources#execute()} method to invoke the remote
        * operation.
        *
-       * @param name The name of the project resource in the form: `projects/{project_id}`
+       * @param name Required. The name of the project resource in the form: `projects/{project_id}`
        * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.EnrollDataSourcesRequest}
        * @return the request
        */
@@ -869,7 +869,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name The name of the project resource in the form: `projects/{project_id}`
+         * @param name Required. The name of the project resource in the form: `projects/{project_id}`
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.EnrollDataSourcesRequest}
          * @since 1.13
          */
@@ -938,17 +938,17 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           return (EnrollDataSources) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the project resource in the form: `projects/{project_id}` */
+        /** Required. The name of the project resource in the form: `projects/{project_id}` */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the project resource in the form: `projects/{project_id}`
+        /** Required. The name of the project resource in the form: `projects/{project_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the project resource in the form: `projects/{project_id}` */
+        /** Required. The name of the project resource in the form: `projects/{project_id}` */
         public EnrollDataSources setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1318,7 +1318,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link UnenrollDataSources#execute()} method to invoke the remote
        * operation.
        *
-       * @param name The name of the project resource in the form: `projects/{project_id}`
+       * @param name Required. The name of the project resource in the form: `projects/{project_id}`
        * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.UnenrollDataSourcesRequest}
        * @return the request
        */
@@ -1349,7 +1349,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param name The name of the project resource in the form: `projects/{project_id}`
+         * @param name Required. The name of the project resource in the form: `projects/{project_id}`
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.UnenrollDataSourcesRequest}
          * @since 1.13
          */
@@ -1418,17 +1418,17 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           return (UnenrollDataSources) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the project resource in the form: `projects/{project_id}` */
+        /** Required. The name of the project resource in the form: `projects/{project_id}` */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the project resource in the form: `projects/{project_id}`
+        /** Required. The name of the project resource in the form: `projects/{project_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the project resource in the form: `projects/{project_id}` */
+        /** Required. The name of the project resource in the form: `projects/{project_id}` */
         public UnenrollDataSources setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2753,7 +2753,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the transfer config. Transfer config names have the form either
+         * @param name Identifier. The resource name of the transfer config. Transfer config names have the form either
          *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
          *        `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a UUID,
          *        even though it is not guaranteed or required. The name is ignored when creating a transfer
@@ -2785,7 +2785,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the transfer config. Transfer config names have the form either
+           * @param name Identifier. The resource name of the transfer config. Transfer config names have the form either
          *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
          *        `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a UUID,
          *        even though it is not guaranteed or required. The name is ignored when creating a transfer
@@ -2859,8 +2859,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The resource name of the transfer config. Transfer config names have the form either
-           * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
+           * Identifier. The resource name of the transfer config. Transfer config names have the
+           * form either `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
            * `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a
            * UUID, even though it is not guaranteed or required. The name is ignored when creating a
            * transfer config.
@@ -2868,7 +2868,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the transfer config. Transfer config names have the form either
+          /** Identifier. The resource name of the transfer config. Transfer config names have the form either
          `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
          `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a UUID, even
          though it is not guaranteed or required. The name is ignored when creating a transfer config.
@@ -2878,8 +2878,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The resource name of the transfer config. Transfer config names have the form either
-           * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
+           * Identifier. The resource name of the transfer config. Transfer config names have the
+           * form either `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
            * `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a
            * UUID, even though it is not guaranteed or required. The name is ignored when creating a
            * transfer config.
@@ -3194,7 +3194,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * optional parameters, call the {@link StartManualRuns#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}` or
+         * @param parent Required. Transfer configuration name in the form:
+         *        `projects/{project_id}/transferConfigs/{config_id}` or
          *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest}
          * @return the request
@@ -3225,7 +3226,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param parent Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}` or
+           * @param parent Required. Transfer configuration name in the form:
+         *        `projects/{project_id}/transferConfigs/{config_id}` or
          *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
            * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest}
            * @since 1.13
@@ -3296,14 +3298,15 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * Transfer configuration name in the form:
+           * Required. Transfer configuration name in the form:
            * `projects/{project_id}/transferConfigs/{config_id}` or
            * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}` or
+          /** Required. Transfer configuration name in the form:
+         `projects/{project_id}/transferConfigs/{config_id}` or
          `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
            */
           public java.lang.String getParent() {
@@ -3311,7 +3314,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * Transfer configuration name in the form:
+           * Required. Transfer configuration name in the form:
            * `projects/{project_id}/transferConfigs/{config_id}` or
            * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
            */
@@ -4923,7 +4926,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the transfer config. Transfer config names have the form either
+       * @param name Identifier. The resource name of the transfer config. Transfer config names have the form either
        *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
        *        `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a UUID,
        *        even though it is not guaranteed or required. The name is ignored when creating a transfer
@@ -4955,7 +4958,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the transfer config. Transfer config names have the form either
+         * @param name Identifier. The resource name of the transfer config. Transfer config names have the form either
        *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
        *        `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a UUID,
        *        even though it is not guaranteed or required. The name is ignored when creating a transfer
@@ -5029,8 +5032,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The resource name of the transfer config. Transfer config names have the form either
-         * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
+         * Identifier. The resource name of the transfer config. Transfer config names have the form
+         * either `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
          * `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a UUID,
          * even though it is not guaranteed or required. The name is ignored when creating a
          * transfer config.
@@ -5038,7 +5041,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the transfer config. Transfer config names have the form either
+        /** Identifier. The resource name of the transfer config. Transfer config names have the form either
        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
        `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a UUID, even
        though it is not guaranteed or required. The name is ignored when creating a transfer config.
@@ -5048,8 +5051,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The resource name of the transfer config. Transfer config names have the form either
-         * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
+         * Identifier. The resource name of the transfer config. Transfer config names have the form
+         * either `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
          * `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a UUID,
          * even though it is not guaranteed or required. The name is ignored when creating a
          * transfer config.
@@ -5364,7 +5367,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link StartManualRuns#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}` or
+       * @param parent Required. Transfer configuration name in the form:
+       *        `projects/{project_id}/transferConfigs/{config_id}` or
        *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
        * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest}
        * @return the request
@@ -5395,7 +5399,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param parent Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}` or
+         * @param parent Required. Transfer configuration name in the form:
+       *        `projects/{project_id}/transferConfigs/{config_id}` or
        *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest}
          * @since 1.13
@@ -5466,14 +5471,15 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Transfer configuration name in the form:
+         * Required. Transfer configuration name in the form:
          * `projects/{project_id}/transferConfigs/{config_id}` or
          * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}` or
+        /** Required. Transfer configuration name in the form:
+       `projects/{project_id}/transferConfigs/{config_id}` or
        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
          */
         public java.lang.String getParent() {
@@ -5481,7 +5487,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Transfer configuration name in the form:
+         * Required. Transfer configuration name in the form:
          * `projects/{project_id}/transferConfigs/{config_id}` or
          * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
          */

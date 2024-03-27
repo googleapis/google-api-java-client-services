@@ -39,6 +39,14 @@ public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.cl
   private java.lang.String breakglassJustification;
 
   /**
+   * The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun
+   * /{policy-name}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String policy;
+
+  /**
    * If True, indicates to use the default project's binary authorization policy. If False, binary
    * authorization will be disabled.
    * The value may be {@code null}.
@@ -64,6 +72,25 @@ public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.cl
    */
   public GoogleCloudRunV2BinaryAuthorization setBreakglassJustification(java.lang.String breakglassJustification) {
     this.breakglassJustification = breakglassJustification;
+    return this;
+  }
+
+  /**
+   * The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun
+   * /{policy-name}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPolicy() {
+    return policy;
+  }
+
+  /**
+   * The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun
+   * /{policy-name}
+   * @param policy policy or {@code null} for none
+   */
+  public GoogleCloudRunV2BinaryAuthorization setPolicy(java.lang.String policy) {
+    this.policy = policy;
     return this;
   }
 

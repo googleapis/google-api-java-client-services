@@ -174,6 +174,490 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
     public class Locations {
 
       /**
+       * Export image for a given resource.
+       *
+       * Create a request for the method "locations.exportImage".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link ExportImage#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the resource of which image metadata should be exported. Format:
+       *        `projects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revisi
+       *        on}` for Revision
+       *        `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+       *        for Execution
+       * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2ExportImageRequest}
+       * @return the request
+       */
+      public ExportImage exportImage(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2ExportImageRequest content) throws java.io.IOException {
+        ExportImage result = new ExportImage(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ExportImage extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2ExportImageResponse> {
+
+        private static final String REST_PATH = "v2/{+name}:exportImage";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/.*$");
+
+        /**
+         * Export image for a given resource.
+         *
+         * Create a request for the method "locations.exportImage".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link ExportImage#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * ExportImage#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the resource of which image metadata should be exported. Format:
+       *        `projects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revisi
+       *        on}` for Revision
+       *        `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+       *        for Execution
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2ExportImageRequest}
+         * @since 1.13
+         */
+        protected ExportImage(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2ExportImageRequest content) {
+          super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v2.model.GoogleCloudRunV2ExportImageResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/.*$");
+          }
+        }
+
+        @Override
+        public ExportImage set$Xgafv(java.lang.String $Xgafv) {
+          return (ExportImage) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ExportImage setAccessToken(java.lang.String accessToken) {
+          return (ExportImage) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ExportImage setAlt(java.lang.String alt) {
+          return (ExportImage) super.setAlt(alt);
+        }
+
+        @Override
+        public ExportImage setCallback(java.lang.String callback) {
+          return (ExportImage) super.setCallback(callback);
+        }
+
+        @Override
+        public ExportImage setFields(java.lang.String fields) {
+          return (ExportImage) super.setFields(fields);
+        }
+
+        @Override
+        public ExportImage setKey(java.lang.String key) {
+          return (ExportImage) super.setKey(key);
+        }
+
+        @Override
+        public ExportImage setOauthToken(java.lang.String oauthToken) {
+          return (ExportImage) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ExportImage setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ExportImage) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ExportImage setQuotaUser(java.lang.String quotaUser) {
+          return (ExportImage) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ExportImage setUploadType(java.lang.String uploadType) {
+          return (ExportImage) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ExportImage setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ExportImage) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the resource of which image metadata should be exported. Format: `p
+         * rojects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revisio
+         * n}` for Revision
+         * `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+         * for Execution
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the resource of which image metadata should be exported. Format:
+       `projects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revision}` for
+       Revision `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+       for Execution
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the resource of which image metadata should be exported. Format: `p
+         * rojects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revisio
+         * n}` for Revision
+         * `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+         * for Execution
+         */
+        public ExportImage setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/.*$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ExportImage set(String parameterName, Object value) {
+          return (ExportImage) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Export image metadata for a given resource.
+       *
+       * Create a request for the method "locations.exportImageMetadata".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link ExportImageMetadata#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the resource of which image metadata should be exported. Format:
+       *        `projects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revisi
+       *        on}` for Revision
+       *        `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+       *        for Execution
+       * @return the request
+       */
+      public ExportImageMetadata exportImageMetadata(java.lang.String name) throws java.io.IOException {
+        ExportImageMetadata result = new ExportImageMetadata(name);
+        initialize(result);
+        return result;
+      }
+
+      public class ExportImageMetadata extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2Metadata> {
+
+        private static final String REST_PATH = "v2/{+name}:exportImageMetadata";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/.*$");
+
+        /**
+         * Export image metadata for a given resource.
+         *
+         * Create a request for the method "locations.exportImageMetadata".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link ExportImageMetadata#execute()} method to invoke the remote
+         * operation. <p> {@link ExportImageMetadata#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The name of the resource of which image metadata should be exported. Format:
+       *        `projects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revisi
+       *        on}` for Revision
+       *        `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+       *        for Execution
+         * @since 1.13
+         */
+        protected ExportImageMetadata(java.lang.String name) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2Metadata.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/.*$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public ExportImageMetadata set$Xgafv(java.lang.String $Xgafv) {
+          return (ExportImageMetadata) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ExportImageMetadata setAccessToken(java.lang.String accessToken) {
+          return (ExportImageMetadata) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ExportImageMetadata setAlt(java.lang.String alt) {
+          return (ExportImageMetadata) super.setAlt(alt);
+        }
+
+        @Override
+        public ExportImageMetadata setCallback(java.lang.String callback) {
+          return (ExportImageMetadata) super.setCallback(callback);
+        }
+
+        @Override
+        public ExportImageMetadata setFields(java.lang.String fields) {
+          return (ExportImageMetadata) super.setFields(fields);
+        }
+
+        @Override
+        public ExportImageMetadata setKey(java.lang.String key) {
+          return (ExportImageMetadata) super.setKey(key);
+        }
+
+        @Override
+        public ExportImageMetadata setOauthToken(java.lang.String oauthToken) {
+          return (ExportImageMetadata) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ExportImageMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ExportImageMetadata) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ExportImageMetadata setQuotaUser(java.lang.String quotaUser) {
+          return (ExportImageMetadata) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ExportImageMetadata setUploadType(java.lang.String uploadType) {
+          return (ExportImageMetadata) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ExportImageMetadata setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ExportImageMetadata) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the resource of which image metadata should be exported. Format: `p
+         * rojects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revisio
+         * n}` for Revision
+         * `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+         * for Execution
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the resource of which image metadata should be exported. Format:
+       `projects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revision}` for
+       Revision `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+       for Execution
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the resource of which image metadata should be exported. Format: `p
+         * rojects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revisio
+         * n}` for Revision
+         * `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+         * for Execution
+         */
+        public ExportImageMetadata setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/.*$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ExportImageMetadata set(String parameterName, Object value) {
+          return (ExportImageMetadata) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Export generated customer metadata for a given resource.
+       *
+       * Create a request for the method "locations.exportMetadata".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link ExportMetadata#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the resource of which metadata should be exported. Format:
+       *        `projects/{project_id_or_number}/locations/{location}/services/{service}` for Service `pro
+       *        jects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revision}`
+       *        for Revision
+       *        `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+       *        for Execution
+       * @return the request
+       */
+      public ExportMetadata exportMetadata(java.lang.String name) throws java.io.IOException {
+        ExportMetadata result = new ExportMetadata(name);
+        initialize(result);
+        return result;
+      }
+
+      public class ExportMetadata extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2Metadata> {
+
+        private static final String REST_PATH = "v2/{+name}:exportMetadata";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/.*$");
+
+        /**
+         * Export generated customer metadata for a given resource.
+         *
+         * Create a request for the method "locations.exportMetadata".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link ExportMetadata#execute()} method to invoke the remote operation.
+         * <p> {@link ExportMetadata#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+         * ientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param name Required. The name of the resource of which metadata should be exported. Format:
+       *        `projects/{project_id_or_number}/locations/{location}/services/{service}` for Service `pro
+       *        jects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revision}`
+       *        for Revision
+       *        `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+       *        for Execution
+         * @since 1.13
+         */
+        protected ExportMetadata(java.lang.String name) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2Metadata.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/.*$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public ExportMetadata set$Xgafv(java.lang.String $Xgafv) {
+          return (ExportMetadata) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ExportMetadata setAccessToken(java.lang.String accessToken) {
+          return (ExportMetadata) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ExportMetadata setAlt(java.lang.String alt) {
+          return (ExportMetadata) super.setAlt(alt);
+        }
+
+        @Override
+        public ExportMetadata setCallback(java.lang.String callback) {
+          return (ExportMetadata) super.setCallback(callback);
+        }
+
+        @Override
+        public ExportMetadata setFields(java.lang.String fields) {
+          return (ExportMetadata) super.setFields(fields);
+        }
+
+        @Override
+        public ExportMetadata setKey(java.lang.String key) {
+          return (ExportMetadata) super.setKey(key);
+        }
+
+        @Override
+        public ExportMetadata setOauthToken(java.lang.String oauthToken) {
+          return (ExportMetadata) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ExportMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ExportMetadata) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ExportMetadata setQuotaUser(java.lang.String quotaUser) {
+          return (ExportMetadata) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ExportMetadata setUploadType(java.lang.String uploadType) {
+          return (ExportMetadata) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ExportMetadata setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ExportMetadata) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the resource of which metadata should be exported. Format:
+         * `projects/{project_id_or_number}/locations/{location}/services/{service}` for Service `pr
+         * ojects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revision
+         * }` for Revision
+         * `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+         * for Execution
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the resource of which metadata should be exported. Format:
+       `projects/{project_id_or_number}/locations/{location}/services/{service}` for Service
+       `projects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revision}` for
+       Revision `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+       for Execution
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the resource of which metadata should be exported. Format:
+         * `projects/{project_id_or_number}/locations/{location}/services/{service}` for Service `pr
+         * ojects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revision
+         * }` for Revision
+         * `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+         * for Execution
+         */
+        public ExportMetadata setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/.*$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ExportMetadata set(String parameterName, Object value) {
+          return (ExportMetadata) super.set(parameterName, value);
+        }
+      }
+
+      /**
        * An accessor for creating requests from the Jobs collection.
        *
        * <p>The typical use is:</p>
@@ -2072,6 +2556,199 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Read the status of an image export operation.
+           *
+           * Create a request for the method "executions.exportStatus".
+           *
+           * This request holds the parameters needed by the run server.  After setting any optional
+           * parameters, call the {@link ExportStatus#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the resource of which image export operation status has to be fetched. Format:
+           *        `projects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revisi
+           *        on}` for Revision
+           *        `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+           *        for Execution
+           * @param operationId Required. The operation id returned from ExportImage.
+           * @return the request
+           */
+          public ExportStatus exportStatus(java.lang.String name, java.lang.String operationId) throws java.io.IOException {
+            ExportStatus result = new ExportStatus(name, operationId);
+            initialize(result);
+            return result;
+          }
+
+          public class ExportStatus extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2ExportStatusResponse> {
+
+            private static final String REST_PATH = "v2/{+name}/{+operationId}:exportStatus";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+
+            private final java.util.regex.Pattern OPERATION_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Read the status of an image export operation.
+             *
+             * Create a request for the method "executions.exportStatus".
+             *
+             * This request holds the parameters needed by the the run server.  After setting any optional
+             * parameters, call the {@link ExportStatus#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * ExportStatus#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the resource of which image export operation status has to be fetched. Format:
+           *        `projects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revisi
+           *        on}` for Revision
+           *        `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+           *        for Execution
+             * @param operationId Required. The operation id returned from ExportImage.
+             * @since 1.13
+             */
+            protected ExportStatus(java.lang.String name, java.lang.String operationId) {
+              super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2ExportStatusResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+              }
+              this.operationId = com.google.api.client.util.Preconditions.checkNotNull(operationId, "Required parameter operationId must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(OPERATION_ID_PATTERN.matcher(operationId).matches(),
+                    "Parameter operationId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public ExportStatus set$Xgafv(java.lang.String $Xgafv) {
+              return (ExportStatus) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ExportStatus setAccessToken(java.lang.String accessToken) {
+              return (ExportStatus) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ExportStatus setAlt(java.lang.String alt) {
+              return (ExportStatus) super.setAlt(alt);
+            }
+
+            @Override
+            public ExportStatus setCallback(java.lang.String callback) {
+              return (ExportStatus) super.setCallback(callback);
+            }
+
+            @Override
+            public ExportStatus setFields(java.lang.String fields) {
+              return (ExportStatus) super.setFields(fields);
+            }
+
+            @Override
+            public ExportStatus setKey(java.lang.String key) {
+              return (ExportStatus) super.setKey(key);
+            }
+
+            @Override
+            public ExportStatus setOauthToken(java.lang.String oauthToken) {
+              return (ExportStatus) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ExportStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ExportStatus) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ExportStatus setQuotaUser(java.lang.String quotaUser) {
+              return (ExportStatus) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ExportStatus setUploadType(java.lang.String uploadType) {
+              return (ExportStatus) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ExportStatus setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ExportStatus) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the resource of which image export operation status has to be
+             * fetched. Format: `projects/{project_id_or_number}/locations/{location}/services/{serv
+             * ice}/revisions/{revision}` for Revision `projects/{project_id_or_number}/locations/{l
+             * ocation}/jobs/{job}/executions/{execution}` for Execution
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the resource of which image export operation status has to be fetched.
+           Format:
+           `projects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revision}` for
+           Revision `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+           for Execution
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the resource of which image export operation status has to be
+             * fetched. Format: `projects/{project_id_or_number}/locations/{location}/services/{serv
+             * ice}/revisions/{revision}` for Revision `projects/{project_id_or_number}/locations/{l
+             * ocation}/jobs/{job}/executions/{execution}` for Execution
+             */
+            public ExportStatus setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/executions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. The operation id returned from ExportImage. */
+            @com.google.api.client.util.Key
+            private java.lang.String operationId;
+
+            /** Required. The operation id returned from ExportImage.
+             */
+            public java.lang.String getOperationId() {
+              return operationId;
+            }
+
+            /** Required. The operation id returned from ExportImage. */
+            public ExportStatus setOperationId(java.lang.String operationId) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(OPERATION_ID_PATTERN.matcher(operationId).matches(),
+                    "Parameter operationId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.operationId = operationId;
+              return this;
+            }
+
+            @Override
+            public ExportStatus set(String parameterName, Object value) {
+              return (ExportStatus) super.set(parameterName, value);
             }
           }
           /**
@@ -5129,6 +5806,199 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Read the status of an image export operation.
+           *
+           * Create a request for the method "revisions.exportStatus".
+           *
+           * This request holds the parameters needed by the run server.  After setting any optional
+           * parameters, call the {@link ExportStatus#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the resource of which image export operation status has to be fetched. Format:
+           *        `projects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revisi
+           *        on}` for Revision
+           *        `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+           *        for Execution
+           * @param operationId Required. The operation id returned from ExportImage.
+           * @return the request
+           */
+          public ExportStatus exportStatus(java.lang.String name, java.lang.String operationId) throws java.io.IOException {
+            ExportStatus result = new ExportStatus(name, operationId);
+            initialize(result);
+            return result;
+          }
+
+          public class ExportStatus extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2ExportStatusResponse> {
+
+            private static final String REST_PATH = "v2/{+name}/{+operationId}:exportStatus";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/revisions/[^/]+$");
+
+            private final java.util.regex.Pattern OPERATION_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Read the status of an image export operation.
+             *
+             * Create a request for the method "revisions.exportStatus".
+             *
+             * This request holds the parameters needed by the the run server.  After setting any optional
+             * parameters, call the {@link ExportStatus#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * ExportStatus#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the resource of which image export operation status has to be fetched. Format:
+           *        `projects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revisi
+           *        on}` for Revision
+           *        `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+           *        for Execution
+             * @param operationId Required. The operation id returned from ExportImage.
+             * @since 1.13
+             */
+            protected ExportStatus(java.lang.String name, java.lang.String operationId) {
+              super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2ExportStatusResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/revisions/[^/]+$");
+              }
+              this.operationId = com.google.api.client.util.Preconditions.checkNotNull(operationId, "Required parameter operationId must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(OPERATION_ID_PATTERN.matcher(operationId).matches(),
+                    "Parameter operationId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public ExportStatus set$Xgafv(java.lang.String $Xgafv) {
+              return (ExportStatus) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ExportStatus setAccessToken(java.lang.String accessToken) {
+              return (ExportStatus) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ExportStatus setAlt(java.lang.String alt) {
+              return (ExportStatus) super.setAlt(alt);
+            }
+
+            @Override
+            public ExportStatus setCallback(java.lang.String callback) {
+              return (ExportStatus) super.setCallback(callback);
+            }
+
+            @Override
+            public ExportStatus setFields(java.lang.String fields) {
+              return (ExportStatus) super.setFields(fields);
+            }
+
+            @Override
+            public ExportStatus setKey(java.lang.String key) {
+              return (ExportStatus) super.setKey(key);
+            }
+
+            @Override
+            public ExportStatus setOauthToken(java.lang.String oauthToken) {
+              return (ExportStatus) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ExportStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ExportStatus) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ExportStatus setQuotaUser(java.lang.String quotaUser) {
+              return (ExportStatus) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ExportStatus setUploadType(java.lang.String uploadType) {
+              return (ExportStatus) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ExportStatus setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ExportStatus) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the resource of which image export operation status has to be
+             * fetched. Format: `projects/{project_id_or_number}/locations/{location}/services/{serv
+             * ice}/revisions/{revision}` for Revision `projects/{project_id_or_number}/locations/{l
+             * ocation}/jobs/{job}/executions/{execution}` for Execution
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the resource of which image export operation status has to be fetched.
+           Format:
+           `projects/{project_id_or_number}/locations/{location}/services/{service}/revisions/{revision}` for
+           Revision `projects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{execution}`
+           for Execution
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the resource of which image export operation status has to be
+             * fetched. Format: `projects/{project_id_or_number}/locations/{location}/services/{serv
+             * ice}/revisions/{revision}` for Revision `projects/{project_id_or_number}/locations/{l
+             * ocation}/jobs/{job}/executions/{execution}` for Execution
+             */
+            public ExportStatus setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/revisions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. The operation id returned from ExportImage. */
+            @com.google.api.client.util.Key
+            private java.lang.String operationId;
+
+            /** Required. The operation id returned from ExportImage.
+             */
+            public java.lang.String getOperationId() {
+              return operationId;
+            }
+
+            /** Required. The operation id returned from ExportImage. */
+            public ExportStatus setOperationId(java.lang.String operationId) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(OPERATION_ID_PATTERN.matcher(operationId).matches(),
+                    "Parameter operationId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.operationId = operationId;
+              return this;
+            }
+
+            @Override
+            public ExportStatus set(String parameterName, Object value) {
+              return (ExportStatus) super.set(parameterName, value);
             }
           }
           /**

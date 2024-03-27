@@ -17,7 +17,7 @@
 package com.google.api.services.run.v2.model;
 
 /**
- * Represents a GCS Bucket mounted as a volume.
+ * Represents a volume backed by a Cloud Storage bucket using Cloud Storage FUSE.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2GCSVolumeSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * GCS Bucket name
+   * Cloud Storage Bucket name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bucket;
 
   /**
-   * If true, mount the GCS bucket as read-only
+   * If true, the volume will be mounted as read only for all mounts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean readOnly;
 
   /**
-   * GCS Bucket name
+   * Cloud Storage Bucket name.
    * @return value or {@code null} for none
    */
   public java.lang.String getBucket() {
@@ -52,7 +52,7 @@ public final class GoogleCloudRunV2GCSVolumeSource extends com.google.api.client
   }
 
   /**
-   * GCS Bucket name
+   * Cloud Storage Bucket name.
    * @param bucket bucket or {@code null} for none
    */
   public GoogleCloudRunV2GCSVolumeSource setBucket(java.lang.String bucket) {
@@ -61,7 +61,7 @@ public final class GoogleCloudRunV2GCSVolumeSource extends com.google.api.client
   }
 
   /**
-   * If true, mount the GCS bucket as read-only
+   * If true, the volume will be mounted as read only for all mounts.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReadOnly() {
@@ -69,7 +69,7 @@ public final class GoogleCloudRunV2GCSVolumeSource extends com.google.api.client
   }
 
   /**
-   * If true, mount the GCS bucket as read-only
+   * If true, the volume will be mounted as read only for all mounts.
    * @param readOnly readOnly or {@code null} for none
    */
   public GoogleCloudRunV2GCSVolumeSource setReadOnly(java.lang.Boolean readOnly) {

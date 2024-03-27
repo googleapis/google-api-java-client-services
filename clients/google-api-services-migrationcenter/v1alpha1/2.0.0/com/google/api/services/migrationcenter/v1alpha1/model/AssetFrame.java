@@ -37,6 +37,14 @@ public final class AssetFrame extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> attributes;
 
   /**
+   * Optional. Frame collection type, if not specified the collection type will be based on the
+   * source type of the source the frame was reported on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String collectionType;
+
+  /**
    * Labels as key value pairs.
    * The value may be {@code null}.
    */
@@ -86,6 +94,25 @@ public final class AssetFrame extends com.google.api.client.json.GenericJson {
    */
   public AssetFrame setAttributes(java.util.Map<String, java.lang.String> attributes) {
     this.attributes = attributes;
+    return this;
+  }
+
+  /**
+   * Optional. Frame collection type, if not specified the collection type will be based on the
+   * source type of the source the frame was reported on.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCollectionType() {
+    return collectionType;
+  }
+
+  /**
+   * Optional. Frame collection type, if not specified the collection type will be based on the
+   * source type of the source the frame was reported on.
+   * @param collectionType collectionType or {@code null} for none
+   */
+  public AssetFrame setCollectionType(java.lang.String collectionType) {
+    this.collectionType = collectionType;
     return this;
   }
 

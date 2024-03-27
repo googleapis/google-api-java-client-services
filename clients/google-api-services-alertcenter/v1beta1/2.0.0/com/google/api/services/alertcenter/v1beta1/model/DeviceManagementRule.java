@@ -66,11 +66,25 @@ public final class DeviceManagementRule extends com.google.api.client.json.Gener
   private java.lang.String iosVendorId;
 
   /**
+   * Obfuscated ID of the owner of the device
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ownerId;
+
+  /**
    * The device resource ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceId;
+
+  /**
+   * Action taken as result of the rule
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ruleAction;
 
   /**
    * The serial number of the device.
@@ -165,6 +179,23 @@ public final class DeviceManagementRule extends com.google.api.client.json.Gener
   }
 
   /**
+   * Obfuscated ID of the owner of the device
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOwnerId() {
+    return ownerId;
+  }
+
+  /**
+   * Obfuscated ID of the owner of the device
+   * @param ownerId ownerId or {@code null} for none
+   */
+  public DeviceManagementRule setOwnerId(java.lang.String ownerId) {
+    this.ownerId = ownerId;
+    return this;
+  }
+
+  /**
    * The device resource ID.
    * @return value or {@code null} for none
    */
@@ -178,6 +209,23 @@ public final class DeviceManagementRule extends com.google.api.client.json.Gener
    */
   public DeviceManagementRule setResourceId(java.lang.String resourceId) {
     this.resourceId = resourceId;
+    return this;
+  }
+
+  /**
+   * Action taken as result of the rule
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuleAction() {
+    return ruleAction;
+  }
+
+  /**
+   * Action taken as result of the rule
+   * @param ruleAction ruleAction or {@code null} for none
+   */
+  public DeviceManagementRule setRuleAction(java.lang.String ruleAction) {
+    this.ruleAction = ruleAction;
     return this;
   }
 

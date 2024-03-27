@@ -157,8 +157,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * Searches all the IAM policies within a given accessible Resource Manager scope
      * (project/folder/organization). This RPC gives callers especially administrators the ability to
      * search all the IAM policies within a scope, even if they don't have `.getIamPolicy` permission of
-     * all the IAM policies. Callers should have `cloud.assets.SearchAllIamPolicies` permission on the
-     * requested scope, otherwise the request will be rejected.
+     * all the IAM policies. Callers should have `cloudasset.assets.searchAllIamPolicies` permission on
+     * the requested scope, otherwise the request will be rejected.
      *
      * Create a request for the method "iamPolicies.searchAll".
      *
@@ -188,8 +188,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Searches all the IAM policies within a given accessible Resource Manager scope
        * (project/folder/organization). This RPC gives callers especially administrators the ability to
        * search all the IAM policies within a scope, even if they don't have `.getIamPolicy` permission
-       * of all the IAM policies. Callers should have `cloud.assets.SearchAllIamPolicies` permission on
-       * the requested scope, otherwise the request will be rejected.
+       * of all the IAM policies. Callers should have `cloudasset.assets.searchAllIamPolicies`
+       * permission on the requested scope, otherwise the request will be rejected.
        *
        * Create a request for the method "iamPolicies.searchAll".
        *
@@ -424,7 +424,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * Searches all the resources within a given accessible Resource Manager scope
      * (project/folder/organization). This RPC gives callers especially administrators the ability to
      * search all the resources within a scope, even if they don't have `.get` permission of all the
-     * resources. Callers should have `cloud.assets.SearchAllResources` permission on the requested
+     * resources. Callers should have `cloudasset.assets.searchAllResources` permission on the requested
      * scope, otherwise the request will be rejected.
      *
      * Create a request for the method "resources.searchAll".
@@ -455,8 +455,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Searches all the resources within a given accessible Resource Manager scope
        * (project/folder/organization). This RPC gives callers especially administrators the ability to
        * search all the resources within a scope, even if they don't have `.get` permission of all the
-       * resources. Callers should have `cloud.assets.SearchAllResources` permission on the requested
-       * scope, otherwise the request will be rejected.
+       * resources. Callers should have `cloudasset.assets.searchAllResources` permission on the
+       * requested scope, otherwise the request will be rejected.
        *
        * Create a request for the method "resources.searchAll".
        *

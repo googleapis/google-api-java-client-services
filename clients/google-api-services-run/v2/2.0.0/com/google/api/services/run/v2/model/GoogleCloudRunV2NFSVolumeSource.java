@@ -37,7 +37,7 @@ public final class GoogleCloudRunV2NFSVolumeSource extends com.google.api.client
   private java.lang.String path;
 
   /**
-   * If true, mount the NFS volume as read only
+   * If true, the volume will be mounted as read only for all mounts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GoogleCloudRunV2NFSVolumeSource extends com.google.api.client
   }
 
   /**
-   * If true, mount the NFS volume as read only
+   * If true, the volume will be mounted as read only for all mounts.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReadOnly() {
@@ -76,7 +76,7 @@ public final class GoogleCloudRunV2NFSVolumeSource extends com.google.api.client
   }
 
   /**
-   * If true, mount the NFS volume as read only
+   * If true, the volume will be mounted as read only for all mounts.
    * @param readOnly readOnly or {@code null} for none
    */
   public GoogleCloudRunV2NFSVolumeSource setReadOnly(java.lang.Boolean readOnly) {

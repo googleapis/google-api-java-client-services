@@ -75,9 +75,8 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   /**
    * Display one of the [Google Material Icons](https://fonts.google.com/icons). For example, to
    * display a [checkbox icon](https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined
-   * %3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048), use "material_icon": { "name":
-   * "check_box" } Available for Chat apps and in [Developer
-   * Preview](https://developers.google.com/workspace/preview) for Google Workspace Add-ons.
+   * %3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048), use ``` "material_icon": {
+   * "name": "check_box" } ``` [Google Chat apps](https://developers.google.com/workspace/chat):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,9 +175,8 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   /**
    * Display one of the [Google Material Icons](https://fonts.google.com/icons). For example, to
    * display a [checkbox icon](https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined
-   * %3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048), use "material_icon": { "name":
-   * "check_box" } Available for Chat apps and in [Developer
-   * Preview](https://developers.google.com/workspace/preview) for Google Workspace Add-ons.
+   * %3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048), use ``` "material_icon": {
+   * "name": "check_box" } ``` [Google Chat apps](https://developers.google.com/workspace/chat):
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1MaterialIcon getMaterialIcon() {
@@ -188,9 +186,8 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   /**
    * Display one of the [Google Material Icons](https://fonts.google.com/icons). For example, to
    * display a [checkbox icon](https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined
-   * %3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048), use "material_icon": { "name":
-   * "check_box" } Available for Chat apps and in [Developer
-   * Preview](https://developers.google.com/workspace/preview) for Google Workspace Add-ons.
+   * %3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048), use ``` "material_icon": {
+   * "name": "check_box" } ``` [Google Chat apps](https://developers.google.com/workspace/chat):
    * @param materialIcon materialIcon or {@code null} for none
    */
   public GoogleAppsCardV1Icon setMaterialIcon(GoogleAppsCardV1MaterialIcon materialIcon) {

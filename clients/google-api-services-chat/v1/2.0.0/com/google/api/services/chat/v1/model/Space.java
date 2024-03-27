@@ -66,11 +66,11 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * Immutable. Whether this space permits any Google Chat user as a member. Input when creating a
    * space in a Google Workspace organization. Omit this field when creating spaces in the following
-   * conditions: * The authenticated user uses a Google Account. By default, the space permits any
-   * Google Chat user. * The space is used to [import data to Google Chat]
-   * (https://developers.google.com/chat/api/guides/import-data-overview). Import mode spaces must
-   * only permit members from the same Google Workspace organization. For existing spaces, this
-   * field is output only.
+   * conditions: * The authenticated user uses a consumer account (unmanaged user account). By
+   * default, a space created by a consumer account permits any Google Chat user. * The space is
+   * used to [import data to Google Chat] (https://developers.google.com/chat/api/guides/import-
+   * data-overview). Import mode spaces must only permit members from the same Google Workspace
+   * organization. For existing spaces, this field is output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,11 +221,11 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * Immutable. Whether this space permits any Google Chat user as a member. Input when creating a
    * space in a Google Workspace organization. Omit this field when creating spaces in the following
-   * conditions: * The authenticated user uses a Google Account. By default, the space permits any
-   * Google Chat user. * The space is used to [import data to Google Chat]
-   * (https://developers.google.com/chat/api/guides/import-data-overview). Import mode spaces must
-   * only permit members from the same Google Workspace organization. For existing spaces, this
-   * field is output only.
+   * conditions: * The authenticated user uses a consumer account (unmanaged user account). By
+   * default, a space created by a consumer account permits any Google Chat user. * The space is
+   * used to [import data to Google Chat] (https://developers.google.com/chat/api/guides/import-
+   * data-overview). Import mode spaces must only permit members from the same Google Workspace
+   * organization. For existing spaces, this field is output only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExternalUserAllowed() {
@@ -235,11 +235,11 @@ public final class Space extends com.google.api.client.json.GenericJson {
   /**
    * Immutable. Whether this space permits any Google Chat user as a member. Input when creating a
    * space in a Google Workspace organization. Omit this field when creating spaces in the following
-   * conditions: * The authenticated user uses a Google Account. By default, the space permits any
-   * Google Chat user. * The space is used to [import data to Google Chat]
-   * (https://developers.google.com/chat/api/guides/import-data-overview). Import mode spaces must
-   * only permit members from the same Google Workspace organization. For existing spaces, this
-   * field is output only.
+   * conditions: * The authenticated user uses a consumer account (unmanaged user account). By
+   * default, a space created by a consumer account permits any Google Chat user. * The space is
+   * used to [import data to Google Chat] (https://developers.google.com/chat/api/guides/import-
+   * data-overview). Import mode spaces must only permit members from the same Google Workspace
+   * organization. For existing spaces, this field is output only.
    * @param externalUserAllowed externalUserAllowed or {@code null} for none
    */
   public Space setExternalUserAllowed(java.lang.Boolean externalUserAllowed) {

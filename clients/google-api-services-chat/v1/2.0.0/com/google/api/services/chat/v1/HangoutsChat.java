@@ -3860,8 +3860,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * update all field paths. Currently supported field paths: - `text` - `attachment` -
          * `cards` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
          * `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
-         * Developer Preview: `accessory_widgets` (Requires [app
-         * authentication](/chat/api/guides/auth/service-accounts).)
+         * `accessory_widgets` (Requires [app authentication](/chat/api/guides/auth/service-
+         * accounts).)
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -3869,8 +3869,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /** Required. The field paths to update. Separate multiple values with commas or use `*` to update all
        field paths. Currently supported field paths: - `text` - `attachment` - `cards` (Requires [app
        authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2` (Requires [app
-       authentication](/chat/api/guides/auth/service-accounts).) - Developer Preview: `accessory_widgets`
-       (Requires [app authentication](/chat/api/guides/auth/service-accounts).)
+       authentication](/chat/api/guides/auth/service-accounts).) - `accessory_widgets` (Requires [app
+       authentication](/chat/api/guides/auth/service-accounts).)
          */
         public String getUpdateMask() {
           return updateMask;
@@ -3881,8 +3881,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * update all field paths. Currently supported field paths: - `text` - `attachment` -
          * `cards` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
          * `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
-         * Developer Preview: `accessory_widgets` (Requires [app
-         * authentication](/chat/api/guides/auth/service-accounts).)
+         * `accessory_widgets` (Requires [app authentication](/chat/api/guides/auth/service-
+         * accounts).)
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -4105,8 +4105,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * update all field paths. Currently supported field paths: - `text` - `attachment` -
          * `cards` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
          * `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
-         * Developer Preview: `accessory_widgets` (Requires [app
-         * authentication](/chat/api/guides/auth/service-accounts).)
+         * `accessory_widgets` (Requires [app authentication](/chat/api/guides/auth/service-
+         * accounts).)
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -4114,8 +4114,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /** Required. The field paths to update. Separate multiple values with commas or use `*` to update all
        field paths. Currently supported field paths: - `text` - `attachment` - `cards` (Requires [app
        authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2` (Requires [app
-       authentication](/chat/api/guides/auth/service-accounts).) - Developer Preview: `accessory_widgets`
-       (Requires [app authentication](/chat/api/guides/auth/service-accounts).)
+       authentication](/chat/api/guides/auth/service-accounts).) - `accessory_widgets` (Requires [app
+       authentication](/chat/api/guides/auth/service-accounts).)
          */
         public String getUpdateMask() {
           return updateMask;
@@ -4126,8 +4126,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * update all field paths. Currently supported field paths: - `text` - `attachment` -
          * `cards` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
          * `cards_v2` (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
-         * Developer Preview: `accessory_widgets` (Requires [app
-         * authentication](/chat/api/guides/auth/service-accounts).)
+         * `accessory_widgets` (Requires [app authentication](/chat/api/guides/auth/service-
+         * accounts).)
          */
         public Update setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -4888,6 +4888,460 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
       }
+    }
+    /**
+     * An accessor for creating requests from the SpaceEvents collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code HangoutsChat chat = new HangoutsChat(...);}
+     *   {@code HangoutsChat.SpaceEvents.List request = chat.spaceEvents().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public SpaceEvents spaceEvents() {
+      return new SpaceEvents();
+    }
+
+    /**
+     * The "spaceEvents" collection of methods.
+     */
+    public class SpaceEvents {
+
+      /**
+       * Returns a SpaceEvent. You can request events from up to 28 days before the time of the request.
+       * The server will return the most recent version of the resource. For example, if a
+       * `google.workspace.chat.message.v1.created` event is requested and the message has since been
+       * deleted, the returned event will contain the deleted message resource in the payload. Requires
+       * [user authentication](https://developers.google.com/chat/api/guides/auth/users).
+       *
+       * Create a request for the method "spaceEvents.get".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the event. Format: `spaces/{space}/spaceEvents/{spaceEvent}`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends HangoutsChatRequest<com.google.api.services.chat.v1.model.SpaceEvent> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^spaces/[^/]+/spaceEvents/[^/]+$");
+
+        /**
+         * Returns a SpaceEvent. You can request events from up to 28 days before the time of the request.
+         * The server will return the most recent version of the resource. For example, if a
+         * `google.workspace.chat.message.v1.created` event is requested and the message has since been
+         * deleted, the returned event will contain the deleted message resource in the payload. Requires
+         * [user authentication](https://developers.google.com/chat/api/guides/auth/users).
+         *
+         * Create a request for the method "spaceEvents.get".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the event. Format: `spaces/{space}/spaceEvents/{spaceEvent}`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.SpaceEvent.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^spaces/[^/]+/spaceEvents/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the event. Format:
+         * `spaces/{space}/spaceEvents/{spaceEvent}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the event. Format: `spaces/{space}/spaceEvents/{spaceEvent}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the event. Format:
+         * `spaces/{space}/spaceEvents/{spaceEvent}`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^spaces/[^/]+/spaceEvents/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists SpaceEvents in a space that the caller is a member of. You can request events from up to 28
+       * days before the time of the request. The server will return the most recent version of the
+       * resources. For example, if a `google.workspace.chat.message.v1.created` event is requested and
+       * the message has since been deleted, the returned event will contain the deleted message resource
+       * in the payload. Requires [user
+       * authentication](https://developers.google.com/chat/api/guides/auth/users).
+       *
+       * Create a request for the method "spaceEvents.list".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of the space from which to list events. Format: `spaces/{space}`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends HangoutsChatRequest<com.google.api.services.chat.v1.model.ListSpaceEventsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/spaceEvents";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^spaces/[^/]+$");
+
+        /**
+         * Lists SpaceEvents in a space that the caller is a member of. You can request events from up to
+         * 28 days before the time of the request. The server will return the most recent version of the
+         * resources. For example, if a `google.workspace.chat.message.v1.created` event is requested and
+         * the message has since been deleted, the returned event will contain the deleted message
+         * resource in the payload. Requires [user
+         * authentication](https://developers.google.com/chat/api/guides/auth/users).
+         *
+         * Create a request for the method "spaceEvents.list".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of the space from which to list events. Format: `spaces/{space}`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.ListSpaceEventsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^spaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the space from which to list events. Format:
+         * `spaces/{space}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of the space from which to list events. Format: `spaces/{space}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The resource name of the space from which to list events. Format:
+         * `spaces/{space}`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^spaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. A query filter. This method supports filtering by: `event_types`, `start_time`,
+         * and `end_time`. `event_types`: You must specify at least one event type in your query.
+         * `event_types` supports the has `:` operator. To filter by multiple event types, use the
+         * `OR` operator. To see the list of currently supported event types, see
+         * google.chat.v1.SpaceEvent.event_type `start_time`: Exclusive timestamp from which to
+         * start listing space events. You can list events that occurred up to 28 days ago. If
+         * unspecified, lists space events from the 28 days ago up to end time. `end_time`:
+         * Inclusive timestamp up to which space events are listed. Default value is the present.
+         * `start_time` and `end_time` accept a timestamp in [RFC-3339](https://www.rfc-
+         * editor.org/rfc/rfc3339) format and support the equals `=` comparison operator. To filter
+         * by both `start_time` and `end_time`, use the `AND` operator. For example, the following
+         * queries are valid: ``` start_time="2023-08-23T19:20:33+00:00" AND
+         * end_time="2023-08-23T19:21:54+00:00" ``` ``` start_time="2023-08-23T19:20:33+00:00" AND
+         * (event_types:"google.workspace.chat.space.v1.updated" OR
+         * event_types:"google.workspace.chat.message.v1.created") ``` The following queries are
+         * invalid: ``` start_time="2023-08-23T19:20:33+00:00" OR
+         * end_time="2023-08-23T19:21:54+00:00" ``` ```
+         * event_types:"google.workspace.chat.space.v1.updated" AND
+         * event_types:"google.workspace.chat.message.v1.created" ``` Invalid queries are rejected
+         * by the server with an `INVALID_ARGUMENT` error.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Required. A query filter. This method supports filtering by: `event_types`, `start_time`, and
+       `end_time`. `event_types`: You must specify at least one event type in your query. `event_types`
+       supports the has `:` operator. To filter by multiple event types, use the `OR` operator. To see the
+       list of currently supported event types, see google.chat.v1.SpaceEvent.event_type `start_time`:
+       Exclusive timestamp from which to start listing space events. You can list events that occurred up
+       to 28 days ago. If unspecified, lists space events from the 28 days ago up to end time. `end_time`:
+       Inclusive timestamp up to which space events are listed. Default value is the present. `start_time`
+       and `end_time` accept a timestamp in [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and
+       support the equals `=` comparison operator. To filter by both `start_time` and `end_time`, use the
+       `AND` operator. For example, the following queries are valid: ```
+       start_time="2023-08-23T19:20:33+00:00" AND end_time="2023-08-23T19:21:54+00:00" ``` ```
+       start_time="2023-08-23T19:20:33+00:00" AND (event_types:"google.workspace.chat.space.v1.updated" OR
+       event_types:"google.workspace.chat.message.v1.created") ``` The following queries are invalid: ```
+       start_time="2023-08-23T19:20:33+00:00" OR end_time="2023-08-23T19:21:54+00:00" ``` ```
+       event_types:"google.workspace.chat.space.v1.updated" AND
+       event_types:"google.workspace.chat.message.v1.created" ``` Invalid queries are rejected by the
+       server with an `INVALID_ARGUMENT` error.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Required. A query filter. This method supports filtering by: `event_types`, `start_time`,
+         * and `end_time`. `event_types`: You must specify at least one event type in your query.
+         * `event_types` supports the has `:` operator. To filter by multiple event types, use the
+         * `OR` operator. To see the list of currently supported event types, see
+         * google.chat.v1.SpaceEvent.event_type `start_time`: Exclusive timestamp from which to
+         * start listing space events. You can list events that occurred up to 28 days ago. If
+         * unspecified, lists space events from the 28 days ago up to end time. `end_time`:
+         * Inclusive timestamp up to which space events are listed. Default value is the present.
+         * `start_time` and `end_time` accept a timestamp in [RFC-3339](https://www.rfc-
+         * editor.org/rfc/rfc3339) format and support the equals `=` comparison operator. To filter
+         * by both `start_time` and `end_time`, use the `AND` operator. For example, the following
+         * queries are valid: ``` start_time="2023-08-23T19:20:33+00:00" AND
+         * end_time="2023-08-23T19:21:54+00:00" ``` ``` start_time="2023-08-23T19:20:33+00:00" AND
+         * (event_types:"google.workspace.chat.space.v1.updated" OR
+         * event_types:"google.workspace.chat.message.v1.created") ``` The following queries are
+         * invalid: ``` start_time="2023-08-23T19:20:33+00:00" OR
+         * end_time="2023-08-23T19:21:54+00:00" ``` ```
+         * event_types:"google.workspace.chat.space.v1.updated" AND
+         * event_types:"google.workspace.chat.message.v1.created" ``` Invalid queries are rejected
+         * by the server with an `INVALID_ARGUMENT` error.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of space events returned. The service may return fewer than
+         * this value. Negative values return an `INVALID_ARGUMENT` error.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of space events returned. The service may return fewer than this
+       value. Negative values return an `INVALID_ARGUMENT` error.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of space events returned. The service may return fewer than
+         * this value. Negative values return an `INVALID_ARGUMENT` error.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous list space events call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to list space events
+         * must match the call that provided the page token. Passing different values to the other
+         * parameters might lead to unexpected results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous list space events call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to list space events must match the
+       call that provided the page token. Passing different values to the other parameters might lead to
+       unexpected results.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous list space events call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to list space events
+         * must match the call that provided the page token. Passing different values to the other
+         * parameters might lead to unexpected results.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
     }
   }
 

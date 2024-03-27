@@ -134,6 +134,13 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
   private java.lang.Boolean enableSafeSearch;
 
   /**
+   * Whether to enable search-as-you-type behavior for the search widget
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableSearchAsYouType;
+
+  /**
    * Turn on or off summary for each snippets result.
    * The value may be {@code null}.
    */
@@ -472,6 +479,23 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfig setEnableSafeSearch(java.lang.Boolean enableSafeSearch) {
     this.enableSafeSearch = enableSafeSearch;
+    return this;
+  }
+
+  /**
+   * Whether to enable search-as-you-type behavior for the search widget
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableSearchAsYouType() {
+    return enableSearchAsYouType;
+  }
+
+  /**
+   * Whether to enable search-as-you-type behavior for the search widget
+   * @param enableSearchAsYouType enableSearchAsYouType or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfig setEnableSearchAsYouType(java.lang.Boolean enableSearchAsYouType) {
+    this.enableSearchAsYouType = enableSearchAsYouType;
     return this;
   }
 

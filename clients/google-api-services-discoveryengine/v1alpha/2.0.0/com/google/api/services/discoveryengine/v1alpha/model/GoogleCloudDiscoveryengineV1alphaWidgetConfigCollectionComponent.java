@@ -54,8 +54,9 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
 
   /**
    * The name of the collection. It should be collection resource name. Format:
-   * `projects/{project_number}/locations/{location}/collections/{collection_id}`. For widget
-   * service usage, such look up widget config, returned name should be skipped.
+   * `projects/{project_number}/locations/{location}/collections/{collection_id}`. For APIs under
+   * WidgetService, such as LookUpWidgetConfig, the project number and location part is erased in
+   * this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +117,9 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
 
   /**
    * The name of the collection. It should be collection resource name. Format:
-   * `projects/{project_number}/locations/{location}/collections/{collection_id}`. For widget
-   * service usage, such look up widget config, returned name should be skipped.
+   * `projects/{project_number}/locations/{location}/collections/{collection_id}`. For APIs under
+   * WidgetService, such as LookUpWidgetConfig, the project number and location part is erased in
+   * this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -126,8 +128,9 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
 
   /**
    * The name of the collection. It should be collection resource name. Format:
-   * `projects/{project_number}/locations/{location}/collections/{collection_id}`. For widget
-   * service usage, such look up widget config, returned name should be skipped.
+   * `projects/{project_number}/locations/{location}/collections/{collection_id}`. For APIs under
+   * WidgetService, such as LookUpWidgetConfig, the project number and location part is erased in
+   * this field.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionComponent setName(java.lang.String name) {

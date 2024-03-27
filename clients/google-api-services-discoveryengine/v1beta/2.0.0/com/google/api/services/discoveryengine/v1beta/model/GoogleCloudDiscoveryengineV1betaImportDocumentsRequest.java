@@ -34,9 +34,11 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    * Document.ids are automatically generated based on the hash of the payload, where IDs may not be
    * consistent during multiple imports. In which case ReconciliationMode.FULL is highly recommended
    * to avoid duplicate contents. If unset or set to `false`, Document.ids have to be specified
-   * using id_field, otherwise, documents without IDs fail to be imported. Only set this field when
-   * using GcsSource or BigQuerySource, and when GcsSource.data_schema or BigQuerySource.data_schema
-   * is `custom` or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown.
+   * using id_field, otherwise, documents without IDs fail to be imported. Supported data sources: *
+   * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an INVALID_ARGUMENT
+   * error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom` or `csv`.
+   * Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource * CloudSqlSource *
+   * FirestoreSource * BigtableSource
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,6 +59,13 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
   private GoogleCloudDiscoveryengineV1betaImportErrorConfig errorConfig;
 
   /**
+   * FhirStore input source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaFhirStoreSource fhirStoreSource;
+
+  /**
    * Cloud Storage location for the input content.
    * The value may be {@code null}.
    */
@@ -64,17 +73,19 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
   private GoogleCloudDiscoveryengineV1betaGcsSource gcsSource;
 
   /**
-   * The field in the Cloud Storage and BigQuery sources that indicates the unique IDs of the
-   * documents. For GcsSource it is the key of the JSON field. For instance, `my_id` for JSON
-   * `{"my_id": "some_uuid"}`. For BigQuerySource it is the column name of the BigQuery table where
-   * the unique ids are stored. The values of the JSON field or the BigQuery column are used as the
-   * Document.ids. The JSON field or the BigQuery column must be of string type, and the values must
-   * be set as valid strings conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) with 1-63
-   * characters. Otherwise, documents without valid IDs fail to be imported. Only set this field
-   * when using GcsSource or BigQuerySource, and when GcsSource.data_schema or
-   * BigQuerySource.data_schema is `custom`. And only set this field when auto_generate_ids is unset
-   * or set as `false`. Otherwise, an INVALID_ARGUMENT error is thrown. If it is unset, a default
-   * value `_id` is used when importing from the allowed data sources.
+   * The field indicates the ID field or column to be used as unique IDs of the documents. For
+   * GcsSource it is the key of the JSON field. For instance, `my_id` for JSON `{"my_id":
+   * "some_uuid"}`. For others, it may be the column name of the table where the unique ids are
+   * stored. The values of the JSON field or the table column are used as the Document.ids. The JSON
+   * field or the table column must be of string type, and the values must be set as valid strings
+   * conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) with 1-63 characters. Otherwise,
+   * documents without valid IDs fail to be imported. Only set this field when auto_generate_ids is
+   * unset or set as `false`. Otherwise, an INVALID_ARGUMENT error is thrown. If it is unset, a
+   * default value `_id` is used when importing from the allowed data sources. Supported data
+   * sources: * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an
+   * INVALID_ARGUMENT error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom`
+   * or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource * CloudSqlSource *
+   * FirestoreSource * BigtableSource
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,9 +111,11 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    * Document.ids are automatically generated based on the hash of the payload, where IDs may not be
    * consistent during multiple imports. In which case ReconciliationMode.FULL is highly recommended
    * to avoid duplicate contents. If unset or set to `false`, Document.ids have to be specified
-   * using id_field, otherwise, documents without IDs fail to be imported. Only set this field when
-   * using GcsSource or BigQuerySource, and when GcsSource.data_schema or BigQuerySource.data_schema
-   * is `custom` or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown.
+   * using id_field, otherwise, documents without IDs fail to be imported. Supported data sources: *
+   * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an INVALID_ARGUMENT
+   * error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom` or `csv`.
+   * Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource * CloudSqlSource *
+   * FirestoreSource * BigtableSource
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoGenerateIds() {
@@ -114,9 +127,11 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    * Document.ids are automatically generated based on the hash of the payload, where IDs may not be
    * consistent during multiple imports. In which case ReconciliationMode.FULL is highly recommended
    * to avoid duplicate contents. If unset or set to `false`, Document.ids have to be specified
-   * using id_field, otherwise, documents without IDs fail to be imported. Only set this field when
-   * using GcsSource or BigQuerySource, and when GcsSource.data_schema or BigQuerySource.data_schema
-   * is `custom` or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown.
+   * using id_field, otherwise, documents without IDs fail to be imported. Supported data sources: *
+   * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an INVALID_ARGUMENT
+   * error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom` or `csv`.
+   * Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource * CloudSqlSource *
+   * FirestoreSource * BigtableSource
    * @param autoGenerateIds autoGenerateIds or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setAutoGenerateIds(java.lang.Boolean autoGenerateIds) {
@@ -159,6 +174,23 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
   }
 
   /**
+   * FhirStore input source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaFhirStoreSource getFhirStoreSource() {
+    return fhirStoreSource;
+  }
+
+  /**
+   * FhirStore input source.
+   * @param fhirStoreSource fhirStoreSource or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setFhirStoreSource(GoogleCloudDiscoveryengineV1betaFhirStoreSource fhirStoreSource) {
+    this.fhirStoreSource = fhirStoreSource;
+    return this;
+  }
+
+  /**
    * Cloud Storage location for the input content.
    * @return value or {@code null} for none
    */
@@ -176,17 +208,19 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
   }
 
   /**
-   * The field in the Cloud Storage and BigQuery sources that indicates the unique IDs of the
-   * documents. For GcsSource it is the key of the JSON field. For instance, `my_id` for JSON
-   * `{"my_id": "some_uuid"}`. For BigQuerySource it is the column name of the BigQuery table where
-   * the unique ids are stored. The values of the JSON field or the BigQuery column are used as the
-   * Document.ids. The JSON field or the BigQuery column must be of string type, and the values must
-   * be set as valid strings conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) with 1-63
-   * characters. Otherwise, documents without valid IDs fail to be imported. Only set this field
-   * when using GcsSource or BigQuerySource, and when GcsSource.data_schema or
-   * BigQuerySource.data_schema is `custom`. And only set this field when auto_generate_ids is unset
-   * or set as `false`. Otherwise, an INVALID_ARGUMENT error is thrown. If it is unset, a default
-   * value `_id` is used when importing from the allowed data sources.
+   * The field indicates the ID field or column to be used as unique IDs of the documents. For
+   * GcsSource it is the key of the JSON field. For instance, `my_id` for JSON `{"my_id":
+   * "some_uuid"}`. For others, it may be the column name of the table where the unique ids are
+   * stored. The values of the JSON field or the table column are used as the Document.ids. The JSON
+   * field or the table column must be of string type, and the values must be set as valid strings
+   * conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) with 1-63 characters. Otherwise,
+   * documents without valid IDs fail to be imported. Only set this field when auto_generate_ids is
+   * unset or set as `false`. Otherwise, an INVALID_ARGUMENT error is thrown. If it is unset, a
+   * default value `_id` is used when importing from the allowed data sources. Supported data
+   * sources: * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an
+   * INVALID_ARGUMENT error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom`
+   * or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource * CloudSqlSource *
+   * FirestoreSource * BigtableSource
    * @return value or {@code null} for none
    */
   public java.lang.String getIdField() {
@@ -194,17 +228,19 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
   }
 
   /**
-   * The field in the Cloud Storage and BigQuery sources that indicates the unique IDs of the
-   * documents. For GcsSource it is the key of the JSON field. For instance, `my_id` for JSON
-   * `{"my_id": "some_uuid"}`. For BigQuerySource it is the column name of the BigQuery table where
-   * the unique ids are stored. The values of the JSON field or the BigQuery column are used as the
-   * Document.ids. The JSON field or the BigQuery column must be of string type, and the values must
-   * be set as valid strings conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) with 1-63
-   * characters. Otherwise, documents without valid IDs fail to be imported. Only set this field
-   * when using GcsSource or BigQuerySource, and when GcsSource.data_schema or
-   * BigQuerySource.data_schema is `custom`. And only set this field when auto_generate_ids is unset
-   * or set as `false`. Otherwise, an INVALID_ARGUMENT error is thrown. If it is unset, a default
-   * value `_id` is used when importing from the allowed data sources.
+   * The field indicates the ID field or column to be used as unique IDs of the documents. For
+   * GcsSource it is the key of the JSON field. For instance, `my_id` for JSON `{"my_id":
+   * "some_uuid"}`. For others, it may be the column name of the table where the unique ids are
+   * stored. The values of the JSON field or the table column are used as the Document.ids. The JSON
+   * field or the table column must be of string type, and the values must be set as valid strings
+   * conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) with 1-63 characters. Otherwise,
+   * documents without valid IDs fail to be imported. Only set this field when auto_generate_ids is
+   * unset or set as `false`. Otherwise, an INVALID_ARGUMENT error is thrown. If it is unset, a
+   * default value `_id` is used when importing from the allowed data sources. Supported data
+   * sources: * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an
+   * INVALID_ARGUMENT error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom`
+   * or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource * CloudSqlSource *
+   * FirestoreSource * BigtableSource
    * @param idField idField or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setIdField(java.lang.String idField) {

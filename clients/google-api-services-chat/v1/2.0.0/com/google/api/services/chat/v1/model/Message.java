@@ -30,6 +30,24 @@ package com.google.api.services.chat.v1.model;
 public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
+   * One or more interactive widgets that appear at the bottom of a message. You can add accessory
+   * widgets to messages that contain text, cards, or both text and cards. Not supported for
+   * messages that contain dialogs. For details, see [Add interactive widgets at the bottom of a
+   * message](https://developers.google.com/workspace/chat/create-messages#add-accessory-widgets).
+   * Creating a message with accessory widgets requires [app authentication]
+   * (https://developers.google.com/chat/api/guides/auth/service-accounts).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AccessoryWidget> accessoryWidgets;
+
+  static {
+    // hack to force ProGuard to consider AccessoryWidget used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AccessoryWidget.class);
+  }
+
+  /**
    * Input only. Parameters that a Chat app can use to configure how its response is posted.
    * The value may be {@code null}.
    */
@@ -296,6 +314,33 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean threadReply;
+
+  /**
+   * One or more interactive widgets that appear at the bottom of a message. You can add accessory
+   * widgets to messages that contain text, cards, or both text and cards. Not supported for
+   * messages that contain dialogs. For details, see [Add interactive widgets at the bottom of a
+   * message](https://developers.google.com/workspace/chat/create-messages#add-accessory-widgets).
+   * Creating a message with accessory widgets requires [app authentication]
+   * (https://developers.google.com/chat/api/guides/auth/service-accounts).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AccessoryWidget> getAccessoryWidgets() {
+    return accessoryWidgets;
+  }
+
+  /**
+   * One or more interactive widgets that appear at the bottom of a message. You can add accessory
+   * widgets to messages that contain text, cards, or both text and cards. Not supported for
+   * messages that contain dialogs. For details, see [Add interactive widgets at the bottom of a
+   * message](https://developers.google.com/workspace/chat/create-messages#add-accessory-widgets).
+   * Creating a message with accessory widgets requires [app authentication]
+   * (https://developers.google.com/chat/api/guides/auth/service-accounts).
+   * @param accessoryWidgets accessoryWidgets or {@code null} for none
+   */
+  public Message setAccessoryWidgets(java.util.List<AccessoryWidget> accessoryWidgets) {
+    this.accessoryWidgets = accessoryWidgets;
+    return this;
+  }
 
   /**
    * Input only. Parameters that a Chat app can use to configure how its response is posted.

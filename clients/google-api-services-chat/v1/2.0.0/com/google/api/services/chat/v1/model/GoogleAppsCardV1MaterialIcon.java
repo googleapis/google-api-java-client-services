@@ -20,9 +20,8 @@ package com.google.api.services.chat.v1.model;
  * A [Google Material Icon](https://fonts.google.com/icons), which includes over 2500+ options. For
  * example, to display a [checkbox icon](https://fonts.google.com/icons?selected=Material%20Symbols%
  * 20Outlined%3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048) with customized weight and
- * grade, write { "name": "check_box", "fill": true, "weight": 300, "grade": -25 } Available for
- * Chat apps and in [Developer Preview](https://developers.google.com/workspace/preview) for Google
- * Workspace Add-ons.
+ * grade, write the following: ``` { "name": "check_box", "fill": true, "weight": 300, "grade": -25
+ * } ``` [Google Chat apps](https://developers.google.com/workspace/chat):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -35,8 +34,9 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether it renders a filled icon. Default value is false. See Customization in [Google Font
-   * Icon](https://fonts.google.com/icons) for details.
+   * Whether the icon renders as filled. Default value is false. To preview different icon settings,
+   * go to [Google Font Icons](https://fonts.google.com/icons) and adjust the settings under
+   * **Customize**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,16 +46,17 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
    * Weight and grade affect a symbol’s thickness. Adjustments to grade are more granular than
    * adjustments to weight and have a small impact on the size of the symbol. Choose from {-25, 0,
    * 200}. If absent, default value is 0. If any other value is specified, a broken image icon is
-   * displayed. See Customization in [Google Font Icon](https://fonts.google.com/icons) for details.
+   * displayed. To preview different icon settings, go to [Google Font
+   * Icons](https://fonts.google.com/icons) and adjust the settings under **Customize**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer grade;
 
   /**
-   * The icon name defined in the [Google Material Icon Icon](https://fonts.google.com/icons) in
-   * snake_case. e.g. "check_box". Any invalid names are abandoned and replaced with empty string
-   * and results in the icon failing to render.
+   * The icon name defined in the [Google Material Icon](https://fonts.google.com/icons), for
+   * example, `check_box`. Any invalid names are abandoned and replaced with empty string and
+   * results in the icon failing to render.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,16 +64,18 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
 
   /**
    * The stroke weight of the icon. Choose from {100, 200, 300, 400, 500, 600, 700}. If absent,
-   * default value is 400. If any other value is specified, a broken image icon is displayed. See
-   * Customization in [Google Font Icon](https://fonts.google.com/icons) for details.
+   * default value is 400. If any other value is specified, a broken image icon is displayed. To
+   * preview different icon settings, go to [Google Font Icons](https://fonts.google.com/icons) and
+   * adjust the settings under **Customize**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer weight;
 
   /**
-   * Whether it renders a filled icon. Default value is false. See Customization in [Google Font
-   * Icon](https://fonts.google.com/icons) for details.
+   * Whether the icon renders as filled. Default value is false. To preview different icon settings,
+   * go to [Google Font Icons](https://fonts.google.com/icons) and adjust the settings under
+   * **Customize**.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFill() {
@@ -80,8 +83,9 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
   }
 
   /**
-   * Whether it renders a filled icon. Default value is false. See Customization in [Google Font
-   * Icon](https://fonts.google.com/icons) for details.
+   * Whether the icon renders as filled. Default value is false. To preview different icon settings,
+   * go to [Google Font Icons](https://fonts.google.com/icons) and adjust the settings under
+   * **Customize**.
    * @param fill fill or {@code null} for none
    */
   public GoogleAppsCardV1MaterialIcon setFill(java.lang.Boolean fill) {
@@ -93,7 +97,8 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
    * Weight and grade affect a symbol’s thickness. Adjustments to grade are more granular than
    * adjustments to weight and have a small impact on the size of the symbol. Choose from {-25, 0,
    * 200}. If absent, default value is 0. If any other value is specified, a broken image icon is
-   * displayed. See Customization in [Google Font Icon](https://fonts.google.com/icons) for details.
+   * displayed. To preview different icon settings, go to [Google Font
+   * Icons](https://fonts.google.com/icons) and adjust the settings under **Customize**.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getGrade() {
@@ -104,7 +109,8 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
    * Weight and grade affect a symbol’s thickness. Adjustments to grade are more granular than
    * adjustments to weight and have a small impact on the size of the symbol. Choose from {-25, 0,
    * 200}. If absent, default value is 0. If any other value is specified, a broken image icon is
-   * displayed. See Customization in [Google Font Icon](https://fonts.google.com/icons) for details.
+   * displayed. To preview different icon settings, go to [Google Font
+   * Icons](https://fonts.google.com/icons) and adjust the settings under **Customize**.
    * @param grade grade or {@code null} for none
    */
   public GoogleAppsCardV1MaterialIcon setGrade(java.lang.Integer grade) {
@@ -113,9 +119,9 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
   }
 
   /**
-   * The icon name defined in the [Google Material Icon Icon](https://fonts.google.com/icons) in
-   * snake_case. e.g. "check_box". Any invalid names are abandoned and replaced with empty string
-   * and results in the icon failing to render.
+   * The icon name defined in the [Google Material Icon](https://fonts.google.com/icons), for
+   * example, `check_box`. Any invalid names are abandoned and replaced with empty string and
+   * results in the icon failing to render.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -123,9 +129,9 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
   }
 
   /**
-   * The icon name defined in the [Google Material Icon Icon](https://fonts.google.com/icons) in
-   * snake_case. e.g. "check_box". Any invalid names are abandoned and replaced with empty string
-   * and results in the icon failing to render.
+   * The icon name defined in the [Google Material Icon](https://fonts.google.com/icons), for
+   * example, `check_box`. Any invalid names are abandoned and replaced with empty string and
+   * results in the icon failing to render.
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1MaterialIcon setName(java.lang.String name) {
@@ -135,8 +141,9 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
 
   /**
    * The stroke weight of the icon. Choose from {100, 200, 300, 400, 500, 600, 700}. If absent,
-   * default value is 400. If any other value is specified, a broken image icon is displayed. See
-   * Customization in [Google Font Icon](https://fonts.google.com/icons) for details.
+   * default value is 400. If any other value is specified, a broken image icon is displayed. To
+   * preview different icon settings, go to [Google Font Icons](https://fonts.google.com/icons) and
+   * adjust the settings under **Customize**.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getWeight() {
@@ -145,8 +152,9 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
 
   /**
    * The stroke weight of the icon. Choose from {100, 200, 300, 400, 500, 600, 700}. If absent,
-   * default value is 400. If any other value is specified, a broken image icon is displayed. See
-   * Customization in [Google Font Icon](https://fonts.google.com/icons) for details.
+   * default value is 400. If any other value is specified, a broken image icon is displayed. To
+   * preview different icon settings, go to [Google Font Icons](https://fonts.google.com/icons) and
+   * adjust the settings under **Customize**.
    * @param weight weight or {@code null} for none
    */
   public GoogleAppsCardV1MaterialIcon setWeight(java.lang.Integer weight) {

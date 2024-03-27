@@ -67,7 +67,7 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   private Status errorStatus;
 
   /**
-   * The resource name of the transfer run. Transfer run names have the form
+   * Identifier. The resource name of the transfer run. Transfer run names have the form
    * `projects/{project_id}/locations/{location}/transferConfigs/{config_id}/runs/{run_id}`. The
    * name is ignored when creating a transfer run.
    * The value may be {@code null}.
@@ -234,7 +234,7 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the transfer run. Transfer run names have the form
+   * Identifier. The resource name of the transfer run. Transfer run names have the form
    * `projects/{project_id}/locations/{location}/transferConfigs/{config_id}/runs/{run_id}`. The
    * name is ignored when creating a transfer run.
    * @return value or {@code null} for none
@@ -244,7 +244,7 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the transfer run. Transfer run names have the form
+   * Identifier. The resource name of the transfer run. Transfer run names have the form
    * `projects/{project_id}/locations/{location}/transferConfigs/{config_id}/runs/{run_id}`. The
    * name is ignored when creating a transfer run.
    * @param name name or {@code null} for none

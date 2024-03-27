@@ -2179,6 +2179,1097 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
 
       }
       /**
+       * An accessor for creating requests from the DiscoveryClients collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code MigrationCenterAPI migrationcenter = new MigrationCenterAPI(...);}
+       *   {@code MigrationCenterAPI.DiscoveryClients.List request = migrationcenter.discoveryClients().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DiscoveryClients discoveryClients() {
+        return new DiscoveryClients();
+      }
+
+      /**
+       * The "discoveryClients" collection of methods.
+       */
+      public class DiscoveryClients {
+
+        /**
+         * Creates a new discovery client.
+         *
+         * Create a request for the method "discoveryClients.create".
+         *
+         * This request holds the parameters needed by the migrationcenter server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent resource.
+         * @param content the {@link com.google.api.services.migrationcenter.v1.model.DiscoveryClient}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.migrationcenter.v1.model.DiscoveryClient content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/discoveryClients";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new discovery client.
+           *
+           * Create a request for the method "discoveryClients.create".
+           *
+           * This request holds the parameters needed by the the migrationcenter server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent resource.
+           * @param content the {@link com.google.api.services.migrationcenter.v1.model.DiscoveryClient}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.migrationcenter.v1.model.DiscoveryClient content) {
+            super(MigrationCenterAPI.this, "POST", REST_PATH, content, com.google.api.services.migrationcenter.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Parent resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent resource.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Parent resource. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. User specified ID for the discovery client. It will become the last component
+           * of the discovery client name. The ID must be unique within the project, is restricted
+           * to lower-cased letters and has a maximum length of 63 characters. The ID must match the
+           * regular expression: `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String discoveryClientId;
+
+          /** Required. User specified ID for the discovery client. It will become the last component of the
+         discovery client name. The ID must be unique within the project, is restricted to lower-cased
+         letters and has a maximum length of 63 characters. The ID must match the regular expression:
+         `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
+           */
+          public java.lang.String getDiscoveryClientId() {
+            return discoveryClientId;
+          }
+
+          /**
+           * Required. User specified ID for the discovery client. It will become the last component
+           * of the discovery client name. The ID must be unique within the project, is restricted
+           * to lower-cased letters and has a maximum length of 63 characters. The ID must match the
+           * regular expression: `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
+           */
+          public Create setDiscoveryClientId(java.lang.String discoveryClientId) {
+            this.discoveryClientId = discoveryClientId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a discovery client.
+         *
+         * Create a request for the method "discoveryClients.delete".
+         *
+         * This request holds the parameters needed by the migrationcenter server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The discovery client name.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/discoveryClients/[^/]+$");
+
+          /**
+           * Deletes a discovery client.
+           *
+           * Create a request for the method "discoveryClients.delete".
+           *
+           * This request holds the parameters needed by the the migrationcenter server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The discovery client name.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(MigrationCenterAPI.this, "DELETE", REST_PATH, null, com.google.api.services.migrationcenter.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryClients/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The discovery client name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The discovery client name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The discovery client name. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryClients/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes after the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the details of a discovery client.
+         *
+         * Create a request for the method "discoveryClients.get".
+         *
+         * This request holds the parameters needed by the migrationcenter server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The discovery client name.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1.model.DiscoveryClient> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/discoveryClients/[^/]+$");
+
+          /**
+           * Gets the details of a discovery client.
+           *
+           * Create a request for the method "discoveryClients.get".
+           *
+           * This request holds the parameters needed by the the migrationcenter server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The discovery client name.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(MigrationCenterAPI.this, "GET", REST_PATH, null, com.google.api.services.migrationcenter.v1.model.DiscoveryClient.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryClients/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The discovery client name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The discovery client name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The discovery client name. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryClients/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all the discovery clients in a given project and location.
+         *
+         * Create a request for the method "discoveryClients.list".
+         *
+         * This request holds the parameters needed by the migrationcenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent resource.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1.model.ListDiscoveryClientsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/discoveryClients";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all the discovery clients in a given project and location.
+           *
+           * Create a request for the method "discoveryClients.list".
+           *
+           * This request holds the parameters needed by the the migrationcenter server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent resource.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(MigrationCenterAPI.this, "GET", REST_PATH, null, com.google.api.services.migrationcenter.v1.model.ListDiscoveryClientsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Parent resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent resource.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Parent resource. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filter expression to filter results by. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter expression to filter results by.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filter expression to filter results by. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Field to sort by. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Field to sort by.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Field to sort by. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. The server may return fewer items than
+           * requested. If unspecified, the server will pick an appropriate default value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of items to return. The server may return fewer items than requested.
+         If unspecified, the server will pick an appropriate default value.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. The server may return fewer items than
+           * requested. If unspecified, the server will pick an appropriate default value.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListDiscoveryClients` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListDiscoveryClients` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListDiscoveryClients` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListDiscoveryClients` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListDiscoveryClients` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListDiscoveryClients` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a discovery client.
+         *
+         * Create a request for the method "discoveryClients.patch".
+         *
+         * This request holds the parameters needed by the migrationcenter server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Identifier. Full name of this discovery client.
+         * @param content the {@link com.google.api.services.migrationcenter.v1.model.DiscoveryClient}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.migrationcenter.v1.model.DiscoveryClient content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/discoveryClients/[^/]+$");
+
+          /**
+           * Updates a discovery client.
+           *
+           * Create a request for the method "discoveryClients.patch".
+           *
+           * This request holds the parameters needed by the the migrationcenter server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Identifier. Full name of this discovery client.
+           * @param content the {@link com.google.api.services.migrationcenter.v1.model.DiscoveryClient}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.migrationcenter.v1.model.DiscoveryClient content) {
+            super(MigrationCenterAPI.this, "PATCH", REST_PATH, content, com.google.api.services.migrationcenter.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryClients/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Output only. Identifier. Full name of this discovery client. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Identifier. Full name of this discovery client.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Output only. Identifier. Full name of this discovery client. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryClients/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Required. Update mask is used to specify the fields to be overwritten in the
+           * `DiscoveryClient` resource by the update. The values specified in the `update_mask`
+           * field are relative to the resource, not the full request. A field will be overwritten
+           * if it is in the mask. A single * value in the mask lets you to overwrite all fields.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Update mask is used to specify the fields to be overwritten in the `DiscoveryClient`
+         resource by the update. The values specified in the `update_mask` field are relative to the
+         resource, not the full request. A field will be overwritten if it is in the mask. A single * value
+         in the mask lets you to overwrite all fields.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Update mask is used to specify the fields to be overwritten in the
+           * `DiscoveryClient` resource by the update. The values specified in the `update_mask`
+           * field are relative to the resource, not the full request. A field will be overwritten
+           * if it is in the mask. A single * value in the mask lets you to overwrite all fields.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sends a discovery client heartbeat. Healthy clients are expected to send heartbeats regularly
+         * (normally every few minutes).
+         *
+         * Create a request for the method "discoveryClients.sendHeartbeat".
+         *
+         * This request holds the parameters needed by the migrationcenter server.  After setting any
+         * optional parameters, call the {@link SendHeartbeat#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The discovery client name.
+         * @param content the {@link com.google.api.services.migrationcenter.v1.model.SendDiscoveryClientHeartbeatRequest}
+         * @return the request
+         */
+        public SendHeartbeat sendHeartbeat(java.lang.String name, com.google.api.services.migrationcenter.v1.model.SendDiscoveryClientHeartbeatRequest content) throws java.io.IOException {
+          SendHeartbeat result = new SendHeartbeat(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SendHeartbeat extends MigrationCenterAPIRequest<com.google.api.services.migrationcenter.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:sendHeartbeat";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/discoveryClients/[^/]+$");
+
+          /**
+           * Sends a discovery client heartbeat. Healthy clients are expected to send heartbeats regularly
+           * (normally every few minutes).
+           *
+           * Create a request for the method "discoveryClients.sendHeartbeat".
+           *
+           * This request holds the parameters needed by the the migrationcenter server.  After setting any
+           * optional parameters, call the {@link SendHeartbeat#execute()} method to invoke the remote
+           * operation. <p> {@link SendHeartbeat#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Required. The discovery client name.
+           * @param content the {@link com.google.api.services.migrationcenter.v1.model.SendDiscoveryClientHeartbeatRequest}
+           * @since 1.13
+           */
+          protected SendHeartbeat(java.lang.String name, com.google.api.services.migrationcenter.v1.model.SendDiscoveryClientHeartbeatRequest content) {
+            super(MigrationCenterAPI.this, "POST", REST_PATH, content, com.google.api.services.migrationcenter.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryClients/[^/]+$");
+            }
+          }
+
+          @Override
+          public SendHeartbeat set$Xgafv(java.lang.String $Xgafv) {
+            return (SendHeartbeat) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SendHeartbeat setAccessToken(java.lang.String accessToken) {
+            return (SendHeartbeat) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SendHeartbeat setAlt(java.lang.String alt) {
+            return (SendHeartbeat) super.setAlt(alt);
+          }
+
+          @Override
+          public SendHeartbeat setCallback(java.lang.String callback) {
+            return (SendHeartbeat) super.setCallback(callback);
+          }
+
+          @Override
+          public SendHeartbeat setFields(java.lang.String fields) {
+            return (SendHeartbeat) super.setFields(fields);
+          }
+
+          @Override
+          public SendHeartbeat setKey(java.lang.String key) {
+            return (SendHeartbeat) super.setKey(key);
+          }
+
+          @Override
+          public SendHeartbeat setOauthToken(java.lang.String oauthToken) {
+            return (SendHeartbeat) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SendHeartbeat setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SendHeartbeat) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SendHeartbeat setQuotaUser(java.lang.String quotaUser) {
+            return (SendHeartbeat) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SendHeartbeat setUploadType(java.lang.String uploadType) {
+            return (SendHeartbeat) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SendHeartbeat setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SendHeartbeat) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The discovery client name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The discovery client name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The discovery client name. */
+          public SendHeartbeat setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveryClients/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public SendHeartbeat set(String parameterName, Object value) {
+            return (SendHeartbeat) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Groups collection.
        *
        * <p>The typical use is:</p>

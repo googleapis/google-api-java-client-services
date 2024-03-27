@@ -84,6 +84,17 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String ageGroup;
 
   /**
+   * A safeguard in the [Automated
+   * Discounts](https://support.google.com/merchants/answer/10295759?hl=en) and [Dynamic
+   * Promotions](https://support.google.com/merchants/answer/13949249?hl=en) projects, ensuring that
+   * discounts on merchants' offers do not fall below this value, thereby preserving the offer's
+   * value and profitability.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price autoPricingMinPrice;
+
+  /**
    * Availability status of the item.
    * The value may be {@code null}.
    */
@@ -885,6 +896,31 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setAgeGroup(java.lang.String ageGroup) {
     this.ageGroup = ageGroup;
+    return this;
+  }
+
+  /**
+   * A safeguard in the [Automated
+   * Discounts](https://support.google.com/merchants/answer/10295759?hl=en) and [Dynamic
+   * Promotions](https://support.google.com/merchants/answer/13949249?hl=en) projects, ensuring that
+   * discounts on merchants' offers do not fall below this value, thereby preserving the offer's
+   * value and profitability.
+   * @return value or {@code null} for none
+   */
+  public Price getAutoPricingMinPrice() {
+    return autoPricingMinPrice;
+  }
+
+  /**
+   * A safeguard in the [Automated
+   * Discounts](https://support.google.com/merchants/answer/10295759?hl=en) and [Dynamic
+   * Promotions](https://support.google.com/merchants/answer/13949249?hl=en) projects, ensuring that
+   * discounts on merchants' offers do not fall below this value, thereby preserving the offer's
+   * value and profitability.
+   * @param autoPricingMinPrice autoPricingMinPrice or {@code null} for none
+   */
+  public Product setAutoPricingMinPrice(Price autoPricingMinPrice) {
+    this.autoPricingMinPrice = autoPricingMinPrice;
     return this;
   }
 

@@ -29,6 +29,33 @@ package com.google.api.services.servicecontrol.v2.model;
 @SuppressWarnings("javadoc")
 public final class ReportResponse extends com.google.api.client.json.GenericJson {
 
+  /**
+   * The extension field to store serialized OTel responses. e.g. ExportLogsServiceResponse,
+   * ExportMetricsServiceResponse.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> extensions;
+
+  /**
+   * The extension field to store serialized OTel responses. e.g. ExportLogsServiceResponse,
+   * ExportMetricsServiceResponse.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getExtensions() {
+    return extensions;
+  }
+
+  /**
+   * The extension field to store serialized OTel responses. e.g. ExportLogsServiceResponse,
+   * ExportMetricsServiceResponse.
+   * @param extensions extensions or {@code null} for none
+   */
+  public ReportResponse setExtensions(java.util.Map<String, java.lang.Object> extensions) {
+    this.extensions = extensions;
+    return this;
+  }
+
   @Override
   public ReportResponse set(String fieldName, Object value) {
     return (ReportResponse) super.set(fieldName, value);

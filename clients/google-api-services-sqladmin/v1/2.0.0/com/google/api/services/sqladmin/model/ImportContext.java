@@ -75,6 +75,13 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   private java.lang.String kind;
 
   /**
+   * Optional. Options for importing data from SQL statements.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlImportOptions sqlImportOptions;
+
+  /**
    * Path to the import file in Cloud Storage, in the form `gs://bucketName/fileName`. Compressed
    * gzip files (.gz) are supported when `fileType` is `SQL`. The instance must have write
    * permissions to the bucket and read access to the file.
@@ -188,6 +195,23 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
    */
   public ImportContext setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Optional. Options for importing data from SQL statements.
+   * @return value or {@code null} for none
+   */
+  public SqlImportOptions getSqlImportOptions() {
+    return sqlImportOptions;
+  }
+
+  /**
+   * Optional. Options for importing data from SQL statements.
+   * @param sqlImportOptions sqlImportOptions or {@code null} for none
+   */
+  public ImportContext setSqlImportOptions(SqlImportOptions sqlImportOptions) {
+    this.sqlImportOptions = sqlImportOptions;
     return this;
   }
 
@@ -685,6 +709,71 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
     @Override
     public CsvImportOptions clone() {
       return (CsvImportOptions) super.clone();
+    }
+
+  }
+
+  /**
+   * Optional. Options for importing data from SQL statements.
+   */
+  public static final class SqlImportOptions extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Optional. Whether or not the import should be parallel.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean parallel;
+
+    /**
+     * Optional. The number of threads to use for parallel import.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Integer threads;
+
+    /**
+     * Optional. Whether or not the import should be parallel.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getParallel() {
+      return parallel;
+    }
+
+    /**
+     * Optional. Whether or not the import should be parallel.
+     * @param parallel parallel or {@code null} for none
+     */
+    public SqlImportOptions setParallel(java.lang.Boolean parallel) {
+      this.parallel = parallel;
+      return this;
+    }
+
+    /**
+     * Optional. The number of threads to use for parallel import.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Integer getThreads() {
+      return threads;
+    }
+
+    /**
+     * Optional. The number of threads to use for parallel import.
+     * @param threads threads or {@code null} for none
+     */
+    public SqlImportOptions setThreads(java.lang.Integer threads) {
+      this.threads = threads;
+      return this;
+    }
+
+    @Override
+    public SqlImportOptions set(String fieldName, Object value) {
+      return (SqlImportOptions) super.set(fieldName, value);
+    }
+
+    @Override
+    public SqlImportOptions clone() {
+      return (SqlImportOptions) super.clone();
     }
 
   }

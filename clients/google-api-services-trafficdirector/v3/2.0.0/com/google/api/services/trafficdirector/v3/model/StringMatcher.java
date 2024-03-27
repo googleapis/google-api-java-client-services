@@ -17,7 +17,7 @@
 package com.google.api.services.trafficdirector.v3.model;
 
 /**
- * Specifies the way to match a string. [#next-free-field: 8]
+ * Specifies the way to match a string. [#next-free-field: 9]
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Traffic Director API. For a detailed explanation see:
@@ -36,6 +36,13 @@ public final class StringMatcher extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String contains;
+
+  /**
+   * Use an extension as the matcher type. [#extension-category: envoy.string_matcher]
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TypedExtensionConfig custom;
 
   /**
    * The input string must match exactly the string specified here. Examples: * ``abc`` only matches
@@ -93,6 +100,23 @@ public final class StringMatcher extends com.google.api.client.json.GenericJson 
    */
   public StringMatcher setContains(java.lang.String contains) {
     this.contains = contains;
+    return this;
+  }
+
+  /**
+   * Use an extension as the matcher type. [#extension-category: envoy.string_matcher]
+   * @return value or {@code null} for none
+   */
+  public TypedExtensionConfig getCustom() {
+    return custom;
+  }
+
+  /**
+   * Use an extension as the matcher type. [#extension-category: envoy.string_matcher]
+   * @param custom custom or {@code null} for none
+   */
+  public StringMatcher setCustom(TypedExtensionConfig custom) {
+    this.custom = custom;
     return this;
   }
 

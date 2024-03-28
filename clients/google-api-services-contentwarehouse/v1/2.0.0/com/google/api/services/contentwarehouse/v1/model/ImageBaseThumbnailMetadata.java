@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next ID: 15
+ * Next ID: 16
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -73,6 +73,13 @@ public final class ImageBaseThumbnailMetadata extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String encryptedDocid;
+
+  /**
+   * expiration timestamp of thumbnail
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long expirationTimestampMicros;
 
   /**
    * the fprint of the thumbnail
@@ -225,6 +232,23 @@ public final class ImageBaseThumbnailMetadata extends com.google.api.client.json
    */
   public ImageBaseThumbnailMetadata setEncryptedDocid(java.lang.String encryptedDocid) {
     this.encryptedDocid = encryptedDocid;
+    return this;
+  }
+
+  /**
+   * expiration timestamp of thumbnail
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getExpirationTimestampMicros() {
+    return expirationTimestampMicros;
+  }
+
+  /**
+   * expiration timestamp of thumbnail
+   * @param expirationTimestampMicros expirationTimestampMicros or {@code null} for none
+   */
+  public ImageBaseThumbnailMetadata setExpirationTimestampMicros(java.lang.Long expirationTimestampMicros) {
+    this.expirationTimestampMicros = expirationTimestampMicros;
     return this;
   }
 

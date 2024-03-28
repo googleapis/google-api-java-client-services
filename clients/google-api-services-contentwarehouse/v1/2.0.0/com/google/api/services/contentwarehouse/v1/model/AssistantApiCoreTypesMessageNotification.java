@@ -17,8 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * LINT.IfChange(ungoverned_message_notification) This proto captures the contents of a messaging
- * app notification that is typically part of a conversation thread. Next Id: 21
+ * This proto captures the contents of a messaging app notification that is typically part of a
+ * conversation thread. Next Id: 21
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

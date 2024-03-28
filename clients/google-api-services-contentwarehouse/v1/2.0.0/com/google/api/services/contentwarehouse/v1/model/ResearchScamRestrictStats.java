@@ -17,8 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Structure to hold the number of active and total datapoints for a given dataset, as defined
- * below. Last used: 2
+ * TODO(qhliao) move this proto to research/scam/proto/restricts.proto Structure to hold the number
+ * of active and total datapoints for a given dataset, as defined below. Last used: 3
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -30,6 +30,14 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class ResearchScamRestrictStats extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Information about the evaluation of the restricts for this query. Could be used for production
+   * (e.g., custom restrict pass certain information to the downstream). copybara:strip_end
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResearchScamRestrictEvaluationInfo evaluationInfo;
 
   /**
    * The number of datapoints that are whitelisted by restricts specified for this query, across all
@@ -51,6 +59,25 @@ public final class ResearchScamRestrictStats extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger numTotalDatapoints;
+
+  /**
+   * Information about the evaluation of the restricts for this query. Could be used for production
+   * (e.g., custom restrict pass certain information to the downstream). copybara:strip_end
+   * @return value or {@code null} for none
+   */
+  public ResearchScamRestrictEvaluationInfo getEvaluationInfo() {
+    return evaluationInfo;
+  }
+
+  /**
+   * Information about the evaluation of the restricts for this query. Could be used for production
+   * (e.g., custom restrict pass certain information to the downstream). copybara:strip_end
+   * @param evaluationInfo evaluationInfo or {@code null} for none
+   */
+  public ResearchScamRestrictStats setEvaluationInfo(ResearchScamRestrictEvaluationInfo evaluationInfo) {
+    this.evaluationInfo = evaluationInfo;
+    return this;
+  }
 
   /**
    * The number of datapoints that are whitelisted by restricts specified for this query, across all

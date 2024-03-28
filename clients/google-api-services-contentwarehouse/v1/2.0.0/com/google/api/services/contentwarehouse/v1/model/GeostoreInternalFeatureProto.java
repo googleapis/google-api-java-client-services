@@ -17,7 +17,10 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Main proto for all internal fields to be stored at the feature level.
+ * InternalFeatureProto represents fields for data that are more about other data within the
+ * FeatureProto than about the feature itself. This could be data that's set by editors
+ * directly(ish) (e.g. trust or rights data), or data set internally by MapFacts based on other data
+ * (e.g. polygon shape IDs).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

@@ -36,7 +36,7 @@ public final class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AssistantApiCoreTypesGovernedColor backgroundColor;
+  private AssistantApiCoreTypesColor backgroundColor;
 
   /**
    * The value may be {@code null}.
@@ -67,7 +67,7 @@ public final class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AssistantApiCoreTypesGovernedColor maskColor;
+  private AssistantApiCoreTypesColor maskColor;
 
   /**
    * URL for the background image of the agent on portrait display.
@@ -81,14 +81,14 @@ public final class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AssistantApiCoreTypesGovernedColor primaryColor;
+  private AssistantApiCoreTypesColor primaryColor;
 
   /**
    * The background color of the agent. Used if no background image is specified for the given
    * display orientation, or if the provided background image does not fit.
    * @return value or {@code null} for none
    */
-  public AssistantApiCoreTypesGovernedColor getBackgroundColor() {
+  public AssistantApiCoreTypesColor getBackgroundColor() {
     return backgroundColor;
   }
 
@@ -97,7 +97,7 @@ public final class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends com.
    * display orientation, or if the provided background image does not fit.
    * @param backgroundColor backgroundColor or {@code null} for none
    */
-  public AssistantApiCoreTypesCloudProviderInfoAgentStyle setBackgroundColor(AssistantApiCoreTypesGovernedColor backgroundColor) {
+  public AssistantApiCoreTypesCloudProviderInfoAgentStyle setBackgroundColor(AssistantApiCoreTypesColor backgroundColor) {
     this.backgroundColor = backgroundColor;
     return this;
   }
@@ -162,7 +162,7 @@ public final class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends com.
    * on applying this mask.
    * @return value or {@code null} for none
    */
-  public AssistantApiCoreTypesGovernedColor getMaskColor() {
+  public AssistantApiCoreTypesColor getMaskColor() {
     return maskColor;
   }
 
@@ -171,7 +171,7 @@ public final class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends com.
    * on applying this mask.
    * @param maskColor maskColor or {@code null} for none
    */
-  public AssistantApiCoreTypesCloudProviderInfoAgentStyle setMaskColor(AssistantApiCoreTypesGovernedColor maskColor) {
+  public AssistantApiCoreTypesCloudProviderInfoAgentStyle setMaskColor(AssistantApiCoreTypesColor maskColor) {
     this.maskColor = maskColor;
     return this;
   }
@@ -197,7 +197,7 @@ public final class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends com.
    * The primary color of the agent. Used by the client to style the header and suggestion chips.
    * @return value or {@code null} for none
    */
-  public AssistantApiCoreTypesGovernedColor getPrimaryColor() {
+  public AssistantApiCoreTypesColor getPrimaryColor() {
     return primaryColor;
   }
 
@@ -205,7 +205,7 @@ public final class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends com.
    * The primary color of the agent. Used by the client to style the header and suggestion chips.
    * @param primaryColor primaryColor or {@code null} for none
    */
-  public AssistantApiCoreTypesCloudProviderInfoAgentStyle setPrimaryColor(AssistantApiCoreTypesGovernedColor primaryColor) {
+  public AssistantApiCoreTypesCloudProviderInfoAgentStyle setPrimaryColor(AssistantApiCoreTypesColor primaryColor) {
     this.primaryColor = primaryColor;
     return this;
   }

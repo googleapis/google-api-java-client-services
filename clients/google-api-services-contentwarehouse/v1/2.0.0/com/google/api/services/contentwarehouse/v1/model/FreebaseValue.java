@@ -34,7 +34,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class FreebaseValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * key, uri, or datetime. Present when value is bool.
+   * Present when value is bool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,7 +196,7 @@ public final class FreebaseValue extends com.google.api.client.json.GenericJson 
   private java.lang.String type;
 
   /**
-   * key, uri, or datetime. Present when value is bool.
+   * Present when value is bool.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBoolValue() {
@@ -204,7 +204,7 @@ public final class FreebaseValue extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * key, uri, or datetime. Present when value is bool.
+   * Present when value is bool.
    * @param boolValue boolValue or {@code null} for none
    */
   public FreebaseValue setBoolValue(java.lang.Boolean boolValue) {

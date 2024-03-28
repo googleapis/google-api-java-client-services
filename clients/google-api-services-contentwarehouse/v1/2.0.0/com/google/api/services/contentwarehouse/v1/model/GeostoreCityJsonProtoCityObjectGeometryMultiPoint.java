@@ -31,24 +31,26 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GeostoreCityJsonProtoCityObjectGeometryMultiPoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * A collection of references to vertices in `CityJsonProto.vertex_xyz`.
-   * `CityJsonProto.vertex_xyz` is a flattened list of vertex coordinates. A value in `x_indices`
-   * should be the index of the x-coordinate of the desired vertex V; the full coordinates of vertex
-   * V can then be found at indices [V,V+1,V+2]. For example, an `x_indices` containing 3, 0, and 12
-   * references three vertices, whose complete x,y,z coordinates can respectively be found at
-   * `CityJsonProto.vertex_xyz` indices [3,4,5], [0,1,2], and [12,13,14].
+   * A collection of references to vertices in `CityJsonProto.flattened_vertices`.
+   * `CityJsonProto.flattened_vertices` is a flattened list of vertex coordinates. A value in
+   * `x_indices` should be the index of the x-coordinate of the desired vertex V; the full
+   * coordinates of vertex V can then be found at indices [V,V+1,V+2]. For example, an `x_indices`
+   * containing 3, 0, and 12 references three vertices, whose complete x,y,z coordinates can
+   * respectively be found at `CityJsonProto.flattened_vertices` indices [3,4,5], [0,1,2], and
+   * [12,13,14].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Integer> xIndices;
 
   /**
-   * A collection of references to vertices in `CityJsonProto.vertex_xyz`.
-   * `CityJsonProto.vertex_xyz` is a flattened list of vertex coordinates. A value in `x_indices`
-   * should be the index of the x-coordinate of the desired vertex V; the full coordinates of vertex
-   * V can then be found at indices [V,V+1,V+2]. For example, an `x_indices` containing 3, 0, and 12
-   * references three vertices, whose complete x,y,z coordinates can respectively be found at
-   * `CityJsonProto.vertex_xyz` indices [3,4,5], [0,1,2], and [12,13,14].
+   * A collection of references to vertices in `CityJsonProto.flattened_vertices`.
+   * `CityJsonProto.flattened_vertices` is a flattened list of vertex coordinates. A value in
+   * `x_indices` should be the index of the x-coordinate of the desired vertex V; the full
+   * coordinates of vertex V can then be found at indices [V,V+1,V+2]. For example, an `x_indices`
+   * containing 3, 0, and 12 references three vertices, whose complete x,y,z coordinates can
+   * respectively be found at `CityJsonProto.flattened_vertices` indices [3,4,5], [0,1,2], and
+   * [12,13,14].
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getXIndices() {
@@ -56,12 +58,13 @@ public final class GeostoreCityJsonProtoCityObjectGeometryMultiPoint extends com
   }
 
   /**
-   * A collection of references to vertices in `CityJsonProto.vertex_xyz`.
-   * `CityJsonProto.vertex_xyz` is a flattened list of vertex coordinates. A value in `x_indices`
-   * should be the index of the x-coordinate of the desired vertex V; the full coordinates of vertex
-   * V can then be found at indices [V,V+1,V+2]. For example, an `x_indices` containing 3, 0, and 12
-   * references three vertices, whose complete x,y,z coordinates can respectively be found at
-   * `CityJsonProto.vertex_xyz` indices [3,4,5], [0,1,2], and [12,13,14].
+   * A collection of references to vertices in `CityJsonProto.flattened_vertices`.
+   * `CityJsonProto.flattened_vertices` is a flattened list of vertex coordinates. A value in
+   * `x_indices` should be the index of the x-coordinate of the desired vertex V; the full
+   * coordinates of vertex V can then be found at indices [V,V+1,V+2]. For example, an `x_indices`
+   * containing 3, 0, and 12 references three vertices, whose complete x,y,z coordinates can
+   * respectively be found at `CityJsonProto.flattened_vertices` indices [3,4,5], [0,1,2], and
+   * [12,13,14].
    * @param xIndices xIndices or {@code null} for none
    */
   public GeostoreCityJsonProtoCityObjectGeometryMultiPoint setXIndices(java.util.List<java.lang.Integer> xIndices) {

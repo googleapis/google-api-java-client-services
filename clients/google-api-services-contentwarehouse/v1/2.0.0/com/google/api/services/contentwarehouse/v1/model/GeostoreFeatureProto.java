@@ -224,6 +224,16 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreDataSourceProto dataSource;
 
   /**
+   * Geometry Store ID and materialized geometry representing the feature's physical presence in the
+   * world. Like geometry_3d above, but with additional semantic or renderable details, e.g. labeled
+   * surfaces ("door", "window"), material specifications, etc. IMPORTANT: Clients may not write to
+   * this field directly; see go/geometry-store-reading-and-writing#writing-to-geometry-store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeostoreGeometryStoreReferenceProto detailed3dModel;
+
+  /**
    * Data used to render this feature on a map.
    * The value may be {@code null}.
    */
@@ -309,7 +319,8 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
 
   /**
    * Geometry Store ID and materialized geometry representing the feature's physical shape in the
-   * world.
+   * world. IMPORTANT: Clients may not write to this field directly; see go/geometry-store-reading-
+   * and-writing#writing-to-geometry-store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -368,9 +379,9 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreCellCoveringProto interiorCovering;
 
   /**
-   * Additional internal feature-level attributes that may be set by data providers to be used
-   * inside the Geo Data infrastructure. This field should never be present in the output of the Geo
-   * Data infrastructure that read-only clients consume.
+   * Data for this feature that is less about the feature and more about other data in the feature.
+   * For example, it might be data about the rights we have to other data in this FeatureProto, or
+   * MapFacts-internal shape IDs for this feature's polygons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -786,7 +797,9 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * Geometry Store ID and materialized geometry for a POI feature's storefront(s).
+   * Geometry Store ID and materialized geometry for a POI feature's storefront(s). IMPORTANT:
+   * Clients may not write to this field directly; see go/geometry-store-reading-and-writing
+   * #writing-to-geometry-store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -823,6 +836,13 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private GeostoreTollClusterProto tollCluster;
+
+  /**
+   * Represents information about /geo/type/toll_path features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeostoreTollPathProto tollPath;
 
   /**
    * Defines the geometry of a feature as a sequence of 6D poses, including lat, lng, altitude,
@@ -868,8 +888,10 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   private GeostoreVerticalOrderingProto verticalOrdering;
 
   /**
-   * Geometry Store ID and materialized geometry representing a tight bounding box of the feature's
-   * geometry (or the building/grounds a POI occupies), e.g. for generating flyover experiences.
+   * Geometry Store ID and materialized geometry representing a bounding box of the feature's
+   * geometry (or the building/grounds a POI occupies) for stylized rendering, UX experiences, etc.
+   * IMPORTANT: Clients may not write to this field directly; see go/geometry-store-reading-and-
+   * writing#writing-to-geometry-store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1243,6 +1265,29 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
+   * Geometry Store ID and materialized geometry representing the feature's physical presence in the
+   * world. Like geometry_3d above, but with additional semantic or renderable details, e.g. labeled
+   * surfaces ("door", "window"), material specifications, etc. IMPORTANT: Clients may not write to
+   * this field directly; see go/geometry-store-reading-and-writing#writing-to-geometry-store.
+   * @return value or {@code null} for none
+   */
+  public GeostoreGeometryStoreReferenceProto getDetailed3dModel() {
+    return detailed3dModel;
+  }
+
+  /**
+   * Geometry Store ID and materialized geometry representing the feature's physical presence in the
+   * world. Like geometry_3d above, but with additional semantic or renderable details, e.g. labeled
+   * surfaces ("door", "window"), material specifications, etc. IMPORTANT: Clients may not write to
+   * this field directly; see go/geometry-store-reading-and-writing#writing-to-geometry-store.
+   * @param detailed3dModel detailed3dModel or {@code null} for none
+   */
+  public GeostoreFeatureProto setDetailed3dModel(GeostoreGeometryStoreReferenceProto detailed3dModel) {
+    this.detailed3dModel = detailed3dModel;
+    return this;
+  }
+
+  /**
    * Data used to render this feature on a map.
    * @return value or {@code null} for none
    */
@@ -1430,7 +1475,8 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
 
   /**
    * Geometry Store ID and materialized geometry representing the feature's physical shape in the
-   * world.
+   * world. IMPORTANT: Clients may not write to this field directly; see go/geometry-store-reading-
+   * and-writing#writing-to-geometry-store.
    * @return value or {@code null} for none
    */
   public GeostoreGeometryStoreReferenceProto getGeometry3d() {
@@ -1439,7 +1485,8 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
 
   /**
    * Geometry Store ID and materialized geometry representing the feature's physical shape in the
-   * world.
+   * world. IMPORTANT: Clients may not write to this field directly; see go/geometry-store-reading-
+   * and-writing#writing-to-geometry-store.
    * @param geometry3d geometry3d or {@code null} for none
    */
   public GeostoreFeatureProto setGeometry3d(GeostoreGeometryStoreReferenceProto geometry3d) {
@@ -1573,9 +1620,9 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * Additional internal feature-level attributes that may be set by data providers to be used
-   * inside the Geo Data infrastructure. This field should never be present in the output of the Geo
-   * Data infrastructure that read-only clients consume.
+   * Data for this feature that is less about the feature and more about other data in the feature.
+   * For example, it might be data about the rights we have to other data in this FeatureProto, or
+   * MapFacts-internal shape IDs for this feature's polygons.
    * @return value or {@code null} for none
    */
   public GeostoreInternalFeatureProto getInternal() {
@@ -1583,9 +1630,9 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * Additional internal feature-level attributes that may be set by data providers to be used
-   * inside the Geo Data infrastructure. This field should never be present in the output of the Geo
-   * Data infrastructure that read-only clients consume.
+   * Data for this feature that is less about the feature and more about other data in the feature.
+   * For example, it might be data about the rights we have to other data in this FeatureProto, or
+   * MapFacts-internal shape IDs for this feature's polygons.
    * @param internal internal or {@code null} for none
    */
   public GeostoreFeatureProto setInternal(GeostoreInternalFeatureProto internal) {
@@ -2475,7 +2522,9 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * Geometry Store ID and materialized geometry for a POI feature's storefront(s).
+   * Geometry Store ID and materialized geometry for a POI feature's storefront(s). IMPORTANT:
+   * Clients may not write to this field directly; see go/geometry-store-reading-and-writing
+   * #writing-to-geometry-store.
    * @return value or {@code null} for none
    */
   public GeostoreGeometryStoreReferenceProto getStorefrontGeometryModel() {
@@ -2483,7 +2532,9 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * Geometry Store ID and materialized geometry for a POI feature's storefront(s).
+   * Geometry Store ID and materialized geometry for a POI feature's storefront(s). IMPORTANT:
+   * Clients may not write to this field directly; see go/geometry-store-reading-and-writing
+   * #writing-to-geometry-store.
    * @param storefrontGeometryModel storefrontGeometryModel or {@code null} for none
    */
   public GeostoreFeatureProto setStorefrontGeometryModel(GeostoreGeometryStoreReferenceProto storefrontGeometryModel) {
@@ -2564,6 +2615,23 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
    */
   public GeostoreFeatureProto setTollCluster(GeostoreTollClusterProto tollCluster) {
     this.tollCluster = tollCluster;
+    return this;
+  }
+
+  /**
+   * Represents information about /geo/type/toll_path features.
+   * @return value or {@code null} for none
+   */
+  public GeostoreTollPathProto getTollPath() {
+    return tollPath;
+  }
+
+  /**
+   * Represents information about /geo/type/toll_path features.
+   * @param tollPath tollPath or {@code null} for none
+   */
+  public GeostoreFeatureProto setTollPath(GeostoreTollPathProto tollPath) {
+    this.tollPath = tollPath;
     return this;
   }
 
@@ -2672,8 +2740,10 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * Geometry Store ID and materialized geometry representing a tight bounding box of the feature's
-   * geometry (or the building/grounds a POI occupies), e.g. for generating flyover experiences.
+   * Geometry Store ID and materialized geometry representing a bounding box of the feature's
+   * geometry (or the building/grounds a POI occupies) for stylized rendering, UX experiences, etc.
+   * IMPORTANT: Clients may not write to this field directly; see go/geometry-store-reading-and-
+   * writing#writing-to-geometry-store.
    * @return value or {@code null} for none
    */
   public GeostoreGeometryStoreReferenceProto getVisualizationArea() {
@@ -2681,8 +2751,10 @@ public final class GeostoreFeatureProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * Geometry Store ID and materialized geometry representing a tight bounding box of the feature's
-   * geometry (or the building/grounds a POI occupies), e.g. for generating flyover experiences.
+   * Geometry Store ID and materialized geometry representing a bounding box of the feature's
+   * geometry (or the building/grounds a POI occupies) for stylized rendering, UX experiences, etc.
+   * IMPORTANT: Clients may not write to this field directly; see go/geometry-store-reading-and-
+   * writing#writing-to-geometry-store.
    * @param visualizationArea visualizationArea or {@code null} for none
    */
   public GeostoreFeatureProto setVisualizationArea(GeostoreGeometryStoreReferenceProto visualizationArea) {

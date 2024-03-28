@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * The information related to the device. Next ID: 18
+ * The information related to the device. Next ID: 19
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -36,6 +36,13 @@ public final class AssistantLogsDeviceInfoLog extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String arbitrationDeviceId;
+
+  /**
+   * A list of diffs for the device's context between AvailableDevice and CTF.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantLogsAvailableDeviceAndCtfContextDiffLog availableDeviceAndCtfContextDiff;
 
   /**
    * The value may be {@code null}.
@@ -159,6 +166,23 @@ public final class AssistantLogsDeviceInfoLog extends com.google.api.client.json
    */
   public AssistantLogsDeviceInfoLog setArbitrationDeviceId(java.lang.String arbitrationDeviceId) {
     this.arbitrationDeviceId = arbitrationDeviceId;
+    return this;
+  }
+
+  /**
+   * A list of diffs for the device's context between AvailableDevice and CTF.
+   * @return value or {@code null} for none
+   */
+  public AssistantLogsAvailableDeviceAndCtfContextDiffLog getAvailableDeviceAndCtfContextDiff() {
+    return availableDeviceAndCtfContextDiff;
+  }
+
+  /**
+   * A list of diffs for the device's context between AvailableDevice and CTF.
+   * @param availableDeviceAndCtfContextDiff availableDeviceAndCtfContextDiff or {@code null} for none
+   */
+  public AssistantLogsDeviceInfoLog setAvailableDeviceAndCtfContextDiff(AssistantLogsAvailableDeviceAndCtfContextDiffLog availableDeviceAndCtfContextDiff) {
+    this.availableDeviceAndCtfContextDiff = availableDeviceAndCtfContextDiff;
     return this;
   }
 

@@ -38,6 +38,13 @@ public final class AssistantLogsStructureAnnotationLog extends com.google.api.cl
   private java.lang.String rawTextFromQuery;
 
   /**
+   * The identification of the structure.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> structureId;
+
+  /**
    * The annotation type mentioned in the query.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class AssistantLogsStructureAnnotationLog extends com.google.api.cl
    */
   public AssistantLogsStructureAnnotationLog setRawTextFromQuery(java.lang.String rawTextFromQuery) {
     this.rawTextFromQuery = rawTextFromQuery;
+    return this;
+  }
+
+  /**
+   * The identification of the structure.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getStructureId() {
+    return structureId;
+  }
+
+  /**
+   * The identification of the structure.
+   * @param structureId structureId or {@code null} for none
+   */
+  public AssistantLogsStructureAnnotationLog setStructureId(java.util.List<java.lang.String> structureId) {
+    this.structureId = structureId;
     return this;
   }
 

@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * This message will specify supports for fields in |assistant.embedded.v1.DeviceOp|, for a device
- * model package. See go/easi-client-op2 for more info. Next ID: 17
+ * model package. See go/easi-client-op2 for more info. Next ID: 19
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -80,6 +80,14 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
    */
   @com.google.api.client.util.Key
   private AssistantDevicesPlatformProtoExecutionWaitCapability executionWait;
+
+  /**
+   * |get_health_observation| specifies the support for get_health_observation client_op, and the
+   * corresponding get_health_observation field in assistant.embedded.v1.DeviceOp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantDevicesPlatformProtoGetHealthObservationCapability getHealthObservation;
 
   /**
    * The value may be {@code null}.
@@ -146,6 +154,14 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
    */
   @com.google.api.client.util.Key
   private AssistantDevicesPlatformProtoSendChatMessageCapability sendChatMessage;
+
+  /**
+   * |ui_show_interpreter| specifies the support for ui.SHOW_INTERPRETER client_op, and the
+   * corresponding ui_show_interpreter field in assistant.embedded.v1.DeviceOp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantDevicesPlatformProtoUiShowInterpreterCapability uiShowInterpreter;
 
   /**
    * |call_call| specifies the support for the call.CALL clientop, and the corresponding call_call
@@ -262,6 +278,25 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
    */
   public AssistantDevicesPlatformProtoSupportedDeviceOps setExecutionWait(AssistantDevicesPlatformProtoExecutionWaitCapability executionWait) {
     this.executionWait = executionWait;
+    return this;
+  }
+
+  /**
+   * |get_health_observation| specifies the support for get_health_observation client_op, and the
+   * corresponding get_health_observation field in assistant.embedded.v1.DeviceOp.
+   * @return value or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoGetHealthObservationCapability getGetHealthObservation() {
+    return getHealthObservation;
+  }
+
+  /**
+   * |get_health_observation| specifies the support for get_health_observation client_op, and the
+   * corresponding get_health_observation field in assistant.embedded.v1.DeviceOp.
+   * @param getHealthObservation getHealthObservation or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoSupportedDeviceOps setGetHealthObservation(AssistantDevicesPlatformProtoGetHealthObservationCapability getHealthObservation) {
+    this.getHealthObservation = getHealthObservation;
     return this;
   }
 
@@ -424,6 +459,25 @@ public final class AssistantDevicesPlatformProtoSupportedDeviceOps extends com.g
    */
   public AssistantDevicesPlatformProtoSupportedDeviceOps setSendChatMessage(AssistantDevicesPlatformProtoSendChatMessageCapability sendChatMessage) {
     this.sendChatMessage = sendChatMessage;
+    return this;
+  }
+
+  /**
+   * |ui_show_interpreter| specifies the support for ui.SHOW_INTERPRETER client_op, and the
+   * corresponding ui_show_interpreter field in assistant.embedded.v1.DeviceOp.
+   * @return value or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoUiShowInterpreterCapability getUiShowInterpreter() {
+    return uiShowInterpreter;
+  }
+
+  /**
+   * |ui_show_interpreter| specifies the support for ui.SHOW_INTERPRETER client_op, and the
+   * corresponding ui_show_interpreter field in assistant.embedded.v1.DeviceOp.
+   * @param uiShowInterpreter uiShowInterpreter or {@code null} for none
+   */
+  public AssistantDevicesPlatformProtoSupportedDeviceOps setUiShowInterpreter(AssistantDevicesPlatformProtoUiShowInterpreterCapability uiShowInterpreter) {
+    this.uiShowInterpreter = uiShowInterpreter;
     return this;
   }
 

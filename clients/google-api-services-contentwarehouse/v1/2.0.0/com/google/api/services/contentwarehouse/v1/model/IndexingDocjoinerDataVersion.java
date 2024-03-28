@@ -29,7 +29,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * their code. Please also see the comment of FieldProjector above. There are also some fields in
  * DataInfo that annotate who generates the data, the Index Signals or Goldmine annotator name for
  * the fields already onboarded or being onboarded to FDP. Fields without annotation of signal_names
- * or goldmine_annotator_names are not onboarded. Next ID: 539
+ * or goldmine_annotator_names are not onboarded. Next ID: 543
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -457,7 +457,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   private IndexingDocjoinerDataVersionVersionInfo imageembed;
 
   /**
-   * END DATA FIELDS
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1521,6 +1520,13 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   private IndexingDocjoinerDataVersionVersionInfo noindexedImageDataList;
 
   /**
+   * Must be used together with quality_nsr_nsr_data
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo nsrFdpData;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1717,6 +1723,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo officialPagesQuerySet;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo orbitIntents;
 
   /**
    * The value may be {@code null}.
@@ -2826,6 +2838,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo robotsPolicy;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo rosettaLanguage;
 
   /**
@@ -3007,6 +3025,13 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo spamTokensSpamTokensAnnotation;
+
+  /**
+   * END DATA FIELDS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo spambrainDomainSitechunkData;
 
   /**
    * The value may be {@code null}.
@@ -4278,7 +4303,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * END DATA FIELDS
    * @return value or {@code null} for none
    */
   public IndexingDocjoinerDataVersionVersionInfo getImageembedDomainNorm() {
@@ -4286,7 +4310,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * END DATA FIELDS
    * @param imageembedDomainNorm imageembedDomainNorm or {@code null} for none
    */
   public IndexingDocjoinerDataVersion setImageembedDomainNorm(IndexingDocjoinerDataVersionVersionInfo imageembedDomainNorm) {
@@ -6937,6 +6960,23 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
+   * Must be used together with quality_nsr_nsr_data
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getNsrFdpData() {
+    return nsrFdpData;
+  }
+
+  /**
+   * Must be used together with quality_nsr_nsr_data
+   * @param nsrFdpData nsrFdpData or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setNsrFdpData(IndexingDocjoinerDataVersionVersionInfo nsrFdpData) {
+    this.nsrFdpData = nsrFdpData;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public IndexingDocjoinerDataVersionVersionInfo getNumberAnnotations() {
@@ -7428,6 +7468,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setOfficialPagesQuerySet(IndexingDocjoinerDataVersionVersionInfo officialPagesQuerySet) {
     this.officialPagesQuerySet = officialPagesQuerySet;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getOrbitIntents() {
+    return orbitIntents;
+  }
+
+  /**
+   * @param orbitIntents orbitIntents or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setOrbitIntents(IndexingDocjoinerDataVersionVersionInfo orbitIntents) {
+    this.orbitIntents = orbitIntents;
     return this;
   }
 
@@ -10194,6 +10249,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getRobotsPolicy() {
+    return robotsPolicy;
+  }
+
+  /**
+   * @param robotsPolicy robotsPolicy or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setRobotsPolicy(IndexingDocjoinerDataVersionVersionInfo robotsPolicy) {
+    this.robotsPolicy = robotsPolicy;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getRosettaLanguage() {
     return rosettaLanguage;
   }
@@ -10653,6 +10723,23 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setSpamTokensSpamTokensAnnotation(IndexingDocjoinerDataVersionVersionInfo spamTokensSpamTokensAnnotation) {
     this.spamTokensSpamTokensAnnotation = spamTokensSpamTokensAnnotation;
+    return this;
+  }
+
+  /**
+   * END DATA FIELDS
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getSpambrainDomainSitechunkData() {
+    return spambrainDomainSitechunkData;
+  }
+
+  /**
+   * END DATA FIELDS
+   * @param spambrainDomainSitechunkData spambrainDomainSitechunkData or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setSpambrainDomainSitechunkData(IndexingDocjoinerDataVersionVersionInfo spambrainDomainSitechunkData) {
+    this.spambrainDomainSitechunkData = spambrainDomainSitechunkData;
     return this;
   }
 

@@ -38,6 +38,13 @@ public final class ImageContentStarburstVersionGroup extends com.google.api.clie
   private java.util.List<java.lang.Float> descriptorFloat;
 
   /**
+   * Raw dense float feature vector prior to embedding. Only for Starburst V6.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Float> descriptorFloatBeforeProjection;
+
+  /**
    * Short descriptor for image content features, e.g. compressed bytes. This is the compressed
    * version of descriptor_float below. It can be can be decompressed to descriptor_float with a
    * tiny bit of compression error (in most cases it should be totally fine).
@@ -66,6 +73,14 @@ public final class ImageContentStarburstVersionGroup extends com.google.api.clie
   private java.util.List<java.lang.Integer> starburstTokens;
 
   /**
+   * Squared distance of the current embedding to each cluster center. Elements are aligned with
+   * starburst_tokens.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Float> starburstTokensDistances;
+
+  /**
    * The following integers are currently used: Starburst V1: 1 Starburst V2: 2 Starburst V3: 3
    * Starburst V4: 4 Starburst Visual V4: 1004 This field is deprecated. Please try to use the
    * 'enum_version' in future.
@@ -88,6 +103,23 @@ public final class ImageContentStarburstVersionGroup extends com.google.api.clie
    */
   public ImageContentStarburstVersionGroup setDescriptorFloat(java.util.List<java.lang.Float> descriptorFloat) {
     this.descriptorFloat = descriptorFloat;
+    return this;
+  }
+
+  /**
+   * Raw dense float feature vector prior to embedding. Only for Starburst V6.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Float> getDescriptorFloatBeforeProjection() {
+    return descriptorFloatBeforeProjection;
+  }
+
+  /**
+   * Raw dense float feature vector prior to embedding. Only for Starburst V6.
+   * @param descriptorFloatBeforeProjection descriptorFloatBeforeProjection or {@code null} for none
+   */
+  public ImageContentStarburstVersionGroup setDescriptorFloatBeforeProjection(java.util.List<java.lang.Float> descriptorFloatBeforeProjection) {
+    this.descriptorFloatBeforeProjection = descriptorFloatBeforeProjection;
     return this;
   }
 
@@ -188,6 +220,25 @@ public final class ImageContentStarburstVersionGroup extends com.google.api.clie
    */
   public ImageContentStarburstVersionGroup setStarburstTokens(java.util.List<java.lang.Integer> starburstTokens) {
     this.starburstTokens = starburstTokens;
+    return this;
+  }
+
+  /**
+   * Squared distance of the current embedding to each cluster center. Elements are aligned with
+   * starburst_tokens.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Float> getStarburstTokensDistances() {
+    return starburstTokensDistances;
+  }
+
+  /**
+   * Squared distance of the current embedding to each cluster center. Elements are aligned with
+   * starburst_tokens.
+   * @param starburstTokensDistances starburstTokensDistances or {@code null} for none
+   */
+  public ImageContentStarburstVersionGroup setStarburstTokensDistances(java.util.List<java.lang.Float> starburstTokensDistances) {
+    this.starburstTokensDistances = starburstTokensDistances;
     return this;
   }
 

@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * A subset of an Alias that is stored on kansas max. It is used in Search for alias resolution and
- * in Maps to show icons quickly on basetiles.
+ * in Maps to show icons quickly on basetiles. Next ID: 18
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -78,6 +78,15 @@ public final class PersonalizationMapsAliasIcon extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.lang.String formattedAddress;
+
+  /**
+   * Indicates whether this alias is Ads join compliant for use by 3p clients. See go/ios_address
+   * and go/aliased-locations-provenance for more details. Please contact oolong-team@ for
+   * additional questions regarding usage of this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isAdsJoinCompliant;
 
   /**
    * Free-text alias if alias type is NICKNAME. Otherwise unset. Limited to 40 characters.
@@ -237,6 +246,27 @@ public final class PersonalizationMapsAliasIcon extends com.google.api.client.js
    */
   public PersonalizationMapsAliasIcon setFormattedAddress(java.lang.String formattedAddress) {
     this.formattedAddress = formattedAddress;
+    return this;
+  }
+
+  /**
+   * Indicates whether this alias is Ads join compliant for use by 3p clients. See go/ios_address
+   * and go/aliased-locations-provenance for more details. Please contact oolong-team@ for
+   * additional questions regarding usage of this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsAdsJoinCompliant() {
+    return isAdsJoinCompliant;
+  }
+
+  /**
+   * Indicates whether this alias is Ads join compliant for use by 3p clients. See go/ios_address
+   * and go/aliased-locations-provenance for more details. Please contact oolong-team@ for
+   * additional questions regarding usage of this field.
+   * @param isAdsJoinCompliant isAdsJoinCompliant or {@code null} for none
+   */
+  public PersonalizationMapsAliasIcon setIsAdsJoinCompliant(java.lang.Boolean isAdsJoinCompliant) {
+    this.isAdsJoinCompliant = isAdsJoinCompliant;
     return this;
   }
 

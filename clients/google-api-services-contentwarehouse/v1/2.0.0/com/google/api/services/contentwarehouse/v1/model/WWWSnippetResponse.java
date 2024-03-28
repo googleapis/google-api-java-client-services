@@ -245,12 +245,6 @@ public final class WWWSnippetResponse extends com.google.api.client.json.Generic
   private ScienceIndexSignal scienceInfo;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String sectionHeadingAnchorName;
-
-  /**
    * If requested, the snippet generator may take note of query items present in an entry in an on-
    * page table-of-contents (i.e. a series of on-page links to named anchors.) If so, these two
    * fields contain the formatted and highlighted entry and the name of the on-page anchor it links
@@ -259,7 +253,7 @@ public final class WWWSnippetResponse extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String sectionHeadingText;
+  private java.lang.String sectionHeadingAnchorName;
 
   /**
    * Did a negative query term match the meta description?
@@ -942,6 +936,11 @@ public final class WWWSnippetResponse extends com.google.api.client.json.Generic
   }
 
   /**
+   * If requested, the snippet generator may take note of query items present in an entry in an on-
+   * page table-of-contents (i.e. a series of on-page links to named anchors.) If so, these two
+   * fields contain the formatted and highlighted entry and the name of the on-page anchor it links
+   * to, respectively. This may be used by GWS to show a direct link to that named anchor on the
+   * page.
    * @return value or {@code null} for none
    */
   public java.lang.String getSectionHeadingAnchorName() {
@@ -949,35 +948,15 @@ public final class WWWSnippetResponse extends com.google.api.client.json.Generic
   }
 
   /**
+   * If requested, the snippet generator may take note of query items present in an entry in an on-
+   * page table-of-contents (i.e. a series of on-page links to named anchors.) If so, these two
+   * fields contain the formatted and highlighted entry and the name of the on-page anchor it links
+   * to, respectively. This may be used by GWS to show a direct link to that named anchor on the
+   * page.
    * @param sectionHeadingAnchorName sectionHeadingAnchorName or {@code null} for none
    */
   public WWWSnippetResponse setSectionHeadingAnchorName(java.lang.String sectionHeadingAnchorName) {
     this.sectionHeadingAnchorName = sectionHeadingAnchorName;
-    return this;
-  }
-
-  /**
-   * If requested, the snippet generator may take note of query items present in an entry in an on-
-   * page table-of-contents (i.e. a series of on-page links to named anchors.) If so, these two
-   * fields contain the formatted and highlighted entry and the name of the on-page anchor it links
-   * to, respectively. This may be used by GWS to show a direct link to that named anchor on the
-   * page.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSectionHeadingText() {
-    return sectionHeadingText;
-  }
-
-  /**
-   * If requested, the snippet generator may take note of query items present in an entry in an on-
-   * page table-of-contents (i.e. a series of on-page links to named anchors.) If so, these two
-   * fields contain the formatted and highlighted entry and the name of the on-page anchor it links
-   * to, respectively. This may be used by GWS to show a direct link to that named anchor on the
-   * page.
-   * @param sectionHeadingText sectionHeadingText or {@code null} for none
-   */
-  public WWWSnippetResponse setSectionHeadingText(java.lang.String sectionHeadingText) {
-    this.sectionHeadingText = sectionHeadingText;
     return this;
   }
 

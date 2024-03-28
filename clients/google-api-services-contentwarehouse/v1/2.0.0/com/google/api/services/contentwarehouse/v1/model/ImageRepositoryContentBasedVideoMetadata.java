@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next Tag: 51
+ * Next Tag: 52
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -70,6 +70,14 @@ public final class ImageRepositoryContentBasedVideoMetadata extends com.google.a
    */
   @com.google.api.client.util.Key
   private DrishtiFeatureSetData featureSetData;
+
+  /**
+   * Frame-level Starburst embeddings. They are IE only signals for short videos initially and will
+   * be supported for all videos later. (go/frame-level-sbv5-on-ie)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImageRepositoryFrameLevelStarburstEmbeddings frameLevelStarburstEmbeddings;
 
   /**
    * Golden7 video-level people features. (go/ypf-video-features)
@@ -428,6 +436,25 @@ public final class ImageRepositoryContentBasedVideoMetadata extends com.google.a
    */
   public ImageRepositoryContentBasedVideoMetadata setFeatureSetData(DrishtiFeatureSetData featureSetData) {
     this.featureSetData = featureSetData;
+    return this;
+  }
+
+  /**
+   * Frame-level Starburst embeddings. They are IE only signals for short videos initially and will
+   * be supported for all videos later. (go/frame-level-sbv5-on-ie)
+   * @return value or {@code null} for none
+   */
+  public ImageRepositoryFrameLevelStarburstEmbeddings getFrameLevelStarburstEmbeddings() {
+    return frameLevelStarburstEmbeddings;
+  }
+
+  /**
+   * Frame-level Starburst embeddings. They are IE only signals for short videos initially and will
+   * be supported for all videos later. (go/frame-level-sbv5-on-ie)
+   * @param frameLevelStarburstEmbeddings frameLevelStarburstEmbeddings or {@code null} for none
+   */
+  public ImageRepositoryContentBasedVideoMetadata setFrameLevelStarburstEmbeddings(ImageRepositoryFrameLevelStarburstEmbeddings frameLevelStarburstEmbeddings) {
+    this.frameLevelStarburstEmbeddings = frameLevelStarburstEmbeddings;
     return this;
   }
 

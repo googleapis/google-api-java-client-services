@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * These are the set of features that are supported by the device. It's a part of the
- * SoftwareCapabilities of the device. Next ID: 68
+ * SoftwareCapabilities of the device. Next ID: 69
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -324,6 +324,13 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
   private java.lang.Boolean meetSupported;
 
   /**
+   * The client information for message summary. More details in: go/roadwayrecap-prd
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantApiMessageSummarySupport messageSummarySupport;
+
+  /**
    * Whether the client can render no input response or just ignore it. No input response is
    * returned when client has a no speech input interaction, eg. user tapped mic but didn't say
    * anything.
@@ -379,7 +386,8 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
   private java.lang.Boolean readMessagesTtsTaperingSupported;
 
   /**
-   * Whether the client supports message summarization.
+   * Whether the client supports message summarization. Deprecated, use message_summary_support
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -520,13 +528,6 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean webBrowserSupported;
-
-  /**
-   * Whether or not the client supports WhatsNext in the protocol.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean whatsNextSupported;
 
   /**
    * Whether the client supports joining a Zoom meeting.
@@ -1267,6 +1268,23 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
   }
 
   /**
+   * The client information for message summary. More details in: go/roadwayrecap-prd
+   * @return value or {@code null} for none
+   */
+  public AssistantApiMessageSummarySupport getMessageSummarySupport() {
+    return messageSummarySupport;
+  }
+
+  /**
+   * The client information for message summary. More details in: go/roadwayrecap-prd
+   * @param messageSummarySupport messageSummarySupport or {@code null} for none
+   */
+  public AssistantApiSupportedFeatures setMessageSummarySupport(AssistantApiMessageSummarySupport messageSummarySupport) {
+    this.messageSummarySupport = messageSummarySupport;
+    return this;
+  }
+
+  /**
    * Whether the client can render no input response or just ignore it. No input response is
    * returned when client has a no speech input interaction, eg. user tapped mic but didn't say
    * anything.
@@ -1395,7 +1413,8 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
   }
 
   /**
-   * Whether the client supports message summarization.
+   * Whether the client supports message summarization. Deprecated, use message_summary_support
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReadNotificationSummarizationSupported() {
@@ -1403,7 +1422,8 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
   }
 
   /**
-   * Whether the client supports message summarization.
+   * Whether the client supports message summarization. Deprecated, use message_summary_support
+   * instead.
    * @param readNotificationSummarizationSupported readNotificationSummarizationSupported or {@code null} for none
    */
   public AssistantApiSupportedFeatures setReadNotificationSummarizationSupported(java.lang.Boolean readNotificationSummarizationSupported) {
@@ -1731,23 +1751,6 @@ public final class AssistantApiSupportedFeatures extends com.google.api.client.j
    */
   public AssistantApiSupportedFeatures setWebBrowserSupported(java.lang.Boolean webBrowserSupported) {
     this.webBrowserSupported = webBrowserSupported;
-    return this;
-  }
-
-  /**
-   * Whether or not the client supports WhatsNext in the protocol.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getWhatsNextSupported() {
-    return whatsNextSupported;
-  }
-
-  /**
-   * Whether or not the client supports WhatsNext in the protocol.
-   * @param whatsNextSupported whatsNextSupported or {@code null} for none
-   */
-  public AssistantApiSupportedFeatures setWhatsNextSupported(java.lang.Boolean whatsNextSupported) {
-    this.whatsNextSupported = whatsNextSupported;
     return this;
   }
 

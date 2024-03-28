@@ -58,6 +58,13 @@ public final class GeostoreCityJsonProtoCityObjectGeometry extends com.google.ap
   private GeostoreCityJsonProtoCityObjectGeometryMultiSurface multisurface;
 
   /**
+   * Predefined semantics that may be referenced from geometric primitives.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GeostoreCityJsonProtoCityObjectGeometrySemantic> semantics;
+
+  /**
    * For geometries consisting of a watertight 3D shape.
    * The value may be {@code null}.
    */
@@ -116,6 +123,23 @@ public final class GeostoreCityJsonProtoCityObjectGeometry extends com.google.ap
    */
   public GeostoreCityJsonProtoCityObjectGeometry setMultisurface(GeostoreCityJsonProtoCityObjectGeometryMultiSurface multisurface) {
     this.multisurface = multisurface;
+    return this;
+  }
+
+  /**
+   * Predefined semantics that may be referenced from geometric primitives.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GeostoreCityJsonProtoCityObjectGeometrySemantic> getSemantics() {
+    return semantics;
+  }
+
+  /**
+   * Predefined semantics that may be referenced from geometric primitives.
+   * @param semantics semantics or {@code null} for none
+   */
+  public GeostoreCityJsonProtoCityObjectGeometry setSemantics(java.util.List<GeostoreCityJsonProtoCityObjectGeometrySemantic> semantics) {
+    this.semantics = semantics;
     return this;
   }
 

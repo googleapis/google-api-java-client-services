@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Represents an information which is very close to composite doc, but compresses how the anchors
- * are represented to save space. Next available tag: 17.
+ * are represented to save space. Next available tag: 18.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -70,6 +70,12 @@ public final class RepositoryWebrefSimplifiedCompositeDoc extends com.google.api
    */
   @com.google.api.client.util.Key
   private RepositoryWebrefPreprocessingUrlMatchingMetadata matchingMetadata;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> pageContent;
 
   /**
    * Additional document metadata needed by Refcon.
@@ -190,6 +196,21 @@ public final class RepositoryWebrefSimplifiedCompositeDoc extends com.google.api
    */
   public RepositoryWebrefSimplifiedCompositeDoc setMatchingMetadata(RepositoryWebrefPreprocessingUrlMatchingMetadata matchingMetadata) {
     this.matchingMetadata = matchingMetadata;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPageContent() {
+    return pageContent;
+  }
+
+  /**
+   * @param pageContent pageContent or {@code null} for none
+   */
+  public RepositoryWebrefSimplifiedCompositeDoc setPageContent(java.util.List<java.lang.String> pageContent) {
+    this.pageContent = pageContent;
     return this;
   }
 

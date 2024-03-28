@@ -45,6 +45,24 @@ public final class QualityOrbitOrbitImageIntent extends com.google.api.client.js
   private java.util.List<java.lang.String> missingInputs;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reach;
+
+  /**
+   * Whether this intent should be removed when backfilling new classifications to the index. When
+   * backfilling a new version of a classifier to production we have cases where we actually want to
+   * *remove* an intent that was present in production because the new version might have moved the
+   * intent to below logging threshold. This bit should be used to signal this case so that merging
+   * logic can remove the intent for the image. This should *never* be set in a production callsite,
+   * it is only intended for backfilling operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean remove;
+
+  /**
    * Score of the intent.
    * The value may be {@code null}.
    */
@@ -87,6 +105,48 @@ public final class QualityOrbitOrbitImageIntent extends com.google.api.client.js
    */
   public QualityOrbitOrbitImageIntent setMissingInputs(java.util.List<java.lang.String> missingInputs) {
     this.missingInputs = missingInputs;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReach() {
+    return reach;
+  }
+
+  /**
+   * @param reach reach or {@code null} for none
+   */
+  public QualityOrbitOrbitImageIntent setReach(java.lang.String reach) {
+    this.reach = reach;
+    return this;
+  }
+
+  /**
+   * Whether this intent should be removed when backfilling new classifications to the index. When
+   * backfilling a new version of a classifier to production we have cases where we actually want to
+   * *remove* an intent that was present in production because the new version might have moved the
+   * intent to below logging threshold. This bit should be used to signal this case so that merging
+   * logic can remove the intent for the image. This should *never* be set in a production callsite,
+   * it is only intended for backfilling operations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRemove() {
+    return remove;
+  }
+
+  /**
+   * Whether this intent should be removed when backfilling new classifications to the index. When
+   * backfilling a new version of a classifier to production we have cases where we actually want to
+   * *remove* an intent that was present in production because the new version might have moved the
+   * intent to below logging threshold. This bit should be used to signal this case so that merging
+   * logic can remove the intent for the image. This should *never* be set in a production callsite,
+   * it is only intended for backfilling operations.
+   * @param remove remove or {@code null} for none
+   */
+  public QualityOrbitOrbitImageIntent setRemove(java.lang.Boolean remove) {
+    this.remove = remove;
     return this;
   }
 

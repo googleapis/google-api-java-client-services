@@ -31,6 +31,13 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class VideoGoogleVideoClipInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Used to track videos produced via Aloud dubbing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String aloudLoggingId;
+
+  /**
    * YT app version (ie. YT Create app version).
    * The value may be {@code null}.
    */
@@ -43,6 +50,37 @@ public final class VideoGoogleVideoClipInfo extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> assetLoggingId;
+
+  /**
+   * Used to track videos produced via Universal Dubbing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dubbingLoggingId;
+
+  /**
+   * Product used to create this video clip.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productType;
+
+  /**
+   * Used to track videos produced via Aloud dubbing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAloudLoggingId() {
+    return aloudLoggingId;
+  }
+
+  /**
+   * Used to track videos produced via Aloud dubbing.
+   * @param aloudLoggingId aloudLoggingId or {@code null} for none
+   */
+  public VideoGoogleVideoClipInfo setAloudLoggingId(java.lang.String aloudLoggingId) {
+    this.aloudLoggingId = aloudLoggingId;
+    return this;
+  }
 
   /**
    * YT app version (ie. YT Create app version).
@@ -75,6 +113,40 @@ public final class VideoGoogleVideoClipInfo extends com.google.api.client.json.G
    */
   public VideoGoogleVideoClipInfo setAssetLoggingId(java.util.List<java.lang.String> assetLoggingId) {
     this.assetLoggingId = assetLoggingId;
+    return this;
+  }
+
+  /**
+   * Used to track videos produced via Universal Dubbing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDubbingLoggingId() {
+    return dubbingLoggingId;
+  }
+
+  /**
+   * Used to track videos produced via Universal Dubbing.
+   * @param dubbingLoggingId dubbingLoggingId or {@code null} for none
+   */
+  public VideoGoogleVideoClipInfo setDubbingLoggingId(java.lang.String dubbingLoggingId) {
+    this.dubbingLoggingId = dubbingLoggingId;
+    return this;
+  }
+
+  /**
+   * Product used to create this video clip.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductType() {
+    return productType;
+  }
+
+  /**
+   * Product used to create this video clip.
+   * @param productType productType or {@code null} for none
+   */
+  public VideoGoogleVideoClipInfo setProductType(java.lang.String productType) {
+    this.productType = productType;
     return this;
   }
 

@@ -60,29 +60,6 @@ public final class CrawlerChangerateUrlVersion extends com.google.api.client.jso
   private java.lang.Integer lastModified;
 
   /**
-   * The checksum of all the off-domain links on the page.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer offDomainLinksChecksum;
-
-  /**
-   * The count of all the off-domain links on the page.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer offDomainLinksCount;
-
-  /**
-   * The count of all the on-domain links on the page. We aren't worried about the contents
-   * themselves, since they might often change (e.g., session ids). We assume that a change in the
-   * number of links is significant, however.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer onDomainLinksCount;
-
-  /**
    * The simhash value obtained from shingles.
    * The value may be {@code null}.
    */
@@ -120,14 +97,6 @@ public final class CrawlerChangerateUrlVersion extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean simhashV2IsTrusted;
-
-  /**
-   * The tiles of the document body. We use int32s instead of int64s (the norm) in order to save
-   * space. Since rare inaccuracy doesn't really matter, we've decided this is an okay tradeoff.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.Integer> tile;
 
   /**
    * The timestamp we crawled the page.
@@ -203,61 +172,6 @@ public final class CrawlerChangerateUrlVersion extends com.google.api.client.jso
    */
   public CrawlerChangerateUrlVersion setLastModified(java.lang.Integer lastModified) {
     this.lastModified = lastModified;
-    return this;
-  }
-
-  /**
-   * The checksum of all the off-domain links on the page.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getOffDomainLinksChecksum() {
-    return offDomainLinksChecksum;
-  }
-
-  /**
-   * The checksum of all the off-domain links on the page.
-   * @param offDomainLinksChecksum offDomainLinksChecksum or {@code null} for none
-   */
-  public CrawlerChangerateUrlVersion setOffDomainLinksChecksum(java.lang.Integer offDomainLinksChecksum) {
-    this.offDomainLinksChecksum = offDomainLinksChecksum;
-    return this;
-  }
-
-  /**
-   * The count of all the off-domain links on the page.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getOffDomainLinksCount() {
-    return offDomainLinksCount;
-  }
-
-  /**
-   * The count of all the off-domain links on the page.
-   * @param offDomainLinksCount offDomainLinksCount or {@code null} for none
-   */
-  public CrawlerChangerateUrlVersion setOffDomainLinksCount(java.lang.Integer offDomainLinksCount) {
-    this.offDomainLinksCount = offDomainLinksCount;
-    return this;
-  }
-
-  /**
-   * The count of all the on-domain links on the page. We aren't worried about the contents
-   * themselves, since they might often change (e.g., session ids). We assume that a change in the
-   * number of links is significant, however.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getOnDomainLinksCount() {
-    return onDomainLinksCount;
-  }
-
-  /**
-   * The count of all the on-domain links on the page. We aren't worried about the contents
-   * themselves, since they might often change (e.g., session ids). We assume that a change in the
-   * number of links is significant, however.
-   * @param onDomainLinksCount onDomainLinksCount or {@code null} for none
-   */
-  public CrawlerChangerateUrlVersion setOnDomainLinksCount(java.lang.Integer onDomainLinksCount) {
-    this.onDomainLinksCount = onDomainLinksCount;
     return this;
   }
 
@@ -351,25 +265,6 @@ public final class CrawlerChangerateUrlVersion extends com.google.api.client.jso
    */
   public CrawlerChangerateUrlVersion setSimhashV2IsTrusted(java.lang.Boolean simhashV2IsTrusted) {
     this.simhashV2IsTrusted = simhashV2IsTrusted;
-    return this;
-  }
-
-  /**
-   * The tiles of the document body. We use int32s instead of int64s (the norm) in order to save
-   * space. Since rare inaccuracy doesn't really matter, we've decided this is an okay tradeoff.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.Integer> getTile() {
-    return tile;
-  }
-
-  /**
-   * The tiles of the document body. We use int32s instead of int64s (the norm) in order to save
-   * space. Since rare inaccuracy doesn't really matter, we've decided this is an okay tradeoff.
-   * @param tile tile or {@code null} for none
-   */
-  public CrawlerChangerateUrlVersion setTile(java.util.List<java.lang.Integer> tile) {
-    this.tile = tile;
     return this;
   }
 

@@ -74,20 +74,6 @@ public final class ImageSafesearchContentOCRAnnotation extends com.google.api.cl
   private java.lang.Float qbstOffensiveScore;
 
   /**
-   * Presence of i18n-recognized vulgar term in the OCR.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean vulgarI18nBit;
-
-  /**
-   * Image OCR vulgarity, computed by vulgar query classifier.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float vulgarScore;
-
-  /**
    * A string that indicates the version of SafeSearch OCR annotation.
    * @return value or {@code null} for none
    */
@@ -188,40 +174,6 @@ public final class ImageSafesearchContentOCRAnnotation extends com.google.api.cl
    */
   public ImageSafesearchContentOCRAnnotation setQbstOffensiveScore(java.lang.Float qbstOffensiveScore) {
     this.qbstOffensiveScore = qbstOffensiveScore;
-    return this;
-  }
-
-  /**
-   * Presence of i18n-recognized vulgar term in the OCR.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getVulgarI18nBit() {
-    return vulgarI18nBit;
-  }
-
-  /**
-   * Presence of i18n-recognized vulgar term in the OCR.
-   * @param vulgarI18nBit vulgarI18nBit or {@code null} for none
-   */
-  public ImageSafesearchContentOCRAnnotation setVulgarI18nBit(java.lang.Boolean vulgarI18nBit) {
-    this.vulgarI18nBit = vulgarI18nBit;
-    return this;
-  }
-
-  /**
-   * Image OCR vulgarity, computed by vulgar query classifier.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getVulgarScore() {
-    return vulgarScore;
-  }
-
-  /**
-   * Image OCR vulgarity, computed by vulgar query classifier.
-   * @param vulgarScore vulgarScore or {@code null} for none
-   */
-  public ImageSafesearchContentOCRAnnotation setVulgarScore(java.lang.Float vulgarScore) {
-    this.vulgarScore = vulgarScore;
     return this;
   }
 

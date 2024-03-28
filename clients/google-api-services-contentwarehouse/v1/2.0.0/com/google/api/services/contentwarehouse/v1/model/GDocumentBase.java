@@ -111,7 +111,7 @@ public final class GDocumentBase extends com.google.api.client.json.GenericJson 
    * When these reasons are set to a non zero value, the document should not be indexed, or show a
    * snippet, or show a cache, etc. These reasons are bit maps of
    * indexing.converter.RobotsInfo.RobotedReasons enum values reflecting the places where the
-   * restriction was found.
+   * restriction was found: //depot/google3/indexing/converter/proto/converter.proto
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("NoIndexReason")
@@ -479,7 +479,7 @@ public final class GDocumentBase extends com.google.api.client.json.GenericJson 
    * When these reasons are set to a non zero value, the document should not be indexed, or show a
    * snippet, or show a cache, etc. These reasons are bit maps of
    * indexing.converter.RobotsInfo.RobotedReasons enum values reflecting the places where the
-   * restriction was found.
+   * restriction was found: //depot/google3/indexing/converter/proto/converter.proto
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNoIndexReason() {
@@ -490,7 +490,7 @@ public final class GDocumentBase extends com.google.api.client.json.GenericJson 
    * When these reasons are set to a non zero value, the document should not be indexed, or show a
    * snippet, or show a cache, etc. These reasons are bit maps of
    * indexing.converter.RobotsInfo.RobotedReasons enum values reflecting the places where the
-   * restriction was found.
+   * restriction was found: //depot/google3/indexing/converter/proto/converter.proto
    * @param noIndexReason noIndexReason or {@code null} for none
    */
   public GDocumentBase setNoIndexReason(java.lang.Integer noIndexReason) {

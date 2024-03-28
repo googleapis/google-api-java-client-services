@@ -35,6 +35,39 @@ public final class TrawlerMultiverseClientIdentifier extends com.google.api.clie
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Integer crawlPolicyId;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String crawlPolicyName;
+
+  /**
+   * Hyperdrive Analytics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hyperdriveAppName;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hyperdriveTableName;
+
+  /**
+   * Propagate the id instead of the string name to save storage resource. TODO (b/317133951)
+   * consider deprecate the two fields in string above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer topicId;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String topicName;
 
   /**
@@ -42,6 +75,87 @@ public final class TrawlerMultiverseClientIdentifier extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.lang.String trafficType;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCrawlPolicyId() {
+    return crawlPolicyId;
+  }
+
+  /**
+   * @param crawlPolicyId crawlPolicyId or {@code null} for none
+   */
+  public TrawlerMultiverseClientIdentifier setCrawlPolicyId(java.lang.Integer crawlPolicyId) {
+    this.crawlPolicyId = crawlPolicyId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCrawlPolicyName() {
+    return crawlPolicyName;
+  }
+
+  /**
+   * @param crawlPolicyName crawlPolicyName or {@code null} for none
+   */
+  public TrawlerMultiverseClientIdentifier setCrawlPolicyName(java.lang.String crawlPolicyName) {
+    this.crawlPolicyName = crawlPolicyName;
+    return this;
+  }
+
+  /**
+   * Hyperdrive Analytics.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHyperdriveAppName() {
+    return hyperdriveAppName;
+  }
+
+  /**
+   * Hyperdrive Analytics.
+   * @param hyperdriveAppName hyperdriveAppName or {@code null} for none
+   */
+  public TrawlerMultiverseClientIdentifier setHyperdriveAppName(java.lang.String hyperdriveAppName) {
+    this.hyperdriveAppName = hyperdriveAppName;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHyperdriveTableName() {
+    return hyperdriveTableName;
+  }
+
+  /**
+   * @param hyperdriveTableName hyperdriveTableName or {@code null} for none
+   */
+  public TrawlerMultiverseClientIdentifier setHyperdriveTableName(java.lang.String hyperdriveTableName) {
+    this.hyperdriveTableName = hyperdriveTableName;
+    return this;
+  }
+
+  /**
+   * Propagate the id instead of the string name to save storage resource. TODO (b/317133951)
+   * consider deprecate the two fields in string above.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTopicId() {
+    return topicId;
+  }
+
+  /**
+   * Propagate the id instead of the string name to save storage resource. TODO (b/317133951)
+   * consider deprecate the two fields in string above.
+   * @param topicId topicId or {@code null} for none
+   */
+  public TrawlerMultiverseClientIdentifier setTopicId(java.lang.Integer topicId) {
+    this.topicId = topicId;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

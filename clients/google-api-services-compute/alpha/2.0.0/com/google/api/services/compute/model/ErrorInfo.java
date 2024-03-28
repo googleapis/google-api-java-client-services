@@ -47,11 +47,12 @@ public final class ErrorInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String domain;
 
   /**
-   * Additional structured details about this error. Keys should match /[a-zA-Z0-9-_]/ and be
-   * limited to 64 characters in length. When identifying the current value of an exceeded limit,
-   * the units should be contained in the key, not the value. For example, rather than
-   * {"instanceLimit": "100/request"}, should be returned as, {"instanceLimitPerRequest": "100"}, if
-   * the client exceeds the number of instances that can be created in a single (batch) request.
+   * Additional structured details about this error. Keys must match /a-z+/ but should ideally be
+   * lowerCamelCase. Also they must be limited to 64 characters in length. When identifying the
+   * current value of an exceeded limit, the units should be contained in the key, not the value.
+   * For example, rather than {"instanceLimit": "100/request"}, should be returned as,
+   * {"instanceLimitPerRequest": "100"}, if the client exceeds the number of instances that can be
+   * created in a single (batch) request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,11 +93,12 @@ public final class ErrorInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional structured details about this error. Keys should match /[a-zA-Z0-9-_]/ and be
-   * limited to 64 characters in length. When identifying the current value of an exceeded limit,
-   * the units should be contained in the key, not the value. For example, rather than
-   * {"instanceLimit": "100/request"}, should be returned as, {"instanceLimitPerRequest": "100"}, if
-   * the client exceeds the number of instances that can be created in a single (batch) request.
+   * Additional structured details about this error. Keys must match /a-z+/ but should ideally be
+   * lowerCamelCase. Also they must be limited to 64 characters in length. When identifying the
+   * current value of an exceeded limit, the units should be contained in the key, not the value.
+   * For example, rather than {"instanceLimit": "100/request"}, should be returned as,
+   * {"instanceLimitPerRequest": "100"}, if the client exceeds the number of instances that can be
+   * created in a single (batch) request.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadatas() {
@@ -104,11 +106,12 @@ public final class ErrorInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional structured details about this error. Keys should match /[a-zA-Z0-9-_]/ and be
-   * limited to 64 characters in length. When identifying the current value of an exceeded limit,
-   * the units should be contained in the key, not the value. For example, rather than
-   * {"instanceLimit": "100/request"}, should be returned as, {"instanceLimitPerRequest": "100"}, if
-   * the client exceeds the number of instances that can be created in a single (batch) request.
+   * Additional structured details about this error. Keys must match /a-z+/ but should ideally be
+   * lowerCamelCase. Also they must be limited to 64 characters in length. When identifying the
+   * current value of an exceeded limit, the units should be contained in the key, not the value.
+   * For example, rather than {"instanceLimit": "100/request"}, should be returned as,
+   * {"instanceLimitPerRequest": "100"}, if the client exceeds the number of instances that can be
+   * created in a single (batch) request.
    * @param metadatas metadatas or {@code null} for none
    */
   public ErrorInfo setMetadatas(java.util.Map<String, java.lang.String> metadatas) {

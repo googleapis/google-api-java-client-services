@@ -99,6 +99,13 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * A list of packet mirroring rules that belong to this policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FirewallPolicyRule> packetMirroringRules;
+
+  /**
    * [Output Only] The parent of the firewall policy. This field is not applicable to network
    * firewall policies.
    * The value may be {@code null}.
@@ -368,6 +375,23 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
    */
   public FirewallPolicy setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * A list of packet mirroring rules that belong to this policy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FirewallPolicyRule> getPacketMirroringRules() {
+    return packetMirroringRules;
+  }
+
+  /**
+   * A list of packet mirroring rules that belong to this policy.
+   * @param packetMirroringRules packetMirroringRules or {@code null} for none
+   */
+  public FirewallPolicy setPacketMirroringRules(java.util.List<FirewallPolicyRule> packetMirroringRules) {
+    this.packetMirroringRules = packetMirroringRules;
     return this;
   }
 

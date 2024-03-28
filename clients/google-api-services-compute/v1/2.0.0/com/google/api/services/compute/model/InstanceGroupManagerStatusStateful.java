@@ -41,7 +41,7 @@ public final class InstanceGroupManagerStatusStateful extends com.google.api.cli
   private java.lang.Boolean hasStatefulConfig;
 
   /**
-   * [Output Only] Status of per-instance configurations on the instance.
+   * [Output Only] Status of per-instance configurations on the instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class InstanceGroupManagerStatusStateful extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Status of per-instance configurations on the instance.
+   * [Output Only] Status of per-instance configurations on the instances.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerStatusStatefulPerInstanceConfigs getPerInstanceConfigs() {
@@ -81,7 +81,7 @@ public final class InstanceGroupManagerStatusStateful extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Status of per-instance configurations on the instance.
+   * [Output Only] Status of per-instance configurations on the instances.
    * @param perInstanceConfigs perInstanceConfigs or {@code null} for none
    */
   public InstanceGroupManagerStatusStateful setPerInstanceConfigs(InstanceGroupManagerStatusStatefulPerInstanceConfigs perInstanceConfigs) {

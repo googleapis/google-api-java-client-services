@@ -18,7 +18,7 @@ package com.google.api.services.run.v1.model;
 
 /**
  * Represents a persistent volume that will be mounted using NFS. This volume will be shared between
- * all instances of the Service and data will not be deleted when the instance is shut down.
+ * all instances of the resource and data will not be deleted when the instance is shut down.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:

@@ -46,7 +46,7 @@ public final class GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig extends com.
   private java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaManagedRule> managedRules;
 
   /**
-   * Output only. The reCAPTCHA keys.
+   * The reCAPTCHA keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig extends com.
   }
 
   /**
-   * Output only. The reCAPTCHA keys.
+   * The reCAPTCHA keys.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaKey> getRecaptchaKeys() {
@@ -106,7 +106,7 @@ public final class GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig extends com.
   }
 
   /**
-   * Output only. The reCAPTCHA keys.
+   * The reCAPTCHA keys.
    * @param recaptchaKeys recaptchaKeys or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig setRecaptchaKeys(java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaKey> recaptchaKeys) {

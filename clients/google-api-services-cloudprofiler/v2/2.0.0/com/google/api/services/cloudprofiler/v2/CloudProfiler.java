@@ -600,39 +600,46 @@ public class CloudProfiler extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** The maximum number of items to return. Default page_size is 1000. Max limit is 1000. */
+        /**
+         * Optional. The maximum number of items to return. Default page_size is 1000. Max limit is
+         * 1000.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of items to return. Default page_size is 1000. Max limit is 1000.
+        /** Optional. The maximum number of items to return. Default page_size is 1000. Max limit is 1000.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The maximum number of items to return. Default page_size is 1000. Max limit is 1000. */
+        /**
+         * Optional. The maximum number of items to return. Default page_size is 1000. Max limit is
+         * 1000.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
         /**
-         * The token to continue pagination and get profiles from a particular page. When
+         * Optional. The token to continue pagination and get profiles from a particular page. When
          * paginating, all other parameters provided to `ListProfiles` must match the call that
          * provided the page token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The token to continue pagination and get profiles from a particular page. When paginating, all
-       other parameters provided to `ListProfiles` must match the call that provided the page token.
+        /** Optional. The token to continue pagination and get profiles from a particular page. When
+       paginating, all other parameters provided to `ListProfiles` must match the call that provided the
+       page token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * The token to continue pagination and get profiles from a particular page. When
+         * Optional. The token to continue pagination and get profiles from a particular page. When
          * paginating, all other parameters provided to `ListProfiles` must match the call that
          * provided the page token.
          */

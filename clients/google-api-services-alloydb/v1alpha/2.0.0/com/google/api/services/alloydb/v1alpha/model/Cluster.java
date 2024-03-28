@@ -156,6 +156,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. The maintenance schedule for the cluster, generated for a specific rollout if a
+   * maintenance window is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaintenanceSchedule maintenanceSchedule;
+
+  /**
    * Optional. The maintenance update policy determines when to allow or deny updates.
    * The value may be {@code null}.
    */
@@ -563,6 +571,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. The maintenance schedule for the cluster, generated for a specific rollout if a
+   * maintenance window is set.
+   * @return value or {@code null} for none
+   */
+  public MaintenanceSchedule getMaintenanceSchedule() {
+    return maintenanceSchedule;
+  }
+
+  /**
+   * Output only. The maintenance schedule for the cluster, generated for a specific rollout if a
+   * maintenance window is set.
+   * @param maintenanceSchedule maintenanceSchedule or {@code null} for none
+   */
+  public Cluster setMaintenanceSchedule(MaintenanceSchedule maintenanceSchedule) {
+    this.maintenanceSchedule = maintenanceSchedule;
     return this;
   }
 

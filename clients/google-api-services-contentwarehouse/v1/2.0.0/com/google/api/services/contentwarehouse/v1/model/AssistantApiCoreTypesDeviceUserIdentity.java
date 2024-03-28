@@ -17,7 +17,9 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * LINT.IfChange
+ * The set of information that helps Assistant identify a device-user pair. An example use of this
+ * proto is in broadcast reply, when after receiving a broadcast, we store a device-user pair in an
+ * attentional entity in order to later infer who initated the broadcast on which device.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

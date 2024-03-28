@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * A message containing per doc signals that are compressed and included in Mustang and TeraGoogle.
  * For TeraGoogle, this message is included in perdocdata which means it can be used in preliminary
  * scoring. CAREFUL: For TeraGoogle, this data resides in very limited serving memory (Flash
- * storage) for a huge number of documents. Next id: 42
+ * storage) for a huge number of documents. Next id: 43
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -85,7 +85,7 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   /**
    * For craps_[url|pattern]_signals, please avoid accessing these fields directly, even in minor
    * ways like checking has_craps_*. Instead, please use methods from quality/navboost/craps/craps-
-   * lossy-compression.h or talk to dice-team.
+   * lossy-compression.h or talk to craps-team@.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -176,14 +176,16 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   private java.lang.Long navDemotion;
 
   /**
-   * NSR confidence score: converted from quality_nsr.NsrData.
+   * NSR confidence score: converted from quality_nsr.NsrData. This field is deprecated - use
+   * nsr_variance inside nsr_data_proto instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long nsrConfidence;
 
   /**
-   * NSR override bid, used in Q* for emergency overrides.
+   * NSR override bid, used in Q* for emergency overrides. This field is deprecated - used the
+   * equivalent field inside nsr_data_proto instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,15 +193,15 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
 
   /**
    * Versioned NSR score to be used in continuous evaluation of the upcoming NSR version and assess
-   * quality impact on various slices.
+   * quality impact on various slices. This field is deprecated - used the equivalent field inside
+   * nsr_data_proto instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<NSRVersionedItem> nsrVersionedData;
 
   /**
-   * PairwiseQ data for QTJ. This field is *not* propagated to shards, but is populated at serving
-   * time by go/web-signal-joins. See b/175762140
+   * Deprecated and unused field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -307,6 +309,13 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   private java.util.List<QualityAuthorityTopicEmbeddingsVersionedItem> topicEmbeddingsVersionedData;
 
   /**
+   * UGC page quality signals. (Times 1000 and floored)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long ugcDiscussionEffortScore;
+
+  /**
    * Unauthoritative score. Used as one of the web page quality qstar signals.
    * The value may be {@code null}.
    */
@@ -314,7 +323,8 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   private java.lang.Long unauthoritativeScore;
 
   /**
-   * NSR for low-quality videos, converted from quality_nsr.NsrData.vlq_nsr.
+   * NSR for low-quality videos, converted from quality_nsr.NsrData.vlq_nsr. This field is
+   * deprecated - used the equivalent field inside nsr_data_proto instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -442,7 +452,7 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   /**
    * For craps_[url|pattern]_signals, please avoid accessing these fields directly, even in minor
    * ways like checking has_craps_*. Instead, please use methods from quality/navboost/craps/craps-
-   * lossy-compression.h or talk to dice-team.
+   * lossy-compression.h or talk to craps-team@.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getCrapsNewUrlSignals() {
@@ -452,7 +462,7 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   /**
    * For craps_[url|pattern]_signals, please avoid accessing these fields directly, even in minor
    * ways like checking has_craps_*. Instead, please use methods from quality/navboost/craps/craps-
-   * lossy-compression.h or talk to dice-team.
+   * lossy-compression.h or talk to craps-team@.
    * @param crapsNewUrlSignals crapsNewUrlSignals or {@code null} for none
    */
   public CompressedQualitySignals setCrapsNewUrlSignals(java.math.BigInteger crapsNewUrlSignals) {
@@ -656,7 +666,8 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   }
 
   /**
-   * NSR confidence score: converted from quality_nsr.NsrData.
+   * NSR confidence score: converted from quality_nsr.NsrData. This field is deprecated - use
+   * nsr_variance inside nsr_data_proto instead.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNsrConfidence() {
@@ -664,7 +675,8 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   }
 
   /**
-   * NSR confidence score: converted from quality_nsr.NsrData.
+   * NSR confidence score: converted from quality_nsr.NsrData. This field is deprecated - use
+   * nsr_variance inside nsr_data_proto instead.
    * @param nsrConfidence nsrConfidence or {@code null} for none
    */
   public CompressedQualitySignals setNsrConfidence(java.lang.Long nsrConfidence) {
@@ -673,7 +685,8 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   }
 
   /**
-   * NSR override bid, used in Q* for emergency overrides.
+   * NSR override bid, used in Q* for emergency overrides. This field is deprecated - used the
+   * equivalent field inside nsr_data_proto instead.
    * @return value or {@code null} for none
    */
   public java.lang.Float getNsrOverrideBid() {
@@ -681,7 +694,8 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   }
 
   /**
-   * NSR override bid, used in Q* for emergency overrides.
+   * NSR override bid, used in Q* for emergency overrides. This field is deprecated - used the
+   * equivalent field inside nsr_data_proto instead.
    * @param nsrOverrideBid nsrOverrideBid or {@code null} for none
    */
   public CompressedQualitySignals setNsrOverrideBid(java.lang.Float nsrOverrideBid) {
@@ -691,7 +705,8 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
 
   /**
    * Versioned NSR score to be used in continuous evaluation of the upcoming NSR version and assess
-   * quality impact on various slices.
+   * quality impact on various slices. This field is deprecated - used the equivalent field inside
+   * nsr_data_proto instead.
    * @return value or {@code null} for none
    */
   public java.util.List<NSRVersionedItem> getNsrVersionedData() {
@@ -700,7 +715,8 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
 
   /**
    * Versioned NSR score to be used in continuous evaluation of the upcoming NSR version and assess
-   * quality impact on various slices.
+   * quality impact on various slices. This field is deprecated - used the equivalent field inside
+   * nsr_data_proto instead.
    * @param nsrVersionedData nsrVersionedData or {@code null} for none
    */
   public CompressedQualitySignals setNsrVersionedData(java.util.List<NSRVersionedItem> nsrVersionedData) {
@@ -709,8 +725,7 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   }
 
   /**
-   * PairwiseQ data for QTJ. This field is *not* propagated to shards, but is populated at serving
-   * time by go/web-signal-joins. See b/175762140
+   * Deprecated and unused field.
    * @return value or {@code null} for none
    */
   public PairwiseQScoringData getPairwiseqScoringData() {
@@ -718,8 +733,7 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   }
 
   /**
-   * PairwiseQ data for QTJ. This field is *not* propagated to shards, but is populated at serving
-   * time by go/web-signal-joins. See b/175762140
+   * Deprecated and unused field.
    * @param pairwiseqScoringData pairwiseqScoringData or {@code null} for none
    */
   public CompressedQualitySignals setPairwiseqScoringData(PairwiseQScoringData pairwiseqScoringData) {
@@ -972,6 +986,23 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   }
 
   /**
+   * UGC page quality signals. (Times 1000 and floored)
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getUgcDiscussionEffortScore() {
+    return ugcDiscussionEffortScore;
+  }
+
+  /**
+   * UGC page quality signals. (Times 1000 and floored)
+   * @param ugcDiscussionEffortScore ugcDiscussionEffortScore or {@code null} for none
+   */
+  public CompressedQualitySignals setUgcDiscussionEffortScore(java.lang.Long ugcDiscussionEffortScore) {
+    this.ugcDiscussionEffortScore = ugcDiscussionEffortScore;
+    return this;
+  }
+
+  /**
    * Unauthoritative score. Used as one of the web page quality qstar signals.
    * @return value or {@code null} for none
    */
@@ -989,7 +1020,8 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   }
 
   /**
-   * NSR for low-quality videos, converted from quality_nsr.NsrData.vlq_nsr.
+   * NSR for low-quality videos, converted from quality_nsr.NsrData.vlq_nsr. This field is
+   * deprecated - used the equivalent field inside nsr_data_proto instead.
    * @return value or {@code null} for none
    */
   public java.lang.Long getVlqNsr() {
@@ -997,7 +1029,8 @@ public final class CompressedQualitySignals extends com.google.api.client.json.G
   }
 
   /**
-   * NSR for low-quality videos, converted from quality_nsr.NsrData.vlq_nsr.
+   * NSR for low-quality videos, converted from quality_nsr.NsrData.vlq_nsr. This field is
+   * deprecated - used the equivalent field inside nsr_data_proto instead.
    * @param vlqNsr vlqNsr or {@code null} for none
    */
   public CompressedQualitySignals setVlqNsr(java.lang.Long vlqNsr) {

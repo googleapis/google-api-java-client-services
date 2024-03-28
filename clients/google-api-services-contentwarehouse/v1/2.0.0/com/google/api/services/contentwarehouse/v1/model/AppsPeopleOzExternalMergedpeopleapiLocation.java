@@ -90,7 +90,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiLocation extends com.googl
   private java.lang.String source;
 
   /**
-   * Describes the type of location. For e.g. Grew_up, Desk. Corresponds to FBS backend.proto
+   * Describes the type of location. E.g. Grew_up, Desk. Corresponds to FBS backend.proto
    * Location.StandardTag
    * The value may be {@code null}.
    */
@@ -249,7 +249,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiLocation extends com.googl
   }
 
   /**
-   * Describes the type of location. For e.g. Grew_up, Desk. Corresponds to FBS backend.proto
+   * Describes the type of location. E.g. Grew_up, Desk. Corresponds to FBS backend.proto
    * Location.StandardTag
    * @return value or {@code null} for none
    */
@@ -258,7 +258,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiLocation extends com.googl
   }
 
   /**
-   * Describes the type of location. For e.g. Grew_up, Desk. Corresponds to FBS backend.proto
+   * Describes the type of location. E.g. Grew_up, Desk. Corresponds to FBS backend.proto
    * Location.StandardTag
    * @param type type or {@code null} for none
    */

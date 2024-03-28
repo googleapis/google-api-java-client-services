@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Set of per-document markup restrictions based on go/eucd-indexing-design. Used for EUCD and
- * global preview compliance. Next ID: 17
+ * global preview compliance. Next ID: 20
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -153,6 +153,27 @@ public final class QualityDniDocPreviewRestrictions extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxVideoPreviewSecsPublisherDefault;
+
+  /**
+   * Source of snippet length.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String snippetLengthSource;
+
+  /**
+   * Source of thumbnail size.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thumbnailSizeSource;
+
+  /**
+   * Source of video preview seconds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String videoPreviewSecsSource;
 
   /**
    * Publish date set by webmaster. See detailed description here: http://shortn/_1eC0zzjR7k. Note
@@ -445,6 +466,57 @@ public final class QualityDniDocPreviewRestrictions extends com.google.api.clien
    */
   public QualityDniDocPreviewRestrictions setMaxVideoPreviewSecsPublisherDefault(java.lang.Integer maxVideoPreviewSecsPublisherDefault) {
     this.maxVideoPreviewSecsPublisherDefault = maxVideoPreviewSecsPublisherDefault;
+    return this;
+  }
+
+  /**
+   * Source of snippet length.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSnippetLengthSource() {
+    return snippetLengthSource;
+  }
+
+  /**
+   * Source of snippet length.
+   * @param snippetLengthSource snippetLengthSource or {@code null} for none
+   */
+  public QualityDniDocPreviewRestrictions setSnippetLengthSource(java.lang.String snippetLengthSource) {
+    this.snippetLengthSource = snippetLengthSource;
+    return this;
+  }
+
+  /**
+   * Source of thumbnail size.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThumbnailSizeSource() {
+    return thumbnailSizeSource;
+  }
+
+  /**
+   * Source of thumbnail size.
+   * @param thumbnailSizeSource thumbnailSizeSource or {@code null} for none
+   */
+  public QualityDniDocPreviewRestrictions setThumbnailSizeSource(java.lang.String thumbnailSizeSource) {
+    this.thumbnailSizeSource = thumbnailSizeSource;
+    return this;
+  }
+
+  /**
+   * Source of video preview seconds.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVideoPreviewSecsSource() {
+    return videoPreviewSecsSource;
+  }
+
+  /**
+   * Source of video preview seconds.
+   * @param videoPreviewSecsSource videoPreviewSecsSource or {@code null} for none
+   */
+  public QualityDniDocPreviewRestrictions setVideoPreviewSecsSource(java.lang.String videoPreviewSecsSource) {
+    this.videoPreviewSecsSource = videoPreviewSecsSource;
     return this;
   }
 

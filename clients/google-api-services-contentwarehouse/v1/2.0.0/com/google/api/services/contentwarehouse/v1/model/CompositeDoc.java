@@ -22,7 +22,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * information (e.g: pagerank, language)? - What does each field in CompositeDoc mean and who should
  * I contact if I have questions? To add a new field into CompositeDoc, or change existing field's
  * size significantly, please file a ticket at go/dj-new-field, fill in necessary information and
- * get approved by docjoin-access@ team. Next id: 193
+ * get approved by docjoin-access@ team. Next id: 194
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -153,6 +153,13 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Proto2BridgeMessageSet docinfoPassthroughAttachments;
+
+  /**
+   * The commit timestamp of a CDoc update to Docjoins on Spanner.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long docjoinsOnSpannerCommitTimestampMicros;
 
   /**
    * Data produced by the embedded-content system. This is a thin message, containing only
@@ -666,6 +673,23 @@ public final class CompositeDoc extends com.google.api.client.json.GenericJson {
    */
   public CompositeDoc setDocinfoPassthroughAttachments(Proto2BridgeMessageSet docinfoPassthroughAttachments) {
     this.docinfoPassthroughAttachments = docinfoPassthroughAttachments;
+    return this;
+  }
+
+  /**
+   * The commit timestamp of a CDoc update to Docjoins on Spanner.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDocjoinsOnSpannerCommitTimestampMicros() {
+    return docjoinsOnSpannerCommitTimestampMicros;
+  }
+
+  /**
+   * The commit timestamp of a CDoc update to Docjoins on Spanner.
+   * @param docjoinsOnSpannerCommitTimestampMicros docjoinsOnSpannerCommitTimestampMicros or {@code null} for none
+   */
+  public CompositeDoc setDocjoinsOnSpannerCommitTimestampMicros(java.lang.Long docjoinsOnSpannerCommitTimestampMicros) {
+    this.docjoinsOnSpannerCommitTimestampMicros = docjoinsOnSpannerCommitTimestampMicros;
     return this;
   }
 

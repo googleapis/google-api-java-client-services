@@ -24,7 +24,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * during search. See mustang/repos_www/attachments.proto:{MustangBasicInfo,MustangContentInfo} for
  * protocols used during search and/or docinfo. Next available tag deprecated, use this (and look
  * for commented out fields): blaze-bin/net/proto_compiler/protocol-compiler --freetags \
- * indexer/perdocdata/perdocdata.proto Next tag: 223
+ * indexer/perdocdata/perdocdata.proto Next tag: 225
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -382,7 +382,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
    * and realtimespam::ClassifierResult for the document level fresh spam classifier (when the doc-
    * level fresh spam score is generated). * MicroblogDocQualitySignals for document-level microblog
    * spam classifier. This only exists in Firebird for now. * spam_buckets::BucketsData for a
-   * document-structure hash
+   * document-structure hash This field is non-personal since the personal fields in MessageSet are
+   * not populated in production.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -460,7 +461,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * Site rank computed for host-level sitechunks. This value encodes nsr, site_pr and new_nsr. See
-   * quality_nsr::util::ConvertNsrDataToHostNsr and go/nsr.
+   * quality_nsr::util::ConvertNsrDataToHostNsr and go/nsr. This field is deprecated - used the
+   * equivalent field inside nsr_data_proto instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -575,7 +577,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * This field is propagated to shards. In addition, it is populated at serving time by go/web-
-   * signal-joins.
+   * signal-joins. This field is deprecated - used the equivalent field inside nsr_data_proto
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -583,7 +586,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * This field is propagated to shards. It will also be populated at serving time by go/web-signal-
-   * joins (see b/168114815).
+   * joins (see b/168114815). This field is deprecated - used the equivalent field inside
+   * nsr_data_proto instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -592,7 +596,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
   /**
    * This field is propagated to shards. It will also be populated at serving time by go/web-signal-
    * joins (see b/170607253). Bit indicating whether this site is video-focused, but not hosted on
-   * any major known video hosting domains.
+   * any major known video hosting domains. This field is deprecated - used the equivalent field
+   * inside nsr_data_proto instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -839,11 +844,18 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
   private SpamMuppetjoinsMuppetSignals spamMuppetSignals;
 
   /**
-   * Site level scores coming from spambrain.
+   * Host-v1 sitechunk level scores coming from spambrain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SpamBrainData spambrainData;
+
+  /**
+   * Domain sitechunk level scores coming from spambrain.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpamBrainData spambrainDomainSitechunkData;
 
   /**
    * The document total spam score identified by spambrain, going from 0 to 1.
@@ -923,7 +935,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * This field is propagated to shards. Stores clustering information on a site level for the
-   * Tundra project.
+   * Tundra project. This field is deprecated - used the equivalent field inside nsr_data_proto
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1875,7 +1888,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
    * and realtimespam::ClassifierResult for the document level fresh spam classifier (when the doc-
    * level fresh spam score is generated). * MicroblogDocQualitySignals for document-level microblog
    * spam classifier. This only exists in Firebird for now. * spam_buckets::BucketsData for a
-   * document-structure hash
+   * document-structure hash This field is non-personal since the personal fields in MessageSet are
+   * not populated in production.
    * @return value or {@code null} for none
    */
   public Proto2BridgeMessageSet getExtraData() {
@@ -1890,7 +1904,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
    * and realtimespam::ClassifierResult for the document level fresh spam classifier (when the doc-
    * level fresh spam score is generated). * MicroblogDocQualitySignals for document-level microblog
    * spam classifier. This only exists in Firebird for now. * spam_buckets::BucketsData for a
-   * document-structure hash
+   * document-structure hash This field is non-personal since the personal fields in MessageSet are
+   * not populated in production.
    * @param extraData extraData or {@code null} for none
    */
   public PerDocData setExtraData(Proto2BridgeMessageSet extraData) {
@@ -2064,7 +2079,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * Site rank computed for host-level sitechunks. This value encodes nsr, site_pr and new_nsr. See
-   * quality_nsr::util::ConvertNsrDataToHostNsr and go/nsr.
+   * quality_nsr::util::ConvertNsrDataToHostNsr and go/nsr. This field is deprecated - used the
+   * equivalent field inside nsr_data_proto instead.
    * @return value or {@code null} for none
    */
   public java.lang.Long getHostNsr() {
@@ -2073,7 +2089,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * Site rank computed for host-level sitechunks. This value encodes nsr, site_pr and new_nsr. See
-   * quality_nsr::util::ConvertNsrDataToHostNsr and go/nsr.
+   * quality_nsr::util::ConvertNsrDataToHostNsr and go/nsr. This field is deprecated - used the
+   * equivalent field inside nsr_data_proto instead.
    * @param hostNsr hostNsr or {@code null} for none
    */
   public PerDocData setHostNsr(java.lang.Long hostNsr) {
@@ -2339,7 +2356,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * This field is propagated to shards. In addition, it is populated at serving time by go/web-
-   * signal-joins.
+   * signal-joins. This field is deprecated - used the equivalent field inside nsr_data_proto
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNsrIsCovidLocalAuthority() {
@@ -2348,7 +2366,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * This field is propagated to shards. In addition, it is populated at serving time by go/web-
-   * signal-joins.
+   * signal-joins. This field is deprecated - used the equivalent field inside nsr_data_proto
+   * instead.
    * @param nsrIsCovidLocalAuthority nsrIsCovidLocalAuthority or {@code null} for none
    */
   public PerDocData setNsrIsCovidLocalAuthority(java.lang.Boolean nsrIsCovidLocalAuthority) {
@@ -2358,7 +2377,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * This field is propagated to shards. It will also be populated at serving time by go/web-signal-
-   * joins (see b/168114815).
+   * joins (see b/168114815). This field is deprecated - used the equivalent field inside
+   * nsr_data_proto instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNsrIsElectionAuthority() {
@@ -2367,7 +2387,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * This field is propagated to shards. It will also be populated at serving time by go/web-signal-
-   * joins (see b/168114815).
+   * joins (see b/168114815). This field is deprecated - used the equivalent field inside
+   * nsr_data_proto instead.
    * @param nsrIsElectionAuthority nsrIsElectionAuthority or {@code null} for none
    */
   public PerDocData setNsrIsElectionAuthority(java.lang.Boolean nsrIsElectionAuthority) {
@@ -2378,7 +2399,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
   /**
    * This field is propagated to shards. It will also be populated at serving time by go/web-signal-
    * joins (see b/170607253). Bit indicating whether this site is video-focused, but not hosted on
-   * any major known video hosting domains.
+   * any major known video hosting domains. This field is deprecated - used the equivalent field
+   * inside nsr_data_proto instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNsrIsVideoFocusedSite() {
@@ -2388,7 +2410,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
   /**
    * This field is propagated to shards. It will also be populated at serving time by go/web-signal-
    * joins (see b/170607253). Bit indicating whether this site is video-focused, but not hosted on
-   * any major known video hosting domains.
+   * any major known video hosting domains. This field is deprecated - used the equivalent field
+   * inside nsr_data_proto instead.
    * @param nsrIsVideoFocusedSite nsrIsVideoFocusedSite or {@code null} for none
    */
   public PerDocData setNsrIsVideoFocusedSite(java.lang.Boolean nsrIsVideoFocusedSite) {
@@ -2973,7 +2996,7 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Site level scores coming from spambrain.
+   * Host-v1 sitechunk level scores coming from spambrain.
    * @return value or {@code null} for none
    */
   public SpamBrainData getSpambrainData() {
@@ -2981,11 +3004,28 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Site level scores coming from spambrain.
+   * Host-v1 sitechunk level scores coming from spambrain.
    * @param spambrainData spambrainData or {@code null} for none
    */
   public PerDocData setSpambrainData(SpamBrainData spambrainData) {
     this.spambrainData = spambrainData;
+    return this;
+  }
+
+  /**
+   * Domain sitechunk level scores coming from spambrain.
+   * @return value or {@code null} for none
+   */
+  public SpamBrainData getSpambrainDomainSitechunkData() {
+    return spambrainDomainSitechunkData;
+  }
+
+  /**
+   * Domain sitechunk level scores coming from spambrain.
+   * @param spambrainDomainSitechunkData spambrainDomainSitechunkData or {@code null} for none
+   */
+  public PerDocData setSpambrainDomainSitechunkData(SpamBrainData spambrainDomainSitechunkData) {
+    this.spambrainDomainSitechunkData = spambrainDomainSitechunkData;
     return this;
   }
 
@@ -3173,7 +3213,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * This field is propagated to shards. Stores clustering information on a site level for the
-   * Tundra project.
+   * Tundra project. This field is deprecated - used the equivalent field inside nsr_data_proto
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTundraClusterId() {
@@ -3182,7 +3223,8 @@ public final class PerDocData extends com.google.api.client.json.GenericJson {
 
   /**
    * This field is propagated to shards. Stores clustering information on a site level for the
-   * Tundra project.
+   * Tundra project. This field is deprecated - used the equivalent field inside nsr_data_proto
+   * instead.
    * @param tundraClusterId tundraClusterId or {@code null} for none
    */
   public PerDocData setTundraClusterId(java.lang.Integer tundraClusterId) {

@@ -17,7 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for ResearchScamV3Restrict.
+ * / Note that: * Your overall query is an AND across namespaces across types. * Namespaces names
+ * are independent across different restrict types (token, numeric and custom).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -31,11 +32,28 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class ResearchScamV3Restrict extends com.google.api.client.json.GenericJson {
 
   /**
-   * / NAMESPACES - a repeating field, where each entry specifies the set of tokens, within a single
-   * namespace, that apply to the query, or database point, on which this V3Restrict proto is
-   * defined. Note that: * Your overall query is an AND across namespaces. * Explicitly specifying a
-   * namespace with 0 tokens is identical to omitting that namespace. ie, "{ns:}" == "". * It is an
-   * error to specify the same namespace more than once per instance of the V3Restrict proto.
+   * This field allows custom restrict extension. - It is up to the extension to decide whether OK
+   * to specify the same custom namespace more than once per instance of the V3Restrict proto. -
+   * Unrecorgniazed (in |V3RestrictsConfig.custom_restrict_namespace_configs|) and unregistered (in
+   * factory function registry) custom namespace name will fail dataset loading (instead of being
+   * ignored silently). See go/scam-restrict-plugin for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ResearchScamCustomRestrictNamespace> customNamespaces;
+
+  static {
+    // hack to force ProGuard to consider ResearchScamCustomRestrictNamespace used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ResearchScamCustomRestrictNamespace.class);
+  }
+
+  /**
+   * A repeating field, where each entry specifies the set of tokens, within a single namespace,
+   * that apply to the query, or database point, on which this V3Restrict proto is defined. *
+   * Explicitly specifying a namespace with 0 tokens is identical to omitting that namespace. ie,
+   * "{ns:}" == "". * It is an error to specify the same namespace more than once per instance of
+   * the V3Restrict proto.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,11 +82,36 @@ public final class ResearchScamV3Restrict extends com.google.api.client.json.Gen
   }
 
   /**
-   * / NAMESPACES - a repeating field, where each entry specifies the set of tokens, within a single
-   * namespace, that apply to the query, or database point, on which this V3Restrict proto is
-   * defined. Note that: * Your overall query is an AND across namespaces. * Explicitly specifying a
-   * namespace with 0 tokens is identical to omitting that namespace. ie, "{ns:}" == "". * It is an
-   * error to specify the same namespace more than once per instance of the V3Restrict proto.
+   * This field allows custom restrict extension. - It is up to the extension to decide whether OK
+   * to specify the same custom namespace more than once per instance of the V3Restrict proto. -
+   * Unrecorgniazed (in |V3RestrictsConfig.custom_restrict_namespace_configs|) and unregistered (in
+   * factory function registry) custom namespace name will fail dataset loading (instead of being
+   * ignored silently). See go/scam-restrict-plugin for more details.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ResearchScamCustomRestrictNamespace> getCustomNamespaces() {
+    return customNamespaces;
+  }
+
+  /**
+   * This field allows custom restrict extension. - It is up to the extension to decide whether OK
+   * to specify the same custom namespace more than once per instance of the V3Restrict proto. -
+   * Unrecorgniazed (in |V3RestrictsConfig.custom_restrict_namespace_configs|) and unregistered (in
+   * factory function registry) custom namespace name will fail dataset loading (instead of being
+   * ignored silently). See go/scam-restrict-plugin for more details.
+   * @param customNamespaces customNamespaces or {@code null} for none
+   */
+  public ResearchScamV3Restrict setCustomNamespaces(java.util.List<ResearchScamCustomRestrictNamespace> customNamespaces) {
+    this.customNamespaces = customNamespaces;
+    return this;
+  }
+
+  /**
+   * A repeating field, where each entry specifies the set of tokens, within a single namespace,
+   * that apply to the query, or database point, on which this V3Restrict proto is defined. *
+   * Explicitly specifying a namespace with 0 tokens is identical to omitting that namespace. ie,
+   * "{ns:}" == "". * It is an error to specify the same namespace more than once per instance of
+   * the V3Restrict proto.
    * @return value or {@code null} for none
    */
   public java.util.List<ResearchScamTokenNamespace> getNamespaces() {
@@ -76,11 +119,11 @@ public final class ResearchScamV3Restrict extends com.google.api.client.json.Gen
   }
 
   /**
-   * / NAMESPACES - a repeating field, where each entry specifies the set of tokens, within a single
-   * namespace, that apply to the query, or database point, on which this V3Restrict proto is
-   * defined. Note that: * Your overall query is an AND across namespaces. * Explicitly specifying a
-   * namespace with 0 tokens is identical to omitting that namespace. ie, "{ns:}" == "". * It is an
-   * error to specify the same namespace more than once per instance of the V3Restrict proto.
+   * A repeating field, where each entry specifies the set of tokens, within a single namespace,
+   * that apply to the query, or database point, on which this V3Restrict proto is defined. *
+   * Explicitly specifying a namespace with 0 tokens is identical to omitting that namespace. ie,
+   * "{ns:}" == "". * It is an error to specify the same namespace more than once per instance of
+   * the V3Restrict proto.
    * @param namespaces namespaces or {@code null} for none
    */
   public ResearchScamV3Restrict setNamespaces(java.util.List<ResearchScamTokenNamespace> namespaces) {

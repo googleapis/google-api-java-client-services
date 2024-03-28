@@ -44,14 +44,6 @@ public final class QualityOrbitOrbitImageIntents extends com.google.api.client.j
   }
 
   /**
-   * Used to control merging behavior: partial protos will always be merged with current, while full
-   * protos will completely replace older versions.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean isPartial;
-
-  /**
    * Represents the version. Filled in Amarna (main version controller).
    * The value may be {@code null}.
    */
@@ -72,25 +64,6 @@ public final class QualityOrbitOrbitImageIntents extends com.google.api.client.j
    */
   public QualityOrbitOrbitImageIntents setIntents(java.util.List<QualityOrbitOrbitImageIntent> intents) {
     this.intents = intents;
-    return this;
-  }
-
-  /**
-   * Used to control merging behavior: partial protos will always be merged with current, while full
-   * protos will completely replace older versions.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIsPartial() {
-    return isPartial;
-  }
-
-  /**
-   * Used to control merging behavior: partial protos will always be merged with current, while full
-   * protos will completely replace older versions.
-   * @param isPartial isPartial or {@code null} for none
-   */
-  public QualityOrbitOrbitImageIntents setIsPartial(java.lang.Boolean isPartial) {
-    this.isPartial = isPartial;
     return this;
   }
 

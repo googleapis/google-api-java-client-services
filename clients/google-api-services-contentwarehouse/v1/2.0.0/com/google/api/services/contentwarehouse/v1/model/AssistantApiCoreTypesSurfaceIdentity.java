@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * The set of information that helps the server identify the surface. This replaces the User-Agent
  * string within the Assistant Server. Note: The SurfaceIdentity proto should only be used to derive
  * the capabilities of a surface. It should not be accessed outside of the CapabilityBuilder or
- * CapabilityChecker. NEXT ID: 6 LINT.IfChange
+ * CapabilityChecker. NEXT ID: 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

@@ -93,13 +93,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
   private ImageSafesearchContentOCRAnnotation ocrAnnotation;
 
   /**
-   * Vulgar score of the text found by OCR in the image.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float ocrVulgarScore;
-
-  /**
    * QuimbyCongas-based detection of offensive symbols in the image (currently swastika and Nazi
    * yellow badge).
    * The value may be {@code null}.
@@ -312,23 +305,6 @@ public final class PornFlagData extends com.google.api.client.json.GenericJson {
    */
   public PornFlagData setOcrAnnotation(ImageSafesearchContentOCRAnnotation ocrAnnotation) {
     this.ocrAnnotation = ocrAnnotation;
-    return this;
-  }
-
-  /**
-   * Vulgar score of the text found by OCR in the image.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getOcrVulgarScore() {
-    return ocrVulgarScore;
-  }
-
-  /**
-   * Vulgar score of the text found by OCR in the image.
-   * @param ocrVulgarScore ocrVulgarScore or {@code null} for none
-   */
-  public PornFlagData setOcrVulgarScore(java.lang.Float ocrVulgarScore) {
-    this.ocrVulgarScore = ocrVulgarScore;
     return this;
   }
 

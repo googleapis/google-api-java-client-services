@@ -25,7 +25,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * action. Clients handle this by always declaring RestrictionProto as a "repeated" element. The
  * semantics of having multiple restrictions are that if any restriction applies, then the action
  * cannot be taken. In other words, restrictions are OR-ed together. Putting all of this together, a
- * set of RestrictionProtos can be interpreted as an bool expression in disjunctive normal form: (A
+ * set of RestrictionProtos can be interpreted as a bool expression in disjunctive normal form: (A
  * and B) or (D and E and F) or (G and H) The action is prohibited if this expression is true. Note
  * that a restriction with no conditions is always true, i.e. its action is always prohibited. NOTE:
  * RestrictionProtos are often compared against one another (e.g. to check for duplicate/redundant
@@ -105,7 +105,8 @@ public final class GeostoreRestrictionProto extends com.google.api.client.json.G
    * PEDESTRIAN_FACILITY_UNKNOWN. Such restrictions must have no subpath. - All other restrictions
    * must have this field set to SCOPE_DIRECTION (whether explicitly or implicitly). This
    * distinction is necessary for cases such as pedestrian facility on one-way segment/sibling
-   * roads.
+   * roads. NOTE: This field only makes sense in the context of segment restrictions, not lane
+   * restrictions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -327,7 +328,8 @@ public final class GeostoreRestrictionProto extends com.google.api.client.json.G
    * PEDESTRIAN_FACILITY_UNKNOWN. Such restrictions must have no subpath. - All other restrictions
    * must have this field set to SCOPE_DIRECTION (whether explicitly or implicitly). This
    * distinction is necessary for cases such as pedestrian facility on one-way segment/sibling
-   * roads.
+   * roads. NOTE: This field only makes sense in the context of segment restrictions, not lane
+   * restrictions.
    * @return value or {@code null} for none
    */
   public java.lang.String getScope() {
@@ -347,7 +349,8 @@ public final class GeostoreRestrictionProto extends com.google.api.client.json.G
    * PEDESTRIAN_FACILITY_UNKNOWN. Such restrictions must have no subpath. - All other restrictions
    * must have this field set to SCOPE_DIRECTION (whether explicitly or implicitly). This
    * distinction is necessary for cases such as pedestrian facility on one-way segment/sibling
-   * roads.
+   * roads. NOTE: This field only makes sense in the context of segment restrictions, not lane
+   * restrictions.
    * @param scope scope or {@code null} for none
    */
   public GeostoreRestrictionProto setScope(java.lang.String scope) {

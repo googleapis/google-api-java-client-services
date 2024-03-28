@@ -80,6 +80,12 @@ public final class DrishtiFeatureSetDataFeatureSetElement extends com.google.api
   private DrishtiSparseFeatureData sparse;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DrishtiDenseTokenData token;
+
+  /**
    * @return value or {@code null} for none
    */
   public DrishtiCompressedFeature getCompressed() {
@@ -198,6 +204,21 @@ public final class DrishtiFeatureSetDataFeatureSetElement extends com.google.api
    */
   public DrishtiFeatureSetDataFeatureSetElement setSparse(DrishtiSparseFeatureData sparse) {
     this.sparse = sparse;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public DrishtiDenseTokenData getToken() {
+    return token;
+  }
+
+  /**
+   * @param token token or {@code null} for none
+   */
+  public DrishtiFeatureSetDataFeatureSetElement setToken(DrishtiDenseTokenData token) {
+    this.token = token;
     return this;
   }
 

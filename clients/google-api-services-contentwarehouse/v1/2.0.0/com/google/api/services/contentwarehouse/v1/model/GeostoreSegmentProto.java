@@ -294,6 +294,7 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   }
 
   /**
+   * LINT.ThenChange(//depot/google3/geostore/base/internal/segment.cc:has_speed_limit)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -306,10 +307,11 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * The maximum speed that is permitted on this segment, in kilometers per hour. This should be the
-   * segment's legal speed limit; however, note that it may contain estimated values based on
-   * country-wide defaults and other heuristics (see 'is_max_permitted_speed_derived' below). Before
-   * exposing this field to users as the legal speed limit please consult with Google lawyers.
+   * LINT.IfChange(speed_limits) The maximum speed that is permitted on this segment, in kilometers
+   * per hour. This should be the segment's legal speed limit; however, note that it may contain
+   * estimated values based on country-wide defaults and other heuristics (see
+   * 'is_max_permitted_speed_derived' below). Before exposing this field to users as the legal speed
+   * limit please consult with Google lawyers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -367,7 +369,7 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   private GeostoreFieldMetadataProto priorityMetadata;
 
   /**
-   * RESERVED
+   * May only be set when the segment's usage is `USAGE_RAMP`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1094,6 +1096,7 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   }
 
   /**
+   * LINT.ThenChange(//depot/google3/geostore/base/internal/segment.cc:has_speed_limit)
    * @return value or {@code null} for none
    */
   public java.util.List<GeostoreAppliedSpeedLimitProto> getLegalMinimumSpeed() {
@@ -1101,6 +1104,7 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   }
 
   /**
+   * LINT.ThenChange(//depot/google3/geostore/base/internal/segment.cc:has_speed_limit)
    * @param legalMinimumSpeed legalMinimumSpeed or {@code null} for none
    */
   public GeostoreSegmentProto setLegalMinimumSpeed(java.util.List<GeostoreAppliedSpeedLimitProto> legalMinimumSpeed) {
@@ -1109,10 +1113,11 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * The maximum speed that is permitted on this segment, in kilometers per hour. This should be the
-   * segment's legal speed limit; however, note that it may contain estimated values based on
-   * country-wide defaults and other heuristics (see 'is_max_permitted_speed_derived' below). Before
-   * exposing this field to users as the legal speed limit please consult with Google lawyers.
+   * LINT.IfChange(speed_limits) The maximum speed that is permitted on this segment, in kilometers
+   * per hour. This should be the segment's legal speed limit; however, note that it may contain
+   * estimated values based on country-wide defaults and other heuristics (see
+   * 'is_max_permitted_speed_derived' below). Before exposing this field to users as the legal speed
+   * limit please consult with Google lawyers.
    * @return value or {@code null} for none
    */
   public java.lang.Float getMaxPermittedSpeedKph() {
@@ -1120,10 +1125,11 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * The maximum speed that is permitted on this segment, in kilometers per hour. This should be the
-   * segment's legal speed limit; however, note that it may contain estimated values based on
-   * country-wide defaults and other heuristics (see 'is_max_permitted_speed_derived' below). Before
-   * exposing this field to users as the legal speed limit please consult with Google lawyers.
+   * LINT.IfChange(speed_limits) The maximum speed that is permitted on this segment, in kilometers
+   * per hour. This should be the segment's legal speed limit; however, note that it may contain
+   * estimated values based on country-wide defaults and other heuristics (see
+   * 'is_max_permitted_speed_derived' below). Before exposing this field to users as the legal speed
+   * limit please consult with Google lawyers.
    * @param maxPermittedSpeedKph maxPermittedSpeedKph or {@code null} for none
    */
   public GeostoreSegmentProto setMaxPermittedSpeedKph(java.lang.Float maxPermittedSpeedKph) {
@@ -1255,7 +1261,7 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
+   * May only be set when the segment's usage is `USAGE_RAMP`.
    * @return value or {@code null} for none
    */
   public GeostoreSegmentProtoRampProto getRamp() {
@@ -1263,7 +1269,7 @@ public final class GeostoreSegmentProto extends com.google.api.client.json.Gener
   }
 
   /**
-   * RESERVED
+   * May only be set when the segment's usage is `USAGE_RAMP`.
    * @param ramp ramp or {@code null} for none
    */
   public GeostoreSegmentProto setRamp(GeostoreSegmentProtoRampProto ramp) {

@@ -56,6 +56,13 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   private java.lang.Boolean firewallPolicyEvaluation;
 
   /**
+   * Optional. The Fraud Prevention setting for this assessment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fraudPrevention;
+
+  /**
    * Optional. Deprecated: use `user_info.account_id` instead. Unique stable hashed user identifier
    * for the request. The identifier must be hashed using hmac-sha256 with stable secret.
    * The value may be {@code null}.
@@ -196,6 +203,23 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
    */
   public GoogleCloudRecaptchaenterpriseV1Event setFirewallPolicyEvaluation(java.lang.Boolean firewallPolicyEvaluation) {
     this.firewallPolicyEvaluation = firewallPolicyEvaluation;
+    return this;
+  }
+
+  /**
+   * Optional. The Fraud Prevention setting for this assessment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFraudPrevention() {
+    return fraudPrevention;
+  }
+
+  /**
+   * Optional. The Fraud Prevention setting for this assessment.
+   * @param fraudPrevention fraudPrevention or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Event setFraudPrevention(java.lang.String fraudPrevention) {
+    this.fraudPrevention = fraudPrevention;
     return this;
   }
 

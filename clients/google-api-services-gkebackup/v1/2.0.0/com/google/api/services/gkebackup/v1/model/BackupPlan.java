@@ -118,6 +118,22 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private RetentionPolicy retentionPolicy;
 
   /**
+   * Output only. A number that represents the current risk level of this BackupPlan from RPO
+   * perspective with 1 being no risk and 5 being highest risk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer rpoRiskLevel;
+
+  /**
+   * Output only. Human-readable description of why the BackupPlan is in the current rpo_risk_level
+   * and action items if any.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rpoRiskReason;
+
+  /**
    * Output only. State of the BackupPlan. This State field reflects the various stages a BackupPlan
    * can be in during the Create operation. It will be set to "DEACTIVATED" if the BackupPlan is
    * deactivated on an Update
@@ -354,6 +370,44 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
    */
   public BackupPlan setRetentionPolicy(RetentionPolicy retentionPolicy) {
     this.retentionPolicy = retentionPolicy;
+    return this;
+  }
+
+  /**
+   * Output only. A number that represents the current risk level of this BackupPlan from RPO
+   * perspective with 1 being no risk and 5 being highest risk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRpoRiskLevel() {
+    return rpoRiskLevel;
+  }
+
+  /**
+   * Output only. A number that represents the current risk level of this BackupPlan from RPO
+   * perspective with 1 being no risk and 5 being highest risk.
+   * @param rpoRiskLevel rpoRiskLevel or {@code null} for none
+   */
+  public BackupPlan setRpoRiskLevel(java.lang.Integer rpoRiskLevel) {
+    this.rpoRiskLevel = rpoRiskLevel;
+    return this;
+  }
+
+  /**
+   * Output only. Human-readable description of why the BackupPlan is in the current rpo_risk_level
+   * and action items if any.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRpoRiskReason() {
+    return rpoRiskReason;
+  }
+
+  /**
+   * Output only. Human-readable description of why the BackupPlan is in the current rpo_risk_level
+   * and action items if any.
+   * @param rpoRiskReason rpoRiskReason or {@code null} for none
+   */
+  public BackupPlan setRpoRiskReason(java.lang.String rpoRiskReason) {
+    this.rpoRiskReason = rpoRiskReason;
     return this;
   }
 

@@ -2415,6 +2415,155 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
             }
           }
           /**
+           * Retrieve the link to the backupIndex.
+           *
+           * Create a request for the method "backups.getBackupIndexDownloadUrl".
+           *
+           * This request holds the parameters needed by the gkebackup server.  After setting any optional
+           * parameters, call the {@link GetBackupIndexDownloadUrl#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param backup Required. Full name of Backup resource. Format:
+           *        projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+           * @return the request
+           */
+          public GetBackupIndexDownloadUrl getBackupIndexDownloadUrl(java.lang.String backup) throws java.io.IOException {
+            GetBackupIndexDownloadUrl result = new GetBackupIndexDownloadUrl(backup);
+            initialize(result);
+            return result;
+          }
+
+          public class GetBackupIndexDownloadUrl extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.GetBackupIndexDownloadUrlResponse> {
+
+            private static final String REST_PATH = "v1/{+backup}:getBackupIndexDownloadUrl";
+
+            private final java.util.regex.Pattern BACKUP_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+/backups/[^/]+$");
+
+            /**
+             * Retrieve the link to the backupIndex.
+             *
+             * Create a request for the method "backups.getBackupIndexDownloadUrl".
+             *
+             * This request holds the parameters needed by the the gkebackup server.  After setting any
+             * optional parameters, call the {@link GetBackupIndexDownloadUrl#execute()} method to invoke the
+             * remote operation. <p> {@link GetBackupIndexDownloadUrl#initialize(com.google.api.client.googlea
+             * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param backup Required. Full name of Backup resource. Format:
+           *        projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+             * @since 1.13
+             */
+            protected GetBackupIndexDownloadUrl(java.lang.String backup) {
+              super(BackupforGKE.this, "GET", REST_PATH, null, com.google.api.services.gkebackup.v1.model.GetBackupIndexDownloadUrlResponse.class);
+              this.backup = com.google.api.client.util.Preconditions.checkNotNull(backup, "Required parameter backup must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(BACKUP_PATTERN.matcher(backup).matches(),
+                    "Parameter backup must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+/backups/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetBackupIndexDownloadUrl set$Xgafv(java.lang.String $Xgafv) {
+              return (GetBackupIndexDownloadUrl) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetBackupIndexDownloadUrl setAccessToken(java.lang.String accessToken) {
+              return (GetBackupIndexDownloadUrl) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetBackupIndexDownloadUrl setAlt(java.lang.String alt) {
+              return (GetBackupIndexDownloadUrl) super.setAlt(alt);
+            }
+
+            @Override
+            public GetBackupIndexDownloadUrl setCallback(java.lang.String callback) {
+              return (GetBackupIndexDownloadUrl) super.setCallback(callback);
+            }
+
+            @Override
+            public GetBackupIndexDownloadUrl setFields(java.lang.String fields) {
+              return (GetBackupIndexDownloadUrl) super.setFields(fields);
+            }
+
+            @Override
+            public GetBackupIndexDownloadUrl setKey(java.lang.String key) {
+              return (GetBackupIndexDownloadUrl) super.setKey(key);
+            }
+
+            @Override
+            public GetBackupIndexDownloadUrl setOauthToken(java.lang.String oauthToken) {
+              return (GetBackupIndexDownloadUrl) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetBackupIndexDownloadUrl setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetBackupIndexDownloadUrl) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetBackupIndexDownloadUrl setQuotaUser(java.lang.String quotaUser) {
+              return (GetBackupIndexDownloadUrl) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetBackupIndexDownloadUrl setUploadType(java.lang.String uploadType) {
+              return (GetBackupIndexDownloadUrl) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetBackupIndexDownloadUrl setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetBackupIndexDownloadUrl) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full name of Backup resource. Format:
+             * projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String backup;
+
+            /** Required. Full name of Backup resource. Format:
+           projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+             */
+            public java.lang.String getBackup() {
+              return backup;
+            }
+
+            /**
+             * Required. Full name of Backup resource. Format:
+             * projects/{project}/locations/{location}/backupPlans/{backup_plan}/backups/{backup}
+             */
+            public GetBackupIndexDownloadUrl setBackup(java.lang.String backup) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(BACKUP_PATTERN.matcher(backup).matches(),
+                    "Parameter backup must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+/backups/[^/]+$");
+              }
+              this.backup = backup;
+              return this;
+            }
+
+            @Override
+            public GetBackupIndexDownloadUrl set(String parameterName, Object value) {
+              return (GetBackupIndexDownloadUrl) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
            * does not have a policy set.
            *

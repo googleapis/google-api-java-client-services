@@ -154,6 +154,248 @@ public class FactCheckTools extends com.google.api.client.googleapis.services.js
   public class Claims {
 
     /**
+     * Search through fact-checked claims using an image as the query.
+     *
+     * Create a request for the method "claims.imageSearch".
+     *
+     * This request holds the parameters needed by the factchecktools server.  After setting any
+     * optional parameters, call the {@link ImageSearch#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public ImageSearch imageSearch() throws java.io.IOException {
+      ImageSearch result = new ImageSearch();
+      initialize(result);
+      return result;
+    }
+
+    public class ImageSearch extends FactCheckToolsRequest<com.google.api.services.factchecktools.v1alpha1.model.GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimImageSearchResponse> {
+
+      private static final String REST_PATH = "v1alpha1/claims:imageSearch";
+
+      /**
+       * Search through fact-checked claims using an image as the query.
+       *
+       * Create a request for the method "claims.imageSearch".
+       *
+       * This request holds the parameters needed by the the factchecktools server.  After setting any
+       * optional parameters, call the {@link ImageSearch#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * ImageSearch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected ImageSearch() {
+        super(FactCheckTools.this, "GET", REST_PATH, null, com.google.api.services.factchecktools.v1alpha1.model.GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimImageSearchResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ImageSearch set$Xgafv(java.lang.String $Xgafv) {
+        return (ImageSearch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ImageSearch setAccessToken(java.lang.String accessToken) {
+        return (ImageSearch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ImageSearch setAlt(java.lang.String alt) {
+        return (ImageSearch) super.setAlt(alt);
+      }
+
+      @Override
+      public ImageSearch setCallback(java.lang.String callback) {
+        return (ImageSearch) super.setCallback(callback);
+      }
+
+      @Override
+      public ImageSearch setFields(java.lang.String fields) {
+        return (ImageSearch) super.setFields(fields);
+      }
+
+      @Override
+      public ImageSearch setKey(java.lang.String key) {
+        return (ImageSearch) super.setKey(key);
+      }
+
+      @Override
+      public ImageSearch setOauthToken(java.lang.String oauthToken) {
+        return (ImageSearch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ImageSearch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ImageSearch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ImageSearch setQuotaUser(java.lang.String quotaUser) {
+        return (ImageSearch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ImageSearch setUploadType(java.lang.String uploadType) {
+        return (ImageSearch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ImageSearch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ImageSearch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The URI of the source image. This must be a publicly-accessible image HTTP/HTTPS
+       * URL. When fetching images from HTTP/HTTPS URLs, Google cannot guarantee that the request
+       * will be completed. Your request may fail if the specified host denies the request (e.g. due
+       * to request throttling or DOS prevention), or if Google throttles requests to the site for
+       * abuse prevention. You should not depend on externally-hosted images for production
+       * applications.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String imageUri;
+
+      /** Required. The URI of the source image. This must be a publicly-accessible image HTTP/HTTPS URL.
+     When fetching images from HTTP/HTTPS URLs, Google cannot guarantee that the request will be
+     completed. Your request may fail if the specified host denies the request (e.g. due to request
+     throttling or DOS prevention), or if Google throttles requests to the site for abuse prevention.
+     You should not depend on externally-hosted images for production applications.
+       */
+      public java.lang.String getImageUri() {
+        return imageUri;
+      }
+
+      /**
+       * Required. The URI of the source image. This must be a publicly-accessible image HTTP/HTTPS
+       * URL. When fetching images from HTTP/HTTPS URLs, Google cannot guarantee that the request
+       * will be completed. Your request may fail if the specified host denies the request (e.g. due
+       * to request throttling or DOS prevention), or if Google throttles requests to the site for
+       * abuse prevention. You should not depend on externally-hosted images for production
+       * applications.
+       */
+      public ImageSearch setImageUri(java.lang.String imageUri) {
+        this.imageUri = imageUri;
+        return this;
+      }
+
+      /**
+       * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". Can be used to restrict
+       * results by language, though we do not currently consider the region.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". Can be used to restrict results
+     by language, though we do not currently consider the region.
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". Can be used to restrict
+       * results by language, though we do not currently consider the region.
+       */
+      public ImageSearch setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+      }
+
+      /**
+       * Optional. An integer that specifies the current offset (that is, starting result location)
+       * in search results. This field is only considered if `page_token` is unset. For example, 0
+       * means to return results starting from the first matching result, and 10 means to return
+       * from the 11th result.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer offset;
+
+      /** Optional. An integer that specifies the current offset (that is, starting result location) in
+     search results. This field is only considered if `page_token` is unset. For example, 0 means to
+     return results starting from the first matching result, and 10 means to return from the 11th
+     result.
+       */
+      public java.lang.Integer getOffset() {
+        return offset;
+      }
+
+      /**
+       * Optional. An integer that specifies the current offset (that is, starting result location)
+       * in search results. This field is only considered if `page_token` is unset. For example, 0
+       * means to return results starting from the first matching result, and 10 means to return
+       * from the 11th result.
+       */
+      public ImageSearch setOffset(java.lang.Integer offset) {
+        this.offset = offset;
+        return this;
+      }
+
+      /**
+       * Optional. The pagination size. We will return up to that many results. Defaults to 10 if
+       * not set.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The pagination size. We will return up to that many results. Defaults to 10 if not set.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The pagination size. We will return up to that many results. Defaults to 10 if
+       * not set.
+       */
+      public ImageSearch setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. The pagination token. You may provide the `next_page_token` returned from a
+       * previous List request, if any, in order to get the next page. All other fields must have
+       * the same values as in the previous request.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. The pagination token. You may provide the `next_page_token` returned from a previous List
+     request, if any, in order to get the next page. All other fields must have the same values as in
+     the previous request.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. The pagination token. You may provide the `next_page_token` returned from a
+       * previous List request, if any, in order to get the next page. All other fields must have
+       * the same values as in the previous request.
+       */
+      public ImageSearch setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public ImageSearch set(String parameterName, Object value) {
+        return (ImageSearch) super.set(parameterName, value);
+      }
+    }
+    /**
      * Search through fact-checked claims.
      *
      * Create a request for the method "claims.search".

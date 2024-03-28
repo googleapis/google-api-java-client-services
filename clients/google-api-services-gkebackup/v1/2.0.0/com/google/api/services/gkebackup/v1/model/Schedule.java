@@ -41,12 +41,30 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   private java.lang.String cronSchedule;
 
   /**
+   * Output only. Start time of next scheduled backup under this BackupPlan by either cron_schedule
+   * or rpo config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String nextScheduledBackupTime;
+
+  /**
    * Optional. This flag denotes whether automatic Backup creation is paused for this BackupPlan.
    * Default: False
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean paused;
+
+  /**
+   * Optional. Defines the RPO schedule configuration for this BackupPlan. This is mutually
+   * exclusive with the cron_schedule field since at most one schedule can be defined for a
+   * BackupPLan. If this is defined, then backup_retain_days must also be defined. Default (empty):
+   * no automatic backup creation will occur.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RpoConfig rpoConfig;
 
   /**
    * Optional. A standard [cron](https://wikipedia.com/wiki/cron) string that defines a repeating
@@ -74,6 +92,25 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Start time of next scheduled backup under this BackupPlan by either cron_schedule
+   * or rpo config.
+   * @return value or {@code null} for none
+   */
+  public String getNextScheduledBackupTime() {
+    return nextScheduledBackupTime;
+  }
+
+  /**
+   * Output only. Start time of next scheduled backup under this BackupPlan by either cron_schedule
+   * or rpo config.
+   * @param nextScheduledBackupTime nextScheduledBackupTime or {@code null} for none
+   */
+  public Schedule setNextScheduledBackupTime(String nextScheduledBackupTime) {
+    this.nextScheduledBackupTime = nextScheduledBackupTime;
+    return this;
+  }
+
+  /**
    * Optional. This flag denotes whether automatic Backup creation is paused for this BackupPlan.
    * Default: False
    * @return value or {@code null} for none
@@ -89,6 +126,29 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
    */
   public Schedule setPaused(java.lang.Boolean paused) {
     this.paused = paused;
+    return this;
+  }
+
+  /**
+   * Optional. Defines the RPO schedule configuration for this BackupPlan. This is mutually
+   * exclusive with the cron_schedule field since at most one schedule can be defined for a
+   * BackupPLan. If this is defined, then backup_retain_days must also be defined. Default (empty):
+   * no automatic backup creation will occur.
+   * @return value or {@code null} for none
+   */
+  public RpoConfig getRpoConfig() {
+    return rpoConfig;
+  }
+
+  /**
+   * Optional. Defines the RPO schedule configuration for this BackupPlan. This is mutually
+   * exclusive with the cron_schedule field since at most one schedule can be defined for a
+   * BackupPLan. If this is defined, then backup_retain_days must also be defined. Default (empty):
+   * no automatic backup creation will occur.
+   * @param rpoConfig rpoConfig or {@code null} for none
+   */
+  public Schedule setRpoConfig(RpoConfig rpoConfig) {
+    this.rpoConfig = rpoConfig;
     return this;
   }
 

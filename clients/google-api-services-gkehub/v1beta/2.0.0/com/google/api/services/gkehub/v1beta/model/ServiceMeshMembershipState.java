@@ -30,6 +30,19 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class ServiceMeshMembershipState extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. List of condition reporting membership statues
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ServiceMeshCondition> conditions;
+
+  static {
+    // hack to force ProGuard to consider ServiceMeshCondition used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ServiceMeshCondition.class);
+  }
+
+  /**
    * Output only. Status of control plane management
    * The value may be {@code null}.
    */
@@ -42,6 +55,23 @@ public final class ServiceMeshMembershipState extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private ServiceMeshDataPlaneManagement dataPlaneManagement;
+
+  /**
+   * Output only. List of condition reporting membership statues
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ServiceMeshCondition> getConditions() {
+    return conditions;
+  }
+
+  /**
+   * Output only. List of condition reporting membership statues
+   * @param conditions conditions or {@code null} for none
+   */
+  public ServiceMeshMembershipState setConditions(java.util.List<ServiceMeshCondition> conditions) {
+    this.conditions = conditions;
+    return this;
+  }
 
   /**
    * Output only. Status of control plane management

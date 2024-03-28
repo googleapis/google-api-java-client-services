@@ -54,6 +54,13 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
   private java.lang.String constraintDefault;
 
   /**
+   * Defines this constraint as being a CustomConstraint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint customConstraint;
+
+  /**
    * Detailed description of what this constraint controls as well as how and where it is enforced.
    * Mutable.
    * The value may be {@code null}.
@@ -124,6 +131,23 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
    */
   public GoogleCloudOrgpolicyV2Constraint setConstraintDefault(java.lang.String constraintDefault) {
     this.constraintDefault = constraintDefault;
+    return this;
+  }
+
+  /**
+   * Defines this constraint as being a CustomConstraint.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint getCustomConstraint() {
+    return customConstraint;
+  }
+
+  /**
+   * Defines this constraint as being a CustomConstraint.
+   * @param customConstraint customConstraint or {@code null} for none
+   */
+  public GoogleCloudOrgpolicyV2Constraint setCustomConstraint(GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint customConstraint) {
+    this.customConstraint = customConstraint;
     return this;
   }
 

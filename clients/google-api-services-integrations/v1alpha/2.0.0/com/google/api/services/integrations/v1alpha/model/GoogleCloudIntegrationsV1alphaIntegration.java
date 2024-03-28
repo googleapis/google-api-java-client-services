@@ -38,11 +38,26 @@ public final class GoogleCloudIntegrationsV1alphaIntegration extends com.google.
   private java.lang.Boolean active;
 
   /**
+   * Output only. The creator's email address. Generated based on the End User Credentials/LOAS role
+   * of the user making the call.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String creatorEmail;
+
+  /**
    * Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Required. The last modifier of this integration
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastModifierEmail;
 
   /**
    * Required. The resource name of the integration.
@@ -76,6 +91,25 @@ public final class GoogleCloudIntegrationsV1alphaIntegration extends com.google.
   }
 
   /**
+   * Output only. The creator's email address. Generated based on the End User Credentials/LOAS role
+   * of the user making the call.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreatorEmail() {
+    return creatorEmail;
+  }
+
+  /**
+   * Output only. The creator's email address. Generated based on the End User Credentials/LOAS role
+   * of the user making the call.
+   * @param creatorEmail creatorEmail or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegration setCreatorEmail(java.lang.String creatorEmail) {
+    this.creatorEmail = creatorEmail;
+    return this;
+  }
+
+  /**
    * Optional.
    * @return value or {@code null} for none
    */
@@ -89,6 +123,23 @@ public final class GoogleCloudIntegrationsV1alphaIntegration extends com.google.
    */
   public GoogleCloudIntegrationsV1alphaIntegration setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Required. The last modifier of this integration
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastModifierEmail() {
+    return lastModifierEmail;
+  }
+
+  /**
+   * Required. The last modifier of this integration
+   * @param lastModifierEmail lastModifierEmail or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegration setLastModifierEmail(java.lang.String lastModifierEmail) {
+    this.lastModifierEmail = lastModifierEmail;
     return this;
   }
 

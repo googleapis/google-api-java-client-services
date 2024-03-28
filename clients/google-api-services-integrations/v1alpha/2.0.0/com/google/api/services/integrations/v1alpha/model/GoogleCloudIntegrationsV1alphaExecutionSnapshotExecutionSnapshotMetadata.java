@@ -54,6 +54,13 @@ public final class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnaps
   private java.lang.Integer executionAttempt;
 
   /**
+   * The direct integration which the event execution snapshots belongs to
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String integrationName;
+
+  /**
    * the task name associated with this snapshot.
    * The value may be {@code null}.
    */
@@ -133,6 +140,23 @@ public final class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnaps
    */
   public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata setExecutionAttempt(java.lang.Integer executionAttempt) {
     this.executionAttempt = executionAttempt;
+    return this;
+  }
+
+  /**
+   * The direct integration which the event execution snapshots belongs to
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIntegrationName() {
+    return integrationName;
+  }
+
+  /**
+   * The direct integration which the event execution snapshots belongs to
+   * @param integrationName integrationName or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata setIntegrationName(java.lang.String integrationName) {
+    this.integrationName = integrationName;
     return this;
   }
 

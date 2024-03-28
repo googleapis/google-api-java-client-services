@@ -127,6 +127,13 @@ public final class GoogleCloudIntegrationsV1alphaExecution extends com.google.ap
   }
 
   /**
+   * Output only. An increasing sequence that is set when a new snapshot is created
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long snapshotNumber;
+
+  /**
    * The trigger id of the integration trigger config. If both trigger_id and client_id is present,
    * the integration is executed from the start tasks provided by the matching trigger config
    * otherwise it is executed from the default start tasks.
@@ -343,6 +350,23 @@ public final class GoogleCloudIntegrationsV1alphaExecution extends com.google.ap
    */
   public GoogleCloudIntegrationsV1alphaExecution setResponseParams(java.util.List<EnterpriseCrmFrontendsEventbusProtoParameterEntry> responseParams) {
     this.responseParams = responseParams;
+    return this;
+  }
+
+  /**
+   * Output only. An increasing sequence that is set when a new snapshot is created
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSnapshotNumber() {
+    return snapshotNumber;
+  }
+
+  /**
+   * Output only. An increasing sequence that is set when a new snapshot is created
+   * @param snapshotNumber snapshotNumber or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecution setSnapshotNumber(java.lang.Long snapshotNumber) {
+    this.snapshotNumber = snapshotNumber;
     return this;
   }
 

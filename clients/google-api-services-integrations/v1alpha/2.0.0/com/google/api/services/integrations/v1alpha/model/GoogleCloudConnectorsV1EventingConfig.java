@@ -51,11 +51,11 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   private GoogleCloudConnectorsV1AuthConfig authConfig;
 
   /**
-   * Encryption key (can be either Google managed or CMEK).
+   * Optional. Dead letter configuration for eventing of a connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudConnectorsV1ConfigVariable encryptionKey;
+  private GoogleCloudConnectorsV1EventingConfigDeadLetterConfig deadLetterConfig;
 
   /**
    * Enrichment Enabled.
@@ -73,11 +73,25 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   private java.lang.String eventsListenerIngressEndpoint;
 
   /**
+   * Optional. Auth details for the event listener.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1AuthConfig listenerAuthConfig;
+
+  /**
    * Optional. Private Connectivity Enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean privateConnectivityEnabled;
+
+  /**
+   * Optional. Proxy for Eventing auto-registration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1DestinationConfig proxyDestinationConfig;
 
   /**
    * Registration endpoint for auto registration.
@@ -121,19 +135,19 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   }
 
   /**
-   * Encryption key (can be either Google managed or CMEK).
+   * Optional. Dead letter configuration for eventing of a connection.
    * @return value or {@code null} for none
    */
-  public GoogleCloudConnectorsV1ConfigVariable getEncryptionKey() {
-    return encryptionKey;
+  public GoogleCloudConnectorsV1EventingConfigDeadLetterConfig getDeadLetterConfig() {
+    return deadLetterConfig;
   }
 
   /**
-   * Encryption key (can be either Google managed or CMEK).
-   * @param encryptionKey encryptionKey or {@code null} for none
+   * Optional. Dead letter configuration for eventing of a connection.
+   * @param deadLetterConfig deadLetterConfig or {@code null} for none
    */
-  public GoogleCloudConnectorsV1EventingConfig setEncryptionKey(GoogleCloudConnectorsV1ConfigVariable encryptionKey) {
-    this.encryptionKey = encryptionKey;
+  public GoogleCloudConnectorsV1EventingConfig setDeadLetterConfig(GoogleCloudConnectorsV1EventingConfigDeadLetterConfig deadLetterConfig) {
+    this.deadLetterConfig = deadLetterConfig;
     return this;
   }
 
@@ -174,6 +188,23 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   }
 
   /**
+   * Optional. Auth details for the event listener.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1AuthConfig getListenerAuthConfig() {
+    return listenerAuthConfig;
+  }
+
+  /**
+   * Optional. Auth details for the event listener.
+   * @param listenerAuthConfig listenerAuthConfig or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingConfig setListenerAuthConfig(GoogleCloudConnectorsV1AuthConfig listenerAuthConfig) {
+    this.listenerAuthConfig = listenerAuthConfig;
+    return this;
+  }
+
+  /**
    * Optional. Private Connectivity Enabled.
    * @return value or {@code null} for none
    */
@@ -187,6 +218,23 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
    */
   public GoogleCloudConnectorsV1EventingConfig setPrivateConnectivityEnabled(java.lang.Boolean privateConnectivityEnabled) {
     this.privateConnectivityEnabled = privateConnectivityEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Proxy for Eventing auto-registration.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1DestinationConfig getProxyDestinationConfig() {
+    return proxyDestinationConfig;
+  }
+
+  /**
+   * Optional. Proxy for Eventing auto-registration.
+   * @param proxyDestinationConfig proxyDestinationConfig or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingConfig setProxyDestinationConfig(GoogleCloudConnectorsV1DestinationConfig proxyDestinationConfig) {
+    this.proxyDestinationConfig = proxyDestinationConfig;
     return this;
   }
 

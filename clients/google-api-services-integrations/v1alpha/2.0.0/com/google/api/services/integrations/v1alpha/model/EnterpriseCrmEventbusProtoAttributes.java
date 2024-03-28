@@ -69,6 +69,13 @@ public final class EnterpriseCrmEventbusProtoAttributes extends com.google.api.c
   private EnterpriseCrmEventbusProtoLogSettings logSettings;
 
   /**
+   * True if this workflow parameter should be masked in the logs
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean masked;
+
+  /**
    * Used to indicate if the ParameterEntry is a read only field or not.
    * The value may be {@code null}.
    */
@@ -174,6 +181,23 @@ public final class EnterpriseCrmEventbusProtoAttributes extends com.google.api.c
    */
   public EnterpriseCrmEventbusProtoAttributes setLogSettings(EnterpriseCrmEventbusProtoLogSettings logSettings) {
     this.logSettings = logSettings;
+    return this;
+  }
+
+  /**
+   * True if this workflow parameter should be masked in the logs
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMasked() {
+    return masked;
+  }
+
+  /**
+   * True if this workflow parameter should be masked in the logs
+   * @param masked masked or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoAttributes setMasked(java.lang.Boolean masked) {
+    this.masked = masked;
     return this;
   }
 

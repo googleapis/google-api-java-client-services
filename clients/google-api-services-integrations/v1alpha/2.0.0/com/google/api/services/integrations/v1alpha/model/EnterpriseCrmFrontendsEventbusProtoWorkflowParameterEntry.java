@@ -45,6 +45,13 @@ public final class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry ext
   private java.util.List<EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry> children;
 
   /**
+   * Indicates whether this variable contains large data and need to be uploaded to Cloud Storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean containsLargeData;
+
+  /**
    * The data type of the parameter.
    * The value may be {@code null}.
    */
@@ -134,6 +141,12 @@ public final class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry ext
   private java.lang.String protoDefPath;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean required;
+
+  /**
    * Metadata information about the parameters.
    * @return value or {@code null} for none
    */
@@ -164,6 +177,23 @@ public final class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry ext
    */
   public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry setChildren(java.util.List<EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry> children) {
     this.children = children;
+    return this;
+  }
+
+  /**
+   * Indicates whether this variable contains large data and need to be uploaded to Cloud Storage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getContainsLargeData() {
+    return containsLargeData;
+  }
+
+  /**
+   * Indicates whether this variable contains large data and need to be uploaded to Cloud Storage.
+   * @param containsLargeData containsLargeData or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry setContainsLargeData(java.lang.Boolean containsLargeData) {
+    this.containsLargeData = containsLargeData;
     return this;
   }
 
@@ -378,6 +408,21 @@ public final class EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry ext
    */
   public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry setProtoDefPath(java.lang.String protoDefPath) {
     this.protoDefPath = protoDefPath;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRequired() {
+    return required;
+  }
+
+  /**
+   * @param required required or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry setRequired(java.lang.Boolean required) {
+    this.required = required;
     return this;
   }
 

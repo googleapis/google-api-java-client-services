@@ -43,6 +43,19 @@ public final class ServiceMeshMembershipState extends com.google.api.client.json
   }
 
   /**
+   * Output only. List of condition reporting membership statues
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ServiceMeshCondition> conditions;
+
+  static {
+    // hack to force ProGuard to consider ServiceMeshCondition used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ServiceMeshCondition.class);
+  }
+
+  /**
    * The API version (i.e. Istio CRD version) for configuring service mesh in this cluster. This
    * version is influenced by the `default_channel` field.
    * The value may be {@code null}.
@@ -78,6 +91,23 @@ public final class ServiceMeshMembershipState extends com.google.api.client.json
    */
   public ServiceMeshMembershipState setAnalysisMessages(java.util.List<ServiceMeshAnalysisMessage> analysisMessages) {
     this.analysisMessages = analysisMessages;
+    return this;
+  }
+
+  /**
+   * Output only. List of condition reporting membership statues
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ServiceMeshCondition> getConditions() {
+    return conditions;
+  }
+
+  /**
+   * Output only. List of condition reporting membership statues
+   * @param conditions conditions or {@code null} for none
+   */
+  public ServiceMeshMembershipState setConditions(java.util.List<ServiceMeshCondition> conditions) {
+    this.conditions = conditions;
     return this;
   }
 

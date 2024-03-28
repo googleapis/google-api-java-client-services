@@ -148,14 +148,14 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String producerForwardingRule;
 
   /**
-   * The number of consumer Network Connectivity Center spokes that connected Private Service
-   * Connect endpoints can be propagated to. This limit lets a service producer indirectly limit how
-   * many propagated Private Service Connect connections can be established to the producer's
-   * service attachment. If the connection preference of the service attachment is ACCEPT_MANUAL,
-   * the limit applies to each project or network that is listed in the consumer accept list. If the
-   * connection preference of the service attachment is ACCEPT_AUTOMATIC, the limit applies to each
-   * project that contains a connected endpoint. If unspecified, the default propagated connection
-   * limit is 250.
+   * The number of consumer spokes that connected Private Service Connect endpoints can be
+   * propagated to through Network Connectivity Center. This limit lets the service producer limit
+   * how many propagated Private Service Connect connections can be established to this service
+   * attachment from a single consumer. If the connection preference of the service attachment is
+   * ACCEPT_MANUAL, the limit applies to each project or network that is listed in the consumer
+   * accept list. If the connection preference of the service attachment is ACCEPT_AUTOMATIC, the
+   * limit applies to each project that contains a connected endpoint. If unspecified, the default
+   * propagated connection limit is 250.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -524,14 +524,14 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The number of consumer Network Connectivity Center spokes that connected Private Service
-   * Connect endpoints can be propagated to. This limit lets a service producer indirectly limit how
-   * many propagated Private Service Connect connections can be established to the producer's
-   * service attachment. If the connection preference of the service attachment is ACCEPT_MANUAL,
-   * the limit applies to each project or network that is listed in the consumer accept list. If the
-   * connection preference of the service attachment is ACCEPT_AUTOMATIC, the limit applies to each
-   * project that contains a connected endpoint. If unspecified, the default propagated connection
-   * limit is 250.
+   * The number of consumer spokes that connected Private Service Connect endpoints can be
+   * propagated to through Network Connectivity Center. This limit lets the service producer limit
+   * how many propagated Private Service Connect connections can be established to this service
+   * attachment from a single consumer. If the connection preference of the service attachment is
+   * ACCEPT_MANUAL, the limit applies to each project or network that is listed in the consumer
+   * accept list. If the connection preference of the service attachment is ACCEPT_AUTOMATIC, the
+   * limit applies to each project that contains a connected endpoint. If unspecified, the default
+   * propagated connection limit is 250.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPropagatedConnectionLimit() {
@@ -539,14 +539,14 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The number of consumer Network Connectivity Center spokes that connected Private Service
-   * Connect endpoints can be propagated to. This limit lets a service producer indirectly limit how
-   * many propagated Private Service Connect connections can be established to the producer's
-   * service attachment. If the connection preference of the service attachment is ACCEPT_MANUAL,
-   * the limit applies to each project or network that is listed in the consumer accept list. If the
-   * connection preference of the service attachment is ACCEPT_AUTOMATIC, the limit applies to each
-   * project that contains a connected endpoint. If unspecified, the default propagated connection
-   * limit is 250.
+   * The number of consumer spokes that connected Private Service Connect endpoints can be
+   * propagated to through Network Connectivity Center. This limit lets the service producer limit
+   * how many propagated Private Service Connect connections can be established to this service
+   * attachment from a single consumer. If the connection preference of the service attachment is
+   * ACCEPT_MANUAL, the limit applies to each project or network that is listed in the consumer
+   * accept list. If the connection preference of the service attachment is ACCEPT_AUTOMATIC, the
+   * limit applies to each project that contains a connected endpoint. If unspecified, the default
+   * propagated connection limit is 250.
    * @param propagatedConnectionLimit propagatedConnectionLimit or {@code null} for none
    */
   public ServiceAttachment setPropagatedConnectionLimit(java.lang.Long propagatedConnectionLimit) {

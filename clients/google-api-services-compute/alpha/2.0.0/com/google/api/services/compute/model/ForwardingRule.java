@@ -148,6 +148,31 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * Specifies the canary migration state for the backend buckets attached to this forwarding rule.
+   * Possible values are PREPARE, TEST, and FINALIZE. To begin the migration from EXTERNAL to
+   * EXTERNAL_MANAGED, the state must be changed to PREPARE. The state must be changed to FINALIZE
+   * before the loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST state
+   * can be used to migrate traffic to backend buckets attached to this forwarding rule by
+   * percentage using externalManagedBackendBucketMigrationTestingPercentage. Rolling back a
+   * migration requires the states to be set in reverse order. So changing the scheme from
+   * EXTERNAL_MANAGED to EXTERNAL requires the state to be set to FINALIZE at the same time.
+   * Optionally, the TEST state can be used to migrate some traffic back to EXTERNAL or PREPARE can
+   * be used to migrate all traffic back to EXTERNAL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalManagedBackendBucketMigrationState;
+
+  /**
+   * Determines the fraction of requests to backend buckets that should be processed by the Global
+   * external Application Load Balancer. The value of this field must be in the range [0, 100]. This
+   * value is only used if the loadBalancingScheme is set to EXTERNAL (when using the Classic ALB).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float externalManagedBackendBucketMigrationTestingPercentage;
+
+  /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a ForwardingRule. Include the
    * fingerprint in patch request to ensure that you do not overwrite changes that were applied from
@@ -680,6 +705,62 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Specifies the canary migration state for the backend buckets attached to this forwarding rule.
+   * Possible values are PREPARE, TEST, and FINALIZE. To begin the migration from EXTERNAL to
+   * EXTERNAL_MANAGED, the state must be changed to PREPARE. The state must be changed to FINALIZE
+   * before the loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST state
+   * can be used to migrate traffic to backend buckets attached to this forwarding rule by
+   * percentage using externalManagedBackendBucketMigrationTestingPercentage. Rolling back a
+   * migration requires the states to be set in reverse order. So changing the scheme from
+   * EXTERNAL_MANAGED to EXTERNAL requires the state to be set to FINALIZE at the same time.
+   * Optionally, the TEST state can be used to migrate some traffic back to EXTERNAL or PREPARE can
+   * be used to migrate all traffic back to EXTERNAL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalManagedBackendBucketMigrationState() {
+    return externalManagedBackendBucketMigrationState;
+  }
+
+  /**
+   * Specifies the canary migration state for the backend buckets attached to this forwarding rule.
+   * Possible values are PREPARE, TEST, and FINALIZE. To begin the migration from EXTERNAL to
+   * EXTERNAL_MANAGED, the state must be changed to PREPARE. The state must be changed to FINALIZE
+   * before the loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST state
+   * can be used to migrate traffic to backend buckets attached to this forwarding rule by
+   * percentage using externalManagedBackendBucketMigrationTestingPercentage. Rolling back a
+   * migration requires the states to be set in reverse order. So changing the scheme from
+   * EXTERNAL_MANAGED to EXTERNAL requires the state to be set to FINALIZE at the same time.
+   * Optionally, the TEST state can be used to migrate some traffic back to EXTERNAL or PREPARE can
+   * be used to migrate all traffic back to EXTERNAL.
+   * @param externalManagedBackendBucketMigrationState externalManagedBackendBucketMigrationState or {@code null} for none
+   */
+  public ForwardingRule setExternalManagedBackendBucketMigrationState(java.lang.String externalManagedBackendBucketMigrationState) {
+    this.externalManagedBackendBucketMigrationState = externalManagedBackendBucketMigrationState;
+    return this;
+  }
+
+  /**
+   * Determines the fraction of requests to backend buckets that should be processed by the Global
+   * external Application Load Balancer. The value of this field must be in the range [0, 100]. This
+   * value is only used if the loadBalancingScheme is set to EXTERNAL (when using the Classic ALB).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getExternalManagedBackendBucketMigrationTestingPercentage() {
+    return externalManagedBackendBucketMigrationTestingPercentage;
+  }
+
+  /**
+   * Determines the fraction of requests to backend buckets that should be processed by the Global
+   * external Application Load Balancer. The value of this field must be in the range [0, 100]. This
+   * value is only used if the loadBalancingScheme is set to EXTERNAL (when using the Classic ALB).
+   * @param externalManagedBackendBucketMigrationTestingPercentage externalManagedBackendBucketMigrationTestingPercentage or {@code null} for none
+   */
+  public ForwardingRule setExternalManagedBackendBucketMigrationTestingPercentage(java.lang.Float externalManagedBackendBucketMigrationTestingPercentage) {
+    this.externalManagedBackendBucketMigrationTestingPercentage = externalManagedBackendBucketMigrationTestingPercentage;
     return this;
   }
 

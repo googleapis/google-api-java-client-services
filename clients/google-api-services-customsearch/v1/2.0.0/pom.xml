@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-customsearch</artifactId>
-  <version>v1-rev20240320-2.0.0</version>
-  <name>Custom Search API v1-rev20240320-2.0.0</name>
+  <version>v1-rev20240326-2.0.0</version>
+  <name>Custom Search API v1-rev20240326-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -54,7 +54,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo exten
 
   /**
    * Username of the account that is being verified. Deprecated. Customers should now provide the
-   * hashed account ID field in Event.
+   * `account_id` field in `event.user_info`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo exten
 
   /**
    * Username of the account that is being verified. Deprecated. Customers should now provide the
-   * hashed account ID field in Event.
+   * `account_id` field in `event.user_info`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -124,7 +124,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo exten
 
   /**
    * Username of the account that is being verified. Deprecated. Customers should now provide the
-   * hashed account ID field in Event.
+   * `account_id` field in `event.user_info`.
    * @param username username or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo setUsername(java.lang.String username) {

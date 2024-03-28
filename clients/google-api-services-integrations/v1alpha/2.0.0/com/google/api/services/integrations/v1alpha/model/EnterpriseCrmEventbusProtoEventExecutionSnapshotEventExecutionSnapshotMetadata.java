@@ -55,6 +55,13 @@ public final class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutio
   private java.lang.Integer eventAttemptNum;
 
   /**
+   * The direct integration which the event execution snapshots belongs to
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String integrationName;
+
+  /**
    * the task attempt number this snapshot belongs to. Could be empty.
    * The value may be {@code null}.
    */
@@ -134,6 +141,23 @@ public final class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutio
    */
   public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata setEventAttemptNum(java.lang.Integer eventAttemptNum) {
     this.eventAttemptNum = eventAttemptNum;
+    return this;
+  }
+
+  /**
+   * The direct integration which the event execution snapshots belongs to
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIntegrationName() {
+    return integrationName;
+  }
+
+  /**
+   * The direct integration which the event execution snapshots belongs to
+   * @param integrationName integrationName or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata setIntegrationName(java.lang.String integrationName) {
+    this.integrationName = integrationName;
     return this;
   }
 

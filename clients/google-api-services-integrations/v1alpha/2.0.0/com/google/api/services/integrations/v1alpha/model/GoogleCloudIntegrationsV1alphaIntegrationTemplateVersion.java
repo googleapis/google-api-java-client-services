@@ -20,7 +20,7 @@ package com.google.api.services.integrations.v1alpha.model;
  * IntegrationTemplateVersion definition. An IntegrationTemplateVersion provides configurations
  * required to construct an IntegrationVersion. It cannot be executed directly like an Integration.
  * Users can create IntegrationTemplateVersions using Integrations. These Templates can be shared by
- * users across GCP projects.
+ * users across GCP projects. Next available: 17
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -55,6 +55,13 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion exte
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Optional. True if variable masking feature should be turned on for generated workflows
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableVariableMasking;
 
   /**
    * Optional. Error Catch Task configuration for the IntegrationTemplateVersion. It's optional.
@@ -219,6 +226,23 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion exte
    */
   public GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. True if variable masking feature should be turned on for generated workflows
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableVariableMasking() {
+    return enableVariableMasking;
+  }
+
+  /**
+   * Optional. True if variable masking feature should be turned on for generated workflows
+   * @param enableVariableMasking enableVariableMasking or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion setEnableVariableMasking(java.lang.Boolean enableVariableMasking) {
+    this.enableVariableMasking = enableVariableMasking;
     return this;
   }
 

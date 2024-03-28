@@ -39,6 +39,13 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
   private java.lang.Long connectionRatelimitWindowSeconds;
 
   /**
+   * Optional. Indicates whether connector is deployed on GKE/CloudRun
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deploymentModel;
+
+  /**
    * Output only. HPA autoscaling config.
    * The value may be {@code null}.
    */
@@ -94,6 +101,23 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
    */
   public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setConnectionRatelimitWindowSeconds(java.lang.Long connectionRatelimitWindowSeconds) {
     this.connectionRatelimitWindowSeconds = connectionRatelimitWindowSeconds;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether connector is deployed on GKE/CloudRun
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeploymentModel() {
+    return deploymentModel;
+  }
+
+  /**
+   * Optional. Indicates whether connector is deployed on GKE/CloudRun
+   * @param deploymentModel deploymentModel or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setDeploymentModel(java.lang.String deploymentModel) {
+    this.deploymentModel = deploymentModel;
     return this;
   }
 

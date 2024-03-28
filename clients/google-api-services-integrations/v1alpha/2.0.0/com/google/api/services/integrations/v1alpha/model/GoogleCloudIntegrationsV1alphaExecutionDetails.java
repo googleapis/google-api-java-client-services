@@ -45,6 +45,13 @@ public final class GoogleCloudIntegrationsV1alphaExecutionDetails extends com.go
   }
 
   /**
+   * Total size of all event_execution_snapshots for an execution
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long eventExecutionSnapshotsSize;
+
+  /**
    * List of snapshots taken during the execution.
    * The value may be {@code null}.
    */
@@ -72,6 +79,23 @@ public final class GoogleCloudIntegrationsV1alphaExecutionDetails extends com.go
    */
   public GoogleCloudIntegrationsV1alphaExecutionDetails setAttemptStats(java.util.List<GoogleCloudIntegrationsV1alphaAttemptStats> attemptStats) {
     this.attemptStats = attemptStats;
+    return this;
+  }
+
+  /**
+   * Total size of all event_execution_snapshots for an execution
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getEventExecutionSnapshotsSize() {
+    return eventExecutionSnapshotsSize;
+  }
+
+  /**
+   * Total size of all event_execution_snapshots for an execution
+   * @param eventExecutionSnapshotsSize eventExecutionSnapshotsSize or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecutionDetails setEventExecutionSnapshotsSize(java.lang.Long eventExecutionSnapshotsSize) {
+    this.eventExecutionSnapshotsSize = eventExecutionSnapshotsSize;
     return this;
   }
 

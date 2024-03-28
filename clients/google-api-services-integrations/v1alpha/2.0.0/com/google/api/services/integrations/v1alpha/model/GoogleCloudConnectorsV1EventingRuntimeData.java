@@ -54,6 +54,13 @@ public final class GoogleCloudConnectorsV1EventingRuntimeData extends com.google
   private GoogleCloudConnectorsV1EventingStatus status;
 
   /**
+   * Output only. Webhook data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1EventingRuntimeDataWebhookData webhookData;
+
+  /**
    * Output only. Events listener endpoint. The value will populated after provisioning the events
    * listener.
    * @return value or {@code null} for none
@@ -105,6 +112,23 @@ public final class GoogleCloudConnectorsV1EventingRuntimeData extends com.google
    */
   public GoogleCloudConnectorsV1EventingRuntimeData setStatus(GoogleCloudConnectorsV1EventingStatus status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Output only. Webhook data.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingRuntimeDataWebhookData getWebhookData() {
+    return webhookData;
+  }
+
+  /**
+   * Output only. Webhook data.
+   * @param webhookData webhookData or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingRuntimeData setWebhookData(GoogleCloudConnectorsV1EventingRuntimeDataWebhookData webhookData) {
+    this.webhookData = webhookData;
     return this;
   }
 

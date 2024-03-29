@@ -17,7 +17,7 @@
 package com.google.api.services.metastore.v1beta.model;
 
 /**
- * Encryption settings for the service.
+ * Response message for DataprocMetastore.CancelMigration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataproc Metastore API. For a detailed explanation
@@ -28,46 +28,46 @@ package com.google.api.services.metastore.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EncryptionConfig extends com.google.api.client.json.GenericJson {
+public final class CancelMigrationResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fully qualified customer provided Cloud KMS key name to use for customer data encryption,
-   * in the following format:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id
-   * }/cryptoKeys/{crypto_key_id}.
+   * The relative resource name of the migration execution, in the following form:projects/{project_
+   * number}/locations/{location_id}/services/{service_id}/migrationExecutions/{migration_execution_
+   * id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String kmsKey;
+  private java.lang.String migrationExecution;
 
   /**
-   * The fully qualified customer provided Cloud KMS key name to use for customer data encryption,
-   * in the following format:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id
-   * }/cryptoKeys/{crypto_key_id}.
+   * The relative resource name of the migration execution, in the following form:projects/{project_
+   * number}/locations/{location_id}/services/{service_id}/migrationExecutions/{migration_execution_
+   * id}.
    * @return value or {@code null} for none
    */
-  public java.lang.String getKmsKey() {
-    return kmsKey;
+  public java.lang.String getMigrationExecution() {
+    return migrationExecution;
   }
 
   /**
-   * The fully qualified customer provided Cloud KMS key name to use for customer data encryption,
-   * in the following format:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id
-   * }/cryptoKeys/{crypto_key_id}.
-   * @param kmsKey kmsKey or {@code null} for none
+   * The relative resource name of the migration execution, in the following form:projects/{project_
+   * number}/locations/{location_id}/services/{service_id}/migrationExecutions/{migration_execution_
+   * id}.
+   * @param migrationExecution migrationExecution or {@code null} for none
    */
-  public EncryptionConfig setKmsKey(java.lang.String kmsKey) {
-    this.kmsKey = kmsKey;
+  public CancelMigrationResponse setMigrationExecution(java.lang.String migrationExecution) {
+    this.migrationExecution = migrationExecution;
     return this;
   }
 
   @Override
-  public EncryptionConfig set(String fieldName, Object value) {
-    return (EncryptionConfig) super.set(fieldName, value);
+  public CancelMigrationResponse set(String fieldName, Object value) {
+    return (CancelMigrationResponse) super.set(fieldName, value);
   }
 
   @Override
-  public EncryptionConfig clone() {
-    return (EncryptionConfig) super.clone();
+  public CancelMigrationResponse clone() {
+    return (CancelMigrationResponse) super.clone();
   }
 
 }

@@ -2955,6 +2955,292 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * Cancels the ongoing Managed Migration process.
+         *
+         * Create a request for the method "services.cancelMigration".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link CancelMigration#execute()} method to invoke the remote operation.
+         *
+         * @param service Required. The relative resource name of the metastore service to cancel the ongoing migration to, in
+         *        the following format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+         * @param content the {@link com.google.api.services.metastore.v1beta.model.CancelMigrationRequest}
+         * @return the request
+         */
+        public CancelMigration cancelMigration(java.lang.String service, com.google.api.services.metastore.v1beta.model.CancelMigrationRequest content) throws java.io.IOException {
+          CancelMigration result = new CancelMigration(service, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CancelMigration extends DataprocMetastoreRequest<com.google.api.services.metastore.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+service}:cancelMigration";
+
+          private final java.util.regex.Pattern SERVICE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+          /**
+           * Cancels the ongoing Managed Migration process.
+           *
+           * Create a request for the method "services.cancelMigration".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link CancelMigration#execute()} method to invoke the remote
+           * operation. <p> {@link CancelMigration#initialize(com.google.api.client.googleapis.services.Abst
+           * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param service Required. The relative resource name of the metastore service to cancel the ongoing migration to, in
+         *        the following format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           * @param content the {@link com.google.api.services.metastore.v1beta.model.CancelMigrationRequest}
+           * @since 1.13
+           */
+          protected CancelMigration(java.lang.String service, com.google.api.services.metastore.v1beta.model.CancelMigrationRequest content) {
+            super(DataprocMetastore.this, "POST", REST_PATH, content, com.google.api.services.metastore.v1beta.model.Operation.class);
+            this.service = com.google.api.client.util.Preconditions.checkNotNull(service, "Required parameter service must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public CancelMigration set$Xgafv(java.lang.String $Xgafv) {
+            return (CancelMigration) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CancelMigration setAccessToken(java.lang.String accessToken) {
+            return (CancelMigration) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CancelMigration setAlt(java.lang.String alt) {
+            return (CancelMigration) super.setAlt(alt);
+          }
+
+          @Override
+          public CancelMigration setCallback(java.lang.String callback) {
+            return (CancelMigration) super.setCallback(callback);
+          }
+
+          @Override
+          public CancelMigration setFields(java.lang.String fields) {
+            return (CancelMigration) super.setFields(fields);
+          }
+
+          @Override
+          public CancelMigration setKey(java.lang.String key) {
+            return (CancelMigration) super.setKey(key);
+          }
+
+          @Override
+          public CancelMigration setOauthToken(java.lang.String oauthToken) {
+            return (CancelMigration) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CancelMigration setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CancelMigration) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CancelMigration setQuotaUser(java.lang.String quotaUser) {
+            return (CancelMigration) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CancelMigration setUploadType(java.lang.String uploadType) {
+            return (CancelMigration) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CancelMigration setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CancelMigration) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to cancel the ongoing
+           * migration to, in the following
+           * format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String service;
+
+          /** Required. The relative resource name of the metastore service to cancel the ongoing migration to,
+         in the following format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public java.lang.String getService() {
+            return service;
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to cancel the ongoing
+           * migration to, in the following
+           * format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public CancelMigration setService(java.lang.String service) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+            this.service = service;
+            return this;
+          }
+
+          @Override
+          public CancelMigration set(String parameterName, Object value) {
+            return (CancelMigration) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Completes the managed migration process. The Dataproc Metastore service will switch to using its
+         * own backend database after successful migration.
+         *
+         * Create a request for the method "services.completeMigration".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link CompleteMigration#execute()} method to invoke the remote operation.
+         *
+         * @param service Required. The relative resource name of the metastore service to complete the migration to, in the
+         *        following format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+         * @param content the {@link com.google.api.services.metastore.v1beta.model.CompleteMigrationRequest}
+         * @return the request
+         */
+        public CompleteMigration completeMigration(java.lang.String service, com.google.api.services.metastore.v1beta.model.CompleteMigrationRequest content) throws java.io.IOException {
+          CompleteMigration result = new CompleteMigration(service, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CompleteMigration extends DataprocMetastoreRequest<com.google.api.services.metastore.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+service}:completeMigration";
+
+          private final java.util.regex.Pattern SERVICE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+          /**
+           * Completes the managed migration process. The Dataproc Metastore service will switch to using
+           * its own backend database after successful migration.
+           *
+           * Create a request for the method "services.completeMigration".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link CompleteMigration#execute()} method to invoke the remote
+           * operation. <p> {@link CompleteMigration#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param service Required. The relative resource name of the metastore service to complete the migration to, in the
+         *        following format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           * @param content the {@link com.google.api.services.metastore.v1beta.model.CompleteMigrationRequest}
+           * @since 1.13
+           */
+          protected CompleteMigration(java.lang.String service, com.google.api.services.metastore.v1beta.model.CompleteMigrationRequest content) {
+            super(DataprocMetastore.this, "POST", REST_PATH, content, com.google.api.services.metastore.v1beta.model.Operation.class);
+            this.service = com.google.api.client.util.Preconditions.checkNotNull(service, "Required parameter service must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public CompleteMigration set$Xgafv(java.lang.String $Xgafv) {
+            return (CompleteMigration) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CompleteMigration setAccessToken(java.lang.String accessToken) {
+            return (CompleteMigration) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CompleteMigration setAlt(java.lang.String alt) {
+            return (CompleteMigration) super.setAlt(alt);
+          }
+
+          @Override
+          public CompleteMigration setCallback(java.lang.String callback) {
+            return (CompleteMigration) super.setCallback(callback);
+          }
+
+          @Override
+          public CompleteMigration setFields(java.lang.String fields) {
+            return (CompleteMigration) super.setFields(fields);
+          }
+
+          @Override
+          public CompleteMigration setKey(java.lang.String key) {
+            return (CompleteMigration) super.setKey(key);
+          }
+
+          @Override
+          public CompleteMigration setOauthToken(java.lang.String oauthToken) {
+            return (CompleteMigration) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CompleteMigration setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CompleteMigration) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CompleteMigration setQuotaUser(java.lang.String quotaUser) {
+            return (CompleteMigration) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CompleteMigration setUploadType(java.lang.String uploadType) {
+            return (CompleteMigration) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CompleteMigration setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CompleteMigration) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to complete the migration
+           * to, in the following
+           * format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String service;
+
+          /** Required. The relative resource name of the metastore service to complete the migration to, in the
+         following format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public java.lang.String getService() {
+            return service;
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to complete the migration
+           * to, in the following
+           * format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public CompleteMigration setService(java.lang.String service) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+            this.service = service;
+            return this;
+          }
+
+          @Override
+          public CompleteMigration set(String parameterName, Object value) {
+            return (CompleteMigration) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a metastore service in a project and location.
          *
          * Create a request for the method "services.create".
@@ -4991,6 +5277,148 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           @Override
           public SetIamPolicy set(String parameterName, Object value) {
             return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Starts the Managed Migration process.
+         *
+         * Create a request for the method "services.startMigration".
+         *
+         * This request holds the parameters needed by the metastore server.  After setting any optional
+         * parameters, call the {@link StartMigration#execute()} method to invoke the remote operation.
+         *
+         * @param service Required. The relative resource name of the metastore service to start migrating to, in the
+         *        following format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+         * @param content the {@link com.google.api.services.metastore.v1beta.model.StartMigrationRequest}
+         * @return the request
+         */
+        public StartMigration startMigration(java.lang.String service, com.google.api.services.metastore.v1beta.model.StartMigrationRequest content) throws java.io.IOException {
+          StartMigration result = new StartMigration(service, content);
+          initialize(result);
+          return result;
+        }
+
+        public class StartMigration extends DataprocMetastoreRequest<com.google.api.services.metastore.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+service}:startMigration";
+
+          private final java.util.regex.Pattern SERVICE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+          /**
+           * Starts the Managed Migration process.
+           *
+           * Create a request for the method "services.startMigration".
+           *
+           * This request holds the parameters needed by the the metastore server.  After setting any
+           * optional parameters, call the {@link StartMigration#execute()} method to invoke the remote
+           * operation. <p> {@link StartMigration#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param service Required. The relative resource name of the metastore service to start migrating to, in the
+         *        following format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           * @param content the {@link com.google.api.services.metastore.v1beta.model.StartMigrationRequest}
+           * @since 1.13
+           */
+          protected StartMigration(java.lang.String service, com.google.api.services.metastore.v1beta.model.StartMigrationRequest content) {
+            super(DataprocMetastore.this, "POST", REST_PATH, content, com.google.api.services.metastore.v1beta.model.Operation.class);
+            this.service = com.google.api.client.util.Preconditions.checkNotNull(service, "Required parameter service must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public StartMigration set$Xgafv(java.lang.String $Xgafv) {
+            return (StartMigration) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public StartMigration setAccessToken(java.lang.String accessToken) {
+            return (StartMigration) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public StartMigration setAlt(java.lang.String alt) {
+            return (StartMigration) super.setAlt(alt);
+          }
+
+          @Override
+          public StartMigration setCallback(java.lang.String callback) {
+            return (StartMigration) super.setCallback(callback);
+          }
+
+          @Override
+          public StartMigration setFields(java.lang.String fields) {
+            return (StartMigration) super.setFields(fields);
+          }
+
+          @Override
+          public StartMigration setKey(java.lang.String key) {
+            return (StartMigration) super.setKey(key);
+          }
+
+          @Override
+          public StartMigration setOauthToken(java.lang.String oauthToken) {
+            return (StartMigration) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public StartMigration setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (StartMigration) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public StartMigration setQuotaUser(java.lang.String quotaUser) {
+            return (StartMigration) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public StartMigration setUploadType(java.lang.String uploadType) {
+            return (StartMigration) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public StartMigration setUploadProtocol(java.lang.String uploadProtocol) {
+            return (StartMigration) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to start migrating to, in
+           * the following
+           * format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String service;
+
+          /** Required. The relative resource name of the metastore service to start migrating to, in the
+         following format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public java.lang.String getService() {
+            return service;
+          }
+
+          /**
+           * Required. The relative resource name of the metastore service to start migrating to, in
+           * the following
+           * format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+           */
+          public StartMigration setService(java.lang.String service) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(SERVICE_PATTERN.matcher(service).matches(),
+                  "Parameter service must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+            this.service = service;
+            return this;
+          }
+
+          @Override
+          public StartMigration set(String parameterName, Object value) {
+            return (StartMigration) super.set(parameterName, value);
           }
         }
         /**
@@ -8315,6 +8743,616 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
             @Override
             public Patch set(String parameterName, Object value) {
               return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the MigrationExecutions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DataprocMetastore metastore = new DataprocMetastore(...);}
+         *   {@code DataprocMetastore.MigrationExecutions.List request = metastore.migrationExecutions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public MigrationExecutions migrationExecutions() {
+          return new MigrationExecutions();
+        }
+
+        /**
+         * The "migrationExecutions" collection of methods.
+         */
+        public class MigrationExecutions {
+
+          /**
+           * Deletes a single migration execution.
+           *
+           * Create a request for the method "migrationExecutions.delete".
+           *
+           * This request holds the parameters needed by the metastore server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The relative resource name of the migrationExecution to delete, in the following form:proj
+           *        ects/{project_number}/locations/{location_id}/services/{service_id}/migrationExecutions/{m
+           *        igration_execution_id}.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DataprocMetastoreRequest<com.google.api.services.metastore.v1beta.model.Operation> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/migrationExecutions/[^/]+$");
+
+            /**
+             * Deletes a single migration execution.
+             *
+             * Create a request for the method "migrationExecutions.delete".
+             *
+             * This request holds the parameters needed by the the metastore server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The relative resource name of the migrationExecution to delete, in the following form:proj
+           *        ects/{project_number}/locations/{location_id}/services/{service_id}/migrationExecutions/{m
+           *        igration_execution_id}.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(DataprocMetastore.this, "DELETE", REST_PATH, null, com.google.api.services.metastore.v1beta.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/migrationExecutions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The relative resource name of the migrationExecution to delete, in the
+             * following form:projects/{project_number}/locations/{location_id}/services/{service_id
+             * }/migrationExecutions/{migration_execution_id}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The relative resource name of the migrationExecution to delete, in the following form:pro
+           jects/{project_number}/locations/{location_id}/services/{service_id}/migrationExecutions/{migration
+           _execution_id}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The relative resource name of the migrationExecution to delete, in the
+             * following form:projects/{project_number}/locations/{location_id}/services/{service_id
+             * }/migrationExecutions/{migration_execution_id}.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/migrationExecutions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
+             * request if it has completed. The server will ignore subsequent requests that provide
+             * a duplicate request ID for at least 60 minutes after the first request.For example,
+             * if an initial request times out, followed by another request with the same request
+             * ID, the server ignores the second request to prevent the creation of duplicate
+             * commitments.The request ID must be a valid UUID
+             * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+             * (00000000-0000-0000-0000-000000000000) is not supported.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. A request ID. Specify a unique request ID to allow the server to ignore the request if it
+           has completed. The server will ignore subsequent requests that provide a duplicate request ID for
+           at least 60 minutes after the first request.For example, if an initial request times out, followed
+           by another request with the same request ID, the server ignores the second request to prevent the
+           creation of duplicate commitments.The request ID must be a valid UUID
+           (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+           (00000000-0000-0000-0000-000000000000) is not supported.
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. A request ID. Specify a unique request ID to allow the server to ignore the
+             * request if it has completed. The server will ignore subsequent requests that provide
+             * a duplicate request ID for at least 60 minutes after the first request.For example,
+             * if an initial request times out, followed by another request with the same request
+             * ID, the server ignores the second request to prevent the creation of duplicate
+             * commitments.The request ID must be a valid UUID
+             * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero UUID
+             * (00000000-0000-0000-0000-000000000000) is not supported.
+             */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of a single migration execution.
+           *
+           * Create a request for the method "migrationExecutions.get".
+           *
+           * This request holds the parameters needed by the metastore server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The relative resource name of the migration execution to retrieve, in the following form:p
+           *        rojects/{project_number}/locations/{location_id}/services/{service_id}/migrationExecutions
+           *        /{migration_execution_id}.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DataprocMetastoreRequest<com.google.api.services.metastore.v1beta.model.MigrationExecution> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/migrationExecutions/[^/]+$");
+
+            /**
+             * Gets details of a single migration execution.
+             *
+             * Create a request for the method "migrationExecutions.get".
+             *
+             * This request holds the parameters needed by the the metastore server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The relative resource name of the migration execution to retrieve, in the following form:p
+           *        rojects/{project_number}/locations/{location_id}/services/{service_id}/migrationExecutions
+           *        /{migration_execution_id}.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(DataprocMetastore.this, "GET", REST_PATH, null, com.google.api.services.metastore.v1beta.model.MigrationExecution.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/migrationExecutions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The relative resource name of the migration execution to retrieve, in the
+             * following form:projects/{project_number}/locations/{location_id}/services/{service_id
+             * }/migrationExecutions/{migration_execution_id}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The relative resource name of the migration execution to retrieve, in the following form:
+           projects/{project_number}/locations/{location_id}/services/{service_id}/migrationExecutions/{migrat
+           ion_execution_id}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The relative resource name of the migration execution to retrieve, in the
+             * following form:projects/{project_number}/locations/{location_id}/services/{service_id
+             * }/migrationExecutions/{migration_execution_id}.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/migrationExecutions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists migration executions on a service.
+           *
+           * Create a request for the method "migrationExecutions.list".
+           *
+           * This request holds the parameters needed by the metastore server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The relative resource name of the service whose migration executions to list, in the
+           *        following form:projects/{project_number}/locations/{location_id}/services/{service_id}/mig
+           *        rationExecutions.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DataprocMetastoreRequest<com.google.api.services.metastore.v1beta.model.ListMigrationExecutionsResponse> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/migrationExecutions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+            /**
+             * Lists migration executions on a service.
+             *
+             * Create a request for the method "migrationExecutions.list".
+             *
+             * This request holds the parameters needed by the the metastore server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The relative resource name of the service whose migration executions to list, in the
+           *        following form:projects/{project_number}/locations/{location_id}/services/{service_id}/mig
+           *        rationExecutions.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DataprocMetastore.this, "GET", REST_PATH, null, com.google.api.services.metastore.v1beta.model.ListMigrationExecutionsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The relative resource name of the service whose migration executions to
+             * list, in the following form:projects/{project_number}/locations/{location_id}/service
+             * s/{service_id}/migrationExecutions.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The relative resource name of the service whose migration executions to list, in the
+           following
+           form:projects/{project_number}/locations/{location_id}/services/{service_id}/migrationExecutions.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The relative resource name of the service whose migration executions to
+             * list, in the following form:projects/{project_number}/locations/{location_id}/service
+             * s/{service_id}/migrationExecutions.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. The filter to apply to list results. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. The filter to apply to list results.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. The filter to apply to list results. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Specify the ordering of results as described in Sorting Order
+             * (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not
+             * specified, the results will be sorted in the default order.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Specify the ordering of results as described in Sorting Order
+           (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not specified, the results
+           will be sorted in the default order.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. Specify the ordering of results as described in Sorting Order
+             * (https://cloud.google.com/apis/design/design_patterns#sorting_order). If not
+             * specified, the results will be sorted in the default order.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of migration executions to return. The response may
+             * contain less than the maximum number. If unspecified, no more than 500 migration
+             * executions are returned. The maximum value is 1000; values above 1000 are changed to
+             * 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of migration executions to return. The response may contain less than
+           the maximum number. If unspecified, no more than 500 migration executions are returned. The maximum
+           value is 1000; values above 1000 are changed to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of migration executions to return. The response may
+             * contain less than the maximum number. If unspecified, no more than 500 migration
+             * executions are returned. The maximum value is 1000; values above 1000 are changed to
+             * 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous
+             * DataprocMetastore.ListMigrationExecutions call. Provide this token to retrieve the
+             * subsequent page.To retrieve the first page, supply an empty page token.When
+             * paginating, other parameters provided to DataprocMetastore.ListMigrationExecutions
+             * must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous DataprocMetastore.ListMigrationExecutions call.
+           Provide this token to retrieve the subsequent page.To retrieve the first page, supply an empty page
+           token.When paginating, other parameters provided to DataprocMetastore.ListMigrationExecutions must
+           match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous
+             * DataprocMetastore.ListMigrationExecutions call. Provide this token to retrieve the
+             * subsequent page.To retrieve the first page, supply an empty page token.When
+             * paginating, other parameters provided to DataprocMetastore.ListMigrationExecutions
+             * must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
             }
           }
 

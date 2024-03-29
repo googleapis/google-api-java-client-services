@@ -71,7 +71,13 @@ public final class AllocationPolicy extends com.google.api.client.json.GenericJs
   private PlacementPolicy placement;
 
   /**
-   * Service account that VMs will run as.
+   * Defines the service account for Batch-created VMs. If omitted, the [default Compute Engine
+   * service account](https://cloud.google.com/compute/docs/access/service-
+   * accounts#default_service_account) is used. Must match the service account specified in any used
+   * instance template configured in the Batch job. Includes the following fields: * email: The
+   * service account's email address. If not set, the default Compute Engine service account is
+   * used. * scopes: Additional OAuth scopes to grant the service account, beyond the default cloud-
+   * platform scope. (list of strings)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +188,13 @@ public final class AllocationPolicy extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Service account that VMs will run as.
+   * Defines the service account for Batch-created VMs. If omitted, the [default Compute Engine
+   * service account](https://cloud.google.com/compute/docs/access/service-
+   * accounts#default_service_account) is used. Must match the service account specified in any used
+   * instance template configured in the Batch job. Includes the following fields: * email: The
+   * service account's email address. If not set, the default Compute Engine service account is
+   * used. * scopes: Additional OAuth scopes to grant the service account, beyond the default cloud-
+   * platform scope. (list of strings)
    * @return value or {@code null} for none
    */
   public ServiceAccount getServiceAccount() {
@@ -190,7 +202,13 @@ public final class AllocationPolicy extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Service account that VMs will run as.
+   * Defines the service account for Batch-created VMs. If omitted, the [default Compute Engine
+   * service account](https://cloud.google.com/compute/docs/access/service-
+   * accounts#default_service_account) is used. Must match the service account specified in any used
+   * instance template configured in the Batch job. Includes the following fields: * email: The
+   * service account's email address. If not set, the default Compute Engine service account is
+   * used. * scopes: Additional OAuth scopes to grant the service account, beyond the default cloud-
+   * platform scope. (list of strings)
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public AllocationPolicy setServiceAccount(ServiceAccount serviceAccount) {

@@ -37,11 +37,25 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
   private java.lang.Integer candidateCount;
 
   /**
+   * Optional. Frequency penalties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float frequencyPenalty;
+
+  /**
    * Optional. The maximum number of output tokens to generate per message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxOutputTokens;
+
+  /**
+   * Optional. Positive penalties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float presencePenalty;
 
   /**
    * Optional. Stop sequences.
@@ -89,6 +103,23 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
   }
 
   /**
+   * Optional. Frequency penalties.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getFrequencyPenalty() {
+    return frequencyPenalty;
+  }
+
+  /**
+   * Optional. Frequency penalties.
+   * @param frequencyPenalty frequencyPenalty or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerationConfig setFrequencyPenalty(java.lang.Float frequencyPenalty) {
+    this.frequencyPenalty = frequencyPenalty;
+    return this;
+  }
+
+  /**
    * Optional. The maximum number of output tokens to generate per message.
    * @return value or {@code null} for none
    */
@@ -102,6 +133,23 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    */
   public GoogleCloudAiplatformV1GenerationConfig setMaxOutputTokens(java.lang.Integer maxOutputTokens) {
     this.maxOutputTokens = maxOutputTokens;
+    return this;
+  }
+
+  /**
+   * Optional. Positive penalties.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getPresencePenalty() {
+    return presencePenalty;
+  }
+
+  /**
+   * Optional. Positive penalties.
+   * @param presencePenalty presencePenalty or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerationConfig setPresencePenalty(java.lang.Float presencePenalty) {
+    this.presencePenalty = presencePenalty;
     return this;
   }
 

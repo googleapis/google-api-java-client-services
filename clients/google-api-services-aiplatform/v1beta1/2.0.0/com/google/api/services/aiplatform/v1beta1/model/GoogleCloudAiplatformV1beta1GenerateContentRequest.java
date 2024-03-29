@@ -60,6 +60,21 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends co
   private java.util.List<GoogleCloudAiplatformV1beta1SafetySetting> safetySettings;
 
   /**
+   * Optional. The user provided system instructions for the model. Note: only text should be used
+   * in parts and content in each part will be in a separate paragraph.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1Content systemInstruction;
+
+  /**
+   * Optional. Tool config. This config is shared for all tools provided in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ToolConfig toolConfig;
+
+  /**
    * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
    * piece of code that enables the system to interact with external systems to perform an action,
    * or set of actions, outside of knowledge and scope of the model.
@@ -122,6 +137,42 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends co
    */
   public GoogleCloudAiplatformV1beta1GenerateContentRequest setSafetySettings(java.util.List<GoogleCloudAiplatformV1beta1SafetySetting> safetySettings) {
     this.safetySettings = safetySettings;
+    return this;
+  }
+
+  /**
+   * Optional. The user provided system instructions for the model. Note: only text should be used
+   * in parts and content in each part will be in a separate paragraph.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Content getSystemInstruction() {
+    return systemInstruction;
+  }
+
+  /**
+   * Optional. The user provided system instructions for the model. Note: only text should be used
+   * in parts and content in each part will be in a separate paragraph.
+   * @param systemInstruction systemInstruction or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest setSystemInstruction(GoogleCloudAiplatformV1beta1Content systemInstruction) {
+    this.systemInstruction = systemInstruction;
+    return this;
+  }
+
+  /**
+   * Optional. Tool config. This config is shared for all tools provided in the request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ToolConfig getToolConfig() {
+    return toolConfig;
+  }
+
+  /**
+   * Optional. Tool config. This config is shared for all tools provided in the request.
+   * @param toolConfig toolConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest setToolConfig(GoogleCloudAiplatformV1beta1ToolConfig toolConfig) {
+    this.toolConfig = toolConfig;
     return this;
   }
 

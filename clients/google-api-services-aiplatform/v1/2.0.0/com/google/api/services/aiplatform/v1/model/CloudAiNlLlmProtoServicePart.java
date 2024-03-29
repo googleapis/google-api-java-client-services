@@ -67,6 +67,14 @@ public final class CloudAiNlLlmProtoServicePart extends com.google.api.client.js
   private CloudAiNlLlmProtoServicePartBlob inlineData;
 
   /**
+   * Metadata provides extra info for building the LM Root request. Note: High enough tag number for
+   * internal only fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiNlLlmProtoServicePartLMRootMetadata lmRootMetadata;
+
+  /**
    * Text input.
    * The value may be {@code null}.
    */
@@ -167,6 +175,25 @@ public final class CloudAiNlLlmProtoServicePart extends com.google.api.client.js
    */
   public CloudAiNlLlmProtoServicePart setInlineData(CloudAiNlLlmProtoServicePartBlob inlineData) {
     this.inlineData = inlineData;
+    return this;
+  }
+
+  /**
+   * Metadata provides extra info for building the LM Root request. Note: High enough tag number for
+   * internal only fields.
+   * @return value or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServicePartLMRootMetadata getLmRootMetadata() {
+    return lmRootMetadata;
+  }
+
+  /**
+   * Metadata provides extra info for building the LM Root request. Note: High enough tag number for
+   * internal only fields.
+   * @param lmRootMetadata lmRootMetadata or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServicePart setLmRootMetadata(CloudAiNlLlmProtoServicePartLMRootMetadata lmRootMetadata) {
+    this.lmRootMetadata = lmRootMetadata;
     return this;
   }
 

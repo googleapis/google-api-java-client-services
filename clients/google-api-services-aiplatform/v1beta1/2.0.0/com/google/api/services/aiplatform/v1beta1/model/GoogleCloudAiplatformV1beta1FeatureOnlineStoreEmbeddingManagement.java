@@ -17,7 +17,9 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Contains settings for embedding management.
+ * Deprecated: This sub message is no longer needed anymore and embedding management is
+ * automatically enabled when specifying Optimized storage type. Contains settings for embedding
+ * management.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

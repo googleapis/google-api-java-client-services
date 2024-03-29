@@ -45,6 +45,14 @@ public final class GoogleCloudAiplatformV1beta1Retrieval extends com.google.api.
   private GoogleCloudAiplatformV1beta1VertexAISearch vertexAiSearch;
 
   /**
+   * Set to use data source powered by Vertex RAG store. User data is uploaded via the
+   * VertexRagDataService.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1VertexRagStore vertexRagStore;
+
+  /**
    * Optional. Disable using the result from this tool in detecting grounding attribution. This does
    * not affect how the result is given to the model for generation.
    * @return value or {@code null} for none
@@ -77,6 +85,25 @@ public final class GoogleCloudAiplatformV1beta1Retrieval extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1Retrieval setVertexAiSearch(GoogleCloudAiplatformV1beta1VertexAISearch vertexAiSearch) {
     this.vertexAiSearch = vertexAiSearch;
+    return this;
+  }
+
+  /**
+   * Set to use data source powered by Vertex RAG store. User data is uploaded via the
+   * VertexRagDataService.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VertexRagStore getVertexRagStore() {
+    return vertexRagStore;
+  }
+
+  /**
+   * Set to use data source powered by Vertex RAG store. User data is uploaded via the
+   * VertexRagDataService.
+   * @param vertexRagStore vertexRagStore or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Retrieval setVertexRagStore(GoogleCloudAiplatformV1beta1VertexRagStore vertexRagStore) {
+    this.vertexRagStore = vertexRagStore;
     return this;
   }
 

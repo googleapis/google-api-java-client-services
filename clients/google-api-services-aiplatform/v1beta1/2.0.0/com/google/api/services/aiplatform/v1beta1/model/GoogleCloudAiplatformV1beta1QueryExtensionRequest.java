@@ -45,20 +45,6 @@ public final class GoogleCloudAiplatformV1beta1QueryExtensionRequest extends com
   }
 
   /**
-   * Required. User provided input query message.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1QueryRequestQuery query;
-
-  /**
-   * Optional. Experiment control on whether to use function call.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean useFunctionCall;
-
-  /**
    * Required. The content of the current conversation with the model. For single-turn queries, this
    * is a single instance. For multi-turn queries, this is a repeated field that contains
    * conversation history + latest request.
@@ -76,40 +62,6 @@ public final class GoogleCloudAiplatformV1beta1QueryExtensionRequest extends com
    */
   public GoogleCloudAiplatformV1beta1QueryExtensionRequest setContents(java.util.List<GoogleCloudAiplatformV1beta1Content> contents) {
     this.contents = contents;
-    return this;
-  }
-
-  /**
-   * Required. User provided input query message.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1QueryRequestQuery getQuery() {
-    return query;
-  }
-
-  /**
-   * Required. User provided input query message.
-   * @param query query or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1QueryExtensionRequest setQuery(GoogleCloudAiplatformV1beta1QueryRequestQuery query) {
-    this.query = query;
-    return this;
-  }
-
-  /**
-   * Optional. Experiment control on whether to use function call.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getUseFunctionCall() {
-    return useFunctionCall;
-  }
-
-  /**
-   * Optional. Experiment control on whether to use function call.
-   * @param useFunctionCall useFunctionCall or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1QueryExtensionRequest setUseFunctionCall(java.lang.Boolean useFunctionCall) {
-    this.useFunctionCall = useFunctionCall;
     return this;
   }
 

@@ -60,6 +60,14 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
   private java.util.List<GoogleCloudAiplatformV1SafetySetting> safetySettings;
 
   /**
+   * Optional. The user provided system instructions for the model. Note: only text should be used
+   * in parts and content in each part will be in a separate paragraph.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1Content systemInstruction;
+
+  /**
    * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
    * piece of code that enables the system to interact with external systems to perform an action,
    * or set of actions, outside of knowledge and scope of the model.
@@ -122,6 +130,25 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
    */
   public GoogleCloudAiplatformV1GenerateContentRequest setSafetySettings(java.util.List<GoogleCloudAiplatformV1SafetySetting> safetySettings) {
     this.safetySettings = safetySettings;
+    return this;
+  }
+
+  /**
+   * Optional. The user provided system instructions for the model. Note: only text should be used
+   * in parts and content in each part will be in a separate paragraph.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Content getSystemInstruction() {
+    return systemInstruction;
+  }
+
+  /**
+   * Optional. The user provided system instructions for the model. Note: only text should be used
+   * in parts and content in each part will be in a separate paragraph.
+   * @param systemInstruction systemInstruction or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentRequest setSystemInstruction(GoogleCloudAiplatformV1Content systemInstruction) {
+    this.systemInstruction = systemInstruction;
     return this;
   }
 

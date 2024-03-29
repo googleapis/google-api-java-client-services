@@ -18,9 +18,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
  * The dedicated serving endpoint for this FeatureOnlineStore. Only need to set when you choose
- * Optimized storage type or enable EmbeddingManagement. Will use public endpoint by default. Note,
- * for EmbeddingManagement use case, only [DedicatedServingEndpoint.public_endpoint_domain_name] is
- * available now.
+ * Optimized storage type. Public endpoint is provisioned by default.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

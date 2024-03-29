@@ -30,28 +30,12 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class PscInstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. List of consumer networks that are allowed to create PSC endpoints to service-
-   * attachments to this instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> allowedConsumerNetworks;
-
-  /**
    * Optional. List of consumer projects that are allowed to create PSC endpoints to service-
    * attachments to this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowedConsumerProjects;
-
-  /**
-   * Optional. List of service attachments that this instance has created endpoints to connect with.
-   * Currently, only a single outgoing service attachment is supported per instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> outgoingServiceAttachmentLinks;
 
   /**
    * Output only. The DNS name of the instance for PSC connectivity. Name convention: ...alloydb-
@@ -62,24 +46,6 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
   private java.lang.String pscDnsName;
 
   /**
-   * Optional. Whether PSC connectivity is enabled for this instance. This is populated by
-   * referencing the value from the parent cluster.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean pscEnabled;
-
-  /**
-   * Optional. Configurations for setting up PSC interfaces attached to the instance which are used
-   * for outbound connectivity. Only primary instances can have PSC interface attached. All the VMs
-   * created for the primary instance will share the same configurations. Currently we only support
-   * 0 or 1 PSC interface.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<PscInterfaceConfig> pscInterfaceConfigs;
-
-  /**
    * Output only. The service attachment created when Private Service Connect (PSC) is enabled for
    * the instance. The name of the resource will be in the format of
    * `projects//regions//serviceAttachments/`
@@ -87,25 +53,6 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAttachmentLink;
-
-  /**
-   * Optional. List of consumer networks that are allowed to create PSC endpoints to service-
-   * attachments to this instance.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getAllowedConsumerNetworks() {
-    return allowedConsumerNetworks;
-  }
-
-  /**
-   * Optional. List of consumer networks that are allowed to create PSC endpoints to service-
-   * attachments to this instance.
-   * @param allowedConsumerNetworks allowedConsumerNetworks or {@code null} for none
-   */
-  public PscInstanceConfig setAllowedConsumerNetworks(java.util.List<java.lang.String> allowedConsumerNetworks) {
-    this.allowedConsumerNetworks = allowedConsumerNetworks;
-    return this;
-  }
 
   /**
    * Optional. List of consumer projects that are allowed to create PSC endpoints to service-
@@ -127,25 +74,6 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. List of service attachments that this instance has created endpoints to connect with.
-   * Currently, only a single outgoing service attachment is supported per instance.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getOutgoingServiceAttachmentLinks() {
-    return outgoingServiceAttachmentLinks;
-  }
-
-  /**
-   * Optional. List of service attachments that this instance has created endpoints to connect with.
-   * Currently, only a single outgoing service attachment is supported per instance.
-   * @param outgoingServiceAttachmentLinks outgoingServiceAttachmentLinks or {@code null} for none
-   */
-  public PscInstanceConfig setOutgoingServiceAttachmentLinks(java.util.List<java.lang.String> outgoingServiceAttachmentLinks) {
-    this.outgoingServiceAttachmentLinks = outgoingServiceAttachmentLinks;
-    return this;
-  }
-
-  /**
    * Output only. The DNS name of the instance for PSC connectivity. Name convention: ...alloydb-
    * psc.goog
    * @return value or {@code null} for none
@@ -161,48 +89,6 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
    */
   public PscInstanceConfig setPscDnsName(java.lang.String pscDnsName) {
     this.pscDnsName = pscDnsName;
-    return this;
-  }
-
-  /**
-   * Optional. Whether PSC connectivity is enabled for this instance. This is populated by
-   * referencing the value from the parent cluster.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getPscEnabled() {
-    return pscEnabled;
-  }
-
-  /**
-   * Optional. Whether PSC connectivity is enabled for this instance. This is populated by
-   * referencing the value from the parent cluster.
-   * @param pscEnabled pscEnabled or {@code null} for none
-   */
-  public PscInstanceConfig setPscEnabled(java.lang.Boolean pscEnabled) {
-    this.pscEnabled = pscEnabled;
-    return this;
-  }
-
-  /**
-   * Optional. Configurations for setting up PSC interfaces attached to the instance which are used
-   * for outbound connectivity. Only primary instances can have PSC interface attached. All the VMs
-   * created for the primary instance will share the same configurations. Currently we only support
-   * 0 or 1 PSC interface.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<PscInterfaceConfig> getPscInterfaceConfigs() {
-    return pscInterfaceConfigs;
-  }
-
-  /**
-   * Optional. Configurations for setting up PSC interfaces attached to the instance which are used
-   * for outbound connectivity. Only primary instances can have PSC interface attached. All the VMs
-   * created for the primary instance will share the same configurations. Currently we only support
-   * 0 or 1 PSC interface.
-   * @param pscInterfaceConfigs pscInterfaceConfigs or {@code null} for none
-   */
-  public PscInstanceConfig setPscInterfaceConfigs(java.util.List<PscInterfaceConfig> pscInterfaceConfigs) {
-    this.pscInterfaceConfigs = pscInterfaceConfigs;
     return this;
   }
 

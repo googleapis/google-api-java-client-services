@@ -31,8 +31,8 @@ package com.google.api.services.searchads360.v0.model;
 public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * The percent of your ad impressions that are shown as the very first ad above the organic search
-   * results.
+   * Search absolute top impression share is the percentage of your Search ad impressions that are
+   * shown in the most prominent Search position.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -740,9 +740,9 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double searchAbsoluteTopImpressionShare;
 
   /**
-   * The number estimating how often your ad wasn't the very first ad above the organic search
-   * results due to a low budget. Note: Search budget lost absolute top impression share is reported
-   * in the range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * The number estimating how often your ad wasn't the very first ad among the top ads in the
+   * search results due to a low budget. Note: Search budget lost absolute top impression share is
+   * reported in the range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -758,7 +758,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double searchBudgetLostImpressionShare;
 
   /**
-   * The number estimating how often your ad didn't show anywhere above the organic search results
+   * The number estimating how often your ad didn't show adjacent to the top organic search results
    * due to a low budget. Note: Search budget lost top impression share is reported in the range of
    * 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * The value may be {@code null}.
@@ -796,9 +796,9 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double searchImpressionShare;
 
   /**
-   * The number estimating how often your ad wasn't the very first ad above the organic search
-   * results due to poor Ad Rank. Note: Search rank lost absolute top impression share is reported
-   * in the range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * The number estimating how often your ad wasn't the very first ad among the top ads in the
+   * search results due to poor Ad Rank. Note: Search rank lost absolute top impression share is
+   * reported in the range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -814,7 +814,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double searchRankLostImpressionShare;
 
   /**
-   * The number estimating how often your ad didn't show anywhere above the organic search results
+   * The number estimating how often your ad didn't show adjacent to the top organic search results
    * due to poor Ad Rank. Note: Search rank lost top impression share is reported in the range of 0
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * The value may be {@code null}.
@@ -823,17 +823,18 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double searchRankLostTopImpressionShare;
 
   /**
-   * The impressions you've received in the top location (anywhere above the organic search results)
-   * compared to the estimated number of impressions you were eligible to receive in the top
-   * location. Note: Search top impression share is reported in the range of 0.1 to 1. Any value
-   * below 0.1 is reported as 0.0999.
+   * The impressions you've received among the top ads compared to the estimated number of
+   * impressions you were eligible to receive among the top ads. Note: Search top impression share
+   * is reported in the range of 0.1 to 1. Any value below 0.1 is reported as 0.0999. Top ads are
+   * generally above the top organic results, although they may show below the top organic results
+   * on certain queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double searchTopImpressionShare;
 
   /**
-   * The percent of your ad impressions that are shown anywhere above the organic search results.
+   * The percent of your ad impressions that are shown adjacent to the top organic search results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -882,8 +883,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double visits;
 
   /**
-   * The percent of your ad impressions that are shown as the very first ad above the organic search
-   * results.
+   * Search absolute top impression share is the percentage of your Search ad impressions that are
+   * shown in the most prominent Search position.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAbsoluteTopImpressionPercentage() {
@@ -891,8 +892,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The percent of your ad impressions that are shown as the very first ad above the organic search
-   * results.
+   * Search absolute top impression share is the percentage of your Search ad impressions that are
+   * shown in the most prominent Search position.
    * @param absoluteTopImpressionPercentage absoluteTopImpressionPercentage or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setAbsoluteTopImpressionPercentage(java.lang.Double absoluteTopImpressionPercentage) {
@@ -2507,9 +2508,9 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number estimating how often your ad wasn't the very first ad above the organic search
-   * results due to a low budget. Note: Search budget lost absolute top impression share is reported
-   * in the range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * The number estimating how often your ad wasn't the very first ad among the top ads in the
+   * search results due to a low budget. Note: Search budget lost absolute top impression share is
+   * reported in the range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * @return value or {@code null} for none
    */
   public java.lang.Double getSearchBudgetLostAbsoluteTopImpressionShare() {
@@ -2517,9 +2518,9 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number estimating how often your ad wasn't the very first ad above the organic search
-   * results due to a low budget. Note: Search budget lost absolute top impression share is reported
-   * in the range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * The number estimating how often your ad wasn't the very first ad among the top ads in the
+   * search results due to a low budget. Note: Search budget lost absolute top impression share is
+   * reported in the range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * @param searchBudgetLostAbsoluteTopImpressionShare searchBudgetLostAbsoluteTopImpressionShare or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setSearchBudgetLostAbsoluteTopImpressionShare(java.lang.Double searchBudgetLostAbsoluteTopImpressionShare) {
@@ -2549,7 +2550,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number estimating how often your ad didn't show anywhere above the organic search results
+   * The number estimating how often your ad didn't show adjacent to the top organic search results
    * due to a low budget. Note: Search budget lost top impression share is reported in the range of
    * 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * @return value or {@code null} for none
@@ -2559,7 +2560,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number estimating how often your ad didn't show anywhere above the organic search results
+   * The number estimating how often your ad didn't show adjacent to the top organic search results
    * due to a low budget. Note: Search budget lost top impression share is reported in the range of
    * 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * @param searchBudgetLostTopImpressionShare searchBudgetLostTopImpressionShare or {@code null} for none
@@ -2637,9 +2638,9 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number estimating how often your ad wasn't the very first ad above the organic search
-   * results due to poor Ad Rank. Note: Search rank lost absolute top impression share is reported
-   * in the range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * The number estimating how often your ad wasn't the very first ad among the top ads in the
+   * search results due to poor Ad Rank. Note: Search rank lost absolute top impression share is
+   * reported in the range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * @return value or {@code null} for none
    */
   public java.lang.Double getSearchRankLostAbsoluteTopImpressionShare() {
@@ -2647,9 +2648,9 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number estimating how often your ad wasn't the very first ad above the organic search
-   * results due to poor Ad Rank. Note: Search rank lost absolute top impression share is reported
-   * in the range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * The number estimating how often your ad wasn't the very first ad among the top ads in the
+   * search results due to poor Ad Rank. Note: Search rank lost absolute top impression share is
+   * reported in the range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * @param searchRankLostAbsoluteTopImpressionShare searchRankLostAbsoluteTopImpressionShare or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setSearchRankLostAbsoluteTopImpressionShare(java.lang.Double searchRankLostAbsoluteTopImpressionShare) {
@@ -2679,7 +2680,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number estimating how often your ad didn't show anywhere above the organic search results
+   * The number estimating how often your ad didn't show adjacent to the top organic search results
    * due to poor Ad Rank. Note: Search rank lost top impression share is reported in the range of 0
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * @return value or {@code null} for none
@@ -2689,7 +2690,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number estimating how often your ad didn't show anywhere above the organic search results
+   * The number estimating how often your ad didn't show adjacent to the top organic search results
    * due to poor Ad Rank. Note: Search rank lost top impression share is reported in the range of 0
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * @param searchRankLostTopImpressionShare searchRankLostTopImpressionShare or {@code null} for none
@@ -2700,10 +2701,11 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The impressions you've received in the top location (anywhere above the organic search results)
-   * compared to the estimated number of impressions you were eligible to receive in the top
-   * location. Note: Search top impression share is reported in the range of 0.1 to 1. Any value
-   * below 0.1 is reported as 0.0999.
+   * The impressions you've received among the top ads compared to the estimated number of
+   * impressions you were eligible to receive among the top ads. Note: Search top impression share
+   * is reported in the range of 0.1 to 1. Any value below 0.1 is reported as 0.0999. Top ads are
+   * generally above the top organic results, although they may show below the top organic results
+   * on certain queries.
    * @return value or {@code null} for none
    */
   public java.lang.Double getSearchTopImpressionShare() {
@@ -2711,10 +2713,11 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The impressions you've received in the top location (anywhere above the organic search results)
-   * compared to the estimated number of impressions you were eligible to receive in the top
-   * location. Note: Search top impression share is reported in the range of 0.1 to 1. Any value
-   * below 0.1 is reported as 0.0999.
+   * The impressions you've received among the top ads compared to the estimated number of
+   * impressions you were eligible to receive among the top ads. Note: Search top impression share
+   * is reported in the range of 0.1 to 1. Any value below 0.1 is reported as 0.0999. Top ads are
+   * generally above the top organic results, although they may show below the top organic results
+   * on certain queries.
    * @param searchTopImpressionShare searchTopImpressionShare or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setSearchTopImpressionShare(java.lang.Double searchTopImpressionShare) {
@@ -2723,7 +2726,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The percent of your ad impressions that are shown anywhere above the organic search results.
+   * The percent of your ad impressions that are shown adjacent to the top organic search results.
    * @return value or {@code null} for none
    */
   public java.lang.Double getTopImpressionPercentage() {
@@ -2731,7 +2734,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The percent of your ad impressions that are shown anywhere above the organic search results.
+   * The percent of your ad impressions that are shown adjacent to the top organic search results.
    * @param topImpressionPercentage topImpressionPercentage or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setTopImpressionPercentage(java.lang.Double topImpressionPercentage) {

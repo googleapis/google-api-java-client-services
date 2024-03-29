@@ -17,7 +17,7 @@
 package com.google.api.services.searchads360.v0.model;
 
 /**
- * A location view summarizes the performance of campaigns by Location criteria.
+ * A location view summarizes the performance of campaigns by a Location criterion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 Reporting API. For a detailed

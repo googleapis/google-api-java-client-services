@@ -3509,6 +3509,179 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
+       * Moves the instance to the target instance config. The returned long-running operation can be used
+       * to track the progress of moving the instance. `MoveInstance` returns `FAILED_PRECONDITION` if the
+       * instance meets any of the following criteria: * Has an ongoing move to a different instance
+       * config * Has backups * Has an ongoing update * Is under free trial * Contains any CMEK-enabled
+       * databases While the operation is pending: * All other attempts to modify the instance, including
+       * changes to its compute capacity, are rejected. * The following database and backup admin
+       * operations are rejected: * DatabaseAdmin.CreateDatabase, * DatabaseAdmin.UpdateDatabaseDdl
+       * (Disabled if default_leader is specified in the request.) * DatabaseAdmin.RestoreDatabase *
+       * DatabaseAdmin.CreateBackup * DatabaseAdmin.CopyBackup * Both the source and target instance
+       * configs are subject to hourly compute and storage charges. * The instance may experience higher
+       * read-write latencies and a higher transaction abort rate. However, moving an instance does not
+       * cause any downtime. The returned long-running operation will have a name of the format
+       * `/operations/` and can be used to track the move instance operation. The metadata field type is
+       * MoveInstanceMetadata. The response field type is Instance, if successful. Cancelling the
+       * operation sets its metadata's cancel_time. Cancellation is not immediate since it involves moving
+       * any data previously moved to target instance config back to the original instance config. The
+       * same operation can be used to track the progress of the cancellation. Upon successful completion
+       * of the cancellation, the operation terminates with CANCELLED status. Upon completion(if not
+       * cancelled) of the returned operation: * Instance would be successfully moved to the target
+       * instance config. * You are billed for compute and storage in target instance config.
+       * Authorization requires `spanner.instances.update` permission on the resource instance. For more
+       * details, please see [documentation](https://cloud.google.com/spanner/docs/move-instance).
+       *
+       * Create a request for the method "instances.move".
+       *
+       * This request holds the parameters needed by the spanner server.  After setting any optional
+       * parameters, call the {@link Move#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The instance to move. Values are of the form `projects//instances/`.
+       * @param content the {@link com.google.api.services.spanner.v1.model.MoveInstanceRequest}
+       * @return the request
+       */
+      public Move move(java.lang.String name, com.google.api.services.spanner.v1.model.MoveInstanceRequest content) throws java.io.IOException {
+        Move result = new Move(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Move extends SpannerRequest<com.google.api.services.spanner.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}:move";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
+
+        /**
+         * Moves the instance to the target instance config. The returned long-running operation can be
+         * used to track the progress of moving the instance. `MoveInstance` returns `FAILED_PRECONDITION`
+         * if the instance meets any of the following criteria: * Has an ongoing move to a different
+         * instance config * Has backups * Has an ongoing update * Is under free trial * Contains any
+         * CMEK-enabled databases While the operation is pending: * All other attempts to modify the
+         * instance, including changes to its compute capacity, are rejected. * The following database and
+         * backup admin operations are rejected: * DatabaseAdmin.CreateDatabase, *
+         * DatabaseAdmin.UpdateDatabaseDdl (Disabled if default_leader is specified in the request.) *
+         * DatabaseAdmin.RestoreDatabase * DatabaseAdmin.CreateBackup * DatabaseAdmin.CopyBackup * Both
+         * the source and target instance configs are subject to hourly compute and storage charges. * The
+         * instance may experience higher read-write latencies and a higher transaction abort rate.
+         * However, moving an instance does not cause any downtime. The returned long-running operation
+         * will have a name of the format `/operations/` and can be used to track the move instance
+         * operation. The metadata field type is MoveInstanceMetadata. The response field type is
+         * Instance, if successful. Cancelling the operation sets its metadata's cancel_time. Cancellation
+         * is not immediate since it involves moving any data previously moved to target instance config
+         * back to the original instance config. The same operation can be used to track the progress of
+         * the cancellation. Upon successful completion of the cancellation, the operation terminates with
+         * CANCELLED status. Upon completion(if not cancelled) of the returned operation: * Instance would
+         * be successfully moved to the target instance config. * You are billed for compute and storage
+         * in target instance config. Authorization requires `spanner.instances.update` permission on the
+         * resource instance. For more details, please see
+         * [documentation](https://cloud.google.com/spanner/docs/move-instance).
+         *
+         * Create a request for the method "instances.move".
+         *
+         * This request holds the parameters needed by the the spanner server.  After setting any optional
+         * parameters, call the {@link Move#execute()} method to invoke the remote operation. <p> {@link
+         * Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The instance to move. Values are of the form `projects//instances/`.
+         * @param content the {@link com.google.api.services.spanner.v1.model.MoveInstanceRequest}
+         * @since 1.13
+         */
+        protected Move(java.lang.String name, com.google.api.services.spanner.v1.model.MoveInstanceRequest content) {
+          super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/instances/[^/]+$");
+          }
+        }
+
+        @Override
+        public Move set$Xgafv(java.lang.String $Xgafv) {
+          return (Move) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Move setAccessToken(java.lang.String accessToken) {
+          return (Move) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Move setAlt(java.lang.String alt) {
+          return (Move) super.setAlt(alt);
+        }
+
+        @Override
+        public Move setCallback(java.lang.String callback) {
+          return (Move) super.setCallback(callback);
+        }
+
+        @Override
+        public Move setFields(java.lang.String fields) {
+          return (Move) super.setFields(fields);
+        }
+
+        @Override
+        public Move setKey(java.lang.String key) {
+          return (Move) super.setKey(key);
+        }
+
+        @Override
+        public Move setOauthToken(java.lang.String oauthToken) {
+          return (Move) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Move setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Move) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Move setQuotaUser(java.lang.String quotaUser) {
+          return (Move) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Move setUploadType(java.lang.String uploadType) {
+          return (Move) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Move setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Move) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The instance to move. Values are of the form `projects//instances/`. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The instance to move. Values are of the form `projects//instances/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The instance to move. Values are of the form `projects//instances/`. */
+        public Move setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/instances/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Move set(String parameterName, Object value) {
+          return (Move) super.set(parameterName, value);
+        }
+      }
+      /**
        * Updates an instance, and begins allocating or releasing resources as requested. The returned
        * long-running operation can be used to track the progress of updating the instance. If the named
        * instance does not exist, returns `NOT_FOUND`. Immediately upon completion of this request: * For

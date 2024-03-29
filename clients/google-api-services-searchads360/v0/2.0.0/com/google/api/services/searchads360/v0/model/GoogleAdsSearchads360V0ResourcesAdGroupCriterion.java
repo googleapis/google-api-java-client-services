@@ -17,7 +17,8 @@
 package com.google.api.services.searchads360.v0.model;
 
 /**
- * An ad group criterion.
+ * An ad group criterion. The ad_group_criterion report only returns criteria that were explicitly
+ * added to the ad group.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 Reporting API. For a detailed

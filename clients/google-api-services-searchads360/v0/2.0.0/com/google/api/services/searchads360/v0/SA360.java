@@ -884,7 +884,8 @@ public class SA360 extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Returns all fields that match the search query. List of thrown errors: [AuthenticationError]()
+     * Returns all fields that match the search [query](/search-ads/reporting/concepts/field-
+     * service#use_a_query_to_get_field_details). List of thrown errors: [AuthenticationError]()
      * [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]()
      * [RequestError]()
      *
@@ -907,7 +908,8 @@ public class SA360 extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "v0/searchAds360Fields:search";
 
       /**
-       * Returns all fields that match the search query. List of thrown errors: [AuthenticationError]()
+       * Returns all fields that match the search [query](/search-ads/reporting/concepts/field-
+       * service#use_a_query_to_get_field_details). List of thrown errors: [AuthenticationError]()
        * [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]()
        * [RequestError]()
        *

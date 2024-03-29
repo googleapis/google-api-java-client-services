@@ -17,7 +17,9 @@
 package com.google.api.services.searchads360.v0.model;
 
 /**
- * A gender view.
+ * A gender view. The gender_view resource reflects the effective serving state, rather than what
+ * criteria were added. An ad group without gender criteria by default shows to all genders, so all
+ * genders appear in gender_view with stats.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 Reporting API. For a detailed

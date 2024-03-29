@@ -62,6 +62,14 @@ public final class GoogleCloudAiplatformV1beta1FunctionDeclaration extends com.g
   private GoogleCloudAiplatformV1beta1Schema parameters;
 
   /**
+   * Optional. Describes the output from this function in JSON Schema format. Reflects the Open API
+   * 3.03 Response Object. The Schema defines the type used for the response value of the function.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1Schema response;
+
+  /**
    * Optional. Description and purpose of the function. Model uses it to decide how and whether to
    * call the function.
    * @return value or {@code null} for none
@@ -125,6 +133,25 @@ public final class GoogleCloudAiplatformV1beta1FunctionDeclaration extends com.g
    */
   public GoogleCloudAiplatformV1beta1FunctionDeclaration setParameters(GoogleCloudAiplatformV1beta1Schema parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Optional. Describes the output from this function in JSON Schema format. Reflects the Open API
+   * 3.03 Response Object. The Schema defines the type used for the response value of the function.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema getResponse() {
+    return response;
+  }
+
+  /**
+   * Optional. Describes the output from this function in JSON Schema format. Reflects the Open API
+   * 3.03 Response Object. The Schema defines the type used for the response value of the function.
+   * @param response response or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FunctionDeclaration setResponse(GoogleCloudAiplatformV1beta1Schema response) {
+    this.response = response;
     return this;
   }
 

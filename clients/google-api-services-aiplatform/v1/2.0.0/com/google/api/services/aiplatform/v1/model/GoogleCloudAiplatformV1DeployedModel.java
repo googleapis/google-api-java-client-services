@@ -64,6 +64,14 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
   private java.lang.Boolean disableContainerLogging;
 
   /**
+   * If true, deploy the model without explainable feature, regardless the existence of
+   * Model.explanation_spec or explanation_spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableExplanations;
+
+  /**
    * The display name of the DeployedModel. If not provided upon creation, the Model's display_name
    * is used.
    * The value may be {@code null}.
@@ -226,6 +234,25 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
    */
   public GoogleCloudAiplatformV1DeployedModel setDisableContainerLogging(java.lang.Boolean disableContainerLogging) {
     this.disableContainerLogging = disableContainerLogging;
+    return this;
+  }
+
+  /**
+   * If true, deploy the model without explainable feature, regardless the existence of
+   * Model.explanation_spec or explanation_spec.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableExplanations() {
+    return disableExplanations;
+  }
+
+  /**
+   * If true, deploy the model without explainable feature, regardless the existence of
+   * Model.explanation_spec or explanation_spec.
+   * @param disableExplanations disableExplanations or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DeployedModel setDisableExplanations(java.lang.Boolean disableExplanations) {
+    this.disableExplanations = disableExplanations;
     return this;
   }
 

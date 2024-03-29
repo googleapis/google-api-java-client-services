@@ -54,7 +54,8 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
   private GoogleCloudAiplatformV1beta1FeatureOnlineStoreDedicatedServingEndpoint dedicatedServingEndpoint;
 
   /**
-   * Optional. The settings for embedding management in FeatureOnlineStore.
+   * Optional. Deprecated: This field is no longer needed anymore and embedding management is
+   * automatically enabled when specifying Optimized storage type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,7 +169,8 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
   }
 
   /**
-   * Optional. The settings for embedding management in FeatureOnlineStore.
+   * Optional. Deprecated: This field is no longer needed anymore and embedding management is
+   * automatically enabled when specifying Optimized storage type.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FeatureOnlineStoreEmbeddingManagement getEmbeddingManagement() {
@@ -176,7 +178,8 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
   }
 
   /**
-   * Optional. The settings for embedding management in FeatureOnlineStore.
+   * Optional. Deprecated: This field is no longer needed anymore and embedding management is
+   * automatically enabled when specifying Optimized storage type.
    * @param embeddingManagement embeddingManagement or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FeatureOnlineStore setEmbeddingManagement(GoogleCloudAiplatformV1beta1FeatureOnlineStoreEmbeddingManagement embeddingManagement) {

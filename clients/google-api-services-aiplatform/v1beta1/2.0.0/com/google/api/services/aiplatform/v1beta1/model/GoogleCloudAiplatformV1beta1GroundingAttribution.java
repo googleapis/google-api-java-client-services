@@ -38,6 +38,13 @@ public final class GoogleCloudAiplatformV1beta1GroundingAttribution extends com.
   private java.lang.Float confidenceScore;
 
   /**
+   * Optional. Attribution from context retrieved by the retrieval tools.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GroundingAttributionRetrievedContext retrievedContext;
+
+  /**
    * Output only. Segment of the content this attribution belongs to.
    * The value may be {@code null}.
    */
@@ -67,6 +74,23 @@ public final class GoogleCloudAiplatformV1beta1GroundingAttribution extends com.
    */
   public GoogleCloudAiplatformV1beta1GroundingAttribution setConfidenceScore(java.lang.Float confidenceScore) {
     this.confidenceScore = confidenceScore;
+    return this;
+  }
+
+  /**
+   * Optional. Attribution from context retrieved by the retrieval tools.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingAttributionRetrievedContext getRetrievedContext() {
+    return retrievedContext;
+  }
+
+  /**
+   * Optional. Attribution from context retrieved by the retrieval tools.
+   * @param retrievedContext retrievedContext or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingAttribution setRetrievedContext(GoogleCloudAiplatformV1beta1GroundingAttributionRetrievedContext retrievedContext) {
+    this.retrievedContext = retrievedContext;
     return this;
   }
 

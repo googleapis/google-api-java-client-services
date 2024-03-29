@@ -64,6 +64,12 @@ public final class LearningGenaiRootHarm extends com.google.api.client.json.Gene
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Boolean imageChild;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Boolean imageCsam;
 
   /**
@@ -111,6 +117,12 @@ public final class LearningGenaiRootHarm extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.Double threshold;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean videoFrameChild;
 
   /**
    * The value may be {@code null}.
@@ -211,6 +223,21 @@ public final class LearningGenaiRootHarm extends com.google.api.client.json.Gene
    */
   public LearningGenaiRootHarm setGrailTextHarmType(LearningGenaiRootHarmGrailTextHarmType grailTextHarmType) {
     this.grailTextHarmType = grailTextHarmType;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getImageChild() {
+    return imageChild;
+  }
+
+  /**
+   * @param imageChild imageChild or {@code null} for none
+   */
+  public LearningGenaiRootHarm setImageChild(java.lang.Boolean imageChild) {
+    this.imageChild = imageChild;
     return this;
   }
 
@@ -339,6 +366,21 @@ public final class LearningGenaiRootHarm extends com.google.api.client.json.Gene
    */
   public LearningGenaiRootHarm setThreshold(java.lang.Double threshold) {
     this.threshold = threshold;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVideoFrameChild() {
+    return videoFrameChild;
+  }
+
+  /**
+   * @param videoFrameChild videoFrameChild or {@code null} for none
+   */
+  public LearningGenaiRootHarm setVideoFrameChild(java.lang.Boolean videoFrameChild) {
+    this.videoFrameChild = videoFrameChild;
     return this;
   }
 

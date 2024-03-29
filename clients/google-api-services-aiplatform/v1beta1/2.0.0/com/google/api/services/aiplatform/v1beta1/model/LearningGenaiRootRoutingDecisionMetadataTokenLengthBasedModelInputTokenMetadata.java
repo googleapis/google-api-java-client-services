@@ -44,6 +44,20 @@ public final class LearningGenaiRootRoutingDecisionMetadataTokenLengthBasedModel
   private java.lang.String modelId;
 
   /**
+   * If true, the model was selected as a fallback, since no model met requirements.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pickedAsFallback;
+
+  /**
+   * If true, the model was selected since it met the requriements.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean selected;
+
+  /**
    * The length computed by backends using the formatter & tokenizer specific to the model
    * @return value or {@code null} for none
    */
@@ -72,6 +86,40 @@ public final class LearningGenaiRootRoutingDecisionMetadataTokenLengthBasedModel
    */
   public LearningGenaiRootRoutingDecisionMetadataTokenLengthBasedModelInputTokenMetadata setModelId(java.lang.String modelId) {
     this.modelId = modelId;
+    return this;
+  }
+
+  /**
+   * If true, the model was selected as a fallback, since no model met requirements.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPickedAsFallback() {
+    return pickedAsFallback;
+  }
+
+  /**
+   * If true, the model was selected as a fallback, since no model met requirements.
+   * @param pickedAsFallback pickedAsFallback or {@code null} for none
+   */
+  public LearningGenaiRootRoutingDecisionMetadataTokenLengthBasedModelInputTokenMetadata setPickedAsFallback(java.lang.Boolean pickedAsFallback) {
+    this.pickedAsFallback = pickedAsFallback;
+    return this;
+  }
+
+  /**
+   * If true, the model was selected since it met the requriements.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSelected() {
+    return selected;
+  }
+
+  /**
+   * If true, the model was selected since it met the requriements.
+   * @param selected selected or {@code null} for none
+   */
+  public LearningGenaiRootRoutingDecisionMetadataTokenLengthBasedModelInputTokenMetadata setSelected(java.lang.Boolean selected) {
+    this.selected = selected;
     return this;
   }
 

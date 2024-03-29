@@ -62,6 +62,15 @@ public final class GoogleCloudAiplatformV1beta1FeatureView extends com.google.ap
   private GoogleCloudAiplatformV1beta1FeatureViewFeatureRegistrySource featureRegistrySource;
 
   /**
+   * Optional. Configuration for index preparation for vector search. It contains the required
+   * configurations to create an index from source data, so that approximate nearest neighbor (a.k.a
+   * ANN) algorithms search can be performed during online serving.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1FeatureViewIndexConfig indexConfig;
+
+  /**
    * Optional. The labels with user-defined metadata to organize your FeatureViews. Label keys and
    * values can be no longer than 64 characters (Unicode codepoints), can only contain lowercase
    * letters, numeric characters, underscores and dashes. International characters are allowed. See
@@ -193,6 +202,27 @@ public final class GoogleCloudAiplatformV1beta1FeatureView extends com.google.ap
    */
   public GoogleCloudAiplatformV1beta1FeatureView setFeatureRegistrySource(GoogleCloudAiplatformV1beta1FeatureViewFeatureRegistrySource featureRegistrySource) {
     this.featureRegistrySource = featureRegistrySource;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for index preparation for vector search. It contains the required
+   * configurations to create an index from source data, so that approximate nearest neighbor (a.k.a
+   * ANN) algorithms search can be performed during online serving.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureViewIndexConfig getIndexConfig() {
+    return indexConfig;
+  }
+
+  /**
+   * Optional. Configuration for index preparation for vector search. It contains the required
+   * configurations to create an index from source data, so that approximate nearest neighbor (a.k.a
+   * ANN) algorithms search can be performed during online serving.
+   * @param indexConfig indexConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureView setIndexConfig(GoogleCloudAiplatformV1beta1FeatureViewIndexConfig indexConfig) {
+    this.indexConfig = indexConfig;
     return this;
   }
 

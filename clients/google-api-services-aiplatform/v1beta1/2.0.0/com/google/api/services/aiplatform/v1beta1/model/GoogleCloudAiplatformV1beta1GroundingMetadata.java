@@ -43,6 +43,13 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
+   * Optional. Queries executed by the retrieval tools.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> retrievalQueries;
+
+  /**
    * Optional. Web search queries for the following-up web search.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadata setGroundingAttributions(java.util.List<GoogleCloudAiplatformV1beta1GroundingAttribution> groundingAttributions) {
     this.groundingAttributions = groundingAttributions;
+    return this;
+  }
+
+  /**
+   * Optional. Queries executed by the retrieval tools.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRetrievalQueries() {
+    return retrievalQueries;
+  }
+
+  /**
+   * Optional. Queries executed by the retrieval tools.
+   * @param retrievalQueries retrievalQueries or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingMetadata setRetrievalQueries(java.util.List<java.lang.String> retrievalQueries) {
+    this.retrievalQueries = retrievalQueries;
     return this;
   }
 

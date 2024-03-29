@@ -37,26 +37,6 @@ public final class GoogleCloudAiplatformV1beta1QueryExtensionResponse extends co
   private java.lang.String failureMessage;
 
   /**
-   * Metadata related to the query execution.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1QueryResponseResponseMetadata metadata;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1QueryResponseQueryResponseMetadata queryResponseMetadata;
-
-  /**
-   * Response to the user's query.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String response;
-
-  /**
    * Steps of extension or LLM interaction, can contain function call, function response, or text
    * response. The last step contains the final response to the query.
    * The value may be {@code null}.
@@ -84,55 +64,6 @@ public final class GoogleCloudAiplatformV1beta1QueryExtensionResponse extends co
    */
   public GoogleCloudAiplatformV1beta1QueryExtensionResponse setFailureMessage(java.lang.String failureMessage) {
     this.failureMessage = failureMessage;
-    return this;
-  }
-
-  /**
-   * Metadata related to the query execution.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1QueryResponseResponseMetadata getMetadata() {
-    return metadata;
-  }
-
-  /**
-   * Metadata related to the query execution.
-   * @param metadata metadata or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1QueryExtensionResponse setMetadata(GoogleCloudAiplatformV1beta1QueryResponseResponseMetadata metadata) {
-    this.metadata = metadata;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1QueryResponseQueryResponseMetadata getQueryResponseMetadata() {
-    return queryResponseMetadata;
-  }
-
-  /**
-   * @param queryResponseMetadata queryResponseMetadata or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1QueryExtensionResponse setQueryResponseMetadata(GoogleCloudAiplatformV1beta1QueryResponseQueryResponseMetadata queryResponseMetadata) {
-    this.queryResponseMetadata = queryResponseMetadata;
-    return this;
-  }
-
-  /**
-   * Response to the user's query.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getResponse() {
-    return response;
-  }
-
-  /**
-   * Response to the user's query.
-   * @param response response or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1QueryExtensionResponse setResponse(java.lang.String response) {
-    this.response = response;
     return this;
   }
 

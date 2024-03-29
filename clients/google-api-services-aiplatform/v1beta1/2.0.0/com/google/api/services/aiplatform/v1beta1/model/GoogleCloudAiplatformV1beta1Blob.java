@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Raw media bytes. Text should not be sent as raw bytes, use the 'text' field.
+ * Content blob. It's preferred to send as text directly rather than raw bytes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1Blob extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Raw bytes for media formats.
+   * Required. Raw bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudAiplatformV1beta1Blob extends com.google.api.clien
   private java.lang.String mimeType;
 
   /**
-   * Required. Raw bytes for media formats.
+   * Required. Raw bytes.
    * @see #decodeData()
    * @return value or {@code null} for none
    */
@@ -53,7 +53,7 @@ public final class GoogleCloudAiplatformV1beta1Blob extends com.google.api.clien
   }
 
   /**
-   * Required. Raw bytes for media formats.
+   * Required. Raw bytes.
    * @see #getData()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -64,7 +64,7 @@ public final class GoogleCloudAiplatformV1beta1Blob extends com.google.api.clien
   }
 
   /**
-   * Required. Raw bytes for media formats.
+   * Required. Raw bytes.
    * @see #encodeData()
    * @param data data or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class GoogleCloudAiplatformV1beta1Blob extends com.google.api.clien
   }
 
   /**
-   * Required. Raw bytes for media formats.
+   * Required. Raw bytes.
    * @see #setData()
    *
    * <p>

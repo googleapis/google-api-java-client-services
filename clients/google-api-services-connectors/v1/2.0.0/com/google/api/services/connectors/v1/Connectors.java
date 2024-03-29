@@ -2255,7 +2255,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
            * `lock_config` To suspend/resume a connection: * `suspended` To update the connection
            * details: * `description` * `labels` * `connector_version` * `config_variables` *
            * `auth_config` * `destination_configs` * `node_config` * `log_config` * `ssl_config` *
-           * `eventing_enablement_type` * `eventing_config`
+           * `eventing_enablement_type` * `eventing_config` * `auth_override_enabled`
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -2263,7 +2263,8 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           /** Required. You can modify only the fields listed below. To lock/unlock a connection: * `lock_config`
          To suspend/resume a connection: * `suspended` To update the connection details: * `description` *
          `labels` * `connector_version` * `config_variables` * `auth_config` * `destination_configs` *
-         `node_config` * `log_config` * `ssl_config` * `eventing_enablement_type` * `eventing_config`
+         `node_config` * `log_config` * `ssl_config` * `eventing_enablement_type` * `eventing_config` *
+         `auth_override_enabled`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -2274,7 +2275,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
            * `lock_config` To suspend/resume a connection: * `suspended` To update the connection
            * details: * `description` * `labels` * `connector_version` * `config_variables` *
            * `auth_config` * `destination_configs` * `node_config` * `log_config` * `ssl_config` *
-           * `eventing_enablement_type` * `eventing_config`
+           * `eventing_enablement_type` * `eventing_config` * `auth_override_enabled`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

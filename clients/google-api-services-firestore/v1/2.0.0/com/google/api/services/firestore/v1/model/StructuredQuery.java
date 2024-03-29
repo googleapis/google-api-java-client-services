@@ -41,6 +41,14 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   private Cursor endAt;
 
   /**
+   * Optional. A potential Nearest Neighbors Search. Applies after all other filters and ordering.
+   * Finds the closest vector embeddings to the given query vector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FindNearest findNearest;
+
+  /**
    * The collections to query.
    * The value may be {@code null}.
    */
@@ -145,6 +153,25 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
    */
   public StructuredQuery setEndAt(Cursor endAt) {
     this.endAt = endAt;
+    return this;
+  }
+
+  /**
+   * Optional. A potential Nearest Neighbors Search. Applies after all other filters and ordering.
+   * Finds the closest vector embeddings to the given query vector.
+   * @return value or {@code null} for none
+   */
+  public FindNearest getFindNearest() {
+    return findNearest;
+  }
+
+  /**
+   * Optional. A potential Nearest Neighbors Search. Applies after all other filters and ordering.
+   * Finds the closest vector embeddings to the given query vector.
+   * @param findNearest findNearest or {@code null} for none
+   */
+  public StructuredQuery setFindNearest(FindNearest findNearest) {
+    this.findNearest = findNearest;
     return this;
   }
 

@@ -38,6 +38,13 @@ public final class GooglePrivacyDlpV2DiscoveryTarget extends com.google.api.clie
   private GooglePrivacyDlpV2BigQueryDiscoveryTarget bigQueryTarget;
 
   /**
+   * Cloud SQL target for Discovery. The first target to match a table will be the one applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2CloudSqlDiscoveryTarget cloudSqlTarget;
+
+  /**
    * BigQuery target for Discovery. The first target to match a table will be the one applied.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class GooglePrivacyDlpV2DiscoveryTarget extends com.google.api.clie
    */
   public GooglePrivacyDlpV2DiscoveryTarget setBigQueryTarget(GooglePrivacyDlpV2BigQueryDiscoveryTarget bigQueryTarget) {
     this.bigQueryTarget = bigQueryTarget;
+    return this;
+  }
+
+  /**
+   * Cloud SQL target for Discovery. The first target to match a table will be the one applied.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CloudSqlDiscoveryTarget getCloudSqlTarget() {
+    return cloudSqlTarget;
+  }
+
+  /**
+   * Cloud SQL target for Discovery. The first target to match a table will be the one applied.
+   * @param cloudSqlTarget cloudSqlTarget or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DiscoveryTarget setCloudSqlTarget(GooglePrivacyDlpV2CloudSqlDiscoveryTarget cloudSqlTarget) {
+    this.cloudSqlTarget = cloudSqlTarget;
     return this;
   }
 

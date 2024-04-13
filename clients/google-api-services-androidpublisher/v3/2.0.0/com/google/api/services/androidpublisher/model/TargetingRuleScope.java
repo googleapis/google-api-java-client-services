@@ -32,12 +32,43 @@ package com.google.api.services.androidpublisher.model;
 public final class TargetingRuleScope extends com.google.api.client.json.GenericJson {
 
   /**
+   * The scope of the current targeting rule is any subscription in the parent app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TargetingRuleScopeAnySubscriptionInApp anySubscriptionInApp;
+
+  /**
    * The scope of the current targeting rule is the subscription with the specified subscription ID.
    * Must be a subscription within the same parent app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String specificSubscriptionInApp;
+
+  /**
+   * The scope of the current targeting rule is the subscription in which this offer is defined.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TargetingRuleScopeThisSubscription thisSubscription;
+
+  /**
+   * The scope of the current targeting rule is any subscription in the parent app.
+   * @return value or {@code null} for none
+   */
+  public TargetingRuleScopeAnySubscriptionInApp getAnySubscriptionInApp() {
+    return anySubscriptionInApp;
+  }
+
+  /**
+   * The scope of the current targeting rule is any subscription in the parent app.
+   * @param anySubscriptionInApp anySubscriptionInApp or {@code null} for none
+   */
+  public TargetingRuleScope setAnySubscriptionInApp(TargetingRuleScopeAnySubscriptionInApp anySubscriptionInApp) {
+    this.anySubscriptionInApp = anySubscriptionInApp;
+    return this;
+  }
 
   /**
    * The scope of the current targeting rule is the subscription with the specified subscription ID.
@@ -55,6 +86,23 @@ public final class TargetingRuleScope extends com.google.api.client.json.Generic
    */
   public TargetingRuleScope setSpecificSubscriptionInApp(java.lang.String specificSubscriptionInApp) {
     this.specificSubscriptionInApp = specificSubscriptionInApp;
+    return this;
+  }
+
+  /**
+   * The scope of the current targeting rule is the subscription in which this offer is defined.
+   * @return value or {@code null} for none
+   */
+  public TargetingRuleScopeThisSubscription getThisSubscription() {
+    return thisSubscription;
+  }
+
+  /**
+   * The scope of the current targeting rule is the subscription in which this offer is defined.
+   * @param thisSubscription thisSubscription or {@code null} for none
+   */
+  public TargetingRuleScope setThisSubscription(TargetingRuleScopeThisSubscription thisSubscription) {
+    this.thisSubscription = thisSubscription;
     return this;
   }
 

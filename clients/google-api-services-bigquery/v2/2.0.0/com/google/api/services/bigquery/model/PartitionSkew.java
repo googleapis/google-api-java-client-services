@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Request format for undeleting a dataset.
+ * Partition skew detailed information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.bigquery.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class UndeleteDatasetRequest extends com.google.api.client.json.GenericJson {
+public final class PartitionSkew extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The exact time when the dataset was deleted. If not specified, the most recently
-   * deleted version is undeleted.
+   * Output only. Source stages which produce skewed data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String deletionTime;
+  private java.util.List<SkewSource> skewSources;
 
   /**
-   * Optional. The exact time when the dataset was deleted. If not specified, the most recently
-   * deleted version is undeleted.
+   * Output only. Source stages which produce skewed data.
    * @return value or {@code null} for none
    */
-  public String getDeletionTime() {
-    return deletionTime;
+  public java.util.List<SkewSource> getSkewSources() {
+    return skewSources;
   }
 
   /**
-   * Optional. The exact time when the dataset was deleted. If not specified, the most recently
-   * deleted version is undeleted.
-   * @param deletionTime deletionTime or {@code null} for none
+   * Output only. Source stages which produce skewed data.
+   * @param skewSources skewSources or {@code null} for none
    */
-  public UndeleteDatasetRequest setDeletionTime(String deletionTime) {
-    this.deletionTime = deletionTime;
+  public PartitionSkew setSkewSources(java.util.List<SkewSource> skewSources) {
+    this.skewSources = skewSources;
     return this;
   }
 
   @Override
-  public UndeleteDatasetRequest set(String fieldName, Object value) {
-    return (UndeleteDatasetRequest) super.set(fieldName, value);
+  public PartitionSkew set(String fieldName, Object value) {
+    return (PartitionSkew) super.set(fieldName, value);
   }
 
   @Override
-  public UndeleteDatasetRequest clone() {
-    return (UndeleteDatasetRequest) super.clone();
+  public PartitionSkew clone() {
+    return (PartitionSkew) super.clone();
   }
 
 }

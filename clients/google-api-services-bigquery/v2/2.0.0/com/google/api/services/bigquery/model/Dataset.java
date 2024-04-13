@@ -137,6 +137,15 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Optional. Options defining open source compatible datasets living in the BigQuery catalog.
+   * Contains metadata of open source database, schema or namespace represented by the current
+   * dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExternalCatalogDatasetOptions externalCatalogDatasetOptions;
+
+  /**
    * Optional. Reference to a read-only external dataset defined in data catalogs outside of
    * BigQuery. Filled out when the dataset type is EXTERNAL.
    * The value may be {@code null}.
@@ -505,6 +514,27 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. Options defining open source compatible datasets living in the BigQuery catalog.
+   * Contains metadata of open source database, schema or namespace represented by the current
+   * dataset.
+   * @return value or {@code null} for none
+   */
+  public ExternalCatalogDatasetOptions getExternalCatalogDatasetOptions() {
+    return externalCatalogDatasetOptions;
+  }
+
+  /**
+   * Optional. Options defining open source compatible datasets living in the BigQuery catalog.
+   * Contains metadata of open source database, schema or namespace represented by the current
+   * dataset.
+   * @param externalCatalogDatasetOptions externalCatalogDatasetOptions or {@code null} for none
+   */
+  public Dataset setExternalCatalogDatasetOptions(ExternalCatalogDatasetOptions externalCatalogDatasetOptions) {
+    this.externalCatalogDatasetOptions = externalCatalogDatasetOptions;
     return this;
   }
 

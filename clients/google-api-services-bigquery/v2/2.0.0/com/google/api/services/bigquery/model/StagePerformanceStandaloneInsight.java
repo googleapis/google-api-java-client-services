@@ -64,6 +64,13 @@ public final class StagePerformanceStandaloneInsight extends com.google.api.clie
   private java.lang.Boolean insufficientShuffleQuota;
 
   /**
+   * Output only. Partition skew in the stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PartitionSkew partitionSkew;
+
+  /**
    * Output only. True if the stage has a slot contention issue.
    * The value may be {@code null}.
    */
@@ -127,6 +134,23 @@ public final class StagePerformanceStandaloneInsight extends com.google.api.clie
    */
   public StagePerformanceStandaloneInsight setInsufficientShuffleQuota(java.lang.Boolean insufficientShuffleQuota) {
     this.insufficientShuffleQuota = insufficientShuffleQuota;
+    return this;
+  }
+
+  /**
+   * Output only. Partition skew in the stage.
+   * @return value or {@code null} for none
+   */
+  public PartitionSkew getPartitionSkew() {
+    return partitionSkew;
+  }
+
+  /**
+   * Output only. Partition skew in the stage.
+   * @param partitionSkew partitionSkew or {@code null} for none
+   */
+  public StagePerformanceStandaloneInsight setPartitionSkew(PartitionSkew partitionSkew) {
+    this.partitionSkew = partitionSkew;
     return this;
   }
 

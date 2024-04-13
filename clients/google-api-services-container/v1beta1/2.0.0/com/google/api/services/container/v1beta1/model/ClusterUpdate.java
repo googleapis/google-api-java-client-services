@@ -82,6 +82,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ClusterTelemetry desiredClusterTelemetry;
 
   /**
+   * The desired containerd config for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContainerdConfig desiredContainerdConfig;
+
+  /**
    * The desired configuration for the fine-grained cost management feature.
    * The value may be {@code null}.
    */
@@ -379,7 +386,9 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private PodSecurityPolicyConfig desiredPodSecurityPolicyConfig;
 
   /**
-   * The desired private cluster configuration.
+   * The desired private cluster configuration. master_global_access_config is the only field that
+   * can be changed via this field. See also ClusterUpdate.desired_enable_private_endpoint for
+   * modifying other fields within PrivateClusterConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -500,6 +509,14 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
+
+  /**
+   * The desired private cluster configuration. Has no effect. Use desired_private_cluster_config
+   * instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateClusterConfig privateClusterConfig;
 
   /**
    * The additional pod ranges that are to be removed from the cluster. The pod ranges specified
@@ -627,6 +644,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredClusterTelemetry(ClusterTelemetry desiredClusterTelemetry) {
     this.desiredClusterTelemetry = desiredClusterTelemetry;
+    return this;
+  }
+
+  /**
+   * The desired containerd config for the cluster.
+   * @return value or {@code null} for none
+   */
+  public ContainerdConfig getDesiredContainerdConfig() {
+    return desiredContainerdConfig;
+  }
+
+  /**
+   * The desired containerd config for the cluster.
+   * @param desiredContainerdConfig desiredContainerdConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredContainerdConfig(ContainerdConfig desiredContainerdConfig) {
+    this.desiredContainerdConfig = desiredContainerdConfig;
     return this;
   }
 
@@ -1339,7 +1373,9 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired private cluster configuration.
+   * The desired private cluster configuration. master_global_access_config is the only field that
+   * can be changed via this field. See also ClusterUpdate.desired_enable_private_endpoint for
+   * modifying other fields within PrivateClusterConfig.
    * @return value or {@code null} for none
    */
   public PrivateClusterConfig getDesiredPrivateClusterConfig() {
@@ -1347,7 +1383,9 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired private cluster configuration.
+   * The desired private cluster configuration. master_global_access_config is the only field that
+   * can be changed via this field. See also ClusterUpdate.desired_enable_private_endpoint for
+   * modifying other fields within PrivateClusterConfig.
    * @param desiredPrivateClusterConfig desiredPrivateClusterConfig or {@code null} for none
    */
   public ClusterUpdate setDesiredPrivateClusterConfig(PrivateClusterConfig desiredPrivateClusterConfig) {
@@ -1632,6 +1670,25 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * The desired private cluster configuration. Has no effect. Use desired_private_cluster_config
+   * instead.
+   * @return value or {@code null} for none
+   */
+  public PrivateClusterConfig getPrivateClusterConfig() {
+    return privateClusterConfig;
+  }
+
+  /**
+   * The desired private cluster configuration. Has no effect. Use desired_private_cluster_config
+   * instead.
+   * @param privateClusterConfig privateClusterConfig or {@code null} for none
+   */
+  public ClusterUpdate setPrivateClusterConfig(PrivateClusterConfig privateClusterConfig) {
+    this.privateClusterConfig = privateClusterConfig;
     return this;
   }
 

@@ -31,6 +31,13 @@ package com.google.api.services.container.v1beta1.model;
 public final class NodeConfigDefaults extends com.google.api.client.json.GenericJson {
 
   /**
+   * Parameters for containerd customization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContainerdConfig containerdConfig;
+
+  /**
    * GCFS (Google Container File System, also known as Riptide) options.
    * The value may be {@code null}.
    */
@@ -51,6 +58,23 @@ public final class NodeConfigDefaults extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private NodePoolLoggingConfig loggingConfig;
+
+  /**
+   * Parameters for containerd customization.
+   * @return value or {@code null} for none
+   */
+  public ContainerdConfig getContainerdConfig() {
+    return containerdConfig;
+  }
+
+  /**
+   * Parameters for containerd customization.
+   * @param containerdConfig containerdConfig or {@code null} for none
+   */
+  public NodeConfigDefaults setContainerdConfig(ContainerdConfig containerdConfig) {
+    this.containerdConfig = containerdConfig;
+    return this;
+  }
 
   /**
    * GCFS (Google Container File System, also known as Riptide) options.

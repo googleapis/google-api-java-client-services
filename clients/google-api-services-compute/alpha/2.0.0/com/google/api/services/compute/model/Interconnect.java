@@ -41,6 +41,14 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adminEnabled;
 
   /**
+   * Configuration for enabling Application Aware Interconnect (AAI) on this Cloud Interconnect
+   * connection between Google and your on-premises router.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InterconnectApplicationAwareInterconnect applicationAwareInterconnect;
+
+  /**
    * [Output only] List of features available for this Interconnect connection, which can take one
    * of the following values: - MACSEC If present then the Interconnect connection is provisioned on
    * MACsec capable hardware ports. If not present then the Interconnect connection is provisioned
@@ -315,6 +323,25 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   public Interconnect setAdminEnabled(java.lang.Boolean adminEnabled) {
     this.adminEnabled = adminEnabled;
+    return this;
+  }
+
+  /**
+   * Configuration for enabling Application Aware Interconnect (AAI) on this Cloud Interconnect
+   * connection between Google and your on-premises router.
+   * @return value or {@code null} for none
+   */
+  public InterconnectApplicationAwareInterconnect getApplicationAwareInterconnect() {
+    return applicationAwareInterconnect;
+  }
+
+  /**
+   * Configuration for enabling Application Aware Interconnect (AAI) on this Cloud Interconnect
+   * connection between Google and your on-premises router.
+   * @param applicationAwareInterconnect applicationAwareInterconnect or {@code null} for none
+   */
+  public Interconnect setApplicationAwareInterconnect(InterconnectApplicationAwareInterconnect applicationAwareInterconnect) {
+    this.applicationAwareInterconnect = applicationAwareInterconnect;
     return this;
   }
 

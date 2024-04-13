@@ -54,7 +54,8 @@ public final class StartLostModeParams extends com.google.api.client.json.Generi
   private UserFacingMessage lostOrganization;
 
   /**
-   * The phone number displayed to the user when the device is in lost mode.
+   * The phone number that will be called when the device is in lost mode and the call owner button
+   * is tapped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +120,8 @@ public final class StartLostModeParams extends com.google.api.client.json.Generi
   }
 
   /**
-   * The phone number displayed to the user when the device is in lost mode.
+   * The phone number that will be called when the device is in lost mode and the call owner button
+   * is tapped.
    * @return value or {@code null} for none
    */
   public UserFacingMessage getLostPhoneNumber() {
@@ -127,7 +129,8 @@ public final class StartLostModeParams extends com.google.api.client.json.Generi
   }
 
   /**
-   * The phone number displayed to the user when the device is in lost mode.
+   * The phone number that will be called when the device is in lost mode and the call owner button
+   * is tapped.
    * @param lostPhoneNumber lostPhoneNumber or {@code null} for none
    */
   public StartLostModeParams setLostPhoneNumber(UserFacingMessage lostPhoneNumber) {

@@ -127,6 +127,13 @@ public final class Registration extends com.google.api.client.json.GenericJson {
   private ContactSettings pendingContactSettings;
 
   /**
+   * Output only. Current domain management provider.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String provider;
+
+  /**
    * Output only. The reason the domain registration failed. Only set for domains in
    * REGISTRATION_FAILED state.
    * The value may be {@code null}.
@@ -349,6 +356,23 @@ public final class Registration extends com.google.api.client.json.GenericJson {
    */
   public Registration setPendingContactSettings(ContactSettings pendingContactSettings) {
     this.pendingContactSettings = pendingContactSettings;
+    return this;
+  }
+
+  /**
+   * Output only. Current domain management provider.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProvider() {
+    return provider;
+  }
+
+  /**
+   * Output only. Current domain management provider.
+   * @param provider provider or {@code null} for none
+   */
+  public Registration setProvider(java.lang.String provider) {
+    this.provider = provider;
     return this;
   }
 

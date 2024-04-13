@@ -39,6 +39,14 @@ public final class RenderProductIssuesRequestPayload extends com.google.api.clie
   private java.lang.String contentOption;
 
   /**
+   * Optional. How actions with user input form should be handled. If not provided, actions will be
+   * returned as links that points merchant to Merchant Center where they can request the action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userInputActionOption;
+
+  /**
    * Optional. How the detailed content should be returned. Default option is to return the content
    * as a pre-rendered HTML text.
    * @return value or {@code null} for none
@@ -54,6 +62,25 @@ public final class RenderProductIssuesRequestPayload extends com.google.api.clie
    */
   public RenderProductIssuesRequestPayload setContentOption(java.lang.String contentOption) {
     this.contentOption = contentOption;
+    return this;
+  }
+
+  /**
+   * Optional. How actions with user input form should be handled. If not provided, actions will be
+   * returned as links that points merchant to Merchant Center where they can request the action.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserInputActionOption() {
+    return userInputActionOption;
+  }
+
+  /**
+   * Optional. How actions with user input form should be handled. If not provided, actions will be
+   * returned as links that points merchant to Merchant Center where they can request the action.
+   * @param userInputActionOption userInputActionOption or {@code null} for none
+   */
+  public RenderProductIssuesRequestPayload setUserInputActionOption(java.lang.String userInputActionOption) {
+    this.userInputActionOption = userInputActionOption;
     return this;
   }
 

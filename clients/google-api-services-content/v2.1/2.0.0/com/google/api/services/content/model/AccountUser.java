@@ -66,7 +66,8 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean paymentsManager;
 
   /**
-   * Whether user is a reporting manager.
+   * Whether user is a reporting manager. This role is equivalent to the Performance and insights
+   * role in Merchant Center.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +159,8 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether user is a reporting manager.
+   * Whether user is a reporting manager. This role is equivalent to the Performance and insights
+   * role in Merchant Center.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReportingManager() {
@@ -166,7 +168,8 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether user is a reporting manager.
+   * Whether user is a reporting manager. This role is equivalent to the Performance and insights
+   * role in Merchant Center.
    * @param reportingManager reportingManager or {@code null} for none
    */
   public AccountUser setReportingManager(java.lang.Boolean reportingManager) {

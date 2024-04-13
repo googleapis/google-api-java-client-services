@@ -711,6 +711,20 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String source;
 
   /**
+   * Structured description, for algorithmically (AI)-generated descriptions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductStructuredDescription structuredDescription;
+
+  /**
+   * Structured title, for algorithmically (AI)-generated titles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductStructuredTitle structuredTitle;
+
+  /**
    * Number of periods (months or years) and amount of payment per period for an item with an
    * associated subscription contract.
    * The value may be {@code null}.
@@ -2372,6 +2386,40 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setSource(java.lang.String source) {
     this.source = source;
+    return this;
+  }
+
+  /**
+   * Structured description, for algorithmically (AI)-generated descriptions.
+   * @return value or {@code null} for none
+   */
+  public ProductStructuredDescription getStructuredDescription() {
+    return structuredDescription;
+  }
+
+  /**
+   * Structured description, for algorithmically (AI)-generated descriptions.
+   * @param structuredDescription structuredDescription or {@code null} for none
+   */
+  public Product setStructuredDescription(ProductStructuredDescription structuredDescription) {
+    this.structuredDescription = structuredDescription;
+    return this;
+  }
+
+  /**
+   * Structured title, for algorithmically (AI)-generated titles.
+   * @return value or {@code null} for none
+   */
+  public ProductStructuredTitle getStructuredTitle() {
+    return structuredTitle;
+  }
+
+  /**
+   * Structured title, for algorithmically (AI)-generated titles.
+   * @param structuredTitle structuredTitle or {@code null} for none
+   */
+  public Product setStructuredTitle(ProductStructuredTitle structuredTitle) {
+    this.structuredTitle = structuredTitle;
     return this;
   }
 

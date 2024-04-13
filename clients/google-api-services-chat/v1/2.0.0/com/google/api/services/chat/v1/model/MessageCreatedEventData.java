@@ -17,8 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Payload for new message events where the `EventType` field is
- * `google.workspace.chat.message.v1.created`.
+ * Event payload for a new message. Event type: `google.workspace.chat.message.v1.created`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,14 +30,14 @@ package com.google.api.services.chat.v1.model;
 public final class MessageCreatedEventData extends com.google.api.client.json.GenericJson {
 
   /**
-   * The most recent version of the message.
+   * The new message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Message message;
 
   /**
-   * The most recent version of the message.
+   * The new message.
    * @return value or {@code null} for none
    */
   public Message getMessage() {
@@ -46,7 +45,7 @@ public final class MessageCreatedEventData extends com.google.api.client.json.Ge
   }
 
   /**
-   * The most recent version of the message.
+   * The new message.
    * @param message message or {@code null} for none
    */
   public MessageCreatedEventData setMessage(Message message) {

@@ -17,11 +17,11 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * An icon displayed in a widget on a card. For an example in Google Chat apps, see
- * [Icon](https://developers.google.com/chat/ui/widgets/icon). Supports [built-
- * in](https://developers.google.com/chat/format-messages#builtinicons) and
- * [custom](https://developers.google.com/chat/format-messages#customicons) icons. [Google Workspace
- * Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+ * An icon displayed in a widget on a card. For an example in Google Chat apps, see [Add an
+ * icon](https://developers.google.com/workspace/chat/add-text-image-card-dialog#add_an_icon).
+ * Supports [built-in](https://developers.google.com/workspace/chat/format-messages#builtinicons)
+ * and [custom](https://developers.google.com/workspace/chat/format-messages#customicons) icons.
+ * [Google Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -38,9 +38,9 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
    * `Button` is provided. As a best practice, you should set a helpful description for what the
    * icon displays, and if applicable, what it does. For example, `A user's account portrait`, or
    * `Opens a new browser tab and navigates to the Google Chat developer documentation at
-   * https://developers.google.com/chat`. If the icon is set in a `Button`, the `altText` appears as
-   * helper text when the user hovers over the button. However, if the button also sets `text`, the
-   * icon's `altText` is ignored.
+   * https://developers.google.com/workspace/chat`. If the icon is set in a `Button`, the `altText`
+   * appears as helper text when the user hovers over the button. However, if the button also sets
+   * `text`, the icon's `altText` is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +48,8 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
 
   /**
    * Display a custom icon hosted at an HTTPS URL. For example: ``` "iconUrl":
-   * "https://developers.google.com/chat/images/quickstart-app-avatar.png" ``` Supported file types
-   * include `.png` and `.jpg`.
+   * "https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png" ``` Supported
+   * file types include `.png` and `.jpg`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,8 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   /**
    * Display one of the built-in icons provided by Google Workspace. For example, to display an
    * airplane icon, specify `AIRPLANE`. For a bus, specify `BUS`. For a full list of supported
-   * icons, see [built-in icons](https://developers.google.com/chat/format-messages#builtinicons).
+   * icons, see [built-in icons](https://developers.google.com/workspace/chat/format-
+   * messages#builtinicons).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +88,9 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
    * `Button` is provided. As a best practice, you should set a helpful description for what the
    * icon displays, and if applicable, what it does. For example, `A user's account portrait`, or
    * `Opens a new browser tab and navigates to the Google Chat developer documentation at
-   * https://developers.google.com/chat`. If the icon is set in a `Button`, the `altText` appears as
-   * helper text when the user hovers over the button. However, if the button also sets `text`, the
-   * icon's `altText` is ignored.
+   * https://developers.google.com/workspace/chat`. If the icon is set in a `Button`, the `altText`
+   * appears as helper text when the user hovers over the button. However, if the button also sets
+   * `text`, the icon's `altText` is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getAltText() {
@@ -101,9 +102,9 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
    * `Button` is provided. As a best practice, you should set a helpful description for what the
    * icon displays, and if applicable, what it does. For example, `A user's account portrait`, or
    * `Opens a new browser tab and navigates to the Google Chat developer documentation at
-   * https://developers.google.com/chat`. If the icon is set in a `Button`, the `altText` appears as
-   * helper text when the user hovers over the button. However, if the button also sets `text`, the
-   * icon's `altText` is ignored.
+   * https://developers.google.com/workspace/chat`. If the icon is set in a `Button`, the `altText`
+   * appears as helper text when the user hovers over the button. However, if the button also sets
+   * `text`, the icon's `altText` is ignored.
    * @param altText altText or {@code null} for none
    */
   public GoogleAppsCardV1Icon setAltText(java.lang.String altText) {
@@ -113,8 +114,8 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
 
   /**
    * Display a custom icon hosted at an HTTPS URL. For example: ``` "iconUrl":
-   * "https://developers.google.com/chat/images/quickstart-app-avatar.png" ``` Supported file types
-   * include `.png` and `.jpg`.
+   * "https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png" ``` Supported
+   * file types include `.png` and `.jpg`.
    * @return value or {@code null} for none
    */
   public java.lang.String getIconUrl() {
@@ -123,8 +124,8 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
 
   /**
    * Display a custom icon hosted at an HTTPS URL. For example: ``` "iconUrl":
-   * "https://developers.google.com/chat/images/quickstart-app-avatar.png" ``` Supported file types
-   * include `.png` and `.jpg`.
+   * "https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png" ``` Supported
+   * file types include `.png` and `.jpg`.
    * @param iconUrl iconUrl or {@code null} for none
    */
   public GoogleAppsCardV1Icon setIconUrl(java.lang.String iconUrl) {
@@ -154,7 +155,8 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   /**
    * Display one of the built-in icons provided by Google Workspace. For example, to display an
    * airplane icon, specify `AIRPLANE`. For a bus, specify `BUS`. For a full list of supported
-   * icons, see [built-in icons](https://developers.google.com/chat/format-messages#builtinicons).
+   * icons, see [built-in icons](https://developers.google.com/workspace/chat/format-
+   * messages#builtinicons).
    * @return value or {@code null} for none
    */
   public java.lang.String getKnownIcon() {
@@ -164,7 +166,8 @@ public final class GoogleAppsCardV1Icon extends com.google.api.client.json.Gener
   /**
    * Display one of the built-in icons provided by Google Workspace. For example, to display an
    * airplane icon, specify `AIRPLANE`. For a bus, specify `BUS`. For a full list of supported
-   * icons, see [built-in icons](https://developers.google.com/chat/format-messages#builtinicons).
+   * icons, see [built-in icons](https://developers.google.com/workspace/chat/format-
+   * messages#builtinicons).
    * @param knownIcon knownIcon or {@code null} for none
    */
   public GoogleAppsCardV1Icon setKnownIcon(java.lang.String knownIcon) {

@@ -19,11 +19,11 @@ package com.google.api.services.chat.v1.model;
 /**
  * A widget that creates one or more UI items that users can select. For example, a dropdown menu or
  * checkboxes. You can use this widget to collect data that can be predicted or enumerated. For an
- * example in Google Chat apps, see [Selection input](https://developers.google.com/chat/ui/widgets
- * /selection-input). Chat apps can process the value of items that users select or input. For
- * details about working with form inputs, see [Receive form
- * data](https://developers.google.com/chat/ui/read-form-data). To collect undefined or abstract
- * data from users, use the TextInput widget. [Google Workspace Add-ons and Chat
+ * example in Google Chat apps, see [Add selectable UI elements](/workspace/chat/design-interactive-
+ * card-dialog#add_selectable_ui_elements). Chat apps can process the value of items that users
+ * select or input. For details about working with form inputs, see [Receive form
+ * data](https://developers.google.com/workspace/chat/read-form-data). To collect undefined or
+ * abstract data from users, use the TextInput widget. [Google Workspace Add-ons and Chat
  * apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -70,9 +70,9 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   private java.lang.Integer multiSelectMaxSelectedItems;
 
   /**
-   * For multiselect menus, the number of text characters that a user inputs before the Chat app
-   * queries autocomplete and displays suggested items in the menu. If unspecified, defaults to 0
-   * characters for static data sources and 3 characters for external data sources.
+   * For multiselect menus, the number of text characters that a user inputs before the app queries
+   * autocomplete and displays suggested items in the menu. If unspecified, defaults to 0 characters
+   * for static data sources and 3 characters for external data sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +80,8 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
 
   /**
    * The name that identifies the selection input in a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
-   * data).
+   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
+   * form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   /**
    * If specified, the form is submitted when the selection changes. If not specified, you must
    * specify a separate button that submits the form. For details about working with form inputs,
-   * see [Receive form data](https://developers.google.com/chat/ui/read-form-data).
+   * see [Receive form data](https://developers.google.com/workspace/chat/read-form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,9 +191,9 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * For multiselect menus, the number of text characters that a user inputs before the Chat app
-   * queries autocomplete and displays suggested items in the menu. If unspecified, defaults to 0
-   * characters for static data sources and 3 characters for external data sources.
+   * For multiselect menus, the number of text characters that a user inputs before the app queries
+   * autocomplete and displays suggested items in the menu. If unspecified, defaults to 0 characters
+   * for static data sources and 3 characters for external data sources.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMultiSelectMinQueryLength() {
@@ -201,9 +201,9 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   }
 
   /**
-   * For multiselect menus, the number of text characters that a user inputs before the Chat app
-   * queries autocomplete and displays suggested items in the menu. If unspecified, defaults to 0
-   * characters for static data sources and 3 characters for external data sources.
+   * For multiselect menus, the number of text characters that a user inputs before the app queries
+   * autocomplete and displays suggested items in the menu. If unspecified, defaults to 0 characters
+   * for static data sources and 3 characters for external data sources.
    * @param multiSelectMinQueryLength multiSelectMinQueryLength or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setMultiSelectMinQueryLength(java.lang.Integer multiSelectMinQueryLength) {
@@ -213,8 +213,8 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
 
   /**
    * The name that identifies the selection input in a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
-   * data).
+   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
+   * form-data).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -223,8 +223,8 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
 
   /**
    * The name that identifies the selection input in a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
-   * data).
+   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
+   * form-data).
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setName(java.lang.String name) {
@@ -235,7 +235,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   /**
    * If specified, the form is submitted when the selection changes. If not specified, you must
    * specify a separate button that submits the form. For details about working with form inputs,
-   * see [Receive form data](https://developers.google.com/chat/ui/read-form-data).
+   * see [Receive form data](https://developers.google.com/workspace/chat/read-form-data).
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getOnChangeAction() {
@@ -245,7 +245,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   /**
    * If specified, the form is submitted when the selection changes. If not specified, you must
    * specify a separate button that submits the form. For details about working with form inputs,
-   * see [Receive form data](https://developers.google.com/chat/ui/read-form-data).
+   * see [Receive form data](https://developers.google.com/workspace/chat/read-form-data).
    * @param onChangeAction onChangeAction or {@code null} for none
    */
   public GoogleAppsCardV1SelectionInput setOnChangeAction(GoogleAppsCardV1Action onChangeAction) {

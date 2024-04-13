@@ -17,8 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Payload for deleted membership events where the `EventType` field is
- * `google.workspace.chat.membership.v1.deleted`.
+ * Event payload for a deleted membership. Event type: `google.workspace.chat.membership.v1.deleted`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,14 +30,14 @@ package com.google.api.services.chat.v1.model;
 public final class MembershipDeletedEventData extends com.google.api.client.json.GenericJson {
 
   /**
-   * The deleted membership. Only `name` and `state` are populated.
+   * The deleted membership. Only the `name` and `state` fields are populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Membership membership;
 
   /**
-   * The deleted membership. Only `name` and `state` are populated.
+   * The deleted membership. Only the `name` and `state` fields are populated.
    * @return value or {@code null} for none
    */
   public Membership getMembership() {
@@ -46,7 +45,7 @@ public final class MembershipDeletedEventData extends com.google.api.client.json
   }
 
   /**
-   * The deleted membership. Only `name` and `state` are populated.
+   * The deleted membership. Only the `name` and `state` fields are populated.
    * @param membership membership or {@code null} for none
    */
   public MembershipDeletedEventData setMembership(Membership membership) {

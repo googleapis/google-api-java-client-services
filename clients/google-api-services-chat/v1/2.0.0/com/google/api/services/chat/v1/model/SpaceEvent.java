@@ -17,7 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * An event that happens in a specific space.
+ * An event that represents a change or activity in a Google Chat space. To learn more, see [Work
+ * with events from Google Chat](https://developers.google.com/workspace/chat/events-overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,186 +31,190 @@ package com.google.api.services.chat.v1.model;
 public final class SpaceEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Time of the event.
+   * Time when the event occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String eventTime;
 
   /**
-   * Type of the space event. The following event types are supported: * New membership:
-   * `google.workspace.chat.membership.v1.created` * Deleted membership:
-   * `google.workspace.chat.membership.v1.deleted` * Updated membership:
-   * `google.workspace.chat.membership.v1.updated` * New message:
-   * `google.workspace.chat.message.v1.created` * Deleted message:
-   * `google.workspace.chat.message.v1.deleted` * Updated message:
-   * `google.workspace.chat.message.v1.updated` * New reaction:
-   * `google.workspace.chat.reaction.v1.created` * Deleted reaction:
-   * `google.workspace.chat.reaction.v1.deleted` * Updated space:
-   * `google.workspace.chat.space.v1.updated` Note that requesting or subscribing to the preceding
-   * event types automatically sets up the subscription or response to also return batched versions
-   * of the event type. For example, if you subscribe to
-   * `google.workspace.chat.membership.v1.created`, you also receive events for
-   * `google.workspace.chat.membership.v1.batchCreated`. For more details see
-   * https://developers.google.com/workspace/events/guides/events-chat#output_only_event_types.
+   * Type of space event. Each event type has a batch version, which represents multiple instances
+   * of the event type that occur in a short period of time. For `spaceEvents.list()` requests, omit
+   * batch event types in your query filter. By default, the server returns both event type and its
+   * batch version. Supported event types for
+   * [messages](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages):
+   * * New message: `google.workspace.chat.message.v1.created` * Updated message:
+   * `google.workspace.chat.message.v1.updated` * Deleted message:
+   * `google.workspace.chat.message.v1.deleted` * Multiple new messages:
+   * `google.workspace.chat.message.v1.batchCreated` * Multiple updated messages:
+   * `google.workspace.chat.message.v1.batchUpdated` * Multiple deleted messages:
+   * `google.workspace.chat.message.v1.batchDeleted` Supported event types for [memberships](https:/
+   * /developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members): * New membership:
+   * `google.workspace.chat.membership.v1.created` * Updated membership:
+   * `google.workspace.chat.membership.v1.updated` * Deleted membership:
+   * `google.workspace.chat.membership.v1.deleted` * Multiple new memberships:
+   * `google.workspace.chat.membership.v1.batchCreated` * Multiple updated memberships:
+   * `google.workspace.chat.membership.v1.batchUpdated` * Multiple deleted memberships:
+   * `google.workspace.chat.membership.v1.batchDeleted` Supported event types for [reactions](https:
+   * //developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.reactions): * New
+   * reaction: `google.workspace.chat.reaction.v1.created` * Deleted reaction:
+   * `google.workspace.chat.reaction.v1.deleted` * Multiple new reactions:
+   * `google.workspace.chat.reaction.v1.batchCreated` * Multiple deleted reactions:
+   * `google.workspace.chat.reaction.v1.batchDeleted` Supported event types about the
+   * [space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces): * Updated
+   * space: `google.workspace.chat.space.v1.updated` * Multiple space updates:
+   * `google.workspace.chat.space.v1.batchUpdated`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventType;
 
   /**
-   * Payload for batch new membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.batchCreated`.
+   * Event payload for multiple new memberships. Event type:
+   * `google.workspace.chat.membership.v1.batchCreated`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MembershipBatchCreatedEventData membershipBatchCreatedEventData;
 
   /**
-   * Payload for batch deleted membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.batchDeleted`.
+   * Event payload for multiple deleted memberships. Event type:
+   * `google.workspace.chat.membership.v1.batchDeleted`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MembershipBatchDeletedEventData membershipBatchDeletedEventData;
 
   /**
-   * Payload for batch updated membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.batchUpdated`.
+   * Event payload for multiple updated memberships. Event type:
+   * `google.workspace.chat.membership.v1.batchUpdated`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MembershipBatchUpdatedEventData membershipBatchUpdatedEventData;
 
   /**
-   * Payload for new membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.created`.
+   * Event payload for a new membership. Event type: `google.workspace.chat.membership.v1.created`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MembershipCreatedEventData membershipCreatedEventData;
 
   /**
-   * Payload for deleted membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.deleted`.
+   * Event payload for a deleted membership. Event type:
+   * `google.workspace.chat.membership.v1.deleted`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MembershipDeletedEventData membershipDeletedEventData;
 
   /**
-   * Payload for updated membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.updated`.
+   * Event payload for an updated membership. Event type:
+   * `google.workspace.chat.membership.v1.updated`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MembershipUpdatedEventData membershipUpdatedEventData;
 
   /**
-   * Payload for batch new message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.batchCreated`.
+   * Event payload for multiple new messages. Event type:
+   * `google.workspace.chat.message.v1.batchCreated`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MessageBatchCreatedEventData messageBatchCreatedEventData;
 
   /**
-   * Payload for batch deleted message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.batchDeleted`.
+   * Event payload for multiple deleted messages. Event type:
+   * `google.workspace.chat.message.v1.batchDeleted`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MessageBatchDeletedEventData messageBatchDeletedEventData;
 
   /**
-   * Payload for batch updated message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.batchUpdated`.
+   * Event payload for multiple updated messages. Event type:
+   * `google.workspace.chat.message.v1.batchUpdated`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MessageBatchUpdatedEventData messageBatchUpdatedEventData;
 
   /**
-   * Payload for new message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.created`.
+   * Event payload for a new message. Event type: `google.workspace.chat.message.v1.created`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MessageCreatedEventData messageCreatedEventData;
 
   /**
-   * Payload for deleted message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.deleted`.
+   * Event payload for a deleted message. Event type: `google.workspace.chat.message.v1.deleted`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MessageDeletedEventData messageDeletedEventData;
 
   /**
-   * Payload for updated message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.updated`.
+   * Event payload for an updated message. Event type: `google.workspace.chat.message.v1.updated`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MessageUpdatedEventData messageUpdatedEventData;
 
   /**
-   * The resource name of the space event. Format: `spaces/{space}/spaceEvents/{spaceEvent}`
+   * Resource name of the space event. Format: `spaces/{space}/spaceEvents/{spaceEvent}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Payload for batch new reaction events where the `EventType` field is
-   * `google.workspace.chat.reaction.v1.batchCreated`.
+   * Event payload for multiple new reactions. Event type:
+   * `google.workspace.chat.reaction.v1.batchCreated`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ReactionBatchCreatedEventData reactionBatchCreatedEventData;
 
   /**
-   * Payload for batch deleted reaction events where the `EventType` field is
-   * `google.workspace.chat.reaction.v1.batchDeleted`.
+   * Event payload for multiple deleted reactions. Event type:
+   * `google.workspace.chat.reaction.v1.batchDeleted`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ReactionBatchDeletedEventData reactionBatchDeletedEventData;
 
   /**
-   * Payload for new reaction events where the `EventType` field is
-   * `google.workspace.chat.reaction.v1.created`.
+   * Event payload for a new reaction. Event type: `google.workspace.chat.reaction.v1.created`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ReactionCreatedEventData reactionCreatedEventData;
 
   /**
-   * Payload for deleted reaction events where the `EventType` field is
-   * `google.workspace.chat.reaction.v1.deleted`.
+   * Event payload for a deleted reaction. Event type: `google.workspace.chat.reaction.v1.deleted`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ReactionDeletedEventData reactionDeletedEventData;
 
   /**
-   * Payload for batch updated space events where the `EventType` field is
-   * `google.workspace.chat.space.v1.batchUpdated`.
+   * Event payload for multiple updates to a space. Event type:
+   * `google.workspace.chat.space.v1.batchUpdated`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SpaceBatchUpdatedEventData spaceBatchUpdatedEventData;
 
   /**
-   * Payload for updated space events where the `EventType` field is
-   * `google.workspace.chat.space.v1.updated`.
+   * Event payload for a space update. Event type: `google.workspace.chat.space.v1.updated`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SpaceUpdatedEventData spaceUpdatedEventData;
 
   /**
-   * Time of the event.
+   * Time when the event occurred.
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -217,7 +222,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time of the event.
+   * Time when the event occurred.
    * @param eventTime eventTime or {@code null} for none
    */
   public SpaceEvent setEventTime(String eventTime) {
@@ -226,21 +231,32 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the space event. The following event types are supported: * New membership:
-   * `google.workspace.chat.membership.v1.created` * Deleted membership:
-   * `google.workspace.chat.membership.v1.deleted` * Updated membership:
-   * `google.workspace.chat.membership.v1.updated` * New message:
-   * `google.workspace.chat.message.v1.created` * Deleted message:
-   * `google.workspace.chat.message.v1.deleted` * Updated message:
-   * `google.workspace.chat.message.v1.updated` * New reaction:
-   * `google.workspace.chat.reaction.v1.created` * Deleted reaction:
-   * `google.workspace.chat.reaction.v1.deleted` * Updated space:
-   * `google.workspace.chat.space.v1.updated` Note that requesting or subscribing to the preceding
-   * event types automatically sets up the subscription or response to also return batched versions
-   * of the event type. For example, if you subscribe to
-   * `google.workspace.chat.membership.v1.created`, you also receive events for
-   * `google.workspace.chat.membership.v1.batchCreated`. For more details see
-   * https://developers.google.com/workspace/events/guides/events-chat#output_only_event_types.
+   * Type of space event. Each event type has a batch version, which represents multiple instances
+   * of the event type that occur in a short period of time. For `spaceEvents.list()` requests, omit
+   * batch event types in your query filter. By default, the server returns both event type and its
+   * batch version. Supported event types for
+   * [messages](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages):
+   * * New message: `google.workspace.chat.message.v1.created` * Updated message:
+   * `google.workspace.chat.message.v1.updated` * Deleted message:
+   * `google.workspace.chat.message.v1.deleted` * Multiple new messages:
+   * `google.workspace.chat.message.v1.batchCreated` * Multiple updated messages:
+   * `google.workspace.chat.message.v1.batchUpdated` * Multiple deleted messages:
+   * `google.workspace.chat.message.v1.batchDeleted` Supported event types for [memberships](https:/
+   * /developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members): * New membership:
+   * `google.workspace.chat.membership.v1.created` * Updated membership:
+   * `google.workspace.chat.membership.v1.updated` * Deleted membership:
+   * `google.workspace.chat.membership.v1.deleted` * Multiple new memberships:
+   * `google.workspace.chat.membership.v1.batchCreated` * Multiple updated memberships:
+   * `google.workspace.chat.membership.v1.batchUpdated` * Multiple deleted memberships:
+   * `google.workspace.chat.membership.v1.batchDeleted` Supported event types for [reactions](https:
+   * //developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.reactions): * New
+   * reaction: `google.workspace.chat.reaction.v1.created` * Deleted reaction:
+   * `google.workspace.chat.reaction.v1.deleted` * Multiple new reactions:
+   * `google.workspace.chat.reaction.v1.batchCreated` * Multiple deleted reactions:
+   * `google.workspace.chat.reaction.v1.batchDeleted` Supported event types about the
+   * [space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces): * Updated
+   * space: `google.workspace.chat.space.v1.updated` * Multiple space updates:
+   * `google.workspace.chat.space.v1.batchUpdated`
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -248,21 +264,32 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the space event. The following event types are supported: * New membership:
-   * `google.workspace.chat.membership.v1.created` * Deleted membership:
-   * `google.workspace.chat.membership.v1.deleted` * Updated membership:
-   * `google.workspace.chat.membership.v1.updated` * New message:
-   * `google.workspace.chat.message.v1.created` * Deleted message:
-   * `google.workspace.chat.message.v1.deleted` * Updated message:
-   * `google.workspace.chat.message.v1.updated` * New reaction:
-   * `google.workspace.chat.reaction.v1.created` * Deleted reaction:
-   * `google.workspace.chat.reaction.v1.deleted` * Updated space:
-   * `google.workspace.chat.space.v1.updated` Note that requesting or subscribing to the preceding
-   * event types automatically sets up the subscription or response to also return batched versions
-   * of the event type. For example, if you subscribe to
-   * `google.workspace.chat.membership.v1.created`, you also receive events for
-   * `google.workspace.chat.membership.v1.batchCreated`. For more details see
-   * https://developers.google.com/workspace/events/guides/events-chat#output_only_event_types.
+   * Type of space event. Each event type has a batch version, which represents multiple instances
+   * of the event type that occur in a short period of time. For `spaceEvents.list()` requests, omit
+   * batch event types in your query filter. By default, the server returns both event type and its
+   * batch version. Supported event types for
+   * [messages](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages):
+   * * New message: `google.workspace.chat.message.v1.created` * Updated message:
+   * `google.workspace.chat.message.v1.updated` * Deleted message:
+   * `google.workspace.chat.message.v1.deleted` * Multiple new messages:
+   * `google.workspace.chat.message.v1.batchCreated` * Multiple updated messages:
+   * `google.workspace.chat.message.v1.batchUpdated` * Multiple deleted messages:
+   * `google.workspace.chat.message.v1.batchDeleted` Supported event types for [memberships](https:/
+   * /developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members): * New membership:
+   * `google.workspace.chat.membership.v1.created` * Updated membership:
+   * `google.workspace.chat.membership.v1.updated` * Deleted membership:
+   * `google.workspace.chat.membership.v1.deleted` * Multiple new memberships:
+   * `google.workspace.chat.membership.v1.batchCreated` * Multiple updated memberships:
+   * `google.workspace.chat.membership.v1.batchUpdated` * Multiple deleted memberships:
+   * `google.workspace.chat.membership.v1.batchDeleted` Supported event types for [reactions](https:
+   * //developers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages.reactions): * New
+   * reaction: `google.workspace.chat.reaction.v1.created` * Deleted reaction:
+   * `google.workspace.chat.reaction.v1.deleted` * Multiple new reactions:
+   * `google.workspace.chat.reaction.v1.batchCreated` * Multiple deleted reactions:
+   * `google.workspace.chat.reaction.v1.batchDeleted` Supported event types about the
+   * [space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces): * Updated
+   * space: `google.workspace.chat.space.v1.updated` * Multiple space updates:
+   * `google.workspace.chat.space.v1.batchUpdated`
    * @param eventType eventType or {@code null} for none
    */
   public SpaceEvent setEventType(java.lang.String eventType) {
@@ -271,8 +298,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch new membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.batchCreated`.
+   * Event payload for multiple new memberships. Event type:
+   * `google.workspace.chat.membership.v1.batchCreated`
    * @return value or {@code null} for none
    */
   public MembershipBatchCreatedEventData getMembershipBatchCreatedEventData() {
@@ -280,8 +307,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch new membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.batchCreated`.
+   * Event payload for multiple new memberships. Event type:
+   * `google.workspace.chat.membership.v1.batchCreated`
    * @param membershipBatchCreatedEventData membershipBatchCreatedEventData or {@code null} for none
    */
   public SpaceEvent setMembershipBatchCreatedEventData(MembershipBatchCreatedEventData membershipBatchCreatedEventData) {
@@ -290,8 +317,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch deleted membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.batchDeleted`.
+   * Event payload for multiple deleted memberships. Event type:
+   * `google.workspace.chat.membership.v1.batchDeleted`
    * @return value or {@code null} for none
    */
   public MembershipBatchDeletedEventData getMembershipBatchDeletedEventData() {
@@ -299,8 +326,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch deleted membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.batchDeleted`.
+   * Event payload for multiple deleted memberships. Event type:
+   * `google.workspace.chat.membership.v1.batchDeleted`
    * @param membershipBatchDeletedEventData membershipBatchDeletedEventData or {@code null} for none
    */
   public SpaceEvent setMembershipBatchDeletedEventData(MembershipBatchDeletedEventData membershipBatchDeletedEventData) {
@@ -309,8 +336,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch updated membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.batchUpdated`.
+   * Event payload for multiple updated memberships. Event type:
+   * `google.workspace.chat.membership.v1.batchUpdated`
    * @return value or {@code null} for none
    */
   public MembershipBatchUpdatedEventData getMembershipBatchUpdatedEventData() {
@@ -318,8 +345,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch updated membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.batchUpdated`.
+   * Event payload for multiple updated memberships. Event type:
+   * `google.workspace.chat.membership.v1.batchUpdated`
    * @param membershipBatchUpdatedEventData membershipBatchUpdatedEventData or {@code null} for none
    */
   public SpaceEvent setMembershipBatchUpdatedEventData(MembershipBatchUpdatedEventData membershipBatchUpdatedEventData) {
@@ -328,8 +355,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for new membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.created`.
+   * Event payload for a new membership. Event type: `google.workspace.chat.membership.v1.created`
    * @return value or {@code null} for none
    */
   public MembershipCreatedEventData getMembershipCreatedEventData() {
@@ -337,8 +363,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for new membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.created`.
+   * Event payload for a new membership. Event type: `google.workspace.chat.membership.v1.created`
    * @param membershipCreatedEventData membershipCreatedEventData or {@code null} for none
    */
   public SpaceEvent setMembershipCreatedEventData(MembershipCreatedEventData membershipCreatedEventData) {
@@ -347,8 +372,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for deleted membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.deleted`.
+   * Event payload for a deleted membership. Event type:
+   * `google.workspace.chat.membership.v1.deleted`
    * @return value or {@code null} for none
    */
   public MembershipDeletedEventData getMembershipDeletedEventData() {
@@ -356,8 +381,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for deleted membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.deleted`.
+   * Event payload for a deleted membership. Event type:
+   * `google.workspace.chat.membership.v1.deleted`
    * @param membershipDeletedEventData membershipDeletedEventData or {@code null} for none
    */
   public SpaceEvent setMembershipDeletedEventData(MembershipDeletedEventData membershipDeletedEventData) {
@@ -366,8 +391,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for updated membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.updated`.
+   * Event payload for an updated membership. Event type:
+   * `google.workspace.chat.membership.v1.updated`
    * @return value or {@code null} for none
    */
   public MembershipUpdatedEventData getMembershipUpdatedEventData() {
@@ -375,8 +400,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for updated membership events where the `EventType` field is
-   * `google.workspace.chat.membership.v1.updated`.
+   * Event payload for an updated membership. Event type:
+   * `google.workspace.chat.membership.v1.updated`
    * @param membershipUpdatedEventData membershipUpdatedEventData or {@code null} for none
    */
   public SpaceEvent setMembershipUpdatedEventData(MembershipUpdatedEventData membershipUpdatedEventData) {
@@ -385,8 +410,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch new message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.batchCreated`.
+   * Event payload for multiple new messages. Event type:
+   * `google.workspace.chat.message.v1.batchCreated`
    * @return value or {@code null} for none
    */
   public MessageBatchCreatedEventData getMessageBatchCreatedEventData() {
@@ -394,8 +419,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch new message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.batchCreated`.
+   * Event payload for multiple new messages. Event type:
+   * `google.workspace.chat.message.v1.batchCreated`
    * @param messageBatchCreatedEventData messageBatchCreatedEventData or {@code null} for none
    */
   public SpaceEvent setMessageBatchCreatedEventData(MessageBatchCreatedEventData messageBatchCreatedEventData) {
@@ -404,8 +429,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch deleted message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.batchDeleted`.
+   * Event payload for multiple deleted messages. Event type:
+   * `google.workspace.chat.message.v1.batchDeleted`
    * @return value or {@code null} for none
    */
   public MessageBatchDeletedEventData getMessageBatchDeletedEventData() {
@@ -413,8 +438,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch deleted message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.batchDeleted`.
+   * Event payload for multiple deleted messages. Event type:
+   * `google.workspace.chat.message.v1.batchDeleted`
    * @param messageBatchDeletedEventData messageBatchDeletedEventData or {@code null} for none
    */
   public SpaceEvent setMessageBatchDeletedEventData(MessageBatchDeletedEventData messageBatchDeletedEventData) {
@@ -423,8 +448,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch updated message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.batchUpdated`.
+   * Event payload for multiple updated messages. Event type:
+   * `google.workspace.chat.message.v1.batchUpdated`
    * @return value or {@code null} for none
    */
   public MessageBatchUpdatedEventData getMessageBatchUpdatedEventData() {
@@ -432,8 +457,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch updated message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.batchUpdated`.
+   * Event payload for multiple updated messages. Event type:
+   * `google.workspace.chat.message.v1.batchUpdated`
    * @param messageBatchUpdatedEventData messageBatchUpdatedEventData or {@code null} for none
    */
   public SpaceEvent setMessageBatchUpdatedEventData(MessageBatchUpdatedEventData messageBatchUpdatedEventData) {
@@ -442,8 +467,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for new message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.created`.
+   * Event payload for a new message. Event type: `google.workspace.chat.message.v1.created`
    * @return value or {@code null} for none
    */
   public MessageCreatedEventData getMessageCreatedEventData() {
@@ -451,8 +475,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for new message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.created`.
+   * Event payload for a new message. Event type: `google.workspace.chat.message.v1.created`
    * @param messageCreatedEventData messageCreatedEventData or {@code null} for none
    */
   public SpaceEvent setMessageCreatedEventData(MessageCreatedEventData messageCreatedEventData) {
@@ -461,8 +484,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for deleted message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.deleted`.
+   * Event payload for a deleted message. Event type: `google.workspace.chat.message.v1.deleted`
    * @return value or {@code null} for none
    */
   public MessageDeletedEventData getMessageDeletedEventData() {
@@ -470,8 +492,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for deleted message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.deleted`.
+   * Event payload for a deleted message. Event type: `google.workspace.chat.message.v1.deleted`
    * @param messageDeletedEventData messageDeletedEventData or {@code null} for none
    */
   public SpaceEvent setMessageDeletedEventData(MessageDeletedEventData messageDeletedEventData) {
@@ -480,8 +501,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for updated message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.updated`.
+   * Event payload for an updated message. Event type: `google.workspace.chat.message.v1.updated`
    * @return value or {@code null} for none
    */
   public MessageUpdatedEventData getMessageUpdatedEventData() {
@@ -489,8 +509,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for updated message events where the `EventType` field is
-   * `google.workspace.chat.message.v1.updated`.
+   * Event payload for an updated message. Event type: `google.workspace.chat.message.v1.updated`
    * @param messageUpdatedEventData messageUpdatedEventData or {@code null} for none
    */
   public SpaceEvent setMessageUpdatedEventData(MessageUpdatedEventData messageUpdatedEventData) {
@@ -499,7 +518,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the space event. Format: `spaces/{space}/spaceEvents/{spaceEvent}`
+   * Resource name of the space event. Format: `spaces/{space}/spaceEvents/{spaceEvent}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -507,7 +526,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the space event. Format: `spaces/{space}/spaceEvents/{spaceEvent}`
+   * Resource name of the space event. Format: `spaces/{space}/spaceEvents/{spaceEvent}`
    * @param name name or {@code null} for none
    */
   public SpaceEvent setName(java.lang.String name) {
@@ -516,8 +535,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch new reaction events where the `EventType` field is
-   * `google.workspace.chat.reaction.v1.batchCreated`.
+   * Event payload for multiple new reactions. Event type:
+   * `google.workspace.chat.reaction.v1.batchCreated`
    * @return value or {@code null} for none
    */
   public ReactionBatchCreatedEventData getReactionBatchCreatedEventData() {
@@ -525,8 +544,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch new reaction events where the `EventType` field is
-   * `google.workspace.chat.reaction.v1.batchCreated`.
+   * Event payload for multiple new reactions. Event type:
+   * `google.workspace.chat.reaction.v1.batchCreated`
    * @param reactionBatchCreatedEventData reactionBatchCreatedEventData or {@code null} for none
    */
   public SpaceEvent setReactionBatchCreatedEventData(ReactionBatchCreatedEventData reactionBatchCreatedEventData) {
@@ -535,8 +554,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch deleted reaction events where the `EventType` field is
-   * `google.workspace.chat.reaction.v1.batchDeleted`.
+   * Event payload for multiple deleted reactions. Event type:
+   * `google.workspace.chat.reaction.v1.batchDeleted`
    * @return value or {@code null} for none
    */
   public ReactionBatchDeletedEventData getReactionBatchDeletedEventData() {
@@ -544,8 +563,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch deleted reaction events where the `EventType` field is
-   * `google.workspace.chat.reaction.v1.batchDeleted`.
+   * Event payload for multiple deleted reactions. Event type:
+   * `google.workspace.chat.reaction.v1.batchDeleted`
    * @param reactionBatchDeletedEventData reactionBatchDeletedEventData or {@code null} for none
    */
   public SpaceEvent setReactionBatchDeletedEventData(ReactionBatchDeletedEventData reactionBatchDeletedEventData) {
@@ -554,8 +573,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for new reaction events where the `EventType` field is
-   * `google.workspace.chat.reaction.v1.created`.
+   * Event payload for a new reaction. Event type: `google.workspace.chat.reaction.v1.created`
    * @return value or {@code null} for none
    */
   public ReactionCreatedEventData getReactionCreatedEventData() {
@@ -563,8 +581,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for new reaction events where the `EventType` field is
-   * `google.workspace.chat.reaction.v1.created`.
+   * Event payload for a new reaction. Event type: `google.workspace.chat.reaction.v1.created`
    * @param reactionCreatedEventData reactionCreatedEventData or {@code null} for none
    */
   public SpaceEvent setReactionCreatedEventData(ReactionCreatedEventData reactionCreatedEventData) {
@@ -573,8 +590,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for deleted reaction events where the `EventType` field is
-   * `google.workspace.chat.reaction.v1.deleted`.
+   * Event payload for a deleted reaction. Event type: `google.workspace.chat.reaction.v1.deleted`
    * @return value or {@code null} for none
    */
   public ReactionDeletedEventData getReactionDeletedEventData() {
@@ -582,8 +598,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for deleted reaction events where the `EventType` field is
-   * `google.workspace.chat.reaction.v1.deleted`.
+   * Event payload for a deleted reaction. Event type: `google.workspace.chat.reaction.v1.deleted`
    * @param reactionDeletedEventData reactionDeletedEventData or {@code null} for none
    */
   public SpaceEvent setReactionDeletedEventData(ReactionDeletedEventData reactionDeletedEventData) {
@@ -592,8 +607,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch updated space events where the `EventType` field is
-   * `google.workspace.chat.space.v1.batchUpdated`.
+   * Event payload for multiple updates to a space. Event type:
+   * `google.workspace.chat.space.v1.batchUpdated`
    * @return value or {@code null} for none
    */
   public SpaceBatchUpdatedEventData getSpaceBatchUpdatedEventData() {
@@ -601,8 +616,8 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for batch updated space events where the `EventType` field is
-   * `google.workspace.chat.space.v1.batchUpdated`.
+   * Event payload for multiple updates to a space. Event type:
+   * `google.workspace.chat.space.v1.batchUpdated`
    * @param spaceBatchUpdatedEventData spaceBatchUpdatedEventData or {@code null} for none
    */
   public SpaceEvent setSpaceBatchUpdatedEventData(SpaceBatchUpdatedEventData spaceBatchUpdatedEventData) {
@@ -611,8 +626,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for updated space events where the `EventType` field is
-   * `google.workspace.chat.space.v1.updated`.
+   * Event payload for a space update. Event type: `google.workspace.chat.space.v1.updated`
    * @return value or {@code null} for none
    */
   public SpaceUpdatedEventData getSpaceUpdatedEventData() {
@@ -620,8 +634,7 @@ public final class SpaceEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Payload for updated space events where the `EventType` field is
-   * `google.workspace.chat.space.v1.updated`.
+   * Event payload for a space update. Event type: `google.workspace.chat.space.v1.updated`
    * @param spaceUpdatedEventData spaceUpdatedEventData or {@code null} for none
    */
   public SpaceEvent setSpaceUpdatedEventData(SpaceUpdatedEventData spaceUpdatedEventData) {

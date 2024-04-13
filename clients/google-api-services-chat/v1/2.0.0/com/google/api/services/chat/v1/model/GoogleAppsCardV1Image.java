@@ -17,9 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * An image that is specified by a URL and can have an `onClick` action. For an example, see
- * [Image](https://developers.google.com/chat/ui/widgets/image). [Google Workspace Add-ons and Chat
- * apps](https://developers.google.com/workspace/extend):
+ * An image that is specified by a URL and can have an `onClick` action. For an example, see [Add an
+ * image](https://developers.google.com/workspace/chat/add-text-image-card-dialog#add_an_image).
+ * [Google Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -39,8 +39,8 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   private java.lang.String altText;
 
   /**
-   * The HTTPS URL that hosts the image. For example: ``` https://developers.google.com/chat/images
-   * /quickstart-app-avatar.png ```
+   * The HTTPS URL that hosts the image. For example: ```
+   * https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   }
 
   /**
-   * The HTTPS URL that hosts the image. For example: ``` https://developers.google.com/chat/images
-   * /quickstart-app-avatar.png ```
+   * The HTTPS URL that hosts the image. For example: ```
+   * https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png ```
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUrl() {
@@ -80,8 +80,8 @@ public final class GoogleAppsCardV1Image extends com.google.api.client.json.Gene
   }
 
   /**
-   * The HTTPS URL that hosts the image. For example: ``` https://developers.google.com/chat/images
-   * /quickstart-app-avatar.png ```
+   * The HTTPS URL that hosts the image. For example: ```
+   * https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png ```
    * @param imageUrl imageUrl or {@code null} for none
    */
   public GoogleAppsCardV1Image setImageUrl(java.lang.String imageUrl) {

@@ -45,8 +45,8 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
   /**
    * Weight and grade affect a symbol’s thickness. Adjustments to grade are more granular than
    * adjustments to weight and have a small impact on the size of the symbol. Choose from {-25, 0,
-   * 200}. If absent, default value is 0. If any other value is specified, a broken image icon is
-   * displayed. To preview different icon settings, go to [Google Font
+   * 200}. If absent, default value is 0. If any other value is specified, the default value is
+   * used. To preview different icon settings, go to [Google Font
    * Icons](https://fonts.google.com/icons) and adjust the settings under **Customize**.
    * The value may be {@code null}.
    */
@@ -64,9 +64,9 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
 
   /**
    * The stroke weight of the icon. Choose from {100, 200, 300, 400, 500, 600, 700}. If absent,
-   * default value is 400. If any other value is specified, a broken image icon is displayed. To
-   * preview different icon settings, go to [Google Font Icons](https://fonts.google.com/icons) and
-   * adjust the settings under **Customize**.
+   * default value is 400. If any other value is specified, the default value is used. To preview
+   * different icon settings, go to [Google Font Icons](https://fonts.google.com/icons) and adjust
+   * the settings under **Customize**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +96,8 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
   /**
    * Weight and grade affect a symbol’s thickness. Adjustments to grade are more granular than
    * adjustments to weight and have a small impact on the size of the symbol. Choose from {-25, 0,
-   * 200}. If absent, default value is 0. If any other value is specified, a broken image icon is
-   * displayed. To preview different icon settings, go to [Google Font
+   * 200}. If absent, default value is 0. If any other value is specified, the default value is
+   * used. To preview different icon settings, go to [Google Font
    * Icons](https://fonts.google.com/icons) and adjust the settings under **Customize**.
    * @return value or {@code null} for none
    */
@@ -108,8 +108,8 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
   /**
    * Weight and grade affect a symbol’s thickness. Adjustments to grade are more granular than
    * adjustments to weight and have a small impact on the size of the symbol. Choose from {-25, 0,
-   * 200}. If absent, default value is 0. If any other value is specified, a broken image icon is
-   * displayed. To preview different icon settings, go to [Google Font
+   * 200}. If absent, default value is 0. If any other value is specified, the default value is
+   * used. To preview different icon settings, go to [Google Font
    * Icons](https://fonts.google.com/icons) and adjust the settings under **Customize**.
    * @param grade grade or {@code null} for none
    */
@@ -141,9 +141,9 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
 
   /**
    * The stroke weight of the icon. Choose from {100, 200, 300, 400, 500, 600, 700}. If absent,
-   * default value is 400. If any other value is specified, a broken image icon is displayed. To
-   * preview different icon settings, go to [Google Font Icons](https://fonts.google.com/icons) and
-   * adjust the settings under **Customize**.
+   * default value is 400. If any other value is specified, the default value is used. To preview
+   * different icon settings, go to [Google Font Icons](https://fonts.google.com/icons) and adjust
+   * the settings under **Customize**.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getWeight() {
@@ -152,9 +152,9 @@ public final class GoogleAppsCardV1MaterialIcon extends com.google.api.client.js
 
   /**
    * The stroke weight of the icon. Choose from {100, 200, 300, 400, 500, 600, 700}. If absent,
-   * default value is 400. If any other value is specified, a broken image icon is displayed. To
-   * preview different icon settings, go to [Google Font Icons](https://fonts.google.com/icons) and
-   * adjust the settings under **Customize**.
+   * default value is 400. If any other value is specified, the default value is used. To preview
+   * different icon settings, go to [Google Font Icons](https://fonts.google.com/icons) and adjust
+   * the settings under **Customize**.
    * @param weight weight or {@code null} for none
    */
   public GoogleAppsCardV1MaterialIcon setWeight(java.lang.Integer weight) {

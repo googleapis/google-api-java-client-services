@@ -35,7 +35,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * messages that contain dialogs. For details, see [Add interactive widgets at the bottom of a
    * message](https://developers.google.com/workspace/chat/create-messages#add-accessory-widgets).
    * Creating a message with accessory widgets requires [app authentication]
-   * (https://developers.google.com/chat/api/guides/auth/service-accounts).
+   * (https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,11 +117,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An array of [cards](https://developers.google.com/chat/api/reference/rest/v1/cards). Only Chat
-   * apps can create cards. If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users), the messages can't contain
-   * cards. To learn about cards and how to create them, see [Design dynamic, interactive, and
-   * consistent UIs with cards](https://developers.google.com/chat/ui). [Card
+   * An array of [cards](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards).
+   * Only Chat apps can create cards. If your Chat app [authenticates as a
+   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
+   * messages can't contain cards. To learn about cards and how to create them, see [Send card
+   * messages](https://developers.google.com/workspace/chat/create-messages#create). [Card
    * builder](https://addons.gsuite.google.com/uikit/builder)
    * The value may be {@code null}.
    */
@@ -137,9 +137,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A custom ID for the message. You can use field to identify a message, or to get,
    * delete, or update a message. To set a custom ID, specify the [`messageId`](https://developers.g
-   * oogle.com/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETERS.message_id)
-   * field when you create the message. For details, see [Name a message](https://developers.google.
-   * com/chat/api/guides/v1/messages/create#name_a_created_message).
+   * oogle.com/workspace/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETERS.mes
+   * sage_id) field when you create the message. For details, see [Name a
+   * message](https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,14 +195,14 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Contains the message `text` with markups added to communicate formatting. This
    * field might not capture all formatting visible in the UI, but includes the following: * [Markup
-   * syntax](https://developers.google.com/chat/format-messages) for bold, italic, strikethrough,
-   * monospace, monospace block, and bulleted list. * [User
-   * mentions](https://developers.google.com/chat/format-messages#messages-@mention) using the
-   * format ``. * Custom hyperlinks using the format `<{url}|{rendered_text}>` where the first
+   * syntax](https://developers.google.com/workspace/chat/format-messages) for bold, italic,
+   * strikethrough, monospace, monospace block, and bulleted list. * [User
+   * mentions](https://developers.google.com/workspace/chat/format-messages#messages-@mention) using
+   * the format ``. * Custom hyperlinks using the format `<{url}|{rendered_text}>` where the first
    * string is the URL and the second is the rendered text—for example, ``. * Custom emoji using the
    * format `:{emoji_name}:`—for example, `:smile:`. This doesn't apply to Unicode emoji, such as
    * `U+1F600` for a grinning face emoji. For more information, see [View text formatting sent in a
-   * message](https://developers.google.com/chat/format-
+   * message](https://developers.google.com/workspace/chat/format-
    * messages#view_text_formatting_sent_in_a_message)
    * The value may be {@code null}.
    */
@@ -219,7 +219,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A URL in `spaces.messages.text` that matches a link preview pattern. For more
-   * information, see [Preview links](https://developers.google.com/chat/how-tos/preview-links).
+   * information, see [Preview links](https://developers.google.com/workspace/chat/preview-links).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,8 +231,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
    * custom ID when you create a message, you can use this ID to specify the message in a request by
    * replacing `{message}` with the value from the `clientAssignedMessageId` field. For example,
-   * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a message](https://dev
-   * elopers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
+   * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
+   * message](https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -243,9 +243,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * message. When set, the message is private and only visible to the specified user and the Chat
    * app. Link previews and attachments aren't supported for private messages. Only Chat apps can
    * send private messages. If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users) to send a message, the message
-   * can't be private and must omit this field. For details, see [Send private messages to Google
-   * Chat users](https://developers.google.com/chat/api/guides/v1/messages/private).
+   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) to send a
+   * message, the message can't be private and must omit this field. For details, see [Send private
+   * messages to Google Chat users](https://developers.google.com/workspace/chat/private-messages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,8 +261,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The user who created the message. If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
-   * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
+   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
+   * output populates the
+   * [user](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) `name` and
+   * `type`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -276,9 +278,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private SlashCommand slashCommand;
 
   /**
-   * If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
-   * [space](https://developers.google.com/chat/api/reference/rest/v1/spaces) `name`.
+   * If your Chat app [authenticates as a user](https://developers.google.com/workspace/chat
+   * /authenticate-authorize-chat-user), the output populates the
+   * [space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces) `name`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -286,11 +288,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Plain-text body of the message. The first link to an image, video, or web page generates a
-   * [preview chip](https://developers.google.com/chat/how-tos/preview-links). You can also
-   * [@mention a Google Chat user](https://developers.google.com/chat/format-
+   * [preview chip](https://developers.google.com/workspace/chat/preview-links). You can also
+   * [@mention a Google Chat user](https://developers.google.com/workspace/chat/format-
    * messages#messages-@mention), or everyone in the space. To learn about creating text messages,
-   * see [Send a text message](https://developers.google.com/chat/api/guides/v1/messages/create
-   * #create-text-messages).
+   * see [Send a text message](https://developers.google.com/workspace/chat/create-messages#create-
+   * text-messages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -298,8 +300,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The thread the message belongs to. For example usage, see [Start or reply to a message
-   * thread](https://developers.google.com/chat/api/guides/v1/messages/create#create-message-
-   * thread).
+   * thread](https://developers.google.com/workspace/chat/create-messages#create-message-thread).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,7 +322,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * messages that contain dialogs. For details, see [Add interactive widgets at the bottom of a
    * message](https://developers.google.com/workspace/chat/create-messages#add-accessory-widgets).
    * Creating a message with accessory widgets requires [app authentication]
-   * (https://developers.google.com/chat/api/guides/auth/service-accounts).
+   * (https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
    * @return value or {@code null} for none
    */
   public java.util.List<AccessoryWidget> getAccessoryWidgets() {
@@ -334,7 +335,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * messages that contain dialogs. For details, see [Add interactive widgets at the bottom of a
    * message](https://developers.google.com/workspace/chat/create-messages#add-accessory-widgets).
    * Creating a message with accessory widgets requires [app authentication]
-   * (https://developers.google.com/chat/api/guides/auth/service-accounts).
+   * (https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
    * @param accessoryWidgets accessoryWidgets or {@code null} for none
    */
   public Message setAccessoryWidgets(java.util.List<AccessoryWidget> accessoryWidgets) {
@@ -451,11 +452,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An array of [cards](https://developers.google.com/chat/api/reference/rest/v1/cards). Only Chat
-   * apps can create cards. If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users), the messages can't contain
-   * cards. To learn about cards and how to create them, see [Design dynamic, interactive, and
-   * consistent UIs with cards](https://developers.google.com/chat/ui). [Card
+   * An array of [cards](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards).
+   * Only Chat apps can create cards. If your Chat app [authenticates as a
+   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
+   * messages can't contain cards. To learn about cards and how to create them, see [Send card
+   * messages](https://developers.google.com/workspace/chat/create-messages#create). [Card
    * builder](https://addons.gsuite.google.com/uikit/builder)
    * @return value or {@code null} for none
    */
@@ -464,11 +465,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An array of [cards](https://developers.google.com/chat/api/reference/rest/v1/cards). Only Chat
-   * apps can create cards. If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users), the messages can't contain
-   * cards. To learn about cards and how to create them, see [Design dynamic, interactive, and
-   * consistent UIs with cards](https://developers.google.com/chat/ui). [Card
+   * An array of [cards](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards).
+   * Only Chat apps can create cards. If your Chat app [authenticates as a
+   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
+   * messages can't contain cards. To learn about cards and how to create them, see [Send card
+   * messages](https://developers.google.com/workspace/chat/create-messages#create). [Card
    * builder](https://addons.gsuite.google.com/uikit/builder)
    * @param cardsV2 cardsV2 or {@code null} for none
    */
@@ -480,9 +481,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A custom ID for the message. You can use field to identify a message, or to get,
    * delete, or update a message. To set a custom ID, specify the [`messageId`](https://developers.g
-   * oogle.com/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETERS.message_id)
-   * field when you create the message. For details, see [Name a message](https://developers.google.
-   * com/chat/api/guides/v1/messages/create#name_a_created_message).
+   * oogle.com/workspace/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETERS.mes
+   * sage_id) field when you create the message. For details, see [Name a
+   * message](https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
    * @return value or {@code null} for none
    */
   public java.lang.String getClientAssignedMessageId() {
@@ -492,9 +493,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A custom ID for the message. You can use field to identify a message, or to get,
    * delete, or update a message. To set a custom ID, specify the [`messageId`](https://developers.g
-   * oogle.com/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETERS.message_id)
-   * field when you create the message. For details, see [Name a message](https://developers.google.
-   * com/chat/api/guides/v1/messages/create#name_a_created_message).
+   * oogle.com/workspace/chat/api/reference/rest/v1/spaces.messages/create#body.QUERY_PARAMETERS.mes
+   * sage_id) field when you create the message. For details, see [Name a
+   * message](https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
    * @param clientAssignedMessageId clientAssignedMessageId or {@code null} for none
    */
   public Message setClientAssignedMessageId(java.lang.String clientAssignedMessageId) {
@@ -602,14 +603,14 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Contains the message `text` with markups added to communicate formatting. This
    * field might not capture all formatting visible in the UI, but includes the following: * [Markup
-   * syntax](https://developers.google.com/chat/format-messages) for bold, italic, strikethrough,
-   * monospace, monospace block, and bulleted list. * [User
-   * mentions](https://developers.google.com/chat/format-messages#messages-@mention) using the
-   * format ``. * Custom hyperlinks using the format `<{url}|{rendered_text}>` where the first
+   * syntax](https://developers.google.com/workspace/chat/format-messages) for bold, italic,
+   * strikethrough, monospace, monospace block, and bulleted list. * [User
+   * mentions](https://developers.google.com/workspace/chat/format-messages#messages-@mention) using
+   * the format ``. * Custom hyperlinks using the format `<{url}|{rendered_text}>` where the first
    * string is the URL and the second is the rendered text—for example, ``. * Custom emoji using the
    * format `:{emoji_name}:`—for example, `:smile:`. This doesn't apply to Unicode emoji, such as
    * `U+1F600` for a grinning face emoji. For more information, see [View text formatting sent in a
-   * message](https://developers.google.com/chat/format-
+   * message](https://developers.google.com/workspace/chat/format-
    * messages#view_text_formatting_sent_in_a_message)
    * @return value or {@code null} for none
    */
@@ -620,14 +621,14 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Contains the message `text` with markups added to communicate formatting. This
    * field might not capture all formatting visible in the UI, but includes the following: * [Markup
-   * syntax](https://developers.google.com/chat/format-messages) for bold, italic, strikethrough,
-   * monospace, monospace block, and bulleted list. * [User
-   * mentions](https://developers.google.com/chat/format-messages#messages-@mention) using the
-   * format ``. * Custom hyperlinks using the format `<{url}|{rendered_text}>` where the first
+   * syntax](https://developers.google.com/workspace/chat/format-messages) for bold, italic,
+   * strikethrough, monospace, monospace block, and bulleted list. * [User
+   * mentions](https://developers.google.com/workspace/chat/format-messages#messages-@mention) using
+   * the format ``. * Custom hyperlinks using the format `<{url}|{rendered_text}>` where the first
    * string is the URL and the second is the rendered text—for example, ``. * Custom emoji using the
    * format `:{emoji_name}:`—for example, `:smile:`. This doesn't apply to Unicode emoji, such as
    * `U+1F600` for a grinning face emoji. For more information, see [View text formatting sent in a
-   * message](https://developers.google.com/chat/format-
+   * message](https://developers.google.com/workspace/chat/format-
    * messages#view_text_formatting_sent_in_a_message)
    * @param formattedText formattedText or {@code null} for none
    */
@@ -657,7 +658,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A URL in `spaces.messages.text` that matches a link preview pattern. For more
-   * information, see [Preview links](https://developers.google.com/chat/how-tos/preview-links).
+   * information, see [Preview links](https://developers.google.com/workspace/chat/preview-links).
    * @return value or {@code null} for none
    */
   public MatchedUrl getMatchedUrl() {
@@ -666,7 +667,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A URL in `spaces.messages.text` that matches a link preview pattern. For more
-   * information, see [Preview links](https://developers.google.com/chat/how-tos/preview-links).
+   * information, see [Preview links](https://developers.google.com/workspace/chat/preview-links).
    * @param matchedUrl matchedUrl or {@code null} for none
    */
   public Message setMatchedUrl(MatchedUrl matchedUrl) {
@@ -680,8 +681,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
    * custom ID when you create a message, you can use this ID to specify the message in a request by
    * replacing `{message}` with the value from the `clientAssignedMessageId` field. For example,
-   * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a message](https://dev
-   * elopers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
+   * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
+   * message](https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -694,8 +695,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a
    * custom ID when you create a message, you can use this ID to specify the message in a request by
    * replacing `{message}` with the value from the `clientAssignedMessageId` field. For example,
-   * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a message](https://dev
-   * elopers.google.com/chat/api/guides/v1/messages/create#name_a_created_message).
+   * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
+   * message](https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
    * @param name name or {@code null} for none
    */
   public Message setName(java.lang.String name) {
@@ -708,9 +709,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * message. When set, the message is private and only visible to the specified user and the Chat
    * app. Link previews and attachments aren't supported for private messages. Only Chat apps can
    * send private messages. If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users) to send a message, the message
-   * can't be private and must omit this field. For details, see [Send private messages to Google
-   * Chat users](https://developers.google.com/chat/api/guides/v1/messages/private).
+   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) to send a
+   * message, the message can't be private and must omit this field. For details, see [Send private
+   * messages to Google Chat users](https://developers.google.com/workspace/chat/private-messages).
    * @return value or {@code null} for none
    */
   public User getPrivateMessageViewer() {
@@ -722,9 +723,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * message. When set, the message is private and only visible to the specified user and the Chat
    * app. Link previews and attachments aren't supported for private messages. Only Chat apps can
    * send private messages. If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users) to send a message, the message
-   * can't be private and must omit this field. For details, see [Send private messages to Google
-   * Chat users](https://developers.google.com/chat/api/guides/v1/messages/private).
+   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) to send a
+   * message, the message can't be private and must omit this field. For details, see [Send private
+   * messages to Google Chat users](https://developers.google.com/workspace/chat/private-messages).
    * @param privateMessageViewer privateMessageViewer or {@code null} for none
    */
   public Message setPrivateMessageViewer(User privateMessageViewer) {
@@ -753,8 +754,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The user who created the message. If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
-   * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
+   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
+   * output populates the
+   * [user](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) `name` and
+   * `type`.
    * @return value or {@code null} for none
    */
   public User getSender() {
@@ -763,8 +766,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The user who created the message. If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
-   * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
+   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
+   * output populates the
+   * [user](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) `name` and
+   * `type`.
    * @param sender sender or {@code null} for none
    */
   public Message setSender(User sender) {
@@ -790,9 +795,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
-   * [space](https://developers.google.com/chat/api/reference/rest/v1/spaces) `name`.
+   * If your Chat app [authenticates as a user](https://developers.google.com/workspace/chat
+   * /authenticate-authorize-chat-user), the output populates the
+   * [space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces) `name`.
    * @return value or {@code null} for none
    */
   public Space getSpace() {
@@ -800,9 +805,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
-   * [space](https://developers.google.com/chat/api/reference/rest/v1/spaces) `name`.
+   * If your Chat app [authenticates as a user](https://developers.google.com/workspace/chat
+   * /authenticate-authorize-chat-user), the output populates the
+   * [space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces) `name`.
    * @param space space or {@code null} for none
    */
   public Message setSpace(Space space) {
@@ -812,11 +817,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Plain-text body of the message. The first link to an image, video, or web page generates a
-   * [preview chip](https://developers.google.com/chat/how-tos/preview-links). You can also
-   * [@mention a Google Chat user](https://developers.google.com/chat/format-
+   * [preview chip](https://developers.google.com/workspace/chat/preview-links). You can also
+   * [@mention a Google Chat user](https://developers.google.com/workspace/chat/format-
    * messages#messages-@mention), or everyone in the space. To learn about creating text messages,
-   * see [Send a text message](https://developers.google.com/chat/api/guides/v1/messages/create
-   * #create-text-messages).
+   * see [Send a text message](https://developers.google.com/workspace/chat/create-messages#create-
+   * text-messages).
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -825,11 +830,11 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Plain-text body of the message. The first link to an image, video, or web page generates a
-   * [preview chip](https://developers.google.com/chat/how-tos/preview-links). You can also
-   * [@mention a Google Chat user](https://developers.google.com/chat/format-
+   * [preview chip](https://developers.google.com/workspace/chat/preview-links). You can also
+   * [@mention a Google Chat user](https://developers.google.com/workspace/chat/format-
    * messages#messages-@mention), or everyone in the space. To learn about creating text messages,
-   * see [Send a text message](https://developers.google.com/chat/api/guides/v1/messages/create
-   * #create-text-messages).
+   * see [Send a text message](https://developers.google.com/workspace/chat/create-messages#create-
+   * text-messages).
    * @param text text or {@code null} for none
    */
   public Message setText(java.lang.String text) {
@@ -839,8 +844,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The thread the message belongs to. For example usage, see [Start or reply to a message
-   * thread](https://developers.google.com/chat/api/guides/v1/messages/create#create-message-
-   * thread).
+   * thread](https://developers.google.com/workspace/chat/create-messages#create-message-thread).
    * @return value or {@code null} for none
    */
   public Thread getThread() {
@@ -849,8 +853,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * The thread the message belongs to. For example usage, see [Start or reply to a message
-   * thread](https://developers.google.com/chat/api/guides/v1/messages/create#create-message-
-   * thread).
+   * thread](https://developers.google.com/workspace/chat/create-messages#create-message-thread).
    * @param thread thread or {@code null} for none
    */
   public Message setThread(Thread thread) {

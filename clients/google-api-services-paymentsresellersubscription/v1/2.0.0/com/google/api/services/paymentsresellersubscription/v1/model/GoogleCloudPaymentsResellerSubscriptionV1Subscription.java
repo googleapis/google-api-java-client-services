@@ -138,6 +138,15 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
   private java.util.List<java.lang.String> promotions;
 
   /**
+   * Optional. The timestamp when the user transaction was made with the Partner. Specify for the
+   * case of "bundle with choice", and it must be before the provision_time (when the user makes a
+   * selection).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String purchaseTime;
+
+  /**
    * Output only. The place where partners should redirect the end-user to after creation. This
    * field might also be populated when creation failed. However, Partners should always prepare a
    * default URL to redirect the user in case this field is empty.
@@ -425,6 +434,27 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Subscription setPromotions(java.util.List<java.lang.String> promotions) {
     this.promotions = promotions;
+    return this;
+  }
+
+  /**
+   * Optional. The timestamp when the user transaction was made with the Partner. Specify for the
+   * case of "bundle with choice", and it must be before the provision_time (when the user makes a
+   * selection).
+   * @return value or {@code null} for none
+   */
+  public String getPurchaseTime() {
+    return purchaseTime;
+  }
+
+  /**
+   * Optional. The timestamp when the user transaction was made with the Partner. Specify for the
+   * case of "bundle with choice", and it must be before the provision_time (when the user makes a
+   * selection).
+   * @param purchaseTime purchaseTime or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1Subscription setPurchaseTime(String purchaseTime) {
+    this.purchaseTime = purchaseTime;
     return this;
   }
 

@@ -71,6 +71,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private ConfidentialNodes confidentialNodes;
 
   /**
+   * Parameters for containerd customization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContainerdConfig containerdConfig;
+
+  /**
    * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
    * 10GB. If unspecified, the default disk size is 100GB.
    * The value may be {@code null}.
@@ -445,6 +452,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setConfidentialNodes(ConfidentialNodes confidentialNodes) {
     this.confidentialNodes = confidentialNodes;
+    return this;
+  }
+
+  /**
+   * Parameters for containerd customization.
+   * @return value or {@code null} for none
+   */
+  public ContainerdConfig getContainerdConfig() {
+    return containerdConfig;
+  }
+
+  /**
+   * Parameters for containerd customization.
+   * @param containerdConfig containerdConfig or {@code null} for none
+   */
+  public NodeConfig setContainerdConfig(ContainerdConfig containerdConfig) {
+    this.containerdConfig = containerdConfig;
     return this;
   }
 

@@ -31,6 +31,20 @@ package com.google.api.services.container.model;
 public final class UpdateNodePoolRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of hardware accelerators to be attached to each node. See
+   * https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AcceleratorConfig> accelerators;
+
+  static {
+    // hack to force ProGuard to consider AcceleratorConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AcceleratorConfig.class);
+  }
+
+  /**
    * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
    * the name field.
    * The value may be {@code null}.
@@ -44,6 +58,14 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private ConfidentialNodes confidentialNodes;
+
+  /**
+   * The desired containerd config for nodes in the node pool. Initiates an upgrade operation that
+   * recreates the nodes with the new config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContainerdConfig containerdConfig;
 
   /**
    * Optional. The desired disk size for nodes in the node pool specified in GB. The smallest
@@ -268,6 +290,25 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String zone;
 
   /**
+   * A list of hardware accelerators to be attached to each node. See
+   * https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AcceleratorConfig> getAccelerators() {
+    return accelerators;
+  }
+
+  /**
+   * A list of hardware accelerators to be attached to each node. See
+   * https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
+   * @param accelerators accelerators or {@code null} for none
+   */
+  public UpdateNodePoolRequest setAccelerators(java.util.List<AcceleratorConfig> accelerators) {
+    this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
    * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
    * the name field.
    * @return value or {@code null} for none
@@ -300,6 +341,25 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setConfidentialNodes(ConfidentialNodes confidentialNodes) {
     this.confidentialNodes = confidentialNodes;
+    return this;
+  }
+
+  /**
+   * The desired containerd config for nodes in the node pool. Initiates an upgrade operation that
+   * recreates the nodes with the new config.
+   * @return value or {@code null} for none
+   */
+  public ContainerdConfig getContainerdConfig() {
+    return containerdConfig;
+  }
+
+  /**
+   * The desired containerd config for nodes in the node pool. Initiates an upgrade operation that
+   * recreates the nodes with the new config.
+   * @param containerdConfig containerdConfig or {@code null} for none
+   */
+  public UpdateNodePoolRequest setContainerdConfig(ContainerdConfig containerdConfig) {
+    this.containerdConfig = containerdConfig;
     return this;
   }
 

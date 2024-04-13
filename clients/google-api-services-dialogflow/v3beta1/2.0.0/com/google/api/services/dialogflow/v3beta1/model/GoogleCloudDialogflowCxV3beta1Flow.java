@@ -86,6 +86,13 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   private GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings knowledgeConnectorSettings;
 
   /**
+   * Optional. Multi-lingual agent settings for this flow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1FlowMultiLanguageSettings multiLanguageSettings;
+
+  /**
    * The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
    * The value may be {@code null}.
    */
@@ -219,6 +226,23 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
    */
   public GoogleCloudDialogflowCxV3beta1Flow setKnowledgeConnectorSettings(GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings knowledgeConnectorSettings) {
     this.knowledgeConnectorSettings = knowledgeConnectorSettings;
+    return this;
+  }
+
+  /**
+   * Optional. Multi-lingual agent settings for this flow.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1FlowMultiLanguageSettings getMultiLanguageSettings() {
+    return multiLanguageSettings;
+  }
+
+  /**
+   * Optional. Multi-lingual agent settings for this flow.
+   * @param multiLanguageSettings multiLanguageSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Flow setMultiLanguageSettings(GoogleCloudDialogflowCxV3beta1FlowMultiLanguageSettings multiLanguageSettings) {
+    this.multiLanguageSettings = multiLanguageSettings;
     return this;
   }
 

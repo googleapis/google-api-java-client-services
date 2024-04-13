@@ -33,12 +33,26 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.client.json.GenericJson {
 
   /**
+   * Document chunked based on chunking config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3DocumentChunkedDocument chunkedDocument;
+
+  /**
    * Optional. Inline document content, represented as a stream of bytes. Note: As with all `bytes`
    * fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
+
+  /**
+   * Parsed layout of the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3DocumentDocumentLayout documentLayout;
 
   /**
    * A list of entities detected on Document.text. For document shards, entities in this list may
@@ -125,6 +139,23 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
   private java.lang.String uri;
 
   /**
+   * Document chunked based on chunking config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentChunkedDocument getChunkedDocument() {
+    return chunkedDocument;
+  }
+
+  /**
+   * Document chunked based on chunking config.
+   * @param chunkedDocument chunkedDocument or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3Document setChunkedDocument(GoogleCloudDocumentaiV1beta3DocumentChunkedDocument chunkedDocument) {
+    this.chunkedDocument = chunkedDocument;
+    return this;
+  }
+
+  /**
    * Optional. Inline document content, represented as a stream of bytes. Note: As with all `bytes`
    * fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
    * @see #decodeContent()
@@ -170,6 +201,23 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
    */
   public GoogleCloudDocumentaiV1beta3Document encodeContent(byte[] content) {
     this.content = com.google.api.client.util.Base64.encodeBase64URLSafeString(content);
+    return this;
+  }
+
+  /**
+   * Parsed layout of the document.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentDocumentLayout getDocumentLayout() {
+    return documentLayout;
+  }
+
+  /**
+   * Parsed layout of the document.
+   * @param documentLayout documentLayout or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3Document setDocumentLayout(GoogleCloudDocumentaiV1beta3DocumentDocumentLayout documentLayout) {
+    this.documentLayout = documentLayout;
     return this;
   }
 

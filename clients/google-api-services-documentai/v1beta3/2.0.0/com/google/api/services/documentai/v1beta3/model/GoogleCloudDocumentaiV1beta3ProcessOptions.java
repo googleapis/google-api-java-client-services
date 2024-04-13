@@ -52,6 +52,14 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptions extends com.google
   private GoogleCloudDocumentaiV1beta3ProcessOptionsIndividualPageSelector individualPageSelector;
 
   /**
+   * Optional. Only applicable to `LAYOUT_PARSER_PROCESSOR`. Returns error if set on other processor
+   * types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig layoutConfig;
+
+  /**
    * Only applicable to `OCR_PROCESSOR` and `FORM_PARSER_PROCESSOR`. Returns error if set on other
    * processor types.
    * The value may be {@code null}.
@@ -115,6 +123,25 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptions extends com.google
    */
   public GoogleCloudDocumentaiV1beta3ProcessOptions setIndividualPageSelector(GoogleCloudDocumentaiV1beta3ProcessOptionsIndividualPageSelector individualPageSelector) {
     this.individualPageSelector = individualPageSelector;
+    return this;
+  }
+
+  /**
+   * Optional. Only applicable to `LAYOUT_PARSER_PROCESSOR`. Returns error if set on other processor
+   * types.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig getLayoutConfig() {
+    return layoutConfig;
+  }
+
+  /**
+   * Optional. Only applicable to `LAYOUT_PARSER_PROCESSOR`. Returns error if set on other processor
+   * types.
+   * @param layoutConfig layoutConfig or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessOptions setLayoutConfig(GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig layoutConfig) {
+    this.layoutConfig = layoutConfig;
     return this;
   }
 

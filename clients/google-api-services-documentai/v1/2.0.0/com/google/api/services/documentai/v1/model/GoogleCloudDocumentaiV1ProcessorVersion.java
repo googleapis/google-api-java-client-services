@@ -96,15 +96,15 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   private java.lang.String modelType;
 
   /**
-   * The resource name of the processor version. Format: `projects/{project}/locations/{location}/pr
-   * ocessors/{processor}/processorVersions/{processor_version}`
+   * Identifier. The resource name of the processor version. Format: `projects/{project}/locations/{
+   * location}/processors/{processor}/processorVersions/{processor_version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The state of the processor version.
+   * Output only. The state of the processor version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -264,8 +264,8 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The resource name of the processor version. Format: `projects/{project}/locations/{location}/pr
-   * ocessors/{processor}/processorVersions/{processor_version}`
+   * Identifier. The resource name of the processor version. Format: `projects/{project}/locations/{
+   * location}/processors/{processor}/processorVersions/{processor_version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -273,8 +273,8 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The resource name of the processor version. Format: `projects/{project}/locations/{location}/pr
-   * ocessors/{processor}/processorVersions/{processor_version}`
+   * Identifier. The resource name of the processor version. Format: `projects/{project}/locations/{
+   * location}/processors/{processor}/processorVersions/{processor_version}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessorVersion setName(java.lang.String name) {
@@ -283,7 +283,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The state of the processor version.
+   * Output only. The state of the processor version.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -291,7 +291,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The state of the processor version.
+   * Output only. The state of the processor version.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessorVersion setState(java.lang.String state) {

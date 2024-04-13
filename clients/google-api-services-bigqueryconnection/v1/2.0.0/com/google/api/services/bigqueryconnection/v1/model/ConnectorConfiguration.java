@@ -52,6 +52,13 @@ public final class ConnectorConfiguration extends com.google.api.client.json.Gen
   private ConnectorConfigurationEndpoint endpoint;
 
   /**
+   * Networking configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConnectorConfigurationNetwork network;
+
+  /**
    * Client authentication.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class ConnectorConfiguration extends com.google.api.client.json.Gen
    */
   public ConnectorConfiguration setEndpoint(ConnectorConfigurationEndpoint endpoint) {
     this.endpoint = endpoint;
+    return this;
+  }
+
+  /**
+   * Networking configuration.
+   * @return value or {@code null} for none
+   */
+  public ConnectorConfigurationNetwork getNetwork() {
+    return network;
+  }
+
+  /**
+   * Networking configuration.
+   * @param network network or {@code null} for none
+   */
+  public ConnectorConfiguration setNetwork(ConnectorConfigurationNetwork network) {
+    this.network = network;
     return this;
   }
 

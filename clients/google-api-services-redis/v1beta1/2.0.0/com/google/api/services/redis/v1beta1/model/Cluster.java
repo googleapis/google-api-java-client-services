@@ -62,11 +62,26 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. The type of a redis node in the cluster. NodeType determines the underlying machine-
+   * type of a redis node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nodeType;
+
+  /**
    * Optional. Persistence config (RDB, AOF) for the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ClusterPersistenceConfig persistenceConfig;
+
+  /**
+   * Output only. Precise value of redis memory size in GB for the entire cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double preciseSizeGb;
 
   /**
    * Required. Each PscConfig configures the consumer network where IPs will be designated to the
@@ -217,6 +232,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The type of a redis node in the cluster. NodeType determines the underlying machine-
+   * type of a redis node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNodeType() {
+    return nodeType;
+  }
+
+  /**
+   * Optional. The type of a redis node in the cluster. NodeType determines the underlying machine-
+   * type of a redis node.
+   * @param nodeType nodeType or {@code null} for none
+   */
+  public Cluster setNodeType(java.lang.String nodeType) {
+    this.nodeType = nodeType;
+    return this;
+  }
+
+  /**
    * Optional. Persistence config (RDB, AOF) for the cluster.
    * @return value or {@code null} for none
    */
@@ -230,6 +264,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setPersistenceConfig(ClusterPersistenceConfig persistenceConfig) {
     this.persistenceConfig = persistenceConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Precise value of redis memory size in GB for the entire cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getPreciseSizeGb() {
+    return preciseSizeGb;
+  }
+
+  /**
+   * Output only. Precise value of redis memory size in GB for the entire cluster.
+   * @param preciseSizeGb preciseSizeGb or {@code null} for none
+   */
+  public Cluster setPreciseSizeGb(java.lang.Double preciseSizeGb) {
+    this.preciseSizeGb = preciseSizeGb;
     return this;
   }
 

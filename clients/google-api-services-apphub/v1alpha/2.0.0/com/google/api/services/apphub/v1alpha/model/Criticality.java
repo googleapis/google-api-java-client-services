@@ -31,14 +31,16 @@ public final class Criticality extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Criticality level. Can contain only lowercase letters, numeric characters,
-   * underscores, and dashes. Can have a maximum length of 63 characters.
+   * underscores, and dashes. Can have a maximum length of 63 characters. Deprecated: Please refer
+   * to type instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String level;
 
   /**
-   * Optional. Indicates mission-critical Application, Service, or Workload.
+   * Optional. Indicates mission-critical Application, Service, or Workload. Deprecated: Please
+   * refer to type instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +55,8 @@ public final class Criticality extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Criticality level. Can contain only lowercase letters, numeric characters,
-   * underscores, and dashes. Can have a maximum length of 63 characters.
+   * underscores, and dashes. Can have a maximum length of 63 characters. Deprecated: Please refer
+   * to type instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getLevel() {
@@ -62,7 +65,8 @@ public final class Criticality extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Criticality level. Can contain only lowercase letters, numeric characters,
-   * underscores, and dashes. Can have a maximum length of 63 characters.
+   * underscores, and dashes. Can have a maximum length of 63 characters. Deprecated: Please refer
+   * to type instead.
    * @param level level or {@code null} for none
    */
   public Criticality setLevel(java.lang.String level) {
@@ -71,7 +75,8 @@ public final class Criticality extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Indicates mission-critical Application, Service, or Workload.
+   * Optional. Indicates mission-critical Application, Service, or Workload. Deprecated: Please
+   * refer to type instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMissionCritical() {
@@ -79,7 +84,8 @@ public final class Criticality extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Indicates mission-critical Application, Service, or Workload.
+   * Optional. Indicates mission-critical Application, Service, or Workload. Deprecated: Please
+   * refer to type instead.
    * @param missionCritical missionCritical or {@code null} for none
    */
   public Criticality setMissionCritical(java.lang.Boolean missionCritical) {

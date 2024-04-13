@@ -41,7 +41,8 @@ public final class GoogleCloudAdvisorynotificationsV1Settings extends com.google
 
   /**
    * Identifier. The resource name of the settings to retrieve. Format:
-   * organizations/{organization}/locations/{location}/settings.
+   * organizations/{organization}/locations/{location}/settings or
+   * projects/{projects}/locations/{location}/settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +85,8 @@ public final class GoogleCloudAdvisorynotificationsV1Settings extends com.google
 
   /**
    * Identifier. The resource name of the settings to retrieve. Format:
-   * organizations/{organization}/locations/{location}/settings.
+   * organizations/{organization}/locations/{location}/settings or
+   * projects/{projects}/locations/{location}/settings.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -93,7 +95,8 @@ public final class GoogleCloudAdvisorynotificationsV1Settings extends com.google
 
   /**
    * Identifier. The resource name of the settings to retrieve. Format:
-   * organizations/{organization}/locations/{location}/settings.
+   * organizations/{organization}/locations/{location}/settings or
+   * projects/{projects}/locations/{location}/settings.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAdvisorynotificationsV1Settings setName(java.lang.String name) {

@@ -54,7 +54,9 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelResponse ext
   /**
    * The trained model status. Possible values are: * **bad-data**: The training data quality is
    * bad. * **no-improvement**: Tuning didn't improve performance. Won't deploy. * **in-progress**:
-   * Model training is in progress. * **ready**: The model is ready for serving.
+   * Model training job creation is in progress. * **training**: Model is actively training. *
+   * **evaluating**: The model is evaluating trained metrics. * **indexing**: The model trained
+   * metrics are indexing. * **ready**: The model is ready for serving.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +116,9 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelResponse ext
   /**
    * The trained model status. Possible values are: * **bad-data**: The training data quality is
    * bad. * **no-improvement**: Tuning didn't improve performance. Won't deploy. * **in-progress**:
-   * Model training is in progress. * **ready**: The model is ready for serving.
+   * Model training job creation is in progress. * **training**: Model is actively training. *
+   * **evaluating**: The model is evaluating trained metrics. * **indexing**: The model trained
+   * metrics are indexing. * **ready**: The model is ready for serving.
    * @return value or {@code null} for none
    */
   public java.lang.String getModelStatus() {
@@ -124,7 +128,9 @@ public final class GoogleCloudDiscoveryengineV1alphaTrainCustomModelResponse ext
   /**
    * The trained model status. Possible values are: * **bad-data**: The training data quality is
    * bad. * **no-improvement**: Tuning didn't improve performance. Won't deploy. * **in-progress**:
-   * Model training is in progress. * **ready**: The model is ready for serving.
+   * Model training job creation is in progress. * **training**: Model is actively training. *
+   * **evaluating**: The model is evaluating trained metrics. * **indexing**: The model trained
+   * metrics are indexing. * **ready**: The model is ready for serving.
    * @param modelStatus modelStatus or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaTrainCustomModelResponse setModelStatus(java.lang.String modelStatus) {

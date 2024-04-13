@@ -37,8 +37,8 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    * using id_field, otherwise, documents without IDs fail to be imported. Supported data sources: *
    * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an INVALID_ARGUMENT
    * error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom` or `csv`.
-   * Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource * CloudSqlSource *
-   * FirestoreSource * BigtableSource
+   * Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource. * CloudSqlSource. *
+   * FirestoreSource. * BigtableSource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,6 +50,20 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1betaBigQuerySource bigquerySource;
+
+  /**
+   * Cloud Bigtable input source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaBigtableSource bigtableSource;
+
+  /**
+   * Cloud SQL input source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaCloudSqlSource cloudSqlSource;
 
   /**
    * The desired location of errors incurred during the Import.
@@ -64,6 +78,13 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1betaFhirStoreSource fhirStoreSource;
+
+  /**
+   * Firestore input source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaFirestoreSource firestoreSource;
 
   /**
    * Cloud Storage location for the input content.
@@ -84,8 +105,8 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    * default value `_id` is used when importing from the allowed data sources. Supported data
    * sources: * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an
    * INVALID_ARGUMENT error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom`
-   * or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource * CloudSqlSource *
-   * FirestoreSource * BigtableSource
+   * or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource. * CloudSqlSource. *
+   * FirestoreSource. * BigtableSource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,6 +128,21 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
   private java.lang.String reconciliationMode;
 
   /**
+   * Spanner input source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSpannerSource spannerSource;
+
+  /**
+   * Indicates which fields in the provided imported documents to update. If not set, the default is
+   * to update all fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateMask;
+
+  /**
    * Whether to automatically generate IDs for the documents if absent. If set to `true`,
    * Document.ids are automatically generated based on the hash of the payload, where IDs may not be
    * consistent during multiple imports. In which case ReconciliationMode.FULL is highly recommended
@@ -114,8 +150,8 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    * using id_field, otherwise, documents without IDs fail to be imported. Supported data sources: *
    * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an INVALID_ARGUMENT
    * error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom` or `csv`.
-   * Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource * CloudSqlSource *
-   * FirestoreSource * BigtableSource
+   * Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource. * CloudSqlSource. *
+   * FirestoreSource. * BigtableSource.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoGenerateIds() {
@@ -130,8 +166,8 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    * using id_field, otherwise, documents without IDs fail to be imported. Supported data sources: *
    * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an INVALID_ARGUMENT
    * error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom` or `csv`.
-   * Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource * CloudSqlSource *
-   * FirestoreSource * BigtableSource
+   * Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource. * CloudSqlSource. *
+   * FirestoreSource. * BigtableSource.
    * @param autoGenerateIds autoGenerateIds or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setAutoGenerateIds(java.lang.Boolean autoGenerateIds) {
@@ -153,6 +189,40 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    */
   public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setBigquerySource(GoogleCloudDiscoveryengineV1betaBigQuerySource bigquerySource) {
     this.bigquerySource = bigquerySource;
+    return this;
+  }
+
+  /**
+   * Cloud Bigtable input source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaBigtableSource getBigtableSource() {
+    return bigtableSource;
+  }
+
+  /**
+   * Cloud Bigtable input source.
+   * @param bigtableSource bigtableSource or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setBigtableSource(GoogleCloudDiscoveryengineV1betaBigtableSource bigtableSource) {
+    this.bigtableSource = bigtableSource;
+    return this;
+  }
+
+  /**
+   * Cloud SQL input source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaCloudSqlSource getCloudSqlSource() {
+    return cloudSqlSource;
+  }
+
+  /**
+   * Cloud SQL input source.
+   * @param cloudSqlSource cloudSqlSource or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setCloudSqlSource(GoogleCloudDiscoveryengineV1betaCloudSqlSource cloudSqlSource) {
+    this.cloudSqlSource = cloudSqlSource;
     return this;
   }
 
@@ -191,6 +261,23 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
   }
 
   /**
+   * Firestore input source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaFirestoreSource getFirestoreSource() {
+    return firestoreSource;
+  }
+
+  /**
+   * Firestore input source.
+   * @param firestoreSource firestoreSource or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setFirestoreSource(GoogleCloudDiscoveryengineV1betaFirestoreSource firestoreSource) {
+    this.firestoreSource = firestoreSource;
+    return this;
+  }
+
+  /**
    * Cloud Storage location for the input content.
    * @return value or {@code null} for none
    */
@@ -219,8 +306,8 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    * default value `_id` is used when importing from the allowed data sources. Supported data
    * sources: * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an
    * INVALID_ARGUMENT error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom`
-   * or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource * CloudSqlSource *
-   * FirestoreSource * BigtableSource
+   * or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource. * CloudSqlSource. *
+   * FirestoreSource. * BigtableSource.
    * @return value or {@code null} for none
    */
   public java.lang.String getIdField() {
@@ -239,8 +326,8 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    * default value `_id` is used when importing from the allowed data sources. Supported data
    * sources: * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an
    * INVALID_ARGUMENT error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom`
-   * or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource * CloudSqlSource *
-   * FirestoreSource * BigtableSource
+   * or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource. * CloudSqlSource. *
+   * FirestoreSource. * BigtableSource.
    * @param idField idField or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setIdField(java.lang.String idField) {
@@ -281,6 +368,42 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    */
   public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setReconciliationMode(java.lang.String reconciliationMode) {
     this.reconciliationMode = reconciliationMode;
+    return this;
+  }
+
+  /**
+   * Spanner input source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSpannerSource getSpannerSource() {
+    return spannerSource;
+  }
+
+  /**
+   * Spanner input source.
+   * @param spannerSource spannerSource or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setSpannerSource(GoogleCloudDiscoveryengineV1betaSpannerSource spannerSource) {
+    this.spannerSource = spannerSource;
+    return this;
+  }
+
+  /**
+   * Indicates which fields in the provided imported documents to update. If not set, the default is
+   * to update all fields.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateMask() {
+    return updateMask;
+  }
+
+  /**
+   * Indicates which fields in the provided imported documents to update. If not set, the default is
+   * to update all fields.
+   * @param updateMask updateMask or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setUpdateMask(String updateMask) {
+    this.updateMask = updateMask;
     return this;
   }
 

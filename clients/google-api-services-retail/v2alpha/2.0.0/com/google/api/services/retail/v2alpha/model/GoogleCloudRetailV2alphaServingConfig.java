@@ -132,6 +132,14 @@ public final class GoogleCloudRetailV2alphaServingConfig extends com.google.api.
   private java.util.List<java.lang.String> ignoreControlIds;
 
   /**
+   * When the flag is enabled, the products in the denylist will not be filtered out in the
+   * recommendation filtering results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreRecsDenylist;
+
+  /**
    * The id of the model in the same Catalog to use at serving time. Currently only
    * RecommendationModels are supported: https://cloud.google.com/retail/recommendations-ai/docs
    * /create-models Can be changed but only to a compatible model (e.g. others-you-may-like CTR to
@@ -442,6 +450,25 @@ public final class GoogleCloudRetailV2alphaServingConfig extends com.google.api.
    */
   public GoogleCloudRetailV2alphaServingConfig setIgnoreControlIds(java.util.List<java.lang.String> ignoreControlIds) {
     this.ignoreControlIds = ignoreControlIds;
+    return this;
+  }
+
+  /**
+   * When the flag is enabled, the products in the denylist will not be filtered out in the
+   * recommendation filtering results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreRecsDenylist() {
+    return ignoreRecsDenylist;
+  }
+
+  /**
+   * When the flag is enabled, the products in the denylist will not be filtered out in the
+   * recommendation filtering results.
+   * @param ignoreRecsDenylist ignoreRecsDenylist or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaServingConfig setIgnoreRecsDenylist(java.lang.Boolean ignoreRecsDenylist) {
+    this.ignoreRecsDenylist = ignoreRecsDenylist;
     return this;
   }
 

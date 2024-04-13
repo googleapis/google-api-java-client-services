@@ -30,8 +30,8 @@ package com.google.api.services.chat.v1.model;
 public final class DriveLinkData extends com.google.api.client.json.GenericJson {
 
   /**
-   * A [DriveDataRef](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages.attac
-   * hments#drivedataref) which references a Google Drive file.
+   * A [DriveDataRef](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.mess
+   * ages.attachments#drivedataref) which references a Google Drive file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class DriveLinkData extends com.google.api.client.json.GenericJson 
   private java.lang.String mimeType;
 
   /**
-   * A [DriveDataRef](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages.attac
-   * hments#drivedataref) which references a Google Drive file.
+   * A [DriveDataRef](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.mess
+   * ages.attachments#drivedataref) which references a Google Drive file.
    * @return value or {@code null} for none
    */
   public DriveDataRef getDriveDataRef() {
@@ -54,8 +54,8 @@ public final class DriveLinkData extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A [DriveDataRef](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages.attac
-   * hments#drivedataref) which references a Google Drive file.
+   * A [DriveDataRef](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.mess
+   * ages.attachments#drivedataref) which references a Google Drive file.
    * @param driveDataRef driveDataRef or {@code null} for none
    */
   public DriveLinkData setDriveDataRef(DriveDataRef driveDataRef) {

@@ -17,8 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Payload for batch updated message events where the `EventType` field is
- * `google.workspace.chat.message.v1.batchUpdated`.
+ * Event payload for multiple updated messages. Event type:
+ * `google.workspace.chat.message.v1.batchUpdated`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

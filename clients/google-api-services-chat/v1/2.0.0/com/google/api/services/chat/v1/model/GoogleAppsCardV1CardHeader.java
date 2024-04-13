@@ -17,9 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Represents a card header. For an example in Google Chat apps, see [Card
- * header](https://developers.google.com/chat/ui/widgets/card-header). [Google Workspace Add-ons and
- * Chat apps](https://developers.google.com/workspace/extend):
+ * Represents a card header. For an example in Google Chat apps, see [Add a
+ * header](https://developers.google.com/workspace/chat/design-components-card-dialog#add_a_header).
+ * [Google Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

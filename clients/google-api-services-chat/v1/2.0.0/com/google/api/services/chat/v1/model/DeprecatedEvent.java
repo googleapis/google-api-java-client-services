@@ -39,7 +39,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   /**
    * For `CARD_CLICKED` interaction events, the form action data associated when a user clicks a
    * card or dialog. To learn more, see [Read form data input by users on
-   * cards](https://developers.google.com/chat/ui/read-form-data).
+   * cards](https://developers.google.com/workspace/chat/read-form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   /**
    * Represents information about the user's client, such as locale, host app, and platform. For
    * Chat apps, `CommonEventObject` includes information submitted by users interacting with
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), like data entered on a card.
+   * [dialogs](https://developers.google.com/workspace/chat/dialogs), like data entered on a card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,14 +57,15 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   /**
    * The URL the Chat app should redirect the user to after they have completed an authorization or
    * configuration flow outside of Google Chat. For more information, see [Connect a Chat app with
-   * other services & tools](https://developers.google.com/chat/how-tos/connect-web-services-tools).
+   * other services & tools](https://developers.google.com/workspace/chat/connect-web-services-
+   * tools).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String configCompleteRedirectUrl;
 
   /**
-   * The type of [dialog](https://developers.google.com/chat/how-tos/dialogs) interaction event
+   * The type of [dialog](https://developers.google.com/workspace/chat/dialogs) interaction event
    * received.
    * The value may be {@code null}.
    */
@@ -80,7 +81,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
 
   /**
    * For `CARD_CLICKED` interaction events, whether the user interacted with a
-   * [dialog](https://developers.google.com/chat/how-tos/dialogs).
+   * [dialog](https://developers.google.com/workspace/chat/dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +141,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   /**
    * For `CARD_CLICKED` interaction events, the form action data associated when a user clicks a
    * card or dialog. To learn more, see [Read form data input by users on
-   * cards](https://developers.google.com/chat/ui/read-form-data).
+   * cards](https://developers.google.com/workspace/chat/read-form-data).
    * @return value or {@code null} for none
    */
   public FormAction getAction() {
@@ -150,7 +151,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   /**
    * For `CARD_CLICKED` interaction events, the form action data associated when a user clicks a
    * card or dialog. To learn more, see [Read form data input by users on
-   * cards](https://developers.google.com/chat/ui/read-form-data).
+   * cards](https://developers.google.com/workspace/chat/read-form-data).
    * @param action action or {@code null} for none
    */
   public DeprecatedEvent setAction(FormAction action) {
@@ -161,7 +162,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   /**
    * Represents information about the user's client, such as locale, host app, and platform. For
    * Chat apps, `CommonEventObject` includes information submitted by users interacting with
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), like data entered on a card.
+   * [dialogs](https://developers.google.com/workspace/chat/dialogs), like data entered on a card.
    * @return value or {@code null} for none
    */
   public CommonEventObject getCommon() {
@@ -171,7 +172,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   /**
    * Represents information about the user's client, such as locale, host app, and platform. For
    * Chat apps, `CommonEventObject` includes information submitted by users interacting with
-   * [dialogs](https://developers.google.com/chat/how-tos/dialogs), like data entered on a card.
+   * [dialogs](https://developers.google.com/workspace/chat/dialogs), like data entered on a card.
    * @param common common or {@code null} for none
    */
   public DeprecatedEvent setCommon(CommonEventObject common) {
@@ -182,7 +183,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   /**
    * The URL the Chat app should redirect the user to after they have completed an authorization or
    * configuration flow outside of Google Chat. For more information, see [Connect a Chat app with
-   * other services & tools](https://developers.google.com/chat/how-tos/connect-web-services-tools).
+   * other services & tools](https://developers.google.com/workspace/chat/connect-web-services-
+   * tools).
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigCompleteRedirectUrl() {
@@ -192,7 +194,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   /**
    * The URL the Chat app should redirect the user to after they have completed an authorization or
    * configuration flow outside of Google Chat. For more information, see [Connect a Chat app with
-   * other services & tools](https://developers.google.com/chat/how-tos/connect-web-services-tools).
+   * other services & tools](https://developers.google.com/workspace/chat/connect-web-services-
+   * tools).
    * @param configCompleteRedirectUrl configCompleteRedirectUrl or {@code null} for none
    */
   public DeprecatedEvent setConfigCompleteRedirectUrl(java.lang.String configCompleteRedirectUrl) {
@@ -201,7 +204,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of [dialog](https://developers.google.com/chat/how-tos/dialogs) interaction event
+   * The type of [dialog](https://developers.google.com/workspace/chat/dialogs) interaction event
    * received.
    * @return value or {@code null} for none
    */
@@ -210,7 +213,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of [dialog](https://developers.google.com/chat/how-tos/dialogs) interaction event
+   * The type of [dialog](https://developers.google.com/workspace/chat/dialogs) interaction event
    * received.
    * @param dialogEventType dialogEventType or {@code null} for none
    */
@@ -238,7 +241,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
 
   /**
    * For `CARD_CLICKED` interaction events, whether the user interacted with a
-   * [dialog](https://developers.google.com/chat/how-tos/dialogs).
+   * [dialog](https://developers.google.com/workspace/chat/dialogs).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDialogEvent() {
@@ -247,7 +250,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
 
   /**
    * For `CARD_CLICKED` interaction events, whether the user interacted with a
-   * [dialog](https://developers.google.com/chat/how-tos/dialogs).
+   * [dialog](https://developers.google.com/workspace/chat/dialogs).
    * @param isDialogEvent isDialogEvent or {@code null} for none
    */
   public DeprecatedEvent setIsDialogEvent(java.lang.Boolean isDialogEvent) {

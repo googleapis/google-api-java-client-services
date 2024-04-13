@@ -31,7 +31,7 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
 
   /**
    * Input only. A response to an interaction event related to a
-   * [dialog](https://developers.google.com/chat/how-tos/dialogs). Must be accompanied by
+   * [dialog](https://developers.google.com/workspace/chat/dialogs). Must be accompanied by
    * `ResponseType.Dialog`.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
 
   /**
    * Input only. A response to an interaction event related to a
-   * [dialog](https://developers.google.com/chat/how-tos/dialogs). Must be accompanied by
+   * [dialog](https://developers.google.com/workspace/chat/dialogs). Must be accompanied by
    * `ResponseType.Dialog`.
    * @return value or {@code null} for none
    */
@@ -72,7 +72,7 @@ public final class ActionResponse extends com.google.api.client.json.GenericJson
 
   /**
    * Input only. A response to an interaction event related to a
-   * [dialog](https://developers.google.com/chat/how-tos/dialogs). Must be accompanied by
+   * [dialog](https://developers.google.com/workspace/chat/dialogs). Must be accompanied by
    * `ResponseType.Dialog`.
    * @param dialogAction dialogAction or {@code null} for none
    */

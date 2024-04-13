@@ -18,8 +18,8 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * A user in Google Chat. When returned as an output from a request, if your Chat app [authenticates
- * as a user](https://developers.google.com/chat/api/guides/auth/users), the output for a `User`
- * resource only populates the user's `name` and `type`.
+ * as a user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
+ * output for a `User` resource only populates the user's `name` and `type`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

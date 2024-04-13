@@ -17,8 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Payload for new reaction events where the `EventType` field is
- * `google.workspace.chat.reaction.v1.created`.
+ * Event payload for a new reaction. Event type: `google.workspace.chat.reaction.v1.created`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,14 +30,14 @@ package com.google.api.services.chat.v1.model;
 public final class ReactionCreatedEventData extends com.google.api.client.json.GenericJson {
 
   /**
-   * The created reaction.
+   * The new reaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Reaction reaction;
 
   /**
-   * The created reaction.
+   * The new reaction.
    * @return value or {@code null} for none
    */
   public Reaction getReaction() {
@@ -46,7 +45,7 @@ public final class ReactionCreatedEventData extends com.google.api.client.json.G
   }
 
   /**
-   * The created reaction.
+   * The new reaction.
    * @param reaction reaction or {@code null} for none
    */
   public ReactionCreatedEventData setReaction(Reaction reaction) {

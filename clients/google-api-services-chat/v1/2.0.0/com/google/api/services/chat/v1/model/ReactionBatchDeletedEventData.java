@@ -17,8 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Payload for batch deleted reaction events where the `EventType` field is
- * `google.workspace.chat.reaction.v1.batchDeleted`.
+ * Event payload for multiple deleted reactions. Event type:
+ * `google.workspace.chat.reaction.v1.batchDeleted`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

@@ -49,7 +49,7 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   /**
    * For multiselect menus, the URL for the icon displayed next to the item's `text` field. Supports
    * PNG and JPEG files. Must be an `HTTPS` URL. For example,
-   * `https://developers.google.com/chat/images/quickstart-app-avatar.png`.
+   * `https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   /**
    * The value associated with this item. The client should use this as a form input value. For
    * details about working with form inputs, see [Receive form
-   * data](https://developers.google.com/chat/ui/read-form-data).
+   * data](https://developers.google.com/workspace/chat/read-form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   /**
    * For multiselect menus, the URL for the icon displayed next to the item's `text` field. Supports
    * PNG and JPEG files. Must be an `HTTPS` URL. For example,
-   * `https://developers.google.com/chat/images/quickstart-app-avatar.png`.
+   * `https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png`.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartIconUri() {
@@ -122,7 +122,7 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   /**
    * For multiselect menus, the URL for the icon displayed next to the item's `text` field. Supports
    * PNG and JPEG files. Must be an `HTTPS` URL. For example,
-   * `https://developers.google.com/chat/images/quickstart-app-avatar.png`.
+   * `https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png`.
    * @param startIconUri startIconUri or {@code null} for none
    */
   public GoogleAppsCardV1SelectionItem setStartIconUri(java.lang.String startIconUri) {
@@ -150,7 +150,7 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   /**
    * The value associated with this item. The client should use this as a form input value. For
    * details about working with form inputs, see [Receive form
-   * data](https://developers.google.com/chat/ui/read-form-data).
+   * data](https://developers.google.com/workspace/chat/read-form-data).
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -160,7 +160,7 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   /**
    * The value associated with this item. The client should use this as a form input value. For
    * details about working with form inputs, see [Receive form
-   * data](https://developers.google.com/chat/ui/read-form-data).
+   * data](https://developers.google.com/workspace/chat/read-form-data).
    * @param value value or {@code null} for none
    */
   public GoogleAppsCardV1SelectionItem setValue(java.lang.String value) {

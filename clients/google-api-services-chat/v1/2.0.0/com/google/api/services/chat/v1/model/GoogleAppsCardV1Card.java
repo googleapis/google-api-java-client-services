@@ -21,22 +21,22 @@ package com.google.api.services.chat.v1.model;
  * defined layout, interactive UI elements like buttons, and rich media like images. Use cards to
  * present detailed information, gather information from users, and guide users to take a next step.
  * [Card builder](https://addons.gsuite.google.com/uikit/builder) To learn how to build cards, see
- * the following documentation: * For Google Chat apps, see [Design dynamic, interactive, and
- * consistent UIs with cards](https://developers.google.com/chat/ui). * For Google Workspace Add-
- * ons, see [Card-based interfaces](https://developers.google.com/apps-script/add-
+ * the following documentation: * For Google Chat apps, see [Design the components of a card or
+ * dialog](https://developers.google.com/workspace/chat/design-components-card-dialog). * For Google
+ * Workspace Add-ons, see [Card-based interfaces](https://developers.google.com/apps-script/add-
  * ons/concepts/cards). **Example: Card message for a Google Chat app** ![Example contact
- * card](https://developers.google.com/chat/images/card_api_reference.png) To create the sample card
- * message in Google Chat, use the following JSON: ``` { "cardsV2": [ { "cardId": "unique-card-id",
- * "card": { "header": { "title": "Sasha", "subtitle": "Software Engineer", "imageUrl":
- * "https://developers.google.com/chat/images/quickstart-app-avatar.png", "imageType": "CIRCLE",
- * "imageAltText": "Avatar for Sasha" }, "sections": [ { "header": "Contact Info", "collapsible":
- * true, "uncollapsibleWidgetsCount": 1, "widgets": [ { "decoratedText": { "startIcon": {
- * "knownIcon": "EMAIL" }, "text": "sasha@example.com" } }, { "decoratedText": { "startIcon": {
- * "knownIcon": "PERSON" }, "text": "Online" } }, { "decoratedText": { "startIcon": { "knownIcon":
- * "PHONE" }, "text": "+1 (555) 555-1234" } }, { "buttonList": { "buttons": [ { "text": "Share",
- * "onClick": { "openLink": { "url": "https://example.com/share" } } }, { "text": "Edit", "onClick":
- * { "action": { "function": "goToView", "parameters": [ { "key": "viewType", "value": "EDIT" } ] }
- * } } ] } } ] } ] } } ] } ```
+ * card](https://developers.google.com/workspace/chat/images/card_api_reference.png) To create the
+ * sample card message in Google Chat, use the following JSON: ``` { "cardsV2": [ { "cardId":
+ * "unique-card-id", "card": { "header": { "title": "Sasha", "subtitle": "Software Engineer",
+ * "imageUrl": "https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png",
+ * "imageType": "CIRCLE", "imageAltText": "Avatar for Sasha" }, "sections": [ { "header": "Contact
+ * Info", "collapsible": true, "uncollapsibleWidgetsCount": 1, "widgets": [ { "decoratedText": {
+ * "startIcon": { "knownIcon": "EMAIL" }, "text": "sasha@example.com" } }, { "decoratedText": {
+ * "startIcon": { "knownIcon": "PERSON" }, "text": "Online" } }, { "decoratedText": { "startIcon": {
+ * "knownIcon": "PHONE" }, "text": "+1 (555) 555-1234" } }, { "buttonList": { "buttons": [ { "text":
+ * "Share", "onClick": { "openLink": { "url": "https://example.com/share" } } }, { "text": "Edit",
+ * "onClick": { "action": { "function": "goToView", "parameters": [ { "key": "viewType", "value":
+ * "EDIT" } ] } } } ] } } ] } ] } } ] } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -72,8 +72,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   /**
    * The fixed footer shown at the bottom of this card. Setting `fixedFooter` without specifying a
    * `primaryButton` or a `secondaryButton` causes an error. For Chat apps, you can use fixed
-   * footers in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
-   * messages](https://developers.google.com/chat/api/guides/v1/messages/create#create). [Google
+   * footers in [dialogs](https://developers.google.com/workspace/chat/dialogs), but not [card
+   * messages](https://developers.google.com/workspace/chat/create-messages#create). [Google
    * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
    * The value may be {@code null}.
    */
@@ -114,8 +114,9 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * Contains a collection of widgets. Each section has its own, optional header. Sections are
-   * visually separated by a line divider. For an example in Google Chat apps, see [Card
-   * section](https://developers.google.com/chat/ui/widgets/card-section).
+   * visually separated by a line divider. For an example in Google Chat apps, see [Define a section
+   * of a card](https://developers.google.com/workspace/chat/design-components-card-
+   * dialog#define_a_section_of_a_card).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,8 +173,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   /**
    * The fixed footer shown at the bottom of this card. Setting `fixedFooter` without specifying a
    * `primaryButton` or a `secondaryButton` causes an error. For Chat apps, you can use fixed
-   * footers in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
-   * messages](https://developers.google.com/chat/api/guides/v1/messages/create#create). [Google
+   * footers in [dialogs](https://developers.google.com/workspace/chat/dialogs), but not [card
+   * messages](https://developers.google.com/workspace/chat/create-messages#create). [Google
    * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
    * @return value or {@code null} for none
    */
@@ -184,8 +185,8 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
   /**
    * The fixed footer shown at the bottom of this card. Setting `fixedFooter` without specifying a
    * `primaryButton` or a `secondaryButton` causes an error. For Chat apps, you can use fixed
-   * footers in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card
-   * messages](https://developers.google.com/chat/api/guides/v1/messages/create#create). [Google
+   * footers in [dialogs](https://developers.google.com/workspace/chat/dialogs), but not [card
+   * messages](https://developers.google.com/workspace/chat/create-messages#create). [Google
    * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
    * @param fixedFooter fixedFooter or {@code null} for none
    */
@@ -272,8 +273,9 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * Contains a collection of widgets. Each section has its own, optional header. Sections are
-   * visually separated by a line divider. For an example in Google Chat apps, see [Card
-   * section](https://developers.google.com/chat/ui/widgets/card-section).
+   * visually separated by a line divider. For an example in Google Chat apps, see [Define a section
+   * of a card](https://developers.google.com/workspace/chat/design-components-card-
+   * dialog#define_a_section_of_a_card).
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1Section> getSections() {
@@ -282,8 +284,9 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
 
   /**
    * Contains a collection of widgets. Each section has its own, optional header. Sections are
-   * visually separated by a line divider. For an example in Google Chat apps, see [Card
-   * section](https://developers.google.com/chat/ui/widgets/card-section).
+   * visually separated by a line divider. For an example in Google Chat apps, see [Define a section
+   * of a card](https://developers.google.com/workspace/chat/design-components-card-
+   * dialog#define_a_section_of_a_card).
    * @param sections sections or {@code null} for none
    */
   public GoogleAppsCardV1Card setSections(java.util.List<GoogleAppsCardV1Section> sections) {

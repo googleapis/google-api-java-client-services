@@ -17,8 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Payload for updated space events where the `EventType` field is
- * `google.workspace.chat.space.v1.updated`.
+ * Event payload for an updated space. Event type: `google.workspace.chat.space.v1.updated`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,14 +30,14 @@ package com.google.api.services.chat.v1.model;
 public final class SpaceUpdatedEventData extends com.google.api.client.json.GenericJson {
 
   /**
-   * The recent version of the space.
+   * The updated space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Space space;
 
   /**
-   * The recent version of the space.
+   * The updated space.
    * @return value or {@code null} for none
    */
   public Space getSpace() {
@@ -46,7 +45,7 @@ public final class SpaceUpdatedEventData extends com.google.api.client.json.Gene
   }
 
   /**
-   * The recent version of the space.
+   * The updated space.
    * @param space space or {@code null} for none
    */
   public SpaceUpdatedEventData setSpace(Space space) {

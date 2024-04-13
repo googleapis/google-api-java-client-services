@@ -4512,13 +4512,13 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Event types to return. Optional. This parameter can be repeated multiple times to return
-       * events of different types. The default is ["default", "focusTime", "outOfOffice"].
+       * events of different types. If unset, returns all event types.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> eventTypes;
 
       /** Event types to return. Optional. This parameter can be repeated multiple times to return events of
-     different types. The default is ["default", "focusTime", "outOfOffice"].
+     different types. If unset, returns all event types.
        */
       public java.util.List<java.lang.String> getEventTypes() {
         return eventTypes;
@@ -4526,7 +4526,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Event types to return. Optional. This parameter can be repeated multiple times to return
-       * events of different types. The default is ["default", "focusTime", "outOfOffice"].
+       * events of different types. If unset, returns all event types.
        */
       public List setEventTypes(java.util.List<java.lang.String> eventTypes) {
         this.eventTypes = eventTypes;
@@ -6034,13 +6034,13 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Event types to return. Optional. This parameter can be repeated multiple times to return
-       * events of different types. The default is ["default", "focusTime", "outOfOffice"].
+       * events of different types. If unset, returns all event types.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> eventTypes;
 
       /** Event types to return. Optional. This parameter can be repeated multiple times to return events of
-     different types. The default is ["default", "focusTime", "outOfOffice"].
+     different types. If unset, returns all event types.
        */
       public java.util.List<java.lang.String> getEventTypes() {
         return eventTypes;
@@ -6048,7 +6048,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Event types to return. Optional. This parameter can be repeated multiple times to return
-       * events of different types. The default is ["default", "focusTime", "outOfOffice"].
+       * events of different types. If unset, returns all event types.
        */
       public Watch setEventTypes(java.util.List<java.lang.String> eventTypes) {
         this.eventTypes = eventTypes;

@@ -11125,22 +11125,28 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Optional. A filter on the entries to return. Filters are case-sensitive. The request
-             * can be filtered by the following fields: entry_type, display_name. The comparison
-             * operators are =, !=, <, >, <=, >= (strings are compared according to lexical order)
-             * The logical operators AND, OR, NOT can be used in the filter. Example filter
-             * expressions: "display_name=AnExampleDisplayName" "entry_type=projects/example-
-             * project/locations/global/entryTypes/example-entry_type" "entry_type=projects/a* OR
-             * "entry_type=projects/k*" "NOT display_name=AnotherExampleDisplayName"
+             * can be filtered by the following fields: entry_type, entry_source.display_name. The
+             * comparison operators are =, !=, <, >, <=, >= (strings are compared according to
+             * lexical order) The logical operators AND, OR, NOT can be used in the filter. Wildcard
+             * "*" can be used, but for entry_type the full project id or number needs to be
+             * provided. Example filter expressions:
+             * "entry_source.display_name=AnExampleDisplayName" "entry_type=projects/example-
+             * project/locations/global/entryTypes/example-entry_type" "entry_type=projects/example-
+             * project/locations/us/entryTypes/a* OR entry_type=projects/another-project/locations"
+             * "NOT entry_source.display_name=AnotherExampleDisplayName"
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** Optional. A filter on the entries to return. Filters are case-sensitive. The request can be
-           filtered by the following fields: entry_type, display_name. The comparison operators are =, !=, <,
-           >, <=, >= (strings are compared according to lexical order) The logical operators AND, OR, NOT can
-           be used in the filter. Example filter expressions: "display_name=AnExampleDisplayName"
-           "entry_type=projects/example-project/locations/global/entryTypes/example-entry_type"
-           "entry_type=projects/a* OR "entry_type=projects/k*" "NOT display_name=AnotherExampleDisplayName"
+           filtered by the following fields: entry_type, entry_source.display_name. The comparison operators
+           are =, !=, <, >, <=, >= (strings are compared according to lexical order) The logical operators
+           AND, OR, NOT can be used in the filter. Wildcard "*" can be used, but for entry_type the full
+           project id or number needs to be provided. Example filter expressions:
+           "entry_source.display_name=AnExampleDisplayName" "entry_type=projects/example-
+           project/locations/global/entryTypes/example-entry_type" "entry_type=projects/example-
+           project/locations/us/entryTypes/a* OR entry_type=projects/another-project/locations" "NOT
+           entry_source.display_name=AnotherExampleDisplayName"
              */
             public java.lang.String getFilter() {
               return filter;
@@ -11148,12 +11154,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Optional. A filter on the entries to return. Filters are case-sensitive. The request
-             * can be filtered by the following fields: entry_type, display_name. The comparison
-             * operators are =, !=, <, >, <=, >= (strings are compared according to lexical order)
-             * The logical operators AND, OR, NOT can be used in the filter. Example filter
-             * expressions: "display_name=AnExampleDisplayName" "entry_type=projects/example-
-             * project/locations/global/entryTypes/example-entry_type" "entry_type=projects/a* OR
-             * "entry_type=projects/k*" "NOT display_name=AnotherExampleDisplayName"
+             * can be filtered by the following fields: entry_type, entry_source.display_name. The
+             * comparison operators are =, !=, <, >, <=, >= (strings are compared according to
+             * lexical order) The logical operators AND, OR, NOT can be used in the filter. Wildcard
+             * "*" can be used, but for entry_type the full project id or number needs to be
+             * provided. Example filter expressions:
+             * "entry_source.display_name=AnExampleDisplayName" "entry_type=projects/example-
+             * project/locations/global/entryTypes/example-entry_type" "entry_type=projects/example-
+             * project/locations/us/entryTypes/a* OR entry_type=projects/another-project/locations"
+             * "NOT entry_source.display_name=AnotherExampleDisplayName"
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

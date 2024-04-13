@@ -31,7 +31,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Environment name. Can contain only lowercase letters, numeric characters,
-   * underscores, and dashes. Can have a maximum length of 63 characters.
+   * underscores, and dashes. Can have a maximum length of 63 characters. Deprecated: Please refer
+   * to type instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Environment name. Can contain only lowercase letters, numeric characters,
-   * underscores, and dashes. Can have a maximum length of 63 characters.
+   * underscores, and dashes. Can have a maximum length of 63 characters. Deprecated: Please refer
+   * to type instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironment() {
@@ -55,7 +57,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Environment name. Can contain only lowercase letters, numeric characters,
-   * underscores, and dashes. Can have a maximum length of 63 characters.
+   * underscores, and dashes. Can have a maximum length of 63 characters. Deprecated: Please refer
+   * to type instead.
    * @param environment environment or {@code null} for none
    */
   public Environment setEnvironment(java.lang.String environment) {

@@ -17,8 +17,8 @@
 package com.google.api.services.osconfig.v1.model;
 
 /**
- * ProjectFeatureSettings represents the features settings for the VM Manager. The project features
- * settings can be set for a project.
+ * ProjectFeatureSettings represents the VM Manager feature settings in a project. For more
+ * information, see Enable full VM Manager functionality.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the OS Config API. For a detailed explanation see:
@@ -31,23 +31,23 @@ package com.google.api.services.osconfig.v1.model;
 public final class ProjectFeatureSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. Name of the config, e.g.
-   * projects/12345/locations/global/projectFeatureSettings
+   * Required. Immutable. Name specifies the URL for the ProjectFeatureSettings resource:
+   * projects/project_id/locations/global/projectFeatureSettings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Currently set PatchAndConfigFeatureSet for name.
+   * Set PatchAndConfigFeatureSet for the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String patchAndConfigFeatureSet;
 
   /**
-   * Required. Immutable. Name of the config, e.g.
-   * projects/12345/locations/global/projectFeatureSettings
+   * Required. Immutable. Name specifies the URL for the ProjectFeatureSettings resource:
+   * projects/project_id/locations/global/projectFeatureSettings.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -55,8 +55,8 @@ public final class ProjectFeatureSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Immutable. Name of the config, e.g.
-   * projects/12345/locations/global/projectFeatureSettings
+   * Required. Immutable. Name specifies the URL for the ProjectFeatureSettings resource:
+   * projects/project_id/locations/global/projectFeatureSettings.
    * @param name name or {@code null} for none
    */
   public ProjectFeatureSettings setName(java.lang.String name) {
@@ -65,7 +65,7 @@ public final class ProjectFeatureSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Currently set PatchAndConfigFeatureSet for name.
+   * Set PatchAndConfigFeatureSet for the project.
    * @return value or {@code null} for none
    */
   public java.lang.String getPatchAndConfigFeatureSet() {
@@ -73,7 +73,7 @@ public final class ProjectFeatureSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Currently set PatchAndConfigFeatureSet for name.
+   * Set PatchAndConfigFeatureSet for the project.
    * @param patchAndConfigFeatureSet patchAndConfigFeatureSet or {@code null} for none
    */
   public ProjectFeatureSettings setPatchAndConfigFeatureSet(java.lang.String patchAndConfigFeatureSet) {

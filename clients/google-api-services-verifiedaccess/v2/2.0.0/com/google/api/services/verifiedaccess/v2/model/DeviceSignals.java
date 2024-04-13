@@ -189,6 +189,13 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> profileAffiliationIds;
 
   /**
+   * Enrollment domain of the customer which is currently managing the profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String profileEnrollmentDomain;
+
+  /**
    * Whether Enterprise-grade (i.e. custom) unsafe URL scanning is enabled or not. This setting may
    * be controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/#EnterpriseRealTimeUrlCheckMode
@@ -646,6 +653,23 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
    */
   public DeviceSignals setProfileAffiliationIds(java.util.List<java.lang.String> profileAffiliationIds) {
     this.profileAffiliationIds = profileAffiliationIds;
+    return this;
+  }
+
+  /**
+   * Enrollment domain of the customer which is currently managing the profile.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProfileEnrollmentDomain() {
+    return profileEnrollmentDomain;
+  }
+
+  /**
+   * Enrollment domain of the customer which is currently managing the profile.
+   * @param profileEnrollmentDomain profileEnrollmentDomain or {@code null} for none
+   */
+  public DeviceSignals setProfileEnrollmentDomain(java.lang.String profileEnrollmentDomain) {
+    this.profileEnrollmentDomain = profileEnrollmentDomain;
     return this;
   }
 

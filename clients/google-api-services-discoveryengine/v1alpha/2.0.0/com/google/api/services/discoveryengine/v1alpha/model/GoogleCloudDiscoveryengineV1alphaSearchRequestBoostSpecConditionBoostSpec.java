@@ -47,6 +47,13 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpecCondit
   private java.lang.Float boost;
 
   /**
+   * Complex specification for custom ranking based on customer defined attribute value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpecConditionBoostSpecBoostControlSpec boostControlSpec;
+
+  /**
    * An expression which specifies a boost condition. The syntax and supported fields are the same
    * as a filter expression. See SearchRequest.filter for detail syntax and limitations. Examples: *
    * To boost documents with document ID "doc_1" or "doc_2", and color "Red" or "Blue":
@@ -90,6 +97,23 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpecCondit
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpecConditionBoostSpec setBoost(java.lang.Float boost) {
     this.boost = boost;
+    return this;
+  }
+
+  /**
+   * Complex specification for custom ranking based on customer defined attribute value.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpecConditionBoostSpecBoostControlSpec getBoostControlSpec() {
+    return boostControlSpec;
+  }
+
+  /**
+   * Complex specification for custom ranking based on customer defined attribute value.
+   * @param boostControlSpec boostControlSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpecConditionBoostSpec setBoostControlSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpecConditionBoostSpecBoostControlSpec boostControlSpec) {
+    this.boostControlSpec = boostControlSpec;
     return this;
   }
 

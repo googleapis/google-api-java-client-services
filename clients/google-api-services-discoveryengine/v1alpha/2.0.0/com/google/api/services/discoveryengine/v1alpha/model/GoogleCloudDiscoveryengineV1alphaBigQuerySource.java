@@ -35,7 +35,7 @@ public final class GoogleCloudDiscoveryengineV1alphaBigQuerySource extends com.g
    * imports: * `document` (default): One Document format per row. Each document must have a valid
    * Document.id and one of Document.json_data or Document.struct_data. * `custom`: One custom data
    * per row in arbitrary format that conforms to the defined Schema of the data store. This can
-   * only be used by Gen App Builder.
+   * only be used by the GENERIC Data Store vertical.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class GoogleCloudDiscoveryengineV1alphaBigQuerySource extends com.g
    * imports: * `document` (default): One Document format per row. Each document must have a valid
    * Document.id and one of Document.json_data or Document.struct_data. * `custom`: One custom data
    * per row in arbitrary format that conforms to the defined Schema of the data store. This can
-   * only be used by Gen App Builder.
+   * only be used by the GENERIC Data Store vertical.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSchema() {
@@ -98,7 +98,7 @@ public final class GoogleCloudDiscoveryengineV1alphaBigQuerySource extends com.g
    * imports: * `document` (default): One Document format per row. Each document must have a valid
    * Document.id and one of Document.json_data or Document.struct_data. * `custom`: One custom data
    * per row in arbitrary format that conforms to the defined Schema of the data store. This can
-   * only be used by Gen App Builder.
+   * only be used by the GENERIC Data Store vertical.
    * @param dataSchema dataSchema or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaBigQuerySource setDataSchema(java.lang.String dataSchema) {

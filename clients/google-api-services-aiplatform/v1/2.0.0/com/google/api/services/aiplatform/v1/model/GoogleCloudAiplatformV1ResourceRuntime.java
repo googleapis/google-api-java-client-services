@@ -29,66 +29,6 @@ package com.google.api.services.aiplatform.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1ResourceRuntime extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Output only. URIs for user to connect to the Cluster. Example: { "RAY_HEAD_NODE_INTERNAL_IP":
-   * "head-node-IP:10001" "RAY_DASHBOARD_URI": "ray-dashboard-address:8888" }
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> accessUris;
-
-  /**
-   * Output only. The resource name of NotebookRuntimeTemplate for the RoV Persistent Cluster The
-   * NotebokRuntimeTemplate is created in the same VPC (if set), and with the same Ray and Python
-   * version as the Persistent Cluster. Example: "projects/1000/locations/us-
-   * central1/notebookRuntimeTemplates/abc123"
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String notebookRuntimeTemplate;
-
-  /**
-   * Output only. URIs for user to connect to the Cluster. Example: { "RAY_HEAD_NODE_INTERNAL_IP":
-   * "head-node-IP:10001" "RAY_DASHBOARD_URI": "ray-dashboard-address:8888" }
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.String> getAccessUris() {
-    return accessUris;
-  }
-
-  /**
-   * Output only. URIs for user to connect to the Cluster. Example: { "RAY_HEAD_NODE_INTERNAL_IP":
-   * "head-node-IP:10001" "RAY_DASHBOARD_URI": "ray-dashboard-address:8888" }
-   * @param accessUris accessUris or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1ResourceRuntime setAccessUris(java.util.Map<String, java.lang.String> accessUris) {
-    this.accessUris = accessUris;
-    return this;
-  }
-
-  /**
-   * Output only. The resource name of NotebookRuntimeTemplate for the RoV Persistent Cluster The
-   * NotebokRuntimeTemplate is created in the same VPC (if set), and with the same Ray and Python
-   * version as the Persistent Cluster. Example: "projects/1000/locations/us-
-   * central1/notebookRuntimeTemplates/abc123"
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getNotebookRuntimeTemplate() {
-    return notebookRuntimeTemplate;
-  }
-
-  /**
-   * Output only. The resource name of NotebookRuntimeTemplate for the RoV Persistent Cluster The
-   * NotebokRuntimeTemplate is created in the same VPC (if set), and with the same Ray and Python
-   * version as the Persistent Cluster. Example: "projects/1000/locations/us-
-   * central1/notebookRuntimeTemplates/abc123"
-   * @param notebookRuntimeTemplate notebookRuntimeTemplate or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1ResourceRuntime setNotebookRuntimeTemplate(java.lang.String notebookRuntimeTemplate) {
-    this.notebookRuntimeTemplate = notebookRuntimeTemplate;
-    return this;
-  }
-
   @Override
   public GoogleCloudAiplatformV1ResourceRuntime set(String fieldName, Object value) {
     return (GoogleCloudAiplatformV1ResourceRuntime) super.set(fieldName, value);

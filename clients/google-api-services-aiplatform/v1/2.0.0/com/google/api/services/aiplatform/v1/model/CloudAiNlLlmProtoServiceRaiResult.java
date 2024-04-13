@@ -74,6 +74,14 @@ public final class CloudAiNlLlmProtoServiceRaiResult extends com.google.api.clie
   private java.util.List<CloudAiNlLlmProtoServiceRaiSignal> raiSignals;
 
   /**
+   * Translation request info during RAI for debugging purpose. Each TranslationRequestInfo
+   * corresponds to a request sent to the translation server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LearningGenaiRootTranslationRequestInfo> translationRequestInfos;
+
+  /**
    * Whether the text triggered the blocklist.
    * The value may be {@code null}.
    */
@@ -200,6 +208,25 @@ public final class CloudAiNlLlmProtoServiceRaiResult extends com.google.api.clie
    */
   public CloudAiNlLlmProtoServiceRaiResult setRaiSignals(java.util.List<CloudAiNlLlmProtoServiceRaiSignal> raiSignals) {
     this.raiSignals = raiSignals;
+    return this;
+  }
+
+  /**
+   * Translation request info during RAI for debugging purpose. Each TranslationRequestInfo
+   * corresponds to a request sent to the translation server.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LearningGenaiRootTranslationRequestInfo> getTranslationRequestInfos() {
+    return translationRequestInfos;
+  }
+
+  /**
+   * Translation request info during RAI for debugging purpose. Each TranslationRequestInfo
+   * corresponds to a request sent to the translation server.
+   * @param translationRequestInfos translationRequestInfos or {@code null} for none
+   */
+  public CloudAiNlLlmProtoServiceRaiResult setTranslationRequestInfos(java.util.List<LearningGenaiRootTranslationRequestInfo> translationRequestInfos) {
+    this.translationRequestInfos = translationRequestInfos;
     return this;
   }
 

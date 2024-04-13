@@ -115,20 +115,6 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesRequest extends 
   private GoogleCloudAiplatformV1beta1QuestionAnsweringRelevanceInput questionAnsweringRelevanceInput;
 
   /**
-   * Input for rag context recall metric.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1RagContextRecallInput ragContextRecallInput;
-
-  /**
-   * Input for response recall metric.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1ResponseRecallInput responseRecallInput;
-
-  /**
    * Instances and metric spec for rouge metric.
    * The value may be {@code null}.
    */
@@ -394,40 +380,6 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesRequest extends 
    */
   public GoogleCloudAiplatformV1beta1EvaluateInstancesRequest setQuestionAnsweringRelevanceInput(GoogleCloudAiplatformV1beta1QuestionAnsweringRelevanceInput questionAnsweringRelevanceInput) {
     this.questionAnsweringRelevanceInput = questionAnsweringRelevanceInput;
-    return this;
-  }
-
-  /**
-   * Input for rag context recall metric.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1RagContextRecallInput getRagContextRecallInput() {
-    return ragContextRecallInput;
-  }
-
-  /**
-   * Input for rag context recall metric.
-   * @param ragContextRecallInput ragContextRecallInput or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1EvaluateInstancesRequest setRagContextRecallInput(GoogleCloudAiplatformV1beta1RagContextRecallInput ragContextRecallInput) {
-    this.ragContextRecallInput = ragContextRecallInput;
-    return this;
-  }
-
-  /**
-   * Input for response recall metric.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1ResponseRecallInput getResponseRecallInput() {
-    return responseRecallInput;
-  }
-
-  /**
-   * Input for response recall metric.
-   * @param responseRecallInput responseRecallInput or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1EvaluateInstancesRequest setResponseRecallInput(GoogleCloudAiplatformV1beta1ResponseRecallInput responseRecallInput) {
-    this.responseRecallInput = responseRecallInput;
     return this;
   }
 

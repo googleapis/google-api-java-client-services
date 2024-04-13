@@ -194,7 +194,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
       public class Global {
 
         /**
-         * GetProjectFeatureSettings returns the feature settings for a project
+         * GetProjectFeatureSettings returns the VM Manager feature settings for a project.
          *
          * Create a request for the method "global.getProjectFeatureSettings".
          *
@@ -202,7 +202,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link GetProjectFeatureSettings#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. Name of the billing config. "projects//locations/global/projectFeatureSettings"
+         * @param name Required. Name specifies the URL for the ProjectFeatureSettings resource:
+         *        projects/project_id/locations/global/projectFeatureSettings.
          * @return the request
          */
         public GetProjectFeatureSettings getProjectFeatureSettings(java.lang.String name) throws java.io.IOException {
@@ -219,7 +220,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/projectFeatureSettings$");
 
           /**
-           * GetProjectFeatureSettings returns the feature settings for a project
+           * GetProjectFeatureSettings returns the VM Manager feature settings for a project.
            *
            * Create a request for the method "global.getProjectFeatureSettings".
            *
@@ -229,7 +230,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
            * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
            * immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the billing config. "projects//locations/global/projectFeatureSettings"
+           * @param name Required. Name specifies the URL for the ProjectFeatureSettings resource:
+         *        projects/project_id/locations/global/projectFeatureSettings.
            * @since 1.13
            */
           protected GetProjectFeatureSettings(java.lang.String name) {
@@ -308,21 +310,22 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. Name of the billing config.
-           * "projects//locations/global/projectFeatureSettings"
+           * Required. Name specifies the URL for the ProjectFeatureSettings resource:
+           * projects/project_id/locations/global/projectFeatureSettings.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the billing config. "projects//locations/global/projectFeatureSettings"
+          /** Required. Name specifies the URL for the ProjectFeatureSettings resource:
+         projects/project_id/locations/global/projectFeatureSettings.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the billing config.
-           * "projects//locations/global/projectFeatureSettings"
+           * Required. Name specifies the URL for the ProjectFeatureSettings resource:
+           * projects/project_id/locations/global/projectFeatureSettings.
            */
           public GetProjectFeatureSettings setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -340,7 +343,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * UpdateProjectFeatureSettings sets the feature settings for a project.
+         * UpdateProjectFeatureSettings sets the VM Manager features for a project.
          *
          * Create a request for the method "global.updateProjectFeatureSettings".
          *
@@ -348,7 +351,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link UpdateProjectFeatureSettings#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. Immutable. Name of the config, e.g. projects/12345/locations/global/projectFeatureSettings
+         * @param name Required. Immutable. Name specifies the URL for the ProjectFeatureSettings resource:
+         *        projects/project_id/locations/global/projectFeatureSettings.
          * @param content the {@link com.google.api.services.osconfig.v1.model.ProjectFeatureSettings}
          * @return the request
          */
@@ -366,7 +370,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/projectFeatureSettings$");
 
           /**
-           * UpdateProjectFeatureSettings sets the feature settings for a project.
+           * UpdateProjectFeatureSettings sets the VM Manager features for a project.
            *
            * Create a request for the method "global.updateProjectFeatureSettings".
            *
@@ -376,7 +380,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
            * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
            * immediately after invoking the constructor. </p>
            *
-           * @param name Required. Immutable. Name of the config, e.g. projects/12345/locations/global/projectFeatureSettings
+           * @param name Required. Immutable. Name specifies the URL for the ProjectFeatureSettings resource:
+         *        projects/project_id/locations/global/projectFeatureSettings.
            * @param content the {@link com.google.api.services.osconfig.v1.model.ProjectFeatureSettings}
            * @since 1.13
            */
@@ -446,22 +451,22 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. Immutable. Name of the config, e.g.
-           * projects/12345/locations/global/projectFeatureSettings
+           * Required. Immutable. Name specifies the URL for the ProjectFeatureSettings resource:
+           * projects/project_id/locations/global/projectFeatureSettings.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Immutable. Name of the config, e.g.
-         projects/12345/locations/global/projectFeatureSettings
+          /** Required. Immutable. Name specifies the URL for the ProjectFeatureSettings resource:
+         projects/project_id/locations/global/projectFeatureSettings.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Immutable. Name of the config, e.g.
-           * projects/12345/locations/global/projectFeatureSettings
+           * Required. Immutable. Name specifies the URL for the ProjectFeatureSettings resource:
+           * projects/project_id/locations/global/projectFeatureSettings.
            */
           public UpdateProjectFeatureSettings setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

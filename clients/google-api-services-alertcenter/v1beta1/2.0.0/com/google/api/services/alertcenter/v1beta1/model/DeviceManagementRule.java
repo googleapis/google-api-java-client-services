@@ -59,6 +59,13 @@ public final class DeviceManagementRule extends com.google.api.client.json.Gener
   private java.lang.String email;
 
   /**
+   * ID of the rule that triggered the alert
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * Required for iOS, empty for others.
    * The value may be {@code null}.
    */
@@ -158,6 +165,23 @@ public final class DeviceManagementRule extends com.google.api.client.json.Gener
    */
   public DeviceManagementRule setEmail(java.lang.String email) {
     this.email = email;
+    return this;
+  }
+
+  /**
+   * ID of the rule that triggered the alert
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * ID of the rule that triggered the alert
+   * @param id id or {@code null} for none
+   */
+  public DeviceManagementRule setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 

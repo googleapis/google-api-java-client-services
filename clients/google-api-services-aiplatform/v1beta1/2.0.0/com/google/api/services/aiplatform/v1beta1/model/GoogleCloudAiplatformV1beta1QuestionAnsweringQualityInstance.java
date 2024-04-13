@@ -30,7 +30,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1QuestionAnsweringQualityInstance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Text to answer the question.
+   * Required. Text to answer the question.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class GoogleCloudAiplatformV1beta1QuestionAnsweringQualityInstance 
   private java.lang.String reference;
 
   /**
-   * Optional. Text to answer the question.
+   * Required. Text to answer the question.
    * @return value or {@code null} for none
    */
   public java.lang.String getContext() {
@@ -66,7 +66,7 @@ public final class GoogleCloudAiplatformV1beta1QuestionAnsweringQualityInstance 
   }
 
   /**
-   * Optional. Text to answer the question.
+   * Required. Text to answer the question.
    * @param context context or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1QuestionAnsweringQualityInstance setContext(java.lang.String context) {

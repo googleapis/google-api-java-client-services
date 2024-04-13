@@ -81,6 +81,24 @@ public final class GoogleCloudAiplatformV1beta1Extension extends com.google.api.
   private java.lang.String name;
 
   /**
+   * Optional. The PrivateServiceConnect config for the extension. If specified, the service
+   * endpoints associated with the Extension should be registered with private network access in the
+   * provided Service Directory (https://cloud.google.com/service-directory/docs/configuring-
+   * private-network-access). If the service contains more than one endpoint with a network, the
+   * service will arbitrarilty choose one of the endpoints to use for extension execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ExtensionPrivateServiceConnectConfig privateServiceConnectConfig;
+
+  /**
+   * Optional. Runtime config controlling the runtime behavior of this Extension.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RuntimeConfig runtimeConfig;
+
+  /**
    * Optional. Examples to illustrate the usage of the extension as a tool.
    * The value may be {@code null}.
    */
@@ -214,6 +232,48 @@ public final class GoogleCloudAiplatformV1beta1Extension extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1Extension setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The PrivateServiceConnect config for the extension. If specified, the service
+   * endpoints associated with the Extension should be registered with private network access in the
+   * provided Service Directory (https://cloud.google.com/service-directory/docs/configuring-
+   * private-network-access). If the service contains more than one endpoint with a network, the
+   * service will arbitrarilty choose one of the endpoints to use for extension execution.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ExtensionPrivateServiceConnectConfig getPrivateServiceConnectConfig() {
+    return privateServiceConnectConfig;
+  }
+
+  /**
+   * Optional. The PrivateServiceConnect config for the extension. If specified, the service
+   * endpoints associated with the Extension should be registered with private network access in the
+   * provided Service Directory (https://cloud.google.com/service-directory/docs/configuring-
+   * private-network-access). If the service contains more than one endpoint with a network, the
+   * service will arbitrarilty choose one of the endpoints to use for extension execution.
+   * @param privateServiceConnectConfig privateServiceConnectConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Extension setPrivateServiceConnectConfig(GoogleCloudAiplatformV1beta1ExtensionPrivateServiceConnectConfig privateServiceConnectConfig) {
+    this.privateServiceConnectConfig = privateServiceConnectConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Runtime config controlling the runtime behavior of this Extension.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RuntimeConfig getRuntimeConfig() {
+    return runtimeConfig;
+  }
+
+  /**
+   * Optional. Runtime config controlling the runtime behavior of this Extension.
+   * @param runtimeConfig runtimeConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Extension setRuntimeConfig(GoogleCloudAiplatformV1beta1RuntimeConfig runtimeConfig) {
+    this.runtimeConfig = runtimeConfig;
     return this;
   }
 

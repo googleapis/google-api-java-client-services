@@ -115,20 +115,6 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesResponse extends
   private GoogleCloudAiplatformV1beta1QuestionAnsweringRelevanceResult questionAnsweringRelevanceResult;
 
   /**
-   * RAG only metrics. Result for context recall metric.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1RagContextRecallResult ragContextRecallResult;
-
-  /**
-   * Result for response recall metric.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1ResponseRecallResult responseRecallResult;
-
-  /**
    * Results for rouge metric.
    * The value may be {@code null}.
    */
@@ -394,40 +380,6 @@ public final class GoogleCloudAiplatformV1beta1EvaluateInstancesResponse extends
    */
   public GoogleCloudAiplatformV1beta1EvaluateInstancesResponse setQuestionAnsweringRelevanceResult(GoogleCloudAiplatformV1beta1QuestionAnsweringRelevanceResult questionAnsweringRelevanceResult) {
     this.questionAnsweringRelevanceResult = questionAnsweringRelevanceResult;
-    return this;
-  }
-
-  /**
-   * RAG only metrics. Result for context recall metric.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1RagContextRecallResult getRagContextRecallResult() {
-    return ragContextRecallResult;
-  }
-
-  /**
-   * RAG only metrics. Result for context recall metric.
-   * @param ragContextRecallResult ragContextRecallResult or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1EvaluateInstancesResponse setRagContextRecallResult(GoogleCloudAiplatformV1beta1RagContextRecallResult ragContextRecallResult) {
-    this.ragContextRecallResult = ragContextRecallResult;
-    return this;
-  }
-
-  /**
-   * Result for response recall metric.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1ResponseRecallResult getResponseRecallResult() {
-    return responseRecallResult;
-  }
-
-  /**
-   * Result for response recall metric.
-   * @param responseRecallResult responseRecallResult or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1EvaluateInstancesResponse setResponseRecallResult(GoogleCloudAiplatformV1beta1ResponseRecallResult responseRecallResult) {
-    this.responseRecallResult = responseRecallResult;
     return this;
   }
 

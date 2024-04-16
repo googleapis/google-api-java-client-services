@@ -30,34 +30,34 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.client.json.GenericJson {
 
   /**
-   * If present, indicates to use Breakglass using this justification. If use_default is False, then
-   * it must be empty. For more information on breakglass, see https://cloud.google.com/binary-
-   * authorization/docs/using-breakglass
+   * Optional. If present, indicates to use Breakglass using this justification. If use_default is
+   * False, then it must be empty. For more information on breakglass, see https://cloud.google.com
+   * /binary-authorization/docs/using-breakglass
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String breakglassJustification;
 
   /**
-   * The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun
-   * /{policy-name}
+   * Optional. The path to a binary authorization policy. Format:
+   * projects/{project}/platforms/cloudRun/{policy-name}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policy;
 
   /**
-   * If True, indicates to use the default project's binary authorization policy. If False, binary
-   * authorization will be disabled.
+   * Optional. If True, indicates to use the default project's binary authorization policy. If
+   * False, binary authorization will be disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useDefault;
 
   /**
-   * If present, indicates to use Breakglass using this justification. If use_default is False, then
-   * it must be empty. For more information on breakglass, see https://cloud.google.com/binary-
-   * authorization/docs/using-breakglass
+   * Optional. If present, indicates to use Breakglass using this justification. If use_default is
+   * False, then it must be empty. For more information on breakglass, see https://cloud.google.com
+   * /binary-authorization/docs/using-breakglass
    * @return value or {@code null} for none
    */
   public java.lang.String getBreakglassJustification() {
@@ -65,9 +65,9 @@ public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.cl
   }
 
   /**
-   * If present, indicates to use Breakglass using this justification. If use_default is False, then
-   * it must be empty. For more information on breakglass, see https://cloud.google.com/binary-
-   * authorization/docs/using-breakglass
+   * Optional. If present, indicates to use Breakglass using this justification. If use_default is
+   * False, then it must be empty. For more information on breakglass, see https://cloud.google.com
+   * /binary-authorization/docs/using-breakglass
    * @param breakglassJustification breakglassJustification or {@code null} for none
    */
   public GoogleCloudRunV2BinaryAuthorization setBreakglassJustification(java.lang.String breakglassJustification) {
@@ -76,8 +76,8 @@ public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.cl
   }
 
   /**
-   * The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun
-   * /{policy-name}
+   * Optional. The path to a binary authorization policy. Format:
+   * projects/{project}/platforms/cloudRun/{policy-name}
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicy() {
@@ -85,8 +85,8 @@ public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.cl
   }
 
   /**
-   * The path to a binary authorization policy. Format: projects/{project}/platforms/cloudRun
-   * /{policy-name}
+   * Optional. The path to a binary authorization policy. Format:
+   * projects/{project}/platforms/cloudRun/{policy-name}
    * @param policy policy or {@code null} for none
    */
   public GoogleCloudRunV2BinaryAuthorization setPolicy(java.lang.String policy) {
@@ -95,8 +95,8 @@ public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.cl
   }
 
   /**
-   * If True, indicates to use the default project's binary authorization policy. If False, binary
-   * authorization will be disabled.
+   * Optional. If True, indicates to use the default project's binary authorization policy. If
+   * False, binary authorization will be disabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseDefault() {
@@ -104,8 +104,8 @@ public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.cl
   }
 
   /**
-   * If True, indicates to use the default project's binary authorization policy. If False, binary
-   * authorization will be disabled.
+   * Optional. If True, indicates to use the default project's binary authorization policy. If
+   * False, binary authorization will be disabled.
    * @param useDefault useDefault or {@code null} for none
    */
   public GoogleCloudRunV2BinaryAuthorization setUseDefault(java.lang.Boolean useDefault) {

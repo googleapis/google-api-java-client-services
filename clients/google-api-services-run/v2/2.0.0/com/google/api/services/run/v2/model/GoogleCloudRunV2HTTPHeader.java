@@ -37,7 +37,7 @@ public final class GoogleCloudRunV2HTTPHeader extends com.google.api.client.json
   private java.lang.String name;
 
   /**
-   * The header field value
+   * Optional. The header field value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GoogleCloudRunV2HTTPHeader extends com.google.api.client.json
   }
 
   /**
-   * The header field value
+   * Optional. The header field value
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -69,7 +69,7 @@ public final class GoogleCloudRunV2HTTPHeader extends com.google.api.client.json
   }
 
   /**
-   * The header field value
+   * Optional. The header field value
    * @param value value or {@code null} for none
    */
   public GoogleCloudRunV2HTTPHeader setValue(java.lang.String value) {

@@ -30,8 +30,8 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2TCPSocketAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Port number to access on the container. Must be in the range 1 to 65535. If not specified,
-   * defaults to the exposed port of the container, which is the value of
+   * Optional. Port number to access on the container. Must be in the range 1 to 65535. If not
+   * specified, defaults to the exposed port of the container, which is the value of
    * container.ports[0].containerPort.
    * The value may be {@code null}.
    */
@@ -39,8 +39,8 @@ public final class GoogleCloudRunV2TCPSocketAction extends com.google.api.client
   private java.lang.Integer port;
 
   /**
-   * Port number to access on the container. Must be in the range 1 to 65535. If not specified,
-   * defaults to the exposed port of the container, which is the value of
+   * Optional. Port number to access on the container. Must be in the range 1 to 65535. If not
+   * specified, defaults to the exposed port of the container, which is the value of
    * container.ports[0].containerPort.
    * @return value or {@code null} for none
    */
@@ -49,8 +49,8 @@ public final class GoogleCloudRunV2TCPSocketAction extends com.google.api.client
   }
 
   /**
-   * Port number to access on the container. Must be in the range 1 to 65535. If not specified,
-   * defaults to the exposed port of the container, which is the value of
+   * Optional. Port number to access on the container. Must be in the range 1 to 65535. If not
+   * specified, defaults to the exposed port of the container, which is the value of
    * container.ports[0].containerPort.
    * @param port port or {@code null} for none
    */

@@ -30,21 +30,21 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client.json.GenericJson {
 
   /**
-   * Maximum number of serving instances that this resource should have.
+   * Optional. Maximum number of serving instances that this resource should have.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxInstanceCount;
 
   /**
-   * Minimum number of serving instances that this resource should have.
+   * Optional. Minimum number of serving instances that this resource should have.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minInstanceCount;
 
   /**
-   * Maximum number of serving instances that this resource should have.
+   * Optional. Maximum number of serving instances that this resource should have.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxInstanceCount() {
@@ -52,7 +52,7 @@ public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client
   }
 
   /**
-   * Maximum number of serving instances that this resource should have.
+   * Optional. Maximum number of serving instances that this resource should have.
    * @param maxInstanceCount maxInstanceCount or {@code null} for none
    */
   public GoogleCloudRunV2RevisionScaling setMaxInstanceCount(java.lang.Integer maxInstanceCount) {
@@ -61,7 +61,7 @@ public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client
   }
 
   /**
-   * Minimum number of serving instances that this resource should have.
+   * Optional. Minimum number of serving instances that this resource should have.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinInstanceCount() {
@@ -69,7 +69,7 @@ public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client
   }
 
   /**
-   * Minimum number of serving instances that this resource should have.
+   * Optional. Minimum number of serving instances that this resource should have.
    * @param minInstanceCount minInstanceCount or {@code null} for none
    */
   public GoogleCloudRunV2RevisionScaling setMinInstanceCount(java.lang.Integer minInstanceCount) {

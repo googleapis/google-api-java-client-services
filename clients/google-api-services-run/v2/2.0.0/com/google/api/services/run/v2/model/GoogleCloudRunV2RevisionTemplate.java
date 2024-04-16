@@ -30,9 +30,9 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Unstructured key value map that may be set by external tools to store and arbitrary metadata.
-   * They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does
-   * not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
+   * Optional. Unstructured key value map that may be set by external tools to store and arbitrary
+   * metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API
+   * v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
    * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All
    * system annotations in v1 now have a corresponding field in v2 RevisionTemplate. This field
    * follows Kubernetes annotations' namespacing, limits, and rules.
@@ -63,7 +63,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.lang.String encryptionKey;
 
   /**
-   * The sandbox environment to host this Revision.
+   * Optional. The sandbox environment to host this Revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,10 +77,10 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.lang.Boolean healthCheckDisabled;
 
   /**
-   * Unstructured key value map that can be used to organize and categorize objects. User-provided
-   * labels are shared with Google's billing system, so they can be used to filter, or break down
-   * billing charges by team, component, environment, state, etc. For more information, visit
-   * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * Optional. Unstructured key value map that can be used to organize and categorize objects. User-
+   * provided labels are shared with Google's billing system, so they can be used to filter, or
+   * break down billing charges by team, component, environment, state, etc. For more information,
+   * visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or
    * https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels
    * with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
    * `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now
@@ -91,30 +91,30 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Sets the maximum number of requests that each serving instance can receive.
+   * Optional. Sets the maximum number of requests that each serving instance can receive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxInstanceRequestConcurrency;
 
   /**
-   * The unique name for the revision. If this field is omitted, it will be automatically generated
-   * based on the Service name.
+   * Optional. The unique name for the revision. If this field is omitted, it will be automatically
+   * generated based on the Service name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String revision;
 
   /**
-   * Scaling settings for this Revision.
+   * Optional. Scaling settings for this Revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRunV2RevisionScaling scaling;
 
   /**
-   * Email address of the IAM service account associated with the revision of the service. The
-   * service account represents the identity of the running revision, and determines what
+   * Optional. Email address of the IAM service account associated with the revision of the service.
+   * The service account represents the identity of the running revision, and determines what
    * permissions the revision has. If not provided, the revision will use the project's default
    * service account.
    * The value may be {@code null}.
@@ -130,21 +130,21 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.lang.Boolean sessionAffinity;
 
   /**
-   * Max allowed time for an instance to respond to a request.
+   * Optional. Max allowed time for an instance to respond to a request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timeout;
 
   /**
-   * A list of Volumes to make available to containers.
+   * Optional. A list of Volumes to make available to containers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudRunV2Volume> volumes;
 
   /**
-   * VPC Access configuration to use for this Revision. For more information, visit
+   * Optional. VPC Access configuration to use for this Revision. For more information, visit
    * https://cloud.google.com/run/docs/configuring/connecting-vpc.
    * The value may be {@code null}.
    */
@@ -152,9 +152,9 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private GoogleCloudRunV2VpcAccess vpcAccess;
 
   /**
-   * Unstructured key value map that may be set by external tools to store and arbitrary metadata.
-   * They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does
-   * not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
+   * Optional. Unstructured key value map that may be set by external tools to store and arbitrary
+   * metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API
+   * v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
    * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All
    * system annotations in v1 now have a corresponding field in v2 RevisionTemplate. This field
    * follows Kubernetes annotations' namespacing, limits, and rules.
@@ -165,9 +165,9 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Unstructured key value map that may be set by external tools to store and arbitrary metadata.
-   * They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does
-   * not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
+   * Optional. Unstructured key value map that may be set by external tools to store and arbitrary
+   * metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API
+   * v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
    * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All
    * system annotations in v1 now have a corresponding field in v2 RevisionTemplate. This field
    * follows Kubernetes annotations' namespacing, limits, and rules.
@@ -215,7 +215,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * The sandbox environment to host this Revision.
+   * Optional. The sandbox environment to host this Revision.
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionEnvironment() {
@@ -223,7 +223,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * The sandbox environment to host this Revision.
+   * Optional. The sandbox environment to host this Revision.
    * @param executionEnvironment executionEnvironment or {@code null} for none
    */
   public GoogleCloudRunV2RevisionTemplate setExecutionEnvironment(java.lang.String executionEnvironment) {
@@ -249,10 +249,10 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Unstructured key value map that can be used to organize and categorize objects. User-provided
-   * labels are shared with Google's billing system, so they can be used to filter, or break down
-   * billing charges by team, component, environment, state, etc. For more information, visit
-   * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * Optional. Unstructured key value map that can be used to organize and categorize objects. User-
+   * provided labels are shared with Google's billing system, so they can be used to filter, or
+   * break down billing charges by team, component, environment, state, etc. For more information,
+   * visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or
    * https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels
    * with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
    * `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now
@@ -264,10 +264,10 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Unstructured key value map that can be used to organize and categorize objects. User-provided
-   * labels are shared with Google's billing system, so they can be used to filter, or break down
-   * billing charges by team, component, environment, state, etc. For more information, visit
-   * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * Optional. Unstructured key value map that can be used to organize and categorize objects. User-
+   * provided labels are shared with Google's billing system, so they can be used to filter, or
+   * break down billing charges by team, component, environment, state, etc. For more information,
+   * visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or
    * https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels
    * with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
    * `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now
@@ -280,7 +280,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Sets the maximum number of requests that each serving instance can receive.
+   * Optional. Sets the maximum number of requests that each serving instance can receive.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxInstanceRequestConcurrency() {
@@ -288,7 +288,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Sets the maximum number of requests that each serving instance can receive.
+   * Optional. Sets the maximum number of requests that each serving instance can receive.
    * @param maxInstanceRequestConcurrency maxInstanceRequestConcurrency or {@code null} for none
    */
   public GoogleCloudRunV2RevisionTemplate setMaxInstanceRequestConcurrency(java.lang.Integer maxInstanceRequestConcurrency) {
@@ -297,8 +297,8 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * The unique name for the revision. If this field is omitted, it will be automatically generated
-   * based on the Service name.
+   * Optional. The unique name for the revision. If this field is omitted, it will be automatically
+   * generated based on the Service name.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevision() {
@@ -306,8 +306,8 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * The unique name for the revision. If this field is omitted, it will be automatically generated
-   * based on the Service name.
+   * Optional. The unique name for the revision. If this field is omitted, it will be automatically
+   * generated based on the Service name.
    * @param revision revision or {@code null} for none
    */
   public GoogleCloudRunV2RevisionTemplate setRevision(java.lang.String revision) {
@@ -316,7 +316,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Scaling settings for this Revision.
+   * Optional. Scaling settings for this Revision.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2RevisionScaling getScaling() {
@@ -324,7 +324,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Scaling settings for this Revision.
+   * Optional. Scaling settings for this Revision.
    * @param scaling scaling or {@code null} for none
    */
   public GoogleCloudRunV2RevisionTemplate setScaling(GoogleCloudRunV2RevisionScaling scaling) {
@@ -333,8 +333,8 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Email address of the IAM service account associated with the revision of the service. The
-   * service account represents the identity of the running revision, and determines what
+   * Optional. Email address of the IAM service account associated with the revision of the service.
+   * The service account represents the identity of the running revision, and determines what
    * permissions the revision has. If not provided, the revision will use the project's default
    * service account.
    * @return value or {@code null} for none
@@ -344,8 +344,8 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Email address of the IAM service account associated with the revision of the service. The
-   * service account represents the identity of the running revision, and determines what
+   * Optional. Email address of the IAM service account associated with the revision of the service.
+   * The service account represents the identity of the running revision, and determines what
    * permissions the revision has. If not provided, the revision will use the project's default
    * service account.
    * @param serviceAccount serviceAccount or {@code null} for none
@@ -373,7 +373,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Max allowed time for an instance to respond to a request.
+   * Optional. Max allowed time for an instance to respond to a request.
    * @return value or {@code null} for none
    */
   public String getTimeout() {
@@ -381,7 +381,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Max allowed time for an instance to respond to a request.
+   * Optional. Max allowed time for an instance to respond to a request.
    * @param timeout timeout or {@code null} for none
    */
   public GoogleCloudRunV2RevisionTemplate setTimeout(String timeout) {
@@ -390,7 +390,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * A list of Volumes to make available to containers.
+   * Optional. A list of Volumes to make available to containers.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRunV2Volume> getVolumes() {
@@ -398,7 +398,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * A list of Volumes to make available to containers.
+   * Optional. A list of Volumes to make available to containers.
    * @param volumes volumes or {@code null} for none
    */
   public GoogleCloudRunV2RevisionTemplate setVolumes(java.util.List<GoogleCloudRunV2Volume> volumes) {
@@ -407,7 +407,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * VPC Access configuration to use for this Revision. For more information, visit
+   * Optional. VPC Access configuration to use for this Revision. For more information, visit
    * https://cloud.google.com/run/docs/configuring/connecting-vpc.
    * @return value or {@code null} for none
    */
@@ -416,7 +416,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * VPC Access configuration to use for this Revision. For more information, visit
+   * Optional. VPC Access configuration to use for this Revision. For more information, visit
    * https://cloud.google.com/run/docs/configuring/connecting-vpc.
    * @param vpcAccess vpcAccess or {@code null} for none
    */

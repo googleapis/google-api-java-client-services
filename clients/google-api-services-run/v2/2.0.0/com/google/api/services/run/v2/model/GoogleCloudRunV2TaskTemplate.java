@@ -51,7 +51,7 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   private java.lang.String encryptionKey;
 
   /**
-   * The execution environment being used to host this Task.
+   * Optional. The execution environment being used to host this Task.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,32 +65,32 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   private java.lang.Integer maxRetries;
 
   /**
-   * Email address of the IAM service account associated with the Task of a Job. The service account
-   * represents the identity of the running task, and determines what permissions the task has. If
-   * not provided, the task will use the project's default service account.
+   * Optional. Email address of the IAM service account associated with the Task of a Job. The
+   * service account represents the identity of the running task, and determines what permissions
+   * the task has. If not provided, the task will use the project's default service account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
 
   /**
-   * Max allowed time duration the Task may be active before the system will actively try to mark it
-   * failed and kill associated containers. This applies per attempt of a task, meaning each retry
-   * can run for the full timeout. Defaults to 600 seconds.
+   * Optional. Max allowed time duration the Task may be active before the system will actively try
+   * to mark it failed and kill associated containers. This applies per attempt of a task, meaning
+   * each retry can run for the full timeout. Defaults to 600 seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timeout;
 
   /**
-   * A list of Volumes to make available to containers.
+   * Optional. A list of Volumes to make available to containers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudRunV2Volume> volumes;
 
   /**
-   * VPC Access configuration to use for this Task. For more information, visit
+   * Optional. VPC Access configuration to use for this Task. For more information, visit
    * https://cloud.google.com/run/docs/configuring/connecting-vpc.
    * The value may be {@code null}.
    */
@@ -134,7 +134,7 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   }
 
   /**
-   * The execution environment being used to host this Task.
+   * Optional. The execution environment being used to host this Task.
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionEnvironment() {
@@ -142,7 +142,7 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   }
 
   /**
-   * The execution environment being used to host this Task.
+   * Optional. The execution environment being used to host this Task.
    * @param executionEnvironment executionEnvironment or {@code null} for none
    */
   public GoogleCloudRunV2TaskTemplate setExecutionEnvironment(java.lang.String executionEnvironment) {
@@ -168,9 +168,9 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   }
 
   /**
-   * Email address of the IAM service account associated with the Task of a Job. The service account
-   * represents the identity of the running task, and determines what permissions the task has. If
-   * not provided, the task will use the project's default service account.
+   * Optional. Email address of the IAM service account associated with the Task of a Job. The
+   * service account represents the identity of the running task, and determines what permissions
+   * the task has. If not provided, the task will use the project's default service account.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -178,9 +178,9 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   }
 
   /**
-   * Email address of the IAM service account associated with the Task of a Job. The service account
-   * represents the identity of the running task, and determines what permissions the task has. If
-   * not provided, the task will use the project's default service account.
+   * Optional. Email address of the IAM service account associated with the Task of a Job. The
+   * service account represents the identity of the running task, and determines what permissions
+   * the task has. If not provided, the task will use the project's default service account.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudRunV2TaskTemplate setServiceAccount(java.lang.String serviceAccount) {
@@ -189,9 +189,9 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   }
 
   /**
-   * Max allowed time duration the Task may be active before the system will actively try to mark it
-   * failed and kill associated containers. This applies per attempt of a task, meaning each retry
-   * can run for the full timeout. Defaults to 600 seconds.
+   * Optional. Max allowed time duration the Task may be active before the system will actively try
+   * to mark it failed and kill associated containers. This applies per attempt of a task, meaning
+   * each retry can run for the full timeout. Defaults to 600 seconds.
    * @return value or {@code null} for none
    */
   public String getTimeout() {
@@ -199,9 +199,9 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   }
 
   /**
-   * Max allowed time duration the Task may be active before the system will actively try to mark it
-   * failed and kill associated containers. This applies per attempt of a task, meaning each retry
-   * can run for the full timeout. Defaults to 600 seconds.
+   * Optional. Max allowed time duration the Task may be active before the system will actively try
+   * to mark it failed and kill associated containers. This applies per attempt of a task, meaning
+   * each retry can run for the full timeout. Defaults to 600 seconds.
    * @param timeout timeout or {@code null} for none
    */
   public GoogleCloudRunV2TaskTemplate setTimeout(String timeout) {
@@ -210,7 +210,7 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   }
 
   /**
-   * A list of Volumes to make available to containers.
+   * Optional. A list of Volumes to make available to containers.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRunV2Volume> getVolumes() {
@@ -218,7 +218,7 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   }
 
   /**
-   * A list of Volumes to make available to containers.
+   * Optional. A list of Volumes to make available to containers.
    * @param volumes volumes or {@code null} for none
    */
   public GoogleCloudRunV2TaskTemplate setVolumes(java.util.List<GoogleCloudRunV2Volume> volumes) {
@@ -227,7 +227,7 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   }
 
   /**
-   * VPC Access configuration to use for this Task. For more information, visit
+   * Optional. VPC Access configuration to use for this Task. For more information, visit
    * https://cloud.google.com/run/docs/configuring/connecting-vpc.
    * @return value or {@code null} for none
    */
@@ -236,7 +236,7 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   }
 
   /**
-   * VPC Access configuration to use for this Task. For more information, visit
+   * Optional. VPC Access configuration to use for this Task. For more information, visit
    * https://cloud.google.com/run/docs/configuring/connecting-vpc.
    * @param vpcAccess vpcAccess or {@code null} for none
    */

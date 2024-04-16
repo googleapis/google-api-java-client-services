@@ -41,14 +41,14 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
   private java.lang.String connector;
 
   /**
-   * Traffic VPC egress settings. If not provided, it defaults to PRIVATE_RANGES_ONLY.
+   * Optional. Traffic VPC egress settings. If not provided, it defaults to PRIVATE_RANGES_ONLY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String egress;
 
   /**
-   * Direct VPC egress settings. Currently only single network interface is supported.
+   * Optional. Direct VPC egress settings. Currently only single network interface is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
   }
 
   /**
-   * Traffic VPC egress settings. If not provided, it defaults to PRIVATE_RANGES_ONLY.
+   * Optional. Traffic VPC egress settings. If not provided, it defaults to PRIVATE_RANGES_ONLY.
    * @return value or {@code null} for none
    */
   public java.lang.String getEgress() {
@@ -92,7 +92,7 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
   }
 
   /**
-   * Traffic VPC egress settings. If not provided, it defaults to PRIVATE_RANGES_ONLY.
+   * Optional. Traffic VPC egress settings. If not provided, it defaults to PRIVATE_RANGES_ONLY.
    * @param egress egress or {@code null} for none
    */
   public GoogleCloudRunV2VpcAccess setEgress(java.lang.String egress) {
@@ -101,7 +101,7 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
   }
 
   /**
-   * Direct VPC egress settings. Currently only single network interface is supported.
+   * Optional. Direct VPC egress settings. Currently only single network interface is supported.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRunV2NetworkInterface> getNetworkInterfaces() {
@@ -109,7 +109,7 @@ public final class GoogleCloudRunV2VpcAccess extends com.google.api.client.json.
   }
 
   /**
-   * Direct VPC egress settings. Currently only single network interface is supported.
+   * Optional. Direct VPC egress settings. Currently only single network interface is supported.
    * @param networkInterfaces networkInterfaces or {@code null} for none
    */
   public GoogleCloudRunV2VpcAccess setNetworkInterfaces(java.util.List<GoogleCloudRunV2NetworkInterface> networkInterfaces) {

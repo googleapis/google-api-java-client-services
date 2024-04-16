@@ -40,7 +40,7 @@ public final class InputFieldTextInput extends com.google.api.client.json.Generi
   private TextWithTooltip additionalInfo;
 
   /**
-   * Text to be used as the [aria label](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html) for the
+   * Text to be used as the [aria-label](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html) for the
    * input.
    * The value may be {@code null}.
    */
@@ -85,7 +85,7 @@ public final class InputFieldTextInput extends com.google.api.client.json.Generi
   }
 
   /**
-   * Text to be used as the [aria label](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html) for the
+   * Text to be used as the [aria-label](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html) for the
    * input.
    * @return value or {@code null} for none
    */
@@ -94,7 +94,7 @@ public final class InputFieldTextInput extends com.google.api.client.json.Generi
   }
 
   /**
-   * Text to be used as the [aria label](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html) for the
+   * Text to be used as the [aria-label](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html) for the
    * input.
    * @param ariaLabel ariaLabel or {@code null} for none
    */

@@ -84,9 +84,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String ageGroup;
 
   /**
-   * A safeguard in the [Automated
-   * Discounts](https://support.google.com/merchants/answer/10295759?hl=en) and [Dynamic
-   * Promotions](https://support.google.com/merchants/answer/13949249?hl=en) projects, ensuring that
+   * A safeguard in the [Automated Discounts](//support.google.com/merchants/answer/10295759) and
+   * [Dynamic Promotions](//support.google.com/merchants/answer/13949249) projects, ensuring that
    * discounts on merchants' offers do not fall below this value, thereby preserving the offer's
    * value and profitability.
    * The value may be {@code null}.
@@ -432,11 +431,12 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String linkTemplate;
 
   /**
-   * Loyalty points that users receive after purchasing the item. Japan only.
+   * Loyalty program information that is used to surface loyalty benefits ( for example pricing,
+   * points, etc) to the user for this item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private LoyaltyPoints loyaltyPoints;
+  private LoyaltyProgram loyaltyProgram;
 
   /**
    * The material of which the item is made.
@@ -914,9 +914,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A safeguard in the [Automated
-   * Discounts](https://support.google.com/merchants/answer/10295759?hl=en) and [Dynamic
-   * Promotions](https://support.google.com/merchants/answer/13949249?hl=en) projects, ensuring that
+   * A safeguard in the [Automated Discounts](//support.google.com/merchants/answer/10295759) and
+   * [Dynamic Promotions](//support.google.com/merchants/answer/13949249) projects, ensuring that
    * discounts on merchants' offers do not fall below this value, thereby preserving the offer's
    * value and profitability.
    * @return value or {@code null} for none
@@ -926,9 +925,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A safeguard in the [Automated
-   * Discounts](https://support.google.com/merchants/answer/10295759?hl=en) and [Dynamic
-   * Promotions](https://support.google.com/merchants/answer/13949249?hl=en) projects, ensuring that
+   * A safeguard in the [Automated Discounts](//support.google.com/merchants/answer/10295759) and
+   * [Dynamic Promotions](//support.google.com/merchants/answer/13949249) projects, ensuring that
    * discounts on merchants' offers do not fall below this value, thereby preserving the offer's
    * value and profitability.
    * @param autoPricingMinPrice autoPricingMinPrice or {@code null} for none
@@ -1718,19 +1716,21 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Loyalty points that users receive after purchasing the item. Japan only.
+   * Loyalty program information that is used to surface loyalty benefits ( for example pricing,
+   * points, etc) to the user for this item.
    * @return value or {@code null} for none
    */
-  public LoyaltyPoints getLoyaltyPoints() {
-    return loyaltyPoints;
+  public LoyaltyProgram getLoyaltyProgram() {
+    return loyaltyProgram;
   }
 
   /**
-   * Loyalty points that users receive after purchasing the item. Japan only.
-   * @param loyaltyPoints loyaltyPoints or {@code null} for none
+   * Loyalty program information that is used to surface loyalty benefits ( for example pricing,
+   * points, etc) to the user for this item.
+   * @param loyaltyProgram loyaltyProgram or {@code null} for none
    */
-  public Product setLoyaltyPoints(LoyaltyPoints loyaltyPoints) {
-    this.loyaltyPoints = loyaltyPoints;
+  public Product setLoyaltyProgram(LoyaltyProgram loyaltyProgram) {
+    this.loyaltyProgram = loyaltyProgram;
     return this;
   }
 

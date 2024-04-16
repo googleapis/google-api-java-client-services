@@ -109,11 +109,12 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes
    * & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
    * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
-   * allowed per Product unless overridden via pantheon UI. Empty values are not allowed. Each value
-   * must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an
-   * INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property
-   * google_product_category. Schema.org property [Product.category] (https://schema.org/category).
-   * [mc_google_product_category]: https://support.google.com/merchants/answer/6324436
+   * allowed per Product unless overridden through the Google Cloud console. Empty values are not
+   * allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters.
+   * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
+   * Center property google_product_category. Schema.org property [Product.category]
+   * (https://schema.org/category). [mc_google_product_category]:
+   * https://support.google.com/merchants/answer/6324436
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -592,11 +593,12 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes
    * & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
    * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
-   * allowed per Product unless overridden via pantheon UI. Empty values are not allowed. Each value
-   * must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an
-   * INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property
-   * google_product_category. Schema.org property [Product.category] (https://schema.org/category).
-   * [mc_google_product_category]: https://support.google.com/merchants/answer/6324436
+   * allowed per Product unless overridden through the Google Cloud console. Empty values are not
+   * allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters.
+   * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
+   * Center property google_product_category. Schema.org property [Product.category]
+   * (https://schema.org/category). [mc_google_product_category]:
+   * https://support.google.com/merchants/answer/6324436
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCategories() {
@@ -612,11 +614,12 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
    * Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes
    * & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
    * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
-   * allowed per Product unless overridden via pantheon UI. Empty values are not allowed. Each value
-   * must be a UTF-8 encoded string with a length limit of 5,000 characters. Otherwise, an
-   * INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property
-   * google_product_category. Schema.org property [Product.category] (https://schema.org/category).
-   * [mc_google_product_category]: https://support.google.com/merchants/answer/6324436
+   * allowed per Product unless overridden through the Google Cloud console. Empty values are not
+   * allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters.
+   * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
+   * Center property google_product_category. Schema.org property [Product.category]
+   * (https://schema.org/category). [mc_google_product_category]:
+   * https://support.google.com/merchants/answer/6324436
    * @param categories categories or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProduct setCategories(java.util.List<java.lang.String> categories) {

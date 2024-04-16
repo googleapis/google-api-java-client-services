@@ -18,7 +18,8 @@ package com.google.api.services.androidmanagement.v1.model;
 
 /**
  * A token to initiate the migration of a device from being managed by a third-party DPC to being
- * managed by Android Management API. A migration token is valid only for a single device.
+ * managed by Android Management API. A migration token is valid only for a single device. See the
+ * guide (https://developers.google.com/android/management/dpc-migration) for more details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

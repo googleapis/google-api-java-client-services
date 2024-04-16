@@ -3100,15 +3100,16 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
       /**
        * Creates a migration token, to migrate an existing device from being managed by the EMM's Device
-       * Policy Controller (DPC) to being managed by the Android Management API.
+       * Policy Controller (DPC) to being managed by the Android Management API. See the guide
+       * (https://developers.google.com/android/management/dpc-migration) for more details.
        *
        * Create a request for the method "migrationTokens.create".
        *
        * This request holds the parameters needed by the androidmanagement server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The enterprise in which this migration token will be created. Format:
-       *        enterprises/{enterprise}
+       * @param parent Required. The enterprise in which this migration token is created. This must be the same enterprise
+       *        which already manages the device in the Play EMM API. Format: enterprises/{enterprise}
        * @param content the {@link com.google.api.services.androidmanagement.v1.model.MigrationToken}
        * @return the request
        */
@@ -3127,7 +3128,8 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
         /**
          * Creates a migration token, to migrate an existing device from being managed by the EMM's Device
-         * Policy Controller (DPC) to being managed by the Android Management API.
+         * Policy Controller (DPC) to being managed by the Android Management API. See the guide
+         * (https://developers.google.com/android/management/dpc-migration) for more details.
          *
          * Create a request for the method "migrationTokens.create".
          *
@@ -3137,8 +3139,8 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The enterprise in which this migration token will be created. Format:
-       *        enterprises/{enterprise}
+         * @param parent Required. The enterprise in which this migration token is created. This must be the same enterprise
+       *        which already manages the device in the Play EMM API. Format: enterprises/{enterprise}
          * @param content the {@link com.google.api.services.androidmanagement.v1.model.MigrationToken}
          * @since 1.13
          */
@@ -3208,21 +3210,23 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The enterprise in which this migration token will be created. Format:
+         * Required. The enterprise in which this migration token is created. This must be the same
+         * enterprise which already manages the device in the Play EMM API. Format:
          * enterprises/{enterprise}
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The enterprise in which this migration token will be created. Format:
-       enterprises/{enterprise}
+        /** Required. The enterprise in which this migration token is created. This must be the same enterprise
+       which already manages the device in the Play EMM API. Format: enterprises/{enterprise}
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The enterprise in which this migration token will be created. Format:
+         * Required. The enterprise in which this migration token is created. This must be the same
+         * enterprise which already manages the device in the Play EMM API. Format:
          * enterprises/{enterprise}
          */
         public Create setParent(java.lang.String parent) {

@@ -111,9 +111,7 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
   private java.lang.String qrCode;
 
   /**
-   * The user associated with this enrollment token. If it's specified when the enrollment token is
-   * created and the user does not exist, the user will be created. This field must not contain
-   * personally identifiable information. Only the account_identifier field needs to be set.
+   * This field is deprecated and the value is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -312,9 +310,7 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The user associated with this enrollment token. If it's specified when the enrollment token is
-   * created and the user does not exist, the user will be created. This field must not contain
-   * personally identifiable information. Only the account_identifier field needs to be set.
+   * This field is deprecated and the value is ignored.
    * @return value or {@code null} for none
    */
   public User getUser() {
@@ -322,9 +318,7 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The user associated with this enrollment token. If it's specified when the enrollment token is
-   * created and the user does not exist, the user will be created. This field must not contain
-   * personally identifiable information. Only the account_identifier field needs to be set.
+   * This field is deprecated and the value is ignored.
    * @param user user or {@code null} for none
    */
   public EnrollmentToken setUser(User user) {

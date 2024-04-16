@@ -37,13 +37,6 @@ public final class InterconnectApplicationAwareInterconnect extends com.google.a
   private InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy bandwidthPercentagePolicy;
 
   /**
-   * Enable or disable the AAI feature on this interconnect.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean enabled;
-
-  /**
    * A description for the AAI profile on this interconnect.
    * The value may be {@code null}.
    */
@@ -68,23 +61,6 @@ public final class InterconnectApplicationAwareInterconnect extends com.google.a
    */
   public InterconnectApplicationAwareInterconnect setBandwidthPercentagePolicy(InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy bandwidthPercentagePolicy) {
     this.bandwidthPercentagePolicy = bandwidthPercentagePolicy;
-    return this;
-  }
-
-  /**
-   * Enable or disable the AAI feature on this interconnect.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEnabled() {
-    return enabled;
-  }
-
-  /**
-   * Enable or disable the AAI feature on this interconnect.
-   * @param enabled enabled or {@code null} for none
-   */
-  public InterconnectApplicationAwareInterconnect setEnabled(java.lang.Boolean enabled) {
-    this.enabled = enabled;
     return this;
   }
 

@@ -30,7 +30,7 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2Condition extends com.google.api.client.json.GenericJson {
 
   /**
-   * A reason for the execution condition.
+   * Output only. A reason for the execution condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,14 +51,14 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   private java.lang.String message;
 
   /**
-   * A common (service-level) reason for this condition.
+   * Output only. A common (service-level) reason for this condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * A reason for the revision condition.
+   * Output only. A reason for the revision condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   private java.lang.String type;
 
   /**
-   * A reason for the execution condition.
+   * Output only. A reason for the execution condition.
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionReason() {
@@ -96,7 +96,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * A reason for the execution condition.
+   * Output only. A reason for the execution condition.
    * @param executionReason executionReason or {@code null} for none
    */
   public GoogleCloudRunV2Condition setExecutionReason(java.lang.String executionReason) {
@@ -139,7 +139,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * A common (service-level) reason for this condition.
+   * Output only. A common (service-level) reason for this condition.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -147,7 +147,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * A common (service-level) reason for this condition.
+   * Output only. A common (service-level) reason for this condition.
    * @param reason reason or {@code null} for none
    */
   public GoogleCloudRunV2Condition setReason(java.lang.String reason) {
@@ -156,7 +156,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * A reason for the revision condition.
+   * Output only. A reason for the revision condition.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevisionReason() {
@@ -164,7 +164,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * A reason for the revision condition.
+   * Output only. A reason for the revision condition.
    * @param revisionReason revisionReason or {@code null} for none
    */
   public GoogleCloudRunV2Condition setRevisionReason(java.lang.String revisionReason) {

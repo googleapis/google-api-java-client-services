@@ -30,37 +30,37 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2NetworkInterface extends com.google.api.client.json.GenericJson {
 
   /**
-   * The VPC network that the Cloud Run resource will be able to send traffic to. At least one of
-   * network or subnetwork must be specified. If both network and subnetwork are specified, the
-   * given VPC subnetwork must belong to the given VPC network. If network is not specified, it will
-   * be looked up from the subnetwork.
+   * Optional. The VPC network that the Cloud Run resource will be able to send traffic to. At least
+   * one of network or subnetwork must be specified. If both network and subnetwork are specified,
+   * the given VPC subnetwork must belong to the given VPC network. If network is not specified, it
+   * will be looked up from the subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * The VPC subnetwork that the Cloud Run resource will get IPs from. At least one of network or
-   * subnetwork must be specified. If both network and subnetwork are specified, the given VPC
-   * subnetwork must belong to the given VPC network. If subnetwork is not specified, the subnetwork
-   * with the same name with the network will be used.
+   * Optional. The VPC subnetwork that the Cloud Run resource will get IPs from. At least one of
+   * network or subnetwork must be specified. If both network and subnetwork are specified, the
+   * given VPC subnetwork must belong to the given VPC network. If subnetwork is not specified, the
+   * subnetwork with the same name with the network will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
 
   /**
-   * Network tags applied to this Cloud Run resource.
+   * Optional. Network tags applied to this Cloud Run resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tags;
 
   /**
-   * The VPC network that the Cloud Run resource will be able to send traffic to. At least one of
-   * network or subnetwork must be specified. If both network and subnetwork are specified, the
-   * given VPC subnetwork must belong to the given VPC network. If network is not specified, it will
-   * be looked up from the subnetwork.
+   * Optional. The VPC network that the Cloud Run resource will be able to send traffic to. At least
+   * one of network or subnetwork must be specified. If both network and subnetwork are specified,
+   * the given VPC subnetwork must belong to the given VPC network. If network is not specified, it
+   * will be looked up from the subnetwork.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -68,10 +68,10 @@ public final class GoogleCloudRunV2NetworkInterface extends com.google.api.clien
   }
 
   /**
-   * The VPC network that the Cloud Run resource will be able to send traffic to. At least one of
-   * network or subnetwork must be specified. If both network and subnetwork are specified, the
-   * given VPC subnetwork must belong to the given VPC network. If network is not specified, it will
-   * be looked up from the subnetwork.
+   * Optional. The VPC network that the Cloud Run resource will be able to send traffic to. At least
+   * one of network or subnetwork must be specified. If both network and subnetwork are specified,
+   * the given VPC subnetwork must belong to the given VPC network. If network is not specified, it
+   * will be looked up from the subnetwork.
    * @param network network or {@code null} for none
    */
   public GoogleCloudRunV2NetworkInterface setNetwork(java.lang.String network) {
@@ -80,10 +80,10 @@ public final class GoogleCloudRunV2NetworkInterface extends com.google.api.clien
   }
 
   /**
-   * The VPC subnetwork that the Cloud Run resource will get IPs from. At least one of network or
-   * subnetwork must be specified. If both network and subnetwork are specified, the given VPC
-   * subnetwork must belong to the given VPC network. If subnetwork is not specified, the subnetwork
-   * with the same name with the network will be used.
+   * Optional. The VPC subnetwork that the Cloud Run resource will get IPs from. At least one of
+   * network or subnetwork must be specified. If both network and subnetwork are specified, the
+   * given VPC subnetwork must belong to the given VPC network. If subnetwork is not specified, the
+   * subnetwork with the same name with the network will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -91,10 +91,10 @@ public final class GoogleCloudRunV2NetworkInterface extends com.google.api.clien
   }
 
   /**
-   * The VPC subnetwork that the Cloud Run resource will get IPs from. At least one of network or
-   * subnetwork must be specified. If both network and subnetwork are specified, the given VPC
-   * subnetwork must belong to the given VPC network. If subnetwork is not specified, the subnetwork
-   * with the same name with the network will be used.
+   * Optional. The VPC subnetwork that the Cloud Run resource will get IPs from. At least one of
+   * network or subnetwork must be specified. If both network and subnetwork are specified, the
+   * given VPC subnetwork must belong to the given VPC network. If subnetwork is not specified, the
+   * subnetwork with the same name with the network will be used.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public GoogleCloudRunV2NetworkInterface setSubnetwork(java.lang.String subnetwork) {
@@ -103,7 +103,7 @@ public final class GoogleCloudRunV2NetworkInterface extends com.google.api.clien
   }
 
   /**
-   * Network tags applied to this Cloud Run resource.
+   * Optional. Network tags applied to this Cloud Run resource.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -111,7 +111,7 @@ public final class GoogleCloudRunV2NetworkInterface extends com.google.api.clien
   }
 
   /**
-   * Network tags applied to this Cloud Run resource.
+   * Optional. Network tags applied to this Cloud Run resource.
    * @param tags tags or {@code null} for none
    */
   public GoogleCloudRunV2NetworkInterface setTags(java.util.List<java.lang.String> tags) {

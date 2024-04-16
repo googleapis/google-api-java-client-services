@@ -212,6 +212,15 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   private java.lang.Boolean satisfiesPzs;
 
   /**
+   * A unique string used as a suffix creating a new execution. The Job will become ready when the
+   * execution is successfully started. The sum of job name and token length must be fewer than 63
+   * characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String startExecutionToken;
+
+  /**
    * Required. The template used to create executions for this Job.
    * The value may be {@code null}.
    */
@@ -648,6 +657,27 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
    */
   public GoogleCloudRunV2Job setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
+   * A unique string used as a suffix creating a new execution. The Job will become ready when the
+   * execution is successfully started. The sum of job name and token length must be fewer than 63
+   * characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStartExecutionToken() {
+    return startExecutionToken;
+  }
+
+  /**
+   * A unique string used as a suffix creating a new execution. The Job will become ready when the
+   * execution is successfully started. The sum of job name and token length must be fewer than 63
+   * characters.
+   * @param startExecutionToken startExecutionToken or {@code null} for none
+   */
+  public GoogleCloudRunV2Job setStartExecutionToken(java.lang.String startExecutionToken) {
+    this.startExecutionToken = startExecutionToken;
     return this;
   }
 

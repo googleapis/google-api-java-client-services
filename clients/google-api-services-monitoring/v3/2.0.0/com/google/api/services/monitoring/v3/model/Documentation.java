@@ -17,7 +17,7 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * A content string and a MIME type that describes the content string's format.
+ * Documentation that is included in the notifications and incidents pertaining to this policy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

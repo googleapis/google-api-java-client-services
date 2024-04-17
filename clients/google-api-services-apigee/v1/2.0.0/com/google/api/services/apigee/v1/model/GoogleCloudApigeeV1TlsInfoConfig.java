@@ -59,6 +59,13 @@ public final class GoogleCloudApigeeV1TlsInfoConfig extends com.google.api.clien
   private java.lang.Boolean enabled;
 
   /**
+   * Flag that enforces TLS settings
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enforce;
+
+  /**
    * Flag that specifies whether to ignore TLS certificate validation errors. Set to `true` to
    * ignore errors.
    * The value may be {@code null}.
@@ -164,6 +171,23 @@ public final class GoogleCloudApigeeV1TlsInfoConfig extends com.google.api.clien
    */
   public GoogleCloudApigeeV1TlsInfoConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * Flag that enforces TLS settings
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnforce() {
+    return enforce;
+  }
+
+  /**
+   * Flag that enforces TLS settings
+   * @param enforce enforce or {@code null} for none
+   */
+  public GoogleCloudApigeeV1TlsInfoConfig setEnforce(java.lang.Boolean enforce) {
+    this.enforce = enforce;
     return this;
   }
 

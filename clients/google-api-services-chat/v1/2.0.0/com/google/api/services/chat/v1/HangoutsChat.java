@@ -2388,7 +2388,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * lists memberships in spaces that the authenticated user has access to. Requires
        * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize). Supports
        * [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * app) and [user authentication](hhttps://developers.google.com/workspace/chat/authenticate-
+       * app) and [user authentication](https://developers.google.com/workspace/chat/authenticate-
        * authorize-chat-user).
        *
        * Create a request for the method "members.list".
@@ -2423,7 +2423,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * lists memberships in spaces that the authenticated user has access to. Requires
          * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize). Supports
          * [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-         * app) and [user authentication](hhttps://developers.google.com/workspace/chat/authenticate-
+         * app) and [user authentication](https://developers.google.com/workspace/chat/authenticate-
          * authorize-chat-user).
          *
          * Create a request for the method "members.list".
@@ -4359,10 +4359,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       public class Reactions {
 
         /**
-         * Creates a reaction and adds it to a message. Only unicode emojis are supported.For an example,
-         * see [Add a reaction to a reaction](https://developers.google.com/workspace/chat/create-
-         * reactions). Requires [user authentication](https://developers.google.com/workspace/chat
-         * /authenticate-authorize-chat-user).
+         * Creates a reaction and adds it to a message. Only unicode emojis are supported. For an example,
+         * see [Add a reaction to a message](https://developers.google.com/workspace/chat/create-reactions).
+         * Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-
+         * authorize-chat-user).
          *
          * Create a request for the method "reactions.create".
          *
@@ -4387,8 +4387,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+$");
 
           /**
-           * Creates a reaction and adds it to a message. Only unicode emojis are supported.For an example,
-           * see [Add a reaction to a reaction](https://developers.google.com/workspace/chat/create-
+           * Creates a reaction and adds it to a message. Only unicode emojis are supported. For an example,
+           * see [Add a reaction to a message](https://developers.google.com/workspace/chat/create-
            * reactions). Requires [user authentication](https://developers.google.com/workspace/chat
            * /authenticate-authorize-chat-user).
            *
@@ -4943,11 +4943,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * space/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload) contains the
        * most recent version of the resource that changed. For example, if you request an event about a
        * new message but the message was later updated, the server returns the updated `Message` resource
-       * in the event payload. Requires [user
-       * authentication](hhttps://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
-       * To get an event, the authenticated user must be a member of the space. For an example, see [Get
-       * details about an event from a Google Chat space](https://developers.google.com/workspace/chat
-       * /get-space-event).
+       * in the event payload. Requires [user authentication](https://developers.google.com/workspace/chat
+       * /authenticate-authorize-chat-user). To get an event, the authenticated user must be a member of
+       * the space. For an example, see [Get details about an event from a Google Chat
+       * space](https://developers.google.com/workspace/chat/get-space-event).
        *
        * Create a request for the method "spaceEvents.get".
        *
@@ -4976,10 +4975,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * the most recent version of the resource that changed. For example, if you request an event
          * about a new message but the message was later updated, the server returns the updated `Message`
          * resource in the event payload. Requires [user
-         * authentication](hhttps://developers.google.com/workspace/chat/authenticate-authorize-chat-
-         * user). To get an event, the authenticated user must be a member of the space. For an example,
-         * see [Get details about an event from a Google Chat
-         * space](https://developers.google.com/workspace/chat/get-space-event).
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+         * To get an event, the authenticated user must be a member of the space. For an example, see [Get
+         * details about an event from a Google Chat space](https://developers.google.com/workspace/chat
+         * /get-space-event).
          *
          * Create a request for the method "spaceEvents.get".
          *

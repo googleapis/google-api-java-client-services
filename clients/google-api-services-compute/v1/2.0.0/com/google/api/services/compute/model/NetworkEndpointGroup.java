@@ -122,7 +122,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   /**
    * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP,
    * GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
-   * PRIVATE_SERVICE_CONNECT.
+   * PRIVATE_SERVICE_CONNECT, GCE_VM_IP_PORTMAP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -389,7 +389,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   /**
    * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP,
    * GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
-   * PRIVATE_SERVICE_CONNECT.
+   * PRIVATE_SERVICE_CONNECT, GCE_VM_IP_PORTMAP.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkEndpointType() {
@@ -399,7 +399,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   /**
    * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP,
    * GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS,
-   * PRIVATE_SERVICE_CONNECT.
+   * PRIVATE_SERVICE_CONNECT, GCE_VM_IP_PORTMAP.
    * @param networkEndpointType networkEndpointType or {@code null} for none
    */
   public NetworkEndpointGroup setNetworkEndpointType(java.lang.String networkEndpointType) {

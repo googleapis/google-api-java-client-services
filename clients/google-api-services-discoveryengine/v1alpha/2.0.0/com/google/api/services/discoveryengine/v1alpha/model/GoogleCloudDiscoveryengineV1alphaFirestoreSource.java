@@ -47,8 +47,8 @@ public final class GoogleCloudDiscoveryengineV1alphaFirestoreSource extends com.
   /**
    * Intermediate Cloud Storage directory used for the import with a length limit of 2,000
    * characters. Can be specified if one wants to have the Firestore export to a specific Cloud
-   * Storage directory. Please ensure that the Firestore service account has the necessary Cloud
-   * Storage Admin permissions to access the specified Cloud Storage directory.
+   * Storage directory. Ensure that the Firestore service account has the necessary Cloud Storage
+   * Admin permissions to access the specified Cloud Storage directory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,8 +101,8 @@ public final class GoogleCloudDiscoveryengineV1alphaFirestoreSource extends com.
   /**
    * Intermediate Cloud Storage directory used for the import with a length limit of 2,000
    * characters. Can be specified if one wants to have the Firestore export to a specific Cloud
-   * Storage directory. Please ensure that the Firestore service account has the necessary Cloud
-   * Storage Admin permissions to access the specified Cloud Storage directory.
+   * Storage directory. Ensure that the Firestore service account has the necessary Cloud Storage
+   * Admin permissions to access the specified Cloud Storage directory.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsStagingDir() {
@@ -112,8 +112,8 @@ public final class GoogleCloudDiscoveryengineV1alphaFirestoreSource extends com.
   /**
    * Intermediate Cloud Storage directory used for the import with a length limit of 2,000
    * characters. Can be specified if one wants to have the Firestore export to a specific Cloud
-   * Storage directory. Please ensure that the Firestore service account has the necessary Cloud
-   * Storage Admin permissions to access the specified Cloud Storage directory.
+   * Storage directory. Ensure that the Firestore service account has the necessary Cloud Storage
+   * Admin permissions to access the specified Cloud Storage directory.
    * @param gcsStagingDir gcsStagingDir or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaFirestoreSource setGcsStagingDir(java.lang.String gcsStagingDir) {

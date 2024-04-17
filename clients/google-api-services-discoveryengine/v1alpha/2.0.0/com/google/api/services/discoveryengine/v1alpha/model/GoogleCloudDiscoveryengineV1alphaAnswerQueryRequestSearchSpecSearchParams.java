@@ -39,6 +39,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
   private GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec boostSpec;
 
   /**
+   * Custom fine tuning configs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec customFineTuningSpec;
+
+  /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the documents being filtered. Filter expression is case-sensitive. This will be
    * used to filter search results which may affect the Answer response. If this field is
@@ -100,6 +107,23 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchParams setBoostSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec boostSpec) {
     this.boostSpec = boostSpec;
+    return this;
+  }
+
+  /**
+   * Custom fine tuning configs.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec getCustomFineTuningSpec() {
+    return customFineTuningSpec;
+  }
+
+  /**
+   * Custom fine tuning configs.
+   * @param customFineTuningSpec customFineTuningSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchParams setCustomFineTuningSpec(GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec customFineTuningSpec) {
+    this.customFineTuningSpec = customFineTuningSpec;
     return this;
   }
 

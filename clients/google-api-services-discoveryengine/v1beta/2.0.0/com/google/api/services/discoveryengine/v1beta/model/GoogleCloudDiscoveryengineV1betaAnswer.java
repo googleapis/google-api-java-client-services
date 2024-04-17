@@ -66,8 +66,8 @@ public final class GoogleCloudDiscoveryengineV1betaAnswer extends com.google.api
   private String createTime;
 
   /**
-   * Immutable. Fully qualified name
-   * `project/locations/global/collections/{collection}/engines/{engine}/sessions/answers`
+   * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{collection}/e
+   * ngines/{engine}/sessions/answers`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,8 +196,8 @@ public final class GoogleCloudDiscoveryengineV1betaAnswer extends com.google.api
   }
 
   /**
-   * Immutable. Fully qualified name
-   * `project/locations/global/collections/{collection}/engines/{engine}/sessions/answers`
+   * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{collection}/e
+   * ngines/{engine}/sessions/answers`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -205,8 +205,8 @@ public final class GoogleCloudDiscoveryengineV1betaAnswer extends com.google.api
   }
 
   /**
-   * Immutable. Fully qualified name
-   * `project/locations/global/collections/{collection}/engines/{engine}/sessions/answers`
+   * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{collection}/e
+   * ngines/{engine}/sessions/answers`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaAnswer setName(java.lang.String name) {

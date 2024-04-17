@@ -37,8 +37,8 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequestQueryUnders
   private java.lang.Boolean disable;
 
   /**
-   * Max rephrase steps. The max number is 10 steps. If not set or set to < 1, it will be set to 1
-   * by default.
+   * Max rephrase steps. The max number is 5 steps. If not set or set to < 1, it will be set to 1 by
+   * default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequestQueryUnders
   }
 
   /**
-   * Max rephrase steps. The max number is 10 steps. If not set or set to < 1, it will be set to 1
-   * by default.
+   * Max rephrase steps. The max number is 5 steps. If not set or set to < 1, it will be set to 1 by
+   * default.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxRephraseSteps() {
@@ -71,8 +71,8 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequestQueryUnders
   }
 
   /**
-   * Max rephrase steps. The max number is 10 steps. If not set or set to < 1, it will be set to 1
-   * by default.
+   * Max rephrase steps. The max number is 5 steps. If not set or set to < 1, it will be set to 1 by
+   * default.
    * @param maxRephraseSteps maxRephraseSteps or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaAnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpec setMaxRephraseSteps(java.lang.Integer maxRephraseSteps) {

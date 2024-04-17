@@ -45,8 +45,8 @@ public final class GoogleCloudDiscoveryengineV1betaConversation extends com.goog
 
   /**
    * Immutable. Fully qualified name
-   * `project/locations/global/collections/{collection}/dataStore/conversations` or
-   * `project/locations/global/collections/{collection}/engines/conversations`.
+   * `projects/{project}/locations/global/collections/{collection}/dataStore/conversations` or
+   * `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,8 +109,8 @@ public final class GoogleCloudDiscoveryengineV1betaConversation extends com.goog
 
   /**
    * Immutable. Fully qualified name
-   * `project/locations/global/collections/{collection}/dataStore/conversations` or
-   * `project/locations/global/collections/{collection}/engines/conversations`.
+   * `projects/{project}/locations/global/collections/{collection}/dataStore/conversations` or
+   * `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -119,8 +119,8 @@ public final class GoogleCloudDiscoveryengineV1betaConversation extends com.goog
 
   /**
    * Immutable. Fully qualified name
-   * `project/locations/global/collections/{collection}/dataStore/conversations` or
-   * `project/locations/global/collections/{collection}/engines/conversations`.
+   * `projects/{project}/locations/global/collections/{collection}/dataStore/conversations` or
+   * `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaConversation setName(java.lang.String name) {

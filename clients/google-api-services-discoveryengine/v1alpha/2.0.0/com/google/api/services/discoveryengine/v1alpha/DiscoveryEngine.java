@@ -747,6 +747,416 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
   public class Projects {
 
     /**
+     * Gets a Project. Returns NOT_FOUND when the project is not yet created.
+     *
+     * Create a request for the method "projects.get".
+     *
+     * This request holds the parameters needed by the discoveryengine server.  After setting any
+     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProject> {
+
+      private static final String REST_PATH = "v1alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Gets a Project. Returns NOT_FOUND when the project is not yet created.
+       *
+       * Create a request for the method "projects.get".
+       *
+       * This request holds the parameters needed by the the discoveryengine server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProject.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Full resource name of a Project, such as `projects/{project_id_or_number}`. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. Full resource name of a Project, such as `projects/{project_id_or_number}`. */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Provisions the project resource. During the process, related systems will get prepared and
+     * initialized. Caller must read the [Terms for data use](https://cloud.google.com/retail/data-use-
+     * terms), and optionally specify in request to provide consent to that service terms.
+     *
+     * Create a request for the method "projects.provision".
+     *
+     * This request holds the parameters needed by the discoveryengine server.  After setting any
+     * optional parameters, call the {@link Provision#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+     * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProvisionProjectRequest}
+     * @return the request
+     */
+    public Provision provision(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProvisionProjectRequest content) throws java.io.IOException {
+      Provision result = new Provision(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Provision extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "v1alpha/{+name}:provision";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Provisions the project resource. During the process, related systems will get prepared and
+       * initialized. Caller must read the [Terms for data use](https://cloud.google.com/retail/data-
+       * use-terms), and optionally specify in request to provide consent to that service terms.
+       *
+       * Create a request for the method "projects.provision".
+       *
+       * This request holds the parameters needed by the the discoveryengine server.  After setting any
+       * optional parameters, call the {@link Provision#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Provision#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProvisionProjectRequest}
+       * @since 1.13
+       */
+      protected Provision(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProvisionProjectRequest content) {
+        super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public Provision set$Xgafv(java.lang.String $Xgafv) {
+        return (Provision) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Provision setAccessToken(java.lang.String accessToken) {
+        return (Provision) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Provision setAlt(java.lang.String alt) {
+        return (Provision) super.setAlt(alt);
+      }
+
+      @Override
+      public Provision setCallback(java.lang.String callback) {
+        return (Provision) super.setCallback(callback);
+      }
+
+      @Override
+      public Provision setFields(java.lang.String fields) {
+        return (Provision) super.setFields(fields);
+      }
+
+      @Override
+      public Provision setKey(java.lang.String key) {
+        return (Provision) super.setKey(key);
+      }
+
+      @Override
+      public Provision setOauthToken(java.lang.String oauthToken) {
+        return (Provision) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Provision setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Provision) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Provision setQuotaUser(java.lang.String quotaUser) {
+        return (Provision) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Provision setUploadType(java.lang.String uploadType) {
+        return (Provision) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Provision setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Provision) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Full resource name of a Project, such as `projects/{project_id_or_number}`. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. Full resource name of a Project, such as `projects/{project_id_or_number}`. */
+      public Provision setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Provision set(String parameterName, Object value) {
+        return (Provision) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates service terms for this project. This method can be used to retroactively accept the
+     * latest terms. Terms available for update: * [Terms for data use](https://cloud.google.com/retail
+     * /data-use-terms)
+     *
+     * Create a request for the method "projects.reportConsentChange".
+     *
+     * This request holds the parameters needed by the discoveryengine server.  After setting any
+     * optional parameters, call the {@link ReportConsentChange#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+     * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaReportConsentChangeRequest}
+     * @return the request
+     */
+    public ReportConsentChange reportConsentChange(java.lang.String project, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaReportConsentChangeRequest content) throws java.io.IOException {
+      ReportConsentChange result = new ReportConsentChange(project, content);
+      initialize(result);
+      return result;
+    }
+
+    public class ReportConsentChange extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProject> {
+
+      private static final String REST_PATH = "v1alpha/{+project}:reportConsentChange";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Updates service terms for this project. This method can be used to retroactively accept the
+       * latest terms. Terms available for update: * [Terms for data
+       * use](https://cloud.google.com/retail/data-use-terms)
+       *
+       * Create a request for the method "projects.reportConsentChange".
+       *
+       * This request holds the parameters needed by the the discoveryengine server.  After setting any
+       * optional parameters, call the {@link ReportConsentChange#execute()} method to invoke the remote
+       * operation. <p> {@link ReportConsentChange#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaReportConsentChangeRequest}
+       * @since 1.13
+       */
+      protected ReportConsentChange(java.lang.String project, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaReportConsentChangeRequest content) {
+        super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProject.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public ReportConsentChange set$Xgafv(java.lang.String $Xgafv) {
+        return (ReportConsentChange) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ReportConsentChange setAccessToken(java.lang.String accessToken) {
+        return (ReportConsentChange) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ReportConsentChange setAlt(java.lang.String alt) {
+        return (ReportConsentChange) super.setAlt(alt);
+      }
+
+      @Override
+      public ReportConsentChange setCallback(java.lang.String callback) {
+        return (ReportConsentChange) super.setCallback(callback);
+      }
+
+      @Override
+      public ReportConsentChange setFields(java.lang.String fields) {
+        return (ReportConsentChange) super.setFields(fields);
+      }
+
+      @Override
+      public ReportConsentChange setKey(java.lang.String key) {
+        return (ReportConsentChange) super.setKey(key);
+      }
+
+      @Override
+      public ReportConsentChange setOauthToken(java.lang.String oauthToken) {
+        return (ReportConsentChange) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ReportConsentChange setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ReportConsentChange) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ReportConsentChange setQuotaUser(java.lang.String quotaUser) {
+        return (ReportConsentChange) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ReportConsentChange setUploadType(java.lang.String uploadType) {
+        return (ReportConsentChange) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ReportConsentChange setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ReportConsentChange) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Full resource name of a Project, such as `projects/{project_id_or_number}`. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Full resource name of a Project, such as `projects/{project_id_or_number}`. */
+      public ReportConsentChange setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.project = project;
+        return this;
+      }
+
+      @Override
+      public ReportConsentChange set(String parameterName, Object value) {
+        return (ReportConsentChange) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Locations collection.
      *
      * <p>The typical use is:</p>
@@ -6498,8 +6908,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name Immutable. Fully qualified name
-             *        `project/locations/global/collections/{collection}/dataStore/conversations` or
-             *        `project/locations/global/collections/{collection}/engines/conversations`.
+             *        `projects/{project}/locations/global/collections/{collection}/dataStore/conversations` or
+             *        `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConversation}
              * @return the request
              */
@@ -6529,8 +6939,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Immutable. Fully qualified name
-             *        `project/locations/global/collections/{collection}/dataStore/conversations` or
-             *        `project/locations/global/collections/{collection}/engines/conversations`.
+             *        `projects/{project}/locations/global/collections/{collection}/dataStore/conversations` or
+             *        `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConversation}
                * @since 1.13
                */
@@ -6600,25 +7010,25 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Immutable. Fully qualified name
-               * `project/locations/global/collections/{collection}/dataStore/conversations` or
-               * `project/locations/global/collections/{collection}/engines/conversations`.
+               * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{c
+               * ollection}/dataStore/conversations` or `projects/{project}/locations/global/collect
+               * ions/{collection}/engines/conversations`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Immutable. Fully qualified name
-             `project/locations/global/collections/{collection}/dataStore/conversations` or
-             `project/locations/global/collections/{collection}/engines/conversations`.
+             `projects/{project}/locations/global/collections/{collection}/dataStore/conversations` or
+             `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Immutable. Fully qualified name
-               * `project/locations/global/collections/{collection}/dataStore/conversations` or
-               * `project/locations/global/collections/{collection}/engines/conversations`.
+               * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{c
+               * ollection}/dataStore/conversations` or `projects/{project}/locations/global/collect
+               * ions/{collection}/engines/conversations`.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -10291,7 +10701,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name Immutable. Fully qualified name
-             *        `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+             *        `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSession}
              * @return the request
              */
@@ -10321,7 +10731,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Immutable. Fully qualified name
-             *        `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+             *        `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions`
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSession}
                * @since 1.13
                */
@@ -10391,22 +10801,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Immutable. Fully qualified name
-               * `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+               * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{c
+               * ollection}/engines/{engine}/sessions`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Immutable. Fully qualified name
-             `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+             `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Immutable. Fully qualified name
-               * `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+               * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{c
+               * ollection}/engines/{engine}/sessions`
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -13959,9 +14369,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * This request holds the parameters needed by the discoveryengine server.  After setting any
              * optional parameters, call the {@link Write#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent DataStore resource name, such as
-             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-             *        .
+             * @param parent Required. The parent resource name. If the write user event action is applied in DataStore level,
+             *        the format is: `projects/{project}/locations/{location}/collections/{collection}/dataStore
+             *        s/{data_store}`. If the write user event action is applied in Location level, for example,
+             *        the event with Document across multiple DataStore, the format is:
+             *        `projects/{project}/locations/{location}`.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent}
              * @return the request
              */
@@ -13989,9 +14401,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Write#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent DataStore resource name, such as
-             *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-             *        .
+               * @param parent Required. The parent resource name. If the write user event action is applied in DataStore level,
+             *        the format is: `projects/{project}/locations/{location}/collections/{collection}/dataStore
+             *        s/{data_store}`. If the write user event action is applied in Location level, for example,
+             *        the event with Document across multiple DataStore, the format is:
+             *        `projects/{project}/locations/{location}`.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent}
                * @since 1.13
                */
@@ -14061,22 +14475,31 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The parent DataStore resource name, such as `projects/{project}/locations
-               * /{location}/collections/{collection}/dataStores/{data_store}`.
+               * Required. The parent resource name. If the write user event action is applied in
+               * DataStore level, the format is: `projects/{project}/locations/{location}/collection
+               * s/{collection}/dataStores/{data_store}`. If the write user event action is applied
+               * in Location level, for example, the event with Document across multiple DataStore,
+               * the format is: `projects/{project}/locations/{location}`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent DataStore resource name, such as
-             `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
+              /** Required. The parent resource name. If the write user event action is applied in DataStore level,
+             the format is:
+             `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`. If the
+             write user event action is applied in Location level, for example, the event with Document across
+             multiple DataStore, the format is: `projects/{project}/locations/{location}`.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
               /**
-               * Required. The parent DataStore resource name, such as `projects/{project}/locations
-               * /{location}/collections/{collection}/dataStores/{data_store}`.
+               * Required. The parent resource name. If the write user event action is applied in
+               * DataStore level, the format is: `projects/{project}/locations/{location}/collection
+               * s/{collection}/dataStores/{data_store}`. If the write user event action is applied
+               * in Location level, for example, the event with Document across multiple DataStore,
+               * the format is: `projects/{project}/locations/{location}`.
                */
               public Write setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -16258,8 +16681,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name Immutable. Fully qualified name
-             *        `project/locations/global/collections/{collection}/dataStore/conversations` or
-             *        `project/locations/global/collections/{collection}/engines/conversations`.
+             *        `projects/{project}/locations/global/collections/{collection}/dataStore/conversations` or
+             *        `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConversation}
              * @return the request
              */
@@ -16289,8 +16712,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Immutable. Fully qualified name
-             *        `project/locations/global/collections/{collection}/dataStore/conversations` or
-             *        `project/locations/global/collections/{collection}/engines/conversations`.
+             *        `projects/{project}/locations/global/collections/{collection}/dataStore/conversations` or
+             *        `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConversation}
                * @since 1.13
                */
@@ -16360,25 +16783,25 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Immutable. Fully qualified name
-               * `project/locations/global/collections/{collection}/dataStore/conversations` or
-               * `project/locations/global/collections/{collection}/engines/conversations`.
+               * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{c
+               * ollection}/dataStore/conversations` or `projects/{project}/locations/global/collect
+               * ions/{collection}/engines/conversations`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Immutable. Fully qualified name
-             `project/locations/global/collections/{collection}/dataStore/conversations` or
-             `project/locations/global/collections/{collection}/engines/conversations`.
+             `projects/{project}/locations/global/collections/{collection}/dataStore/conversations` or
+             `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Immutable. Fully qualified name
-               * `project/locations/global/collections/{collection}/dataStore/conversations` or
-               * `project/locations/global/collections/{collection}/engines/conversations`.
+               * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{c
+               * ollection}/dataStore/conversations` or `projects/{project}/locations/global/collect
+               * ions/{collection}/engines/conversations`.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -18478,7 +18901,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name Immutable. Fully qualified name
-             *        `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+             *        `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSession}
              * @return the request
              */
@@ -18508,7 +18931,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Immutable. Fully qualified name
-             *        `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+             *        `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions`
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSession}
                * @since 1.13
                */
@@ -18578,22 +19001,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Immutable. Fully qualified name
-               * `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+               * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{c
+               * ollection}/engines/{engine}/sessions`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Immutable. Fully qualified name
-             `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+             `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions`
                */
               public java.lang.String getName() {
                 return name;
               }
 
               /**
-               * Immutable. Fully qualified name
-               * `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+               * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{c
+               * ollection}/engines/{engine}/sessions`
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -23904,8 +24327,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Immutable. Fully qualified name
-           *        `project/locations/global/collections/{collection}/dataStore/conversations` or
-           *        `project/locations/global/collections/{collection}/engines/conversations`.
+           *        `projects/{project}/locations/global/collections/{collection}/dataStore/conversations` or
+           *        `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConversation}
            * @return the request
            */
@@ -23935,8 +24358,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Immutable. Fully qualified name
-           *        `project/locations/global/collections/{collection}/dataStore/conversations` or
-           *        `project/locations/global/collections/{collection}/engines/conversations`.
+           *        `projects/{project}/locations/global/collections/{collection}/dataStore/conversations` or
+           *        `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaConversation}
              * @since 1.13
              */
@@ -24006,25 +24429,25 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Immutable. Fully qualified name
-             * `project/locations/global/collections/{collection}/dataStore/conversations` or
-             * `project/locations/global/collections/{collection}/engines/conversations`.
+             * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{col
+             * lection}/dataStore/conversations` or
+             * `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Immutable. Fully qualified name
-           `project/locations/global/collections/{collection}/dataStore/conversations` or
-           `project/locations/global/collections/{collection}/engines/conversations`.
+           `projects/{project}/locations/global/collections/{collection}/dataStore/conversations` or
+           `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Immutable. Fully qualified name
-             * `project/locations/global/collections/{collection}/dataStore/conversations` or
-             * `project/locations/global/collections/{collection}/engines/conversations`.
+             * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{col
+             * lection}/dataStore/conversations` or
+             * `projects/{project}/locations/global/collections/{collection}/engines/conversations`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -27345,7 +27768,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Immutable. Fully qualified name
-           *        `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+           *        `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions`
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSession}
            * @return the request
            */
@@ -27375,7 +27798,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Immutable. Fully qualified name
-           *        `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+           *        `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions`
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSession}
              * @since 1.13
              */
@@ -27445,22 +27868,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Immutable. Fully qualified name
-             * `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+             * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{col
+             * lection}/engines/{engine}/sessions`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Immutable. Fully qualified name
-           `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+           `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Immutable. Fully qualified name
-             * `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+             * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{col
+             * lection}/engines/{engine}/sessions`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -29956,9 +30379,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Write#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent DataStore resource name, such as
-           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-           *        .
+           * @param parent Required. The parent resource name. If the write user event action is applied in DataStore level,
+           *        the format is: `projects/{project}/locations/{location}/collections/{collection}/dataStore
+           *        s/{data_store}`. If the write user event action is applied in Location level, for example,
+           *        the event with Document across multiple DataStore, the format is:
+           *        `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent}
            * @return the request
            */
@@ -29986,9 +30411,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Write#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent DataStore resource name, such as
-           *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-           *        .
+             * @param parent Required. The parent resource name. If the write user event action is applied in DataStore level,
+           *        the format is: `projects/{project}/locations/{location}/collections/{collection}/dataStore
+           *        s/{data_store}`. If the write user event action is applied in Location level, for example,
+           *        the event with Document across multiple DataStore, the format is:
+           *        `projects/{project}/locations/{location}`.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent}
              * @since 1.13
              */
@@ -30058,22 +30485,31 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The parent DataStore resource name, such as `projects/{project}/locations/{
-             * location}/collections/{collection}/dataStores/{data_store}`.
+             * Required. The parent resource name. If the write user event action is applied in
+             * DataStore level, the format is: `projects/{project}/locations/{location}/collections/
+             * {collection}/dataStores/{data_store}`. If the write user event action is applied in
+             * Location level, for example, the event with Document across multiple DataStore, the
+             * format is: `projects/{project}/locations/{location}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent DataStore resource name, such as
-           `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
+            /** Required. The parent resource name. If the write user event action is applied in DataStore level,
+           the format is:
+           `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`. If the
+           write user event action is applied in Location level, for example, the event with Document across
+           multiple DataStore, the format is: `projects/{project}/locations/{location}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent DataStore resource name, such as `projects/{project}/locations/{
-             * location}/collections/{collection}/dataStores/{data_store}`.
+             * Required. The parent resource name. If the write user event action is applied in
+             * DataStore level, the format is: `projects/{project}/locations/{location}/collections/
+             * {collection}/dataStores/{data_store}`. If the write user event action is applied in
+             * Location level, for example, the event with Document across multiple DataStore, the
+             * format is: `projects/{project}/locations/{location}`.
              */
             public Write setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -30945,6 +31381,366 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           @Override
           public Rank set(String parameterName, Object value) {
             return (Rank) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the SampleQuerySets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+       *   {@code DiscoveryEngine.SampleQuerySets.List request = discoveryengine.sampleQuerySets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SampleQuerySets sampleQuerySets() {
+        return new SampleQuerySets();
+      }
+
+      /**
+       * The "sampleQuerySets" collection of methods.
+       */
+      public class SampleQuerySets {
+
+        /**
+         * An accessor for creating requests from the Operations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.Operations.List request = discoveryengine.operations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Operations operations() {
+          return new Operations();
+        }
+
+        /**
+         * The "operations" collection of methods.
+         */
+        public class Operations {
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+/operations/[^/]+$");
+
+            /**
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
+             * operation result at intervals as recommended by the API service.
+             *
+             * Create a request for the method "operations.get".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sampleQuerySets/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
+       * An accessor for creating requests from the UserEvents collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+       *   {@code DiscoveryEngine.UserEvents.List request = discoveryengine.userEvents().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public UserEvents userEvents() {
+        return new UserEvents();
+      }
+
+      /**
+       * The "userEvents" collection of methods.
+       */
+      public class UserEvents {
+
+        /**
+         * Writes a single user event.
+         *
+         * Create a request for the method "userEvents.write".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Write#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name. If the write user event action is applied in DataStore level,
+         *        the format is: `projects/{project}/locations/{location}/collections/{collection}/dataStore
+         *        s/{data_store}`. If the write user event action is applied in Location level, for example,
+         *        the event with Document across multiple DataStore, the format is:
+         *        `projects/{project}/locations/{location}`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent}
+         * @return the request
+         */
+        public Write write(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent content) throws java.io.IOException {
+          Write result = new Write(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Write extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/userEvents:write";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Writes a single user event.
+           *
+           * Create a request for the method "userEvents.write".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Write#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Write#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name. If the write user event action is applied in DataStore level,
+         *        the format is: `projects/{project}/locations/{location}/collections/{collection}/dataStore
+         *        s/{data_store}`. If the write user event action is applied in Location level, for example,
+         *        the event with Document across multiple DataStore, the format is:
+         *        `projects/{project}/locations/{location}`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent}
+           * @since 1.13
+           */
+          protected Write(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent content) {
+            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserEvent.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Write set$Xgafv(java.lang.String $Xgafv) {
+            return (Write) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Write setAccessToken(java.lang.String accessToken) {
+            return (Write) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Write setAlt(java.lang.String alt) {
+            return (Write) super.setAlt(alt);
+          }
+
+          @Override
+          public Write setCallback(java.lang.String callback) {
+            return (Write) super.setCallback(callback);
+          }
+
+          @Override
+          public Write setFields(java.lang.String fields) {
+            return (Write) super.setFields(fields);
+          }
+
+          @Override
+          public Write setKey(java.lang.String key) {
+            return (Write) super.setKey(key);
+          }
+
+          @Override
+          public Write setOauthToken(java.lang.String oauthToken) {
+            return (Write) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Write setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Write) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Write setQuotaUser(java.lang.String quotaUser) {
+            return (Write) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Write setUploadType(java.lang.String uploadType) {
+            return (Write) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Write setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Write) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name. If the write user event action is applied in
+           * DataStore level, the format is: `projects/{project}/locations/{location}/collections/{c
+           * ollection}/dataStores/{data_store}`. If the write user event action is applied in
+           * Location level, for example, the event with Document across multiple DataStore, the
+           * format is: `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name. If the write user event action is applied in DataStore level,
+         the format is:
+         `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`. If the
+         write user event action is applied in Location level, for example, the event with Document across
+         multiple DataStore, the format is: `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name. If the write user event action is applied in
+           * DataStore level, the format is: `projects/{project}/locations/{location}/collections/{c
+           * ollection}/dataStores/{data_store}`. If the write user event action is applied in
+           * Location level, for example, the event with Document across multiple DataStore, the
+           * format is: `projects/{project}/locations/{location}`.
+           */
+          public Write setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Write set(String parameterName, Object value) {
+            return (Write) super.set(parameterName, value);
           }
         }
 

@@ -38,7 +38,7 @@ public final class GoogleCloudDiscoveryengineV1betaSession extends com.google.ap
 
   /**
    * Immutable. Fully qualified name
-   * `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+   * `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class GoogleCloudDiscoveryengineV1betaSession extends com.google.ap
 
   /**
    * Immutable. Fully qualified name
-   * `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+   * `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -100,7 +100,7 @@ public final class GoogleCloudDiscoveryengineV1betaSession extends com.google.ap
 
   /**
    * Immutable. Fully qualified name
-   * `project/locations/global/collections/{collection}/engines/{engine}/sessions`
+   * `projects/{project}/locations/global/collections/{collection}/engines/{engine}/sessions`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSession setName(java.lang.String name) {

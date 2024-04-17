@@ -62,12 +62,13 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Name of the resource on which conditions will be evaluated. Must use the Relative Resource Name
-   * of the resource, which is the URI path of the resource without the leading "/". Examples are
-   * "projects/_/buckets/[BUCKET-ID]" for storage buckets or "projects/[PROJECT-ID]/global/firewalls
-   * /[FIREWALL-ID]" for a firewall. This field is required for evaluating conditions with rules on
-   * resource names. For a `list` permission check, the resource.name value must be set to the
-   * parent resource. If the parent resource is a project, this field should be left unset.
+   * The **relative** name of the resource, which is the URI path of the resource without the
+   * leading "/". See https://cloud.google.com/iam/docs/conditions-resource-attributes#resource-name
+   * for examples used by other GCP Services. This field is **required** for services integrated
+   * with resource-attribute-based IAM conditions and/or CustomOrgPolicy. This field requires
+   * special handling for parents-only permissions such as `create` and `list`. See the document
+   * linked below for further details. See go/iam-conditions-sig-g3#populate-resource-attributes for
+   * specific details on populating this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,19 +79,26 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * official_service_name of the Service as defined in service configurations under
    * //configs/cloud/resourcetypes. For example, the official_service_name of cloud resource manager
    * service is set as 'cloudresourcemanager.googleapis.com' according to
-   * //configs/cloud/resourcetypes/google/cloud/resourcemanager/prod.yaml
+   * //configs/cloud/resourcetypes/google/cloud/resourcemanager/prod.yaml This field is **required**
+   * for services integrated with resource-attribute-based IAM conditions and/or CustomOrgPolicy.
+   * This field requires special handling for parents-only permissions such as `create` and `list`.
+   * See the document linked below for further details. See go/iam-conditions-sig-g3#populate-
+   * resource-attributes for specific details on populating this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String service;
 
   /**
-   * The public resource type name of the resource on which conditions will be evaluated. It is
-   * configured using the official_name of the ResourceType as defined in service configurations
-   * under //configs/cloud/resourcetypes. For example, the official_name for GCP projects is set as
+   * The public resource type name of the resource. It is configured using the official_name of the
+   * ResourceType as defined in service configurations under //configs/cloud/resourcetypes. For
+   * example, the official_name for GCP projects is set as
    * 'cloudresourcemanager.googleapis.com/Project' according to
-   * //configs/cloud/resourcetypes/google/cloud/resourcemanager/prod.yaml For details see go/iam-
-   * conditions-integration-guide.
+   * //configs/cloud/resourcetypes/google/cloud/resourcemanager/prod.yaml This field is **required**
+   * for services integrated with resource-attribute-based IAM conditions and/or CustomOrgPolicy.
+   * This field requires special handling for parents-only permissions such as `create` and `list`.
+   * See the document linked below for further details. See go/iam-conditions-sig-g3#populate-
+   * resource-attributes for specific details on populating this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,12 +173,13 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the resource on which conditions will be evaluated. Must use the Relative Resource Name
-   * of the resource, which is the URI path of the resource without the leading "/". Examples are
-   * "projects/_/buckets/[BUCKET-ID]" for storage buckets or "projects/[PROJECT-ID]/global/firewalls
-   * /[FIREWALL-ID]" for a firewall. This field is required for evaluating conditions with rules on
-   * resource names. For a `list` permission check, the resource.name value must be set to the
-   * parent resource. If the parent resource is a project, this field should be left unset.
+   * The **relative** name of the resource, which is the URI path of the resource without the
+   * leading "/". See https://cloud.google.com/iam/docs/conditions-resource-attributes#resource-name
+   * for examples used by other GCP Services. This field is **required** for services integrated
+   * with resource-attribute-based IAM conditions and/or CustomOrgPolicy. This field requires
+   * special handling for parents-only permissions such as `create` and `list`. See the document
+   * linked below for further details. See go/iam-conditions-sig-g3#populate-resource-attributes for
+   * specific details on populating this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -178,12 +187,13 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the resource on which conditions will be evaluated. Must use the Relative Resource Name
-   * of the resource, which is the URI path of the resource without the leading "/". Examples are
-   * "projects/_/buckets/[BUCKET-ID]" for storage buckets or "projects/[PROJECT-ID]/global/firewalls
-   * /[FIREWALL-ID]" for a firewall. This field is required for evaluating conditions with rules on
-   * resource names. For a `list` permission check, the resource.name value must be set to the
-   * parent resource. If the parent resource is a project, this field should be left unset.
+   * The **relative** name of the resource, which is the URI path of the resource without the
+   * leading "/". See https://cloud.google.com/iam/docs/conditions-resource-attributes#resource-name
+   * for examples used by other GCP Services. This field is **required** for services integrated
+   * with resource-attribute-based IAM conditions and/or CustomOrgPolicy. This field requires
+   * special handling for parents-only permissions such as `create` and `list`. See the document
+   * linked below for further details. See go/iam-conditions-sig-g3#populate-resource-attributes for
+   * specific details on populating this field.
    * @param name name or {@code null} for none
    */
   public Resource setName(java.lang.String name) {
@@ -196,7 +206,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * official_service_name of the Service as defined in service configurations under
    * //configs/cloud/resourcetypes. For example, the official_service_name of cloud resource manager
    * service is set as 'cloudresourcemanager.googleapis.com' according to
-   * //configs/cloud/resourcetypes/google/cloud/resourcemanager/prod.yaml
+   * //configs/cloud/resourcetypes/google/cloud/resourcemanager/prod.yaml This field is **required**
+   * for services integrated with resource-attribute-based IAM conditions and/or CustomOrgPolicy.
+   * This field requires special handling for parents-only permissions such as `create` and `list`.
+   * See the document linked below for further details. See go/iam-conditions-sig-g3#populate-
+   * resource-attributes for specific details on populating this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -208,7 +222,11 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * official_service_name of the Service as defined in service configurations under
    * //configs/cloud/resourcetypes. For example, the official_service_name of cloud resource manager
    * service is set as 'cloudresourcemanager.googleapis.com' according to
-   * //configs/cloud/resourcetypes/google/cloud/resourcemanager/prod.yaml
+   * //configs/cloud/resourcetypes/google/cloud/resourcemanager/prod.yaml This field is **required**
+   * for services integrated with resource-attribute-based IAM conditions and/or CustomOrgPolicy.
+   * This field requires special handling for parents-only permissions such as `create` and `list`.
+   * See the document linked below for further details. See go/iam-conditions-sig-g3#populate-
+   * resource-attributes for specific details on populating this field.
    * @param service service or {@code null} for none
    */
   public Resource setService(java.lang.String service) {
@@ -217,12 +235,15 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The public resource type name of the resource on which conditions will be evaluated. It is
-   * configured using the official_name of the ResourceType as defined in service configurations
-   * under //configs/cloud/resourcetypes. For example, the official_name for GCP projects is set as
+   * The public resource type name of the resource. It is configured using the official_name of the
+   * ResourceType as defined in service configurations under //configs/cloud/resourcetypes. For
+   * example, the official_name for GCP projects is set as
    * 'cloudresourcemanager.googleapis.com/Project' according to
-   * //configs/cloud/resourcetypes/google/cloud/resourcemanager/prod.yaml For details see go/iam-
-   * conditions-integration-guide.
+   * //configs/cloud/resourcetypes/google/cloud/resourcemanager/prod.yaml This field is **required**
+   * for services integrated with resource-attribute-based IAM conditions and/or CustomOrgPolicy.
+   * This field requires special handling for parents-only permissions such as `create` and `list`.
+   * See the document linked below for further details. See go/iam-conditions-sig-g3#populate-
+   * resource-attributes for specific details on populating this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -230,12 +251,15 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The public resource type name of the resource on which conditions will be evaluated. It is
-   * configured using the official_name of the ResourceType as defined in service configurations
-   * under //configs/cloud/resourcetypes. For example, the official_name for GCP projects is set as
+   * The public resource type name of the resource. It is configured using the official_name of the
+   * ResourceType as defined in service configurations under //configs/cloud/resourcetypes. For
+   * example, the official_name for GCP projects is set as
    * 'cloudresourcemanager.googleapis.com/Project' according to
-   * //configs/cloud/resourcetypes/google/cloud/resourcemanager/prod.yaml For details see go/iam-
-   * conditions-integration-guide.
+   * //configs/cloud/resourcetypes/google/cloud/resourcemanager/prod.yaml This field is **required**
+   * for services integrated with resource-attribute-based IAM conditions and/or CustomOrgPolicy.
+   * This field requires special handling for parents-only permissions such as `create` and `list`.
+   * See the document linked below for further details. See go/iam-conditions-sig-g3#populate-
+   * resource-attributes for specific details on populating this field.
    * @param type type or {@code null} for none
    */
   public Resource setType(java.lang.String type) {

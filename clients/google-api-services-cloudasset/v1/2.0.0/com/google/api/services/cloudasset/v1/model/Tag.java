@@ -37,6 +37,13 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   private java.lang.String tagKey;
 
   /**
+   * TagKey ID, in the format of tagKeys/{TAG_KEY_ID}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tagKeyId;
+
+  /**
    * TagValue namespaced name, in the format of
    * {ORG_ID}/{TAG_KEY_SHORT_NAME}/{TAG_VALUE_SHORT_NAME}.
    * The value may be {@code null}.
@@ -65,6 +72,23 @@ public final class Tag extends com.google.api.client.json.GenericJson {
    */
   public Tag setTagKey(java.lang.String tagKey) {
     this.tagKey = tagKey;
+    return this;
+  }
+
+  /**
+   * TagKey ID, in the format of tagKeys/{TAG_KEY_ID}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTagKeyId() {
+    return tagKeyId;
+  }
+
+  /**
+   * TagKey ID, in the format of tagKeys/{TAG_KEY_ID}.
+   * @param tagKeyId tagKeyId or {@code null} for none
+   */
+  public Tag setTagKeyId(java.lang.String tagKeyId) {
+    this.tagKeyId = tagKeyId;
     return this;
   }
 

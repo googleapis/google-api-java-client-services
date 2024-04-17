@@ -42,11 +42,56 @@ package com.google.api.services.iam.v1.model;
 public final class ServiceAccountKey extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A user provided email address as the point of contact for this service account key.
+   * Must be an email address. Limit 64 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contact;
+
+  /**
+   * Output only. The cloud identity that created this service account key. Populated automatically
+   * when the key is created and not editable by the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String creator;
+
+  /**
+   * Optional. A user provided description of this service account key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * optional. If the key is disabled, it may have a DisableReason describing why it was disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String disableReason;
+
+  /**
    * The key status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabled;
+
+  /**
+   * Extended Status provides permanent information about a service account key. For example, if
+   * this key was detected as exposed or compromised, that information will remain for the lifetime
+   * of the key in the extended_status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ExtendedStatus> extendedStatus;
+
+  static {
+    // hack to force ProGuard to consider ExtendedStatus used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ExtendedStatus.class);
+  }
 
   /**
    * Specifies the algorithm (and possibly key size) for the key.
@@ -120,6 +165,78 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   private String validBeforeTime;
 
   /**
+   * Optional. A user provided email address as the point of contact for this service account key.
+   * Must be an email address. Limit 64 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContact() {
+    return contact;
+  }
+
+  /**
+   * Optional. A user provided email address as the point of contact for this service account key.
+   * Must be an email address. Limit 64 characters.
+   * @param contact contact or {@code null} for none
+   */
+  public ServiceAccountKey setContact(java.lang.String contact) {
+    this.contact = contact;
+    return this;
+  }
+
+  /**
+   * Output only. The cloud identity that created this service account key. Populated automatically
+   * when the key is created and not editable by the user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreator() {
+    return creator;
+  }
+
+  /**
+   * Output only. The cloud identity that created this service account key. Populated automatically
+   * when the key is created and not editable by the user.
+   * @param creator creator or {@code null} for none
+   */
+  public ServiceAccountKey setCreator(java.lang.String creator) {
+    this.creator = creator;
+    return this;
+  }
+
+  /**
+   * Optional. A user provided description of this service account key.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. A user provided description of this service account key.
+   * @param description description or {@code null} for none
+   */
+  public ServiceAccountKey setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * optional. If the key is disabled, it may have a DisableReason describing why it was disabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisableReason() {
+    return disableReason;
+  }
+
+  /**
+   * optional. If the key is disabled, it may have a DisableReason describing why it was disabled.
+   * @param disableReason disableReason or {@code null} for none
+   */
+  public ServiceAccountKey setDisableReason(java.lang.String disableReason) {
+    this.disableReason = disableReason;
+    return this;
+  }
+
+  /**
    * The key status.
    * @return value or {@code null} for none
    */
@@ -133,6 +250,27 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
    */
   public ServiceAccountKey setDisabled(java.lang.Boolean disabled) {
     this.disabled = disabled;
+    return this;
+  }
+
+  /**
+   * Extended Status provides permanent information about a service account key. For example, if
+   * this key was detected as exposed or compromised, that information will remain for the lifetime
+   * of the key in the extended_status.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ExtendedStatus> getExtendedStatus() {
+    return extendedStatus;
+  }
+
+  /**
+   * Extended Status provides permanent information about a service account key. For example, if
+   * this key was detected as exposed or compromised, that information will remain for the lifetime
+   * of the key in the extended_status.
+   * @param extendedStatus extendedStatus or {@code null} for none
+   */
+  public ServiceAccountKey setExtendedStatus(java.util.List<ExtendedStatus> extendedStatus) {
+    this.extendedStatus = extendedStatus;
     return this;
   }
 

@@ -17,8 +17,7 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * An X.509-type identity provider represents a CA. It is trusted to assert a client identity if the
- * client has a certificate that chains up to this CA.
+ * Request message for UndeleteOauthClient.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -29,16 +28,16 @@ package com.google.api.services.iam.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class X509 extends com.google.api.client.json.GenericJson {
+public final class UndeleteOauthClientRequest extends com.google.api.client.json.GenericJson {
 
   @Override
-  public X509 set(String fieldName, Object value) {
-    return (X509) super.set(fieldName, value);
+  public UndeleteOauthClientRequest set(String fieldName, Object value) {
+    return (UndeleteOauthClientRequest) super.set(fieldName, value);
   }
 
   @Override
-  public X509 clone() {
-    return (X509) super.clone();
+  public UndeleteOauthClientRequest clone() {
+    return (UndeleteOauthClientRequest) super.clone();
   }
 
 }

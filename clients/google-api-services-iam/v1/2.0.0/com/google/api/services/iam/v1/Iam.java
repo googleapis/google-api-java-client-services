@@ -1523,8 +1523,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Returns the caller's permissions on the WorkforcePool. If the pool does not exist, this will
-       * return an empty set of permissions, not a `NOT_FOUND` error.
+       * Returns the caller's permissions on the WorkforcePool. If the pool doesn't exist, this call
+       * returns an empty set of permissions. It doesn't return a `NOT_FOUND` error.
        *
        * Create a request for the method "workforcePools.testIamPermissions".
        *
@@ -1551,8 +1551,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+$");
 
         /**
-         * Returns the caller's permissions on the WorkforcePool. If the pool does not exist, this will
-         * return an empty set of permissions, not a `NOT_FOUND` error.
+         * Returns the caller's permissions on the WorkforcePool. If the pool doesn't exist, this call
+         * returns an empty set of permissions. It doesn't return a `NOT_FOUND` error.
          *
          * Create a request for the method "workforcePools.testIamPermissions".
          *
@@ -2161,7 +2161,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
         /**
          * Deletes a WorkforcePoolProvider. Deleting a provider does not revoke credentials that have
-         * already been\ issued; they continue to grant access. You can undelete a provider for 30 days.
+         * already been issued; they continue to grant access. You can undelete a provider for 30 days.
          * After 30 days, deletion is permanent. You cannot update deleted providers. However, you can view
          * and list them.
          *
@@ -2189,7 +2189,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Deletes a WorkforcePoolProvider. Deleting a provider does not revoke credentials that have
-           * already been\ issued; they continue to grant access. You can undelete a provider for 30 days.
+           * already been issued; they continue to grant access. You can undelete a provider for 30 days.
            * After 30 days, deletion is permanent. You cannot update deleted providers. However, you can
            * view and list them.
            *
@@ -4091,19 +4091,21 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Deletes a WorkforcePoolSubject. Subject must not already be in a deleted state. A
          * WorkforcePoolSubject is automatically created the first time an external credential is exchanged
-         * for a Google Cloud credential with a mapped `google.subject` attribute. There is no path to
-         * manually create WorkforcePoolSubjects. Once deleted, the WorkforcePoolSubject may not be used for
-         * 30 days. After 30 days, the WorkforcePoolSubject will be deleted forever and can be reused in
-         * token exchanges with Google Cloud STS. This will automatically create a new WorkforcePoolSubject
-         * that is independent of the previously deleted WorkforcePoolSubject with the same google.subject
-         * value.
+         * for a Google Cloud credential using a mapped `google.subject` attribute. There is no endpoint to
+         * manually create a WorkforcePoolSubject. For 30 days after a WorkforcePoolSubject is deleted,
+         * using the same `google.subject` attribute in token exchanges with Google Cloud STS fails. Call
+         * UndeleteWorkforcePoolSubject to undelete a WorkforcePoolSubject that has been deleted, within
+         * within 30 days of deleting it. After 30 days, the WorkforcePoolSubject is permanently deleted. At
+         * this point, a token exchange with Google Cloud STS that uses the same mapped `google.subject`
+         * attribute automatically creates a new WorkforcePoolSubject that is unrelated to the previously
+         * deleted WorkforcePoolSubject but has the same `google.subject` value.
          *
          * Create a request for the method "subjects.delete".
          *
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, like '/' and ':', must
+         * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, like `/` and `:`, must
          *        be escaped, because all URLs need to conform to the "When to Escape and Unescape" section
          *        of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
          *        `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
@@ -4125,12 +4127,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Deletes a WorkforcePoolSubject. Subject must not already be in a deleted state. A
            * WorkforcePoolSubject is automatically created the first time an external credential is
-           * exchanged for a Google Cloud credential with a mapped `google.subject` attribute. There is no
-           * path to manually create WorkforcePoolSubjects. Once deleted, the WorkforcePoolSubject may not
-           * be used for 30 days. After 30 days, the WorkforcePoolSubject will be deleted forever and can be
-           * reused in token exchanges with Google Cloud STS. This will automatically create a new
-           * WorkforcePoolSubject that is independent of the previously deleted WorkforcePoolSubject with
-           * the same google.subject value.
+           * exchanged for a Google Cloud credential using a mapped `google.subject` attribute. There is no
+           * endpoint to manually create a WorkforcePoolSubject. For 30 days after a WorkforcePoolSubject is
+           * deleted, using the same `google.subject` attribute in token exchanges with Google Cloud STS
+           * fails. Call UndeleteWorkforcePoolSubject to undelete a WorkforcePoolSubject that has been
+           * deleted, within within 30 days of deleting it. After 30 days, the WorkforcePoolSubject is
+           * permanently deleted. At this point, a token exchange with Google Cloud STS that uses the same
+           * mapped `google.subject` attribute automatically creates a new WorkforcePoolSubject that is
+           * unrelated to the previously deleted WorkforcePoolSubject but has the same `google.subject`
+           * value.
            *
            * Create a request for the method "subjects.delete".
            *
@@ -4139,7 +4144,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, like '/' and ':', must
+           * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, like `/` and `:`, must
          *        be escaped, because all URLs need to conform to the "When to Escape and Unescape" section
          *        of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
          *        `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
@@ -4211,15 +4216,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The resource name of the WorkforcePoolSubject. Special characters, like '/'
-           * and ':', must be escaped, because all URLs need to conform to the "When to Escape and
+           * Required. The resource name of the WorkforcePoolSubject. Special characters, like `/`
+           * and `:`, must be escaped, because all URLs need to conform to the "When to Escape and
            * Unescape" section of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
            * `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the WorkforcePoolSubject. Special characters, like '/' and ':', must
+          /** Required. The resource name of the WorkforcePoolSubject. Special characters, like `/` and `:`, must
          be escaped, because all URLs need to conform to the "When to Escape and Unescape" section of
          [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
          `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
@@ -4229,8 +4234,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The resource name of the WorkforcePoolSubject. Special characters, like '/'
-           * and ':', must be escaped, because all URLs need to conform to the "When to Escape and
+           * Required. The resource name of the WorkforcePoolSubject. Special characters, like `/`
+           * and `:`, must be escaped, because all URLs need to conform to the "When to Escape and
            * Unescape" section of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
            * `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
            */
@@ -4257,7 +4262,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, like '/' and ':', must
+         * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, like `/` and `:`, must
          *        be escaped, because all URLs need to conform to the "When to Escape and Unescape" section
          *        of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
          *        `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
@@ -4288,7 +4293,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, like '/' and ':', must
+           * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, like `/` and `:`, must
          *        be escaped, because all URLs need to conform to the "When to Escape and Unescape" section
          *        of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
          *        `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
@@ -4361,15 +4366,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The resource name of the WorkforcePoolSubject. Special characters, like '/'
-           * and ':', must be escaped, because all URLs need to conform to the "When to Escape and
+           * Required. The resource name of the WorkforcePoolSubject. Special characters, like `/`
+           * and `:`, must be escaped, because all URLs need to conform to the "When to Escape and
            * Unescape" section of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
            * `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the WorkforcePoolSubject. Special characters, like '/' and ':', must
+          /** Required. The resource name of the WorkforcePoolSubject. Special characters, like `/` and `:`, must
          be escaped, because all URLs need to conform to the "When to Escape and Unescape" section of
          [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
          `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
@@ -4379,8 +4384,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The resource name of the WorkforcePoolSubject. Special characters, like '/'
-           * and ':', must be escaped, because all URLs need to conform to the "When to Escape and
+           * Required. The resource name of the WorkforcePoolSubject. Special characters, like `/`
+           * and `:`, must be escaped, because all URLs need to conform to the "When to Escape and
            * Unescape" section of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
            * `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
            */
@@ -6187,6 +6192,1756 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
      */
     public class Locations {
 
+      /**
+       * An accessor for creating requests from the OauthClients collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Iam iam = new Iam(...);}
+       *   {@code Iam.OauthClients.List request = iam.oauthClients().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public OauthClients oauthClients() {
+        return new OauthClients();
+      }
+
+      /**
+       * The "oauthClients" collection of methods.
+       */
+      public class OauthClients {
+
+        /**
+         * Creates a new OauthClient. You cannot reuse the name of a deleted oauth client until 30 days
+         * after deletion.
+         *
+         * Create a request for the method "oauthClients.create".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource to create the oauth client in. The only supported location is
+         *        `global`.
+         * @param content the {@link com.google.api.services.iam.v1.model.OauthClient}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.iam.v1.model.OauthClient content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends IamRequest<com.google.api.services.iam.v1.model.OauthClient> {
+
+          private static final String REST_PATH = "v1/{+parent}/oauthClients";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new OauthClient. You cannot reuse the name of a deleted oauth client until 30 days
+           * after deletion.
+           *
+           * Create a request for the method "oauthClients.create".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource to create the oauth client in. The only supported location is
+         *        `global`.
+           * @param content the {@link com.google.api.services.iam.v1.model.OauthClient}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.iam.v1.model.OauthClient content) {
+            super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.OauthClient.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource to create the oauth client in. The only supported
+           * location is `global`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource to create the oauth client in. The only supported location is
+         `global`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource to create the oauth client in. The only supported
+           * location is `global`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the oauth client, which becomes the final component of the
+           * resource name. This value should be a string of 6 to 63 lowercase letters, digits, or
+           * hyphens. It must start with a letter, and cannot have a trailing hyphen. The prefix
+           * `gcp-` is reserved for use by Google, and may not be specified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String oauthClientId;
+
+          /** Required. The ID to use for the oauth client, which becomes the final component of the resource
+         name. This value should be a string of 6 to 63 lowercase letters, digits, or hyphens. It must start
+         with a letter, and cannot have a trailing hyphen. The prefix `gcp-` is reserved for use by Google,
+         and may not be specified.
+           */
+          public java.lang.String getOauthClientId() {
+            return oauthClientId;
+          }
+
+          /**
+           * Required. The ID to use for the oauth client, which becomes the final component of the
+           * resource name. This value should be a string of 6 to 63 lowercase letters, digits, or
+           * hyphens. It must start with a letter, and cannot have a trailing hyphen. The prefix
+           * `gcp-` is reserved for use by Google, and may not be specified.
+           */
+          public Create setOauthClientId(java.lang.String oauthClientId) {
+            this.oauthClientId = oauthClientId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a OauthClient. You cannot use a deleted oauth client. However, deletion does not revoke
+         * access tokens that have already been issued; they continue to grant access. Deletion does revoke
+         * refresh tokens that have already been issued; They cannot be used to renew an access token. If
+         * the oauth client is undeleted, and the refresh tokens are not expired, they are valid for token
+         * exchange again. You can undelete an oauth client for 30 days. After 30 days, deletion is
+         * permanent. You cannot update deleted oauth clients. However, you can view and list them.
+         *
+         * Create a request for the method "oauthClients.delete".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the oauth client to delete. Format:
+         *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends IamRequest<com.google.api.services.iam.v1.model.OauthClient> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+
+          /**
+           * Deletes a OauthClient. You cannot use a deleted oauth client. However, deletion does not revoke
+           * access tokens that have already been issued; they continue to grant access. Deletion does
+           * revoke refresh tokens that have already been issued; They cannot be used to renew an access
+           * token. If the oauth client is undeleted, and the refresh tokens are not expired, they are valid
+           * for token exchange again. You can undelete an oauth client for 30 days. After 30 days, deletion
+           * is permanent. You cannot update deleted oauth clients. However, you can view and list them.
+           *
+           * Create a request for the method "oauthClients.delete".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the oauth client to delete. Format:
+         *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Iam.this, "DELETE", REST_PATH, null, com.google.api.services.iam.v1.model.OauthClient.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the oauth client to delete. Format:
+           * `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the oauth client to delete. Format:
+         `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the oauth client to delete. Format:
+           * `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets an individual OauthClient.
+         *
+         * Create a request for the method "oauthClients.get".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the oauth client to retrieve. Format:
+         *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends IamRequest<com.google.api.services.iam.v1.model.OauthClient> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+
+          /**
+           * Gets an individual OauthClient.
+           *
+           * Create a request for the method "oauthClients.get".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the oauth client to retrieve. Format:
+         *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.OauthClient.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the oauth client to retrieve. Format:
+           * `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the oauth client to retrieve. Format:
+         `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the oauth client to retrieve. Format:
+           * `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all non-deleted OauthClientss in a project. If `show_deleted` is set to `true`, then
+         * deleted oauth clients are also listed.
+         *
+         * Create a request for the method "oauthClients.list".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent to list oauth clients for.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends IamRequest<com.google.api.services.iam.v1.model.ListOauthClientsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/oauthClients";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all non-deleted OauthClientss in a project. If `show_deleted` is set to `true`, then
+           * deleted oauth clients are also listed.
+           *
+           * Create a request for the method "oauthClients.list".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent to list oauth clients for.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.ListOauthClientsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent to list oauth clients for. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent to list oauth clients for.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent to list oauth clients for. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of oauth clients to return. If unspecified, at most 50
+           * oauth clients will be returned. The maximum value is 100; values above 100 are
+           * truncated to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of oauth clients to return. If unspecified, at most 50 oauth clients
+         will be returned. The maximum value is 100; values above 100 are truncated to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of oauth clients to return. If unspecified, at most 50
+           * oauth clients will be returned. The maximum value is 100; values above 100 are
+           * truncated to 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListOauthClients` call. Provide this
+           * to retrieve the subsequent page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListOauthClients` call. Provide this to retrieve
+         the subsequent page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListOauthClients` call. Provide this
+           * to retrieve the subsequent page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Optional. Whether to return soft-deleted oauth clients. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean showDeleted;
+
+          /** Optional. Whether to return soft-deleted oauth clients.
+           */
+          public java.lang.Boolean getShowDeleted() {
+            return showDeleted;
+          }
+
+          /** Optional. Whether to return soft-deleted oauth clients. */
+          public List setShowDeleted(java.lang.Boolean showDeleted) {
+            this.showDeleted = showDeleted;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an existing OauthClient.
+         *
+         * Create a request for the method "oauthClients.patch".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Immutable. The resource name of the oauth client.
+         *        Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+         * @param content the {@link com.google.api.services.iam.v1.model.OauthClient}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.iam.v1.model.OauthClient content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends IamRequest<com.google.api.services.iam.v1.model.OauthClient> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+
+          /**
+           * Updates an existing OauthClient.
+           *
+           * Create a request for the method "oauthClients.patch".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Immutable. The resource name of the oauth client.
+         *        Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           * @param content the {@link com.google.api.services.iam.v1.model.OauthClient}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.iam.v1.model.OauthClient content) {
+            super(Iam.this, "PATCH", REST_PATH, content, com.google.api.services.iam.v1.model.OauthClient.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Immutable. The resource name of the oauth client.
+           * Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Immutable. The resource name of the oauth client.
+         Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Immutable. The resource name of the oauth client.
+           * Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. The list of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. The list of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Required. The list of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Undeletes a OauthClient, as long as it was deleted fewer than 30 days ago.
+         *
+         * Create a request for the method "oauthClients.undelete".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the oauth client to undelete. Format:
+         *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+         * @param content the {@link com.google.api.services.iam.v1.model.UndeleteOauthClientRequest}
+         * @return the request
+         */
+        public Undelete undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteOauthClientRequest content) throws java.io.IOException {
+          Undelete result = new Undelete(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Undelete extends IamRequest<com.google.api.services.iam.v1.model.OauthClient> {
+
+          private static final String REST_PATH = "v1/{+name}:undelete";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+
+          /**
+           * Undeletes a OauthClient, as long as it was deleted fewer than 30 days ago.
+           *
+           * Create a request for the method "oauthClients.undelete".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Undelete#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the oauth client to undelete. Format:
+         *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           * @param content the {@link com.google.api.services.iam.v1.model.UndeleteOauthClientRequest}
+           * @since 1.13
+           */
+          protected Undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteOauthClientRequest content) {
+            super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.OauthClient.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+            }
+          }
+
+          @Override
+          public Undelete set$Xgafv(java.lang.String $Xgafv) {
+            return (Undelete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Undelete setAccessToken(java.lang.String accessToken) {
+            return (Undelete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Undelete setAlt(java.lang.String alt) {
+            return (Undelete) super.setAlt(alt);
+          }
+
+          @Override
+          public Undelete setCallback(java.lang.String callback) {
+            return (Undelete) super.setCallback(callback);
+          }
+
+          @Override
+          public Undelete setFields(java.lang.String fields) {
+            return (Undelete) super.setFields(fields);
+          }
+
+          @Override
+          public Undelete setKey(java.lang.String key) {
+            return (Undelete) super.setKey(key);
+          }
+
+          @Override
+          public Undelete setOauthToken(java.lang.String oauthToken) {
+            return (Undelete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Undelete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Undelete setQuotaUser(java.lang.String quotaUser) {
+            return (Undelete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Undelete setUploadType(java.lang.String uploadType) {
+            return (Undelete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Undelete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the oauth client to undelete. Format:
+           * `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the oauth client to undelete. Format:
+         `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the oauth client to undelete. Format:
+           * `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
+           */
+          public Undelete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Undelete set(String parameterName, Object value) {
+            return (Undelete) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Credentials collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Iam iam = new Iam(...);}
+         *   {@code Iam.Credentials.List request = iam.credentials().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Credentials credentials() {
+          return new Credentials();
+        }
+
+        /**
+         * The "credentials" collection of methods.
+         */
+        public class Credentials {
+
+          /**
+           * Creates a new OauthClientCredential.
+           *
+           * Create a request for the method "credentials.create".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource to create the oauth client Credential in.
+           * @param content the {@link com.google.api.services.iam.v1.model.OauthClientCredential}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.iam.v1.model.OauthClientCredential content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends IamRequest<com.google.api.services.iam.v1.model.OauthClientCredential> {
+
+            private static final String REST_PATH = "v1/{+parent}/credentials";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+
+            /**
+             * Creates a new OauthClientCredential.
+             *
+             * Create a request for the method "credentials.create".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource to create the oauth client Credential in.
+             * @param content the {@link com.google.api.services.iam.v1.model.OauthClientCredential}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.iam.v1.model.OauthClientCredential content) {
+              super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.OauthClientCredential.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent resource to create the oauth client Credential in. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource to create the oauth client Credential in.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent resource to create the oauth client Credential in. */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the oauth client credential, which becomes the final
+             * component of the resource name. This value should be 4-32 characters, and may contain
+             * the characters [a-z0-9-]. The prefix `gcp-` is reserved for use by Google, and may
+             * not be specified.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String oauthClientCredentialId;
+
+            /** Required. The ID to use for the oauth client credential, which becomes the final component of the
+           resource name. This value should be 4-32 characters, and may contain the characters [a-z0-9-]. The
+           prefix `gcp-` is reserved for use by Google, and may not be specified.
+             */
+            public java.lang.String getOauthClientCredentialId() {
+              return oauthClientCredentialId;
+            }
+
+            /**
+             * Required. The ID to use for the oauth client credential, which becomes the final
+             * component of the resource name. This value should be 4-32 characters, and may contain
+             * the characters [a-z0-9-]. The prefix `gcp-` is reserved for use by Google, and may
+             * not be specified.
+             */
+            public Create setOauthClientCredentialId(java.lang.String oauthClientCredentialId) {
+              this.oauthClientCredentialId = oauthClientCredentialId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a OauthClientCredential. Before deleting an oauth client credential, it should first be
+           * disabled.
+           *
+           * Create a request for the method "credentials.delete".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the oauth client credential to delete. Format:
+           *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
+           *        al}`.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends IamRequest<com.google.api.services.iam.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+/credentials/[^/]+$");
+
+            /**
+             * Deletes a OauthClientCredential. Before deleting an oauth client credential, it should first be
+             * disabled.
+             *
+             * Create a request for the method "credentials.delete".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the oauth client credential to delete. Format:
+           *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
+           *        al}`.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Iam.this, "DELETE", REST_PATH, null, com.google.api.services.iam.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+/credentials/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the oauth client credential to delete. Format: `projects/{proje
+             * ct}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the oauth client credential to delete. Format:
+           `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the oauth client credential to delete. Format: `projects/{proje
+             * ct}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+/credentials/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets an individual OauthClientCredential.
+           *
+           * Create a request for the method "credentials.get".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the oauth client credential to retrieve. Format:
+           *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
+           *        al}`.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends IamRequest<com.google.api.services.iam.v1.model.OauthClientCredential> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+/credentials/[^/]+$");
+
+            /**
+             * Gets an individual OauthClientCredential.
+             *
+             * Create a request for the method "credentials.get".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the oauth client credential to retrieve. Format:
+           *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
+           *        al}`.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.OauthClientCredential.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+/credentials/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the oauth client credential to retrieve. Format: `projects/{pro
+             * ject}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the oauth client credential to retrieve. Format:
+           `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the oauth client credential to retrieve. Format: `projects/{pro
+             * ject}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+/credentials/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all OauthClientCredentialss in a OauthClient.
+           *
+           * Create a request for the method "credentials.list".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent to list oauth client credentials for.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends IamRequest<com.google.api.services.iam.v1.model.ListOauthClientCredentialsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/credentials";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+
+            /**
+             * Lists all OauthClientCredentialss in a OauthClient.
+             *
+             * Create a request for the method "credentials.list".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent to list oauth client credentials for.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.ListOauthClientCredentialsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent to list oauth client credentials for. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent to list oauth client credentials for.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent to list oauth client credentials for. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an existing OauthClientCredential.
+           *
+           * Create a request for the method "credentials.patch".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Immutable. The resource name of the oauth client credential. Format:
+           *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
+           *        al}`
+           * @param content the {@link com.google.api.services.iam.v1.model.OauthClientCredential}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.iam.v1.model.OauthClientCredential content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends IamRequest<com.google.api.services.iam.v1.model.OauthClientCredential> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+/credentials/[^/]+$");
+
+            /**
+             * Updates an existing OauthClientCredential.
+             *
+             * Create a request for the method "credentials.patch".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Immutable. The resource name of the oauth client credential. Format:
+           *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
+           *        al}`
+             * @param content the {@link com.google.api.services.iam.v1.model.OauthClientCredential}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.iam.v1.model.OauthClientCredential content) {
+              super(Iam.this, "PATCH", REST_PATH, content, com.google.api.services.iam.v1.model.OauthClientCredential.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+/credentials/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Immutable. The resource name of the oauth client credential. Format: `projects/{proje
+             * ct}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Immutable. The resource name of the oauth client credential. Format:
+           `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Immutable. The resource name of the oauth client credential. Format: `projects/{proje
+             * ct}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+/credentials/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. The list of fields to update. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. The list of fields to update.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Required. The list of fields to update. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
       /**
        * An accessor for creating requests from the WorkloadIdentityPools collection.
        *
@@ -14962,6 +16717,145 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Patches a ServiceAccountKey.
+         *
+         * Create a request for the method "keys.patch".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource name of the service account key in the following format
+         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+         * @param content the {@link com.google.api.services.iam.v1.model.PatchServiceAccountKeyRequest}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.iam.v1.model.PatchServiceAccountKeyRequest content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends IamRequest<com.google.api.services.iam.v1.model.ServiceAccountKey> {
+
+          private static final String REST_PATH = "v1/{+name}:patch";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+/keys/[^/]+$");
+
+          /**
+           * Patches a ServiceAccountKey.
+           *
+           * Create a request for the method "keys.patch".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource name of the service account key in the following format
+         *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+           * @param content the {@link com.google.api.services.iam.v1.model.PatchServiceAccountKeyRequest}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.iam.v1.model.PatchServiceAccountKeyRequest content) {
+            super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.ServiceAccountKey.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/serviceAccounts/[^/]+/keys/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the service account key in the following format
+           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource name of the service account key in the following format
+         `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource name of the service account key in the following format
+           * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/serviceAccounts/[^/]+/keys/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**

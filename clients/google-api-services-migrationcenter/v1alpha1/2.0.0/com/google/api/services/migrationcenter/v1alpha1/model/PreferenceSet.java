@@ -37,6 +37,13 @@ public final class PreferenceSet extends com.google.api.client.json.GenericJson 
   private String createTime;
 
   /**
+   * Optional. A set of preferences that applies to all databases in the context.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabasePreferences databasePreferences;
+
+  /**
    * A description of the preference set.
    * The value may be {@code null}.
    */
@@ -56,6 +63,15 @@ public final class PreferenceSet extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Region preferences for assets using this preference set. If you are unsure which
+   * value to set, the migration service API region is often a good value to start with. If
+   * unspecified, VirtualMachinePreferences.RegionPreferences is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RegionPreferences regionPreferences;
 
   /**
    * Output only. The timestamp when the preference set was last updated.
@@ -85,6 +101,23 @@ public final class PreferenceSet extends com.google.api.client.json.GenericJson 
    */
   public PreferenceSet setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. A set of preferences that applies to all databases in the context.
+   * @return value or {@code null} for none
+   */
+  public DatabasePreferences getDatabasePreferences() {
+    return databasePreferences;
+  }
+
+  /**
+   * Optional. A set of preferences that applies to all databases in the context.
+   * @param databasePreferences databasePreferences or {@code null} for none
+   */
+  public PreferenceSet setDatabasePreferences(DatabasePreferences databasePreferences) {
+    this.databasePreferences = databasePreferences;
     return this;
   }
 
@@ -136,6 +169,27 @@ public final class PreferenceSet extends com.google.api.client.json.GenericJson 
    */
   public PreferenceSet setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Region preferences for assets using this preference set. If you are unsure which
+   * value to set, the migration service API region is often a good value to start with. If
+   * unspecified, VirtualMachinePreferences.RegionPreferences is used.
+   * @return value or {@code null} for none
+   */
+  public RegionPreferences getRegionPreferences() {
+    return regionPreferences;
+  }
+
+  /**
+   * Optional. Region preferences for assets using this preference set. If you are unsure which
+   * value to set, the migration service API region is often a good value to start with. If
+   * unspecified, VirtualMachinePreferences.RegionPreferences is used.
+   * @param regionPreferences regionPreferences or {@code null} for none
+   */
+  public PreferenceSet setRegionPreferences(RegionPreferences regionPreferences) {
+    this.regionPreferences = regionPreferences;
     return this;
   }
 

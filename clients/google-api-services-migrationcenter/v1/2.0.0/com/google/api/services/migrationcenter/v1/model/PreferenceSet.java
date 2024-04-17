@@ -65,7 +65,7 @@ public final class PreferenceSet extends com.google.api.client.json.GenericJson 
   private String updateTime;
 
   /**
-   * A set of preferences that applies to all virtual machines in the context.
+   * Optional. A set of preferences that applies to all virtual machines in the context.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +157,7 @@ public final class PreferenceSet extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A set of preferences that applies to all virtual machines in the context.
+   * Optional. A set of preferences that applies to all virtual machines in the context.
    * @return value or {@code null} for none
    */
   public VirtualMachinePreferences getVirtualMachinePreferences() {
@@ -165,7 +165,7 @@ public final class PreferenceSet extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A set of preferences that applies to all virtual machines in the context.
+   * Optional. A set of preferences that applies to all virtual machines in the context.
    * @param virtualMachinePreferences virtualMachinePreferences or {@code null} for none
    */
   public PreferenceSet setVirtualMachinePreferences(VirtualMachinePreferences virtualMachinePreferences) {

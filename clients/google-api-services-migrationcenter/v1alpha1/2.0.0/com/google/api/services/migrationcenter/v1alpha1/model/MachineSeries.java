@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * A Compute Engine machine series.
+ * A machine series, for a target product (e.g. Compute Engine, Google Cloud VMware Engine).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -30,16 +30,20 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class MachineSeries extends com.google.api.client.json.GenericJson {
 
   /**
-   * Code to identify a Compute Engine machine series. Consult https://cloud.google.com/compute/docs
-   * /machine-resource#machine_type_comparison for more details on the available series.
+   * Code to identify a machine series. Consult this for more details on the available series for
+   * Compute Engine: https://cloud.google.com/compute/docs/machine-resource#machine_type_comparison
+   * Consult this for more details on the available series for Google Cloud VMware Engine:
+   * https://cloud.google.com/vmware-engine/pricing
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String code;
 
   /**
-   * Code to identify a Compute Engine machine series. Consult https://cloud.google.com/compute/docs
-   * /machine-resource#machine_type_comparison for more details on the available series.
+   * Code to identify a machine series. Consult this for more details on the available series for
+   * Compute Engine: https://cloud.google.com/compute/docs/machine-resource#machine_type_comparison
+   * Consult this for more details on the available series for Google Cloud VMware Engine:
+   * https://cloud.google.com/vmware-engine/pricing
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -47,8 +51,10 @@ public final class MachineSeries extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Code to identify a Compute Engine machine series. Consult https://cloud.google.com/compute/docs
-   * /machine-resource#machine_type_comparison for more details on the available series.
+   * Code to identify a machine series. Consult this for more details on the available series for
+   * Compute Engine: https://cloud.google.com/compute/docs/machine-resource#machine_type_comparison
+   * Consult this for more details on the available series for Google Cloud VMware Engine:
+   * https://cloud.google.com/vmware-engine/pricing
    * @param code code or {@code null} for none
    */
   public MachineSeries setCode(java.lang.String code) {

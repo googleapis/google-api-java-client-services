@@ -44,6 +44,14 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   private ReportSummaryHistogramChartData coreCountHistogram;
 
   /**
+   * Output only. Count of assets grouped by database type. Keys here are taken from DatabaseType
+   * enum. Only present for databases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReportSummaryChartData databaseTypes;
+
+  /**
    * Histogram showing a distribution of memory sizes.
    * The value may be {@code null}.
    */
@@ -151,6 +159,25 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
    */
   public ReportSummaryAssetAggregateStats setCoreCountHistogram(ReportSummaryHistogramChartData coreCountHistogram) {
     this.coreCountHistogram = coreCountHistogram;
+    return this;
+  }
+
+  /**
+   * Output only. Count of assets grouped by database type. Keys here are taken from DatabaseType
+   * enum. Only present for databases.
+   * @return value or {@code null} for none
+   */
+  public ReportSummaryChartData getDatabaseTypes() {
+    return databaseTypes;
+  }
+
+  /**
+   * Output only. Count of assets grouped by database type. Keys here are taken from DatabaseType
+   * enum. Only present for databases.
+   * @param databaseTypes databaseTypes or {@code null} for none
+   */
+  public ReportSummaryAssetAggregateStats setDatabaseTypes(ReportSummaryChartData databaseTypes) {
+    this.databaseTypes = databaseTypes;
     return this;
   }
 

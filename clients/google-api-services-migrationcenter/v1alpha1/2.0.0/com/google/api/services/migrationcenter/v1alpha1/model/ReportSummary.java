@@ -38,11 +38,25 @@ public final class ReportSummary extends com.google.api.client.json.GenericJson 
   private ReportSummaryAssetAggregateStats allAssetsStats;
 
   /**
+   * Output only. Aggregate statistics for unique database assets across all the groups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReportSummaryAssetAggregateStats databaseStats;
+
+  /**
    * Findings for each Group included in this report.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ReportSummaryGroupFinding> groupFindings;
+
+  /**
+   * Output only. Aggregate statistics for unique virtual machine assets across all the groups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReportSummaryAssetAggregateStats virtualMachineStats;
 
   /**
    * Aggregate statistics for unique assets across all the groups.
@@ -62,6 +76,23 @@ public final class ReportSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Output only. Aggregate statistics for unique database assets across all the groups.
+   * @return value or {@code null} for none
+   */
+  public ReportSummaryAssetAggregateStats getDatabaseStats() {
+    return databaseStats;
+  }
+
+  /**
+   * Output only. Aggregate statistics for unique database assets across all the groups.
+   * @param databaseStats databaseStats or {@code null} for none
+   */
+  public ReportSummary setDatabaseStats(ReportSummaryAssetAggregateStats databaseStats) {
+    this.databaseStats = databaseStats;
+    return this;
+  }
+
+  /**
    * Findings for each Group included in this report.
    * @return value or {@code null} for none
    */
@@ -75,6 +106,23 @@ public final class ReportSummary extends com.google.api.client.json.GenericJson 
    */
   public ReportSummary setGroupFindings(java.util.List<ReportSummaryGroupFinding> groupFindings) {
     this.groupFindings = groupFindings;
+    return this;
+  }
+
+  /**
+   * Output only. Aggregate statistics for unique virtual machine assets across all the groups.
+   * @return value or {@code null} for none
+   */
+  public ReportSummaryAssetAggregateStats getVirtualMachineStats() {
+    return virtualMachineStats;
+  }
+
+  /**
+   * Output only. Aggregate statistics for unique virtual machine assets across all the groups.
+   * @param virtualMachineStats virtualMachineStats or {@code null} for none
+   */
+  public ReportSummary setVirtualMachineStats(ReportSummaryAssetAggregateStats virtualMachineStats) {
+    this.virtualMachineStats = virtualMachineStats;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Details about databases in this finding. Only present for databases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReportSummaryDatabaseFinding databaseFinding;
+
+  /**
    * Description for the Preference Set.
    * The value may be {@code null}.
    */
@@ -64,6 +71,21 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
    */
   @com.google.api.client.util.Key
   private Money monthlyCostCompute;
+
+  /**
+   * Output only. Backup monthly cost for this preference set. Only present for databases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Money monthlyCostDatabaseBackup;
+
+  /**
+   * Output only. Database licensing monthly cost for this preference set. For virtual machines
+   * denotes the cost of licenses for hosted databases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Money monthlyCostDatabaseLicensing;
 
   /**
    * Network Egress monthly cost for this preference set. Only present for virtual machines.
@@ -102,6 +124,13 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   private Money monthlyCostTotal;
 
   /**
+   * Output only. A copy of the preference set used for this finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PreferenceSet preferenceSet;
+
+  /**
    * Target region for this Preference Set
    * The value may be {@code null}.
    */
@@ -137,6 +166,23 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
    */
   @com.google.api.client.util.Key
   private ReportSummaryVMWareEngineFinding vmwareEngineFinding;
+
+  /**
+   * Output only. Details about databases in this finding. Only present for databases.
+   * @return value or {@code null} for none
+   */
+  public ReportSummaryDatabaseFinding getDatabaseFinding() {
+    return databaseFinding;
+  }
+
+  /**
+   * Output only. Details about databases in this finding. Only present for databases.
+   * @param databaseFinding databaseFinding or {@code null} for none
+   */
+  public ReportSummaryGroupPreferenceSetFinding setDatabaseFinding(ReportSummaryDatabaseFinding databaseFinding) {
+    this.databaseFinding = databaseFinding;
+    return this;
+  }
 
   /**
    * Description for the Preference Set.
@@ -226,6 +272,42 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
   }
 
   /**
+   * Output only. Backup monthly cost for this preference set. Only present for databases.
+   * @return value or {@code null} for none
+   */
+  public Money getMonthlyCostDatabaseBackup() {
+    return monthlyCostDatabaseBackup;
+  }
+
+  /**
+   * Output only. Backup monthly cost for this preference set. Only present for databases.
+   * @param monthlyCostDatabaseBackup monthlyCostDatabaseBackup or {@code null} for none
+   */
+  public ReportSummaryGroupPreferenceSetFinding setMonthlyCostDatabaseBackup(Money monthlyCostDatabaseBackup) {
+    this.monthlyCostDatabaseBackup = monthlyCostDatabaseBackup;
+    return this;
+  }
+
+  /**
+   * Output only. Database licensing monthly cost for this preference set. For virtual machines
+   * denotes the cost of licenses for hosted databases.
+   * @return value or {@code null} for none
+   */
+  public Money getMonthlyCostDatabaseLicensing() {
+    return monthlyCostDatabaseLicensing;
+  }
+
+  /**
+   * Output only. Database licensing monthly cost for this preference set. For virtual machines
+   * denotes the cost of licenses for hosted databases.
+   * @param monthlyCostDatabaseLicensing monthlyCostDatabaseLicensing or {@code null} for none
+   */
+  public ReportSummaryGroupPreferenceSetFinding setMonthlyCostDatabaseLicensing(Money monthlyCostDatabaseLicensing) {
+    this.monthlyCostDatabaseLicensing = monthlyCostDatabaseLicensing;
+    return this;
+  }
+
+  /**
    * Network Egress monthly cost for this preference set. Only present for virtual machines.
    * @return value or {@code null} for none
    */
@@ -309,6 +391,23 @@ public final class ReportSummaryGroupPreferenceSetFinding extends com.google.api
    */
   public ReportSummaryGroupPreferenceSetFinding setMonthlyCostTotal(Money monthlyCostTotal) {
     this.monthlyCostTotal = monthlyCostTotal;
+    return this;
+  }
+
+  /**
+   * Output only. A copy of the preference set used for this finding.
+   * @return value or {@code null} for none
+   */
+  public PreferenceSet getPreferenceSet() {
+    return preferenceSet;
+  }
+
+  /**
+   * Output only. A copy of the preference set used for this finding.
+   * @param preferenceSet preferenceSet or {@code null} for none
+   */
+  public ReportSummaryGroupPreferenceSetFinding setPreferenceSet(PreferenceSet preferenceSet) {
+    this.preferenceSet = preferenceSet;
     return this;
   }
 

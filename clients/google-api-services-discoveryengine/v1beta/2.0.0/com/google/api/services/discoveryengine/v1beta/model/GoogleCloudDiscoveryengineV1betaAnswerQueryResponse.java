@@ -38,6 +38,13 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryResponse extends c
   private GoogleCloudDiscoveryengineV1betaAnswer answer;
 
   /**
+   * A global unique ID used for logging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String answerQueryToken;
+
+  /**
    * Session resource object. It will be only available when session field is set and valid in the
    * AnswerQueryRequest request.
    * The value may be {@code null}.
@@ -61,6 +68,23 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryResponse extends c
    */
   public GoogleCloudDiscoveryengineV1betaAnswerQueryResponse setAnswer(GoogleCloudDiscoveryengineV1betaAnswer answer) {
     this.answer = answer;
+    return this;
+  }
+
+  /**
+   * A global unique ID used for logging.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAnswerQueryToken() {
+    return answerQueryToken;
+  }
+
+  /**
+   * A global unique ID used for logging.
+   * @param answerQueryToken answerQueryToken or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswerQueryResponse setAnswerQueryToken(java.lang.String answerQueryToken) {
+    this.answerQueryToken = answerQueryToken;
     return this;
   }
 

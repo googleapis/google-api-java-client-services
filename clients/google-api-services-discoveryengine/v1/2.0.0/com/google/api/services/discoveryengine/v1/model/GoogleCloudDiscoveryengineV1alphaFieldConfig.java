@@ -31,6 +31,16 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1alphaFieldConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * If this field is set, only the corresponding source will be indexed for this field. Otherwise,
+   * the values from different sources are merged. Assuming a page with `` in meta tag, and `` in
+   * page map: if this enum is set to METATAGS, we will only index ``; if this enum is not set, we
+   * will merge them and index ``.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> advancedSiteSearchDataSources;
+
+  /**
    * If completable_option is COMPLETABLE_ENABLED, field values are directly used and returned as
    * suggestions for Autocomplete in CompletionService.CompleteQuery. If completable_option is
    * unset, the server behavior defaults to COMPLETABLE_DISABLED for fields that support setting
@@ -130,6 +140,29 @@ public final class GoogleCloudDiscoveryengineV1alphaFieldConfig extends com.goog
    */
   @com.google.api.client.util.Key
   private java.lang.String searchableOption;
+
+  /**
+   * If this field is set, only the corresponding source will be indexed for this field. Otherwise,
+   * the values from different sources are merged. Assuming a page with `` in meta tag, and `` in
+   * page map: if this enum is set to METATAGS, we will only index ``; if this enum is not set, we
+   * will merge them and index ``.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAdvancedSiteSearchDataSources() {
+    return advancedSiteSearchDataSources;
+  }
+
+  /**
+   * If this field is set, only the corresponding source will be indexed for this field. Otherwise,
+   * the values from different sources are merged. Assuming a page with `` in meta tag, and `` in
+   * page map: if this enum is set to METATAGS, we will only index ``; if this enum is not set, we
+   * will merge them and index ``.
+   * @param advancedSiteSearchDataSources advancedSiteSearchDataSources or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaFieldConfig setAdvancedSiteSearchDataSources(java.util.List<java.lang.String> advancedSiteSearchDataSources) {
+    this.advancedSiteSearchDataSources = advancedSiteSearchDataSources;
+    return this;
+  }
 
   /**
    * If completable_option is COMPLETABLE_ENABLED, field values are directly used and returned as

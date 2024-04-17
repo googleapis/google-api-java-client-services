@@ -71,7 +71,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
   /**
    * Specifies whether to return the confidence score from the extractive segments in each search
    * result. This feature is available only for new or allowlisted data stores. To allowlist your
-   * data store, please contact your Customer Engineer. The default value is `false`.
+   * data store, contact your Customer Engineer. The default value is `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,7 +170,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
   /**
    * Specifies whether to return the confidence score from the extractive segments in each search
    * result. This feature is available only for new or allowlisted data stores. To allowlist your
-   * data store, please contact your Customer Engineer. The default value is `false`.
+   * data store, contact your Customer Engineer. The default value is `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReturnExtractiveSegmentScore() {
@@ -180,7 +180,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
   /**
    * Specifies whether to return the confidence score from the extractive segments in each search
    * result. This feature is available only for new or allowlisted data stores. To allowlist your
-   * data store, please contact your Customer Engineer. The default value is `false`.
+   * data store, contact your Customer Engineer. The default value is `false`.
    * @param returnExtractiveSegmentScore returnExtractiveSegmentScore or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecExtractiveContentSpec setReturnExtractiveSegmentScore(java.lang.Boolean returnExtractiveSegmentScore) {

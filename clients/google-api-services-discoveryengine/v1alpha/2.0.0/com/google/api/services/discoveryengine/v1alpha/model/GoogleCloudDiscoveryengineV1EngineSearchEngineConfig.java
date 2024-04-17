@@ -38,8 +38,8 @@ public final class GoogleCloudDiscoveryengineV1EngineSearchEngineConfig extends 
 
   /**
    * The search feature tier of this engine. Different tiers might have different pricing. To learn
-   * more, please check the pricing documentation. Defaults to SearchTier.SEARCH_TIER_STANDARD if
-   * not specified.
+   * more, check the pricing documentation. Defaults to SearchTier.SEARCH_TIER_STANDARD if not
+   * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +64,8 @@ public final class GoogleCloudDiscoveryengineV1EngineSearchEngineConfig extends 
 
   /**
    * The search feature tier of this engine. Different tiers might have different pricing. To learn
-   * more, please check the pricing documentation. Defaults to SearchTier.SEARCH_TIER_STANDARD if
-   * not specified.
+   * more, check the pricing documentation. Defaults to SearchTier.SEARCH_TIER_STANDARD if not
+   * specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getSearchTier() {
@@ -74,8 +74,8 @@ public final class GoogleCloudDiscoveryengineV1EngineSearchEngineConfig extends 
 
   /**
    * The search feature tier of this engine. Different tiers might have different pricing. To learn
-   * more, please check the pricing documentation. Defaults to SearchTier.SEARCH_TIER_STANDARD if
-   * not specified.
+   * more, check the pricing documentation. Defaults to SearchTier.SEARCH_TIER_STANDARD if not
+   * specified.
    * @param searchTier searchTier or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1EngineSearchEngineConfig setSearchTier(java.lang.String searchTier) {

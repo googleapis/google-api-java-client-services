@@ -55,7 +55,7 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
   private java.lang.Integer endPos;
 
   /**
-   * Position indicating the start of the claim in the answer candidate, measured in bytes/unicode.
+   * Position indicating the start of the claim in the answer candidate, measured in bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +121,7 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
   }
 
   /**
-   * Position indicating the start of the claim in the answer candidate, measured in bytes/unicode.
+   * Position indicating the start of the claim in the answer candidate, measured in bytes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartPos() {
@@ -129,7 +129,7 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
   }
 
   /**
-   * Position indicating the start of the claim in the answer candidate, measured in bytes/unicode.
+   * Position indicating the start of the claim in the answer candidate, measured in bytes.
    * @param startPos startPos or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim setStartPos(java.lang.Integer startPos) {

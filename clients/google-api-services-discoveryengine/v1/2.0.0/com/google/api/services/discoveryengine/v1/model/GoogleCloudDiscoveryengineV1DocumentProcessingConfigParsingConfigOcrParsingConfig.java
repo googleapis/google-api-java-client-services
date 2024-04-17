@@ -30,8 +30,8 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigOcrParsingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Apply additional enhanced OCR processing to a list of document elements. Supported values: *
-   * `table`: advanced table parsing model.
+   * [DEPRECATED] This field is deprecated. To use the additional enhanced document elements
+   * processing, please switch to `layout_parsing_config`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingCo
   private java.lang.Boolean useNativeText;
 
   /**
-   * Apply additional enhanced OCR processing to a list of document elements. Supported values: *
-   * `table`: advanced table parsing model.
+   * [DEPRECATED] This field is deprecated. To use the additional enhanced document elements
+   * processing, please switch to `layout_parsing_config`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnhancedDocumentElements() {
@@ -54,8 +54,8 @@ public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingCo
   }
 
   /**
-   * Apply additional enhanced OCR processing to a list of document elements. Supported values: *
-   * `table`: advanced table parsing model.
+   * [DEPRECATED] This field is deprecated. To use the additional enhanced document elements
+   * processing, please switch to `layout_parsing_config`.
    * @param enhancedDocumentElements enhancedDocumentElements or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigOcrParsingConfig setEnhancedDocumentElements(java.util.List<java.lang.String> enhancedDocumentElements) {

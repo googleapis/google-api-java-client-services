@@ -37,7 +37,7 @@ public final class AggregateAssetsValuesRequest extends com.google.api.client.js
   private java.util.List<Aggregation> aggregations;
 
   /**
-   * The aggregation will be performed on assets that match the provided filter.
+   * Optional. The aggregation will be performed on assets that match the provided filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class AggregateAssetsValuesRequest extends com.google.api.client.js
   }
 
   /**
-   * The aggregation will be performed on assets that match the provided filter.
+   * Optional. The aggregation will be performed on assets that match the provided filter.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -69,7 +69,7 @@ public final class AggregateAssetsValuesRequest extends com.google.api.client.js
   }
 
   /**
-   * The aggregation will be performed on assets that match the provided filter.
+   * Optional. The aggregation will be performed on assets that match the provided filter.
    * @param filter filter or {@code null} for none
    */
   public AggregateAssetsValuesRequest setFilter(java.lang.String filter) {

@@ -30,49 +30,49 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class ComputeEngineShapeDescriptor extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of logical cores.
+   * Output only. Number of logical cores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer logicalCoreCount;
 
   /**
-   * Compute Engine machine type.
+   * Output only. Compute Engine machine type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
 
   /**
-   * Memory in mebibytes.
+   * Output only. Memory in mebibytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer memoryMb;
 
   /**
-   * Number of physical cores.
+   * Output only. Number of physical cores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer physicalCoreCount;
 
   /**
-   * Compute Engine machine series.
+   * Output only. Compute Engine machine series.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String series;
 
   /**
-   * Compute Engine storage. Never empty.
+   * Output only. Compute Engine storage. Never empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ComputeStorageDescriptor> storage;
 
   /**
-   * Number of logical cores.
+   * Output only. Number of logical cores.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLogicalCoreCount() {
@@ -80,7 +80,7 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
   }
 
   /**
-   * Number of logical cores.
+   * Output only. Number of logical cores.
    * @param logicalCoreCount logicalCoreCount or {@code null} for none
    */
   public ComputeEngineShapeDescriptor setLogicalCoreCount(java.lang.Integer logicalCoreCount) {
@@ -89,7 +89,7 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
   }
 
   /**
-   * Compute Engine machine type.
+   * Output only. Compute Engine machine type.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -97,7 +97,7 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
   }
 
   /**
-   * Compute Engine machine type.
+   * Output only. Compute Engine machine type.
    * @param machineType machineType or {@code null} for none
    */
   public ComputeEngineShapeDescriptor setMachineType(java.lang.String machineType) {
@@ -106,7 +106,7 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
   }
 
   /**
-   * Memory in mebibytes.
+   * Output only. Memory in mebibytes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMemoryMb() {
@@ -114,7 +114,7 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
   }
 
   /**
-   * Memory in mebibytes.
+   * Output only. Memory in mebibytes.
    * @param memoryMb memoryMb or {@code null} for none
    */
   public ComputeEngineShapeDescriptor setMemoryMb(java.lang.Integer memoryMb) {
@@ -123,7 +123,7 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
   }
 
   /**
-   * Number of physical cores.
+   * Output only. Number of physical cores.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPhysicalCoreCount() {
@@ -131,7 +131,7 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
   }
 
   /**
-   * Number of physical cores.
+   * Output only. Number of physical cores.
    * @param physicalCoreCount physicalCoreCount or {@code null} for none
    */
   public ComputeEngineShapeDescriptor setPhysicalCoreCount(java.lang.Integer physicalCoreCount) {
@@ -140,7 +140,7 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
   }
 
   /**
-   * Compute Engine machine series.
+   * Output only. Compute Engine machine series.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeries() {
@@ -148,7 +148,7 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
   }
 
   /**
-   * Compute Engine machine series.
+   * Output only. Compute Engine machine series.
    * @param series series or {@code null} for none
    */
   public ComputeEngineShapeDescriptor setSeries(java.lang.String series) {
@@ -157,7 +157,7 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
   }
 
   /**
-   * Compute Engine storage. Never empty.
+   * Output only. Compute Engine storage. Never empty.
    * @return value or {@code null} for none
    */
   public java.util.List<ComputeStorageDescriptor> getStorage() {
@@ -165,7 +165,7 @@ public final class ComputeEngineShapeDescriptor extends com.google.api.client.js
   }
 
   /**
-   * Compute Engine storage. Never empty.
+   * Output only. Compute Engine storage. Never empty.
    * @param storage storage or {@code null} for none
    */
   public ComputeEngineShapeDescriptor setStorage(java.util.List<ComputeStorageDescriptor> storage) {

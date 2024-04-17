@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * Statistical aggregation of disk usage.
+ * An issue associated with a migration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DailyResourceUsageAggregationDisk extends com.google.api.client.json.GenericJson {
+public final class Issue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Disk I/O operations per second.
+   * Output only. Details about a compatibility issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DailyResourceUsageAggregationStats iops;
+  private IssueCompatibilityIssue compatibilityIssue;
 
   /**
-   * Disk read I/O operations per second.
+   * Output only. English description of the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DailyResourceUsageAggregationStats readIops;
+  private java.lang.String description;
 
   /**
-   * Disk write I/O operations per second.
+   * Output only. Unique identifier for this issue type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DailyResourceUsageAggregationStats writeIops;
+  private java.lang.String issueCode;
 
   /**
-   * Disk I/O operations per second.
+   * Output only. Details about a compatibility issue.
    * @return value or {@code null} for none
    */
-  public DailyResourceUsageAggregationStats getIops() {
-    return iops;
+  public IssueCompatibilityIssue getCompatibilityIssue() {
+    return compatibilityIssue;
   }
 
   /**
-   * Disk I/O operations per second.
-   * @param iops iops or {@code null} for none
+   * Output only. Details about a compatibility issue.
+   * @param compatibilityIssue compatibilityIssue or {@code null} for none
    */
-  public DailyResourceUsageAggregationDisk setIops(DailyResourceUsageAggregationStats iops) {
-    this.iops = iops;
+  public Issue setCompatibilityIssue(IssueCompatibilityIssue compatibilityIssue) {
+    this.compatibilityIssue = compatibilityIssue;
     return this;
   }
 
   /**
-   * Disk read I/O operations per second.
+   * Output only. English description of the issue.
    * @return value or {@code null} for none
    */
-  public DailyResourceUsageAggregationStats getReadIops() {
-    return readIops;
+  public java.lang.String getDescription() {
+    return description;
   }
 
   /**
-   * Disk read I/O operations per second.
-   * @param readIops readIops or {@code null} for none
+   * Output only. English description of the issue.
+   * @param description description or {@code null} for none
    */
-  public DailyResourceUsageAggregationDisk setReadIops(DailyResourceUsageAggregationStats readIops) {
-    this.readIops = readIops;
+  public Issue setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 
   /**
-   * Disk write I/O operations per second.
+   * Output only. Unique identifier for this issue type.
    * @return value or {@code null} for none
    */
-  public DailyResourceUsageAggregationStats getWriteIops() {
-    return writeIops;
+  public java.lang.String getIssueCode() {
+    return issueCode;
   }
 
   /**
-   * Disk write I/O operations per second.
-   * @param writeIops writeIops or {@code null} for none
+   * Output only. Unique identifier for this issue type.
+   * @param issueCode issueCode or {@code null} for none
    */
-  public DailyResourceUsageAggregationDisk setWriteIops(DailyResourceUsageAggregationStats writeIops) {
-    this.writeIops = writeIops;
+  public Issue setIssueCode(java.lang.String issueCode) {
+    this.issueCode = issueCode;
     return this;
   }
 
   @Override
-  public DailyResourceUsageAggregationDisk set(String fieldName, Object value) {
-    return (DailyResourceUsageAggregationDisk) super.set(fieldName, value);
+  public Issue set(String fieldName, Object value) {
+    return (Issue) super.set(fieldName, value);
   }
 
   @Override
-  public DailyResourceUsageAggregationDisk clone() {
-    return (DailyResourceUsageAggregationDisk) super.clone();
+  public Issue clone() {
+    return (Issue) super.clone();
   }
 
 }

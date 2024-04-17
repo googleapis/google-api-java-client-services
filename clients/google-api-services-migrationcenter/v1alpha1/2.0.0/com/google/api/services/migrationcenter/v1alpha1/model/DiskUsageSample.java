@@ -38,6 +38,20 @@ public final class DiskUsageSample extends com.google.api.client.json.GenericJso
   private java.lang.Float averageIops;
 
   /**
+   * Average read IOPS sampled over a short window. Must be non-negative.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float averageReadIops;
+
+  /**
+   * Average write IOPS sampled over a short window. Must be non-negative.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float averageWriteIops;
+
+  /**
    * Average IOPS sampled over a short window. Must be non-negative. Must be equal to the sum of
    * read and write if one of them is positive. if both read and write are zero they are ignored.
    * @return value or {@code null} for none
@@ -53,6 +67,40 @@ public final class DiskUsageSample extends com.google.api.client.json.GenericJso
    */
   public DiskUsageSample setAverageIops(java.lang.Float averageIops) {
     this.averageIops = averageIops;
+    return this;
+  }
+
+  /**
+   * Average read IOPS sampled over a short window. Must be non-negative.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getAverageReadIops() {
+    return averageReadIops;
+  }
+
+  /**
+   * Average read IOPS sampled over a short window. Must be non-negative.
+   * @param averageReadIops averageReadIops or {@code null} for none
+   */
+  public DiskUsageSample setAverageReadIops(java.lang.Float averageReadIops) {
+    this.averageReadIops = averageReadIops;
+    return this;
+  }
+
+  /**
+   * Average write IOPS sampled over a short window. Must be non-negative.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getAverageWriteIops() {
+    return averageWriteIops;
+  }
+
+  /**
+   * Average write IOPS sampled over a short window. Must be non-negative.
+   * @param averageWriteIops averageWriteIops or {@code null} for none
+   */
+  public DiskUsageSample setAverageWriteIops(java.lang.Float averageWriteIops) {
+    this.averageWriteIops = averageWriteIops;
     return this;
   }
 

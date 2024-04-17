@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * Statistical aggregation of disk usage.
+ * Details of a database instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DailyResourceUsageAggregationDisk extends com.google.api.client.json.GenericJson {
+public final class DatabaseInstance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Disk I/O operations per second.
+   * Optional. The instance's hosts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DailyResourceUsageAggregationStats iops;
+  private java.util.List<DatabaseInstanceHost> hosts;
 
   /**
-   * Disk read I/O operations per second.
+   * The instance's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DailyResourceUsageAggregationStats readIops;
+  private java.lang.String instanceName;
 
   /**
-   * Disk write I/O operations per second.
+   * The instance role in the database engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DailyResourceUsageAggregationStats writeIops;
+  private java.lang.String role;
 
   /**
-   * Disk I/O operations per second.
+   * Optional. The instance's hosts.
    * @return value or {@code null} for none
    */
-  public DailyResourceUsageAggregationStats getIops() {
-    return iops;
+  public java.util.List<DatabaseInstanceHost> getHosts() {
+    return hosts;
   }
 
   /**
-   * Disk I/O operations per second.
-   * @param iops iops or {@code null} for none
+   * Optional. The instance's hosts.
+   * @param hosts hosts or {@code null} for none
    */
-  public DailyResourceUsageAggregationDisk setIops(DailyResourceUsageAggregationStats iops) {
-    this.iops = iops;
+  public DatabaseInstance setHosts(java.util.List<DatabaseInstanceHost> hosts) {
+    this.hosts = hosts;
     return this;
   }
 
   /**
-   * Disk read I/O operations per second.
+   * The instance's name.
    * @return value or {@code null} for none
    */
-  public DailyResourceUsageAggregationStats getReadIops() {
-    return readIops;
+  public java.lang.String getInstanceName() {
+    return instanceName;
   }
 
   /**
-   * Disk read I/O operations per second.
-   * @param readIops readIops or {@code null} for none
+   * The instance's name.
+   * @param instanceName instanceName or {@code null} for none
    */
-  public DailyResourceUsageAggregationDisk setReadIops(DailyResourceUsageAggregationStats readIops) {
-    this.readIops = readIops;
+  public DatabaseInstance setInstanceName(java.lang.String instanceName) {
+    this.instanceName = instanceName;
     return this;
   }
 
   /**
-   * Disk write I/O operations per second.
+   * The instance role in the database engine.
    * @return value or {@code null} for none
    */
-  public DailyResourceUsageAggregationStats getWriteIops() {
-    return writeIops;
+  public java.lang.String getRole() {
+    return role;
   }
 
   /**
-   * Disk write I/O operations per second.
-   * @param writeIops writeIops or {@code null} for none
+   * The instance role in the database engine.
+   * @param role role or {@code null} for none
    */
-  public DailyResourceUsageAggregationDisk setWriteIops(DailyResourceUsageAggregationStats writeIops) {
-    this.writeIops = writeIops;
+  public DatabaseInstance setRole(java.lang.String role) {
+    this.role = role;
     return this;
   }
 
   @Override
-  public DailyResourceUsageAggregationDisk set(String fieldName, Object value) {
-    return (DailyResourceUsageAggregationDisk) super.set(fieldName, value);
+  public DatabaseInstance set(String fieldName, Object value) {
+    return (DatabaseInstance) super.set(fieldName, value);
   }
 
   @Override
-  public DailyResourceUsageAggregationDisk clone() {
-    return (DailyResourceUsageAggregationDisk) super.clone();
+  public DatabaseInstance clone() {
+    return (DatabaseInstance) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * Statistical aggregation of disk usage.
+ * Mysql plugin.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DailyResourceUsageAggregationDisk extends com.google.api.client.json.GenericJson {
+public final class MysqlPlugin extends com.google.api.client.json.GenericJson {
 
   /**
-   * Disk I/O operations per second.
+   * Required. The plugin is active.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DailyResourceUsageAggregationStats iops;
+  private java.lang.Boolean enabled;
 
   /**
-   * Disk read I/O operations per second.
+   * Required. The plugin name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DailyResourceUsageAggregationStats readIops;
+  private java.lang.String plugin;
 
   /**
-   * Disk write I/O operations per second.
+   * Required. The plugin version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DailyResourceUsageAggregationStats writeIops;
+  private java.lang.String version;
 
   /**
-   * Disk I/O operations per second.
+   * Required. The plugin is active.
    * @return value or {@code null} for none
    */
-  public DailyResourceUsageAggregationStats getIops() {
-    return iops;
+  public java.lang.Boolean getEnabled() {
+    return enabled;
   }
 
   /**
-   * Disk I/O operations per second.
-   * @param iops iops or {@code null} for none
+   * Required. The plugin is active.
+   * @param enabled enabled or {@code null} for none
    */
-  public DailyResourceUsageAggregationDisk setIops(DailyResourceUsageAggregationStats iops) {
-    this.iops = iops;
+  public MysqlPlugin setEnabled(java.lang.Boolean enabled) {
+    this.enabled = enabled;
     return this;
   }
 
   /**
-   * Disk read I/O operations per second.
+   * Required. The plugin name.
    * @return value or {@code null} for none
    */
-  public DailyResourceUsageAggregationStats getReadIops() {
-    return readIops;
+  public java.lang.String getPlugin() {
+    return plugin;
   }
 
   /**
-   * Disk read I/O operations per second.
-   * @param readIops readIops or {@code null} for none
+   * Required. The plugin name.
+   * @param plugin plugin or {@code null} for none
    */
-  public DailyResourceUsageAggregationDisk setReadIops(DailyResourceUsageAggregationStats readIops) {
-    this.readIops = readIops;
+  public MysqlPlugin setPlugin(java.lang.String plugin) {
+    this.plugin = plugin;
     return this;
   }
 
   /**
-   * Disk write I/O operations per second.
+   * Required. The plugin version.
    * @return value or {@code null} for none
    */
-  public DailyResourceUsageAggregationStats getWriteIops() {
-    return writeIops;
+  public java.lang.String getVersion() {
+    return version;
   }
 
   /**
-   * Disk write I/O operations per second.
-   * @param writeIops writeIops or {@code null} for none
+   * Required. The plugin version.
+   * @param version version or {@code null} for none
    */
-  public DailyResourceUsageAggregationDisk setWriteIops(DailyResourceUsageAggregationStats writeIops) {
-    this.writeIops = writeIops;
+  public MysqlPlugin setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 
   @Override
-  public DailyResourceUsageAggregationDisk set(String fieldName, Object value) {
-    return (DailyResourceUsageAggregationDisk) super.set(fieldName, value);
+  public MysqlPlugin set(String fieldName, Object value) {
+    return (MysqlPlugin) super.set(fieldName, value);
   }
 
   @Override
-  public DailyResourceUsageAggregationDisk clone() {
-    return (DailyResourceUsageAggregationDisk) super.clone();
+  public MysqlPlugin clone() {
+    return (MysqlPlugin) super.clone();
   }
 
 }

@@ -63,6 +63,13 @@ public final class GoogleCloudApigeeV1TlsInfo extends com.google.api.client.json
   private java.lang.Boolean enabled;
 
   /**
+   * TLS is strictly enforced.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enforce;
+
+  /**
    * If true, Edge ignores TLS certificate errors. Valid when configuring TLS for target servers and
    * target endpoints, and when configuring virtual hosts that use 2-way TLS. When used with a
    * target endpoint/target server, if the backend system uses SNI and returns a cert with a subject
@@ -177,6 +184,23 @@ public final class GoogleCloudApigeeV1TlsInfo extends com.google.api.client.json
    */
   public GoogleCloudApigeeV1TlsInfo setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * TLS is strictly enforced.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnforce() {
+    return enforce;
+  }
+
+  /**
+   * TLS is strictly enforced.
+   * @param enforce enforce or {@code null} for none
+   */
+  public GoogleCloudApigeeV1TlsInfo setEnforce(java.lang.Boolean enforce) {
+    this.enforce = enforce;
     return this;
   }
 

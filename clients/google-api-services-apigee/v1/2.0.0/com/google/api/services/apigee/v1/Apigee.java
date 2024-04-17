@@ -47950,6 +47950,168 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
     }
     /**
+     * An accessor for creating requests from the SecurityAssessmentResults collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Apigee apigee = new Apigee(...);}
+     *   {@code Apigee.SecurityAssessmentResults.List request = apigee.securityAssessmentResults().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public SecurityAssessmentResults securityAssessmentResults() {
+      return new SecurityAssessmentResults();
+    }
+
+    /**
+     * The "securityAssessmentResults" collection of methods.
+     */
+    public class SecurityAssessmentResults {
+
+      /**
+       * Compute RAV2 security scores for a set of resources.
+       *
+       * Create a request for the method "securityAssessmentResults.batchCompute".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link BatchCompute#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the organization for which the score needs to be computed in the following format:
+       *        `organizations/{org}/securityAssessmentResults`
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest}
+       * @return the request
+       */
+      public BatchCompute batchCompute(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest content) throws java.io.IOException {
+        BatchCompute result = new BatchCompute(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchCompute extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:batchCompute";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/securityAssessmentResults$");
+
+        /**
+         * Compute RAV2 security scores for a set of resources.
+         *
+         * Create a request for the method "securityAssessmentResults.batchCompute".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link BatchCompute#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * BatchCompute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the organization for which the score needs to be computed in the following format:
+       *        `organizations/{org}/securityAssessmentResults`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest}
+         * @since 1.13
+         */
+        protected BatchCompute(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest content) {
+          super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityAssessmentResults$");
+          }
+        }
+
+        @Override
+        public BatchCompute set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchCompute) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchCompute setAccessToken(java.lang.String accessToken) {
+          return (BatchCompute) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchCompute setAlt(java.lang.String alt) {
+          return (BatchCompute) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchCompute setCallback(java.lang.String callback) {
+          return (BatchCompute) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchCompute setFields(java.lang.String fields) {
+          return (BatchCompute) super.setFields(fields);
+        }
+
+        @Override
+        public BatchCompute setKey(java.lang.String key) {
+          return (BatchCompute) super.setKey(key);
+        }
+
+        @Override
+        public BatchCompute setOauthToken(java.lang.String oauthToken) {
+          return (BatchCompute) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchCompute setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchCompute) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchCompute setQuotaUser(java.lang.String quotaUser) {
+          return (BatchCompute) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchCompute setUploadType(java.lang.String uploadType) {
+          return (BatchCompute) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchCompute setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchCompute) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the organization for which the score needs to be computed in the
+         * following format: `organizations/{org}/securityAssessmentResults`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the organization for which the score needs to be computed in the following
+       format: `organizations/{org}/securityAssessmentResults`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the organization for which the score needs to be computed in the
+         * following format: `organizations/{org}/securityAssessmentResults`
+         */
+        public BatchCompute setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityAssessmentResults$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public BatchCompute set(String parameterName, Object value) {
+          return (BatchCompute) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the SecurityProfiles collection.
      *
      * <p>The typical use is:</p>

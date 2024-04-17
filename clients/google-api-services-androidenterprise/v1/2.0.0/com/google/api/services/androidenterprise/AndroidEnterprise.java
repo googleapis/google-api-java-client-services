@@ -1559,7 +1559,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
     /**
      * Returns a unique token to access an embeddable UI. To generate a web UI, pass the generated token
      * into the managed Google Play javascript API. Each token may only be used to start one UI session.
-     * See the javascript API documentation for further information.
+     * See the JavaScript API documentation for further information.
      *
      * Create a request for the method "enterprises.createWebToken".
      *
@@ -1584,7 +1584,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       /**
        * Returns a unique token to access an embeddable UI. To generate a web UI, pass the generated
        * token into the managed Google Play javascript API. Each token may only be used to start one UI
-       * session. See the javascript API documentation for further information.
+       * session. See the JavaScript API documentation for further information.
        *
        * Create a request for the method "enterprises.createWebToken".
        *

@@ -37,6 +37,8 @@ public final class ProjectEvent extends com.google.api.client.json.GenericJson {
   private java.lang.String eventId;
 
   /**
+   * Phase indicates when in the container event propagation this event is being communicated.
+   * Events are sent before and after the per-resource events are propagated. required
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +52,7 @@ public final class ProjectEvent extends com.google.api.client.json.GenericJson {
   private ProjectsMetadata projectMetadata;
 
   /**
-   * The state of the project that led to this event.
+   * The state of the organization that led to this event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,6 +76,8 @@ public final class ProjectEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Phase indicates when in the container event propagation this event is being communicated.
+   * Events are sent before and after the per-resource events are propagated. required
    * @return value or {@code null} for none
    */
   public java.lang.String getPhase() {
@@ -81,6 +85,8 @@ public final class ProjectEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Phase indicates when in the container event propagation this event is being communicated.
+   * Events are sent before and after the per-resource events are propagated. required
    * @param phase phase or {@code null} for none
    */
   public ProjectEvent setPhase(java.lang.String phase) {
@@ -106,7 +112,7 @@ public final class ProjectEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The state of the project that led to this event.
+   * The state of the organization that led to this event.
    * @return value or {@code null} for none
    */
   public ContainerState getState() {
@@ -114,7 +120,7 @@ public final class ProjectEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The state of the project that led to this event.
+   * The state of the organization that led to this event.
    * @param state state or {@code null} for none
    */
   public ProjectEvent setState(ContainerState state) {

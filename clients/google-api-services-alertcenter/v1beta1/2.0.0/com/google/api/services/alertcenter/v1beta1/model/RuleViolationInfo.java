@@ -39,6 +39,13 @@ public final class RuleViolationInfo extends com.google.api.client.json.GenericJ
   private java.lang.String dataSource;
 
   /**
+   * Event associated with this alert after applying the rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventType;
+
+  /**
    * List of matches that were found in the resource content.
    * The value may be {@code null}.
    */
@@ -131,6 +138,23 @@ public final class RuleViolationInfo extends com.google.api.client.json.GenericJ
    */
   public RuleViolationInfo setDataSource(java.lang.String dataSource) {
     this.dataSource = dataSource;
+    return this;
+  }
+
+  /**
+   * Event associated with this alert after applying the rule.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventType() {
+    return eventType;
+  }
+
+  /**
+   * Event associated with this alert after applying the rule.
+   * @param eventType eventType or {@code null} for none
+   */
+  public RuleViolationInfo setEventType(java.lang.String eventType) {
+    this.eventType = eventType;
     return this;
   }
 

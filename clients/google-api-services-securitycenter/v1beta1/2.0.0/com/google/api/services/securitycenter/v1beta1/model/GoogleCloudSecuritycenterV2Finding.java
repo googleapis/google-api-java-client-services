@@ -85,6 +85,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private java.lang.String category;
 
   /**
+   * Fields related to Cloud Armor findings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2CloudArmor cloudArmor;
+
+  /**
    * Cloud DLP data profile that is associated with the finding.
    * The value may be {@code null}.
    */
@@ -344,6 +351,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private java.lang.String nextSteps;
 
   /**
+   * Notebook associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2Notebook notebook;
+
+  /**
    * Contains information about the org policies associated with the finding.
    * The value may be {@code null}.
    */
@@ -552,6 +566,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setCategory(java.lang.String category) {
     this.category = category;
+    return this;
+  }
+
+  /**
+   * Fields related to Cloud Armor findings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2CloudArmor getCloudArmor() {
+    return cloudArmor;
+  }
+
+  /**
+   * Fields related to Cloud Armor findings.
+   * @param cloudArmor cloudArmor or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setCloudArmor(GoogleCloudSecuritycenterV2CloudArmor cloudArmor) {
+    this.cloudArmor = cloudArmor;
     return this;
   }
 
@@ -1082,6 +1113,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setNextSteps(java.lang.String nextSteps) {
     this.nextSteps = nextSteps;
+    return this;
+  }
+
+  /**
+   * Notebook associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Notebook getNotebook() {
+    return notebook;
+  }
+
+  /**
+   * Notebook associated with the finding.
+   * @param notebook notebook or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setNotebook(GoogleCloudSecuritycenterV2Notebook notebook) {
+    this.notebook = notebook;
     return this;
   }
 

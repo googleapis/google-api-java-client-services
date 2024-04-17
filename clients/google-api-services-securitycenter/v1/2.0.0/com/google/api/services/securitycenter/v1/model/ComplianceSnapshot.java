@@ -38,6 +38,13 @@ public final class ComplianceSnapshot extends com.google.api.client.json.Generic
   private java.lang.String category;
 
   /**
+   * The cloud provider for the compliance snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudProvider;
+
+  /**
    * The compliance standard (ie CIS).
    * The value may be {@code null}.
    */
@@ -73,13 +80,6 @@ public final class ComplianceSnapshot extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * The CRM resource display name that is closest to the snapshot the Findings belong to.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String projectDisplayName;
-
-  /**
    * The snapshot time of the snapshot.
    * The value may be {@code null}.
    */
@@ -100,6 +100,23 @@ public final class ComplianceSnapshot extends com.google.api.client.json.Generic
    */
   public ComplianceSnapshot setCategory(java.lang.String category) {
     this.category = category;
+    return this;
+  }
+
+  /**
+   * The cloud provider for the compliance snapshot.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudProvider() {
+    return cloudProvider;
+  }
+
+  /**
+   * The cloud provider for the compliance snapshot.
+   * @param cloudProvider cloudProvider or {@code null} for none
+   */
+  public ComplianceSnapshot setCloudProvider(java.lang.String cloudProvider) {
+    this.cloudProvider = cloudProvider;
     return this;
   }
 
@@ -185,23 +202,6 @@ public final class ComplianceSnapshot extends com.google.api.client.json.Generic
    */
   public ComplianceSnapshot setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * The CRM resource display name that is closest to the snapshot the Findings belong to.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getProjectDisplayName() {
-    return projectDisplayName;
-  }
-
-  /**
-   * The CRM resource display name that is closest to the snapshot the Findings belong to.
-   * @param projectDisplayName projectDisplayName or {@code null} for none
-   */
-  public ComplianceSnapshot setProjectDisplayName(java.lang.String projectDisplayName) {
-    this.projectDisplayName = projectDisplayName;
     return this;
   }
 

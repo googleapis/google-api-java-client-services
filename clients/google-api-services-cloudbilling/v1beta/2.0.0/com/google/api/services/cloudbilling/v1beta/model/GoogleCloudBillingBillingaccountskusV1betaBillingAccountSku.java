@@ -18,8 +18,8 @@ package com.google.api.services.cloudbilling.v1beta.model;
 
 /**
  * Encapsulates a stock keeping unit (SKU) visible to a billing account. A SKU distinctly identifies
- * a resource that you can purchase, such as `Nvidia Tesla K80 GPU attached to Spot Preemptible VMs
- * running in Warsaw`.
+ * a resource that you can purchase. For a list of available SKUs, see
+ * [SKUs](https://cloud.google.com/skus).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing API. For a detailed explanation see:

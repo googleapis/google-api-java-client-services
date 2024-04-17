@@ -30,11 +30,71 @@ package com.google.api.services.run.v1.model;
 public final class JobSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * A unique string used as a suffix for creating a new execution. The Job will become ready when
+   * the execution is successfully completed. The sum of job name and token length must be fewer
+   * than 63 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runExecutionToken;
+
+  /**
+   * A unique string used as a suffix for creating a new execution. The Job will become ready when
+   * the execution is successfully started. The sum of job name and token length must be fewer than
+   * 63 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String startExecutionToken;
+
+  /**
    * Optional. Describes the execution that will be created when running a job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExecutionTemplateSpec template;
+
+  /**
+   * A unique string used as a suffix for creating a new execution. The Job will become ready when
+   * the execution is successfully completed. The sum of job name and token length must be fewer
+   * than 63 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRunExecutionToken() {
+    return runExecutionToken;
+  }
+
+  /**
+   * A unique string used as a suffix for creating a new execution. The Job will become ready when
+   * the execution is successfully completed. The sum of job name and token length must be fewer
+   * than 63 characters.
+   * @param runExecutionToken runExecutionToken or {@code null} for none
+   */
+  public JobSpec setRunExecutionToken(java.lang.String runExecutionToken) {
+    this.runExecutionToken = runExecutionToken;
+    return this;
+  }
+
+  /**
+   * A unique string used as a suffix for creating a new execution. The Job will become ready when
+   * the execution is successfully started. The sum of job name and token length must be fewer than
+   * 63 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStartExecutionToken() {
+    return startExecutionToken;
+  }
+
+  /**
+   * A unique string used as a suffix for creating a new execution. The Job will become ready when
+   * the execution is successfully started. The sum of job name and token length must be fewer than
+   * 63 characters.
+   * @param startExecutionToken startExecutionToken or {@code null} for none
+   */
+  public JobSpec setStartExecutionToken(java.lang.String startExecutionToken) {
+    this.startExecutionToken = startExecutionToken;
+    return this;
+  }
 
   /**
    * Optional. Describes the execution that will be created when running a job.

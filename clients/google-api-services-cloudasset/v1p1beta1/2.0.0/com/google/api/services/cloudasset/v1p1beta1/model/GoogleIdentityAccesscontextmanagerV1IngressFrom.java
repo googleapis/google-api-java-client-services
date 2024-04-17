@@ -32,8 +32,10 @@ package com.google.api.services.cloudasset.v1p1beta1.model;
 public final class GoogleIdentityAccesscontextmanagerV1IngressFrom extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of identities that are allowed access through this ingress policy, in the format of
-   * `user:{email_id}` or `serviceAccount:{email_id}`.
+   * A list of identities that are allowed access through [IngressPolicy]. Identities can be an
+   * individual user, service account, Google group, or third-party identity. The `v1` identities
+   * that have the prefix `user`, `group`, `serviceAccount`, `principal`, and `principalSet` in
+   * https://cloud.google.com/iam/docs/principal-identifiers#v1 are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +57,10 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressFrom extends com.g
   private java.util.List<GoogleIdentityAccesscontextmanagerV1IngressSource> sources;
 
   /**
-   * A list of identities that are allowed access through this ingress policy, in the format of
-   * `user:{email_id}` or `serviceAccount:{email_id}`.
+   * A list of identities that are allowed access through [IngressPolicy]. Identities can be an
+   * individual user, service account, Google group, or third-party identity. The `v1` identities
+   * that have the prefix `user`, `group`, `serviceAccount`, `principal`, and `principalSet` in
+   * https://cloud.google.com/iam/docs/principal-identifiers#v1 are supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIdentities() {
@@ -64,8 +68,10 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressFrom extends com.g
   }
 
   /**
-   * A list of identities that are allowed access through this ingress policy, in the format of
-   * `user:{email_id}` or `serviceAccount:{email_id}`.
+   * A list of identities that are allowed access through [IngressPolicy]. Identities can be an
+   * individual user, service account, Google group, or third-party identity. The `v1` identities
+   * that have the prefix `user`, `group`, `serviceAccount`, `principal`, and `principalSet` in
+   * https://cloud.google.com/iam/docs/principal-identifiers#v1 are supported.
    * @param identities identities or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1IngressFrom setIdentities(java.util.List<java.lang.String> identities) {

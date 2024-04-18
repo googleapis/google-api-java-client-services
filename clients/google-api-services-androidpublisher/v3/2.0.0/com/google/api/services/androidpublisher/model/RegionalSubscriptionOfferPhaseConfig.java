@@ -42,6 +42,13 @@ public final class RegionalSubscriptionOfferPhaseConfig extends com.google.api.c
   private Money absoluteDiscount;
 
   /**
+   * Set to specify this offer is free to obtain.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RegionalSubscriptionOfferPhaseFreePriceOverride free;
+
+  /**
    * The absolute price the user pays for this offer phase. The price must not be smaller than the
    * minimum price allowed for this region.
    * The value may be {@code null}.
@@ -91,6 +98,23 @@ public final class RegionalSubscriptionOfferPhaseConfig extends com.google.api.c
    */
   public RegionalSubscriptionOfferPhaseConfig setAbsoluteDiscount(Money absoluteDiscount) {
     this.absoluteDiscount = absoluteDiscount;
+    return this;
+  }
+
+  /**
+   * Set to specify this offer is free to obtain.
+   * @return value or {@code null} for none
+   */
+  public RegionalSubscriptionOfferPhaseFreePriceOverride getFree() {
+    return free;
+  }
+
+  /**
+   * Set to specify this offer is free to obtain.
+   * @param free free or {@code null} for none
+   */
+  public RegionalSubscriptionOfferPhaseConfig setFree(RegionalSubscriptionOfferPhaseFreePriceOverride free) {
+    this.free = free;
     return this;
   }
 

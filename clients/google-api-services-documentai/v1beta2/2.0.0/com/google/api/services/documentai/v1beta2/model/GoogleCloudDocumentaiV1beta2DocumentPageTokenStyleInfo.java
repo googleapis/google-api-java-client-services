@@ -95,28 +95,28 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo extend
   private java.lang.Double pixelFontSize;
 
   /**
-   * Whether the text is in small caps.
+   * Whether the text is in small caps. This feature is not supported yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean smallcaps;
 
   /**
-   * Whether the text is strikethrough.
+   * Whether the text is strikethrough. This feature is not supported yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean strikeout;
 
   /**
-   * Whether the text is a subscript.
+   * Whether the text is a subscript. This feature is not supported yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean subscript;
 
   /**
-   * Whether the text is a superscript.
+   * Whether the text is a superscript. This feature is not supported yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,7 +292,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo extend
   }
 
   /**
-   * Whether the text is in small caps.
+   * Whether the text is in small caps. This feature is not supported yet.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSmallcaps() {
@@ -300,7 +300,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo extend
   }
 
   /**
-   * Whether the text is in small caps.
+   * Whether the text is in small caps. This feature is not supported yet.
    * @param smallcaps smallcaps or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo setSmallcaps(java.lang.Boolean smallcaps) {
@@ -309,7 +309,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo extend
   }
 
   /**
-   * Whether the text is strikethrough.
+   * Whether the text is strikethrough. This feature is not supported yet.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStrikeout() {
@@ -317,7 +317,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo extend
   }
 
   /**
-   * Whether the text is strikethrough.
+   * Whether the text is strikethrough. This feature is not supported yet.
    * @param strikeout strikeout or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo setStrikeout(java.lang.Boolean strikeout) {
@@ -326,7 +326,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo extend
   }
 
   /**
-   * Whether the text is a subscript.
+   * Whether the text is a subscript. This feature is not supported yet.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSubscript() {
@@ -334,7 +334,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo extend
   }
 
   /**
-   * Whether the text is a subscript.
+   * Whether the text is a subscript. This feature is not supported yet.
    * @param subscript subscript or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo setSubscript(java.lang.Boolean subscript) {
@@ -343,7 +343,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo extend
   }
 
   /**
-   * Whether the text is a superscript.
+   * Whether the text is a superscript. This feature is not supported yet.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSuperscript() {
@@ -351,7 +351,7 @@ public final class GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo extend
   }
 
   /**
-   * Whether the text is a superscript.
+   * Whether the text is a superscript. This feature is not supported yet.
    * @param superscript superscript or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo setSuperscript(java.lang.Boolean superscript) {

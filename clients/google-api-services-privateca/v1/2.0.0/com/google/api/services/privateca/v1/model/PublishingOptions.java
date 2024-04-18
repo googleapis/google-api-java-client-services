@@ -33,8 +33,8 @@ package com.google.api.services.privateca.v1.model;
 public final class PublishingOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Specifies the encoding format of each CertificateAuthority's CA certificate and CRLs.
-   * If this is omitted, CA certificates and CRLs will be published in PEM.
+   * Optional. Specifies the encoding format of each CertificateAuthority resource's CA certificate
+   * and CRLs. If this is omitted, CA certificates and CRLs will be published in PEM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class PublishingOptions extends com.google.api.client.json.GenericJ
   private java.lang.Boolean publishCrl;
 
   /**
-   * Optional. Specifies the encoding format of each CertificateAuthority's CA certificate and CRLs.
-   * If this is omitted, CA certificates and CRLs will be published in PEM.
+   * Optional. Specifies the encoding format of each CertificateAuthority resource's CA certificate
+   * and CRLs. If this is omitted, CA certificates and CRLs will be published in PEM.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncodingFormat() {
@@ -71,8 +71,8 @@ public final class PublishingOptions extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Specifies the encoding format of each CertificateAuthority's CA certificate and CRLs.
-   * If this is omitted, CA certificates and CRLs will be published in PEM.
+   * Optional. Specifies the encoding format of each CertificateAuthority resource's CA certificate
+   * and CRLs. If this is omitted, CA certificates and CRLs will be published in PEM.
    * @param encodingFormat encodingFormat or {@code null} for none
    */
   public PublishingOptions setEncodingFormat(java.lang.String encodingFormat) {

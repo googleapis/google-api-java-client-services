@@ -74,8 +74,8 @@ public final class IssuancePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The maximum lifetime allowed for issued Certificates. Note that if the issuing
-   * CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective
-   * lifetime will be explicitly truncated to match it.
+   * CertificateAuthority expires before a Certificate resource's requested maximum_lifetime, the
+   * effective lifetime will be explicitly truncated to match it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,8 +180,8 @@ public final class IssuancePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The maximum lifetime allowed for issued Certificates. Note that if the issuing
-   * CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective
-   * lifetime will be explicitly truncated to match it.
+   * CertificateAuthority expires before a Certificate resource's requested maximum_lifetime, the
+   * effective lifetime will be explicitly truncated to match it.
    * @return value or {@code null} for none
    */
   public String getMaximumLifetime() {
@@ -190,8 +190,8 @@ public final class IssuancePolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The maximum lifetime allowed for issued Certificates. Note that if the issuing
-   * CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective
-   * lifetime will be explicitly truncated to match it.
+   * CertificateAuthority expires before a Certificate resource's requested maximum_lifetime, the
+   * effective lifetime will be explicitly truncated to match it.
    * @param maximumLifetime maximumLifetime or {@code null} for none
    */
   public IssuancePolicy setMaximumLifetime(String maximumLifetime) {

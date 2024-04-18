@@ -31,7 +31,7 @@ package com.google.api.services.privateca.v1.model;
 public final class FetchCaCertsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The PEM encoded CA certificate chains of all Certificate Authorities in this CaPool in the
+   * The PEM encoded CA certificate chains of all certificate authorities in this CaPool in the
    * ENABLED, DISABLED, or STAGED states.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class FetchCaCertsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The PEM encoded CA certificate chains of all Certificate Authorities in this CaPool in the
+   * The PEM encoded CA certificate chains of all certificate authorities in this CaPool in the
    * ENABLED, DISABLED, or STAGED states.
    * @return value or {@code null} for none
    */
@@ -54,7 +54,7 @@ public final class FetchCaCertsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The PEM encoded CA certificate chains of all Certificate Authorities in this CaPool in the
+   * The PEM encoded CA certificate chains of all certificate authorities in this CaPool in the
    * ENABLED, DISABLED, or STAGED states.
    * @param caCerts caCerts or {@code null} for none
    */

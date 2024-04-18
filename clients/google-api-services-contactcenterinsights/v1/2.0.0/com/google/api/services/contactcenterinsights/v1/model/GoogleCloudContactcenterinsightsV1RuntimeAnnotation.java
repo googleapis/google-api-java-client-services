@@ -88,6 +88,27 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotation extends c
   private GoogleCloudContactcenterinsightsV1FaqAnswerData faqAnswer;
 
   /**
+   * The generator suggestion result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1GetGeneratorSuggestionResponse generatorSuggestionResult;
+
+  /**
+   * The Knowledge Assist result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1GetKnowledgeAssistResponse knowledgeAssistResult;
+
+  /**
+   * The Knowledge Search result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1SearchKnowledgeAnswer knowledgeSearchResult;
+
+  /**
    * Agent Assist Smart Compose suggestion data.
    * The value may be {@code null}.
    */
@@ -243,6 +264,57 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotation extends c
    */
   public GoogleCloudContactcenterinsightsV1RuntimeAnnotation setFaqAnswer(GoogleCloudContactcenterinsightsV1FaqAnswerData faqAnswer) {
     this.faqAnswer = faqAnswer;
+    return this;
+  }
+
+  /**
+   * The generator suggestion result.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1GetGeneratorSuggestionResponse getGeneratorSuggestionResult() {
+    return generatorSuggestionResult;
+  }
+
+  /**
+   * The generator suggestion result.
+   * @param generatorSuggestionResult generatorSuggestionResult or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1RuntimeAnnotation setGeneratorSuggestionResult(GoogleCloudContactcenterinsightsV1GetGeneratorSuggestionResponse generatorSuggestionResult) {
+    this.generatorSuggestionResult = generatorSuggestionResult;
+    return this;
+  }
+
+  /**
+   * The Knowledge Assist result.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1GetKnowledgeAssistResponse getKnowledgeAssistResult() {
+    return knowledgeAssistResult;
+  }
+
+  /**
+   * The Knowledge Assist result.
+   * @param knowledgeAssistResult knowledgeAssistResult or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1RuntimeAnnotation setKnowledgeAssistResult(GoogleCloudContactcenterinsightsV1GetKnowledgeAssistResponse knowledgeAssistResult) {
+    this.knowledgeAssistResult = knowledgeAssistResult;
+    return this;
+  }
+
+  /**
+   * The Knowledge Search result.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1SearchKnowledgeAnswer getKnowledgeSearchResult() {
+    return knowledgeSearchResult;
+  }
+
+  /**
+   * The Knowledge Search result.
+   * @param knowledgeSearchResult knowledgeSearchResult or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1RuntimeAnnotation setKnowledgeSearchResult(GoogleCloudContactcenterinsightsV1SearchKnowledgeAnswer knowledgeSearchResult) {
+    this.knowledgeSearchResult = knowledgeSearchResult;
     return this;
   }
 

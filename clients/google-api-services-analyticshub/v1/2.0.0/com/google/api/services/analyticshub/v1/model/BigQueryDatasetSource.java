@@ -40,6 +40,14 @@ public final class BigQueryDatasetSource extends com.google.api.client.json.Gene
   private java.lang.String dataset;
 
   /**
+   * Optional. If set, restricted export policy will be propagated and enforced on the linked
+   * dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RestrictedExportPolicy restrictedExportPolicy;
+
+  /**
    * Optional. Resources in this dataset that are selectively shared. If this field is empty, then
    * the entire dataset (all resources) are shared. This field is only valid for data clean room
    * exchanges.
@@ -62,6 +70,25 @@ public final class BigQueryDatasetSource extends com.google.api.client.json.Gene
    */
   public BigQueryDatasetSource setDataset(java.lang.String dataset) {
     this.dataset = dataset;
+    return this;
+  }
+
+  /**
+   * Optional. If set, restricted export policy will be propagated and enforced on the linked
+   * dataset.
+   * @return value or {@code null} for none
+   */
+  public RestrictedExportPolicy getRestrictedExportPolicy() {
+    return restrictedExportPolicy;
+  }
+
+  /**
+   * Optional. If set, restricted export policy will be propagated and enforced on the linked
+   * dataset.
+   * @param restrictedExportPolicy restrictedExportPolicy or {@code null} for none
+   */
+  public BigQueryDatasetSource setRestrictedExportPolicy(RestrictedExportPolicy restrictedExportPolicy) {
+    this.restrictedExportPolicy = restrictedExportPolicy;
     return this;
   }
 

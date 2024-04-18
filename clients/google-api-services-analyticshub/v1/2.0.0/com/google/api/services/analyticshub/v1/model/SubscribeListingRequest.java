@@ -30,14 +30,14 @@ package com.google.api.services.analyticshub.v1.model;
 public final class SubscribeListingRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * BigQuery destination dataset to create for the subscriber.
+   * Input only. BigQuery destination dataset to create for the subscriber.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DestinationDataset destinationDataset;
 
   /**
-   * BigQuery destination dataset to create for the subscriber.
+   * Input only. BigQuery destination dataset to create for the subscriber.
    * @return value or {@code null} for none
    */
   public DestinationDataset getDestinationDataset() {
@@ -45,7 +45,7 @@ public final class SubscribeListingRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * BigQuery destination dataset to create for the subscriber.
+   * Input only. BigQuery destination dataset to create for the subscriber.
    * @param destinationDataset destinationDataset or {@code null} for none
    */
   public SubscribeListingRequest setDestinationDataset(DestinationDataset destinationDataset) {

@@ -1466,7 +1466,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * contain non-existent resources in the network, or the user does not have read permissions to the
            * network configurations of listed projects), then the reachability result returns a value of
            * UNKNOWN. If the endpoint specifications in `ConnectivityTest` are incomplete, the reachability
-           * result returns a value of `AMBIGUOUS`. See the documentation in `ConnectivityTest` for for more
+           * result returns a value of `AMBIGUOUS`. See the documentation in `ConnectivityTest` for more
            * details.
            *
            * Create a request for the method "connectivityTests.patch".
@@ -1500,7 +1500,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * contain non-existent resources in the network, or the user does not have read permissions to
              * the network configurations of listed projects), then the reachability result returns a value of
              * UNKNOWN. If the endpoint specifications in `ConnectivityTest` are incomplete, the reachability
-             * result returns a value of `AMBIGUOUS`. See the documentation in `ConnectivityTest` for for more
+             * result returns a value of `AMBIGUOUS`. See the documentation in `ConnectivityTest` for more
              * details.
              *
              * Create a request for the method "connectivityTests.patch".

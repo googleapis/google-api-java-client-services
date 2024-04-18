@@ -322,6 +322,19 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String feedLabel;
 
   /**
+   * Optional. Conditions to be met for a product to have free shipping.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FreeShippingThreshold> freeShippingThreshold;
+
+  static {
+    // hack to force ProGuard to consider FreeShippingThreshold used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FreeShippingThreshold.class);
+  }
+
+  /**
    * Target gender of the item.
    * The value may be {@code null}.
    */
@@ -1452,6 +1465,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setFeedLabel(java.lang.String feedLabel) {
     this.feedLabel = feedLabel;
+    return this;
+  }
+
+  /**
+   * Optional. Conditions to be met for a product to have free shipping.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FreeShippingThreshold> getFreeShippingThreshold() {
+    return freeShippingThreshold;
+  }
+
+  /**
+   * Optional. Conditions to be met for a product to have free shipping.
+   * @param freeShippingThreshold freeShippingThreshold or {@code null} for none
+   */
+  public Product setFreeShippingThreshold(java.util.List<FreeShippingThreshold> freeShippingThreshold) {
+    this.freeShippingThreshold = freeShippingThreshold;
     return this;
   }
 

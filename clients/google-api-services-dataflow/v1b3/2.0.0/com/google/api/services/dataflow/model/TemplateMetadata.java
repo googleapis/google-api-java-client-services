@@ -30,6 +30,15 @@ package com.google.api.services.dataflow.model;
 public final class TemplateMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Indicates the default streaming mode for a streaming template. Only valid if both
+   * supports_at_least_once and supports_exactly_once are true. Possible values: UNSPECIFIED,
+   * EXACTLY_ONCE and AT_LEAST_ONCE
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultStreamingMode;
+
+  /**
    * Optional. A description of the template.
    * The value may be {@code null}.
    */
@@ -76,6 +85,27 @@ public final class TemplateMetadata extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean supportsExactlyOnce;
+
+  /**
+   * Optional. Indicates the default streaming mode for a streaming template. Only valid if both
+   * supports_at_least_once and supports_exactly_once are true. Possible values: UNSPECIFIED,
+   * EXACTLY_ONCE and AT_LEAST_ONCE
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultStreamingMode() {
+    return defaultStreamingMode;
+  }
+
+  /**
+   * Optional. Indicates the default streaming mode for a streaming template. Only valid if both
+   * supports_at_least_once and supports_exactly_once are true. Possible values: UNSPECIFIED,
+   * EXACTLY_ONCE and AT_LEAST_ONCE
+   * @param defaultStreamingMode defaultStreamingMode or {@code null} for none
+   */
+  public TemplateMetadata setDefaultStreamingMode(java.lang.String defaultStreamingMode) {
+    this.defaultStreamingMode = defaultStreamingMode;
+    return this;
+  }
 
   /**
    * Optional. A description of the template.

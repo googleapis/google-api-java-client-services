@@ -148,6 +148,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. The maintenance update policy determines when to allow or deny updates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaintenanceUpdatePolicy maintenanceUpdatePolicy;
+
+  /**
    * Output only. Cluster created via DMS migration.
    * The value may be {@code null}.
    */
@@ -187,6 +194,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private PrimaryConfig primaryConfig;
+
+  /**
+   * Optional. The configuration for Private Service Connect (PSC) for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PscConfig pscConfig;
 
   /**
    * Output only. Reconciling (https://google.aip.dev/128#reconciliation). Set to true if the
@@ -519,6 +533,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The maintenance update policy determines when to allow or deny updates.
+   * @return value or {@code null} for none
+   */
+  public MaintenanceUpdatePolicy getMaintenanceUpdatePolicy() {
+    return maintenanceUpdatePolicy;
+  }
+
+  /**
+   * Optional. The maintenance update policy determines when to allow or deny updates.
+   * @param maintenanceUpdatePolicy maintenanceUpdatePolicy or {@code null} for none
+   */
+  public Cluster setMaintenanceUpdatePolicy(MaintenanceUpdatePolicy maintenanceUpdatePolicy) {
+    this.maintenanceUpdatePolicy = maintenanceUpdatePolicy;
+    return this;
+  }
+
+  /**
    * Output only. Cluster created via DMS migration.
    * @return value or {@code null} for none
    */
@@ -612,6 +643,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setPrimaryConfig(PrimaryConfig primaryConfig) {
     this.primaryConfig = primaryConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for Private Service Connect (PSC) for the cluster.
+   * @return value or {@code null} for none
+   */
+  public PscConfig getPscConfig() {
+    return pscConfig;
+  }
+
+  /**
+   * Optional. The configuration for Private Service Connect (PSC) for the cluster.
+   * @param pscConfig pscConfig or {@code null} for none
+   */
+  public Cluster setPscConfig(PscConfig pscConfig) {
+    this.pscConfig = pscConfig;
     return this;
   }
 

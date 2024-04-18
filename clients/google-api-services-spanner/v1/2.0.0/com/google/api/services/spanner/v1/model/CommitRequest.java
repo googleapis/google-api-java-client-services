@@ -30,9 +30,9 @@ package com.google.api.services.spanner.v1.model;
 public final class CommitRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The amount of latency this request is willing to incur in order to improve
+   * Optional. The amount of latency this request is configured to incur in order to improve
    * throughput. If this field is not set, Spanner assumes requests are relatively latency sensitive
-   * and automatically determines an appropriate delay time. You can specify a batching delay value
+   * and automatically determines an appropriate delay time. You can specify a commit delay value
    * between 0 and 500 ms.
    * The value may be {@code null}.
    */
@@ -81,9 +81,9 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   private java.lang.String transactionId;
 
   /**
-   * Optional. The amount of latency this request is willing to incur in order to improve
+   * Optional. The amount of latency this request is configured to incur in order to improve
    * throughput. If this field is not set, Spanner assumes requests are relatively latency sensitive
-   * and automatically determines an appropriate delay time. You can specify a batching delay value
+   * and automatically determines an appropriate delay time. You can specify a commit delay value
    * between 0 and 500 ms.
    * @return value or {@code null} for none
    */
@@ -92,9 +92,9 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The amount of latency this request is willing to incur in order to improve
+   * Optional. The amount of latency this request is configured to incur in order to improve
    * throughput. If this field is not set, Spanner assumes requests are relatively latency sensitive
-   * and automatically determines an appropriate delay time. You can specify a batching delay value
+   * and automatically determines an appropriate delay time. You can specify a commit delay value
    * between 0 and 500 ms.
    * @param maxCommitDelay maxCommitDelay or {@code null} for none
    */

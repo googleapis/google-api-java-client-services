@@ -77,8 +77,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. User's role within a Chat space, which determines their permitted actions in the
-   * space. [Developer Preview](https://developers.google.com/workspace/preview): This field can
-   * only be used as input in `UpdateMembership`.
+   * space. This field can only be used as input in `UpdateMembership`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,8 +197,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. User's role within a Chat space, which determines their permitted actions in the
-   * space. [Developer Preview](https://developers.google.com/workspace/preview): This field can
-   * only be used as input in `UpdateMembership`.
+   * space. This field can only be used as input in `UpdateMembership`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -208,8 +206,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. User's role within a Chat space, which determines their permitted actions in the
-   * space. [Developer Preview](https://developers.google.com/workspace/preview): This field can
-   * only be used as input in `UpdateMembership`.
+   * space. This field can only be used as input in `UpdateMembership`.
    * @param role role or {@code null} for none
    */
   public Membership setRole(java.lang.String role) {

@@ -31,6 +31,13 @@ package com.google.api.services.metastore.v1alpha.model;
 public final class ScalingConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The autoscaling configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoscalingConfig autoscalingConfig;
+
+  /**
    * An enum of readable instance sizes, with each instance size mapping to a float value (e.g.
    * InstanceSize.EXTRA_SMALL = scaling_factor(0.1))
    * The value may be {@code null}.
@@ -45,6 +52,23 @@ public final class ScalingConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.Float scalingFactor;
+
+  /**
+   * Optional. The autoscaling configuration.
+   * @return value or {@code null} for none
+   */
+  public AutoscalingConfig getAutoscalingConfig() {
+    return autoscalingConfig;
+  }
+
+  /**
+   * Optional. The autoscaling configuration.
+   * @param autoscalingConfig autoscalingConfig or {@code null} for none
+   */
+  public ScalingConfig setAutoscalingConfig(AutoscalingConfig autoscalingConfig) {
+    this.autoscalingConfig = autoscalingConfig;
+    return this;
+  }
 
   /**
    * An enum of readable instance sizes, with each instance size mapping to a float value (e.g.

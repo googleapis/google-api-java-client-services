@@ -17,8 +17,8 @@
 package com.google.api.services.metastore.v1alpha.model;
 
 /**
- * Configuration information for migrating from self-managed hive metastore on GCP using Cloud SQL
- * as the backend database to DPMS.
+ * Configuration information for migrating from self-managed hive metastore on Google Cloud using
+ * Cloud SQL as the backend database to Dataproc Metastore.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataproc Metastore API. For a detailed explanation

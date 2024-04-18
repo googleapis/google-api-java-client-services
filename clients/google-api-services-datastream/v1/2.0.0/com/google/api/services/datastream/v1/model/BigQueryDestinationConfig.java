@@ -30,6 +30,13 @@ package com.google.api.services.datastream.v1.model;
 public final class BigQueryDestinationConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Append only mode
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppendOnly appendOnly;
+
+  /**
    * The guaranteed data freshness (in seconds) when querying tables created by the stream. Editing
    * this field will only affect new tables created in the future, but existing tables will not be
    * impacted. Lower values mean that queries will return fresher data, but may result in higher
@@ -38,6 +45,13 @@ public final class BigQueryDestinationConfig extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private String dataFreshness;
+
+  /**
+   * The standard mode
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Merge merge;
 
   /**
    * Single destination dataset.
@@ -52,6 +66,23 @@ public final class BigQueryDestinationConfig extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private SourceHierarchyDatasets sourceHierarchyDatasets;
+
+  /**
+   * Append only mode
+   * @return value or {@code null} for none
+   */
+  public AppendOnly getAppendOnly() {
+    return appendOnly;
+  }
+
+  /**
+   * Append only mode
+   * @param appendOnly appendOnly or {@code null} for none
+   */
+  public BigQueryDestinationConfig setAppendOnly(AppendOnly appendOnly) {
+    this.appendOnly = appendOnly;
+    return this;
+  }
 
   /**
    * The guaranteed data freshness (in seconds) when querying tables created by the stream. Editing
@@ -73,6 +104,23 @@ public final class BigQueryDestinationConfig extends com.google.api.client.json.
    */
   public BigQueryDestinationConfig setDataFreshness(String dataFreshness) {
     this.dataFreshness = dataFreshness;
+    return this;
+  }
+
+  /**
+   * The standard mode
+   * @return value or {@code null} for none
+   */
+  public Merge getMerge() {
+    return merge;
+  }
+
+  /**
+   * The standard mode
+   * @param merge merge or {@code null} for none
+   */
+  public BigQueryDestinationConfig setMerge(Merge merge) {
+    this.merge = merge;
     return this;
   }
 

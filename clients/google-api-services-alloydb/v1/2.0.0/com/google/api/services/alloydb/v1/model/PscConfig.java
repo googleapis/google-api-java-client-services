@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.alloydb.v1alpha.model;
+package com.google.api.services.alloydb.v1.model;
 
 /**
- * MaintenanceUpdatePolicy defines the policy for system updates.
+ * PscConfig contains PSC related configuration at a cluster level.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -27,40 +27,43 @@ package com.google.api.services.alloydb.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MaintenanceUpdatePolicy extends com.google.api.client.json.GenericJson {
+public final class PscConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Preferred windows to perform maintenance. Currently limited to 1.
+   * Optional. Create an instance that allows connections from Private Service Connect endpoints to
+   * the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<MaintenanceWindow> maintenanceWindows;
+  private java.lang.Boolean pscEnabled;
 
   /**
-   * Preferred windows to perform maintenance. Currently limited to 1.
+   * Optional. Create an instance that allows connections from Private Service Connect endpoints to
+   * the instance.
    * @return value or {@code null} for none
    */
-  public java.util.List<MaintenanceWindow> getMaintenanceWindows() {
-    return maintenanceWindows;
+  public java.lang.Boolean getPscEnabled() {
+    return pscEnabled;
   }
 
   /**
-   * Preferred windows to perform maintenance. Currently limited to 1.
-   * @param maintenanceWindows maintenanceWindows or {@code null} for none
+   * Optional. Create an instance that allows connections from Private Service Connect endpoints to
+   * the instance.
+   * @param pscEnabled pscEnabled or {@code null} for none
    */
-  public MaintenanceUpdatePolicy setMaintenanceWindows(java.util.List<MaintenanceWindow> maintenanceWindows) {
-    this.maintenanceWindows = maintenanceWindows;
+  public PscConfig setPscEnabled(java.lang.Boolean pscEnabled) {
+    this.pscEnabled = pscEnabled;
     return this;
   }
 
   @Override
-  public MaintenanceUpdatePolicy set(String fieldName, Object value) {
-    return (MaintenanceUpdatePolicy) super.set(fieldName, value);
+  public PscConfig set(String fieldName, Object value) {
+    return (PscConfig) super.set(fieldName, value);
   }
 
   @Override
-  public MaintenanceUpdatePolicy clone() {
-    return (MaintenanceUpdatePolicy) super.clone();
+  public PscConfig clone() {
+    return (PscConfig) super.clone();
   }
 
 }

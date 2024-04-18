@@ -871,15 +871,14 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
           /**
            * Optional. This field allows this pool to be deleted even if it's being depended on by
            * another resource. However, doing so may result in unintended and unrecoverable effects
-           * on any dependent resource(s) since the pool will no longer be able to issue
-           * certificates.
+           * on any dependent resources since the pool will no longer be able to issue certificates.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean ignoreDependentResources;
 
           /** Optional. This field allows this pool to be deleted even if it's being depended on by another
          resource. However, doing so may result in unintended and unrecoverable effects on any dependent
-         resource(s) since the pool will no longer be able to issue certificates.
+         resources since the pool will no longer be able to issue certificates.
            */
           public java.lang.Boolean getIgnoreDependentResources() {
             return ignoreDependentResources;
@@ -888,8 +887,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
           /**
            * Optional. This field allows this pool to be deleted even if it's being depended on by
            * another resource. However, doing so may result in unintended and unrecoverable effects
-           * on any dependent resource(s) since the pool will no longer be able to issue
-           * certificates.
+           * on any dependent resources since the pool will no longer be able to issue certificates.
            */
           public Delete setIgnoreDependentResources(java.lang.Boolean ignoreDependentResources) {
             this.ignoreDependentResources = ignoreDependentResources;
@@ -946,7 +944,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
         }
         /**
          * FetchCaCerts returns the current trust anchor for the CaPool. This will include CA certificate
-         * chains for all Certificate Authorities in the ENABLED, DISABLED, or STAGED states.
+         * chains for all certificate authorities in the ENABLED, DISABLED, or STAGED states.
          *
          * Create a request for the method "caPools.fetchCaCerts".
          *
@@ -972,7 +970,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
 
           /**
            * FetchCaCerts returns the current trust anchor for the CaPool. This will include CA certificate
-           * chains for all Certificate Authorities in the ENABLED, DISABLED, or STAGED states.
+           * chains for all certificate authorities in the ENABLED, DISABLED, or STAGED states.
            *
            * Create a request for the method "caPools.fetchCaCerts".
            *
@@ -2664,26 +2662,26 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
             }
 
             /**
-             * Optional. This field allows this ca to be deleted even if it's being depended on by
+             * Optional. This field allows this CA to be deleted even if it's being depended on by
              * another resource. However, doing so may result in unintended and unrecoverable
-             * effects on any dependent resource(s) since the CA will no longer be able to issue
+             * effects on any dependent resources since the CA will no longer be able to issue
              * certificates.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean ignoreDependentResources;
 
-            /** Optional. This field allows this ca to be deleted even if it's being depended on by another
+            /** Optional. This field allows this CA to be deleted even if it's being depended on by another
            resource. However, doing so may result in unintended and unrecoverable effects on any dependent
-           resource(s) since the CA will no longer be able to issue certificates.
+           resources since the CA will no longer be able to issue certificates.
              */
             public java.lang.Boolean getIgnoreDependentResources() {
               return ignoreDependentResources;
             }
 
             /**
-             * Optional. This field allows this ca to be deleted even if it's being depended on by
+             * Optional. This field allows this CA to be deleted even if it's being depended on by
              * another resource. However, doing so may result in unintended and unrecoverable
-             * effects on any dependent resource(s) since the CA will no longer be able to issue
+             * effects on any dependent resources since the CA will no longer be able to issue
              * certificates.
              */
             public Delete setIgnoreDependentResources(java.lang.Boolean ignoreDependentResources) {

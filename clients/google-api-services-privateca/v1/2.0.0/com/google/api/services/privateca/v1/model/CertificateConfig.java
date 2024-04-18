@@ -49,8 +49,8 @@ public final class CertificateConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. When specified this provides a custom SKI to be used in the certificate. This should
-   * only be used to maintain a SKI of an existing CA originally created outside CAS, which was not
-   * generated using method (1) described in RFC 5280 section 4.2.1.2.
+   * only be used to maintain a SKI of an existing CA originally created outside CA service, which
+   * was not generated using method (1) described in RFC 5280 section 4.2.1.2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,8 +104,8 @@ public final class CertificateConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. When specified this provides a custom SKI to be used in the certificate. This should
-   * only be used to maintain a SKI of an existing CA originally created outside CAS, which was not
-   * generated using method (1) described in RFC 5280 section 4.2.1.2.
+   * only be used to maintain a SKI of an existing CA originally created outside CA service, which
+   * was not generated using method (1) described in RFC 5280 section 4.2.1.2.
    * @return value or {@code null} for none
    */
   public CertificateConfigKeyId getSubjectKeyId() {
@@ -114,8 +114,8 @@ public final class CertificateConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. When specified this provides a custom SKI to be used in the certificate. This should
-   * only be used to maintain a SKI of an existing CA originally created outside CAS, which was not
-   * generated using method (1) described in RFC 5280 section 4.2.1.2.
+   * only be used to maintain a SKI of an existing CA originally created outside CA service, which
+   * was not generated using method (1) described in RFC 5280 section 4.2.1.2.
    * @param subjectKeyId subjectKeyId or {@code null} for none
    */
   public CertificateConfig setSubjectKeyId(CertificateConfigKeyId subjectKeyId) {

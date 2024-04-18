@@ -44,6 +44,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private Standard standard;
 
   /**
+   * Output only. The state of the Reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The reservation name with the format:
    * projects/{projectID}/locations/{location}/reservations/{reservationID}
    * @return value or {@code null} for none
@@ -74,6 +81,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setStandard(Standard standard) {
     this.standard = standard;
+    return this;
+  }
+
+  /**
+   * Output only. The state of the Reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The state of the Reservation.
+   * @param state state or {@code null} for none
+   */
+  public Reservation setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

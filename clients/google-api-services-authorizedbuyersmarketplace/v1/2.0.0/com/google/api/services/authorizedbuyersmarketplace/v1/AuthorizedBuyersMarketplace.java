@@ -781,6 +781,35 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
 
         /**
+         * Optional. Optional query string using the [Cloud API list filtering
+         * syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Only
+         * supported when parent is bidder. Supported columns for filtering are: * displayName *
+         * createTime * updateTime * eligibleSeatIds
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Optional query string using the [Cloud API list filtering
+       syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Only supported
+       when parent is bidder. Supported columns for filtering are: * displayName * createTime * updateTime
+       * eligibleSeatIds
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Optional query string using the [Cloud API list filtering
+         * syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Only
+         * supported when parent is bidder. Supported columns for filtering are: * displayName *
+         * createTime * updateTime * eligibleSeatIds
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * Requested page size. The server may return fewer results than requested. Max allowed page
          * size is 500.
          */

@@ -34,12 +34,9 @@ public final class GoogleFirebaseAppcheckV1betaUpdateResourcePolicyRequest exten
   /**
    * Required. The ResourcePolicy to update. The ResourcePolicy's `name` field is used to identify
    * the ResourcePolicy to be updated, in the format: ```
-   * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_name} ``` Note that
-   * the `service_id` element must be a supported service ID. Currently, the following service IDs
-   * are supported: * `oauth2.googleapis.com` (Google Identity for iOS) Only the top-level resources
-   * are supported for each of the services. The resources must belong to the service specified and
-   * `resource_name` should be formatted as: * `oauthClients/{oauth_client_id}` (Google Identity for
-   * iOS)
+   * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note
+   * that the `service_id` element must be a supported service ID. Currently, the following service
+   * IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,12 +53,9 @@ public final class GoogleFirebaseAppcheckV1betaUpdateResourcePolicyRequest exten
   /**
    * Required. The ResourcePolicy to update. The ResourcePolicy's `name` field is used to identify
    * the ResourcePolicy to be updated, in the format: ```
-   * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_name} ``` Note that
-   * the `service_id` element must be a supported service ID. Currently, the following service IDs
-   * are supported: * `oauth2.googleapis.com` (Google Identity for iOS) Only the top-level resources
-   * are supported for each of the services. The resources must belong to the service specified and
-   * `resource_name` should be formatted as: * `oauthClients/{oauth_client_id}` (Google Identity for
-   * iOS)
+   * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note
+   * that the `service_id` element must be a supported service ID. Currently, the following service
+   * IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
    * @return value or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaResourcePolicy getResourcePolicy() {
@@ -71,12 +65,9 @@ public final class GoogleFirebaseAppcheckV1betaUpdateResourcePolicyRequest exten
   /**
    * Required. The ResourcePolicy to update. The ResourcePolicy's `name` field is used to identify
    * the ResourcePolicy to be updated, in the format: ```
-   * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_name} ``` Note that
-   * the `service_id` element must be a supported service ID. Currently, the following service IDs
-   * are supported: * `oauth2.googleapis.com` (Google Identity for iOS) Only the top-level resources
-   * are supported for each of the services. The resources must belong to the service specified and
-   * `resource_name` should be formatted as: * `oauthClients/{oauth_client_id}` (Google Identity for
-   * iOS)
+   * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note
+   * that the `service_id` element must be a supported service ID. Currently, the following service
+   * IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
    * @param resourcePolicy resourcePolicy or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaUpdateResourcePolicyRequest setResourcePolicy(GoogleFirebaseAppcheckV1betaResourcePolicy resourcePolicy) {

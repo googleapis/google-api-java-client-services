@@ -41,7 +41,7 @@ public final class GoogleFirebaseAppcheckV1betaListResourcePoliciesResponse exte
   private java.lang.String nextPageToken;
 
   /**
-   * The ResourcePolicys retrieved.
+   * The ResourcePolicy objects retrieved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class GoogleFirebaseAppcheckV1betaListResourcePoliciesResponse exte
   }
 
   /**
-   * The ResourcePolicys retrieved.
+   * The ResourcePolicy objects retrieved.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleFirebaseAppcheckV1betaResourcePolicy> getResourcePolicies() {
@@ -79,7 +79,7 @@ public final class GoogleFirebaseAppcheckV1betaListResourcePoliciesResponse exte
   }
 
   /**
-   * The ResourcePolicys retrieved.
+   * The ResourcePolicy objects retrieved.
    * @param resourcePolicies resourcePolicies or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaListResourcePoliciesResponse setResourcePolicies(java.util.List<GoogleFirebaseAppcheckV1betaResourcePolicy> resourcePolicies) {

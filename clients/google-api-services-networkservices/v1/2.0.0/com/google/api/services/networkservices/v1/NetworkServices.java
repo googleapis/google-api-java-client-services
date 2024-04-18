@@ -7283,7 +7283,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Used to specify the fields to be overwritten in the `LbRouteExtension`
+           * Optional. Used to specify the fields to be overwritten in the `LbRouteExtension`
            * resource by the update. The fields specified in the update_mask are relative to the
            * resource, not the full request. A field is overwritten if it is in the mask. If the
            * user does not specify a mask, then all fields are overwritten.
@@ -7291,7 +7291,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Used to specify the fields to be overwritten in the `LbRouteExtension` resource by the
+          /** Optional. Used to specify the fields to be overwritten in the `LbRouteExtension` resource by the
          update. The fields specified in the update_mask are relative to the resource, not the full request.
          A field is overwritten if it is in the mask. If the user does not specify a mask, then all fields
          are overwritten.
@@ -7301,7 +7301,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Used to specify the fields to be overwritten in the `LbRouteExtension`
+           * Optional. Used to specify the fields to be overwritten in the `LbRouteExtension`
            * resource by the update. The fields specified in the update_mask are relative to the
            * resource, not the full request. A field is overwritten if it is in the mask. If the
            * user does not specify a mask, then all fields are overwritten.
@@ -8266,7 +8266,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Used to specify the fields to be overwritten in the `LbTrafficExtension`
+           * Optional. Used to specify the fields to be overwritten in the `LbTrafficExtension`
            * resource by the update. The fields specified in the update_mask are relative to the
            * resource, not the full request. A field is overwritten if it is in the mask. If the
            * user does not specify a mask, then all fields are overwritten.
@@ -8274,7 +8274,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Used to specify the fields to be overwritten in the `LbTrafficExtension` resource by the
+          /** Optional. Used to specify the fields to be overwritten in the `LbTrafficExtension` resource by the
          update. The fields specified in the update_mask are relative to the resource, not the full request.
          A field is overwritten if it is in the mask. If the user does not specify a mask, then all fields
          are overwritten.
@@ -8284,7 +8284,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Used to specify the fields to be overwritten in the `LbTrafficExtension`
+           * Optional. Used to specify the fields to be overwritten in the `LbTrafficExtension`
            * resource by the update. The fields specified in the update_mask are relative to the
            * resource, not the full request. A field is overwritten if it is in the mask. If the
            * user does not specify a mask, then all fields are overwritten.

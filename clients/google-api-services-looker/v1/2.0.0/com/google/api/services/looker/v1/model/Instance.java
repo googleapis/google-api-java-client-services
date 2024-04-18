@@ -17,7 +17,7 @@
 package com.google.api.services.looker.v1.model;
 
 /**
- * A Looker instance.
+ * A Looker instance. LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Looker (Google Cloud core) API. For a detailed

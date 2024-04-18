@@ -33,10 +33,10 @@ public final class LocationPolicy extends com.google.api.client.json.GenericJson
    * A list of allowed location names represented by internal URLs. Each location can be a region or
    * a zone. Only one region or multiple zones in one region is supported now. For example,
    * ["regions/us-central1"] allow VMs in any zones in region us-central1. ["zones/us-central1-a",
-   * "zones/us-central1-c"] only allow VMs in zones us-central1-a and us-central1-c. All locations
-   * end up in different regions would cause errors. For example, ["regions/us-central1", "zones/us-
-   * central1-a", "zones/us-central1-b", "zones/us-west1-a"] contains 2 regions "us-central1" and
-   * "us-west1". An error is expected in this case.
+   * "zones/us-central1-c"] only allow VMs in zones us-central1-a and us-central1-c. Mixing
+   * locations from different regions would cause errors. For example, ["regions/us-central1",
+   * "zones/us-central1-a", "zones/us-central1-b", "zones/us-west1-a"] contains locations from two
+   * distinct regions: us-central1 and us-west1. This combination will trigger an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,10 +46,10 @@ public final class LocationPolicy extends com.google.api.client.json.GenericJson
    * A list of allowed location names represented by internal URLs. Each location can be a region or
    * a zone. Only one region or multiple zones in one region is supported now. For example,
    * ["regions/us-central1"] allow VMs in any zones in region us-central1. ["zones/us-central1-a",
-   * "zones/us-central1-c"] only allow VMs in zones us-central1-a and us-central1-c. All locations
-   * end up in different regions would cause errors. For example, ["regions/us-central1", "zones/us-
-   * central1-a", "zones/us-central1-b", "zones/us-west1-a"] contains 2 regions "us-central1" and
-   * "us-west1". An error is expected in this case.
+   * "zones/us-central1-c"] only allow VMs in zones us-central1-a and us-central1-c. Mixing
+   * locations from different regions would cause errors. For example, ["regions/us-central1",
+   * "zones/us-central1-a", "zones/us-central1-b", "zones/us-west1-a"] contains locations from two
+   * distinct regions: us-central1 and us-west1. This combination will trigger an error.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedLocations() {
@@ -60,10 +60,10 @@ public final class LocationPolicy extends com.google.api.client.json.GenericJson
    * A list of allowed location names represented by internal URLs. Each location can be a region or
    * a zone. Only one region or multiple zones in one region is supported now. For example,
    * ["regions/us-central1"] allow VMs in any zones in region us-central1. ["zones/us-central1-a",
-   * "zones/us-central1-c"] only allow VMs in zones us-central1-a and us-central1-c. All locations
-   * end up in different regions would cause errors. For example, ["regions/us-central1", "zones/us-
-   * central1-a", "zones/us-central1-b", "zones/us-west1-a"] contains 2 regions "us-central1" and
-   * "us-west1". An error is expected in this case.
+   * "zones/us-central1-c"] only allow VMs in zones us-central1-a and us-central1-c. Mixing
+   * locations from different regions would cause errors. For example, ["regions/us-central1",
+   * "zones/us-central1-a", "zones/us-central1-b", "zones/us-west1-a"] contains locations from two
+   * distinct regions: us-central1 and us-west1. This combination will trigger an error.
    * @param allowedLocations allowedLocations or {@code null} for none
    */
   public LocationPolicy setAllowedLocations(java.util.List<java.lang.String> allowedLocations) {

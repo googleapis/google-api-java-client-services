@@ -46,6 +46,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. The delete operation will fail when the value is set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deletionProtectionEnabled;
+
+  /**
    * Output only. Endpoints created on each given network, for Redis clients to connect to the
    * cluster. Currently only one discovery endpoint is supported.
    * The value may be {@code null}.
@@ -190,6 +197,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. The delete operation will fail when the value is set to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeletionProtectionEnabled() {
+    return deletionProtectionEnabled;
+  }
+
+  /**
+   * Optional. The delete operation will fail when the value is set to true.
+   * @param deletionProtectionEnabled deletionProtectionEnabled or {@code null} for none
+   */
+  public Cluster setDeletionProtectionEnabled(java.lang.Boolean deletionProtectionEnabled) {
+    this.deletionProtectionEnabled = deletionProtectionEnabled;
     return this;
   }
 

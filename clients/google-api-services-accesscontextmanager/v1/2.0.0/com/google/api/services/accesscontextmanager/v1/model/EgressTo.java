@@ -37,10 +37,10 @@ public final class EgressTo extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of external resources that are allowed to be accessed. Only AWS and Azure resources are
-   * supported. For Amazon S3, the supported format is s3://BUCKET_NAME. For Azure Storage, the
-   * supported format is azure://myaccount.blob.core.windows.net/CONTAINER_NAME. A request matches
-   * if it contains an external resource in this list (Example: s3://bucket/path). Currently '*' is
-   * not allowed.
+   * supported. For Amazon S3, the supported formats are s3://BUCKET_NAME, s3a://BUCKET_NAME, and
+   * s3n://BUCKET_NAME. For Azure Storage, the supported format is
+   * azure://myaccount.blob.core.windows.net/CONTAINER_NAME. A request matches if it contains an
+   * external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,10 +72,10 @@ public final class EgressTo extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of external resources that are allowed to be accessed. Only AWS and Azure resources are
-   * supported. For Amazon S3, the supported format is s3://BUCKET_NAME. For Azure Storage, the
-   * supported format is azure://myaccount.blob.core.windows.net/CONTAINER_NAME. A request matches
-   * if it contains an external resource in this list (Example: s3://bucket/path). Currently '*' is
-   * not allowed.
+   * supported. For Amazon S3, the supported formats are s3://BUCKET_NAME, s3a://BUCKET_NAME, and
+   * s3n://BUCKET_NAME. For Azure Storage, the supported format is
+   * azure://myaccount.blob.core.windows.net/CONTAINER_NAME. A request matches if it contains an
+   * external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExternalResources() {
@@ -84,10 +84,10 @@ public final class EgressTo extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of external resources that are allowed to be accessed. Only AWS and Azure resources are
-   * supported. For Amazon S3, the supported format is s3://BUCKET_NAME. For Azure Storage, the
-   * supported format is azure://myaccount.blob.core.windows.net/CONTAINER_NAME. A request matches
-   * if it contains an external resource in this list (Example: s3://bucket/path). Currently '*' is
-   * not allowed.
+   * supported. For Amazon S3, the supported formats are s3://BUCKET_NAME, s3a://BUCKET_NAME, and
+   * s3n://BUCKET_NAME. For Azure Storage, the supported format is
+   * azure://myaccount.blob.core.windows.net/CONTAINER_NAME. A request matches if it contains an
+   * external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.
    * @param externalResources externalResources or {@code null} for none
    */
   public EgressTo setExternalResources(java.util.List<java.lang.String> externalResources) {

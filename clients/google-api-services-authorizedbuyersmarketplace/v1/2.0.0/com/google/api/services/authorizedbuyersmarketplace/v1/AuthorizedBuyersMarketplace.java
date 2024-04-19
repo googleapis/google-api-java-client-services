@@ -154,6 +154,258 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
   public class Bidders {
 
     /**
+     * An accessor for creating requests from the AuctionPackages collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AuthorizedBuyersMarketplace authorizedbuyersmarketplace = new AuthorizedBuyersMarketplace(...);}
+     *   {@code AuthorizedBuyersMarketplace.AuctionPackages.List request = authorizedbuyersmarketplace.auctionPackages().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AuctionPackages auctionPackages() {
+      return new AuctionPackages();
+    }
+
+    /**
+     * The "auctionPackages" collection of methods.
+     */
+    public class AuctionPackages {
+
+      /**
+       * List the auction packages. Buyers can use the URL path "/v1/buyers/{accountId}/auctionPackages"
+       * to list auction packages for the current buyer and its clients. Bidders can use the URL path
+       * "/v1/bidders/{accountId}/auctionPackages" to list auction packages for the bidder, its media
+       * planners, its buyers, and all their clients.
+       *
+       * Create a request for the method "auctionPackages.list".
+       *
+       * This request holds the parameters needed by the authorizedbuyersmarketplace server.  After
+       * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. Name of the parent buyer that can access the auction package. Format:
+       *        `buyers/{accountId}`. When used with a bidder account, the auction packages that the
+       *        bidder, its media planners, its buyers and clients are subscribed to will be listed, in
+       *        the format `bidders/{accountId}`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AuthorizedBuyersMarketplaceRequest<com.google.api.services.authorizedbuyersmarketplace.v1.model.ListAuctionPackagesResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/auctionPackages";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^bidders/[^/]+$");
+
+        /**
+         * List the auction packages. Buyers can use the URL path "/v1/buyers/{accountId}/auctionPackages"
+         * to list auction packages for the current buyer and its clients. Bidders can use the URL path
+         * "/v1/bidders/{accountId}/auctionPackages" to list auction packages for the bidder, its media
+         * planners, its buyers, and all their clients.
+         *
+         * Create a request for the method "auctionPackages.list".
+         *
+         * This request holds the parameters needed by the the authorizedbuyersmarketplace server.  After
+         * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the parent buyer that can access the auction package. Format:
+       *        `buyers/{accountId}`. When used with a bidder account, the auction packages that the
+       *        bidder, its media planners, its buyers and clients are subscribed to will be listed, in
+       *        the format `bidders/{accountId}`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(AuthorizedBuyersMarketplace.this, "GET", REST_PATH, null, com.google.api.services.authorizedbuyersmarketplace.v1.model.ListAuctionPackagesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the parent buyer that can access the auction package. Format:
+         * `buyers/{accountId}`. When used with a bidder account, the auction packages that the
+         * bidder, its media planners, its buyers and clients are subscribed to will be listed, in
+         * the format `bidders/{accountId}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the parent buyer that can access the auction package. Format:
+       `buyers/{accountId}`. When used with a bidder account, the auction packages that the bidder, its
+       media planners, its buyers and clients are subscribed to will be listed, in the format
+       `bidders/{accountId}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the parent buyer that can access the auction package. Format:
+         * `buyers/{accountId}`. When used with a bidder account, the auction packages that the
+         * bidder, its media planners, its buyers and clients are subscribed to will be listed, in
+         * the format `bidders/{accountId}`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^bidders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Optional query string using the [Cloud API list filtering syntax](/authorized-
+         * buyers/apis/guides/list-filters). Only supported when parent is bidder. Supported columns
+         * for filtering are: * displayName * createTime * updateTime * eligibleSeatIds
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Optional query string using the [Cloud API list filtering syntax](/authorized-
+       buyers/apis/guides/list-filters). Only supported when parent is bidder. Supported columns for
+       filtering are: * displayName * createTime * updateTime * eligibleSeatIds
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Optional query string using the [Cloud API list filtering syntax](/authorized-
+         * buyers/apis/guides/list-filters). Only supported when parent is bidder. Supported columns
+         * for filtering are: * displayName * createTime * updateTime * eligibleSeatIds
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested. Max allowed page
+         * size is 500.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The server may return fewer results than requested. Max allowed page size is
+       500.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested. Max allowed page
+         * size is 500.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The page token as returned. ListAuctionPackagesResponse.nextPageToken */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The page token as returned. ListAuctionPackagesResponse.nextPageToken
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The page token as returned. ListAuctionPackagesResponse.nextPageToken */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the FinalizedDeals collection.
      *
      * <p>The typical use is:</p>
@@ -639,7 +891,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
       }
       /**
-       * List the auction packages subscribed by a buyer and its clients.
+       * List the auction packages. Buyers can use the URL path "/v1/buyers/{accountId}/auctionPackages"
+       * to list auction packages for the current buyer and its clients. Bidders can use the URL path
+       * "/v1/bidders/{accountId}/auctionPackages" to list auction packages for the bidder, its media
+       * planners, its buyers, and all their clients.
        *
        * Create a request for the method "auctionPackages.list".
        *
@@ -647,7 +902,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. Name of the parent buyer that can access the auction package. Format: `buyers/{accountId}`
+       * @param parent Required. Name of the parent buyer that can access the auction package. Format:
+       *        `buyers/{accountId}`. When used with a bidder account, the auction packages that the
+       *        bidder, its media planners, its buyers and clients are subscribed to will be listed, in
+       *        the format `bidders/{accountId}`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -664,7 +922,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
             java.util.regex.Pattern.compile("^buyers/[^/]+$");
 
         /**
-         * List the auction packages subscribed by a buyer and its clients.
+         * List the auction packages. Buyers can use the URL path "/v1/buyers/{accountId}/auctionPackages"
+         * to list auction packages for the current buyer and its clients. Bidders can use the URL path
+         * "/v1/bidders/{accountId}/auctionPackages" to list auction packages for the bidder, its media
+         * planners, its buyers, and all their clients.
          *
          * Create a request for the method "auctionPackages.list".
          *
@@ -674,7 +935,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent buyer that can access the auction package. Format: `buyers/{accountId}`
+         * @param parent Required. Name of the parent buyer that can access the auction package. Format:
+       *        `buyers/{accountId}`. When used with a bidder account, the auction packages that the
+       *        bidder, its media planners, its buyers and clients are subscribed to will be listed, in
+       *        the format `bidders/{accountId}`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -754,13 +1018,17 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Required. Name of the parent buyer that can access the auction package. Format:
-         * `buyers/{accountId}`
+         * `buyers/{accountId}`. When used with a bidder account, the auction packages that the
+         * bidder, its media planners, its buyers and clients are subscribed to will be listed, in
+         * the format `bidders/{accountId}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. Name of the parent buyer that can access the auction package. Format:
-       `buyers/{accountId}`
+       `buyers/{accountId}`. When used with a bidder account, the auction packages that the bidder, its
+       media planners, its buyers and clients are subscribed to will be listed, in the format
+       `bidders/{accountId}`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -768,7 +1036,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Required. Name of the parent buyer that can access the auction package. Format:
-         * `buyers/{accountId}`
+         * `buyers/{accountId}`. When used with a bidder account, the auction packages that the
+         * bidder, its media planners, its buyers and clients are subscribed to will be listed, in
+         * the format `bidders/{accountId}`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -781,28 +1051,25 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
 
         /**
-         * Optional. Optional query string using the [Cloud API list filtering
-         * syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Only
-         * supported when parent is bidder. Supported columns for filtering are: * displayName *
-         * createTime * updateTime * eligibleSeatIds
+         * Optional. Optional query string using the [Cloud API list filtering syntax](/authorized-
+         * buyers/apis/guides/list-filters). Only supported when parent is bidder. Supported columns
+         * for filtering are: * displayName * createTime * updateTime * eligibleSeatIds
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional. Optional query string using the [Cloud API list filtering
-       syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Only supported
-       when parent is bidder. Supported columns for filtering are: * displayName * createTime * updateTime
-       * eligibleSeatIds
+        /** Optional. Optional query string using the [Cloud API list filtering syntax](/authorized-
+       buyers/apis/guides/list-filters). Only supported when parent is bidder. Supported columns for
+       filtering are: * displayName * createTime * updateTime * eligibleSeatIds
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Optional. Optional query string using the [Cloud API list filtering
-         * syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Only
-         * supported when parent is bidder. Supported columns for filtering are: * displayName *
-         * createTime * updateTime * eligibleSeatIds
+         * Optional. Optional query string using the [Cloud API list filtering syntax](/authorized-
+         * buyers/apis/guides/list-filters). Only supported when parent is bidder. Supported columns
+         * for filtering are: * displayName * createTime * updateTime * eligibleSeatIds
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

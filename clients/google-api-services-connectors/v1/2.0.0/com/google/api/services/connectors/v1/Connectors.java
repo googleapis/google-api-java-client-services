@@ -2419,6 +2419,199 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Returns Top matching Connections for a given query.
+         *
+         * Create a request for the method "connections.search".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Parent resource of the Connection, of the form: `projects/locations/connections`
+         * @return the request
+         */
+        public Search search(java.lang.String name) throws java.io.IOException {
+          Search result = new Search(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Search extends ConnectorsRequest<com.google.api.services.connectors.v1.model.SearchConnectionsResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:search";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections$");
+
+          /**
+           * Returns Top matching Connections for a given query.
+           *
+           * Create a request for the method "connections.search".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Parent resource of the Connection, of the form: `projects/locations/connections`
+           * @since 1.13
+           */
+          protected Search(java.lang.String name) {
+            super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v1.model.SearchConnectionsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Search set$Xgafv(java.lang.String $Xgafv) {
+            return (Search) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Search setAccessToken(java.lang.String accessToken) {
+            return (Search) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Search setAlt(java.lang.String alt) {
+            return (Search) super.setAlt(alt);
+          }
+
+          @Override
+          public Search setCallback(java.lang.String callback) {
+            return (Search) super.setCallback(callback);
+          }
+
+          @Override
+          public Search setFields(java.lang.String fields) {
+            return (Search) super.setFields(fields);
+          }
+
+          @Override
+          public Search setKey(java.lang.String key) {
+            return (Search) super.setKey(key);
+          }
+
+          @Override
+          public Search setOauthToken(java.lang.String oauthToken) {
+            return (Search) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Search) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Search setQuotaUser(java.lang.String quotaUser) {
+            return (Search) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Search setUploadType(java.lang.String uploadType) {
+            return (Search) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Search setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Search) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent resource of the Connection, of the form:
+           * `projects/locations/connections`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Parent resource of the Connection, of the form: `projects/locations/connections`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Parent resource of the Connection, of the form:
+           * `projects/locations/connections`
+           */
+          public Search setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. The number of top matching connectors to return */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The number of top matching connectors to return
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The number of top matching connectors to return */
+          public Search setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. page_token */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. page_token
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. page_token */
+          public Search setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Required. The query against which the search needs to be done. */
+          @com.google.api.client.util.Key
+          private java.lang.String query;
+
+          /** Required. The query against which the search needs to be done.
+           */
+          public java.lang.String getQuery() {
+            return query;
+          }
+
+          /** Required. The query against which the search needs to be done. */
+          public Search setQuery(java.lang.String query) {
+            this.query = query;
+            return this;
+          }
+
+          @Override
+          public Search set(String parameterName, Object value) {
+            return (Search) super.set(parameterName, value);
+          }
+        }
+        /**
          * Sets the access control policy on the specified resource. Replaces any existing policy. Can
          * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *

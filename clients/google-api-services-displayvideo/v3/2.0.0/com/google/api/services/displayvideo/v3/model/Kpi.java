@@ -31,6 +31,14 @@ package com.google.api.services.displayvideo.v3.model;
 public final class Kpi extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Custom Bidding Algorithm ID associated with KPI_CUSTOM_IMPRESSION_VALUE_OVER_COST.
+   * This field is ignored if the proper KPI is not selected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long kpiAlgorithmId;
+
+  /**
    * The goal amount, in micros of the advertiser's currency. Applicable when kpi_type is one of: *
    * `KPI_TYPE_CPM` * `KPI_TYPE_CPC` * `KPI_TYPE_CPA` * `KPI_TYPE_CPIAVC` * `KPI_TYPE_VCPM` For
    * example: 1500000 represents 1.5 standard units of the currency.
@@ -63,6 +71,25 @@ public final class Kpi extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String kpiType;
+
+  /**
+   * Optional. Custom Bidding Algorithm ID associated with KPI_CUSTOM_IMPRESSION_VALUE_OVER_COST.
+   * This field is ignored if the proper KPI is not selected.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getKpiAlgorithmId() {
+    return kpiAlgorithmId;
+  }
+
+  /**
+   * Optional. Custom Bidding Algorithm ID associated with KPI_CUSTOM_IMPRESSION_VALUE_OVER_COST.
+   * This field is ignored if the proper KPI is not selected.
+   * @param kpiAlgorithmId kpiAlgorithmId or {@code null} for none
+   */
+  public Kpi setKpiAlgorithmId(java.lang.Long kpiAlgorithmId) {
+    this.kpiAlgorithmId = kpiAlgorithmId;
+    return this;
+  }
 
   /**
    * The goal amount, in micros of the advertiser's currency. Applicable when kpi_type is one of: *

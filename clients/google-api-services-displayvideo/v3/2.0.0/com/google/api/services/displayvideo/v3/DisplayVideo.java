@@ -17054,7 +17054,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * @param advertiserId Required. The ID of the advertiser.
          * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+         *        `TARGETING_TYPE_KEYWORD`
          * @param content the {@link com.google.api.services.displayvideo.v3.model.AssignedTargetingOption}
          * @return the request
          */
@@ -17089,7 +17090,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * @param advertiserId Required. The ID of the advertiser.
            * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+         *        `TARGETING_TYPE_KEYWORD`
            * @param content the {@link com.google.api.services.displayvideo.v3.model.AssignedTargetingOption}
            * @since 1.13
            */
@@ -17178,14 +17180,15 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Required. Identifies the type of this assigned targeting option. Supported targeting
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-           * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           * `TARGETING_TYPE_KEYWORD`
            */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
 
           /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID`
-         * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+         * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
@@ -17194,7 +17197,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Required. Identifies the type of this assigned targeting option. Supported targeting
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-           * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           * `TARGETING_TYPE_KEYWORD`
            */
           public Create setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {
@@ -17222,7 +17226,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * @param advertiserId Required. The ID of the advertiser.
          * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+         *        `TARGETING_TYPE_KEYWORD`
          * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
          * @return the request
          */
@@ -17259,7 +17264,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * @param advertiserId Required. The ID of the advertiser.
            * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+         *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+         *        `TARGETING_TYPE_KEYWORD`
            * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
            * @since 1.13
            */
@@ -17354,14 +17360,15 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Required. Identifies the type of this assigned targeting option. Supported targeting
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-           * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           * `TARGETING_TYPE_KEYWORD`
            */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
 
           /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID`
-         * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+         * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
@@ -17370,7 +17377,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Required. Identifies the type of this assigned targeting option. Supported targeting
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
-           * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+           * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
+           * `TARGETING_TYPE_KEYWORD`
            */
           public Delete setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {

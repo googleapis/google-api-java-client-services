@@ -4417,7 +4417,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           }
         }
         /**
-         * Query DPMS metadata.
+         * Query Dataproc Metastore metadata.
          *
          * Create a request for the method "services.queryMetadata".
          *
@@ -4443,7 +4443,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
           /**
-           * Query DPMS metadata.
+           * Query Dataproc Metastore metadata.
            *
            * Create a request for the method "services.queryMetadata".
            *

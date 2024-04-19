@@ -997,6 +997,32 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
       }
 
       /**
+       * Optional. Maximum length of snippet text, in characters, to be returned with results. Note:
+       * this feature is limited to specific engines. * Valid values are integers between 161 and
+       * 1000, inclusive.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer snippetLength;
+
+      /** Optional. Maximum length of snippet text, in characters, to be returned with results. Note: this
+     feature is limited to specific engines. * Valid values are integers between 161 and 1000,
+     inclusive.
+       */
+      public java.lang.Integer getSnippetLength() {
+        return snippetLength;
+      }
+
+      /**
+       * Optional. Maximum length of snippet text, in characters, to be returned with results. Note:
+       * this feature is limited to specific engines. * Valid values are integers between 161 and
+       * 1000, inclusive.
+       */
+      public List setSnippetLength(java.lang.Integer snippetLength) {
+        this.snippetLength = snippetLength;
+        return this;
+      }
+
+      /**
        * The sort expression to apply to the results. The sort parameter specifies that the results
        * be sorted according to the specified expression i.e. sort by date. [Example:
        * sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-
@@ -1928,6 +1954,32 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
          */
         public List setSiteSearchFilter(java.lang.String siteSearchFilter) {
           this.siteSearchFilter = siteSearchFilter;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum length of snippet text, in characters, to be returned with results.
+         * Note: this feature is limited to specific engines. * Valid values are integers between
+         * 161 and 1000, inclusive.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer snippetLength;
+
+        /** Optional. Maximum length of snippet text, in characters, to be returned with results. Note: this
+       feature is limited to specific engines. * Valid values are integers between 161 and 1000,
+       inclusive.
+         */
+        public java.lang.Integer getSnippetLength() {
+          return snippetLength;
+        }
+
+        /**
+         * Optional. Maximum length of snippet text, in characters, to be returned with results.
+         * Note: this feature is limited to specific engines. * Valid values are integers between
+         * 161 and 1000, inclusive.
+         */
+        public List setSnippetLength(java.lang.Integer snippetLength) {
+          this.snippetLength = snippetLength;
           return this;
         }
 

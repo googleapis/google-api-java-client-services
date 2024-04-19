@@ -38,6 +38,13 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private AuthConfig authConfig;
 
   /**
+   * Output only. Billing config for the connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BillingConfig billingConfig;
+
+  /**
    * Optional. Configuration for configuring the connection with an external system.
    * The value may be {@code null}.
    */
@@ -251,6 +258,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setAuthConfig(AuthConfig authConfig) {
     this.authConfig = authConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Billing config for the connection.
+   * @return value or {@code null} for none
+   */
+  public BillingConfig getBillingConfig() {
+    return billingConfig;
+  }
+
+  /**
+   * Output only. Billing config for the connection.
+   * @param billingConfig billingConfig or {@code null} for none
+   */
+  public Connection setBillingConfig(BillingConfig billingConfig) {
+    this.billingConfig = billingConfig;
     return this;
   }
 

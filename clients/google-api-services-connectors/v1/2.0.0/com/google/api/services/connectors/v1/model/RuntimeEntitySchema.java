@@ -57,6 +57,13 @@ public final class RuntimeEntitySchema extends com.google.api.client.json.Generi
   private JsonSchema jsonSchema;
 
   /**
+   * List of operations supported by this entity
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> operations;
+
+  /**
    * Output only. Name of the entity.
    * @return value or {@code null} for none
    */
@@ -104,6 +111,23 @@ public final class RuntimeEntitySchema extends com.google.api.client.json.Generi
    */
   public RuntimeEntitySchema setJsonSchema(JsonSchema jsonSchema) {
     this.jsonSchema = jsonSchema;
+    return this;
+  }
+
+  /**
+   * List of operations supported by this entity
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOperations() {
+    return operations;
+  }
+
+  /**
+   * List of operations supported by this entity
+   * @param operations operations or {@code null} for none
+   */
+  public RuntimeEntitySchema setOperations(java.util.List<java.lang.String> operations) {
+    this.operations = operations;
     return this;
   }
 

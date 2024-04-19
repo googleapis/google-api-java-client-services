@@ -37,60 +37,11 @@ public final class GoogleCloudDataplexV1SearchEntriesResult extends com.google.a
   private GoogleCloudDataplexV1Entry dataplexEntry;
 
   /**
-   * Entry description.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String description;
-
-  /**
-   * Display name.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String displayName;
-
-  /**
-   * Resource name of the entry.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("entry")
-  private java.lang.String entry__;
-
-  /**
-   * The entry type.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String entryType;
-
-  /**
-   * Fully qualified name.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String fullyQualifiedName;
-
-  /**
    * Linked resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String linkedResource;
-
-  /**
-   * The last modification timestamp.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String modifyTime;
-
-  /**
-   * Relative resource name.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String relativeResource;
 
   /**
    * Snippets.
@@ -117,91 +68,6 @@ public final class GoogleCloudDataplexV1SearchEntriesResult extends com.google.a
   }
 
   /**
-   * Entry description.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDescription() {
-    return description;
-  }
-
-  /**
-   * Entry description.
-   * @param description description or {@code null} for none
-   */
-  public GoogleCloudDataplexV1SearchEntriesResult setDescription(java.lang.String description) {
-    this.description = description;
-    return this;
-  }
-
-  /**
-   * Display name.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDisplayName() {
-    return displayName;
-  }
-
-  /**
-   * Display name.
-   * @param displayName displayName or {@code null} for none
-   */
-  public GoogleCloudDataplexV1SearchEntriesResult setDisplayName(java.lang.String displayName) {
-    this.displayName = displayName;
-    return this;
-  }
-
-  /**
-   * Resource name of the entry.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEntry() {
-    return entry__;
-  }
-
-  /**
-   * Resource name of the entry.
-   * @param entry__ entry__ or {@code null} for none
-   */
-  public GoogleCloudDataplexV1SearchEntriesResult setEntry(java.lang.String entry__) {
-    this.entry__ = entry__;
-    return this;
-  }
-
-  /**
-   * The entry type.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEntryType() {
-    return entryType;
-  }
-
-  /**
-   * The entry type.
-   * @param entryType entryType or {@code null} for none
-   */
-  public GoogleCloudDataplexV1SearchEntriesResult setEntryType(java.lang.String entryType) {
-    this.entryType = entryType;
-    return this;
-  }
-
-  /**
-   * Fully qualified name.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFullyQualifiedName() {
-    return fullyQualifiedName;
-  }
-
-  /**
-   * Fully qualified name.
-   * @param fullyQualifiedName fullyQualifiedName or {@code null} for none
-   */
-  public GoogleCloudDataplexV1SearchEntriesResult setFullyQualifiedName(java.lang.String fullyQualifiedName) {
-    this.fullyQualifiedName = fullyQualifiedName;
-    return this;
-  }
-
-  /**
    * Linked resource name.
    * @return value or {@code null} for none
    */
@@ -215,40 +81,6 @@ public final class GoogleCloudDataplexV1SearchEntriesResult extends com.google.a
    */
   public GoogleCloudDataplexV1SearchEntriesResult setLinkedResource(java.lang.String linkedResource) {
     this.linkedResource = linkedResource;
-    return this;
-  }
-
-  /**
-   * The last modification timestamp.
-   * @return value or {@code null} for none
-   */
-  public String getModifyTime() {
-    return modifyTime;
-  }
-
-  /**
-   * The last modification timestamp.
-   * @param modifyTime modifyTime or {@code null} for none
-   */
-  public GoogleCloudDataplexV1SearchEntriesResult setModifyTime(String modifyTime) {
-    this.modifyTime = modifyTime;
-    return this;
-  }
-
-  /**
-   * Relative resource name.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRelativeResource() {
-    return relativeResource;
-  }
-
-  /**
-   * Relative resource name.
-   * @param relativeResource relativeResource or {@code null} for none
-   */
-  public GoogleCloudDataplexV1SearchEntriesResult setRelativeResource(java.lang.String relativeResource) {
-    this.relativeResource = relativeResource;
     return this;
   }
 

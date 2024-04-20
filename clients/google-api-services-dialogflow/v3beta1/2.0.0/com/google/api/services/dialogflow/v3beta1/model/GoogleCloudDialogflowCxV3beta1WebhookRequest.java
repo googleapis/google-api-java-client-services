@@ -68,6 +68,13 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequest extends com.goog
   private java.lang.String languageCode;
 
   /**
+   * Information about the language of the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1LanguageInfo languageInfo;
+
+  /**
    * The list of rich message responses to present to the user. Webhook can choose to append or
    * replace this list in WebhookResponse.fulfillment_response;
    * The value may be {@code null}.
@@ -224,6 +231,23 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequest extends com.goog
    */
   public GoogleCloudDialogflowCxV3beta1WebhookRequest setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Information about the language of the request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1LanguageInfo getLanguageInfo() {
+    return languageInfo;
+  }
+
+  /**
+   * Information about the language of the request.
+   * @param languageInfo languageInfo or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1WebhookRequest setLanguageInfo(GoogleCloudDialogflowCxV3beta1LanguageInfo languageInfo) {
+    this.languageInfo = languageInfo;
     return this;
   }
 

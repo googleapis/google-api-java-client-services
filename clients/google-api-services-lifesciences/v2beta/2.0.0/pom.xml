@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-lifesciences</artifactId>
-  <version>v2beta-rev20230707-2.0.0</version>
-  <name>Cloud Life Sciences API v2beta-rev20230707-2.0.0</name>
+  <version>v2beta-rev20240329-2.0.0</version>
+  <name>Cloud Life Sciences API v2beta-rev20240329-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -33,7 +33,7 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1Action extends com.google.api.client.json.GenericJson {
 
   /**
-   * A custom function to invoke when the containing element is clicked or othrwise activated. For
+   * A custom function to invoke when the containing element is clicked or otherwise activated. For
    * example usage, see [Read form data](https://developers.google.com/workspace/chat/read-form-
    * data).
    * The value may be {@code null}.
@@ -89,7 +89,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   private java.lang.Boolean persistValues;
 
   /**
-   * A custom function to invoke when the containing element is clicked or othrwise activated. For
+   * A custom function to invoke when the containing element is clicked or otherwise activated. For
    * example usage, see [Read form data](https://developers.google.com/workspace/chat/read-form-
    * data).
    * @return value or {@code null} for none
@@ -99,7 +99,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   }
 
   /**
-   * A custom function to invoke when the containing element is clicked or othrwise activated. For
+   * A custom function to invoke when the containing element is clicked or otherwise activated. For
    * example usage, see [Read form data](https://developers.google.com/workspace/chat/read-form-
    * data).
    * @param function function or {@code null} for none

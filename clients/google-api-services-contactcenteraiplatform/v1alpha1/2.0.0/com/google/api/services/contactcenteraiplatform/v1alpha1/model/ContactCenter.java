@@ -68,6 +68,13 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
   private java.lang.String displayName;
 
   /**
+   * Optional. Early release channel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Early early;
+
+  /**
    * The configuration of this instance, it is currently immutable once created.
    * The value may be {@code null}.
    */
@@ -94,6 +101,13 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Normal release channel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Normal normal;
 
   /**
    * Output only. A list of UJET components that should be privately accessed. This field is set by
@@ -231,6 +245,23 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Early release channel.
+   * @return value or {@code null} for none
+   */
+  public Early getEarly() {
+    return early;
+  }
+
+  /**
+   * Optional. Early release channel.
+   * @param early early or {@code null} for none
+   */
+  public ContactCenter setEarly(Early early) {
+    this.early = early;
+    return this;
+  }
+
+  /**
    * The configuration of this instance, it is currently immutable once created.
    * @return value or {@code null} for none
    */
@@ -295,6 +326,23 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   public ContactCenter setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Normal release channel.
+   * @return value or {@code null} for none
+   */
+  public Normal getNormal() {
+    return normal;
+  }
+
+  /**
+   * Optional. Normal release channel.
+   * @param normal normal or {@code null} for none
+   */
+  public ContactCenter setNormal(Normal normal) {
+    this.normal = normal;
     return this;
   }
 

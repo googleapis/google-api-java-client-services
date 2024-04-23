@@ -37,6 +37,13 @@ public final class GroundingMetadata extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> retrievalQueries;
 
   /**
+   * Optional. Google search entry for the following-up web searches.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SearchEntryPoint searchEntryPoint;
+
+  /**
    * Optional. Web search queries for the following-up web search.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GroundingMetadata extends com.google.api.client.json.GenericJ
    */
   public GroundingMetadata setRetrievalQueries(java.util.List<java.lang.String> retrievalQueries) {
     this.retrievalQueries = retrievalQueries;
+    return this;
+  }
+
+  /**
+   * Optional. Google search entry for the following-up web searches.
+   * @return value or {@code null} for none
+   */
+  public SearchEntryPoint getSearchEntryPoint() {
+    return searchEntryPoint;
+  }
+
+  /**
+   * Optional. Google search entry for the following-up web searches.
+   * @param searchEntryPoint searchEntryPoint or {@code null} for none
+   */
+  public GroundingMetadata setSearchEntryPoint(SearchEntryPoint searchEntryPoint) {
+    this.searchEntryPoint = searchEntryPoint;
     return this;
   }
 

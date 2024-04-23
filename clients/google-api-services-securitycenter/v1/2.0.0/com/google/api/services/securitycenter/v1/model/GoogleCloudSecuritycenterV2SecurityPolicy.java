@@ -46,8 +46,8 @@ public final class GoogleCloudSecuritycenterV2SecurityPolicy extends com.google.
   private java.lang.Boolean preview;
 
   /**
-   * The type of Google Cloud Armor security policy for example, ‘backend security policy’, ‘edge
-   * security policy’, ‘network edge security policy’, or ‘always-on DDoS protection’.
+   * The type of Google Cloud Armor security policy for example, 'backend security policy', 'edge
+   * security policy', 'network edge security policy', or 'always-on DDoS protection'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +88,8 @@ public final class GoogleCloudSecuritycenterV2SecurityPolicy extends com.google.
   }
 
   /**
-   * The type of Google Cloud Armor security policy for example, ‘backend security policy’, ‘edge
-   * security policy’, ‘network edge security policy’, or ‘always-on DDoS protection’.
+   * The type of Google Cloud Armor security policy for example, 'backend security policy', 'edge
+   * security policy', 'network edge security policy', or 'always-on DDoS protection'.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -97,8 +97,8 @@ public final class GoogleCloudSecuritycenterV2SecurityPolicy extends com.google.
   }
 
   /**
-   * The type of Google Cloud Armor security policy for example, ‘backend security policy’, ‘edge
-   * security policy’, ‘network edge security policy’, or ‘always-on DDoS protection’.
+   * The type of Google Cloud Armor security policy for example, 'backend security policy', 'edge
+   * security policy', 'network edge security policy', or 'always-on DDoS protection'.
    * @param type type or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SecurityPolicy setType(java.lang.String type) {

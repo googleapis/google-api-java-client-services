@@ -31,7 +31,7 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class Attack extends com.google.api.client.json.GenericJson {
 
   /**
-   * Type of attack, for example, ‘SYN-flood’, ‘NTP-udp’, or ‘CHARGEN-udp’.
+   * Type of attack, for example, 'SYN-flood', 'NTP-udp', or 'CHARGEN-udp'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class Attack extends com.google.api.client.json.GenericJson {
   private java.lang.Integer volumePps;
 
   /**
-   * Type of attack, for example, ‘SYN-flood’, ‘NTP-udp’, or ‘CHARGEN-udp’.
+   * Type of attack, for example, 'SYN-flood', 'NTP-udp', or 'CHARGEN-udp'.
    * @return value or {@code null} for none
    */
   public java.lang.String getClassification() {
@@ -60,7 +60,7 @@ public final class Attack extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of attack, for example, ‘SYN-flood’, ‘NTP-udp’, or ‘CHARGEN-udp’.
+   * Type of attack, for example, 'SYN-flood', 'NTP-udp', or 'CHARGEN-udp'.
    * @param classification classification or {@code null} for none
    */
   public Attack setClassification(java.lang.String classification) {

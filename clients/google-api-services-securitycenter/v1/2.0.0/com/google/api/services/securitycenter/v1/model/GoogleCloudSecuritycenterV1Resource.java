@@ -124,12 +124,12 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   private ResourcePath resourcePath;
 
   /**
-   * A string representation of the resource path. For GCP, it has the format of:
+   * A string representation of the resource path. For Google Cloud, it has the format of
    * organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}
-   * where there can be any number of folders. For AWS, it has the format of: org/{organization_id}/
-   * ou/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be
-   * any number of organizational units. For Azure, it has the format of: mg/{management_group_id}/m
-   * g/{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can
+   * where there can be any number of folders. For AWS, it has the format of org/{organization_id}/o
+   * u/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be
+   * any number of organizational units. For Azure, it has the format of mg/{management_group_id}/mg
+   * /{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can
    * be any number of management groups.
    * The value may be {@code null}.
    */
@@ -361,12 +361,12 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * A string representation of the resource path. For GCP, it has the format of:
+   * A string representation of the resource path. For Google Cloud, it has the format of
    * organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}
-   * where there can be any number of folders. For AWS, it has the format of: org/{organization_id}/
-   * ou/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be
-   * any number of organizational units. For Azure, it has the format of: mg/{management_group_id}/m
-   * g/{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can
+   * where there can be any number of folders. For AWS, it has the format of org/{organization_id}/o
+   * u/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be
+   * any number of organizational units. For Azure, it has the format of mg/{management_group_id}/mg
+   * /{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can
    * be any number of management groups.
    * @return value or {@code null} for none
    */
@@ -375,12 +375,12 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * A string representation of the resource path. For GCP, it has the format of:
+   * A string representation of the resource path. For Google Cloud, it has the format of
    * organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}
-   * where there can be any number of folders. For AWS, it has the format of: org/{organization_id}/
-   * ou/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be
-   * any number of organizational units. For Azure, it has the format of: mg/{management_group_id}/m
-   * g/{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can
+   * where there can be any number of folders. For AWS, it has the format of org/{organization_id}/o
+   * u/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be
+   * any number of organizational units. For Azure, it has the format of mg/{management_group_id}/mg
+   * /{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can
    * be any number of management groups.
    * @param resourcePathString resourcePathString or {@code null} for none
    */

@@ -70,7 +70,7 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
 
   /**
    * Distinguish between volumetric & protocol DDoS attack and application layer attacks. For
-   * example, “L3_4” for Layer 3 and Layer 4 DDoS attacks, or “L_7” for Layer 7 DDoS attacks.
+   * example, "L3_4" for Layer 3 and Layer 4 DDoS attacks, or "L_7" for Layer 7 DDoS attacks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,7 +169,7 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
 
   /**
    * Distinguish between volumetric & protocol DDoS attack and application layer attacks. For
-   * example, “L3_4” for Layer 3 and Layer 4 DDoS attacks, or “L_7” for Layer 7 DDoS attacks.
+   * example, "L3_4" for Layer 3 and Layer 4 DDoS attacks, or "L_7" for Layer 7 DDoS attacks.
    * @return value or {@code null} for none
    */
   public java.lang.String getThreatVector() {
@@ -178,7 +178,7 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
 
   /**
    * Distinguish between volumetric & protocol DDoS attack and application layer attacks. For
-   * example, “L3_4” for Layer 3 and Layer 4 DDoS attacks, or “L_7” for Layer 7 DDoS attacks.
+   * example, "L3_4" for Layer 3 and Layer 4 DDoS attacks, or "L_7" for Layer 7 DDoS attacks.
    * @param threatVector threatVector or {@code null} for none
    */
   public CloudArmor setThreatVector(java.lang.String threatVector) {

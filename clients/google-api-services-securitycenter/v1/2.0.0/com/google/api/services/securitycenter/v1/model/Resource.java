@@ -123,12 +123,12 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private ResourcePath resourcePath;
 
   /**
-   * A string representation of the resource path. For GCP, it has the format of:
+   * A string representation of the resource path. For Google Cloud, it has the format of
    * org/{organization_id}/folder/{folder_id}/folder/{folder_id}/project/{project_id} where there
-   * can be any number of folders. For AWS, it has the format of: org/{organization_id}/ou/{organiza
-   * tional_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be any number
-   * of organizational units. For Azure, it has the format of: mg/{management_group_id}/mg/{manageme
-   * nt_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can be any
+   * can be any number of folders. For AWS, it has the format of org/{organization_id}/ou/{organizat
+   * ional_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be any number
+   * of organizational units. For Azure, it has the format of mg/{management_group_id}/mg/{managemen
+   * t_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can be any
    * number of management groups.
    * The value may be {@code null}.
    */
@@ -358,12 +358,12 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string representation of the resource path. For GCP, it has the format of:
+   * A string representation of the resource path. For Google Cloud, it has the format of
    * org/{organization_id}/folder/{folder_id}/folder/{folder_id}/project/{project_id} where there
-   * can be any number of folders. For AWS, it has the format of: org/{organization_id}/ou/{organiza
-   * tional_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be any number
-   * of organizational units. For Azure, it has the format of: mg/{management_group_id}/mg/{manageme
-   * nt_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can be any
+   * can be any number of folders. For AWS, it has the format of org/{organization_id}/ou/{organizat
+   * ional_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be any number
+   * of organizational units. For Azure, it has the format of mg/{management_group_id}/mg/{managemen
+   * t_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can be any
    * number of management groups.
    * @return value or {@code null} for none
    */
@@ -372,12 +372,12 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string representation of the resource path. For GCP, it has the format of:
+   * A string representation of the resource path. For Google Cloud, it has the format of
    * org/{organization_id}/folder/{folder_id}/folder/{folder_id}/project/{project_id} where there
-   * can be any number of folders. For AWS, it has the format of: org/{organization_id}/ou/{organiza
-   * tional_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be any number
-   * of organizational units. For Azure, it has the format of: mg/{management_group_id}/mg/{manageme
-   * nt_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can be any
+   * can be any number of folders. For AWS, it has the format of org/{organization_id}/ou/{organizat
+   * ional_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be any number
+   * of organizational units. For Azure, it has the format of mg/{management_group_id}/mg/{managemen
+   * t_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can be any
    * number of management groups.
    * @param resourcePathString resourcePathString or {@code null} for none
    */

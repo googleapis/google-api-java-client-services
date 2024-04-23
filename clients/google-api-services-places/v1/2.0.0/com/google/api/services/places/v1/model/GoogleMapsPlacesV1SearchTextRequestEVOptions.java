@@ -31,15 +31,15 @@ public final class GoogleMapsPlacesV1SearchTextRequestEVOptions extends com.goog
 
   /**
    * Optional. The list of preferred EV connector types. A place that does not support any of the
-   * listed connector types are filter out.
+   * listed connector types is filtered out.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> connectorTypes;
 
   /**
-   * Optional. Filtering places by minimum charging rate. Any places with charging a rate less than
-   * the minimum charging rate are filtered out.
+   * Optional. Minimum required charging rate in kilowatts. A place with a charging rate less than
+   * the specified rate is filtered out.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class GoogleMapsPlacesV1SearchTextRequestEVOptions extends com.goog
 
   /**
    * Optional. The list of preferred EV connector types. A place that does not support any of the
-   * listed connector types are filter out.
+   * listed connector types is filtered out.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getConnectorTypes() {
@@ -56,7 +56,7 @@ public final class GoogleMapsPlacesV1SearchTextRequestEVOptions extends com.goog
 
   /**
    * Optional. The list of preferred EV connector types. A place that does not support any of the
-   * listed connector types are filter out.
+   * listed connector types is filtered out.
    * @param connectorTypes connectorTypes or {@code null} for none
    */
   public GoogleMapsPlacesV1SearchTextRequestEVOptions setConnectorTypes(java.util.List<java.lang.String> connectorTypes) {
@@ -65,8 +65,8 @@ public final class GoogleMapsPlacesV1SearchTextRequestEVOptions extends com.goog
   }
 
   /**
-   * Optional. Filtering places by minimum charging rate. Any places with charging a rate less than
-   * the minimum charging rate are filtered out.
+   * Optional. Minimum required charging rate in kilowatts. A place with a charging rate less than
+   * the specified rate is filtered out.
    * @return value or {@code null} for none
    */
   public java.lang.Double getMinimumChargingRateKw() {
@@ -74,8 +74,8 @@ public final class GoogleMapsPlacesV1SearchTextRequestEVOptions extends com.goog
   }
 
   /**
-   * Optional. Filtering places by minimum charging rate. Any places with charging a rate less than
-   * the minimum charging rate are filtered out.
+   * Optional. Minimum required charging rate in kilowatts. A place with a charging rate less than
+   * the specified rate is filtered out.
    * @param minimumChargingRateKw minimumChargingRateKw or {@code null} for none
    */
   public GoogleMapsPlacesV1SearchTextRequestEVOptions setMinimumChargingRateKw(java.lang.Double minimumChargingRateKw) {

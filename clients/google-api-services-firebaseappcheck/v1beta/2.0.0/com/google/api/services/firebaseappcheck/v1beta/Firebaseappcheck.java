@@ -8620,7 +8620,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the firebaseappcheck server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The relative resource name of the parent service in which the specified ResourcePolicy
+         * @param parent Required. The relative resource name of the parent Service in which the specified ResourcePolicy
          *        will be created, in the format: ``` projects/{project_number}/services/{service_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
@@ -8651,7 +8651,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The relative resource name of the parent service in which the specified ResourcePolicy
+           * @param parent Required. The relative resource name of the parent Service in which the specified ResourcePolicy
          *        will be created, in the format: ``` projects/{project_number}/services/{service_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
@@ -8724,7 +8724,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The relative resource name of the parent service in which the specified
+           * Required. The relative resource name of the parent Service in which the specified
            * ResourcePolicy will be created, in the format: ```
            * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
            * must be a supported service ID. Currently, the following service IDs are supported: *
@@ -8733,7 +8733,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The relative resource name of the parent service in which the specified ResourcePolicy
+          /** Required. The relative resource name of the parent Service in which the specified ResourcePolicy
          will be created, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that
          the `service_id` element must be a supported service ID. Currently, the following service IDs are
          supported: * `oauth2.googleapis.com` (Google Identity for iOS)
@@ -8743,7 +8743,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The relative resource name of the parent service in which the specified
+           * Required. The relative resource name of the parent Service in which the specified
            * ResourcePolicy will be created, in the format: ```
            * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
            * must be a supported service ID. Currently, the following service IDs are supported: *
@@ -8954,7 +8954,6 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
-         *        `resource_policy_id` is a system-generated UID used as the resource ID for the policy.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -8984,7 +8983,6 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
-         *        `resource_policy_id` is a system-generated UID used as the resource ID for the policy.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -9068,8 +9066,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
            * ``` Note that the `service_id` element must be a supported service ID. Currently, the
            * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
-           * iOS) `resource_policy_id` is a system-generated UID used as the resource ID for the
-           * policy.
+           * iOS)
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -9077,8 +9074,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           /** Required. The relative resource name of the ResourcePolicy to retrieve, in the format: ```
          projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note that
          the `service_id` element must be a supported service ID. Currently, the following service IDs are
-         supported: * `oauth2.googleapis.com` (Google Identity for iOS) `resource_policy_id` is a system-
-         generated UID used as the resource ID for the policy.
+         supported: * `oauth2.googleapis.com` (Google Identity for iOS)
            */
           public java.lang.String getName() {
             return name;
@@ -9090,8 +9086,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
            * ``` Note that the `service_id` element must be a supported service ID. Currently, the
            * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
-           * iOS) `resource_policy_id` is a system-generated UID used as the resource ID for the
-           * policy.
+           * iOS)
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9116,7 +9111,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the firebaseappcheck server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The relative resource name of the parent service for which to list each associated
+         * @param parent Required. The relative resource name of the parent Service for which to list each associated
          *        ResourcePolicy, in the format: ``` projects/{project_number}/services/{service_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
@@ -9145,7 +9140,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The relative resource name of the parent service for which to list each associated
+           * @param parent Required. The relative resource name of the parent Service for which to list each associated
          *        ResourcePolicy, in the format: ``` projects/{project_number}/services/{service_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
@@ -9227,7 +9222,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The relative resource name of the parent service for which to list each
+           * Required. The relative resource name of the parent Service for which to list each
            * associated ResourcePolicy, in the format: ```
            * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
            * must be a supported service ID. Currently, the following service IDs are supported: *
@@ -9236,7 +9231,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The relative resource name of the parent service for which to list each associated
+          /** Required. The relative resource name of the parent Service for which to list each associated
          ResourcePolicy, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that
          the `service_id` element must be a supported service ID. Currently, the following service IDs are
          supported: * `oauth2.googleapis.com` (Google Identity for iOS)
@@ -9246,7 +9241,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The relative resource name of the parent service for which to list each
+           * Required. The relative resource name of the parent Service for which to list each
            * associated ResourcePolicy, in the format: ```
            * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
            * must be a supported service ID. Currently, the following service IDs are supported: *
@@ -9370,11 +9365,11 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the firebaseappcheck server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The relative name of the resource configuration object, in the format: ```
+         * @param name Required. The relative name of the resource policy object, in the format: ```
          *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
-         *        `resource_policy_id` is a system-generated UID used as the resource ID for the policy.
+         *        `resource_policy_id` is a system-generated UID.
          * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy}
          * @return the request
          */
@@ -9402,11 +9397,11 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The relative name of the resource configuration object, in the format: ```
+           * @param name Required. The relative name of the resource policy object, in the format: ```
          *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
-         *        `resource_policy_id` is a system-generated UID used as the resource ID for the policy.
+         *        `resource_policy_id` is a system-generated UID.
            * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy}
            * @since 1.13
            */
@@ -9476,33 +9471,31 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The relative name of the resource configuration object, in the format: ```
+           * Required. The relative name of the resource policy object, in the format: ```
            * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
            * ``` Note that the `service_id` element must be a supported service ID. Currently, the
            * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
-           * iOS) `resource_policy_id` is a system-generated UID used as the resource ID for the
-           * policy.
+           * iOS) `resource_policy_id` is a system-generated UID.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The relative name of the resource configuration object, in the format: ```
+          /** Required. The relative name of the resource policy object, in the format: ```
          projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note that
          the `service_id` element must be a supported service ID. Currently, the following service IDs are
          supported: * `oauth2.googleapis.com` (Google Identity for iOS) `resource_policy_id` is a system-
-         generated UID used as the resource ID for the policy.
+         generated UID.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The relative name of the resource configuration object, in the format: ```
+           * Required. The relative name of the resource policy object, in the format: ```
            * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
            * ``` Note that the `service_id` element must be a supported service ID. Currently, the
            * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
-           * iOS) `resource_policy_id` is a system-generated UID used as the resource ID for the
-           * policy.
+           * iOS) `resource_policy_id` is a system-generated UID.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

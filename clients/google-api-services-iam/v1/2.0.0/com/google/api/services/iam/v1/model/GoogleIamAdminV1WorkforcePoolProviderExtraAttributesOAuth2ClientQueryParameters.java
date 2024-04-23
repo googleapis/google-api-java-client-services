@@ -33,9 +33,9 @@ public final class GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Cli
   /**
    * Optional. The filter used to request specific records from IdP. In case of attributes type as
    * AZURE_AD_GROUPS_MAIL, it represents the filter used to request specific groups for users from
-   * IdP. By default all the groups associated with the user are fetched. The groups that are used
-   * should be mail enabled and security enabled. See https://learn.microsoft.com/en-us/graph
-   * /search-query-parameter for more details.
+   * IdP. By default, all of the groups associated with the user are fetched. The groups should be
+   * mail enabled and security enabled. See https://learn.microsoft.com/en-us/graph/search-query-
+   * parameter for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,9 +44,9 @@ public final class GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Cli
   /**
    * Optional. The filter used to request specific records from IdP. In case of attributes type as
    * AZURE_AD_GROUPS_MAIL, it represents the filter used to request specific groups for users from
-   * IdP. By default all the groups associated with the user are fetched. The groups that are used
-   * should be mail enabled and security enabled. See https://learn.microsoft.com/en-us/graph
-   * /search-query-parameter for more details.
+   * IdP. By default, all of the groups associated with the user are fetched. The groups should be
+   * mail enabled and security enabled. See https://learn.microsoft.com/en-us/graph/search-query-
+   * parameter for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -56,9 +56,9 @@ public final class GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Cli
   /**
    * Optional. The filter used to request specific records from IdP. In case of attributes type as
    * AZURE_AD_GROUPS_MAIL, it represents the filter used to request specific groups for users from
-   * IdP. By default all the groups associated with the user are fetched. The groups that are used
-   * should be mail enabled and security enabled. See https://learn.microsoft.com/en-us/graph
-   * /search-query-parameter for more details.
+   * IdP. By default, all of the groups associated with the user are fetched. The groups should be
+   * mail enabled and security enabled. See https://learn.microsoft.com/en-us/graph/search-query-
+   * parameter for more details.
    * @param filter filter or {@code null} for none
    */
   public GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2ClientQueryParameters setFilter(java.lang.String filter) {

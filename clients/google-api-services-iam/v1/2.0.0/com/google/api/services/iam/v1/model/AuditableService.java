@@ -31,16 +31,14 @@ package com.google.api.services.iam.v1.model;
 public final class AuditableService extends com.google.api.client.json.GenericJson {
 
   /**
-   * Public name of the service. For example, the service name for Cloud IAM is
-   * 'iam.googleapis.com'.
+   * Public name of the service. For example, the service name for IAM is 'iam.googleapis.com'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Public name of the service. For example, the service name for Cloud IAM is
-   * 'iam.googleapis.com'.
+   * Public name of the service. For example, the service name for IAM is 'iam.googleapis.com'.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -48,8 +46,7 @@ public final class AuditableService extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Public name of the service. For example, the service name for Cloud IAM is
-   * 'iam.googleapis.com'.
+   * Public name of the service. For example, the service name for IAM is 'iam.googleapis.com'.
    * @param name name or {@code null} for none
    */
   public AuditableService setName(java.lang.String name) {

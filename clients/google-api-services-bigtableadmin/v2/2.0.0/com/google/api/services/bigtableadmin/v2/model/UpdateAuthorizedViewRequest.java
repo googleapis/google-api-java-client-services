@@ -32,8 +32,8 @@ public final class UpdateAuthorizedViewRequest extends com.google.api.client.jso
 
   /**
    * Required. The AuthorizedView to update. The `name` in `authorized_view` is used to identify the
-   * AuthorizedView. AuthorizedView name must in this format
-   * projects//instances//tables//authorizedViews/
+   * AuthorizedView. AuthorizedView name must in this format:
+   * `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +59,8 @@ public final class UpdateAuthorizedViewRequest extends com.google.api.client.jso
 
   /**
    * Required. The AuthorizedView to update. The `name` in `authorized_view` is used to identify the
-   * AuthorizedView. AuthorizedView name must in this format
-   * projects//instances//tables//authorizedViews/
+   * AuthorizedView. AuthorizedView name must in this format:
+   * `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
    * @return value or {@code null} for none
    */
   public AuthorizedView getAuthorizedView() {
@@ -69,8 +69,8 @@ public final class UpdateAuthorizedViewRequest extends com.google.api.client.jso
 
   /**
    * Required. The AuthorizedView to update. The `name` in `authorized_view` is used to identify the
-   * AuthorizedView. AuthorizedView name must in this format
-   * projects//instances//tables//authorizedViews/
+   * AuthorizedView. AuthorizedView name must in this format:
+   * `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
    * @param authorizedView authorizedView or {@code null} for none
    */
   public UpdateAuthorizedViewRequest setAuthorizedView(AuthorizedView authorizedView) {

@@ -4381,8 +4381,8 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Gets the access control policy for a Table or Backup resource. Returns an empty policy if the
-           * resource exists but does not have a policy set.
+           * Gets the access control policy for a Bigtable resource. Returns an empty policy if the resource
+           * exists but does not have a policy set.
            *
            * Create a request for the method "backups.getIamPolicy".
            *
@@ -4409,8 +4409,8 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/clusters/[^/]+/backups/[^/]+$");
 
             /**
-             * Gets the access control policy for a Table or Backup resource. Returns an empty policy if the
-             * resource exists but does not have a policy set.
+             * Gets the access control policy for a Bigtable resource. Returns an empty policy if the resource
+             * exists but does not have a policy set.
              *
              * Create a request for the method "backups.getIamPolicy".
              *
@@ -5028,7 +5028,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Sets the access control policy on a Table or Backup resource. Replaces any existing policy.
+           * Sets the access control policy on a Bigtable resource. Replaces any existing policy.
            *
            * Create a request for the method "backups.setIamPolicy".
            *
@@ -5055,7 +5055,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/clusters/[^/]+/backups/[^/]+$");
 
             /**
-             * Sets the access control policy on a Table or Backup resource. Replaces any existing policy.
+             * Sets the access control policy on a Bigtable resource. Replaces any existing policy.
              *
              * Create a request for the method "backups.setIamPolicy".
              *
@@ -5173,7 +5173,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Returns permissions that the caller has on the specified Table or Backup resource.
+           * Returns permissions that the caller has on the specified Bigtable resource.
            *
            * Create a request for the method "backups.testIamPermissions".
            *
@@ -5200,7 +5200,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/clusters/[^/]+/backups/[^/]+$");
 
             /**
-             * Returns permissions that the caller has on the specified Table or Backup resource.
+             * Returns permissions that the caller has on the specified Bigtable resource.
              *
              * Create a request for the method "backups.testIamPermissions".
              *
@@ -6496,8 +6496,8 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Gets the access control policy for a Table or Backup resource. Returns an empty policy if the
-         * resource exists but does not have a policy set.
+         * Gets the access control policy for a Bigtable resource. Returns an empty policy if the resource
+         * exists but does not have a policy set.
          *
          * Create a request for the method "tables.getIamPolicy".
          *
@@ -6524,8 +6524,8 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
 
           /**
-           * Gets the access control policy for a Table or Backup resource. Returns an empty policy if the
-           * resource exists but does not have a policy set.
+           * Gets the access control policy for a Bigtable resource. Returns an empty policy if the resource
+           * exists but does not have a policy set.
            *
            * Create a request for the method "tables.getIamPolicy".
            *
@@ -7330,7 +7330,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Sets the access control policy on a Table or Backup resource. Replaces any existing policy.
+         * Sets the access control policy on a Bigtable resource. Replaces any existing policy.
          *
          * Create a request for the method "tables.setIamPolicy".
          *
@@ -7357,7 +7357,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
 
           /**
-           * Sets the access control policy on a Table or Backup resource. Replaces any existing policy.
+           * Sets the access control policy on a Bigtable resource. Replaces any existing policy.
            *
            * Create a request for the method "tables.setIamPolicy".
            *
@@ -7475,7 +7475,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Returns permissions that the caller has on the specified Table or Backup resource.
+         * Returns permissions that the caller has on the specified Bigtable resource.
          *
          * Create a request for the method "tables.testIamPermissions".
          *
@@ -7502,7 +7502,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/tables/[^/]+$");
 
           /**
-           * Returns permissions that the caller has on the specified Table or Backup resource.
+           * Returns permissions that the caller has on the specified Bigtable resource.
            *
            * Create a request for the method "tables.testIamPermissions".
            *
@@ -8290,8 +8290,8 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Gets the access control policy for a Table or Backup resource. Returns an empty policy if the
-           * resource exists but does not have a policy set.
+           * Gets the access control policy for a Bigtable resource. Returns an empty policy if the resource
+           * exists but does not have a policy set.
            *
            * Create a request for the method "authorizedViews.getIamPolicy".
            *
@@ -8318,8 +8318,8 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+$");
 
             /**
-             * Gets the access control policy for a Table or Backup resource. Returns an empty policy if the
-             * resource exists but does not have a policy set.
+             * Gets the access control policy for a Bigtable resource. Returns an empty policy if the resource
+             * exists but does not have a policy set.
              *
              * Create a request for the method "authorizedViews.getIamPolicy".
              *
@@ -8846,7 +8846,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Sets the access control policy on a Table or Backup resource. Replaces any existing policy.
+           * Sets the access control policy on a Bigtable resource. Replaces any existing policy.
            *
            * Create a request for the method "authorizedViews.setIamPolicy".
            *
@@ -8873,7 +8873,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+$");
 
             /**
-             * Sets the access control policy on a Table or Backup resource. Replaces any existing policy.
+             * Sets the access control policy on a Bigtable resource. Replaces any existing policy.
              *
              * Create a request for the method "authorizedViews.setIamPolicy".
              *
@@ -8991,7 +8991,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Returns permissions that the caller has on the specified Table or Backup resource.
+           * Returns permissions that the caller has on the specified Bigtable resource.
            *
            * Create a request for the method "authorizedViews.testIamPermissions".
            *
@@ -9018,7 +9018,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/tables/[^/]+/authorizedViews/[^/]+$");
 
             /**
-             * Returns permissions that the caller has on the specified Table or Backup resource.
+             * Returns permissions that the caller has on the specified Bigtable resource.
              *
              * Create a request for the method "authorizedViews.testIamPermissions".
              *

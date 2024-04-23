@@ -45,7 +45,7 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
   private CellFormat defaultFormat;
 
   /**
-   * Whether to allow external url access for image and import functions. Read only when true. When
+   * Whether to allow external URL access for image and import functions. Read only when true. When
    * false, you can set to true.
    * The value may be {@code null}.
    */
@@ -129,7 +129,7 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether to allow external url access for image and import functions. Read only when true. When
+   * Whether to allow external URL access for image and import functions. Read only when true. When
    * false, you can set to true.
    * @return value or {@code null} for none
    */
@@ -138,7 +138,7 @@ public final class SpreadsheetProperties extends com.google.api.client.json.Gene
   }
 
   /**
-   * Whether to allow external url access for image and import functions. Read only when true. When
+   * Whether to allow external URL access for image and import functions. Read only when true. When
    * false, you can set to true.
    * @param importFunctionsExternalUrlAccessAllowed importFunctionsExternalUrlAccessAllowed or {@code null} for none
    */

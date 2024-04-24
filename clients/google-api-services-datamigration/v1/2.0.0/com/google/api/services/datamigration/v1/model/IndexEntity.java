@@ -53,6 +53,16 @@ public final class IndexEntity extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tableColumns;
 
   /**
+   * For each table_column, mark whether it's sorting order is ascending (false) or descending
+   * (true). If no value is defined, assume all columns are sorted in ascending order. Otherwise,
+   * the number of items must match that of table_columns with each value specifying the direction
+   * of the matched column by its index.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Boolean> tableColumnsDescending;
+
+  /**
    * Type of index, for example B-TREE.
    * The value may be {@code null}.
    */
@@ -116,6 +126,29 @@ public final class IndexEntity extends com.google.api.client.json.GenericJson {
    */
   public IndexEntity setTableColumns(java.util.List<java.lang.String> tableColumns) {
     this.tableColumns = tableColumns;
+    return this;
+  }
+
+  /**
+   * For each table_column, mark whether it's sorting order is ascending (false) or descending
+   * (true). If no value is defined, assume all columns are sorted in ascending order. Otherwise,
+   * the number of items must match that of table_columns with each value specifying the direction
+   * of the matched column by its index.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Boolean> getTableColumnsDescending() {
+    return tableColumnsDescending;
+  }
+
+  /**
+   * For each table_column, mark whether it's sorting order is ascending (false) or descending
+   * (true). If no value is defined, assume all columns are sorted in ascending order. Otherwise,
+   * the number of items must match that of table_columns with each value specifying the direction
+   * of the matched column by its index.
+   * @param tableColumnsDescending tableColumnsDescending or {@code null} for none
+   */
+  public IndexEntity setTableColumnsDescending(java.util.List<java.lang.Boolean> tableColumnsDescending) {
+    this.tableColumnsDescending = tableColumnsDescending;
     return this;
   }
 

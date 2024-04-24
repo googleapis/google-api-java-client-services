@@ -17,8 +17,8 @@
 package com.google.api.services.orgpolicy.v2.model;
 
 /**
- * A Google defined custom constraint. This represents a subset of fields missing from Constraint
- * proto that are required to describe CustomConstraint
+ * A Google managed constraint. This represents a subset of fields missing from Constraint proto
+ * that are required to describe CustomConstraint
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Organization Policy API. For a detailed explanation
@@ -29,7 +29,7 @@ package com.google.api.services.orgpolicy.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint extends com.google.api.client.json.GenericJson {
 
   /**
    * Allow or deny type.
@@ -74,7 +74,7 @@ public final class GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint
    * Allow or deny type.
    * @param actionType actionType or {@code null} for none
    */
-  public GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint setActionType(java.lang.String actionType) {
+  public GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint setActionType(java.lang.String actionType) {
     this.actionType = actionType;
     return this;
   }
@@ -95,7 +95,7 @@ public final class GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint
    * `resource.management.auto_upgrade == true` The max length of the condition is 1000 characters.
    * @param condition condition or {@code null} for none
    */
-  public GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint setCondition(java.lang.String condition) {
+  public GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint setCondition(java.lang.String condition) {
     this.condition = condition;
     return this;
   }
@@ -112,7 +112,7 @@ public final class GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint
    * All the operations being applied for this constraint.
    * @param methodTypes methodTypes or {@code null} for none
    */
-  public GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint setMethodTypes(java.util.List<java.lang.String> methodTypes) {
+  public GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint setMethodTypes(java.util.List<java.lang.String> methodTypes) {
     this.methodTypes = methodTypes;
     return this;
   }
@@ -131,19 +131,19 @@ public final class GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint
    * Example: * `compute.googleapis.com/Instance`.
    * @param resourceTypes resourceTypes or {@code null} for none
    */
-  public GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint setResourceTypes(java.util.List<java.lang.String> resourceTypes) {
+  public GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint setResourceTypes(java.util.List<java.lang.String> resourceTypes) {
     this.resourceTypes = resourceTypes;
     return this;
   }
 
   @Override
-  public GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint set(String fieldName, Object value) {
-    return (GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint) super.set(fieldName, value);
+  public GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint set(String fieldName, Object value) {
+    return (GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint clone() {
-    return (GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint) super.clone();
+  public GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint clone() {
+    return (GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint) super.clone();
   }
 
 }

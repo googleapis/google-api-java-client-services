@@ -54,13 +54,6 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
   private java.lang.String constraintDefault;
 
   /**
-   * Defines this constraint as being a CustomConstraint.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint customConstraint;
-
-  /**
    * Detailed description of what this constraint controls as well as how and where it is enforced.
    * Mutable.
    * The value may be {@code null}.
@@ -74,6 +67,13 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
+
+  /**
+   * Defines this constraint as being a GoogleManagedConstraint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint googleManagedConstraint;
 
   /**
    * Defines this constraint as being a ListConstraint.
@@ -135,23 +135,6 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
   }
 
   /**
-   * Defines this constraint as being a CustomConstraint.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint getCustomConstraint() {
-    return customConstraint;
-  }
-
-  /**
-   * Defines this constraint as being a CustomConstraint.
-   * @param customConstraint customConstraint or {@code null} for none
-   */
-  public GoogleCloudOrgpolicyV2Constraint setCustomConstraint(GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint customConstraint) {
-    this.customConstraint = customConstraint;
-    return this;
-  }
-
-  /**
    * Detailed description of what this constraint controls as well as how and where it is enforced.
    * Mutable.
    * @return value or {@code null} for none
@@ -184,6 +167,23 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
    */
   public GoogleCloudOrgpolicyV2Constraint setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Defines this constraint as being a GoogleManagedConstraint.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint getGoogleManagedConstraint() {
+    return googleManagedConstraint;
+  }
+
+  /**
+   * Defines this constraint as being a GoogleManagedConstraint.
+   * @param googleManagedConstraint googleManagedConstraint or {@code null} for none
+   */
+  public GoogleCloudOrgpolicyV2Constraint setGoogleManagedConstraint(GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint googleManagedConstraint) {
+    this.googleManagedConstraint = googleManagedConstraint;
     return this;
   }
 

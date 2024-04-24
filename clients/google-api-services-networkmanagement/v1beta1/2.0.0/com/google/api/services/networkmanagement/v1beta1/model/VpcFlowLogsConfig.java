@@ -77,6 +77,13 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   private java.lang.String interconnectAttachment;
 
   /**
+   * Optional. Resource labels to represent user-provided metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Optional. Configures whether all, none or a subset of metadata fields should be added to the
    * reported VPC flow logs. Default value is INCLUDE_ALL_METADATA.
    * The value may be {@code null}.
@@ -245,6 +252,23 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
    */
   public VpcFlowLogsConfig setInterconnectAttachment(java.lang.String interconnectAttachment) {
     this.interconnectAttachment = interconnectAttachment;
+    return this;
+  }
+
+  /**
+   * Optional. Resource labels to represent user-provided metadata.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. Resource labels to represent user-provided metadata.
+   * @param labels labels or {@code null} for none
+   */
+  public VpcFlowLogsConfig setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

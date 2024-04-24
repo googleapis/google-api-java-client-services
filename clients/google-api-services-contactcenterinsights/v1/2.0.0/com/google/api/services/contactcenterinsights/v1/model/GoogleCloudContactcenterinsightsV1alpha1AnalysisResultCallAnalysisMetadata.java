@@ -73,6 +73,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1AnalysisResultCallAna
   private java.util.List<GoogleCloudContactcenterinsightsV1alpha1ConversationLevelSentiment> sentiments;
 
   /**
+   * Overall conversation-level silence during the call.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1alpha1ConversationLevelSilence silence;
+
+  /**
    * A list of call annotations that apply to this call.
    * @return value or {@code null} for none
    */
@@ -171,6 +178,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1AnalysisResultCallAna
    */
   public GoogleCloudContactcenterinsightsV1alpha1AnalysisResultCallAnalysisMetadata setSentiments(java.util.List<GoogleCloudContactcenterinsightsV1alpha1ConversationLevelSentiment> sentiments) {
     this.sentiments = sentiments;
+    return this;
+  }
+
+  /**
+   * Overall conversation-level silence during the call.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1ConversationLevelSilence getSilence() {
+    return silence;
+  }
+
+  /**
+   * Overall conversation-level silence during the call.
+   * @param silence silence or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1AnalysisResultCallAnalysisMetadata setSilence(GoogleCloudContactcenterinsightsV1alpha1ConversationLevelSilence silence) {
+    this.silence = silence;
     return this;
   }
 

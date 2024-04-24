@@ -67,6 +67,13 @@ public final class LearningGenaiRootFilterMetadataFilterDebugInfo extends com.go
   private CloudAiNlLlmProtoServiceRaiSignal raiSignal;
 
   /**
+   * Number of rewinds by controlled decoding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LearningGenaiRootControlDecodingRecords records;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,6 +180,23 @@ public final class LearningGenaiRootFilterMetadataFilterDebugInfo extends com.go
    */
   public LearningGenaiRootFilterMetadataFilterDebugInfo setRaiSignal(CloudAiNlLlmProtoServiceRaiSignal raiSignal) {
     this.raiSignal = raiSignal;
+    return this;
+  }
+
+  /**
+   * Number of rewinds by controlled decoding.
+   * @return value or {@code null} for none
+   */
+  public LearningGenaiRootControlDecodingRecords getRecords() {
+    return records;
+  }
+
+  /**
+   * Number of rewinds by controlled decoding.
+   * @param records records or {@code null} for none
+   */
+  public LearningGenaiRootFilterMetadataFilterDebugInfo setRecords(LearningGenaiRootControlDecodingRecords records) {
+    this.records = records;
     return this;
   }
 

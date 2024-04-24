@@ -48,6 +48,13 @@ public final class GoogleCloudAiplatformV1beta1Schedule extends com.google.api.c
   private java.lang.Boolean catchUp;
 
   /**
+   * Request for ModelMonitoringService.CreateModelMonitoringJob.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1CreateModelMonitoringJobRequest createModelMonitoringJobRequest;
+
+  /**
    * Request for PipelineService.CreatePipelineJob. CreatePipelineJobRequest.parent field is
    * required (format: projects/{project}/locations/{location}).
    * The value may be {@code null}.
@@ -214,6 +221,23 @@ public final class GoogleCloudAiplatformV1beta1Schedule extends com.google.api.c
    */
   public GoogleCloudAiplatformV1beta1Schedule setCatchUp(java.lang.Boolean catchUp) {
     this.catchUp = catchUp;
+    return this;
+  }
+
+  /**
+   * Request for ModelMonitoringService.CreateModelMonitoringJob.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CreateModelMonitoringJobRequest getCreateModelMonitoringJobRequest() {
+    return createModelMonitoringJobRequest;
+  }
+
+  /**
+   * Request for ModelMonitoringService.CreateModelMonitoringJob.
+   * @param createModelMonitoringJobRequest createModelMonitoringJobRequest or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schedule setCreateModelMonitoringJobRequest(GoogleCloudAiplatformV1beta1CreateModelMonitoringJobRequest createModelMonitoringJobRequest) {
+    this.createModelMonitoringJobRequest = createModelMonitoringJobRequest;
     return this;
   }
 

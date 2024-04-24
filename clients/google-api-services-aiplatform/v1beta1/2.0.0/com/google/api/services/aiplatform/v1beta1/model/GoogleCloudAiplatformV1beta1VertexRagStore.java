@@ -31,7 +31,7 @@ public final class GoogleCloudAiplatformV1beta1VertexRagStore extends com.google
 
   /**
    * Required. Vertex RAG Store corpus resource name:
-   * projects/{project}/locations/{location}/ragCorpora/{ragCorpus} Currently only one corpus is
+   * `projects/{project}/locations/{location}/ragCorpora/{ragCorpus}` Currently only one corpus is
    * allowed. In the future we may open up multiple corpora support. However, they should be from
    * the same project and location.
    * The value may be {@code null}.
@@ -47,8 +47,15 @@ public final class GoogleCloudAiplatformV1beta1VertexRagStore extends com.google
   private java.lang.Integer similarityTopK;
 
   /**
+   * Optional. Only return results with vector distance smaller than the threshold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double vectorDistanceThreshold;
+
+  /**
    * Required. Vertex RAG Store corpus resource name:
-   * projects/{project}/locations/{location}/ragCorpora/{ragCorpus} Currently only one corpus is
+   * `projects/{project}/locations/{location}/ragCorpora/{ragCorpus}` Currently only one corpus is
    * allowed. In the future we may open up multiple corpora support. However, they should be from
    * the same project and location.
    * @return value or {@code null} for none
@@ -59,7 +66,7 @@ public final class GoogleCloudAiplatformV1beta1VertexRagStore extends com.google
 
   /**
    * Required. Vertex RAG Store corpus resource name:
-   * projects/{project}/locations/{location}/ragCorpora/{ragCorpus} Currently only one corpus is
+   * `projects/{project}/locations/{location}/ragCorpora/{ragCorpus}` Currently only one corpus is
    * allowed. In the future we may open up multiple corpora support. However, they should be from
    * the same project and location.
    * @param ragCorpora ragCorpora or {@code null} for none
@@ -83,6 +90,23 @@ public final class GoogleCloudAiplatformV1beta1VertexRagStore extends com.google
    */
   public GoogleCloudAiplatformV1beta1VertexRagStore setSimilarityTopK(java.lang.Integer similarityTopK) {
     this.similarityTopK = similarityTopK;
+    return this;
+  }
+
+  /**
+   * Optional. Only return results with vector distance smaller than the threshold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getVectorDistanceThreshold() {
+    return vectorDistanceThreshold;
+  }
+
+  /**
+   * Optional. Only return results with vector distance smaller than the threshold.
+   * @param vectorDistanceThreshold vectorDistanceThreshold or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VertexRagStore setVectorDistanceThreshold(java.lang.Double vectorDistanceThreshold) {
+    this.vectorDistanceThreshold = vectorDistanceThreshold;
     return this;
   }
 

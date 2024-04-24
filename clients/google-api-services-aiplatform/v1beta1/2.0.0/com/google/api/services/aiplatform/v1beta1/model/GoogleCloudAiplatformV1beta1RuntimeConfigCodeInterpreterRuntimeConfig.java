@@ -30,29 +30,30 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1RuntimeConfigCodeInterpreterRuntimeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The GCS bucket for file input of this Extension. If specified, support input from the
-   * GCS bucket. Vertex Extension Custom Code Service Agent should be granted file reader to this
-   * bucket. If not specified, the extension will only accept file contents from request body and
-   * reject GCS file inputs.
+   * Optional. The Cloud Storage bucket for file input of this Extension. If specified, support
+   * input from the Cloud Storage bucket. Vertex Extension Custom Code Service Agent should be
+   * granted file reader to this bucket. If not specified, the extension will only accept file
+   * contents from request body and reject Cloud Storage file inputs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileInputGcsBucket;
 
   /**
-   * Optional. The GCS bucket for file output of this Extension. If specified, write all output
-   * files to the GCS bucket. Vertex Extension Custom Code Service Agent should be granted file
-   * writer to this bucket. If not specified, the file content will be output in response body.
+   * Optional. The Cloud Storage bucket for file output of this Extension. If specified, write all
+   * output files to the Cloud Storage bucket. Vertex Extension Custom Code Service Agent should be
+   * granted file writer to this bucket. If not specified, the file content will be output in
+   * response body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileOutputGcsBucket;
 
   /**
-   * Optional. The GCS bucket for file input of this Extension. If specified, support input from the
-   * GCS bucket. Vertex Extension Custom Code Service Agent should be granted file reader to this
-   * bucket. If not specified, the extension will only accept file contents from request body and
-   * reject GCS file inputs.
+   * Optional. The Cloud Storage bucket for file input of this Extension. If specified, support
+   * input from the Cloud Storage bucket. Vertex Extension Custom Code Service Agent should be
+   * granted file reader to this bucket. If not specified, the extension will only accept file
+   * contents from request body and reject Cloud Storage file inputs.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileInputGcsBucket() {
@@ -60,10 +61,10 @@ public final class GoogleCloudAiplatformV1beta1RuntimeConfigCodeInterpreterRunti
   }
 
   /**
-   * Optional. The GCS bucket for file input of this Extension. If specified, support input from the
-   * GCS bucket. Vertex Extension Custom Code Service Agent should be granted file reader to this
-   * bucket. If not specified, the extension will only accept file contents from request body and
-   * reject GCS file inputs.
+   * Optional. The Cloud Storage bucket for file input of this Extension. If specified, support
+   * input from the Cloud Storage bucket. Vertex Extension Custom Code Service Agent should be
+   * granted file reader to this bucket. If not specified, the extension will only accept file
+   * contents from request body and reject Cloud Storage file inputs.
    * @param fileInputGcsBucket fileInputGcsBucket or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RuntimeConfigCodeInterpreterRuntimeConfig setFileInputGcsBucket(java.lang.String fileInputGcsBucket) {
@@ -72,9 +73,10 @@ public final class GoogleCloudAiplatformV1beta1RuntimeConfigCodeInterpreterRunti
   }
 
   /**
-   * Optional. The GCS bucket for file output of this Extension. If specified, write all output
-   * files to the GCS bucket. Vertex Extension Custom Code Service Agent should be granted file
-   * writer to this bucket. If not specified, the file content will be output in response body.
+   * Optional. The Cloud Storage bucket for file output of this Extension. If specified, write all
+   * output files to the Cloud Storage bucket. Vertex Extension Custom Code Service Agent should be
+   * granted file writer to this bucket. If not specified, the file content will be output in
+   * response body.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileOutputGcsBucket() {
@@ -82,9 +84,10 @@ public final class GoogleCloudAiplatformV1beta1RuntimeConfigCodeInterpreterRunti
   }
 
   /**
-   * Optional. The GCS bucket for file output of this Extension. If specified, write all output
-   * files to the GCS bucket. Vertex Extension Custom Code Service Agent should be granted file
-   * writer to this bucket. If not specified, the file content will be output in response body.
+   * Optional. The Cloud Storage bucket for file output of this Extension. If specified, write all
+   * output files to the Cloud Storage bucket. Vertex Extension Custom Code Service Agent should be
+   * granted file writer to this bucket. If not specified, the file content will be output in
+   * response body.
    * @param fileOutputGcsBucket fileOutputGcsBucket or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RuntimeConfigCodeInterpreterRuntimeConfig setFileOutputGcsBucket(java.lang.String fileOutputGcsBucket) {

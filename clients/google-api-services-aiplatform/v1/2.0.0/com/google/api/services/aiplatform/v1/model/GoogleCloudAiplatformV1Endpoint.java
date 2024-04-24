@@ -138,6 +138,14 @@ public final class GoogleCloudAiplatformV1Endpoint extends com.google.api.client
   private GoogleCloudAiplatformV1PredictRequestResponseLoggingConfig predictRequestResponseLoggingConfig;
 
   /**
+   * Optional. Configuration for private service connect. network and private_service_connect_config
+   * are mutually exclusive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1PrivateServiceConnectConfig privateServiceConnectConfig;
+
+  /**
    * A map from a DeployedModel's ID to the percentage of this Endpoint's traffic that should be
    * forwarded to that DeployedModel. If a DeployedModel's ID is not listed in this map, then it
    * receives no traffic. The traffic percentage values must add up to 100, or map must be empty if
@@ -389,6 +397,25 @@ public final class GoogleCloudAiplatformV1Endpoint extends com.google.api.client
    */
   public GoogleCloudAiplatformV1Endpoint setPredictRequestResponseLoggingConfig(GoogleCloudAiplatformV1PredictRequestResponseLoggingConfig predictRequestResponseLoggingConfig) {
     this.predictRequestResponseLoggingConfig = predictRequestResponseLoggingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for private service connect. network and private_service_connect_config
+   * are mutually exclusive.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PrivateServiceConnectConfig getPrivateServiceConnectConfig() {
+    return privateServiceConnectConfig;
+  }
+
+  /**
+   * Optional. Configuration for private service connect. network and private_service_connect_config
+   * are mutually exclusive.
+   * @param privateServiceConnectConfig privateServiceConnectConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Endpoint setPrivateServiceConnectConfig(GoogleCloudAiplatformV1PrivateServiceConnectConfig privateServiceConnectConfig) {
+    this.privateServiceConnectConfig = privateServiceConnectConfig;
     return this;
   }
 

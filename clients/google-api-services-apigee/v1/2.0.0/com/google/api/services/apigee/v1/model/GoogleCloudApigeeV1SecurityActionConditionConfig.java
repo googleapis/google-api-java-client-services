@@ -57,6 +57,15 @@ public final class GoogleCloudApigeeV1SecurityActionConditionConfig extends com.
   private java.util.List<java.lang.String> apiProducts;
 
   /**
+   * Optional. A list of ASN numbers to act on, e.g. 23.
+   * https://en.wikipedia.org/wiki/Autonomous_system_(Internet) This uses int64 instead of uint32
+   * because of https://linter.aip.dev/141/forbidden-types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> asns;
+
+  /**
    * Optional. A list of Bot Reasons. Current options: Flooder, Brute Guessor, Static Content
    * Scraper, OAuth Abuser, Robot Abuser, TorListRule, Advanced Anomaly Detection, Advanced API
    * Scraper, Search Engine Crawlers, Public Clouds, Public Cloud AWS, Public Cloud Azure, and
@@ -86,6 +95,14 @@ public final class GoogleCloudApigeeV1SecurityActionConditionConfig extends com.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ipAddressRanges;
+
+  /**
+   * Optional. A list of countries/region codes to act on, e.g. US. This follows
+   * https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> regionCodes;
 
   /**
    * Optional. A list of user agents to deny. We look for exact matches. Limit 50 per action.
@@ -142,6 +159,27 @@ public final class GoogleCloudApigeeV1SecurityActionConditionConfig extends com.
    */
   public GoogleCloudApigeeV1SecurityActionConditionConfig setApiProducts(java.util.List<java.lang.String> apiProducts) {
     this.apiProducts = apiProducts;
+    return this;
+  }
+
+  /**
+   * Optional. A list of ASN numbers to act on, e.g. 23.
+   * https://en.wikipedia.org/wiki/Autonomous_system_(Internet) This uses int64 instead of uint32
+   * because of https://linter.aip.dev/141/forbidden-types.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getAsns() {
+    return asns;
+  }
+
+  /**
+   * Optional. A list of ASN numbers to act on, e.g. 23.
+   * https://en.wikipedia.org/wiki/Autonomous_system_(Internet) This uses int64 instead of uint32
+   * because of https://linter.aip.dev/141/forbidden-types.
+   * @param asns asns or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityActionConditionConfig setAsns(java.util.List<java.lang.Long> asns) {
+    this.asns = asns;
     return this;
   }
 
@@ -216,6 +254,25 @@ public final class GoogleCloudApigeeV1SecurityActionConditionConfig extends com.
    */
   public GoogleCloudApigeeV1SecurityActionConditionConfig setIpAddressRanges(java.util.List<java.lang.String> ipAddressRanges) {
     this.ipAddressRanges = ipAddressRanges;
+    return this;
+  }
+
+  /**
+   * Optional. A list of countries/region codes to act on, e.g. US. This follows
+   * https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRegionCodes() {
+    return regionCodes;
+  }
+
+  /**
+   * Optional. A list of countries/region codes to act on, e.g. US. This follows
+   * https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.
+   * @param regionCodes regionCodes or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityActionConditionConfig setRegionCodes(java.util.List<java.lang.String> regionCodes) {
+    this.regionCodes = regionCodes;
     return this;
   }
 

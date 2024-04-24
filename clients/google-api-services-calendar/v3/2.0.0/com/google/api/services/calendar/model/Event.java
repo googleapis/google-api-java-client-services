@@ -128,8 +128,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
    * Specific type of the event. This cannot be modified after the event is created. Possible values
    * are: - "default" - A regular event or not further specified.  - "outOfOffice" - An out-of-
    * office event.  - "focusTime" - A focus-time event.  - "workingLocation" - A working location
-   * event.  Currently, only "default " and "workingLocation" events can be created using the API.
-   * Extended support for other event types will be made available in later releases.
+   * event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -712,8 +711,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
    * Specific type of the event. This cannot be modified after the event is created. Possible values
    * are: - "default" - A regular event or not further specified.  - "outOfOffice" - An out-of-
    * office event.  - "focusTime" - A focus-time event.  - "workingLocation" - A working location
-   * event.  Currently, only "default " and "workingLocation" events can be created using the API.
-   * Extended support for other event types will be made available in later releases.
+   * event.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -724,8 +722,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
    * Specific type of the event. This cannot be modified after the event is created. Possible values
    * are: - "default" - A regular event or not further specified.  - "outOfOffice" - An out-of-
    * office event.  - "focusTime" - A focus-time event.  - "workingLocation" - A working location
-   * event.  Currently, only "default " and "workingLocation" events can be created using the API.
-   * Extended support for other event types will be made available in later releases.
+   * event.
    * @param eventType eventType or {@code null} for none
    */
   public Event setEventType(java.lang.String eventType) {

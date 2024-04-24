@@ -38,11 +38,25 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
   private java.util.List<GoogleCloudConnectorsV1ConfigVariable> additionalVariables;
 
   /**
+   * Identifier key for auth config
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String authKey;
+
+  /**
    * The type of authentication configured.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String authType;
+
+  /**
+   * Oauth2AuthCodeFlow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow oauth2AuthCodeFlow;
 
   /**
    * Oauth2ClientCredentials.
@@ -90,6 +104,23 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
   }
 
   /**
+   * Identifier key for auth config
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuthKey() {
+    return authKey;
+  }
+
+  /**
+   * Identifier key for auth config
+   * @param authKey authKey or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1AuthConfig setAuthKey(java.lang.String authKey) {
+    this.authKey = authKey;
+    return this;
+  }
+
+  /**
    * The type of authentication configured.
    * @return value or {@code null} for none
    */
@@ -103,6 +134,23 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1AuthConfig setAuthType(java.lang.String authType) {
     this.authType = authType;
+    return this;
+  }
+
+  /**
+   * Oauth2AuthCodeFlow.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow getOauth2AuthCodeFlow() {
+    return oauth2AuthCodeFlow;
+  }
+
+  /**
+   * Oauth2AuthCodeFlow.
+   * @param oauth2AuthCodeFlow oauth2AuthCodeFlow or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1AuthConfig setOauth2AuthCodeFlow(GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow oauth2AuthCodeFlow) {
+    this.oauth2AuthCodeFlow = oauth2AuthCodeFlow;
     return this;
   }
 

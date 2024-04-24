@@ -32,6 +32,22 @@ package com.google.api.services.integrations.v1.model;
 public final class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Ancestor iteration number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> ancestorIterationNumbers;
+
+  /**
+   * Ancestor task number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> ancestorTaskNumbers;
+
+  /**
    * the event attempt number this snapshot belongs to.
    * The value may be {@code null}.
    */
@@ -39,11 +55,25 @@ public final class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutio
   private java.lang.Integer eventAttemptNum;
 
   /**
+   * The direct integration which the event execution snapshots belongs to
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String integrationName;
+
+  /**
    * the task attempt number this snapshot belongs to. Could be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer taskAttemptNum;
+
+  /**
+   * the task label associated with this snapshot. Could be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String taskLabel;
 
   /**
    * the task name associated with this snapshot. Could be empty.
@@ -58,6 +88,44 @@ public final class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutio
    */
   @com.google.api.client.util.Key
   private java.lang.String taskNumber;
+
+  /**
+   * Ancestor iteration number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAncestorIterationNumbers() {
+    return ancestorIterationNumbers;
+  }
+
+  /**
+   * Ancestor iteration number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * @param ancestorIterationNumbers ancestorIterationNumbers or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata setAncestorIterationNumbers(java.util.List<java.lang.String> ancestorIterationNumbers) {
+    this.ancestorIterationNumbers = ancestorIterationNumbers;
+    return this;
+  }
+
+  /**
+   * Ancestor task number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAncestorTaskNumbers() {
+    return ancestorTaskNumbers;
+  }
+
+  /**
+   * Ancestor task number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * @param ancestorTaskNumbers ancestorTaskNumbers or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata setAncestorTaskNumbers(java.util.List<java.lang.String> ancestorTaskNumbers) {
+    this.ancestorTaskNumbers = ancestorTaskNumbers;
+    return this;
+  }
 
   /**
    * the event attempt number this snapshot belongs to.
@@ -77,6 +145,23 @@ public final class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutio
   }
 
   /**
+   * The direct integration which the event execution snapshots belongs to
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIntegrationName() {
+    return integrationName;
+  }
+
+  /**
+   * The direct integration which the event execution snapshots belongs to
+   * @param integrationName integrationName or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata setIntegrationName(java.lang.String integrationName) {
+    this.integrationName = integrationName;
+    return this;
+  }
+
+  /**
    * the task attempt number this snapshot belongs to. Could be empty.
    * @return value or {@code null} for none
    */
@@ -90,6 +175,23 @@ public final class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutio
    */
   public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata setTaskAttemptNum(java.lang.Integer taskAttemptNum) {
     this.taskAttemptNum = taskAttemptNum;
+    return this;
+  }
+
+  /**
+   * the task label associated with this snapshot. Could be empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTaskLabel() {
+    return taskLabel;
+  }
+
+  /**
+   * the task label associated with this snapshot. Could be empty.
+   * @param taskLabel taskLabel or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata setTaskLabel(java.lang.String taskLabel) {
+    this.taskLabel = taskLabel;
     return this;
   }
 

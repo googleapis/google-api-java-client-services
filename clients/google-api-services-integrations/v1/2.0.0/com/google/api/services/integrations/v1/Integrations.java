@@ -796,154 +796,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           return (GetClients) super.set(parameterName, value);
         }
       }
-      /**
-       * This is a UI only method and will be moved away. Returns a list of common tasks.
-       *
-       * Create a request for the method "locations.listTaskEntities".
-       *
-       * This request holds the parameters needed by the integrations server.  After setting any optional
-       * parameters, call the {@link ListTaskEntities#execute()} method to invoke the remote operation.
-       *
-       * @param parent Required. The location resource of the request. This is not going to be used but preserve the field
-       *        for future.
-       * @return the request
-       */
-      public ListTaskEntities listTaskEntities(java.lang.String parent) throws java.io.IOException {
-        ListTaskEntities result = new ListTaskEntities(parent);
-        initialize(result);
-        return result;
-      }
-
-      public class ListTaskEntities extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListTaskEntitiesResponse> {
-
-        private static final String REST_PATH = "v1/{+parent}:listTaskEntities";
-
-        private final java.util.regex.Pattern PARENT_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-        /**
-         * This is a UI only method and will be moved away. Returns a list of common tasks.
-         *
-         * Create a request for the method "locations.listTaskEntities".
-         *
-         * This request holds the parameters needed by the the integrations server.  After setting any
-         * optional parameters, call the {@link ListTaskEntities#execute()} method to invoke the remote
-         * operation. <p> {@link ListTaskEntities#initialize(com.google.api.client.googleapis.services.Abs
-         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
-         * invoking the constructor. </p>
-         *
-         * @param parent Required. The location resource of the request. This is not going to be used but preserve the field
-       *        for future.
-         * @since 1.13
-         */
-        protected ListTaskEntities(java.lang.String parent) {
-          super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListTaskEntitiesResponse.class);
-          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^projects/[^/]+/locations/[^/]+$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public ListTaskEntities set$Xgafv(java.lang.String $Xgafv) {
-          return (ListTaskEntities) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public ListTaskEntities setAccessToken(java.lang.String accessToken) {
-          return (ListTaskEntities) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public ListTaskEntities setAlt(java.lang.String alt) {
-          return (ListTaskEntities) super.setAlt(alt);
-        }
-
-        @Override
-        public ListTaskEntities setCallback(java.lang.String callback) {
-          return (ListTaskEntities) super.setCallback(callback);
-        }
-
-        @Override
-        public ListTaskEntities setFields(java.lang.String fields) {
-          return (ListTaskEntities) super.setFields(fields);
-        }
-
-        @Override
-        public ListTaskEntities setKey(java.lang.String key) {
-          return (ListTaskEntities) super.setKey(key);
-        }
-
-        @Override
-        public ListTaskEntities setOauthToken(java.lang.String oauthToken) {
-          return (ListTaskEntities) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public ListTaskEntities setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (ListTaskEntities) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public ListTaskEntities setQuotaUser(java.lang.String quotaUser) {
-          return (ListTaskEntities) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public ListTaskEntities setUploadType(java.lang.String uploadType) {
-          return (ListTaskEntities) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public ListTaskEntities setUploadProtocol(java.lang.String uploadProtocol) {
-          return (ListTaskEntities) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * Required. The location resource of the request. This is not going to be used but preserve
-         * the field for future.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String parent;
-
-        /** Required. The location resource of the request. This is not going to be used but preserve the field
-       for future.
-         */
-        public java.lang.String getParent() {
-          return parent;
-        }
-
-        /**
-         * Required. The location resource of the request. This is not going to be used but preserve
-         * the field for future.
-         */
-        public ListTaskEntities setParent(java.lang.String parent) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
-                "^projects/[^/]+/locations/[^/]+$");
-          }
-          this.parent = parent;
-          return this;
-        }
-
-        @Override
-        public ListTaskEntities set(String parameterName, Object value) {
-          return (ListTaskEntities) super.set(parameterName, value);
-        }
-      }
 
       /**
        * An accessor for creating requests from the AppsScriptProjects collection.
@@ -1939,22 +1791,21 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-
-           * buyers/apis/guides/v2/list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+           * /list-filters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/v2/list-
-         filters.
+          /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/list-filters.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-
-           * buyers/apis/guides/v2/list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+           * /list-filters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -2029,7 +1880,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the integrations server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the SFDC instance projects/{project}/locations/{location}/authConfigs/{authConfig}.
+         * @param name Resource name of the auth config. For more information, see Manage authentication profiles.
+         *        projects/{project}/locations/{location}/authConfigs/{authConfig}.
          * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAuthConfig}
          * @return the request
          */
@@ -2060,7 +1912,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the SFDC instance projects/{project}/locations/{location}/authConfigs/{authConfig}.
+           * @param name Resource name of the auth config. For more information, see Manage authentication profiles.
+         *        projects/{project}/locations/{location}/authConfigs/{authConfig}.
            * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAuthConfig}
            * @since 1.13
            */
@@ -2130,13 +1983,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Resource name of the SFDC instance
-           * projects/{project}/locations/{location}/authConfigs/{authConfig}.
+           * Resource name of the auth config. For more information, see Manage authentication
+           * profiles. projects/{project}/locations/{location}/authConfigs/{authConfig}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Resource name of the SFDC instance
+          /** Resource name of the auth config. For more information, see Manage authentication profiles.
          projects/{project}/locations/{location}/authConfigs/{authConfig}.
            */
           public java.lang.String getName() {
@@ -2144,8 +1997,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Resource name of the SFDC instance
-           * projects/{project}/locations/{location}/authConfigs/{authConfig}.
+           * Resource name of the auth config. For more information, see Manage authentication
+           * profiles. projects/{project}/locations/{location}/authConfigs/{authConfig}.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2902,22 +2755,21 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-
-           * buyers/apis/guides/v2/list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+           * /list-filters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/v2/list-
-         filters.
+          /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/list-filters.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-
-           * buyers/apis/guides/v2/list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+           * /list-filters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -3427,6 +3279,400 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             return (Provision) super.set(parameterName, value);
           }
         }
+        /**
+         * Update run-as service account for provisioned client
+         *
+         * Create a request for the method "clients.replace".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Replace#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Required: The ID of the GCP Project to be provisioned.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest}
+         * @return the request
+         */
+        public Replace replace(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest content) throws java.io.IOException {
+          Replace result = new Replace(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Replace extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+parent}/clients:replace";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Update run-as service account for provisioned client
+           *
+           * Create a request for the method "clients.replace".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Replace#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Replace#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Required: The ID of the GCP Project to be provisioned.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest}
+           * @since 1.13
+           */
+          protected Replace(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleProtobufEmpty.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Replace set$Xgafv(java.lang.String $Xgafv) {
+            return (Replace) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Replace setAccessToken(java.lang.String accessToken) {
+            return (Replace) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Replace setAlt(java.lang.String alt) {
+            return (Replace) super.setAlt(alt);
+          }
+
+          @Override
+          public Replace setCallback(java.lang.String callback) {
+            return (Replace) super.setCallback(callback);
+          }
+
+          @Override
+          public Replace setFields(java.lang.String fields) {
+            return (Replace) super.setFields(fields);
+          }
+
+          @Override
+          public Replace setKey(java.lang.String key) {
+            return (Replace) super.setKey(key);
+          }
+
+          @Override
+          public Replace setOauthToken(java.lang.String oauthToken) {
+            return (Replace) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Replace setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Replace) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Replace setQuotaUser(java.lang.String quotaUser) {
+            return (Replace) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Replace setUploadType(java.lang.String uploadType) {
+            return (Replace) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Replace setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Replace) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Required: The ID of the GCP Project to be provisioned. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Required: The ID of the GCP Project to be provisioned.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Required: The ID of the GCP Project to be provisioned. */
+          public Replace setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Replace set(String parameterName, Object value) {
+            return (Replace) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update client from GMEK to CMEK
+         *
+         * Create a request for the method "clients.switch".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link IntegrationsSwitch#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Required: The ID of the GCP Project to be provisioned.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest}
+         * @return the request
+         */
+        public IntegrationsSwitch integrationsSwitch(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest content) throws java.io.IOException {
+          IntegrationsSwitch result = new IntegrationsSwitch(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class IntegrationsSwitch extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+parent}/clients:switch";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Update client from GMEK to CMEK
+           *
+           * Create a request for the method "clients.switch".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link IntegrationsSwitch#execute()} method to invoke the remote
+           * operation. <p> {@link IntegrationsSwitch#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. Required: The ID of the GCP Project to be provisioned.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest}
+           * @since 1.13
+           */
+          protected IntegrationsSwitch(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleProtobufEmpty.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public IntegrationsSwitch set$Xgafv(java.lang.String $Xgafv) {
+            return (IntegrationsSwitch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public IntegrationsSwitch setAccessToken(java.lang.String accessToken) {
+            return (IntegrationsSwitch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public IntegrationsSwitch setAlt(java.lang.String alt) {
+            return (IntegrationsSwitch) super.setAlt(alt);
+          }
+
+          @Override
+          public IntegrationsSwitch setCallback(java.lang.String callback) {
+            return (IntegrationsSwitch) super.setCallback(callback);
+          }
+
+          @Override
+          public IntegrationsSwitch setFields(java.lang.String fields) {
+            return (IntegrationsSwitch) super.setFields(fields);
+          }
+
+          @Override
+          public IntegrationsSwitch setKey(java.lang.String key) {
+            return (IntegrationsSwitch) super.setKey(key);
+          }
+
+          @Override
+          public IntegrationsSwitch setOauthToken(java.lang.String oauthToken) {
+            return (IntegrationsSwitch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public IntegrationsSwitch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (IntegrationsSwitch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public IntegrationsSwitch setQuotaUser(java.lang.String quotaUser) {
+            return (IntegrationsSwitch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public IntegrationsSwitch setUploadType(java.lang.String uploadType) {
+            return (IntegrationsSwitch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public IntegrationsSwitch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (IntegrationsSwitch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Required: The ID of the GCP Project to be provisioned. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Required: The ID of the GCP Project to be provisioned.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Required: The ID of the GCP Project to be provisioned. */
+          public IntegrationsSwitch setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public IntegrationsSwitch set(String parameterName, Object value) {
+            return (IntegrationsSwitch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update variable masking for provisioned client
+         *
+         * Create a request for the method "clients.switchVariableMasking".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link SwitchVariableMasking#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. Required: The ID of the GCP Project to be provisioned.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest}
+         * @return the request
+         */
+        public SwitchVariableMasking switchVariableMasking(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest content) throws java.io.IOException {
+          SwitchVariableMasking result = new SwitchVariableMasking(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SwitchVariableMasking extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+parent}/clients:switchVariableMasking";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Update variable masking for provisioned client
+           *
+           * Create a request for the method "clients.switchVariableMasking".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link SwitchVariableMasking#execute()} method to invoke the
+           * remote operation. <p> {@link SwitchVariableMasking#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param parent Required. Required: The ID of the GCP Project to be provisioned.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest}
+           * @since 1.13
+           */
+          protected SwitchVariableMasking(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleProtobufEmpty.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public SwitchVariableMasking set$Xgafv(java.lang.String $Xgafv) {
+            return (SwitchVariableMasking) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SwitchVariableMasking setAccessToken(java.lang.String accessToken) {
+            return (SwitchVariableMasking) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SwitchVariableMasking setAlt(java.lang.String alt) {
+            return (SwitchVariableMasking) super.setAlt(alt);
+          }
+
+          @Override
+          public SwitchVariableMasking setCallback(java.lang.String callback) {
+            return (SwitchVariableMasking) super.setCallback(callback);
+          }
+
+          @Override
+          public SwitchVariableMasking setFields(java.lang.String fields) {
+            return (SwitchVariableMasking) super.setFields(fields);
+          }
+
+          @Override
+          public SwitchVariableMasking setKey(java.lang.String key) {
+            return (SwitchVariableMasking) super.setKey(key);
+          }
+
+          @Override
+          public SwitchVariableMasking setOauthToken(java.lang.String oauthToken) {
+            return (SwitchVariableMasking) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SwitchVariableMasking setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SwitchVariableMasking) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SwitchVariableMasking setQuotaUser(java.lang.String quotaUser) {
+            return (SwitchVariableMasking) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SwitchVariableMasking setUploadType(java.lang.String uploadType) {
+            return (SwitchVariableMasking) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SwitchVariableMasking setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SwitchVariableMasking) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Required: The ID of the GCP Project to be provisioned. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Required: The ID of the GCP Project to be provisioned.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Required: The ID of the GCP Project to be provisioned. */
+          public SwitchVariableMasking setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public SwitchVariableMasking set(String parameterName, Object value) {
+            return (SwitchVariableMasking) super.set(parameterName, value);
+          }
+        }
 
       }
       /**
@@ -3450,7 +3696,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
       public class CloudFunctions {
 
         /**
-         * Creates an cloud function project.
+         * Creates a cloud function project.
          *
          * Create a request for the method "cloudFunctions.create".
          *
@@ -3475,7 +3721,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates an cloud function project.
+           * Creates a cloud function project.
            *
            * Create a request for the method "cloudFunctions.create".
            *
@@ -4678,6 +4924,174 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Executes an integration on receiving events from Integration Connector triggers, Eventarc or CPS
+         * Trigger. Input data to integration is received in body in json format
+         *
+         * Create a request for the method "integrations.executeEvent".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link ExecuteEvent#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The integration resource name. Format:
+         *        projects/{gcp_project_id}/locations/{location}/integrations/{integration_id}
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleProtobufStruct}
+         * @return the request
+         */
+        public ExecuteEvent executeEvent(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleProtobufStruct content) throws java.io.IOException {
+          ExecuteEvent result = new ExecuteEvent(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ExecuteEvent extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteEventResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:executeEvent";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
+
+          /**
+           * Executes an integration on receiving events from Integration Connector triggers, Eventarc or
+           * CPS Trigger. Input data to integration is received in body in json format
+           *
+           * Create a request for the method "integrations.executeEvent".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link ExecuteEvent#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ExecuteEvent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The integration resource name. Format:
+         *        projects/{gcp_project_id}/locations/{location}/integrations/{integration_id}
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleProtobufStruct}
+           * @since 1.13
+           */
+          protected ExecuteEvent(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleProtobufStruct content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteEventResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
+            }
+          }
+
+          @Override
+          public ExecuteEvent set$Xgafv(java.lang.String $Xgafv) {
+            return (ExecuteEvent) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ExecuteEvent setAccessToken(java.lang.String accessToken) {
+            return (ExecuteEvent) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ExecuteEvent setAlt(java.lang.String alt) {
+            return (ExecuteEvent) super.setAlt(alt);
+          }
+
+          @Override
+          public ExecuteEvent setCallback(java.lang.String callback) {
+            return (ExecuteEvent) super.setCallback(callback);
+          }
+
+          @Override
+          public ExecuteEvent setFields(java.lang.String fields) {
+            return (ExecuteEvent) super.setFields(fields);
+          }
+
+          @Override
+          public ExecuteEvent setKey(java.lang.String key) {
+            return (ExecuteEvent) super.setKey(key);
+          }
+
+          @Override
+          public ExecuteEvent setOauthToken(java.lang.String oauthToken) {
+            return (ExecuteEvent) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ExecuteEvent setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ExecuteEvent) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ExecuteEvent setQuotaUser(java.lang.String quotaUser) {
+            return (ExecuteEvent) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ExecuteEvent setUploadType(java.lang.String uploadType) {
+            return (ExecuteEvent) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ExecuteEvent setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ExecuteEvent) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The integration resource name. Format:
+           * projects/{gcp_project_id}/locations/{location}/integrations/{integration_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The integration resource name. Format:
+         projects/{gcp_project_id}/locations/{location}/integrations/{integration_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The integration resource name. Format:
+           * projects/{gcp_project_id}/locations/{location}/integrations/{integration_id}
+           */
+          public ExecuteEvent setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Id of the integration trigger config. The trigger_id is in the format: `integ
+           * ration_connector_trigger/projects/{gcp_project_id}/location/{location}/connections/{con
+           * nection_name}/subscriptions/{subscription_name}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String triggerId;
+
+          /** Required. Id of the integration trigger config. The trigger_id is in the format: `integration_conne
+         ctor_trigger/projects/{gcp_project_id}/location/{location}/connections/{connection_name}/subscripti
+         ons/{subscription_name}`.
+           */
+          public java.lang.String getTriggerId() {
+            return triggerId;
+          }
+
+          /**
+           * Required. Id of the integration trigger config. The trigger_id is in the format: `integ
+           * ration_connector_trigger/projects/{gcp_project_id}/location/{location}/connections/{con
+           * nection_name}/subscriptions/{subscription_name}`.
+           */
+          public ExecuteEvent setTriggerId(java.lang.String triggerId) {
+            this.triggerId = triggerId;
+            return this;
+          }
+
+          @Override
+          public ExecuteEvent set(String parameterName, Object value) {
+            return (ExecuteEvent) super.set(parameterName, value);
+          }
+        }
+        /**
          * Returns the list of all integrations in the specified project.
          *
          * Create a request for the method "integrations.list".
@@ -5633,33 +6047,39 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Optional. Standard filter field, we support filtering on all fields in
-             * EventExecutionParamIndexes table. All fields support for EQUALS, in additional:
-             * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterKey, ParameterValue,
-             * ParameterType support for HAS For example: "parameter_value" HAS \"parameter1\" Also
-             * supports operators like AND, OR, NOT For example, trigger_id=\"id1\" AND
-             * event_execution_state=\"FAILED\"
+             * Optional. Standard filter field, we support filtering on following fields:
+             * workflow_name: the name of the integration. CreateTimestamp: the execution created
+             * time. event_execution_state: the state of the executions. execution_id: the id of the
+             * execution. trigger_id: the id of the trigger. parameter_type: the type of the
+             * parameters involved in the execution. All fields support for EQUALS, in additional:
+             * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support for HAS For
+             * example: "parameter_type" HAS \"string\" Also supports operators like AND, OR, NOT
+             * For example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Standard filter field, we support filtering on all fields in EventExecutionParamIndexes
-           table. All fields support for EQUALS, in additional: CreateTimestamp support for LESS_THAN,
-           GREATER_THAN ParameterKey, ParameterValue, ParameterType support for HAS For example:
-           "parameter_value" HAS \"parameter1\" Also supports operators like AND, OR, NOT For example,
-           trigger_id=\"id1\" AND event_execution_state=\"FAILED\"
+            /** Optional. Standard filter field, we support filtering on following fields: workflow_name: the name
+           of the integration. CreateTimestamp: the execution created time. event_execution_state: the state
+           of the executions. execution_id: the id of the execution. trigger_id: the id of the trigger.
+           parameter_type: the type of the parameters involved in the execution. All fields support for
+           EQUALS, in additional: CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support
+           for HAS For example: "parameter_type" HAS \"string\" Also supports operators like AND, OR, NOT For
+           example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Standard filter field, we support filtering on all fields in
-             * EventExecutionParamIndexes table. All fields support for EQUALS, in additional:
-             * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterKey, ParameterValue,
-             * ParameterType support for HAS For example: "parameter_value" HAS \"parameter1\" Also
-             * supports operators like AND, OR, NOT For example, trigger_id=\"id1\" AND
-             * event_execution_state=\"FAILED\"
+             * Optional. Standard filter field, we support filtering on following fields:
+             * workflow_name: the name of the integration. CreateTimestamp: the execution created
+             * time. event_execution_state: the state of the executions. execution_id: the id of the
+             * execution. trigger_id: the id of the trigger. parameter_type: the type of the
+             * parameters involved in the execution. All fields support for EQUALS, in additional:
+             * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support for HAS For
+             * example: "parameter_type" HAS \"string\" Also supports operators like AND, OR, NOT
+             * For example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -5965,6 +6385,29 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
+             * Optional. If true, the service will provide execution info with snapshot metadata
+             * only i.e. without event parameters.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean snapshotMetadataWithoutParams;
+
+            /** Optional. If true, the service will provide execution info with snapshot metadata only i.e. without
+           event parameters.
+             */
+            public java.lang.Boolean getSnapshotMetadataWithoutParams() {
+              return snapshotMetadataWithoutParams;
+            }
+
+            /**
+             * Optional. If true, the service will provide execution info with snapshot metadata
+             * only i.e. without event parameters.
+             */
+            public List setSnapshotMetadataWithoutParams(java.lang.Boolean snapshotMetadataWithoutParams) {
+              this.snapshotMetadataWithoutParams = snapshotMetadataWithoutParams;
+              return this;
+            }
+
+            /**
              * Optional. If true, the service will truncate the params to only keep the first 1000
              * characters of string params and empty the executions in order to make response
              * smaller. Only works for UI and when the params fields are not filtered out.
@@ -6017,7 +6460,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           public class Suspensions {
 
             /**
-             * * Lifts suspension for advanced suspension task. Fetch corresponding suspension with provided
+             * * Lifts suspension for the Suspension task. Fetch corresponding suspension with provided
              * suspension Id, resolve suspension, and set up suspension result for the Suspension Task.
              *
              * Create a request for the method "suspensions.lift".
@@ -6045,7 +6488,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+/suspensions/[^/]+$");
 
               /**
-               * * Lifts suspension for advanced suspension task. Fetch corresponding suspension with provided
+               * * Lifts suspension for the Suspension task. Fetch corresponding suspension with provided
                * suspension Id, resolve suspension, and set up suspension result for the Suspension Task.
                *
                * Create a request for the method "suspensions.lift".
@@ -6522,239 +6965,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * An accessor for creating requests from the Executionsnapshots collection.
-         *
-         * <p>The typical use is:</p>
-         * <pre>
-         *   {@code Integrations integrations = new Integrations(...);}
-         *   {@code Integrations.Executionsnapshots.List request = integrations.executionsnapshots().list(parameters ...)}
-         * </pre>
-         *
-         * @return the resource collection
-         */
-        public Executionsnapshots executionsnapshots() {
-          return new Executionsnapshots();
-        }
-
-        /**
-         * The "executionsnapshots" collection of methods.
-         */
-        public class Executionsnapshots {
-
-          /**
-           * Lists the snapshots of a given integration executions. This RPC is not being used.
-           *
-           * Create a request for the method "executionsnapshots.list".
-           *
-           * This request holds the parameters needed by the integrations server.  After setting any optional
-           * parameters, call the {@link List#execute()} method to invoke the remote operation.
-           *
-           * @param parent Required. The parent resource name of the integration execution.
-           * @return the request
-           */
-          public List list(java.lang.String parent) throws java.io.IOException {
-            List result = new List(parent);
-            initialize(result);
-            return result;
-          }
-
-          public class List extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListExecutionSnapshotsResponse> {
-
-            private static final String REST_PATH = "v1/{+parent}/executionsnapshots";
-
-            private final java.util.regex.Pattern PARENT_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
-
-            /**
-             * Lists the snapshots of a given integration executions. This RPC is not being used.
-             *
-             * Create a request for the method "executionsnapshots.list".
-             *
-             * This request holds the parameters needed by the the integrations server.  After setting any
-             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param parent Required. The parent resource name of the integration execution.
-             * @since 1.13
-             */
-            protected List(java.lang.String parent) {
-              super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListExecutionSnapshotsResponse.class);
-              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
-              }
-            }
-
-            @Override
-            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-              return super.executeUsingHead();
-            }
-
-            @Override
-            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-              return super.buildHttpRequestUsingHead();
-            }
-
-            @Override
-            public List set$Xgafv(java.lang.String $Xgafv) {
-              return (List) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public List setAccessToken(java.lang.String accessToken) {
-              return (List) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public List setAlt(java.lang.String alt) {
-              return (List) super.setAlt(alt);
-            }
-
-            @Override
-            public List setCallback(java.lang.String callback) {
-              return (List) super.setCallback(callback);
-            }
-
-            @Override
-            public List setFields(java.lang.String fields) {
-              return (List) super.setFields(fields);
-            }
-
-            @Override
-            public List setKey(java.lang.String key) {
-              return (List) super.setKey(key);
-            }
-
-            @Override
-            public List setOauthToken(java.lang.String oauthToken) {
-              return (List) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (List) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public List setQuotaUser(java.lang.String quotaUser) {
-              return (List) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public List setUploadType(java.lang.String uploadType) {
-              return (List) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public List setUploadProtocol(java.lang.String uploadProtocol) {
-              return (List) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /** Required. The parent resource name of the integration execution. */
-            @com.google.api.client.util.Key
-            private java.lang.String parent;
-
-            /** Required. The parent resource name of the integration execution.
-             */
-            public java.lang.String getParent() {
-              return parent;
-            }
-
-            /** Required. The parent resource name of the integration execution. */
-            public List setParent(java.lang.String parent) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+$");
-              }
-              this.parent = parent;
-              return this;
-            }
-
-            /** Currently supports filter by `execution_info_id` or `execution_snapshot_id`. */
-            @com.google.api.client.util.Key
-            private java.lang.String filter;
-
-            /** Currently supports filter by `execution_info_id` or `execution_snapshot_id`.
-             */
-            public java.lang.String getFilter() {
-              return filter;
-            }
-
-            /** Currently supports filter by `execution_info_id` or `execution_snapshot_id`. */
-            public List setFilter(java.lang.String filter) {
-              this.filter = filter;
-              return this;
-            }
-
-            /** Number of entries to be returned in a page. */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** Number of entries to be returned in a page.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /** Number of entries to be returned in a page. */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
-              return this;
-            }
-
-            /** The token used to retrieve the next page results. */
-            @com.google.api.client.util.Key
-            private java.lang.String pageToken;
-
-            /** The token used to retrieve the next page results.
-             */
-            public java.lang.String getPageToken() {
-              return pageToken;
-            }
-
-            /** The token used to retrieve the next page results. */
-            public List setPageToken(java.lang.String pageToken) {
-              this.pageToken = pageToken;
-              return this;
-            }
-
-            /**
-             * View mask for the response data. If set, only the field specified will be returned as
-             * part of the result. If not set, all fields in event execution snapshot will be filled
-             * and returned.
-             */
-            @com.google.api.client.util.Key
-            private String readMask;
-
-            /** View mask for the response data. If set, only the field specified will be returned as part of the
-           result. If not set, all fields in event execution snapshot will be filled and returned.
-             */
-            public String getReadMask() {
-              return readMask;
-            }
-
-            /**
-             * View mask for the response data. If set, only the field specified will be returned as
-             * part of the result. If not set, all fields in event execution snapshot will be filled
-             * and returned.
-             */
-            public List setReadMask(String readMask) {
-              this.readMask = readMask;
-              return this;
-            }
-
-            @Override
-            public List set(String parameterName, Object value) {
-              return (List) super.set(parameterName, value);
-            }
-          }
-
-        }
-        /**
          * An accessor for creating requests from the Versions collection.
          *
          * <p>The typical use is:</p>
@@ -6774,158 +6984,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
          */
         public class Versions {
 
-          /**
-           * Soft-deletes the integration. Changes the status of the integration to ARCHIVED. If the
-           * integration being ARCHIVED is tagged as "HEAD", the tag is removed from this snapshot and set to
-           * the previous non-ARCHIVED snapshot. The PUBLISH_REQUESTED, DUE_FOR_DELETION tags are removed too.
-           * This RPC throws an exception if the version being archived is DRAFT, and if the `locked_by` user
-           * is not the same as the user performing the Archive. Audit fields updated include
-           * last_modified_timestamp, last_modified_by. Any existing lock is released when Archiving a
-           * integration. Currently, there is no unarchive mechanism.
-           *
-           * Create a request for the method "versions.archive".
-           *
-           * This request holds the parameters needed by the integrations server.  After setting any optional
-           * parameters, call the {@link Archive#execute()} method to invoke the remote operation.
-           *
-           * @param name Required. The version to archive. Format:
-           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest}
-           * @return the request
-           */
-          public Archive archive(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest content) throws java.io.IOException {
-            Archive result = new Archive(name, content);
-            initialize(result);
-            return result;
-          }
-
-          public class Archive extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionResponse> {
-
-            private static final String REST_PATH = "v1/{+name}:archive";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
-
-            /**
-             * Soft-deletes the integration. Changes the status of the integration to ARCHIVED. If the
-             * integration being ARCHIVED is tagged as "HEAD", the tag is removed from this snapshot and set
-             * to the previous non-ARCHIVED snapshot. The PUBLISH_REQUESTED, DUE_FOR_DELETION tags are removed
-             * too. This RPC throws an exception if the version being archived is DRAFT, and if the
-             * `locked_by` user is not the same as the user performing the Archive. Audit fields updated
-             * include last_modified_timestamp, last_modified_by. Any existing lock is released when Archiving
-             * a integration. Currently, there is no unarchive mechanism.
-             *
-             * Create a request for the method "versions.archive".
-             *
-             * This request holds the parameters needed by the the integrations server.  After setting any
-             * optional parameters, call the {@link Archive#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Archive#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name Required. The version to archive. Format:
-           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest}
-             * @since 1.13
-             */
-            protected Archive(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest content) {
-              super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionResponse.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
-              }
-            }
-
-            @Override
-            public Archive set$Xgafv(java.lang.String $Xgafv) {
-              return (Archive) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Archive setAccessToken(java.lang.String accessToken) {
-              return (Archive) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Archive setAlt(java.lang.String alt) {
-              return (Archive) super.setAlt(alt);
-            }
-
-            @Override
-            public Archive setCallback(java.lang.String callback) {
-              return (Archive) super.setCallback(callback);
-            }
-
-            @Override
-            public Archive setFields(java.lang.String fields) {
-              return (Archive) super.setFields(fields);
-            }
-
-            @Override
-            public Archive setKey(java.lang.String key) {
-              return (Archive) super.setKey(key);
-            }
-
-            @Override
-            public Archive setOauthToken(java.lang.String oauthToken) {
-              return (Archive) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Archive setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Archive) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Archive setQuotaUser(java.lang.String quotaUser) {
-              return (Archive) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Archive setUploadType(java.lang.String uploadType) {
-              return (Archive) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Archive setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Archive) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. The version to archive. Format:
-             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Required. The version to archive. Format:
-           projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /**
-             * Required. The version to archive. Format:
-             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             */
-            public Archive setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public Archive set(String parameterName, Object value) {
-              return (Archive) super.set(parameterName, value);
-            }
-          }
           /**
            * Create a integration with a draft version in the specified project.
            *
@@ -7061,6 +7119,22 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               return this;
             }
 
+            /** Optional. Optional. Indicates if sample workflow should be created. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean createSampleIntegrations;
+
+            /** Optional. Optional. Indicates if sample workflow should be created.
+             */
+            public java.lang.Boolean getCreateSampleIntegrations() {
+              return createSampleIntegrations;
+            }
+
+            /** Optional. Optional. Indicates if sample workflow should be created. */
+            public Create setCreateSampleIntegrations(java.lang.Boolean createSampleIntegrations) {
+              this.createSampleIntegrations = createSampleIntegrations;
+              return this;
+            }
+
             /**
              * Set this flag to true, if draft version is to be created for a brand new integration.
              * False, if the request is for an existing integration. For backward compatibility
@@ -7092,152 +7166,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             @Override
             public Create set(String parameterName, Object value) {
               return (Create) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Sets the status of the ACTIVE integration to SNAPSHOT with a new tag "PREVIOUSLY_PUBLISHED" after
-           * validating it. The "HEAD" and "PUBLISH_REQUESTED" tags do not change. This RPC throws an
-           * exception if the version being snapshot is not ACTIVE. Audit fields added include action,
-           * action_by, action_timestamp.
-           *
-           * Create a request for the method "versions.deactivate".
-           *
-           * This request holds the parameters needed by the integrations server.  After setting any optional
-           * parameters, call the {@link Deactivate#execute()} method to invoke the remote operation.
-           *
-           * @param name Required. The version to deactivate. Format:
-           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest}
-           * @return the request
-           */
-          public Deactivate deactivate(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest content) throws java.io.IOException {
-            Deactivate result = new Deactivate(name, content);
-            initialize(result);
-            return result;
-          }
-
-          public class Deactivate extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionResponse> {
-
-            private static final String REST_PATH = "v1/{+name}:deactivate";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
-
-            /**
-             * Sets the status of the ACTIVE integration to SNAPSHOT with a new tag "PREVIOUSLY_PUBLISHED"
-             * after validating it. The "HEAD" and "PUBLISH_REQUESTED" tags do not change. This RPC throws an
-             * exception if the version being snapshot is not ACTIVE. Audit fields added include action,
-             * action_by, action_timestamp.
-             *
-             * Create a request for the method "versions.deactivate".
-             *
-             * This request holds the parameters needed by the the integrations server.  After setting any
-             * optional parameters, call the {@link Deactivate#execute()} method to invoke the remote
-             * operation. <p> {@link
-             * Deactivate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name Required. The version to deactivate. Format:
-           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest}
-             * @since 1.13
-             */
-            protected Deactivate(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest content) {
-              super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionResponse.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
-              }
-            }
-
-            @Override
-            public Deactivate set$Xgafv(java.lang.String $Xgafv) {
-              return (Deactivate) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Deactivate setAccessToken(java.lang.String accessToken) {
-              return (Deactivate) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Deactivate setAlt(java.lang.String alt) {
-              return (Deactivate) super.setAlt(alt);
-            }
-
-            @Override
-            public Deactivate setCallback(java.lang.String callback) {
-              return (Deactivate) super.setCallback(callback);
-            }
-
-            @Override
-            public Deactivate setFields(java.lang.String fields) {
-              return (Deactivate) super.setFields(fields);
-            }
-
-            @Override
-            public Deactivate setKey(java.lang.String key) {
-              return (Deactivate) super.setKey(key);
-            }
-
-            @Override
-            public Deactivate setOauthToken(java.lang.String oauthToken) {
-              return (Deactivate) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Deactivate setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Deactivate) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Deactivate setQuotaUser(java.lang.String quotaUser) {
-              return (Deactivate) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Deactivate setUploadType(java.lang.String uploadType) {
-              return (Deactivate) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Deactivate setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Deactivate) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. The version to deactivate. Format:
-             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Required. The version to deactivate. Format:
-           projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /**
-             * Required. The version to deactivate. Format:
-             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             */
-            public Deactivate setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public Deactivate set(String parameterName, Object value) {
-              return (Deactivate) super.set(parameterName, value);
             }
           }
           /**
@@ -7551,9 +7479,207 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               return this;
             }
 
+            /**
+             * Optional. Integration related file to download like Integration Json, Config
+             * variable, testcase etc.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> files;
+
+            /** Optional. Integration related file to download like Integration Json, Config variable, testcase
+           etc.
+             */
+            public java.util.List<java.lang.String> getFiles() {
+              return files;
+            }
+
+            /**
+             * Optional. Integration related file to download like Integration Json, Config
+             * variable, testcase etc.
+             */
+            public Download setFiles(java.util.List<java.lang.String> files) {
+              this.files = files;
+              return this;
+            }
+
             @Override
             public Download set(String parameterName, Object value) {
               return (Download) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Downloads an Integration version package like IntegrationVersion,Integration Config etc.
+           * Retrieves the IntegrationVersion package for a given `integration_id` and returns the response as
+           * a JSON.
+           *
+           * Create a request for the method "versions.downloadJsonPackage".
+           *
+           * This request holds the parameters needed by the integrations server.  After setting any optional
+           * parameters, call the {@link DownloadJsonPackage#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Integration version name Format:
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+           * @return the request
+           */
+          public DownloadJsonPackage downloadJsonPackage(java.lang.String name) throws java.io.IOException {
+            DownloadJsonPackage result = new DownloadJsonPackage(name);
+            initialize(result);
+            return result;
+          }
+
+          public class DownloadJsonPackage extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDownloadJsonPackageResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:downloadJsonPackage";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+
+            /**
+             * Downloads an Integration version package like IntegrationVersion,Integration Config etc.
+             * Retrieves the IntegrationVersion package for a given `integration_id` and returns the response
+             * as a JSON.
+             *
+             * Create a request for the method "versions.downloadJsonPackage".
+             *
+             * This request holds the parameters needed by the the integrations server.  After setting any
+             * optional parameters, call the {@link DownloadJsonPackage#execute()} method to invoke the remote
+             * operation. <p> {@link DownloadJsonPackage#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. Integration version name Format:
+           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             * @since 1.13
+             */
+            protected DownloadJsonPackage(java.lang.String name) {
+              super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDownloadJsonPackageResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public DownloadJsonPackage set$Xgafv(java.lang.String $Xgafv) {
+              return (DownloadJsonPackage) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DownloadJsonPackage setAccessToken(java.lang.String accessToken) {
+              return (DownloadJsonPackage) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DownloadJsonPackage setAlt(java.lang.String alt) {
+              return (DownloadJsonPackage) super.setAlt(alt);
+            }
+
+            @Override
+            public DownloadJsonPackage setCallback(java.lang.String callback) {
+              return (DownloadJsonPackage) super.setCallback(callback);
+            }
+
+            @Override
+            public DownloadJsonPackage setFields(java.lang.String fields) {
+              return (DownloadJsonPackage) super.setFields(fields);
+            }
+
+            @Override
+            public DownloadJsonPackage setKey(java.lang.String key) {
+              return (DownloadJsonPackage) super.setKey(key);
+            }
+
+            @Override
+            public DownloadJsonPackage setOauthToken(java.lang.String oauthToken) {
+              return (DownloadJsonPackage) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DownloadJsonPackage setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DownloadJsonPackage) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DownloadJsonPackage setQuotaUser(java.lang.String quotaUser) {
+              return (DownloadJsonPackage) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DownloadJsonPackage setUploadType(java.lang.String uploadType) {
+              return (DownloadJsonPackage) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DownloadJsonPackage setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DownloadJsonPackage) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Integration version name Format:
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Integration version name Format:
+           projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Integration version name Format:
+             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
+             */
+            public DownloadJsonPackage setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Integration related file to download like Integration Version, Config
+             * variable, testcase etc.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> files;
+
+            /** Optional. Integration related file to download like Integration Version, Config variable, testcase
+           etc.
+             */
+            public java.util.List<java.lang.String> getFiles() {
+              return files;
+            }
+
+            /**
+             * Optional. Integration related file to download like Integration Version, Config
+             * variable, testcase etc.
+             */
+            public DownloadJsonPackage setFiles(java.util.List<java.lang.String> files) {
+              this.files = files;
+              return this;
+            }
+
+            @Override
+            public DownloadJsonPackage set(String parameterName, Object value) {
+              return (DownloadJsonPackage) super.set(parameterName, value);
             }
           }
           /**
@@ -8592,150 +8718,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               return (Upload) super.set(parameterName, value);
             }
           }
-          /**
-           * Validates the given integration. If the id doesn't exist, a NotFoundException is thrown. If
-           * validation fails a CanonicalCodeException is thrown. If there was no failure an empty response is
-           * returned.
-           *
-           * Create a request for the method "versions.validate".
-           *
-           * This request holds the parameters needed by the integrations server.  After setting any optional
-           * parameters, call the {@link Validate#execute()} method to invoke the remote operation.
-           *
-           * @param name Required. The version to validate. Format:
-           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest}
-           * @return the request
-           */
-          public Validate validate(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest content) throws java.io.IOException {
-            Validate result = new Validate(name, content);
-            initialize(result);
-            return result;
-          }
-
-          public class Validate extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionResponse> {
-
-            private static final String REST_PATH = "v1/{+name}:validate";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
-
-            /**
-             * Validates the given integration. If the id doesn't exist, a NotFoundException is thrown. If
-             * validation fails a CanonicalCodeException is thrown. If there was no failure an empty response
-             * is returned.
-             *
-             * Create a request for the method "versions.validate".
-             *
-             * This request holds the parameters needed by the the integrations server.  After setting any
-             * optional parameters, call the {@link Validate#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Validate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name Required. The version to validate. Format:
-           *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest}
-             * @since 1.13
-             */
-            protected Validate(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest content) {
-              super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionResponse.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
-              }
-            }
-
-            @Override
-            public Validate set$Xgafv(java.lang.String $Xgafv) {
-              return (Validate) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Validate setAccessToken(java.lang.String accessToken) {
-              return (Validate) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Validate setAlt(java.lang.String alt) {
-              return (Validate) super.setAlt(alt);
-            }
-
-            @Override
-            public Validate setCallback(java.lang.String callback) {
-              return (Validate) super.setCallback(callback);
-            }
-
-            @Override
-            public Validate setFields(java.lang.String fields) {
-              return (Validate) super.setFields(fields);
-            }
-
-            @Override
-            public Validate setKey(java.lang.String key) {
-              return (Validate) super.setKey(key);
-            }
-
-            @Override
-            public Validate setOauthToken(java.lang.String oauthToken) {
-              return (Validate) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Validate setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Validate) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Validate setQuotaUser(java.lang.String quotaUser) {
-              return (Validate) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Validate setUploadType(java.lang.String uploadType) {
-              return (Validate) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Validate setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Validate) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. The version to validate. Format:
-             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Required. The version to validate. Format:
-           projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /**
-             * Required. The version to validate. Format:
-             * projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             */
-            public Validate setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public Validate set(String parameterName, Object value) {
-              return (Validate) super.set(parameterName, value);
-            }
-          }
 
         }
       }
@@ -8758,288 +8740,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
        * The "products" collection of methods.
        */
       public class Products {
-
-        /**
-         * PROTECT WITH A VISIBILITY LABEL. THIS METHOD WILL BE MOVED TO A SEPARATE SERVICE. Create a
-         * bundle.
-         *
-         * Create a request for the method "products.createBundle".
-         *
-         * This request holds the parameters needed by the integrations server.  After setting any optional
-         * parameters, call the {@link CreateBundle#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The location resource of the request.
-         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCreateBundleRequest}
-         * @return the request
-         */
-        public CreateBundle createBundle(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCreateBundleRequest content) throws java.io.IOException {
-          CreateBundle result = new CreateBundle(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class CreateBundle extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCreateBundleResponse> {
-
-          private static final String REST_PATH = "v1/{+parent}:createBundle";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+$");
-
-          /**
-           * PROTECT WITH A VISIBILITY LABEL. THIS METHOD WILL BE MOVED TO A SEPARATE SERVICE. Create a
-           * bundle.
-           *
-           * Create a request for the method "products.createBundle".
-           *
-           * This request holds the parameters needed by the the integrations server.  After setting any
-           * optional parameters, call the {@link CreateBundle#execute()} method to invoke the remote
-           * operation. <p> {@link
-           * CreateBundle#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The location resource of the request.
-           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCreateBundleRequest}
-           * @since 1.13
-           */
-          protected CreateBundle(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCreateBundleRequest content) {
-            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCreateBundleResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
-            }
-          }
-
-          @Override
-          public CreateBundle set$Xgafv(java.lang.String $Xgafv) {
-            return (CreateBundle) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public CreateBundle setAccessToken(java.lang.String accessToken) {
-            return (CreateBundle) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public CreateBundle setAlt(java.lang.String alt) {
-            return (CreateBundle) super.setAlt(alt);
-          }
-
-          @Override
-          public CreateBundle setCallback(java.lang.String callback) {
-            return (CreateBundle) super.setCallback(callback);
-          }
-
-          @Override
-          public CreateBundle setFields(java.lang.String fields) {
-            return (CreateBundle) super.setFields(fields);
-          }
-
-          @Override
-          public CreateBundle setKey(java.lang.String key) {
-            return (CreateBundle) super.setKey(key);
-          }
-
-          @Override
-          public CreateBundle setOauthToken(java.lang.String oauthToken) {
-            return (CreateBundle) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public CreateBundle setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (CreateBundle) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public CreateBundle setQuotaUser(java.lang.String quotaUser) {
-            return (CreateBundle) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public CreateBundle setUploadType(java.lang.String uploadType) {
-            return (CreateBundle) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public CreateBundle setUploadProtocol(java.lang.String uploadProtocol) {
-            return (CreateBundle) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. The location resource of the request. */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The location resource of the request.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /** Required. The location resource of the request. */
-          public CreateBundle setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          @Override
-          public CreateBundle set(String parameterName, Object value) {
-            return (CreateBundle) super.set(parameterName, value);
-          }
-        }
-        /**
-         * This is a UI only method and will be moved away. Returns a list of common tasks.
-         *
-         * Create a request for the method "products.listTaskEntities".
-         *
-         * This request holds the parameters needed by the integrations server.  After setting any optional
-         * parameters, call the {@link ListTaskEntities#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The location resource of the request. This is not going to be used but preserve the field
-         *        for future.
-         * @return the request
-         */
-        public ListTaskEntities listTaskEntities(java.lang.String parent) throws java.io.IOException {
-          ListTaskEntities result = new ListTaskEntities(parent);
-          initialize(result);
-          return result;
-        }
-
-        public class ListTaskEntities extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListTaskEntitiesResponse> {
-
-          private static final String REST_PATH = "v1/{+parent}:listTaskEntities";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+$");
-
-          /**
-           * This is a UI only method and will be moved away. Returns a list of common tasks.
-           *
-           * Create a request for the method "products.listTaskEntities".
-           *
-           * This request holds the parameters needed by the the integrations server.  After setting any
-           * optional parameters, call the {@link ListTaskEntities#execute()} method to invoke the remote
-           * operation. <p> {@link ListTaskEntities#initialize(com.google.api.client.googleapis.services.Abs
-           * tractGoogleClientRequest)} must be called to initialize this instance immediately after
-           * invoking the constructor. </p>
-           *
-           * @param parent Required. The location resource of the request. This is not going to be used but preserve the field
-         *        for future.
-           * @since 1.13
-           */
-          protected ListTaskEntities(java.lang.String parent) {
-            super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListTaskEntitiesResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public ListTaskEntities set$Xgafv(java.lang.String $Xgafv) {
-            return (ListTaskEntities) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public ListTaskEntities setAccessToken(java.lang.String accessToken) {
-            return (ListTaskEntities) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public ListTaskEntities setAlt(java.lang.String alt) {
-            return (ListTaskEntities) super.setAlt(alt);
-          }
-
-          @Override
-          public ListTaskEntities setCallback(java.lang.String callback) {
-            return (ListTaskEntities) super.setCallback(callback);
-          }
-
-          @Override
-          public ListTaskEntities setFields(java.lang.String fields) {
-            return (ListTaskEntities) super.setFields(fields);
-          }
-
-          @Override
-          public ListTaskEntities setKey(java.lang.String key) {
-            return (ListTaskEntities) super.setKey(key);
-          }
-
-          @Override
-          public ListTaskEntities setOauthToken(java.lang.String oauthToken) {
-            return (ListTaskEntities) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public ListTaskEntities setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (ListTaskEntities) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public ListTaskEntities setQuotaUser(java.lang.String quotaUser) {
-            return (ListTaskEntities) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public ListTaskEntities setUploadType(java.lang.String uploadType) {
-            return (ListTaskEntities) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public ListTaskEntities setUploadProtocol(java.lang.String uploadProtocol) {
-            return (ListTaskEntities) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The location resource of the request. This is not going to be used but
-           * preserve the field for future.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The location resource of the request. This is not going to be used but preserve the field
-         for future.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * Required. The location resource of the request. This is not going to be used but
-           * preserve the field for future.
-           */
-          public ListTaskEntities setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          @Override
-          public ListTaskEntities set(String parameterName, Object value) {
-            return (ListTaskEntities) super.set(parameterName, value);
-          }
-        }
 
         /**
          * An accessor for creating requests from the AuthConfigs collection.
@@ -9752,22 +9452,21 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/v2/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/v2/list-
-           filters.
+            /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/list-filters.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/v2/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -9844,7 +9543,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the integrations server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Resource name of the SFDC instance projects/{project}/locations/{location}/authConfigs/{authConfig}.
+           * @param name Resource name of the auth config. For more information, see Manage authentication profiles.
+           *        projects/{project}/locations/{location}/authConfigs/{authConfig}.
            * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAuthConfig}
            * @return the request
            */
@@ -9875,7 +9575,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Resource name of the SFDC instance projects/{project}/locations/{location}/authConfigs/{authConfig}.
+             * @param name Resource name of the auth config. For more information, see Manage authentication profiles.
+           *        projects/{project}/locations/{location}/authConfigs/{authConfig}.
              * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAuthConfig}
              * @since 1.13
              */
@@ -9945,13 +9646,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Resource name of the SFDC instance
-             * projects/{project}/locations/{location}/authConfigs/{authConfig}.
+             * Resource name of the auth config. For more information, see Manage authentication
+             * profiles. projects/{project}/locations/{location}/authConfigs/{authConfig}.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Resource name of the SFDC instance
+            /** Resource name of the auth config. For more information, see Manage authentication profiles.
            projects/{project}/locations/{location}/authConfigs/{authConfig}.
              */
             public java.lang.String getName() {
@@ -9959,8 +9660,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Resource name of the SFDC instance
-             * projects/{project}/locations/{location}/authConfigs/{authConfig}.
+             * Resource name of the auth config. For more information, see Manage authentication
+             * profiles. projects/{project}/locations/{location}/authConfigs/{authConfig}.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -10717,22 +10418,21 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/v2/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/v2/list-
-           filters.
+            /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/list-filters.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/v2/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -10979,7 +10679,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
         public class CloudFunctions {
 
           /**
-           * Creates an cloud function project.
+           * Creates a cloud function project.
            *
            * Create a request for the method "cloudFunctions.create".
            *
@@ -11004,7 +10704,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+$");
 
             /**
-             * Creates an cloud function project.
+             * Creates a cloud function project.
              *
              * Create a request for the method "cloudFunctions.create".
              *
@@ -11131,148 +10831,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
          */
         public class IntegrationsOperations {
 
-          /**
-           * PROTECT WITH A VISIBILITY LABEL. THIS METHOD WILL BE MOVED TO A SEPARATE SERVICE. Soft-deletes
-           * the bundle.
-           *
-           * Create a request for the method "integrations.archiveBundle".
-           *
-           * This request holds the parameters needed by the integrations server.  After setting any optional
-           * parameters, call the {@link ArchiveBundle#execute()} method to invoke the remote operation.
-           *
-           * @param name Required. The bundle to archive. Format:
-           *        projects/{project}/locations/{location}/integrations/{integration}
-           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveBundleRequest}
-           * @return the request
-           */
-          public ArchiveBundle archiveBundle(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveBundleRequest content) throws java.io.IOException {
-            ArchiveBundle result = new ArchiveBundle(name, content);
-            initialize(result);
-            return result;
-          }
-
-          public class ArchiveBundle extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveBundleResponse> {
-
-            private static final String REST_PATH = "v1/{+name}:archiveBundle";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+$");
-
-            /**
-             * PROTECT WITH A VISIBILITY LABEL. THIS METHOD WILL BE MOVED TO A SEPARATE SERVICE. Soft-deletes
-             * the bundle.
-             *
-             * Create a request for the method "integrations.archiveBundle".
-             *
-             * This request holds the parameters needed by the the integrations server.  After setting any
-             * optional parameters, call the {@link ArchiveBundle#execute()} method to invoke the remote
-             * operation. <p> {@link ArchiveBundle#initialize(com.google.api.client.googleapis.services.Abstra
-             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-             * the constructor. </p>
-             *
-             * @param name Required. The bundle to archive. Format:
-           *        projects/{project}/locations/{location}/integrations/{integration}
-             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveBundleRequest}
-             * @since 1.13
-             */
-            protected ArchiveBundle(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveBundleRequest content) {
-              super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveBundleResponse.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+$");
-              }
-            }
-
-            @Override
-            public ArchiveBundle set$Xgafv(java.lang.String $Xgafv) {
-              return (ArchiveBundle) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public ArchiveBundle setAccessToken(java.lang.String accessToken) {
-              return (ArchiveBundle) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public ArchiveBundle setAlt(java.lang.String alt) {
-              return (ArchiveBundle) super.setAlt(alt);
-            }
-
-            @Override
-            public ArchiveBundle setCallback(java.lang.String callback) {
-              return (ArchiveBundle) super.setCallback(callback);
-            }
-
-            @Override
-            public ArchiveBundle setFields(java.lang.String fields) {
-              return (ArchiveBundle) super.setFields(fields);
-            }
-
-            @Override
-            public ArchiveBundle setKey(java.lang.String key) {
-              return (ArchiveBundle) super.setKey(key);
-            }
-
-            @Override
-            public ArchiveBundle setOauthToken(java.lang.String oauthToken) {
-              return (ArchiveBundle) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public ArchiveBundle setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (ArchiveBundle) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public ArchiveBundle setQuotaUser(java.lang.String quotaUser) {
-              return (ArchiveBundle) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public ArchiveBundle setUploadType(java.lang.String uploadType) {
-              return (ArchiveBundle) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public ArchiveBundle setUploadProtocol(java.lang.String uploadProtocol) {
-              return (ArchiveBundle) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. The bundle to archive. Format:
-             * projects/{project}/locations/{location}/integrations/{integration}
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Required. The bundle to archive. Format:
-           projects/{project}/locations/{location}/integrations/{integration}
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /**
-             * Required. The bundle to archive. Format:
-             * projects/{project}/locations/{location}/integrations/{integration}
-             */
-            public ArchiveBundle setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public ArchiveBundle set(String parameterName, Object value) {
-              return (ArchiveBundle) super.set(parameterName, value);
-            }
-          }
           /**
            * Executes integrations synchronously by passing the trigger id in the request body. The request is
            * not returned until the requested executions are either fulfilled or experienced an error. If the
@@ -12514,33 +12072,39 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               }
 
               /**
-               * Optional. Standard filter field, we support filtering on all fields in
-               * EventExecutionParamIndexes table. All fields support for EQUALS, in additional:
-               * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterKey, ParameterValue,
-               * ParameterType support for HAS For example: "parameter_value" HAS \"parameter1\"
-               * Also supports operators like AND, OR, NOT For example, trigger_id=\"id1\" AND
-               * event_execution_state=\"FAILED\"
+               * Optional. Standard filter field, we support filtering on following fields:
+               * workflow_name: the name of the integration. CreateTimestamp: the execution created
+               * time. event_execution_state: the state of the executions. execution_id: the id of
+               * the execution. trigger_id: the id of the trigger. parameter_type: the type of the
+               * parameters involved in the execution. All fields support for EQUALS, in additional:
+               * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support for HAS
+               * For example: "parameter_type" HAS \"string\" Also supports operators like AND, OR,
+               * NOT For example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Optional. Standard filter field, we support filtering on all fields in EventExecutionParamIndexes
-             table. All fields support for EQUALS, in additional: CreateTimestamp support for LESS_THAN,
-             GREATER_THAN ParameterKey, ParameterValue, ParameterType support for HAS For example:
-             "parameter_value" HAS \"parameter1\" Also supports operators like AND, OR, NOT For example,
-             trigger_id=\"id1\" AND event_execution_state=\"FAILED\"
+              /** Optional. Standard filter field, we support filtering on following fields: workflow_name: the name
+             of the integration. CreateTimestamp: the execution created time. event_execution_state: the state
+             of the executions. execution_id: the id of the execution. trigger_id: the id of the trigger.
+             parameter_type: the type of the parameters involved in the execution. All fields support for
+             EQUALS, in additional: CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support
+             for HAS For example: "parameter_type" HAS \"string\" Also supports operators like AND, OR, NOT For
+             example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * Optional. Standard filter field, we support filtering on all fields in
-               * EventExecutionParamIndexes table. All fields support for EQUALS, in additional:
-               * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterKey, ParameterValue,
-               * ParameterType support for HAS For example: "parameter_value" HAS \"parameter1\"
-               * Also supports operators like AND, OR, NOT For example, trigger_id=\"id1\" AND
-               * event_execution_state=\"FAILED\"
+               * Optional. Standard filter field, we support filtering on following fields:
+               * workflow_name: the name of the integration. CreateTimestamp: the execution created
+               * time. event_execution_state: the state of the executions. execution_id: the id of
+               * the execution. trigger_id: the id of the trigger. parameter_type: the type of the
+               * parameters involved in the execution. All fields support for EQUALS, in additional:
+               * CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support for HAS
+               * For example: "parameter_type" HAS \"string\" Also supports operators like AND, OR,
+               * NOT For example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -12846,6 +12410,29 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               }
 
               /**
+               * Optional. If true, the service will provide execution info with snapshot metadata
+               * only i.e. without event parameters.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean snapshotMetadataWithoutParams;
+
+              /** Optional. If true, the service will provide execution info with snapshot metadata only i.e. without
+             event parameters.
+               */
+              public java.lang.Boolean getSnapshotMetadataWithoutParams() {
+                return snapshotMetadataWithoutParams;
+              }
+
+              /**
+               * Optional. If true, the service will provide execution info with snapshot metadata
+               * only i.e. without event parameters.
+               */
+              public List setSnapshotMetadataWithoutParams(java.lang.Boolean snapshotMetadataWithoutParams) {
+                this.snapshotMetadataWithoutParams = snapshotMetadataWithoutParams;
+                return this;
+              }
+
+              /**
                * Optional. If true, the service will truncate the params to only keep the first 1000
                * characters of string params and empty the executions in order to make response
                * smaller. Only works for UI and when the params fields are not filtered out.
@@ -12898,7 +12485,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             public class Suspensions {
 
               /**
-               * * Lifts suspension for advanced suspension task. Fetch corresponding suspension with provided
+               * * Lifts suspension for the Suspension task. Fetch corresponding suspension with provided
                * suspension Id, resolve suspension, and set up suspension result for the Suspension Task.
                *
                * Create a request for the method "suspensions.lift".
@@ -12926,7 +12513,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/executions/[^/]+/suspensions/[^/]+$");
 
                 /**
-                 * * Lifts suspension for advanced suspension task. Fetch corresponding suspension with provided
+                 * * Lifts suspension for the Suspension task. Fetch corresponding suspension with provided
                  * suspension Id, resolve suspension, and set up suspension result for the Suspension Task.
                  *
                  * Create a request for the method "suspensions.lift".
@@ -13405,239 +12992,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
           }
           /**
-           * An accessor for creating requests from the Executionsnapshots collection.
-           *
-           * <p>The typical use is:</p>
-           * <pre>
-           *   {@code Integrations integrations = new Integrations(...);}
-           *   {@code Integrations.Executionsnapshots.List request = integrations.executionsnapshots().list(parameters ...)}
-           * </pre>
-           *
-           * @return the resource collection
-           */
-          public Executionsnapshots executionsnapshots() {
-            return new Executionsnapshots();
-          }
-
-          /**
-           * The "executionsnapshots" collection of methods.
-           */
-          public class Executionsnapshots {
-
-            /**
-             * Lists the snapshots of a given integration executions. This RPC is not being used.
-             *
-             * Create a request for the method "executionsnapshots.list".
-             *
-             * This request holds the parameters needed by the integrations server.  After setting any optional
-             * parameters, call the {@link List#execute()} method to invoke the remote operation.
-             *
-             * @param parent Required. The parent resource name of the integration execution.
-             * @return the request
-             */
-            public List list(java.lang.String parent) throws java.io.IOException {
-              List result = new List(parent);
-              initialize(result);
-              return result;
-            }
-
-            public class List extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListExecutionSnapshotsResponse> {
-
-              private static final String REST_PATH = "v1/{+parent}/executionsnapshots";
-
-              private final java.util.regex.Pattern PARENT_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+$");
-
-              /**
-               * Lists the snapshots of a given integration executions. This RPC is not being used.
-               *
-               * Create a request for the method "executionsnapshots.list".
-               *
-               * This request holds the parameters needed by the the integrations server.  After setting any
-               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param parent Required. The parent resource name of the integration execution.
-               * @since 1.13
-               */
-              protected List(java.lang.String parent) {
-                super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListExecutionSnapshotsResponse.class);
-                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+$");
-                }
-              }
-
-              @Override
-              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                return super.executeUsingHead();
-              }
-
-              @Override
-              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                return super.buildHttpRequestUsingHead();
-              }
-
-              @Override
-              public List set$Xgafv(java.lang.String $Xgafv) {
-                return (List) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public List setAccessToken(java.lang.String accessToken) {
-                return (List) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public List setAlt(java.lang.String alt) {
-                return (List) super.setAlt(alt);
-              }
-
-              @Override
-              public List setCallback(java.lang.String callback) {
-                return (List) super.setCallback(callback);
-              }
-
-              @Override
-              public List setFields(java.lang.String fields) {
-                return (List) super.setFields(fields);
-              }
-
-              @Override
-              public List setKey(java.lang.String key) {
-                return (List) super.setKey(key);
-              }
-
-              @Override
-              public List setOauthToken(java.lang.String oauthToken) {
-                return (List) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (List) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public List setQuotaUser(java.lang.String quotaUser) {
-                return (List) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public List setUploadType(java.lang.String uploadType) {
-                return (List) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public List setUploadProtocol(java.lang.String uploadProtocol) {
-                return (List) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /** Required. The parent resource name of the integration execution. */
-              @com.google.api.client.util.Key
-              private java.lang.String parent;
-
-              /** Required. The parent resource name of the integration execution.
-               */
-              public java.lang.String getParent() {
-                return parent;
-              }
-
-              /** Required. The parent resource name of the integration execution. */
-              public List setParent(java.lang.String parent) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+$");
-                }
-                this.parent = parent;
-                return this;
-              }
-
-              /** Currently supports filter by `execution_info_id` or `execution_snapshot_id`. */
-              @com.google.api.client.util.Key
-              private java.lang.String filter;
-
-              /** Currently supports filter by `execution_info_id` or `execution_snapshot_id`.
-               */
-              public java.lang.String getFilter() {
-                return filter;
-              }
-
-              /** Currently supports filter by `execution_info_id` or `execution_snapshot_id`. */
-              public List setFilter(java.lang.String filter) {
-                this.filter = filter;
-                return this;
-              }
-
-              /** Number of entries to be returned in a page. */
-              @com.google.api.client.util.Key
-              private java.lang.Integer pageSize;
-
-              /** Number of entries to be returned in a page.
-               */
-              public java.lang.Integer getPageSize() {
-                return pageSize;
-              }
-
-              /** Number of entries to be returned in a page. */
-              public List setPageSize(java.lang.Integer pageSize) {
-                this.pageSize = pageSize;
-                return this;
-              }
-
-              /** The token used to retrieve the next page results. */
-              @com.google.api.client.util.Key
-              private java.lang.String pageToken;
-
-              /** The token used to retrieve the next page results.
-               */
-              public java.lang.String getPageToken() {
-                return pageToken;
-              }
-
-              /** The token used to retrieve the next page results. */
-              public List setPageToken(java.lang.String pageToken) {
-                this.pageToken = pageToken;
-                return this;
-              }
-
-              /**
-               * View mask for the response data. If set, only the field specified will be returned
-               * as part of the result. If not set, all fields in event execution snapshot will be
-               * filled and returned.
-               */
-              @com.google.api.client.util.Key
-              private String readMask;
-
-              /** View mask for the response data. If set, only the field specified will be returned as part of the
-             result. If not set, all fields in event execution snapshot will be filled and returned.
-               */
-              public String getReadMask() {
-                return readMask;
-              }
-
-              /**
-               * View mask for the response data. If set, only the field specified will be returned
-               * as part of the result. If not set, all fields in event execution snapshot will be
-               * filled and returned.
-               */
-              public List setReadMask(String readMask) {
-                this.readMask = readMask;
-                return this;
-              }
-
-              @Override
-              public List set(String parameterName, Object value) {
-                return (List) super.set(parameterName, value);
-              }
-            }
-
-          }
-          /**
            * An accessor for creating requests from the Versions collection.
            *
            * <p>The typical use is:</p>
@@ -13657,158 +13011,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            */
           public class Versions {
 
-            /**
-             * Soft-deletes the integration. Changes the status of the integration to ARCHIVED. If the
-             * integration being ARCHIVED is tagged as "HEAD", the tag is removed from this snapshot and set to
-             * the previous non-ARCHIVED snapshot. The PUBLISH_REQUESTED, DUE_FOR_DELETION tags are removed too.
-             * This RPC throws an exception if the version being archived is DRAFT, and if the `locked_by` user
-             * is not the same as the user performing the Archive. Audit fields updated include
-             * last_modified_timestamp, last_modified_by. Any existing lock is released when Archiving a
-             * integration. Currently, there is no unarchive mechanism.
-             *
-             * Create a request for the method "versions.archive".
-             *
-             * This request holds the parameters needed by the integrations server.  After setting any optional
-             * parameters, call the {@link Archive#execute()} method to invoke the remote operation.
-             *
-             * @param name Required. The version to archive. Format:
-             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest}
-             * @return the request
-             */
-            public Archive archive(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest content) throws java.io.IOException {
-              Archive result = new Archive(name, content);
-              initialize(result);
-              return result;
-            }
-
-            public class Archive extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionResponse> {
-
-              private static final String REST_PATH = "v1/{+name}:archive";
-
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-
-              /**
-               * Soft-deletes the integration. Changes the status of the integration to ARCHIVED. If the
-               * integration being ARCHIVED is tagged as "HEAD", the tag is removed from this snapshot and set
-               * to the previous non-ARCHIVED snapshot. The PUBLISH_REQUESTED, DUE_FOR_DELETION tags are removed
-               * too. This RPC throws an exception if the version being archived is DRAFT, and if the
-               * `locked_by` user is not the same as the user performing the Archive. Audit fields updated
-               * include last_modified_timestamp, last_modified_by. Any existing lock is released when Archiving
-               * a integration. Currently, there is no unarchive mechanism.
-               *
-               * Create a request for the method "versions.archive".
-               *
-               * This request holds the parameters needed by the the integrations server.  After setting any
-               * optional parameters, call the {@link Archive#execute()} method to invoke the remote operation.
-               * <p> {@link
-               * Archive#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-               * be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param name Required. The version to archive. Format:
-             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest}
-               * @since 1.13
-               */
-              protected Archive(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest content) {
-                super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionResponse.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-                }
-              }
-
-              @Override
-              public Archive set$Xgafv(java.lang.String $Xgafv) {
-                return (Archive) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public Archive setAccessToken(java.lang.String accessToken) {
-                return (Archive) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public Archive setAlt(java.lang.String alt) {
-                return (Archive) super.setAlt(alt);
-              }
-
-              @Override
-              public Archive setCallback(java.lang.String callback) {
-                return (Archive) super.setCallback(callback);
-              }
-
-              @Override
-              public Archive setFields(java.lang.String fields) {
-                return (Archive) super.setFields(fields);
-              }
-
-              @Override
-              public Archive setKey(java.lang.String key) {
-                return (Archive) super.setKey(key);
-              }
-
-              @Override
-              public Archive setOauthToken(java.lang.String oauthToken) {
-                return (Archive) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public Archive setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Archive) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public Archive setQuotaUser(java.lang.String quotaUser) {
-                return (Archive) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public Archive setUploadType(java.lang.String uploadType) {
-                return (Archive) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public Archive setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Archive) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /**
-               * Required. The version to archive. Format: projects/{project}/locations/{location}/i
-               * ntegrations/{integration}/versions/{version}
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String name;
-
-              /** Required. The version to archive. Format:
-             projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-               */
-              public java.lang.String getName() {
-                return name;
-              }
-
-              /**
-               * Required. The version to archive. Format: projects/{project}/locations/{location}/i
-               * ntegrations/{integration}/versions/{version}
-               */
-              public Archive setName(java.lang.String name) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-                }
-                this.name = name;
-                return this;
-              }
-
-              @Override
-              public Archive set(String parameterName, Object value) {
-                return (Archive) super.set(parameterName, value);
-              }
-            }
             /**
              * Create a integration with a draft version in the specified project.
              *
@@ -13944,6 +13146,22 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                 return this;
               }
 
+              /** Optional. Optional. Indicates if sample workflow should be created. */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean createSampleIntegrations;
+
+              /** Optional. Optional. Indicates if sample workflow should be created.
+               */
+              public java.lang.Boolean getCreateSampleIntegrations() {
+                return createSampleIntegrations;
+              }
+
+              /** Optional. Optional. Indicates if sample workflow should be created. */
+              public Create setCreateSampleIntegrations(java.lang.Boolean createSampleIntegrations) {
+                this.createSampleIntegrations = createSampleIntegrations;
+                return this;
+              }
+
               /**
                * Set this flag to true, if draft version is to be created for a brand new
                * integration. False, if the request is for an existing integration. For backward
@@ -13975,152 +13193,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               @Override
               public Create set(String parameterName, Object value) {
                 return (Create) super.set(parameterName, value);
-              }
-            }
-            /**
-             * Sets the status of the ACTIVE integration to SNAPSHOT with a new tag "PREVIOUSLY_PUBLISHED" after
-             * validating it. The "HEAD" and "PUBLISH_REQUESTED" tags do not change. This RPC throws an
-             * exception if the version being snapshot is not ACTIVE. Audit fields added include action,
-             * action_by, action_timestamp.
-             *
-             * Create a request for the method "versions.deactivate".
-             *
-             * This request holds the parameters needed by the integrations server.  After setting any optional
-             * parameters, call the {@link Deactivate#execute()} method to invoke the remote operation.
-             *
-             * @param name Required. The version to deactivate. Format:
-             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest}
-             * @return the request
-             */
-            public Deactivate deactivate(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest content) throws java.io.IOException {
-              Deactivate result = new Deactivate(name, content);
-              initialize(result);
-              return result;
-            }
-
-            public class Deactivate extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionResponse> {
-
-              private static final String REST_PATH = "v1/{+name}:deactivate";
-
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-
-              /**
-               * Sets the status of the ACTIVE integration to SNAPSHOT with a new tag "PREVIOUSLY_PUBLISHED"
-               * after validating it. The "HEAD" and "PUBLISH_REQUESTED" tags do not change. This RPC throws an
-               * exception if the version being snapshot is not ACTIVE. Audit fields added include action,
-               * action_by, action_timestamp.
-               *
-               * Create a request for the method "versions.deactivate".
-               *
-               * This request holds the parameters needed by the the integrations server.  After setting any
-               * optional parameters, call the {@link Deactivate#execute()} method to invoke the remote
-               * operation. <p> {@link
-               * Deactivate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param name Required. The version to deactivate. Format:
-             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest}
-               * @since 1.13
-               */
-              protected Deactivate(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest content) {
-                super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionResponse.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-                }
-              }
-
-              @Override
-              public Deactivate set$Xgafv(java.lang.String $Xgafv) {
-                return (Deactivate) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public Deactivate setAccessToken(java.lang.String accessToken) {
-                return (Deactivate) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public Deactivate setAlt(java.lang.String alt) {
-                return (Deactivate) super.setAlt(alt);
-              }
-
-              @Override
-              public Deactivate setCallback(java.lang.String callback) {
-                return (Deactivate) super.setCallback(callback);
-              }
-
-              @Override
-              public Deactivate setFields(java.lang.String fields) {
-                return (Deactivate) super.setFields(fields);
-              }
-
-              @Override
-              public Deactivate setKey(java.lang.String key) {
-                return (Deactivate) super.setKey(key);
-              }
-
-              @Override
-              public Deactivate setOauthToken(java.lang.String oauthToken) {
-                return (Deactivate) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public Deactivate setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Deactivate) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public Deactivate setQuotaUser(java.lang.String quotaUser) {
-                return (Deactivate) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public Deactivate setUploadType(java.lang.String uploadType) {
-                return (Deactivate) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public Deactivate setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Deactivate) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /**
-               * Required. The version to deactivate. Format: projects/{project}/locations/{location
-               * }/integrations/{integration}/versions/{version}
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String name;
-
-              /** Required. The version to deactivate. Format:
-             projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-               */
-              public java.lang.String getName() {
-                return name;
-              }
-
-              /**
-               * Required. The version to deactivate. Format: projects/{project}/locations/{location
-               * }/integrations/{integration}/versions/{version}
-               */
-              public Deactivate setName(java.lang.String name) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-                }
-                this.name = name;
-                return this;
-              }
-
-              @Override
-              public Deactivate set(String parameterName, Object value) {
-                return (Deactivate) super.set(parameterName, value);
               }
             }
             /**
@@ -14434,6 +13506,29 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                 return this;
               }
 
+              /**
+               * Optional. Integration related file to download like Integration Json, Config
+               * variable, testcase etc.
+               */
+              @com.google.api.client.util.Key
+              private java.util.List<java.lang.String> files;
+
+              /** Optional. Integration related file to download like Integration Json, Config variable, testcase
+             etc.
+               */
+              public java.util.List<java.lang.String> getFiles() {
+                return files;
+              }
+
+              /**
+               * Optional. Integration related file to download like Integration Json, Config
+               * variable, testcase etc.
+               */
+              public Download setFiles(java.util.List<java.lang.String> files) {
+                this.files = files;
+                return this;
+              }
+
               @Override
               public Download set(String parameterName, Object value) {
                 return (Download) super.set(parameterName, value);
@@ -14584,147 +13679,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               @Override
               public Get set(String parameterName, Object value) {
                 return (Get) super.set(parameterName, value);
-              }
-            }
-            /**
-             * PROTECT WITH A VISIBILITY LABEL. THIS METHOD WILL BE MOVED TO A SEPARATE SERVICE. RPC to get
-             * details of the Bundle
-             *
-             * Create a request for the method "versions.getBundle".
-             *
-             * This request holds the parameters needed by the integrations server.  After setting any optional
-             * parameters, call the {@link GetBundle#execute()} method to invoke the remote operation.
-             *
-             * @param name Required. The bundle name.
-             * @return the request
-             */
-            public GetBundle getBundle(java.lang.String name) throws java.io.IOException {
-              GetBundle result = new GetBundle(name);
-              initialize(result);
-              return result;
-            }
-
-            public class GetBundle extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGetBundleResponse> {
-
-              private static final String REST_PATH = "v1/{+name}:getBundle";
-
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-
-              /**
-               * PROTECT WITH A VISIBILITY LABEL. THIS METHOD WILL BE MOVED TO A SEPARATE SERVICE. RPC to get
-               * details of the Bundle
-               *
-               * Create a request for the method "versions.getBundle".
-               *
-               * This request holds the parameters needed by the the integrations server.  After setting any
-               * optional parameters, call the {@link GetBundle#execute()} method to invoke the remote
-               * operation. <p> {@link
-               * GetBundle#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param name Required. The bundle name.
-               * @since 1.13
-               */
-              protected GetBundle(java.lang.String name) {
-                super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGetBundleResponse.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-                }
-              }
-
-              @Override
-              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                return super.executeUsingHead();
-              }
-
-              @Override
-              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                return super.buildHttpRequestUsingHead();
-              }
-
-              @Override
-              public GetBundle set$Xgafv(java.lang.String $Xgafv) {
-                return (GetBundle) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public GetBundle setAccessToken(java.lang.String accessToken) {
-                return (GetBundle) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public GetBundle setAlt(java.lang.String alt) {
-                return (GetBundle) super.setAlt(alt);
-              }
-
-              @Override
-              public GetBundle setCallback(java.lang.String callback) {
-                return (GetBundle) super.setCallback(callback);
-              }
-
-              @Override
-              public GetBundle setFields(java.lang.String fields) {
-                return (GetBundle) super.setFields(fields);
-              }
-
-              @Override
-              public GetBundle setKey(java.lang.String key) {
-                return (GetBundle) super.setKey(key);
-              }
-
-              @Override
-              public GetBundle setOauthToken(java.lang.String oauthToken) {
-                return (GetBundle) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public GetBundle setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (GetBundle) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public GetBundle setQuotaUser(java.lang.String quotaUser) {
-                return (GetBundle) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public GetBundle setUploadType(java.lang.String uploadType) {
-                return (GetBundle) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public GetBundle setUploadProtocol(java.lang.String uploadProtocol) {
-                return (GetBundle) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /** Required. The bundle name. */
-              @com.google.api.client.util.Key
-              private java.lang.String name;
-
-              /** Required. The bundle name.
-               */
-              public java.lang.String getName() {
-                return name;
-              }
-
-              /** Required. The bundle name. */
-              public GetBundle setName(java.lang.String name) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-                }
-                this.name = name;
-                return this;
-              }
-
-              @Override
-              public GetBundle set(String parameterName, Object value) {
-                return (GetBundle) super.set(parameterName, value);
               }
             }
             /**
@@ -15631,137 +14585,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               }
             }
             /**
-             * THIS METHOD WILL BE MOVED TO A SEPARATE SERVICE. RPC to update the Bundle
-             *
-             * Create a request for the method "versions.updateBundle".
-             *
-             * This request holds the parameters needed by the integrations server.  After setting any optional
-             * parameters, call the {@link UpdateBundle#execute()} method to invoke the remote operation.
-             *
-             * @param name Required. Bundle name
-             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUpdateBundleRequest}
-             * @return the request
-             */
-            public UpdateBundle updateBundle(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUpdateBundleRequest content) throws java.io.IOException {
-              UpdateBundle result = new UpdateBundle(name, content);
-              initialize(result);
-              return result;
-            }
-
-            public class UpdateBundle extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUpdateBundleResponse> {
-
-              private static final String REST_PATH = "v1/{+name}:updateBundle";
-
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-
-              /**
-               * THIS METHOD WILL BE MOVED TO A SEPARATE SERVICE. RPC to update the Bundle
-               *
-               * Create a request for the method "versions.updateBundle".
-               *
-               * This request holds the parameters needed by the the integrations server.  After setting any
-               * optional parameters, call the {@link UpdateBundle#execute()} method to invoke the remote
-               * operation. <p> {@link
-               * UpdateBundle#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param name Required. Bundle name
-               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUpdateBundleRequest}
-               * @since 1.13
-               */
-              protected UpdateBundle(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUpdateBundleRequest content) {
-                super(Integrations.this, "PATCH", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUpdateBundleResponse.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-                }
-              }
-
-              @Override
-              public UpdateBundle set$Xgafv(java.lang.String $Xgafv) {
-                return (UpdateBundle) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public UpdateBundle setAccessToken(java.lang.String accessToken) {
-                return (UpdateBundle) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public UpdateBundle setAlt(java.lang.String alt) {
-                return (UpdateBundle) super.setAlt(alt);
-              }
-
-              @Override
-              public UpdateBundle setCallback(java.lang.String callback) {
-                return (UpdateBundle) super.setCallback(callback);
-              }
-
-              @Override
-              public UpdateBundle setFields(java.lang.String fields) {
-                return (UpdateBundle) super.setFields(fields);
-              }
-
-              @Override
-              public UpdateBundle setKey(java.lang.String key) {
-                return (UpdateBundle) super.setKey(key);
-              }
-
-              @Override
-              public UpdateBundle setOauthToken(java.lang.String oauthToken) {
-                return (UpdateBundle) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public UpdateBundle setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (UpdateBundle) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public UpdateBundle setQuotaUser(java.lang.String quotaUser) {
-                return (UpdateBundle) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public UpdateBundle setUploadType(java.lang.String uploadType) {
-                return (UpdateBundle) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public UpdateBundle setUploadProtocol(java.lang.String uploadProtocol) {
-                return (UpdateBundle) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /** Required. Bundle name */
-              @com.google.api.client.util.Key
-              private java.lang.String name;
-
-              /** Required. Bundle name
-               */
-              public java.lang.String getName() {
-                return name;
-              }
-
-              /** Required. Bundle name */
-              public UpdateBundle setName(java.lang.String name) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-                }
-                this.name = name;
-                return this;
-              }
-
-              @Override
-              public UpdateBundle set(String parameterName, Object value) {
-                return (UpdateBundle) super.set(parameterName, value);
-              }
-            }
-            /**
              * Uploads an integration. The content can be a previously downloaded integration. Performs the same
              * function as CreateDraftIntegrationVersion, but accepts input in a string format, which holds the
              * complete representation of the IntegrationVersion content.
@@ -15903,150 +14726,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               @Override
               public Upload set(String parameterName, Object value) {
                 return (Upload) super.set(parameterName, value);
-              }
-            }
-            /**
-             * Validates the given integration. If the id doesn't exist, a NotFoundException is thrown. If
-             * validation fails a CanonicalCodeException is thrown. If there was no failure an empty response is
-             * returned.
-             *
-             * Create a request for the method "versions.validate".
-             *
-             * This request holds the parameters needed by the integrations server.  After setting any optional
-             * parameters, call the {@link Validate#execute()} method to invoke the remote operation.
-             *
-             * @param name Required. The version to validate. Format:
-             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest}
-             * @return the request
-             */
-            public Validate validate(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest content) throws java.io.IOException {
-              Validate result = new Validate(name, content);
-              initialize(result);
-              return result;
-            }
-
-            public class Validate extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionResponse> {
-
-              private static final String REST_PATH = "v1/{+name}:validate";
-
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-
-              /**
-               * Validates the given integration. If the id doesn't exist, a NotFoundException is thrown. If
-               * validation fails a CanonicalCodeException is thrown. If there was no failure an empty response
-               * is returned.
-               *
-               * Create a request for the method "versions.validate".
-               *
-               * This request holds the parameters needed by the the integrations server.  After setting any
-               * optional parameters, call the {@link Validate#execute()} method to invoke the remote operation.
-               * <p> {@link
-               * Validate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param name Required. The version to validate. Format:
-             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest}
-               * @since 1.13
-               */
-              protected Validate(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionRequest content) {
-                super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaValidateIntegrationVersionResponse.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-                }
-              }
-
-              @Override
-              public Validate set$Xgafv(java.lang.String $Xgafv) {
-                return (Validate) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public Validate setAccessToken(java.lang.String accessToken) {
-                return (Validate) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public Validate setAlt(java.lang.String alt) {
-                return (Validate) super.setAlt(alt);
-              }
-
-              @Override
-              public Validate setCallback(java.lang.String callback) {
-                return (Validate) super.setCallback(callback);
-              }
-
-              @Override
-              public Validate setFields(java.lang.String fields) {
-                return (Validate) super.setFields(fields);
-              }
-
-              @Override
-              public Validate setKey(java.lang.String key) {
-                return (Validate) super.setKey(key);
-              }
-
-              @Override
-              public Validate setOauthToken(java.lang.String oauthToken) {
-                return (Validate) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public Validate setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Validate) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public Validate setQuotaUser(java.lang.String quotaUser) {
-                return (Validate) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public Validate setUploadType(java.lang.String uploadType) {
-                return (Validate) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public Validate setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Validate) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /**
-               * Required. The version to validate. Format: projects/{project}/locations/{location}/
-               * integrations/{integration}/versions/{version}
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String name;
-
-              /** Required. The version to validate. Format:
-             projects/{project}/locations/{location}/integrations/{integration}/versions/{version}
-               */
-              public java.lang.String getName() {
-                return name;
-              }
-
-              /**
-               * Required. The version to validate. Format: projects/{project}/locations/{location}/
-               * integrations/{integration}/versions/{version}
-               */
-              public Validate setName(java.lang.String name) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/versions/[^/]+$");
-                }
-                this.name = name;
-                return this;
-              }
-
-              @Override
-              public Validate set(String parameterName, Object value) {
-                return (Validate) super.set(parameterName, value);
               }
             }
 
@@ -16606,22 +15285,21 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/v2/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/v2/list-
-           filters.
+            /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/list-filters.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/v2/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -17406,13 +16084,12 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Filtering as supported in https://developers.google.com/authorized-
-               * buyers/apis/guides/v2/list-filters.
+               * buyers/apis/guides/list-filters.
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/v2/list-
-             filters.
+              /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/list-filters.
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -17420,7 +16097,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Filtering as supported in https://developers.google.com/authorized-
-               * buyers/apis/guides/v2/list-filters.
+               * buyers/apis/guides/list-filters.
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -18209,22 +16886,21 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-
-           * buyers/apis/guides/v2/list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+           * /list-filters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/v2/list-
-         filters.
+          /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/list-filters.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-
-           * buyers/apis/guides/v2/list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+           * /list-filters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -19008,22 +17684,21 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/v2/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/v2/list-
-           filters.
+            /** Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides/list-filters.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/v2/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -19377,6 +18052,11 @@ public class Integrations extends com.google.api.client.googleapis.services.json
     public Builder setGoogleClientRequestInitializer(
         com.google.api.client.googleapis.services.GoogleClientRequestInitializer googleClientRequestInitializer) {
       return (Builder) super.setGoogleClientRequestInitializer(googleClientRequestInitializer);
+    }
+
+    @Override
+    public Builder setUniverseDomain(String universeDomain) {
+      return (Builder) super.setUniverseDomain(universeDomain);
     }
   }
 }

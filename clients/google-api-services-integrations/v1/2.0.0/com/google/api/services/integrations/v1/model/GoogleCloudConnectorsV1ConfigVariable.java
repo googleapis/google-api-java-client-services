@@ -38,6 +38,13 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   private java.lang.Boolean boolValue;
 
   /**
+   * Value is a Encryption Key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1EncryptionKey encryptionKeyValue;
+
+  /**
    * Value is an integer
    * The value may be {@code null}.
    */
@@ -79,6 +86,23 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
    */
   public GoogleCloudConnectorsV1ConfigVariable setBoolValue(java.lang.Boolean boolValue) {
     this.boolValue = boolValue;
+    return this;
+  }
+
+  /**
+   * Value is a Encryption Key.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EncryptionKey getEncryptionKeyValue() {
+    return encryptionKeyValue;
+  }
+
+  /**
+   * Value is a Encryption Key.
+   * @param encryptionKeyValue encryptionKeyValue or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConfigVariable setEncryptionKeyValue(GoogleCloudConnectorsV1EncryptionKey encryptionKeyValue) {
+    this.encryptionKeyValue = encryptionKeyValue;
     return this;
   }
 

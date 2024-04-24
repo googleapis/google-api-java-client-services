@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Field Mapping Config to map multiple output fields values from input fields values.
+ * Configuration detail of coordinate, it used for UI
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,37 +28,64 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EnterpriseCrmEventbusProtoFieldMappingConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaCoordinate extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. X axis of the coordinate
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<EnterpriseCrmEventbusProtoMappedField> mappedFields;
+  private java.lang.Integer x;
 
   /**
+   * Required. Y axis of the coordinate
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer y;
+
+  /**
+   * Required. X axis of the coordinate
    * @return value or {@code null} for none
    */
-  public java.util.List<EnterpriseCrmEventbusProtoMappedField> getMappedFields() {
-    return mappedFields;
+  public java.lang.Integer getX() {
+    return x;
   }
 
   /**
-   * @param mappedFields mappedFields or {@code null} for none
+   * Required. X axis of the coordinate
+   * @param x x or {@code null} for none
    */
-  public EnterpriseCrmEventbusProtoFieldMappingConfig setMappedFields(java.util.List<EnterpriseCrmEventbusProtoMappedField> mappedFields) {
-    this.mappedFields = mappedFields;
+  public GoogleCloudIntegrationsV1alphaCoordinate setX(java.lang.Integer x) {
+    this.x = x;
+    return this;
+  }
+
+  /**
+   * Required. Y axis of the coordinate
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getY() {
+    return y;
+  }
+
+  /**
+   * Required. Y axis of the coordinate
+   * @param y y or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaCoordinate setY(java.lang.Integer y) {
+    this.y = y;
     return this;
   }
 
   @Override
-  public EnterpriseCrmEventbusProtoFieldMappingConfig set(String fieldName, Object value) {
-    return (EnterpriseCrmEventbusProtoFieldMappingConfig) super.set(fieldName, value);
+  public GoogleCloudIntegrationsV1alphaCoordinate set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaCoordinate) super.set(fieldName, value);
   }
 
   @Override
-  public EnterpriseCrmEventbusProtoFieldMappingConfig clone() {
-    return (EnterpriseCrmEventbusProtoFieldMappingConfig) super.clone();
+  public GoogleCloudIntegrationsV1alphaCoordinate clone() {
+    return (GoogleCloudIntegrationsV1alphaCoordinate) super.clone();
   }
 
 }

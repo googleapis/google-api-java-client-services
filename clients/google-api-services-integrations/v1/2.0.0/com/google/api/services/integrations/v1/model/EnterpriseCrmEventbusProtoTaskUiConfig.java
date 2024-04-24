@@ -18,8 +18,7 @@ package com.google.api.services.integrations.v1.model;
 
 /**
  * Task authors would use this type to configure the UI for a particular task by specifying what UI
- * config modules should be included to compose the UI. Learn more about config module framework: go
- * /integration-platform-config-module-framework
+ * config modules should be included to compose the UI. Learn more about config module framework:
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed

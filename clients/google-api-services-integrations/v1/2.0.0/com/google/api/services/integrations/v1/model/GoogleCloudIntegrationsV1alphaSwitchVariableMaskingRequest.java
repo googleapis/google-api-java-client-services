@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * THIS METHOD WILL BE MOVED TO A SEPARATE SERVICE. Request message for Bundle update
+ * Request to enable/disable variable masking for a provisioned client
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,40 +28,40 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudIntegrationsV1alphaUpdateBundleRequest extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * It contains the updated bundle data
+   * Required. REQUIRED: True if variable masking feature should be turned on for this region
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudIntegrationsV1alphaIntegrationBundleConfig config;
+  private java.lang.Boolean enableVariableMasking;
 
   /**
-   * It contains the updated bundle data
+   * Required. REQUIRED: True if variable masking feature should be turned on for this region
    * @return value or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaIntegrationBundleConfig getConfig() {
-    return config;
+  public java.lang.Boolean getEnableVariableMasking() {
+    return enableVariableMasking;
   }
 
   /**
-   * It contains the updated bundle data
-   * @param config config or {@code null} for none
+   * Required. REQUIRED: True if variable masking feature should be turned on for this region
+   * @param enableVariableMasking enableVariableMasking or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaUpdateBundleRequest setConfig(GoogleCloudIntegrationsV1alphaIntegrationBundleConfig config) {
-    this.config = config;
+  public GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest setEnableVariableMasking(java.lang.Boolean enableVariableMasking) {
+    this.enableVariableMasking = enableVariableMasking;
     return this;
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaUpdateBundleRequest set(String fieldName, Object value) {
-    return (GoogleCloudIntegrationsV1alphaUpdateBundleRequest) super.set(fieldName, value);
+  public GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaUpdateBundleRequest clone() {
-    return (GoogleCloudIntegrationsV1alphaUpdateBundleRequest) super.clone();
+  public GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest clone() {
+    return (GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest) super.clone();
   }
 
 }

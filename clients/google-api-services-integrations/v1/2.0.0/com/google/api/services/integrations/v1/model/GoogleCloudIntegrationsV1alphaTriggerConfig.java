@@ -62,6 +62,14 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
   private java.lang.String description;
 
   /**
+   * Optional. Optional Error catcher id of the error catch flow which will be executed when
+   * execution error happens in the task
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String errorCatcherId;
+
+  /**
    * Optional. The user created label for a particular trigger.
    * The value may be {@code null}.
    */
@@ -74,6 +82,13 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String nextTasksExecutionPolicy;
+
+  /**
+   * Optional. Informs the front-end application where to draw this error catcher config on the UI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIntegrationsV1alphaCoordinate position;
 
   /**
    * Optional. Configurable properties of the trigger, not to be confused with integration
@@ -99,6 +114,14 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudIntegrationsV1alphaNextTask.class);
   }
+
+  /**
+   * Optional. Name of the trigger. Example: "API Trigger", "Cloud Pub Sub Trigger" When set will be
+   * sent out to monitoring dashabord for tracking purpose.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trigger;
 
   /**
    * Optional. The backend trigger ID.
@@ -181,6 +204,25 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
   }
 
   /**
+   * Optional. Optional Error catcher id of the error catch flow which will be executed when
+   * execution error happens in the task
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getErrorCatcherId() {
+    return errorCatcherId;
+  }
+
+  /**
+   * Optional. Optional Error catcher id of the error catch flow which will be executed when
+   * execution error happens in the task
+   * @param errorCatcherId errorCatcherId or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTriggerConfig setErrorCatcherId(java.lang.String errorCatcherId) {
+    this.errorCatcherId = errorCatcherId;
+    return this;
+  }
+
+  /**
    * Optional. The user created label for a particular trigger.
    * @return value or {@code null} for none
    */
@@ -211,6 +253,23 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
    */
   public GoogleCloudIntegrationsV1alphaTriggerConfig setNextTasksExecutionPolicy(java.lang.String nextTasksExecutionPolicy) {
     this.nextTasksExecutionPolicy = nextTasksExecutionPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Informs the front-end application where to draw this error catcher config on the UI.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaCoordinate getPosition() {
+    return position;
+  }
+
+  /**
+   * Optional. Informs the front-end application where to draw this error catcher config on the UI.
+   * @param position position or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTriggerConfig setPosition(GoogleCloudIntegrationsV1alphaCoordinate position) {
+    this.position = position;
     return this;
   }
 
@@ -255,6 +314,25 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
    */
   public GoogleCloudIntegrationsV1alphaTriggerConfig setStartTasks(java.util.List<GoogleCloudIntegrationsV1alphaNextTask> startTasks) {
     this.startTasks = startTasks;
+    return this;
+  }
+
+  /**
+   * Optional. Name of the trigger. Example: "API Trigger", "Cloud Pub Sub Trigger" When set will be
+   * sent out to monitoring dashabord for tracking purpose.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrigger() {
+    return trigger;
+  }
+
+  /**
+   * Optional. Name of the trigger. Example: "API Trigger", "Cloud Pub Sub Trigger" When set will be
+   * sent out to monitoring dashabord for tracking purpose.
+   * @param trigger trigger or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTriggerConfig setTrigger(java.lang.String trigger) {
+    this.trigger = trigger;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Status for the execution attempt.
+ * Encryption Key value.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,67 +28,67 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudIntegrationsV1alphaAttemptStats extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudConnectorsV1EncryptionKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * The end time of the integration execution for current attempt.
+   * The [KMS key name] with which the content of the Operation is encrypted. The expected format:
+   * `projects/locations/keyRings/cryptoKeys`. Will be empty string if google managed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String endTime;
+  private java.lang.String kmsKeyName;
 
   /**
-   * The start time of the integration execution for current attempt. This could be in the future if
-   * it's been scheduled.
+   * Type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String startTime;
+  private java.lang.String type;
 
   /**
-   * The end time of the integration execution for current attempt.
+   * The [KMS key name] with which the content of the Operation is encrypted. The expected format:
+   * `projects/locations/keyRings/cryptoKeys`. Will be empty string if google managed.
    * @return value or {@code null} for none
    */
-  public String getEndTime() {
-    return endTime;
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
   }
 
   /**
-   * The end time of the integration execution for current attempt.
-   * @param endTime endTime or {@code null} for none
+   * The [KMS key name] with which the content of the Operation is encrypted. The expected format:
+   * `projects/locations/keyRings/cryptoKeys`. Will be empty string if google managed.
+   * @param kmsKeyName kmsKeyName or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaAttemptStats setEndTime(String endTime) {
-    this.endTime = endTime;
+  public GoogleCloudConnectorsV1EncryptionKey setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
     return this;
   }
 
   /**
-   * The start time of the integration execution for current attempt. This could be in the future if
-   * it's been scheduled.
+   * Type.
    * @return value or {@code null} for none
    */
-  public String getStartTime() {
-    return startTime;
+  public java.lang.String getType() {
+    return type;
   }
 
   /**
-   * The start time of the integration execution for current attempt. This could be in the future if
-   * it's been scheduled.
-   * @param startTime startTime or {@code null} for none
+   * Type.
+   * @param type type or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaAttemptStats setStartTime(String startTime) {
-    this.startTime = startTime;
+  public GoogleCloudConnectorsV1EncryptionKey setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaAttemptStats set(String fieldName, Object value) {
-    return (GoogleCloudIntegrationsV1alphaAttemptStats) super.set(fieldName, value);
+  public GoogleCloudConnectorsV1EncryptionKey set(String fieldName, Object value) {
+    return (GoogleCloudConnectorsV1EncryptionKey) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaAttemptStats clone() {
-    return (GoogleCloudIntegrationsV1alphaAttemptStats) super.clone();
+  public GoogleCloudConnectorsV1EncryptionKey clone() {
+    return (GoogleCloudConnectorsV1EncryptionKey) super.clone();
   }
 
 }

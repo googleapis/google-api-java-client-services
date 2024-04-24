@@ -18,7 +18,7 @@ package com.google.api.services.integrations.v1.model;
 
 /**
  * This message is used for processing and persisting (when applicable) key value pair parameters
- * for each event in the event bus.
+ * for each event in the event bus. Next available id: 4
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -38,6 +38,13 @@ public final class GoogleCloudIntegrationsV1alphaEventParameter extends com.goog
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
+
+  /**
+   * True if this parameter should be masked in the logs
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean masked;
 
   /**
    * Values for the defined keys. Each value can either be string, int, double or any proto message.
@@ -62,6 +69,23 @@ public final class GoogleCloudIntegrationsV1alphaEventParameter extends com.goog
    */
   public GoogleCloudIntegrationsV1alphaEventParameter setKey(java.lang.String key) {
     this.key = key;
+    return this;
+  }
+
+  /**
+   * True if this parameter should be masked in the logs
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMasked() {
+    return masked;
+  }
+
+  /**
+   * True if this parameter should be masked in the logs
+   * @param masked masked or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaEventParameter setMasked(java.lang.Boolean masked) {
+    this.masked = masked;
     return this;
   }
 

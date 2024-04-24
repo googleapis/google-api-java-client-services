@@ -18,8 +18,6 @@ package com.google.api.services.integrations.v1.model;
 
 /**
  * Message to be used to configure custom alerting in the {@code EventConfig} protos for an event.
- * See go/eventbus-alert-config-examples for examples of the different alerts that can be
- * configured.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -116,8 +114,7 @@ public final class EnterpriseCrmEventbusProtoWorkflowAlertConfig extends com.goo
   private java.lang.String thresholdType;
 
   /**
-   * The metric value, above or below which the alert should be triggered. See go/eventbus-alert-
-   * config-examples.
+   * The metric value, above or below which the alert should be triggered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -329,8 +326,7 @@ public final class EnterpriseCrmEventbusProtoWorkflowAlertConfig extends com.goo
   }
 
   /**
-   * The metric value, above or below which the alert should be triggered. See go/eventbus-alert-
-   * config-examples.
+   * The metric value, above or below which the alert should be triggered.
    * @return value or {@code null} for none
    */
   public EnterpriseCrmEventbusProtoBaseAlertConfigThresholdValue getThresholdValue() {
@@ -338,8 +334,7 @@ public final class EnterpriseCrmEventbusProtoWorkflowAlertConfig extends com.goo
   }
 
   /**
-   * The metric value, above or below which the alert should be triggered. See go/eventbus-alert-
-   * config-examples.
+   * The metric value, above or below which the alert should be triggered.
    * @param thresholdValue thresholdValue or {@code null} for none
    */
   public EnterpriseCrmEventbusProtoWorkflowAlertConfig setThresholdValue(EnterpriseCrmEventbusProtoBaseAlertConfigThresholdValue thresholdValue) {

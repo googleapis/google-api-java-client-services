@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Response for DownloadIntegrationVersion.
+ * To store string representation of Integration file.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,24 +28,24 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaSerializedFile extends com.google.api.client.json.GenericJson {
 
   /**
-   * String representation of the requested file.
+   * String representation of the file content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
 
   /**
-   * List containing String represendation for multiple file with type.
+   * File information like Integration version, Integration Config variables etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudIntegrationsV1alphaSerializedFile> files;
+  private java.lang.String file;
 
   /**
-   * String representation of the requested file.
+   * String representation of the file content.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -53,39 +53,39 @@ public final class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionRespo
   }
 
   /**
-   * String representation of the requested file.
+   * String representation of the file content.
    * @param content content or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse setContent(java.lang.String content) {
+  public GoogleCloudIntegrationsV1alphaSerializedFile setContent(java.lang.String content) {
     this.content = content;
     return this;
   }
 
   /**
-   * List containing String represendation for multiple file with type.
+   * File information like Integration version, Integration Config variables etc.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudIntegrationsV1alphaSerializedFile> getFiles() {
-    return files;
+  public java.lang.String getFile() {
+    return file;
   }
 
   /**
-   * List containing String represendation for multiple file with type.
-   * @param files files or {@code null} for none
+   * File information like Integration version, Integration Config variables etc.
+   * @param file file or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse setFiles(java.util.List<GoogleCloudIntegrationsV1alphaSerializedFile> files) {
-    this.files = files;
+  public GoogleCloudIntegrationsV1alphaSerializedFile setFile(java.lang.String file) {
+    this.file = file;
     return this;
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse set(String fieldName, Object value) {
-    return (GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse) super.set(fieldName, value);
+  public GoogleCloudIntegrationsV1alphaSerializedFile set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaSerializedFile) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse clone() {
-    return (GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse) super.clone();
+  public GoogleCloudIntegrationsV1alphaSerializedFile clone() {
+    return (GoogleCloudIntegrationsV1alphaSerializedFile) super.clone();
   }
 
 }

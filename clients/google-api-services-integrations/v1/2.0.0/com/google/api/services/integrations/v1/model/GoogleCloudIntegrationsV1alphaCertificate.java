@@ -52,7 +52,7 @@ public final class GoogleCloudIntegrationsV1alphaCertificate extends com.google.
   private java.lang.String description;
 
   /**
-   * Name of the certificate
+   * Required. Name of the certificate
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +145,7 @@ public final class GoogleCloudIntegrationsV1alphaCertificate extends com.google.
   }
 
   /**
-   * Name of the certificate
+   * Required. Name of the certificate
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -153,7 +153,7 @@ public final class GoogleCloudIntegrationsV1alphaCertificate extends com.google.
   }
 
   /**
-   * Name of the certificate
+   * Required. Name of the certificate
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaCertificate setDisplayName(java.lang.String displayName) {

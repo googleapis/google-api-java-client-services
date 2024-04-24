@@ -31,6 +31,13 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaProjectProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. Required: The client billing type that was requested
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String billingType;
+
+  /**
    * An enum value of what the enablement state is for the given project
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class GoogleCloudIntegrationsV1alphaProjectProperties extends com.g
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> provisionedRegions;
+
+  /**
+   * Required. Required: The client billing type that was requested
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBillingType() {
+    return billingType;
+  }
+
+  /**
+   * Required. Required: The client billing type that was requested
+   * @param billingType billingType or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaProjectProperties setBillingType(java.lang.String billingType) {
+    this.billingType = billingType;
+    return this;
+  }
 
   /**
    * An enum value of what the enablement state is for the given project

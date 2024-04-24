@@ -18,7 +18,7 @@ package com.google.api.services.integrations.v1.model;
 
 /**
  * The task configuration details. This is not the implementation of Task. There might be multiple
- * TaskConfigs for the same Task. Next available id: 27
+ * TaskConfigs for the same Task.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -75,6 +75,20 @@ public final class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends com.goo
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableStrictTypeValidation;
+
+  /**
+   * Optional Error catcher id of the error catch flow which will be executed when execution error
+   * happens in the task
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String errorCatcherId;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalTaskType;
 
   /**
    * Optional. Determines the number of times the task will be retried on failure and with what
@@ -227,8 +241,7 @@ public final class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends com.goo
   /**
    * A string template that allows user to configure task parameters (with either literal default
    * values or tokens which will be resolved at execution time) for the task. It will eventually
-   * replace the old "parameters" field. Please refer to go/eventbus-task-spec-example for detailed
-   * usage example.
+   * replace the old "parameters" field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -338,6 +351,40 @@ public final class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends com.goo
    */
   public EnterpriseCrmFrontendsEventbusProtoTaskConfig setDisableStrictTypeValidation(java.lang.Boolean disableStrictTypeValidation) {
     this.disableStrictTypeValidation = disableStrictTypeValidation;
+    return this;
+  }
+
+  /**
+   * Optional Error catcher id of the error catch flow which will be executed when execution error
+   * happens in the task
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getErrorCatcherId() {
+    return errorCatcherId;
+  }
+
+  /**
+   * Optional Error catcher id of the error catch flow which will be executed when execution error
+   * happens in the task
+   * @param errorCatcherId errorCatcherId or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoTaskConfig setErrorCatcherId(java.lang.String errorCatcherId) {
+    this.errorCatcherId = errorCatcherId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalTaskType() {
+    return externalTaskType;
+  }
+
+  /**
+   * @param externalTaskType externalTaskType or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoTaskConfig setExternalTaskType(java.lang.String externalTaskType) {
+    this.externalTaskType = externalTaskType;
     return this;
   }
 
@@ -670,8 +717,7 @@ public final class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends com.goo
   /**
    * A string template that allows user to configure task parameters (with either literal default
    * values or tokens which will be resolved at execution time) for the task. It will eventually
-   * replace the old "parameters" field. Please refer to go/eventbus-task-spec-example for detailed
-   * usage example.
+   * replace the old "parameters" field.
    * @return value or {@code null} for none
    */
   public java.lang.String getTaskSpec() {
@@ -681,8 +727,7 @@ public final class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends com.goo
   /**
    * A string template that allows user to configure task parameters (with either literal default
    * values or tokens which will be resolved at execution time) for the task. It will eventually
-   * replace the old "parameters" field. Please refer to go/eventbus-task-spec-example for detailed
-   * usage example.
+   * replace the old "parameters" field.
    * @param taskSpec taskSpec or {@code null} for none
    */
   public EnterpriseCrmFrontendsEventbusProtoTaskConfig setTaskSpec(java.lang.String taskSpec) {

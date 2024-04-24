@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Request for ArchiveBundle.
+ * Model definition for GoogleProtobufStruct.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,16 +28,16 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudIntegrationsV1alphaArchiveBundleRequest extends com.google.api.client.json.GenericJson {
+public final class GoogleProtobufStruct extends com.google.api.client.json.GenericJson {
 
   @Override
-  public GoogleCloudIntegrationsV1alphaArchiveBundleRequest set(String fieldName, Object value) {
-    return (GoogleCloudIntegrationsV1alphaArchiveBundleRequest) super.set(fieldName, value);
+  public GoogleProtobufStruct set(String fieldName, Object value) {
+    return (GoogleProtobufStruct) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaArchiveBundleRequest clone() {
-    return (GoogleCloudIntegrationsV1alphaArchiveBundleRequest) super.clone();
+  public GoogleProtobufStruct clone() {
+    return (GoogleProtobufStruct) super.clone();
   }
 
 }

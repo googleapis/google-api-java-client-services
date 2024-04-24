@@ -18,7 +18,7 @@ package com.google.api.services.integrations.v1.model;
 
 /**
  * LINT.IfChange This message is used for storing key value pair properties for each Event / Task in
- * the EventBus. Please see go/cloud-crm-eng/platform/event_bus.md for more details.
+ * the EventBus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed

@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Information about the value and type of the field. Next Id: 8
+ * Information about the value and type of the field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -39,8 +39,7 @@ public final class EnterpriseCrmEventbusProtoField extends com.google.api.client
 
   /**
    * This holds the default values for the fields. This value is supplied by user so may or may not
-   * contain PII or SPII data. This field will be scrubbed using DatapolScrubber#maybeScrub() with
-   * go/proto-sanitizer#level3
+   * contain PII or SPII data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,12 +74,12 @@ public final class EnterpriseCrmEventbusProtoField extends com.google.api.client
 
   /**
    * This is the transform expression to fetch the input field value. for e.g.
-   * $param1$.CONCAT('test'). See go/transform-functions-design for more details. Keep points - 1.
-   * Only input field can have a transform expression. 2. If a transform expression is provided,
-   * reference_key will be ignored. 3. If no value is returned after evaluation of transform
-   * expression, default_value can be mapped if provided. 4. The field_type should be the type of
-   * the final object returned after the transform expression is evaluated. Scrubs the transform
-   * expression before logging as value provided by user so may or may not contain PII or SPII data.
+   * $param1$.CONCAT('test'). Keep points - 1. Only input field can have a transform expression. 2.
+   * If a transform expression is provided, reference_key will be ignored. 3. If no value is
+   * returned after evaluation of transform expression, default_value can be mapped if provided. 4.
+   * The field_type should be the type of the final object returned after the transform expression
+   * is evaluated. Scrubs the transform expression before logging as value provided by user so may
+   * or may not contain PII or SPII data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,8 +104,7 @@ public final class EnterpriseCrmEventbusProtoField extends com.google.api.client
 
   /**
    * This holds the default values for the fields. This value is supplied by user so may or may not
-   * contain PII or SPII data. This field will be scrubbed using DatapolScrubber#maybeScrub() with
-   * go/proto-sanitizer#level3
+   * contain PII or SPII data.
    * @return value or {@code null} for none
    */
   public EnterpriseCrmEventbusProtoParameterValueType getDefaultValue() {
@@ -115,8 +113,7 @@ public final class EnterpriseCrmEventbusProtoField extends com.google.api.client
 
   /**
    * This holds the default values for the fields. This value is supplied by user so may or may not
-   * contain PII or SPII data. This field will be scrubbed using DatapolScrubber#maybeScrub() with
-   * go/proto-sanitizer#level3
+   * contain PII or SPII data.
    * @param defaultValue defaultValue or {@code null} for none
    */
   public EnterpriseCrmEventbusProtoField setDefaultValue(EnterpriseCrmEventbusProtoParameterValueType defaultValue) {
@@ -189,12 +186,12 @@ public final class EnterpriseCrmEventbusProtoField extends com.google.api.client
 
   /**
    * This is the transform expression to fetch the input field value. for e.g.
-   * $param1$.CONCAT('test'). See go/transform-functions-design for more details. Keep points - 1.
-   * Only input field can have a transform expression. 2. If a transform expression is provided,
-   * reference_key will be ignored. 3. If no value is returned after evaluation of transform
-   * expression, default_value can be mapped if provided. 4. The field_type should be the type of
-   * the final object returned after the transform expression is evaluated. Scrubs the transform
-   * expression before logging as value provided by user so may or may not contain PII or SPII data.
+   * $param1$.CONCAT('test'). Keep points - 1. Only input field can have a transform expression. 2.
+   * If a transform expression is provided, reference_key will be ignored. 3. If no value is
+   * returned after evaluation of transform expression, default_value can be mapped if provided. 4.
+   * The field_type should be the type of the final object returned after the transform expression
+   * is evaluated. Scrubs the transform expression before logging as value provided by user so may
+   * or may not contain PII or SPII data.
    * @return value or {@code null} for none
    */
   public EnterpriseCrmEventbusProtoTransformExpression getTransformExpression() {
@@ -203,12 +200,12 @@ public final class EnterpriseCrmEventbusProtoField extends com.google.api.client
 
   /**
    * This is the transform expression to fetch the input field value. for e.g.
-   * $param1$.CONCAT('test'). See go/transform-functions-design for more details. Keep points - 1.
-   * Only input field can have a transform expression. 2. If a transform expression is provided,
-   * reference_key will be ignored. 3. If no value is returned after evaluation of transform
-   * expression, default_value can be mapped if provided. 4. The field_type should be the type of
-   * the final object returned after the transform expression is evaluated. Scrubs the transform
-   * expression before logging as value provided by user so may or may not contain PII or SPII data.
+   * $param1$.CONCAT('test'). Keep points - 1. Only input field can have a transform expression. 2.
+   * If a transform expression is provided, reference_key will be ignored. 3. If no value is
+   * returned after evaluation of transform expression, default_value can be mapped if provided. 4.
+   * The field_type should be the type of the final object returned after the transform expression
+   * is evaluated. Scrubs the transform expression before logging as value provided by user so may
+   * or may not contain PII or SPII data.
    * @param transformExpression transformExpression or {@code null} for none
    */
   public EnterpriseCrmEventbusProtoField setTransformExpression(EnterpriseCrmEventbusProtoTransformExpression transformExpression) {

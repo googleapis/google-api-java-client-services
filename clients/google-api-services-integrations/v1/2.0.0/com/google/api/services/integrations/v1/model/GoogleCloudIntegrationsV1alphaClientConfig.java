@@ -52,13 +52,6 @@ public final class GoogleCloudIntegrationsV1alphaClientConfig extends com.google
   private GoogleCloudIntegrationsV1alphaCloudKmsConfig cloudKmsConfig;
 
   /**
-   * Determines the cloud logging configuration for the project
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudIntegrationsV1alphaCloudLoggingConfig cloudLoggingConfig;
-
-  /**
    * The timestamp when the client was first created.
    * The value may be {@code null}.
    */
@@ -73,6 +66,13 @@ public final class GoogleCloudIntegrationsV1alphaClientConfig extends com.google
   private java.lang.String description;
 
   /**
+   * Optional. True if variable masking feature should be turned on for this region
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableVariableMasking;
+
+  /**
    * Globally unique ID (project_id + region)
    * The value may be {@code null}.
    */
@@ -80,7 +80,14 @@ public final class GoogleCloudIntegrationsV1alphaClientConfig extends com.google
   private java.lang.String id;
 
   /**
-   * The P4SA account associated with this client
+   * Optional. Indicates the client is provisioned with CMEK or GMEK.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isGmek;
+
+  /**
+   * The service agent associated with this client
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,6 +106,15 @@ public final class GoogleCloudIntegrationsV1alphaClientConfig extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
+
+  /**
+   * Default run-as service account email, set up during project provision time, that will be used
+   * to generate auth token to be used in Connector task, Rest caller task, Cloud function task and
+   * Subworkflows.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runAsServiceAccount;
 
   /**
    * Indicates the billing type of the client
@@ -152,23 +168,6 @@ public final class GoogleCloudIntegrationsV1alphaClientConfig extends com.google
   }
 
   /**
-   * Determines the cloud logging configuration for the project
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudIntegrationsV1alphaCloudLoggingConfig getCloudLoggingConfig() {
-    return cloudLoggingConfig;
-  }
-
-  /**
-   * Determines the cloud logging configuration for the project
-   * @param cloudLoggingConfig cloudLoggingConfig or {@code null} for none
-   */
-  public GoogleCloudIntegrationsV1alphaClientConfig setCloudLoggingConfig(GoogleCloudIntegrationsV1alphaCloudLoggingConfig cloudLoggingConfig) {
-    this.cloudLoggingConfig = cloudLoggingConfig;
-    return this;
-  }
-
-  /**
    * The timestamp when the client was first created.
    * @return value or {@code null} for none
    */
@@ -203,6 +202,23 @@ public final class GoogleCloudIntegrationsV1alphaClientConfig extends com.google
   }
 
   /**
+   * Optional. True if variable masking feature should be turned on for this region
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableVariableMasking() {
+    return enableVariableMasking;
+  }
+
+  /**
+   * Optional. True if variable masking feature should be turned on for this region
+   * @param enableVariableMasking enableVariableMasking or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaClientConfig setEnableVariableMasking(java.lang.Boolean enableVariableMasking) {
+    this.enableVariableMasking = enableVariableMasking;
+    return this;
+  }
+
+  /**
    * Globally unique ID (project_id + region)
    * @return value or {@code null} for none
    */
@@ -220,7 +236,24 @@ public final class GoogleCloudIntegrationsV1alphaClientConfig extends com.google
   }
 
   /**
-   * The P4SA account associated with this client
+   * Optional. Indicates the client is provisioned with CMEK or GMEK.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsGmek() {
+    return isGmek;
+  }
+
+  /**
+   * Optional. Indicates the client is provisioned with CMEK or GMEK.
+   * @param isGmek isGmek or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaClientConfig setIsGmek(java.lang.Boolean isGmek) {
+    this.isGmek = isGmek;
+    return this;
+  }
+
+  /**
+   * The service agent associated with this client
    * @return value or {@code null} for none
    */
   public java.lang.String getP4ServiceAccount() {
@@ -228,7 +261,7 @@ public final class GoogleCloudIntegrationsV1alphaClientConfig extends com.google
   }
 
   /**
-   * The P4SA account associated with this client
+   * The service agent associated with this client
    * @param p4ServiceAccount p4ServiceAccount or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaClientConfig setP4ServiceAccount(java.lang.String p4ServiceAccount) {
@@ -267,6 +300,27 @@ public final class GoogleCloudIntegrationsV1alphaClientConfig extends com.google
    */
   public GoogleCloudIntegrationsV1alphaClientConfig setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * Default run-as service account email, set up during project provision time, that will be used
+   * to generate auth token to be used in Connector task, Rest caller task, Cloud function task and
+   * Subworkflows.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRunAsServiceAccount() {
+    return runAsServiceAccount;
+  }
+
+  /**
+   * Default run-as service account email, set up during project provision time, that will be used
+   * to generate auth token to be used in Connector task, Rest caller task, Cloud function task and
+   * Subworkflows.
+   * @param runAsServiceAccount runAsServiceAccount or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaClientConfig setRunAsServiceAccount(java.lang.String runAsServiceAccount) {
+    this.runAsServiceAccount = runAsServiceAccount;
     return this;
   }
 

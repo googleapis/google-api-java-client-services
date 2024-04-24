@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * This is a UI only method and will be moved away. Response for ListTaskEntities.
+ * Resource limits defined for connection pods of a given connector type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,46 +28,64 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudIntegrationsV1alphaListTaskEntitiesResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudConnectorsV1ResourceLimits extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of the tasks.
+   * Output only. CPU limit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<EnterpriseCrmFrontendsEventbusProtoTaskEntity> taskEntities;
-
-  static {
-    // hack to force ProGuard to consider EnterpriseCrmFrontendsEventbusProtoTaskEntity used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(EnterpriseCrmFrontendsEventbusProtoTaskEntity.class);
-  }
+  private java.lang.String cpu;
 
   /**
-   * The list of the tasks.
+   * Output only. Memory limit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String memory;
+
+  /**
+   * Output only. CPU limit.
    * @return value or {@code null} for none
    */
-  public java.util.List<EnterpriseCrmFrontendsEventbusProtoTaskEntity> getTaskEntities() {
-    return taskEntities;
+  public java.lang.String getCpu() {
+    return cpu;
   }
 
   /**
-   * The list of the tasks.
-   * @param taskEntities taskEntities or {@code null} for none
+   * Output only. CPU limit.
+   * @param cpu cpu or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaListTaskEntitiesResponse setTaskEntities(java.util.List<EnterpriseCrmFrontendsEventbusProtoTaskEntity> taskEntities) {
-    this.taskEntities = taskEntities;
+  public GoogleCloudConnectorsV1ResourceLimits setCpu(java.lang.String cpu) {
+    this.cpu = cpu;
+    return this;
+  }
+
+  /**
+   * Output only. Memory limit.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMemory() {
+    return memory;
+  }
+
+  /**
+   * Output only. Memory limit.
+   * @param memory memory or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ResourceLimits setMemory(java.lang.String memory) {
+    this.memory = memory;
     return this;
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaListTaskEntitiesResponse set(String fieldName, Object value) {
-    return (GoogleCloudIntegrationsV1alphaListTaskEntitiesResponse) super.set(fieldName, value);
+  public GoogleCloudConnectorsV1ResourceLimits set(String fieldName, Object value) {
+    return (GoogleCloudConnectorsV1ResourceLimits) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaListTaskEntitiesResponse clone() {
-    return (GoogleCloudIntegrationsV1alphaListTaskEntitiesResponse) super.clone();
+  public GoogleCloudConnectorsV1ResourceLimits clone() {
+    return (GoogleCloudConnectorsV1ResourceLimits) super.clone();
   }
 
 }

@@ -31,8 +31,8 @@ package com.google.api.services.content.model;
 public final class LiaAboutPageSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status of the verification process for the About page. Acceptable values are: - "`active`"
-   * - "`inactive`" - "`pending`"
+   * The status of the verification process for the About page. Supported values are: - "`active`" -
+   * "`inactive`" - "`pending`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class LiaAboutPageSettings extends com.google.api.client.json.Gener
   private java.lang.String url;
 
   /**
-   * The status of the verification process for the About page. Acceptable values are: - "`active`"
-   * - "`inactive`" - "`pending`"
+   * The status of the verification process for the About page. Supported values are: - "`active`" -
+   * "`inactive`" - "`pending`"
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -55,8 +55,8 @@ public final class LiaAboutPageSettings extends com.google.api.client.json.Gener
   }
 
   /**
-   * The status of the verification process for the About page. Acceptable values are: - "`active`"
-   * - "`inactive`" - "`pending`"
+   * The status of the verification process for the About page. Supported values are: - "`active`" -
+   * "`inactive`" - "`pending`"
    * @param status status or {@code null} for none
    */
   public LiaAboutPageSettings setStatus(java.lang.String status) {

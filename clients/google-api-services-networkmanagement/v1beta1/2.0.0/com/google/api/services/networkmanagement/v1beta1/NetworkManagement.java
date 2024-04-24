@@ -1474,7 +1474,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the networkmanagement server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Unique name of the resource using the form:
+           * @param name Identifier. Unique name of the resource using the form:
            *        `projects/{project_id}/locations/global/connectivityTests/{test}`
            * @param content the {@link com.google.api.services.networkmanagement.v1beta1.model.ConnectivityTest}
            * @return the request
@@ -1511,7 +1511,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Unique name of the resource using the form:
+             * @param name Identifier. Unique name of the resource using the form:
            *        `projects/{project_id}/locations/global/connectivityTests/{test}`
              * @param content the {@link com.google.api.services.networkmanagement.v1beta1.model.ConnectivityTest}
              * @since 1.13
@@ -1582,13 +1582,13 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Required. Unique name of the resource using the form:
+             * Identifier. Unique name of the resource using the form:
              * `projects/{project_id}/locations/global/connectivityTests/{test}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Unique name of the resource using the form:
+            /** Identifier. Unique name of the resource using the form:
            `projects/{project_id}/locations/global/connectivityTests/{test}`
              */
             public java.lang.String getName() {
@@ -1596,7 +1596,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Required. Unique name of the resource using the form:
+             * Identifier. Unique name of the resource using the form:
              * `projects/{project_id}/locations/global/connectivityTests/{test}`
              */
             public Patch setName(java.lang.String name) {

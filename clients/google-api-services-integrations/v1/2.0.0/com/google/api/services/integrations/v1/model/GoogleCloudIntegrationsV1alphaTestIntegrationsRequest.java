@@ -38,6 +38,13 @@ public final class GoogleCloudIntegrationsV1alphaTestIntegrationsRequest extends
   private java.lang.String clientId;
 
   /**
+   * Optional. Config parameters used during integration execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> configParameters;
+
+  /**
    * Optional. custom deadline of the rpc
    * The value may be {@code null}.
    */
@@ -97,6 +104,23 @@ public final class GoogleCloudIntegrationsV1alphaTestIntegrationsRequest extends
    */
   public GoogleCloudIntegrationsV1alphaTestIntegrationsRequest setClientId(java.lang.String clientId) {
     this.clientId = clientId;
+    return this;
+  }
+
+  /**
+   * Optional. Config parameters used during integration execution.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getConfigParameters() {
+    return configParameters;
+  }
+
+  /**
+   * Optional. Config parameters used during integration execution.
+   * @param configParameters configParameters or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTestIntegrationsRequest setConfigParameters(java.util.Map<String, java.lang.Object> configParameters) {
+    this.configParameters = configParameters;
     return this;
   }
 

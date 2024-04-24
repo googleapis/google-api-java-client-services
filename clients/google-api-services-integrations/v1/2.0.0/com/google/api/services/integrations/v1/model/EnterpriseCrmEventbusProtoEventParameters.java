@@ -18,8 +18,7 @@ package com.google.api.services.integrations.v1.model;
 
 /**
  * LINT.IfChange This message is used for processing and persisting (when applicable) key value pair
- * parameters for each event in the event bus. Please see go/integration-platform/event_bus.md for
- * more details. Next id: 4
+ * parameters for each event in the event bus. Please see
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed

@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Response for GetBundle.
+ * Response for DownloadJsonPackage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,40 +28,40 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudIntegrationsV1alphaGetBundleResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaDownloadJsonPackageResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * It contains the bundle data
+   * List containing JSON for multiple file with type information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudIntegrationsV1alphaIntegrationBundleConfig config;
+  private java.util.List<GoogleCloudIntegrationsV1alphaFile> files;
 
   /**
-   * It contains the bundle data
+   * List containing JSON for multiple file with type information.
    * @return value or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaIntegrationBundleConfig getConfig() {
-    return config;
+  public java.util.List<GoogleCloudIntegrationsV1alphaFile> getFiles() {
+    return files;
   }
 
   /**
-   * It contains the bundle data
-   * @param config config or {@code null} for none
+   * List containing JSON for multiple file with type information.
+   * @param files files or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaGetBundleResponse setConfig(GoogleCloudIntegrationsV1alphaIntegrationBundleConfig config) {
-    this.config = config;
+  public GoogleCloudIntegrationsV1alphaDownloadJsonPackageResponse setFiles(java.util.List<GoogleCloudIntegrationsV1alphaFile> files) {
+    this.files = files;
     return this;
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaGetBundleResponse set(String fieldName, Object value) {
-    return (GoogleCloudIntegrationsV1alphaGetBundleResponse) super.set(fieldName, value);
+  public GoogleCloudIntegrationsV1alphaDownloadJsonPackageResponse set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaDownloadJsonPackageResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaGetBundleResponse clone() {
-    return (GoogleCloudIntegrationsV1alphaGetBundleResponse) super.clone();
+  public GoogleCloudIntegrationsV1alphaDownloadJsonPackageResponse clone() {
+    return (GoogleCloudIntegrationsV1alphaDownloadJsonPackageResponse) super.clone();
   }
 
 }

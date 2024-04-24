@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Request for DeactivateIntegrationVersion.
+ * The response for executing an integration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,16 +28,40 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaExecuteEventResponse extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest set(String fieldName, Object value) {
-    return (GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest) super.set(fieldName, value);
+  /**
+   * The id of the execution corresponding to this run of integration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String executionId;
+
+  /**
+   * The id of the execution corresponding to this run of integration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExecutionId() {
+    return executionId;
+  }
+
+  /**
+   * The id of the execution corresponding to this run of integration.
+   * @param executionId executionId or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecuteEventResponse setExecutionId(java.lang.String executionId) {
+    this.executionId = executionId;
+    return this;
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest clone() {
-    return (GoogleCloudIntegrationsV1alphaDeactivateIntegrationVersionRequest) super.clone();
+  public GoogleCloudIntegrationsV1alphaExecuteEventResponse set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaExecuteEventResponse) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleCloudIntegrationsV1alphaExecuteEventResponse clone() {
+    return (GoogleCloudIntegrationsV1alphaExecuteEventResponse) super.clone();
   }
 
 }

@@ -17,7 +17,8 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Use this request to post all workflows associated with a given trigger id. Next available id: 10
+ * LINT.IfChange Use this request to post all workflows associated with a given trigger id. Next
+ * available id: 13
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -65,6 +66,13 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
   private java.lang.String priority;
 
   /**
+   * Optional. This is a field to see the quota retry count for integration execution
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer quotaRetryCount;
+
+  /**
    * Optional. This is used to de-dup incoming request: if the duplicate request was detected, the
    * response from the previous execution is returned. Must have no more than 36 characters and
    * contain only alphanumeric characters and hyphens.
@@ -72,6 +80,14 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
+
+  /**
+   * This field is only required when using Admin Access. The resource name of target, or the parent
+   * resource name. For example: "projects/locations/integrations"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceName;
 
   /**
    * Optional. Time in milliseconds since epoch when the given event would be scheduled.
@@ -94,6 +110,15 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
    */
   @com.google.api.client.util.Key
   private java.lang.String triggerId;
+
+  /**
+   * This is a unique id provided by the method caller. If provided this will be used as the
+   * execution_id when a new execution info is created. This is a string representation of a UUID.
+   * Must have no more than 36 characters and contain only alphanumeric characters and hyphens.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userGeneratedExecutionId;
 
   /**
    * Optional. If provided, the workflow_name is used to filter all the matched workflows having
@@ -185,6 +210,23 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
   }
 
   /**
+   * Optional. This is a field to see the quota retry count for integration execution
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getQuotaRetryCount() {
+    return quotaRetryCount;
+  }
+
+  /**
+   * Optional. This is a field to see the quota retry count for integration execution
+   * @param quotaRetryCount quotaRetryCount or {@code null} for none
+   */
+  public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest setQuotaRetryCount(java.lang.Integer quotaRetryCount) {
+    this.quotaRetryCount = quotaRetryCount;
+    return this;
+  }
+
+  /**
    * Optional. This is used to de-dup incoming request: if the duplicate request was detected, the
    * response from the previous execution is returned. Must have no more than 36 characters and
    * contain only alphanumeric characters and hyphens.
@@ -202,6 +244,25 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
    */
   public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
+    return this;
+  }
+
+  /**
+   * This field is only required when using Admin Access. The resource name of target, or the parent
+   * resource name. For example: "projects/locations/integrations"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceName() {
+    return resourceName;
+  }
+
+  /**
+   * This field is only required when using Admin Access. The resource name of target, or the parent
+   * resource name. For example: "projects/locations/integrations"
+   * @param resourceName resourceName or {@code null} for none
+   */
+  public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest setResourceName(java.lang.String resourceName) {
+    this.resourceName = resourceName;
     return this;
   }
 
@@ -255,6 +316,27 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
    */
   public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest setTriggerId(java.lang.String triggerId) {
     this.triggerId = triggerId;
+    return this;
+  }
+
+  /**
+   * This is a unique id provided by the method caller. If provided this will be used as the
+   * execution_id when a new execution info is created. This is a string representation of a UUID.
+   * Must have no more than 36 characters and contain only alphanumeric characters and hyphens.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserGeneratedExecutionId() {
+    return userGeneratedExecutionId;
+  }
+
+  /**
+   * This is a unique id provided by the method caller. If provided this will be used as the
+   * execution_id when a new execution info is created. This is a string representation of a UUID.
+   * Must have no more than 36 characters and contain only alphanumeric characters and hyphens.
+   * @param userGeneratedExecutionId userGeneratedExecutionId or {@code null} for none
+   */
+  public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest setUserGeneratedExecutionId(java.lang.String userGeneratedExecutionId) {
+    this.userGeneratedExecutionId = userGeneratedExecutionId;
     return this;
   }
 

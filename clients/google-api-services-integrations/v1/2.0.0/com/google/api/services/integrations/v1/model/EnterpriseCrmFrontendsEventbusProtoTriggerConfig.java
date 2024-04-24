@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Configuration detail of a trigger. Next available id: 17
+ * Configuration detail of a trigger. Next available id: 20
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -69,6 +69,14 @@ public final class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends com.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> enabledClients;
+
+  /**
+   * Optional Error catcher id of the error catch flow which will be executed when execution error
+   * happens in the task
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String errorCatcherId;
 
   /**
    * The user created label for a particular trigger.
@@ -140,6 +148,14 @@ public final class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String triggerId;
+
+  /**
+   * Optional. Name of the trigger This is added to identify the type of trigger. This is avoid the
+   * logic on triggerId to identify the trigger_type and push the same to monitoring.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String triggerName;
 
   /**
    * Required. A number to uniquely identify each trigger config within the workflow on UI.
@@ -231,6 +247,25 @@ public final class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends com.
    */
   public EnterpriseCrmFrontendsEventbusProtoTriggerConfig setEnabledClients(java.util.List<java.lang.String> enabledClients) {
     this.enabledClients = enabledClients;
+    return this;
+  }
+
+  /**
+   * Optional Error catcher id of the error catch flow which will be executed when execution error
+   * happens in the task
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getErrorCatcherId() {
+    return errorCatcherId;
+  }
+
+  /**
+   * Optional Error catcher id of the error catch flow which will be executed when execution error
+   * happens in the task
+   * @param errorCatcherId errorCatcherId or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoTriggerConfig setErrorCatcherId(java.lang.String errorCatcherId) {
+    this.errorCatcherId = errorCatcherId;
     return this;
   }
 
@@ -385,6 +420,25 @@ public final class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends com.
    */
   public EnterpriseCrmFrontendsEventbusProtoTriggerConfig setTriggerId(java.lang.String triggerId) {
     this.triggerId = triggerId;
+    return this;
+  }
+
+  /**
+   * Optional. Name of the trigger This is added to identify the type of trigger. This is avoid the
+   * logic on triggerId to identify the trigger_type and push the same to monitoring.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTriggerName() {
+    return triggerName;
+  }
+
+  /**
+   * Optional. Name of the trigger This is added to identify the type of trigger. This is avoid the
+   * logic on triggerId to identify the trigger_type and push the same to monitoring.
+   * @param triggerName triggerName or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoTriggerConfig setTriggerName(java.lang.String triggerName) {
+    this.triggerName = triggerName;
     return this;
   }
 

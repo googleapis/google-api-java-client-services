@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Field Mapping Config to map multiple output fields values from input fields values.
+ * Request for the SwitchEncryption rpc
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,37 +28,40 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EnterpriseCrmEventbusProtoFieldMappingConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. REQUIRED: Cloud KMS config for AuthModule to encrypt/decrypt credentials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<EnterpriseCrmEventbusProtoMappedField> mappedFields;
+  private GoogleCloudIntegrationsV1alphaCloudKmsConfig cloudKmsConfig;
 
   /**
+   * Required. REQUIRED: Cloud KMS config for AuthModule to encrypt/decrypt credentials.
    * @return value or {@code null} for none
    */
-  public java.util.List<EnterpriseCrmEventbusProtoMappedField> getMappedFields() {
-    return mappedFields;
+  public GoogleCloudIntegrationsV1alphaCloudKmsConfig getCloudKmsConfig() {
+    return cloudKmsConfig;
   }
 
   /**
-   * @param mappedFields mappedFields or {@code null} for none
+   * Required. REQUIRED: Cloud KMS config for AuthModule to encrypt/decrypt credentials.
+   * @param cloudKmsConfig cloudKmsConfig or {@code null} for none
    */
-  public EnterpriseCrmEventbusProtoFieldMappingConfig setMappedFields(java.util.List<EnterpriseCrmEventbusProtoMappedField> mappedFields) {
-    this.mappedFields = mappedFields;
+  public GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest setCloudKmsConfig(GoogleCloudIntegrationsV1alphaCloudKmsConfig cloudKmsConfig) {
+    this.cloudKmsConfig = cloudKmsConfig;
     return this;
   }
 
   @Override
-  public EnterpriseCrmEventbusProtoFieldMappingConfig set(String fieldName, Object value) {
-    return (EnterpriseCrmEventbusProtoFieldMappingConfig) super.set(fieldName, value);
+  public GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest) super.set(fieldName, value);
   }
 
   @Override
-  public EnterpriseCrmEventbusProtoFieldMappingConfig clone() {
-    return (EnterpriseCrmEventbusProtoFieldMappingConfig) super.clone();
+  public GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest clone() {
+    return (GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest) super.clone();
   }
 
 }

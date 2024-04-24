@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Config info for Cloud Logging
+ * Resource requests defined for connection pods of a given connector type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudIntegrationsV1alphaCloudLoggingConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudConnectorsV1ResourceRequests extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud bucket name for the project.
+   * Output only. CPU request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String bucket;
+  private java.lang.String cpu;
 
   /**
-   * This field determines whether the logs should be sent to cloud logging api
+   * Output only. Memory request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enableCloudLogging;
+  private java.lang.String memory;
 
   /**
-   * Cloud bucket name for the project.
+   * Output only. CPU request.
    * @return value or {@code null} for none
    */
-  public java.lang.String getBucket() {
-    return bucket;
+  public java.lang.String getCpu() {
+    return cpu;
   }
 
   /**
-   * Cloud bucket name for the project.
-   * @param bucket bucket or {@code null} for none
+   * Output only. CPU request.
+   * @param cpu cpu or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaCloudLoggingConfig setBucket(java.lang.String bucket) {
-    this.bucket = bucket;
+  public GoogleCloudConnectorsV1ResourceRequests setCpu(java.lang.String cpu) {
+    this.cpu = cpu;
     return this;
   }
 
   /**
-   * This field determines whether the logs should be sent to cloud logging api
+   * Output only. Memory request.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getEnableCloudLogging() {
-    return enableCloudLogging;
+  public java.lang.String getMemory() {
+    return memory;
   }
 
   /**
-   * This field determines whether the logs should be sent to cloud logging api
-   * @param enableCloudLogging enableCloudLogging or {@code null} for none
+   * Output only. Memory request.
+   * @param memory memory or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaCloudLoggingConfig setEnableCloudLogging(java.lang.Boolean enableCloudLogging) {
-    this.enableCloudLogging = enableCloudLogging;
+  public GoogleCloudConnectorsV1ResourceRequests setMemory(java.lang.String memory) {
+    this.memory = memory;
     return this;
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaCloudLoggingConfig set(String fieldName, Object value) {
-    return (GoogleCloudIntegrationsV1alphaCloudLoggingConfig) super.set(fieldName, value);
+  public GoogleCloudConnectorsV1ResourceRequests set(String fieldName, Object value) {
+    return (GoogleCloudConnectorsV1ResourceRequests) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaCloudLoggingConfig clone() {
-    return (GoogleCloudIntegrationsV1alphaCloudLoggingConfig) super.clone();
+  public GoogleCloudConnectorsV1ResourceRequests clone() {
+    return (GoogleCloudConnectorsV1ResourceRequests) super.clone();
   }
 
 }

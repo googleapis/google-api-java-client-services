@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Response for create bundle.
+ * Dead Letter configuration details provided by the user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudIntegrationsV1alphaCreateBundleResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudConnectorsV1EventingConfigDeadLetterConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * It contains the bundle data
+   * Optional. Project which has the topic given.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudIntegrationsV1alphaIntegrationBundleConfig config;
+  private java.lang.String projectId;
 
   /**
-   * trigger_id of the bundle task
+   * Optional. Topic to push events which couldn't be processed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String triggerId;
+  private java.lang.String topic;
 
   /**
-   * It contains the bundle data
+   * Optional. Project which has the topic given.
    * @return value or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaIntegrationBundleConfig getConfig() {
-    return config;
+  public java.lang.String getProjectId() {
+    return projectId;
   }
 
   /**
-   * It contains the bundle data
-   * @param config config or {@code null} for none
+   * Optional. Project which has the topic given.
+   * @param projectId projectId or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaCreateBundleResponse setConfig(GoogleCloudIntegrationsV1alphaIntegrationBundleConfig config) {
-    this.config = config;
+  public GoogleCloudConnectorsV1EventingConfigDeadLetterConfig setProjectId(java.lang.String projectId) {
+    this.projectId = projectId;
     return this;
   }
 
   /**
-   * trigger_id of the bundle task
+   * Optional. Topic to push events which couldn't be processed.
    * @return value or {@code null} for none
    */
-  public java.lang.String getTriggerId() {
-    return triggerId;
+  public java.lang.String getTopic() {
+    return topic;
   }
 
   /**
-   * trigger_id of the bundle task
-   * @param triggerId triggerId or {@code null} for none
+   * Optional. Topic to push events which couldn't be processed.
+   * @param topic topic or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaCreateBundleResponse setTriggerId(java.lang.String triggerId) {
-    this.triggerId = triggerId;
+  public GoogleCloudConnectorsV1EventingConfigDeadLetterConfig setTopic(java.lang.String topic) {
+    this.topic = topic;
     return this;
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaCreateBundleResponse set(String fieldName, Object value) {
-    return (GoogleCloudIntegrationsV1alphaCreateBundleResponse) super.set(fieldName, value);
+  public GoogleCloudConnectorsV1EventingConfigDeadLetterConfig set(String fieldName, Object value) {
+    return (GoogleCloudConnectorsV1EventingConfigDeadLetterConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaCreateBundleResponse clone() {
-    return (GoogleCloudIntegrationsV1alphaCreateBundleResponse) super.clone();
+  public GoogleCloudConnectorsV1EventingConfigDeadLetterConfig clone() {
+    return (GoogleCloudConnectorsV1EventingConfigDeadLetterConfig) super.clone();
   }
 
 }

@@ -30,6 +30,30 @@ package com.google.api.services.integrations.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Config parameters used during integration execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> configParameters;
+
+  /**
+   * Optional. Config parameters used during integration execution.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getConfigParameters() {
+    return configParameters;
+  }
+
+  /**
+   * Optional. Config parameters used during integration execution.
+   * @param configParameters configParameters or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest setConfigParameters(java.util.Map<String, java.lang.Object> configParameters) {
+    this.configParameters = configParameters;
+    return this;
+  }
+
   @Override
   public GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest set(String fieldName, Object value) {
     return (GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest) super.set(fieldName, value);

@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * TaskMetadata are attributes that are associated to every common Task we have. Next available: 26
+ * TaskMetadata are attributes that are associated to every common Task we have.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -139,8 +139,7 @@ public final class EnterpriseCrmEventbusProtoTaskMetadata extends com.google.api
 
   /**
    * URL to gstatic image icon for this task. This icon shows up on the task list panel along with
-   * the task name in the Workflow Editor screen. Use the 24p, 2x, gray color icon image format. See
-   * go/icons.
+   * the task name in the Workflow Editor screen. Use the 24p, 2x, gray color icon image format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -453,8 +452,7 @@ public final class EnterpriseCrmEventbusProtoTaskMetadata extends com.google.api
 
   /**
    * URL to gstatic image icon for this task. This icon shows up on the task list panel along with
-   * the task name in the Workflow Editor screen. Use the 24p, 2x, gray color icon image format. See
-   * go/icons.
+   * the task name in the Workflow Editor screen. Use the 24p, 2x, gray color icon image format.
    * @return value or {@code null} for none
    */
   public java.lang.String getIconLink() {
@@ -463,8 +461,7 @@ public final class EnterpriseCrmEventbusProtoTaskMetadata extends com.google.api
 
   /**
    * URL to gstatic image icon for this task. This icon shows up on the task list panel along with
-   * the task name in the Workflow Editor screen. Use the 24p, 2x, gray color icon image format. See
-   * go/icons.
+   * the task name in the Workflow Editor screen. Use the 24p, 2x, gray color icon image format.
    * @param iconLink iconLink or {@code null} for none
    */
   public EnterpriseCrmEventbusProtoTaskMetadata setIconLink(java.lang.String iconLink) {

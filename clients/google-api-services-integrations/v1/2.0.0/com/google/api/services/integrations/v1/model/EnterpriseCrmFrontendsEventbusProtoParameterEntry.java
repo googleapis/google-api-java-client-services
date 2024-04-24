@@ -46,6 +46,13 @@ public final class EnterpriseCrmFrontendsEventbusProtoParameterEntry extends com
   private java.lang.String key;
 
   /**
+   * True if this parameter should be masked in the logs
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean masked;
+
+  /**
    * Values for the defined keys. Each value can either be string, int, double or any proto message.
    * The value may be {@code null}.
    */
@@ -85,6 +92,23 @@ public final class EnterpriseCrmFrontendsEventbusProtoParameterEntry extends com
    */
   public EnterpriseCrmFrontendsEventbusProtoParameterEntry setKey(java.lang.String key) {
     this.key = key;
+    return this;
+  }
+
+  /**
+   * True if this parameter should be masked in the logs
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMasked() {
+    return masked;
+  }
+
+  /**
+   * True if this parameter should be masked in the logs
+   * @param masked masked or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoParameterEntry setMasked(java.lang.Boolean masked) {
+    this.masked = masked;
     return this;
   }
 

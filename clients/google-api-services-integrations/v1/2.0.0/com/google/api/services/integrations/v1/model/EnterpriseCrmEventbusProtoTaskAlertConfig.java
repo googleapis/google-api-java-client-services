@@ -18,8 +18,6 @@ package com.google.api.services.integrations.v1.model;
 
 /**
  * Message to be used to configure alerting in the {@code TaskConfig} protos for tasks in an event.
- * See go/eventbus-alert-config-examples for examples of the different alerts that can be
- * configured.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed

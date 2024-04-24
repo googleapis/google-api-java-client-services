@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Response message for Bundle update
+ * Request for the ReplaceServiceAccount rpc
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,40 +28,40 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudIntegrationsV1alphaUpdateBundleResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains updated bundle config
+   * Required. REQUIRED: Run-as service account to be updated
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudIntegrationsV1alphaIntegrationBundleConfig config;
+  private java.lang.String runAsServiceAccount;
 
   /**
-   * Contains updated bundle config
+   * Required. REQUIRED: Run-as service account to be updated
    * @return value or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaIntegrationBundleConfig getConfig() {
-    return config;
+  public java.lang.String getRunAsServiceAccount() {
+    return runAsServiceAccount;
   }
 
   /**
-   * Contains updated bundle config
-   * @param config config or {@code null} for none
+   * Required. REQUIRED: Run-as service account to be updated
+   * @param runAsServiceAccount runAsServiceAccount or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaUpdateBundleResponse setConfig(GoogleCloudIntegrationsV1alphaIntegrationBundleConfig config) {
-    this.config = config;
+  public GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest setRunAsServiceAccount(java.lang.String runAsServiceAccount) {
+    this.runAsServiceAccount = runAsServiceAccount;
     return this;
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaUpdateBundleResponse set(String fieldName, Object value) {
-    return (GoogleCloudIntegrationsV1alphaUpdateBundleResponse) super.set(fieldName, value);
+  public GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaUpdateBundleResponse clone() {
-    return (GoogleCloudIntegrationsV1alphaUpdateBundleResponse) super.clone();
+  public GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest clone() {
+    return (GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest) super.clone();
   }
 
 }

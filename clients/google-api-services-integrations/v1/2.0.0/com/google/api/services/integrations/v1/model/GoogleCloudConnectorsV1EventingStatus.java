@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Status for the execution attempt.
+ * EventingStatus indicates the state of eventing.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,67 +28,64 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudIntegrationsV1alphaAttemptStats extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudConnectorsV1EventingStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The end time of the integration execution for current attempt.
+   * Output only. Description of error if State is set to "ERROR".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String endTime;
+  private java.lang.String description;
 
   /**
-   * The start time of the integration execution for current attempt. This could be in the future if
-   * it's been scheduled.
+   * Output only. State.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String startTime;
+  private java.lang.String state;
 
   /**
-   * The end time of the integration execution for current attempt.
+   * Output only. Description of error if State is set to "ERROR".
    * @return value or {@code null} for none
    */
-  public String getEndTime() {
-    return endTime;
+  public java.lang.String getDescription() {
+    return description;
   }
 
   /**
-   * The end time of the integration execution for current attempt.
-   * @param endTime endTime or {@code null} for none
+   * Output only. Description of error if State is set to "ERROR".
+   * @param description description or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaAttemptStats setEndTime(String endTime) {
-    this.endTime = endTime;
+  public GoogleCloudConnectorsV1EventingStatus setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 
   /**
-   * The start time of the integration execution for current attempt. This could be in the future if
-   * it's been scheduled.
+   * Output only. State.
    * @return value or {@code null} for none
    */
-  public String getStartTime() {
-    return startTime;
+  public java.lang.String getState() {
+    return state;
   }
 
   /**
-   * The start time of the integration execution for current attempt. This could be in the future if
-   * it's been scheduled.
-   * @param startTime startTime or {@code null} for none
+   * Output only. State.
+   * @param state state or {@code null} for none
    */
-  public GoogleCloudIntegrationsV1alphaAttemptStats setStartTime(String startTime) {
-    this.startTime = startTime;
+  public GoogleCloudConnectorsV1EventingStatus setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaAttemptStats set(String fieldName, Object value) {
-    return (GoogleCloudIntegrationsV1alphaAttemptStats) super.set(fieldName, value);
+  public GoogleCloudConnectorsV1EventingStatus set(String fieldName, Object value) {
+    return (GoogleCloudConnectorsV1EventingStatus) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaAttemptStats clone() {
-    return (GoogleCloudIntegrationsV1alphaAttemptStats) super.clone();
+  public GoogleCloudConnectorsV1EventingStatus clone() {
+    return (GoogleCloudConnectorsV1EventingStatus) super.clone();
   }
 
 }

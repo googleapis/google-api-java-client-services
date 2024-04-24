@@ -31,11 +31,34 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Ancestor iteration number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> ancestorIterationNumbers;
+
+  /**
+   * Ancestor task number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> ancestorTaskNumbers;
+
+  /**
    * the execution attempt number this snapshot belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer executionAttempt;
+
+  /**
+   * The direct integration which the event execution snapshots belongs to
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String integrationName;
 
   /**
    * the task name associated with this snapshot.
@@ -52,11 +75,56 @@ public final class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnaps
   private java.lang.Integer taskAttempt;
 
   /**
+   * the task label associated with this snapshot. Could be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String taskLabel;
+
+  /**
    * The task number associated with this snapshot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String taskNumber;
+
+  /**
+   * Ancestor iteration number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAncestorIterationNumbers() {
+    return ancestorIterationNumbers;
+  }
+
+  /**
+   * Ancestor iteration number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * @param ancestorIterationNumbers ancestorIterationNumbers or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata setAncestorIterationNumbers(java.util.List<java.lang.String> ancestorIterationNumbers) {
+    this.ancestorIterationNumbers = ancestorIterationNumbers;
+    return this;
+  }
+
+  /**
+   * Ancestor task number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAncestorTaskNumbers() {
+    return ancestorTaskNumbers;
+  }
+
+  /**
+   * Ancestor task number for the task(it will only be non-empty if the task is under 'private
+   * workflow')
+   * @param ancestorTaskNumbers ancestorTaskNumbers or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata setAncestorTaskNumbers(java.util.List<java.lang.String> ancestorTaskNumbers) {
+    this.ancestorTaskNumbers = ancestorTaskNumbers;
+    return this;
+  }
 
   /**
    * the execution attempt number this snapshot belongs to.
@@ -72,6 +140,23 @@ public final class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnaps
    */
   public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata setExecutionAttempt(java.lang.Integer executionAttempt) {
     this.executionAttempt = executionAttempt;
+    return this;
+  }
+
+  /**
+   * The direct integration which the event execution snapshots belongs to
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIntegrationName() {
+    return integrationName;
+  }
+
+  /**
+   * The direct integration which the event execution snapshots belongs to
+   * @param integrationName integrationName or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata setIntegrationName(java.lang.String integrationName) {
+    this.integrationName = integrationName;
     return this;
   }
 
@@ -106,6 +191,23 @@ public final class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnaps
    */
   public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata setTaskAttempt(java.lang.Integer taskAttempt) {
     this.taskAttempt = taskAttempt;
+    return this;
+  }
+
+  /**
+   * the task label associated with this snapshot. Could be empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTaskLabel() {
+    return taskLabel;
+  }
+
+  /**
+   * the task label associated with this snapshot. Could be empty.
+   * @param taskLabel taskLabel or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata setTaskLabel(java.lang.String taskLabel) {
+    this.taskLabel = taskLabel;
     return this;
   }
 

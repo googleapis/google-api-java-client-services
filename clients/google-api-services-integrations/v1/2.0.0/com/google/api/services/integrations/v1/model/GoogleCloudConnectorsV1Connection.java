@@ -39,6 +39,13 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private GoogleCloudConnectorsV1AuthConfig authConfig;
 
   /**
+   * Output only. Billing config for the connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1BillingConfig billingConfig;
+
+  /**
    * Optional. Configuration for configuring the connection with an external system.
    * The value may be {@code null}.
    */
@@ -52,6 +59,14 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
+   * Output only. Connection revision. This field is only updated when the connection is created or
+   * updated by User.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long connectionRevision;
+
+  /**
    * Required. Connector version on which the connection is created. The format is:
    * projects/locations/providers/connectors/versions Only global location is supported for
    * ConnectorVersion resource.
@@ -59,6 +74,20 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.lang.String connectorVersion;
+
+  /**
+   * Output only. Infra configs supported by Connector Version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1ConnectorVersionInfraConfig connectorVersionInfraConfig;
+
+  /**
+   * Output only. Flag to mark the version indicating the launch stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectorVersionLaunchStage;
 
   /**
    * Output only. Created time.
@@ -91,12 +120,40 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private java.lang.String envoyImageLocation;
 
   /**
+   * Optional. Eventing config of a connection
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1EventingConfig eventingConfig;
+
+  /**
+   * Optional. Eventing enablement type. Will be nil if eventing is not enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventingEnablementType;
+
+  /**
+   * Output only. Eventing Runtime Data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1EventingRuntimeData eventingRuntimeData;
+
+  /**
    * Output only. GCR location where the runtime image is stored. formatted like:
    * gcr.io/{bucketName}/{imageName}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageLocation;
+
+  /**
+   * Output only. Is trusted tester program enabled for the project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isTrustedTester;
 
   /**
    * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on
@@ -114,6 +171,13 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private GoogleCloudConnectorsV1LockConfig lockConfig;
 
   /**
+   * Optional. Log configuration for the connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1LogConfig logConfig;
+
+  /**
    * Output only. Resource name of the Connection. Format:
    * projects/{project}/locations/{location}/connections/{connection}
    * The value may be {@code null}.
@@ -129,7 +193,7 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private GoogleCloudConnectorsV1NodeConfig nodeConfig;
 
   /**
-   * Optional. Service account needed for runtime plane to access GCP resources.
+   * Optional. Service account needed for runtime plane to access Google Cloud resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,11 +209,25 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   private java.lang.String serviceDirectory;
 
   /**
+   * Optional. Ssl config of a connection
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1SslConfig sslConfig;
+
+  /**
    * Output only. Current status of the connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1ConnectionStatus status;
+
+  /**
+   * Output only. This subscription type enum states the subscription type of the project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subscriptionType;
 
   /**
    * Optional. Suspended indicates if a user has suspended a connection or not.
@@ -185,6 +263,23 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
+   * Output only. Billing config for the connection.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1BillingConfig getBillingConfig() {
+    return billingConfig;
+  }
+
+  /**
+   * Output only. Billing config for the connection.
+   * @param billingConfig billingConfig or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setBillingConfig(GoogleCloudConnectorsV1BillingConfig billingConfig) {
+    this.billingConfig = billingConfig;
+    return this;
+  }
+
+  /**
    * Optional. Configuration for configuring the connection with an external system.
    * @return value or {@code null} for none
    */
@@ -198,6 +293,25 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1Connection setConfigVariables(java.util.List<GoogleCloudConnectorsV1ConfigVariable> configVariables) {
     this.configVariables = configVariables;
+    return this;
+  }
+
+  /**
+   * Output only. Connection revision. This field is only updated when the connection is created or
+   * updated by User.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getConnectionRevision() {
+    return connectionRevision;
+  }
+
+  /**
+   * Output only. Connection revision. This field is only updated when the connection is created or
+   * updated by User.
+   * @param connectionRevision connectionRevision or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setConnectionRevision(java.lang.Long connectionRevision) {
+    this.connectionRevision = connectionRevision;
     return this;
   }
 
@@ -219,6 +333,40 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1Connection setConnectorVersion(java.lang.String connectorVersion) {
     this.connectorVersion = connectorVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Infra configs supported by Connector Version.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConnectorVersionInfraConfig getConnectorVersionInfraConfig() {
+    return connectorVersionInfraConfig;
+  }
+
+  /**
+   * Output only. Infra configs supported by Connector Version.
+   * @param connectorVersionInfraConfig connectorVersionInfraConfig or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setConnectorVersionInfraConfig(GoogleCloudConnectorsV1ConnectorVersionInfraConfig connectorVersionInfraConfig) {
+    this.connectorVersionInfraConfig = connectorVersionInfraConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Flag to mark the version indicating the launch stage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectorVersionLaunchStage() {
+    return connectorVersionLaunchStage;
+  }
+
+  /**
+   * Output only. Flag to mark the version indicating the launch stage.
+   * @param connectorVersionLaunchStage connectorVersionLaunchStage or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setConnectorVersionLaunchStage(java.lang.String connectorVersionLaunchStage) {
+    this.connectorVersionLaunchStage = connectorVersionLaunchStage;
     return this;
   }
 
@@ -295,6 +443,57 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
+   * Optional. Eventing config of a connection
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingConfig getEventingConfig() {
+    return eventingConfig;
+  }
+
+  /**
+   * Optional. Eventing config of a connection
+   * @param eventingConfig eventingConfig or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setEventingConfig(GoogleCloudConnectorsV1EventingConfig eventingConfig) {
+    this.eventingConfig = eventingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Eventing enablement type. Will be nil if eventing is not enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventingEnablementType() {
+    return eventingEnablementType;
+  }
+
+  /**
+   * Optional. Eventing enablement type. Will be nil if eventing is not enabled.
+   * @param eventingEnablementType eventingEnablementType or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setEventingEnablementType(java.lang.String eventingEnablementType) {
+    this.eventingEnablementType = eventingEnablementType;
+    return this;
+  }
+
+  /**
+   * Output only. Eventing Runtime Data.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingRuntimeData getEventingRuntimeData() {
+    return eventingRuntimeData;
+  }
+
+  /**
+   * Output only. Eventing Runtime Data.
+   * @param eventingRuntimeData eventingRuntimeData or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setEventingRuntimeData(GoogleCloudConnectorsV1EventingRuntimeData eventingRuntimeData) {
+    this.eventingRuntimeData = eventingRuntimeData;
+    return this;
+  }
+
+  /**
    * Output only. GCR location where the runtime image is stored. formatted like:
    * gcr.io/{bucketName}/{imageName}
    * @return value or {@code null} for none
@@ -310,6 +509,23 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1Connection setImageLocation(java.lang.String imageLocation) {
     this.imageLocation = imageLocation;
+    return this;
+  }
+
+  /**
+   * Output only. Is trusted tester program enabled for the project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsTrustedTester() {
+    return isTrustedTester;
+  }
+
+  /**
+   * Output only. Is trusted tester program enabled for the project.
+   * @param isTrustedTester isTrustedTester or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setIsTrustedTester(java.lang.Boolean isTrustedTester) {
+    this.isTrustedTester = isTrustedTester;
     return this;
   }
 
@@ -350,6 +566,23 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
+   * Optional. Log configuration for the connection.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1LogConfig getLogConfig() {
+    return logConfig;
+  }
+
+  /**
+   * Optional. Log configuration for the connection.
+   * @param logConfig logConfig or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setLogConfig(GoogleCloudConnectorsV1LogConfig logConfig) {
+    this.logConfig = logConfig;
+    return this;
+  }
+
+  /**
    * Output only. Resource name of the Connection. Format:
    * projects/{project}/locations/{location}/connections/{connection}
    * @return value or {@code null} for none
@@ -386,7 +619,7 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
-   * Optional. Service account needed for runtime plane to access GCP resources.
+   * Optional. Service account needed for runtime plane to access Google Cloud resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -394,7 +627,7 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
-   * Optional. Service account needed for runtime plane to access GCP resources.
+   * Optional. Service account needed for runtime plane to access Google Cloud resources.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudConnectorsV1Connection setServiceAccount(java.lang.String serviceAccount) {
@@ -424,6 +657,23 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
   }
 
   /**
+   * Optional. Ssl config of a connection
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1SslConfig getSslConfig() {
+    return sslConfig;
+  }
+
+  /**
+   * Optional. Ssl config of a connection
+   * @param sslConfig sslConfig or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setSslConfig(GoogleCloudConnectorsV1SslConfig sslConfig) {
+    this.sslConfig = sslConfig;
+    return this;
+  }
+
+  /**
    * Output only. Current status of the connection.
    * @return value or {@code null} for none
    */
@@ -437,6 +687,23 @@ public final class GoogleCloudConnectorsV1Connection extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1Connection setStatus(GoogleCloudConnectorsV1ConnectionStatus status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Output only. This subscription type enum states the subscription type of the project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubscriptionType() {
+    return subscriptionType;
+  }
+
+  /**
+   * Output only. This subscription type enum states the subscription type of the project.
+   * @param subscriptionType subscriptionType or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1Connection setSubscriptionType(java.lang.String subscriptionType) {
+    this.subscriptionType = subscriptionType;
     return this;
   }
 

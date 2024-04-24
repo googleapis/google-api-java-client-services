@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Request for ArchiveIntegrationVersion.
+ * Billing config for the connection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,16 +28,40 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudConnectorsV1BillingConfig extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest set(String fieldName, Object value) {
-    return (GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest) super.set(fieldName, value);
+  /**
+   * Output only. Billing category for the connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String billingCategory;
+
+  /**
+   * Output only. Billing category for the connector.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBillingCategory() {
+    return billingCategory;
+  }
+
+  /**
+   * Output only. Billing category for the connector.
+   * @param billingCategory billingCategory or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1BillingConfig setBillingCategory(java.lang.String billingCategory) {
+    this.billingCategory = billingCategory;
+    return this;
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest clone() {
-    return (GoogleCloudIntegrationsV1alphaArchiveIntegrationVersionRequest) super.clone();
+  public GoogleCloudConnectorsV1BillingConfig set(String fieldName, Object value) {
+    return (GoogleCloudConnectorsV1BillingConfig) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleCloudConnectorsV1BillingConfig clone() {
+    return (GoogleCloudConnectorsV1BillingConfig) super.clone();
   }
 
 }

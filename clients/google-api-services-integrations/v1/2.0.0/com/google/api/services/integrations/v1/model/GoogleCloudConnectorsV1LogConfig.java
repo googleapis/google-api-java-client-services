@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Response for ValidateIntegrationVersion.
+ * Log configuration for the connection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,16 +28,40 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudIntegrationsV1alphaValidateIntegrationVersionResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudConnectorsV1LogConfig extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public GoogleCloudIntegrationsV1alphaValidateIntegrationVersionResponse set(String fieldName, Object value) {
-    return (GoogleCloudIntegrationsV1alphaValidateIntegrationVersionResponse) super.set(fieldName, value);
+  /**
+   * Enabled represents whether logging is enabled or not for a connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enabled;
+
+  /**
+   * Enabled represents whether logging is enabled or not for a connection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnabled() {
+    return enabled;
+  }
+
+  /**
+   * Enabled represents whether logging is enabled or not for a connection.
+   * @param enabled enabled or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1LogConfig setEnabled(java.lang.Boolean enabled) {
+    this.enabled = enabled;
+    return this;
   }
 
   @Override
-  public GoogleCloudIntegrationsV1alphaValidateIntegrationVersionResponse clone() {
-    return (GoogleCloudIntegrationsV1alphaValidateIntegrationVersionResponse) super.clone();
+  public GoogleCloudConnectorsV1LogConfig set(String fieldName, Object value) {
+    return (GoogleCloudConnectorsV1LogConfig) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleCloudConnectorsV1LogConfig clone() {
+    return (GoogleCloudConnectorsV1LogConfig) super.clone();
   }
 
 }

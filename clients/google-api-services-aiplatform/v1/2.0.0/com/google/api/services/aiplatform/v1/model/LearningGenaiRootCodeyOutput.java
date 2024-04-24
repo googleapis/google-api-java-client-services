@@ -42,6 +42,12 @@ public final class LearningGenaiRootCodeyOutput extends com.google.api.client.js
   private LearningGenaiRootCodeyCompletionMetadata codeyCompletionMetadata;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LearningGenaiRootCodeyGenerationMetadata codeyGenerationMetadata;
+
+  /**
    * @return value or {@code null} for none
    */
   public LearningGenaiRootCodeyChatMetadata getCodeyChatMetadata() {
@@ -68,6 +74,21 @@ public final class LearningGenaiRootCodeyOutput extends com.google.api.client.js
    */
   public LearningGenaiRootCodeyOutput setCodeyCompletionMetadata(LearningGenaiRootCodeyCompletionMetadata codeyCompletionMetadata) {
     this.codeyCompletionMetadata = codeyCompletionMetadata;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public LearningGenaiRootCodeyGenerationMetadata getCodeyGenerationMetadata() {
+    return codeyGenerationMetadata;
+  }
+
+  /**
+   * @param codeyGenerationMetadata codeyGenerationMetadata or {@code null} for none
+   */
+  public LearningGenaiRootCodeyOutput setCodeyGenerationMetadata(LearningGenaiRootCodeyGenerationMetadata codeyGenerationMetadata) {
+    this.codeyGenerationMetadata = codeyGenerationMetadata;
     return this;
   }
 

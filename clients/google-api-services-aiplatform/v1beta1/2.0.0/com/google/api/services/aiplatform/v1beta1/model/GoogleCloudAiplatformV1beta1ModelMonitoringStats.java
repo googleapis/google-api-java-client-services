@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Empty message, used to indicate no authentication for an endpoint.
+ * Represents the collection of statistics for a metric.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,16 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1AuthConfigNoAuth extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1ModelMonitoringStats extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public GoogleCloudAiplatformV1beta1AuthConfigNoAuth set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1AuthConfigNoAuth) super.set(fieldName, value);
+  /**
+   * Generated tabular statistics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ModelMonitoringTabularStats tabularStats;
+
+  /**
+   * Generated tabular statistics.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ModelMonitoringTabularStats getTabularStats() {
+    return tabularStats;
+  }
+
+  /**
+   * Generated tabular statistics.
+   * @param tabularStats tabularStats or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ModelMonitoringStats setTabularStats(GoogleCloudAiplatformV1beta1ModelMonitoringTabularStats tabularStats) {
+    this.tabularStats = tabularStats;
+    return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1AuthConfigNoAuth clone() {
-    return (GoogleCloudAiplatformV1beta1AuthConfigNoAuth) super.clone();
+  public GoogleCloudAiplatformV1beta1ModelMonitoringStats set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1ModelMonitoringStats) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleCloudAiplatformV1beta1ModelMonitoringStats clone() {
+    return (GoogleCloudAiplatformV1beta1ModelMonitoringStats) super.clone();
   }
 
 }

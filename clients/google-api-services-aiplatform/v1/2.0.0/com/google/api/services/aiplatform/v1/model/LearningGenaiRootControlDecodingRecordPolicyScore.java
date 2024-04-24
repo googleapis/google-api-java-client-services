@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.aiplatform.v1beta1.model;
+package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Attribution from the web.
+ * Model definition for LearningGenaiRootControlDecodingRecordPolicyScore.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,64 +27,58 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1GroundingAttributionWeb extends com.google.api.client.json.GenericJson {
+public final class LearningGenaiRootControlDecodingRecordPolicyScore extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Title of the attribution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String title;
+  private java.lang.String policy;
 
   /**
-   * Output only. URI reference of the attribution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String uri;
+  private java.lang.Float score;
 
   /**
-   * Output only. Title of the attribution.
    * @return value or {@code null} for none
    */
-  public java.lang.String getTitle() {
-    return title;
+  public java.lang.String getPolicy() {
+    return policy;
   }
 
   /**
-   * Output only. Title of the attribution.
-   * @param title title or {@code null} for none
+   * @param policy policy or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1GroundingAttributionWeb setTitle(java.lang.String title) {
-    this.title = title;
+  public LearningGenaiRootControlDecodingRecordPolicyScore setPolicy(java.lang.String policy) {
+    this.policy = policy;
     return this;
   }
 
   /**
-   * Output only. URI reference of the attribution.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUri() {
-    return uri;
+  public java.lang.Float getScore() {
+    return score;
   }
 
   /**
-   * Output only. URI reference of the attribution.
-   * @param uri uri or {@code null} for none
+   * @param score score or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1GroundingAttributionWeb setUri(java.lang.String uri) {
-    this.uri = uri;
+  public LearningGenaiRootControlDecodingRecordPolicyScore setScore(java.lang.Float score) {
+    this.score = score;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1GroundingAttributionWeb set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1GroundingAttributionWeb) super.set(fieldName, value);
+  public LearningGenaiRootControlDecodingRecordPolicyScore set(String fieldName, Object value) {
+    return (LearningGenaiRootControlDecodingRecordPolicyScore) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1GroundingAttributionWeb clone() {
-    return (GoogleCloudAiplatformV1beta1GroundingAttributionWeb) super.clone();
+  public LearningGenaiRootControlDecodingRecordPolicyScore clone() {
+    return (LearningGenaiRootControlDecodingRecordPolicyScore) super.clone();
   }
 
 }

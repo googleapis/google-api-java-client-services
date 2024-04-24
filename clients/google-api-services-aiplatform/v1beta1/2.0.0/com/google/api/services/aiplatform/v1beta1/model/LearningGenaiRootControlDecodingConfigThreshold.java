@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.aiplatform.v1.model;
+package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Attribution from the web.
+ * Score threshold for a category.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,64 +27,58 @@ package com.google.api.services.aiplatform.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1GroundingAttributionWeb extends com.google.api.client.json.GenericJson {
+public final class LearningGenaiRootControlDecodingConfigThreshold extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Title of the attribution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String title;
+  private java.lang.String policy;
 
   /**
-   * Output only. URI reference of the attribution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String uri;
+  private java.lang.Float scoreMax;
 
   /**
-   * Output only. Title of the attribution.
    * @return value or {@code null} for none
    */
-  public java.lang.String getTitle() {
-    return title;
+  public java.lang.String getPolicy() {
+    return policy;
   }
 
   /**
-   * Output only. Title of the attribution.
-   * @param title title or {@code null} for none
+   * @param policy policy or {@code null} for none
    */
-  public GoogleCloudAiplatformV1GroundingAttributionWeb setTitle(java.lang.String title) {
-    this.title = title;
+  public LearningGenaiRootControlDecodingConfigThreshold setPolicy(java.lang.String policy) {
+    this.policy = policy;
     return this;
   }
 
   /**
-   * Output only. URI reference of the attribution.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUri() {
-    return uri;
+  public java.lang.Float getScoreMax() {
+    return scoreMax;
   }
 
   /**
-   * Output only. URI reference of the attribution.
-   * @param uri uri or {@code null} for none
+   * @param scoreMax scoreMax or {@code null} for none
    */
-  public GoogleCloudAiplatformV1GroundingAttributionWeb setUri(java.lang.String uri) {
-    this.uri = uri;
+  public LearningGenaiRootControlDecodingConfigThreshold setScoreMax(java.lang.Float scoreMax) {
+    this.scoreMax = scoreMax;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1GroundingAttributionWeb set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1GroundingAttributionWeb) super.set(fieldName, value);
+  public LearningGenaiRootControlDecodingConfigThreshold set(String fieldName, Object value) {
+    return (LearningGenaiRootControlDecodingConfigThreshold) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1GroundingAttributionWeb clone() {
-    return (GoogleCloudAiplatformV1GroundingAttributionWeb) super.clone();
+  public LearningGenaiRootControlDecodingConfigThreshold clone() {
+    return (LearningGenaiRootControlDecodingConfigThreshold) super.clone();
   }
 
 }

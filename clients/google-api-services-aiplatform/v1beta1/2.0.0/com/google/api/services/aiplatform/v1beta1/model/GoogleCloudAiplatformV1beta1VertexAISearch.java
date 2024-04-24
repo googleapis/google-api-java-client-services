@@ -32,7 +32,7 @@ public final class GoogleCloudAiplatformV1beta1VertexAISearch extends com.google
 
   /**
    * Required. Fully-qualified Vertex AI Search's datastore resource ID. Format:
-   * projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}
+   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class GoogleCloudAiplatformV1beta1VertexAISearch extends com.google
 
   /**
    * Required. Fully-qualified Vertex AI Search's datastore resource ID. Format:
-   * projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}
+   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
    * @return value or {@code null} for none
    */
   public java.lang.String getDatastore() {
@@ -49,7 +49,7 @@ public final class GoogleCloudAiplatformV1beta1VertexAISearch extends com.google
 
   /**
    * Required. Fully-qualified Vertex AI Search's datastore resource ID. Format:
-   * projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}
+   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
    * @param datastore datastore or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1VertexAISearch setDatastore(java.lang.String datastore) {

@@ -31,9 +31,7 @@ public final class GoogleCloudAiplatformV1beta1RuntimeConfigVertexAISearchRuntim
 
   /**
    * Required. Vertext AI Search serving config name. Format: `projects/{project}/locations/{locatio
-   * n}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config}` or `projects/{pro
-   * ject}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{ser
-   * ving_config}`
+   * n}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,9 +39,7 @@ public final class GoogleCloudAiplatformV1beta1RuntimeConfigVertexAISearchRuntim
 
   /**
    * Required. Vertext AI Search serving config name. Format: `projects/{project}/locations/{locatio
-   * n}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config}` or `projects/{pro
-   * ject}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{ser
-   * ving_config}`
+   * n}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config}`
    * @return value or {@code null} for none
    */
   public java.lang.String getServingConfigName() {
@@ -52,9 +48,7 @@ public final class GoogleCloudAiplatformV1beta1RuntimeConfigVertexAISearchRuntim
 
   /**
    * Required. Vertext AI Search serving config name. Format: `projects/{project}/locations/{locatio
-   * n}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config}` or `projects/{pro
-   * ject}/locations/{location}/collections/{collection}/dataStores/{data_store}/servingConfigs/{ser
-   * ving_config}`
+   * n}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config}`
    * @param servingConfigName servingConfigName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RuntimeConfigVertexAISearchRuntimeConfig setServingConfigName(java.lang.String servingConfigName) {

@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Tool to retrieve public web data for grounding, powered by Google.
+ * Model definition for LearningGenaiRootControlDecodingRecords.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,43 +27,46 @@ package com.google.api.services.aiplatform.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1GoogleSearchRetrieval extends com.google.api.client.json.GenericJson {
+public final class LearningGenaiRootControlDecodingRecords extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Disable using the result from this tool in detecting grounding attribution. This does
-   * not affect how the result is given to the model for generation.
+   * One ControlDecodingRecord record maps to one rewind.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean disableAttribution;
+  private java.util.List<LearningGenaiRootControlDecodingRecord> records;
 
-  /**
-   * Optional. Disable using the result from this tool in detecting grounding attribution. This does
-   * not affect how the result is given to the model for generation.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getDisableAttribution() {
-    return disableAttribution;
+  static {
+    // hack to force ProGuard to consider LearningGenaiRootControlDecodingRecord used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LearningGenaiRootControlDecodingRecord.class);
   }
 
   /**
-   * Optional. Disable using the result from this tool in detecting grounding attribution. This does
-   * not affect how the result is given to the model for generation.
-   * @param disableAttribution disableAttribution or {@code null} for none
+   * One ControlDecodingRecord record maps to one rewind.
+   * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1GoogleSearchRetrieval setDisableAttribution(java.lang.Boolean disableAttribution) {
-    this.disableAttribution = disableAttribution;
+  public java.util.List<LearningGenaiRootControlDecodingRecord> getRecords() {
+    return records;
+  }
+
+  /**
+   * One ControlDecodingRecord record maps to one rewind.
+   * @param records records or {@code null} for none
+   */
+  public LearningGenaiRootControlDecodingRecords setRecords(java.util.List<LearningGenaiRootControlDecodingRecord> records) {
+    this.records = records;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1GoogleSearchRetrieval set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1GoogleSearchRetrieval) super.set(fieldName, value);
+  public LearningGenaiRootControlDecodingRecords set(String fieldName, Object value) {
+    return (LearningGenaiRootControlDecodingRecords) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1GoogleSearchRetrieval clone() {
-    return (GoogleCloudAiplatformV1GoogleSearchRetrieval) super.clone();
+  public LearningGenaiRootControlDecodingRecords clone() {
+    return (LearningGenaiRootControlDecodingRecords) super.clone();
   }
 
 }

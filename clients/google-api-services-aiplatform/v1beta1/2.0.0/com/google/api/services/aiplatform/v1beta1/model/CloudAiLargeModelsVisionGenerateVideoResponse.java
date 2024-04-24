@@ -37,6 +37,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
   private java.util.List<CloudAiLargeModelsVisionMedia> generatedSamples;
 
   /**
+   * Returns rai error message for filtered videos.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String raiErrorMessage;
+
+  /**
    * Returns if any videos were filtered due to RAI policies.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
    */
   public CloudAiLargeModelsVisionGenerateVideoResponse setGeneratedSamples(java.util.List<CloudAiLargeModelsVisionMedia> generatedSamples) {
     this.generatedSamples = generatedSamples;
+    return this;
+  }
+
+  /**
+   * Returns rai error message for filtered videos.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRaiErrorMessage() {
+    return raiErrorMessage;
+  }
+
+  /**
+   * Returns rai error message for filtered videos.
+   * @param raiErrorMessage raiErrorMessage or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoResponse setRaiErrorMessage(java.lang.String raiErrorMessage) {
+    this.raiErrorMessage = raiErrorMessage;
     return this;
   }
 

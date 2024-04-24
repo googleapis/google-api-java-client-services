@@ -31,7 +31,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1RougeSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Supported rouge types are rougen[1-9], rougeL and rougeLsum.
+   * Optional. Supported rouge types are rougen[1-9], rougeL, and rougeLsum.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class GoogleCloudAiplatformV1beta1RougeSpec extends com.google.api.
   private java.lang.Boolean useStemmer;
 
   /**
-   * Optional. Supported rouge types are rougen[1-9], rougeL and rougeLsum.
+   * Optional. Supported rouge types are rougen[1-9], rougeL, and rougeLsum.
    * @return value or {@code null} for none
    */
   public java.lang.String getRougeType() {
@@ -60,7 +60,7 @@ public final class GoogleCloudAiplatformV1beta1RougeSpec extends com.google.api.
   }
 
   /**
-   * Optional. Supported rouge types are rougen[1-9], rougeL and rougeLsum.
+   * Optional. Supported rouge types are rougen[1-9], rougeL, and rougeLsum.
    * @param rougeType rougeType or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RougeSpec setRougeType(java.lang.String rougeType) {

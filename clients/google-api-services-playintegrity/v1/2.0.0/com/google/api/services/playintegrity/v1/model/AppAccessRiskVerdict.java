@@ -32,24 +32,24 @@ package com.google.api.services.playintegrity.v1.model;
 public final class AppAccessRiskVerdict extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. App access risk verdict related to apps that are not installed by Google Play, and
-   * are not preloaded on the system image by the device manufacturer.
+   * App access risk verdict related to apps that are not installed by Google Play, and are not
+   * preloaded on the system image by the device manufacturer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String otherApps;
 
   /**
-   * Required. App access risk verdict related to apps that are not installed by the Google Play
-   * Store, and are not preloaded on the system image by the device manufacturer.
+   * App access risk verdict related to apps that are not installed by the Google Play Store, and
+   * are not preloaded on the system image by the device manufacturer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String playOrSystemApps;
 
   /**
-   * Required. App access risk verdict related to apps that are not installed by Google Play, and
-   * are not preloaded on the system image by the device manufacturer.
+   * App access risk verdict related to apps that are not installed by Google Play, and are not
+   * preloaded on the system image by the device manufacturer.
    * @return value or {@code null} for none
    */
   public java.lang.String getOtherApps() {
@@ -57,8 +57,8 @@ public final class AppAccessRiskVerdict extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. App access risk verdict related to apps that are not installed by Google Play, and
-   * are not preloaded on the system image by the device manufacturer.
+   * App access risk verdict related to apps that are not installed by Google Play, and are not
+   * preloaded on the system image by the device manufacturer.
    * @param otherApps otherApps or {@code null} for none
    */
   public AppAccessRiskVerdict setOtherApps(java.lang.String otherApps) {
@@ -67,8 +67,8 @@ public final class AppAccessRiskVerdict extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. App access risk verdict related to apps that are not installed by the Google Play
-   * Store, and are not preloaded on the system image by the device manufacturer.
+   * App access risk verdict related to apps that are not installed by the Google Play Store, and
+   * are not preloaded on the system image by the device manufacturer.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlayOrSystemApps() {
@@ -76,8 +76,8 @@ public final class AppAccessRiskVerdict extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. App access risk verdict related to apps that are not installed by the Google Play
-   * Store, and are not preloaded on the system image by the device manufacturer.
+   * App access risk verdict related to apps that are not installed by the Google Play Store, and
+   * are not preloaded on the system image by the device manufacturer.
    * @param playOrSystemApps playOrSystemApps or {@code null} for none
    */
   public AppAccessRiskVerdict setPlayOrSystemApps(java.lang.String playOrSystemApps) {

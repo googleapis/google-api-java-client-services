@@ -151,8 +151,7 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Optional. Data dump parallelism settings used by the migration. Currently applicable only for
-   * MySQL to Cloud SQL for MySQL migrations only.
+   * Optional. Data dump parallelism settings used by the migration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -515,8 +514,7 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Data dump parallelism settings used by the migration. Currently applicable only for
-   * MySQL to Cloud SQL for MySQL migrations only.
+   * Optional. Data dump parallelism settings used by the migration.
    * @return value or {@code null} for none
    */
   public PerformanceConfig getPerformanceConfig() {
@@ -524,8 +522,7 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Data dump parallelism settings used by the migration. Currently applicable only for
-   * MySQL to Cloud SQL for MySQL migrations only.
+   * Optional. Data dump parallelism settings used by the migration.
    * @param performanceConfig performanceConfig or {@code null} for none
    */
   public MigrationJob setPerformanceConfig(PerformanceConfig performanceConfig) {

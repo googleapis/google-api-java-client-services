@@ -38,7 +38,7 @@ public final class ProductSubscriptionCost extends com.google.api.client.json.Ge
   private Price amount;
 
   /**
-   * The type of subscription period.
+   * The type of subscription period. - "`month`" - "`year`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class ProductSubscriptionCost extends com.google.api.client.json.Ge
   }
 
   /**
-   * The type of subscription period.
+   * The type of subscription period. - "`month`" - "`year`"
    * @return value or {@code null} for none
    */
   public java.lang.String getPeriod() {
@@ -77,7 +77,7 @@ public final class ProductSubscriptionCost extends com.google.api.client.json.Ge
   }
 
   /**
-   * The type of subscription period.
+   * The type of subscription period. - "`month`" - "`year`"
    * @param period period or {@code null} for none
    */
   public ProductSubscriptionCost setPeriod(java.lang.String period) {

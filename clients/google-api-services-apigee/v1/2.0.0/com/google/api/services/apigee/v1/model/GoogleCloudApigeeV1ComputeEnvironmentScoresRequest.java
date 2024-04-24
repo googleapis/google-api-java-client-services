@@ -59,7 +59,8 @@ public final class GoogleCloudApigeeV1ComputeEnvironmentScoresRequest extends co
   private java.lang.String pageToken;
 
   /**
-   * Required. Time range for score calculation. At most 14 days of scores will be returned.
+   * Required. Time range for score calculation. At most 14 days of scores will be returned, and
+   * both the start and end dates must be within the last 90 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +134,8 @@ public final class GoogleCloudApigeeV1ComputeEnvironmentScoresRequest extends co
   }
 
   /**
-   * Required. Time range for score calculation. At most 14 days of scores will be returned.
+   * Required. Time range for score calculation. At most 14 days of scores will be returned, and
+   * both the start and end dates must be within the last 90 days.
    * @return value or {@code null} for none
    */
   public GoogleTypeInterval getTimeRange() {
@@ -141,7 +143,8 @@ public final class GoogleCloudApigeeV1ComputeEnvironmentScoresRequest extends co
   }
 
   /**
-   * Required. Time range for score calculation. At most 14 days of scores will be returned.
+   * Required. Time range for score calculation. At most 14 days of scores will be returned, and
+   * both the start and end dates must be within the last 90 days.
    * @param timeRange timeRange or {@code null} for none
    */
   public GoogleCloudApigeeV1ComputeEnvironmentScoresRequest setTimeRange(GoogleTypeInterval timeRange) {

@@ -61,6 +61,13 @@ public final class WorkflowInvocationAction extends com.google.api.client.json.G
   private Interval invocationTiming;
 
   /**
+   * Output only. The workflow action's notebook action details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NotebookAction notebookAction;
+
+  /**
    * Output only. This action's current state.
    * The value may be {@code null}.
    */
@@ -145,6 +152,23 @@ public final class WorkflowInvocationAction extends com.google.api.client.json.G
    */
   public WorkflowInvocationAction setInvocationTiming(Interval invocationTiming) {
     this.invocationTiming = invocationTiming;
+    return this;
+  }
+
+  /**
+   * Output only. The workflow action's notebook action details.
+   * @return value or {@code null} for none
+   */
+  public NotebookAction getNotebookAction() {
+    return notebookAction;
+  }
+
+  /**
+   * Output only. The workflow action's notebook action details.
+   * @param notebookAction notebookAction or {@code null} for none
+   */
+  public WorkflowInvocationAction setNotebookAction(NotebookAction notebookAction) {
+    this.notebookAction = notebookAction;
     return this;
   }
 

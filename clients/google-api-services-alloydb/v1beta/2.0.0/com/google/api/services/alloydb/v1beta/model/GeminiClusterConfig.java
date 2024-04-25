@@ -17,8 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * Cluster level configuration parameters related to the Gemini in Databases add-on. See go/prd-
- * enable-duet-ai-databases for more details.
+ * Cluster level configuration parameters related to the Gemini in Databases add-on.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:

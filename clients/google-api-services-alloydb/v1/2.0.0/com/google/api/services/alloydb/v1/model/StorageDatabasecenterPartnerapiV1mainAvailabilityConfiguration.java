@@ -39,6 +39,14 @@ public final class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguratio
   private java.lang.String availabilityType;
 
   /**
+   * Checks for resources that are configured to have redundancy, and ongoing replication across
+   * regions
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean crossRegionReplicaConfigured;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,6 +76,25 @@ public final class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguratio
    */
   public StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration setAvailabilityType(java.lang.String availabilityType) {
     this.availabilityType = availabilityType;
+    return this;
+  }
+
+  /**
+   * Checks for resources that are configured to have redundancy, and ongoing replication across
+   * regions
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCrossRegionReplicaConfigured() {
+    return crossRegionReplicaConfigured;
+  }
+
+  /**
+   * Checks for resources that are configured to have redundancy, and ongoing replication across
+   * regions
+   * @param crossRegionReplicaConfigured crossRegionReplicaConfigured or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration setCrossRegionReplicaConfigured(java.lang.Boolean crossRegionReplicaConfigured) {
+    this.crossRegionReplicaConfigured = crossRegionReplicaConfigured;
     return this;
   }
 

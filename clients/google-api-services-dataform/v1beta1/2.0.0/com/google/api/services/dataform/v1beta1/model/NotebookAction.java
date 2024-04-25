@@ -17,7 +17,7 @@
 package com.google.api.services.dataform.v1beta1.model;
 
 /**
- * Represents a workflow action that will run against BigQuery.
+ * Represents a workflow action that will run against a Notebook runtime.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataform API. For a detailed explanation see:
@@ -27,26 +27,43 @@ package com.google.api.services.dataform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class BigQueryAction extends com.google.api.client.json.GenericJson {
+public final class NotebookAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The ID of the BigQuery job that executed the SQL in sql_script. Only set once the
-   * job has started to run.
+   * Output only. The code contents of a Notebook to be run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contents;
+
+  /**
+   * Output only. The ID of the Vertex job that executed the notebook in contents and also the ID
+   * used for the outputs created in GCS buckets. Only set once the job has started to run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String jobId;
 
   /**
-   * Output only. The generated BigQuery SQL script that will be executed.
-   * The value may be {@code null}.
+   * Output only. The code contents of a Notebook to be run.
+   * @return value or {@code null} for none
    */
-  @com.google.api.client.util.Key
-  private java.lang.String sqlScript;
+  public java.lang.String getContents() {
+    return contents;
+  }
 
   /**
-   * Output only. The ID of the BigQuery job that executed the SQL in sql_script. Only set once the
-   * job has started to run.
+   * Output only. The code contents of a Notebook to be run.
+   * @param contents contents or {@code null} for none
+   */
+  public NotebookAction setContents(java.lang.String contents) {
+    this.contents = contents;
+    return this;
+  }
+
+  /**
+   * Output only. The ID of the Vertex job that executed the notebook in contents and also the ID
+   * used for the outputs created in GCS buckets. Only set once the job has started to run.
    * @return value or {@code null} for none
    */
   public java.lang.String getJobId() {
@@ -54,40 +71,23 @@ public final class BigQueryAction extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The ID of the BigQuery job that executed the SQL in sql_script. Only set once the
-   * job has started to run.
+   * Output only. The ID of the Vertex job that executed the notebook in contents and also the ID
+   * used for the outputs created in GCS buckets. Only set once the job has started to run.
    * @param jobId jobId or {@code null} for none
    */
-  public BigQueryAction setJobId(java.lang.String jobId) {
+  public NotebookAction setJobId(java.lang.String jobId) {
     this.jobId = jobId;
     return this;
   }
 
-  /**
-   * Output only. The generated BigQuery SQL script that will be executed.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSqlScript() {
-    return sqlScript;
-  }
-
-  /**
-   * Output only. The generated BigQuery SQL script that will be executed.
-   * @param sqlScript sqlScript or {@code null} for none
-   */
-  public BigQueryAction setSqlScript(java.lang.String sqlScript) {
-    this.sqlScript = sqlScript;
-    return this;
+  @Override
+  public NotebookAction set(String fieldName, Object value) {
+    return (NotebookAction) super.set(fieldName, value);
   }
 
   @Override
-  public BigQueryAction set(String fieldName, Object value) {
-    return (BigQueryAction) super.set(fieldName, value);
-  }
-
-  @Override
-  public BigQueryAction clone() {
-    return (BigQueryAction) super.clone();
+  public NotebookAction clone() {
+    return (NotebookAction) super.clone();
   }
 
 }

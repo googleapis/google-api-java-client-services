@@ -60,6 +60,13 @@ public final class CompilationResultAction extends com.google.api.client.json.Ge
   private java.lang.String filePath;
 
   /**
+   * The notebook executed by this action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Notebook notebook;
+
+  /**
    * The database operations executed by this action.
    * The value may be {@code null}.
    */
@@ -149,6 +156,23 @@ public final class CompilationResultAction extends com.google.api.client.json.Ge
    */
   public CompilationResultAction setFilePath(java.lang.String filePath) {
     this.filePath = filePath;
+    return this;
+  }
+
+  /**
+   * The notebook executed by this action.
+   * @return value or {@code null} for none
+   */
+  public Notebook getNotebook() {
+    return notebook;
+  }
+
+  /**
+   * The notebook executed by this action.
+   * @param notebook notebook or {@code null} for none
+   */
+  public CompilationResultAction setNotebook(Notebook notebook) {
+    this.notebook = notebook;
     return this;
   }
 

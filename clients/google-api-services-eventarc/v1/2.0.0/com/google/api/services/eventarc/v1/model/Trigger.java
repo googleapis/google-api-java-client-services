@@ -112,6 +112,13 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Whether or not this Trigger satisfies the requirements of physical zone separation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Optional. The IAM service account email associated with the trigger. The service account
    * represents the identity of the trigger. The `iam.serviceAccounts.actAs` permission must be
    * granted on the service account to allow a principal to impersonate the service account. For
@@ -310,6 +317,23 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
    */
   public Trigger setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Whether or not this Trigger satisfies the requirements of physical zone separation
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Whether or not this Trigger satisfies the requirements of physical zone separation
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Trigger setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

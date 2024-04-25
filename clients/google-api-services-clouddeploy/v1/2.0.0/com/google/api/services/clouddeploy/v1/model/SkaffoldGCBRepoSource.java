@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * Git repository containing Skaffold Config modules.
+ * Cloud Build V2 Repository containing Skaffold Configs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -27,31 +27,32 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SkaffoldGitSource extends com.google.api.client.json.GenericJson {
+public final class SkaffoldGCBRepoSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Relative path from the repository root to the Skaffold file.
+   * Optional. Relative path from the repository root to the Skaffold Config file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * Optional. Git branch or tag to use when cloning the repository.
+   * Optional. Branch or tag to use when cloning the repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ref;
 
   /**
-   * Required. Git repository the package should be cloned from.
+   * Required. Name of the Cloud Build V2 Repository. Format is
+   * projects/{project}/locations/{location}/connections/{connection}/repositories/{repository}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String repo;
+  private java.lang.String repository;
 
   /**
-   * Optional. Relative path from the repository root to the Skaffold file.
+   * Optional. Relative path from the repository root to the Skaffold Config file.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -59,16 +60,16 @@ public final class SkaffoldGitSource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Relative path from the repository root to the Skaffold file.
+   * Optional. Relative path from the repository root to the Skaffold Config file.
    * @param path path or {@code null} for none
    */
-  public SkaffoldGitSource setPath(java.lang.String path) {
+  public SkaffoldGCBRepoSource setPath(java.lang.String path) {
     this.path = path;
     return this;
   }
 
   /**
-   * Optional. Git branch or tag to use when cloning the repository.
+   * Optional. Branch or tag to use when cloning the repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getRef() {
@@ -76,39 +77,41 @@ public final class SkaffoldGitSource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Git branch or tag to use when cloning the repository.
+   * Optional. Branch or tag to use when cloning the repository.
    * @param ref ref or {@code null} for none
    */
-  public SkaffoldGitSource setRef(java.lang.String ref) {
+  public SkaffoldGCBRepoSource setRef(java.lang.String ref) {
     this.ref = ref;
     return this;
   }
 
   /**
-   * Required. Git repository the package should be cloned from.
+   * Required. Name of the Cloud Build V2 Repository. Format is
+   * projects/{project}/locations/{location}/connections/{connection}/repositories/{repository}.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRepo() {
-    return repo;
+  public java.lang.String getRepository() {
+    return repository;
   }
 
   /**
-   * Required. Git repository the package should be cloned from.
-   * @param repo repo or {@code null} for none
+   * Required. Name of the Cloud Build V2 Repository. Format is
+   * projects/{project}/locations/{location}/connections/{connection}/repositories/{repository}.
+   * @param repository repository or {@code null} for none
    */
-  public SkaffoldGitSource setRepo(java.lang.String repo) {
-    this.repo = repo;
+  public SkaffoldGCBRepoSource setRepository(java.lang.String repository) {
+    this.repository = repository;
     return this;
   }
 
   @Override
-  public SkaffoldGitSource set(String fieldName, Object value) {
-    return (SkaffoldGitSource) super.set(fieldName, value);
+  public SkaffoldGCBRepoSource set(String fieldName, Object value) {
+    return (SkaffoldGCBRepoSource) super.set(fieldName, value);
   }
 
   @Override
-  public SkaffoldGitSource clone() {
-    return (SkaffoldGitSource) super.clone();
+  public SkaffoldGCBRepoSource clone() {
+    return (SkaffoldGCBRepoSource) super.clone();
   }
 
 }

@@ -44,6 +44,13 @@ public final class SkaffoldModules extends com.google.api.client.json.GenericJso
   private SkaffoldGitSource git;
 
   /**
+   * Cloud Build V2 repository containing the Skaffold Config modules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SkaffoldGCBRepoSource googleCloudBuildRepo;
+
+  /**
    * Cloud Storage bucket containing the Skaffold Config modules.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class SkaffoldModules extends com.google.api.client.json.GenericJso
    */
   public SkaffoldModules setGit(SkaffoldGitSource git) {
     this.git = git;
+    return this;
+  }
+
+  /**
+   * Cloud Build V2 repository containing the Skaffold Config modules.
+   * @return value or {@code null} for none
+   */
+  public SkaffoldGCBRepoSource getGoogleCloudBuildRepo() {
+    return googleCloudBuildRepo;
+  }
+
+  /**
+   * Cloud Build V2 repository containing the Skaffold Config modules.
+   * @param googleCloudBuildRepo googleCloudBuildRepo or {@code null} for none
+   */
+  public SkaffoldModules setGoogleCloudBuildRepo(SkaffoldGCBRepoSource googleCloudBuildRepo) {
+    this.googleCloudBuildRepo = googleCloudBuildRepo;
     return this;
   }
 

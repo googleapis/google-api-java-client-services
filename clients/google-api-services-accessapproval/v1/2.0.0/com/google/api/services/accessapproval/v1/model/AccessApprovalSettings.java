@@ -126,6 +126,13 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   private java.lang.Integer preferredRequestExpirationDays;
 
   /**
+   * Optional. A setting to require approval request justifications to be customer visible.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean requireCustomerVisibleJustification;
+
+  /**
    * The asymmetric crypto key version to use for signing approval requests. Empty
    * active_key_version indicates that a Google-managed key should be used for signing. This
    * property will be ignored if set by an ancestor of this resource, and new non-empty values may
@@ -344,6 +351,23 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    */
   public AccessApprovalSettings setPreferredRequestExpirationDays(java.lang.Integer preferredRequestExpirationDays) {
     this.preferredRequestExpirationDays = preferredRequestExpirationDays;
+    return this;
+  }
+
+  /**
+   * Optional. A setting to require approval request justifications to be customer visible.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRequireCustomerVisibleJustification() {
+    return requireCustomerVisibleJustification;
+  }
+
+  /**
+   * Optional. A setting to require approval request justifications to be customer visible.
+   * @param requireCustomerVisibleJustification requireCustomerVisibleJustification or {@code null} for none
+   */
+  public AccessApprovalSettings setRequireCustomerVisibleJustification(java.lang.Boolean requireCustomerVisibleJustification) {
+    this.requireCustomerVisibleJustification = requireCustomerVisibleJustification;
     return this;
   }
 

@@ -133,8 +133,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Optional. Configuration parameters related to the Gemini in Databases add-on. See go/prd-
-   * enable-duet-ai-databases for more details.
+   * Optional. Configuration parameters related to the Gemini in Databases add-on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -513,8 +512,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration parameters related to the Gemini in Databases add-on. See go/prd-
-   * enable-duet-ai-databases for more details.
+   * Optional. Configuration parameters related to the Gemini in Databases add-on.
    * @return value or {@code null} for none
    */
   public GeminiClusterConfig getGeminiConfig() {
@@ -522,8 +520,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration parameters related to the Gemini in Databases add-on. See go/prd-
-   * enable-duet-ai-databases for more details.
+   * Optional. Configuration parameters related to the Gemini in Databases add-on.
    * @param geminiConfig geminiConfig or {@code null} for none
    */
   public Cluster setGeminiConfig(GeminiClusterConfig geminiConfig) {

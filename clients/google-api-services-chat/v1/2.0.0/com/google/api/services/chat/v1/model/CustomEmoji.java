@@ -30,14 +30,14 @@ package com.google.api.services.chat.v1.model;
 public final class CustomEmoji extends com.google.api.client.json.GenericJson {
 
   /**
-   * Unique key for the custom emoji resource.
+   * Output only. Unique key for the custom emoji resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
 
   /**
-   * Unique key for the custom emoji resource.
+   * Output only. Unique key for the custom emoji resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -45,7 +45,7 @@ public final class CustomEmoji extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique key for the custom emoji resource.
+   * Output only. Unique key for the custom emoji resource.
    * @param uid uid or {@code null} for none
    */
   public CustomEmoji setUid(java.lang.String uid) {

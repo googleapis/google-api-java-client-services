@@ -32,7 +32,7 @@ public class HangoutsChatScopes {
   /** Import spaces, messages, and memberships into Google Chat.. */
   public static final String CHAT_IMPORT = "https://www.googleapis.com/auth/chat.import";
 
-  /** View, add, and remove members from conversations in Google Chat. */
+  /** View, add, update, and remove members from conversations in Google Chat. */
   public static final String CHAT_MEMBERSHIPS = "https://www.googleapis.com/auth/chat.memberships";
 
   /** Add and remove itself from conversations in Google Chat. */
@@ -68,6 +68,12 @@ public class HangoutsChatScopes {
   /** View chat and spaces in Google Chat. */
   public static final String CHAT_SPACES_READONLY = "https://www.googleapis.com/auth/chat.spaces.readonly";
 
+  /** View and modify last read time for Google Chat conversations. */
+  public static final String CHAT_USERS_READSTATE = "https://www.googleapis.com/auth/chat.users.readstate";
+
+  /** View last read time for Google Chat conversations. */
+  public static final String CHAT_USERS_READSTATE_READONLY = "https://www.googleapis.com/auth/chat.users.readstate.readonly";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -90,6 +96,8 @@ public class HangoutsChatScopes {
     set.add(CHAT_SPACES);
     set.add(CHAT_SPACES_CREATE);
     set.add(CHAT_SPACES_READONLY);
+    set.add(CHAT_USERS_READSTATE);
+    set.add(CHAT_USERS_READSTATE_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

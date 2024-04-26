@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.google.api.client.json.GenericJson {
 
   /**
+   * The allocatable prefix length supported by this PublicDelegatedSubPrefix.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer allocatablePrefixLength;
+
+  /**
    * Name of the project scoping this PublicDelegatedSubPrefix.
    * The value may be {@code null}.
    */
@@ -58,6 +65,13 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   private java.lang.Boolean isAddress;
 
   /**
+   * The PublicDelegatedSubPrefix mode for IPv6 only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * The name of the sub public delegated prefix.
    * The value may be {@code null}.
    */
@@ -78,6 +92,23 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * The allocatable prefix length supported by this PublicDelegatedSubPrefix.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAllocatablePrefixLength() {
+    return allocatablePrefixLength;
+  }
+
+  /**
+   * The allocatable prefix length supported by this PublicDelegatedSubPrefix.
+   * @param allocatablePrefixLength allocatablePrefixLength or {@code null} for none
+   */
+  public PublicDelegatedPrefixPublicDelegatedSubPrefix setAllocatablePrefixLength(java.lang.Integer allocatablePrefixLength) {
+    this.allocatablePrefixLength = allocatablePrefixLength;
+    return this;
+  }
 
   /**
    * Name of the project scoping this PublicDelegatedSubPrefix.
@@ -144,6 +175,23 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
    */
   public PublicDelegatedPrefixPublicDelegatedSubPrefix setIsAddress(java.lang.Boolean isAddress) {
     this.isAddress = isAddress;
+    return this;
+  }
+
+  /**
+   * The PublicDelegatedSubPrefix mode for IPv6 only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * The PublicDelegatedSubPrefix mode for IPv6 only.
+   * @param mode mode or {@code null} for none
+   */
+  public PublicDelegatedPrefixPublicDelegatedSubPrefix setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 

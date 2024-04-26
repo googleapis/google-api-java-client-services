@@ -156,6 +156,19 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.math.BigInteger id;
 
   /**
+   * Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in
+   * EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-
+   * PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in
+   * https://www.googleapis.com/compute/v1/projects/project_id/regions/region
+   * /publicDelegatedPrefixes/sub-pdp-name Partial URL, as in: -
+   * projects/project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name -
+   * regions/region/publicDelegatedPrefixes/sub-pdp-name
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipCollection;
+
+  /**
    * The IP Version that will be used by this forwarding rule. Valid options are IPV4 or IPV6.
    * The value may be {@code null}.
    */
@@ -705,6 +718,35 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in
+   * EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-
+   * PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in
+   * https://www.googleapis.com/compute/v1/projects/project_id/regions/region
+   * /publicDelegatedPrefixes/sub-pdp-name Partial URL, as in: -
+   * projects/project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name -
+   * regions/region/publicDelegatedPrefixes/sub-pdp-name
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpCollection() {
+    return ipCollection;
+  }
+
+  /**
+   * Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in
+   * EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-
+   * PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in
+   * https://www.googleapis.com/compute/v1/projects/project_id/regions/region
+   * /publicDelegatedPrefixes/sub-pdp-name Partial URL, as in: -
+   * projects/project_id/regions/region/publicDelegatedPrefixes/sub-pdp-name -
+   * regions/region/publicDelegatedPrefixes/sub-pdp-name
+   * @param ipCollection ipCollection or {@code null} for none
+   */
+  public ForwardingRule setIpCollection(java.lang.String ipCollection) {
+    this.ipCollection = ipCollection;
     return this;
   }
 

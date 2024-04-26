@@ -64,7 +64,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   private java.lang.String enable;
 
   /**
-   * Filter for mirrored traffic. If unspecified, all traffic is mirrored.
+   * Filter for mirrored traffic. If unspecified, all IPv4 traffic is mirrored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,7 +211,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Filter for mirrored traffic. If unspecified, all traffic is mirrored.
+   * Filter for mirrored traffic. If unspecified, all IPv4 traffic is mirrored.
    * @return value or {@code null} for none
    */
   public PacketMirroringFilter getFilter() {
@@ -219,7 +219,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Filter for mirrored traffic. If unspecified, all traffic is mirrored.
+   * Filter for mirrored traffic. If unspecified, all IPv4 traffic is mirrored.
    * @param filter filter or {@code null} for none
    */
   public PacketMirroring setFilter(PacketMirroringFilter filter) {

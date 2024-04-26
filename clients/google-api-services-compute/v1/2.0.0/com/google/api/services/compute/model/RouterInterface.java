@@ -30,13 +30,25 @@ package com.google.api.services.compute.model;
 public final class RouterInterface extends com.google.api.client.json.GenericJson {
 
   /**
-   * IP address and range of the interface. The IP range must be in the RFC3927 link-local IP
-   * address space. The value must be a CIDR-formatted string, for example: 169.254.0.1/30. NOTE: Do
-   * not truncate the address as it represents the IP address of the interface.
+   * IP address and range of the interface. - For Internet Protocol version 4 (IPv4), the IP range
+   * must be in the RFC3927 link-local IP address space. The value must be a CIDR-formatted string,
+   * for example, 169.254.0.1/30. Note: Do not truncate the IP address, as it represents the IP
+   * address of the interface. - For Internet Protocol version 6 (IPv6), the value must be a unique
+   * local address (ULA) range from fdff:1::/64 with a mask length of 126 or less. This value should
+   * be a CIDR-formatted string, for example, fc00:0:1:1::1/112. Within the router's VPC, this IPv6
+   * prefix will be reserved exclusively for this connection and cannot be used for any other
+   * purpose.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipRange;
+
+  /**
+   * IP version of this interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipVersion;
 
   /**
    * URI of the linked Interconnect attachment. It must be in the same region as the router. Each
@@ -111,9 +123,14 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
   private java.lang.String subnetwork;
 
   /**
-   * IP address and range of the interface. The IP range must be in the RFC3927 link-local IP
-   * address space. The value must be a CIDR-formatted string, for example: 169.254.0.1/30. NOTE: Do
-   * not truncate the address as it represents the IP address of the interface.
+   * IP address and range of the interface. - For Internet Protocol version 4 (IPv4), the IP range
+   * must be in the RFC3927 link-local IP address space. The value must be a CIDR-formatted string,
+   * for example, 169.254.0.1/30. Note: Do not truncate the IP address, as it represents the IP
+   * address of the interface. - For Internet Protocol version 6 (IPv6), the value must be a unique
+   * local address (ULA) range from fdff:1::/64 with a mask length of 126 or less. This value should
+   * be a CIDR-formatted string, for example, fc00:0:1:1::1/112. Within the router's VPC, this IPv6
+   * prefix will be reserved exclusively for this connection and cannot be used for any other
+   * purpose.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpRange() {
@@ -121,13 +138,35 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * IP address and range of the interface. The IP range must be in the RFC3927 link-local IP
-   * address space. The value must be a CIDR-formatted string, for example: 169.254.0.1/30. NOTE: Do
-   * not truncate the address as it represents the IP address of the interface.
+   * IP address and range of the interface. - For Internet Protocol version 4 (IPv4), the IP range
+   * must be in the RFC3927 link-local IP address space. The value must be a CIDR-formatted string,
+   * for example, 169.254.0.1/30. Note: Do not truncate the IP address, as it represents the IP
+   * address of the interface. - For Internet Protocol version 6 (IPv6), the value must be a unique
+   * local address (ULA) range from fdff:1::/64 with a mask length of 126 or less. This value should
+   * be a CIDR-formatted string, for example, fc00:0:1:1::1/112. Within the router's VPC, this IPv6
+   * prefix will be reserved exclusively for this connection and cannot be used for any other
+   * purpose.
    * @param ipRange ipRange or {@code null} for none
    */
   public RouterInterface setIpRange(java.lang.String ipRange) {
     this.ipRange = ipRange;
+    return this;
+  }
+
+  /**
+   * IP version of this interface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpVersion() {
+    return ipVersion;
+  }
+
+  /**
+   * IP version of this interface.
+   * @param ipVersion ipVersion or {@code null} for none
+   */
+  public RouterInterface setIpVersion(java.lang.String ipVersion) {
+    this.ipVersion = ipVersion;
     return this;
   }
 

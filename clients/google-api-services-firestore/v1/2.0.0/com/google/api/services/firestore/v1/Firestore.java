@@ -1376,8 +1376,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Creates a backup schedule on a database. At most two backup schedules can be configured on a
-         * database, one daily backup schedule with retention up to 7 days and one weekly backup schedule
-         * with retention up to 14 weeks.
+         * database, one daily backup schedule and one weekly backup schedule.
          *
          * Create a request for the method "backupSchedules.create".
          *
@@ -1403,8 +1402,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Creates a backup schedule on a database. At most two backup schedules can be configured on a
-           * database, one daily backup schedule with retention up to 7 days and one weekly backup schedule
-           * with retention up to 14 weeks.
+           * database, one daily backup schedule and one weekly backup schedule.
            *
            * Create a request for the method "backupSchedules.create".
            *
@@ -2440,14 +2438,14 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              * The filter to apply to list results. Currently, FirestoreAdmin.ListFields only
              * supports listing fields that have been explicitly overridden. To issue this query,
              * call FirestoreAdmin.ListFields with a filter that includes
-             * `indexConfig.usesAncestorConfig:false` .
+             * `indexConfig.usesAncestorConfig:false` or `ttlConfig:*`.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** The filter to apply to list results. Currently, FirestoreAdmin.ListFields only supports listing
            fields that have been explicitly overridden. To issue this query, call FirestoreAdmin.ListFields
-           with a filter that includes `indexConfig.usesAncestorConfig:false` .
+           with a filter that includes `indexConfig.usesAncestorConfig:false` or `ttlConfig:*`.
              */
             public java.lang.String getFilter() {
               return filter;
@@ -2457,7 +2455,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              * The filter to apply to list results. Currently, FirestoreAdmin.ListFields only
              * supports listing fields that have been explicitly overridden. To issue this query,
              * call FirestoreAdmin.ListFields with a filter that includes
-             * `indexConfig.usesAncestorConfig:false` .
+             * `indexConfig.usesAncestorConfig:false` or `ttlConfig:*`.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

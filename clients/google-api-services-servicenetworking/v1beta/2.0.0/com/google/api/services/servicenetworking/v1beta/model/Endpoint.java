@@ -40,9 +40,8 @@ package com.google.api.services.servicenetworking.v1beta.model;
 public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Unimplemented. Dot not use. DEPRECATED: This field is no longer supported. Instead of using
-   * aliases, please specify multiple google.api.Endpoint for each of the intended aliases.
-   * Additional names that this endpoint will be hosted on.
+   * Aliases for this endpoint, these will be served by the same UrlMap as the parent endpoint, and
+   * will be provisioned in the GCP stack for the Regional Endpoints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,9 +75,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String target;
 
   /**
-   * Unimplemented. Dot not use. DEPRECATED: This field is no longer supported. Instead of using
-   * aliases, please specify multiple google.api.Endpoint for each of the intended aliases.
-   * Additional names that this endpoint will be hosted on.
+   * Aliases for this endpoint, these will be served by the same UrlMap as the parent endpoint, and
+   * will be provisioned in the GCP stack for the Regional Endpoints.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAliases() {
@@ -86,9 +84,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unimplemented. Dot not use. DEPRECATED: This field is no longer supported. Instead of using
-   * aliases, please specify multiple google.api.Endpoint for each of the intended aliases.
-   * Additional names that this endpoint will be hosted on.
+   * Aliases for this endpoint, these will be served by the same UrlMap as the parent endpoint, and
+   * will be provisioned in the GCP stack for the Regional Endpoints.
    * @param aliases aliases or {@code null} for none
    */
   public Endpoint setAliases(java.util.List<java.lang.String> aliases) {

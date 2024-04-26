@@ -195,7 +195,7 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredImageType;
 
   /**
-   * Specify the details of in-transit encryption.
+   * Specify the details of in-transit encryption. Now named inter-node transparent encryption.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -922,7 +922,7 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specify the details of in-transit encryption.
+   * Specify the details of in-transit encryption. Now named inter-node transparent encryption.
    * @return value or {@code null} for none
    */
   public java.lang.String getDesiredInTransitEncryptionConfig() {
@@ -930,7 +930,7 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specify the details of in-transit encryption.
+   * Specify the details of in-transit encryption. Now named inter-node transparent encryption.
    * @param desiredInTransitEncryptionConfig desiredInTransitEncryptionConfig or {@code null} for none
    */
   public ClusterUpdate setDesiredInTransitEncryptionConfig(java.lang.String desiredInTransitEncryptionConfig) {

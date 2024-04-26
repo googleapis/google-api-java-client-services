@@ -31,16 +31,16 @@ package com.google.api.services.container.v1beta1.model;
 public final class PolicyBinding extends com.google.api.client.json.GenericJson {
 
   /**
-   * The relative resource name of the binauthz platform policy to audit. GKE platform policies have
-   * the following format: `projects/{project_number}/platforms/gke/policies/{policy_id}`.
+   * The relative resource name of the binauthz platform policy to evaluate. GKE platform policies
+   * have the following format: `projects/{project_number}/platforms/gke/policies/{policy_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The relative resource name of the binauthz platform policy to audit. GKE platform policies have
-   * the following format: `projects/{project_number}/platforms/gke/policies/{policy_id}`.
+   * The relative resource name of the binauthz platform policy to evaluate. GKE platform policies
+   * have the following format: `projects/{project_number}/platforms/gke/policies/{policy_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -48,8 +48,8 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The relative resource name of the binauthz platform policy to audit. GKE platform policies have
-   * the following format: `projects/{project_number}/platforms/gke/policies/{policy_id}`.
+   * The relative resource name of the binauthz platform policy to evaluate. GKE platform policies
+   * have the following format: `projects/{project_number}/platforms/gke/policies/{policy_id}`.
    * @param name name or {@code null} for none
    */
   public PolicyBinding setName(java.lang.String name) {

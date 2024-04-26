@@ -53,6 +53,13 @@ public final class CaseClassification extends com.google.api.client.json.Generic
   private java.lang.String id;
 
   /**
+   * The full product the classification corresponds to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Product product;
+
+  /**
    * A display name for the classification. The display name is not static and can change. To
    * uniquely and consistently identify classifications, use the `CaseClassification.id` field.
    * @return value or {@code null} for none
@@ -93,6 +100,23 @@ public final class CaseClassification extends com.google.api.client.json.Generic
    */
   public CaseClassification setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * The full product the classification corresponds to.
+   * @return value or {@code null} for none
+   */
+  public Product getProduct() {
+    return product;
+  }
+
+  /**
+   * The full product the classification corresponds to.
+   * @param product product or {@code null} for none
+   */
+  public CaseClassification setProduct(Product product) {
+    this.product = product;
     return this;
   }
 

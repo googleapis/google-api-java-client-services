@@ -3809,6 +3809,218 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
         }
         /**
+         * An accessor for creating requests from the GenericArtifacts collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+         *   {@code ArtifactRegistry.GenericArtifacts.List request = artifactregistry.genericArtifacts().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public GenericArtifacts genericArtifacts() {
+          return new GenericArtifacts();
+        }
+
+        /**
+         * The "genericArtifacts" collection of methods.
+         */
+        public class GenericArtifacts {
+
+          /**
+           * Directly uploads a Generic artifact. The returned Operation will complete once the resources are
+           * uploaded. Package, Version, and File resources are created based on the uploaded artifact.
+           * Uploaded artifacts that conflict with existing resources will raise an ALREADY_EXISTS error.
+           *
+           * Create a request for the method "genericArtifacts.upload".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+           *
+           * @param parent The resource name of the repository where the generic artifact will be uploaded.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadGenericArtifactRequest}
+           * @return the request
+           */
+          public Upload upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadGenericArtifactRequest content) throws java.io.IOException {
+            Upload result = new Upload(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          /**
+           * Directly uploads a Generic artifact. The returned Operation will complete once the resources are
+           * uploaded. Package, Version, and File resources are created based on the uploaded artifact.
+           * Uploaded artifacts that conflict with existing resources will raise an ALREADY_EXISTS error.
+           *
+           * Create a request for the method "genericArtifacts.upload".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+           *
+           * <p>
+           * This method should be used for uploading media content.
+           * </p>
+           *
+           * @param parent The resource name of the repository where the generic artifact will be uploaded.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadGenericArtifactRequest} media metadata or {@code null} if none
+           * @param mediaContent The media HTTP content.
+           * @return the request
+           * @throws java.io.IOException if the initialization of the request fails
+           */
+          public Upload upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadGenericArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+            Upload result = new Upload(parent, content, mediaContent);
+            initialize(result);
+            return result;
+          }
+
+          public class Upload extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.UploadGenericArtifactMediaResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/genericArtifacts:create";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+            /**
+             * Directly uploads a Generic artifact. The returned Operation will complete once the resources
+             * are uploaded. Package, Version, and File resources are created based on the uploaded artifact.
+             * Uploaded artifacts that conflict with existing resources will raise an ALREADY_EXISTS error.
+             *
+             * Create a request for the method "genericArtifacts.upload".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The resource name of the repository where the generic artifact will be uploaded.
+             * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadGenericArtifactRequest}
+             * @since 1.13
+             */
+            protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadGenericArtifactRequest content) {
+              super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.UploadGenericArtifactMediaResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+            }
+
+            /**
+             * Directly uploads a Generic artifact. The returned Operation will complete once the resources
+             * are uploaded. Package, Version, and File resources are created based on the uploaded artifact.
+             * Uploaded artifacts that conflict with existing resources will raise an ALREADY_EXISTS error.
+             *
+             * Create a request for the method "genericArtifacts.upload".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * <p>
+             * This constructor should be used for uploading media content.
+             * </p>
+             *
+             * @param parent The resource name of the repository where the generic artifact will be uploaded.
+             * @param content the {@link com.google.api.services.artifactregistry.v1.model.UploadGenericArtifactRequest} media metadata or {@code null} if none
+             * @param mediaContent The media HTTP content.
+             * @since 1.13
+             */
+            protected Upload(java.lang.String parent, com.google.api.services.artifactregistry.v1.model.UploadGenericArtifactRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+              super(ArtifactRegistry.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.artifactregistry.v1.model.UploadGenericArtifactMediaResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
+              initializeMediaUpload(mediaContent);
+            }
+
+            @Override
+            public Upload set$Xgafv(java.lang.String $Xgafv) {
+              return (Upload) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Upload setAccessToken(java.lang.String accessToken) {
+              return (Upload) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Upload setAlt(java.lang.String alt) {
+              return (Upload) super.setAlt(alt);
+            }
+
+            @Override
+            public Upload setCallback(java.lang.String callback) {
+              return (Upload) super.setCallback(callback);
+            }
+
+            @Override
+            public Upload setFields(java.lang.String fields) {
+              return (Upload) super.setFields(fields);
+            }
+
+            @Override
+            public Upload setKey(java.lang.String key) {
+              return (Upload) super.setKey(key);
+            }
+
+            @Override
+            public Upload setOauthToken(java.lang.String oauthToken) {
+              return (Upload) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Upload) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Upload setQuotaUser(java.lang.String quotaUser) {
+              return (Upload) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Upload setUploadType(java.lang.String uploadType) {
+              return (Upload) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Upload) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The resource name of the repository where the generic artifact will be uploaded. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The resource name of the repository where the generic artifact will be uploaded.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The resource name of the repository where the generic artifact will be uploaded. */
+            public Upload setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Upload set(String parameterName, Object value) {
+              return (Upload) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the GoModules collection.
          *
          * <p>The typical use is:</p>

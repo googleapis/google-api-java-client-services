@@ -81,6 +81,13 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String gceOperation;
 
   /**
+   * Immutable. An immutable identifier for the producer instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String producerInstanceId;
+
+  /**
    * The PSC connection id of the PSC forwarding rule.
    * The value may be {@code null}.
    */
@@ -219,6 +226,23 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
    */
   public PscConnection setGceOperation(java.lang.String gceOperation) {
     this.gceOperation = gceOperation;
+    return this;
+  }
+
+  /**
+   * Immutable. An immutable identifier for the producer instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProducerInstanceId() {
+    return producerInstanceId;
+  }
+
+  /**
+   * Immutable. An immutable identifier for the producer instance.
+   * @param producerInstanceId producerInstanceId or {@code null} for none
+   */
+  public PscConnection setProducerInstanceId(java.lang.String producerInstanceId) {
+    this.producerInstanceId = producerInstanceId;
     return this;
   }
 

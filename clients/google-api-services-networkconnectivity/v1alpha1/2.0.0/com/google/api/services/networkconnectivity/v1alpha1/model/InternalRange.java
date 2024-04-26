@@ -72,8 +72,9 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   /**
    * The URL or resource ID of the network in which to reserve the internal range. The network
    * cannot be deleted if there are any reserved internal ranges referring to it. Legacy networks
-   * are not supported. This can only be specified for a global internal address. Example: - URL:
-   * /compute/v1/projects/{project}/global/networks/{resourceId} - ID: network123
+   * are not supported. For example:
+   * https://www.googleapis.com/compute/v1/projects/{project}/locations/global/networks/{network}
+   * projects/{project}/locations/global/networks/{network} {network}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -230,8 +231,9 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   /**
    * The URL or resource ID of the network in which to reserve the internal range. The network
    * cannot be deleted if there are any reserved internal ranges referring to it. Legacy networks
-   * are not supported. This can only be specified for a global internal address. Example: - URL:
-   * /compute/v1/projects/{project}/global/networks/{resourceId} - ID: network123
+   * are not supported. For example:
+   * https://www.googleapis.com/compute/v1/projects/{project}/locations/global/networks/{network}
+   * projects/{project}/locations/global/networks/{network} {network}
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -241,8 +243,9 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   /**
    * The URL or resource ID of the network in which to reserve the internal range. The network
    * cannot be deleted if there are any reserved internal ranges referring to it. Legacy networks
-   * are not supported. This can only be specified for a global internal address. Example: - URL:
-   * /compute/v1/projects/{project}/global/networks/{resourceId} - ID: network123
+   * are not supported. For example:
+   * https://www.googleapis.com/compute/v1/projects/{project}/locations/global/networks/{network}
+   * projects/{project}/locations/global/networks/{network} {network}
    * @param network network or {@code null} for none
    */
   public InternalRange setNetwork(java.lang.String network) {

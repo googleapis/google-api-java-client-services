@@ -33,6 +33,15 @@ package com.google.api.services.compute.model;
 public final class PublicDelegatedPrefix extends com.google.api.client.json.GenericJson {
 
   /**
+   * The allocatable prefix length supported by this public delegated prefix. This field is optional
+   * and cannot be set for prefixes in DELEGATION mode. It cannot be set for IPv4 prefixes either,
+   * and it always defaults to 32.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer allocatablePrefixLength;
+
+  /**
    * [Output Only] The version of BYOIP API.
    * The value may be {@code null}.
    */
@@ -95,6 +104,13 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.String kind;
 
   /**
+   * The public delegated prefix mode for IPv6 only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -145,6 +161,27 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * The allocatable prefix length supported by this public delegated prefix. This field is optional
+   * and cannot be set for prefixes in DELEGATION mode. It cannot be set for IPv4 prefixes either,
+   * and it always defaults to 32.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAllocatablePrefixLength() {
+    return allocatablePrefixLength;
+  }
+
+  /**
+   * The allocatable prefix length supported by this public delegated prefix. This field is optional
+   * and cannot be set for prefixes in DELEGATION mode. It cannot be set for IPv4 prefixes either,
+   * and it always defaults to 32.
+   * @param allocatablePrefixLength allocatablePrefixLength or {@code null} for none
+   */
+  public PublicDelegatedPrefix setAllocatablePrefixLength(java.lang.Integer allocatablePrefixLength) {
+    this.allocatablePrefixLength = allocatablePrefixLength;
+    return this;
+  }
 
   /**
    * [Output Only] The version of BYOIP API.
@@ -327,6 +364,23 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    */
   public PublicDelegatedPrefix setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The public delegated prefix mode for IPv6 only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * The public delegated prefix mode for IPv6 only.
+   * @param mode mode or {@code null} for none
+   */
+  public PublicDelegatedPrefix setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 

@@ -105,11 +105,36 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.String enable;
 
   /**
-   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+   * Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 4.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableIpv4;
+
+  /**
+   * Enable IPv6 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableIpv6;
+
+  /**
+   * List of export policies applied to this peer, in the order they must be evaluated. The name
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type. Note that Route
+   * Policies are currently available in preview. Please use Beta API to use Route Policies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> exportPolicies;
+
+  /**
+   * List of import policies applied to this peer, in the order they must be evaluated. The name
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type. Note that Route
+   * Policies are currently available in preview. Please use Beta API to use Route Policies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> importPolicies;
 
   /**
    * Name of the interface the BGP peer is associated with.
@@ -119,11 +144,18 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.String interfaceName;
 
   /**
-   * IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
+   * IP address of the interface inside Google Cloud Platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
+
+  /**
+   * IPv4 address of the interface inside Google Cloud Platform.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv4NexthopAddress;
 
   /**
    * IPv6 address of the interface inside Google Cloud Platform.
@@ -170,11 +202,18 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.Long peerAsn;
 
   /**
-   * IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+   * IP address of the BGP interface outside Google Cloud Platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String peerIpAddress;
+
+  /**
+   * IPv4 address of the BGP interface outside Google Cloud Platform.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peerIpv4NexthopAddress;
 
   /**
    * IPv6 address of the BGP interface outside Google Cloud Platform.
@@ -356,7 +395,24 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+   * Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 4.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableIpv4() {
+    return enableIpv4;
+  }
+
+  /**
+   * Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 4.
+   * @param enableIpv4 enableIpv4 or {@code null} for none
+   */
+  public RouterBgpPeer setEnableIpv4(java.lang.Boolean enableIpv4) {
+    this.enableIpv4 = enableIpv4;
+    return this;
+  }
+
+  /**
+   * Enable IPv6 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 6.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableIpv6() {
@@ -364,11 +420,53 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+   * Enable IPv6 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 6.
    * @param enableIpv6 enableIpv6 or {@code null} for none
    */
   public RouterBgpPeer setEnableIpv6(java.lang.Boolean enableIpv6) {
     this.enableIpv6 = enableIpv6;
+    return this;
+  }
+
+  /**
+   * List of export policies applied to this peer, in the order they must be evaluated. The name
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type. Note that Route
+   * Policies are currently available in preview. Please use Beta API to use Route Policies.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExportPolicies() {
+    return exportPolicies;
+  }
+
+  /**
+   * List of export policies applied to this peer, in the order they must be evaluated. The name
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type. Note that Route
+   * Policies are currently available in preview. Please use Beta API to use Route Policies.
+   * @param exportPolicies exportPolicies or {@code null} for none
+   */
+  public RouterBgpPeer setExportPolicies(java.util.List<java.lang.String> exportPolicies) {
+    this.exportPolicies = exportPolicies;
+    return this;
+  }
+
+  /**
+   * List of import policies applied to this peer, in the order they must be evaluated. The name
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type. Note that Route
+   * Policies are currently available in preview. Please use Beta API to use Route Policies.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getImportPolicies() {
+    return importPolicies;
+  }
+
+  /**
+   * List of import policies applied to this peer, in the order they must be evaluated. The name
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type. Note that Route
+   * Policies are currently available in preview. Please use Beta API to use Route Policies.
+   * @param importPolicies importPolicies or {@code null} for none
+   */
+  public RouterBgpPeer setImportPolicies(java.util.List<java.lang.String> importPolicies) {
+    this.importPolicies = importPolicies;
     return this;
   }
 
@@ -390,7 +488,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
+   * IP address of the interface inside Google Cloud Platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -398,11 +496,28 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
+   * IP address of the interface inside Google Cloud Platform.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public RouterBgpPeer setIpAddress(java.lang.String ipAddress) {
     this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * IPv4 address of the interface inside Google Cloud Platform.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv4NexthopAddress() {
+    return ipv4NexthopAddress;
+  }
+
+  /**
+   * IPv4 address of the interface inside Google Cloud Platform.
+   * @param ipv4NexthopAddress ipv4NexthopAddress or {@code null} for none
+   */
+  public RouterBgpPeer setIpv4NexthopAddress(java.lang.String ipv4NexthopAddress) {
+    this.ipv4NexthopAddress = ipv4NexthopAddress;
     return this;
   }
 
@@ -510,7 +625,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+   * IP address of the BGP interface outside Google Cloud Platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeerIpAddress() {
@@ -518,11 +633,28 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+   * IP address of the BGP interface outside Google Cloud Platform.
    * @param peerIpAddress peerIpAddress or {@code null} for none
    */
   public RouterBgpPeer setPeerIpAddress(java.lang.String peerIpAddress) {
     this.peerIpAddress = peerIpAddress;
+    return this;
+  }
+
+  /**
+   * IPv4 address of the BGP interface outside Google Cloud Platform.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeerIpv4NexthopAddress() {
+    return peerIpv4NexthopAddress;
+  }
+
+  /**
+   * IPv4 address of the BGP interface outside Google Cloud Platform.
+   * @param peerIpv4NexthopAddress peerIpv4NexthopAddress or {@code null} for none
+   */
+  public RouterBgpPeer setPeerIpv4NexthopAddress(java.lang.String peerIpv4NexthopAddress) {
+    this.peerIpv4NexthopAddress = peerIpv4NexthopAddress;
     return this;
   }
 

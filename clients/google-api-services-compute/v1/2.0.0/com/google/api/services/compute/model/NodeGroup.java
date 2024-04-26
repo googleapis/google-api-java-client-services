@@ -83,6 +83,14 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String locationHint;
 
   /**
+   * Specifies the frequency of planned maintenance events. The accepted values are: `AS_NEEDED` and
+   * `RECURRENT`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceInterval;
+
+  /**
    * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one
    * of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For
    * more information, see Maintenance policies.
@@ -295,6 +303,25 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
    */
   public NodeGroup setLocationHint(java.lang.String locationHint) {
     this.locationHint = locationHint;
+    return this;
+  }
+
+  /**
+   * Specifies the frequency of planned maintenance events. The accepted values are: `AS_NEEDED` and
+   * `RECURRENT`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceInterval() {
+    return maintenanceInterval;
+  }
+
+  /**
+   * Specifies the frequency of planned maintenance events. The accepted values are: `AS_NEEDED` and
+   * `RECURRENT`.
+   * @param maintenanceInterval maintenanceInterval or {@code null} for none
+   */
+  public NodeGroup setMaintenanceInterval(java.lang.String maintenanceInterval) {
+    this.maintenanceInterval = maintenanceInterval;
     return this;
   }
 

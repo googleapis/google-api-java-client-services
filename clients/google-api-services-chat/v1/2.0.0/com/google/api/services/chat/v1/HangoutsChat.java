@@ -5577,6 +5577,601 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the Users collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code HangoutsChat chat = new HangoutsChat(...);}
+   *   {@code HangoutsChat.Users.List request = chat.users().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Users users() {
+    return new Users();
+  }
+
+  /**
+   * The "users" collection of methods.
+   */
+  public class Users {
+
+    /**
+     * An accessor for creating requests from the Spaces collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code HangoutsChat chat = new HangoutsChat(...);}
+     *   {@code HangoutsChat.Spaces.List request = chat.spaces().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Spaces spaces() {
+      return new Spaces();
+    }
+
+    /**
+     * The "spaces" collection of methods.
+     */
+    public class Spaces {
+
+      /**
+       * Returns details about a user's read state within a space, used to identify read and unread
+       * messages. Requires [user authentication](https://developers.google.com/workspace/chat
+       * /authenticate-authorize-chat-user).
+       *
+       * Create a request for the method "spaces.getSpaceReadState".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link GetSpaceReadState#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Resource name of the space read state to retrieve. Only supports getting read state for
+       *        the calling user. To refer to the calling user, set one of the following: - The `me`
+       *        alias. For example, `users/me/spaces/{space}/spaceReadState`. - Their Workspace email
+       *        address. For example, `users/user@example.com/spaces/{space}/spaceReadState`. - Their user
+       *        id. For example, `users/123456789/spaces/{space}/spaceReadState`. Format:
+       *        users/{user}/spaces/{space}/spaceReadState
+       * @return the request
+       */
+      public GetSpaceReadState getSpaceReadState(java.lang.String name) throws java.io.IOException {
+        GetSpaceReadState result = new GetSpaceReadState(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetSpaceReadState extends HangoutsChatRequest<com.google.api.services.chat.v1.model.SpaceReadState> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/spaces/[^/]+/spaceReadState$");
+
+        /**
+         * Returns details about a user's read state within a space, used to identify read and unread
+         * messages. Requires [user authentication](https://developers.google.com/workspace/chat
+         * /authenticate-authorize-chat-user).
+         *
+         * Create a request for the method "spaces.getSpaceReadState".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link GetSpaceReadState#execute()} method to invoke the remote operation.
+         * <p> {@link GetSpaceReadState#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+         * eClientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param name Required. Resource name of the space read state to retrieve. Only supports getting read state for
+       *        the calling user. To refer to the calling user, set one of the following: - The `me`
+       *        alias. For example, `users/me/spaces/{space}/spaceReadState`. - Their Workspace email
+       *        address. For example, `users/user@example.com/spaces/{space}/spaceReadState`. - Their user
+       *        id. For example, `users/123456789/spaces/{space}/spaceReadState`. Format:
+       *        users/{user}/spaces/{space}/spaceReadState
+         * @since 1.13
+         */
+        protected GetSpaceReadState(java.lang.String name) {
+          super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.SpaceReadState.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/spaces/[^/]+/spaceReadState$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetSpaceReadState set$Xgafv(java.lang.String $Xgafv) {
+          return (GetSpaceReadState) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetSpaceReadState setAccessToken(java.lang.String accessToken) {
+          return (GetSpaceReadState) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetSpaceReadState setAlt(java.lang.String alt) {
+          return (GetSpaceReadState) super.setAlt(alt);
+        }
+
+        @Override
+        public GetSpaceReadState setCallback(java.lang.String callback) {
+          return (GetSpaceReadState) super.setCallback(callback);
+        }
+
+        @Override
+        public GetSpaceReadState setFields(java.lang.String fields) {
+          return (GetSpaceReadState) super.setFields(fields);
+        }
+
+        @Override
+        public GetSpaceReadState setKey(java.lang.String key) {
+          return (GetSpaceReadState) super.setKey(key);
+        }
+
+        @Override
+        public GetSpaceReadState setOauthToken(java.lang.String oauthToken) {
+          return (GetSpaceReadState) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetSpaceReadState setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetSpaceReadState) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetSpaceReadState setQuotaUser(java.lang.String quotaUser) {
+          return (GetSpaceReadState) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetSpaceReadState setUploadType(java.lang.String uploadType) {
+          return (GetSpaceReadState) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetSpaceReadState setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetSpaceReadState) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the space read state to retrieve. Only supports getting read
+         * state for the calling user. To refer to the calling user, set one of the following: - The
+         * `me` alias. For example, `users/me/spaces/{space}/spaceReadState`. - Their Workspace
+         * email address. For example, `users/user@example.com/spaces/{space}/spaceReadState`. -
+         * Their user id. For example, `users/123456789/spaces/{space}/spaceReadState`. Format:
+         * users/{user}/spaces/{space}/spaceReadState
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Resource name of the space read state to retrieve. Only supports getting read state for
+       the calling user. To refer to the calling user, set one of the following: - The `me` alias. For
+       example, `users/me/spaces/{space}/spaceReadState`. - Their Workspace email address. For example,
+       `users/user@example.com/spaces/{space}/spaceReadState`. - Their user id. For example,
+       `users/123456789/spaces/{space}/spaceReadState`. Format: users/{user}/spaces/{space}/spaceReadState
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Resource name of the space read state to retrieve. Only supports getting read
+         * state for the calling user. To refer to the calling user, set one of the following: - The
+         * `me` alias. For example, `users/me/spaces/{space}/spaceReadState`. - Their Workspace
+         * email address. For example, `users/user@example.com/spaces/{space}/spaceReadState`. -
+         * Their user id. For example, `users/123456789/spaces/{space}/spaceReadState`. Format:
+         * users/{user}/spaces/{space}/spaceReadState
+         */
+        public GetSpaceReadState setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/spaces/[^/]+/spaceReadState$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetSpaceReadState set(String parameterName, Object value) {
+          return (GetSpaceReadState) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a user's read state within a space, used to identify read and unread messages. Requires
+       * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+       * user).
+       *
+       * Create a request for the method "spaces.updateSpaceReadState".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link UpdateSpaceReadState#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Resource name of the space read state. Format: `users/{user}/spaces/{space}/spaceReadState`
+       * @param content the {@link com.google.api.services.chat.v1.model.SpaceReadState}
+       * @return the request
+       */
+      public UpdateSpaceReadState updateSpaceReadState(java.lang.String name, com.google.api.services.chat.v1.model.SpaceReadState content) throws java.io.IOException {
+        UpdateSpaceReadState result = new UpdateSpaceReadState(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateSpaceReadState extends HangoutsChatRequest<com.google.api.services.chat.v1.model.SpaceReadState> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/spaces/[^/]+/spaceReadState$");
+
+        /**
+         * Updates a user's read state within a space, used to identify read and unread messages. Requires
+         * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+         * user).
+         *
+         * Create a request for the method "spaces.updateSpaceReadState".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link UpdateSpaceReadState#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateSpaceReadState#initialize(com.google.api.client.googleapis.services
+         * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Resource name of the space read state. Format: `users/{user}/spaces/{space}/spaceReadState`
+         * @param content the {@link com.google.api.services.chat.v1.model.SpaceReadState}
+         * @since 1.13
+         */
+        protected UpdateSpaceReadState(java.lang.String name, com.google.api.services.chat.v1.model.SpaceReadState content) {
+          super(HangoutsChat.this, "PATCH", REST_PATH, content, com.google.api.services.chat.v1.model.SpaceReadState.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/spaces/[^/]+/spaceReadState$");
+          }
+        }
+
+        @Override
+        public UpdateSpaceReadState set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateSpaceReadState) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateSpaceReadState setAccessToken(java.lang.String accessToken) {
+          return (UpdateSpaceReadState) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateSpaceReadState setAlt(java.lang.String alt) {
+          return (UpdateSpaceReadState) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateSpaceReadState setCallback(java.lang.String callback) {
+          return (UpdateSpaceReadState) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateSpaceReadState setFields(java.lang.String fields) {
+          return (UpdateSpaceReadState) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateSpaceReadState setKey(java.lang.String key) {
+          return (UpdateSpaceReadState) super.setKey(key);
+        }
+
+        @Override
+        public UpdateSpaceReadState setOauthToken(java.lang.String oauthToken) {
+          return (UpdateSpaceReadState) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateSpaceReadState setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateSpaceReadState) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateSpaceReadState setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateSpaceReadState) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateSpaceReadState setUploadType(java.lang.String uploadType) {
+          return (UpdateSpaceReadState) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateSpaceReadState setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateSpaceReadState) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Resource name of the space read state. Format:
+         * `users/{user}/spaces/{space}/spaceReadState`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Resource name of the space read state. Format: `users/{user}/spaces/{space}/spaceReadState`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Resource name of the space read state. Format:
+         * `users/{user}/spaces/{space}/spaceReadState`
+         */
+        public UpdateSpaceReadState setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/spaces/[^/]+/spaceReadState$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The field paths to update. Currently supported field paths: - `last_read_time`
+         * When the `last_read_time` is before the latest message create time, the space appears as
+         * unread in the UI. To mark the space as read, set `last_read_time` to any value later
+         * (larger) than the latest message create time. The `last_read_time` is coerced to match
+         * the latest message create time. Note that the space read state only affects the read
+         * state of messages that are visible in the space's top-level conversation. Replies in
+         * threads are unaffected by this timestamp, and instead rely on the thread read state.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The field paths to update. Currently supported field paths: - `last_read_time` When the
+       `last_read_time` is before the latest message create time, the space appears as unread in the UI.
+       To mark the space as read, set `last_read_time` to any value later (larger) than the latest message
+       create time. The `last_read_time` is coerced to match the latest message create time. Note that the
+       space read state only affects the read state of messages that are visible in the space's top-level
+       conversation. Replies in threads are unaffected by this timestamp, and instead rely on the thread
+       read state.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The field paths to update. Currently supported field paths: - `last_read_time`
+         * When the `last_read_time` is before the latest message create time, the space appears as
+         * unread in the UI. To mark the space as read, set `last_read_time` to any value later
+         * (larger) than the latest message create time. The `last_read_time` is coerced to match
+         * the latest message create time. Note that the space read state only affects the read
+         * state of messages that are visible in the space's top-level conversation. Replies in
+         * threads are unaffected by this timestamp, and instead rely on the thread read state.
+         */
+        public UpdateSpaceReadState setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateSpaceReadState set(String parameterName, Object value) {
+          return (UpdateSpaceReadState) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Threads collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code HangoutsChat chat = new HangoutsChat(...);}
+       *   {@code HangoutsChat.Threads.List request = chat.threads().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Threads threads() {
+        return new Threads();
+      }
+
+      /**
+       * The "threads" collection of methods.
+       */
+      public class Threads {
+
+        /**
+         * Returns details about a user's read state within a thread, used to identify read and unread
+         * messages. Requires [user authentication](https://developers.google.com/workspace/chat
+         * /authenticate-authorize-chat-user).
+         *
+         * Create a request for the method "threads.getThreadReadState".
+         *
+         * This request holds the parameters needed by the chat server.  After setting any optional
+         * parameters, call the {@link GetThreadReadState#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the thread read state to retrieve. Only supports getting read state for
+         *        the calling user. To refer to the calling user, set one of the following: - The `me`
+         *        alias. For example, `users/me/spaces/{space}/threads/{thread}/threadReadState`. - Their
+         *        Workspace email address. For example,
+         *        `users/user@example.com/spaces/{space}/threads/{thread}/threadReadState`. - Their user id.
+         *        For example, `users/123456789/spaces/{space}/threads/{thread}/threadReadState`. Format:
+         *        users/{user}/spaces/{space}/threads/{thread}/threadReadState
+         * @return the request
+         */
+        public GetThreadReadState getThreadReadState(java.lang.String name) throws java.io.IOException {
+          GetThreadReadState result = new GetThreadReadState(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetThreadReadState extends HangoutsChatRequest<com.google.api.services.chat.v1.model.ThreadReadState> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^users/[^/]+/spaces/[^/]+/threads/[^/]+/threadReadState$");
+
+          /**
+           * Returns details about a user's read state within a thread, used to identify read and unread
+           * messages. Requires [user authentication](https://developers.google.com/workspace/chat
+           * /authenticate-authorize-chat-user).
+           *
+           * Create a request for the method "threads.getThreadReadState".
+           *
+           * This request holds the parameters needed by the the chat server.  After setting any optional
+           * parameters, call the {@link GetThreadReadState#execute()} method to invoke the remote
+           * operation. <p> {@link GetThreadReadState#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the thread read state to retrieve. Only supports getting read state for
+         *        the calling user. To refer to the calling user, set one of the following: - The `me`
+         *        alias. For example, `users/me/spaces/{space}/threads/{thread}/threadReadState`. - Their
+         *        Workspace email address. For example,
+         *        `users/user@example.com/spaces/{space}/threads/{thread}/threadReadState`. - Their user id.
+         *        For example, `users/123456789/spaces/{space}/threads/{thread}/threadReadState`. Format:
+         *        users/{user}/spaces/{space}/threads/{thread}/threadReadState
+           * @since 1.13
+           */
+          protected GetThreadReadState(java.lang.String name) {
+            super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.ThreadReadState.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^users/[^/]+/spaces/[^/]+/threads/[^/]+/threadReadState$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetThreadReadState set$Xgafv(java.lang.String $Xgafv) {
+            return (GetThreadReadState) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetThreadReadState setAccessToken(java.lang.String accessToken) {
+            return (GetThreadReadState) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetThreadReadState setAlt(java.lang.String alt) {
+            return (GetThreadReadState) super.setAlt(alt);
+          }
+
+          @Override
+          public GetThreadReadState setCallback(java.lang.String callback) {
+            return (GetThreadReadState) super.setCallback(callback);
+          }
+
+          @Override
+          public GetThreadReadState setFields(java.lang.String fields) {
+            return (GetThreadReadState) super.setFields(fields);
+          }
+
+          @Override
+          public GetThreadReadState setKey(java.lang.String key) {
+            return (GetThreadReadState) super.setKey(key);
+          }
+
+          @Override
+          public GetThreadReadState setOauthToken(java.lang.String oauthToken) {
+            return (GetThreadReadState) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetThreadReadState setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetThreadReadState) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetThreadReadState setQuotaUser(java.lang.String quotaUser) {
+            return (GetThreadReadState) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetThreadReadState setUploadType(java.lang.String uploadType) {
+            return (GetThreadReadState) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetThreadReadState setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetThreadReadState) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the thread read state to retrieve. Only supports getting
+           * read state for the calling user. To refer to the calling user, set one of the
+           * following: - The `me` alias. For example,
+           * `users/me/spaces/{space}/threads/{thread}/threadReadState`. - Their Workspace email
+           * address. For example,
+           * `users/user@example.com/spaces/{space}/threads/{thread}/threadReadState`. - Their user
+           * id. For example, `users/123456789/spaces/{space}/threads/{thread}/threadReadState`.
+           * Format: users/{user}/spaces/{space}/threads/{thread}/threadReadState
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the thread read state to retrieve. Only supports getting read state for
+         the calling user. To refer to the calling user, set one of the following: - The `me` alias. For
+         example, `users/me/spaces/{space}/threads/{thread}/threadReadState`. - Their Workspace email
+         address. For example, `users/user@example.com/spaces/{space}/threads/{thread}/threadReadState`. -
+         Their user id. For example, `users/123456789/spaces/{space}/threads/{thread}/threadReadState`.
+         Format: users/{user}/spaces/{space}/threads/{thread}/threadReadState
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the thread read state to retrieve. Only supports getting
+           * read state for the calling user. To refer to the calling user, set one of the
+           * following: - The `me` alias. For example,
+           * `users/me/spaces/{space}/threads/{thread}/threadReadState`. - Their Workspace email
+           * address. For example,
+           * `users/user@example.com/spaces/{space}/threads/{thread}/threadReadState`. - Their user
+           * id. For example, `users/123456789/spaces/{space}/threads/{thread}/threadReadState`.
+           * Format: users/{user}/spaces/{space}/threads/{thread}/threadReadState
+           */
+          public GetThreadReadState setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^users/[^/]+/spaces/[^/]+/threads/[^/]+/threadReadState$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetThreadReadState set(String parameterName, Object value) {
+            return (GetThreadReadState) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * Builder for {@link HangoutsChat}.
    *
    * <p>

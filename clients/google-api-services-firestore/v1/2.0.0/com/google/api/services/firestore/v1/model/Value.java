@@ -30,7 +30,7 @@ package com.google.api.services.firestore.v1.model;
 public final class Value extends com.google.api.client.json.GenericJson {
 
   /**
-   * An array value. Cannot directly contain another array value, though can contain an map which
+   * An array value. Cannot directly contain another array value, though can contain a map which
    * contains another array.
    * The value may be {@code null}.
    */
@@ -112,7 +112,7 @@ public final class Value extends com.google.api.client.json.GenericJson {
   private String timestampValue;
 
   /**
-   * An array value. Cannot directly contain another array value, though can contain an map which
+   * An array value. Cannot directly contain another array value, though can contain a map which
    * contains another array.
    * @return value or {@code null} for none
    */
@@ -121,7 +121,7 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An array value. Cannot directly contain another array value, though can contain an map which
+   * An array value. Cannot directly contain another array value, though can contain a map which
    * contains another array.
    * @param arrayValue arrayValue or {@code null} for none
    */

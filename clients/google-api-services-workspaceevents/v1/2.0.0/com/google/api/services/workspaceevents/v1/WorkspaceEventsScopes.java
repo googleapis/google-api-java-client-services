@@ -26,7 +26,7 @@ public class WorkspaceEventsScopes {
   /** Private Service: https://www.googleapis.com/auth/chat.bot. */
   public static final String CHAT_BOT = "https://www.googleapis.com/auth/chat.bot";
 
-  /** View, add, update, and remove members from conversations in Google Chat. */
+  /** View, add, and remove members from conversations in Google Chat. */
   public static final String CHAT_MEMBERSHIPS = "https://www.googleapis.com/auth/chat.memberships";
 
   /** View members in Google Chat conversations.. */

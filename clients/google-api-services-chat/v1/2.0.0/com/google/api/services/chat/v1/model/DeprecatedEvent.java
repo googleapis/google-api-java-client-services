@@ -80,8 +80,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private String eventTime;
 
   /**
-   * For `CARD_CLICKED` interaction events, whether the user interacted with a
-   * [dialog](https://developers.google.com/workspace/chat/dialogs).
+   * For `CARD_CLICKED` and `MESSAGE` interaction events, whether the user is interacting with or
+   * about to interact with a [dialog](https://developers.google.com/workspace/chat/dialogs).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -240,8 +240,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * For `CARD_CLICKED` interaction events, whether the user interacted with a
-   * [dialog](https://developers.google.com/workspace/chat/dialogs).
+   * For `CARD_CLICKED` and `MESSAGE` interaction events, whether the user is interacting with or
+   * about to interact with a [dialog](https://developers.google.com/workspace/chat/dialogs).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDialogEvent() {
@@ -249,8 +249,8 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * For `CARD_CLICKED` interaction events, whether the user interacted with a
-   * [dialog](https://developers.google.com/workspace/chat/dialogs).
+   * For `CARD_CLICKED` and `MESSAGE` interaction events, whether the user is interacting with or
+   * about to interact with a [dialog](https://developers.google.com/workspace/chat/dialogs).
    * @param isDialogEvent isDialogEvent or {@code null} for none
    */
   public DeprecatedEvent setIsDialogEvent(java.lang.Boolean isDialogEvent) {

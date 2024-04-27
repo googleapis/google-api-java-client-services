@@ -2898,10 +2898,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
     public class Messages {
 
       /**
-       * Creates a message in a Google Chat space. For an example, see [Send a
-       * message](https://developers.google.com/workspace/chat/create-messages). Calling this method
-       * requires [authentication](https://developers.google.com/workspace/chat/authenticate-authorize)
-       * and supports the following authentication types: - For text messages, user authentication or app
+       * Creates a message in a Google Chat space. The maximum message size, including text and cards, is
+       * 32,000 bytes. For an example, see [Send a message](https://developers.google.com/workspace/chat
+       * /create-messages). Calling this method requires
+       * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize) and
+       * supports the following authentication types: - For text messages, user authentication or app
        * authentication are supported. - For card messages, only app authentication is supported. (Only
        * Chat apps can create card messages.)
        *
@@ -2928,7 +2929,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+$");
 
         /**
-         * Creates a message in a Google Chat space. For an example, see [Send a
+         * Creates a message in a Google Chat space. The maximum message size, including text and cards,
+         * is 32,000 bytes. For an example, see [Send a
          * message](https://developers.google.com/workspace/chat/create-messages). Calling this method
          * requires [authentication](https://developers.google.com/workspace/chat/authenticate-authorize)
          * and supports the following authentication types: - For text messages, user authentication or

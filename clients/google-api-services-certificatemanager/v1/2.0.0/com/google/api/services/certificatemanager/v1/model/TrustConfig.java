@@ -33,7 +33,7 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A certificate matching an allowlisted certificate is always considered valid as long
    * as the certificate is parseable, proof of private key possession is established, and
-   * constraints on the certificate’s SAN field are met.
+   * constraints on the certificate's SAN field are met.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A certificate matching an allowlisted certificate is always considered valid as long
    * as the certificate is parseable, proof of private key possession is established, and
-   * constraints on the certificate’s SAN field are met.
+   * constraints on the certificate's SAN field are met.
    * @return value or {@code null} for none
    */
   public java.util.List<AllowlistedCertificate> getAllowlistedCertificates() {
@@ -111,7 +111,7 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A certificate matching an allowlisted certificate is always considered valid as long
    * as the certificate is parseable, proof of private key possession is established, and
-   * constraints on the certificate’s SAN field are met.
+   * constraints on the certificate's SAN field are met.
    * @param allowlistedCertificates allowlistedCertificates or {@code null} for none
    */
   public TrustConfig setAllowlistedCertificates(java.util.List<AllowlistedCertificate> allowlistedCertificates) {

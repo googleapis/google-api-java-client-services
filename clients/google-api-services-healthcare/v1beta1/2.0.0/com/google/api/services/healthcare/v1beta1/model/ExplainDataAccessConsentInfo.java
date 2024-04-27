@@ -39,8 +39,8 @@ public final class ExplainDataAccessConsentInfo extends com.google.api.client.js
   private java.util.List<java.lang.String> cascadeOrigins;
 
   /**
-   * The resource name of this consent resource. Format: `projects/{projectId}/locations/{locationId
-   * }/datasets/{datasetId}/fhirStores/{fhirStoreId}/fhir/{resourceType}/{id}`.
+   * The resource name of this consent resource, in the format: `projects/{project_id}/locations/{lo
+   * cation}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Consent/{resource_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,8 +112,8 @@ public final class ExplainDataAccessConsentInfo extends com.google.api.client.js
   }
 
   /**
-   * The resource name of this consent resource. Format: `projects/{projectId}/locations/{locationId
-   * }/datasets/{datasetId}/fhirStores/{fhirStoreId}/fhir/{resourceType}/{id}`.
+   * The resource name of this consent resource, in the format: `projects/{project_id}/locations/{lo
+   * cation}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Consent/{resource_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsentResource() {
@@ -121,8 +121,8 @@ public final class ExplainDataAccessConsentInfo extends com.google.api.client.js
   }
 
   /**
-   * The resource name of this consent resource. Format: `projects/{projectId}/locations/{locationId
-   * }/datasets/{datasetId}/fhirStores/{fhirStoreId}/fhir/{resourceType}/{id}`.
+   * The resource name of this consent resource, in the format: `projects/{project_id}/locations/{lo
+   * cation}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Consent/{resource_id}`.
    * @param consentResource consentResource or {@code null} for none
    */
   public ExplainDataAccessConsentInfo setConsentResource(java.lang.String consentResource) {

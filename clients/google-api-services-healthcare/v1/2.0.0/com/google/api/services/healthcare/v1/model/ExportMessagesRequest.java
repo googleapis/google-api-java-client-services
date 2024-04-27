@@ -41,12 +41,12 @@ public final class ExportMessagesRequest extends com.google.api.client.json.Gene
   private String endTime;
 
   /**
-   * Restricts messages exported to those matching a filter, only applicable to PubsubDestination.
-   * The following syntax is available: * A string field value can be written as text inside
-   * quotation marks, for example `"query text"`. The only valid relational operation for text
-   * fields is equality (`=`), where text is searched within the field, rather than having the field
-   * be equal to the text. For example, `"Comment = great"` returns messages with `great` in the
-   * comment field. * A number field value can be written as an integer, a decimal, or an
+   * Restricts messages exported to those matching a filter, only applicable to PubsubDestination
+   * and GcsDestination. The following syntax is available: * A string field value can be written as
+   * text inside quotation marks, for example `"query text"`. The only valid relational operation
+   * for text fields is equality (`=`), where text is searched within the field, rather than having
+   * the field be equal to the text. For example, `"Comment = great"` returns messages with `great`
+   * in the comment field. * A number field value can be written as an integer, a decimal, or an
    * exponential. The valid relational operators for number fields are the equality operator (`=`),
    * along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
    * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. *
@@ -128,12 +128,12 @@ public final class ExportMessagesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Restricts messages exported to those matching a filter, only applicable to PubsubDestination.
-   * The following syntax is available: * A string field value can be written as text inside
-   * quotation marks, for example `"query text"`. The only valid relational operation for text
-   * fields is equality (`=`), where text is searched within the field, rather than having the field
-   * be equal to the text. For example, `"Comment = great"` returns messages with `great` in the
-   * comment field. * A number field value can be written as an integer, a decimal, or an
+   * Restricts messages exported to those matching a filter, only applicable to PubsubDestination
+   * and GcsDestination. The following syntax is available: * A string field value can be written as
+   * text inside quotation marks, for example `"query text"`. The only valid relational operation
+   * for text fields is equality (`=`), where text is searched within the field, rather than having
+   * the field be equal to the text. For example, `"Comment = great"` returns messages with `great`
+   * in the comment field. * A number field value can be written as an integer, a decimal, or an
    * exponential. The valid relational operators for number fields are the equality operator (`=`),
    * along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
    * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. *
@@ -166,12 +166,12 @@ public final class ExportMessagesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Restricts messages exported to those matching a filter, only applicable to PubsubDestination.
-   * The following syntax is available: * A string field value can be written as text inside
-   * quotation marks, for example `"query text"`. The only valid relational operation for text
-   * fields is equality (`=`), where text is searched within the field, rather than having the field
-   * be equal to the text. For example, `"Comment = great"` returns messages with `great` in the
-   * comment field. * A number field value can be written as an integer, a decimal, or an
+   * Restricts messages exported to those matching a filter, only applicable to PubsubDestination
+   * and GcsDestination. The following syntax is available: * A string field value can be written as
+   * text inside quotation marks, for example `"query text"`. The only valid relational operation
+   * for text fields is equality (`=`), where text is searched within the field, rather than having
+   * the field be equal to the text. For example, `"Comment = great"` returns messages with `great`
+   * in the comment field. * A number field value can be written as an integer, a decimal, or an
    * exponential. The valid relational operators for number fields are the equality operator (`=`),
    * along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
    * inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. *

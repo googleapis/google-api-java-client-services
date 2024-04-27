@@ -16612,7 +16612,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Output only. Identifier. Resource name of the FHIR store, of the form
-           *        `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+           *        `projects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_i
+           *        d}`.
            * @param content the {@link com.google.api.services.healthcare.v1.model.FhirStore}
            * @return the request
            */
@@ -16641,7 +16642,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Output only. Identifier. Resource name of the FHIR store, of the form
-           *        `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+           *        `projects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_i
+           *        d}`.
              * @param content the {@link com.google.api.services.healthcare.v1.model.FhirStore}
              * @since 1.13
              */
@@ -16711,22 +16713,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Output only. Identifier. Resource name of the FHIR store, of the form
-             * `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             * Output only. Identifier. Resource name of the FHIR store, of the form `projects/{proj
+             * ect_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Output only. Identifier. Resource name of the FHIR store, of the form
-           `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+           `projects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Output only. Identifier. Resource name of the FHIR store, of the form
-             * `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             * Output only. Identifier. Resource name of the FHIR store, of the form `projects/{proj
+             * ect_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

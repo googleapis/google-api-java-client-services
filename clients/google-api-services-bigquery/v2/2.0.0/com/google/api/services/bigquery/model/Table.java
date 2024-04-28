@@ -338,6 +338,15 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> resourceTags;
 
   /**
+   * Optional. Output only. Restriction config for table. If set, restrict certain accesses on the
+   * table based on the config. See [Data egress](/bigquery/docs/analytics-hub-
+   * introduction#data_egress) for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RestrictionConfig restrictions;
+
+  /**
    * Optional. Describes the schema of this table.
    * The value may be {@code null}.
    */
@@ -1174,6 +1183,27 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setResourceTags(java.util.Map<String, java.lang.String> resourceTags) {
     this.resourceTags = resourceTags;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Restriction config for table. If set, restrict certain accesses on the
+   * table based on the config. See [Data egress](/bigquery/docs/analytics-hub-
+   * introduction#data_egress) for more details.
+   * @return value or {@code null} for none
+   */
+  public RestrictionConfig getRestrictions() {
+    return restrictions;
+  }
+
+  /**
+   * Optional. Output only. Restriction config for table. If set, restrict certain accesses on the
+   * table based on the config. See [Data egress](/bigquery/docs/analytics-hub-
+   * introduction#data_egress) for more details.
+   * @param restrictions restrictions or {@code null} for none
+   */
+  public Table setRestrictions(RestrictionConfig restrictions) {
+    this.restrictions = restrictions;
     return this;
   }
 

@@ -71,7 +71,11 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String fieldDelimiter;
 
   /**
-   * [Optional] A custom string that will represent a NULL value in CSV import data.
+   * Optional. Specifies a string that represents a null value in a CSV file. For example, if you
+   * specify "\N", BigQuery interprets "\N" as a null value when querying a CSV file. The default
+   * value is the empty string. If you set this property to a custom value, BigQuery throws an error
+   * if an empty string is present for all data types except for STRING and BYTE. For STRING and
+   * BYTE columns, BigQuery interprets the empty string as an empty value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,7 +213,11 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A custom string that will represent a NULL value in CSV import data.
+   * Optional. Specifies a string that represents a null value in a CSV file. For example, if you
+   * specify "\N", BigQuery interprets "\N" as a null value when querying a CSV file. The default
+   * value is the empty string. If you set this property to a custom value, BigQuery throws an error
+   * if an empty string is present for all data types except for STRING and BYTE. For STRING and
+   * BYTE columns, BigQuery interprets the empty string as an empty value.
    * @return value or {@code null} for none
    */
   public java.lang.String getNullMarker() {
@@ -217,7 +225,11 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Optional] A custom string that will represent a NULL value in CSV import data.
+   * Optional. Specifies a string that represents a null value in a CSV file. For example, if you
+   * specify "\N", BigQuery interprets "\N" as a null value when querying a CSV file. The default
+   * value is the empty string. If you set this property to a custom value, BigQuery throws an error
+   * if an empty string is present for all data types except for STRING and BYTE. For STRING and
+   * BYTE columns, BigQuery interprets the empty string as an empty value.
    * @param nullMarker nullMarker or {@code null} for none
    */
   public CsvOptions setNullMarker(java.lang.String nullMarker) {

@@ -45,6 +45,13 @@ public final class ParquetOptions extends com.google.api.client.json.GenericJson
   private java.lang.Boolean enumAsString;
 
   /**
+   * Optional. Will indicate how to represent a parquet map if present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mapTargetType;
+
+  /**
    * Optional. Indicates whether to use schema inference specifically for Parquet LIST logical type.
    * @return value or {@code null} for none
    */
@@ -77,6 +84,23 @@ public final class ParquetOptions extends com.google.api.client.json.GenericJson
    */
   public ParquetOptions setEnumAsString(java.lang.Boolean enumAsString) {
     this.enumAsString = enumAsString;
+    return this;
+  }
+
+  /**
+   * Optional. Will indicate how to represent a parquet map if present.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMapTargetType() {
+    return mapTargetType;
+  }
+
+  /**
+   * Optional. Will indicate how to represent a parquet map if present.
+   * @param mapTargetType mapTargetType or {@code null} for none
+   */
+  public ParquetOptions setMapTargetType(java.lang.String mapTargetType) {
+    this.mapTargetType = mapTargetType;
     return this;
   }
 

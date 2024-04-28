@@ -45,6 +45,16 @@ public final class DifferentialPrivacyPolicy extends com.google.api.client.json.
   private java.lang.Double deltaBudget;
 
   /**
+   * Output only. The delta budget remaining. If budget is exhausted, no more queries are allowed.
+   * Note that the budget for queries that are in progress is deducted before the query executes. If
+   * the query fails or is cancelled then the budget is refunded. In this case the amount of budget
+   * remaining can increase.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double deltaBudgetRemaining;
+
+  /**
    * Optional. The delta value that is used per query. Delta represents the probability that any row
    * will fail to be epsilon differentially private. Indicates the risk associated with exposing
    * aggregate rows in the result of a query.
@@ -67,6 +77,16 @@ public final class DifferentialPrivacyPolicy extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.Double epsilonBudget;
+
+  /**
+   * Output only. The epsilon budget remaining. If budget is exhausted, no more queries are allowed.
+   * Note that the budget for queries that are in progress is deducted before the query executes. If
+   * the query fails or is cancelled then the budget is refunded. In this case the amount of budget
+   * remaining can increase.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double epsilonBudgetRemaining;
 
   /**
    * Optional. The maximum epsilon value that a query can consume. If the subscriber specifies
@@ -130,6 +150,29 @@ public final class DifferentialPrivacyPolicy extends com.google.api.client.json.
   }
 
   /**
+   * Output only. The delta budget remaining. If budget is exhausted, no more queries are allowed.
+   * Note that the budget for queries that are in progress is deducted before the query executes. If
+   * the query fails or is cancelled then the budget is refunded. In this case the amount of budget
+   * remaining can increase.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDeltaBudgetRemaining() {
+    return deltaBudgetRemaining;
+  }
+
+  /**
+   * Output only. The delta budget remaining. If budget is exhausted, no more queries are allowed.
+   * Note that the budget for queries that are in progress is deducted before the query executes. If
+   * the query fails or is cancelled then the budget is refunded. In this case the amount of budget
+   * remaining can increase.
+   * @param deltaBudgetRemaining deltaBudgetRemaining or {@code null} for none
+   */
+  public DifferentialPrivacyPolicy setDeltaBudgetRemaining(java.lang.Double deltaBudgetRemaining) {
+    this.deltaBudgetRemaining = deltaBudgetRemaining;
+    return this;
+  }
+
+  /**
    * Optional. The delta value that is used per query. Delta represents the probability that any row
    * will fail to be epsilon differentially private. Indicates the risk associated with exposing
    * aggregate rows in the result of a query.
@@ -180,6 +223,29 @@ public final class DifferentialPrivacyPolicy extends com.google.api.client.json.
    */
   public DifferentialPrivacyPolicy setEpsilonBudget(java.lang.Double epsilonBudget) {
     this.epsilonBudget = epsilonBudget;
+    return this;
+  }
+
+  /**
+   * Output only. The epsilon budget remaining. If budget is exhausted, no more queries are allowed.
+   * Note that the budget for queries that are in progress is deducted before the query executes. If
+   * the query fails or is cancelled then the budget is refunded. In this case the amount of budget
+   * remaining can increase.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getEpsilonBudgetRemaining() {
+    return epsilonBudgetRemaining;
+  }
+
+  /**
+   * Output only. The epsilon budget remaining. If budget is exhausted, no more queries are allowed.
+   * Note that the budget for queries that are in progress is deducted before the query executes. If
+   * the query fails or is cancelled then the budget is refunded. In this case the amount of budget
+   * remaining can increase.
+   * @param epsilonBudgetRemaining epsilonBudgetRemaining or {@code null} for none
+   */
+  public DifferentialPrivacyPolicy setEpsilonBudgetRemaining(java.lang.Double epsilonBudgetRemaining) {
+    this.epsilonBudgetRemaining = epsilonBudgetRemaining;
     return this;
   }
 

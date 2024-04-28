@@ -43,6 +43,14 @@ public final class TableSchema extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Specifies metadata of the foreign data type definition in field schema
+   * (TableFieldSchema.foreign_type_definition).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ForeignTypeInfo foreignTypeInfo;
+
+  /**
    * Describes the fields in a table.
    * @return value or {@code null} for none
    */
@@ -56,6 +64,25 @@ public final class TableSchema extends com.google.api.client.json.GenericJson {
    */
   public TableSchema setFields(java.util.List<TableFieldSchema> fields) {
     this.fields = fields;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies metadata of the foreign data type definition in field schema
+   * (TableFieldSchema.foreign_type_definition).
+   * @return value or {@code null} for none
+   */
+  public ForeignTypeInfo getForeignTypeInfo() {
+    return foreignTypeInfo;
+  }
+
+  /**
+   * Optional. Specifies metadata of the foreign data type definition in field schema
+   * (TableFieldSchema.foreign_type_definition).
+   * @param foreignTypeInfo foreignTypeInfo or {@code null} for none
+   */
+  public TableSchema setForeignTypeInfo(ForeignTypeInfo foreignTypeInfo) {
+    this.foreignTypeInfo = foreignTypeInfo;
     return this;
   }
 

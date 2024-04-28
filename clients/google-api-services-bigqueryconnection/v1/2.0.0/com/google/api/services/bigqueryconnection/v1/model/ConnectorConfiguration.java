@@ -31,6 +31,13 @@ package com.google.api.services.bigqueryconnection.v1.model;
 public final class ConnectorConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Data asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConnectorConfigurationAsset asset;
+
+  /**
    * Client authentication.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class ConnectorConfiguration extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private ConnectorConfigurationNetwork network;
+
+  /**
+   * Optional. Data asset.
+   * @return value or {@code null} for none
+   */
+  public ConnectorConfigurationAsset getAsset() {
+    return asset;
+  }
+
+  /**
+   * Optional. Data asset.
+   * @param asset asset or {@code null} for none
+   */
+  public ConnectorConfiguration setAsset(ConnectorConfigurationAsset asset) {
+    this.asset = asset;
+    return this;
+  }
 
   /**
    * Client authentication.

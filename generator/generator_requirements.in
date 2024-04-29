@@ -1,4 +1,4 @@
-django==1.8.12
+django==1.8.16
 httplib2==0.20.4
 google-apputils==0.4.2
 python-gflags==3.1.2

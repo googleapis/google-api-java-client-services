@@ -18,7 +18,7 @@ jobs:
         with:
           path: google-api-java-client-services
       # we install the moreutils `parallel` command
-      - run: apt install moreutils
+      - run: sudo apt-get install moreutils
       - working-directory: google-api-java-client-services
         run: bash .github/workflows/verify_compilation.sh
 

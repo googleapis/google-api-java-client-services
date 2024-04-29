@@ -28,8 +28,15 @@ print_failed_libraries() {
 # export process_client so it can be accessed by the inner shell launched by the
 # find command
 export -f process_client
+# for convenience in local setups, we remove the failed libraries list
+# beforehand
+if [[ -f "${failed_libs}" ]];then
+  rm "${failed_libs}"
+fi
 pushd "${repo_root}"
-find . -name 'pom.xml' -exec bash -xe -c 'process_client "$0"' {} \;
+# runs mvn compile in parallel (max 20 jobs)
+parallel -j50 -i bash -xe -c 'process_client "{}"' -- $(find . -mindepth 3 -name '*pom.xml' -printf '%p ')
+
 print_failed_libraries
 
 

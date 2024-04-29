@@ -1,0 +1,18 @@
+on:
+  schedule:
+    # Runs at 04:00 am
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+# Generates a list of libraries that cannot be
+# compiled (printed to the action stdout)
+name: Verify library compilation
+jobs:
+  verify:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/setup-java@v3
+      with:
+        distribution: temurin
+        java-version: 7
+      - run: bash .github/workflows/verify_compilation.sh
+

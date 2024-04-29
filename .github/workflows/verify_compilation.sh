@@ -29,7 +29,7 @@ print_failed_libraries() {
 # find command
 export -f process_client
 pushd "${repo_root}"
-find . -name 'pom.xml' -exec bash -c 'process_client "$0"' {} \;
+find . -name 'pom.xml' -exec bash -xe -c 'process_client "$0"' {} \;
 print_failed_libraries
 
 

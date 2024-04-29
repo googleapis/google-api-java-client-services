@@ -13,6 +13,6 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: temurin
-          java-version: 7
+          java-version: 8
       - run: bash .github/workflows/verify_compilation.sh
 

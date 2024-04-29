@@ -14,5 +14,8 @@ jobs:
         with:
           distribution: temurin
           java-version: 8
+      - uses: actions/checkout@v2
+        with:
+          path: google-api-java-client-services
       - run: bash ./google-api-java-client-services/.github/workflows/verify_compilation.sh
 

@@ -27,7 +27,7 @@ print_failed_libraries() {
 
 # export process_client so it can be accessed by the inner shell launched by the
 # find command
-export -f print_failed_libraries
+export -f process_client
 pushd "${repo_root}"
 find . -name 'pom.xml' -exec bash -c 'process_client "$0"' {} \;
 print_failed_libraries

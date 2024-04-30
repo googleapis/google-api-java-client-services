@@ -35,7 +35,7 @@ if [[ -f "${failed_libs}" ]];then
 fi
 pushd "${repo_root}"
 # runs mvn compile in parallel (max 20 jobs)
-parallel -j50 -i bash -xe -c 'process_client "{}"' -- $(find . -mindepth 3 -name '*pom.xml' -printf '%p ')
+/bin/parallel -j50 -i bash -xe -c 'process_client "{}"' -- $(find . -mindepth 3 -name '*pom.xml' -printf '%p ')
 
 print_failed_libraries
 

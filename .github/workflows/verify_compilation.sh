@@ -34,8 +34,13 @@ if [[ -f "${failed_libs}" ]];then
   rm "${failed_libs}"
 fi
 pushd "${repo_root}"
+
+# some distros rename parallel to parallel.moreutils
+parallel_bin="parallel.moreutils"
+which parallel.moreutils || parallel_bin="parallel"
+
 # runs mvn compile in parallel (max 20 jobs)
-/bin/parallel -j50 -i bash -xe -c 'process_client "{}"' -- $(find . -mindepth 3 -name '*pom.xml' -printf '%p ')
+${parallel_bin} -j50 -i bash -xe -c 'process_client "{}"' -- $(find . -mindepth 3 -name '*pom.xml' -printf '%p ')
 
 print_failed_libraries
 

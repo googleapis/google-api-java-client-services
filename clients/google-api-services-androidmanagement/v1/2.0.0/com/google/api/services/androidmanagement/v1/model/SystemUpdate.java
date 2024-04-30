@@ -17,7 +17,11 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * Configuration for managing system updates
+ * Configuration for managing system updatesNote: Google Play system updates
+ * (https://source.android.com/docs/core/ota/modular-system) (also called Mainline updates) are
+ * automatically downloaded but require a device reboot to be installed. Refer to the mainline
+ * section in Manage system updates (https://developer.android.com/work/dpc/system-updates#mainline)
+ * for further details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

@@ -1347,17 +1347,17 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. The maximum number of items to return. */
+          /** Optional. The maximum number of items to return. The default value is 100. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of items to return.
+          /** Optional. The maximum number of items to return. The default value is 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Optional. The maximum number of items to return. */
+          /** Optional. The maximum number of items to return. The default value is 100. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
@@ -2651,17 +2651,17 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** Optional. The maximum number of items to return. */
+            /** Optional. The maximum number of items to return. The default value is 100. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. The maximum number of items to return.
+            /** Optional. The maximum number of items to return. The default value is 100.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** Optional. The maximum number of items to return. */
+            /** Optional. The maximum number of items to return. The default value is 100. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
@@ -3958,17 +3958,17 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
                 return this;
               }
 
-              /** Optional. The maximum number of items to return. */
+              /** Optional. The maximum number of items to return. The default value is 100. */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Optional. The maximum number of items to return.
+              /** Optional. The maximum number of items to return. The default value is 100.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /** Optional. The maximum number of items to return. */
+              /** Optional. The maximum number of items to return. The default value is 100. */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;

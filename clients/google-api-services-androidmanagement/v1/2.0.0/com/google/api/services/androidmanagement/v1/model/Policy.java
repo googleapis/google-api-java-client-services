@@ -713,7 +713,11 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * The system update policy, which controls how OS updates are applied. If the update type is
-   * WINDOWED, the update window will automatically apply to Play app updates as well.
+   * WINDOWED, the update window will automatically apply to Play app updates as well.Note: Google
+   * Play system updates (https://source.android.com/docs/core/ota/modular-system) (also called
+   * Mainline updates) are automatically downloaded and require a device reboot to be installed.
+   * Refer to the mainline section in Manage system updates (https://developer.android.com/work/dpc
+   * /system-updates#mainline) for further details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -2324,7 +2328,11 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * The system update policy, which controls how OS updates are applied. If the update type is
-   * WINDOWED, the update window will automatically apply to Play app updates as well.
+   * WINDOWED, the update window will automatically apply to Play app updates as well.Note: Google
+   * Play system updates (https://source.android.com/docs/core/ota/modular-system) (also called
+   * Mainline updates) are automatically downloaded and require a device reboot to be installed.
+   * Refer to the mainline section in Manage system updates (https://developer.android.com/work/dpc
+   * /system-updates#mainline) for further details.
    * @return value or {@code null} for none
    */
   public SystemUpdate getSystemUpdate() {
@@ -2333,7 +2341,11 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * The system update policy, which controls how OS updates are applied. If the update type is
-   * WINDOWED, the update window will automatically apply to Play app updates as well.
+   * WINDOWED, the update window will automatically apply to Play app updates as well.Note: Google
+   * Play system updates (https://source.android.com/docs/core/ota/modular-system) (also called
+   * Mainline updates) are automatically downloaded and require a device reboot to be installed.
+   * Refer to the mainline section in Manage system updates (https://developer.android.com/work/dpc
+   * /system-updates#mainline) for further details.
    * @param systemUpdate systemUpdate or {@code null} for none
    */
   public Policy setSystemUpdate(SystemUpdate systemUpdate) {

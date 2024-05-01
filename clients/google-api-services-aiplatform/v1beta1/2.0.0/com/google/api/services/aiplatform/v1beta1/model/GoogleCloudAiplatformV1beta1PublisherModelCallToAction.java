@@ -51,6 +51,13 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToAction extend
   private GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeployGke deployGke;
 
   /**
+   * Optional. Fine tune the PublisherModel with the third-party model tuning UI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PublisherModelCallToActionRegionalResourceReferences fineTune;
+
+  /**
    * Optional. Open evaluation pipeline of the PublisherModel.
    * The value may be {@code null}.
    */
@@ -168,6 +175,23 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToAction extend
    */
   public GoogleCloudAiplatformV1beta1PublisherModelCallToAction setDeployGke(GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeployGke deployGke) {
     this.deployGke = deployGke;
+    return this;
+  }
+
+  /**
+   * Optional. Fine tune the PublisherModel with the third-party model tuning UI.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToActionRegionalResourceReferences getFineTune() {
+    return fineTune;
+  }
+
+  /**
+   * Optional. Fine tune the PublisherModel with the third-party model tuning UI.
+   * @param fineTune fineTune or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToAction setFineTune(GoogleCloudAiplatformV1beta1PublisherModelCallToActionRegionalResourceReferences fineTune) {
+    this.fineTune = fineTune;
     return this;
   }
 

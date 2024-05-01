@@ -37,11 +37,25 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
   private String createTime;
 
   /**
+   * The custom compute configuration for an execution job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1NotebookExecutionJobCustomEnvironmentSpec customEnvironmentSpec;
+
+  /**
    * The Dataform Repository pointing to a single file notebook repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1NotebookExecutionJobDataformRepositorySource dataformRepositorySource;
+
+  /**
+   * The contents of an input notebook file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1NotebookExecutionJobDirectNotebookSource directNotebookSource;
 
   /**
    * The display name of the NotebookExecutionJob. The name can be up to 128 characters long and can
@@ -149,6 +163,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
   }
 
   /**
+   * The custom compute configuration for an execution job.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookExecutionJobCustomEnvironmentSpec getCustomEnvironmentSpec() {
+    return customEnvironmentSpec;
+  }
+
+  /**
+   * The custom compute configuration for an execution job.
+   * @param customEnvironmentSpec customEnvironmentSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookExecutionJob setCustomEnvironmentSpec(GoogleCloudAiplatformV1beta1NotebookExecutionJobCustomEnvironmentSpec customEnvironmentSpec) {
+    this.customEnvironmentSpec = customEnvironmentSpec;
+    return this;
+  }
+
+  /**
    * The Dataform Repository pointing to a single file notebook repository.
    * @return value or {@code null} for none
    */
@@ -162,6 +193,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
    */
   public GoogleCloudAiplatformV1beta1NotebookExecutionJob setDataformRepositorySource(GoogleCloudAiplatformV1beta1NotebookExecutionJobDataformRepositorySource dataformRepositorySource) {
     this.dataformRepositorySource = dataformRepositorySource;
+    return this;
+  }
+
+  /**
+   * The contents of an input notebook file.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookExecutionJobDirectNotebookSource getDirectNotebookSource() {
+    return directNotebookSource;
+  }
+
+  /**
+   * The contents of an input notebook file.
+   * @param directNotebookSource directNotebookSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookExecutionJob setDirectNotebookSource(GoogleCloudAiplatformV1beta1NotebookExecutionJobDirectNotebookSource directNotebookSource) {
+    this.directNotebookSource = directNotebookSource;
     return this;
   }
 

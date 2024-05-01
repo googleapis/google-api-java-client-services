@@ -30,7 +30,8 @@ package com.google.api.services.aiplatform.v1.model;
 public final class LearningGenaiRecitationSegmentResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The dataset the segment came from.
+   * The dataset the segment came from. Datasets change often as model evolves. Treat this field as
+   * informational only and avoid depending on it directly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,6 @@ public final class LearningGenaiRecitationSegmentResult extends com.google.api.c
   private java.lang.String displayAttributionMessage;
 
   /**
-   * populated when recitation_action == CITE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,6 +79,14 @@ public final class LearningGenaiRecitationSegmentResult extends com.google.api.c
   private java.lang.String segmentRecitationAction;
 
   /**
+   * The category of the source dataset where the segment came from. This is more stable than
+   * Dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceCategory;
+
+  /**
    * The segment boundary start (inclusive) and end index (exclusive) in the given text. In the
    * streaming RPC, the indexes always start from the beginning of the first text in the entire
    * stream. The indexes are measured in UTF-16 code units.
@@ -88,7 +96,8 @@ public final class LearningGenaiRecitationSegmentResult extends com.google.api.c
   private java.lang.Integer startIndex;
 
   /**
-   * The dataset the segment came from.
+   * The dataset the segment came from. Datasets change often as model evolves. Treat this field as
+   * informational only and avoid depending on it directly.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributionDataset() {
@@ -96,7 +105,8 @@ public final class LearningGenaiRecitationSegmentResult extends com.google.api.c
   }
 
   /**
-   * The dataset the segment came from.
+   * The dataset the segment came from. Datasets change often as model evolves. Treat this field as
+   * informational only and avoid depending on it directly.
    * @param attributionDataset attributionDataset or {@code null} for none
    */
   public LearningGenaiRecitationSegmentResult setAttributionDataset(java.lang.String attributionDataset) {
@@ -124,7 +134,6 @@ public final class LearningGenaiRecitationSegmentResult extends com.google.api.c
   }
 
   /**
-   * populated when recitation_action == CITE
    * @return value or {@code null} for none
    */
   public LearningGenaiRecitationDocAttribution getDocAttribution() {
@@ -132,7 +141,6 @@ public final class LearningGenaiRecitationSegmentResult extends com.google.api.c
   }
 
   /**
-   * populated when recitation_action == CITE
    * @param docAttribution docAttribution or {@code null} for none
    */
   public LearningGenaiRecitationSegmentResult setDocAttribution(LearningGenaiRecitationDocAttribution docAttribution) {
@@ -203,6 +211,25 @@ public final class LearningGenaiRecitationSegmentResult extends com.google.api.c
    */
   public LearningGenaiRecitationSegmentResult setSegmentRecitationAction(java.lang.String segmentRecitationAction) {
     this.segmentRecitationAction = segmentRecitationAction;
+    return this;
+  }
+
+  /**
+   * The category of the source dataset where the segment came from. This is more stable than
+   * Dataset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceCategory() {
+    return sourceCategory;
+  }
+
+  /**
+   * The category of the source dataset where the segment came from. This is more stable than
+   * Dataset.
+   * @param sourceCategory sourceCategory or {@code null} for none
+   */
+  public LearningGenaiRecitationSegmentResult setSourceCategory(java.lang.String sourceCategory) {
+    this.sourceCategory = sourceCategory;
     return this;
   }
 

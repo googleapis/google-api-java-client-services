@@ -57,14 +57,6 @@ public final class GoogleCloudAiplatformV1beta1ModelMonitoringSchema extends com
   private java.util.List<GoogleCloudAiplatformV1beta1ModelMonitoringSchemaFieldSchema> groundTruthFields;
 
   /**
-   * The prediction instance type that the Model accepts when serving. Supported values are: *
-   * `object`: Each input is a JSON object format. * `array`: Each input is a JSON array format.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String instanceType;
-
-  /**
    * Prediction output names of the model. The requirements are the same as the feature_fields. For
    * AutoML Tables, the prediction output name presented in schema will be:
    * `predicted_{target_column}`, the `target_column` is the one you specified when you train the
@@ -133,25 +125,6 @@ public final class GoogleCloudAiplatformV1beta1ModelMonitoringSchema extends com
    */
   public GoogleCloudAiplatformV1beta1ModelMonitoringSchema setGroundTruthFields(java.util.List<GoogleCloudAiplatformV1beta1ModelMonitoringSchemaFieldSchema> groundTruthFields) {
     this.groundTruthFields = groundTruthFields;
-    return this;
-  }
-
-  /**
-   * The prediction instance type that the Model accepts when serving. Supported values are: *
-   * `object`: Each input is a JSON object format. * `array`: Each input is a JSON array format.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getInstanceType() {
-    return instanceType;
-  }
-
-  /**
-   * The prediction instance type that the Model accepts when serving. Supported values are: *
-   * `object`: Each input is a JSON object format. * `array`: Each input is a JSON array format.
-   * @param instanceType instanceType or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1ModelMonitoringSchema setInstanceType(java.lang.String instanceType) {
-    this.instanceType = instanceType;
     return this;
   }
 

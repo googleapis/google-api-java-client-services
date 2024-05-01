@@ -45,7 +45,7 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapoint extends com.google
   private java.lang.String datapointId;
 
   /**
-   * Required. Feature embedding vector. An array of numbers with the length of
+   * Required. Feature embedding vector for dense index. An array of numbers with the length of
    * [NearestNeighborSearchConfig.dimensions].
    * The value may be {@code null}.
    */
@@ -107,7 +107,7 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapoint extends com.google
   }
 
   /**
-   * Required. Feature embedding vector. An array of numbers with the length of
+   * Required. Feature embedding vector for dense index. An array of numbers with the length of
    * [NearestNeighborSearchConfig.dimensions].
    * @return value or {@code null} for none
    */
@@ -116,7 +116,7 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapoint extends com.google
   }
 
   /**
-   * Required. Feature embedding vector. An array of numbers with the length of
+   * Required. Feature embedding vector for dense index. An array of numbers with the length of
    * [NearestNeighborSearchConfig.dimensions].
    * @param featureVector featureVector or {@code null} for none
    */

@@ -68,11 +68,20 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   private java.lang.String annotatedUser;
 
   /**
-   * (Read-only) The timestamp after which the device will stop receiving Chrome updates or support
+   * (Read-only) The timestamp after which the device will stop receiving Chrome updates or support.
+   * Please use "autoUpdateThrough" instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long autoUpdateExpiration;
+
+  /**
+   * Output only. The timestamp after which the device will stop receiving Chrome updates or
+   * support.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoUpdateThrough;
 
   /**
    * Output only. Contains backlight information for the device.
@@ -203,6 +212,27 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String ethernetMacAddress0;
+
+  /**
+   * Output only. Whether or not the device requires the extended support opt in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean extendedSupportEligible;
+
+  /**
+   * Output only. Whether extended support policy is enabled on the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean extendedSupportEnabled;
+
+  /**
+   * Output only. Date of the device when extended support policy for automatic updates starts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String extendedSupportStart;
 
   /**
    * The Chrome device's firmware version.
@@ -514,7 +544,8 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * (Read-only) The timestamp after which the device will stop receiving Chrome updates or support
+   * (Read-only) The timestamp after which the device will stop receiving Chrome updates or support.
+   * Please use "autoUpdateThrough" instead.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAutoUpdateExpiration() {
@@ -522,11 +553,31 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * (Read-only) The timestamp after which the device will stop receiving Chrome updates or support
+   * (Read-only) The timestamp after which the device will stop receiving Chrome updates or support.
+   * Please use "autoUpdateThrough" instead.
    * @param autoUpdateExpiration autoUpdateExpiration or {@code null} for none
    */
   public ChromeOsDevice setAutoUpdateExpiration(java.lang.Long autoUpdateExpiration) {
     this.autoUpdateExpiration = autoUpdateExpiration;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp after which the device will stop receiving Chrome updates or
+   * support.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutoUpdateThrough() {
+    return autoUpdateThrough;
+  }
+
+  /**
+   * Output only. The timestamp after which the device will stop receiving Chrome updates or
+   * support.
+   * @param autoUpdateThrough autoUpdateThrough or {@code null} for none
+   */
+  public ChromeOsDevice setAutoUpdateThrough(java.lang.String autoUpdateThrough) {
+    this.autoUpdateThrough = autoUpdateThrough;
     return this;
   }
 
@@ -766,6 +817,57 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   public ChromeOsDevice setEthernetMacAddress0(java.lang.String ethernetMacAddress0) {
     this.ethernetMacAddress0 = ethernetMacAddress0;
+    return this;
+  }
+
+  /**
+   * Output only. Whether or not the device requires the extended support opt in.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExtendedSupportEligible() {
+    return extendedSupportEligible;
+  }
+
+  /**
+   * Output only. Whether or not the device requires the extended support opt in.
+   * @param extendedSupportEligible extendedSupportEligible or {@code null} for none
+   */
+  public ChromeOsDevice setExtendedSupportEligible(java.lang.Boolean extendedSupportEligible) {
+    this.extendedSupportEligible = extendedSupportEligible;
+    return this;
+  }
+
+  /**
+   * Output only. Whether extended support policy is enabled on the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExtendedSupportEnabled() {
+    return extendedSupportEnabled;
+  }
+
+  /**
+   * Output only. Whether extended support policy is enabled on the device.
+   * @param extendedSupportEnabled extendedSupportEnabled or {@code null} for none
+   */
+  public ChromeOsDevice setExtendedSupportEnabled(java.lang.Boolean extendedSupportEnabled) {
+    this.extendedSupportEnabled = extendedSupportEnabled;
+    return this;
+  }
+
+  /**
+   * Output only. Date of the device when extended support policy for automatic updates starts.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExtendedSupportStart() {
+    return extendedSupportStart;
+  }
+
+  /**
+   * Output only. Date of the device when extended support policy for automatic updates starts.
+   * @param extendedSupportStart extendedSupportStart or {@code null} for none
+   */
+  public ChromeOsDevice setExtendedSupportStart(java.lang.String extendedSupportStart) {
+    this.extendedSupportStart = extendedSupportStart;
     return this;
   }
 

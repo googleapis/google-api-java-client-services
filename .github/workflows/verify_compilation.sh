@@ -7,8 +7,7 @@ export repo_root=$(git rev-parse --show-toplevel)
 export failed_libs="${repo_root}/failed_libs"
 
 process_client() {
-  pom=$1
-  pom_dir=$(dirname "${pom}")
+  pom_dir=$1
   pushd "${pom_dir}"
   lib_name=$(pwd | sed 's/.*\(google-api-services-.*\)/\1/')
   mvn compile || echo "${lib_name}" >> "${failed_libs}"
@@ -40,7 +39,7 @@ parallel_bin="parallel.moreutils"
 which parallel.moreutils || parallel_bin="parallel"
 
 # runs mvn compile in parallel (max 50 jobs)
-${parallel_bin} -j50 -i bash -xe -c 'process_client "{}"' -- $(find . -mindepth 3 -name '*pom.xml' -printf '%p ')
+${parallel_bin} -j50 -i bash -xe -c 'process_client "{}"' -- $(find "clients" -mindepth 3 -name '*2.0.0*' -printf '%p ')
 
 print_failed_libraries
 

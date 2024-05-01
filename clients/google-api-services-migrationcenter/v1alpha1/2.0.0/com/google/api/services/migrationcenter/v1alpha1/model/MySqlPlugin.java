@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * Mysql plugin.
+ * MySql plugin.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,7 +27,7 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MysqlPlugin extends com.google.api.client.json.GenericJson {
+public final class MySqlPlugin extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The plugin is active.
@@ -62,7 +62,7 @@ public final class MysqlPlugin extends com.google.api.client.json.GenericJson {
    * Required. The plugin is active.
    * @param enabled enabled or {@code null} for none
    */
-  public MysqlPlugin setEnabled(java.lang.Boolean enabled) {
+  public MySqlPlugin setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
     return this;
   }
@@ -79,7 +79,7 @@ public final class MysqlPlugin extends com.google.api.client.json.GenericJson {
    * Required. The plugin name.
    * @param plugin plugin or {@code null} for none
    */
-  public MysqlPlugin setPlugin(java.lang.String plugin) {
+  public MySqlPlugin setPlugin(java.lang.String plugin) {
     this.plugin = plugin;
     return this;
   }
@@ -96,19 +96,19 @@ public final class MysqlPlugin extends com.google.api.client.json.GenericJson {
    * Required. The plugin version.
    * @param version version or {@code null} for none
    */
-  public MysqlPlugin setVersion(java.lang.String version) {
+  public MySqlPlugin setVersion(java.lang.String version) {
     this.version = version;
     return this;
   }
 
   @Override
-  public MysqlPlugin set(String fieldName, Object value) {
-    return (MysqlPlugin) super.set(fieldName, value);
+  public MySqlPlugin set(String fieldName, Object value) {
+    return (MySqlPlugin) super.set(fieldName, value);
   }
 
   @Override
-  public MysqlPlugin clone() {
-    return (MysqlPlugin) super.clone();
+  public MySqlPlugin clone() {
+    return (MySqlPlugin) super.clone();
   }
 
 }

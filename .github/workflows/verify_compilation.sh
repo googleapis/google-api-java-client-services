@@ -3,7 +3,7 @@
 # create a list of clients that cannot be compiled. The resulting list is
 # printed to stdout
 set -exo
-export repo_root=$(git rev-parse --show-toplevel)
+repo_root=$(git rev-parse --show-toplevel)
 export failed_libs="${repo_root}/failed_libs"
 
 process_client() {

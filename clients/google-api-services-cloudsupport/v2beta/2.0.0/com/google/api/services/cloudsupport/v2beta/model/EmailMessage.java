@@ -39,8 +39,8 @@ public final class EmailMessage extends com.google.api.client.json.GenericJson {
   private Actor actor;
 
   /**
-   * Output only. The full email message body in both plaintext and richtext. The plaintext field of
-   * body_content will be elided in a best-effort attempt to remove extraneous reply threads.
+   * Output only. The full email message body. A best-effort attempt is made to remove extraneous
+   * reply threads.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,8 +101,8 @@ public final class EmailMessage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The full email message body in both plaintext and richtext. The plaintext field of
-   * body_content will be elided in a best-effort attempt to remove extraneous reply threads.
+   * Output only. The full email message body. A best-effort attempt is made to remove extraneous
+   * reply threads.
    * @return value or {@code null} for none
    */
   public TextContent getBodyContent() {
@@ -110,8 +110,8 @@ public final class EmailMessage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The full email message body in both plaintext and richtext. The plaintext field of
-   * body_content will be elided in a best-effort attempt to remove extraneous reply threads.
+   * Output only. The full email message body. A best-effort attempt is made to remove extraneous
+   * reply threads.
    * @param bodyContent bodyContent or {@code null} for none
    */
   public EmailMessage setBodyContent(TextContent bodyContent) {

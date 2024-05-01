@@ -39,7 +39,12 @@ parallel_bin="parallel.moreutils"
 which parallel.moreutils || parallel_bin="parallel"
 
 # runs mvn compile in parallel (max 50 jobs)
-${parallel_bin} -j50 -i bash -xe -c 'process_client "{}"' -- $(find "clients" -mindepth 3 -name '*2.0.0*' -printf '%p ')
+targets=$(find "clients" -mindepth 3 -name '*2.0.0*' -printf '%p ')
+echo "Attempting compilation on the following libraries:"
+set +x
+echo "${targets}" | sed 's/ /\n/g' | sort
+set -x
+${parallel_bin} -j50 -i bash -xe -c 'process_client "{}"' -- ${targets}
 
 print_failed_libraries
 

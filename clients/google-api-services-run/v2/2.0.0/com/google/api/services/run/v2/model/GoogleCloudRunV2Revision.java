@@ -178,6 +178,13 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
   private java.lang.String name;
 
   /**
+   * The node selector for the revision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2NodeSelector nodeSelector;
+
+  /**
    * Output only. The generation of this Revision currently serving traffic. See comments in
    * `reconciling` for additional information on reconciliation process in Cloud Run.
    * The value may be {@code null}.
@@ -592,6 +599,23 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
    */
   public GoogleCloudRunV2Revision setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The node selector for the revision.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2NodeSelector getNodeSelector() {
+    return nodeSelector;
+  }
+
+  /**
+   * The node selector for the revision.
+   * @param nodeSelector nodeSelector or {@code null} for none
+   */
+  public GoogleCloudRunV2Revision setNodeSelector(GoogleCloudRunV2NodeSelector nodeSelector) {
+    this.nodeSelector = nodeSelector;
     return this;
   }
 

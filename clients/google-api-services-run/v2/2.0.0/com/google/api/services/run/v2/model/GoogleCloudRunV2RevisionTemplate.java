@@ -98,6 +98,13 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.lang.Integer maxInstanceRequestConcurrency;
 
   /**
+   * Optional. The node selector for the revision template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2NodeSelector nodeSelector;
+
+  /**
    * Optional. The unique name for the revision. If this field is omitted, it will be automatically
    * generated based on the Service name.
    * The value may be {@code null}.
@@ -293,6 +300,23 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
    */
   public GoogleCloudRunV2RevisionTemplate setMaxInstanceRequestConcurrency(java.lang.Integer maxInstanceRequestConcurrency) {
     this.maxInstanceRequestConcurrency = maxInstanceRequestConcurrency;
+    return this;
+  }
+
+  /**
+   * Optional. The node selector for the revision template.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2NodeSelector getNodeSelector() {
+    return nodeSelector;
+  }
+
+  /**
+   * Optional. The node selector for the revision template.
+   * @param nodeSelector nodeSelector or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionTemplate setNodeSelector(GoogleCloudRunV2NodeSelector nodeSelector) {
+    this.nodeSelector = nodeSelector;
     return this;
   }
 

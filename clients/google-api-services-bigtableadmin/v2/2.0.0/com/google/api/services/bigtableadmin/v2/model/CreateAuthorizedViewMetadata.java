@@ -38,7 +38,7 @@ public final class CreateAuthorizedViewMetadata extends com.google.api.client.js
   private String finishTime;
 
   /**
-   * The request that prompted the initiation of this CreateInstance operation.
+   * The request that prompted the initiation of this CreateAuthorizedView operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class CreateAuthorizedViewMetadata extends com.google.api.client.js
   }
 
   /**
-   * The request that prompted the initiation of this CreateInstance operation.
+   * The request that prompted the initiation of this CreateAuthorizedView operation.
    * @return value or {@code null} for none
    */
   public CreateAuthorizedViewRequest getOriginalRequest() {
@@ -77,7 +77,7 @@ public final class CreateAuthorizedViewMetadata extends com.google.api.client.js
   }
 
   /**
-   * The request that prompted the initiation of this CreateInstance operation.
+   * The request that prompted the initiation of this CreateAuthorizedView operation.
    * @param originalRequest originalRequest or {@code null} for none
    */
   public CreateAuthorizedViewMetadata setOriginalRequest(CreateAuthorizedViewRequest originalRequest) {

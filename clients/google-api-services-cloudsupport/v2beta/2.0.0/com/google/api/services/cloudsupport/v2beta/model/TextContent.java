@@ -17,8 +17,7 @@
 package com.google.api.services.cloudsupport.v2beta.model;
 
 /**
- * Used for content on cases/comments/etc. On input either plain_text or rich_text should be
- * supplied but not both.
+ * Stores text attached to a support object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Support API. For a detailed explanation
@@ -32,28 +31,14 @@ package com.google.api.services.cloudsupport.v2beta.model;
 public final class TextContent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Content in this field should be rendered and interpreted as-is. If not provided on input, then
-   * rich_text must be provided and this field will contain the plain text extracted from the
-   * rich_text input.
+   * Content in this field should be rendered and interpreted as-is.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String plainText;
 
   /**
-   * Content in this field should be rendered and interpreted as HTML. If not provided on input,
-   * then plain_text must be provided and this field will contain the escaped plain text content.
-   * Only a subset of HTML tags and styles are allowed on input, all other tags will be
-   * stripped/sanitized. Output will always contain safe and valid HTML.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String richText;
-
-  /**
-   * Content in this field should be rendered and interpreted as-is. If not provided on input, then
-   * rich_text must be provided and this field will contain the plain text extracted from the
-   * rich_text input.
+   * Content in this field should be rendered and interpreted as-is.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlainText() {
@@ -61,36 +46,11 @@ public final class TextContent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Content in this field should be rendered and interpreted as-is. If not provided on input, then
-   * rich_text must be provided and this field will contain the plain text extracted from the
-   * rich_text input.
+   * Content in this field should be rendered and interpreted as-is.
    * @param plainText plainText or {@code null} for none
    */
   public TextContent setPlainText(java.lang.String plainText) {
     this.plainText = plainText;
-    return this;
-  }
-
-  /**
-   * Content in this field should be rendered and interpreted as HTML. If not provided on input,
-   * then plain_text must be provided and this field will contain the escaped plain text content.
-   * Only a subset of HTML tags and styles are allowed on input, all other tags will be
-   * stripped/sanitized. Output will always contain safe and valid HTML.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRichText() {
-    return richText;
-  }
-
-  /**
-   * Content in this field should be rendered and interpreted as HTML. If not provided on input,
-   * then plain_text must be provided and this field will contain the escaped plain text content.
-   * Only a subset of HTML tags and styles are allowed on input, all other tags will be
-   * stripped/sanitized. Output will always contain safe and valid HTML.
-   * @param richText richText or {@code null} for none
-   */
-  public TextContent setRichText(java.lang.String richText) {
-    this.richText = richText;
     return this;
   }
 

@@ -1854,22 +1854,22 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Optional. A token identifying the page of results to return. If unspecified, the first page
-       * is retrieved.
+       * Optional. A token identifying the page of results to return. If unspecified, it retrieves
+       * the first page.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Optional. A token identifying the page of results to return. If unspecified, the first page is
-     retrieved.
+      /** Optional. A token identifying the page of results to return. If unspecified, it retrieves the first
+     page.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * Optional. A token identifying the page of results to return. If unspecified, the first page
-       * is retrieved.
+       * Optional. A token identifying the page of results to return. If unspecified, it retrieves
+       * the first page.
        */
       public ShowFeed setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;

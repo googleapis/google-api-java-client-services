@@ -37,7 +37,7 @@ public final class GoogleCloudAiplatformV1beta1IndexStats extends com.google.api
   private java.lang.Integer shardsCount;
 
   /**
-   * Output only. The number of vectors in the Index.
+   * Output only. The number of dense vectors in the Index.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -61,7 +61,7 @@ public final class GoogleCloudAiplatformV1beta1IndexStats extends com.google.api
   }
 
   /**
-   * Output only. The number of vectors in the Index.
+   * Output only. The number of dense vectors in the Index.
    * @return value or {@code null} for none
    */
   public java.lang.Long getVectorsCount() {
@@ -69,7 +69,7 @@ public final class GoogleCloudAiplatformV1beta1IndexStats extends com.google.api
   }
 
   /**
-   * Output only. The number of vectors in the Index.
+   * Output only. The number of dense vectors in the Index.
    * @param vectorsCount vectorsCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1IndexStats setVectorsCount(java.lang.Long vectorsCount) {

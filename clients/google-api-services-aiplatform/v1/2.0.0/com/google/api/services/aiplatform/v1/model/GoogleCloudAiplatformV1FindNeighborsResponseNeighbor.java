@@ -39,7 +39,7 @@ public final class GoogleCloudAiplatformV1FindNeighborsResponseNeighbor extends 
   private GoogleCloudAiplatformV1IndexDatapoint datapoint;
 
   /**
-   * The distance between the neighbor and the query vector.
+   * The distance between the neighbor and the dense embedding query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class GoogleCloudAiplatformV1FindNeighborsResponseNeighbor extends 
   }
 
   /**
-   * The distance between the neighbor and the query vector.
+   * The distance between the neighbor and the dense embedding query.
    * @return value or {@code null} for none
    */
   public java.lang.Double getDistance() {
@@ -75,7 +75,7 @@ public final class GoogleCloudAiplatformV1FindNeighborsResponseNeighbor extends 
   }
 
   /**
-   * The distance between the neighbor and the query vector.
+   * The distance between the neighbor and the dense embedding query.
    * @param distance distance or {@code null} for none
    */
   public GoogleCloudAiplatformV1FindNeighborsResponseNeighbor setDistance(java.lang.Double distance) {

@@ -194,8 +194,9 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
   private java.lang.Boolean streamTerminated;
 
   /**
-   * NOT YET IMPLEMENTED. Aggregated number of total tokens decoded so far. For streaming, this is
-   * sum of all the tokens decoded so far i.e. aggregated count.
+   * Total tokens decoded so far per response_candidate. For streaming: Count of all the tokens
+   * decoded so far (aggregated count). For unary: Count of all the tokens decoded per
+   * response_candidate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -570,8 +571,9 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
   }
 
   /**
-   * NOT YET IMPLEMENTED. Aggregated number of total tokens decoded so far. For streaming, this is
-   * sum of all the tokens decoded so far i.e. aggregated count.
+   * Total tokens decoded so far per response_candidate. For streaming: Count of all the tokens
+   * decoded so far (aggregated count). For unary: Count of all the tokens decoded per
+   * response_candidate.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalDecodedTokenCount() {
@@ -579,8 +581,9 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
   }
 
   /**
-   * NOT YET IMPLEMENTED. Aggregated number of total tokens decoded so far. For streaming, this is
-   * sum of all the tokens decoded so far i.e. aggregated count.
+   * Total tokens decoded so far per response_candidate. For streaming: Count of all the tokens
+   * decoded so far (aggregated count). For unary: Count of all the tokens decoded per
+   * response_candidate.
    * @param totalDecodedTokenCount totalDecodedTokenCount or {@code null} for none
    */
   public LearningServingLlmMessageMetadata setTotalDecodedTokenCount(java.lang.Integer totalDecodedTokenCount) {

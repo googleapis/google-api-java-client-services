@@ -8629,21 +8629,22 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. The resource_view to be applied to the returned views' fields. Default to
-             * NAME_ONLY.
+             * Optional. The resource_view to be applied to the returned AuthorizedViews' fields.
+             * Default to NAME_ONLY.
              */
             @com.google.api.client.util.Key
             private java.lang.String view;
 
-            /** Optional. The resource_view to be applied to the returned views' fields. Default to NAME_ONLY.
+            /** Optional. The resource_view to be applied to the returned AuthorizedViews' fields. Default to
+           NAME_ONLY.
              */
             public java.lang.String getView() {
               return view;
             }
 
             /**
-             * Optional. The resource_view to be applied to the returned views' fields. Default to
-             * NAME_ONLY.
+             * Optional. The resource_view to be applied to the returned AuthorizedViews' fields.
+             * Default to NAME_ONLY.
              */
             public List setView(java.lang.String view) {
               this.view = view;

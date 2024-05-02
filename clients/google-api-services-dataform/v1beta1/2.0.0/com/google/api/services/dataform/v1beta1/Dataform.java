@@ -1071,7 +1071,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           return result;
         }
 
-        public class Commit extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Empty> {
+        public class Commit extends DataformRequest<com.google.api.services.dataform.v1beta1.model.CommitRepositoryChangesResponse> {
 
           private static final String REST_PATH = "v1beta1/{+name}:commit";
 
@@ -1095,7 +1095,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
            * @since 1.13
            */
           protected Commit(java.lang.String name, com.google.api.services.dataform.v1beta1.model.CommitRepositoryChangesRequest content) {
-            super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Empty.class);
+            super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.CommitRepositoryChangesResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

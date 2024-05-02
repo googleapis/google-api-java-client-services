@@ -38,6 +38,13 @@ public final class WorkflowInvocation extends com.google.api.client.json.Generic
   private java.lang.String compilationResult;
 
   /**
+   * Output only. Only set if the repository has a KMS Key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataEncryptionState dataEncryptionState;
+
+  /**
    * Immutable. If left unset, a default InvocationConfig will be used.
    * The value may be {@code null}.
    */
@@ -97,6 +104,23 @@ public final class WorkflowInvocation extends com.google.api.client.json.Generic
    */
   public WorkflowInvocation setCompilationResult(java.lang.String compilationResult) {
     this.compilationResult = compilationResult;
+    return this;
+  }
+
+  /**
+   * Output only. Only set if the repository has a KMS Key.
+   * @return value or {@code null} for none
+   */
+  public DataEncryptionState getDataEncryptionState() {
+    return dataEncryptionState;
+  }
+
+  /**
+   * Output only. Only set if the repository has a KMS Key.
+   * @param dataEncryptionState dataEncryptionState or {@code null} for none
+   */
+  public WorkflowInvocation setDataEncryptionState(DataEncryptionState dataEncryptionState) {
+    this.dataEncryptionState = dataEncryptionState;
     return this;
   }
 

@@ -46,6 +46,21 @@ public final class CopyBackupEncryptionConfig extends com.google.api.client.json
   private java.lang.String kmsKeyName;
 
   /**
+   * Optional. Specifies the KMS configuration for the one or more keys used to protect the backup.
+   * Values are of the form `projects//locations//keyRings//cryptoKeys/`. Kms keys specified can be
+   * in any order. The keys referenced by kms_key_names must fully cover all regions of the backup's
+   * instance configuration. Some examples: * For single region instance configs, specify a single
+   * regional location KMS key. * For multi-regional instance configs of type GOOGLE_MANAGED, either
+   * specify a multi-regional location KMS key or multiple regional location KMS keys that cover all
+   * regions in the instance config. * For an instance config of type USER_MANAGED, please specify
+   * only regional location KMS keys to cover each region in the instance config. Multi-regional
+   * location KMS keys are not supported for USER_MANAGED instance configs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> kmsKeyNames;
+
+  /**
    * Required. The encryption type of the backup.
    * @return value or {@code null} for none
    */
@@ -80,6 +95,39 @@ public final class CopyBackupEncryptionConfig extends com.google.api.client.json
    */
   public CopyBackupEncryptionConfig setKmsKeyName(java.lang.String kmsKeyName) {
     this.kmsKeyName = kmsKeyName;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the KMS configuration for the one or more keys used to protect the backup.
+   * Values are of the form `projects//locations//keyRings//cryptoKeys/`. Kms keys specified can be
+   * in any order. The keys referenced by kms_key_names must fully cover all regions of the backup's
+   * instance configuration. Some examples: * For single region instance configs, specify a single
+   * regional location KMS key. * For multi-regional instance configs of type GOOGLE_MANAGED, either
+   * specify a multi-regional location KMS key or multiple regional location KMS keys that cover all
+   * regions in the instance config. * For an instance config of type USER_MANAGED, please specify
+   * only regional location KMS keys to cover each region in the instance config. Multi-regional
+   * location KMS keys are not supported for USER_MANAGED instance configs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getKmsKeyNames() {
+    return kmsKeyNames;
+  }
+
+  /**
+   * Optional. Specifies the KMS configuration for the one or more keys used to protect the backup.
+   * Values are of the form `projects//locations//keyRings//cryptoKeys/`. Kms keys specified can be
+   * in any order. The keys referenced by kms_key_names must fully cover all regions of the backup's
+   * instance configuration. Some examples: * For single region instance configs, specify a single
+   * regional location KMS key. * For multi-regional instance configs of type GOOGLE_MANAGED, either
+   * specify a multi-regional location KMS key or multiple regional location KMS keys that cover all
+   * regions in the instance config. * For an instance config of type USER_MANAGED, please specify
+   * only regional location KMS keys to cover each region in the instance config. Multi-regional
+   * location KMS keys are not supported for USER_MANAGED instance configs.
+   * @param kmsKeyNames kmsKeyNames or {@code null} for none
+   */
+  public CopyBackupEncryptionConfig setKmsKeyNames(java.util.List<java.lang.String> kmsKeyNames) {
+    this.kmsKeyNames = kmsKeyNames;
     return this;
   }
 

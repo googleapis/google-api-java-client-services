@@ -129,9 +129,9 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The email address of the service account for Cloud Workstations VMs created with this
-   * configuration. When specified, be sure that the service account has `logginglogEntries.create`
-   * permission on the project so it can write logs out to Cloud Logging. If using a custom
-   * container image, the service account must have [Artifact Registry
+   * configuration. When specified, be sure that the service account has `logging.logEntries.create`
+   * and `monitoring.timeSeries.create` permissions on the project so it can write logs out to Cloud
+   * Logging. If using a custom container image, the service account must have [Artifact Registry
    * Reader](https://cloud.google.com/artifact-registry/docs/access-control#roles) permission to
    * pull the specified image. If you as the administrator want to be able to `ssh` into the
    * underlying VM, you need to set this value to a service account for which you have the
@@ -145,9 +145,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccount;
 
   /**
-   * Optional. Scopes to grant to the service_account. Various scopes are automatically added based
-   * on feature usage. When specified, users of workstations under this configuration must have
-   * `iam.serviceAccounts.actAs` on the service account.
+   * Optional. Scopes to grant to the service_account. When specified, users of workstations under
+   * this configuration must have `iam.serviceAccounts.actAs` on the service account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -381,9 +380,9 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The email address of the service account for Cloud Workstations VMs created with this
-   * configuration. When specified, be sure that the service account has `logginglogEntries.create`
-   * permission on the project so it can write logs out to Cloud Logging. If using a custom
-   * container image, the service account must have [Artifact Registry
+   * configuration. When specified, be sure that the service account has `logging.logEntries.create`
+   * and `monitoring.timeSeries.create` permissions on the project so it can write logs out to Cloud
+   * Logging. If using a custom container image, the service account must have [Artifact Registry
    * Reader](https://cloud.google.com/artifact-registry/docs/access-control#roles) permission to
    * pull the specified image. If you as the administrator want to be able to `ssh` into the
    * underlying VM, you need to set this value to a service account for which you have the
@@ -399,9 +398,9 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The email address of the service account for Cloud Workstations VMs created with this
-   * configuration. When specified, be sure that the service account has `logginglogEntries.create`
-   * permission on the project so it can write logs out to Cloud Logging. If using a custom
-   * container image, the service account must have [Artifact Registry
+   * configuration. When specified, be sure that the service account has `logging.logEntries.create`
+   * and `monitoring.timeSeries.create` permissions on the project so it can write logs out to Cloud
+   * Logging. If using a custom container image, the service account must have [Artifact Registry
    * Reader](https://cloud.google.com/artifact-registry/docs/access-control#roles) permission to
    * pull the specified image. If you as the administrator want to be able to `ssh` into the
    * underlying VM, you need to set this value to a service account for which you have the
@@ -417,9 +416,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Scopes to grant to the service_account. Various scopes are automatically added based
-   * on feature usage. When specified, users of workstations under this configuration must have
-   * `iam.serviceAccounts.actAs` on the service account.
+   * Optional. Scopes to grant to the service_account. When specified, users of workstations under
+   * this configuration must have `iam.serviceAccounts.actAs` on the service account.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServiceAccountScopes() {
@@ -427,9 +425,8 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Scopes to grant to the service_account. Various scopes are automatically added based
-   * on feature usage. When specified, users of workstations under this configuration must have
-   * `iam.serviceAccounts.actAs` on the service account.
+   * Optional. Scopes to grant to the service_account. When specified, users of workstations under
+   * this configuration must have `iam.serviceAccounts.actAs` on the service account.
    * @param serviceAccountScopes serviceAccountScopes or {@code null} for none
    */
   public GceInstance setServiceAccountScopes(java.util.List<java.lang.String> serviceAccountScopes) {

@@ -72,6 +72,20 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
+   * Optional. A list of applications that are subject to this binding's restrictions. If the list
+   * is empty, the binding restrictions will universally apply to all applications.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Application> restrictedClientApplications;
+
+  static {
+    // hack to force ProGuard to consider Application used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Application.class);
+  }
+
+  /**
    * Optional. Access level that a user must have to be granted access. Only one access level is
    * supported, not multiple. This repeated field must have exactly one element. Example:
    * "accessPolicies/9522/accessLevels/device_trusted"
@@ -160,6 +174,25 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
    */
   public GcpUserAccessBinding setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. A list of applications that are subject to this binding's restrictions. If the list
+   * is empty, the binding restrictions will universally apply to all applications.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Application> getRestrictedClientApplications() {
+    return restrictedClientApplications;
+  }
+
+  /**
+   * Optional. A list of applications that are subject to this binding's restrictions. If the list
+   * is empty, the binding restrictions will universally apply to all applications.
+   * @param restrictedClientApplications restrictedClientApplications or {@code null} for none
+   */
+  public GcpUserAccessBinding setRestrictedClientApplications(java.util.List<Application> restrictedClientApplications) {
+    this.restrictedClientApplications = restrictedClientApplications;
     return this;
   }
 

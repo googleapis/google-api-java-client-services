@@ -31,16 +31,26 @@ package com.google.api.services.batch.v1.model;
 public final class TaskExecution extends com.google.api.client.json.GenericJson {
 
   /**
-   * When task is completed as the status of FAILED or SUCCEEDED, exit code is for one task
-   * execution result, default is 0 as success.
+   * The exit code of a finished task. If the task succeeded, the exit code will be 0. If the task
+   * failed but not due to the following reasons, the exit code will be 50000. Otherwise, it can be
+   * from different sources: - Batch known failures as
+   * https://cloud.google.com/batch/docs/troubleshooting#reserved-exit-codes. - Batch runnable
+   * execution failures: You can rely on Batch logs for further diagnose:
+   * https://cloud.google.com/batch/docs/analyze-job-using-logs. If there are multiple runnables
+   * failures, Batch only exposes the first error caught for now.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer exitCode;
 
   /**
-   * When task is completed as the status of FAILED or SUCCEEDED, exit code is for one task
-   * execution result, default is 0 as success.
+   * The exit code of a finished task. If the task succeeded, the exit code will be 0. If the task
+   * failed but not due to the following reasons, the exit code will be 50000. Otherwise, it can be
+   * from different sources: - Batch known failures as
+   * https://cloud.google.com/batch/docs/troubleshooting#reserved-exit-codes. - Batch runnable
+   * execution failures: You can rely on Batch logs for further diagnose:
+   * https://cloud.google.com/batch/docs/analyze-job-using-logs. If there are multiple runnables
+   * failures, Batch only exposes the first error caught for now.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getExitCode() {
@@ -48,8 +58,13 @@ public final class TaskExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * When task is completed as the status of FAILED or SUCCEEDED, exit code is for one task
-   * execution result, default is 0 as success.
+   * The exit code of a finished task. If the task succeeded, the exit code will be 0. If the task
+   * failed but not due to the following reasons, the exit code will be 50000. Otherwise, it can be
+   * from different sources: - Batch known failures as
+   * https://cloud.google.com/batch/docs/troubleshooting#reserved-exit-codes. - Batch runnable
+   * execution failures: You can rely on Batch logs for further diagnose:
+   * https://cloud.google.com/batch/docs/analyze-job-using-logs. If there are multiple runnables
+   * failures, Batch only exposes the first error caught for now.
    * @param exitCode exitCode or {@code null} for none
    */
   public TaskExecution setExitCode(java.lang.Integer exitCode) {

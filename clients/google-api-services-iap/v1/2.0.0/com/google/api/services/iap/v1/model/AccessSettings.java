@@ -52,6 +52,14 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   private GcipSettings gcipSettings;
 
   /**
+   * Optional. Identity sources that IAP can use to authenticate the end user. Only one identity
+   * source can be configured.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> identitySources;
+
+  /**
    * Settings to configure IAP's OAuth behavior.
    * The value may be {@code null}.
    */
@@ -71,6 +79,14 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private ReauthSettings reauthSettings;
+
+  /**
+   * Optional. Settings to configure the workforce identity federation, including workforce pools
+   * and OAuth 2.0 settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkforceIdentitySettings workforceIdentitySettings;
 
   /**
    * Settings to configure and enable allowed domains.
@@ -124,6 +140,25 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Optional. Identity sources that IAP can use to authenticate the end user. Only one identity
+   * source can be configured.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIdentitySources() {
+    return identitySources;
+  }
+
+  /**
+   * Optional. Identity sources that IAP can use to authenticate the end user. Only one identity
+   * source can be configured.
+   * @param identitySources identitySources or {@code null} for none
+   */
+  public AccessSettings setIdentitySources(java.util.List<java.lang.String> identitySources) {
+    this.identitySources = identitySources;
+    return this;
+  }
+
+  /**
    * Settings to configure IAP's OAuth behavior.
    * @return value or {@code null} for none
    */
@@ -171,6 +206,25 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
    */
   public AccessSettings setReauthSettings(ReauthSettings reauthSettings) {
     this.reauthSettings = reauthSettings;
+    return this;
+  }
+
+  /**
+   * Optional. Settings to configure the workforce identity federation, including workforce pools
+   * and OAuth 2.0 settings.
+   * @return value or {@code null} for none
+   */
+  public WorkforceIdentitySettings getWorkforceIdentitySettings() {
+    return workforceIdentitySettings;
+  }
+
+  /**
+   * Optional. Settings to configure the workforce identity federation, including workforce pools
+   * and OAuth 2.0 settings.
+   * @param workforceIdentitySettings workforceIdentitySettings or {@code null} for none
+   */
+  public AccessSettings setWorkforceIdentitySettings(WorkforceIdentitySettings workforceIdentitySettings) {
+    this.workforceIdentitySettings = workforceIdentitySettings;
     return this;
   }
 

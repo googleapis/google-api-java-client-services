@@ -131,6 +131,20 @@ public final class CertificateAuthority extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> pemCaCertificates;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. The State for this CertificateAuthority.
    * The value may be {@code null}.
    */
@@ -398,6 +412,40 @@ public final class CertificateAuthority extends com.google.api.client.json.Gener
    */
   public CertificateAuthority setPemCaCertificates(java.util.List<java.lang.String> pemCaCertificates) {
     this.pemCaCertificates = pemCaCertificates;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public CertificateAuthority setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public CertificateAuthority setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

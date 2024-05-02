@@ -17,9 +17,10 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * Contains information needed for generating an OpenID Connect token
- * (https://developers.google.com/identity/protocols/OpenIDConnect). The OIDC token will be
- * generated for the Monitoring service agent service account.
+ * Contains information needed for generating either an OpenID Connect token
+ * (https://developers.google.com/identity/protocols/OpenIDConnect) or OAuth token
+ * (https://developers.google.com/identity/protocols/oauth2). The token will be generated for the
+ * Monitoring service agent service account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Monitoring API. For a detailed explanation see:

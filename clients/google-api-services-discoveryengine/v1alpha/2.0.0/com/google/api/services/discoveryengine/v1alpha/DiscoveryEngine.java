@@ -134,599 +134,6 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
   }
 
   /**
-   * An accessor for creating requests from the Locations collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
-   *   {@code DiscoveryEngine.Locations.List request = discoveryengine.locations().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Locations locations() {
-    return new Locations();
-  }
-
-  /**
-   * The "locations" collection of methods.
-   */
-  public class Locations {
-
-    /**
-     * Gets the Widget Config using the uuid.
-     *
-     * Create a request for the method "locations.lookupWidgetConfig".
-     *
-     * This request holds the parameters needed by the discoveryengine server.  After setting any
-     * optional parameters, call the {@link LookupWidgetConfig#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param location Required. The location resource where lookup widget will be performed. Format:
-     *        `locations/{location}`
-     * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLookupWidgetConfigRequest}
-     * @return the request
-     */
-    public LookupWidgetConfig lookupWidgetConfig(java.lang.String location, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLookupWidgetConfigRequest content) throws java.io.IOException {
-      LookupWidgetConfig result = new LookupWidgetConfig(location, content);
-      initialize(result);
-      return result;
-    }
-
-    public class LookupWidgetConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLookupWidgetConfigResponse> {
-
-      private static final String REST_PATH = "v1alpha/{+location}/lookupWidgetConfig";
-
-      private final java.util.regex.Pattern LOCATION_PATTERN =
-          java.util.regex.Pattern.compile("^locations/[^/]+$");
-
-      /**
-       * Gets the Widget Config using the uuid.
-       *
-       * Create a request for the method "locations.lookupWidgetConfig".
-       *
-       * This request holds the parameters needed by the the discoveryengine server.  After setting any
-       * optional parameters, call the {@link LookupWidgetConfig#execute()} method to invoke the remote
-       * operation. <p> {@link LookupWidgetConfig#initialize(com.google.api.client.googleapis.services.A
-       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
-       * invoking the constructor. </p>
-       *
-       * @param location Required. The location resource where lookup widget will be performed. Format:
-     *        `locations/{location}`
-       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLookupWidgetConfigRequest}
-       * @since 1.13
-       */
-      protected LookupWidgetConfig(java.lang.String location, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLookupWidgetConfigRequest content) {
-        super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaLookupWidgetConfigResponse.class);
-        this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
-              "Parameter location must conform to the pattern " +
-              "^locations/[^/]+$");
-        }
-      }
-
-      @Override
-      public LookupWidgetConfig set$Xgafv(java.lang.String $Xgafv) {
-        return (LookupWidgetConfig) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public LookupWidgetConfig setAccessToken(java.lang.String accessToken) {
-        return (LookupWidgetConfig) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public LookupWidgetConfig setAlt(java.lang.String alt) {
-        return (LookupWidgetConfig) super.setAlt(alt);
-      }
-
-      @Override
-      public LookupWidgetConfig setCallback(java.lang.String callback) {
-        return (LookupWidgetConfig) super.setCallback(callback);
-      }
-
-      @Override
-      public LookupWidgetConfig setFields(java.lang.String fields) {
-        return (LookupWidgetConfig) super.setFields(fields);
-      }
-
-      @Override
-      public LookupWidgetConfig setKey(java.lang.String key) {
-        return (LookupWidgetConfig) super.setKey(key);
-      }
-
-      @Override
-      public LookupWidgetConfig setOauthToken(java.lang.String oauthToken) {
-        return (LookupWidgetConfig) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public LookupWidgetConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (LookupWidgetConfig) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public LookupWidgetConfig setQuotaUser(java.lang.String quotaUser) {
-        return (LookupWidgetConfig) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public LookupWidgetConfig setUploadType(java.lang.String uploadType) {
-        return (LookupWidgetConfig) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public LookupWidgetConfig setUploadProtocol(java.lang.String uploadProtocol) {
-        return (LookupWidgetConfig) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The location resource where lookup widget will be performed. Format:
-       * `locations/{location}`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String location;
-
-      /** Required. The location resource where lookup widget will be performed. Format:
-     `locations/{location}`
-       */
-      public java.lang.String getLocation() {
-        return location;
-      }
-
-      /**
-       * Required. The location resource where lookup widget will be performed. Format:
-       * `locations/{location}`
-       */
-      public LookupWidgetConfig setLocation(java.lang.String location) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
-              "Parameter location must conform to the pattern " +
-              "^locations/[^/]+$");
-        }
-        this.location = location;
-        return this;
-      }
-
-      @Override
-      public LookupWidgetConfig set(String parameterName, Object value) {
-        return (LookupWidgetConfig) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Performs a user input completion with keyword suggestion. Similar to the
-     * CompletionService.CompleteQuery method, but a widget version that allows CompleteQuery without
-     * API Key. It supports CompleteQuery with or without JWT token.
-     *
-     * Create a request for the method "locations.widgetCompleteQuery".
-     *
-     * This request holds the parameters needed by the discoveryengine server.  After setting any
-     * optional parameters, call the {@link WidgetCompleteQuery#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param location Required. The location resource where widget complete query will be performed. Format:
-     *        `locations/{location}`
-     * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetCompleteQueryRequest}
-     * @return the request
-     */
-    public WidgetCompleteQuery widgetCompleteQuery(java.lang.String location, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetCompleteQueryRequest content) throws java.io.IOException {
-      WidgetCompleteQuery result = new WidgetCompleteQuery(location, content);
-      initialize(result);
-      return result;
-    }
-
-    public class WidgetCompleteQuery extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetCompleteQueryResponse> {
-
-      private static final String REST_PATH = "v1alpha/{+location}/widgetCompleteQuery";
-
-      private final java.util.regex.Pattern LOCATION_PATTERN =
-          java.util.regex.Pattern.compile("^locations/[^/]+$");
-
-      /**
-       * Performs a user input completion with keyword suggestion. Similar to the
-       * CompletionService.CompleteQuery method, but a widget version that allows CompleteQuery without
-       * API Key. It supports CompleteQuery with or without JWT token.
-       *
-       * Create a request for the method "locations.widgetCompleteQuery".
-       *
-       * This request holds the parameters needed by the the discoveryengine server.  After setting any
-       * optional parameters, call the {@link WidgetCompleteQuery#execute()} method to invoke the remote
-       * operation. <p> {@link WidgetCompleteQuery#initialize(com.google.api.client.googleapis.services.
-       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-       * invoking the constructor. </p>
-       *
-       * @param location Required. The location resource where widget complete query will be performed. Format:
-     *        `locations/{location}`
-       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetCompleteQueryRequest}
-       * @since 1.13
-       */
-      protected WidgetCompleteQuery(java.lang.String location, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetCompleteQueryRequest content) {
-        super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetCompleteQueryResponse.class);
-        this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
-              "Parameter location must conform to the pattern " +
-              "^locations/[^/]+$");
-        }
-      }
-
-      @Override
-      public WidgetCompleteQuery set$Xgafv(java.lang.String $Xgafv) {
-        return (WidgetCompleteQuery) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public WidgetCompleteQuery setAccessToken(java.lang.String accessToken) {
-        return (WidgetCompleteQuery) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public WidgetCompleteQuery setAlt(java.lang.String alt) {
-        return (WidgetCompleteQuery) super.setAlt(alt);
-      }
-
-      @Override
-      public WidgetCompleteQuery setCallback(java.lang.String callback) {
-        return (WidgetCompleteQuery) super.setCallback(callback);
-      }
-
-      @Override
-      public WidgetCompleteQuery setFields(java.lang.String fields) {
-        return (WidgetCompleteQuery) super.setFields(fields);
-      }
-
-      @Override
-      public WidgetCompleteQuery setKey(java.lang.String key) {
-        return (WidgetCompleteQuery) super.setKey(key);
-      }
-
-      @Override
-      public WidgetCompleteQuery setOauthToken(java.lang.String oauthToken) {
-        return (WidgetCompleteQuery) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public WidgetCompleteQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (WidgetCompleteQuery) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public WidgetCompleteQuery setQuotaUser(java.lang.String quotaUser) {
-        return (WidgetCompleteQuery) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public WidgetCompleteQuery setUploadType(java.lang.String uploadType) {
-        return (WidgetCompleteQuery) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public WidgetCompleteQuery setUploadProtocol(java.lang.String uploadProtocol) {
-        return (WidgetCompleteQuery) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The location resource where widget complete query will be performed. Format:
-       * `locations/{location}`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String location;
-
-      /** Required. The location resource where widget complete query will be performed. Format:
-     `locations/{location}`
-       */
-      public java.lang.String getLocation() {
-        return location;
-      }
-
-      /**
-       * Required. The location resource where widget complete query will be performed. Format:
-       * `locations/{location}`
-       */
-      public WidgetCompleteQuery setLocation(java.lang.String location) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
-              "Parameter location must conform to the pattern " +
-              "^locations/[^/]+$");
-        }
-        this.location = location;
-        return this;
-      }
-
-      @Override
-      public WidgetCompleteQuery set(String parameterName, Object value) {
-        return (WidgetCompleteQuery) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Converse a conversation with Widget.
-     *
-     * Create a request for the method "locations.widgetConverseConversation".
-     *
-     * This request holds the parameters needed by the discoveryengine server.  After setting any
-     * optional parameters, call the {@link WidgetConverseConversation#execute()} method to invoke the
-     * remote operation.
-     *
-     * @param location Required. The location resource where widget converse conversation will be performed. Format:
-     *        `locations/{location}`
-     * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetConverseConversationRequest}
-     * @return the request
-     */
-    public WidgetConverseConversation widgetConverseConversation(java.lang.String location, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetConverseConversationRequest content) throws java.io.IOException {
-      WidgetConverseConversation result = new WidgetConverseConversation(location, content);
-      initialize(result);
-      return result;
-    }
-
-    public class WidgetConverseConversation extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetConverseConversationResponse> {
-
-      private static final String REST_PATH = "v1alpha/{+location}/widgetConverseConversation";
-
-      private final java.util.regex.Pattern LOCATION_PATTERN =
-          java.util.regex.Pattern.compile("^locations/[^/]+$");
-
-      /**
-       * Converse a conversation with Widget.
-       *
-       * Create a request for the method "locations.widgetConverseConversation".
-       *
-       * This request holds the parameters needed by the the discoveryengine server.  After setting any
-       * optional parameters, call the {@link WidgetConverseConversation#execute()} method to invoke the
-       * remote operation. <p> {@link WidgetConverseConversation#initialize(com.google.api.client.google
-       * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
-       * immediately after invoking the constructor. </p>
-       *
-       * @param location Required. The location resource where widget converse conversation will be performed. Format:
-     *        `locations/{location}`
-       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetConverseConversationRequest}
-       * @since 1.13
-       */
-      protected WidgetConverseConversation(java.lang.String location, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetConverseConversationRequest content) {
-        super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetConverseConversationResponse.class);
-        this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
-              "Parameter location must conform to the pattern " +
-              "^locations/[^/]+$");
-        }
-      }
-
-      @Override
-      public WidgetConverseConversation set$Xgafv(java.lang.String $Xgafv) {
-        return (WidgetConverseConversation) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public WidgetConverseConversation setAccessToken(java.lang.String accessToken) {
-        return (WidgetConverseConversation) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public WidgetConverseConversation setAlt(java.lang.String alt) {
-        return (WidgetConverseConversation) super.setAlt(alt);
-      }
-
-      @Override
-      public WidgetConverseConversation setCallback(java.lang.String callback) {
-        return (WidgetConverseConversation) super.setCallback(callback);
-      }
-
-      @Override
-      public WidgetConverseConversation setFields(java.lang.String fields) {
-        return (WidgetConverseConversation) super.setFields(fields);
-      }
-
-      @Override
-      public WidgetConverseConversation setKey(java.lang.String key) {
-        return (WidgetConverseConversation) super.setKey(key);
-      }
-
-      @Override
-      public WidgetConverseConversation setOauthToken(java.lang.String oauthToken) {
-        return (WidgetConverseConversation) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public WidgetConverseConversation setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (WidgetConverseConversation) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public WidgetConverseConversation setQuotaUser(java.lang.String quotaUser) {
-        return (WidgetConverseConversation) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public WidgetConverseConversation setUploadType(java.lang.String uploadType) {
-        return (WidgetConverseConversation) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public WidgetConverseConversation setUploadProtocol(java.lang.String uploadProtocol) {
-        return (WidgetConverseConversation) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The location resource where widget converse conversation will be performed.
-       * Format: `locations/{location}`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String location;
-
-      /** Required. The location resource where widget converse conversation will be performed. Format:
-     `locations/{location}`
-       */
-      public java.lang.String getLocation() {
-        return location;
-      }
-
-      /**
-       * Required. The location resource where widget converse conversation will be performed.
-       * Format: `locations/{location}`
-       */
-      public WidgetConverseConversation setLocation(java.lang.String location) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
-              "Parameter location must conform to the pattern " +
-              "^locations/[^/]+$");
-        }
-        this.location = location;
-        return this;
-      }
-
-      @Override
-      public WidgetConverseConversation set(String parameterName, Object value) {
-        return (WidgetConverseConversation) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Performs a search. Similar to the SearchService.Search method, but a widget version that allows
-     * search without API Key. It supports search with or without JWT token.
-     *
-     * Create a request for the method "locations.widgetSearch".
-     *
-     * This request holds the parameters needed by the discoveryengine server.  After setting any
-     * optional parameters, call the {@link WidgetSearch#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param location Required. The location resource where widget search will be performed. Format:
-     *        `locations/{location}`
-     * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetSearchRequest}
-     * @return the request
-     */
-    public WidgetSearch widgetSearch(java.lang.String location, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetSearchRequest content) throws java.io.IOException {
-      WidgetSearch result = new WidgetSearch(location, content);
-      initialize(result);
-      return result;
-    }
-
-    public class WidgetSearch extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetSearchResponse> {
-
-      private static final String REST_PATH = "v1alpha/{+location}/widgetSearch";
-
-      private final java.util.regex.Pattern LOCATION_PATTERN =
-          java.util.regex.Pattern.compile("^locations/[^/]+$");
-
-      /**
-       * Performs a search. Similar to the SearchService.Search method, but a widget version that allows
-       * search without API Key. It supports search with or without JWT token.
-       *
-       * Create a request for the method "locations.widgetSearch".
-       *
-       * This request holds the parameters needed by the the discoveryengine server.  After setting any
-       * optional parameters, call the {@link WidgetSearch#execute()} method to invoke the remote
-       * operation. <p> {@link
-       * WidgetSearch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param location Required. The location resource where widget search will be performed. Format:
-     *        `locations/{location}`
-       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetSearchRequest}
-       * @since 1.13
-       */
-      protected WidgetSearch(java.lang.String location, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetSearchRequest content) {
-        super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaWidgetSearchResponse.class);
-        this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
-              "Parameter location must conform to the pattern " +
-              "^locations/[^/]+$");
-        }
-      }
-
-      @Override
-      public WidgetSearch set$Xgafv(java.lang.String $Xgafv) {
-        return (WidgetSearch) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public WidgetSearch setAccessToken(java.lang.String accessToken) {
-        return (WidgetSearch) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public WidgetSearch setAlt(java.lang.String alt) {
-        return (WidgetSearch) super.setAlt(alt);
-      }
-
-      @Override
-      public WidgetSearch setCallback(java.lang.String callback) {
-        return (WidgetSearch) super.setCallback(callback);
-      }
-
-      @Override
-      public WidgetSearch setFields(java.lang.String fields) {
-        return (WidgetSearch) super.setFields(fields);
-      }
-
-      @Override
-      public WidgetSearch setKey(java.lang.String key) {
-        return (WidgetSearch) super.setKey(key);
-      }
-
-      @Override
-      public WidgetSearch setOauthToken(java.lang.String oauthToken) {
-        return (WidgetSearch) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public WidgetSearch setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (WidgetSearch) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public WidgetSearch setQuotaUser(java.lang.String quotaUser) {
-        return (WidgetSearch) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public WidgetSearch setUploadType(java.lang.String uploadType) {
-        return (WidgetSearch) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public WidgetSearch setUploadProtocol(java.lang.String uploadProtocol) {
-        return (WidgetSearch) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The location resource where widget search will be performed. Format:
-       * `locations/{location}`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String location;
-
-      /** Required. The location resource where widget search will be performed. Format:
-     `locations/{location}`
-       */
-      public java.lang.String getLocation() {
-        return location;
-      }
-
-      /**
-       * Required. The location resource where widget search will be performed. Format:
-       * `locations/{location}`
-       */
-      public WidgetSearch setLocation(java.lang.String location) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
-              "Parameter location must conform to the pattern " +
-              "^locations/[^/]+$");
-        }
-        this.location = location;
-        return this;
-      }
-
-      @Override
-      public WidgetSearch set(String parameterName, Object value) {
-        return (WidgetSearch) super.set(parameterName, value);
-      }
-    }
-
-  }
-
-  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -3285,19 +2692,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+             * Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+            /** Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+             * Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -7068,6 +6475,180 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               @Override
               public Patch set(String parameterName, Object value) {
                 return (Patch) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the CustomModels collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.CustomModels.List request = discoveryengine.customModels().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public CustomModels customModels() {
+            return new CustomModels();
+          }
+
+          /**
+           * The "customModels" collection of methods.
+           */
+          public class CustomModels {
+
+            /**
+             * Gets a list of all the custom models.
+             *
+             * Create a request for the method "customModels.list".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param dataStore Required. The resource name of the parent Data Store, such as
+             *        `projects/locations/global/collections/default_collection/dataStores/default_data_store`.
+             *        This field is used to identify the data store where to fetch the models from.
+             * @return the request
+             */
+            public List list(java.lang.String dataStore) throws java.io.IOException {
+              List result = new List(dataStore);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListCustomModelsResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+dataStore}/customModels";
+
+              private final java.util.regex.Pattern DATA_STORE_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+              /**
+               * Gets a list of all the custom models.
+               *
+               * Create a request for the method "customModels.list".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param dataStore Required. The resource name of the parent Data Store, such as
+             *        `projects/locations/global/collections/default_collection/dataStores/default_data_store`.
+             *        This field is used to identify the data store where to fetch the models from.
+               * @since 1.13
+               */
+              protected List(java.lang.String dataStore) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListCustomModelsResponse.class);
+                this.dataStore = com.google.api.client.util.Preconditions.checkNotNull(dataStore, "Required parameter dataStore must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                      "Parameter dataStore must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the parent Data Store, such as `projects/locations/g
+               * lobal/collections/default_collection/dataStores/default_data_store`. This field is
+               * used to identify the data store where to fetch the models from.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String dataStore;
+
+              /** Required. The resource name of the parent Data Store, such as
+             `projects/locations/global/collections/default_collection/dataStores/default_data_store`. This
+             field is used to identify the data store where to fetch the models from.
+               */
+              public java.lang.String getDataStore() {
+                return dataStore;
+              }
+
+              /**
+               * Required. The resource name of the parent Data Store, such as `projects/locations/g
+               * lobal/collections/default_collection/dataStores/default_data_store`. This field is
+               * used to identify the data store where to fetch the models from.
+               */
+              public List setDataStore(java.lang.String dataStore) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                      "Parameter dataStore must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+                this.dataStore = dataStore;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
               }
             }
 
@@ -20858,19 +20439,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+           * Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+          /** Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+           * Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

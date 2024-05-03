@@ -55,6 +55,16 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseClaim 
   private java.lang.Integer endPos;
 
   /**
+   * Indicates that this claim required grounding check. When the system decided this claim doesn't
+   * require attribution/grounding check, this field will be set to false. In that case, no
+   * grounding check was done for the claim and therefore citation_indices, and
+   * anti_citation_indices should not be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean groundingCheckRequired;
+
+  /**
    * Position indicating the start of the claim in the answer candidate, measured in bytes.
    * The value may be {@code null}.
    */
@@ -117,6 +127,29 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseClaim 
    */
   public GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseClaim setEndPos(java.lang.Integer endPos) {
     this.endPos = endPos;
+    return this;
+  }
+
+  /**
+   * Indicates that this claim required grounding check. When the system decided this claim doesn't
+   * require attribution/grounding check, this field will be set to false. In that case, no
+   * grounding check was done for the claim and therefore citation_indices, and
+   * anti_citation_indices should not be returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGroundingCheckRequired() {
+    return groundingCheckRequired;
+  }
+
+  /**
+   * Indicates that this claim required grounding check. When the system decided this claim doesn't
+   * require attribution/grounding check, this field will be set to false. In that case, no
+   * grounding check was done for the claim and therefore citation_indices, and
+   * anti_citation_indices should not be returned.
+   * @param groundingCheckRequired groundingCheckRequired or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaCheckGroundingResponseClaim setGroundingCheckRequired(java.lang.Boolean groundingCheckRequired) {
+    this.groundingCheckRequired = groundingCheckRequired;
     return this;
   }
 

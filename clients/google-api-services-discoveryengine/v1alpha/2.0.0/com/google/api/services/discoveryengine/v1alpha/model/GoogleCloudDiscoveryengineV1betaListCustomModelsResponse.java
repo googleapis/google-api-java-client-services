@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * AdditionalParams message for WidgetService methods for security and privacy enhancement.
+ * Response message for SearchTuningService.ListCustomModels method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -27,40 +27,46 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaAdditionalParams extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1betaListCustomModelsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Token that used for non-human user check.
+   * List of custom tuning models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String token;
+  private java.util.List<GoogleCloudDiscoveryengineV1betaCustomTuningModel> models;
 
-  /**
-   * Token that used for non-human user check.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getToken() {
-    return token;
+  static {
+    // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1betaCustomTuningModel used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1betaCustomTuningModel.class);
   }
 
   /**
-   * Token that used for non-human user check.
-   * @param token token or {@code null} for none
+   * List of custom tuning models.
+   * @return value or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaAdditionalParams setToken(java.lang.String token) {
-    this.token = token;
+  public java.util.List<GoogleCloudDiscoveryengineV1betaCustomTuningModel> getModels() {
+    return models;
+  }
+
+  /**
+   * List of custom tuning models.
+   * @param models models or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaListCustomModelsResponse setModels(java.util.List<GoogleCloudDiscoveryengineV1betaCustomTuningModel> models) {
+    this.models = models;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaAdditionalParams set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaAdditionalParams) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1betaListCustomModelsResponse set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1betaListCustomModelsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaAdditionalParams clone() {
-    return (GoogleCloudDiscoveryengineV1alphaAdditionalParams) super.clone();
+  public GoogleCloudDiscoveryengineV1betaListCustomModelsResponse clone() {
+    return (GoogleCloudDiscoveryengineV1betaListCustomModelsResponse) super.clone();
   }
 
 }

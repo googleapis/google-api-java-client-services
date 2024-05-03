@@ -116,8 +116,9 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   /**
    * The order in which documents are returned. Documents can be ordered by a field in an Document
    * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. For
-   * more information on ordering, see [Ordering](https://cloud.google.com/retail/docs/filter-and-
-   * order#order) If this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
+   * more information on ordering for retail search, see
+   * [Ordering](https://cloud.google.com/retail/docs/filter-and-order#order) If this field is
+   * unrecognizable, an `INVALID_ARGUMENT` is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -422,8 +423,9 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   /**
    * The order in which documents are returned. Documents can be ordered by a field in an Document
    * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. For
-   * more information on ordering, see [Ordering](https://cloud.google.com/retail/docs/filter-and-
-   * order#order) If this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
+   * more information on ordering for retail search, see
+   * [Ordering](https://cloud.google.com/retail/docs/filter-and-order#order) If this field is
+   * unrecognizable, an `INVALID_ARGUMENT` is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -433,8 +435,9 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   /**
    * The order in which documents are returned. Documents can be ordered by a field in an Document
    * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. For
-   * more information on ordering, see [Ordering](https://cloud.google.com/retail/docs/filter-and-
-   * order#order) If this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
+   * more information on ordering for retail search, see
+   * [Ordering](https://cloud.google.com/retail/docs/filter-and-order#order) If this field is
+   * unrecognizable, an `INVALID_ARGUMENT` is returned.
    * @param orderBy orderBy or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1SearchRequest setOrderBy(java.lang.String orderBy) {

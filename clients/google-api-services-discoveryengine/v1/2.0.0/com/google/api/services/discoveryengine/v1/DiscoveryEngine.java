@@ -1688,19 +1688,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+             * Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+            /** Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+             * Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -14236,19 +14236,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+           * Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+          /** Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+           * Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

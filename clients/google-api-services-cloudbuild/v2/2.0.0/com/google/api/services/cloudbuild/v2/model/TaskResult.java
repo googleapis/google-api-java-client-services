@@ -65,6 +65,13 @@ public final class TaskResult extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
+   * Optional. Optionally used to initialize a Task's result with a Step's result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ParamValue value;
+
+  /**
    * Description of the result.
    * @return value or {@code null} for none
    */
@@ -131,6 +138,23 @@ public final class TaskResult extends com.google.api.client.json.GenericJson {
    */
   public TaskResult setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Optional. Optionally used to initialize a Task's result with a Step's result.
+   * @return value or {@code null} for none
+   */
+  public ParamValue getValue() {
+    return value;
+  }
+
+  /**
+   * Optional. Optionally used to initialize a Task's result with a Step's result.
+   * @param value value or {@code null} for none
+   */
+  public TaskResult setValue(ParamValue value) {
+    this.value = value;
     return this;
   }
 

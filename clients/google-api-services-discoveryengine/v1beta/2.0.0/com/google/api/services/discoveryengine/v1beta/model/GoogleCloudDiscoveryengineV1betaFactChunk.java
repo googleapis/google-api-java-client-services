@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1betaFactChunk extends com.google.
   private java.lang.String chunkText;
 
   /**
+   * The index of this chunk. Currently, only used for the streaming mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer index;
+
+  /**
    * Source from which this fact chunk was retrieved. If it was retrieved from the GroundingFacts
    * provided in the request then this field will contain the index of the specific fact from which
    * this chunk was retrieved.
@@ -66,6 +73,23 @@ public final class GoogleCloudDiscoveryengineV1betaFactChunk extends com.google.
    */
   public GoogleCloudDiscoveryengineV1betaFactChunk setChunkText(java.lang.String chunkText) {
     this.chunkText = chunkText;
+    return this;
+  }
+
+  /**
+   * The index of this chunk. Currently, only used for the streaming mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getIndex() {
+    return index;
+  }
+
+  /**
+   * The index of this chunk. Currently, only used for the streaming mode.
+   * @param index index or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaFactChunk setIndex(java.lang.Integer index) {
+    this.index = index;
     return this;
   }
 

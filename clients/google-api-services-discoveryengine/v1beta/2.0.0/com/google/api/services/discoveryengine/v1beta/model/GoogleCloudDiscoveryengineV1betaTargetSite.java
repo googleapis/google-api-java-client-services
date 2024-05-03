@@ -79,6 +79,13 @@ public final class GoogleCloudDiscoveryengineV1betaTargetSite extends com.google
   private java.lang.String providedUriPattern;
 
   /**
+   * Output only. Root domain of the provided_uri_pattern.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rootDomainUri;
+
+  /**
    * Output only. Site ownership and validity verification status.
    * The value may be {@code null}.
    */
@@ -212,6 +219,23 @@ public final class GoogleCloudDiscoveryengineV1betaTargetSite extends com.google
    */
   public GoogleCloudDiscoveryengineV1betaTargetSite setProvidedUriPattern(java.lang.String providedUriPattern) {
     this.providedUriPattern = providedUriPattern;
+    return this;
+  }
+
+  /**
+   * Output only. Root domain of the provided_uri_pattern.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRootDomainUri() {
+    return rootDomainUri;
+  }
+
+  /**
+   * Output only. Root domain of the provided_uri_pattern.
+   * @param rootDomainUri rootDomainUri or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaTargetSite setRootDomainUri(java.lang.String rootDomainUri) {
+    this.rootDomainUri = rootDomainUri;
     return this;
   }
 

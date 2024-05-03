@@ -52,6 +52,13 @@ public final class GoogleCloudDiscoveryengineV1betaTrainCustomModelResponse exte
   private java.util.Map<String, java.lang.Double> metrics;
 
   /**
+   * Fully qualified name of the CustomTuningModel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelName;
+
+  /**
    * The trained model status. Possible values are: * **bad-data**: The training data quality is
    * bad. * **no-improvement**: Tuning didn't improve performance. Won't deploy. * **in-progress**:
    * Model training job creation is in progress. * **training**: Model is actively training. *
@@ -110,6 +117,23 @@ public final class GoogleCloudDiscoveryengineV1betaTrainCustomModelResponse exte
    */
   public GoogleCloudDiscoveryengineV1betaTrainCustomModelResponse setMetrics(java.util.Map<String, java.lang.Double> metrics) {
     this.metrics = metrics;
+    return this;
+  }
+
+  /**
+   * Fully qualified name of the CustomTuningModel.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelName() {
+    return modelName;
+  }
+
+  /**
+   * Fully qualified name of the CustomTuningModel.
+   * @param modelName modelName or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaTrainCustomModelResponse setModelName(java.lang.String modelName) {
+    this.modelName = modelName;
     return this;
   }
 

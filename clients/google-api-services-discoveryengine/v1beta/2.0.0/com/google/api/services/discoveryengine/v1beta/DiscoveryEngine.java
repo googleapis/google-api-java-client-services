@@ -1688,19 +1688,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+             * Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+            /** Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+             * Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -4702,6 +4702,180 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               @Override
               public Patch set(String parameterName, Object value) {
                 return (Patch) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the CustomModels collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.CustomModels.List request = discoveryengine.customModels().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public CustomModels customModels() {
+            return new CustomModels();
+          }
+
+          /**
+           * The "customModels" collection of methods.
+           */
+          public class CustomModels {
+
+            /**
+             * Gets a list of all the custom models.
+             *
+             * Create a request for the method "customModels.list".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param dataStore Required. The resource name of the parent Data Store, such as
+             *        `projects/locations/global/collections/default_collection/dataStores/default_data_store`.
+             *        This field is used to identify the data store where to fetch the models from.
+             * @return the request
+             */
+            public List list(java.lang.String dataStore) throws java.io.IOException {
+              List result = new List(dataStore);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListCustomModelsResponse> {
+
+              private static final String REST_PATH = "v1beta/{+dataStore}/customModels";
+
+              private final java.util.regex.Pattern DATA_STORE_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+              /**
+               * Gets a list of all the custom models.
+               *
+               * Create a request for the method "customModels.list".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param dataStore Required. The resource name of the parent Data Store, such as
+             *        `projects/locations/global/collections/default_collection/dataStores/default_data_store`.
+             *        This field is used to identify the data store where to fetch the models from.
+               * @since 1.13
+               */
+              protected List(java.lang.String dataStore) {
+                super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListCustomModelsResponse.class);
+                this.dataStore = com.google.api.client.util.Preconditions.checkNotNull(dataStore, "Required parameter dataStore must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                      "Parameter dataStore must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the parent Data Store, such as `projects/locations/g
+               * lobal/collections/default_collection/dataStores/default_data_store`. This field is
+               * used to identify the data store where to fetch the models from.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String dataStore;
+
+              /** Required. The resource name of the parent Data Store, such as
+             `projects/locations/global/collections/default_collection/dataStores/default_data_store`. This
+             field is used to identify the data store where to fetch the models from.
+               */
+              public java.lang.String getDataStore() {
+                return dataStore;
+              }
+
+              /**
+               * Required. The resource name of the parent Data Store, such as `projects/locations/g
+               * lobal/collections/default_collection/dataStores/default_data_store`. This field is
+               * used to identify the data store where to fetch the models from.
+               */
+              public List setDataStore(java.lang.String dataStore) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                      "Parameter dataStore must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+                }
+                this.dataStore = dataStore;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
               }
             }
 
@@ -18191,19 +18365,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+           * Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+          /** Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Filter by solution type. For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
+           * Filter by solution type . For example: filter = 'solution_type:SOLUTION_TYPE_SEARCH'
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

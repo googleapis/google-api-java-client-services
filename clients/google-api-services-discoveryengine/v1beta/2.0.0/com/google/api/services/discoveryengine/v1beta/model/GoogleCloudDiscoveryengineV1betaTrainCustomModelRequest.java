@@ -44,6 +44,13 @@ public final class GoogleCloudDiscoveryengineV1betaTrainCustomModelRequest exten
   private GoogleCloudDiscoveryengineV1betaTrainCustomModelRequestGcsTrainingInput gcsTrainingInput;
 
   /**
+   * If not provided, a UUID will be generated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelId;
+
+  /**
    * Model to be trained. Supported values are: * **search-tuning**: Fine tuning the search system
    * based on data provided.
    * The value may be {@code null}.
@@ -82,6 +89,23 @@ public final class GoogleCloudDiscoveryengineV1betaTrainCustomModelRequest exten
    */
   public GoogleCloudDiscoveryengineV1betaTrainCustomModelRequest setGcsTrainingInput(GoogleCloudDiscoveryengineV1betaTrainCustomModelRequestGcsTrainingInput gcsTrainingInput) {
     this.gcsTrainingInput = gcsTrainingInput;
+    return this;
+  }
+
+  /**
+   * If not provided, a UUID will be generated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelId() {
+    return modelId;
+  }
+
+  /**
+   * If not provided, a UUID will be generated.
+   * @param modelId modelId or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaTrainCustomModelRequest setModelId(java.lang.String modelId) {
+    this.modelId = modelId;
     return this;
   }
 

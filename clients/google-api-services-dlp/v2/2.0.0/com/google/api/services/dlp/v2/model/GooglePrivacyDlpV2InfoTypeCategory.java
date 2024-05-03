@@ -18,7 +18,7 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Classification of infoTypes to organize them according to geographic location, industry, and data
- * type. NEXT_ID: 47
+ * type. NEXT_ID: 48
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

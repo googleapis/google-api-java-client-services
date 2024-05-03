@@ -134,6 +134,331 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
+   * An accessor for creating requests from the Folders collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudKMS cloudkms = new CloudKMS(...);}
+   *   {@code CloudKMS.Folders.List request = cloudkms.folders().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Folders folders() {
+    return new Folders();
+  }
+
+  /**
+   * The "folders" collection of methods.
+   */
+  public class Folders {
+
+    /**
+     * Returns the AutokeyConfig for a folder.
+     *
+     * Create a request for the method "folders.getAutokeyConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link GetAutokeyConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+     * @return the request
+     */
+    public GetAutokeyConfig getAutokeyConfig(java.lang.String name) throws java.io.IOException {
+      GetAutokeyConfig result = new GetAutokeyConfig(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetAutokeyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.AutokeyConfig> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/autokeyConfig$");
+
+      /**
+       * Returns the AutokeyConfig for a folder.
+       *
+       * Create a request for the method "folders.getAutokeyConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link GetAutokeyConfig#execute()} method to invoke the remote
+       * operation. <p> {@link GetAutokeyConfig#initialize(com.google.api.client.googleapis.services.Abs
+       * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+       * @since 1.13
+       */
+      protected GetAutokeyConfig(java.lang.String name) {
+        super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.AutokeyConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/autokeyConfig$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetAutokeyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetAutokeyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetAutokeyConfig setAccessToken(java.lang.String accessToken) {
+        return (GetAutokeyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetAutokeyConfig setAlt(java.lang.String alt) {
+        return (GetAutokeyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetAutokeyConfig setCallback(java.lang.String callback) {
+        return (GetAutokeyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetAutokeyConfig setFields(java.lang.String fields) {
+        return (GetAutokeyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetAutokeyConfig setKey(java.lang.String key) {
+        return (GetAutokeyConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetAutokeyConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetAutokeyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetAutokeyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetAutokeyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetAutokeyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetAutokeyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetAutokeyConfig setUploadType(java.lang.String uploadType) {
+        return (GetAutokeyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetAutokeyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetAutokeyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+       */
+      public GetAutokeyConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/autokeyConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetAutokeyConfig set(String parameterName, Object value) {
+        return (GetAutokeyConfig) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the AutokeyConfig for a folder. The caller must have both
+     * `cloudkms.autokeyConfigs.update` permission on the parent folder and
+     * `cloudkms.cryptoKeys.setIamPolicy` permission on the provided key project. An empty key project
+     * may be provided to clear the configuration.
+     *
+     * Create a request for the method "folders.updateAutokeyConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link UpdateAutokeyConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+     * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
+     * @return the request
+     */
+    public UpdateAutokeyConfig updateAutokeyConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.AutokeyConfig content) throws java.io.IOException {
+      UpdateAutokeyConfig result = new UpdateAutokeyConfig(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateAutokeyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.AutokeyConfig> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/autokeyConfig$");
+
+      /**
+       * Updates the AutokeyConfig for a folder. The caller must have both
+       * `cloudkms.autokeyConfigs.update` permission on the parent folder and
+       * `cloudkms.cryptoKeys.setIamPolicy` permission on the provided key project. An empty key project
+       * may be provided to clear the configuration.
+       *
+       * Create a request for the method "folders.updateAutokeyConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link UpdateAutokeyConfig#execute()} method to invoke the remote
+       * operation. <p> {@link UpdateAutokeyConfig#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+       * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
+       * @since 1.13
+       */
+      protected UpdateAutokeyConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.AutokeyConfig content) {
+        super(CloudKMS.this, "PATCH", REST_PATH, content, com.google.api.services.cloudkms.v1.model.AutokeyConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/autokeyConfig$");
+        }
+      }
+
+      @Override
+      public UpdateAutokeyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateAutokeyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setAccessToken(java.lang.String accessToken) {
+        return (UpdateAutokeyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setAlt(java.lang.String alt) {
+        return (UpdateAutokeyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setCallback(java.lang.String callback) {
+        return (UpdateAutokeyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setFields(java.lang.String fields) {
+        return (UpdateAutokeyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setKey(java.lang.String key) {
+        return (UpdateAutokeyConfig) super.setKey(key);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setOauthToken(java.lang.String oauthToken) {
+        return (UpdateAutokeyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateAutokeyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateAutokeyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setUploadType(java.lang.String uploadType) {
+        return (UpdateAutokeyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateAutokeyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Identifier. Name of the AutokeyConfig resource, e.g.
+       * `folders/{FOLDER_NUMBER}/autokeyConfig`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Identifier. Name of the AutokeyConfig resource, e.g.
+       * `folders/{FOLDER_NUMBER}/autokeyConfig`.
+       */
+      public UpdateAutokeyConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/autokeyConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Required. Masks which fields of the AutokeyConfig to update, e.g. `keyProject`. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. Masks which fields of the AutokeyConfig to update, e.g. `keyProject`.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. Masks which fields of the AutokeyConfig to update, e.g. `keyProject`. */
+      public UpdateAutokeyConfig setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateAutokeyConfig set(String parameterName, Object value) {
+        return (UpdateAutokeyConfig) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -152,6 +477,161 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
    * The "projects" collection of methods.
    */
   public class Projects {
+
+    /**
+     * Returns the effective Cloud KMS Autokey configuration for a given project.
+     *
+     * Create a request for the method "projects.showEffectiveAutokeyConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link ShowEffectiveAutokeyConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param parent Required. Name of the resource project to the show effective Cloud KMS Autokey configuration for.
+     *        This may be helpful for interrogating the effect of nested folder configurations on a
+     *        given resource project.
+     * @return the request
+     */
+    public ShowEffectiveAutokeyConfig showEffectiveAutokeyConfig(java.lang.String parent) throws java.io.IOException {
+      ShowEffectiveAutokeyConfig result = new ShowEffectiveAutokeyConfig(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class ShowEffectiveAutokeyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.ShowEffectiveAutokeyConfigResponse> {
+
+      private static final String REST_PATH = "v1/{+parent}:showEffectiveAutokeyConfig";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Returns the effective Cloud KMS Autokey configuration for a given project.
+       *
+       * Create a request for the method "projects.showEffectiveAutokeyConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link ShowEffectiveAutokeyConfig#execute()} method to invoke the
+       * remote operation. <p> {@link ShowEffectiveAutokeyConfig#initialize(com.google.api.client.google
+       * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. Name of the resource project to the show effective Cloud KMS Autokey configuration for.
+     *        This may be helpful for interrogating the effect of nested folder configurations on a
+     *        given resource project.
+       * @since 1.13
+       */
+      protected ShowEffectiveAutokeyConfig(java.lang.String parent) {
+        super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.ShowEffectiveAutokeyConfigResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (ShowEffectiveAutokeyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setAccessToken(java.lang.String accessToken) {
+        return (ShowEffectiveAutokeyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setAlt(java.lang.String alt) {
+        return (ShowEffectiveAutokeyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setCallback(java.lang.String callback) {
+        return (ShowEffectiveAutokeyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setFields(java.lang.String fields) {
+        return (ShowEffectiveAutokeyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setKey(java.lang.String key) {
+        return (ShowEffectiveAutokeyConfig) super.setKey(key);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setOauthToken(java.lang.String oauthToken) {
+        return (ShowEffectiveAutokeyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ShowEffectiveAutokeyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (ShowEffectiveAutokeyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setUploadType(java.lang.String uploadType) {
+        return (ShowEffectiveAutokeyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ShowEffectiveAutokeyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Name of the resource project to the show effective Cloud KMS Autokey
+       * configuration for. This may be helpful for interrogating the effect of nested folder
+       * configurations on a given resource project.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. Name of the resource project to the show effective Cloud KMS Autokey configuration for.
+     This may be helpful for interrogating the effect of nested folder configurations on a given
+     resource project.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. Name of the resource project to the show effective Cloud KMS Autokey
+       * configuration for. This may be helpful for interrogating the effect of nested folder
+       * configurations on a given resource project.
+       */
+      public ShowEffectiveAutokeyConfig setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig set(String parameterName, Object value) {
+        return (ShowEffectiveAutokeyConfig) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the Locations collection.
@@ -2830,6 +3310,514 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public VerifyConnectivity set(String parameterName, Object value) {
             return (VerifyConnectivity) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the KeyHandles collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudKMS cloudkms = new CloudKMS(...);}
+       *   {@code CloudKMS.KeyHandles.List request = cloudkms.keyHandles().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public KeyHandles keyHandles() {
+        return new KeyHandles();
+      }
+
+      /**
+       * The "keyHandles" collection of methods.
+       */
+      public class KeyHandles {
+
+        /**
+         * Creates a new KeyHandle, triggering the provisioning of a new CryptoKey for CMEK use with the
+         * given resource type in the configured key project and the same location. GetOperation should be
+         * used to resolve the resulting long-running operation and get the resulting KeyHandle and
+         * CryptoKey.
+         *
+         * Create a request for the method "keyHandles.create".
+         *
+         * This request holds the parameters needed by the cloudkms server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the resource project and location to create the KeyHandle in, e.g.
+         *        `projects/{PROJECT_ID}/locations/{LOCATION}`.
+         * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyHandle}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.cloudkms.v1.model.KeyHandle content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/keyHandles";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new KeyHandle, triggering the provisioning of a new CryptoKey for CMEK use with the
+           * given resource type in the configured key project and the same location. GetOperation should be
+           * used to resolve the resulting long-running operation and get the resulting KeyHandle and
+           * CryptoKey.
+           *
+           * Create a request for the method "keyHandles.create".
+           *
+           * This request holds the parameters needed by the the cloudkms server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the resource project and location to create the KeyHandle in, e.g.
+         *        `projects/{PROJECT_ID}/locations/{LOCATION}`.
+           * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyHandle}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.cloudkms.v1.model.KeyHandle content) {
+            super(CloudKMS.this, "POST", REST_PATH, content, com.google.api.services.cloudkms.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the resource project and location to create the KeyHandle in, e.g.
+           * `projects/{PROJECT_ID}/locations/{LOCATION}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the resource project and location to create the KeyHandle in, e.g.
+         `projects/{PROJECT_ID}/locations/{LOCATION}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the resource project and location to create the KeyHandle in, e.g.
+           * `projects/{PROJECT_ID}/locations/{LOCATION}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Id of the KeyHandle. Must be unique to the resource project and location. If
+           * not provided by the caller, a new UUID is used.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String keyHandleId;
+
+          /** Optional. Id of the KeyHandle. Must be unique to the resource project and location. If not provided
+         by the caller, a new UUID is used.
+           */
+          public java.lang.String getKeyHandleId() {
+            return keyHandleId;
+          }
+
+          /**
+           * Optional. Id of the KeyHandle. Must be unique to the resource project and location. If
+           * not provided by the caller, a new UUID is used.
+           */
+          public Create setKeyHandleId(java.lang.String keyHandleId) {
+            this.keyHandleId = keyHandleId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns the KeyHandle.
+         *
+         * Create a request for the method "keyHandles.get".
+         *
+         * This request holds the parameters needed by the cloudkms server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the KeyHandle resource, e.g.
+         *        `projects/{PROJECT_ID}/locations/{LOCATION}/keyHandles/{KEY_HANDLE_ID}`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.KeyHandle> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyHandles/[^/]+$");
+
+          /**
+           * Returns the KeyHandle.
+           *
+           * Create a request for the method "keyHandles.get".
+           *
+           * This request holds the parameters needed by the the cloudkms server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the KeyHandle resource, e.g.
+         *        `projects/{PROJECT_ID}/locations/{LOCATION}/keyHandles/{KEY_HANDLE_ID}`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.KeyHandle.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/keyHandles/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the KeyHandle resource, e.g.
+           * `projects/{PROJECT_ID}/locations/{LOCATION}/keyHandles/{KEY_HANDLE_ID}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the KeyHandle resource, e.g.
+         `projects/{PROJECT_ID}/locations/{LOCATION}/keyHandles/{KEY_HANDLE_ID}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the KeyHandle resource, e.g.
+           * `projects/{PROJECT_ID}/locations/{LOCATION}/keyHandles/{KEY_HANDLE_ID}`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/keyHandles/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists KeyHandles.
+         *
+         * Create a request for the method "keyHandles.list".
+         *
+         * This request holds the parameters needed by the cloudkms server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the resource project and location from which to list KeyHandles, e.g.
+         *        `projects/{PROJECT_ID}/locations/{LOCATION}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.ListKeyHandlesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/keyHandles";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists KeyHandles.
+           *
+           * Create a request for the method "keyHandles.list".
+           *
+           * This request holds the parameters needed by the the cloudkms server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the resource project and location from which to list KeyHandles, e.g.
+         *        `projects/{PROJECT_ID}/locations/{LOCATION}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.ListKeyHandlesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the resource project and location from which to list KeyHandles, e.g.
+           * `projects/{PROJECT_ID}/locations/{LOCATION}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the resource project and location from which to list KeyHandles, e.g.
+         `projects/{PROJECT_ID}/locations/{LOCATION}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the resource project and location from which to list KeyHandles, e.g.
+           * `projects/{PROJECT_ID}/locations/{LOCATION}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter to apply when listing KeyHandles, e.g.
+           * `resource_type_selector="{SERVICE}.googleapis.com/{TYPE}"`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter to apply when listing KeyHandles, e.g.
+         `resource_type_selector="{SERVICE}.googleapis.com/{TYPE}"`.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter to apply when listing KeyHandles, e.g.
+           * `resource_type_selector="{SERVICE}.googleapis.com/{TYPE}"`.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
 
@@ -8699,6 +9687,168 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudKMS cloudkms = new CloudKMS(...);}
+       *   {@code CloudKMS.Operations.List request = cloudkms.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the cloudkms server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the the cloudkms server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
       }
     }
   }

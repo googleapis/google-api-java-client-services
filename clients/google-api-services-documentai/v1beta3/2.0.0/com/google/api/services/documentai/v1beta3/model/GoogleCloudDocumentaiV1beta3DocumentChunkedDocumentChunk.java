@@ -66,6 +66,13 @@ public final class GoogleCloudDocumentaiV1beta3DocumentChunkedDocumentChunk exte
   private GoogleCloudDocumentaiV1beta3DocumentChunkedDocumentChunkChunkPageSpan pageSpan;
 
   /**
+   * DO NOT USE. List of all parsed documents layout source blocks used to generate the chunk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sourceBlockIds;
+
+  /**
    * ID of the chunk.
    * @return value or {@code null} for none
    */
@@ -147,6 +154,23 @@ public final class GoogleCloudDocumentaiV1beta3DocumentChunkedDocumentChunk exte
    */
   public GoogleCloudDocumentaiV1beta3DocumentChunkedDocumentChunk setPageSpan(GoogleCloudDocumentaiV1beta3DocumentChunkedDocumentChunkChunkPageSpan pageSpan) {
     this.pageSpan = pageSpan;
+    return this;
+  }
+
+  /**
+   * DO NOT USE. List of all parsed documents layout source blocks used to generate the chunk.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSourceBlockIds() {
+    return sourceBlockIds;
+  }
+
+  /**
+   * DO NOT USE. List of all parsed documents layout source blocks used to generate the chunk.
+   * @param sourceBlockIds sourceBlockIds or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentChunkedDocumentChunk setSourceBlockIds(java.util.List<java.lang.String> sourceBlockIds) {
+    this.sourceBlockIds = sourceBlockIds;
     return this;
   }
 

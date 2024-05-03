@@ -31,7 +31,7 @@ package com.google.api.services.config.v1.model;
 public final class Deployment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Arbitrary key-value metadata storage e.g. to help client tools identifiy deployments
+   * Optional. Arbitrary key-value metadata storage e.g. to help client tools identify deployments
    * during automation. See https://google.aip.dev/148#annotations for details on format and size
    * limitations.
    * The value may be {@code null}.
@@ -211,7 +211,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private java.lang.String workerPool;
 
   /**
-   * Optional. Arbitrary key-value metadata storage e.g. to help client tools identifiy deployments
+   * Optional. Arbitrary key-value metadata storage e.g. to help client tools identify deployments
    * during automation. See https://google.aip.dev/148#annotations for details on format and size
    * limitations.
    * @return value or {@code null} for none
@@ -221,7 +221,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Arbitrary key-value metadata storage e.g. to help client tools identifiy deployments
+   * Optional. Arbitrary key-value metadata storage e.g. to help client tools identify deployments
    * during automation. See https://google.aip.dev/148#annotations for details on format and size
    * limitations.
    * @param annotations annotations or {@code null} for none

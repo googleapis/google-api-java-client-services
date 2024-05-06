@@ -17,7 +17,7 @@
 package com.google.api.services.artifactregistry.v1.model;
 
 /**
- * Virtual repository configuration.
+ * LINT.IfChange Virtual repository configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Artifact Registry API. For a detailed explanation

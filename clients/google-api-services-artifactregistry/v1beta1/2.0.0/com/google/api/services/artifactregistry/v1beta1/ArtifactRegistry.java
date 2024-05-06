@@ -1491,7 +1491,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the artifactregistry server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+         * @param name The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`. For
+         *        each location in a project, repository names must be unique.
          * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.Repository}
          * @return the request
          */
@@ -1519,7 +1520,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+           * @param name The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`. For
+         *        each location in a project, repository names must be unique.
            * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.Repository}
            * @since 1.13
            */
@@ -1590,12 +1592,14 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
           /**
            * The name of the repository, for example: `projects/p1/locations/us-
-           * central1/repositories/repo1`.
+           * central1/repositories/repo1`. For each location in a project, repository names must be
+           * unique.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+         For each location in a project, repository names must be unique.
            */
           public java.lang.String getName() {
             return name;
@@ -1603,7 +1607,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
           /**
            * The name of the repository, for example: `projects/p1/locations/us-
-           * central1/repositories/repo1`.
+           * central1/repositories/repo1`. For each location in a project, repository names must be
+           * unique.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

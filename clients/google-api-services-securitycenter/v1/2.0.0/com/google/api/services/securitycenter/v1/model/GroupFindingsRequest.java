@@ -82,9 +82,8 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
   /**
    * Required. Expression that defines what assets fields to use for grouping (including
    * `state_change`). The string value should follow SQL syntax: comma separated list of fields. For
-   * example: "parent,resource_name". The following fields are supported: * resource_name * category
-   * * state * parent * severity The following fields are supported when compare_duration is set: *
-   * state_change
+   * example: "parent,resource_name". The following fields are supported when compare_duration is
+   * set: * state_change
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,9 +221,8 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
   /**
    * Required. Expression that defines what assets fields to use for grouping (including
    * `state_change`). The string value should follow SQL syntax: comma separated list of fields. For
-   * example: "parent,resource_name". The following fields are supported: * resource_name * category
-   * * state * parent * severity The following fields are supported when compare_duration is set: *
-   * state_change
+   * example: "parent,resource_name". The following fields are supported when compare_duration is
+   * set: * state_change
    * @return value or {@code null} for none
    */
   public java.lang.String getGroupBy() {
@@ -234,9 +232,8 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
   /**
    * Required. Expression that defines what assets fields to use for grouping (including
    * `state_change`). The string value should follow SQL syntax: comma separated list of fields. For
-   * example: "parent,resource_name". The following fields are supported: * resource_name * category
-   * * state * parent * severity The following fields are supported when compare_duration is set: *
-   * state_change
+   * example: "parent,resource_name". The following fields are supported when compare_duration is
+   * set: * state_change
    * @param groupBy groupBy or {@code null} for none
    */
   public GroupFindingsRequest setGroupBy(java.lang.String groupBy) {

@@ -79,11 +79,18 @@ public final class Repository extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the repository, for example: `projects/p1/locations/us-
-   * central1/repositories/repo1`.
+   * central1/repositories/repo1`. For each location in a project, repository names must be unique.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. If set, the repository satisfies physical zone isolation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
 
   /**
    * Output only. If set, the repository satisfies physical zone separation.
@@ -221,7 +228,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the repository, for example: `projects/p1/locations/us-
-   * central1/repositories/repo1`.
+   * central1/repositories/repo1`. For each location in a project, repository names must be unique.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -230,11 +237,28 @@ public final class Repository extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the repository, for example: `projects/p1/locations/us-
-   * central1/repositories/repo1`.
+   * central1/repositories/repo1`. For each location in a project, repository names must be unique.
    * @param name name or {@code null} for none
    */
   public Repository setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. If set, the repository satisfies physical zone isolation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. If set, the repository satisfies physical zone isolation.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public Repository setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
     return this;
   }
 

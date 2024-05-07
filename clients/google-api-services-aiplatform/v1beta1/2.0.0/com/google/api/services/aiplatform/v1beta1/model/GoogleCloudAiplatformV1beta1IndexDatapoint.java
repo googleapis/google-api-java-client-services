@@ -71,6 +71,13 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapoint extends com.google
   private java.util.List<GoogleCloudAiplatformV1beta1IndexDatapointRestriction> restricts;
 
   /**
+   * Optional. Feature embedding vector for sparse index.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1IndexDatapointSparseEmbedding sparseEmbedding;
+
+  /**
    * Optional. CrowdingTag of the datapoint, the number of neighbors to return in each crowding can
    * be configured during query.
    * @return value or {@code null} for none
@@ -164,6 +171,23 @@ public final class GoogleCloudAiplatformV1beta1IndexDatapoint extends com.google
    */
   public GoogleCloudAiplatformV1beta1IndexDatapoint setRestricts(java.util.List<GoogleCloudAiplatformV1beta1IndexDatapointRestriction> restricts) {
     this.restricts = restricts;
+    return this;
+  }
+
+  /**
+   * Optional. Feature embedding vector for sparse index.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1IndexDatapointSparseEmbedding getSparseEmbedding() {
+    return sparseEmbedding;
+  }
+
+  /**
+   * Optional. Feature embedding vector for sparse index.
+   * @param sparseEmbedding sparseEmbedding or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1IndexDatapoint setSparseEmbedding(GoogleCloudAiplatformV1beta1IndexDatapointSparseEmbedding sparseEmbedding) {
+    this.sparseEmbedding = sparseEmbedding;
     return this;
   }
 

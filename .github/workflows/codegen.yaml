@@ -44,7 +44,7 @@ jobs:
             const MAX_BATCH_SIZE = 100
             const result = {
               batches: [],
-              hour: 0,
+              hour: new Date().getHours(),
             };
             for (let i = 0; i < filteredServices.length; i += MAX_BATCH_SIZE) {
               result.batches.push(filteredServices.slice(i, i + MAX_BATCH_SIZE))

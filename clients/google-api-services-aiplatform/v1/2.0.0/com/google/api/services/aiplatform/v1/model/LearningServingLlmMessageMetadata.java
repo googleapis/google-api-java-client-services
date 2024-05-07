@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * LINT.IfChange This metadata contains additional information required for debugging.
+ * LINT.IfChange This metadata contains additional information required for debugging. Next ID: 28
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -28,6 +28,12 @@ package com.google.api.services.aiplatform.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class LearningServingLlmMessageMetadata extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LearningServingLlmAtlasOutputMetadata atlasMetadata;
 
   /**
    * Summary of classifier output. We attach this to all messages regardless of whether
@@ -136,13 +142,21 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
   private java.lang.String originalText;
 
   /**
-   * NOT YET IMPLEMENTED. Applies to streaming only. Number of tokens decoded / emitted by the model
-   * as part of this stream. This may be different from token_count, which contains number of tokens
-   * returned in this response after any response rewriting / truncation.
+   * Number of tokens decoded by the model as part of a stream. This count may be different from
+   * `per_stream_returned_token_count` which, is counted after any response rewriting or truncation.
+   * Applies to streaming response only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer perStreamDecodedTokenCount;
+
+  /**
+   * Number of tokens returned per stream in a response candidate after any response rewriting or
+   * truncation. Applies to streaming response only. Applies to Gemini models only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer perStreamReturnedTokenCount;
 
   /**
    * Results of running RAI on the query or this response candidate. One output per rai_config. It
@@ -167,7 +181,8 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
   private LearningGenaiRecitationRecitationResult recitationResult;
 
   /**
-   * NOT YET IMPLEMENTED. Number of tokens returned as part of this candidate.
+   * NOT IMPLEMENTED TODO (b/334187574) Remove this field after Labs migrates to
+   * per_stream_returned_token_count and total_returned_token_count.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,6 +218,14 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
   private java.lang.Integer totalDecodedTokenCount;
 
   /**
+   * Total number of tokens returned in a response candidate. For streaming, it is the aggregated
+   * count (i.e. total so far) Applies to Gemini models only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalReturnedTokenCount;
+
+  /**
    * Translated user-prompt used for RAI post processing. This is for internal processing only. We
    * will translate in pre-processor and pass the translated text to the post processor using this
    * field. It will be empty if non of the signals requested need translation.
@@ -217,6 +240,21 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private CloudAiNlLlmProtoServiceRaiResult vertexRaiResult;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public LearningServingLlmAtlasOutputMetadata getAtlasMetadata() {
+    return atlasMetadata;
+  }
+
+  /**
+   * @param atlasMetadata atlasMetadata or {@code null} for none
+   */
+  public LearningServingLlmMessageMetadata setAtlasMetadata(LearningServingLlmAtlasOutputMetadata atlasMetadata) {
+    this.atlasMetadata = atlasMetadata;
+    return this;
+  }
 
   /**
    * Summary of classifier output. We attach this to all messages regardless of whether
@@ -461,9 +499,9 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
   }
 
   /**
-   * NOT YET IMPLEMENTED. Applies to streaming only. Number of tokens decoded / emitted by the model
-   * as part of this stream. This may be different from token_count, which contains number of tokens
-   * returned in this response after any response rewriting / truncation.
+   * Number of tokens decoded by the model as part of a stream. This count may be different from
+   * `per_stream_returned_token_count` which, is counted after any response rewriting or truncation.
+   * Applies to streaming response only.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPerStreamDecodedTokenCount() {
@@ -471,13 +509,32 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
   }
 
   /**
-   * NOT YET IMPLEMENTED. Applies to streaming only. Number of tokens decoded / emitted by the model
-   * as part of this stream. This may be different from token_count, which contains number of tokens
-   * returned in this response after any response rewriting / truncation.
+   * Number of tokens decoded by the model as part of a stream. This count may be different from
+   * `per_stream_returned_token_count` which, is counted after any response rewriting or truncation.
+   * Applies to streaming response only.
    * @param perStreamDecodedTokenCount perStreamDecodedTokenCount or {@code null} for none
    */
   public LearningServingLlmMessageMetadata setPerStreamDecodedTokenCount(java.lang.Integer perStreamDecodedTokenCount) {
     this.perStreamDecodedTokenCount = perStreamDecodedTokenCount;
+    return this;
+  }
+
+  /**
+   * Number of tokens returned per stream in a response candidate after any response rewriting or
+   * truncation. Applies to streaming response only. Applies to Gemini models only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPerStreamReturnedTokenCount() {
+    return perStreamReturnedTokenCount;
+  }
+
+  /**
+   * Number of tokens returned per stream in a response candidate after any response rewriting or
+   * truncation. Applies to streaming response only. Applies to Gemini models only.
+   * @param perStreamReturnedTokenCount perStreamReturnedTokenCount or {@code null} for none
+   */
+  public LearningServingLlmMessageMetadata setPerStreamReturnedTokenCount(java.lang.Integer perStreamReturnedTokenCount) {
+    this.perStreamReturnedTokenCount = perStreamReturnedTokenCount;
     return this;
   }
 
@@ -520,7 +577,8 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
   }
 
   /**
-   * NOT YET IMPLEMENTED. Number of tokens returned as part of this candidate.
+   * NOT IMPLEMENTED TODO (b/334187574) Remove this field after Labs migrates to
+   * per_stream_returned_token_count and total_returned_token_count.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getReturnTokenCount() {
@@ -528,7 +586,8 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
   }
 
   /**
-   * NOT YET IMPLEMENTED. Number of tokens returned as part of this candidate.
+   * NOT IMPLEMENTED TODO (b/334187574) Remove this field after Labs migrates to
+   * per_stream_returned_token_count and total_returned_token_count.
    * @param returnTokenCount returnTokenCount or {@code null} for none
    */
   public LearningServingLlmMessageMetadata setReturnTokenCount(java.lang.Integer returnTokenCount) {
@@ -588,6 +647,25 @@ public final class LearningServingLlmMessageMetadata extends com.google.api.clie
    */
   public LearningServingLlmMessageMetadata setTotalDecodedTokenCount(java.lang.Integer totalDecodedTokenCount) {
     this.totalDecodedTokenCount = totalDecodedTokenCount;
+    return this;
+  }
+
+  /**
+   * Total number of tokens returned in a response candidate. For streaming, it is the aggregated
+   * count (i.e. total so far) Applies to Gemini models only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalReturnedTokenCount() {
+    return totalReturnedTokenCount;
+  }
+
+  /**
+   * Total number of tokens returned in a response candidate. For streaming, it is the aggregated
+   * count (i.e. total so far) Applies to Gemini models only.
+   * @param totalReturnedTokenCount totalReturnedTokenCount or {@code null} for none
+   */
+  public LearningServingLlmMessageMetadata setTotalReturnedTokenCount(java.lang.Integer totalReturnedTokenCount) {
+    this.totalReturnedTokenCount = totalReturnedTokenCount;
     return this;
   }
 

@@ -30,14 +30,16 @@ package com.google.api.services.compute.model;
 public final class SnapshotSettingsStorageLocationSettingsStorageLocationPreference extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the location. It should be one of the GCS buckets.
+   * Name of the location. It should be one of the Cloud Storage buckets. Only one location can be
+   * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Name of the location. It should be one of the GCS buckets.
+   * Name of the location. It should be one of the Cloud Storage buckets. Only one location can be
+   * specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -45,7 +47,8 @@ public final class SnapshotSettingsStorageLocationSettingsStorageLocationPrefere
   }
 
   /**
-   * Name of the location. It should be one of the GCS buckets.
+   * Name of the location. It should be one of the Cloud Storage buckets. Only one location can be
+   * specified.
    * @param name name or {@code null} for none
    */
   public SnapshotSettingsStorageLocationSettingsStorageLocationPreference setName(java.lang.String name) {

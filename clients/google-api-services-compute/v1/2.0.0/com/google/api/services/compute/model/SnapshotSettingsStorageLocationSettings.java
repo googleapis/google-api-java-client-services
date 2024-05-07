@@ -31,7 +31,7 @@ public final class SnapshotSettingsStorageLocationSettings extends com.google.ap
 
   /**
    * When the policy is SPECIFIC_LOCATIONS, snapshots will be stored in the locations listed in this
-   * field. Keys are GCS bucket locations.
+   * field. Keys are Cloud Storage bucket locations. Only one location can be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class SnapshotSettingsStorageLocationSettings extends com.google.ap
 
   /**
    * When the policy is SPECIFIC_LOCATIONS, snapshots will be stored in the locations listed in this
-   * field. Keys are GCS bucket locations.
+   * field. Keys are Cloud Storage bucket locations. Only one location can be specified.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, SnapshotSettingsStorageLocationSettingsStorageLocationPreference> getLocations() {
@@ -55,7 +55,7 @@ public final class SnapshotSettingsStorageLocationSettings extends com.google.ap
 
   /**
    * When the policy is SPECIFIC_LOCATIONS, snapshots will be stored in the locations listed in this
-   * field. Keys are GCS bucket locations.
+   * field. Keys are Cloud Storage bucket locations. Only one location can be specified.
    * @param locations locations or {@code null} for none
    */
   public SnapshotSettingsStorageLocationSettings setLocations(java.util.Map<String, SnapshotSettingsStorageLocationSettingsStorageLocationPreference> locations) {

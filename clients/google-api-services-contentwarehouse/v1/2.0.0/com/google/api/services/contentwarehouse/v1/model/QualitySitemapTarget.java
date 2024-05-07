@@ -99,6 +99,14 @@ public final class QualitySitemapTarget extends com.google.api.client.json.Gener
   private java.lang.Boolean sourceAnchor;
 
   /**
+   * FIELD SHOULD ONLY BE POPULATED DURING ONLINE/SERVING TIME. Thus it should have no impact on
+   * cdoc/mdu.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QualitySitemapSporcSignals sporcSignals;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -273,6 +281,25 @@ public final class QualitySitemapTarget extends com.google.api.client.json.Gener
    */
   public QualitySitemapTarget setSourceAnchor(java.lang.Boolean sourceAnchor) {
     this.sourceAnchor = sourceAnchor;
+    return this;
+  }
+
+  /**
+   * FIELD SHOULD ONLY BE POPULATED DURING ONLINE/SERVING TIME. Thus it should have no impact on
+   * cdoc/mdu.
+   * @return value or {@code null} for none
+   */
+  public QualitySitemapSporcSignals getSporcSignals() {
+    return sporcSignals;
+  }
+
+  /**
+   * FIELD SHOULD ONLY BE POPULATED DURING ONLINE/SERVING TIME. Thus it should have no impact on
+   * cdoc/mdu.
+   * @param sporcSignals sporcSignals or {@code null} for none
+   */
+  public QualitySitemapTarget setSporcSignals(QualitySitemapSporcSignals sporcSignals) {
+    this.sporcSignals = sporcSignals;
     return this;
   }
 

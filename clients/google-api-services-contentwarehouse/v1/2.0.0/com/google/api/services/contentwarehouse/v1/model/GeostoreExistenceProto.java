@@ -39,11 +39,8 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
 
   /**
    * Indicates whether the place is closed (permanently or temporarily), i.e., not operational in
-   * the present, but was at in the past and/or will be in the future. WARNING: New code should use
-   * Geo Schema's libraries instead, specifically the OpeningStatus APIs, available in: * C++
-   * (cs/f:google3/geostore/base/public/feature.h%20function:ExistenceState) * Java
-   * (cs/f:google3/java/com/google/geostore/base/Existence.java%20function:OpeningStatus) * Python
-   * (cs/f:google3/geostore/base/public/python/feature.clif%20existence_state)
+   * the present, but was in the past. WARNING: New code should prefer go/geo-schema-reference
+   * :operational-status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,15 +49,9 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
   /**
    * The earliest known date of this feature's "end" (e.g. an establishment's permanent closure), if
    * the actual date is unknown; i.e. the best known upper bound of the day end_date would
-   * represent. end_as_of_date must be in local (civil) time and of PRECISION_DAY. For example,
-   * given an establishment: * Without any end_as_of_date, the permanent closure definitely isn't
-   * now and isn't known to start at any point in the future. * With an end_as_of_date of 2023-04-05
-   * but without any end_date, the permanent closure definitely starts at latest 2023-04-05 but may
-   * start before 2023-04-05. * With an end_as_of_date of 2023-04-05 and an end_date of 2023 (at
-   * just PRECISION_YEAR), the permanent closure definitely starts at earliest 2023-01-01 (i.e. the
-   * first day of 2023) and at latest 2023-04-05, but may start at any day between 2023-01-01 and
-   * 2023-04-05. IMPORTANT: Generally for Geo Schema-internal use only. If you believe you need to
-   * use this field directly, please go/contact-geo-schema.
+   * represent. end_as_of_date must be in local (civil) time and of PRECISION_DAY. WARNING: Not
+   * necessarily consistent yet with `closed` or the ClosureAttachmentProto. If you believe you need
+   * to use this field directly, please go/contact-geo-schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +67,8 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
    * ** DEPRECATED ** This field is now deprecated (see b/22878252). Please use the Geo Schema
    * GetFeatureBirthTimestamp() API to extract the birth timestamp of a feature. The timestamp in
    * seconds since the UNIX epoch (January 1, 1970) when this feature becomes live in the Geo
-   * repository. Different from start_date in that this is the birth date of Google's representation
-   * of the place whereas start_date is the birth date of the place in the physical world.
+   * repository. This was the birth date of the place's representation in Google whereas start_date
+   * is the birth date of the place's operations in the physical world.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -103,14 +94,14 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
   private java.lang.String removedReason;
 
   /**
-   * (Initial) opening and (permanent) closing dates of the establishment, such that start_date is
-   * the first day open and end_date is the first day closed. The only allowed precisions are
-   * PRECISION_DAY, PRECISION_MONTH, PRECISION_YEAR. DateTimeProto.seconds should have the lowest
-   * legal value for the desired date/time and precision. E.g. for PRECISION_MONTH, 2019-02-15
-   * 21:10:30 is not valid, it should be 2019-02-01 00:00:00 instead. NOTE: The start_date and
-   * end_date are stored in UTC but should be interpreted as being in the local timezone. So clients
-   * should convert the DateTimeProto to local (civil) time using UTC+0, and then treat the result
-   * as local to the feature.
+   * (Initial) start and (permanent) end dates of operations, such that start_date is the first day
+   * operational and end_date is the first day when operations have permanently ended. The only
+   * allowed precisions are PRECISION_DAY, PRECISION_MONTH, PRECISION_YEAR. DateTimeProto.seconds
+   * should have the lowest legal value for the desired date/time and precision. E.g. for
+   * PRECISION_MONTH, 2019-02-15 21:10:30 is not valid, it should be 2019-02-01 00:00:00 instead.
+   * NOTE: The start_date and end_date are stored in UTC but should be interpreted as being in the
+   * local timezone. So clients should convert the DateTimeProto to local (civil) time using UTC+0,
+   * and then treat the result as local to the feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,11 +126,8 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
 
   /**
    * Indicates whether the place is closed (permanently or temporarily), i.e., not operational in
-   * the present, but was at in the past and/or will be in the future. WARNING: New code should use
-   * Geo Schema's libraries instead, specifically the OpeningStatus APIs, available in: * C++
-   * (cs/f:google3/geostore/base/public/feature.h%20function:ExistenceState) * Java
-   * (cs/f:google3/java/com/google/geostore/base/Existence.java%20function:OpeningStatus) * Python
-   * (cs/f:google3/geostore/base/public/python/feature.clif%20existence_state)
+   * the present, but was in the past. WARNING: New code should prefer go/geo-schema-reference
+   * :operational-status.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getClosed() {
@@ -148,11 +136,8 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
 
   /**
    * Indicates whether the place is closed (permanently or temporarily), i.e., not operational in
-   * the present, but was at in the past and/or will be in the future. WARNING: New code should use
-   * Geo Schema's libraries instead, specifically the OpeningStatus APIs, available in: * C++
-   * (cs/f:google3/geostore/base/public/feature.h%20function:ExistenceState) * Java
-   * (cs/f:google3/java/com/google/geostore/base/Existence.java%20function:OpeningStatus) * Python
-   * (cs/f:google3/geostore/base/public/python/feature.clif%20existence_state)
+   * the present, but was in the past. WARNING: New code should prefer go/geo-schema-reference
+   * :operational-status.
    * @param closed closed or {@code null} for none
    */
   public GeostoreExistenceProto setClosed(java.lang.Boolean closed) {
@@ -163,15 +148,9 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
   /**
    * The earliest known date of this feature's "end" (e.g. an establishment's permanent closure), if
    * the actual date is unknown; i.e. the best known upper bound of the day end_date would
-   * represent. end_as_of_date must be in local (civil) time and of PRECISION_DAY. For example,
-   * given an establishment: * Without any end_as_of_date, the permanent closure definitely isn't
-   * now and isn't known to start at any point in the future. * With an end_as_of_date of 2023-04-05
-   * but without any end_date, the permanent closure definitely starts at latest 2023-04-05 but may
-   * start before 2023-04-05. * With an end_as_of_date of 2023-04-05 and an end_date of 2023 (at
-   * just PRECISION_YEAR), the permanent closure definitely starts at earliest 2023-01-01 (i.e. the
-   * first day of 2023) and at latest 2023-04-05, but may start at any day between 2023-01-01 and
-   * 2023-04-05. IMPORTANT: Generally for Geo Schema-internal use only. If you believe you need to
-   * use this field directly, please go/contact-geo-schema.
+   * represent. end_as_of_date must be in local (civil) time and of PRECISION_DAY. WARNING: Not
+   * necessarily consistent yet with `closed` or the ClosureAttachmentProto. If you believe you need
+   * to use this field directly, please go/contact-geo-schema.
    * @return value or {@code null} for none
    */
   public GeostoreDateTimeProto getEndAsOfDate() {
@@ -181,15 +160,9 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
   /**
    * The earliest known date of this feature's "end" (e.g. an establishment's permanent closure), if
    * the actual date is unknown; i.e. the best known upper bound of the day end_date would
-   * represent. end_as_of_date must be in local (civil) time and of PRECISION_DAY. For example,
-   * given an establishment: * Without any end_as_of_date, the permanent closure definitely isn't
-   * now and isn't known to start at any point in the future. * With an end_as_of_date of 2023-04-05
-   * but without any end_date, the permanent closure definitely starts at latest 2023-04-05 but may
-   * start before 2023-04-05. * With an end_as_of_date of 2023-04-05 and an end_date of 2023 (at
-   * just PRECISION_YEAR), the permanent closure definitely starts at earliest 2023-01-01 (i.e. the
-   * first day of 2023) and at latest 2023-04-05, but may start at any day between 2023-01-01 and
-   * 2023-04-05. IMPORTANT: Generally for Geo Schema-internal use only. If you believe you need to
-   * use this field directly, please go/contact-geo-schema.
+   * represent. end_as_of_date must be in local (civil) time and of PRECISION_DAY. WARNING: Not
+   * necessarily consistent yet with `closed` or the ClosureAttachmentProto. If you believe you need
+   * to use this field directly, please go/contact-geo-schema.
    * @param endAsOfDate endAsOfDate or {@code null} for none
    */
   public GeostoreExistenceProto setEndAsOfDate(GeostoreDateTimeProto endAsOfDate) {
@@ -216,8 +189,8 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
    * ** DEPRECATED ** This field is now deprecated (see b/22878252). Please use the Geo Schema
    * GetFeatureBirthTimestamp() API to extract the birth timestamp of a feature. The timestamp in
    * seconds since the UNIX epoch (January 1, 1970) when this feature becomes live in the Geo
-   * repository. Different from start_date in that this is the birth date of Google's representation
-   * of the place whereas start_date is the birth date of the place in the physical world.
+   * repository. This was the birth date of the place's representation in Google whereas start_date
+   * is the birth date of the place's operations in the physical world.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFeatureBirthTimestampSeconds() {
@@ -228,8 +201,8 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
    * ** DEPRECATED ** This field is now deprecated (see b/22878252). Please use the Geo Schema
    * GetFeatureBirthTimestamp() API to extract the birth timestamp of a feature. The timestamp in
    * seconds since the UNIX epoch (January 1, 1970) when this feature becomes live in the Geo
-   * repository. Different from start_date in that this is the birth date of Google's representation
-   * of the place whereas start_date is the birth date of the place in the physical world.
+   * repository. This was the birth date of the place's representation in Google whereas start_date
+   * is the birth date of the place's operations in the physical world.
    * @param featureBirthTimestampSeconds featureBirthTimestampSeconds or {@code null} for none
    */
   public GeostoreExistenceProto setFeatureBirthTimestampSeconds(java.lang.Long featureBirthTimestampSeconds) {
@@ -282,14 +255,14 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
   }
 
   /**
-   * (Initial) opening and (permanent) closing dates of the establishment, such that start_date is
-   * the first day open and end_date is the first day closed. The only allowed precisions are
-   * PRECISION_DAY, PRECISION_MONTH, PRECISION_YEAR. DateTimeProto.seconds should have the lowest
-   * legal value for the desired date/time and precision. E.g. for PRECISION_MONTH, 2019-02-15
-   * 21:10:30 is not valid, it should be 2019-02-01 00:00:00 instead. NOTE: The start_date and
-   * end_date are stored in UTC but should be interpreted as being in the local timezone. So clients
-   * should convert the DateTimeProto to local (civil) time using UTC+0, and then treat the result
-   * as local to the feature.
+   * (Initial) start and (permanent) end dates of operations, such that start_date is the first day
+   * operational and end_date is the first day when operations have permanently ended. The only
+   * allowed precisions are PRECISION_DAY, PRECISION_MONTH, PRECISION_YEAR. DateTimeProto.seconds
+   * should have the lowest legal value for the desired date/time and precision. E.g. for
+   * PRECISION_MONTH, 2019-02-15 21:10:30 is not valid, it should be 2019-02-01 00:00:00 instead.
+   * NOTE: The start_date and end_date are stored in UTC but should be interpreted as being in the
+   * local timezone. So clients should convert the DateTimeProto to local (civil) time using UTC+0,
+   * and then treat the result as local to the feature.
    * @return value or {@code null} for none
    */
   public GeostoreDateTimeProto getStartDate() {
@@ -297,14 +270,14 @@ public final class GeostoreExistenceProto extends com.google.api.client.json.Gen
   }
 
   /**
-   * (Initial) opening and (permanent) closing dates of the establishment, such that start_date is
-   * the first day open and end_date is the first day closed. The only allowed precisions are
-   * PRECISION_DAY, PRECISION_MONTH, PRECISION_YEAR. DateTimeProto.seconds should have the lowest
-   * legal value for the desired date/time and precision. E.g. for PRECISION_MONTH, 2019-02-15
-   * 21:10:30 is not valid, it should be 2019-02-01 00:00:00 instead. NOTE: The start_date and
-   * end_date are stored in UTC but should be interpreted as being in the local timezone. So clients
-   * should convert the DateTimeProto to local (civil) time using UTC+0, and then treat the result
-   * as local to the feature.
+   * (Initial) start and (permanent) end dates of operations, such that start_date is the first day
+   * operational and end_date is the first day when operations have permanently ended. The only
+   * allowed precisions are PRECISION_DAY, PRECISION_MONTH, PRECISION_YEAR. DateTimeProto.seconds
+   * should have the lowest legal value for the desired date/time and precision. E.g. for
+   * PRECISION_MONTH, 2019-02-15 21:10:30 is not valid, it should be 2019-02-01 00:00:00 instead.
+   * NOTE: The start_date and end_date are stored in UTC but should be interpreted as being in the
+   * local timezone. So clients should convert the DateTimeProto to local (civil) time using UTC+0,
+   * and then treat the result as local to the feature.
    * @param startDate startDate or {@code null} for none
    */
   public GeostoreExistenceProto setStartDate(GeostoreDateTimeProto startDate) {

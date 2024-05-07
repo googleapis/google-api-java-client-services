@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * NOTE: When adding a new field to be propagated to Raffia check if NsrPatternSignalSpec needs to
- * be updated. Next ID: 56
+ * be updated. Next ID: 63
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -50,6 +50,20 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Integer chardEncoded;
+
+  /**
+   * Site-level Chard (encoded as an int).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualityNsrVersionedIntSignal> chardScoreEncoded;
+
+  /**
+   * Site-level Chard Variance for all pages of a site.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualityNsrVersionedFloatSignal> chardScoreVariance;
 
   /**
    * The value may be {@code null}.
@@ -150,16 +164,23 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   private java.lang.Boolean isVideoFocusedSite;
 
   /**
+   * Keto data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer language;
+  private java.util.List<QualityNsrKetoKetoVersionedData> ketoVersionedData;
+
+  static {
+    // hack to force ProGuard to consider QualityNsrKetoKetoVersionedData used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(QualityNsrKetoKetoVersionedData.class);
+  }
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer largeOrgId;
+  private java.lang.Integer language;
 
   /**
    * Locality score of the site, i.e. the locality component of the LocalAuthority signal (see go
@@ -174,14 +195,6 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private QualityNsrNsrDataMetadata metadata;
-
-  /**
-   * This field used as a temporary field for clean transitions when we need to roll out Q* and NSR
-   * changes simultaneously.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float newNsr;
 
   /**
    * The value may be {@code null}.
@@ -206,7 +219,6 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   private java.lang.Float nsrOverrideBid;
 
   /**
-   * NSR variance logodds [0, infinity).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -242,6 +254,13 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   private java.util.List<QualityNsrVersionedFloatSignal> priorAdjustedNsr;
 
   /**
+   * Site-level AGC classification score (see also go/project-racter-overview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualityNsrVersionedFloatSignal> racterScores;
+
+  /**
    * Secondary NSR sitechunk. When present, it provides more granular chunking than primary
    * sitechunks (see quality/nsr/util/sitechunker.h for details).
    * The value may be {@code null}.
@@ -254,6 +273,21 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Float shoppingScore;
+
+  /**
+   * Site2vec embeddings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualityNsrNsrDataEmbedding> site2vecEmbedding;
+
+  /**
+   * Encoded site2vec embedding (to be used in superroot) since the full embeddings take too much
+   * space.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualityNsrNsrDataEncodedEmbedding> site2vecEmbeddingEncoded;
 
   /**
    * Aggregated value of url autopilot scores for this sitechunk.
@@ -305,12 +339,6 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Float siteQualityStddev;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private java.util.List<QualityNsrVersionedFloatSignal> siteQualityStddevs;
 
   /**
@@ -332,6 +360,13 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.util.List<QualityNsrVersionedFloatSignal> spambrainLavcScores;
+
+  /**
+   * Titlematch score of the site, a signal that tells how well titles are matching user queries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float titlematchScore;
 
   /**
    * Site-level tofu score: site quality predictor based on content.
@@ -437,6 +472,40 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setChardEncoded(java.lang.Integer chardEncoded) {
     this.chardEncoded = chardEncoded;
+    return this;
+  }
+
+  /**
+   * Site-level Chard (encoded as an int).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrVersionedIntSignal> getChardScoreEncoded() {
+    return chardScoreEncoded;
+  }
+
+  /**
+   * Site-level Chard (encoded as an int).
+   * @param chardScoreEncoded chardScoreEncoded or {@code null} for none
+   */
+  public QualityNsrNsrData setChardScoreEncoded(java.util.List<QualityNsrVersionedIntSignal> chardScoreEncoded) {
+    this.chardScoreEncoded = chardScoreEncoded;
+    return this;
+  }
+
+  /**
+   * Site-level Chard Variance for all pages of a site.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrVersionedFloatSignal> getChardScoreVariance() {
+    return chardScoreVariance;
+  }
+
+  /**
+   * Site-level Chard Variance for all pages of a site.
+   * @param chardScoreVariance chardScoreVariance or {@code null} for none
+   */
+  public QualityNsrNsrData setChardScoreVariance(java.util.List<QualityNsrVersionedFloatSignal> chardScoreVariance) {
+    this.chardScoreVariance = chardScoreVariance;
     return this;
   }
 
@@ -679,6 +748,23 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Keto data.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrKetoKetoVersionedData> getKetoVersionedData() {
+    return ketoVersionedData;
+  }
+
+  /**
+   * Keto data.
+   * @param ketoVersionedData ketoVersionedData or {@code null} for none
+   */
+  public QualityNsrNsrData setKetoVersionedData(java.util.List<QualityNsrKetoKetoVersionedData> ketoVersionedData) {
+    this.ketoVersionedData = ketoVersionedData;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLanguage() {
@@ -690,21 +776,6 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setLanguage(java.lang.Integer language) {
     this.language = language;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getLargeOrgId() {
-    return largeOrgId;
-  }
-
-  /**
-   * @param largeOrgId largeOrgId or {@code null} for none
-   */
-  public QualityNsrNsrData setLargeOrgId(java.lang.Integer largeOrgId) {
-    this.largeOrgId = largeOrgId;
     return this;
   }
 
@@ -739,25 +810,6 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setMetadata(QualityNsrNsrDataMetadata metadata) {
     this.metadata = metadata;
-    return this;
-  }
-
-  /**
-   * This field used as a temporary field for clean transitions when we need to roll out Q* and NSR
-   * changes simultaneously.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getNewNsr() {
-    return newNsr;
-  }
-
-  /**
-   * This field used as a temporary field for clean transitions when we need to roll out Q* and NSR
-   * changes simultaneously.
-   * @param newNsr newNsr or {@code null} for none
-   */
-  public QualityNsrNsrData setNewNsr(java.lang.Float newNsr) {
-    this.newNsr = newNsr;
     return this;
   }
 
@@ -815,7 +867,6 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * NSR variance logodds [0, infinity).
    * @return value or {@code null} for none
    */
   public java.lang.Float getNsrVariance() {
@@ -823,7 +874,6 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * NSR variance logodds [0, infinity).
    * @param nsrVariance nsrVariance or {@code null} for none
    */
   public QualityNsrNsrData setNsrVariance(java.lang.Float nsrVariance) {
@@ -902,6 +952,23 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Site-level AGC classification score (see also go/project-racter-overview).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrVersionedFloatSignal> getRacterScores() {
+    return racterScores;
+  }
+
+  /**
+   * Site-level AGC classification score (see also go/project-racter-overview).
+   * @param racterScores racterScores or {@code null} for none
+   */
+  public QualityNsrNsrData setRacterScores(java.util.List<QualityNsrVersionedFloatSignal> racterScores) {
+    this.racterScores = racterScores;
+    return this;
+  }
+
+  /**
    * Secondary NSR sitechunk. When present, it provides more granular chunking than primary
    * sitechunks (see quality/nsr/util/sitechunker.h for details).
    * @return value or {@code null} for none
@@ -932,6 +999,42 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setShoppingScore(java.lang.Float shoppingScore) {
     this.shoppingScore = shoppingScore;
+    return this;
+  }
+
+  /**
+   * Site2vec embeddings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrNsrDataEmbedding> getSite2vecEmbedding() {
+    return site2vecEmbedding;
+  }
+
+  /**
+   * Site2vec embeddings.
+   * @param site2vecEmbedding site2vecEmbedding or {@code null} for none
+   */
+  public QualityNsrNsrData setSite2vecEmbedding(java.util.List<QualityNsrNsrDataEmbedding> site2vecEmbedding) {
+    this.site2vecEmbedding = site2vecEmbedding;
+    return this;
+  }
+
+  /**
+   * Encoded site2vec embedding (to be used in superroot) since the full embeddings take too much
+   * space.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrNsrDataEncodedEmbedding> getSite2vecEmbeddingEncoded() {
+    return site2vecEmbeddingEncoded;
+  }
+
+  /**
+   * Encoded site2vec embedding (to be used in superroot) since the full embeddings take too much
+   * space.
+   * @param site2vecEmbeddingEncoded site2vecEmbeddingEncoded or {@code null} for none
+   */
+  public QualityNsrNsrData setSite2vecEmbeddingEncoded(java.util.List<QualityNsrNsrDataEncodedEmbedding> site2vecEmbeddingEncoded) {
+    this.site2vecEmbeddingEncoded = site2vecEmbeddingEncoded;
     return this;
   }
 
@@ -1045,29 +1148,14 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    * level rating.
    * @return value or {@code null} for none
    */
-  public java.lang.Float getSiteQualityStddev() {
-    return siteQualityStddev;
+  public java.util.List<QualityNsrVersionedFloatSignal> getSiteQualityStddevs() {
+    return siteQualityStddevs;
   }
 
   /**
    * Estimate of site's PQ rating stddev--spread of the page-level PQ ratings of a site. Note this
    * is different from nsr_variance which predicts error of NSR itself from the aggregated site-
    * level rating.
-   * @param siteQualityStddev siteQualityStddev or {@code null} for none
-   */
-  public QualityNsrNsrData setSiteQualityStddev(java.lang.Float siteQualityStddev) {
-    this.siteQualityStddev = siteQualityStddev;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<QualityNsrVersionedFloatSignal> getSiteQualityStddevs() {
-    return siteQualityStddevs;
-  }
-
-  /**
    * @param siteQualityStddevs siteQualityStddevs or {@code null} for none
    */
   public QualityNsrNsrData setSiteQualityStddevs(java.util.List<QualityNsrVersionedFloatSignal> siteQualityStddevs) {
@@ -1121,6 +1209,23 @@ public final class QualityNsrNsrData extends com.google.api.client.json.GenericJ
    */
   public QualityNsrNsrData setSpambrainLavcScores(java.util.List<QualityNsrVersionedFloatSignal> spambrainLavcScores) {
     this.spambrainLavcScores = spambrainLavcScores;
+    return this;
+  }
+
+  /**
+   * Titlematch score of the site, a signal that tells how well titles are matching user queries.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getTitlematchScore() {
+    return titlematchScore;
+  }
+
+  /**
+   * Titlematch score of the site, a signal that tells how well titles are matching user queries.
+   * @param titlematchScore titlematchScore or {@code null} for none
+   */
+  public QualityNsrNsrData setTitlematchScore(java.lang.Float titlematchScore) {
+    this.titlematchScore = titlematchScore;
     return this;
   }
 

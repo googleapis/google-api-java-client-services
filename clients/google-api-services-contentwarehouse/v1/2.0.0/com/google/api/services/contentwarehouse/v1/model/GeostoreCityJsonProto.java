@@ -33,20 +33,19 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class GeostoreCityJsonProto extends com.google.api.client.json.GenericJson {
 
   /**
+   * Additional information that can be used to describe the appearance of CityObjects in this
+   * CityJsonProto.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeostoreCityJsonProtoAppearance appearance;
+
+  /**
    * City objects associated with this CityJsonProto.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GeostoreCityJsonProtoCityObject> cityObjects;
-
-  /**
-   * Spec for converting vertices from a local coordinate system in arbitrary units to ECEF
-   * coordinates in meters (https://en.wikipedia.org/wiki/Earth-centered,_Earth-
-   * fixed_coordinate_system).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GeostoreCityJsonProtoTransform transform;
 
   /**
    * Vertices as local coordinates represented as a flattened list: [x1,y1,z1,x2,y2,z2,x3,y3,z3].
@@ -58,7 +57,35 @@ public final class GeostoreCityJsonProto extends com.google.api.client.json.Gene
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.Integer> vertexXyz;
+  private java.util.List<java.lang.Integer> flattenedVertices;
+
+  /**
+   * Spec for converting vertices from a local coordinate system in arbitrary units to ECEF
+   * coordinates in meters (https://en.wikipedia.org/wiki/Earth-centered,_Earth-
+   * fixed_coordinate_system).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeostoreCityJsonProtoTransform transform;
+
+  /**
+   * Additional information that can be used to describe the appearance of CityObjects in this
+   * CityJsonProto.
+   * @return value or {@code null} for none
+   */
+  public GeostoreCityJsonProtoAppearance getAppearance() {
+    return appearance;
+  }
+
+  /**
+   * Additional information that can be used to describe the appearance of CityObjects in this
+   * CityJsonProto.
+   * @param appearance appearance or {@code null} for none
+   */
+  public GeostoreCityJsonProto setAppearance(GeostoreCityJsonProtoAppearance appearance) {
+    this.appearance = appearance;
+    return this;
+  }
 
   /**
    * City objects associated with this CityJsonProto.
@@ -74,6 +101,33 @@ public final class GeostoreCityJsonProto extends com.google.api.client.json.Gene
    */
   public GeostoreCityJsonProto setCityObjects(java.util.List<GeostoreCityJsonProtoCityObject> cityObjects) {
     this.cityObjects = cityObjects;
+    return this;
+  }
+
+  /**
+   * Vertices as local coordinates represented as a flattened list: [x1,y1,z1,x2,y2,z2,x3,y3,z3].
+   * Vertices are relative to a local coordinate system and rounded to their nearest integer value.
+   * See `transform` for how vertices can be transformed from a local coordinate system into an
+   * Earth-centered, Earth-fixed coordinate system. Vertices are flattened for space efficiency,
+   * memory locality, and processing performance. To access the x,y,z coordinates of vertex N, read
+   * the values at indices 3N, 3N+1, and 3N+2.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getFlattenedVertices() {
+    return flattenedVertices;
+  }
+
+  /**
+   * Vertices as local coordinates represented as a flattened list: [x1,y1,z1,x2,y2,z2,x3,y3,z3].
+   * Vertices are relative to a local coordinate system and rounded to their nearest integer value.
+   * See `transform` for how vertices can be transformed from a local coordinate system into an
+   * Earth-centered, Earth-fixed coordinate system. Vertices are flattened for space efficiency,
+   * memory locality, and processing performance. To access the x,y,z coordinates of vertex N, read
+   * the values at indices 3N, 3N+1, and 3N+2.
+   * @param flattenedVertices flattenedVertices or {@code null} for none
+   */
+  public GeostoreCityJsonProto setFlattenedVertices(java.util.List<java.lang.Integer> flattenedVertices) {
+    this.flattenedVertices = flattenedVertices;
     return this;
   }
 
@@ -95,33 +149,6 @@ public final class GeostoreCityJsonProto extends com.google.api.client.json.Gene
    */
   public GeostoreCityJsonProto setTransform(GeostoreCityJsonProtoTransform transform) {
     this.transform = transform;
-    return this;
-  }
-
-  /**
-   * Vertices as local coordinates represented as a flattened list: [x1,y1,z1,x2,y2,z2,x3,y3,z3].
-   * Vertices are relative to a local coordinate system and rounded to their nearest integer value.
-   * See `transform` for how vertices can be transformed from a local coordinate system into an
-   * Earth-centered, Earth-fixed coordinate system. Vertices are flattened for space efficiency,
-   * memory locality, and processing performance. To access the x,y,z coordinates of vertex N, read
-   * the values at indices 3N, 3N+1, and 3N+2.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.Integer> getVertexXyz() {
-    return vertexXyz;
-  }
-
-  /**
-   * Vertices as local coordinates represented as a flattened list: [x1,y1,z1,x2,y2,z2,x3,y3,z3].
-   * Vertices are relative to a local coordinate system and rounded to their nearest integer value.
-   * See `transform` for how vertices can be transformed from a local coordinate system into an
-   * Earth-centered, Earth-fixed coordinate system. Vertices are flattened for space efficiency,
-   * memory locality, and processing performance. To access the x,y,z coordinates of vertex N, read
-   * the values at indices 3N, 3N+1, and 3N+2.
-   * @param vertexXyz vertexXyz or {@code null} for none
-   */
-  public GeostoreCityJsonProto setVertexXyz(java.util.List<java.lang.Integer> vertexXyz) {
-    this.vertexXyz = vertexXyz;
     return this;
   }
 

@@ -25,7 +25,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * simple_value) are allowed to omit the annotation. See intent_query_proto_test.cc for details.
  * Note: If you are trying to add a new OpaqueType, stop; OpaqueType is deprecated, refer to
  * go/opaque_type for details. If you think this is the only way to implement your feature, attend
- * an office hours (go/meaning-help) and discuss with the MRF team. Next Id: 41
+ * an office hours (go/meaning-help) and discuss with the MRF team. Next Id: 42
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -246,6 +246,13 @@ public final class KnowledgeAnswersIntentQueryArgumentValue extends com.google.a
    */
   @com.google.api.client.util.Key
   private QualityActionsReminder reminder;
+
+  /**
+   * A scalar value with optional unit; used ONLY for resolved values after grounding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KnowledgeAnswersIntentQueryScalarValue scalarValue;
 
   /**
    * Sensitive value, see go/sensitive-intents and go/a4w-multi-turn-dialog
@@ -820,6 +827,23 @@ public final class KnowledgeAnswersIntentQueryArgumentValue extends com.google.a
    */
   public KnowledgeAnswersIntentQueryArgumentValue setReminder(QualityActionsReminder reminder) {
     this.reminder = reminder;
+    return this;
+  }
+
+  /**
+   * A scalar value with optional unit; used ONLY for resolved values after grounding.
+   * @return value or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryScalarValue getScalarValue() {
+    return scalarValue;
+  }
+
+  /**
+   * A scalar value with optional unit; used ONLY for resolved values after grounding.
+   * @param scalarValue scalarValue or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentValue setScalarValue(KnowledgeAnswersIntentQueryScalarValue scalarValue) {
+    this.scalarValue = scalarValue;
     return this;
   }
 

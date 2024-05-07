@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Message representing versioned scores
+ * Model definition for SpamBrainScore.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -31,6 +31,12 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class SpamBrainScore extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelName;
+
+  /**
    * The value corresponding to this version.
    * The value may be {@code null}.
    */
@@ -38,11 +44,26 @@ public final class SpamBrainScore extends com.google.api.client.json.GenericJson
   private java.lang.Float sbScore;
 
   /**
-   * The version id.
+   * The version id (derived from the epoch - larger number means newer score)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer versionId;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelName() {
+    return modelName;
+  }
+
+  /**
+   * @param modelName modelName or {@code null} for none
+   */
+  public SpamBrainScore setModelName(java.lang.String modelName) {
+    this.modelName = modelName;
+    return this;
+  }
 
   /**
    * The value corresponding to this version.
@@ -62,7 +83,7 @@ public final class SpamBrainScore extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The version id.
+   * The version id (derived from the epoch - larger number means newer score)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersionId() {
@@ -70,7 +91,7 @@ public final class SpamBrainScore extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The version id.
+   * The version id (derived from the epoch - larger number means newer score)
    * @param versionId versionId or {@code null} for none
    */
   public SpamBrainScore setVersionId(java.lang.Integer versionId) {

@@ -102,13 +102,6 @@ public final class GeostoreRoadSignComponentProto extends com.google.api.client.
   private GeostoreNameProto text;
 
   /**
-   * This type of content represented by this sign component.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
-
-  /**
    * The id of the feature referred to by this component, typically the route or locality feature
    * this sign points towards. In the ASCII art example above, this field would contain the id for
    * the routes A11 and E50 and the localities Chartres and Paris in the corresponding component.
@@ -254,23 +247,6 @@ public final class GeostoreRoadSignComponentProto extends com.google.api.client.
    */
   public GeostoreRoadSignComponentProto setText(GeostoreNameProto text) {
     this.text = text;
-    return this;
-  }
-
-  /**
-   * This type of content represented by this sign component.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getType() {
-    return type;
-  }
-
-  /**
-   * This type of content represented by this sign component.
-   * @param type type or {@code null} for none
-   */
-  public GeostoreRoadSignComponentProto setType(java.lang.String type) {
-    this.type = type;
     return this;
   }
 

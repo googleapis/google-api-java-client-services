@@ -46,6 +46,13 @@ public final class AssistantLogsRoomAnnotationLog extends com.google.api.client.
   private java.lang.Integer roomCount;
 
   /**
+   * The identification of the room.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> roomId;
+
+  /**
    * The annotation type mentioned in the query.
    * The value may be {@code null}.
    */
@@ -91,6 +98,23 @@ public final class AssistantLogsRoomAnnotationLog extends com.google.api.client.
    */
   public AssistantLogsRoomAnnotationLog setRoomCount(java.lang.Integer roomCount) {
     this.roomCount = roomCount;
+    return this;
+  }
+
+  /**
+   * The identification of the room.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRoomId() {
+    return roomId;
+  }
+
+  /**
+   * The identification of the room.
+   * @param roomId roomId or {@code null} for none
+   */
+  public AssistantLogsRoomAnnotationLog setRoomId(java.util.List<java.lang.String> roomId) {
+    this.roomId = roomId;
     return this;
   }
 

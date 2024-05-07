@@ -17,7 +17,10 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for GeostoreGeopoliticalProto.
+ * This protocol buffer is used to store geopolitical information about the feature that override
+ * the base state of the feature. For example, the name of the feature from different regions' POV.
+ * This protocol buffer can be used on any feature involved in a geopolitical situation and is not
+ * limited to TYPE_POLITICAL features.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -41,11 +44,37 @@ public final class GeostoreGeopoliticalProto extends com.google.api.client.json.
   private java.lang.String conveysAttributionTo;
 
   /**
-   * Any specific handling of this feature's name from different regions' POVs.
+   * Any specific handling of this feature's name from different regions' POVs. This field can only
+   * contain up to one name per region/language combination (each of which would be a separate
+   * RegionSpecificNameProto).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GeostoreRegionSpecificNameProto> regionSpecificName;
+
+  /**
+   * Adjustments to the base polygon of this feature to construct a region-specific view. In
+   * general, this field is edited only by go/mf-triggers based on the data written to
+   * regional_polygon_composing_claims. This field should only be directly edited if there are
+   * region-specific adjustments that cannot be represented using the geometry of this feature's
+   * claims, but note that anything written to this field will be overwritten by go/mf-triggers if
+   * regional_polygon_composing_claims is ever edited. See go/geopolitical-geometry-schema for more
+   * information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GeostoreGeopoliticalProtoRegionalPolygonAdjustmentProto> regionalPolygonAdjustment;
+
+  /**
+   * Feature's claim(s) which compose the region-specific polygon. This composition will be used by
+   * go/mf-triggers to compose the specified region's view of this feature's geometry. The
+   * difference between that polygon and this feature's base polygon will be stored in
+   * regional_polygon_adjustment below. Edits to this field will overwrite anything already stored
+   * in regional_polygon_adjustment. See go/geopolitical-geometry-schema for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GeostoreGeopoliticalProtoRegionalPolygonComposingClaimsProto> regionalPolygonComposingClaims;
 
   /**
    * If present, some aspect of this feature (usually name or geometry) can signify ownership of the
@@ -71,7 +100,9 @@ public final class GeostoreGeopoliticalProto extends com.google.api.client.json.
   }
 
   /**
-   * Any specific handling of this feature's name from different regions' POVs.
+   * Any specific handling of this feature's name from different regions' POVs. This field can only
+   * contain up to one name per region/language combination (each of which would be a separate
+   * RegionSpecificNameProto).
    * @return value or {@code null} for none
    */
   public java.util.List<GeostoreRegionSpecificNameProto> getRegionSpecificName() {
@@ -79,11 +110,67 @@ public final class GeostoreGeopoliticalProto extends com.google.api.client.json.
   }
 
   /**
-   * Any specific handling of this feature's name from different regions' POVs.
+   * Any specific handling of this feature's name from different regions' POVs. This field can only
+   * contain up to one name per region/language combination (each of which would be a separate
+   * RegionSpecificNameProto).
    * @param regionSpecificName regionSpecificName or {@code null} for none
    */
   public GeostoreGeopoliticalProto setRegionSpecificName(java.util.List<GeostoreRegionSpecificNameProto> regionSpecificName) {
     this.regionSpecificName = regionSpecificName;
+    return this;
+  }
+
+  /**
+   * Adjustments to the base polygon of this feature to construct a region-specific view. In
+   * general, this field is edited only by go/mf-triggers based on the data written to
+   * regional_polygon_composing_claims. This field should only be directly edited if there are
+   * region-specific adjustments that cannot be represented using the geometry of this feature's
+   * claims, but note that anything written to this field will be overwritten by go/mf-triggers if
+   * regional_polygon_composing_claims is ever edited. See go/geopolitical-geometry-schema for more
+   * information.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GeostoreGeopoliticalProtoRegionalPolygonAdjustmentProto> getRegionalPolygonAdjustment() {
+    return regionalPolygonAdjustment;
+  }
+
+  /**
+   * Adjustments to the base polygon of this feature to construct a region-specific view. In
+   * general, this field is edited only by go/mf-triggers based on the data written to
+   * regional_polygon_composing_claims. This field should only be directly edited if there are
+   * region-specific adjustments that cannot be represented using the geometry of this feature's
+   * claims, but note that anything written to this field will be overwritten by go/mf-triggers if
+   * regional_polygon_composing_claims is ever edited. See go/geopolitical-geometry-schema for more
+   * information.
+   * @param regionalPolygonAdjustment regionalPolygonAdjustment or {@code null} for none
+   */
+  public GeostoreGeopoliticalProto setRegionalPolygonAdjustment(java.util.List<GeostoreGeopoliticalProtoRegionalPolygonAdjustmentProto> regionalPolygonAdjustment) {
+    this.regionalPolygonAdjustment = regionalPolygonAdjustment;
+    return this;
+  }
+
+  /**
+   * Feature's claim(s) which compose the region-specific polygon. This composition will be used by
+   * go/mf-triggers to compose the specified region's view of this feature's geometry. The
+   * difference between that polygon and this feature's base polygon will be stored in
+   * regional_polygon_adjustment below. Edits to this field will overwrite anything already stored
+   * in regional_polygon_adjustment. See go/geopolitical-geometry-schema for more information.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GeostoreGeopoliticalProtoRegionalPolygonComposingClaimsProto> getRegionalPolygonComposingClaims() {
+    return regionalPolygonComposingClaims;
+  }
+
+  /**
+   * Feature's claim(s) which compose the region-specific polygon. This composition will be used by
+   * go/mf-triggers to compose the specified region's view of this feature's geometry. The
+   * difference between that polygon and this feature's base polygon will be stored in
+   * regional_polygon_adjustment below. Edits to this field will overwrite anything already stored
+   * in regional_polygon_adjustment. See go/geopolitical-geometry-schema for more information.
+   * @param regionalPolygonComposingClaims regionalPolygonComposingClaims or {@code null} for none
+   */
+  public GeostoreGeopoliticalProto setRegionalPolygonComposingClaims(java.util.List<GeostoreGeopoliticalProtoRegionalPolygonComposingClaimsProto> regionalPolygonComposingClaims) {
+    this.regionalPolygonComposingClaims = regionalPolygonComposingClaims;
     return this;
   }
 

@@ -31,6 +31,33 @@ package com.google.api.services.contentwarehouse.v1.model;
 @SuppressWarnings("javadoc")
 public final class PhotosDynamicDepthMetadata extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Currently there are two versions of DynamicDepth (go/ddv2). DynamicDepth photos without a set
+   * version should be assumed to be ddv1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer version;
+
+  /**
+   * Currently there are two versions of DynamicDepth (go/ddv2). DynamicDepth photos without a set
+   * version should be assumed to be ddv1.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getVersion() {
+    return version;
+  }
+
+  /**
+   * Currently there are two versions of DynamicDepth (go/ddv2). DynamicDepth photos without a set
+   * version should be assumed to be ddv1.
+   * @param version version or {@code null} for none
+   */
+  public PhotosDynamicDepthMetadata setVersion(java.lang.Integer version) {
+    this.version = version;
+    return this;
+  }
+
   @Override
   public PhotosDynamicDepthMetadata set(String fieldName, Object value) {
     return (PhotosDynamicDepthMetadata) super.set(fieldName, value);

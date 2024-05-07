@@ -45,35 +45,11 @@ public final class AbuseiamEvaluation extends com.google.api.client.json.Generic
   private java.lang.String backend;
 
   /**
-   * Extra information regarding the cluster review context where the case received the evaluation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AbuseiamClusterEvaluationContext clusterEvaluationContext;
-
-  /**
    * Backends can choose to put some debug info in addition to abuse_type, score, and status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String comment;
-
-  /**
-   * A set of repeated features to allow adapters to return semi structured data. Please, prefer
-   * using feature instead of the old misc_data field since it supports richer and more structured
-   * data to be passed back.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<AbuseiamFeature> feature;
-
-  /**
-   * Information about the manual review, for manual review evaluations. Do NOT expect this field to
-   * be set if `backend != MANUAL_REVIEW`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AbuseiamManualReviewEvaluationInfo manualReviewInfo;
 
   /**
    * This field is used to store miscellaneous information that Backend might provide. If you find
@@ -83,13 +59,6 @@ public final class AbuseiamEvaluation extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.util.List<AbuseiamNameValuePair> miscData;
-
-  /**
-   * Time in milliseconds when the Backend processed this Evaluation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long processTimeMillisecs;
 
   /**
    * When the evaluation was processed by the decision script.
@@ -146,14 +115,6 @@ public final class AbuseiamEvaluation extends com.google.api.client.json.Generic
   private java.lang.String version;
 
   /**
-   * Information about the video review, for video review evaluations. Do NOT expect this field to
-   * be set if `backend != VIDEO_REVIEW`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AbuseiamVideoReviewData videoReviewData;
-
-  /**
    * @return value or {@code null} for none
    */
   public AbuseiamAbuseType getAbuseType() {
@@ -186,23 +147,6 @@ public final class AbuseiamEvaluation extends com.google.api.client.json.Generic
   }
 
   /**
-   * Extra information regarding the cluster review context where the case received the evaluation.
-   * @return value or {@code null} for none
-   */
-  public AbuseiamClusterEvaluationContext getClusterEvaluationContext() {
-    return clusterEvaluationContext;
-  }
-
-  /**
-   * Extra information regarding the cluster review context where the case received the evaluation.
-   * @param clusterEvaluationContext clusterEvaluationContext or {@code null} for none
-   */
-  public AbuseiamEvaluation setClusterEvaluationContext(AbuseiamClusterEvaluationContext clusterEvaluationContext) {
-    this.clusterEvaluationContext = clusterEvaluationContext;
-    return this;
-  }
-
-  /**
    * Backends can choose to put some debug info in addition to abuse_type, score, and status.
    * @return value or {@code null} for none
    */
@@ -216,46 +160,6 @@ public final class AbuseiamEvaluation extends com.google.api.client.json.Generic
    */
   public AbuseiamEvaluation setComment(java.lang.String comment) {
     this.comment = comment;
-    return this;
-  }
-
-  /**
-   * A set of repeated features to allow adapters to return semi structured data. Please, prefer
-   * using feature instead of the old misc_data field since it supports richer and more structured
-   * data to be passed back.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<AbuseiamFeature> getFeature() {
-    return feature;
-  }
-
-  /**
-   * A set of repeated features to allow adapters to return semi structured data. Please, prefer
-   * using feature instead of the old misc_data field since it supports richer and more structured
-   * data to be passed back.
-   * @param feature feature or {@code null} for none
-   */
-  public AbuseiamEvaluation setFeature(java.util.List<AbuseiamFeature> feature) {
-    this.feature = feature;
-    return this;
-  }
-
-  /**
-   * Information about the manual review, for manual review evaluations. Do NOT expect this field to
-   * be set if `backend != MANUAL_REVIEW`.
-   * @return value or {@code null} for none
-   */
-  public AbuseiamManualReviewEvaluationInfo getManualReviewInfo() {
-    return manualReviewInfo;
-  }
-
-  /**
-   * Information about the manual review, for manual review evaluations. Do NOT expect this field to
-   * be set if `backend != MANUAL_REVIEW`.
-   * @param manualReviewInfo manualReviewInfo or {@code null} for none
-   */
-  public AbuseiamEvaluation setManualReviewInfo(AbuseiamManualReviewEvaluationInfo manualReviewInfo) {
-    this.manualReviewInfo = manualReviewInfo;
     return this;
   }
 
@@ -277,23 +181,6 @@ public final class AbuseiamEvaluation extends com.google.api.client.json.Generic
    */
   public AbuseiamEvaluation setMiscData(java.util.List<AbuseiamNameValuePair> miscData) {
     this.miscData = miscData;
-    return this;
-  }
-
-  /**
-   * Time in milliseconds when the Backend processed this Evaluation.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getProcessTimeMillisecs() {
-    return processTimeMillisecs;
-  }
-
-  /**
-   * Time in milliseconds when the Backend processed this Evaluation.
-   * @param processTimeMillisecs processTimeMillisecs or {@code null} for none
-   */
-  public AbuseiamEvaluation setProcessTimeMillisecs(java.lang.Long processTimeMillisecs) {
-    this.processTimeMillisecs = processTimeMillisecs;
     return this;
   }
 
@@ -426,25 +313,6 @@ public final class AbuseiamEvaluation extends com.google.api.client.json.Generic
    */
   public AbuseiamEvaluation setVersion(java.lang.String version) {
     this.version = version;
-    return this;
-  }
-
-  /**
-   * Information about the video review, for video review evaluations. Do NOT expect this field to
-   * be set if `backend != VIDEO_REVIEW`.
-   * @return value or {@code null} for none
-   */
-  public AbuseiamVideoReviewData getVideoReviewData() {
-    return videoReviewData;
-  }
-
-  /**
-   * Information about the video review, for video review evaluations. Do NOT expect this field to
-   * be set if `backend != VIDEO_REVIEW`.
-   * @param videoReviewData videoReviewData or {@code null} for none
-   */
-  public AbuseiamEvaluation setVideoReviewData(AbuseiamVideoReviewData videoReviewData) {
-    this.videoReviewData = videoReviewData;
     return this;
   }
 

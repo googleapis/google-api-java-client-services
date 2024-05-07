@@ -17,7 +17,8 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for QualityNsrVersionedFloatSignal.
+ * A versioned float value. See VersionedFloatSignal functions in
+ * google3/quality/nsr/proto/proto_util.h
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -41,8 +42,8 @@ public final class QualityNsrVersionedFloatSignal extends com.google.api.client.
    * Unique version id.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private java.lang.Integer versionId;
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long versionId;
 
   /**
    * The corresponding float value.
@@ -65,7 +66,7 @@ public final class QualityNsrVersionedFloatSignal extends com.google.api.client.
    * Unique version id.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getVersionId() {
+  public java.lang.Long getVersionId() {
     return versionId;
   }
 
@@ -73,7 +74,7 @@ public final class QualityNsrVersionedFloatSignal extends com.google.api.client.
    * Unique version id.
    * @param versionId versionId or {@code null} for none
    */
-  public QualityNsrVersionedFloatSignal setVersionId(java.lang.Integer versionId) {
+  public QualityNsrVersionedFloatSignal setVersionId(java.lang.Long versionId) {
     this.versionId = versionId;
     return this;
   }

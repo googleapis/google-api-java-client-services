@@ -86,6 +86,14 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
   }
 
   /**
+   * Policy metadata fields for LLM related data usage restrictions. Only expected to be used by SCP
+   * internally -- please consult ke-data-governance@ before populating this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageGraphBfgLlmPolicyMetadata llmPolicyMetadata;
+
+  /**
    * Policy metadata fields for LMS data. Only expected to be used by LMS providers -- please
    * consult ke-data-governance@ before populating this field.
    * The value may be {@code null}.
@@ -212,6 +220,25 @@ public final class StorageGraphBfgPolicyMetadata extends com.google.api.client.j
    */
   public StorageGraphBfgPolicyMetadata setLegalRemovalRegions(java.util.List<KeGovernanceTypedRegions> legalRemovalRegions) {
     this.legalRemovalRegions = legalRemovalRegions;
+    return this;
+  }
+
+  /**
+   * Policy metadata fields for LLM related data usage restrictions. Only expected to be used by SCP
+   * internally -- please consult ke-data-governance@ before populating this field.
+   * @return value or {@code null} for none
+   */
+  public StorageGraphBfgLlmPolicyMetadata getLlmPolicyMetadata() {
+    return llmPolicyMetadata;
+  }
+
+  /**
+   * Policy metadata fields for LLM related data usage restrictions. Only expected to be used by SCP
+   * internally -- please consult ke-data-governance@ before populating this field.
+   * @param llmPolicyMetadata llmPolicyMetadata or {@code null} for none
+   */
+  public StorageGraphBfgPolicyMetadata setLlmPolicyMetadata(StorageGraphBfgLlmPolicyMetadata llmPolicyMetadata) {
+    this.llmPolicyMetadata = llmPolicyMetadata;
     return this;
   }
 

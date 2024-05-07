@@ -18,7 +18,9 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * This protocol buffer is included from feature.proto as an optional message. Political features
- * represent the different ways that people are divided into geographical regions.
+ * represent the different ways that people are divided into geographical regions. This protocol
+ * buffer is applicable only to TYPE_POLITICAL features and is used to store political information
+ * from the feature's point of view.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

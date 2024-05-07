@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Contains information logged in target device selection. See go/improve-device-targeting-logging
- * for details. Next Id: 22
+ * for details. Next Id: 23
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -50,6 +50,15 @@ public final class AssistantLogsDeviceSelectionLog extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private AssistantLogsAllMediaStreamLog allMediaStreamLog;
+
+  /**
+   * The list of `available_devices` as they appear in DeviceTargetingContext. This is very useful
+   * for debugging diffs between GB and CMP since they have different methods of populating the
+   * `available_devices` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantLogsAvailableDevicesLog availableDevicesLog;
 
   /**
    * DeviceSelectionLog for counterfactual logging.
@@ -174,6 +183,27 @@ public final class AssistantLogsDeviceSelectionLog extends com.google.api.client
    */
   public AssistantLogsDeviceSelectionLog setAllMediaStreamLog(AssistantLogsAllMediaStreamLog allMediaStreamLog) {
     this.allMediaStreamLog = allMediaStreamLog;
+    return this;
+  }
+
+  /**
+   * The list of `available_devices` as they appear in DeviceTargetingContext. This is very useful
+   * for debugging diffs between GB and CMP since they have different methods of populating the
+   * `available_devices` field.
+   * @return value or {@code null} for none
+   */
+  public AssistantLogsAvailableDevicesLog getAvailableDevicesLog() {
+    return availableDevicesLog;
+  }
+
+  /**
+   * The list of `available_devices` as they appear in DeviceTargetingContext. This is very useful
+   * for debugging diffs between GB and CMP since they have different methods of populating the
+   * `available_devices` field.
+   * @param availableDevicesLog availableDevicesLog or {@code null} for none
+   */
+  public AssistantLogsDeviceSelectionLog setAvailableDevicesLog(AssistantLogsAvailableDevicesLog availableDevicesLog) {
+    this.availableDevicesLog = availableDevicesLog;
     return this;
   }
 

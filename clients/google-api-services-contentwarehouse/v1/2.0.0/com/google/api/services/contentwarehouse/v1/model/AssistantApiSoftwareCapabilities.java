@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * These capabilities represent what software features the client supports. This should be
- * determined based on the client's various software versions (OS, GSA version, etc). Next ID: 27
+ * determined based on the client's various software versions (OS, GSA version, etc). Next ID: 28
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -168,6 +168,13 @@ public final class AssistantApiSoftwareCapabilities extends com.google.api.clien
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(AssistantApiLiveTvProvider.class);
   }
+
+  /**
+   * Capabilities of Robin client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AssistantApiRobinCapabilities robinCapabilities;
 
   /**
    * The Soli capabilities on Elaine. go/dingo-dc-software
@@ -485,6 +492,23 @@ public final class AssistantApiSoftwareCapabilities extends com.google.api.clien
    */
   public AssistantApiSoftwareCapabilities setOrderedLiveTvProviders(java.util.List<AssistantApiLiveTvProvider> orderedLiveTvProviders) {
     this.orderedLiveTvProviders = orderedLiveTvProviders;
+    return this;
+  }
+
+  /**
+   * Capabilities of Robin client.
+   * @return value or {@code null} for none
+   */
+  public AssistantApiRobinCapabilities getRobinCapabilities() {
+    return robinCapabilities;
+  }
+
+  /**
+   * Capabilities of Robin client.
+   * @param robinCapabilities robinCapabilities or {@code null} for none
+   */
+  public AssistantApiSoftwareCapabilities setRobinCapabilities(AssistantApiRobinCapabilities robinCapabilities) {
+    this.robinCapabilities = robinCapabilities;
     return this;
   }
 

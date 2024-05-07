@@ -32,11 +32,32 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class PhotosHdrMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PhotosHdrMetadataBaseFormat baseFormat;
+
+  /**
    * Indicates the presence of some kind of gainmap-utilizing format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PhotosHdrMetadataGainmap gainmap;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public PhotosHdrMetadataBaseFormat getBaseFormat() {
+    return baseFormat;
+  }
+
+  /**
+   * @param baseFormat baseFormat or {@code null} for none
+   */
+  public PhotosHdrMetadata setBaseFormat(PhotosHdrMetadataBaseFormat baseFormat) {
+    this.baseFormat = baseFormat;
+    return this;
+  }
 
   /**
    * Indicates the presence of some kind of gainmap-utilizing format.

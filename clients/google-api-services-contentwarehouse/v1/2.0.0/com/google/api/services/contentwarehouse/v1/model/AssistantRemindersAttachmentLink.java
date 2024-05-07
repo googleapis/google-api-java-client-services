@@ -41,7 +41,8 @@ public final class AssistantRemindersAttachmentLink extends com.google.api.clien
   /**
    * REQUIRED. The text for the notification link button. Note: We cannot take
    * nlp_generation.TemplateData yet due to cyclic dependency. The plan is to cut dependency from
-   * TemplateData to quality.actions.Reminder.
+   * TemplateData to quality.actions.Reminder. DEPRECATED. No longer used as part of the
+   * notification flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +70,8 @@ public final class AssistantRemindersAttachmentLink extends com.google.api.clien
   /**
    * REQUIRED. The text for the notification link button. Note: We cannot take
    * nlp_generation.TemplateData yet due to cyclic dependency. The plan is to cut dependency from
-   * TemplateData to quality.actions.Reminder.
+   * TemplateData to quality.actions.Reminder. DEPRECATED. No longer used as part of the
+   * notification flow.
    * @return value or {@code null} for none
    */
   public AssistantRemindersNlgTemplateKey getNotificationText() {
@@ -79,7 +81,8 @@ public final class AssistantRemindersAttachmentLink extends com.google.api.clien
   /**
    * REQUIRED. The text for the notification link button. Note: We cannot take
    * nlp_generation.TemplateData yet due to cyclic dependency. The plan is to cut dependency from
-   * TemplateData to quality.actions.Reminder.
+   * TemplateData to quality.actions.Reminder. DEPRECATED. No longer used as part of the
+   * notification flow.
    * @param notificationText notificationText or {@code null} for none
    */
   public AssistantRemindersAttachmentLink setNotificationText(AssistantRemindersNlgTemplateKey notificationText) {

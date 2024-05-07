@@ -44,6 +44,31 @@ public final class GeostoreCityJsonProtoCityObjectGeometrySurface extends com.go
   }
 
   /**
+   * The materials this surface is made of. May be left blank if materials are unspecified for this
+   * surface. IMPORTANT: This field must not contain more than one MaterialSpec unless CityJSON's
+   * material "theme" is incorporated into CityJsonProto (see discussion in go/cityjson-for-hand-
+   * modeled-landmarks).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GeostoreCityJsonProtoCityObjectGeometryMaterialSpec> materialSpecs;
+
+  static {
+    // hack to force ProGuard to consider GeostoreCityJsonProtoCityObjectGeometryMaterialSpec used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GeostoreCityJsonProtoCityObjectGeometryMaterialSpec.class);
+  }
+
+  /**
+   * The semantics of this surface (e.g. what part of a building it is) represented as an index into
+   * the containing Geometry's `semantics` field. May be left blank if semantics are unspecified for
+   * this surface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer semanticsIndex;
+
+  /**
    * The first loop is exterior; any additional are interior.
    * @return value or {@code null} for none
    */
@@ -57,6 +82,50 @@ public final class GeostoreCityJsonProtoCityObjectGeometrySurface extends com.go
    */
   public GeostoreCityJsonProtoCityObjectGeometrySurface setLoops(java.util.List<GeostoreCityJsonProtoCityObjectGeometryMultiPoint> loops) {
     this.loops = loops;
+    return this;
+  }
+
+  /**
+   * The materials this surface is made of. May be left blank if materials are unspecified for this
+   * surface. IMPORTANT: This field must not contain more than one MaterialSpec unless CityJSON's
+   * material "theme" is incorporated into CityJsonProto (see discussion in go/cityjson-for-hand-
+   * modeled-landmarks).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GeostoreCityJsonProtoCityObjectGeometryMaterialSpec> getMaterialSpecs() {
+    return materialSpecs;
+  }
+
+  /**
+   * The materials this surface is made of. May be left blank if materials are unspecified for this
+   * surface. IMPORTANT: This field must not contain more than one MaterialSpec unless CityJSON's
+   * material "theme" is incorporated into CityJsonProto (see discussion in go/cityjson-for-hand-
+   * modeled-landmarks).
+   * @param materialSpecs materialSpecs or {@code null} for none
+   */
+  public GeostoreCityJsonProtoCityObjectGeometrySurface setMaterialSpecs(java.util.List<GeostoreCityJsonProtoCityObjectGeometryMaterialSpec> materialSpecs) {
+    this.materialSpecs = materialSpecs;
+    return this;
+  }
+
+  /**
+   * The semantics of this surface (e.g. what part of a building it is) represented as an index into
+   * the containing Geometry's `semantics` field. May be left blank if semantics are unspecified for
+   * this surface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSemanticsIndex() {
+    return semanticsIndex;
+  }
+
+  /**
+   * The semantics of this surface (e.g. what part of a building it is) represented as an index into
+   * the containing Geometry's `semantics` field. May be left blank if semantics are unspecified for
+   * this surface.
+   * @param semanticsIndex semanticsIndex or {@code null} for none
+   */
+  public GeostoreCityJsonProtoCityObjectGeometrySurface setSemanticsIndex(java.lang.Integer semanticsIndex) {
+    this.semanticsIndex = semanticsIndex;
     return this;
   }
 

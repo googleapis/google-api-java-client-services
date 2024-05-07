@@ -82,11 +82,12 @@ public final class GeostoreIntersectionProto extends com.google.api.client.json.
 
   /**
    * The toll cluster to which this intersection belongs. If present, the toll cluster must also
-   * refer back to the intersection.
+   * refer back to the intersection. To set this field, the intersection must be a
+   * gcid:toll_intersection feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GeostoreFeatureIdProto tollClusterId;
+  private GeostoreFeatureIdProto tollCluster;
 
   /**
    * The artifact or logical intersection group to which this intersection belongs. If present, the
@@ -151,20 +152,22 @@ public final class GeostoreIntersectionProto extends com.google.api.client.json.
 
   /**
    * The toll cluster to which this intersection belongs. If present, the toll cluster must also
-   * refer back to the intersection.
+   * refer back to the intersection. To set this field, the intersection must be a
+   * gcid:toll_intersection feature.
    * @return value or {@code null} for none
    */
-  public GeostoreFeatureIdProto getTollClusterId() {
-    return tollClusterId;
+  public GeostoreFeatureIdProto getTollCluster() {
+    return tollCluster;
   }
 
   /**
    * The toll cluster to which this intersection belongs. If present, the toll cluster must also
-   * refer back to the intersection.
-   * @param tollClusterId tollClusterId or {@code null} for none
+   * refer back to the intersection. To set this field, the intersection must be a
+   * gcid:toll_intersection feature.
+   * @param tollCluster tollCluster or {@code null} for none
    */
-  public GeostoreIntersectionProto setTollClusterId(GeostoreFeatureIdProto tollClusterId) {
-    this.tollClusterId = tollClusterId;
+  public GeostoreIntersectionProto setTollCluster(GeostoreFeatureIdProto tollCluster) {
+    this.tollCluster = tollCluster;
     return this;
   }
 

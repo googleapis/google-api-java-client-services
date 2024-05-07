@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * The logging-version of DeviceId proto, which identifies a device. This mirrors
- * cs/google3/assistant/api/core_types/device_type.proto?q=symbol:DeviceId Next ID: 6
+ * cs/google3/assistant/api/core_types/device_type.proto?q=symbol:DeviceId Next ID: 9
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -37,6 +37,14 @@ public final class AssistantLogsSettingsDeviceIdLog extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String agsaClientInstanceId;
+
+  /**
+   * Allo Id. Corresponds to the GBotRequest.Sender.sender. This ID type should be deprecated by
+   * now, yet we've observed it serving prod traffic in GB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String alloDeviceId;
 
   /**
    * A unique device ID for Assistant devices as proposed by go/ocelot-team.
@@ -65,6 +73,14 @@ public final class AssistantLogsSettingsDeviceIdLog extends com.google.api.clien
   private java.lang.String clientInstanceId;
 
   /**
+   * The unique DeviceConfig to the specific third party device. It is also used by Android Auto
+   * Embedded first party device. See go/opa-ids.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deviceConfigId;
+
+  /**
    * The unique device ID for HomeGraph devices. This is the HomeGraph ID, created when the device
    * is registered into HomeGraph. It is immutable for the same device unless it is completely
    * deleted and recreated. See go/home-graph for details. }
@@ -81,6 +97,13 @@ public final class AssistantLogsSettingsDeviceIdLog extends com.google.api.clien
   private java.lang.String libassistantDeviceId;
 
   /**
+   * The unique device ID for the Assistant App on iOS. See go/opa-ios-design for details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String opaIosDeviceId;
+
+  /**
    * The client_instance_id on devices with GSA. See 'client_instance_field' in go/androidids.
    * @return value or {@code null} for none
    */
@@ -94,6 +117,25 @@ public final class AssistantLogsSettingsDeviceIdLog extends com.google.api.clien
    */
   public AssistantLogsSettingsDeviceIdLog setAgsaClientInstanceId(java.lang.String agsaClientInstanceId) {
     this.agsaClientInstanceId = agsaClientInstanceId;
+    return this;
+  }
+
+  /**
+   * Allo Id. Corresponds to the GBotRequest.Sender.sender. This ID type should be deprecated by
+   * now, yet we've observed it serving prod traffic in GB.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAlloDeviceId() {
+    return alloDeviceId;
+  }
+
+  /**
+   * Allo Id. Corresponds to the GBotRequest.Sender.sender. This ID type should be deprecated by
+   * now, yet we've observed it serving prod traffic in GB.
+   * @param alloDeviceId alloDeviceId or {@code null} for none
+   */
+  public AssistantLogsSettingsDeviceIdLog setAlloDeviceId(java.lang.String alloDeviceId) {
+    this.alloDeviceId = alloDeviceId;
     return this;
   }
 
@@ -159,6 +201,25 @@ public final class AssistantLogsSettingsDeviceIdLog extends com.google.api.clien
   }
 
   /**
+   * The unique DeviceConfig to the specific third party device. It is also used by Android Auto
+   * Embedded first party device. See go/opa-ids.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeviceConfigId() {
+    return deviceConfigId;
+  }
+
+  /**
+   * The unique DeviceConfig to the specific third party device. It is also used by Android Auto
+   * Embedded first party device. See go/opa-ids.
+   * @param deviceConfigId deviceConfigId or {@code null} for none
+   */
+  public AssistantLogsSettingsDeviceIdLog setDeviceConfigId(java.lang.String deviceConfigId) {
+    this.deviceConfigId = deviceConfigId;
+    return this;
+  }
+
+  /**
    * The unique device ID for HomeGraph devices. This is the HomeGraph ID, created when the device
    * is registered into HomeGraph. It is immutable for the same device unless it is completely
    * deleted and recreated. See go/home-graph for details. }
@@ -193,6 +254,23 @@ public final class AssistantLogsSettingsDeviceIdLog extends com.google.api.clien
    */
   public AssistantLogsSettingsDeviceIdLog setLibassistantDeviceId(java.lang.String libassistantDeviceId) {
     this.libassistantDeviceId = libassistantDeviceId;
+    return this;
+  }
+
+  /**
+   * The unique device ID for the Assistant App on iOS. See go/opa-ios-design for details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOpaIosDeviceId() {
+    return opaIosDeviceId;
+  }
+
+  /**
+   * The unique device ID for the Assistant App on iOS. See go/opa-ios-design for details.
+   * @param opaIosDeviceId opaIosDeviceId or {@code null} for none
+   */
+  public AssistantLogsSettingsDeviceIdLog setOpaIosDeviceId(java.lang.String opaIosDeviceId) {
+    this.opaIosDeviceId = opaIosDeviceId;
     return this;
   }
 

@@ -89,13 +89,6 @@ public final class RepositoryWebrefMdvcMetadataPerVertical extends com.google.ap
   private java.lang.Integer resolutionPriority;
 
   /**
-   * Fingerprints that identify the topic's sub-verticals, if any.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.util.List<java.math.BigInteger> subVerticalFp;
-
-  /**
    * Name of the vertical this message is about.
    * The value may be {@code null}.
    */
@@ -239,23 +232,6 @@ public final class RepositoryWebrefMdvcMetadataPerVertical extends com.google.ap
    */
   public RepositoryWebrefMdvcMetadataPerVertical setResolutionPriority(java.lang.Integer resolutionPriority) {
     this.resolutionPriority = resolutionPriority;
-    return this;
-  }
-
-  /**
-   * Fingerprints that identify the topic's sub-verticals, if any.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.math.BigInteger> getSubVerticalFp() {
-    return subVerticalFp;
-  }
-
-  /**
-   * Fingerprints that identify the topic's sub-verticals, if any.
-   * @param subVerticalFp subVerticalFp or {@code null} for none
-   */
-  public RepositoryWebrefMdvcMetadataPerVertical setSubVerticalFp(java.util.List<java.math.BigInteger> subVerticalFp) {
-    this.subVerticalFp = subVerticalFp;
     return this;
   }
 

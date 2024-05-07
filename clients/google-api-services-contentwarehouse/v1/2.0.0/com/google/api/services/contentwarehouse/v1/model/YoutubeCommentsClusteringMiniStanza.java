@@ -19,7 +19,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * Intended to be simpler to work with than the ExportedStanza it's derived from See documentation: 
  * https://g3doc.corp.google.com/company/teams/youtube/community_intelligence/eng_resources/data_sou
- * rces.md#ministanza Next available: 80
+ * rces.md#ministanza Next available: 84
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -40,18 +40,12 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   private java.util.Map<String, java.lang.Double> ansibleScores;
 
   /**
-   * Automod scores map. Keyed by various model names.
+   * Automod scores map. Keyed by various model names. Deprecated. Consider using low_quality_scores
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Double> automodScores;
-
-  /**
-   * The blarney stone score.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private YoutubeDistillerBlarneyStoneScores blarneyStoneScore;
 
   /**
    * The channel this channel discussion comment belongs to. Note that this will match channel_id
@@ -62,7 +56,9 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   private java.lang.String channelDiscussionId;
 
   /**
-   * The channel of the video this comment belongs to.
+   * The channel of the video or post this comment belongs to. In certain circumstances a video can
+   * belong to multiple channels, this channel_id does not handle that situation well. go/yt-
+   * identity-overview for further reading.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,6 +101,15 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Double> commentClassificationRanking;
+
+  /**
+   * Contains the current status of comment enforcement. This provides a summary/aggregation of all
+   * restrictions (one per comment), while CommentModeratedRestriction provides the history of
+   * restrictions (multiple per comment). Extracted from http://shortn/_m5yiWa8ENR
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private YoutubeCommentsApiCommentEnforcementStatus commentEnforcementStatus;
 
   /**
    * Contains various comment moderated restrictions. Only available in the Atlas version. Extracted
@@ -197,11 +202,11 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   private VideoYoutubeCommentsRankingCTRMetrics empiricalCtrs;
 
   /**
-   * Fountain Discovery Score, which represents the reputation of the author.
+   * Whether a comment is deleted by the end user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Double fds;
+  private java.lang.Boolean endUserDeleted;
 
   /**
    * Indicator for whether there is creator heart on this comment.
@@ -240,7 +245,8 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   private java.lang.Boolean isDeleted;
 
   /**
-   * Whether the comment is pinned. This is derived from the DestinationStreamDump.
+   * Whether the comment is pinned. This is derived from YTMS and may be out of sync with other
+   * fields (a day early or behind).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -312,14 +318,23 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   private java.util.Map<String, java.lang.Double> misinfoScores;
 
   /**
-   * Number of dislikes the comment has.
+   * Whether a comment's author channel is deleted. Populated from http://shortn/_YttLvbraAI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean mustDeleteComments;
+
+  /**
+   * Number of dislikes the comment has. num_likes and num_dislikes are retrieved from a different
+   * source than other fields and may be out of sync (a day early or behind).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numDislikes;
 
   /**
-   * Number of likes the comment has.
+   * Number of likes the comment has. num_likes and num_dislikes are retrieved from a different
+   * source than other fields and may be out of sync (a day early or behind).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -368,15 +383,6 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.String postId;
-
-  /**
-   * The language code stored in the KV pair ranking:post_language. This should usually be the same
-   * as language_code but is not guaranteed to be identical. The KV pair is needed because SBE
-   * ranking can't consume user_content. Still populated, but deprecated.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String rankingPostLanguage;
 
   /**
    * A textual content for the context.
@@ -445,7 +451,7 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * The author of the comment
+   * The author of the comment Prefer using yt_author_channel_id instead of subject when possible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -480,7 +486,7 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   private java.util.Map<String, YoutubeCommentsRankingYouTubeCommentTextEmbedding> textEmbedding;
 
   /**
-   * Text length of the comment.
+   * Text length of the comment in UTF-16 code points. The encoding could change in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -509,16 +515,6 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   private java.lang.String videoId;
 
   /**
-   * Unique video timestamps in seconds sorted by timestamp. This is derived from text Segments, not
-   * from a KV. These may exceed the length of the video since that isn't checked at segmentation
-   * time. The segmentation rules have changed over time e.g. in the past "10:00 PM" was treated as
-   * a timestamp.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.Integer> videoTimestamps;
-
-  /**
    * Word entropy of the comment.
    * The value may be {@code null}.
    */
@@ -526,7 +522,8 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   private java.lang.Double wordEntropy;
 
   /**
-   * The youtube channel id of the comment author.
+   * The youtube channel id of the comment author. One person can have multiple channels and one
+   * channel can have multiple users. go/yt-identity-overview for further reading.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -577,7 +574,8 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * Automod scores map. Keyed by various model names.
+   * Automod scores map. Keyed by various model names. Deprecated. Consider using low_quality_scores
+   * instead.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Double> getAutomodScores() {
@@ -585,28 +583,12 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * Automod scores map. Keyed by various model names.
+   * Automod scores map. Keyed by various model names. Deprecated. Consider using low_quality_scores
+   * instead.
    * @param automodScores automodScores or {@code null} for none
    */
   public YoutubeCommentsClusteringMiniStanza setAutomodScores(java.util.Map<String, java.lang.Double> automodScores) {
     this.automodScores = automodScores;
-    return this;
-  }
-
-  /**
-   * The blarney stone score.
-   * @return value or {@code null} for none
-   */
-  public YoutubeDistillerBlarneyStoneScores getBlarneyStoneScore() {
-    return blarneyStoneScore;
-  }
-
-  /**
-   * The blarney stone score.
-   * @param blarneyStoneScore blarneyStoneScore or {@code null} for none
-   */
-  public YoutubeCommentsClusteringMiniStanza setBlarneyStoneScore(YoutubeDistillerBlarneyStoneScores blarneyStoneScore) {
-    this.blarneyStoneScore = blarneyStoneScore;
     return this;
   }
 
@@ -630,7 +612,9 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * The channel of the video this comment belongs to.
+   * The channel of the video or post this comment belongs to. In certain circumstances a video can
+   * belong to multiple channels, this channel_id does not handle that situation well. go/yt-
+   * identity-overview for further reading.
    * @return value or {@code null} for none
    */
   public java.lang.String getChannelId() {
@@ -638,7 +622,9 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * The channel of the video this comment belongs to.
+   * The channel of the video or post this comment belongs to. In certain circumstances a video can
+   * belong to multiple channels, this channel_id does not handle that situation well. go/yt-
+   * identity-overview for further reading.
    * @param channelId channelId or {@code null} for none
    */
   public YoutubeCommentsClusteringMiniStanza setChannelId(java.lang.String channelId) {
@@ -734,6 +720,27 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   public YoutubeCommentsClusteringMiniStanza setCommentClassificationRanking(java.util.Map<String, java.lang.Double> commentClassificationRanking) {
     this.commentClassificationRanking = commentClassificationRanking;
+    return this;
+  }
+
+  /**
+   * Contains the current status of comment enforcement. This provides a summary/aggregation of all
+   * restrictions (one per comment), while CommentModeratedRestriction provides the history of
+   * restrictions (multiple per comment). Extracted from http://shortn/_m5yiWa8ENR
+   * @return value or {@code null} for none
+   */
+  public YoutubeCommentsApiCommentEnforcementStatus getCommentEnforcementStatus() {
+    return commentEnforcementStatus;
+  }
+
+  /**
+   * Contains the current status of comment enforcement. This provides a summary/aggregation of all
+   * restrictions (one per comment), while CommentModeratedRestriction provides the history of
+   * restrictions (multiple per comment). Extracted from http://shortn/_m5yiWa8ENR
+   * @param commentEnforcementStatus commentEnforcementStatus or {@code null} for none
+   */
+  public YoutubeCommentsClusteringMiniStanza setCommentEnforcementStatus(YoutubeCommentsApiCommentEnforcementStatus commentEnforcementStatus) {
+    this.commentEnforcementStatus = commentEnforcementStatus;
     return this;
   }
 
@@ -939,19 +946,19 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * Fountain Discovery Score, which represents the reputation of the author.
+   * Whether a comment is deleted by the end user.
    * @return value or {@code null} for none
    */
-  public java.lang.Double getFds() {
-    return fds;
+  public java.lang.Boolean getEndUserDeleted() {
+    return endUserDeleted;
   }
 
   /**
-   * Fountain Discovery Score, which represents the reputation of the author.
-   * @param fds fds or {@code null} for none
+   * Whether a comment is deleted by the end user.
+   * @param endUserDeleted endUserDeleted or {@code null} for none
    */
-  public YoutubeCommentsClusteringMiniStanza setFds(java.lang.Double fds) {
-    this.fds = fds;
+  public YoutubeCommentsClusteringMiniStanza setEndUserDeleted(java.lang.Boolean endUserDeleted) {
+    this.endUserDeleted = endUserDeleted;
     return this;
   }
 
@@ -1043,7 +1050,8 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * Whether the comment is pinned. This is derived from the DestinationStreamDump.
+   * Whether the comment is pinned. This is derived from YTMS and may be out of sync with other
+   * fields (a day early or behind).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsPinned() {
@@ -1051,7 +1059,8 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * Whether the comment is pinned. This is derived from the DestinationStreamDump.
+   * Whether the comment is pinned. This is derived from YTMS and may be out of sync with other
+   * fields (a day early or behind).
    * @param isPinned isPinned or {@code null} for none
    */
   public YoutubeCommentsClusteringMiniStanza setIsPinned(java.lang.Boolean isPinned) {
@@ -1217,7 +1226,25 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * Number of dislikes the comment has.
+   * Whether a comment's author channel is deleted. Populated from http://shortn/_YttLvbraAI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMustDeleteComments() {
+    return mustDeleteComments;
+  }
+
+  /**
+   * Whether a comment's author channel is deleted. Populated from http://shortn/_YttLvbraAI.
+   * @param mustDeleteComments mustDeleteComments or {@code null} for none
+   */
+  public YoutubeCommentsClusteringMiniStanza setMustDeleteComments(java.lang.Boolean mustDeleteComments) {
+    this.mustDeleteComments = mustDeleteComments;
+    return this;
+  }
+
+  /**
+   * Number of dislikes the comment has. num_likes and num_dislikes are retrieved from a different
+   * source than other fields and may be out of sync (a day early or behind).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumDislikes() {
@@ -1225,7 +1252,8 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * Number of dislikes the comment has.
+   * Number of dislikes the comment has. num_likes and num_dislikes are retrieved from a different
+   * source than other fields and may be out of sync (a day early or behind).
    * @param numDislikes numDislikes or {@code null} for none
    */
   public YoutubeCommentsClusteringMiniStanza setNumDislikes(java.lang.Integer numDislikes) {
@@ -1234,7 +1262,8 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * Number of likes the comment has.
+   * Number of likes the comment has. num_likes and num_dislikes are retrieved from a different
+   * source than other fields and may be out of sync (a day early or behind).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumLikes() {
@@ -1242,7 +1271,8 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * Number of likes the comment has.
+   * Number of likes the comment has. num_likes and num_dislikes are retrieved from a different
+   * source than other fields and may be out of sync (a day early or behind).
    * @param numLikes numLikes or {@code null} for none
    */
   public YoutubeCommentsClusteringMiniStanza setNumLikes(java.lang.Integer numLikes) {
@@ -1353,27 +1383,6 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
    */
   public YoutubeCommentsClusteringMiniStanza setPostId(java.lang.String postId) {
     this.postId = postId;
-    return this;
-  }
-
-  /**
-   * The language code stored in the KV pair ranking:post_language. This should usually be the same
-   * as language_code but is not guaranteed to be identical. The KV pair is needed because SBE
-   * ranking can't consume user_content. Still populated, but deprecated.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRankingPostLanguage() {
-    return rankingPostLanguage;
-  }
-
-  /**
-   * The language code stored in the KV pair ranking:post_language. This should usually be the same
-   * as language_code but is not guaranteed to be identical. The KV pair is needed because SBE
-   * ranking can't consume user_content. Still populated, but deprecated.
-   * @param rankingPostLanguage rankingPostLanguage or {@code null} for none
-   */
-  public YoutubeCommentsClusteringMiniStanza setRankingPostLanguage(java.lang.String rankingPostLanguage) {
-    this.rankingPostLanguage = rankingPostLanguage;
     return this;
   }
 
@@ -1507,7 +1516,7 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * The author of the comment
+   * The author of the comment Prefer using yt_author_channel_id instead of subject when possible.
    * @return value or {@code null} for none
    */
   public SecurityCredentialsPrincipalProto getSubject() {
@@ -1515,7 +1524,7 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * The author of the comment
+   * The author of the comment Prefer using yt_author_channel_id instead of subject when possible.
    * @param subject subject or {@code null} for none
    */
   public YoutubeCommentsClusteringMiniStanza setSubject(SecurityCredentialsPrincipalProto subject) {
@@ -1592,7 +1601,7 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * Text length of the comment.
+   * Text length of the comment in UTF-16 code points. The encoding could change in the future.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTextLength() {
@@ -1600,7 +1609,7 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * Text length of the comment.
+   * Text length of the comment in UTF-16 code points. The encoding could change in the future.
    * @param textLength textLength or {@code null} for none
    */
   public YoutubeCommentsClusteringMiniStanza setTextLength(java.lang.Integer textLength) {
@@ -1662,29 +1671,6 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * Unique video timestamps in seconds sorted by timestamp. This is derived from text Segments, not
-   * from a KV. These may exceed the length of the video since that isn't checked at segmentation
-   * time. The segmentation rules have changed over time e.g. in the past "10:00 PM" was treated as
-   * a timestamp.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.Integer> getVideoTimestamps() {
-    return videoTimestamps;
-  }
-
-  /**
-   * Unique video timestamps in seconds sorted by timestamp. This is derived from text Segments, not
-   * from a KV. These may exceed the length of the video since that isn't checked at segmentation
-   * time. The segmentation rules have changed over time e.g. in the past "10:00 PM" was treated as
-   * a timestamp.
-   * @param videoTimestamps videoTimestamps or {@code null} for none
-   */
-  public YoutubeCommentsClusteringMiniStanza setVideoTimestamps(java.util.List<java.lang.Integer> videoTimestamps) {
-    this.videoTimestamps = videoTimestamps;
-    return this;
-  }
-
-  /**
    * Word entropy of the comment.
    * @return value or {@code null} for none
    */
@@ -1702,7 +1688,8 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * The youtube channel id of the comment author.
+   * The youtube channel id of the comment author. One person can have multiple channels and one
+   * channel can have multiple users. go/yt-identity-overview for further reading.
    * @return value or {@code null} for none
    */
   public java.lang.String getYtAuthorChannelId() {
@@ -1710,7 +1697,8 @@ public final class YoutubeCommentsClusteringMiniStanza extends com.google.api.cl
   }
 
   /**
-   * The youtube channel id of the comment author.
+   * The youtube channel id of the comment author. One person can have multiple channels and one
+   * channel can have multiple users. go/yt-identity-overview for further reading.
    * @param ytAuthorChannelId ytAuthorChannelId or {@code null} for none
    */
   public YoutubeCommentsClusteringMiniStanza setYtAuthorChannelId(java.lang.String ytAuthorChannelId) {

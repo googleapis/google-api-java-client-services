@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * The proto containing all the information we extracted from docjoin, for the source_url of the
- * dataset. NEXT TAG: 17
+ * dataset. NEXT TAG: 18
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -94,11 +94,19 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfo extends com.google.
   }
 
   /**
-   * The page rank of the document.
+   * The page rank of the document. DEPRECATED in favour of Pagerank_NS. Do not use as it is no
+   * longer maintained in docjoins and can break at any moment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer pagerank;
+
+  /**
+   * The production pagerank value of the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer pagerankNs;
 
   /**
    * Petacat classifications for the web document. Normally the results from calling Petacat come in
@@ -301,7 +309,8 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfo extends com.google.
   }
 
   /**
-   * The page rank of the document.
+   * The page rank of the document. DEPRECATED in favour of Pagerank_NS. Do not use as it is no
+   * longer maintained in docjoins and can break at any moment.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPagerank() {
@@ -309,11 +318,29 @@ public final class ResearchScienceSearchSourceUrlDocjoinInfo extends com.google.
   }
 
   /**
-   * The page rank of the document.
+   * The page rank of the document. DEPRECATED in favour of Pagerank_NS. Do not use as it is no
+   * longer maintained in docjoins and can break at any moment.
    * @param pagerank pagerank or {@code null} for none
    */
   public ResearchScienceSearchSourceUrlDocjoinInfo setPagerank(java.lang.Integer pagerank) {
     this.pagerank = pagerank;
+    return this;
+  }
+
+  /**
+   * The production pagerank value of the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPagerankNs() {
+    return pagerankNs;
+  }
+
+  /**
+   * The production pagerank value of the document.
+   * @param pagerankNs pagerankNs or {@code null} for none
+   */
+  public ResearchScienceSearchSourceUrlDocjoinInfo setPagerankNs(java.lang.Integer pagerankNs) {
+    this.pagerankNs = pagerankNs;
     return this;
   }
 

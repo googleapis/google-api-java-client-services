@@ -37,8 +37,9 @@ public final class AssistantApiSurfaceProperties extends com.google.api.client.j
   private AssistantApiSurfacePropertiesExecutionCapabilities executionCapabilities;
 
   /**
-   * Indicates if the surface prefers glanceable UI when rendering Assistant response. (see go
-   * /mobile-dr-hbird-glanceable-comms-cuj for more context).
+   * DEPRECATED: This field is used only by the Hummingbird effort, which has culminated and is
+   * being cleaned up (b/325065733). Indicates if the surface prefers glanceable UI when rendering
+   * Assistant response. (see go/mobile-dr-hbird-glanceable-comms-cuj for more context).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,8 +76,9 @@ public final class AssistantApiSurfaceProperties extends com.google.api.client.j
   }
 
   /**
-   * Indicates if the surface prefers glanceable UI when rendering Assistant response. (see go
-   * /mobile-dr-hbird-glanceable-comms-cuj for more context).
+   * DEPRECATED: This field is used only by the Hummingbird effort, which has culminated and is
+   * being cleaned up (b/325065733). Indicates if the surface prefers glanceable UI when rendering
+   * Assistant response. (see go/mobile-dr-hbird-glanceable-comms-cuj for more context).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPrefersGlanceableUi() {
@@ -84,8 +86,9 @@ public final class AssistantApiSurfaceProperties extends com.google.api.client.j
   }
 
   /**
-   * Indicates if the surface prefers glanceable UI when rendering Assistant response. (see go
-   * /mobile-dr-hbird-glanceable-comms-cuj for more context).
+   * DEPRECATED: This field is used only by the Hummingbird effort, which has culminated and is
+   * being cleaned up (b/325065733). Indicates if the surface prefers glanceable UI when rendering
+   * Assistant response. (see go/mobile-dr-hbird-glanceable-comms-cuj for more context).
    * @param prefersGlanceableUi prefersGlanceableUi or {@code null} for none
    */
   public AssistantApiSurfaceProperties setPrefersGlanceableUi(java.lang.Boolean prefersGlanceableUi) {

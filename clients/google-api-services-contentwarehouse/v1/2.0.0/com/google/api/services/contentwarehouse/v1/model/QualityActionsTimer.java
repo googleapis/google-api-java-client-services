@@ -139,7 +139,7 @@ public final class QualityActionsTimer extends com.google.api.client.json.Generi
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AssistantApiCoreTypesGovernedRingtoneTaskMetadata ringtoneTaskMetadata;
+  private AssistantApiCoreTypesRingtoneTaskMetadata ringtoneTaskMetadata;
 
   /**
    * Contains info about the room the timer is in
@@ -407,7 +407,7 @@ public final class QualityActionsTimer extends com.google.api.client.json.Generi
    * Ringtone Task Metadata information used to generate sound for firing the timer.
    * @return value or {@code null} for none
    */
-  public AssistantApiCoreTypesGovernedRingtoneTaskMetadata getRingtoneTaskMetadata() {
+  public AssistantApiCoreTypesRingtoneTaskMetadata getRingtoneTaskMetadata() {
     return ringtoneTaskMetadata;
   }
 
@@ -415,7 +415,7 @@ public final class QualityActionsTimer extends com.google.api.client.json.Generi
    * Ringtone Task Metadata information used to generate sound for firing the timer.
    * @param ringtoneTaskMetadata ringtoneTaskMetadata or {@code null} for none
    */
-  public QualityActionsTimer setRingtoneTaskMetadata(AssistantApiCoreTypesGovernedRingtoneTaskMetadata ringtoneTaskMetadata) {
+  public QualityActionsTimer setRingtoneTaskMetadata(AssistantApiCoreTypesRingtoneTaskMetadata ringtoneTaskMetadata) {
     this.ringtoneTaskMetadata = ringtoneTaskMetadata;
     return this;
   }

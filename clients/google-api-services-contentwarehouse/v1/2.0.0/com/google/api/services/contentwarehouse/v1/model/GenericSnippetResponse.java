@@ -45,6 +45,14 @@ public final class GenericSnippetResponse extends com.google.api.client.json.Gen
   private Proto2BridgeMessageSet info;
 
   /**
+   * The experimental ranking snippet field. This will be populated only when
+   * `fastwa_want_ranking_snippet` is set in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rankingSnippet;
+
+  /**
    * Lines of the snippet HTML. Typically gws concatenates these and lets the browser wrap. The
    * values include trailing spaces, so inserting additional spaces is not necessary. However, for
    * very old browsers, gws may insert break tags after each snippet line. This field is confusing
@@ -104,6 +112,25 @@ public final class GenericSnippetResponse extends com.google.api.client.json.Gen
    */
   public GenericSnippetResponse setInfo(Proto2BridgeMessageSet info) {
     this.info = info;
+    return this;
+  }
+
+  /**
+   * The experimental ranking snippet field. This will be populated only when
+   * `fastwa_want_ranking_snippet` is set in the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRankingSnippet() {
+    return rankingSnippet;
+  }
+
+  /**
+   * The experimental ranking snippet field. This will be populated only when
+   * `fastwa_want_ranking_snippet` is set in the request.
+   * @param rankingSnippet rankingSnippet or {@code null} for none
+   */
+  public GenericSnippetResponse setRankingSnippet(java.lang.String rankingSnippet) {
+    this.rankingSnippet = rankingSnippet;
     return this;
   }
 

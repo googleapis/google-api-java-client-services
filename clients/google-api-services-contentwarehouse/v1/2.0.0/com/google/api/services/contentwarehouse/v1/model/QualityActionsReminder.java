@@ -126,7 +126,8 @@ public final class QualityActionsReminder extends com.google.api.client.json.Gen
   private QualityActionsReminderPerson creator;
 
   /**
-   * OPTIONAL. Contains fields needed to build the customized notification card
+   * OPTIONAL. Contains fields needed to build the customized notification card DEPRECATED. No
+   * longer supported after migration to Tasks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -476,7 +477,8 @@ public final class QualityActionsReminder extends com.google.api.client.json.Gen
   }
 
   /**
-   * OPTIONAL. Contains fields needed to build the customized notification card
+   * OPTIONAL. Contains fields needed to build the customized notification card DEPRECATED. No
+   * longer supported after migration to Tasks.
    * @return value or {@code null} for none
    */
   public java.util.List<QualityActionsCustomizedNotification> getCustomizedNotificationCard() {
@@ -484,7 +486,8 @@ public final class QualityActionsReminder extends com.google.api.client.json.Gen
   }
 
   /**
-   * OPTIONAL. Contains fields needed to build the customized notification card
+   * OPTIONAL. Contains fields needed to build the customized notification card DEPRECATED. No
+   * longer supported after migration to Tasks.
    * @param customizedNotificationCard customizedNotificationCard or {@code null} for none
    */
   public QualityActionsReminder setCustomizedNotificationCard(java.util.List<QualityActionsCustomizedNotification> customizedNotificationCard) {

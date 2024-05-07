@@ -20,7 +20,8 @@ package com.google.api.services.contentwarehouse.v1.model;
  * A reference to a photo in either Photos Backend or SGI storage. This message should be treated as
  * an opaque blob to avoid a dependency on a specific storage backend. This version of
  * ImageReference is visible outside of SGBE. Do not add fields that should not be exposed outside
- * of Profile Service and Image Service.
+ * of Profile Service and Image Service. See the SGBE-internal version here:
+ * http://google3/social/graph/image/proto/image_reference.proto
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

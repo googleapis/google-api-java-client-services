@@ -33,6 +33,14 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class ImageRepositoryFramePerdoc extends com.google.api.client.json.GenericJson {
 
   /**
+   * Error, if any, while generating the frame perdoc. It is mutually exclusive to the perdoc, only
+   * set when perdoc is missing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UtilStatusProto errorStatus;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,6 +59,25 @@ public final class ImageRepositoryFramePerdoc extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.Integer timestampMsec;
+
+  /**
+   * Error, if any, while generating the frame perdoc. It is mutually exclusive to the perdoc, only
+   * set when perdoc is missing.
+   * @return value or {@code null} for none
+   */
+  public UtilStatusProto getErrorStatus() {
+    return errorStatus;
+  }
+
+  /**
+   * Error, if any, while generating the frame perdoc. It is mutually exclusive to the perdoc, only
+   * set when perdoc is missing.
+   * @param errorStatus errorStatus or {@code null} for none
+   */
+  public ImageRepositoryFramePerdoc setErrorStatus(UtilStatusProto errorStatus) {
+    this.errorStatus = errorStatus;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Last used tag = 8
+ * Last used tag = 13
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -101,6 +101,29 @@ public final class ResearchScamNeighborSelectionOverride extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer perCrowdingAttributePreReorderingNumNeighbors;
+
+  /**
+   * The scoring extension metadata overrides for single machine classical scam database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResearchScamScoringExtensionMetadata scoringExtensionMetadata;
+
+  /**
+   * Note: currently not implemented for all database shard subclasses! Contact ScaM before using.
+   * Provides prematched centers_to_search for tree-X hybrid searchers. Ignores any overwrites
+   * related to centroid matching since they are already matched. `tree_x_hybrid_centers_to_search`
+   * should match by size with `tree_x_hybrid_distances`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Long> treeXHybridCentersToSearch;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Float> treeXHybridDistances;
 
   /**
    * Note: currently not implemented for all database shard subclasses! Contact ScaM before using.
@@ -275,6 +298,61 @@ public final class ResearchScamNeighborSelectionOverride extends com.google.api.
    */
   public ResearchScamNeighborSelectionOverride setPerCrowdingAttributePreReorderingNumNeighbors(java.lang.Integer perCrowdingAttributePreReorderingNumNeighbors) {
     this.perCrowdingAttributePreReorderingNumNeighbors = perCrowdingAttributePreReorderingNumNeighbors;
+    return this;
+  }
+
+  /**
+   * The scoring extension metadata overrides for single machine classical scam database.
+   * @return value or {@code null} for none
+   */
+  public ResearchScamScoringExtensionMetadata getScoringExtensionMetadata() {
+    return scoringExtensionMetadata;
+  }
+
+  /**
+   * The scoring extension metadata overrides for single machine classical scam database.
+   * @param scoringExtensionMetadata scoringExtensionMetadata or {@code null} for none
+   */
+  public ResearchScamNeighborSelectionOverride setScoringExtensionMetadata(ResearchScamScoringExtensionMetadata scoringExtensionMetadata) {
+    this.scoringExtensionMetadata = scoringExtensionMetadata;
+    return this;
+  }
+
+  /**
+   * Note: currently not implemented for all database shard subclasses! Contact ScaM before using.
+   * Provides prematched centers_to_search for tree-X hybrid searchers. Ignores any overwrites
+   * related to centroid matching since they are already matched. `tree_x_hybrid_centers_to_search`
+   * should match by size with `tree_x_hybrid_distances`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getTreeXHybridCentersToSearch() {
+    return treeXHybridCentersToSearch;
+  }
+
+  /**
+   * Note: currently not implemented for all database shard subclasses! Contact ScaM before using.
+   * Provides prematched centers_to_search for tree-X hybrid searchers. Ignores any overwrites
+   * related to centroid matching since they are already matched. `tree_x_hybrid_centers_to_search`
+   * should match by size with `tree_x_hybrid_distances`.
+   * @param treeXHybridCentersToSearch treeXHybridCentersToSearch or {@code null} for none
+   */
+  public ResearchScamNeighborSelectionOverride setTreeXHybridCentersToSearch(java.util.List<java.lang.Long> treeXHybridCentersToSearch) {
+    this.treeXHybridCentersToSearch = treeXHybridCentersToSearch;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Float> getTreeXHybridDistances() {
+    return treeXHybridDistances;
+  }
+
+  /**
+   * @param treeXHybridDistances treeXHybridDistances or {@code null} for none
+   */
+  public ResearchScamNeighborSelectionOverride setTreeXHybridDistances(java.util.List<java.lang.Float> treeXHybridDistances) {
+    this.treeXHybridDistances = treeXHybridDistances;
     return this;
   }
 

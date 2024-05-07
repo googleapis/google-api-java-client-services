@@ -65,10 +65,12 @@ public final class ResearchScamGenericFeatureVector extends com.google.api.clien
   private String expirationTimestamp;
 
   /**
-   * DEPRECATED: - this field can safely be left unspecified. For dense vectors, dimensionality is
-   * inferred from the number of values specified, and must be identical to this, or unspecified.
-   * For sparse vectors, the default value is correct for most users, and allows use of 64-bit hash
-   * values for feature indices.
+   * - Optionally explicitly specifies the dimensionality of this vector. For dense vectors, this is
+   * ignored and, dimensionality is inferred from the number of values specified, and must be
+   * identical to this, or unspecified. For sparse vectors, the default value is correct for most
+   * users, and allows use of 64-bit hash values for feature indices. If you're using sparse vectors
+   * with a limited range of dimension indices and want to do K-Means clustering with them, you may
+   * want to specify this explicitly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -295,10 +297,12 @@ public final class ResearchScamGenericFeatureVector extends com.google.api.clien
   }
 
   /**
-   * DEPRECATED: - this field can safely be left unspecified. For dense vectors, dimensionality is
-   * inferred from the number of values specified, and must be identical to this, or unspecified.
-   * For sparse vectors, the default value is correct for most users, and allows use of 64-bit hash
-   * values for feature indices.
+   * - Optionally explicitly specifies the dimensionality of this vector. For dense vectors, this is
+   * ignored and, dimensionality is inferred from the number of values specified, and must be
+   * identical to this, or unspecified. For sparse vectors, the default value is correct for most
+   * users, and allows use of 64-bit hash values for feature indices. If you're using sparse vectors
+   * with a limited range of dimension indices and want to do K-Means clustering with them, you may
+   * want to specify this explicitly.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getFeatureDim() {
@@ -306,10 +310,12 @@ public final class ResearchScamGenericFeatureVector extends com.google.api.clien
   }
 
   /**
-   * DEPRECATED: - this field can safely be left unspecified. For dense vectors, dimensionality is
-   * inferred from the number of values specified, and must be identical to this, or unspecified.
-   * For sparse vectors, the default value is correct for most users, and allows use of 64-bit hash
-   * values for feature indices.
+   * - Optionally explicitly specifies the dimensionality of this vector. For dense vectors, this is
+   * ignored and, dimensionality is inferred from the number of values specified, and must be
+   * identical to this, or unspecified. For sparse vectors, the default value is correct for most
+   * users, and allows use of 64-bit hash values for feature indices. If you're using sparse vectors
+   * with a limited range of dimension indices and want to do K-Means clustering with them, you may
+   * want to specify this explicitly.
    * @param featureDim featureDim or {@code null} for none
    */
   public ResearchScamGenericFeatureVector setFeatureDim(java.math.BigInteger featureDim) {

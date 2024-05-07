@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next id: 17.
+ * Next id: 20.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -81,6 +81,14 @@ public final class HtmlrenderWebkitHeadlessProtoRenderStats extends com.google.a
   private java.lang.Integer droppedLogEntryCount;
 
   /**
+   * Time allowed to use for fetching in milliseconds: fetch_deadline - render_start_time. go
+   * /render-timeline#render-timeline
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer fetchDeadlineMsec;
+
+  /**
    * Image encoding (e.g. raw -> PNG) time.
    * The value may be {@code null}.
    */
@@ -93,6 +101,14 @@ public final class HtmlrenderWebkitHeadlessProtoRenderStats extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.Integer imageScalingTimeMsec;
+
+  /**
+   * Time allowed to use for javascript in milliseconds: javascript_deadline - render_start_time. go
+   * /render-timeline#render-timeline
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer javascriptDeadlineMsec;
 
   /**
    * Time from starting render to document finished loading. This includes all fetches, parsing,
@@ -115,6 +131,14 @@ public final class HtmlrenderWebkitHeadlessProtoRenderStats extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.Integer renderCostMgcu;
+
+  /**
+   * Time allowed to use for rendering in milliseconds: render_deadline - render_start_time. go
+   * /render-timeline#render-timeline
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer renderDeadlineMsec;
 
   /**
    * Render engine used to render this document.
@@ -244,6 +268,25 @@ public final class HtmlrenderWebkitHeadlessProtoRenderStats extends com.google.a
   }
 
   /**
+   * Time allowed to use for fetching in milliseconds: fetch_deadline - render_start_time. go
+   * /render-timeline#render-timeline
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getFetchDeadlineMsec() {
+    return fetchDeadlineMsec;
+  }
+
+  /**
+   * Time allowed to use for fetching in milliseconds: fetch_deadline - render_start_time. go
+   * /render-timeline#render-timeline
+   * @param fetchDeadlineMsec fetchDeadlineMsec or {@code null} for none
+   */
+  public HtmlrenderWebkitHeadlessProtoRenderStats setFetchDeadlineMsec(java.lang.Integer fetchDeadlineMsec) {
+    this.fetchDeadlineMsec = fetchDeadlineMsec;
+    return this;
+  }
+
+  /**
    * Image encoding (e.g. raw -> PNG) time.
    * @return value or {@code null} for none
    */
@@ -274,6 +317,25 @@ public final class HtmlrenderWebkitHeadlessProtoRenderStats extends com.google.a
    */
   public HtmlrenderWebkitHeadlessProtoRenderStats setImageScalingTimeMsec(java.lang.Integer imageScalingTimeMsec) {
     this.imageScalingTimeMsec = imageScalingTimeMsec;
+    return this;
+  }
+
+  /**
+   * Time allowed to use for javascript in milliseconds: javascript_deadline - render_start_time. go
+   * /render-timeline#render-timeline
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getJavascriptDeadlineMsec() {
+    return javascriptDeadlineMsec;
+  }
+
+  /**
+   * Time allowed to use for javascript in milliseconds: javascript_deadline - render_start_time. go
+   * /render-timeline#render-timeline
+   * @param javascriptDeadlineMsec javascriptDeadlineMsec or {@code null} for none
+   */
+  public HtmlrenderWebkitHeadlessProtoRenderStats setJavascriptDeadlineMsec(java.lang.Integer javascriptDeadlineMsec) {
+    this.javascriptDeadlineMsec = javascriptDeadlineMsec;
     return this;
   }
 
@@ -327,6 +389,25 @@ public final class HtmlrenderWebkitHeadlessProtoRenderStats extends com.google.a
    */
   public HtmlrenderWebkitHeadlessProtoRenderStats setRenderCostMgcu(java.lang.Integer renderCostMgcu) {
     this.renderCostMgcu = renderCostMgcu;
+    return this;
+  }
+
+  /**
+   * Time allowed to use for rendering in milliseconds: render_deadline - render_start_time. go
+   * /render-timeline#render-timeline
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRenderDeadlineMsec() {
+    return renderDeadlineMsec;
+  }
+
+  /**
+   * Time allowed to use for rendering in milliseconds: render_deadline - render_start_time. go
+   * /render-timeline#render-timeline
+   * @param renderDeadlineMsec renderDeadlineMsec or {@code null} for none
+   */
+  public HtmlrenderWebkitHeadlessProtoRenderStats setRenderDeadlineMsec(java.lang.Integer renderDeadlineMsec) {
+    this.renderDeadlineMsec = renderDeadlineMsec;
     return this;
   }
 

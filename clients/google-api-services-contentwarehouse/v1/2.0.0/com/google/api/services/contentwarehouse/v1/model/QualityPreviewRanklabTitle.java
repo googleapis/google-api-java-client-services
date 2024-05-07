@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * A collection of data corresponding to a single title candidate. This will be used as: - a
  * collection of signals to score and select titles in production - an input for training title
  * models NOTE: When adding a floating point value for Ranklab purposes, use float32 instead of
- * float64, because some of the Ranklab library still does not fully support float64. Next ID: 68
+ * float64, because some of the Ranklab library still does not fully support float64. Next ID: 70
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -239,6 +239,18 @@ public final class QualityPreviewRanklabTitle extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.Float goldmineSalientTermFactor;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float goldmineSiteNameMarkupFactor;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float goldmineSiteQueryFactor;
 
   /**
    * The value may be {@code null}.
@@ -939,6 +951,36 @@ public final class QualityPreviewRanklabTitle extends com.google.api.client.json
    */
   public QualityPreviewRanklabTitle setGoldmineSalientTermFactor(java.lang.Float goldmineSalientTermFactor) {
     this.goldmineSalientTermFactor = goldmineSalientTermFactor;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getGoldmineSiteNameMarkupFactor() {
+    return goldmineSiteNameMarkupFactor;
+  }
+
+  /**
+   * @param goldmineSiteNameMarkupFactor goldmineSiteNameMarkupFactor or {@code null} for none
+   */
+  public QualityPreviewRanklabTitle setGoldmineSiteNameMarkupFactor(java.lang.Float goldmineSiteNameMarkupFactor) {
+    this.goldmineSiteNameMarkupFactor = goldmineSiteNameMarkupFactor;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getGoldmineSiteQueryFactor() {
+    return goldmineSiteQueryFactor;
+  }
+
+  /**
+   * @param goldmineSiteQueryFactor goldmineSiteQueryFactor or {@code null} for none
+   */
+  public QualityPreviewRanklabTitle setGoldmineSiteQueryFactor(java.lang.Float goldmineSiteQueryFactor) {
+    this.goldmineSiteQueryFactor = goldmineSiteQueryFactor;
     return this;
   }
 

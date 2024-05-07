@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Contact meta data. Next ID: 30
+ * Contact meta data. Next ID: 31
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -97,6 +97,13 @@ public final class AssistantLogsCommunicationPersonalContactDataLog extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isContactFromSecondaryAccount;
+
+  /**
+   * If the contact is matched exactly from the query name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isExactMatch;
 
   /**
    * If this is a shared contact. This is true in 2 cases: - User is calling their own contacts that
@@ -406,6 +413,23 @@ public final class AssistantLogsCommunicationPersonalContactDataLog extends com.
    */
   public AssistantLogsCommunicationPersonalContactDataLog setIsContactFromSecondaryAccount(java.lang.Boolean isContactFromSecondaryAccount) {
     this.isContactFromSecondaryAccount = isContactFromSecondaryAccount;
+    return this;
+  }
+
+  /**
+   * If the contact is matched exactly from the query name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsExactMatch() {
+    return isExactMatch;
+  }
+
+  /**
+   * If the contact is matched exactly from the query name.
+   * @param isExactMatch isExactMatch or {@code null} for none
+   */
+  public AssistantLogsCommunicationPersonalContactDataLog setIsExactMatch(java.lang.Boolean isExactMatch) {
+    this.isExactMatch = isExactMatch;
     return this;
   }
 

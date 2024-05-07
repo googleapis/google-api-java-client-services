@@ -31,6 +31,13 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class AssistantLogsDeviceAnnotationLog extends com.google.api.client.json.GenericJson {
 
   /**
+   * The identification of the device. The logging version of the full DeviceId.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AssistantLogsSettingsDeviceIdLog> deviceIdLog;
+
+  /**
    * The raw text mentioning a device from the query, such as "any tv".
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class AssistantLogsDeviceAnnotationLog extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String userDefinedName;
+
+  /**
+   * The identification of the device. The logging version of the full DeviceId.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AssistantLogsSettingsDeviceIdLog> getDeviceIdLog() {
+    return deviceIdLog;
+  }
+
+  /**
+   * The identification of the device. The logging version of the full DeviceId.
+   * @param deviceIdLog deviceIdLog or {@code null} for none
+   */
+  public AssistantLogsDeviceAnnotationLog setDeviceIdLog(java.util.List<AssistantLogsSettingsDeviceIdLog> deviceIdLog) {
+    this.deviceIdLog = deviceIdLog;
+    return this;
+  }
 
   /**
    * The raw text mentioning a device from the query, such as "any tv".

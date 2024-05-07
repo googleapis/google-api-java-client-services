@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A message representing the signals associated with an argument. NEXT ID TO USE: 62 For
+ * A message representing the signals associated with an argument. NEXT ID TO USE: 67 For
  * //depot/google3/logs/proto/knowledge/interpretation/intent_query.proto in the "ThenChange",
  * fields under Argument.signals in the serving proto are stored directly under Argument on the
  * logging side. For example, see http://google3/nlp/semantic_parsing/data_management/logs/web_logs/
@@ -99,6 +99,14 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
   private java.lang.String contextResolution;
 
   /**
+   * Contains the source and type information related to a personal entity, for example if it is a
+   * hotel or a restaurant (type) and if it comes from Gmail, Calendar, etc. (source).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CopleySourceTypeList copleySourceTypeList;
+
+  /**
    * If the literal.obj_type of the argument value is ID (Entity), this represents freebase types of
    * the entity in this argument.
    * The value may be {@code null}.
@@ -114,6 +122,13 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> deprecatedSupportingMid;
+
+  /**
+   * Signals about the entity card entity for this argument.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KnowledgeAnswersIntentQueryEntityCardSignals entityCardSignals;
 
   /**
    * Signals about what other entities this entity implies / is implied by. This is useful for
@@ -140,6 +155,14 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
    */
   @com.google.api.client.util.Key
   private NlpSemanticParsingExpressionStatus expressionStatus;
+
+  /**
+   * If this slot was transformed from or could be transformed to a facet on a categorical, that
+   * information is stored here.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KnowledgeAnswersFacetParsing facet;
 
   /**
    * Whether the argument entity comes from a manual graphic symbol annotation. This is later used
@@ -321,6 +344,23 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
    */
   @com.google.api.client.util.Key
   private java.util.List<KnowledgeAnswersIntentQueryPersonalEntity> personalEntity;
+
+  /**
+   * The confidence (in [0, 1]) that the annotation is a reference that implies another entity
+   * (e.g., "my hotel" in "navigate to my hotel" is a reference to an explicit hotel from the user's
+   * hotel reservations).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float personalQrefReferenceScore;
+
+  /**
+   * The confidence (in [0, 1]) that the annotation was created on an implicit mention (e.g., "my
+   * hotel") as opposed to an explicit mention (e.g., "the westin copley square").
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float personalQrefResolutionScore;
 
   /**
    * Information about where the value of this argument came from. For example, it could have been
@@ -622,6 +662,25 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
   }
 
   /**
+   * Contains the source and type information related to a personal entity, for example if it is a
+   * hotel or a restaurant (type) and if it comes from Gmail, Calendar, etc. (source).
+   * @return value or {@code null} for none
+   */
+  public CopleySourceTypeList getCopleySourceTypeList() {
+    return copleySourceTypeList;
+  }
+
+  /**
+   * Contains the source and type information related to a personal entity, for example if it is a
+   * hotel or a restaurant (type) and if it comes from Gmail, Calendar, etc. (source).
+   * @param copleySourceTypeList copleySourceTypeList or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentSignals setCopleySourceTypeList(CopleySourceTypeList copleySourceTypeList) {
+    this.copleySourceTypeList = copleySourceTypeList;
+    return this;
+  }
+
+  /**
    * If the literal.obj_type of the argument value is ID (Entity), this represents freebase types of
    * the entity in this argument.
    * @return value or {@code null} for none
@@ -658,6 +717,23 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
    */
   public KnowledgeAnswersIntentQueryArgumentSignals setDeprecatedSupportingMid(java.util.List<java.lang.String> deprecatedSupportingMid) {
     this.deprecatedSupportingMid = deprecatedSupportingMid;
+    return this;
+  }
+
+  /**
+   * Signals about the entity card entity for this argument.
+   * @return value or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryEntityCardSignals getEntityCardSignals() {
+    return entityCardSignals;
+  }
+
+  /**
+   * Signals about the entity card entity for this argument.
+   * @param entityCardSignals entityCardSignals or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentSignals setEntityCardSignals(KnowledgeAnswersIntentQueryEntityCardSignals entityCardSignals) {
+    this.entityCardSignals = entityCardSignals;
     return this;
   }
 
@@ -719,6 +795,25 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
    */
   public KnowledgeAnswersIntentQueryArgumentSignals setExpressionStatus(NlpSemanticParsingExpressionStatus expressionStatus) {
     this.expressionStatus = expressionStatus;
+    return this;
+  }
+
+  /**
+   * If this slot was transformed from or could be transformed to a facet on a categorical, that
+   * information is stored here.
+   * @return value or {@code null} for none
+   */
+  public KnowledgeAnswersFacetParsing getFacet() {
+    return facet;
+  }
+
+  /**
+   * If this slot was transformed from or could be transformed to a facet on a categorical, that
+   * information is stored here.
+   * @param facet facet or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentSignals setFacet(KnowledgeAnswersFacetParsing facet) {
+    this.facet = facet;
     return this;
   }
 
@@ -1153,6 +1248,46 @@ public final class KnowledgeAnswersIntentQueryArgumentSignals extends com.google
    */
   public KnowledgeAnswersIntentQueryArgumentSignals setPersonalEntity(java.util.List<KnowledgeAnswersIntentQueryPersonalEntity> personalEntity) {
     this.personalEntity = personalEntity;
+    return this;
+  }
+
+  /**
+   * The confidence (in [0, 1]) that the annotation is a reference that implies another entity
+   * (e.g., "my hotel" in "navigate to my hotel" is a reference to an explicit hotel from the user's
+   * hotel reservations).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getPersonalQrefReferenceScore() {
+    return personalQrefReferenceScore;
+  }
+
+  /**
+   * The confidence (in [0, 1]) that the annotation is a reference that implies another entity
+   * (e.g., "my hotel" in "navigate to my hotel" is a reference to an explicit hotel from the user's
+   * hotel reservations).
+   * @param personalQrefReferenceScore personalQrefReferenceScore or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentSignals setPersonalQrefReferenceScore(java.lang.Float personalQrefReferenceScore) {
+    this.personalQrefReferenceScore = personalQrefReferenceScore;
+    return this;
+  }
+
+  /**
+   * The confidence (in [0, 1]) that the annotation was created on an implicit mention (e.g., "my
+   * hotel") as opposed to an explicit mention (e.g., "the westin copley square").
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getPersonalQrefResolutionScore() {
+    return personalQrefResolutionScore;
+  }
+
+  /**
+   * The confidence (in [0, 1]) that the annotation was created on an implicit mention (e.g., "my
+   * hotel") as opposed to an explicit mention (e.g., "the westin copley square").
+   * @param personalQrefResolutionScore personalQrefResolutionScore or {@code null} for none
+   */
+  public KnowledgeAnswersIntentQueryArgumentSignals setPersonalQrefResolutionScore(java.lang.Float personalQrefResolutionScore) {
+    this.personalQrefResolutionScore = personalQrefResolutionScore;
     return this;
   }
 

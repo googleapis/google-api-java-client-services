@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next tag value: 382.
+ * Next tag value: 384.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -844,6 +844,13 @@ public final class PhotosImageMetadata extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> gcameradisableautocreation;
 
   /**
+   * Indicates that an OEM has applied auto enhance via Photos' API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean gcameraisautoenhanced;
+
+  /**
    * The following XMP metadata are used specifically for MicroVideo. More information about
    * MicroVideo format can be found at go/photos-microvideo-format A value of 1 indicates that this
    * file was a MicroVideo at capture time. Otherwise, this is not a MicroVideo (not set or 0).
@@ -887,6 +894,14 @@ public final class PhotosImageMetadata extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.Integer gcameramotionphoto;
+
+  /**
+   * Indicates the creator of the Motion Photo. This will be set if the MotionPhoto was generated
+   * from a LivePhoto from the iOS to Android conversion tool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gcameramotionphotocreator;
 
   /**
    * The presentation timestamp in microseconds of the video frame corresponding to the image still.
@@ -4013,6 +4028,23 @@ public final class PhotosImageMetadata extends com.google.api.client.json.Generi
   }
 
   /**
+   * Indicates that an OEM has applied auto enhance via Photos' API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGcameraisautoenhanced() {
+    return gcameraisautoenhanced;
+  }
+
+  /**
+   * Indicates that an OEM has applied auto enhance via Photos' API.
+   * @param gcameraisautoenhanced gcameraisautoenhanced or {@code null} for none
+   */
+  public PhotosImageMetadata setGcameraisautoenhanced(java.lang.Boolean gcameraisautoenhanced) {
+    this.gcameraisautoenhanced = gcameraisautoenhanced;
+    return this;
+  }
+
+  /**
    * The following XMP metadata are used specifically for MicroVideo. More information about
    * MicroVideo format can be found at go/photos-microvideo-format A value of 1 indicates that this
    * file was a MicroVideo at capture time. Otherwise, this is not a MicroVideo (not set or 0).
@@ -4114,6 +4146,25 @@ public final class PhotosImageMetadata extends com.google.api.client.json.Generi
    */
   public PhotosImageMetadata setGcameramotionphoto(java.lang.Integer gcameramotionphoto) {
     this.gcameramotionphoto = gcameramotionphoto;
+    return this;
+  }
+
+  /**
+   * Indicates the creator of the Motion Photo. This will be set if the MotionPhoto was generated
+   * from a LivePhoto from the iOS to Android conversion tool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGcameramotionphotocreator() {
+    return gcameramotionphotocreator;
+  }
+
+  /**
+   * Indicates the creator of the Motion Photo. This will be set if the MotionPhoto was generated
+   * from a LivePhoto from the iOS to Android conversion tool.
+   * @param gcameramotionphotocreator gcameramotionphotocreator or {@code null} for none
+   */
+  public PhotosImageMetadata setGcameramotionphotocreator(java.lang.String gcameramotionphotocreator) {
+    this.gcameramotionphotocreator = gcameramotionphotocreator;
     return this;
   }
 

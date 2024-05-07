@@ -103,12 +103,12 @@ public final class AssistantApiCoreTypesDeviceId extends com.google.api.client.j
   private AssistantApiCoreTypesDeviceConfig deviceConfig;
 
   /**
-   * DEPRECATED. assistant.api.core_types.governed.SurfaceIdentity.surface_type field should be used
-   * instead. The device's surface type. This is the string version of surface_type. The server
-   * should use the SurfaceType value derived from this string. If the device_type isn't supported
-   * within the SurfaceType enum, it will be set as UNKNOWN. Developers should use the enum in
-   * ServerParams instead of this string. WARNING: Clients are not actually setting this field. This
-   * field will be removed once references to it within the code base have been removed.
+   * DEPRECATED. assistant.api.core_types.SurfaceIdentity.surface_type field should be used instead.
+   * The device's surface type. This is the string version of surface_type. The server should use
+   * the SurfaceType value derived from this string. If the device_type isn't supported within the
+   * SurfaceType enum, it will be set as UNKNOWN. Developers should use the enum in ServerParams
+   * instead of this string. WARNING: Clients are not actually setting this field. This field will
+   * be removed once references to it within the code base have been removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -302,12 +302,12 @@ public final class AssistantApiCoreTypesDeviceId extends com.google.api.client.j
   }
 
   /**
-   * DEPRECATED. assistant.api.core_types.governed.SurfaceIdentity.surface_type field should be used
-   * instead. The device's surface type. This is the string version of surface_type. The server
-   * should use the SurfaceType value derived from this string. If the device_type isn't supported
-   * within the SurfaceType enum, it will be set as UNKNOWN. Developers should use the enum in
-   * ServerParams instead of this string. WARNING: Clients are not actually setting this field. This
-   * field will be removed once references to it within the code base have been removed.
+   * DEPRECATED. assistant.api.core_types.SurfaceIdentity.surface_type field should be used instead.
+   * The device's surface type. This is the string version of surface_type. The server should use
+   * the SurfaceType value derived from this string. If the device_type isn't supported within the
+   * SurfaceType enum, it will be set as UNKNOWN. Developers should use the enum in ServerParams
+   * instead of this string. WARNING: Clients are not actually setting this field. This field will
+   * be removed once references to it within the code base have been removed.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceType() {
@@ -315,12 +315,12 @@ public final class AssistantApiCoreTypesDeviceId extends com.google.api.client.j
   }
 
   /**
-   * DEPRECATED. assistant.api.core_types.governed.SurfaceIdentity.surface_type field should be used
-   * instead. The device's surface type. This is the string version of surface_type. The server
-   * should use the SurfaceType value derived from this string. If the device_type isn't supported
-   * within the SurfaceType enum, it will be set as UNKNOWN. Developers should use the enum in
-   * ServerParams instead of this string. WARNING: Clients are not actually setting this field. This
-   * field will be removed once references to it within the code base have been removed.
+   * DEPRECATED. assistant.api.core_types.SurfaceIdentity.surface_type field should be used instead.
+   * The device's surface type. This is the string version of surface_type. The server should use
+   * the SurfaceType value derived from this string. If the device_type isn't supported within the
+   * SurfaceType enum, it will be set as UNKNOWN. Developers should use the enum in ServerParams
+   * instead of this string. WARNING: Clients are not actually setting this field. This field will
+   * be removed once references to it within the code base have been removed.
    * @param deviceType deviceType or {@code null} for none
    */
   public AssistantApiCoreTypesDeviceId setDeviceType(java.lang.String deviceType) {

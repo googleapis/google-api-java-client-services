@@ -29,7 +29,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * their code. Please also see the comment of FieldProjector above. There are also some fields in
  * DataInfo that annotate who generates the data, the Index Signals or Goldmine annotator name for
  * the fields already onboarded or being onboarded to FDP. Fields without annotation of signal_names
- * or goldmine_annotator_names are not onboarded. Next ID: 539
+ * or goldmine_annotator_names are not onboarded. Next ID: 710
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -196,6 +196,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo creatorjoinsEmbeddedUgcAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo datacommonsDatacommonsTriplesSignal;
 
   /**
@@ -268,6 +274,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo fastDataPropagationTestSignalContent;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo fatcatCompactDocClassification;
 
   /**
@@ -305,6 +317,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo freshboxFreshboxArticleAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo geoCarsVehicleDetailsPageAnnotation;
 
   /**
    * The value may be {@code null}.
@@ -457,7 +475,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   private IndexingDocjoinerDataVersionVersionInfo imageembed;
 
   /**
-   * END DATA FIELDS
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -689,6 +706,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo indexingCenterpieceCenterpieceUnifiedAnnotations;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo indexingCenterpieceComponentLearningSource;
 
   /**
@@ -774,6 +797,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo indexingDupsLocalizedLocalizedCluster;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo indexingDupsNearDupsResult;
 
   /**
    * The value may be {@code null}.
@@ -1001,6 +1030,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo indexingSelectionIndexCompositionExperimentExtension;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo indexingSelectionLanguageExtension;
 
   /**
@@ -1026,6 +1061,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo indexingSelectionTensorFlowExtension;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo indexingServiceFirsttimesCrawlFirsttimesSignals;
 
   /**
    * The value may be {@code null}.
@@ -1247,6 +1288,871 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumConsumerNewsAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuAccusatoryTitleAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuAmusingAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBaseCuriosityAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBaseCuriosityV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBaseCuriosityV3Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBeginnerAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBeginnerTitleAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBoringAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBoringVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBoringVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBroadTitleAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBroadlyConsumableAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuClickbaitPlusAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuClickbaitPlusCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCommercialNewsAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCommercialVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCommercialVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCommercialVideoV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCommercialVideoV2CandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuComplexAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCoolProjectVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCoolProjectVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCoolProjectVideoV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCoolProjectVideoV2CandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCreativeVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCreativeVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCuteShortVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCuteShortVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDepressingTitleAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDietaryAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDisasterAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDisasterV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDiscriminatoryAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDisgustingAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDisgustingV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDismissRatioUserBehaviorAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDistanceSensitiveAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDiyProjectVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDiyProjectVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDqsAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDramaticTitleAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDryFactsAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEasyReadAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEducationalVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEducationalVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingVideoV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingVideoV2CandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingVideoV3Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingVideoV3CandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingnessAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingnessLeAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingnessMmAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEnjoyableMutedVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEntertainingVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEntertainingVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFactualAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFlavorAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFlavorMmAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFlavorMmCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFlavorMmV2CandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFunFactsAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFunVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFunVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFunnyShortVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFunnyShortVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuGameplayVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuGameplayVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuGoodCommercialAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuGossipNewsAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuHeartRatioUserBehaviorAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuHowToVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuHowToVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInspiredQueryRateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInspiringAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInspiringTitleAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInspiringUserBehaviorAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInspiringV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuIntelligentAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInterviewVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInterviewVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuLectureVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuLectureVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuLifehackVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuLifehackVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuLifestyleAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuListicleTitleAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuMayhemNewsAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuMediaVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuMediaVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuNegativeToneAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuNewsVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuNewsVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuNewsyTitleAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuOpinionPiecesAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuPersonalNarrativeAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuPracticalAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuPracticalVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuPracticalVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuPredictedTrafficRatioAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuProductReviewVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuProductReviewVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuProfanityAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuProfanityV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuRacyAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuRacyV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuRealLifeTipsAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuRemoteRelevanceAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuReviewsAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuSensationalClickbaitAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuSensationalClickbaitV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuSensationalClickbaitV3Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuSexualUserBehaviorAnnotation;
+
+  /**
+   * END DATA FIELDS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuShareRatioUserBehaviorAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuStalenessAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuStoryAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuStorytellingVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuStorytellingVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuThoughtProvokingAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuThoughtProvokingV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuTimeSensitiveAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuTimelessAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuTimelessVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuTimelessVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuTrailerVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuTrailerVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuUsefulUserBehaviorAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuUsefulVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuUsefulVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuVideoFlavorAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuViolenceAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuViolenceV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuVisuallyEngagingAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuVisuallyEngagingV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuVlogVideoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuVlogVideoCandidateAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuWellWrittenAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuWithholdingInfoAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuWithholdingInfoV2Annotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuWorthyHeadlineNewsAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo knowledgeMumStoryTeaserAnnotation;
 
   /**
@@ -1337,6 +2243,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo multiverseHubSpokesSignal;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo navBoostDocument;
 
   /**
@@ -1351,6 +2263,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo newsAnnotationsContentAnnotations;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo newsCorpusDifferentiatedContentAnnotation;
 
   /**
    * The value may be {@code null}.
@@ -1519,6 +2437,13 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo noindexedImageDataList;
+
+  /**
+   * Must be used together with quality_nsr_nsr_data
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo nsrFdpData;
 
   /**
    * The value may be {@code null}.
@@ -1722,6 +2647,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo orbitIntents;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo perDocLangidData;
 
   /**
@@ -1824,6 +2755,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo qualityChardPredictedXlqSevereHoax;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo qualityContraSelectedAttributions;
 
   /**
@@ -1896,6 +2833,24 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo qualityFlavorsFlavorSet;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo qualityForumrankingUgcPageQualityDocumentAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo qualityFreshnessAbacusInstantNavBoostDocumentAnon;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo qualityFreshnessAbacusInstantNegativeClicksInfo;
 
   /**
@@ -1951,6 +2906,24 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo qualityLisztomaniaDocument;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo qualityModernProtoUcpDocInfo;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo qualityModernProtoUcpServingData;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo qualityNaturalPearlsNaturalPearlsDocumentAnnotation;
 
   /**
    * The value may be {@code null}.
@@ -2082,6 +3055,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo qualityPeoplesearchNamedetectorNavboostNameAnnotations;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo qualityPopfeedsChromeBackgroundAnnotation;
 
   /**
@@ -2089,6 +3068,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo qualityPopfeedsHubDataAnnotations;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo qualityPopfeedsTopicStatsTopicScoreAnnotation;
 
   /**
    * The value may be {@code null}.
@@ -2227,6 +3212,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo qualitySherlockKnexAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo qualityShoppingDtcDomainsSignal;
 
   /**
    * The value may be {@code null}.
@@ -2580,6 +3571,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo repositoryWebrefAuthorExtractionAnnotation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo repositoryWebrefEntityJoin;
 
   /**
@@ -2611,6 +3608,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo repositoryWebrefPageClassificationSignalsSet;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo repositoryWebrefPiannoDocumentIntent;
 
   /**
    * The value may be {@code null}.
@@ -2826,6 +3829,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo robotsPolicy;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo rosettaLanguage;
 
   /**
@@ -3012,6 +4021,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo spambrainDomainSitechunkData;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo tableTalkStrideOfferPagePriceAnnotation;
 
   /**
@@ -3049,6 +4064,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo travelAssistantTravelDocClassification;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo trawlerEffectiveRobotsContent;
 
   /**
    * The value may be {@code null}.
@@ -3175,6 +4196,12 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private IndexingDocjoinerDataVersionVersionInfo videoScoringSignal;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexingDocjoinerDataVersionVersionInfo videoShoppingVideoShoppingAnnotation;
 
   /**
    * The value may be {@code null}.
@@ -3620,6 +4647,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getCreatorjoinsEmbeddedUgcAnnotation() {
+    return creatorjoinsEmbeddedUgcAnnotation;
+  }
+
+  /**
+   * @param creatorjoinsEmbeddedUgcAnnotation creatorjoinsEmbeddedUgcAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setCreatorjoinsEmbeddedUgcAnnotation(IndexingDocjoinerDataVersionVersionInfo creatorjoinsEmbeddedUgcAnnotation) {
+    this.creatorjoinsEmbeddedUgcAnnotation = creatorjoinsEmbeddedUgcAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getDatacommonsDatacommonsTriplesSignal() {
     return datacommonsDatacommonsTriplesSignal;
   }
@@ -3800,6 +4842,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getFastDataPropagationTestSignalContent() {
+    return fastDataPropagationTestSignalContent;
+  }
+
+  /**
+   * @param fastDataPropagationTestSignalContent fastDataPropagationTestSignalContent or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setFastDataPropagationTestSignalContent(IndexingDocjoinerDataVersionVersionInfo fastDataPropagationTestSignalContent) {
+    this.fastDataPropagationTestSignalContent = fastDataPropagationTestSignalContent;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getFatcatCompactDocClassification() {
     return fatcatCompactDocClassification;
   }
@@ -3899,6 +4956,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setFreshboxFreshboxArticleAnnotation(IndexingDocjoinerDataVersionVersionInfo freshboxFreshboxArticleAnnotation) {
     this.freshboxFreshboxArticleAnnotation = freshboxFreshboxArticleAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getGeoCarsVehicleDetailsPageAnnotation() {
+    return geoCarsVehicleDetailsPageAnnotation;
+  }
+
+  /**
+   * @param geoCarsVehicleDetailsPageAnnotation geoCarsVehicleDetailsPageAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setGeoCarsVehicleDetailsPageAnnotation(IndexingDocjoinerDataVersionVersionInfo geoCarsVehicleDetailsPageAnnotation) {
+    this.geoCarsVehicleDetailsPageAnnotation = geoCarsVehicleDetailsPageAnnotation;
     return this;
   }
 
@@ -4278,7 +5350,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * END DATA FIELDS
    * @return value or {@code null} for none
    */
   public IndexingDocjoinerDataVersionVersionInfo getImageembedDomainNorm() {
@@ -4286,7 +5357,6 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   }
 
   /**
-   * END DATA FIELDS
    * @param imageembedDomainNorm imageembedDomainNorm or {@code null} for none
    */
   public IndexingDocjoinerDataVersion setImageembedDomainNorm(IndexingDocjoinerDataVersionVersionInfo imageembedDomainNorm) {
@@ -4852,6 +5922,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getIndexingCenterpieceCenterpieceUnifiedAnnotations() {
+    return indexingCenterpieceCenterpieceUnifiedAnnotations;
+  }
+
+  /**
+   * @param indexingCenterpieceCenterpieceUnifiedAnnotations indexingCenterpieceCenterpieceUnifiedAnnotations or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setIndexingCenterpieceCenterpieceUnifiedAnnotations(IndexingDocjoinerDataVersionVersionInfo indexingCenterpieceCenterpieceUnifiedAnnotations) {
+    this.indexingCenterpieceCenterpieceUnifiedAnnotations = indexingCenterpieceCenterpieceUnifiedAnnotations;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getIndexingCenterpieceComponentLearningSource() {
     return indexingCenterpieceComponentLearningSource;
   }
@@ -5071,6 +6156,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setIndexingDupsLocalizedLocalizedCluster(IndexingDocjoinerDataVersionVersionInfo indexingDupsLocalizedLocalizedCluster) {
     this.indexingDupsLocalizedLocalizedCluster = indexingDupsLocalizedLocalizedCluster;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getIndexingDupsNearDupsResult() {
+    return indexingDupsNearDupsResult;
+  }
+
+  /**
+   * @param indexingDupsNearDupsResult indexingDupsNearDupsResult or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setIndexingDupsNearDupsResult(IndexingDocjoinerDataVersionVersionInfo indexingDupsNearDupsResult) {
+    this.indexingDupsNearDupsResult = indexingDupsNearDupsResult;
     return this;
   }
 
@@ -5632,6 +6732,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getIndexingSelectionIndexCompositionExperimentExtension() {
+    return indexingSelectionIndexCompositionExperimentExtension;
+  }
+
+  /**
+   * @param indexingSelectionIndexCompositionExperimentExtension indexingSelectionIndexCompositionExperimentExtension or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setIndexingSelectionIndexCompositionExperimentExtension(IndexingDocjoinerDataVersionVersionInfo indexingSelectionIndexCompositionExperimentExtension) {
+    this.indexingSelectionIndexCompositionExperimentExtension = indexingSelectionIndexCompositionExperimentExtension;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getIndexingSelectionLanguageExtension() {
     return indexingSelectionLanguageExtension;
   }
@@ -5701,6 +6816,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setIndexingSelectionTensorFlowExtension(IndexingDocjoinerDataVersionVersionInfo indexingSelectionTensorFlowExtension) {
     this.indexingSelectionTensorFlowExtension = indexingSelectionTensorFlowExtension;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getIndexingServiceFirsttimesCrawlFirsttimesSignals() {
+    return indexingServiceFirsttimesCrawlFirsttimesSignals;
+  }
+
+  /**
+   * @param indexingServiceFirsttimesCrawlFirsttimesSignals indexingServiceFirsttimesCrawlFirsttimesSignals or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setIndexingServiceFirsttimesCrawlFirsttimesSignals(IndexingDocjoinerDataVersionVersionInfo indexingServiceFirsttimesCrawlFirsttimesSignals) {
+    this.indexingServiceFirsttimesCrawlFirsttimesSignals = indexingServiceFirsttimesCrawlFirsttimesSignals;
     return this;
   }
 
@@ -6247,6 +7377,2168 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumConsumerNewsAnnotation() {
+    return knowledgeMumConsumerNewsAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumConsumerNewsAnnotation knowledgeMumConsumerNewsAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumConsumerNewsAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumConsumerNewsAnnotation) {
+    this.knowledgeMumConsumerNewsAnnotation = knowledgeMumConsumerNewsAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuAccusatoryTitleAnnotation() {
+    return knowledgeMumDcuAccusatoryTitleAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuAccusatoryTitleAnnotation knowledgeMumDcuAccusatoryTitleAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuAccusatoryTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuAccusatoryTitleAnnotation) {
+    this.knowledgeMumDcuAccusatoryTitleAnnotation = knowledgeMumDcuAccusatoryTitleAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuAmusingAnnotation() {
+    return knowledgeMumDcuAmusingAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuAmusingAnnotation knowledgeMumDcuAmusingAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuAmusingAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuAmusingAnnotation) {
+    this.knowledgeMumDcuAmusingAnnotation = knowledgeMumDcuAmusingAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuBaseCuriosityAnnotation() {
+    return knowledgeMumDcuBaseCuriosityAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuBaseCuriosityAnnotation knowledgeMumDcuBaseCuriosityAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuBaseCuriosityAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBaseCuriosityAnnotation) {
+    this.knowledgeMumDcuBaseCuriosityAnnotation = knowledgeMumDcuBaseCuriosityAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuBaseCuriosityV2Annotation() {
+    return knowledgeMumDcuBaseCuriosityV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuBaseCuriosityV2Annotation knowledgeMumDcuBaseCuriosityV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuBaseCuriosityV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBaseCuriosityV2Annotation) {
+    this.knowledgeMumDcuBaseCuriosityV2Annotation = knowledgeMumDcuBaseCuriosityV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuBaseCuriosityV3Annotation() {
+    return knowledgeMumDcuBaseCuriosityV3Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuBaseCuriosityV3Annotation knowledgeMumDcuBaseCuriosityV3Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuBaseCuriosityV3Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBaseCuriosityV3Annotation) {
+    this.knowledgeMumDcuBaseCuriosityV3Annotation = knowledgeMumDcuBaseCuriosityV3Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuBeginnerAnnotation() {
+    return knowledgeMumDcuBeginnerAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuBeginnerAnnotation knowledgeMumDcuBeginnerAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuBeginnerAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBeginnerAnnotation) {
+    this.knowledgeMumDcuBeginnerAnnotation = knowledgeMumDcuBeginnerAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuBeginnerTitleAnnotation() {
+    return knowledgeMumDcuBeginnerTitleAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuBeginnerTitleAnnotation knowledgeMumDcuBeginnerTitleAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuBeginnerTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBeginnerTitleAnnotation) {
+    this.knowledgeMumDcuBeginnerTitleAnnotation = knowledgeMumDcuBeginnerTitleAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuBoringAnnotation() {
+    return knowledgeMumDcuBoringAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuBoringAnnotation knowledgeMumDcuBoringAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuBoringAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBoringAnnotation) {
+    this.knowledgeMumDcuBoringAnnotation = knowledgeMumDcuBoringAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuBoringVideoAnnotation() {
+    return knowledgeMumDcuBoringVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuBoringVideoAnnotation knowledgeMumDcuBoringVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuBoringVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBoringVideoAnnotation) {
+    this.knowledgeMumDcuBoringVideoAnnotation = knowledgeMumDcuBoringVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuBoringVideoCandidateAnnotation() {
+    return knowledgeMumDcuBoringVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuBoringVideoCandidateAnnotation knowledgeMumDcuBoringVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuBoringVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBoringVideoCandidateAnnotation) {
+    this.knowledgeMumDcuBoringVideoCandidateAnnotation = knowledgeMumDcuBoringVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuBroadTitleAnnotation() {
+    return knowledgeMumDcuBroadTitleAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuBroadTitleAnnotation knowledgeMumDcuBroadTitleAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuBroadTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBroadTitleAnnotation) {
+    this.knowledgeMumDcuBroadTitleAnnotation = knowledgeMumDcuBroadTitleAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuBroadlyConsumableAnnotation() {
+    return knowledgeMumDcuBroadlyConsumableAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuBroadlyConsumableAnnotation knowledgeMumDcuBroadlyConsumableAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuBroadlyConsumableAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuBroadlyConsumableAnnotation) {
+    this.knowledgeMumDcuBroadlyConsumableAnnotation = knowledgeMumDcuBroadlyConsumableAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuClickbaitPlusAnnotation() {
+    return knowledgeMumDcuClickbaitPlusAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuClickbaitPlusAnnotation knowledgeMumDcuClickbaitPlusAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuClickbaitPlusAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuClickbaitPlusAnnotation) {
+    this.knowledgeMumDcuClickbaitPlusAnnotation = knowledgeMumDcuClickbaitPlusAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuClickbaitPlusCandidateAnnotation() {
+    return knowledgeMumDcuClickbaitPlusCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuClickbaitPlusCandidateAnnotation knowledgeMumDcuClickbaitPlusCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuClickbaitPlusCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuClickbaitPlusCandidateAnnotation) {
+    this.knowledgeMumDcuClickbaitPlusCandidateAnnotation = knowledgeMumDcuClickbaitPlusCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuCommercialNewsAnnotation() {
+    return knowledgeMumDcuCommercialNewsAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuCommercialNewsAnnotation knowledgeMumDcuCommercialNewsAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuCommercialNewsAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCommercialNewsAnnotation) {
+    this.knowledgeMumDcuCommercialNewsAnnotation = knowledgeMumDcuCommercialNewsAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuCommercialVideoAnnotation() {
+    return knowledgeMumDcuCommercialVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuCommercialVideoAnnotation knowledgeMumDcuCommercialVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuCommercialVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCommercialVideoAnnotation) {
+    this.knowledgeMumDcuCommercialVideoAnnotation = knowledgeMumDcuCommercialVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuCommercialVideoCandidateAnnotation() {
+    return knowledgeMumDcuCommercialVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuCommercialVideoCandidateAnnotation knowledgeMumDcuCommercialVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuCommercialVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCommercialVideoCandidateAnnotation) {
+    this.knowledgeMumDcuCommercialVideoCandidateAnnotation = knowledgeMumDcuCommercialVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuCommercialVideoV2Annotation() {
+    return knowledgeMumDcuCommercialVideoV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuCommercialVideoV2Annotation knowledgeMumDcuCommercialVideoV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuCommercialVideoV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCommercialVideoV2Annotation) {
+    this.knowledgeMumDcuCommercialVideoV2Annotation = knowledgeMumDcuCommercialVideoV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuCommercialVideoV2CandidateAnnotation() {
+    return knowledgeMumDcuCommercialVideoV2CandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuCommercialVideoV2CandidateAnnotation knowledgeMumDcuCommercialVideoV2CandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuCommercialVideoV2CandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCommercialVideoV2CandidateAnnotation) {
+    this.knowledgeMumDcuCommercialVideoV2CandidateAnnotation = knowledgeMumDcuCommercialVideoV2CandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuComplexAnnotation() {
+    return knowledgeMumDcuComplexAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuComplexAnnotation knowledgeMumDcuComplexAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuComplexAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuComplexAnnotation) {
+    this.knowledgeMumDcuComplexAnnotation = knowledgeMumDcuComplexAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuCoolProjectVideoAnnotation() {
+    return knowledgeMumDcuCoolProjectVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuCoolProjectVideoAnnotation knowledgeMumDcuCoolProjectVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuCoolProjectVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCoolProjectVideoAnnotation) {
+    this.knowledgeMumDcuCoolProjectVideoAnnotation = knowledgeMumDcuCoolProjectVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuCoolProjectVideoCandidateAnnotation() {
+    return knowledgeMumDcuCoolProjectVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuCoolProjectVideoCandidateAnnotation knowledgeMumDcuCoolProjectVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuCoolProjectVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCoolProjectVideoCandidateAnnotation) {
+    this.knowledgeMumDcuCoolProjectVideoCandidateAnnotation = knowledgeMumDcuCoolProjectVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuCoolProjectVideoV2Annotation() {
+    return knowledgeMumDcuCoolProjectVideoV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuCoolProjectVideoV2Annotation knowledgeMumDcuCoolProjectVideoV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuCoolProjectVideoV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCoolProjectVideoV2Annotation) {
+    this.knowledgeMumDcuCoolProjectVideoV2Annotation = knowledgeMumDcuCoolProjectVideoV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuCoolProjectVideoV2CandidateAnnotation() {
+    return knowledgeMumDcuCoolProjectVideoV2CandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuCoolProjectVideoV2CandidateAnnotation knowledgeMumDcuCoolProjectVideoV2CandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuCoolProjectVideoV2CandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCoolProjectVideoV2CandidateAnnotation) {
+    this.knowledgeMumDcuCoolProjectVideoV2CandidateAnnotation = knowledgeMumDcuCoolProjectVideoV2CandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuCreativeVideoAnnotation() {
+    return knowledgeMumDcuCreativeVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuCreativeVideoAnnotation knowledgeMumDcuCreativeVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuCreativeVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCreativeVideoAnnotation) {
+    this.knowledgeMumDcuCreativeVideoAnnotation = knowledgeMumDcuCreativeVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuCreativeVideoCandidateAnnotation() {
+    return knowledgeMumDcuCreativeVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuCreativeVideoCandidateAnnotation knowledgeMumDcuCreativeVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuCreativeVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCreativeVideoCandidateAnnotation) {
+    this.knowledgeMumDcuCreativeVideoCandidateAnnotation = knowledgeMumDcuCreativeVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuCuteShortVideoAnnotation() {
+    return knowledgeMumDcuCuteShortVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuCuteShortVideoAnnotation knowledgeMumDcuCuteShortVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuCuteShortVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCuteShortVideoAnnotation) {
+    this.knowledgeMumDcuCuteShortVideoAnnotation = knowledgeMumDcuCuteShortVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuCuteShortVideoCandidateAnnotation() {
+    return knowledgeMumDcuCuteShortVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuCuteShortVideoCandidateAnnotation knowledgeMumDcuCuteShortVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuCuteShortVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuCuteShortVideoCandidateAnnotation) {
+    this.knowledgeMumDcuCuteShortVideoCandidateAnnotation = knowledgeMumDcuCuteShortVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDepressingTitleAnnotation() {
+    return knowledgeMumDcuDepressingTitleAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDepressingTitleAnnotation knowledgeMumDcuDepressingTitleAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDepressingTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDepressingTitleAnnotation) {
+    this.knowledgeMumDcuDepressingTitleAnnotation = knowledgeMumDcuDepressingTitleAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDietaryAnnotation() {
+    return knowledgeMumDcuDietaryAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDietaryAnnotation knowledgeMumDcuDietaryAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDietaryAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDietaryAnnotation) {
+    this.knowledgeMumDcuDietaryAnnotation = knowledgeMumDcuDietaryAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDisasterAnnotation() {
+    return knowledgeMumDcuDisasterAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDisasterAnnotation knowledgeMumDcuDisasterAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDisasterAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDisasterAnnotation) {
+    this.knowledgeMumDcuDisasterAnnotation = knowledgeMumDcuDisasterAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDisasterV2Annotation() {
+    return knowledgeMumDcuDisasterV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDisasterV2Annotation knowledgeMumDcuDisasterV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDisasterV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDisasterV2Annotation) {
+    this.knowledgeMumDcuDisasterV2Annotation = knowledgeMumDcuDisasterV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDiscriminatoryAnnotation() {
+    return knowledgeMumDcuDiscriminatoryAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDiscriminatoryAnnotation knowledgeMumDcuDiscriminatoryAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDiscriminatoryAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDiscriminatoryAnnotation) {
+    this.knowledgeMumDcuDiscriminatoryAnnotation = knowledgeMumDcuDiscriminatoryAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDisgustingAnnotation() {
+    return knowledgeMumDcuDisgustingAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDisgustingAnnotation knowledgeMumDcuDisgustingAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDisgustingAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDisgustingAnnotation) {
+    this.knowledgeMumDcuDisgustingAnnotation = knowledgeMumDcuDisgustingAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDisgustingV2Annotation() {
+    return knowledgeMumDcuDisgustingV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDisgustingV2Annotation knowledgeMumDcuDisgustingV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDisgustingV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDisgustingV2Annotation) {
+    this.knowledgeMumDcuDisgustingV2Annotation = knowledgeMumDcuDisgustingV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDismissRatioUserBehaviorAnnotation() {
+    return knowledgeMumDcuDismissRatioUserBehaviorAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDismissRatioUserBehaviorAnnotation knowledgeMumDcuDismissRatioUserBehaviorAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDismissRatioUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDismissRatioUserBehaviorAnnotation) {
+    this.knowledgeMumDcuDismissRatioUserBehaviorAnnotation = knowledgeMumDcuDismissRatioUserBehaviorAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDistanceSensitiveAnnotation() {
+    return knowledgeMumDcuDistanceSensitiveAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDistanceSensitiveAnnotation knowledgeMumDcuDistanceSensitiveAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDistanceSensitiveAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDistanceSensitiveAnnotation) {
+    this.knowledgeMumDcuDistanceSensitiveAnnotation = knowledgeMumDcuDistanceSensitiveAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDiyProjectVideoAnnotation() {
+    return knowledgeMumDcuDiyProjectVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDiyProjectVideoAnnotation knowledgeMumDcuDiyProjectVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDiyProjectVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDiyProjectVideoAnnotation) {
+    this.knowledgeMumDcuDiyProjectVideoAnnotation = knowledgeMumDcuDiyProjectVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDiyProjectVideoCandidateAnnotation() {
+    return knowledgeMumDcuDiyProjectVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDiyProjectVideoCandidateAnnotation knowledgeMumDcuDiyProjectVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDiyProjectVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDiyProjectVideoCandidateAnnotation) {
+    this.knowledgeMumDcuDiyProjectVideoCandidateAnnotation = knowledgeMumDcuDiyProjectVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDqsAnnotation() {
+    return knowledgeMumDcuDqsAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDqsAnnotation knowledgeMumDcuDqsAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDqsAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDqsAnnotation) {
+    this.knowledgeMumDcuDqsAnnotation = knowledgeMumDcuDqsAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDramaticTitleAnnotation() {
+    return knowledgeMumDcuDramaticTitleAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDramaticTitleAnnotation knowledgeMumDcuDramaticTitleAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDramaticTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDramaticTitleAnnotation) {
+    this.knowledgeMumDcuDramaticTitleAnnotation = knowledgeMumDcuDramaticTitleAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuDryFactsAnnotation() {
+    return knowledgeMumDcuDryFactsAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuDryFactsAnnotation knowledgeMumDcuDryFactsAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuDryFactsAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuDryFactsAnnotation) {
+    this.knowledgeMumDcuDryFactsAnnotation = knowledgeMumDcuDryFactsAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEasyReadAnnotation() {
+    return knowledgeMumDcuEasyReadAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEasyReadAnnotation knowledgeMumDcuEasyReadAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEasyReadAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEasyReadAnnotation) {
+    this.knowledgeMumDcuEasyReadAnnotation = knowledgeMumDcuEasyReadAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEducationalVideoAnnotation() {
+    return knowledgeMumDcuEducationalVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEducationalVideoAnnotation knowledgeMumDcuEducationalVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEducationalVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEducationalVideoAnnotation) {
+    this.knowledgeMumDcuEducationalVideoAnnotation = knowledgeMumDcuEducationalVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEducationalVideoCandidateAnnotation() {
+    return knowledgeMumDcuEducationalVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEducationalVideoCandidateAnnotation knowledgeMumDcuEducationalVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEducationalVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEducationalVideoCandidateAnnotation) {
+    this.knowledgeMumDcuEducationalVideoCandidateAnnotation = knowledgeMumDcuEducationalVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEngagingVideoAnnotation() {
+    return knowledgeMumDcuEngagingVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEngagingVideoAnnotation knowledgeMumDcuEngagingVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEngagingVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingVideoAnnotation) {
+    this.knowledgeMumDcuEngagingVideoAnnotation = knowledgeMumDcuEngagingVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEngagingVideoCandidateAnnotation() {
+    return knowledgeMumDcuEngagingVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEngagingVideoCandidateAnnotation knowledgeMumDcuEngagingVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEngagingVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingVideoCandidateAnnotation) {
+    this.knowledgeMumDcuEngagingVideoCandidateAnnotation = knowledgeMumDcuEngagingVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEngagingVideoV2Annotation() {
+    return knowledgeMumDcuEngagingVideoV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEngagingVideoV2Annotation knowledgeMumDcuEngagingVideoV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEngagingVideoV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingVideoV2Annotation) {
+    this.knowledgeMumDcuEngagingVideoV2Annotation = knowledgeMumDcuEngagingVideoV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEngagingVideoV2CandidateAnnotation() {
+    return knowledgeMumDcuEngagingVideoV2CandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEngagingVideoV2CandidateAnnotation knowledgeMumDcuEngagingVideoV2CandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEngagingVideoV2CandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingVideoV2CandidateAnnotation) {
+    this.knowledgeMumDcuEngagingVideoV2CandidateAnnotation = knowledgeMumDcuEngagingVideoV2CandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEngagingVideoV3Annotation() {
+    return knowledgeMumDcuEngagingVideoV3Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEngagingVideoV3Annotation knowledgeMumDcuEngagingVideoV3Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEngagingVideoV3Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingVideoV3Annotation) {
+    this.knowledgeMumDcuEngagingVideoV3Annotation = knowledgeMumDcuEngagingVideoV3Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEngagingVideoV3CandidateAnnotation() {
+    return knowledgeMumDcuEngagingVideoV3CandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEngagingVideoV3CandidateAnnotation knowledgeMumDcuEngagingVideoV3CandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEngagingVideoV3CandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingVideoV3CandidateAnnotation) {
+    this.knowledgeMumDcuEngagingVideoV3CandidateAnnotation = knowledgeMumDcuEngagingVideoV3CandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEngagingnessAnnotation() {
+    return knowledgeMumDcuEngagingnessAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEngagingnessAnnotation knowledgeMumDcuEngagingnessAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEngagingnessAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingnessAnnotation) {
+    this.knowledgeMumDcuEngagingnessAnnotation = knowledgeMumDcuEngagingnessAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEngagingnessLeAnnotation() {
+    return knowledgeMumDcuEngagingnessLeAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEngagingnessLeAnnotation knowledgeMumDcuEngagingnessLeAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEngagingnessLeAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingnessLeAnnotation) {
+    this.knowledgeMumDcuEngagingnessLeAnnotation = knowledgeMumDcuEngagingnessLeAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEngagingnessMmAnnotation() {
+    return knowledgeMumDcuEngagingnessMmAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEngagingnessMmAnnotation knowledgeMumDcuEngagingnessMmAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEngagingnessMmAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEngagingnessMmAnnotation) {
+    this.knowledgeMumDcuEngagingnessMmAnnotation = knowledgeMumDcuEngagingnessMmAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEnjoyableMutedVideoAnnotation() {
+    return knowledgeMumDcuEnjoyableMutedVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEnjoyableMutedVideoAnnotation knowledgeMumDcuEnjoyableMutedVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEnjoyableMutedVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEnjoyableMutedVideoAnnotation) {
+    this.knowledgeMumDcuEnjoyableMutedVideoAnnotation = knowledgeMumDcuEnjoyableMutedVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation() {
+    return knowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation knowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation) {
+    this.knowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation = knowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEntertainingVideoAnnotation() {
+    return knowledgeMumDcuEntertainingVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEntertainingVideoAnnotation knowledgeMumDcuEntertainingVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEntertainingVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEntertainingVideoAnnotation) {
+    this.knowledgeMumDcuEntertainingVideoAnnotation = knowledgeMumDcuEntertainingVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuEntertainingVideoCandidateAnnotation() {
+    return knowledgeMumDcuEntertainingVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuEntertainingVideoCandidateAnnotation knowledgeMumDcuEntertainingVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuEntertainingVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuEntertainingVideoCandidateAnnotation) {
+    this.knowledgeMumDcuEntertainingVideoCandidateAnnotation = knowledgeMumDcuEntertainingVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuFactualAnnotation() {
+    return knowledgeMumDcuFactualAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuFactualAnnotation knowledgeMumDcuFactualAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuFactualAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFactualAnnotation) {
+    this.knowledgeMumDcuFactualAnnotation = knowledgeMumDcuFactualAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuFlavorAnnotation() {
+    return knowledgeMumDcuFlavorAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuFlavorAnnotation knowledgeMumDcuFlavorAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuFlavorAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFlavorAnnotation) {
+    this.knowledgeMumDcuFlavorAnnotation = knowledgeMumDcuFlavorAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuFlavorMmAnnotation() {
+    return knowledgeMumDcuFlavorMmAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuFlavorMmAnnotation knowledgeMumDcuFlavorMmAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuFlavorMmAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFlavorMmAnnotation) {
+    this.knowledgeMumDcuFlavorMmAnnotation = knowledgeMumDcuFlavorMmAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuFlavorMmCandidateAnnotation() {
+    return knowledgeMumDcuFlavorMmCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuFlavorMmCandidateAnnotation knowledgeMumDcuFlavorMmCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuFlavorMmCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFlavorMmCandidateAnnotation) {
+    this.knowledgeMumDcuFlavorMmCandidateAnnotation = knowledgeMumDcuFlavorMmCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuFlavorMmV2CandidateAnnotation() {
+    return knowledgeMumDcuFlavorMmV2CandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuFlavorMmV2CandidateAnnotation knowledgeMumDcuFlavorMmV2CandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuFlavorMmV2CandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFlavorMmV2CandidateAnnotation) {
+    this.knowledgeMumDcuFlavorMmV2CandidateAnnotation = knowledgeMumDcuFlavorMmV2CandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuFunFactsAnnotation() {
+    return knowledgeMumDcuFunFactsAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuFunFactsAnnotation knowledgeMumDcuFunFactsAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuFunFactsAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFunFactsAnnotation) {
+    this.knowledgeMumDcuFunFactsAnnotation = knowledgeMumDcuFunFactsAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuFunVideoAnnotation() {
+    return knowledgeMumDcuFunVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuFunVideoAnnotation knowledgeMumDcuFunVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuFunVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFunVideoAnnotation) {
+    this.knowledgeMumDcuFunVideoAnnotation = knowledgeMumDcuFunVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuFunVideoCandidateAnnotation() {
+    return knowledgeMumDcuFunVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuFunVideoCandidateAnnotation knowledgeMumDcuFunVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuFunVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFunVideoCandidateAnnotation) {
+    this.knowledgeMumDcuFunVideoCandidateAnnotation = knowledgeMumDcuFunVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuFunnyShortVideoAnnotation() {
+    return knowledgeMumDcuFunnyShortVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuFunnyShortVideoAnnotation knowledgeMumDcuFunnyShortVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuFunnyShortVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFunnyShortVideoAnnotation) {
+    this.knowledgeMumDcuFunnyShortVideoAnnotation = knowledgeMumDcuFunnyShortVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuFunnyShortVideoCandidateAnnotation() {
+    return knowledgeMumDcuFunnyShortVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuFunnyShortVideoCandidateAnnotation knowledgeMumDcuFunnyShortVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuFunnyShortVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuFunnyShortVideoCandidateAnnotation) {
+    this.knowledgeMumDcuFunnyShortVideoCandidateAnnotation = knowledgeMumDcuFunnyShortVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuGameplayVideoAnnotation() {
+    return knowledgeMumDcuGameplayVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuGameplayVideoAnnotation knowledgeMumDcuGameplayVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuGameplayVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuGameplayVideoAnnotation) {
+    this.knowledgeMumDcuGameplayVideoAnnotation = knowledgeMumDcuGameplayVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuGameplayVideoCandidateAnnotation() {
+    return knowledgeMumDcuGameplayVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuGameplayVideoCandidateAnnotation knowledgeMumDcuGameplayVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuGameplayVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuGameplayVideoCandidateAnnotation) {
+    this.knowledgeMumDcuGameplayVideoCandidateAnnotation = knowledgeMumDcuGameplayVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuGoodCommercialAnnotation() {
+    return knowledgeMumDcuGoodCommercialAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuGoodCommercialAnnotation knowledgeMumDcuGoodCommercialAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuGoodCommercialAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuGoodCommercialAnnotation) {
+    this.knowledgeMumDcuGoodCommercialAnnotation = knowledgeMumDcuGoodCommercialAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuGossipNewsAnnotation() {
+    return knowledgeMumDcuGossipNewsAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuGossipNewsAnnotation knowledgeMumDcuGossipNewsAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuGossipNewsAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuGossipNewsAnnotation) {
+    this.knowledgeMumDcuGossipNewsAnnotation = knowledgeMumDcuGossipNewsAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuHeartRatioUserBehaviorAnnotation() {
+    return knowledgeMumDcuHeartRatioUserBehaviorAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuHeartRatioUserBehaviorAnnotation knowledgeMumDcuHeartRatioUserBehaviorAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuHeartRatioUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuHeartRatioUserBehaviorAnnotation) {
+    this.knowledgeMumDcuHeartRatioUserBehaviorAnnotation = knowledgeMumDcuHeartRatioUserBehaviorAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuHowToVideoAnnotation() {
+    return knowledgeMumDcuHowToVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuHowToVideoAnnotation knowledgeMumDcuHowToVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuHowToVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuHowToVideoAnnotation) {
+    this.knowledgeMumDcuHowToVideoAnnotation = knowledgeMumDcuHowToVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuHowToVideoCandidateAnnotation() {
+    return knowledgeMumDcuHowToVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuHowToVideoCandidateAnnotation knowledgeMumDcuHowToVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuHowToVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuHowToVideoCandidateAnnotation) {
+    this.knowledgeMumDcuHowToVideoCandidateAnnotation = knowledgeMumDcuHowToVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuInspiredQueryRateAnnotation() {
+    return knowledgeMumDcuInspiredQueryRateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuInspiredQueryRateAnnotation knowledgeMumDcuInspiredQueryRateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuInspiredQueryRateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInspiredQueryRateAnnotation) {
+    this.knowledgeMumDcuInspiredQueryRateAnnotation = knowledgeMumDcuInspiredQueryRateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuInspiringAnnotation() {
+    return knowledgeMumDcuInspiringAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuInspiringAnnotation knowledgeMumDcuInspiringAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuInspiringAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInspiringAnnotation) {
+    this.knowledgeMumDcuInspiringAnnotation = knowledgeMumDcuInspiringAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuInspiringTitleAnnotation() {
+    return knowledgeMumDcuInspiringTitleAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuInspiringTitleAnnotation knowledgeMumDcuInspiringTitleAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuInspiringTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInspiringTitleAnnotation) {
+    this.knowledgeMumDcuInspiringTitleAnnotation = knowledgeMumDcuInspiringTitleAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuInspiringUserBehaviorAnnotation() {
+    return knowledgeMumDcuInspiringUserBehaviorAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuInspiringUserBehaviorAnnotation knowledgeMumDcuInspiringUserBehaviorAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuInspiringUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInspiringUserBehaviorAnnotation) {
+    this.knowledgeMumDcuInspiringUserBehaviorAnnotation = knowledgeMumDcuInspiringUserBehaviorAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuInspiringV2Annotation() {
+    return knowledgeMumDcuInspiringV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuInspiringV2Annotation knowledgeMumDcuInspiringV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuInspiringV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInspiringV2Annotation) {
+    this.knowledgeMumDcuInspiringV2Annotation = knowledgeMumDcuInspiringV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuIntelligentAnnotation() {
+    return knowledgeMumDcuIntelligentAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuIntelligentAnnotation knowledgeMumDcuIntelligentAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuIntelligentAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuIntelligentAnnotation) {
+    this.knowledgeMumDcuIntelligentAnnotation = knowledgeMumDcuIntelligentAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuInterviewVideoAnnotation() {
+    return knowledgeMumDcuInterviewVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuInterviewVideoAnnotation knowledgeMumDcuInterviewVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuInterviewVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInterviewVideoAnnotation) {
+    this.knowledgeMumDcuInterviewVideoAnnotation = knowledgeMumDcuInterviewVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuInterviewVideoCandidateAnnotation() {
+    return knowledgeMumDcuInterviewVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuInterviewVideoCandidateAnnotation knowledgeMumDcuInterviewVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuInterviewVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuInterviewVideoCandidateAnnotation) {
+    this.knowledgeMumDcuInterviewVideoCandidateAnnotation = knowledgeMumDcuInterviewVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuLectureVideoAnnotation() {
+    return knowledgeMumDcuLectureVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuLectureVideoAnnotation knowledgeMumDcuLectureVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuLectureVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuLectureVideoAnnotation) {
+    this.knowledgeMumDcuLectureVideoAnnotation = knowledgeMumDcuLectureVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuLectureVideoCandidateAnnotation() {
+    return knowledgeMumDcuLectureVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuLectureVideoCandidateAnnotation knowledgeMumDcuLectureVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuLectureVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuLectureVideoCandidateAnnotation) {
+    this.knowledgeMumDcuLectureVideoCandidateAnnotation = knowledgeMumDcuLectureVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuLifehackVideoAnnotation() {
+    return knowledgeMumDcuLifehackVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuLifehackVideoAnnotation knowledgeMumDcuLifehackVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuLifehackVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuLifehackVideoAnnotation) {
+    this.knowledgeMumDcuLifehackVideoAnnotation = knowledgeMumDcuLifehackVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuLifehackVideoCandidateAnnotation() {
+    return knowledgeMumDcuLifehackVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuLifehackVideoCandidateAnnotation knowledgeMumDcuLifehackVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuLifehackVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuLifehackVideoCandidateAnnotation) {
+    this.knowledgeMumDcuLifehackVideoCandidateAnnotation = knowledgeMumDcuLifehackVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuLifestyleAnnotation() {
+    return knowledgeMumDcuLifestyleAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuLifestyleAnnotation knowledgeMumDcuLifestyleAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuLifestyleAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuLifestyleAnnotation) {
+    this.knowledgeMumDcuLifestyleAnnotation = knowledgeMumDcuLifestyleAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuListicleTitleAnnotation() {
+    return knowledgeMumDcuListicleTitleAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuListicleTitleAnnotation knowledgeMumDcuListicleTitleAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuListicleTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuListicleTitleAnnotation) {
+    this.knowledgeMumDcuListicleTitleAnnotation = knowledgeMumDcuListicleTitleAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuMayhemNewsAnnotation() {
+    return knowledgeMumDcuMayhemNewsAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuMayhemNewsAnnotation knowledgeMumDcuMayhemNewsAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuMayhemNewsAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuMayhemNewsAnnotation) {
+    this.knowledgeMumDcuMayhemNewsAnnotation = knowledgeMumDcuMayhemNewsAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuMediaVideoAnnotation() {
+    return knowledgeMumDcuMediaVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuMediaVideoAnnotation knowledgeMumDcuMediaVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuMediaVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuMediaVideoAnnotation) {
+    this.knowledgeMumDcuMediaVideoAnnotation = knowledgeMumDcuMediaVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuMediaVideoCandidateAnnotation() {
+    return knowledgeMumDcuMediaVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuMediaVideoCandidateAnnotation knowledgeMumDcuMediaVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuMediaVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuMediaVideoCandidateAnnotation) {
+    this.knowledgeMumDcuMediaVideoCandidateAnnotation = knowledgeMumDcuMediaVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuNegativeToneAnnotation() {
+    return knowledgeMumDcuNegativeToneAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuNegativeToneAnnotation knowledgeMumDcuNegativeToneAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuNegativeToneAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuNegativeToneAnnotation) {
+    this.knowledgeMumDcuNegativeToneAnnotation = knowledgeMumDcuNegativeToneAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuNewsVideoAnnotation() {
+    return knowledgeMumDcuNewsVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuNewsVideoAnnotation knowledgeMumDcuNewsVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuNewsVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuNewsVideoAnnotation) {
+    this.knowledgeMumDcuNewsVideoAnnotation = knowledgeMumDcuNewsVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuNewsVideoCandidateAnnotation() {
+    return knowledgeMumDcuNewsVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuNewsVideoCandidateAnnotation knowledgeMumDcuNewsVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuNewsVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuNewsVideoCandidateAnnotation) {
+    this.knowledgeMumDcuNewsVideoCandidateAnnotation = knowledgeMumDcuNewsVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuNewsyTitleAnnotation() {
+    return knowledgeMumDcuNewsyTitleAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuNewsyTitleAnnotation knowledgeMumDcuNewsyTitleAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuNewsyTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuNewsyTitleAnnotation) {
+    this.knowledgeMumDcuNewsyTitleAnnotation = knowledgeMumDcuNewsyTitleAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuOpinionPiecesAnnotation() {
+    return knowledgeMumDcuOpinionPiecesAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuOpinionPiecesAnnotation knowledgeMumDcuOpinionPiecesAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuOpinionPiecesAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuOpinionPiecesAnnotation) {
+    this.knowledgeMumDcuOpinionPiecesAnnotation = knowledgeMumDcuOpinionPiecesAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuPersonalNarrativeAnnotation() {
+    return knowledgeMumDcuPersonalNarrativeAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuPersonalNarrativeAnnotation knowledgeMumDcuPersonalNarrativeAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuPersonalNarrativeAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuPersonalNarrativeAnnotation) {
+    this.knowledgeMumDcuPersonalNarrativeAnnotation = knowledgeMumDcuPersonalNarrativeAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuPracticalAnnotation() {
+    return knowledgeMumDcuPracticalAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuPracticalAnnotation knowledgeMumDcuPracticalAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuPracticalAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuPracticalAnnotation) {
+    this.knowledgeMumDcuPracticalAnnotation = knowledgeMumDcuPracticalAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuPracticalVideoAnnotation() {
+    return knowledgeMumDcuPracticalVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuPracticalVideoAnnotation knowledgeMumDcuPracticalVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuPracticalVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuPracticalVideoAnnotation) {
+    this.knowledgeMumDcuPracticalVideoAnnotation = knowledgeMumDcuPracticalVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuPracticalVideoCandidateAnnotation() {
+    return knowledgeMumDcuPracticalVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuPracticalVideoCandidateAnnotation knowledgeMumDcuPracticalVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuPracticalVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuPracticalVideoCandidateAnnotation) {
+    this.knowledgeMumDcuPracticalVideoCandidateAnnotation = knowledgeMumDcuPracticalVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuPredictedTrafficRatioAnnotation() {
+    return knowledgeMumDcuPredictedTrafficRatioAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuPredictedTrafficRatioAnnotation knowledgeMumDcuPredictedTrafficRatioAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuPredictedTrafficRatioAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuPredictedTrafficRatioAnnotation) {
+    this.knowledgeMumDcuPredictedTrafficRatioAnnotation = knowledgeMumDcuPredictedTrafficRatioAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuProductReviewVideoAnnotation() {
+    return knowledgeMumDcuProductReviewVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuProductReviewVideoAnnotation knowledgeMumDcuProductReviewVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuProductReviewVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuProductReviewVideoAnnotation) {
+    this.knowledgeMumDcuProductReviewVideoAnnotation = knowledgeMumDcuProductReviewVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuProductReviewVideoCandidateAnnotation() {
+    return knowledgeMumDcuProductReviewVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuProductReviewVideoCandidateAnnotation knowledgeMumDcuProductReviewVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuProductReviewVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuProductReviewVideoCandidateAnnotation) {
+    this.knowledgeMumDcuProductReviewVideoCandidateAnnotation = knowledgeMumDcuProductReviewVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuProfanityAnnotation() {
+    return knowledgeMumDcuProfanityAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuProfanityAnnotation knowledgeMumDcuProfanityAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuProfanityAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuProfanityAnnotation) {
+    this.knowledgeMumDcuProfanityAnnotation = knowledgeMumDcuProfanityAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuProfanityV2Annotation() {
+    return knowledgeMumDcuProfanityV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuProfanityV2Annotation knowledgeMumDcuProfanityV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuProfanityV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuProfanityV2Annotation) {
+    this.knowledgeMumDcuProfanityV2Annotation = knowledgeMumDcuProfanityV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuRacyAnnotation() {
+    return knowledgeMumDcuRacyAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuRacyAnnotation knowledgeMumDcuRacyAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuRacyAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuRacyAnnotation) {
+    this.knowledgeMumDcuRacyAnnotation = knowledgeMumDcuRacyAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuRacyV2Annotation() {
+    return knowledgeMumDcuRacyV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuRacyV2Annotation knowledgeMumDcuRacyV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuRacyV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuRacyV2Annotation) {
+    this.knowledgeMumDcuRacyV2Annotation = knowledgeMumDcuRacyV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuRealLifeTipsAnnotation() {
+    return knowledgeMumDcuRealLifeTipsAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuRealLifeTipsAnnotation knowledgeMumDcuRealLifeTipsAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuRealLifeTipsAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuRealLifeTipsAnnotation) {
+    this.knowledgeMumDcuRealLifeTipsAnnotation = knowledgeMumDcuRealLifeTipsAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuRemoteRelevanceAnnotation() {
+    return knowledgeMumDcuRemoteRelevanceAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuRemoteRelevanceAnnotation knowledgeMumDcuRemoteRelevanceAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuRemoteRelevanceAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuRemoteRelevanceAnnotation) {
+    this.knowledgeMumDcuRemoteRelevanceAnnotation = knowledgeMumDcuRemoteRelevanceAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuReviewsAnnotation() {
+    return knowledgeMumDcuReviewsAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuReviewsAnnotation knowledgeMumDcuReviewsAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuReviewsAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuReviewsAnnotation) {
+    this.knowledgeMumDcuReviewsAnnotation = knowledgeMumDcuReviewsAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuSensationalClickbaitAnnotation() {
+    return knowledgeMumDcuSensationalClickbaitAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuSensationalClickbaitAnnotation knowledgeMumDcuSensationalClickbaitAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuSensationalClickbaitAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuSensationalClickbaitAnnotation) {
+    this.knowledgeMumDcuSensationalClickbaitAnnotation = knowledgeMumDcuSensationalClickbaitAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuSensationalClickbaitV2Annotation() {
+    return knowledgeMumDcuSensationalClickbaitV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuSensationalClickbaitV2Annotation knowledgeMumDcuSensationalClickbaitV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuSensationalClickbaitV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuSensationalClickbaitV2Annotation) {
+    this.knowledgeMumDcuSensationalClickbaitV2Annotation = knowledgeMumDcuSensationalClickbaitV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuSensationalClickbaitV3Annotation() {
+    return knowledgeMumDcuSensationalClickbaitV3Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuSensationalClickbaitV3Annotation knowledgeMumDcuSensationalClickbaitV3Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuSensationalClickbaitV3Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuSensationalClickbaitV3Annotation) {
+    this.knowledgeMumDcuSensationalClickbaitV3Annotation = knowledgeMumDcuSensationalClickbaitV3Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuSexualUserBehaviorAnnotation() {
+    return knowledgeMumDcuSexualUserBehaviorAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuSexualUserBehaviorAnnotation knowledgeMumDcuSexualUserBehaviorAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuSexualUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuSexualUserBehaviorAnnotation) {
+    this.knowledgeMumDcuSexualUserBehaviorAnnotation = knowledgeMumDcuSexualUserBehaviorAnnotation;
+    return this;
+  }
+
+  /**
+   * END DATA FIELDS
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuShareRatioUserBehaviorAnnotation() {
+    return knowledgeMumDcuShareRatioUserBehaviorAnnotation;
+  }
+
+  /**
+   * END DATA FIELDS
+   * @param knowledgeMumDcuShareRatioUserBehaviorAnnotation knowledgeMumDcuShareRatioUserBehaviorAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuShareRatioUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuShareRatioUserBehaviorAnnotation) {
+    this.knowledgeMumDcuShareRatioUserBehaviorAnnotation = knowledgeMumDcuShareRatioUserBehaviorAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuStalenessAnnotation() {
+    return knowledgeMumDcuStalenessAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuStalenessAnnotation knowledgeMumDcuStalenessAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuStalenessAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuStalenessAnnotation) {
+    this.knowledgeMumDcuStalenessAnnotation = knowledgeMumDcuStalenessAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuStoryAnnotation() {
+    return knowledgeMumDcuStoryAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuStoryAnnotation knowledgeMumDcuStoryAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuStoryAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuStoryAnnotation) {
+    this.knowledgeMumDcuStoryAnnotation = knowledgeMumDcuStoryAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuStorytellingVideoAnnotation() {
+    return knowledgeMumDcuStorytellingVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuStorytellingVideoAnnotation knowledgeMumDcuStorytellingVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuStorytellingVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuStorytellingVideoAnnotation) {
+    this.knowledgeMumDcuStorytellingVideoAnnotation = knowledgeMumDcuStorytellingVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuStorytellingVideoCandidateAnnotation() {
+    return knowledgeMumDcuStorytellingVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuStorytellingVideoCandidateAnnotation knowledgeMumDcuStorytellingVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuStorytellingVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuStorytellingVideoCandidateAnnotation) {
+    this.knowledgeMumDcuStorytellingVideoCandidateAnnotation = knowledgeMumDcuStorytellingVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuThoughtProvokingAnnotation() {
+    return knowledgeMumDcuThoughtProvokingAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuThoughtProvokingAnnotation knowledgeMumDcuThoughtProvokingAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuThoughtProvokingAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuThoughtProvokingAnnotation) {
+    this.knowledgeMumDcuThoughtProvokingAnnotation = knowledgeMumDcuThoughtProvokingAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuThoughtProvokingV2Annotation() {
+    return knowledgeMumDcuThoughtProvokingV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuThoughtProvokingV2Annotation knowledgeMumDcuThoughtProvokingV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuThoughtProvokingV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuThoughtProvokingV2Annotation) {
+    this.knowledgeMumDcuThoughtProvokingV2Annotation = knowledgeMumDcuThoughtProvokingV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuTimeSensitiveAnnotation() {
+    return knowledgeMumDcuTimeSensitiveAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuTimeSensitiveAnnotation knowledgeMumDcuTimeSensitiveAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuTimeSensitiveAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuTimeSensitiveAnnotation) {
+    this.knowledgeMumDcuTimeSensitiveAnnotation = knowledgeMumDcuTimeSensitiveAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuTimelessAnnotation() {
+    return knowledgeMumDcuTimelessAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuTimelessAnnotation knowledgeMumDcuTimelessAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuTimelessAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuTimelessAnnotation) {
+    this.knowledgeMumDcuTimelessAnnotation = knowledgeMumDcuTimelessAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuTimelessVideoAnnotation() {
+    return knowledgeMumDcuTimelessVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuTimelessVideoAnnotation knowledgeMumDcuTimelessVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuTimelessVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuTimelessVideoAnnotation) {
+    this.knowledgeMumDcuTimelessVideoAnnotation = knowledgeMumDcuTimelessVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuTimelessVideoCandidateAnnotation() {
+    return knowledgeMumDcuTimelessVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuTimelessVideoCandidateAnnotation knowledgeMumDcuTimelessVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuTimelessVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuTimelessVideoCandidateAnnotation) {
+    this.knowledgeMumDcuTimelessVideoCandidateAnnotation = knowledgeMumDcuTimelessVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuTrailerVideoAnnotation() {
+    return knowledgeMumDcuTrailerVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuTrailerVideoAnnotation knowledgeMumDcuTrailerVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuTrailerVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuTrailerVideoAnnotation) {
+    this.knowledgeMumDcuTrailerVideoAnnotation = knowledgeMumDcuTrailerVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuTrailerVideoCandidateAnnotation() {
+    return knowledgeMumDcuTrailerVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuTrailerVideoCandidateAnnotation knowledgeMumDcuTrailerVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuTrailerVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuTrailerVideoCandidateAnnotation) {
+    this.knowledgeMumDcuTrailerVideoCandidateAnnotation = knowledgeMumDcuTrailerVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuUsefulUserBehaviorAnnotation() {
+    return knowledgeMumDcuUsefulUserBehaviorAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuUsefulUserBehaviorAnnotation knowledgeMumDcuUsefulUserBehaviorAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuUsefulUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuUsefulUserBehaviorAnnotation) {
+    this.knowledgeMumDcuUsefulUserBehaviorAnnotation = knowledgeMumDcuUsefulUserBehaviorAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuUsefulVideoAnnotation() {
+    return knowledgeMumDcuUsefulVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuUsefulVideoAnnotation knowledgeMumDcuUsefulVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuUsefulVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuUsefulVideoAnnotation) {
+    this.knowledgeMumDcuUsefulVideoAnnotation = knowledgeMumDcuUsefulVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuUsefulVideoCandidateAnnotation() {
+    return knowledgeMumDcuUsefulVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuUsefulVideoCandidateAnnotation knowledgeMumDcuUsefulVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuUsefulVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuUsefulVideoCandidateAnnotation) {
+    this.knowledgeMumDcuUsefulVideoCandidateAnnotation = knowledgeMumDcuUsefulVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuVideoFlavorAnnotation() {
+    return knowledgeMumDcuVideoFlavorAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuVideoFlavorAnnotation knowledgeMumDcuVideoFlavorAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuVideoFlavorAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuVideoFlavorAnnotation) {
+    this.knowledgeMumDcuVideoFlavorAnnotation = knowledgeMumDcuVideoFlavorAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuViolenceAnnotation() {
+    return knowledgeMumDcuViolenceAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuViolenceAnnotation knowledgeMumDcuViolenceAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuViolenceAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuViolenceAnnotation) {
+    this.knowledgeMumDcuViolenceAnnotation = knowledgeMumDcuViolenceAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuViolenceV2Annotation() {
+    return knowledgeMumDcuViolenceV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuViolenceV2Annotation knowledgeMumDcuViolenceV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuViolenceV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuViolenceV2Annotation) {
+    this.knowledgeMumDcuViolenceV2Annotation = knowledgeMumDcuViolenceV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation() {
+    return knowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation knowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation) {
+    this.knowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation = knowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuVisuallyEngagingAnnotation() {
+    return knowledgeMumDcuVisuallyEngagingAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuVisuallyEngagingAnnotation knowledgeMumDcuVisuallyEngagingAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuVisuallyEngagingAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuVisuallyEngagingAnnotation) {
+    this.knowledgeMumDcuVisuallyEngagingAnnotation = knowledgeMumDcuVisuallyEngagingAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuVisuallyEngagingV2Annotation() {
+    return knowledgeMumDcuVisuallyEngagingV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuVisuallyEngagingV2Annotation knowledgeMumDcuVisuallyEngagingV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuVisuallyEngagingV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuVisuallyEngagingV2Annotation) {
+    this.knowledgeMumDcuVisuallyEngagingV2Annotation = knowledgeMumDcuVisuallyEngagingV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuVlogVideoAnnotation() {
+    return knowledgeMumDcuVlogVideoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuVlogVideoAnnotation knowledgeMumDcuVlogVideoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuVlogVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuVlogVideoAnnotation) {
+    this.knowledgeMumDcuVlogVideoAnnotation = knowledgeMumDcuVlogVideoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuVlogVideoCandidateAnnotation() {
+    return knowledgeMumDcuVlogVideoCandidateAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuVlogVideoCandidateAnnotation knowledgeMumDcuVlogVideoCandidateAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuVlogVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuVlogVideoCandidateAnnotation) {
+    this.knowledgeMumDcuVlogVideoCandidateAnnotation = knowledgeMumDcuVlogVideoCandidateAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuWellWrittenAnnotation() {
+    return knowledgeMumDcuWellWrittenAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuWellWrittenAnnotation knowledgeMumDcuWellWrittenAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuWellWrittenAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuWellWrittenAnnotation) {
+    this.knowledgeMumDcuWellWrittenAnnotation = knowledgeMumDcuWellWrittenAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuWithholdingInfoAnnotation() {
+    return knowledgeMumDcuWithholdingInfoAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuWithholdingInfoAnnotation knowledgeMumDcuWithholdingInfoAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuWithholdingInfoAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuWithholdingInfoAnnotation) {
+    this.knowledgeMumDcuWithholdingInfoAnnotation = knowledgeMumDcuWithholdingInfoAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuWithholdingInfoV2Annotation() {
+    return knowledgeMumDcuWithholdingInfoV2Annotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuWithholdingInfoV2Annotation knowledgeMumDcuWithholdingInfoV2Annotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuWithholdingInfoV2Annotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuWithholdingInfoV2Annotation) {
+    this.knowledgeMumDcuWithholdingInfoV2Annotation = knowledgeMumDcuWithholdingInfoV2Annotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumDcuWorthyHeadlineNewsAnnotation() {
+    return knowledgeMumDcuWorthyHeadlineNewsAnnotation;
+  }
+
+  /**
+   * @param knowledgeMumDcuWorthyHeadlineNewsAnnotation knowledgeMumDcuWorthyHeadlineNewsAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setKnowledgeMumDcuWorthyHeadlineNewsAnnotation(IndexingDocjoinerDataVersionVersionInfo knowledgeMumDcuWorthyHeadlineNewsAnnotation) {
+    this.knowledgeMumDcuWorthyHeadlineNewsAnnotation = knowledgeMumDcuWorthyHeadlineNewsAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getKnowledgeMumStoryTeaserAnnotation() {
     return knowledgeMumStoryTeaserAnnotation;
   }
@@ -6472,6 +9764,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getMultiverseHubSpokesSignal() {
+    return multiverseHubSpokesSignal;
+  }
+
+  /**
+   * @param multiverseHubSpokesSignal multiverseHubSpokesSignal or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setMultiverseHubSpokesSignal(IndexingDocjoinerDataVersionVersionInfo multiverseHubSpokesSignal) {
+    this.multiverseHubSpokesSignal = multiverseHubSpokesSignal;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getNavBoostDocument() {
     return navBoostDocument;
   }
@@ -6513,6 +9820,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setNewsAnnotationsContentAnnotations(IndexingDocjoinerDataVersionVersionInfo newsAnnotationsContentAnnotations) {
     this.newsAnnotationsContentAnnotations = newsAnnotationsContentAnnotations;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getNewsCorpusDifferentiatedContentAnnotation() {
+    return newsCorpusDifferentiatedContentAnnotation;
+  }
+
+  /**
+   * @param newsCorpusDifferentiatedContentAnnotation newsCorpusDifferentiatedContentAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setNewsCorpusDifferentiatedContentAnnotation(IndexingDocjoinerDataVersionVersionInfo newsCorpusDifferentiatedContentAnnotation) {
+    this.newsCorpusDifferentiatedContentAnnotation = newsCorpusDifferentiatedContentAnnotation;
     return this;
   }
 
@@ -6933,6 +10255,23 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setNoindexedImageDataList(IndexingDocjoinerDataVersionVersionInfo noindexedImageDataList) {
     this.noindexedImageDataList = noindexedImageDataList;
+    return this;
+  }
+
+  /**
+   * Must be used together with quality_nsr_nsr_data
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getNsrFdpData() {
+    return nsrFdpData;
+  }
+
+  /**
+   * Must be used together with quality_nsr_nsr_data
+   * @param nsrFdpData nsrFdpData or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setNsrFdpData(IndexingDocjoinerDataVersionVersionInfo nsrFdpData) {
+    this.nsrFdpData = nsrFdpData;
     return this;
   }
 
@@ -7434,6 +10773,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getOrbitIntents() {
+    return orbitIntents;
+  }
+
+  /**
+   * @param orbitIntents orbitIntents or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setOrbitIntents(IndexingDocjoinerDataVersionVersionInfo orbitIntents) {
+    this.orbitIntents = orbitIntents;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getPerDocLangidData() {
     return perDocLangidData;
   }
@@ -7689,6 +11043,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getQualityChardPredictedXlqSevereHoax() {
+    return qualityChardPredictedXlqSevereHoax;
+  }
+
+  /**
+   * @param qualityChardPredictedXlqSevereHoax qualityChardPredictedXlqSevereHoax or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setQualityChardPredictedXlqSevereHoax(IndexingDocjoinerDataVersionVersionInfo qualityChardPredictedXlqSevereHoax) {
+    this.qualityChardPredictedXlqSevereHoax = qualityChardPredictedXlqSevereHoax;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getQualityContraSelectedAttributions() {
     return qualityContraSelectedAttributions;
   }
@@ -7869,6 +11238,51 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getQualityFlavorsFlavorSet() {
+    return qualityFlavorsFlavorSet;
+  }
+
+  /**
+   * @param qualityFlavorsFlavorSet qualityFlavorsFlavorSet or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setQualityFlavorsFlavorSet(IndexingDocjoinerDataVersionVersionInfo qualityFlavorsFlavorSet) {
+    this.qualityFlavorsFlavorSet = qualityFlavorsFlavorSet;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getQualityForumrankingUgcPageQualityDocumentAnnotation() {
+    return qualityForumrankingUgcPageQualityDocumentAnnotation;
+  }
+
+  /**
+   * @param qualityForumrankingUgcPageQualityDocumentAnnotation qualityForumrankingUgcPageQualityDocumentAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setQualityForumrankingUgcPageQualityDocumentAnnotation(IndexingDocjoinerDataVersionVersionInfo qualityForumrankingUgcPageQualityDocumentAnnotation) {
+    this.qualityForumrankingUgcPageQualityDocumentAnnotation = qualityForumrankingUgcPageQualityDocumentAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getQualityFreshnessAbacusInstantNavBoostDocumentAnon() {
+    return qualityFreshnessAbacusInstantNavBoostDocumentAnon;
+  }
+
+  /**
+   * @param qualityFreshnessAbacusInstantNavBoostDocumentAnon qualityFreshnessAbacusInstantNavBoostDocumentAnon or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setQualityFreshnessAbacusInstantNavBoostDocumentAnon(IndexingDocjoinerDataVersionVersionInfo qualityFreshnessAbacusInstantNavBoostDocumentAnon) {
+    this.qualityFreshnessAbacusInstantNavBoostDocumentAnon = qualityFreshnessAbacusInstantNavBoostDocumentAnon;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getQualityFreshnessAbacusInstantNegativeClicksInfo() {
     return qualityFreshnessAbacusInstantNegativeClicksInfo;
   }
@@ -8013,6 +11427,51 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setQualityLisztomaniaDocument(IndexingDocjoinerDataVersionVersionInfo qualityLisztomaniaDocument) {
     this.qualityLisztomaniaDocument = qualityLisztomaniaDocument;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getQualityModernProtoUcpDocInfo() {
+    return qualityModernProtoUcpDocInfo;
+  }
+
+  /**
+   * @param qualityModernProtoUcpDocInfo qualityModernProtoUcpDocInfo or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setQualityModernProtoUcpDocInfo(IndexingDocjoinerDataVersionVersionInfo qualityModernProtoUcpDocInfo) {
+    this.qualityModernProtoUcpDocInfo = qualityModernProtoUcpDocInfo;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getQualityModernProtoUcpServingData() {
+    return qualityModernProtoUcpServingData;
+  }
+
+  /**
+   * @param qualityModernProtoUcpServingData qualityModernProtoUcpServingData or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setQualityModernProtoUcpServingData(IndexingDocjoinerDataVersionVersionInfo qualityModernProtoUcpServingData) {
+    this.qualityModernProtoUcpServingData = qualityModernProtoUcpServingData;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getQualityNaturalPearlsNaturalPearlsDocumentAnnotation() {
+    return qualityNaturalPearlsNaturalPearlsDocumentAnnotation;
+  }
+
+  /**
+   * @param qualityNaturalPearlsNaturalPearlsDocumentAnnotation qualityNaturalPearlsNaturalPearlsDocumentAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setQualityNaturalPearlsNaturalPearlsDocumentAnnotation(IndexingDocjoinerDataVersionVersionInfo qualityNaturalPearlsNaturalPearlsDocumentAnnotation) {
+    this.qualityNaturalPearlsNaturalPearlsDocumentAnnotation = qualityNaturalPearlsNaturalPearlsDocumentAnnotation;
     return this;
   }
 
@@ -8334,6 +11793,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getQualityPeoplesearchNamedetectorNavboostNameAnnotations() {
+    return qualityPeoplesearchNamedetectorNavboostNameAnnotations;
+  }
+
+  /**
+   * @param qualityPeoplesearchNamedetectorNavboostNameAnnotations qualityPeoplesearchNamedetectorNavboostNameAnnotations or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setQualityPeoplesearchNamedetectorNavboostNameAnnotations(IndexingDocjoinerDataVersionVersionInfo qualityPeoplesearchNamedetectorNavboostNameAnnotations) {
+    this.qualityPeoplesearchNamedetectorNavboostNameAnnotations = qualityPeoplesearchNamedetectorNavboostNameAnnotations;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getQualityPopfeedsChromeBackgroundAnnotation() {
     return qualityPopfeedsChromeBackgroundAnnotation;
   }
@@ -8358,6 +11832,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setQualityPopfeedsHubDataAnnotations(IndexingDocjoinerDataVersionVersionInfo qualityPopfeedsHubDataAnnotations) {
     this.qualityPopfeedsHubDataAnnotations = qualityPopfeedsHubDataAnnotations;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getQualityPopfeedsTopicStatsTopicScoreAnnotation() {
+    return qualityPopfeedsTopicStatsTopicScoreAnnotation;
+  }
+
+  /**
+   * @param qualityPopfeedsTopicStatsTopicScoreAnnotation qualityPopfeedsTopicStatsTopicScoreAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setQualityPopfeedsTopicStatsTopicScoreAnnotation(IndexingDocjoinerDataVersionVersionInfo qualityPopfeedsTopicStatsTopicScoreAnnotation) {
+    this.qualityPopfeedsTopicStatsTopicScoreAnnotation = qualityPopfeedsTopicStatsTopicScoreAnnotation;
     return this;
   }
 
@@ -8703,6 +12192,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setQualitySherlockKnexAnnotation(IndexingDocjoinerDataVersionVersionInfo qualitySherlockKnexAnnotation) {
     this.qualitySherlockKnexAnnotation = qualitySherlockKnexAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getQualityShoppingDtcDomainsSignal() {
+    return qualityShoppingDtcDomainsSignal;
+  }
+
+  /**
+   * @param qualityShoppingDtcDomainsSignal qualityShoppingDtcDomainsSignal or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setQualityShoppingDtcDomainsSignal(IndexingDocjoinerDataVersionVersionInfo qualityShoppingDtcDomainsSignal) {
+    this.qualityShoppingDtcDomainsSignal = qualityShoppingDtcDomainsSignal;
     return this;
   }
 
@@ -9579,6 +13083,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getRepositoryWebrefAuthorExtractionAnnotation() {
+    return repositoryWebrefAuthorExtractionAnnotation;
+  }
+
+  /**
+   * @param repositoryWebrefAuthorExtractionAnnotation repositoryWebrefAuthorExtractionAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setRepositoryWebrefAuthorExtractionAnnotation(IndexingDocjoinerDataVersionVersionInfo repositoryWebrefAuthorExtractionAnnotation) {
+    this.repositoryWebrefAuthorExtractionAnnotation = repositoryWebrefAuthorExtractionAnnotation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getRepositoryWebrefEntityJoin() {
     return repositoryWebrefEntityJoin;
   }
@@ -9663,6 +13182,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setRepositoryWebrefPageClassificationSignalsSet(IndexingDocjoinerDataVersionVersionInfo repositoryWebrefPageClassificationSignalsSet) {
     this.repositoryWebrefPageClassificationSignalsSet = repositoryWebrefPageClassificationSignalsSet;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getRepositoryWebrefPiannoDocumentIntent() {
+    return repositoryWebrefPiannoDocumentIntent;
+  }
+
+  /**
+   * @param repositoryWebrefPiannoDocumentIntent repositoryWebrefPiannoDocumentIntent or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setRepositoryWebrefPiannoDocumentIntent(IndexingDocjoinerDataVersionVersionInfo repositoryWebrefPiannoDocumentIntent) {
+    this.repositoryWebrefPiannoDocumentIntent = repositoryWebrefPiannoDocumentIntent;
     return this;
   }
 
@@ -10194,6 +13728,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getRobotsPolicy() {
+    return robotsPolicy;
+  }
+
+  /**
+   * @param robotsPolicy robotsPolicy or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setRobotsPolicy(IndexingDocjoinerDataVersionVersionInfo robotsPolicy) {
+    this.robotsPolicy = robotsPolicy;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getRosettaLanguage() {
     return rosettaLanguage;
   }
@@ -10659,6 +14208,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
   /**
    * @return value or {@code null} for none
    */
+  public IndexingDocjoinerDataVersionVersionInfo getSpambrainDomainSitechunkData() {
+    return spambrainDomainSitechunkData;
+  }
+
+  /**
+   * @param spambrainDomainSitechunkData spambrainDomainSitechunkData or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setSpambrainDomainSitechunkData(IndexingDocjoinerDataVersionVersionInfo spambrainDomainSitechunkData) {
+    this.spambrainDomainSitechunkData = spambrainDomainSitechunkData;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public IndexingDocjoinerDataVersionVersionInfo getTableTalkStrideOfferPagePriceAnnotation() {
     return tableTalkStrideOfferPagePriceAnnotation;
   }
@@ -10758,6 +14322,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setTravelAssistantTravelDocClassification(IndexingDocjoinerDataVersionVersionInfo travelAssistantTravelDocClassification) {
     this.travelAssistantTravelDocClassification = travelAssistantTravelDocClassification;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getTrawlerEffectiveRobotsContent() {
+    return trawlerEffectiveRobotsContent;
+  }
+
+  /**
+   * @param trawlerEffectiveRobotsContent trawlerEffectiveRobotsContent or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setTrawlerEffectiveRobotsContent(IndexingDocjoinerDataVersionVersionInfo trawlerEffectiveRobotsContent) {
+    this.trawlerEffectiveRobotsContent = trawlerEffectiveRobotsContent;
     return this;
   }
 
@@ -11073,6 +14652,21 @@ public final class IndexingDocjoinerDataVersion extends com.google.api.client.js
    */
   public IndexingDocjoinerDataVersion setVideoScoringSignal(IndexingDocjoinerDataVersionVersionInfo videoScoringSignal) {
     this.videoScoringSignal = videoScoringSignal;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersionVersionInfo getVideoShoppingVideoShoppingAnnotation() {
+    return videoShoppingVideoShoppingAnnotation;
+  }
+
+  /**
+   * @param videoShoppingVideoShoppingAnnotation videoShoppingVideoShoppingAnnotation or {@code null} for none
+   */
+  public IndexingDocjoinerDataVersion setVideoShoppingVideoShoppingAnnotation(IndexingDocjoinerDataVersionVersionInfo videoShoppingVideoShoppingAnnotation) {
+    this.videoShoppingVideoShoppingAnnotation = videoShoppingVideoShoppingAnnotation;
     return this;
   }
 

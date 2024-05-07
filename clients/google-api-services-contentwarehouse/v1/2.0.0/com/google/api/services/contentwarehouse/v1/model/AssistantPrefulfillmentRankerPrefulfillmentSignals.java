@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and
- * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 69
+ * GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 80
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -30,36 +30,6 @@ package com.google.api.services.contentwarehouse.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends com.google.api.client.json.GenericJson {
-
-  /**
-   * Assistant User Interaction Score for binding set.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float bindingSetAuis;
-
-  /**
-   * BindingSet level invalid reason. This is only useful when the bindingset is invalid after
-   * running the horizontal check in HGR. More details: go/gb-infeasible.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String bindingSetInvalidReason;
-
-  /**
-   * Pauis score for the binding set
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float bindingSetPauis;
-
-  /**
-   * BindingSet level validity. When one of the GPs returns invalid resolution, or the combined
-   * bindingset is invalid, this enum will indidate the validity. More details: go/gb-infeasible.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String bindingSetValidity;
 
   /**
    * A parsing score that is independently calibrated by each parser/IG.
@@ -108,28 +78,18 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Boolean generatedByLegacyAquaDomain;
 
   /**
-   * Grounding Signals. Score indicating how grounded the intent is, populated by the Grounding Box.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Double groundabilityScore;
-
-  /**
-   * Grounding Provider related ranking features, including general Grounding Provider ranking
-   * features(shared among multiple GPs) and specific Grounding Provider ranking features(provided
-   * by a specific GP).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AssistantGroundingRankerGroundingProviderFeatures groundingProviderFeatures;
-
-  /**
    * Whether the interpretation has a Search answer group object, signifying it came from Search
    * resolution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hasAnswerGroup;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasIntentUpdate;
 
   /**
    * This is a cross-intent feature which is calculated by iterating all intent candidates. This
@@ -162,13 +122,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Double intentNameAuisScoreExp;
 
   /**
-   * Intent level Pauis User Interaction Score.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float intentNamePauis;
-
-  /**
    * intent_type differentiates between intents that share the top level intent name. For eg: for
    * TV_FALLBACK_SEARCH_INTENT, the top level intent name must be "Find_media" and the media_object
    * argument within it must be of type "Media_unspecified".
@@ -178,18 +131,24 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.String intentType;
 
   /**
+   * Whether the intent aqua intent from media domain enabled in QBT
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isAquaMediaIntent;
+
+  /**
+   * NSP-specific signals, used to determine if NSP intents should be selected or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isCommunicationOpaRawTargetIntent;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isDummyIntent;
-
-  /**
-   * Feasibility of fulfilling the binding set. Eg: For PlayMedia, this is equivalent to
-   * playability. More details: go/hgr-feasibility-feature.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean isFeasible;
 
   /**
    * Whether the intent is fully grounded.
@@ -207,6 +166,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Boolean isHighConfidencePodcastIntent;
 
   /**
+   * Whether the intent is from ORBIT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isIntentFromOrbit;
+
+  /**
    * Whether the intent is a media control intent.
    * The value may be {@code null}.
    */
@@ -214,11 +180,36 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Boolean isMediaControlIntent;
 
   /**
+   * Whether the intent is a media intent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isMediaIntent;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isNspDescopedIntent;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isNspEnabledIntent;
+
+  /**
    * Whether this interpretation was genearted by NSP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isNspIntent;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isNspTargetIntent;
 
   /**
    * Whether the intent is a PlayGenericMusic-type intent.
@@ -241,6 +232,13 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isPodcastIntent;
+
+  /**
+   * Whether the intent is a PlayMedia radio intent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isRadioIntent;
 
   /**
    * Whether the intent is an intent marked disabled by the Sage IG.
@@ -294,6 +292,14 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Boolean isVideoIntent;
 
   /**
+   * Used for PFR manaul rule to prefer high kscore radio intent. The k-score comes from
+   * twiddled_ranking_scores in query interpretations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float kScore;
+
+  /**
    * The rank order of the interpretation as determined by kscorer. The kscorer-determined dominant
    * interpretation, if any, gets a rank of 0. The remaining N interpretations get a rank of 1
    * through N.
@@ -301,23 +307,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Integer kscorerRank;
-
-  /**
-   * Learn and adapt(go/laa) related features. Design doc: go/laa-profile-signal-for-grounding.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AssistantGroundingRankerLaaFeatures laaFeatures;
-
-  /**
-   * This feature is always false / no-op in serving time. In training time, this feature may be set
-   * true on specific examples for weighted training where when this signal is true, only cross-
-   * intent level features are used for training and other candidate level features are masked (set
-   * as missing).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean maskCandidateLevelFeatures;
 
   /**
    * The maximum score assigned by the Horizontal Grounding Ranker (HGR) across all of the intent's
@@ -328,6 +317,14 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Double maxHgrScoreAcrossBindingSets;
 
   /**
+   * Parse score generated by NSP. If NSP intent has been pruned due to dededuplication, It will
+   * have highest parse score for deduplicated intent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double nspIntentParseScore;
+
+  /**
    * Rank of the intent as reported by NSP.
    * The value may be {@code null}.
    */
@@ -335,14 +332,8 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Integer nspRank;
 
   /**
-   * Number of alternative hypotheses from speech recognition(S3).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float numAlternativeHypothesis;
-
-  /**
-   * Sum of the number of constraints used by the Grounding Box to ground each variable.
+   * Signals as proposed in go/improved-grounding-signals. Sum of the number of constraints used by
+   * the Grounding Box to ground each variable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -358,7 +349,8 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Double numConstraintsSatisfied;
 
   /**
-   * Number of groundable arguments the intent has, populated by the Grounding Box.
+   * Grounding Signals. Number of groundable arguments the intent has, populated by the Grounding
+   * Box.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -370,22 +362,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Double numGroundedArgs;
-
-  /**
-   * Signals as proposed in go/improved-grounding-signals. Number of arguments, possibly nested,
-   * that the Grounding Box tried to ground.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Double numVariables;
-
-  /**
-   * Number of arguments, possibly nested, that the Grounding Box was able to ground. This includes
-   * ambiguously grounded arguments.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Double numVariablesGrounded;
 
   /**
    * A ID corresponding to which bucket a given parsing score belongs in.
@@ -434,13 +410,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private java.lang.Float predictedIntentConfidence;
 
   /**
-   * Used in HGR to modify the ranker based on input experimental flag and intent name.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String rankerName;
-
-  /**
    * The determination made by the SearchDispatchingConfig as to whether and how this interpretation
    * should be dispatched to Search.
    * The value may be {@code null}.
@@ -468,100 +437,11 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   private AssistantPfrTiebreakingMetadata tiebreakingMetadata;
 
   /**
-   * Average of per-word confidence for top speech recognition hypothesis. The value is from
-   * RecognizerHypothesisLog:
-   * http://google3/logs/proto/speech/service/recognizer_log.proto?l=848=281400256
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float topHypothesisConfidence;
-
-  /**
    * Whether the interpretation should run through grounding box or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean usesGroundingBox;
-
-  /**
-   * Horizontal feature that stores information about confidence scores for each resolution within
-   * the binding set.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float verticalConfidenceScore;
-
-  /**
-   * Assistant User Interaction Score for binding set.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getBindingSetAuis() {
-    return bindingSetAuis;
-  }
-
-  /**
-   * Assistant User Interaction Score for binding set.
-   * @param bindingSetAuis bindingSetAuis or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setBindingSetAuis(java.lang.Float bindingSetAuis) {
-    this.bindingSetAuis = bindingSetAuis;
-    return this;
-  }
-
-  /**
-   * BindingSet level invalid reason. This is only useful when the bindingset is invalid after
-   * running the horizontal check in HGR. More details: go/gb-infeasible.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getBindingSetInvalidReason() {
-    return bindingSetInvalidReason;
-  }
-
-  /**
-   * BindingSet level invalid reason. This is only useful when the bindingset is invalid after
-   * running the horizontal check in HGR. More details: go/gb-infeasible.
-   * @param bindingSetInvalidReason bindingSetInvalidReason or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setBindingSetInvalidReason(java.lang.String bindingSetInvalidReason) {
-    this.bindingSetInvalidReason = bindingSetInvalidReason;
-    return this;
-  }
-
-  /**
-   * Pauis score for the binding set
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getBindingSetPauis() {
-    return bindingSetPauis;
-  }
-
-  /**
-   * Pauis score for the binding set
-   * @param bindingSetPauis bindingSetPauis or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setBindingSetPauis(java.lang.Float bindingSetPauis) {
-    this.bindingSetPauis = bindingSetPauis;
-    return this;
-  }
-
-  /**
-   * BindingSet level validity. When one of the GPs returns invalid resolution, or the combined
-   * bindingset is invalid, this enum will indidate the validity. More details: go/gb-infeasible.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getBindingSetValidity() {
-    return bindingSetValidity;
-  }
-
-  /**
-   * BindingSet level validity. When one of the GPs returns invalid resolution, or the combined
-   * bindingset is invalid, this enum will indidate the validity. More details: go/gb-infeasible.
-   * @param bindingSetValidity bindingSetValidity or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setBindingSetValidity(java.lang.String bindingSetValidity) {
-    this.bindingSetValidity = bindingSetValidity;
-    return this;
-  }
 
   /**
    * A parsing score that is independently calibrated by each parser/IG.
@@ -674,44 +554,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
-   * Grounding Signals. Score indicating how grounded the intent is, populated by the Grounding Box.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Double getGroundabilityScore() {
-    return groundabilityScore;
-  }
-
-  /**
-   * Grounding Signals. Score indicating how grounded the intent is, populated by the Grounding Box.
-   * @param groundabilityScore groundabilityScore or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setGroundabilityScore(java.lang.Double groundabilityScore) {
-    this.groundabilityScore = groundabilityScore;
-    return this;
-  }
-
-  /**
-   * Grounding Provider related ranking features, including general Grounding Provider ranking
-   * features(shared among multiple GPs) and specific Grounding Provider ranking features(provided
-   * by a specific GP).
-   * @return value or {@code null} for none
-   */
-  public AssistantGroundingRankerGroundingProviderFeatures getGroundingProviderFeatures() {
-    return groundingProviderFeatures;
-  }
-
-  /**
-   * Grounding Provider related ranking features, including general Grounding Provider ranking
-   * features(shared among multiple GPs) and specific Grounding Provider ranking features(provided
-   * by a specific GP).
-   * @param groundingProviderFeatures groundingProviderFeatures or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setGroundingProviderFeatures(AssistantGroundingRankerGroundingProviderFeatures groundingProviderFeatures) {
-    this.groundingProviderFeatures = groundingProviderFeatures;
-    return this;
-  }
-
-  /**
    * Whether the interpretation has a Search answer group object, signifying it came from Search
    * resolution.
    * @return value or {@code null} for none
@@ -727,6 +569,21 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setHasAnswerGroup(java.lang.Boolean hasAnswerGroup) {
     this.hasAnswerGroup = hasAnswerGroup;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasIntentUpdate() {
+    return hasIntentUpdate;
+  }
+
+  /**
+   * @param hasIntentUpdate hasIntentUpdate or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setHasIntentUpdate(java.lang.Boolean hasIntentUpdate) {
+    this.hasIntentUpdate = hasIntentUpdate;
     return this;
   }
 
@@ -803,23 +660,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
-   * Intent level Pauis User Interaction Score.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getIntentNamePauis() {
-    return intentNamePauis;
-  }
-
-  /**
-   * Intent level Pauis User Interaction Score.
-   * @param intentNamePauis intentNamePauis or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIntentNamePauis(java.lang.Float intentNamePauis) {
-    this.intentNamePauis = intentNamePauis;
-    return this;
-  }
-
-  /**
    * intent_type differentiates between intents that share the top level intent name. For eg: for
    * TV_FALLBACK_SEARCH_INTENT, the top level intent name must be "Find_media" and the media_object
    * argument within it must be of type "Media_unspecified".
@@ -841,6 +681,40 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
+   * Whether the intent aqua intent from media domain enabled in QBT
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsAquaMediaIntent() {
+    return isAquaMediaIntent;
+  }
+
+  /**
+   * Whether the intent aqua intent from media domain enabled in QBT
+   * @param isAquaMediaIntent isAquaMediaIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsAquaMediaIntent(java.lang.Boolean isAquaMediaIntent) {
+    this.isAquaMediaIntent = isAquaMediaIntent;
+    return this;
+  }
+
+  /**
+   * NSP-specific signals, used to determine if NSP intents should be selected or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsCommunicationOpaRawTargetIntent() {
+    return isCommunicationOpaRawTargetIntent;
+  }
+
+  /**
+   * NSP-specific signals, used to determine if NSP intents should be selected or not.
+   * @param isCommunicationOpaRawTargetIntent isCommunicationOpaRawTargetIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsCommunicationOpaRawTargetIntent(java.lang.Boolean isCommunicationOpaRawTargetIntent) {
+    this.isCommunicationOpaRawTargetIntent = isCommunicationOpaRawTargetIntent;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDummyIntent() {
@@ -852,25 +726,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsDummyIntent(java.lang.Boolean isDummyIntent) {
     this.isDummyIntent = isDummyIntent;
-    return this;
-  }
-
-  /**
-   * Feasibility of fulfilling the binding set. Eg: For PlayMedia, this is equivalent to
-   * playability. More details: go/hgr-feasibility-feature.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIsFeasible() {
-    return isFeasible;
-  }
-
-  /**
-   * Feasibility of fulfilling the binding set. Eg: For PlayMedia, this is equivalent to
-   * playability. More details: go/hgr-feasibility-feature.
-   * @param isFeasible isFeasible or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsFeasible(java.lang.Boolean isFeasible) {
-    this.isFeasible = isFeasible;
     return this;
   }
 
@@ -911,6 +766,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
+   * Whether the intent is from ORBIT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsIntentFromOrbit() {
+    return isIntentFromOrbit;
+  }
+
+  /**
+   * Whether the intent is from ORBIT.
+   * @param isIntentFromOrbit isIntentFromOrbit or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsIntentFromOrbit(java.lang.Boolean isIntentFromOrbit) {
+    this.isIntentFromOrbit = isIntentFromOrbit;
+    return this;
+  }
+
+  /**
    * Whether the intent is a media control intent.
    * @return value or {@code null} for none
    */
@@ -928,6 +800,53 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
+   * Whether the intent is a media intent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsMediaIntent() {
+    return isMediaIntent;
+  }
+
+  /**
+   * Whether the intent is a media intent.
+   * @param isMediaIntent isMediaIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsMediaIntent(java.lang.Boolean isMediaIntent) {
+    this.isMediaIntent = isMediaIntent;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsNspDescopedIntent() {
+    return isNspDescopedIntent;
+  }
+
+  /**
+   * @param isNspDescopedIntent isNspDescopedIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsNspDescopedIntent(java.lang.Boolean isNspDescopedIntent) {
+    this.isNspDescopedIntent = isNspDescopedIntent;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsNspEnabledIntent() {
+    return isNspEnabledIntent;
+  }
+
+  /**
+   * @param isNspEnabledIntent isNspEnabledIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsNspEnabledIntent(java.lang.Boolean isNspEnabledIntent) {
+    this.isNspEnabledIntent = isNspEnabledIntent;
+    return this;
+  }
+
+  /**
    * Whether this interpretation was genearted by NSP.
    * @return value or {@code null} for none
    */
@@ -941,6 +860,21 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsNspIntent(java.lang.Boolean isNspIntent) {
     this.isNspIntent = isNspIntent;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsNspTargetIntent() {
+    return isNspTargetIntent;
+  }
+
+  /**
+   * @param isNspTargetIntent isNspTargetIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsNspTargetIntent(java.lang.Boolean isNspTargetIntent) {
+    this.isNspTargetIntent = isNspTargetIntent;
     return this;
   }
 
@@ -994,6 +928,23 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsPodcastIntent(java.lang.Boolean isPodcastIntent) {
     this.isPodcastIntent = isPodcastIntent;
+    return this;
+  }
+
+  /**
+   * Whether the intent is a PlayMedia radio intent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsRadioIntent() {
+    return isRadioIntent;
+  }
+
+  /**
+   * Whether the intent is a PlayMedia radio intent.
+   * @param isRadioIntent isRadioIntent or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setIsRadioIntent(java.lang.Boolean isRadioIntent) {
+    this.isRadioIntent = isRadioIntent;
     return this;
   }
 
@@ -1121,6 +1072,25 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
+   * Used for PFR manaul rule to prefer high kscore radio intent. The k-score comes from
+   * twiddled_ranking_scores in query interpretations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getKScore() {
+    return kScore;
+  }
+
+  /**
+   * Used for PFR manaul rule to prefer high kscore radio intent. The k-score comes from
+   * twiddled_ranking_scores in query interpretations.
+   * @param kScore kScore or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setKScore(java.lang.Float kScore) {
+    this.kScore = kScore;
+    return this;
+  }
+
+  /**
    * The rank order of the interpretation as determined by kscorer. The kscorer-determined dominant
    * interpretation, if any, gets a rank of 0. The remaining N interpretations get a rank of 1
    * through N.
@@ -1138,46 +1108,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setKscorerRank(java.lang.Integer kscorerRank) {
     this.kscorerRank = kscorerRank;
-    return this;
-  }
-
-  /**
-   * Learn and adapt(go/laa) related features. Design doc: go/laa-profile-signal-for-grounding.
-   * @return value or {@code null} for none
-   */
-  public AssistantGroundingRankerLaaFeatures getLaaFeatures() {
-    return laaFeatures;
-  }
-
-  /**
-   * Learn and adapt(go/laa) related features. Design doc: go/laa-profile-signal-for-grounding.
-   * @param laaFeatures laaFeatures or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setLaaFeatures(AssistantGroundingRankerLaaFeatures laaFeatures) {
-    this.laaFeatures = laaFeatures;
-    return this;
-  }
-
-  /**
-   * This feature is always false / no-op in serving time. In training time, this feature may be set
-   * true on specific examples for weighted training where when this signal is true, only cross-
-   * intent level features are used for training and other candidate level features are masked (set
-   * as missing).
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getMaskCandidateLevelFeatures() {
-    return maskCandidateLevelFeatures;
-  }
-
-  /**
-   * This feature is always false / no-op in serving time. In training time, this feature may be set
-   * true on specific examples for weighted training where when this signal is true, only cross-
-   * intent level features are used for training and other candidate level features are masked (set
-   * as missing).
-   * @param maskCandidateLevelFeatures maskCandidateLevelFeatures or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setMaskCandidateLevelFeatures(java.lang.Boolean maskCandidateLevelFeatures) {
-    this.maskCandidateLevelFeatures = maskCandidateLevelFeatures;
     return this;
   }
 
@@ -1201,6 +1131,25 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
+   * Parse score generated by NSP. If NSP intent has been pruned due to dededuplication, It will
+   * have highest parse score for deduplicated intent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getNspIntentParseScore() {
+    return nspIntentParseScore;
+  }
+
+  /**
+   * Parse score generated by NSP. If NSP intent has been pruned due to dededuplication, It will
+   * have highest parse score for deduplicated intent.
+   * @param nspIntentParseScore nspIntentParseScore or {@code null} for none
+   */
+  public AssistantPrefulfillmentRankerPrefulfillmentSignals setNspIntentParseScore(java.lang.Double nspIntentParseScore) {
+    this.nspIntentParseScore = nspIntentParseScore;
+    return this;
+  }
+
+  /**
    * Rank of the intent as reported by NSP.
    * @return value or {@code null} for none
    */
@@ -1218,24 +1167,8 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
-   * Number of alternative hypotheses from speech recognition(S3).
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getNumAlternativeHypothesis() {
-    return numAlternativeHypothesis;
-  }
-
-  /**
-   * Number of alternative hypotheses from speech recognition(S3).
-   * @param numAlternativeHypothesis numAlternativeHypothesis or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumAlternativeHypothesis(java.lang.Float numAlternativeHypothesis) {
-    this.numAlternativeHypothesis = numAlternativeHypothesis;
-    return this;
-  }
-
-  /**
-   * Sum of the number of constraints used by the Grounding Box to ground each variable.
+   * Signals as proposed in go/improved-grounding-signals. Sum of the number of constraints used by
+   * the Grounding Box to ground each variable.
    * @return value or {@code null} for none
    */
   public java.lang.Double getNumConstraints() {
@@ -1243,7 +1176,8 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
-   * Sum of the number of constraints used by the Grounding Box to ground each variable.
+   * Signals as proposed in go/improved-grounding-signals. Sum of the number of constraints used by
+   * the Grounding Box to ground each variable.
    * @param numConstraints numConstraints or {@code null} for none
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumConstraints(java.lang.Double numConstraints) {
@@ -1273,7 +1207,8 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
-   * Number of groundable arguments the intent has, populated by the Grounding Box.
+   * Grounding Signals. Number of groundable arguments the intent has, populated by the Grounding
+   * Box.
    * @return value or {@code null} for none
    */
   public java.lang.Double getNumGroundableArgs() {
@@ -1281,7 +1216,8 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
-   * Number of groundable arguments the intent has, populated by the Grounding Box.
+   * Grounding Signals. Number of groundable arguments the intent has, populated by the Grounding
+   * Box.
    * @param numGroundableArgs numGroundableArgs or {@code null} for none
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumGroundableArgs(java.lang.Double numGroundableArgs) {
@@ -1303,44 +1239,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumGroundedArgs(java.lang.Double numGroundedArgs) {
     this.numGroundedArgs = numGroundedArgs;
-    return this;
-  }
-
-  /**
-   * Signals as proposed in go/improved-grounding-signals. Number of arguments, possibly nested,
-   * that the Grounding Box tried to ground.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Double getNumVariables() {
-    return numVariables;
-  }
-
-  /**
-   * Signals as proposed in go/improved-grounding-signals. Number of arguments, possibly nested,
-   * that the Grounding Box tried to ground.
-   * @param numVariables numVariables or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumVariables(java.lang.Double numVariables) {
-    this.numVariables = numVariables;
-    return this;
-  }
-
-  /**
-   * Number of arguments, possibly nested, that the Grounding Box was able to ground. This includes
-   * ambiguously grounded arguments.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Double getNumVariablesGrounded() {
-    return numVariablesGrounded;
-  }
-
-  /**
-   * Number of arguments, possibly nested, that the Grounding Box was able to ground. This includes
-   * ambiguously grounded arguments.
-   * @param numVariablesGrounded numVariablesGrounded or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setNumVariablesGrounded(java.lang.Double numVariablesGrounded) {
-    this.numVariablesGrounded = numVariablesGrounded;
     return this;
   }
 
@@ -1455,23 +1353,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
-   * Used in HGR to modify the ranker based on input experimental flag and intent name.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRankerName() {
-    return rankerName;
-  }
-
-  /**
-   * Used in HGR to modify the ranker based on input experimental flag and intent name.
-   * @param rankerName rankerName or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setRankerName(java.lang.String rankerName) {
-    this.rankerName = rankerName;
-    return this;
-  }
-
-  /**
    * The determination made by the SearchDispatchingConfig as to whether and how this interpretation
    * should be dispatched to Search.
    * @return value or {@code null} for none
@@ -1538,27 +1419,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
   }
 
   /**
-   * Average of per-word confidence for top speech recognition hypothesis. The value is from
-   * RecognizerHypothesisLog:
-   * http://google3/logs/proto/speech/service/recognizer_log.proto?l=848=281400256
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getTopHypothesisConfidence() {
-    return topHypothesisConfidence;
-  }
-
-  /**
-   * Average of per-word confidence for top speech recognition hypothesis. The value is from
-   * RecognizerHypothesisLog:
-   * http://google3/logs/proto/speech/service/recognizer_log.proto?l=848=281400256
-   * @param topHypothesisConfidence topHypothesisConfidence or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setTopHypothesisConfidence(java.lang.Float topHypothesisConfidence) {
-    this.topHypothesisConfidence = topHypothesisConfidence;
-    return this;
-  }
-
-  /**
    * Whether the interpretation should run through grounding box or not.
    * @return value or {@code null} for none
    */
@@ -1572,25 +1432,6 @@ public final class AssistantPrefulfillmentRankerPrefulfillmentSignals extends co
    */
   public AssistantPrefulfillmentRankerPrefulfillmentSignals setUsesGroundingBox(java.lang.Boolean usesGroundingBox) {
     this.usesGroundingBox = usesGroundingBox;
-    return this;
-  }
-
-  /**
-   * Horizontal feature that stores information about confidence scores for each resolution within
-   * the binding set.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getVerticalConfidenceScore() {
-    return verticalConfidenceScore;
-  }
-
-  /**
-   * Horizontal feature that stores information about confidence scores for each resolution within
-   * the binding set.
-   * @param verticalConfidenceScore verticalConfidenceScore or {@code null} for none
-   */
-  public AssistantPrefulfillmentRankerPrefulfillmentSignals setVerticalConfidenceScore(java.lang.Float verticalConfidenceScore) {
-    this.verticalConfidenceScore = verticalConfidenceScore;
     return this;
   }
 

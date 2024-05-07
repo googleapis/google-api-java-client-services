@@ -31,12 +31,21 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class HtmlrenderWebkitHeadlessProtoChromiumTrace extends com.google.api.client.json.GenericJson {
 
   /**
+   * Populated if Chromium traces are requested in JSON format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String chromiumTrace;
 
   /**
+   * Populated if Chromium traces are requested in PROTO format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String chromiumTraceProto;
+
+  /**
+   * Populated if Chromium traces are requested in JSON format.
    * @return value or {@code null} for none
    */
   public java.lang.String getChromiumTrace() {
@@ -44,10 +53,56 @@ public final class HtmlrenderWebkitHeadlessProtoChromiumTrace extends com.google
   }
 
   /**
+   * Populated if Chromium traces are requested in JSON format.
    * @param chromiumTrace chromiumTrace or {@code null} for none
    */
   public HtmlrenderWebkitHeadlessProtoChromiumTrace setChromiumTrace(java.lang.String chromiumTrace) {
     this.chromiumTrace = chromiumTrace;
+    return this;
+  }
+
+  /**
+   * Populated if Chromium traces are requested in PROTO format.
+   * @see #decodeChromiumTraceProto()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChromiumTraceProto() {
+    return chromiumTraceProto;
+  }
+
+  /**
+   * Populated if Chromium traces are requested in PROTO format.
+   * @see #getChromiumTraceProto()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeChromiumTraceProto() {
+    return com.google.api.client.util.Base64.decodeBase64(chromiumTraceProto);
+  }
+
+  /**
+   * Populated if Chromium traces are requested in PROTO format.
+   * @see #encodeChromiumTraceProto()
+   * @param chromiumTraceProto chromiumTraceProto or {@code null} for none
+   */
+  public HtmlrenderWebkitHeadlessProtoChromiumTrace setChromiumTraceProto(java.lang.String chromiumTraceProto) {
+    this.chromiumTraceProto = chromiumTraceProto;
+    return this;
+  }
+
+  /**
+   * Populated if Chromium traces are requested in PROTO format.
+   * @see #setChromiumTraceProto()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public HtmlrenderWebkitHeadlessProtoChromiumTrace encodeChromiumTraceProto(byte[] chromiumTraceProto) {
+    this.chromiumTraceProto = com.google.api.client.util.Base64.encodeBase64URLSafeString(chromiumTraceProto);
     return this;
   }
 

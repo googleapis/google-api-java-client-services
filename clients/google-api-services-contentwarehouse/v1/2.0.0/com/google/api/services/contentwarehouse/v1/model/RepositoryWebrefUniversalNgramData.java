@@ -38,14 +38,6 @@ public final class RepositoryWebrefUniversalNgramData extends com.google.api.cli
   private java.lang.Float idf;
 
   /**
-   * Probability that the n-gram is a plural form of a word. This information is extracted from SAFT
-   * annotations of queries. See HasPluralProperty().
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float pluralProb;
-
-  /**
    * IDF of the n-gram.
    * @return value or {@code null} for none
    */
@@ -59,25 +51,6 @@ public final class RepositoryWebrefUniversalNgramData extends com.google.api.cli
    */
   public RepositoryWebrefUniversalNgramData setIdf(java.lang.Float idf) {
     this.idf = idf;
-    return this;
-  }
-
-  /**
-   * Probability that the n-gram is a plural form of a word. This information is extracted from SAFT
-   * annotations of queries. See HasPluralProperty().
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getPluralProb() {
-    return pluralProb;
-  }
-
-  /**
-   * Probability that the n-gram is a plural form of a word. This information is extracted from SAFT
-   * annotations of queries. See HasPluralProperty().
-   * @param pluralProb pluralProb or {@code null} for none
-   */
-  public RepositoryWebrefUniversalNgramData setPluralProb(java.lang.Float pluralProb) {
-    this.pluralProb = pluralProb;
     return this;
   }
 

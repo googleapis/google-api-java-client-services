@@ -61,6 +61,15 @@ public final class CompositeDocPartialUpdateInfo extends com.google.api.client.j
   private java.lang.Integer shouldLookupDocjoinsTier;
 
   /**
+   * Which vertical docjoin corpus we should do cdoc lookup to merge partial cdocs. This uses the
+   * string value of table name in google3/indexing/docjoins/spanner/schema/global_tables_data.sdl.
+   * For example, Voce and ShortVideo. NOT intended for other usage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shouldLookupDocjoinsVerticalCorpus;
+
+  /**
    * List of signal updates present in the enclosing partial cdoc. Signal name for a signal is
    * unique name for the signal according to SignalSpec.
    * The value may be {@code null}.
@@ -137,6 +146,27 @@ public final class CompositeDocPartialUpdateInfo extends com.google.api.client.j
    */
   public CompositeDocPartialUpdateInfo setShouldLookupDocjoinsTier(java.lang.Integer shouldLookupDocjoinsTier) {
     this.shouldLookupDocjoinsTier = shouldLookupDocjoinsTier;
+    return this;
+  }
+
+  /**
+   * Which vertical docjoin corpus we should do cdoc lookup to merge partial cdocs. This uses the
+   * string value of table name in google3/indexing/docjoins/spanner/schema/global_tables_data.sdl.
+   * For example, Voce and ShortVideo. NOT intended for other usage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShouldLookupDocjoinsVerticalCorpus() {
+    return shouldLookupDocjoinsVerticalCorpus;
+  }
+
+  /**
+   * Which vertical docjoin corpus we should do cdoc lookup to merge partial cdocs. This uses the
+   * string value of table name in google3/indexing/docjoins/spanner/schema/global_tables_data.sdl.
+   * For example, Voce and ShortVideo. NOT intended for other usage.
+   * @param shouldLookupDocjoinsVerticalCorpus shouldLookupDocjoinsVerticalCorpus or {@code null} for none
+   */
+  public CompositeDocPartialUpdateInfo setShouldLookupDocjoinsVerticalCorpus(java.lang.String shouldLookupDocjoinsVerticalCorpus) {
+    this.shouldLookupDocjoinsVerticalCorpus = shouldLookupDocjoinsVerticalCorpus;
     return this;
   }
 

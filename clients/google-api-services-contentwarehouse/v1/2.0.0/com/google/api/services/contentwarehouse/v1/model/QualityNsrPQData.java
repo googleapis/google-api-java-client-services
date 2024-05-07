@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Next id: 18
+ * Next id: 22
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -38,6 +38,20 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
   private java.lang.Integer chard;
 
   /**
+   * URL-level Chard (encoded as an int).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualityNsrVersionedIntSignal> chardScoreEncoded;
+
+  /**
+   * LLM-based effort estimation for article pages (see landspeeder/4311817).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualityNsrVersionedFloatSignal> contentEffort;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,13 +68,6 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Float deltaLinkOutgoing;
-
-  /**
-   * The delta score of the URL-level quality predictor.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float deltaPageQuality;
 
   /**
    * Total deltaNSR adjustment based on subchunks. This is a page-level adjustment (subchunks are
@@ -101,6 +108,22 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Float page2vecLq;
+
+  /**
+   * Predicted default NSR score computed in Goldmine via the NSR default predictor (go/default-nsr-
+   * predictor).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualityNsrVersionedFloatSignal> predictedDefaultNsr;
+
+  /**
+   * Site-URL delta signals based quality score computed in Goldmine via the Rhubarb model (go
+   * /rhubarb-dd).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QualityNsrVersionedFloatSignal> rhubarb;
 
   /**
    * The value may be {@code null}.
@@ -146,6 +169,40 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * URL-level Chard (encoded as an int).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrVersionedIntSignal> getChardScoreEncoded() {
+    return chardScoreEncoded;
+  }
+
+  /**
+   * URL-level Chard (encoded as an int).
+   * @param chardScoreEncoded chardScoreEncoded or {@code null} for none
+   */
+  public QualityNsrPQData setChardScoreEncoded(java.util.List<QualityNsrVersionedIntSignal> chardScoreEncoded) {
+    this.chardScoreEncoded = chardScoreEncoded;
+    return this;
+  }
+
+  /**
+   * LLM-based effort estimation for article pages (see landspeeder/4311817).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrVersionedFloatSignal> getContentEffort() {
+    return contentEffort;
+  }
+
+  /**
+   * LLM-based effort estimation for article pages (see landspeeder/4311817).
+   * @param contentEffort contentEffort or {@code null} for none
+   */
+  public QualityNsrPQData setContentEffort(java.util.List<QualityNsrVersionedFloatSignal> contentEffort) {
+    this.contentEffort = contentEffort;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Float getDeltaAutopilotScore() {
@@ -187,23 +244,6 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
    */
   public QualityNsrPQData setDeltaLinkOutgoing(java.lang.Float deltaLinkOutgoing) {
     this.deltaLinkOutgoing = deltaLinkOutgoing;
-    return this;
-  }
-
-  /**
-   * The delta score of the URL-level quality predictor.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getDeltaPageQuality() {
-    return deltaPageQuality;
-  }
-
-  /**
-   * The delta score of the URL-level quality predictor.
-   * @param deltaPageQuality deltaPageQuality or {@code null} for none
-   */
-  public QualityNsrPQData setDeltaPageQuality(java.lang.Float deltaPageQuality) {
-    this.deltaPageQuality = deltaPageQuality;
     return this;
   }
 
@@ -302,6 +342,44 @@ public final class QualityNsrPQData extends com.google.api.client.json.GenericJs
    */
   public QualityNsrPQData setPage2vecLq(java.lang.Float page2vecLq) {
     this.page2vecLq = page2vecLq;
+    return this;
+  }
+
+  /**
+   * Predicted default NSR score computed in Goldmine via the NSR default predictor (go/default-nsr-
+   * predictor).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrVersionedFloatSignal> getPredictedDefaultNsr() {
+    return predictedDefaultNsr;
+  }
+
+  /**
+   * Predicted default NSR score computed in Goldmine via the NSR default predictor (go/default-nsr-
+   * predictor).
+   * @param predictedDefaultNsr predictedDefaultNsr or {@code null} for none
+   */
+  public QualityNsrPQData setPredictedDefaultNsr(java.util.List<QualityNsrVersionedFloatSignal> predictedDefaultNsr) {
+    this.predictedDefaultNsr = predictedDefaultNsr;
+    return this;
+  }
+
+  /**
+   * Site-URL delta signals based quality score computed in Goldmine via the Rhubarb model (go
+   * /rhubarb-dd).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QualityNsrVersionedFloatSignal> getRhubarb() {
+    return rhubarb;
+  }
+
+  /**
+   * Site-URL delta signals based quality score computed in Goldmine via the Rhubarb model (go
+   * /rhubarb-dd).
+   * @param rhubarb rhubarb or {@code null} for none
+   */
+  public QualityNsrPQData setRhubarb(java.util.List<QualityNsrVersionedFloatSignal> rhubarb) {
+    this.rhubarb = rhubarb;
     return this;
   }
 

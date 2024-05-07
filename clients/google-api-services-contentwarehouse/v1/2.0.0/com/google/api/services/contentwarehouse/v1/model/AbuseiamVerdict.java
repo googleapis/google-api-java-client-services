@@ -94,7 +94,7 @@ public final class AbuseiamVerdict extends com.google.api.client.json.GenericJso
   private java.lang.Boolean isLegalIssued;
 
   /**
-   * This field is used to pass relevant / necessary scores to our clients. For eg: ASBE propogates
+   * This field is used to pass relevant / necessary scores to our clients. For eg: ASBE propagates
    * these scores to moonshine.
    * The value may be {@code null}.
    */
@@ -305,7 +305,7 @@ public final class AbuseiamVerdict extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This field is used to pass relevant / necessary scores to our clients. For eg: ASBE propogates
+   * This field is used to pass relevant / necessary scores to our clients. For eg: ASBE propagates
    * these scores to moonshine.
    * @return value or {@code null} for none
    */
@@ -314,7 +314,7 @@ public final class AbuseiamVerdict extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * This field is used to pass relevant / necessary scores to our clients. For eg: ASBE propogates
+   * This field is used to pass relevant / necessary scores to our clients. For eg: ASBE propagates
    * these scores to moonshine.
    * @param miscScores miscScores or {@code null} for none
    */

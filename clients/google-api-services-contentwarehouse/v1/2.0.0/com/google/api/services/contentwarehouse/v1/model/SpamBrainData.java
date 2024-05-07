@@ -17,9 +17,9 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * This holds SpamBrain values which will be populated to docjoins & muppet. Proto is copied from
- * spam_brain::SpamBrainData and populated at sitechunked site level (as opposed to the spambrain
- * page classifier score).
+ * This holds SpamBrain values which are populated in docjoins. The data is populated at sitechunked
+ * host level and sitechunked domain level in the doc_attachments, and saved in Perdocdata in
+ * respective fields.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

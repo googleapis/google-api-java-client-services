@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * PerDocData for fringe-query-prior (built into the shards for eventual consumption at Fringe
- * classification time). Not stored in DocJoins. NEXT ID: 13
+ * classification time). Not stored in DocJoins. NEXT ID: 17
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -57,6 +57,13 @@ public final class QualityFringeFringeQueryPriorPerDocData extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.Long encodedChardXlqYmylPrediction;
+
+  /**
+   * An encoding of the Document About Fringe Topic (daft) score in [0, 1].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long encodedDaftScore;
 
   /**
    * An estimate of the vulnerability of this doc to show fringe content, based on the context
@@ -128,12 +135,37 @@ public final class QualityFringeFringeQueryPriorPerDocData extends com.google.ap
   private java.lang.Long encodedProximityScore;
 
   /**
+   * An encoding of the XLQ pseudorater severity score translated into pXLQ score space in [0,1].
+   * The encoding includes the pseudorater version and confidence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long encodedPseudoraterPxlqScore;
+
+  /**
+   * Whether the page is a politics page according to petacats on a government domain according to
+   * KG. Used to override pXLQ in Q* delta-pxlq.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean politicsPageGovSite;
+
+  /**
    * Indices on the repository_webref::WebrefEntities::entity field of entities that represent a
-   * person or a group of people (aka sensitive entities).
+   * person or a group of people (aka sensitive entities). Will be deprecated once
+   * sensitive_entities_mids is fully launched (see b/290268614).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Integer> sensitiveEntitiesIndices;
+
+  /**
+   * MIDs of entities that represent a person or a group of people (aka sensitive entities). See
+   * b/290268614 for reference why this is needed in replacement to sensitive_entities_indices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.math.BigInteger> sensitiveEntitiesMids;
 
   /**
    * @return value or {@code null} for none
@@ -198,6 +230,23 @@ public final class QualityFringeFringeQueryPriorPerDocData extends com.google.ap
    */
   public QualityFringeFringeQueryPriorPerDocData setEncodedChardXlqYmylPrediction(java.lang.Long encodedChardXlqYmylPrediction) {
     this.encodedChardXlqYmylPrediction = encodedChardXlqYmylPrediction;
+    return this;
+  }
+
+  /**
+   * An encoding of the Document About Fringe Topic (daft) score in [0, 1].
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getEncodedDaftScore() {
+    return encodedDaftScore;
+  }
+
+  /**
+   * An encoding of the Document About Fringe Topic (daft) score in [0, 1].
+   * @param encodedDaftScore encodedDaftScore or {@code null} for none
+   */
+  public QualityFringeFringeQueryPriorPerDocData setEncodedDaftScore(java.lang.Long encodedDaftScore) {
+    this.encodedDaftScore = encodedDaftScore;
     return this;
   }
 
@@ -361,8 +410,47 @@ public final class QualityFringeFringeQueryPriorPerDocData extends com.google.ap
   }
 
   /**
+   * An encoding of the XLQ pseudorater severity score translated into pXLQ score space in [0,1].
+   * The encoding includes the pseudorater version and confidence.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getEncodedPseudoraterPxlqScore() {
+    return encodedPseudoraterPxlqScore;
+  }
+
+  /**
+   * An encoding of the XLQ pseudorater severity score translated into pXLQ score space in [0,1].
+   * The encoding includes the pseudorater version and confidence.
+   * @param encodedPseudoraterPxlqScore encodedPseudoraterPxlqScore or {@code null} for none
+   */
+  public QualityFringeFringeQueryPriorPerDocData setEncodedPseudoraterPxlqScore(java.lang.Long encodedPseudoraterPxlqScore) {
+    this.encodedPseudoraterPxlqScore = encodedPseudoraterPxlqScore;
+    return this;
+  }
+
+  /**
+   * Whether the page is a politics page according to petacats on a government domain according to
+   * KG. Used to override pXLQ in Q* delta-pxlq.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPoliticsPageGovSite() {
+    return politicsPageGovSite;
+  }
+
+  /**
+   * Whether the page is a politics page according to petacats on a government domain according to
+   * KG. Used to override pXLQ in Q* delta-pxlq.
+   * @param politicsPageGovSite politicsPageGovSite or {@code null} for none
+   */
+  public QualityFringeFringeQueryPriorPerDocData setPoliticsPageGovSite(java.lang.Boolean politicsPageGovSite) {
+    this.politicsPageGovSite = politicsPageGovSite;
+    return this;
+  }
+
+  /**
    * Indices on the repository_webref::WebrefEntities::entity field of entities that represent a
-   * person or a group of people (aka sensitive entities).
+   * person or a group of people (aka sensitive entities). Will be deprecated once
+   * sensitive_entities_mids is fully launched (see b/290268614).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getSensitiveEntitiesIndices() {
@@ -371,11 +459,31 @@ public final class QualityFringeFringeQueryPriorPerDocData extends com.google.ap
 
   /**
    * Indices on the repository_webref::WebrefEntities::entity field of entities that represent a
-   * person or a group of people (aka sensitive entities).
+   * person or a group of people (aka sensitive entities). Will be deprecated once
+   * sensitive_entities_mids is fully launched (see b/290268614).
    * @param sensitiveEntitiesIndices sensitiveEntitiesIndices or {@code null} for none
    */
   public QualityFringeFringeQueryPriorPerDocData setSensitiveEntitiesIndices(java.util.List<java.lang.Integer> sensitiveEntitiesIndices) {
     this.sensitiveEntitiesIndices = sensitiveEntitiesIndices;
+    return this;
+  }
+
+  /**
+   * MIDs of entities that represent a person or a group of people (aka sensitive entities). See
+   * b/290268614 for reference why this is needed in replacement to sensitive_entities_indices.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.math.BigInteger> getSensitiveEntitiesMids() {
+    return sensitiveEntitiesMids;
+  }
+
+  /**
+   * MIDs of entities that represent a person or a group of people (aka sensitive entities). See
+   * b/290268614 for reference why this is needed in replacement to sensitive_entities_indices.
+   * @param sensitiveEntitiesMids sensitiveEntitiesMids or {@code null} for none
+   */
+  public QualityFringeFringeQueryPriorPerDocData setSensitiveEntitiesMids(java.util.List<java.math.BigInteger> sensitiveEntitiesMids) {
+    this.sensitiveEntitiesMids = sensitiveEntitiesMids;
     return this;
   }
 

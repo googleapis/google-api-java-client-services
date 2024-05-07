@@ -20,7 +20,7 @@ package com.google.api.services.contentwarehouse.v1.model;
  * This is an optional container of arbitrary data that can be added to a FetchReplyData. This data
  * is meant to be logged, but not sent back in a fetch reply (it should be added *after* the reply
  * is prepared). Use FetchResponsePreparatorImpl::AddTrawlerPrivateDataToFetchReplyData to add. See
- * also the comment in fetch_response_preparator_impl.cc. Next Tag: 47
+ * also the comment in fetch_response_preparator_impl.cc. Next Tag: 49
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -268,6 +268,23 @@ public final class TrawlerTrawlerPrivateFetchReplyData extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.String downloadFileName;
+
+  /**
+   * We check if Google-Extended is allowed to crawl this URL, wildcard rules are obeyed, this is
+   * for internal analysis. Check RobotsTxtClient::RobotsStatus for the meaning of number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer googleExtendedObeyWildcardRobotsStatus;
+
+  /**
+   * We check if Google-Extended is allowed to crawl this URL and store the result here, wildcard
+   * rules are not obeyed, this is for internal analysis. Check RobotsTxtClient::RobotsStatus for
+   * the meaning of number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer googleExtendedRobotsStatus;
 
   /**
    * Stores the HTTP version we used in the last hop.
@@ -973,6 +990,46 @@ public final class TrawlerTrawlerPrivateFetchReplyData extends com.google.api.cl
    */
   public TrawlerTrawlerPrivateFetchReplyData setDownloadFileName(java.lang.String downloadFileName) {
     this.downloadFileName = downloadFileName;
+    return this;
+  }
+
+  /**
+   * We check if Google-Extended is allowed to crawl this URL, wildcard rules are obeyed, this is
+   * for internal analysis. Check RobotsTxtClient::RobotsStatus for the meaning of number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getGoogleExtendedObeyWildcardRobotsStatus() {
+    return googleExtendedObeyWildcardRobotsStatus;
+  }
+
+  /**
+   * We check if Google-Extended is allowed to crawl this URL, wildcard rules are obeyed, this is
+   * for internal analysis. Check RobotsTxtClient::RobotsStatus for the meaning of number.
+   * @param googleExtendedObeyWildcardRobotsStatus googleExtendedObeyWildcardRobotsStatus or {@code null} for none
+   */
+  public TrawlerTrawlerPrivateFetchReplyData setGoogleExtendedObeyWildcardRobotsStatus(java.lang.Integer googleExtendedObeyWildcardRobotsStatus) {
+    this.googleExtendedObeyWildcardRobotsStatus = googleExtendedObeyWildcardRobotsStatus;
+    return this;
+  }
+
+  /**
+   * We check if Google-Extended is allowed to crawl this URL and store the result here, wildcard
+   * rules are not obeyed, this is for internal analysis. Check RobotsTxtClient::RobotsStatus for
+   * the meaning of number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getGoogleExtendedRobotsStatus() {
+    return googleExtendedRobotsStatus;
+  }
+
+  /**
+   * We check if Google-Extended is allowed to crawl this URL and store the result here, wildcard
+   * rules are not obeyed, this is for internal analysis. Check RobotsTxtClient::RobotsStatus for
+   * the meaning of number.
+   * @param googleExtendedRobotsStatus googleExtendedRobotsStatus or {@code null} for none
+   */
+  public TrawlerTrawlerPrivateFetchReplyData setGoogleExtendedRobotsStatus(java.lang.Integer googleExtendedRobotsStatus) {
+    this.googleExtendedRobotsStatus = googleExtendedRobotsStatus;
     return this;
   }
 

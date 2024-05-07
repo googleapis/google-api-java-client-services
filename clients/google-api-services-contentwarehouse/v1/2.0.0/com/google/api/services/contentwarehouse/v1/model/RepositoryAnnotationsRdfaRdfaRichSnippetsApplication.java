@@ -17,7 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * This structure holds data for application information for rich snippets Next ID: 53
+ * This structure holds data for application information for rich snippets Next ID: 54
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -149,6 +149,13 @@ public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends 
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean inAppPurchase;
+
+  /**
+   * Whether this is a game and avaible on Battlestar (go/battlestar).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isBattlestarTitle;
 
   /**
    * Indicates if the localized data comes from default locale. This is needed because the default
@@ -663,6 +670,23 @@ public final class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends 
    */
   public RepositoryAnnotationsRdfaRdfaRichSnippetsApplication setInAppPurchase(java.lang.Boolean inAppPurchase) {
     this.inAppPurchase = inAppPurchase;
+    return this;
+  }
+
+  /**
+   * Whether this is a game and avaible on Battlestar (go/battlestar).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsBattlestarTitle() {
+    return isBattlestarTitle;
+  }
+
+  /**
+   * Whether this is a game and avaible on Battlestar (go/battlestar).
+   * @param isBattlestarTitle isBattlestarTitle or {@code null} for none
+   */
+  public RepositoryAnnotationsRdfaRdfaRichSnippetsApplication setIsBattlestarTitle(java.lang.Boolean isBattlestarTitle) {
+    this.isBattlestarTitle = isBattlestarTitle;
     return this;
   }
 

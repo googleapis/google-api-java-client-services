@@ -51,7 +51,7 @@ public final class SmartphonePerDocData extends com.google.api.client.json.Gener
   /**
    * Indicates if the page is violating mobile ads density interstitial policy and the violation
    * strength. See go/interstitials-for-ads and http://ariane/268642 for details. To save indexing
-   * space, we convert the double values in [0.0, 1.0] to intergers in range [0, 1000] by using
+   * space, we convert the double values in [0.0, 1.0] to integers in range [0, 1000] by using
    * floor(value * 1000).
    * The value may be {@code null}.
    */
@@ -148,7 +148,7 @@ public final class SmartphonePerDocData extends com.google.api.client.json.Gener
   /**
    * Indicates if the page is violating mobile ads density interstitial policy and the violation
    * strength. See go/interstitials-for-ads and http://ariane/268642 for details. To save indexing
-   * space, we convert the double values in [0.0, 1.0] to intergers in range [0, 1000] by using
+   * space, we convert the double values in [0.0, 1.0] to integers in range [0, 1000] by using
    * floor(value * 1000).
    * @return value or {@code null} for none
    */
@@ -159,7 +159,7 @@ public final class SmartphonePerDocData extends com.google.api.client.json.Gener
   /**
    * Indicates if the page is violating mobile ads density interstitial policy and the violation
    * strength. See go/interstitials-for-ads and http://ariane/268642 for details. To save indexing
-   * space, we convert the double values in [0.0, 1.0] to intergers in range [0, 1000] by using
+   * space, we convert the double values in [0.0, 1.0] to integers in range [0, 1000] by using
    * floor(value * 1000).
    * @param adsDensityInterstitialViolationStrength adsDensityInterstitialViolationStrength or {@code null} for none
    */

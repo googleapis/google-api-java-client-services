@@ -65,6 +65,13 @@ public final class RepositoryWebrefEntityAnnotations extends com.google.api.clie
   private RepositoryWebrefExplainedRangeInfo explainedRangeInfo;
 
   /**
+   * This is an experimental output for go/multiref. Don't use it without consulting the Webref team
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RepositoryWebrefImageMention> imageMention;
+
+  /**
    * An entity is marked as implicit if there is no explicit mention of the entity in the content of
    * the page. For instance, all mentions of the entity are in query, url and/or anchors; or the
    * entity has only implicit content mentions.
@@ -193,6 +200,23 @@ public final class RepositoryWebrefEntityAnnotations extends com.google.api.clie
    */
   public RepositoryWebrefEntityAnnotations setExplainedRangeInfo(RepositoryWebrefExplainedRangeInfo explainedRangeInfo) {
     this.explainedRangeInfo = explainedRangeInfo;
+    return this;
+  }
+
+  /**
+   * This is an experimental output for go/multiref. Don't use it without consulting the Webref team
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RepositoryWebrefImageMention> getImageMention() {
+    return imageMention;
+  }
+
+  /**
+   * This is an experimental output for go/multiref. Don't use it without consulting the Webref team
+   * @param imageMention imageMention or {@code null} for none
+   */
+  public RepositoryWebrefEntityAnnotations setImageMention(java.util.List<RepositoryWebrefImageMention> imageMention) {
+    this.imageMention = imageMention;
     return this;
   }
 

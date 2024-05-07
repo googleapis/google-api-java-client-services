@@ -19,7 +19,8 @@ package com.google.api.services.contentwarehouse.v1.model;
 /**
  * This protocol buffer supports a name per region per language, allowing it to represent the name
  * of a given feature in different regions and languages. For example, the Persian Gulf has
- * different English names in UAE versus Lebanon.
+ * different English names in UAE versus Lebanon; each would need to be represented as distinct
+ * RegionSpecificNameProtos.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

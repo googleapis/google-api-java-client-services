@@ -17,8 +17,7 @@
 package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * A circle membership that the person has. A circle membership is created by adding a person to a
- * circle by person-id or by email.
+ * DEPRECATED. No data is returned for this field anymore. See b/329513077.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation

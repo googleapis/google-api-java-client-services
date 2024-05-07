@@ -31,11 +31,11 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class RepositoryWebrefAnnotatedCategoryInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * A debug string for the category.
+   * The collection hrid for the category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String debugString;
+  private java.lang.String collectionHrid;
 
   /**
    * The mid of the entity representing the category.
@@ -45,19 +45,19 @@ public final class RepositoryWebrefAnnotatedCategoryInfo extends com.google.api.
   private java.math.BigInteger mid;
 
   /**
-   * A debug string for the category.
+   * The collection hrid for the category.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDebugString() {
-    return debugString;
+  public java.lang.String getCollectionHrid() {
+    return collectionHrid;
   }
 
   /**
-   * A debug string for the category.
-   * @param debugString debugString or {@code null} for none
+   * The collection hrid for the category.
+   * @param collectionHrid collectionHrid or {@code null} for none
    */
-  public RepositoryWebrefAnnotatedCategoryInfo setDebugString(java.lang.String debugString) {
-    this.debugString = debugString;
+  public RepositoryWebrefAnnotatedCategoryInfo setCollectionHrid(java.lang.String collectionHrid) {
+    this.collectionHrid = collectionHrid;
     return this;
   }
 

@@ -129,7 +129,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
-   * Circles that this person is a member of.
+   * DEPRECATED. No data is returned for this field anymore. See b/329513077.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -954,7 +954,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
-   * Circles that this person is a member of.
+   * DEPRECATED. No data is returned for this field anymore. See b/329513077.
    * @return value or {@code null} for none
    */
   public java.util.List<AppsPeopleOzExternalMergedpeopleapiCircleMembership> getCircleMembership() {
@@ -962,7 +962,7 @@ public final class AppsPeopleOzExternalMergedpeopleapiPerson extends com.google.
   }
 
   /**
-   * Circles that this person is a member of.
+   * DEPRECATED. No data is returned for this field anymore. See b/329513077.
    * @param circleMembership circleMembership or {@code null} for none
    */
   public AppsPeopleOzExternalMergedpeopleapiPerson setCircleMembership(java.util.List<AppsPeopleOzExternalMergedpeopleapiCircleMembership> circleMembership) {

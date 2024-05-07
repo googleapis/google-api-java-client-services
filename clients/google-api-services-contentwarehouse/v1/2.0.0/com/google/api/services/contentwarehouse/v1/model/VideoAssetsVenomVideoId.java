@@ -32,9 +32,8 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class VideoAssetsVenomVideoId extends com.google.api.client.json.GenericJson {
 
   /**
-   * REQUIRED. IDs have some constraints: - 32 bytes max: this is enforced by the server - for the
-   * time being, must be parseable as a youtube ID (basically a base64-encoded string which maps to
-   * a 64-bit integer). This restriction will eventually be lifted.
+   * REQUIRED. IDs have some constraints: - must be parseable as a youtube ID (basically a
+   * base64-encoded string which maps to a 64-bit integer, see google3/video/tools/video_id.h):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +48,8 @@ public final class VideoAssetsVenomVideoId extends com.google.api.client.json.Ge
   private java.lang.String ns;
 
   /**
-   * REQUIRED. IDs have some constraints: - 32 bytes max: this is enforced by the server - for the
-   * time being, must be parseable as a youtube ID (basically a base64-encoded string which maps to
-   * a 64-bit integer). This restriction will eventually be lifted.
+   * REQUIRED. IDs have some constraints: - must be parseable as a youtube ID (basically a
+   * base64-encoded string which maps to a 64-bit integer, see google3/video/tools/video_id.h):
    * @see #decodeId()
    * @return value or {@code null} for none
    */
@@ -60,9 +58,8 @@ public final class VideoAssetsVenomVideoId extends com.google.api.client.json.Ge
   }
 
   /**
-   * REQUIRED. IDs have some constraints: - 32 bytes max: this is enforced by the server - for the
-   * time being, must be parseable as a youtube ID (basically a base64-encoded string which maps to
-   * a 64-bit integer). This restriction will eventually be lifted.
+   * REQUIRED. IDs have some constraints: - must be parseable as a youtube ID (basically a
+   * base64-encoded string which maps to a 64-bit integer, see google3/video/tools/video_id.h):
    * @see #getId()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -73,9 +70,8 @@ public final class VideoAssetsVenomVideoId extends com.google.api.client.json.Ge
   }
 
   /**
-   * REQUIRED. IDs have some constraints: - 32 bytes max: this is enforced by the server - for the
-   * time being, must be parseable as a youtube ID (basically a base64-encoded string which maps to
-   * a 64-bit integer). This restriction will eventually be lifted.
+   * REQUIRED. IDs have some constraints: - must be parseable as a youtube ID (basically a
+   * base64-encoded string which maps to a 64-bit integer, see google3/video/tools/video_id.h):
    * @see #encodeId()
    * @param id id or {@code null} for none
    */
@@ -85,9 +81,8 @@ public final class VideoAssetsVenomVideoId extends com.google.api.client.json.Ge
   }
 
   /**
-   * REQUIRED. IDs have some constraints: - 32 bytes max: this is enforced by the server - for the
-   * time being, must be parseable as a youtube ID (basically a base64-encoded string which maps to
-   * a 64-bit integer). This restriction will eventually be lifted.
+   * REQUIRED. IDs have some constraints: - must be parseable as a youtube ID (basically a
+   * base64-encoded string which maps to a 64-bit integer, see google3/video/tools/video_id.h):
    * @see #setId()
    *
    * <p>

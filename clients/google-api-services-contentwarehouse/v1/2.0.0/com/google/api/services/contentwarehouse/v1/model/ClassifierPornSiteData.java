@@ -92,12 +92,6 @@ public final class ClassifierPornSiteData extends com.google.api.client.json.Gen
   private java.lang.Float violenceScore;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ClassifierPornSiteViolenceStats violenceStats;
-
-  /**
    * The average pedo page score for the site.
    * @return value or {@code null} for none
    */
@@ -243,21 +237,6 @@ public final class ClassifierPornSiteData extends com.google.api.client.json.Gen
    */
   public ClassifierPornSiteData setViolenceScore(java.lang.Float violenceScore) {
     this.violenceScore = violenceScore;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public ClassifierPornSiteViolenceStats getViolenceStats() {
-    return violenceStats;
-  }
-
-  /**
-   * @param violenceStats violenceStats or {@code null} for none
-   */
-  public ClassifierPornSiteData setViolenceStats(ClassifierPornSiteViolenceStats violenceStats) {
-    this.violenceStats = violenceStats;
     return this;
   }
 

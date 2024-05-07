@@ -31,14 +31,6 @@ package com.google.api.services.contentwarehouse.v1.model;
 public final class QualityNavboostCrapsCrapsData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains counter for Aging signal (go/freshness-aging). It's used internally by Craps/Aging
-   * pipeline.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private QualityNavboostCrapsAgingData agingCounts;
-
-  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,25 +190,6 @@ public final class QualityNavboostCrapsCrapsData extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.Integer voterTokenCount;
-
-  /**
-   * Contains counter for Aging signal (go/freshness-aging). It's used internally by Craps/Aging
-   * pipeline.
-   * @return value or {@code null} for none
-   */
-  public QualityNavboostCrapsAgingData getAgingCounts() {
-    return agingCounts;
-  }
-
-  /**
-   * Contains counter for Aging signal (go/freshness-aging). It's used internally by Craps/Aging
-   * pipeline.
-   * @param agingCounts agingCounts or {@code null} for none
-   */
-  public QualityNavboostCrapsCrapsData setAgingCounts(QualityNavboostCrapsAgingData agingCounts) {
-    this.agingCounts = agingCounts;
-    return this;
-  }
 
   /**
    * @return value or {@code null} for none

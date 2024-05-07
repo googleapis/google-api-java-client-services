@@ -18,7 +18,7 @@ package com.google.api.services.contentwarehouse.v1.model;
 
 /**
  * The following message contains info of sub image docs, it is populated in query_state and
- * consumed in web image boost twiddler: (go/WebImageBoostTwiddler). NextID: 26
+ * consumed in web image boost twiddler: (go/WebImageBoostTwiddler). NextID: 31
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
@@ -36,6 +36,12 @@ public final class WWWResultInfoSubImageDocInfo extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Integer> additionalSafesearchSignals;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WWWResultInfoMinimalAestheticsAdjusterInfo aestheticsAdjusterInfo;
 
   /**
    * The best thumbnail type is either 300K or 50K.
@@ -134,6 +140,12 @@ public final class WWWResultInfoSubImageDocInfo extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Integer ocrTokensCount;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Float pamirNormalizedScore;
 
   /**
@@ -215,6 +227,21 @@ public final class WWWResultInfoSubImageDocInfo extends com.google.api.client.js
    */
   public WWWResultInfoSubImageDocInfo setAdditionalSafesearchSignals(java.util.List<java.lang.Integer> additionalSafesearchSignals) {
     this.additionalSafesearchSignals = additionalSafesearchSignals;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public WWWResultInfoMinimalAestheticsAdjusterInfo getAestheticsAdjusterInfo() {
+    return aestheticsAdjusterInfo;
+  }
+
+  /**
+   * @param aestheticsAdjusterInfo aestheticsAdjusterInfo or {@code null} for none
+   */
+  public WWWResultInfoSubImageDocInfo setAestheticsAdjusterInfo(WWWResultInfoMinimalAestheticsAdjusterInfo aestheticsAdjusterInfo) {
+    this.aestheticsAdjusterInfo = aestheticsAdjusterInfo;
     return this;
   }
 
@@ -471,6 +498,21 @@ public final class WWWResultInfoSubImageDocInfo extends com.google.api.client.js
    */
   public WWWResultInfoSubImageDocInfo setImageUrl(java.lang.String imageUrl) {
     this.imageUrl = imageUrl;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getOcrTokensCount() {
+    return ocrTokensCount;
+  }
+
+  /**
+   * @param ocrTokensCount ocrTokensCount or {@code null} for none
+   */
+  public WWWResultInfoSubImageDocInfo setOcrTokensCount(java.lang.Integer ocrTokensCount) {
+    this.ocrTokensCount = ocrTokensCount;
     return this;
   }
 

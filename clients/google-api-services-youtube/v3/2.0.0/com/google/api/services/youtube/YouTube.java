@@ -17864,6 +17864,178 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         }
       }
 
+      /**
+       * An accessor for creating requests from the LiveChat collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code YouTube youtube = new YouTube(...);}
+       *   {@code YouTube.LiveChat.List request = youtube.liveChat().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public LiveChat liveChat() {
+        return new LiveChat();
+      }
+
+      /**
+       * The "liveChat" collection of methods.
+       */
+      public class LiveChat {
+
+        /**
+         * An accessor for creating requests from the Messages collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code YouTube youtube = new YouTube(...);}
+         *   {@code YouTube.Messages.List request = youtube.messages().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Messages messages() {
+          return new Messages();
+        }
+
+        /**
+         * The "messages" collection of methods.
+         */
+        public class Messages {
+
+          /**
+           * Transition a durable chat event.
+           *
+           * Create a request for the method "messages.transition".
+           *
+           * This request holds the parameters needed by the youtube server.  After setting any optional
+           * parameters, call the {@link Transition#execute()} method to invoke the remote operation.
+           *
+           * @return the request
+           */
+          public Transition transition() throws java.io.IOException {
+            Transition result = new Transition();
+            initialize(result);
+            return result;
+          }
+
+          public class Transition extends YouTubeRequest<com.google.api.services.youtube.model.LiveChatMessage> {
+
+            private static final String REST_PATH = "youtube/v3/liveChat/messages/transition";
+
+            /**
+             * Transition a durable chat event.
+             *
+             * Create a request for the method "messages.transition".
+             *
+             * This request holds the parameters needed by the the youtube server.  After setting any optional
+             * parameters, call the {@link Transition#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * Transition#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @since 1.13
+             */
+            protected Transition() {
+              super(YouTube.this, "POST", REST_PATH, null, com.google.api.services.youtube.model.LiveChatMessage.class);
+            }
+
+            @Override
+            public Transition set$Xgafv(java.lang.String $Xgafv) {
+              return (Transition) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Transition setAccessToken(java.lang.String accessToken) {
+              return (Transition) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Transition setAlt(java.lang.String alt) {
+              return (Transition) super.setAlt(alt);
+            }
+
+            @Override
+            public Transition setCallback(java.lang.String callback) {
+              return (Transition) super.setCallback(callback);
+            }
+
+            @Override
+            public Transition setFields(java.lang.String fields) {
+              return (Transition) super.setFields(fields);
+            }
+
+            @Override
+            public Transition setKey(java.lang.String key) {
+              return (Transition) super.setKey(key);
+            }
+
+            @Override
+            public Transition setOauthToken(java.lang.String oauthToken) {
+              return (Transition) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Transition setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Transition) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Transition setQuotaUser(java.lang.String quotaUser) {
+              return (Transition) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Transition setUploadType(java.lang.String uploadType) {
+              return (Transition) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Transition setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Transition) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The ID that uniquely identify the chat message event to transition. */
+            @com.google.api.client.util.Key
+            private java.lang.String id;
+
+            /** The ID that uniquely identify the chat message event to transition.
+             */
+            public java.lang.String getId() {
+              return id;
+            }
+
+            /** The ID that uniquely identify the chat message event to transition. */
+            public Transition setId(java.lang.String id) {
+              this.id = id;
+              return this;
+            }
+
+            /** The status to which the chat event is going to transition. */
+            @com.google.api.client.util.Key
+            private java.lang.String status;
+
+            /** The status to which the chat event is going to transition.
+             */
+            public java.lang.String getStatus() {
+              return status;
+            }
+
+            /** The status to which the chat event is going to transition. */
+            public Transition setStatus(java.lang.String status) {
+              this.status = status;
+              return this;
+            }
+
+            @Override
+            public Transition set(String parameterName, Object value) {
+              return (Transition) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
     }
   }
 

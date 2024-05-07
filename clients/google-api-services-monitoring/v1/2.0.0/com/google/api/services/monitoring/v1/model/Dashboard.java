@@ -31,6 +31,13 @@ package com.google.api.services.monitoring.v1.model;
 public final class Dashboard extends com.google.api.client.json.GenericJson {
 
   /**
+   * Configuration for event annotations to display on this dashboard.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DashboardAnnotations annotations;
+
+  /**
    * The content is divided into equally spaced columns and the widgets are arranged vertically.
    * The value may be {@code null}.
    */
@@ -98,6 +105,23 @@ public final class Dashboard extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private RowLayout rowLayout;
+
+  /**
+   * Configuration for event annotations to display on this dashboard.
+   * @return value or {@code null} for none
+   */
+  public DashboardAnnotations getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Configuration for event annotations to display on this dashboard.
+   * @param annotations annotations or {@code null} for none
+   */
+  public Dashboard setAnnotations(DashboardAnnotations annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * The content is divided into equally spaced columns and the widgets are arranged vertically.

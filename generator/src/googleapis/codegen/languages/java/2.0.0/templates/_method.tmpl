@@ -141,7 +141,7 @@ public class {{ method.className }} extends {{ api.className }}Request<{{ method
     initializeMediaDownload();
   {% endif %}
   {% if method.apiVersion %}
-    setApiVersionHeader(API_VERSION);
+    getRequestHeaders().set(API_VERSION_HEADER, API_VERSION);
   {% endif %}
   }
 {% endfilter %}

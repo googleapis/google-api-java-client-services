@@ -44,7 +44,7 @@ jobs:
             const MAX_BATCH_SIZE = 100
             const result = {
               batches: [],
-              hour: new Date().getHours(),
+              hour: 1,
             };
             for (let i = 0; i < filteredServices.length; i += MAX_BATCH_SIZE) {
               result.batches.push(filteredServices.slice(i, i + MAX_BATCH_SIZE))
@@ -58,6 +58,6 @@ jobs:
     # For example, a job starting at "1:30" uses the chunk at the index 1 in the array.
     # If you manually invoke the workflow other hours than 0:00 - 2:59 and the array's length is 3,
     # this job is skipped because there's no element at the index in the array.
-    if: ${{!!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).1]}}
+    if: ${{!!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
     with: 
       services: ${{toJson(fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour])}}

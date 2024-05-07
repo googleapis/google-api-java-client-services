@@ -134,192 +134,6 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
   }
 
   /**
-   * An accessor for creating requests from the Media collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
-   *   {@code ArtifactRegistry.Media.List request = artifactregistry.media().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Media media() {
-    return new Media();
-  }
-
-  /**
-   * The "media" collection of methods.
-   */
-  public class Media {
-
-    /**
-     * Download a file.
-     *
-     * Create a request for the method "media.download".
-     *
-     * This request holds the parameters needed by the artifactregistry server.  After setting any
-     * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
-     *
-     * @param name Required. The name of the file to download.
-     * @return the request
-     */
-    public Download download(java.lang.String name) throws java.io.IOException {
-      Download result = new Download(name);
-      initialize(result);
-      return result;
-    }
-
-    public class Download extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1beta2.model.DownloadFileResponse> {
-
-      private static final String REST_PATH = "v1beta2/{+name}:download";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/files/[^/]+$");
-
-      /**
-       * Download a file.
-       *
-       * Create a request for the method "media.download".
-       *
-       * This request holds the parameters needed by the the artifactregistry server.  After setting any
-       * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name Required. The name of the file to download.
-       * @since 1.13
-       */
-      protected Download(java.lang.String name) {
-        super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1beta2.model.DownloadFileResponse.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/files/[^/]+$");
-        }
-        initializeMediaDownload();
-      }
-
-      @Override
-      public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
-        super.executeMediaAndDownloadTo(outputStream);
-      }
-
-      @Override
-      public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
-        return super.executeMediaAsInputStream();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
-        return super.executeMedia();
-      }
-
-      @Override
-      public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
-        java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
-            ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
-        return new com.google.api.client.http.GenericUrl(
-            com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public Download set$Xgafv(java.lang.String $Xgafv) {
-        return (Download) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Download setAccessToken(java.lang.String accessToken) {
-        return (Download) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Download setAlt(java.lang.String alt) {
-        return (Download) super.setAlt(alt);
-      }
-
-      @Override
-      public Download setCallback(java.lang.String callback) {
-        return (Download) super.setCallback(callback);
-      }
-
-      @Override
-      public Download setFields(java.lang.String fields) {
-        return (Download) super.setFields(fields);
-      }
-
-      @Override
-      public Download setKey(java.lang.String key) {
-        return (Download) super.setKey(key);
-      }
-
-      @Override
-      public Download setOauthToken(java.lang.String oauthToken) {
-        return (Download) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Download) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Download setQuotaUser(java.lang.String quotaUser) {
-        return (Download) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Download setUploadType(java.lang.String uploadType) {
-        return (Download) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Download setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Download) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** Required. The name of the file to download. */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Required. The name of the file to download.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /** Required. The name of the file to download. */
-      public Download setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/files/[^/]+$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public Download set(String parameterName, Object value) {
-        return (Download) super.set(parameterName, value);
-      }
-    }
-
-  }
-
-  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -1975,7 +1789,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the artifactregistry server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+         * @param name The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`. For
+         *        each location in a project, repository names must be unique.
          * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.Repository}
          * @return the request
          */
@@ -2003,7 +1818,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+           * @param name The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`. For
+         *        each location in a project, repository names must be unique.
            * @param content the {@link com.google.api.services.artifactregistry.v1beta2.model.Repository}
            * @since 1.13
            */
@@ -2074,12 +1890,14 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
           /**
            * The name of the repository, for example: `projects/p1/locations/us-
-           * central1/repositories/repo1`.
+           * central1/repositories/repo1`. For each location in a project, repository names must be
+           * unique.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+         For each location in a project, repository names must be unique.
            */
           public java.lang.String getName() {
             return name;
@@ -2087,7 +1905,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
           /**
            * The name of the repository, for example: `projects/p1/locations/us-
-           * central1/repositories/repo1`.
+           * central1/repositories/repo1`. For each location in a project, repository names must be
+           * unique.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2788,6 +2607,169 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
          */
         public class Files {
 
+          /**
+           * Download a file.
+           *
+           * Create a request for the method "files.download".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the file to download.
+           * @return the request
+           */
+          public Download download(java.lang.String name) throws java.io.IOException {
+            Download result = new Download(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Download extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1beta2.model.DownloadFileResponse> {
+
+            private static final String REST_PATH = "v1beta2/{+name}:download";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/files/[^/]+$");
+
+            /**
+             * Download a file.
+             *
+             * Create a request for the method "files.download".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the file to download.
+             * @since 1.13
+             */
+            protected Download(java.lang.String name) {
+              super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1beta2.model.DownloadFileResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/files/[^/]+$");
+              }
+              initializeMediaDownload();
+            }
+
+            @Override
+            public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+              super.executeMediaAndDownloadTo(outputStream);
+            }
+
+            @Override
+            public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+              return super.executeMediaAsInputStream();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+              return super.executeMedia();
+            }
+
+            @Override
+            public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+              java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+                  ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+              return new com.google.api.client.http.GenericUrl(
+                  com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Download set$Xgafv(java.lang.String $Xgafv) {
+              return (Download) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Download setAccessToken(java.lang.String accessToken) {
+              return (Download) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Download setAlt(java.lang.String alt) {
+              return (Download) super.setAlt(alt);
+            }
+
+            @Override
+            public Download setCallback(java.lang.String callback) {
+              return (Download) super.setCallback(callback);
+            }
+
+            @Override
+            public Download setFields(java.lang.String fields) {
+              return (Download) super.setFields(fields);
+            }
+
+            @Override
+            public Download setKey(java.lang.String key) {
+              return (Download) super.setKey(key);
+            }
+
+            @Override
+            public Download setOauthToken(java.lang.String oauthToken) {
+              return (Download) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Download) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Download setQuotaUser(java.lang.String quotaUser) {
+              return (Download) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Download setUploadType(java.lang.String uploadType) {
+              return (Download) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Download setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Download) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the file to download. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the file to download.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the file to download. */
+            public Download setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/files/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Download set(String parameterName, Object value) {
+              return (Download) super.set(parameterName, value);
+            }
+          }
           /**
            * Gets a file.
            *

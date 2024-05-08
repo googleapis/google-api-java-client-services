@@ -86,7 +86,9 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
   private java.util.Map<String, java.lang.String> pubsubNotificationSettings;
 
   /**
-   * Default DLP redaction resources to be applied while ingesting conversations.
+   * Default DLP redaction resources to be applied while ingesting conversations. This applies to
+   * conversations ingested from the UploadConversation and IngestConversations endpoints, including
+   * conversations coming from CCAI Platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +96,9 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
 
   /**
    * Optional. Default Speech-to-Text resources to be used while ingesting audio files. Optional,
-   * CCAI Insights will create a default if not provided.
+   * CCAI Insights will create a default if not provided. This applies to conversations ingested
+   * from the UploadConversation and IngestConversations endpoints, including conversations coming
+   * from CCAI Platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,7 +240,9 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
   }
 
   /**
-   * Default DLP redaction resources to be applied while ingesting conversations.
+   * Default DLP redaction resources to be applied while ingesting conversations. This applies to
+   * conversations ingested from the UploadConversation and IngestConversations endpoints, including
+   * conversations coming from CCAI Platform.
    * @return value or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1RedactionConfig getRedactionConfig() {
@@ -244,7 +250,9 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
   }
 
   /**
-   * Default DLP redaction resources to be applied while ingesting conversations.
+   * Default DLP redaction resources to be applied while ingesting conversations. This applies to
+   * conversations ingested from the UploadConversation and IngestConversations endpoints, including
+   * conversations coming from CCAI Platform.
    * @param redactionConfig redactionConfig or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1Settings setRedactionConfig(GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig) {
@@ -254,7 +262,9 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
 
   /**
    * Optional. Default Speech-to-Text resources to be used while ingesting audio files. Optional,
-   * CCAI Insights will create a default if not provided.
+   * CCAI Insights will create a default if not provided. This applies to conversations ingested
+   * from the UploadConversation and IngestConversations endpoints, including conversations coming
+   * from CCAI Platform.
    * @return value or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1SpeechConfig getSpeechConfig() {
@@ -263,7 +273,9 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
 
   /**
    * Optional. Default Speech-to-Text resources to be used while ingesting audio files. Optional,
-   * CCAI Insights will create a default if not provided.
+   * CCAI Insights will create a default if not provided. This applies to conversations ingested
+   * from the UploadConversation and IngestConversations endpoints, including conversations coming
+   * from CCAI Platform.
    * @param speechConfig speechConfig or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1Settings setSpeechConfig(GoogleCloudContactcenterinsightsV1SpeechConfig speechConfig) {

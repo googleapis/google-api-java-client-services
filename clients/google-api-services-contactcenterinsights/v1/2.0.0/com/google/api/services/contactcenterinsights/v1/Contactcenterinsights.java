@@ -927,7 +927,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Creates a conversation.
+         * Creates a conversation. DEPRECATED: Use UploadConversation instead. CreateConversation does not
+         * support audio transcription or DLP redaction.
          *
          * Create a request for the method "conversations.create".
          *
@@ -952,7 +953,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a conversation.
+           * Creates a conversation. DEPRECATED: Use UploadConversation instead. CreateConversation does not
+           * support audio transcription or DLP redaction.
            *
            * Create a request for the method "conversations.create".
            *

@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * Performance data for an asset.
+ * PostgreSql extension.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,43 +27,64 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AssetPerformanceData extends com.google.api.client.json.GenericJson {
+public final class PostgreSqlExtension extends com.google.api.client.json.GenericJson {
 
   /**
-   * Daily resource usage aggregations. Contains all of the data available for an asset, up to the
-   * last 40 days. Aggregations are sorted from oldest to most recent.
+   * Required. The extension name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<DailyResourceUsageAggregation> dailyResourceUsageAggregations;
+  private java.lang.String extension;
 
   /**
-   * Daily resource usage aggregations. Contains all of the data available for an asset, up to the
-   * last 40 days. Aggregations are sorted from oldest to most recent.
+   * Required. The extension version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String version;
+
+  /**
+   * Required. The extension name.
    * @return value or {@code null} for none
    */
-  public java.util.List<DailyResourceUsageAggregation> getDailyResourceUsageAggregations() {
-    return dailyResourceUsageAggregations;
+  public java.lang.String getExtension() {
+    return extension;
   }
 
   /**
-   * Daily resource usage aggregations. Contains all of the data available for an asset, up to the
-   * last 40 days. Aggregations are sorted from oldest to most recent.
-   * @param dailyResourceUsageAggregations dailyResourceUsageAggregations or {@code null} for none
+   * Required. The extension name.
+   * @param extension extension or {@code null} for none
    */
-  public AssetPerformanceData setDailyResourceUsageAggregations(java.util.List<DailyResourceUsageAggregation> dailyResourceUsageAggregations) {
-    this.dailyResourceUsageAggregations = dailyResourceUsageAggregations;
+  public PostgreSqlExtension setExtension(java.lang.String extension) {
+    this.extension = extension;
+    return this;
+  }
+
+  /**
+   * Required. The extension version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersion() {
+    return version;
+  }
+
+  /**
+   * Required. The extension version.
+   * @param version version or {@code null} for none
+   */
+  public PostgreSqlExtension setVersion(java.lang.String version) {
+    this.version = version;
     return this;
   }
 
   @Override
-  public AssetPerformanceData set(String fieldName, Object value) {
-    return (AssetPerformanceData) super.set(fieldName, value);
+  public PostgreSqlExtension set(String fieldName, Object value) {
+    return (PostgreSqlExtension) super.set(fieldName, value);
   }
 
   @Override
-  public AssetPerformanceData clone() {
-    return (AssetPerformanceData) super.clone();
+  public PostgreSqlExtension clone() {
+    return (PostgreSqlExtension) super.clone();
   }
 
 }

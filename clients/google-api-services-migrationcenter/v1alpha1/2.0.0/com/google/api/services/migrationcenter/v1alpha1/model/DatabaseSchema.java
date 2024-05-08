@@ -30,6 +30,13 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class DatabaseSchema extends com.google.api.client.json.GenericJson {
 
   /**
+   * Details of a Mysql schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MySqlSchemaDetails mysql;
+
+  /**
    * List of details of objects by category.
    * The value may be {@code null}.
    */
@@ -43,6 +50,13 @@ public final class DatabaseSchema extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Details of a PostgreSql schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PostgreSqlSchemaDetails postgresql;
+
+  /**
    * The name of the schema.
    * The value may be {@code null}.
    */
@@ -50,11 +64,35 @@ public final class DatabaseSchema extends com.google.api.client.json.GenericJson
   private java.lang.String schemaName;
 
   /**
+   * Details of a SqlServer schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerSchemaDetails sqlServer;
+
+  /**
    * The total size of tables in bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long tablesSizeBytes;
+
+  /**
+   * Details of a Mysql schema.
+   * @return value or {@code null} for none
+   */
+  public MySqlSchemaDetails getMysql() {
+    return mysql;
+  }
+
+  /**
+   * Details of a Mysql schema.
+   * @param mysql mysql or {@code null} for none
+   */
+  public DatabaseSchema setMysql(MySqlSchemaDetails mysql) {
+    this.mysql = mysql;
+    return this;
+  }
 
   /**
    * List of details of objects by category.
@@ -74,6 +112,23 @@ public final class DatabaseSchema extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Details of a PostgreSql schema.
+   * @return value or {@code null} for none
+   */
+  public PostgreSqlSchemaDetails getPostgresql() {
+    return postgresql;
+  }
+
+  /**
+   * Details of a PostgreSql schema.
+   * @param postgresql postgresql or {@code null} for none
+   */
+  public DatabaseSchema setPostgresql(PostgreSqlSchemaDetails postgresql) {
+    this.postgresql = postgresql;
+    return this;
+  }
+
+  /**
    * The name of the schema.
    * @return value or {@code null} for none
    */
@@ -87,6 +142,23 @@ public final class DatabaseSchema extends com.google.api.client.json.GenericJson
    */
   public DatabaseSchema setSchemaName(java.lang.String schemaName) {
     this.schemaName = schemaName;
+    return this;
+  }
+
+  /**
+   * Details of a SqlServer schema.
+   * @return value or {@code null} for none
+   */
+  public SqlServerSchemaDetails getSqlServer() {
+    return sqlServer;
+  }
+
+  /**
+   * Details of a SqlServer schema.
+   * @param sqlServer sqlServer or {@code null} for none
+   */
+  public DatabaseSchema setSqlServer(SqlServerSchemaDetails sqlServer) {
+    this.sqlServer = sqlServer;
     return this;
   }
 

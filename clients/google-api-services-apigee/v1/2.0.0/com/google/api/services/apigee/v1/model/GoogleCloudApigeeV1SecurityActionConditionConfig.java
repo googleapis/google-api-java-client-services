@@ -90,6 +90,14 @@ public final class GoogleCloudApigeeV1SecurityActionConditionConfig extends com.
   private java.util.List<java.lang.String> developers;
 
   /**
+   * Optional. Act only on particular HTTP methods. E.g. A read-only API can block POST/PUT/DELETE
+   * methods. Accepted values are: GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE and PATCH.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> httpMethods;
+
+  /**
    * Optional. A list of IP addresses. This could be either IPv4 or IPv6. Limited to 100 per action.
    * The value may be {@code null}.
    */
@@ -237,6 +245,25 @@ public final class GoogleCloudApigeeV1SecurityActionConditionConfig extends com.
    */
   public GoogleCloudApigeeV1SecurityActionConditionConfig setDevelopers(java.util.List<java.lang.String> developers) {
     this.developers = developers;
+    return this;
+  }
+
+  /**
+   * Optional. Act only on particular HTTP methods. E.g. A read-only API can block POST/PUT/DELETE
+   * methods. Accepted values are: GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE and PATCH.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getHttpMethods() {
+    return httpMethods;
+  }
+
+  /**
+   * Optional. Act only on particular HTTP methods. E.g. A read-only API can block POST/PUT/DELETE
+   * methods. Accepted values are: GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE and PATCH.
+   * @param httpMethods httpMethods or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityActionConditionConfig setHttpMethods(java.util.List<java.lang.String> httpMethods) {
+    this.httpMethods = httpMethods;
     return this;
   }
 

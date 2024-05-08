@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * Details of a database instance.
+ * Mysql storage engine tables.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DatabaseInstance extends com.google.api.client.json.GenericJson {
+public final class MySqlStorageEngineDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The instance's hosts.
+   * Optional. The number of encrypted tables.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<DatabaseInstanceHost> hosts;
+  private java.lang.Integer encryptedTableCount;
 
   /**
-   * The instance's name.
+   * Required. The storage engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String instanceName;
+  private java.lang.String engine;
 
   /**
-   * The instance role in the database engine.
+   * Optional. The number of tables.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String role;
+  private java.lang.Integer tableCount;
 
   /**
-   * Optional. The instance's hosts.
+   * Optional. The number of encrypted tables.
    * @return value or {@code null} for none
    */
-  public java.util.List<DatabaseInstanceHost> getHosts() {
-    return hosts;
+  public java.lang.Integer getEncryptedTableCount() {
+    return encryptedTableCount;
   }
 
   /**
-   * Optional. The instance's hosts.
-   * @param hosts hosts or {@code null} for none
+   * Optional. The number of encrypted tables.
+   * @param encryptedTableCount encryptedTableCount or {@code null} for none
    */
-  public DatabaseInstance setHosts(java.util.List<DatabaseInstanceHost> hosts) {
-    this.hosts = hosts;
+  public MySqlStorageEngineDetails setEncryptedTableCount(java.lang.Integer encryptedTableCount) {
+    this.encryptedTableCount = encryptedTableCount;
     return this;
   }
 
   /**
-   * The instance's name.
+   * Required. The storage engine.
    * @return value or {@code null} for none
    */
-  public java.lang.String getInstanceName() {
-    return instanceName;
+  public java.lang.String getEngine() {
+    return engine;
   }
 
   /**
-   * The instance's name.
-   * @param instanceName instanceName or {@code null} for none
+   * Required. The storage engine.
+   * @param engine engine or {@code null} for none
    */
-  public DatabaseInstance setInstanceName(java.lang.String instanceName) {
-    this.instanceName = instanceName;
+  public MySqlStorageEngineDetails setEngine(java.lang.String engine) {
+    this.engine = engine;
     return this;
   }
 
   /**
-   * The instance role in the database engine.
+   * Optional. The number of tables.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRole() {
-    return role;
+  public java.lang.Integer getTableCount() {
+    return tableCount;
   }
 
   /**
-   * The instance role in the database engine.
-   * @param role role or {@code null} for none
+   * Optional. The number of tables.
+   * @param tableCount tableCount or {@code null} for none
    */
-  public DatabaseInstance setRole(java.lang.String role) {
-    this.role = role;
+  public MySqlStorageEngineDetails setTableCount(java.lang.Integer tableCount) {
+    this.tableCount = tableCount;
     return this;
   }
 
   @Override
-  public DatabaseInstance set(String fieldName, Object value) {
-    return (DatabaseInstance) super.set(fieldName, value);
+  public MySqlStorageEngineDetails set(String fieldName, Object value) {
+    return (MySqlStorageEngineDetails) super.set(fieldName, value);
   }
 
   @Override
-  public DatabaseInstance clone() {
-    return (DatabaseInstance) super.clone();
+  public MySqlStorageEngineDetails clone() {
+    return (MySqlStorageEngineDetails) super.clone();
   }
 
 }

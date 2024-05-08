@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * Performance data for an asset.
+ * Specific details for a Mysql database.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AssetPerformanceData extends com.google.api.client.json.GenericJson {
+public final class MySqlSchemaDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Daily resource usage aggregations. Contains all of the data available for an asset, up to the
-   * last 40 days. Aggregations are sorted from oldest to most recent.
+   * Optional. Mysql storage engine tables.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<DailyResourceUsageAggregation> dailyResourceUsageAggregations;
+  private java.util.List<MySqlStorageEngineDetails> storageEngines;
 
   /**
-   * Daily resource usage aggregations. Contains all of the data available for an asset, up to the
-   * last 40 days. Aggregations are sorted from oldest to most recent.
+   * Optional. Mysql storage engine tables.
    * @return value or {@code null} for none
    */
-  public java.util.List<DailyResourceUsageAggregation> getDailyResourceUsageAggregations() {
-    return dailyResourceUsageAggregations;
+  public java.util.List<MySqlStorageEngineDetails> getStorageEngines() {
+    return storageEngines;
   }
 
   /**
-   * Daily resource usage aggregations. Contains all of the data available for an asset, up to the
-   * last 40 days. Aggregations are sorted from oldest to most recent.
-   * @param dailyResourceUsageAggregations dailyResourceUsageAggregations or {@code null} for none
+   * Optional. Mysql storage engine tables.
+   * @param storageEngines storageEngines or {@code null} for none
    */
-  public AssetPerformanceData setDailyResourceUsageAggregations(java.util.List<DailyResourceUsageAggregation> dailyResourceUsageAggregations) {
-    this.dailyResourceUsageAggregations = dailyResourceUsageAggregations;
+  public MySqlSchemaDetails setStorageEngines(java.util.List<MySqlStorageEngineDetails> storageEngines) {
+    this.storageEngines = storageEngines;
     return this;
   }
 
   @Override
-  public AssetPerformanceData set(String fieldName, Object value) {
-    return (AssetPerformanceData) super.set(fieldName, value);
+  public MySqlSchemaDetails set(String fieldName, Object value) {
+    return (MySqlSchemaDetails) super.set(fieldName, value);
   }
 
   @Override
-  public AssetPerformanceData clone() {
-    return (AssetPerformanceData) super.clone();
+  public MySqlSchemaDetails clone() {
+    return (MySqlSchemaDetails) super.clone();
   }
 
 }

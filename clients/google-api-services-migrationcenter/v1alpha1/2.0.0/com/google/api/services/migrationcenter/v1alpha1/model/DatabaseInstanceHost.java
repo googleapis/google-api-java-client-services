@@ -17,7 +17,7 @@
 package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
- * Performance data for an asset.
+ * Details of a host of a database instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AssetPerformanceData extends com.google.api.client.json.GenericJson {
+public final class DatabaseInstanceHost extends com.google.api.client.json.GenericJson {
 
   /**
-   * Daily resource usage aggregations. Contains all of the data available for an asset, up to the
-   * last 40 days. Aggregations are sorted from oldest to most recent.
+   * Optional. The host name of the host.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<DailyResourceUsageAggregation> dailyResourceUsageAggregations;
+  private java.lang.String hostName;
 
   /**
-   * Daily resource usage aggregations. Contains all of the data available for an asset, up to the
-   * last 40 days. Aggregations are sorted from oldest to most recent.
+   * Optional. The host name of the host.
    * @return value or {@code null} for none
    */
-  public java.util.List<DailyResourceUsageAggregation> getDailyResourceUsageAggregations() {
-    return dailyResourceUsageAggregations;
+  public java.lang.String getHostName() {
+    return hostName;
   }
 
   /**
-   * Daily resource usage aggregations. Contains all of the data available for an asset, up to the
-   * last 40 days. Aggregations are sorted from oldest to most recent.
-   * @param dailyResourceUsageAggregations dailyResourceUsageAggregations or {@code null} for none
+   * Optional. The host name of the host.
+   * @param hostName hostName or {@code null} for none
    */
-  public AssetPerformanceData setDailyResourceUsageAggregations(java.util.List<DailyResourceUsageAggregation> dailyResourceUsageAggregations) {
-    this.dailyResourceUsageAggregations = dailyResourceUsageAggregations;
+  public DatabaseInstanceHost setHostName(java.lang.String hostName) {
+    this.hostName = hostName;
     return this;
   }
 
   @Override
-  public AssetPerformanceData set(String fieldName, Object value) {
-    return (AssetPerformanceData) super.set(fieldName, value);
+  public DatabaseInstanceHost set(String fieldName, Object value) {
+    return (DatabaseInstanceHost) super.set(fieldName, value);
   }
 
   @Override
-  public AssetPerformanceData clone() {
-    return (AssetPerformanceData) super.clone();
+  public DatabaseInstanceHost clone() {
+    return (DatabaseInstanceHost) super.clone();
   }
 
 }

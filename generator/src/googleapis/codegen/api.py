@@ -685,7 +685,8 @@ class Method(template_objects.CodeObject):
     # TODO(user): if rest_path is not set, raise a good error and fail fast.
     self.SetTemplateValue('restPath', rest_path)
 
-    if 'apiVersion' in def_dict:
+    # Check that ApiVersion field exists and is not empty string ("")
+    if 'apiVersion' in def_dict and def_dict.get('apiVersion'):
       self.SetTemplateValue('apiVersion', def_dict.get('apiVersion'))
 
     # Figure out the input and output types and schemas for this method.

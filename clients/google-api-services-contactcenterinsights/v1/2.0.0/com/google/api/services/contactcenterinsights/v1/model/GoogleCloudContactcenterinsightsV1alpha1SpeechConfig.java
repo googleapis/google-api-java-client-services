@@ -17,7 +17,9 @@
 package com.google.api.services.contactcenterinsights.v1.model;
 
 /**
- * Speech-to-Text configuration.
+ * Speech-to-Text configuration. Speech-to-Text settings are applied to conversations ingested from
+ * the UploadConversation and IngestConversations endpoints, including conversation coming from CCAI
+ * Platform. They are not applied to conversations ingested from the CreateConversation endpoint.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Insights API. For a detailed

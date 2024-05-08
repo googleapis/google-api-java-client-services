@@ -130,6 +130,13 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The resource name of the metric: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceName;
+
+  /**
    * Output only. The last update timestamp of the metric.This field may not be present for older
    * metrics.
    * The value may be {@code null}.
@@ -378,6 +385,23 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
    */
   public LogMetric setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the metric: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceName() {
+    return resourceName;
+  }
+
+  /**
+   * Output only. The resource name of the metric: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+   * @param resourceName resourceName or {@code null} for none
+   */
+  public LogMetric setResourceName(java.lang.String resourceName) {
+    this.resourceName = resourceName;
     return this;
   }
 

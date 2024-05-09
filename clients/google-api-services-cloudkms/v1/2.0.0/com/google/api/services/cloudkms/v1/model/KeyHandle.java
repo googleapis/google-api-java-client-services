@@ -33,14 +33,17 @@ public final class KeyHandle extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Name of a CryptoKey that has been provisioned for Customer Managed Encryption Key
-   * (CMEK) use in the KeyHandle's project and location for the requested resource type.
+   * (CMEK) use in the KeyHandle project and location for the requested resource type. The CryptoKey
+   * project will reflect the value configured in the AutokeyConfig on the resource project's
+   * ancestor folder at the time of the KeyHandle creation. If more than one ancestor folder has a
+   * configured AutokeyConfig, the nearest of these configurations is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKey;
 
   /**
-   * Output only. Identifier. Name of the [KeyHandle] resource, e.g.
+   * Output only. Identifier. Name of the KeyHandle resource, e.g.
    * `projects/{PROJECT_ID}/locations/{LOCATION}/keyHandles/{KEY_HANDLE_ID}`.
    * The value may be {@code null}.
    */
@@ -57,7 +60,10 @@ public final class KeyHandle extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Name of a CryptoKey that has been provisioned for Customer Managed Encryption Key
-   * (CMEK) use in the KeyHandle's project and location for the requested resource type.
+   * (CMEK) use in the KeyHandle project and location for the requested resource type. The CryptoKey
+   * project will reflect the value configured in the AutokeyConfig on the resource project's
+   * ancestor folder at the time of the KeyHandle creation. If more than one ancestor folder has a
+   * configured AutokeyConfig, the nearest of these configurations is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKey() {
@@ -66,7 +72,10 @@ public final class KeyHandle extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Name of a CryptoKey that has been provisioned for Customer Managed Encryption Key
-   * (CMEK) use in the KeyHandle's project and location for the requested resource type.
+   * (CMEK) use in the KeyHandle project and location for the requested resource type. The CryptoKey
+   * project will reflect the value configured in the AutokeyConfig on the resource project's
+   * ancestor folder at the time of the KeyHandle creation. If more than one ancestor folder has a
+   * configured AutokeyConfig, the nearest of these configurations is used.
    * @param kmsKey kmsKey or {@code null} for none
    */
   public KeyHandle setKmsKey(java.lang.String kmsKey) {
@@ -75,7 +84,7 @@ public final class KeyHandle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Identifier. Name of the [KeyHandle] resource, e.g.
+   * Output only. Identifier. Name of the KeyHandle resource, e.g.
    * `projects/{PROJECT_ID}/locations/{LOCATION}/keyHandles/{KEY_HANDLE_ID}`.
    * @return value or {@code null} for none
    */
@@ -84,7 +93,7 @@ public final class KeyHandle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Identifier. Name of the [KeyHandle] resource, e.g.
+   * Output only. Identifier. Name of the KeyHandle resource, e.g.
    * `projects/{PROJECT_ID}/locations/{LOCATION}/keyHandles/{KEY_HANDLE_ID}`.
    * @param name name or {@code null} for none
    */

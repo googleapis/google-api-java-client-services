@@ -41,6 +41,14 @@ public final class NodePoolAutoConfig extends com.google.api.client.json.Generic
   private NetworkTags networkTags;
 
   /**
+   * NodeKubeletConfig controls the defaults for autoprovisioned node-pools. Currently only
+   * `insecure_kubelet_readonly_port_enabled` can be set here.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeKubeletConfig nodeKubeletConfig;
+
+  /**
    * Resource manager tag keys and values to be attached to the nodes for managing Compute Engine
    * firewalls using Network Firewall Policies.
    * The value may be {@code null}.
@@ -66,6 +74,25 @@ public final class NodePoolAutoConfig extends com.google.api.client.json.Generic
    */
   public NodePoolAutoConfig setNetworkTags(NetworkTags networkTags) {
     this.networkTags = networkTags;
+    return this;
+  }
+
+  /**
+   * NodeKubeletConfig controls the defaults for autoprovisioned node-pools. Currently only
+   * `insecure_kubelet_readonly_port_enabled` can be set here.
+   * @return value or {@code null} for none
+   */
+  public NodeKubeletConfig getNodeKubeletConfig() {
+    return nodeKubeletConfig;
+  }
+
+  /**
+   * NodeKubeletConfig controls the defaults for autoprovisioned node-pools. Currently only
+   * `insecure_kubelet_readonly_port_enabled` can be set here.
+   * @param nodeKubeletConfig nodeKubeletConfig or {@code null} for none
+   */
+  public NodePoolAutoConfig setNodeKubeletConfig(NodeKubeletConfig nodeKubeletConfig) {
+    this.nodeKubeletConfig = nodeKubeletConfig;
     return this;
   }
 

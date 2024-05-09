@@ -235,6 +235,13 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   private java.lang.String extendedSupportStart;
 
   /**
+   * Output only. Fan information for the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FanInfo> fanInfo;
+
+  /**
    * The Chrome device's firmware version.
    * The value may be {@code null}.
    */
@@ -868,6 +875,23 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   public ChromeOsDevice setExtendedSupportStart(java.lang.String extendedSupportStart) {
     this.extendedSupportStart = extendedSupportStart;
+    return this;
+  }
+
+  /**
+   * Output only. Fan information for the device.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FanInfo> getFanInfo() {
+    return fanInfo;
+  }
+
+  /**
+   * Output only. Fan information for the device.
+   * @param fanInfo fanInfo or {@code null} for none
+   */
+  public ChromeOsDevice setFanInfo(java.util.List<FanInfo> fanInfo) {
+    this.fanInfo = fanInfo;
     return this;
   }
 

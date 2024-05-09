@@ -2715,8 +2715,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Updates a membership. Requires [user authentication](https://developers.google.com/workspace/chat
-       * /authenticate-authorize-chat-user).
+       * Updates a membership. For an example, see [Update a user's membership in a
+       * space](https://developers.google.com/workspace/chat/update-members). Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
        *
        * Create a request for the method "members.patch".
        *
@@ -2741,7 +2742,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^spaces/[^/]+/members/[^/]+$");
 
         /**
-         * Updates a membership. Requires [user
+         * Updates a membership. For an example, see [Update a user's membership in a
+         * space](https://developers.google.com/workspace/chat/update-members). Requires [user
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
          *
          * Create a request for the method "members.patch".
@@ -5620,8 +5622,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * Returns details about a user's read state within a space, used to identify read and unread
-       * messages. Requires [user authentication](https://developers.google.com/workspace/chat
-       * /authenticate-authorize-chat-user).
+       * messages. For an example, see [Get details about a user's space read
+       * state](https://developers.google.com/workspace/chat/get-space-read-state). Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
        *
        * Create a request for the method "spaces.getSpaceReadState".
        *
@@ -5651,8 +5654,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Returns details about a user's read state within a space, used to identify read and unread
-         * messages. Requires [user authentication](https://developers.google.com/workspace/chat
-         * /authenticate-authorize-chat-user).
+         * messages. For an example, see [Get details about a user's space read
+         * state](https://developers.google.com/workspace/chat/get-space-read-state). Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
          *
          * Create a request for the method "spaces.getSpaceReadState".
          *
@@ -5790,9 +5794,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Updates a user's read state within a space, used to identify read and unread messages. Requires
-       * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * user).
+       * Updates a user's read state within a space, used to identify read and unread messages. For an
+       * example, see [Update a user's space read state](https://developers.google.com/workspace/chat
+       * /update-space-read-state). Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
        *
        * Create a request for the method "spaces.updateSpaceReadState".
        *
@@ -5818,9 +5823,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^users/[^/]+/spaces/[^/]+/spaceReadState$");
 
         /**
-         * Updates a user's read state within a space, used to identify read and unread messages. Requires
-         * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-         * user).
+         * Updates a user's read state within a space, used to identify read and unread messages. For an
+         * example, see [Update a user's space read state](https://developers.google.com/workspace/chat
+         * /update-space-read-state). Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
          *
          * Create a request for the method "spaces.updateSpaceReadState".
          *
@@ -5992,8 +5998,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Returns details about a user's read state within a thread, used to identify read and unread
-         * messages. Requires [user authentication](https://developers.google.com/workspace/chat
-         * /authenticate-authorize-chat-user).
+         * messages. For an example, see [Get details about a user's thread read
+         * state](https://developers.google.com/workspace/chat/get-thread-read-state). Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
          *
          * Create a request for the method "threads.getThreadReadState".
          *
@@ -6024,8 +6031,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
           /**
            * Returns details about a user's read state within a thread, used to identify read and unread
-           * messages. Requires [user authentication](https://developers.google.com/workspace/chat
-           * /authenticate-authorize-chat-user).
+           * messages. For an example, see [Get details about a user's thread read
+           * state](https://developers.google.com/workspace/chat/get-thread-read-state). Requires [user
+           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
            *
            * Create a request for the method "threads.getThreadReadState".
            *

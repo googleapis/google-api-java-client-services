@@ -44,6 +44,13 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   private java.lang.String evaluationId;
 
   /**
+   * Optional. External data sources
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ExternalDataSources> externalDataSources;
+
+  /**
    * Output only. [Output only] Inventory time stamp
    * The value may be {@code null}.
    */
@@ -118,6 +125,23 @@ public final class Execution extends com.google.api.client.json.GenericJson {
    */
   public Execution setEvaluationId(java.lang.String evaluationId) {
     this.evaluationId = evaluationId;
+    return this;
+  }
+
+  /**
+   * Optional. External data sources
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ExternalDataSources> getExternalDataSources() {
+    return externalDataSources;
+  }
+
+  /**
+   * Optional. External data sources
+   * @param externalDataSources externalDataSources or {@code null} for none
+   */
+  public Execution setExternalDataSources(java.util.List<ExternalDataSources> externalDataSources) {
+    this.externalDataSources = externalDataSources;
     return this;
   }
 

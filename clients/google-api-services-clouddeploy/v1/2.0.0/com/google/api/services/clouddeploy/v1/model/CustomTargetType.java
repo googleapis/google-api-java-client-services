@@ -91,7 +91,8 @@ public final class CustomTargetType extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Name of the `CustomTargetType`. Format is
-   * `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+   * `projects/{project}/locations/{location}/customTargetTypes/{customTargetType}`. The
+   * `customTargetType` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -250,7 +251,8 @@ public final class CustomTargetType extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Name of the `CustomTargetType`. Format is
-   * `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+   * `projects/{project}/locations/{location}/customTargetTypes/{customTargetType}`. The
+   * `customTargetType` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -259,7 +261,8 @@ public final class CustomTargetType extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Name of the `CustomTargetType`. Format is
-   * `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+   * `projects/{project}/locations/{location}/customTargetTypes/{customTargetType}`. The
+   * `customTargetType` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * @param name name or {@code null} for none
    */
   public CustomTargetType setName(java.lang.String name) {

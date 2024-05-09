@@ -31,7 +31,7 @@ public final class CreateChildRolloutJobRun extends com.google.api.client.json.G
 
   /**
    * Output only. Name of the `ChildRollout`. Format is `projects/{project}/locations/{location}/del
-   * iveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/a-z{0,62}`.
+   * iveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class CreateChildRolloutJobRun extends com.google.api.client.json.G
 
   /**
    * Output only. Name of the `ChildRollout`. Format is `projects/{project}/locations/{location}/del
-   * iveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/a-z{0,62}`.
+   * iveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRollout() {
@@ -55,7 +55,7 @@ public final class CreateChildRolloutJobRun extends com.google.api.client.json.G
 
   /**
    * Output only. Name of the `ChildRollout`. Format is `projects/{project}/locations/{location}/del
-   * iveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/a-z{0,62}`.
+   * iveryPipelines/{deliveryPipeline}/releases/{release}/rollouts/{rollout}`.
    * @param rollout rollout or {@code null} for none
    */
   public CreateChildRolloutJobRun setRollout(java.lang.String rollout) {

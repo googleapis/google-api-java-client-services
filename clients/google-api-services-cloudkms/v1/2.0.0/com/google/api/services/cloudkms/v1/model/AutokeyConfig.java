@@ -32,11 +32,12 @@ public final class AutokeyConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Name of the key project, e.g. `projects/{PROJECT_ID}` or `projects/{PROJECT_NUMBER}`,
-   * where Cloud KMS Autokey will provision new CryptoKeys. On UpdateAutokeyConfig, the caller will
-   * require `cloudkms.cryptoKeys.setIamPolicy` permission on this key project. Once configured, for
-   * Cloud KMS Autokey to function properly, this key project must have the Cloud KMS API activated
-   * and the Cloud KMS Service Agent for this key project must be granted the `cloudkms.admin` role
-   * (or pertinent permissions).
+   * where Cloud KMS Autokey will provision a new CryptoKey when a KeyHandle is created. On
+   * UpdateAutokeyConfig, the caller will require `cloudkms.cryptoKeys.setIamPolicy` permission on
+   * this key project. Once configured, for Cloud KMS Autokey to function properly, this key project
+   * must have the Cloud KMS API activated and the Cloud KMS Service Agent for this key project must
+   * be granted the `cloudkms.admin` role (or pertinent permissions). A request with an empty key
+   * project field will clear the configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,11 +52,12 @@ public final class AutokeyConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Name of the key project, e.g. `projects/{PROJECT_ID}` or `projects/{PROJECT_NUMBER}`,
-   * where Cloud KMS Autokey will provision new CryptoKeys. On UpdateAutokeyConfig, the caller will
-   * require `cloudkms.cryptoKeys.setIamPolicy` permission on this key project. Once configured, for
-   * Cloud KMS Autokey to function properly, this key project must have the Cloud KMS API activated
-   * and the Cloud KMS Service Agent for this key project must be granted the `cloudkms.admin` role
-   * (or pertinent permissions).
+   * where Cloud KMS Autokey will provision a new CryptoKey when a KeyHandle is created. On
+   * UpdateAutokeyConfig, the caller will require `cloudkms.cryptoKeys.setIamPolicy` permission on
+   * this key project. Once configured, for Cloud KMS Autokey to function properly, this key project
+   * must have the Cloud KMS API activated and the Cloud KMS Service Agent for this key project must
+   * be granted the `cloudkms.admin` role (or pertinent permissions). A request with an empty key
+   * project field will clear the configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyProject() {
@@ -64,11 +66,12 @@ public final class AutokeyConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Name of the key project, e.g. `projects/{PROJECT_ID}` or `projects/{PROJECT_NUMBER}`,
-   * where Cloud KMS Autokey will provision new CryptoKeys. On UpdateAutokeyConfig, the caller will
-   * require `cloudkms.cryptoKeys.setIamPolicy` permission on this key project. Once configured, for
-   * Cloud KMS Autokey to function properly, this key project must have the Cloud KMS API activated
-   * and the Cloud KMS Service Agent for this key project must be granted the `cloudkms.admin` role
-   * (or pertinent permissions).
+   * where Cloud KMS Autokey will provision a new CryptoKey when a KeyHandle is created. On
+   * UpdateAutokeyConfig, the caller will require `cloudkms.cryptoKeys.setIamPolicy` permission on
+   * this key project. Once configured, for Cloud KMS Autokey to function properly, this key project
+   * must have the Cloud KMS API activated and the Cloud KMS Service Agent for this key project must
+   * be granted the `cloudkms.admin` role (or pertinent permissions). A request with an empty key
+   * project field will clear the configuration.
    * @param keyProject keyProject or {@code null} for none
    */
   public AutokeyConfig setKeyProject(java.lang.String keyProject) {

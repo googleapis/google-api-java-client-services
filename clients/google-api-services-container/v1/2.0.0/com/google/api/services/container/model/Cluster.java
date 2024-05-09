@@ -506,6 +506,20 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private ResourceUsageExportConfig resourceUsageExportConfig;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Enable/Disable Security Posture API features for the cluster.
    * The value may be {@code null}.
    */
@@ -1709,6 +1723,40 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setResourceUsageExportConfig(ResourceUsageExportConfig resourceUsageExportConfig) {
     this.resourceUsageExportConfig = resourceUsageExportConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public Cluster setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Cluster setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

@@ -141,7 +141,10 @@ public class {{ method.className }} extends {{ api.className }}Request<{{ method
     initializeMediaDownload();
   {% endif %}
   {% if method.apiVersion %}
-    getRequestHeaders().set(API_VERSION_HEADER, API_VERSION);
+    com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+    if (headers.get(API_VERSION_HEADER) == null) {
+      headers.set(API_VERSION_HEADER, API_VERSION);
+    }
   {% endif %}
   }
 {% endfilter %}
@@ -191,6 +194,12 @@ public class {{ method.className }} extends {{ api.className }}Request<{{ method
     com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
     initializeMediaUpload(mediaContent);
   {% call_template _alt_def method=method %}
+  {% if method.apiVersion %}
+    com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+    if (headers.get(API_VERSION_HEADER) == null) {
+      headers.set(API_VERSION_HEADER, API_VERSION);
+    }
+  {% endif %}
   }
 {% endif %}
 {% endfilter %}

@@ -1736,7 +1736,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Optional. Name of the `CustomTargetType`. Format is
-         *        `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+         *        `projects/{project}/locations/{location}/customTargetTypes/{customTargetType}`. The
+         *        `customTargetType` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
          * @param content the {@link com.google.api.services.clouddeploy.v1.model.CustomTargetType}
          * @return the request
          */
@@ -1765,7 +1766,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Optional. Name of the `CustomTargetType`. Format is
-         *        `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+         *        `projects/{project}/locations/{location}/customTargetTypes/{customTargetType}`. The
+         *        `customTargetType` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.CustomTargetType}
            * @since 1.13
            */
@@ -1836,13 +1838,15 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Optional. Name of the `CustomTargetType`. Format is
-           * `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+           * `projects/{project}/locations/{location}/customTargetTypes/{customTargetType}`. The
+           * `customTargetType` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Optional. Name of the `CustomTargetType`. Format is
-         `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+         `projects/{project}/locations/{location}/customTargetTypes/{customTargetType}`. The
+         `customTargetType` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
            */
           public java.lang.String getName() {
             return name;
@@ -1850,7 +1854,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Optional. Name of the `CustomTargetType`. Format is
-           * `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+           * `projects/{project}/locations/{location}/customTargetTypes/{customTargetType}`. The
+           * `customTargetType` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3235,7 +3240,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Optional. Name of the `DeliveryPipeline`. Format is
-         *        `projects/{project}/locations/{location}/deliveryPipelines/a-z{0,62}`.
+         *        `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}`. The
+         *        `deliveryPipeline` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
          * @param content the {@link com.google.api.services.clouddeploy.v1.model.DeliveryPipeline}
          * @return the request
          */
@@ -3264,7 +3270,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Optional. Name of the `DeliveryPipeline`. Format is
-         *        `projects/{project}/locations/{location}/deliveryPipelines/a-z{0,62}`.
+         *        `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}`. The
+         *        `deliveryPipeline` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.DeliveryPipeline}
            * @since 1.13
            */
@@ -3335,13 +3342,15 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Optional. Name of the `DeliveryPipeline`. Format is
-           * `projects/{project}/locations/{location}/deliveryPipelines/a-z{0,62}`.
+           * `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}`. The
+           * `deliveryPipeline` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Optional. Name of the `DeliveryPipeline`. Format is
-         `projects/{project}/locations/{location}/deliveryPipelines/a-z{0,62}`.
+         `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}`. The
+         `deliveryPipeline` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
            */
           public java.lang.String getName() {
             return name;
@@ -3349,7 +3358,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Optional. Name of the `DeliveryPipeline`. Format is
-           * `projects/{project}/locations/{location}/deliveryPipelines/a-z{0,62}`.
+           * `projects/{project}/locations/{location}/deliveryPipelines/{deliveryPipeline}`. The
+           * `deliveryPipeline` component must match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -10002,7 +10012,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Optional. Name of the `Target`. Format is
-         *        `projects/{project}/locations/{location}/targets/a-z{0,62}`.
+         *        `projects/{project}/locations/{location}/targets/{target}`. The `target` component must
+         *        match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
          * @param content the {@link com.google.api.services.clouddeploy.v1.model.Target}
          * @return the request
          */
@@ -10031,7 +10042,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Optional. Name of the `Target`. Format is
-         *        `projects/{project}/locations/{location}/targets/a-z{0,62}`.
+         *        `projects/{project}/locations/{location}/targets/{target}`. The `target` component must
+         *        match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
            * @param content the {@link com.google.api.services.clouddeploy.v1.model.Target}
            * @since 1.13
            */
@@ -10102,13 +10114,15 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Optional. Name of the `Target`. Format is
-           * `projects/{project}/locations/{location}/targets/a-z{0,62}`.
+           * `projects/{project}/locations/{location}/targets/{target}`. The `target` component must
+           * match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Optional. Name of the `Target`. Format is
-         `projects/{project}/locations/{location}/targets/a-z{0,62}`.
+         `projects/{project}/locations/{location}/targets/{target}`. The `target` component must match
+         `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
            */
           public java.lang.String getName() {
             return name;
@@ -10116,7 +10130,8 @@ public class CloudDeploy extends com.google.api.client.googleapis.services.json.
 
           /**
            * Optional. Name of the `Target`. Format is
-           * `projects/{project}/locations/{location}/targets/a-z{0,62}`.
+           * `projects/{project}/locations/{location}/targets/{target}`. The `target` component must
+           * match `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

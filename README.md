@@ -264,34 +264,7 @@ for how to use credentials with google-http-client and
 
 ## How the code is updated and published
 
-When a change is made in the API definitions, the following events happens:
-
-1. The Discovery documents are maintained within Google ([details](http://go/api-discovery)).
-2. [The discovery-artifact-manager repository](https://github.com/googleapis/discovery-artifact-manager) has
-   [update-discoveries job](https://github.com/googleapis/discovery-artifact-manager/blob/master/.github/workflows/update-disco.yml)
-   that copies the definition files from https://discovery.googleapis.com/discovery/v1/apis to
-   the repository.
-3. This google-api-java-client-services repository has ([codegen workflow](
-   https://github.com/googleapis/google-api-java-client-services/blob/main/.github/workflows/codegen.yaml)).
-   This daily workflow has the following jobs:
-    - **discovery**: It uses the discovery-artifact-manager repository's [List discovery services workflow](
-      https://github.com/googleapis/discovery-artifact-manager/blob/master/.github/workflows/list-services.yml)
-      to list the service names.
-      Example values in the returned array include "storage" (from `discoveries/storage.v1.json`) and "admin"
-      (from `discoveries/admin.datatransfer_v1.json`).
-    - **total_service_size_check**: This job ensures the size of the service name array does not exceed 300
-      (00:30 to 02:30 implies 3 batches of size 100); otherwise it fails.
-      As of November 2023, the size of the service name array is 269.
-    - **batch** This job splits the service names into chunks of maximum 100 and returns an array containing the chunks.
-      This is to avoid one job that is too long to finish and also to avoid hitting the maximum parallel job limit of Github actions (256).
-    - **generate**: At the end, this job runs the code generator for each service in the chunk whose array index
-      corresponds to the hour of the day. For details, see [codegen.yaml](
-      https://github.com/googleapis/google-api-java-client-services/blob/main/.github/workflows/codegen.yaml).
-      If there are code changes, this job creates pull requests
-      (Example: [#18860](https://github.com/googleapis/google-api-java-client-services/pull/18860)).
-4. The yoshi-approver and merge-on-green bots merge the pull requests automatically.
-5. [The Kokoro job](http://fusion2/search?q=google-api-java-client-services%2Frelease&s=p)
-   publishes the libraries in this repository.
+See [document](http://go/java-apiary-clients).
 
 ## Generating the API clients locally
 

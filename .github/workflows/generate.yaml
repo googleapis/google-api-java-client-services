@@ -4,11 +4,13 @@ on:
       services:
         required: true
         type: string
+        description: A JSON array of service names. E.g., ["aiplatform"]
   workflow_call:
     inputs:
       services:
         required: true
         type: string
+        description: A JSON array of service names. E.g., ["aiplatform"]
 
 name: generate
 jobs:

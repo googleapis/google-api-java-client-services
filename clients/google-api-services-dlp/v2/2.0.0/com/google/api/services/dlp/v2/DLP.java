@@ -2988,7 +2988,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Search#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Parent name, typically an organization, without location. For example:
-         *        "organizations/12345678".
+         *        `organizations/12345678`.
          * @return the request
          */
         public Search search(java.lang.String parent) throws java.io.IOException {
@@ -3015,7 +3015,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Parent name, typically an organization, without location. For example:
-         *        "organizations/12345678".
+         *        `organizations/12345678`.
            * @since 1.13
            */
           protected Search(java.lang.String parent) {
@@ -3095,13 +3095,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent name, typically an organization, without location. For example:
-           * "organizations/12345678".
+           * `organizations/12345678`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent name, typically an organization, without location. For example:
-         "organizations/12345678".
+         `organizations/12345678`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -3109,7 +3109,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent name, typically an organization, without location. For example:
-           * "organizations/12345678".
+           * `organizations/12345678`.
            */
           public Search setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -15257,7 +15257,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name in the format: "projects/{project}/locations/{location}".
+         * @param parent Required. Parent resource name in the format: `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateConnectionRequest}
          * @return the request
          */
@@ -15284,7 +15284,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name in the format: "projects/{project}/locations/{location}".
+           * @param parent Required. Parent resource name in the format: `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateConnectionRequest}
            * @since 1.13
            */
@@ -15355,12 +15355,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name in the format:
-           * "projects/{project}/locations/{location}".
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent resource name in the format: "projects/{project}/locations/{location}".
+          /** Required. Parent resource name in the format: `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -15368,7 +15368,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name in the format:
-           * "projects/{project}/locations/{location}".
+           * `projects/{project}/locations/{location}`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -15394,7 +15394,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. Resource name of the Connection to be deleted, in the format:
-         *        "projects/{project}/locations/{location}/connections/{connection}".
+         *        `projects/{project}/locations/{location}/connections/{connection}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -15421,7 +15421,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Resource name of the Connection to be deleted, in the format:
-         *        "projects/{project}/locations/{location}/connections/{connection}".
+         *        `projects/{project}/locations/{location}/connections/{connection}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -15491,13 +15491,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name of the Connection to be deleted, in the format:
-           * "projects/{project}/locations/{location}/connections/{connection}".
+           * `projects/{project}/locations/{location}/connections/{connection}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Resource name of the Connection to be deleted, in the format:
-         "projects/{project}/locations/{location}/connections/{connection}".
+         `projects/{project}/locations/{location}/connections/{connection}`.
            */
           public java.lang.String getName() {
             return name;
@@ -15505,7 +15505,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name of the Connection to be deleted, in the format:
-           * "projects/{project}/locations/{location}/connections/{connection}".
+           * `projects/{project}/locations/{location}/connections/{connection}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -15531,7 +15531,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Resource name in the format:
-         *        "projects/{project}/locations/{location}/connections/{connection}".
+         *        `projects/{project}/locations/{location}/connections/{connection}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -15558,7 +15558,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Resource name in the format:
-         *        "projects/{project}/locations/{location}/connections/{connection}".
+         *        `projects/{project}/locations/{location}/connections/{connection}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -15638,13 +15638,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name in the format:
-           * "projects/{project}/locations/{location}/connections/{connection}".
+           * `projects/{project}/locations/{location}/connections/{connection}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Resource name in the format:
-         "projects/{project}/locations/{location}/connections/{connection}".
+         `projects/{project}/locations/{location}/connections/{connection}`.
            */
           public java.lang.String getName() {
             return name;
@@ -15652,7 +15652,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name in the format:
-           * "projects/{project}/locations/{location}/connections/{connection}".
+           * `projects/{project}/locations/{location}/connections/{connection}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -15677,7 +15677,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent name, for example: "projects/project-id/locations/global".
+         * @param parent Required. Parent name, for example: `projects/project-id/locations/global`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -15703,7 +15703,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent name, for example: "projects/project-id/locations/global".
+           * @param parent Required. Parent name, for example: `projects/project-id/locations/global`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -15781,17 +15781,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent name, for example: "projects/project-id/locations/global". */
+          /** Required. Parent name, for example: `projects/project-id/locations/global`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent name, for example: "projects/project-id/locations/global".
+          /** Required. Parent name, for example: `projects/project-id/locations/global`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent name, for example: "projects/project-id/locations/global". */
+          /** Required. Parent name, for example: `projects/project-id/locations/global`. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -15871,7 +15871,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Required. Resource name in the format:
-         *        "projects/{project}/locations/{location}/connections/{connection}".
+         *        `projects/{project}/locations/{location}/connections/{connection}`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateConnectionRequest}
          * @return the request
          */
@@ -15899,7 +15899,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Resource name in the format:
-         *        "projects/{project}/locations/{location}/connections/{connection}".
+         *        `projects/{project}/locations/{location}/connections/{connection}`.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateConnectionRequest}
            * @since 1.13
            */
@@ -15970,13 +15970,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name in the format:
-           * "projects/{project}/locations/{location}/connections/{connection}".
+           * `projects/{project}/locations/{location}/connections/{connection}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Resource name in the format:
-         "projects/{project}/locations/{location}/connections/{connection}".
+         `projects/{project}/locations/{location}/connections/{connection}`.
            */
           public java.lang.String getName() {
             return name;
@@ -15984,7 +15984,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Resource name in the format:
-           * "projects/{project}/locations/{location}/connections/{connection}".
+           * `projects/{project}/locations/{location}/connections/{connection}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -16010,7 +16010,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Search#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Parent name, typically an organization, without location. For example:
-         *        "organizations/12345678".
+         *        `organizations/12345678`.
          * @return the request
          */
         public Search search(java.lang.String parent) throws java.io.IOException {
@@ -16037,7 +16037,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Parent name, typically an organization, without location. For example:
-         *        "organizations/12345678".
+         *        `organizations/12345678`.
            * @since 1.13
            */
           protected Search(java.lang.String parent) {
@@ -16117,13 +16117,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent name, typically an organization, without location. For example:
-           * "organizations/12345678".
+           * `organizations/12345678`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent name, typically an organization, without location. For example:
-         "organizations/12345678".
+         `organizations/12345678`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -16131,7 +16131,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent name, typically an organization, without location. For example:
-           * "organizations/12345678".
+           * `organizations/12345678`.
            */
           public Search setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

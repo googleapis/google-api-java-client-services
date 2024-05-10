@@ -42,8 +42,8 @@ public final class GooglePrivacyDlpV2CloudSqlProperties extends com.google.api.c
    * connection per instance is allowed. This can only be set at creation time, and cannot be
    * updated. It is an error to use a connection_name from different project or region than the one
    * that holds the connection. For example, a Connection resource for Cloud SQL connection_name
-   * "project-id:us-central1:sql-instance" must be created under the parent "projects/project-
-   * id/locations/us-central1"
+   * `project-id:us-central1:sql-instance` must be created under the parent `projects/project-
+   * id/locations/us-central1`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +92,8 @@ public final class GooglePrivacyDlpV2CloudSqlProperties extends com.google.api.c
    * connection per instance is allowed. This can only be set at creation time, and cannot be
    * updated. It is an error to use a connection_name from different project or region than the one
    * that holds the connection. For example, a Connection resource for Cloud SQL connection_name
-   * "project-id:us-central1:sql-instance" must be created under the parent "projects/project-
-   * id/locations/us-central1"
+   * `project-id:us-central1:sql-instance` must be created under the parent `projects/project-
+   * id/locations/us-central1`
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectionName() {
@@ -105,8 +105,8 @@ public final class GooglePrivacyDlpV2CloudSqlProperties extends com.google.api.c
    * connection per instance is allowed. This can only be set at creation time, and cannot be
    * updated. It is an error to use a connection_name from different project or region than the one
    * that holds the connection. For example, a Connection resource for Cloud SQL connection_name
-   * "project-id:us-central1:sql-instance" must be created under the parent "projects/project-
-   * id/locations/us-central1"
+   * `project-id:us-central1:sql-instance` must be created under the parent `projects/project-
+   * id/locations/us-central1`
    * @param connectionName connectionName or {@code null} for none
    */
   public GooglePrivacyDlpV2CloudSqlProperties setConnectionName(java.lang.String connectionName) {

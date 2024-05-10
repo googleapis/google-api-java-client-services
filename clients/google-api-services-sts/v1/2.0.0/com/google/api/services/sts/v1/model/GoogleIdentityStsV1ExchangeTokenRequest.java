@@ -59,8 +59,9 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   private java.lang.String options;
 
   /**
-   * Required. An identifier for the type of requested security token. Must be
-   * `urn:ietf:params:oauth:token-type:access_token`.
+   * Required. An identifier for the type of requested security token. Can be `urn:ietf:params:oauth
+   * :token-type:access_token` or `urn:ietf:params:oauth:token-
+   * type:access_boundary_intermediate_token`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,8 +222,9 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   }
 
   /**
-   * Required. An identifier for the type of requested security token. Must be
-   * `urn:ietf:params:oauth:token-type:access_token`.
+   * Required. An identifier for the type of requested security token. Can be `urn:ietf:params:oauth
+   * :token-type:access_token` or `urn:ietf:params:oauth:token-
+   * type:access_boundary_intermediate_token`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestedTokenType() {
@@ -230,8 +232,9 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   }
 
   /**
-   * Required. An identifier for the type of requested security token. Must be
-   * `urn:ietf:params:oauth:token-type:access_token`.
+   * Required. An identifier for the type of requested security token. Can be `urn:ietf:params:oauth
+   * :token-type:access_token` or `urn:ietf:params:oauth:token-
+   * type:access_boundary_intermediate_token`.
    * @param requestedTokenType requestedTokenType or {@code null} for none
    */
   public GoogleIdentityStsV1ExchangeTokenRequest setRequestedTokenType(java.lang.String requestedTokenType) {

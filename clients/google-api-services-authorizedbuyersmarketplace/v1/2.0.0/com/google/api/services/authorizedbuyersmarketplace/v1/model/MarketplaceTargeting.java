@@ -17,9 +17,9 @@
 package com.google.api.services.authorizedbuyersmarketplace.v1.model;
 
 /**
- * Targeting represents different criteria that can be used to target inventory. For example, they
- * can choose to target inventory only if the user is in the US. Multiple types of targeting are
- * always applied as a logical AND, unless noted otherwise.
+ * Targeting represents different criteria that can be used to target deals or auction packages. For
+ * example, they can choose to target inventory only if the user is in the US. Multiple types of
+ * targeting are always applied as a logical AND, unless noted otherwise.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Authorized Buyers Marketplace API. For a detailed
@@ -38,6 +38,14 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private DayPartTargeting daypartTargeting;
+
+  /**
+   * Output only. The sensitive content category label IDs excluded. Refer to this file
+   * https://storage.googleapis.com/adx-rtb-dictionaries/content-labels.txt for category IDs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> excludedSensitiveCategoryIds;
 
   /**
    * Output only. Geo criteria IDs to be included/excluded.
@@ -83,6 +91,14 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   private CriteriaTargeting userListTargeting;
 
   /**
+   * Output only. The verticals included or excluded as defined in https://developers.google.com
+   * /authorized-buyers/rtb/downloads/publisher-verticals
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CriteriaTargeting verticalTargeting;
+
+  /**
    * Output only. Video targeting information.
    * The value may be {@code null}.
    */
@@ -103,6 +119,25 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
    */
   public MarketplaceTargeting setDaypartTargeting(DayPartTargeting daypartTargeting) {
     this.daypartTargeting = daypartTargeting;
+    return this;
+  }
+
+  /**
+   * Output only. The sensitive content category label IDs excluded. Refer to this file
+   * https://storage.googleapis.com/adx-rtb-dictionaries/content-labels.txt for category IDs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getExcludedSensitiveCategoryIds() {
+    return excludedSensitiveCategoryIds;
+  }
+
+  /**
+   * Output only. The sensitive content category label IDs excluded. Refer to this file
+   * https://storage.googleapis.com/adx-rtb-dictionaries/content-labels.txt for category IDs.
+   * @param excludedSensitiveCategoryIds excludedSensitiveCategoryIds or {@code null} for none
+   */
+  public MarketplaceTargeting setExcludedSensitiveCategoryIds(java.util.List<java.lang.Long> excludedSensitiveCategoryIds) {
+    this.excludedSensitiveCategoryIds = excludedSensitiveCategoryIds;
     return this;
   }
 
@@ -207,6 +242,25 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
    */
   public MarketplaceTargeting setUserListTargeting(CriteriaTargeting userListTargeting) {
     this.userListTargeting = userListTargeting;
+    return this;
+  }
+
+  /**
+   * Output only. The verticals included or excluded as defined in https://developers.google.com
+   * /authorized-buyers/rtb/downloads/publisher-verticals
+   * @return value or {@code null} for none
+   */
+  public CriteriaTargeting getVerticalTargeting() {
+    return verticalTargeting;
+  }
+
+  /**
+   * Output only. The verticals included or excluded as defined in https://developers.google.com
+   * /authorized-buyers/rtb/downloads/publisher-verticals
+   * @param verticalTargeting verticalTargeting or {@code null} for none
+   */
+  public MarketplaceTargeting setVerticalTargeting(CriteriaTargeting verticalTargeting) {
+    this.verticalTargeting = verticalTargeting;
     return this;
   }
 

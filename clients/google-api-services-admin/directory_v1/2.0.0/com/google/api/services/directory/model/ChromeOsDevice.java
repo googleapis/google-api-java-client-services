@@ -108,6 +108,13 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
   private java.lang.String bootMode;
 
   /**
+   * Output only. Chrome OS type of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String chromeOsType;
+
+  /**
    * Information regarding CPU specs in the device.
    * The value may be {@code null}.
    */
@@ -627,6 +634,23 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    */
   public ChromeOsDevice setBootMode(java.lang.String bootMode) {
     this.bootMode = bootMode;
+    return this;
+  }
+
+  /**
+   * Output only. Chrome OS type of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChromeOsType() {
+    return chromeOsType;
+  }
+
+  /**
+   * Output only. Chrome OS type of the device.
+   * @param chromeOsType chromeOsType or {@code null} for none
+   */
+  public ChromeOsDevice setChromeOsType(java.lang.String chromeOsType) {
+    this.chromeOsType = chromeOsType;
     return this;
   }
 

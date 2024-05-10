@@ -1249,17 +1249,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return, value should not exceed 300. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of results to return. [default: 100] [minimum: 1]
+      /** Maximum number of results to return, value should not exceed 300. [default: 100] [minimum: 1]
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of results to return. */
+      /** Maximum number of results to return, value should not exceed 300. */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -1322,17 +1322,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Restrict information returned to a set of selected fields. */
+      /** Determines whether the response contains the full list of properties or only a subset. */
       @com.google.api.client.util.Key
       private java.lang.String projection;
 
-      /** Restrict information returned to a set of selected fields.
+      /** Determines whether the response contains the full list of properties or only a subset.
        */
       public java.lang.String getProjection() {
         return projection;
       }
 
-      /** Restrict information returned to a set of selected fields. */
+      /** Determines whether the response contains the full list of properties or only a subset. */
       public List setProjection(java.lang.String projection) {
         this.projection = projection;
         return this;
@@ -1688,17 +1688,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Restrict information returned to a set of selected fields. */
+      /** Determines whether the response contains the full list of properties or only a subset. */
       @com.google.api.client.util.Key
       private java.lang.String projection;
 
-      /** Restrict information returned to a set of selected fields.
+      /** Determines whether the response contains the full list of properties or only a subset.
        */
       public java.lang.String getProjection() {
         return projection;
       }
 
-      /** Restrict information returned to a set of selected fields. */
+      /** Determines whether the response contains the full list of properties or only a subset. */
       public Patch setProjection(java.lang.String projection) {
         this.projection = projection;
         return this;
@@ -1867,17 +1867,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Restrict information returned to a set of selected fields. */
+      /** Determines whether the response contains the full list of properties or only a subset. */
       @com.google.api.client.util.Key
       private java.lang.String projection;
 
-      /** Restrict information returned to a set of selected fields.
+      /** Determines whether the response contains the full list of properties or only a subset.
        */
       public java.lang.String getProjection() {
         return projection;
       }
 
-      /** Restrict information returned to a set of selected fields. */
+      /** Determines whether the response contains the full list of properties or only a subset. */
       public Update setProjection(java.lang.String projection) {
         this.projection = projection;
         return this;

@@ -1056,6 +1056,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
+        /** If true, also returns deleted resources. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showDeleted;
+
+        /** If true, also returns deleted resources.
+         */
+        public java.lang.Boolean getShowDeleted() {
+          return showDeleted;
+        }
+
+        /** If true, also returns deleted resources. */
+        public List setShowDeleted(java.lang.Boolean showDeleted) {
+          this.showDeleted = showDeleted;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);

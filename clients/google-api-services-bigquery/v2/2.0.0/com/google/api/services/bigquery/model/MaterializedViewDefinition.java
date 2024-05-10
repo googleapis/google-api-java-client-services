@@ -30,8 +30,8 @@ package com.google.api.services.bigquery.model;
 public final class MaterializedViewDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. This option declares authors intention to construct a materialized view that will not
-   * be refreshed incrementally.
+   * Optional. This option declares the intention to construct a materialized view that isn't
+   * refreshed incrementally.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +77,8 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
   private java.lang.Long refreshIntervalMs;
 
   /**
-   * Optional. This option declares authors intention to construct a materialized view that will not
-   * be refreshed incrementally.
+   * Optional. This option declares the intention to construct a materialized view that isn't
+   * refreshed incrementally.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowNonIncrementalDefinition() {
@@ -86,8 +86,8 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
   }
 
   /**
-   * Optional. This option declares authors intention to construct a materialized view that will not
-   * be refreshed incrementally.
+   * Optional. This option declares the intention to construct a materialized view that isn't
+   * refreshed incrementally.
    * @param allowNonIncrementalDefinition allowNonIncrementalDefinition or {@code null} for none
    */
   public MaterializedViewDefinition setAllowNonIncrementalDefinition(java.lang.Boolean allowNonIncrementalDefinition) {

@@ -37,6 +37,13 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private ConnectedRepository connectedRepository;
 
   /**
+   * If provided, get the source from this Developer Connect config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeveloperConnectConfig developerConnectConfig;
+
+  /**
    * If provided, get the source from this Git repository.
    * The value may be {@code null}.
    */
@@ -80,6 +87,23 @@ public final class Source extends com.google.api.client.json.GenericJson {
    */
   public Source setConnectedRepository(ConnectedRepository connectedRepository) {
     this.connectedRepository = connectedRepository;
+    return this;
+  }
+
+  /**
+   * If provided, get the source from this Developer Connect config.
+   * @return value or {@code null} for none
+   */
+  public DeveloperConnectConfig getDeveloperConnectConfig() {
+    return developerConnectConfig;
+  }
+
+  /**
+   * If provided, get the source from this Developer Connect config.
+   * @param developerConnectConfig developerConnectConfig or {@code null} for none
+   */
+  public Source setDeveloperConnectConfig(DeveloperConnectConfig developerConnectConfig) {
+    this.developerConnectConfig = developerConnectConfig;
     return this;
   }
 

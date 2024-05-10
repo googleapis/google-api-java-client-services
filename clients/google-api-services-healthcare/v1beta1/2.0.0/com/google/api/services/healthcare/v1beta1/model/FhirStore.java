@@ -121,7 +121,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Identifier. Resource name of the FHIR store, of the form
-   * `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+   * `projects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -394,7 +394,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Identifier. Resource name of the FHIR store, of the form
-   * `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+   * `projects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -403,7 +403,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Identifier. Resource name of the FHIR store, of the form
-   * `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+   * `projects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
    * @param name name or {@code null} for none
    */
   public FhirStore setName(java.lang.String name) {

@@ -17,8 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Payload for batch new message events where the `EventType` field is
- * `google.workspace.chat.message.v1.batchCreated`.
+ * Event payload for multiple new messages. Event type:
+ * `google.workspace.chat.message.v1.batchCreated`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,14 +31,14 @@ package com.google.api.services.chat.v1.model;
 public final class MessageBatchCreatedEventData extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of created messages.
+   * A list of new messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<MessageCreatedEventData> messages;
 
   /**
-   * A list of created messages.
+   * A list of new messages.
    * @return value or {@code null} for none
    */
   public java.util.List<MessageCreatedEventData> getMessages() {
@@ -46,7 +46,7 @@ public final class MessageBatchCreatedEventData extends com.google.api.client.js
   }
 
   /**
-   * A list of created messages.
+   * A list of new messages.
    * @param messages messages or {@code null} for none
    */
   public MessageBatchCreatedEventData setMessages(java.util.List<MessageCreatedEventData> messages) {

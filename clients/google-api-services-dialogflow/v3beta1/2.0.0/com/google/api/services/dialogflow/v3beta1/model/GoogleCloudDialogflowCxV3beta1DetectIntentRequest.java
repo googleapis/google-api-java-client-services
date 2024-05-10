@@ -51,6 +51,21 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentRequest extends com
   private GoogleCloudDialogflowCxV3beta1QueryParameters queryParams;
 
   /**
+   * Required. The name of the session this query is sent to. Format:
+   * `projects//locations//agents//sessions/` or
+   * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not specified,
+   * we assume default 'draft' environment. It's up to the API caller to choose an appropriate
+   * `Session ID`. It can be a random number or some type of session identifiers (preferably
+   * hashed). The length of the `Session ID` must not exceed 36 characters. For more information,
+   * see the [sessions guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note:
+   * Always use agent versions for production traffic. See [Versions and
+   * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String session;
+
+  /**
    * Instructs the speech synthesizer how to generate the output audio.
    * @return value or {@code null} for none
    */
@@ -98,6 +113,39 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentRequest extends com
    */
   public GoogleCloudDialogflowCxV3beta1DetectIntentRequest setQueryParams(GoogleCloudDialogflowCxV3beta1QueryParameters queryParams) {
     this.queryParams = queryParams;
+    return this;
+  }
+
+  /**
+   * Required. The name of the session this query is sent to. Format:
+   * `projects//locations//agents//sessions/` or
+   * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not specified,
+   * we assume default 'draft' environment. It's up to the API caller to choose an appropriate
+   * `Session ID`. It can be a random number or some type of session identifiers (preferably
+   * hashed). The length of the `Session ID` must not exceed 36 characters. For more information,
+   * see the [sessions guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note:
+   * Always use agent versions for production traffic. See [Versions and
+   * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSession() {
+    return session;
+  }
+
+  /**
+   * Required. The name of the session this query is sent to. Format:
+   * `projects//locations//agents//sessions/` or
+   * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not specified,
+   * we assume default 'draft' environment. It's up to the API caller to choose an appropriate
+   * `Session ID`. It can be a random number or some type of session identifiers (preferably
+   * hashed). The length of the `Session ID` must not exceed 36 characters. For more information,
+   * see the [sessions guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note:
+   * Always use agent versions for production traffic. See [Versions and
+   * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+   * @param session session or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1DetectIntentRequest setSession(java.lang.String session) {
+    this.session = session;
     return this;
   }
 

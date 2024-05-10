@@ -64,6 +64,14 @@ public final class RecurringExternalTransaction extends com.google.api.client.js
   private java.lang.String migratedTransactionProgram;
 
   /**
+   * Details of a recurring external transaction product which doesn't belong to any other specific
+   * category.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OtherRecurringProduct otherRecurringProduct;
+
+  /**
    * Details of an external subscription.
    * @return value or {@code null} for none
    */
@@ -136,6 +144,25 @@ public final class RecurringExternalTransaction extends com.google.api.client.js
    */
   public RecurringExternalTransaction setMigratedTransactionProgram(java.lang.String migratedTransactionProgram) {
     this.migratedTransactionProgram = migratedTransactionProgram;
+    return this;
+  }
+
+  /**
+   * Details of a recurring external transaction product which doesn't belong to any other specific
+   * category.
+   * @return value or {@code null} for none
+   */
+  public OtherRecurringProduct getOtherRecurringProduct() {
+    return otherRecurringProduct;
+  }
+
+  /**
+   * Details of a recurring external transaction product which doesn't belong to any other specific
+   * category.
+   * @param otherRecurringProduct otherRecurringProduct or {@code null} for none
+   */
+  public RecurringExternalTransaction setOtherRecurringProduct(OtherRecurringProduct otherRecurringProduct) {
+    this.otherRecurringProduct = otherRecurringProduct;
     return this;
   }
 

@@ -41,8 +41,8 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
 
   /**
    * The name by which the switch widget is identified in a form input event. For details about
-   * working with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-
-   * form-data).
+   * working with form inputs, see [Receive form data](https://developers.google.com/workspace/chat
+   * /read-form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +64,8 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
 
   /**
    * The value entered by a user, returned as part of a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
-   * data).
+   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
+   * form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +92,8 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
 
   /**
    * The name by which the switch widget is identified in a form input event. For details about
-   * working with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-
-   * form-data).
+   * working with form inputs, see [Receive form data](https://developers.google.com/workspace/chat
+   * /read-form-data).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -102,8 +102,8 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
 
   /**
    * The name by which the switch widget is identified in a form input event. For details about
-   * working with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-
-   * form-data).
+   * working with form inputs, see [Receive form data](https://developers.google.com/workspace/chat
+   * /read-form-data).
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl setName(java.lang.String name) {
@@ -147,8 +147,8 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
 
   /**
    * The value entered by a user, returned as part of a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
-   * data).
+   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
+   * form-data).
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -157,8 +157,8 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
 
   /**
    * The value entered by a user, returned as part of a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
-   * data).
+   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
+   * form-data).
    * @param value value or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl setValue(java.lang.String value) {

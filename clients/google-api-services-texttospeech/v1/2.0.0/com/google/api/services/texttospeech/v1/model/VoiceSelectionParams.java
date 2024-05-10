@@ -53,8 +53,8 @@ public final class VoiceSelectionParams extends com.google.api.client.json.Gener
   private java.lang.String languageCode;
 
   /**
-   * The name of the voice. If not set, the service will choose a voice based on the other
-   * parameters such as language_code and gender.
+   * The name of the voice. If both the name and the gender are not set, the service will choose a
+   * voice based on the other parameters such as language_code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,8 +121,8 @@ public final class VoiceSelectionParams extends com.google.api.client.json.Gener
   }
 
   /**
-   * The name of the voice. If not set, the service will choose a voice based on the other
-   * parameters such as language_code and gender.
+   * The name of the voice. If both the name and the gender are not set, the service will choose a
+   * voice based on the other parameters such as language_code.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -130,8 +130,8 @@ public final class VoiceSelectionParams extends com.google.api.client.json.Gener
   }
 
   /**
-   * The name of the voice. If not set, the service will choose a voice based on the other
-   * parameters such as language_code and gender.
+   * The name of the voice. If both the name and the gender are not set, the service will choose a
+   * voice based on the other parameters such as language_code.
    * @param name name or {@code null} for none
    */
   public VoiceSelectionParams setName(java.lang.String name) {

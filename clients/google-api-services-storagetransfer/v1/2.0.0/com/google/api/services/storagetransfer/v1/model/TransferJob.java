@@ -99,7 +99,7 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Notification configuration. This is not supported for transfers involving PosixFilesystem.
+   * Notification configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -308,7 +308,7 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notification configuration. This is not supported for transfers involving PosixFilesystem.
+   * Notification configuration.
    * @return value or {@code null} for none
    */
   public NotificationConfig getNotificationConfig() {
@@ -316,7 +316,7 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notification configuration. This is not supported for transfers involving PosixFilesystem.
+   * Notification configuration.
    * @param notificationConfig notificationConfig or {@code null} for none
    */
   public TransferJob setNotificationConfig(NotificationConfig notificationConfig) {

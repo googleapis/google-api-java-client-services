@@ -43,7 +43,7 @@ public final class ServiceMeshMembershipState extends com.google.api.client.json
   }
 
   /**
-   * Output only. List of condition reporting membership statues
+   * Output only. List of conditions reported for this membership.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class ServiceMeshMembershipState extends com.google.api.client.json
   }
 
   /**
-   * Output only. List of condition reporting membership statues
+   * Output only. List of conditions reported for this membership.
    * @return value or {@code null} for none
    */
   public java.util.List<ServiceMeshCondition> getConditions() {
@@ -103,7 +103,7 @@ public final class ServiceMeshMembershipState extends com.google.api.client.json
   }
 
   /**
-   * Output only. List of condition reporting membership statues
+   * Output only. List of conditions reported for this membership.
    * @param conditions conditions or {@code null} for none
    */
   public ServiceMeshMembershipState setConditions(java.util.List<ServiceMeshCondition> conditions) {

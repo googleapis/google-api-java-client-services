@@ -38,7 +38,7 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   private java.lang.Long count;
 
   /**
-   * The accelerator type string (for example, "nvidia-tesla-k80"). Only NVIDIA GPU accelerators are
+   * The accelerator type string (for example, "nvidia-tesla-t4"). Only NVIDIA GPU accelerators are
    * currently supported. If an NVIDIA GPU is attached, the required runtime libraries will be made
    * available to all containers under `/usr/local/nvidia`. The driver version to install must be
    * specified using the NVIDIA driver version parameter on the virtual machine specification. Note
@@ -66,7 +66,7 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The accelerator type string (for example, "nvidia-tesla-k80"). Only NVIDIA GPU accelerators are
+   * The accelerator type string (for example, "nvidia-tesla-t4"). Only NVIDIA GPU accelerators are
    * currently supported. If an NVIDIA GPU is attached, the required runtime libraries will be made
    * available to all containers under `/usr/local/nvidia`. The driver version to install must be
    * specified using the NVIDIA driver version parameter on the virtual machine specification. Note
@@ -78,7 +78,7 @@ public final class Accelerator extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The accelerator type string (for example, "nvidia-tesla-k80"). Only NVIDIA GPU accelerators are
+   * The accelerator type string (for example, "nvidia-tesla-t4"). Only NVIDIA GPU accelerators are
    * currently supported. If an NVIDIA GPU is attached, the required runtime libraries will be made
    * available to all containers under `/usr/local/nvidia`. The driver version to install must be
    * specified using the NVIDIA driver version parameter on the virtual machine specification. Note

@@ -258,9 +258,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> replicaNames;
 
   /**
-   * The pair of a primary instance and disaster recovery (DR) replica. A DR replica is a cross-
-   * region replica that you designate for failover in the event that the primary instance has
-   * regional failure.
+   * A primary instance and disaster recovery (DR) replica pair. A DR replica is a cross-region
+   * replica that you designate for failover in the event that the primary instance experiences
+   * regional failure. Only applicable to MySQL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -900,9 +900,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The pair of a primary instance and disaster recovery (DR) replica. A DR replica is a cross-
-   * region replica that you designate for failover in the event that the primary instance has
-   * regional failure.
+   * A primary instance and disaster recovery (DR) replica pair. A DR replica is a cross-region
+   * replica that you designate for failover in the event that the primary instance experiences
+   * regional failure. Only applicable to MySQL.
    * @return value or {@code null} for none
    */
   public ReplicationCluster getReplicationCluster() {
@@ -910,9 +910,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The pair of a primary instance and disaster recovery (DR) replica. A DR replica is a cross-
-   * region replica that you designate for failover in the event that the primary instance has
-   * regional failure.
+   * A primary instance and disaster recovery (DR) replica pair. A DR replica is a cross-region
+   * replica that you designate for failover in the event that the primary instance experiences
+   * regional failure. Only applicable to MySQL.
    * @param replicationCluster replicationCluster or {@code null} for none
    */
   public DatabaseInstance setReplicationCluster(ReplicationCluster replicationCluster) {

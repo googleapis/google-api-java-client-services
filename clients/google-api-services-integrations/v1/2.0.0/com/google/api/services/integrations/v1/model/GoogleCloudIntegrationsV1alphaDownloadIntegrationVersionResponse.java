@@ -31,14 +31,21 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * String representation of the integration version.
+   * String representation of the requested file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
 
   /**
-   * String representation of the integration version.
+   * List containing String represendation for multiple file with type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudIntegrationsV1alphaSerializedFile> files;
+
+  /**
+   * String representation of the requested file.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -46,11 +53,28 @@ public final class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionRespo
   }
 
   /**
-   * String representation of the integration version.
+   * String representation of the requested file.
    * @param content content or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse setContent(java.lang.String content) {
     this.content = content;
+    return this;
+  }
+
+  /**
+   * List containing String represendation for multiple file with type.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudIntegrationsV1alphaSerializedFile> getFiles() {
+    return files;
+  }
+
+  /**
+   * List containing String represendation for multiple file with type.
+   * @param files files or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse setFiles(java.util.List<GoogleCloudIntegrationsV1alphaSerializedFile> files) {
+    this.files = files;
     return this;
   }
 

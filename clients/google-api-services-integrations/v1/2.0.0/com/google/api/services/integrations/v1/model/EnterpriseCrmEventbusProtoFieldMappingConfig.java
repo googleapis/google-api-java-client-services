@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Field Mapping Config to map multiple output fields values from input fields values. Next id: 2
+ * Field Mapping Config to map multiple output fields values from input fields values.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed

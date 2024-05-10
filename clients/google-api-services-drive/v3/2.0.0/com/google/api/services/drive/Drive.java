@@ -3982,7 +3982,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates the metadate for a shared drive.
+     * Updates the metadata for a shared drive.
      *
      * Create a request for the method "drives.update".
      *
@@ -4004,7 +4004,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "drives/{driveId}";
 
       /**
-       * Updates the metadate for a shared drive.
+       * Updates the metadata for a shared drive.
        *
        * Create a request for the method "drives.update".
        *

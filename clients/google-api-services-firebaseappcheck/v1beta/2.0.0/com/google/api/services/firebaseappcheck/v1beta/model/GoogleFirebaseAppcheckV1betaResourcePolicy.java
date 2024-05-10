@@ -18,7 +18,7 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 
 /**
  * App Check enforcement policy for a specific resource of a Firebase service supported by App
- * Check. Note that this policy will override the Service level enforcement mode configuration.
+ * Check. Note that this policy will override the service-level configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Check API. For a detailed explanation
@@ -33,9 +33,7 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
 
   /**
    * Required. The App Check enforcement mode for this resource. This will override the
-   * EnforcementMode setting on the service. For new resources that you are creating, you should
-   * consider setting an override and enable enforcement on the resource immediately, if there are
-   * no outdated clients that can use it.
+   * EnforcementMode setting on the parent service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,18 +42,18 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
   /**
    * This checksum is computed by the server based on the value of other fields, and may be sent on
    * update and delete requests to ensure the client has an up-to-date value before proceeding. This
-   * etag is strongly validated.
+   * etag is strongly validated as defined by RFC 7232.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * Required. The relative name of the resource configuration object, in the format: ```
+   * Required. The relative name of the resource policy object, in the format: ```
    * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note
    * that the `service_id` element must be a supported service ID. Currently, the following service
    * IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS) `resource_policy_id` is
-   * a system-generated UID used as the resource ID for the policy.
+   * a system-generated UID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,17 +61,19 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
 
   /**
    * Required. Service specific name of the resource object to which this policy applies, in the
-   * format: * `//oauth2.googleapis.com/projects/{project}/oauthClients/{oauth_client_id}` (Google
-   * Identity for iOS) NOTE that the resource must belong to the service specified in the `name` and
-   * be from the same project as this policy, but it may or may not exist at the time of creation of
-   * the policy.
+   * format: * `//oauth2.googleapis.com/projects/{project_number}/oauthClients/{oauth_client_id}`
+   * (Google Identity for iOS) Note that the resource must belong to the service specified in the
+   * `name` and be from the same project as this policy, but the resource is allowed to be missing
+   * at the time of creation of this policy; in that case, we make a best-effort attempt at
+   * respecting this policy, but it may not have any effect until the resource is fully created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetResource;
 
   /**
-   * Output only. Timestamp when this service configuration object was most recently updated.
+   * Output only. Timestamp when this resource policy configuration object was most recently
+   * updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,9 +81,7 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
 
   /**
    * Required. The App Check enforcement mode for this resource. This will override the
-   * EnforcementMode setting on the service. For new resources that you are creating, you should
-   * consider setting an override and enable enforcement on the resource immediately, if there are
-   * no outdated clients that can use it.
+   * EnforcementMode setting on the parent service.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnforcementMode() {
@@ -92,9 +90,7 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
 
   /**
    * Required. The App Check enforcement mode for this resource. This will override the
-   * EnforcementMode setting on the service. For new resources that you are creating, you should
-   * consider setting an override and enable enforcement on the resource immediately, if there are
-   * no outdated clients that can use it.
+   * EnforcementMode setting on the parent service.
    * @param enforcementMode enforcementMode or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaResourcePolicy setEnforcementMode(java.lang.String enforcementMode) {
@@ -105,7 +101,7 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
   /**
    * This checksum is computed by the server based on the value of other fields, and may be sent on
    * update and delete requests to ensure the client has an up-to-date value before proceeding. This
-   * etag is strongly validated.
+   * etag is strongly validated as defined by RFC 7232.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -115,7 +111,7 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
   /**
    * This checksum is computed by the server based on the value of other fields, and may be sent on
    * update and delete requests to ensure the client has an up-to-date value before proceeding. This
-   * etag is strongly validated.
+   * etag is strongly validated as defined by RFC 7232.
    * @param etag etag or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaResourcePolicy setEtag(java.lang.String etag) {
@@ -124,11 +120,11 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
   }
 
   /**
-   * Required. The relative name of the resource configuration object, in the format: ```
+   * Required. The relative name of the resource policy object, in the format: ```
    * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note
    * that the `service_id` element must be a supported service ID. Currently, the following service
    * IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS) `resource_policy_id` is
-   * a system-generated UID used as the resource ID for the policy.
+   * a system-generated UID.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -136,11 +132,11 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
   }
 
   /**
-   * Required. The relative name of the resource configuration object, in the format: ```
+   * Required. The relative name of the resource policy object, in the format: ```
    * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note
    * that the `service_id` element must be a supported service ID. Currently, the following service
    * IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS) `resource_policy_id` is
-   * a system-generated UID used as the resource ID for the policy.
+   * a system-generated UID.
    * @param name name or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaResourcePolicy setName(java.lang.String name) {
@@ -150,10 +146,11 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
 
   /**
    * Required. Service specific name of the resource object to which this policy applies, in the
-   * format: * `//oauth2.googleapis.com/projects/{project}/oauthClients/{oauth_client_id}` (Google
-   * Identity for iOS) NOTE that the resource must belong to the service specified in the `name` and
-   * be from the same project as this policy, but it may or may not exist at the time of creation of
-   * the policy.
+   * format: * `//oauth2.googleapis.com/projects/{project_number}/oauthClients/{oauth_client_id}`
+   * (Google Identity for iOS) Note that the resource must belong to the service specified in the
+   * `name` and be from the same project as this policy, but the resource is allowed to be missing
+   * at the time of creation of this policy; in that case, we make a best-effort attempt at
+   * respecting this policy, but it may not have any effect until the resource is fully created.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetResource() {
@@ -162,10 +159,11 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
 
   /**
    * Required. Service specific name of the resource object to which this policy applies, in the
-   * format: * `//oauth2.googleapis.com/projects/{project}/oauthClients/{oauth_client_id}` (Google
-   * Identity for iOS) NOTE that the resource must belong to the service specified in the `name` and
-   * be from the same project as this policy, but it may or may not exist at the time of creation of
-   * the policy.
+   * format: * `//oauth2.googleapis.com/projects/{project_number}/oauthClients/{oauth_client_id}`
+   * (Google Identity for iOS) Note that the resource must belong to the service specified in the
+   * `name` and be from the same project as this policy, but the resource is allowed to be missing
+   * at the time of creation of this policy; in that case, we make a best-effort attempt at
+   * respecting this policy, but it may not have any effect until the resource is fully created.
    * @param targetResource targetResource or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaResourcePolicy setTargetResource(java.lang.String targetResource) {
@@ -174,7 +172,8 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
   }
 
   /**
-   * Output only. Timestamp when this service configuration object was most recently updated.
+   * Output only. Timestamp when this resource policy configuration object was most recently
+   * updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -182,7 +181,8 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
   }
 
   /**
-   * Output only. Timestamp when this service configuration object was most recently updated.
+   * Output only. Timestamp when this resource policy configuration object was most recently
+   * updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaResourcePolicy setUpdateTime(String updateTime) {

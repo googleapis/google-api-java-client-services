@@ -46,7 +46,7 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
   private GoogleIamAdminV1WorkforcePoolProviderOidcClientSecret clientSecret;
 
   /**
-   * Required. The OIDC issuer URI. Must be a valid URI using the 'https' scheme.
+   * Required. The OIDC issuer URI. Must be a valid URI using the `https` scheme.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
   }
 
   /**
-   * Required. The OIDC issuer URI. Must be a valid URI using the 'https' scheme.
+   * Required. The OIDC issuer URI. Must be a valid URI using the `https` scheme.
    * @return value or {@code null} for none
    */
   public java.lang.String getIssuerUri() {
@@ -117,7 +117,7 @@ public final class GoogleIamAdminV1WorkforcePoolProviderOidc extends com.google.
   }
 
   /**
-   * Required. The OIDC issuer URI. Must be a valid URI using the 'https' scheme.
+   * Required. The OIDC issuer URI. Must be a valid URI using the `https` scheme.
    * @param issuerUri issuerUri or {@code null} for none
    */
   public GoogleIamAdminV1WorkforcePoolProviderOidc setIssuerUri(java.lang.String issuerUri) {

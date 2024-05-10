@@ -107,7 +107,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
   private GoogleCloudAiplatformV1beta1MachineSpec machineSpec;
 
   /**
-   * Output only. The resource name of the NotebookRuntimeTemplate.
+   * The resource name of the NotebookRuntimeTemplate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -350,7 +350,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
   }
 
   /**
-   * Output only. The resource name of the NotebookRuntimeTemplate.
+   * The resource name of the NotebookRuntimeTemplate.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -358,7 +358,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
   }
 
   /**
-   * Output only. The resource name of the NotebookRuntimeTemplate.
+   * The resource name of the NotebookRuntimeTemplate.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setName(java.lang.String name) {

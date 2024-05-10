@@ -22,9 +22,8 @@ package com.google.api.services.androidmanagement.v1.model;
  * battery restrictions so will not be placed into the restricted App Standby Bucket
  * (https://developer.android.com/topic/performance/appstandby#restricted-bucket). Extensions apps
  * are also protected against users clearing their data or force-closing the application, although
- * admins can continue to use the clear app data command (https://developer.android.com/management/r
- * eference/rest/v1/enterprises.devices/issueCommand#CommandType) on extension apps if needed for
- * Android 13 and above.
+ * admins can continue to use the clear app data command on extension apps if needed for Android 13
+ * and above.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

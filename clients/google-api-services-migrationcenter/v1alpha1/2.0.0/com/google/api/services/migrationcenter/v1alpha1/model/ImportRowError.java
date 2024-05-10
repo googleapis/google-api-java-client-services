@@ -30,6 +30,27 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class ImportRowError extends com.google.api.client.json.GenericJson {
 
   /**
+   * Error details for an archive file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImportRowErrorArchiveErrorDetails archiveError;
+
+  /**
+   * The asset title.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assetTitle;
+
+  /**
+   * Error details for a CSV file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImportRowErrorCsvErrorDetails csvError;
+
+  /**
    * The list of errors detected in the row.
    * The value may be {@code null}.
    */
@@ -41,6 +62,13 @@ public final class ImportRowError extends com.google.api.client.json.GenericJson
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ImportError.class);
   }
+
+  /**
+   * Error details for a JSON file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImportRowErrorJsonErrorDetails jsonError;
 
   /**
    * The row number where the error was detected.
@@ -64,6 +92,64 @@ public final class ImportRowError extends com.google.api.client.json.GenericJson
   private java.lang.String vmUuid;
 
   /**
+   * Error details for an XLSX file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImportRowErrorXlsxErrorDetails xlsxError;
+
+  /**
+   * Error details for an archive file.
+   * @return value or {@code null} for none
+   */
+  public ImportRowErrorArchiveErrorDetails getArchiveError() {
+    return archiveError;
+  }
+
+  /**
+   * Error details for an archive file.
+   * @param archiveError archiveError or {@code null} for none
+   */
+  public ImportRowError setArchiveError(ImportRowErrorArchiveErrorDetails archiveError) {
+    this.archiveError = archiveError;
+    return this;
+  }
+
+  /**
+   * The asset title.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssetTitle() {
+    return assetTitle;
+  }
+
+  /**
+   * The asset title.
+   * @param assetTitle assetTitle or {@code null} for none
+   */
+  public ImportRowError setAssetTitle(java.lang.String assetTitle) {
+    this.assetTitle = assetTitle;
+    return this;
+  }
+
+  /**
+   * Error details for a CSV file.
+   * @return value or {@code null} for none
+   */
+  public ImportRowErrorCsvErrorDetails getCsvError() {
+    return csvError;
+  }
+
+  /**
+   * Error details for a CSV file.
+   * @param csvError csvError or {@code null} for none
+   */
+  public ImportRowError setCsvError(ImportRowErrorCsvErrorDetails csvError) {
+    this.csvError = csvError;
+    return this;
+  }
+
+  /**
    * The list of errors detected in the row.
    * @return value or {@code null} for none
    */
@@ -77,6 +163,23 @@ public final class ImportRowError extends com.google.api.client.json.GenericJson
    */
   public ImportRowError setErrors(java.util.List<ImportError> errors) {
     this.errors = errors;
+    return this;
+  }
+
+  /**
+   * Error details for a JSON file.
+   * @return value or {@code null} for none
+   */
+  public ImportRowErrorJsonErrorDetails getJsonError() {
+    return jsonError;
+  }
+
+  /**
+   * Error details for a JSON file.
+   * @param jsonError jsonError or {@code null} for none
+   */
+  public ImportRowError setJsonError(ImportRowErrorJsonErrorDetails jsonError) {
+    this.jsonError = jsonError;
     return this;
   }
 
@@ -128,6 +231,23 @@ public final class ImportRowError extends com.google.api.client.json.GenericJson
    */
   public ImportRowError setVmUuid(java.lang.String vmUuid) {
     this.vmUuid = vmUuid;
+    return this;
+  }
+
+  /**
+   * Error details for an XLSX file.
+   * @return value or {@code null} for none
+   */
+  public ImportRowErrorXlsxErrorDetails getXlsxError() {
+    return xlsxError;
+  }
+
+  /**
+   * Error details for an XLSX file.
+   * @param xlsxError xlsxError or {@code null} for none
+   */
+  public ImportRowError setXlsxError(ImportRowErrorXlsxErrorDetails xlsxError) {
+    this.xlsxError = xlsxError;
     return this;
   }
 

@@ -820,7 +820,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * An expression for filtering the results of the request by label. The syntax is
        * \"labels.[:]\". Multiple filters can be ANDed together by connecting with a space. Example:
        * \"labels.department:receiving labels.active\". See [Filtering datasets using
-       * labels](/bigquery/docs/labeling-datasets#filtering_datasets_using_labels) for details.
+       * labels](/bigquery/docs/filtering-labels#filtering_datasets_using_labels) for details.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
@@ -828,7 +828,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       /** An expression for filtering the results of the request by label. The syntax is \"labels.[:]\".
      Multiple filters can be ANDed together by connecting with a space. Example:
      \"labels.department:receiving labels.active\". See [Filtering datasets using labels](/bigquery/docs
-     /labeling-datasets#filtering_datasets_using_labels) for details.
+     /filtering-labels#filtering_datasets_using_labels) for details.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -838,7 +838,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        * An expression for filtering the results of the request by label. The syntax is
        * \"labels.[:]\". Multiple filters can be ANDed together by connecting with a space. Example:
        * \"labels.department:receiving labels.active\". See [Filtering datasets using
-       * labels](/bigquery/docs/labeling-datasets#filtering_datasets_using_labels) for details.
+       * labels](/bigquery/docs/filtering-labels#filtering_datasets_using_labels) for details.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -4543,6 +4543,153 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+     * does not have a policy set.
+     *
+     * Create a request for the method "routines.getIamPolicy".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+     *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+     *        this field.
+     * @param content the {@link com.google.api.services.bigquery.model.GetIamPolicyRequest}
+     * @return the request
+     */
+    public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.bigquery.model.GetIamPolicyRequest content) throws java.io.IOException {
+      GetIamPolicy result = new GetIamPolicy(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIamPolicy extends BigqueryRequest<com.google.api.services.bigquery.model.Policy> {
+
+      private static final String REST_PATH = "{+resource}:getIamPolicy";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/datasets/[^/]+/routines/[^/]+$");
+
+      /**
+       * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+       * and does not have a policy set.
+       *
+       * Create a request for the method "routines.getIamPolicy".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+     *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+     *        this field.
+       * @param content the {@link com.google.api.services.bigquery.model.GetIamPolicyRequest}
+       * @since 1.13
+       */
+      protected GetIamPolicy(java.lang.String resource, com.google.api.services.bigquery.model.GetIamPolicyRequest content) {
+        super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.Policy.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+/datasets/[^/]+/routines/[^/]+$");
+        }
+      }
+
+      @Override
+      public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetIamPolicy setAlt(java.lang.String alt) {
+        return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setCallback(java.lang.String callback) {
+        return (GetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public GetIamPolicy setFields(java.lang.String fields) {
+        return (GetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public GetIamPolicy setKey(java.lang.String key) {
+        return (GetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (GetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being requested. See [Resource
+       * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       * this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy is being requested. See [Resource
+     names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+     field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being requested. See [Resource
+       * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       * this field.
+       */
+      public GetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+/datasets/[^/]+/routines/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public GetIamPolicy set(String parameterName, Object value) {
+        return (GetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
      * Creates a new routine in the dataset.
      *
      * Create a request for the method "routines.insert".
@@ -4967,6 +5114,153 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+     * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+     *
+     * Create a request for the method "routines.setIamPolicy".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+     *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+     *        this field.
+     * @param content the {@link com.google.api.services.bigquery.model.SetIamPolicyRequest}
+     * @return the request
+     */
+    public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.bigquery.model.SetIamPolicyRequest content) throws java.io.IOException {
+      SetIamPolicy result = new SetIamPolicy(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetIamPolicy extends BigqueryRequest<com.google.api.services.bigquery.model.Policy> {
+
+      private static final String REST_PATH = "{+resource}:setIamPolicy";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/datasets/[^/]+/routines/[^/]+$");
+
+      /**
+       * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+       * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+       *
+       * Create a request for the method "routines.setIamPolicy".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+     *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+     *        this field.
+       * @param content the {@link com.google.api.services.bigquery.model.SetIamPolicyRequest}
+       * @since 1.13
+       */
+      protected SetIamPolicy(java.lang.String resource, com.google.api.services.bigquery.model.SetIamPolicyRequest content) {
+        super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.Policy.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+/datasets/[^/]+/routines/[^/]+$");
+        }
+      }
+
+      @Override
+      public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (SetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (SetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SetIamPolicy setAlt(java.lang.String alt) {
+        return (SetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetIamPolicy setCallback(java.lang.String callback) {
+        return (SetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public SetIamPolicy setFields(java.lang.String fields) {
+        return (SetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public SetIamPolicy setKey(java.lang.String key) {
+        return (SetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (SetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (SetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being specified. See [Resource
+       * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       * this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy is being specified. See [Resource
+     names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+     field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being specified. See [Resource
+       * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+       * this field.
+       */
+      public SetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+/datasets/[^/]+/routines/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public SetIamPolicy set(String parameterName, Object value) {
+        return (SetIamPolicy) super.set(parameterName, value);
       }
     }
     /**

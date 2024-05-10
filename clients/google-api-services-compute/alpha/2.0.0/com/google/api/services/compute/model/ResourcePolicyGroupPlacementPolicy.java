@@ -18,7 +18,7 @@ package com.google.api.services.compute.model;
 
 /**
  * A GroupPlacementPolicy specifies resource placement configuration. It specifies the failure
- * bucket separation as well as network locality
+ * bucket separation
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -46,13 +46,6 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   private java.lang.String collocation;
 
   /**
-   * Specifies network locality
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String locality;
-
-  /**
    * Specifies the number of max logical switches.
    * The value may be {@code null}.
    */
@@ -72,13 +65,6 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sliceCount;
-
-  /**
-   * Specifies instances to hosts placement relationship
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String style;
 
   /**
    * Specifies the shape of the TPU slice
@@ -133,23 +119,6 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   }
 
   /**
-   * Specifies network locality
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLocality() {
-    return locality;
-  }
-
-  /**
-   * Specifies network locality
-   * @param locality locality or {@code null} for none
-   */
-  public ResourcePolicyGroupPlacementPolicy setLocality(java.lang.String locality) {
-    this.locality = locality;
-    return this;
-  }
-
-  /**
    * Specifies the number of max logical switches.
    * @return value or {@code null} for none
    */
@@ -197,23 +166,6 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
    */
   public ResourcePolicyGroupPlacementPolicy setSliceCount(java.lang.Integer sliceCount) {
     this.sliceCount = sliceCount;
-    return this;
-  }
-
-  /**
-   * Specifies instances to hosts placement relationship
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStyle() {
-    return style;
-  }
-
-  /**
-   * Specifies instances to hosts placement relationship
-   * @param style style or {@code null} for none
-   */
-  public ResourcePolicyGroupPlacementPolicy setStyle(java.lang.String style) {
-    this.style = style;
     return this;
   }
 

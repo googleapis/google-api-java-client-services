@@ -30,6 +30,33 @@ package com.google.api.services.datamigration.v1.model;
 @SuppressWarnings("javadoc")
 public final class ResumeMigrationJobRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Resume the migration job without running prior configuration verification. Defaults
+   * to `false`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipValidation;
+
+  /**
+   * Optional. Resume the migration job without running prior configuration verification. Defaults
+   * to `false`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipValidation() {
+    return skipValidation;
+  }
+
+  /**
+   * Optional. Resume the migration job without running prior configuration verification. Defaults
+   * to `false`.
+   * @param skipValidation skipValidation or {@code null} for none
+   */
+  public ResumeMigrationJobRequest setSkipValidation(java.lang.Boolean skipValidation) {
+    this.skipValidation = skipValidation;
+    return this;
+  }
+
   @Override
   public ResumeMigrationJobRequest set(String fieldName, Object value) {
     return (ResumeMigrationJobRequest) super.set(fieldName, value);

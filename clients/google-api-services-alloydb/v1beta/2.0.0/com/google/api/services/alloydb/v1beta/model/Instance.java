@@ -108,8 +108,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String gceZone;
 
   /**
-   * Optional. Configuration parameters related to the Gemini in Databases add-on. See go/prd-
-   * enable-duet-ai-databases for more details.
+   * Optional. Configuration parameters related to the Gemini in Databases add-on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -445,8 +444,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration parameters related to the Gemini in Databases add-on. See go/prd-
-   * enable-duet-ai-databases for more details.
+   * Optional. Configuration parameters related to the Gemini in Databases add-on.
    * @return value or {@code null} for none
    */
   public GeminiInstanceConfig getGeminiConfig() {
@@ -454,8 +452,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration parameters related to the Gemini in Databases add-on. See go/prd-
-   * enable-duet-ai-databases for more details.
+   * Optional. Configuration parameters related to the Gemini in Databases add-on.
    * @param geminiConfig geminiConfig or {@code null} for none
    */
   public Instance setGeminiConfig(GeminiInstanceConfig geminiConfig) {

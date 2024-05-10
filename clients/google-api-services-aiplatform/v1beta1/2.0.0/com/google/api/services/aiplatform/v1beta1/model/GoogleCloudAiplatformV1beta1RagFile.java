@@ -60,7 +60,7 @@ public final class GoogleCloudAiplatformV1beta1RagFile extends com.google.api.cl
 
   /**
    * Output only. Google Cloud Storage location of the RagFile. It does not support wildcards in the
-   * GCS uri for now.
+   * Cloud Storage uri for now.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +174,7 @@ public final class GoogleCloudAiplatformV1beta1RagFile extends com.google.api.cl
 
   /**
    * Output only. Google Cloud Storage location of the RagFile. It does not support wildcards in the
-   * GCS uri for now.
+   * Cloud Storage uri for now.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GcsSource getGcsSource() {
@@ -183,7 +183,7 @@ public final class GoogleCloudAiplatformV1beta1RagFile extends com.google.api.cl
 
   /**
    * Output only. Google Cloud Storage location of the RagFile. It does not support wildcards in the
-   * GCS uri for now.
+   * Cloud Storage uri for now.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagFile setGcsSource(GoogleCloudAiplatformV1beta1GcsSource gcsSource) {

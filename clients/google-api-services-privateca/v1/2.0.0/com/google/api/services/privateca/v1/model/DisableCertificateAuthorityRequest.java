@@ -33,7 +33,7 @@ public final class DisableCertificateAuthorityRequest extends com.google.api.cli
   /**
    * Optional. This field allows this CA to be disabled even if it's being depended on by another
    * resource. However, doing so may result in unintended and unrecoverable effects on any dependent
-   * resource(s) since the CA will no longer be able to issue certificates.
+   * resources since the CA will no longer be able to issue certificates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class DisableCertificateAuthorityRequest extends com.google.api.cli
   /**
    * Optional. This field allows this CA to be disabled even if it's being depended on by another
    * resource. However, doing so may result in unintended and unrecoverable effects on any dependent
-   * resource(s) since the CA will no longer be able to issue certificates.
+   * resources since the CA will no longer be able to issue certificates.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreDependentResources() {
@@ -66,7 +66,7 @@ public final class DisableCertificateAuthorityRequest extends com.google.api.cli
   /**
    * Optional. This field allows this CA to be disabled even if it's being depended on by another
    * resource. However, doing so may result in unintended and unrecoverable effects on any dependent
-   * resource(s) since the CA will no longer be able to issue certificates.
+   * resources since the CA will no longer be able to issue certificates.
    * @param ignoreDependentResources ignoreDependentResources or {@code null} for none
    */
   public DisableCertificateAuthorityRequest setIgnoreDependentResources(java.lang.Boolean ignoreDependentResources) {

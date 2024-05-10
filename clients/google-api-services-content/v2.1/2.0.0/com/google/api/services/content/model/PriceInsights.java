@@ -32,6 +32,13 @@ package com.google.api.services.content.model;
 public final class PriceInsights extends com.google.api.client.json.GenericJson {
 
   /**
+   * The predicted effectiveness of applying the price suggestion, bucketed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveness;
+
+  /**
    * The predicted change in clicks as a fraction after introducing the suggested price compared to
    * current active price. For example, 0.05 is a 5% predicted increase in clicks.
    * The value may be {@code null}.
@@ -95,6 +102,23 @@ public final class PriceInsights extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long suggestedPriceMicros;
+
+  /**
+   * The predicted effectiveness of applying the price suggestion, bucketed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveness() {
+    return effectiveness;
+  }
+
+  /**
+   * The predicted effectiveness of applying the price suggestion, bucketed.
+   * @param effectiveness effectiveness or {@code null} for none
+   */
+  public PriceInsights setEffectiveness(java.lang.String effectiveness) {
+    this.effectiveness = effectiveness;
+    return this;
+  }
 
   /**
    * The predicted change in clicks as a fraction after introducing the suggested price compared to

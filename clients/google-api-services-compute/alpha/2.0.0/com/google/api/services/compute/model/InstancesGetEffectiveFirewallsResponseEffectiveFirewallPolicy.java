@@ -45,6 +45,13 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   private java.lang.String name;
 
   /**
+   * [Output only] Priority of firewall policy association. Not applicable for type=HIERARCHY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer priority;
+
+  /**
    * The rules that apply to the network.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
    */
   public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output only] Priority of firewall policy association. Not applicable for type=HIERARCHY.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPriority() {
+    return priority;
+  }
+
+  /**
+   * [Output only] Priority of firewall policy association. Not applicable for type=HIERARCHY.
+   * @param priority priority or {@code null} for none
+   */
+  public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setPriority(java.lang.Integer priority) {
+    this.priority = priority;
     return this;
   }
 

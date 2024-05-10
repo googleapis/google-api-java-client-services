@@ -62,8 +62,8 @@ public final class CertificateTemplate extends com.google.api.client.json.Generi
 
   /**
    * Optional. The maximum lifetime allowed for issued Certificates that use this template. If the
-   * issuing CaPool's IssuancePolicy specifies a maximum_lifetime the minimum of the two durations
-   * will be the maximum lifetime for issued Certificates. Note that if the issuing
+   * issuing CaPool resource's IssuancePolicy specifies a maximum_lifetime the minimum of the two
+   * durations will be the maximum lifetime for issued Certificates. Note that if the issuing
    * CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective
    * lifetime will be explicitly truncated to match it.
    * The value may be {@code null}.
@@ -184,8 +184,8 @@ public final class CertificateTemplate extends com.google.api.client.json.Generi
 
   /**
    * Optional. The maximum lifetime allowed for issued Certificates that use this template. If the
-   * issuing CaPool's IssuancePolicy specifies a maximum_lifetime the minimum of the two durations
-   * will be the maximum lifetime for issued Certificates. Note that if the issuing
+   * issuing CaPool resource's IssuancePolicy specifies a maximum_lifetime the minimum of the two
+   * durations will be the maximum lifetime for issued Certificates. Note that if the issuing
    * CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective
    * lifetime will be explicitly truncated to match it.
    * @return value or {@code null} for none
@@ -196,8 +196,8 @@ public final class CertificateTemplate extends com.google.api.client.json.Generi
 
   /**
    * Optional. The maximum lifetime allowed for issued Certificates that use this template. If the
-   * issuing CaPool's IssuancePolicy specifies a maximum_lifetime the minimum of the two durations
-   * will be the maximum lifetime for issued Certificates. Note that if the issuing
+   * issuing CaPool resource's IssuancePolicy specifies a maximum_lifetime the minimum of the two
+   * durations will be the maximum lifetime for issued Certificates. Note that if the issuing
    * CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective
    * lifetime will be explicitly truncated to match it.
    * @param maximumLifetime maximumLifetime or {@code null} for none

@@ -668,6 +668,147 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * Perform disable hyperthreading operation on a single server.
+         *
+         * Create a request for the method "instances.disableHyperthreading".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link DisableHyperthreading#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The `name` field is used to identify the instance. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.DisableHyperthreadingRequest}
+         * @return the request
+         */
+        public DisableHyperthreading disableHyperthreading(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.DisableHyperthreadingRequest content) throws java.io.IOException {
+          DisableHyperthreading result = new DisableHyperthreading(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DisableHyperthreading extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:disableHyperthreading";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Perform disable hyperthreading operation on a single server.
+           *
+           * Create a request for the method "instances.disableHyperthreading".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link DisableHyperthreading#execute()} method to invoke the
+           * remote operation. <p> {@link DisableHyperthreading#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The `name` field is used to identify the instance. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.DisableHyperthreadingRequest}
+           * @since 1.13
+           */
+          protected DisableHyperthreading(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.DisableHyperthreadingRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public DisableHyperthreading set$Xgafv(java.lang.String $Xgafv) {
+            return (DisableHyperthreading) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DisableHyperthreading setAccessToken(java.lang.String accessToken) {
+            return (DisableHyperthreading) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DisableHyperthreading setAlt(java.lang.String alt) {
+            return (DisableHyperthreading) super.setAlt(alt);
+          }
+
+          @Override
+          public DisableHyperthreading setCallback(java.lang.String callback) {
+            return (DisableHyperthreading) super.setCallback(callback);
+          }
+
+          @Override
+          public DisableHyperthreading setFields(java.lang.String fields) {
+            return (DisableHyperthreading) super.setFields(fields);
+          }
+
+          @Override
+          public DisableHyperthreading setKey(java.lang.String key) {
+            return (DisableHyperthreading) super.setKey(key);
+          }
+
+          @Override
+          public DisableHyperthreading setOauthToken(java.lang.String oauthToken) {
+            return (DisableHyperthreading) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DisableHyperthreading setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DisableHyperthreading) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DisableHyperthreading setQuotaUser(java.lang.String quotaUser) {
+            return (DisableHyperthreading) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DisableHyperthreading setUploadType(java.lang.String uploadType) {
+            return (DisableHyperthreading) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DisableHyperthreading setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DisableHyperthreading) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `name` field is used to identify the instance. Format:
+           * projects/{project}/locations/{location}/instances/{instance}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The `name` field is used to identify the instance. Format:
+         projects/{project}/locations/{location}/instances/{instance}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The `name` field is used to identify the instance. Format:
+           * projects/{project}/locations/{location}/instances/{instance}
+           */
+          public DisableHyperthreading setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public DisableHyperthreading set(String parameterName, Object value) {
+            return (DisableHyperthreading) super.set(parameterName, value);
+          }
+        }
+        /**
          * Disable the interactive serial console feature on an instance.
          *
          * Create a request for the method "instances.disableInteractiveSerialConsole".
@@ -797,6 +938,147 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           @Override
           public DisableInteractiveSerialConsole set(String parameterName, Object value) {
             return (DisableInteractiveSerialConsole) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Perform enable hyperthreading operation on a single server.
+         *
+         * Create a request for the method "instances.enableHyperthreading".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link EnableHyperthreading#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The `name` field is used to identify the instance. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.EnableHyperthreadingRequest}
+         * @return the request
+         */
+        public EnableHyperthreading enableHyperthreading(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.EnableHyperthreadingRequest content) throws java.io.IOException {
+          EnableHyperthreading result = new EnableHyperthreading(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class EnableHyperthreading extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:enableHyperthreading";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Perform enable hyperthreading operation on a single server.
+           *
+           * Create a request for the method "instances.enableHyperthreading".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link EnableHyperthreading#execute()} method to invoke the
+           * remote operation. <p> {@link EnableHyperthreading#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The `name` field is used to identify the instance. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.EnableHyperthreadingRequest}
+           * @since 1.13
+           */
+          protected EnableHyperthreading(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.EnableHyperthreadingRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public EnableHyperthreading set$Xgafv(java.lang.String $Xgafv) {
+            return (EnableHyperthreading) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public EnableHyperthreading setAccessToken(java.lang.String accessToken) {
+            return (EnableHyperthreading) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public EnableHyperthreading setAlt(java.lang.String alt) {
+            return (EnableHyperthreading) super.setAlt(alt);
+          }
+
+          @Override
+          public EnableHyperthreading setCallback(java.lang.String callback) {
+            return (EnableHyperthreading) super.setCallback(callback);
+          }
+
+          @Override
+          public EnableHyperthreading setFields(java.lang.String fields) {
+            return (EnableHyperthreading) super.setFields(fields);
+          }
+
+          @Override
+          public EnableHyperthreading setKey(java.lang.String key) {
+            return (EnableHyperthreading) super.setKey(key);
+          }
+
+          @Override
+          public EnableHyperthreading setOauthToken(java.lang.String oauthToken) {
+            return (EnableHyperthreading) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public EnableHyperthreading setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (EnableHyperthreading) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public EnableHyperthreading setQuotaUser(java.lang.String quotaUser) {
+            return (EnableHyperthreading) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public EnableHyperthreading setUploadType(java.lang.String uploadType) {
+            return (EnableHyperthreading) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public EnableHyperthreading setUploadProtocol(java.lang.String uploadProtocol) {
+            return (EnableHyperthreading) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `name` field is used to identify the instance. Format:
+           * projects/{project}/locations/{location}/instances/{instance}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The `name` field is used to identify the instance. Format:
+         projects/{project}/locations/{location}/instances/{instance}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The `name` field is used to identify the instance. Format:
+           * projects/{project}/locations/{location}/instances/{instance}
+           */
+          public EnableHyperthreading setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public EnableHyperthreading set(String parameterName, Object value) {
+            return (EnableHyperthreading) super.set(parameterName, value);
           }
         }
         /**
@@ -1570,6 +1852,146 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Perform reimage operation on a single server.
+         *
+         * Create a request for the method "instances.reimage".
+         *
+         * This request holds the parameters needed by the baremetalsolution server.  After setting any
+         * optional parameters, call the {@link Reimage#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The `name` field is used to identify the instance. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
+         * @param content the {@link com.google.api.services.baremetalsolution.v2.model.ReimageInstanceRequest}
+         * @return the request
+         */
+        public Reimage reimage(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.ReimageInstanceRequest content) throws java.io.IOException {
+          Reimage result = new Reimage(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Reimage extends BaremetalsolutionRequest<com.google.api.services.baremetalsolution.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}:reimage";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Perform reimage operation on a single server.
+           *
+           * Create a request for the method "instances.reimage".
+           *
+           * This request holds the parameters needed by the the baremetalsolution server.  After setting
+           * any optional parameters, call the {@link Reimage#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Reimage#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The `name` field is used to identify the instance. Format:
+         *        projects/{project}/locations/{location}/instances/{instance}
+           * @param content the {@link com.google.api.services.baremetalsolution.v2.model.ReimageInstanceRequest}
+           * @since 1.13
+           */
+          protected Reimage(java.lang.String name, com.google.api.services.baremetalsolution.v2.model.ReimageInstanceRequest content) {
+            super(Baremetalsolution.this, "POST", REST_PATH, content, com.google.api.services.baremetalsolution.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Reimage set$Xgafv(java.lang.String $Xgafv) {
+            return (Reimage) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Reimage setAccessToken(java.lang.String accessToken) {
+            return (Reimage) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Reimage setAlt(java.lang.String alt) {
+            return (Reimage) super.setAlt(alt);
+          }
+
+          @Override
+          public Reimage setCallback(java.lang.String callback) {
+            return (Reimage) super.setCallback(callback);
+          }
+
+          @Override
+          public Reimage setFields(java.lang.String fields) {
+            return (Reimage) super.setFields(fields);
+          }
+
+          @Override
+          public Reimage setKey(java.lang.String key) {
+            return (Reimage) super.setKey(key);
+          }
+
+          @Override
+          public Reimage setOauthToken(java.lang.String oauthToken) {
+            return (Reimage) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Reimage setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Reimage) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Reimage setQuotaUser(java.lang.String quotaUser) {
+            return (Reimage) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Reimage setUploadType(java.lang.String uploadType) {
+            return (Reimage) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Reimage setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Reimage) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `name` field is used to identify the instance. Format:
+           * projects/{project}/locations/{location}/instances/{instance}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The `name` field is used to identify the instance. Format:
+         projects/{project}/locations/{location}/instances/{instance}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The `name` field is used to identify the instance. Format:
+           * projects/{project}/locations/{location}/instances/{instance}
+           */
+          public Reimage setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Reimage set(String parameterName, Object value) {
+            return (Reimage) super.set(parameterName, value);
           }
         }
         /**

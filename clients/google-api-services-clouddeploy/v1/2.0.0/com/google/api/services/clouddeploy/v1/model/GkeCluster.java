@@ -30,7 +30,7 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class GkeCluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * Information specifying a GKE Cluster. Format is
+   * Optional. Information specifying a GKE Cluster. Format is
    * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`.
    * The value may be {@code null}.
    */
@@ -49,7 +49,7 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean internalIp;
 
   /**
-   * Information specifying a GKE Cluster. Format is
+   * Optional. Information specifying a GKE Cluster. Format is
    * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`.
    * @return value or {@code null} for none
    */
@@ -58,7 +58,7 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information specifying a GKE Cluster. Format is
+   * Optional. Information specifying a GKE Cluster. Format is
    * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`.
    * @param cluster cluster or {@code null} for none
    */

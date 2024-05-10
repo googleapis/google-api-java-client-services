@@ -98,7 +98,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private GatewayAPIConfig gatewayApiConfig;
 
   /**
-   * Specify the details of in-transit encryption.
+   * Specify the details of in-transit encryption. Now named inter-node transparent encryption.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -306,7 +306,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specify the details of in-transit encryption.
+   * Specify the details of in-transit encryption. Now named inter-node transparent encryption.
    * @return value or {@code null} for none
    */
   public java.lang.String getInTransitEncryptionConfig() {
@@ -314,7 +314,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specify the details of in-transit encryption.
+   * Specify the details of in-transit encryption. Now named inter-node transparent encryption.
    * @param inTransitEncryptionConfig inTransitEncryptionConfig or {@code null} for none
    */
   public NetworkConfig setInTransitEncryptionConfig(java.lang.String inTransitEncryptionConfig) {

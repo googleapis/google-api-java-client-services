@@ -91,6 +91,13 @@ public final class GoogleDevtoolsCloudbuildV1Build extends com.google.api.client
   private String finishTime;
 
   /**
+   * Optional. Configuration for git operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleDevtoolsCloudbuildV1GitConfig gitConfig;
+
+  /**
    * Output only. Unique identifier of the build.
    * The value may be {@code null}.
    */
@@ -385,6 +392,23 @@ public final class GoogleDevtoolsCloudbuildV1Build extends com.google.api.client
    */
   public GoogleDevtoolsCloudbuildV1Build setFinishTime(String finishTime) {
     this.finishTime = finishTime;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for git operations.
+   * @return value or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1GitConfig getGitConfig() {
+    return gitConfig;
+  }
+
+  /**
+   * Optional. Configuration for git operations.
+   * @param gitConfig gitConfig or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1Build setGitConfig(GoogleDevtoolsCloudbuildV1GitConfig gitConfig) {
+    this.gitConfig = gitConfig;
     return this;
   }
 

@@ -3686,6 +3686,351 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
         public class Branches {
 
           /**
+           * Retrieves a Branch.
+           *
+           * Create a request for the method "branches.get".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the branch to retrieve. Format:
+           *        `projects/locations/global/catalogs/default_catalog/branches/some_branch_id`.
+           *        "default_branch" can be used as a special branch_id, it returns the default branch that
+           *        has been set for the catalog.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBranch> {
+
+            private static final String REST_PATH = "v2alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+$");
+
+            /**
+             * Retrieves a Branch.
+             *
+             * Create a request for the method "branches.get".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the branch to retrieve. Format:
+           *        `projects/locations/global/catalogs/default_catalog/branches/some_branch_id`.
+           *        "default_branch" can be used as a special branch_id, it returns the default branch that
+           *        has been set for the catalog.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaBranch.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the branch to retrieve. Format:
+             * `projects/locations/global/catalogs/default_catalog/branches/some_branch_id`.
+             * "default_branch" can be used as a special branch_id, it returns the default branch
+             * that has been set for the catalog.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the branch to retrieve. Format:
+           `projects/locations/global/catalogs/default_catalog/branches/some_branch_id`. "default_branch" can
+           be used as a special branch_id, it returns the default branch that has been set for the catalog.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the branch to retrieve. Format:
+             * `projects/locations/global/catalogs/default_catalog/branches/some_branch_id`.
+             * "default_branch" can be used as a special branch_id, it returns the default branch
+             * that has been set for the catalog.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+/branches/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * The view to apply to the returned Branch. Defaults to [Branch.BranchView.BASIC] if
+             * unspecified. See documentation of fields of Branch to find what fields are excluded
+             * from BASIC view.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** The view to apply to the returned Branch. Defaults to [Branch.BranchView.BASIC] if unspecified. See
+           documentation of fields of Branch to find what fields are excluded from BASIC view.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * The view to apply to the returned Branch. Defaults to [Branch.BranchView.BASIC] if
+             * unspecified. See documentation of fields of Branch to find what fields are excluded
+             * from BASIC view.
+             */
+            public Get setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all Branchs under the specified parent Catalog.
+           *
+           * Create a request for the method "branches.list".
+           *
+           * This request holds the parameters needed by the retail server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent catalog resource name.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListBranchesResponse> {
+
+            private static final String REST_PATH = "v2alpha/{+parent}/branches";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+            /**
+             * Lists all Branchs under the specified parent Catalog.
+             *
+             * Create a request for the method "branches.list".
+             *
+             * This request holds the parameters needed by the the retail server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent catalog resource name.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaListBranchesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent catalog resource name. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent catalog resource name.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent catalog resource name. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The view to apply to the returned Branch. Defaults to [Branch.BranchView.BASIC] if
+             * unspecified. See documentation of fields of Branch to find what fields are excluded
+             * from BASIC view.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** The view to apply to the returned Branch. Defaults to [Branch.BranchView.BASIC] if unspecified. See
+           documentation of fields of Branch to find what fields are excluded from BASIC view.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * The view to apply to the returned Branch. Defaults to [Branch.BranchView.BASIC] if
+             * unspecified. See documentation of fields of Branch to find what fields are excluded
+             * from BASIC view.
+             */
+            public List setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+          /**
            * An accessor for creating requests from the Operations collection.
            *
            * <p>The typical use is:</p>

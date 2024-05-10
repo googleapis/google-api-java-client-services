@@ -467,7 +467,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private Tags tags;
 
   /**
-   * [Output Only] Specifies upcoming maintenance for the instance.
+   * [Output Only] DEPRECATED: Please use resource_status.upcoming_maintenance instead. Specifies
+   * upcoming maintenance for the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1564,7 +1565,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Specifies upcoming maintenance for the instance.
+   * [Output Only] DEPRECATED: Please use resource_status.upcoming_maintenance instead. Specifies
+   * upcoming maintenance for the instance.
    * @return value or {@code null} for none
    */
   public UpcomingMaintenance getUpcomingMaintenance() {
@@ -1572,7 +1574,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Specifies upcoming maintenance for the instance.
+   * [Output Only] DEPRECATED: Please use resource_status.upcoming_maintenance instead. Specifies
+   * upcoming maintenance for the instance.
    * @param upcomingMaintenance upcomingMaintenance or {@code null} for none
    */
   public Instance setUpcomingMaintenance(UpcomingMaintenance upcomingMaintenance) {

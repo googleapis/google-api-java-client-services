@@ -52,6 +52,13 @@ public final class GoogleCloudDiscoveryengineV1ImportDocumentsMetadata extends c
   private java.lang.Long successCount;
 
   /**
+   * Total count of entries that were processed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalCount;
+
+  /**
    * Operation last update time. If the operation is done, this is also the finish time.
    * The value may be {@code null}.
    */
@@ -106,6 +113,23 @@ public final class GoogleCloudDiscoveryengineV1ImportDocumentsMetadata extends c
    */
   public GoogleCloudDiscoveryengineV1ImportDocumentsMetadata setSuccessCount(java.lang.Long successCount) {
     this.successCount = successCount;
+    return this;
+  }
+
+  /**
+   * Total count of entries that were processed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalCount() {
+    return totalCount;
+  }
+
+  /**
+   * Total count of entries that were processed.
+   * @param totalCount totalCount or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1ImportDocumentsMetadata setTotalCount(java.lang.Long totalCount) {
+    this.totalCount = totalCount;
     return this;
   }
 

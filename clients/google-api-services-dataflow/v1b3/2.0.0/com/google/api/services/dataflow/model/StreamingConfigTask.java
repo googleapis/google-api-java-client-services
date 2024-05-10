@@ -51,6 +51,14 @@ public final class StreamingConfigTask extends com.google.api.client.json.Generi
   private java.lang.Long maxWorkItemCommitBytes;
 
   /**
+   * Operational limits for the streaming job. Can be used by the worker to validate outputs sent to
+   * the backend.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StreamingOperationalLimits operationalLimits;
+
+  /**
    * Set of computation configuration information.
    * The value may be {@code null}.
    */
@@ -134,6 +142,25 @@ public final class StreamingConfigTask extends com.google.api.client.json.Generi
    */
   public StreamingConfigTask setMaxWorkItemCommitBytes(java.lang.Long maxWorkItemCommitBytes) {
     this.maxWorkItemCommitBytes = maxWorkItemCommitBytes;
+    return this;
+  }
+
+  /**
+   * Operational limits for the streaming job. Can be used by the worker to validate outputs sent to
+   * the backend.
+   * @return value or {@code null} for none
+   */
+  public StreamingOperationalLimits getOperationalLimits() {
+    return operationalLimits;
+  }
+
+  /**
+   * Operational limits for the streaming job. Can be used by the worker to validate outputs sent to
+   * the backend.
+   * @param operationalLimits operationalLimits or {@code null} for none
+   */
+  public StreamingConfigTask setOperationalLimits(StreamingOperationalLimits operationalLimits) {
+    this.operationalLimits = operationalLimits;
     return this;
   }
 

@@ -80,7 +80,7 @@ public final class GoogleCloudRecommenderV1Recommendation extends com.google.api
   private String lastRefreshTime;
 
   /**
-   * Name of recommendation.
+   * Identifier. Name of recommendation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -240,7 +240,7 @@ public final class GoogleCloudRecommenderV1Recommendation extends com.google.api
   }
 
   /**
-   * Name of recommendation.
+   * Identifier. Name of recommendation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -248,7 +248,7 @@ public final class GoogleCloudRecommenderV1Recommendation extends com.google.api
   }
 
   /**
-   * Name of recommendation.
+   * Identifier. Name of recommendation.
    * @param name name or {@code null} for none
    */
   public GoogleCloudRecommenderV1Recommendation setName(java.lang.String name) {

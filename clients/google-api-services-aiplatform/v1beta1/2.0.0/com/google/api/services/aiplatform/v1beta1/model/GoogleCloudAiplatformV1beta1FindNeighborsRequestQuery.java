@@ -74,6 +74,13 @@ public final class GoogleCloudAiplatformV1beta1FindNeighborsRequestQuery extends
   private java.lang.Integer perCrowdingAttributeNeighborCount;
 
   /**
+   * Optional. Represents RRF algorithm that combines search results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1FindNeighborsRequestQueryRRF rrf;
+
+  /**
    * The number of neighbors to find via approximate search before exact reordering is performed. If
    * not set, the default value from scam config is used; if set, this value must be > 0.
    * @return value or {@code null} for none
@@ -173,6 +180,23 @@ public final class GoogleCloudAiplatformV1beta1FindNeighborsRequestQuery extends
    */
   public GoogleCloudAiplatformV1beta1FindNeighborsRequestQuery setPerCrowdingAttributeNeighborCount(java.lang.Integer perCrowdingAttributeNeighborCount) {
     this.perCrowdingAttributeNeighborCount = perCrowdingAttributeNeighborCount;
+    return this;
+  }
+
+  /**
+   * Optional. Represents RRF algorithm that combines search results.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FindNeighborsRequestQueryRRF getRrf() {
+    return rrf;
+  }
+
+  /**
+   * Optional. Represents RRF algorithm that combines search results.
+   * @param rrf rrf or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FindNeighborsRequestQuery setRrf(GoogleCloudAiplatformV1beta1FindNeighborsRequestQueryRRF rrf) {
+    this.rrf = rrf;
     return this;
   }
 

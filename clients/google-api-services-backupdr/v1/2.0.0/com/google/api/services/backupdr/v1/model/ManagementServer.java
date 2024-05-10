@@ -31,6 +31,14 @@ package com.google.api.services.backupdr.v1.model;
 public final class ManagementServer extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The hostname or ip address of the exposed AGM endpoints, used by BAs to connect to
+   * BA proxy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> baProxyUri;
+
+  /**
    * Output only. The time when the instance was created.
    * The value may be {@code null}.
    */
@@ -128,6 +136,25 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private WorkforceIdentityBasedOAuth2ClientID workforceIdentityBasedOauth2ClientId;
+
+  /**
+   * Output only. The hostname or ip address of the exposed AGM endpoints, used by BAs to connect to
+   * BA proxy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getBaProxyUri() {
+    return baProxyUri;
+  }
+
+  /**
+   * Output only. The hostname or ip address of the exposed AGM endpoints, used by BAs to connect to
+   * BA proxy.
+   * @param baProxyUri baProxyUri or {@code null} for none
+   */
+  public ManagementServer setBaProxyUri(java.util.List<java.lang.String> baProxyUri) {
+    this.baProxyUri = baProxyUri;
+    return this;
+  }
 
   /**
    * Output only. The time when the instance was created.

@@ -80,7 +80,7 @@ public final class GoogleCloudRecommenderV1Insight extends com.google.api.client
   private String lastRefreshTime;
 
   /**
-   * Name of the insight.
+   * Identifier. Name of the insight.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,7 +235,7 @@ public final class GoogleCloudRecommenderV1Insight extends com.google.api.client
   }
 
   /**
-   * Name of the insight.
+   * Identifier. Name of the insight.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -243,7 +243,7 @@ public final class GoogleCloudRecommenderV1Insight extends com.google.api.client
   }
 
   /**
-   * Name of the insight.
+   * Identifier. Name of the insight.
    * @param name name or {@code null} for none
    */
   public GoogleCloudRecommenderV1Insight setName(java.lang.String name) {

@@ -37,7 +37,7 @@ public final class GoogleCloudAiplatformV1beta1PairwiseQuestionAnsweringQualityI
   private java.lang.String baselinePrediction;
 
   /**
-   * Optional. Text to answer the question.
+   * Required. Text to answer the question.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class GoogleCloudAiplatformV1beta1PairwiseQuestionAnsweringQualityI
   }
 
   /**
-   * Optional. Text to answer the question.
+   * Required. Text to answer the question.
    * @return value or {@code null} for none
    */
   public java.lang.String getContext() {
@@ -90,7 +90,7 @@ public final class GoogleCloudAiplatformV1beta1PairwiseQuestionAnsweringQualityI
   }
 
   /**
-   * Optional. Text to answer the question.
+   * Required. Text to answer the question.
    * @param context context or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PairwiseQuestionAnsweringQualityInstance setContext(java.lang.String context) {

@@ -58,8 +58,10 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Chat user or app the membership corresponds to. If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
-   * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
+   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
+   * output populates the
+   * [user](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) `name` and
+   * `type`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,8 +77,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. User's role within a Chat space, which determines their permitted actions in the
-   * space. [Developer Preview](https://developers.google.com/workspace/preview): This field can
-   * only be used as input in `UpdateMembership`.
+   * space. This field can only be used as input in `UpdateMembership`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,8 +153,10 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Chat user or app the membership corresponds to. If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
-   * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
+   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
+   * output populates the
+   * [user](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) `name` and
+   * `type`.
    * @return value or {@code null} for none
    */
   public User getMember() {
@@ -162,8 +165,10 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Chat user or app the membership corresponds to. If your Chat app [authenticates as a
-   * user](https://developers.google.com/chat/api/guides/auth/users), the output populates the
-   * [user](https://developers.google.com/chat/api/reference/rest/v1/User) `name` and `type`.
+   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
+   * output populates the
+   * [user](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) `name` and
+   * `type`.
    * @param member member or {@code null} for none
    */
   public Membership setMember(User member) {
@@ -192,8 +197,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. User's role within a Chat space, which determines their permitted actions in the
-   * space. [Developer Preview](https://developers.google.com/workspace/preview): This field can
-   * only be used as input in `UpdateMembership`.
+   * space. This field can only be used as input in `UpdateMembership`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -202,8 +206,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. User's role within a Chat space, which determines their permitted actions in the
-   * space. [Developer Preview](https://developers.google.com/workspace/preview): This field can
-   * only be used as input in `UpdateMembership`.
+   * space. This field can only be used as input in `UpdateMembership`.
    * @param role role or {@code null} for none
    */
   public Membership setRole(java.lang.String role) {

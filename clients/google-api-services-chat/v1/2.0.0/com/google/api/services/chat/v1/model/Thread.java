@@ -18,10 +18,10 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * A thread in a Google Chat space. For example usage, see [Start or reply to a message
- * thread](https://developers.google.com/chat/api/guides/v1/messages/create#create-message-thread).
- * If you specify a thread when creating a message, you can set the [`messageReplyOption`](https://d
- * evelopers.google.com/chat/api/reference/rest/v1/spaces.messages/create#messagereplyoption) field
- * to determine what happens if no matching thread is found.
+ * thread](https://developers.google.com/workspace/chat/create-messages#create-message-thread). If
+ * you specify a thread when creating a message, you can set the [`messageReplyOption`](https://deve
+ * lopers.google.com/workspace/chat/api/reference/rest/v1/spaces.messages/create#messagereplyoption)
+ * field to determine what happens if no matching thread is found.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

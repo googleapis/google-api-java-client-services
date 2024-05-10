@@ -38,6 +38,13 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
   private java.lang.String cgroupMode;
 
   /**
+   * Optional. Amounts for 2M and 1G hugepages
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HugepagesConfig hugepages;
+
+  /**
    * The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. The
    * following parameters are supported. net.core.busy_poll net.core.busy_read
    * net.core.netdev_max_backlog net.core.rmem_max net.core.wmem_default net.core.wmem_max
@@ -62,6 +69,23 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    */
   public LinuxNodeConfig setCgroupMode(java.lang.String cgroupMode) {
     this.cgroupMode = cgroupMode;
+    return this;
+  }
+
+  /**
+   * Optional. Amounts for 2M and 1G hugepages
+   * @return value or {@code null} for none
+   */
+  public HugepagesConfig getHugepages() {
+    return hugepages;
+  }
+
+  /**
+   * Optional. Amounts for 2M and 1G hugepages
+   * @param hugepages hugepages or {@code null} for none
+   */
+  public LinuxNodeConfig setHugepages(HugepagesConfig hugepages) {
+    this.hugepages = hugepages;
     return this;
   }
 

@@ -38,7 +38,8 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   private java.util.List<ResponseStatusCode> acceptedResponseStatusCodes;
 
   /**
-   * The authentication information. Optional when creating an HTTP check; defaults to empty.
+   * The authentication information. Optional when creating an HTTP check; defaults to empty. Do not
+   * set both auth_method and auth_info.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,6 +134,14 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   private java.lang.String requestMethod;
 
   /**
+   * If specified, Uptime will generate and attach an OIDC JWT token for the Monitoring service
+   * agent service account as an Authorization header in the HTTP request when probing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceAgentAuthentication serviceAgentAuthentication;
+
+  /**
    * If true, use HTTPS instead of HTTP to run the check.
    * The value may be {@code null}.
    */
@@ -168,7 +177,8 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The authentication information. Optional when creating an HTTP check; defaults to empty.
+   * The authentication information. Optional when creating an HTTP check; defaults to empty. Do not
+   * set both auth_method and auth_info.
    * @return value or {@code null} for none
    */
   public BasicAuthentication getAuthInfo() {
@@ -176,7 +186,8 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The authentication information. Optional when creating an HTTP check; defaults to empty.
+   * The authentication information. Optional when creating an HTTP check; defaults to empty. Do not
+   * set both auth_method and auth_info.
    * @param authInfo authInfo or {@code null} for none
    */
   public HttpCheck setAuthInfo(BasicAuthentication authInfo) {
@@ -422,6 +433,25 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
    */
   public HttpCheck setRequestMethod(java.lang.String requestMethod) {
     this.requestMethod = requestMethod;
+    return this;
+  }
+
+  /**
+   * If specified, Uptime will generate and attach an OIDC JWT token for the Monitoring service
+   * agent service account as an Authorization header in the HTTP request when probing.
+   * @return value or {@code null} for none
+   */
+  public ServiceAgentAuthentication getServiceAgentAuthentication() {
+    return serviceAgentAuthentication;
+  }
+
+  /**
+   * If specified, Uptime will generate and attach an OIDC JWT token for the Monitoring service
+   * agent service account as an Authorization header in the HTTP request when probing.
+   * @param serviceAgentAuthentication serviceAgentAuthentication or {@code null} for none
+   */
+  public HttpCheck setServiceAgentAuthentication(ServiceAgentAuthentication serviceAgentAuthentication) {
+    this.serviceAgentAuthentication = serviceAgentAuthentication;
     return this;
   }
 

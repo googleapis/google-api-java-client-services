@@ -18,12 +18,14 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * A field in which users can enter text. Supports suggestions and on-change actions. For an example
- * in Google Chat apps, see [Text input](https://developers.google.com/chat/ui/widgets/text-input).
- * Chat apps receive and can process the value of entered text during form input events. For details
- * about working with form inputs, see [Receive form data](https://developers.google.com/chat/ui
- * /read-form-data). When you need to collect undefined or abstract data from users, use a text
- * input. To collect defined or enumerated data from users, use the SelectionInput widget. [Google
- * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+ * in Google Chat apps, see [Add a field in which a user can enter
+ * text](https://developers.google.com/workspace/chat/design-interactive-card-
+ * dialog#add_a_field_in_which_a_user_can_enter_text). Chat apps receive and can process the value
+ * of entered text during form input events. For details about working with form inputs, see
+ * [Receive form data](https://developers.google.com/workspace/chat/read-form-data). When you need
+ * to collect undefined or abstract data from users, use a text input. To collect defined or
+ * enumerated data from users, use the SelectionInput widget. [Google Workspace Add-ons and Chat
+ * apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -81,8 +83,8 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
 
   /**
    * The name by which the text input is identified in a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
-   * data).
+   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
+   * form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +93,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   /**
    * What to do when a change occurs in the text input field. For example, a user adding to the
    * field or deleting text. Examples of actions to take include running a custom function or
-   * opening a [dialog](https://developers.google.com/chat/how-tos/dialogs) in Google Chat.
+   * opening a [dialog](https://developers.google.com/workspace/chat/dialogs) in Google Chat.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +118,8 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
 
   /**
    * The value entered by a user, returned as part of a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
-   * data).
+   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
+   * form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,8 +227,8 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
 
   /**
    * The name by which the text input is identified in a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
-   * data).
+   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
+   * form-data).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -235,8 +237,8 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
 
   /**
    * The name by which the text input is identified in a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
-   * data).
+   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
+   * form-data).
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setName(java.lang.String name) {
@@ -247,7 +249,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   /**
    * What to do when a change occurs in the text input field. For example, a user adding to the
    * field or deleting text. Examples of actions to take include running a custom function or
-   * opening a [dialog](https://developers.google.com/chat/how-tos/dialogs) in Google Chat.
+   * opening a [dialog](https://developers.google.com/workspace/chat/dialogs) in Google Chat.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Action getOnChangeAction() {
@@ -257,7 +259,7 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
   /**
    * What to do when a change occurs in the text input field. For example, a user adding to the
    * field or deleting text. Examples of actions to take include running a custom function or
-   * opening a [dialog](https://developers.google.com/chat/how-tos/dialogs) in Google Chat.
+   * opening a [dialog](https://developers.google.com/workspace/chat/dialogs) in Google Chat.
    * @param onChangeAction onChangeAction or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setOnChangeAction(GoogleAppsCardV1Action onChangeAction) {
@@ -307,8 +309,8 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
 
   /**
    * The value entered by a user, returned as part of a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
-   * data).
+   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
+   * form-data).
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -317,8 +319,8 @@ public final class GoogleAppsCardV1TextInput extends com.google.api.client.json.
 
   /**
    * The value entered by a user, returned as part of a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/chat/ui/read-form-
-   * data).
+   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
+   * form-data).
    * @param value value or {@code null} for none
    */
   public GoogleAppsCardV1TextInput setValue(java.lang.String value) {

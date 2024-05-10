@@ -31,6 +31,13 @@ package com.google.api.services.securitycenter.v1.model;
 public final class Simulation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates which cloud provider was used in this simulation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudProvider;
+
+  /**
    * Output only. Time simulation was created
    * The value may be {@code null}.
    */
@@ -55,6 +62,23 @@ public final class Simulation extends com.google.api.client.json.GenericJson {
     // hack to force ProGuard to consider ResourceValueConfigMetadata used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ResourceValueConfigMetadata.class);
+  }
+
+  /**
+   * Indicates which cloud provider was used in this simulation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudProvider() {
+    return cloudProvider;
+  }
+
+  /**
+   * Indicates which cloud provider was used in this simulation.
+   * @param cloudProvider cloudProvider or {@code null} for none
+   */
+  public Simulation setCloudProvider(java.lang.String cloudProvider) {
+    this.cloudProvider = cloudProvider;
+    return this;
   }
 
   /**

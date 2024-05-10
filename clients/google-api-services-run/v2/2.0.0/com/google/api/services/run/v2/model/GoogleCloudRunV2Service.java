@@ -45,7 +45,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Settings for the Binary Authorization feature.
+   * Optional. Settings for the Binary Authorization feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,8 +150,8 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.Long generation;
 
   /**
-   * Provides the ingress settings for this Service. On output, returns the currently observed
-   * ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+   * Optional. Provides the ingress settings for this Service. On output, returns the currently
+   * observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +195,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.String latestReadyRevision;
 
   /**
-   * The launch stage as defined by [Google Cloud Platform Launch
+   * Optional. The launch stage as defined by [Google Cloud Platform Launch
    * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
    * `GA`. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input
    * to allow use of preview features in that stage. On read (or output), describes whether the
@@ -276,8 +276,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private GoogleCloudRunV2Condition terminalCondition;
 
   /**
-   * Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If
-   * traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
+   * Optional. Specifies how to distribute traffic over a collection of Revisions belonging to the
+   * Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready`
+   * Revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -341,7 +342,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Settings for the Binary Authorization feature.
+   * Optional. Settings for the Binary Authorization feature.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2BinaryAuthorization getBinaryAuthorization() {
@@ -349,7 +350,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Settings for the Binary Authorization feature.
+   * Optional. Settings for the Binary Authorization feature.
    * @param binaryAuthorization binaryAuthorization or {@code null} for none
    */
   public GoogleCloudRunV2Service setBinaryAuthorization(GoogleCloudRunV2BinaryAuthorization binaryAuthorization) {
@@ -578,8 +579,8 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Provides the ingress settings for this Service. On output, returns the currently observed
-   * ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+   * Optional. Provides the ingress settings for this Service. On output, returns the currently
+   * observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
    * @return value or {@code null} for none
    */
   public java.lang.String getIngress() {
@@ -587,8 +588,8 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Provides the ingress settings for this Service. On output, returns the currently observed
-   * ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+   * Optional. Provides the ingress settings for this Service. On output, returns the currently
+   * observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
    * @param ingress ingress or {@code null} for none
    */
   public GoogleCloudRunV2Service setIngress(java.lang.String ingress) {
@@ -683,7 +684,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * The launch stage as defined by [Google Cloud Platform Launch
+   * Optional. The launch stage as defined by [Google Cloud Platform Launch
    * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
    * `GA`. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input
    * to allow use of preview features in that stage. On read (or output), describes whether the
@@ -696,7 +697,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * The launch stage as defined by [Google Cloud Platform Launch
+   * Optional. The launch stage as defined by [Google Cloud Platform Launch
    * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
    * `GA`. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input
    * to allow use of preview features in that stage. On read (or output), describes whether the
@@ -869,8 +870,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If
-   * traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
+   * Optional. Specifies how to distribute traffic over a collection of Revisions belonging to the
+   * Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready`
+   * Revision.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRunV2TrafficTarget> getTraffic() {
@@ -878,8 +880,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If
-   * traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
+   * Optional. Specifies how to distribute traffic over a collection of Revisions belonging to the
+   * Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready`
+   * Revision.
    * @param traffic traffic or {@code null} for none
    */
   public GoogleCloudRunV2Service setTraffic(java.util.List<GoogleCloudRunV2TrafficTarget> traffic) {

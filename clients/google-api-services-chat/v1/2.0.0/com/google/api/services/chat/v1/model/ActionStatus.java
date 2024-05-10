@@ -18,7 +18,7 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * Represents the status for a request to either invoke or submit a
- * [dialog](https://developers.google.com/chat/how-tos/dialogs).
+ * [dialog](https://developers.google.com/workspace/chat/dialogs).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

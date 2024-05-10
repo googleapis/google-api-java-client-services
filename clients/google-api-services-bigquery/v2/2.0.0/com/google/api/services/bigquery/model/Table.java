@@ -112,6 +112,13 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Long expirationTime;
 
   /**
+   * Optional. Options defining open source compatible table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExternalCatalogTableOptions externalCatalogTableOptions;
+
+  /**
    * Optional. Describes the data format, location, and other properties of a table stored outside
    * of BigQuery. By defining these properties, the data source can then be queried as if it were a
    * standard BigQuery table.
@@ -329,6 +336,15 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> resourceTags;
+
+  /**
+   * Optional. Output only. Restriction config for table. If set, restrict certain accesses on the
+   * table based on the config. See [Data egress](/bigquery/docs/analytics-hub-
+   * introduction#data_egress) for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RestrictionConfig restrictions;
 
   /**
    * Optional. Describes the schema of this table.
@@ -600,6 +616,23 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setExpirationTime(java.lang.Long expirationTime) {
     this.expirationTime = expirationTime;
+    return this;
+  }
+
+  /**
+   * Optional. Options defining open source compatible table.
+   * @return value or {@code null} for none
+   */
+  public ExternalCatalogTableOptions getExternalCatalogTableOptions() {
+    return externalCatalogTableOptions;
+  }
+
+  /**
+   * Optional. Options defining open source compatible table.
+   * @param externalCatalogTableOptions externalCatalogTableOptions or {@code null} for none
+   */
+  public Table setExternalCatalogTableOptions(ExternalCatalogTableOptions externalCatalogTableOptions) {
+    this.externalCatalogTableOptions = externalCatalogTableOptions;
     return this;
   }
 
@@ -1150,6 +1183,27 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setResourceTags(java.util.Map<String, java.lang.String> resourceTags) {
     this.resourceTags = resourceTags;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Restriction config for table. If set, restrict certain accesses on the
+   * table based on the config. See [Data egress](/bigquery/docs/analytics-hub-
+   * introduction#data_egress) for more details.
+   * @return value or {@code null} for none
+   */
+  public RestrictionConfig getRestrictions() {
+    return restrictions;
+  }
+
+  /**
+   * Optional. Output only. Restriction config for table. If set, restrict certain accesses on the
+   * table based on the config. See [Data egress](/bigquery/docs/analytics-hub-
+   * introduction#data_egress) for more details.
+   * @param restrictions restrictions or {@code null} for none
+   */
+  public Table setRestrictions(RestrictionConfig restrictions) {
+    this.restrictions = restrictions;
     return this;
   }
 

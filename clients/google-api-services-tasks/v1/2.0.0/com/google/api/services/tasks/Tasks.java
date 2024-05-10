@@ -1290,7 +1290,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Creates a new task on the specified task list. A user can have up to 20,000 uncompleted tasks per
+     * Creates a new task on the specified task list. A user can have up to 20,000 non-hidden tasks per
      * list and up to 100,000 tasks in total at a time.
      *
      * Create a request for the method "tasks.insert".
@@ -1313,7 +1313,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks";
 
       /**
-       * Creates a new task on the specified task list. A user can have up to 20,000 uncompleted tasks
+       * Creates a new task on the specified task list. A user can have up to 20,000 non-hidden tasks
        * per list and up to 100,000 tasks in total at a time.
        *
        * Create a request for the method "tasks.insert".
@@ -1455,7 +1455,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Returns all tasks in the specified task list. A user can have up to 20,000 uncompleted tasks per
+     * Returns all tasks in the specified task list. A user can have up to 20,000 non-hidden tasks per
      * list and up to 100,000 tasks in total at a time.
      *
      * Create a request for the method "tasks.list".
@@ -1477,8 +1477,8 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks";
 
       /**
-       * Returns all tasks in the specified task list. A user can have up to 20,000 uncompleted tasks
-       * per list and up to 100,000 tasks in total at a time.
+       * Returns all tasks in the specified task list. A user can have up to 20,000 non-hidden tasks per
+       * list and up to 100,000 tasks in total at a time.
        *
        * Create a request for the method "tasks.list".
        *

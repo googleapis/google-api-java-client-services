@@ -47,18 +47,17 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String analyticsRegion;
 
   /**
-   * Cloud KMS key name used for encrypting API consumer data. Required for US/EU regions when
-   * [BillingType](#BillingType) is `SUBSCRIPTION`. When [BillingType](#BillingType) is `EVALUATION`
-   * or the region is not US/EU, a Google-Managed encryption key will be used. Format:
-   * `projects/locations/keyRings/cryptoKeys`
+   * Cloud KMS key name used for encrypting API consumer data. If not specified or
+   * [BillingType](#BillingType) is `EVALUATION`, a Google-Managed encryption key will be used.
+   * Format: `projects/locations/keyRings/cryptoKeys`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String apiConsumerDataEncryptionKeyName;
 
   /**
-   * This field is needed only for customers with control plane in US or EU. Apigee stores some
-   * control plane data only in single region. This field determines which single region Apigee
+   * This field is needed only for customers using non-default data residency regions. Apigee stores
+   * some control plane data only in single region. This field determines which single region Apigee
    * should use. For example: "us-west1" when control plane is in US or "europe-west2" when control
    * plane is in EU.
    * The value may be {@code null}.
@@ -116,9 +115,9 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
 
   /**
    * Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
-   * Required when [BillingType](#BillingType) is `SUBSCRIPTION`. When [BillingType](#BillingType)
-   * is `EVALUATION`, a Google-Managed encryption key will be used. Format:
-   * `projects/locations/keyRings/cryptoKeys`
+   * Only used for the data residency region "US" or "EU". If not specified or
+   * [BillingType](#BillingType) is `EVALUATION`, a Google-Managed encryption key will be used.
+   * Format: `projects/locations/keyRings/cryptoKeys`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,11 +216,10 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
 
   /**
    * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime
-   * instances. Update is not allowed after the organization is created. Required when
-   * [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is
-   * `TRIAL`, a Google-Managed encryption key will be used. For example:
-   * "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee
-   * hybrid.
+   * instances. Update is not allowed after the organization is created. If not specified or
+   * [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For
+   * example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for
+   * Apigee hybrid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -307,10 +305,9 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Cloud KMS key name used for encrypting API consumer data. Required for US/EU regions when
-   * [BillingType](#BillingType) is `SUBSCRIPTION`. When [BillingType](#BillingType) is `EVALUATION`
-   * or the region is not US/EU, a Google-Managed encryption key will be used. Format:
-   * `projects/locations/keyRings/cryptoKeys`
+   * Cloud KMS key name used for encrypting API consumer data. If not specified or
+   * [BillingType](#BillingType) is `EVALUATION`, a Google-Managed encryption key will be used.
+   * Format: `projects/locations/keyRings/cryptoKeys`
    * @return value or {@code null} for none
    */
   public java.lang.String getApiConsumerDataEncryptionKeyName() {
@@ -318,10 +315,9 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Cloud KMS key name used for encrypting API consumer data. Required for US/EU regions when
-   * [BillingType](#BillingType) is `SUBSCRIPTION`. When [BillingType](#BillingType) is `EVALUATION`
-   * or the region is not US/EU, a Google-Managed encryption key will be used. Format:
-   * `projects/locations/keyRings/cryptoKeys`
+   * Cloud KMS key name used for encrypting API consumer data. If not specified or
+   * [BillingType](#BillingType) is `EVALUATION`, a Google-Managed encryption key will be used.
+   * Format: `projects/locations/keyRings/cryptoKeys`
    * @param apiConsumerDataEncryptionKeyName apiConsumerDataEncryptionKeyName or {@code null} for none
    */
   public GoogleCloudApigeeV1Organization setApiConsumerDataEncryptionKeyName(java.lang.String apiConsumerDataEncryptionKeyName) {
@@ -330,8 +326,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * This field is needed only for customers with control plane in US or EU. Apigee stores some
-   * control plane data only in single region. This field determines which single region Apigee
+   * This field is needed only for customers using non-default data residency regions. Apigee stores
+   * some control plane data only in single region. This field determines which single region Apigee
    * should use. For example: "us-west1" when control plane is in US or "europe-west2" when control
    * plane is in EU.
    * @return value or {@code null} for none
@@ -341,8 +337,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * This field is needed only for customers with control plane in US or EU. Apigee stores some
-   * control plane data only in single region. This field determines which single region Apigee
+   * This field is needed only for customers using non-default data residency regions. Apigee stores
+   * some control plane data only in single region. This field determines which single region Apigee
    * should use. For example: "us-west1" when control plane is in US or "europe-west2" when control
    * plane is in EU.
    * @param apiConsumerDataLocation apiConsumerDataLocation or {@code null} for none
@@ -495,9 +491,9 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
 
   /**
    * Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
-   * Required when [BillingType](#BillingType) is `SUBSCRIPTION`. When [BillingType](#BillingType)
-   * is `EVALUATION`, a Google-Managed encryption key will be used. Format:
-   * `projects/locations/keyRings/cryptoKeys`
+   * Only used for the data residency region "US" or "EU". If not specified or
+   * [BillingType](#BillingType) is `EVALUATION`, a Google-Managed encryption key will be used.
+   * Format: `projects/locations/keyRings/cryptoKeys`
    * @return value or {@code null} for none
    */
   public java.lang.String getControlPlaneEncryptionKeyName() {
@@ -506,9 +502,9 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
 
   /**
    * Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
-   * Required when [BillingType](#BillingType) is `SUBSCRIPTION`. When [BillingType](#BillingType)
-   * is `EVALUATION`, a Google-Managed encryption key will be used. Format:
-   * `projects/locations/keyRings/cryptoKeys`
+   * Only used for the data residency region "US" or "EU". If not specified or
+   * [BillingType](#BillingType) is `EVALUATION`, a Google-Managed encryption key will be used.
+   * Format: `projects/locations/keyRings/cryptoKeys`
    * @param controlPlaneEncryptionKeyName controlPlaneEncryptionKeyName or {@code null} for none
    */
   public GoogleCloudApigeeV1Organization setControlPlaneEncryptionKeyName(java.lang.String controlPlaneEncryptionKeyName) {
@@ -736,11 +732,10 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
 
   /**
    * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime
-   * instances. Update is not allowed after the organization is created. Required when
-   * [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is
-   * `TRIAL`, a Google-Managed encryption key will be used. For example:
-   * "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee
-   * hybrid.
+   * instances. Update is not allowed after the organization is created. If not specified or
+   * [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For
+   * example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for
+   * Apigee hybrid.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeDatabaseEncryptionKeyName() {
@@ -749,11 +744,10 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
 
   /**
    * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime
-   * instances. Update is not allowed after the organization is created. Required when
-   * [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is
-   * `TRIAL`, a Google-Managed encryption key will be used. For example:
-   * "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee
-   * hybrid.
+   * instances. Update is not allowed after the organization is created. If not specified or
+   * [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For
+   * example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for
+   * Apigee hybrid.
    * @param runtimeDatabaseEncryptionKeyName runtimeDatabaseEncryptionKeyName or {@code null} for none
    */
   public GoogleCloudApigeeV1Organization setRuntimeDatabaseEncryptionKeyName(java.lang.String runtimeDatabaseEncryptionKeyName) {

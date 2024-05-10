@@ -31,8 +31,8 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The request messages specifying the ResourcePolicys to update. A maximum of 100
-   * objects can be updated in a batch.
+   * Required. The request messages specifying the ResourcePolicy objects to update. A maximum of
+   * 100 objects can be updated in a batch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,8 +49,8 @@ public final class GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesReques
   private String updateMask;
 
   /**
-   * Required. The request messages specifying the ResourcePolicys to update. A maximum of 100
-   * objects can be updated in a batch.
+   * Required. The request messages specifying the ResourcePolicy objects to update. A maximum of
+   * 100 objects can be updated in a batch.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleFirebaseAppcheckV1betaUpdateResourcePolicyRequest> getRequests() {
@@ -58,8 +58,8 @@ public final class GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesReques
   }
 
   /**
-   * Required. The request messages specifying the ResourcePolicys to update. A maximum of 100
-   * objects can be updated in a batch.
+   * Required. The request messages specifying the ResourcePolicy objects to update. A maximum of
+   * 100 objects can be updated in a batch.
    * @param requests requests or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesRequest setRequests(java.util.List<GoogleFirebaseAppcheckV1betaUpdateResourcePolicyRequest> requests) {

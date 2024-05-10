@@ -23,8 +23,7 @@ package com.google.api.services.integrations.v1.model;
  * at that. For *PERCENTILE_DURATION metrics, one or both of these fields may be set, and also, the
  * duration threshold value should be specified in the threshold_duration_ms member below. For
  * *AVERAGE_DURATION metrics, these fields should not be set at all. A different member,
- * threshold_duration_ms, must be set in the EventAlertConfig or the TaskAlertConfig. See go
- * /eventbus-alert-config-examples
+ * threshold_duration_ms, must be set in the EventAlertConfig or the TaskAlertConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed

@@ -17,7 +17,8 @@
 package com.google.api.services.content.model;
 
 /**
- * Model definition for Installment.
+ * Details of a monthly installment payment offering. [Learn
+ * more](https://support.google.com/merchants/answer/6324474) about installments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -36,6 +37,20 @@ public final class Installment extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Price amount;
+
+  /**
+   * Optional. Type of installment payments. Supported values are: - "`finance`" - "`lease`"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String creditType;
+
+  /**
+   * Optional. The initial down payment amount the buyer has to pay.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price downpayment;
 
   /**
    * The number of installments the buyer has to pay.
@@ -58,6 +73,40 @@ public final class Installment extends com.google.api.client.json.GenericJson {
    */
   public Installment setAmount(Price amount) {
     this.amount = amount;
+    return this;
+  }
+
+  /**
+   * Optional. Type of installment payments. Supported values are: - "`finance`" - "`lease`"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreditType() {
+    return creditType;
+  }
+
+  /**
+   * Optional. Type of installment payments. Supported values are: - "`finance`" - "`lease`"
+   * @param creditType creditType or {@code null} for none
+   */
+  public Installment setCreditType(java.lang.String creditType) {
+    this.creditType = creditType;
+    return this;
+  }
+
+  /**
+   * Optional. The initial down payment amount the buyer has to pay.
+   * @return value or {@code null} for none
+   */
+  public Price getDownpayment() {
+    return downpayment;
+  }
+
+  /**
+   * Optional. The initial down payment amount the buyer has to pay.
+   * @param downpayment downpayment or {@code null} for none
+   */
+  public Installment setDownpayment(Price downpayment) {
+    this.downpayment = downpayment;
     return this;
   }
 

@@ -31,6 +31,13 @@ package com.google.api.services.container.model;
 public final class DNSConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The domain used in Additive VPC scope.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String additiveVpcScopeDnsDomain;
+
+  /**
    * cluster_dns indicates which in-cluster DNS provider should be used.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class DNSConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterDnsScope;
+
+  /**
+   * Optional. The domain used in Additive VPC scope.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdditiveVpcScopeDnsDomain() {
+    return additiveVpcScopeDnsDomain;
+  }
+
+  /**
+   * Optional. The domain used in Additive VPC scope.
+   * @param additiveVpcScopeDnsDomain additiveVpcScopeDnsDomain or {@code null} for none
+   */
+  public DNSConfig setAdditiveVpcScopeDnsDomain(java.lang.String additiveVpcScopeDnsDomain) {
+    this.additiveVpcScopeDnsDomain = additiveVpcScopeDnsDomain;
+    return this;
+  }
 
   /**
    * cluster_dns indicates which in-cluster DNS provider should be used.

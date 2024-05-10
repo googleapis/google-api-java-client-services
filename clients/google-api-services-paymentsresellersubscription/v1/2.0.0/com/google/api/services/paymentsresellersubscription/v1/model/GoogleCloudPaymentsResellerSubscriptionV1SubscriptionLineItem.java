@@ -79,9 +79,9 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   private java.lang.Integer lineItemIndex;
 
   /**
-   * Optional. The promotions applied on the line item. It can be: - a free trial promotion, which
-   * overrides the subscription-level free trial promotion. - an introductory pricing promotion.
-   * When used as input in Create or Provision API, specify its resource name only.
+   * Optional. The promotions applied on the line item. It can be: - an introductory pricing
+   * promotion. - a free trial promotion. This feature is not enabled. If used, the request will be
+   * rejected. When used as input in Create or Provision API, specify its resource name only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -238,9 +238,9 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   }
 
   /**
-   * Optional. The promotions applied on the line item. It can be: - a free trial promotion, which
-   * overrides the subscription-level free trial promotion. - an introductory pricing promotion.
-   * When used as input in Create or Provision API, specify its resource name only.
+   * Optional. The promotions applied on the line item. It can be: - an introductory pricing
+   * promotion. - a free trial promotion. This feature is not enabled. If used, the request will be
+   * rejected. When used as input in Create or Provision API, specify its resource name only.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec> getLineItemPromotionSpecs() {
@@ -248,9 +248,9 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem
   }
 
   /**
-   * Optional. The promotions applied on the line item. It can be: - a free trial promotion, which
-   * overrides the subscription-level free trial promotion. - an introductory pricing promotion.
-   * When used as input in Create or Provision API, specify its resource name only.
+   * Optional. The promotions applied on the line item. It can be: - an introductory pricing
+   * promotion. - a free trial promotion. This feature is not enabled. If used, the request will be
+   * rejected. When used as input in Create or Provision API, specify its resource name only.
    * @param lineItemPromotionSpecs lineItemPromotionSpecs or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem setLineItemPromotionSpecs(java.util.List<GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec> lineItemPromotionSpecs) {

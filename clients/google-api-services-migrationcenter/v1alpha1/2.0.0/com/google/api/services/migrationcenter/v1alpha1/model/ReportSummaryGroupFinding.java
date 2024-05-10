@@ -37,6 +37,20 @@ public final class ReportSummaryGroupFinding extends com.google.api.client.json.
   private ReportSummaryAssetAggregateStats assetAggregateStats;
 
   /**
+   * Output only. Asset type for the group finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String assetType;
+
+  /**
+   * Output only. Source asset database type for the group finding. Only present for databases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseType;
+
+  /**
    * Description for this group finding.
    * The value may be {@code null}.
    */
@@ -49,6 +63,13 @@ public final class ReportSummaryGroupFinding extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
+
+  /**
+   * Output only. Full name of the group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String group;
 
   /**
    * This field is deprecated, do not rely on it having a value.
@@ -78,6 +99,40 @@ public final class ReportSummaryGroupFinding extends com.google.api.client.json.
    */
   public ReportSummaryGroupFinding setAssetAggregateStats(ReportSummaryAssetAggregateStats assetAggregateStats) {
     this.assetAggregateStats = assetAggregateStats;
+    return this;
+  }
+
+  /**
+   * Output only. Asset type for the group finding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssetType() {
+    return assetType;
+  }
+
+  /**
+   * Output only. Asset type for the group finding.
+   * @param assetType assetType or {@code null} for none
+   */
+  public ReportSummaryGroupFinding setAssetType(java.lang.String assetType) {
+    this.assetType = assetType;
+    return this;
+  }
+
+  /**
+   * Output only. Source asset database type for the group finding. Only present for databases.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseType() {
+    return databaseType;
+  }
+
+  /**
+   * Output only. Source asset database type for the group finding. Only present for databases.
+   * @param databaseType databaseType or {@code null} for none
+   */
+  public ReportSummaryGroupFinding setDatabaseType(java.lang.String databaseType) {
+    this.databaseType = databaseType;
     return this;
   }
 
@@ -112,6 +167,23 @@ public final class ReportSummaryGroupFinding extends com.google.api.client.json.
    */
   public ReportSummaryGroupFinding setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. Full name of the group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGroup() {
+    return group;
+  }
+
+  /**
+   * Output only. Full name of the group.
+   * @param group group or {@code null} for none
+   */
+  public ReportSummaryGroupFinding setGroup(java.lang.String group) {
+    this.group = group;
     return this;
   }
 

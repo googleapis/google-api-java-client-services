@@ -31,22 +31,22 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaAttemptStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * The end time of the event execution for current attempt.
+   * The end time of the integration execution for current attempt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * The start time of the event execution for current attempt. This could be in the future if it's
-   * been scheduled.
+   * The start time of the integration execution for current attempt. This could be in the future if
+   * it's been scheduled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * The end time of the event execution for current attempt.
+   * The end time of the integration execution for current attempt.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -54,7 +54,7 @@ public final class GoogleCloudIntegrationsV1alphaAttemptStats extends com.google
   }
 
   /**
-   * The end time of the event execution for current attempt.
+   * The end time of the integration execution for current attempt.
    * @param endTime endTime or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaAttemptStats setEndTime(String endTime) {
@@ -63,8 +63,8 @@ public final class GoogleCloudIntegrationsV1alphaAttemptStats extends com.google
   }
 
   /**
-   * The start time of the event execution for current attempt. This could be in the future if it's
-   * been scheduled.
+   * The start time of the integration execution for current attempt. This could be in the future if
+   * it's been scheduled.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -72,8 +72,8 @@ public final class GoogleCloudIntegrationsV1alphaAttemptStats extends com.google
   }
 
   /**
-   * The start time of the event execution for current attempt. This could be in the future if it's
-   * been scheduled.
+   * The start time of the integration execution for current attempt. This could be in the future if
+   * it's been scheduled.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaAttemptStats setStartTime(String startTime) {

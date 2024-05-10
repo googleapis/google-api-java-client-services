@@ -74,7 +74,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private String currentStateTime;
 
   /**
-   * The environment for the job.
+   * Optional. The environment for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,10 +123,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
-   * The user-specified Dataflow job name. Only one active job with a given name can exist in a
-   * project within one region at any given time. Jobs in different regions can have the same name.
-   * If a caller attempts to create a job with the same name as an active job that already exists,
-   * the attempt returns the existing job. The name must match the regular expression
+   * Optional. The user-specified Dataflow job name. Only one active job with a given name can exist
+   * in a project within one region at any given time. Jobs in different regions can have the same
+   * name. If a caller attempts to create a job with the same name as an active job that already
+   * exists, the attempt returns the existing job. The name must match the regular expression
    * `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
    * The value may be {@code null}.
    */
@@ -259,7 +259,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> transformNameMapping;
 
   /**
-   * The type of Dataflow job.
+   * Optional. The type of Dataflow job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -367,7 +367,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The environment for the job.
+   * Optional. The environment for the job.
    * @return value or {@code null} for none
    */
   public Environment getEnvironment() {
@@ -375,7 +375,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The environment for the job.
+   * Optional. The environment for the job.
    * @param environment environment or {@code null} for none
    */
   public Job setEnvironment(Environment environment) {
@@ -483,10 +483,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-specified Dataflow job name. Only one active job with a given name can exist in a
-   * project within one region at any given time. Jobs in different regions can have the same name.
-   * If a caller attempts to create a job with the same name as an active job that already exists,
-   * the attempt returns the existing job. The name must match the regular expression
+   * Optional. The user-specified Dataflow job name. Only one active job with a given name can exist
+   * in a project within one region at any given time. Jobs in different regions can have the same
+   * name. If a caller attempts to create a job with the same name as an active job that already
+   * exists, the attempt returns the existing job. The name must match the regular expression
    * `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
    * @return value or {@code null} for none
    */
@@ -495,10 +495,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-specified Dataflow job name. Only one active job with a given name can exist in a
-   * project within one region at any given time. Jobs in different regions can have the same name.
-   * If a caller attempts to create a job with the same name as an active job that already exists,
-   * the attempt returns the existing job. The name must match the regular expression
+   * Optional. The user-specified Dataflow job name. Only one active job with a given name can exist
+   * in a project within one region at any given time. Jobs in different regions can have the same
+   * name. If a caller attempts to create a job with the same name as an active job that already
+   * exists, the attempt returns the existing job. The name must match the regular expression
    * `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
    * @param name name or {@code null} for none
    */
@@ -788,7 +788,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of Dataflow job.
+   * Optional. The type of Dataflow job.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -796,7 +796,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of Dataflow job.
+   * Optional. The type of Dataflow job.
    * @param type type or {@code null} for none
    */
   public Job setType(java.lang.String type) {

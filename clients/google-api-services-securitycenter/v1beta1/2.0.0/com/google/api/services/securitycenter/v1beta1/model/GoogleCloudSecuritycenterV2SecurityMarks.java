@@ -34,15 +34,15 @@ public final class GoogleCloudSecuritycenterV2SecurityMarks extends com.google.a
 
   /**
    * The canonical name of the marks. The following list shows some examples: +
-   * `organizations/{organization_id}/assets/{asset_id}/securityMarks" +
-   * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks" + `or
+   * `organizations/{organization_id}/assets/{asset_id}/securityMarks` +
+   * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks` + `or
    * ganizations/{organization_id}/sources/{source_id}/locations/{location}/findings/{finding_id}/se
-   * curityMarks" + `folders/{folder_id}/assets/{asset_id}/securityMarks" +
-   * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}/securityMarks" + `folders/{folde
-   * r_id}/sources/{source_id}/locations/{location}/findings/{finding_id}/securityMarks" +
-   * `projects/{project_number}/assets/{asset_id}/securityMarks" +
-   * `projects/{project_number}/sources/{source_id}/findings/{finding_id}/securityMarks" + `projects
-   * /{project_number}/sources/{source_id}/locations/{location}/findings/{finding_id}/securityMarks"
+   * curityMarks` + `folders/{folder_id}/assets/{asset_id}/securityMarks` +
+   * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}/securityMarks` + `folders/{folde
+   * r_id}/sources/{source_id}/locations/{location}/findings/{finding_id}/securityMarks` +
+   * `projects/{project_number}/assets/{asset_id}/securityMarks` +
+   * `projects/{project_number}/sources/{source_id}/findings/{finding_id}/securityMarks` + `projects
+   * /{project_number}/sources/{source_id}/locations/{location}/findings/{finding_id}/securityMarks`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,15 +73,15 @@ public final class GoogleCloudSecuritycenterV2SecurityMarks extends com.google.a
 
   /**
    * The canonical name of the marks. The following list shows some examples: +
-   * `organizations/{organization_id}/assets/{asset_id}/securityMarks" +
-   * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks" + `or
+   * `organizations/{organization_id}/assets/{asset_id}/securityMarks` +
+   * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks` + `or
    * ganizations/{organization_id}/sources/{source_id}/locations/{location}/findings/{finding_id}/se
-   * curityMarks" + `folders/{folder_id}/assets/{asset_id}/securityMarks" +
-   * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}/securityMarks" + `folders/{folde
-   * r_id}/sources/{source_id}/locations/{location}/findings/{finding_id}/securityMarks" +
-   * `projects/{project_number}/assets/{asset_id}/securityMarks" +
-   * `projects/{project_number}/sources/{source_id}/findings/{finding_id}/securityMarks" + `projects
-   * /{project_number}/sources/{source_id}/locations/{location}/findings/{finding_id}/securityMarks"
+   * curityMarks` + `folders/{folder_id}/assets/{asset_id}/securityMarks` +
+   * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}/securityMarks` + `folders/{folde
+   * r_id}/sources/{source_id}/locations/{location}/findings/{finding_id}/securityMarks` +
+   * `projects/{project_number}/assets/{asset_id}/securityMarks` +
+   * `projects/{project_number}/sources/{source_id}/findings/{finding_id}/securityMarks` + `projects
+   * /{project_number}/sources/{source_id}/locations/{location}/findings/{finding_id}/securityMarks`
    * @return value or {@code null} for none
    */
   public java.lang.String getCanonicalName() {
@@ -90,15 +90,15 @@ public final class GoogleCloudSecuritycenterV2SecurityMarks extends com.google.a
 
   /**
    * The canonical name of the marks. The following list shows some examples: +
-   * `organizations/{organization_id}/assets/{asset_id}/securityMarks" +
-   * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks" + `or
+   * `organizations/{organization_id}/assets/{asset_id}/securityMarks` +
+   * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks` + `or
    * ganizations/{organization_id}/sources/{source_id}/locations/{location}/findings/{finding_id}/se
-   * curityMarks" + `folders/{folder_id}/assets/{asset_id}/securityMarks" +
-   * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}/securityMarks" + `folders/{folde
-   * r_id}/sources/{source_id}/locations/{location}/findings/{finding_id}/securityMarks" +
-   * `projects/{project_number}/assets/{asset_id}/securityMarks" +
-   * `projects/{project_number}/sources/{source_id}/findings/{finding_id}/securityMarks" + `projects
-   * /{project_number}/sources/{source_id}/locations/{location}/findings/{finding_id}/securityMarks"
+   * curityMarks` + `folders/{folder_id}/assets/{asset_id}/securityMarks` +
+   * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}/securityMarks` + `folders/{folde
+   * r_id}/sources/{source_id}/locations/{location}/findings/{finding_id}/securityMarks` +
+   * `projects/{project_number}/assets/{asset_id}/securityMarks` +
+   * `projects/{project_number}/sources/{source_id}/findings/{finding_id}/securityMarks` + `projects
+   * /{project_number}/sources/{source_id}/locations/{location}/findings/{finding_id}/securityMarks`
    * @param canonicalName canonicalName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SecurityMarks setCanonicalName(java.lang.String canonicalName) {

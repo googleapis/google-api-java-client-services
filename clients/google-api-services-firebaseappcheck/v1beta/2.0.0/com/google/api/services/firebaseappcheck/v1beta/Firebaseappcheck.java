@@ -3752,13 +3752,13 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the AppAttestConfig Gets to
-           * update. Example: `token_ttl`.
+           * Required. A comma-separated list of names of fields in the AppAttestConfig to update.
+           * Example: `token_ttl`.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. A comma-separated list of names of fields in the AppAttestConfig Gets to update. Example:
+          /** Required. A comma-separated list of names of fields in the AppAttestConfig to update. Example:
          `token_ttl`.
            */
           public String getUpdateMask() {
@@ -3766,8 +3766,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the AppAttestConfig Gets to
-           * update. Example: `token_ttl`.
+           * Required. A comma-separated list of names of fields in the AppAttestConfig to update.
+           * Example: `token_ttl`.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -5102,22 +5102,22 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the DeviceCheckConfig Gets to
-           * update. Example: `key_id,private_key`.
+           * Required. A comma-separated list of names of fields in the DeviceCheckConfig to update.
+           * Example: `key_id,private_key`.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. A comma-separated list of names of fields in the DeviceCheckConfig Gets to update.
-         Example: `key_id,private_key`.
+          /** Required. A comma-separated list of names of fields in the DeviceCheckConfig to update. Example:
+         `key_id,private_key`.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the DeviceCheckConfig Gets to
-           * update. Example: `key_id,private_key`.
+           * Required. A comma-separated list of names of fields in the DeviceCheckConfig to update.
+           * Example: `key_id,private_key`.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -5615,21 +5615,21 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the PlayIntegrityConfig Gets to
+           * Required. A comma-separated list of names of fields in the PlayIntegrityConfig to
            * update. Example: `token_ttl`.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. A comma-separated list of names of fields in the PlayIntegrityConfig Gets to update.
-         Example: `token_ttl`.
+          /** Required. A comma-separated list of names of fields in the PlayIntegrityConfig to update. Example:
+         `token_ttl`.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the PlayIntegrityConfig Gets to
+           * Required. A comma-separated list of names of fields in the PlayIntegrityConfig to
            * update. Example: `token_ttl`.
            */
           public Patch setUpdateMask(String updateMask) {
@@ -7685,13 +7685,13 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the SafetyNetConfig Gets to
-           * update. Example: `token_ttl`.
+           * Required. A comma-separated list of names of fields in the SafetyNetConfig to update.
+           * Example: `token_ttl`.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. A comma-separated list of names of fields in the SafetyNetConfig Gets to update. Example:
+          /** Required. A comma-separated list of names of fields in the SafetyNetConfig to update. Example:
          `token_ttl`.
            */
           public String getUpdateMask() {
@@ -7699,8 +7699,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the SafetyNetConfig Gets to
-           * update. Example: `token_ttl`.
+           * Required. A comma-separated list of names of fields in the SafetyNetConfig to update.
+           * Example: `token_ttl`.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -8475,9 +8475,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Required. The parent project name and the service, in the format ```
-         *        projects/{project_number}/services/{service_id} ``` The parent collection in the `name`
-         *        field of any resource being updated must match this field, or the entire batch fails.
+         * @param parent Required. The parent service name, in the format ``` projects/{project_number}/services/{service_id}
+         *        ``` The parent collection in the `name` field of any resource being updated must match
+         *        this field, or the entire batch fails.
          * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesRequest}
          * @return the request
          */
@@ -8505,9 +8505,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent project name and the service, in the format ```
-         *        projects/{project_number}/services/{service_id} ``` The parent collection in the `name`
-         *        field of any resource being updated must match this field, or the entire batch fails.
+           * @param parent Required. The parent service name, in the format ``` projects/{project_number}/services/{service_id}
+         *        ``` The parent collection in the `name` field of any resource being updated must match
+         *        this field, or the entire batch fails.
            * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchUpdateResourcePoliciesRequest}
            * @since 1.13
            */
@@ -8577,14 +8577,14 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The parent project name and the service, in the format ```
+           * Required. The parent service name, in the format ```
            * projects/{project_number}/services/{service_id} ``` The parent collection in the `name`
            * field of any resource being updated must match this field, or the entire batch fails.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent project name and the service, in the format ```
+          /** Required. The parent service name, in the format ```
          projects/{project_number}/services/{service_id} ``` The parent collection in the `name` field of
          any resource being updated must match this field, or the entire batch fails.
            */
@@ -8593,7 +8593,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The parent project name and the service, in the format ```
+           * Required. The parent service name, in the format ```
            * projects/{project_number}/services/{service_id} ``` The parent collection in the `name`
            * field of any resource being updated must match this field, or the entire batch fails.
            */
@@ -8620,7 +8620,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the firebaseappcheck server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The relative resource name of the parent service in which the specified ResourcePolicy
+         * @param parent Required. The relative resource name of the parent Service in which the specified ResourcePolicy
          *        will be created, in the format: ``` projects/{project_number}/services/{service_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
@@ -8651,7 +8651,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The relative resource name of the parent service in which the specified ResourcePolicy
+           * @param parent Required. The relative resource name of the parent Service in which the specified ResourcePolicy
          *        will be created, in the format: ``` projects/{project_number}/services/{service_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
@@ -8724,7 +8724,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The relative resource name of the parent service in which the specified
+           * Required. The relative resource name of the parent Service in which the specified
            * ResourcePolicy will be created, in the format: ```
            * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
            * must be a supported service ID. Currently, the following service IDs are supported: *
@@ -8733,7 +8733,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The relative resource name of the parent service in which the specified ResourcePolicy
+          /** Required. The relative resource name of the parent Service in which the specified ResourcePolicy
          will be created, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that
          the `service_id` element must be a supported service ID. Currently, the following service IDs are
          supported: * `oauth2.googleapis.com` (Google Identity for iOS)
@@ -8743,7 +8743,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The relative resource name of the parent service in which the specified
+           * Required. The relative resource name of the parent Service in which the specified
            * ResourcePolicy will be created, in the format: ```
            * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
            * must be a supported service ID. Currently, the following service IDs are supported: *
@@ -8773,7 +8773,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The relative resource name of the ResourcePolicy to delete, in the format: ```
-         *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_name} ```
+         *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -8801,7 +8801,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The relative resource name of the ResourcePolicy to delete, in the format: ```
-         *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_name} ```
+         *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -8871,14 +8871,15 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
           /**
            * Required. The relative resource name of the ResourcePolicy to delete, in the format:
-           * ``` projects/{project_number}/services/{service_id}/resourcePolicies/{resource_name}
+           * ```
+           * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
            * ```
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The relative resource name of the ResourcePolicy to delete, in the format: ```
-         projects/{project_number}/services/{service_id}/resourcePolicies/{resource_name} ```
+         projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
            */
           public java.lang.String getName() {
             return name;
@@ -8886,7 +8887,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
           /**
            * Required. The relative resource name of the ResourcePolicy to delete, in the format:
-           * ``` projects/{project_number}/services/{service_id}/resourcePolicies/{resource_name}
+           * ```
+           * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
            * ```
            */
           public Delete setName(java.lang.String name) {
@@ -8901,15 +8903,21 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
           /**
            * The checksum to be validated against the current ResourcePolicy, to ensure the client
-           * has an up-to-date value before proceeding. The user can obtain this from the
-           * ResourcePolicy object that they last received. This etag is strongly validated.
+           * has an up-to-date value before proceeding. This checksum is computed by the server
+           * based on the values of fields in the ResourcePolicy object, and can be obtained from
+           * the ResourcePolicy object received from the last CreateResourcePolicy,
+           * GetResourcePolicy, ListResourcePolicies, UpdateResourcePolicy, or
+           * BatchUpdateResourcePolicies call. This etag is strongly validated as defined by RFC
+           * 7232.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
           /** The checksum to be validated against the current ResourcePolicy, to ensure the client has an up-to-
-         date value before proceeding. The user can obtain this from the ResourcePolicy object that they
-         last received. This etag is strongly validated.
+         date value before proceeding. This checksum is computed by the server based on the values of fields
+         in the ResourcePolicy object, and can be obtained from the ResourcePolicy object received from the
+         last CreateResourcePolicy, GetResourcePolicy, ListResourcePolicies, UpdateResourcePolicy, or
+         BatchUpdateResourcePolicies call. This etag is strongly validated as defined by RFC 7232.
            */
           public java.lang.String getEtag() {
             return etag;
@@ -8917,8 +8925,12 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
           /**
            * The checksum to be validated against the current ResourcePolicy, to ensure the client
-           * has an up-to-date value before proceeding. The user can obtain this from the
-           * ResourcePolicy object that they last received. This etag is strongly validated.
+           * has an up-to-date value before proceeding. This checksum is computed by the server
+           * based on the values of fields in the ResourcePolicy object, and can be obtained from
+           * the ResourcePolicy object received from the last CreateResourcePolicy,
+           * GetResourcePolicy, ListResourcePolicies, UpdateResourcePolicy, or
+           * BatchUpdateResourcePolicies call. This etag is strongly validated as defined by RFC
+           * 7232.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -8942,7 +8954,6 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
-         *        `resource_policy_id` is a system-generated UID used as the resource ID for the policy.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -8972,7 +8983,6 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
-         *        `resource_policy_id` is a system-generated UID used as the resource ID for the policy.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -9056,8 +9066,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
            * ``` Note that the `service_id` element must be a supported service ID. Currently, the
            * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
-           * iOS) `resource_policy_id` is a system-generated UID used as the resource ID for the
-           * policy.
+           * iOS)
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -9065,8 +9074,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           /** Required. The relative resource name of the ResourcePolicy to retrieve, in the format: ```
          projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note that
          the `service_id` element must be a supported service ID. Currently, the following service IDs are
-         supported: * `oauth2.googleapis.com` (Google Identity for iOS) `resource_policy_id` is a system-
-         generated UID used as the resource ID for the policy.
+         supported: * `oauth2.googleapis.com` (Google Identity for iOS)
            */
           public java.lang.String getName() {
             return name;
@@ -9078,8 +9086,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
            * ``` Note that the `service_id` element must be a supported service ID. Currently, the
            * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
-           * iOS) `resource_policy_id` is a system-generated UID used as the resource ID for the
-           * policy.
+           * iOS)
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9104,9 +9111,10 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the firebaseappcheck server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The relative resource name of the parent project and service for which to list each
-         *        associated ResourcePolicy, in the format: ```
-         *        projects/{project_number}/services/{service_name} ```
+         * @param parent Required. The relative resource name of the parent Service for which to list each associated
+         *        ResourcePolicy, in the format: ``` projects/{project_number}/services/{service_id} ```
+         *        Note that the `service_id` element must be a supported service ID. Currently, the
+         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -9132,9 +9140,10 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The relative resource name of the parent project and service for which to list each
-         *        associated ResourcePolicy, in the format: ```
-         *        projects/{project_number}/services/{service_name} ```
+           * @param parent Required. The relative resource name of the parent Service for which to list each associated
+         *        ResourcePolicy, in the format: ``` projects/{project_number}/services/{service_id} ```
+         *        Note that the `service_id` element must be a supported service ID. Currently, the
+         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -9213,24 +9222,30 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The relative resource name of the parent project and service for which to
-           * list each associated ResourcePolicy, in the format: ```
-           * projects/{project_number}/services/{service_name} ```
+           * Required. The relative resource name of the parent Service for which to list each
+           * associated ResourcePolicy, in the format: ```
+           * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
+           * must be a supported service ID. Currently, the following service IDs are supported: *
+           * `oauth2.googleapis.com` (Google Identity for iOS)
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The relative resource name of the parent project and service for which to list each
-         associated ResourcePolicy, in the format: ``` projects/{project_number}/services/{service_name} ```
+          /** Required. The relative resource name of the parent Service for which to list each associated
+         ResourcePolicy, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that
+         the `service_id` element must be a supported service ID. Currently, the following service IDs are
+         supported: * `oauth2.googleapis.com` (Google Identity for iOS)
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The relative resource name of the parent project and service for which to
-           * list each associated ResourcePolicy, in the format: ```
-           * projects/{project_number}/services/{service_name} ```
+           * Required. The relative resource name of the parent Service for which to list each
+           * associated ResourcePolicy, in the format: ```
+           * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
+           * must be a supported service ID. Currently, the following service IDs are supported: *
+           * `oauth2.googleapis.com` (Google Identity for iOS)
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -9283,27 +9298,25 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * The maximum number of ResourcePolicys to return in the response. Only explicitly
-           * configured policies are returned. The server may return fewer than this at its own
-           * discretion. If no value is specified (or too large a value is specified), the server
-           * will impose its own limit.
+           * The maximum number of ResourcePolicy objects to return in the response. The server may
+           * return fewer than this at its own discretion. If no value is specified (or too large a
+           * value is specified), the server will impose its own limit.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of ResourcePolicys to return in the response. Only explicitly configured
-         policies are returned. The server may return fewer than this at its own discretion. If no value is
-         specified (or too large a value is specified), the server will impose its own limit.
+          /** The maximum number of ResourcePolicy objects to return in the response. The server may return fewer
+         than this at its own discretion. If no value is specified (or too large a value is specified), the
+         server will impose its own limit.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of ResourcePolicys to return in the response. Only explicitly
-           * configured policies are returned. The server may return fewer than this at its own
-           * discretion. If no value is specified (or too large a value is specified), the server
-           * will impose its own limit.
+           * The maximum number of ResourcePolicy objects to return in the response. The server may
+           * return fewer than this at its own discretion. If no value is specified (or too large a
+           * value is specified), the server will impose its own limit.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -9312,17 +9325,17 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
           /**
            * Token returned from a previous call to ListResourcePolicies indicating where in the set
-           * of ResourcePolicys to resume listing. Provide this to retrieve the subsequent page.
-           * When paginating, all other parameters provided to ListResourcePolicies must match the
-           * call that provided the page token; if they do not match, the result is undefined.
+           * of ResourcePolicy objects to resume listing. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters provided to ListResourcePolicies must match
+           * the call that provided the page token; if they do not match, the result is undefined.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** Token returned from a previous call to ListResourcePolicies indicating where in the set of
-         ResourcePolicys to resume listing. Provide this to retrieve the subsequent page. When paginating,
-         all other parameters provided to ListResourcePolicies must match the call that provided the page
-         token; if they do not match, the result is undefined.
+         ResourcePolicy objects to resume listing. Provide this to retrieve the subsequent page. When
+         paginating, all other parameters provided to ListResourcePolicies must match the call that provided
+         the page token; if they do not match, the result is undefined.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -9330,9 +9343,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
           /**
            * Token returned from a previous call to ListResourcePolicies indicating where in the set
-           * of ResourcePolicys to resume listing. Provide this to retrieve the subsequent page.
-           * When paginating, all other parameters provided to ListResourcePolicies must match the
-           * call that provided the page token; if they do not match, the result is undefined.
+           * of ResourcePolicy objects to resume listing. Provide this to retrieve the subsequent
+           * page. When paginating, all other parameters provided to ListResourcePolicies must match
+           * the call that provided the page token; if they do not match, the result is undefined.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -9352,11 +9365,11 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the firebaseappcheck server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The relative name of the resource configuration object, in the format: ```
+         * @param name Required. The relative name of the resource policy object, in the format: ```
          *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
-         *        `resource_policy_id` is a system-generated UID used as the resource ID for the policy.
+         *        `resource_policy_id` is a system-generated UID.
          * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy}
          * @return the request
          */
@@ -9384,11 +9397,11 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The relative name of the resource configuration object, in the format: ```
+           * @param name Required. The relative name of the resource policy object, in the format: ```
          *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
-         *        `resource_policy_id` is a system-generated UID used as the resource ID for the policy.
+         *        `resource_policy_id` is a system-generated UID.
            * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy}
            * @since 1.13
            */
@@ -9458,33 +9471,31 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The relative name of the resource configuration object, in the format: ```
+           * Required. The relative name of the resource policy object, in the format: ```
            * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
            * ``` Note that the `service_id` element must be a supported service ID. Currently, the
            * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
-           * iOS) `resource_policy_id` is a system-generated UID used as the resource ID for the
-           * policy.
+           * iOS) `resource_policy_id` is a system-generated UID.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The relative name of the resource configuration object, in the format: ```
+          /** Required. The relative name of the resource policy object, in the format: ```
          projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note that
          the `service_id` element must be a supported service ID. Currently, the following service IDs are
          supported: * `oauth2.googleapis.com` (Google Identity for iOS) `resource_policy_id` is a system-
-         generated UID used as the resource ID for the policy.
+         generated UID.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The relative name of the resource configuration object, in the format: ```
+           * Required. The relative name of the resource policy object, in the format: ```
            * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
            * ``` Note that the `service_id` element must be a supported service ID. Currently, the
            * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
-           * iOS) `resource_policy_id` is a system-generated UID used as the resource ID for the
-           * policy.
+           * iOS) `resource_policy_id` is a system-generated UID.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

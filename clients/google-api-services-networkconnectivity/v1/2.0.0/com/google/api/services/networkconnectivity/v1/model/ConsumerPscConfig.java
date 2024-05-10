@@ -48,6 +48,13 @@ public final class ConsumerPscConfig extends com.google.api.client.json.GenericJ
   private java.lang.String network;
 
   /**
+   * Immutable. An immutable identifier for the producer instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String producerInstanceId;
+
+  /**
    * The consumer project where PSC connections are allowed to be created in.
    * The value may be {@code null}.
    */
@@ -98,6 +105,23 @@ public final class ConsumerPscConfig extends com.google.api.client.json.GenericJ
    */
   public ConsumerPscConfig setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Immutable. An immutable identifier for the producer instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProducerInstanceId() {
+    return producerInstanceId;
+  }
+
+  /**
+   * Immutable. An immutable identifier for the producer instance.
+   * @param producerInstanceId producerInstanceId or {@code null} for none
+   */
+  public ConsumerPscConfig setProducerInstanceId(java.lang.String producerInstanceId) {
+    this.producerInstanceId = producerInstanceId;
     return this;
   }
 

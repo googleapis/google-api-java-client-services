@@ -51,11 +51,11 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToAction extend
   private GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeployGke deployGke;
 
   /**
-   * Optional. Multiple setups to deploy the PublisherModel to Vertex Endpoint.
+   * Optional. Fine tune the PublisherModel with the third-party model tuning UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeployVertex multiDeployVertex;
+  private GoogleCloudAiplatformV1beta1PublisherModelCallToActionRegionalResourceReferences fineTune;
 
   /**
    * Optional. Open evaluation pipeline of the PublisherModel.
@@ -179,19 +179,19 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelCallToAction extend
   }
 
   /**
-   * Optional. Multiple setups to deploy the PublisherModel to Vertex Endpoint.
+   * Optional. Fine tune the PublisherModel with the third-party model tuning UI.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeployVertex getMultiDeployVertex() {
-    return multiDeployVertex;
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToActionRegionalResourceReferences getFineTune() {
+    return fineTune;
   }
 
   /**
-   * Optional. Multiple setups to deploy the PublisherModel to Vertex Endpoint.
-   * @param multiDeployVertex multiDeployVertex or {@code null} for none
+   * Optional. Fine tune the PublisherModel with the third-party model tuning UI.
+   * @param fineTune fineTune or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1PublisherModelCallToAction setMultiDeployVertex(GoogleCloudAiplatformV1beta1PublisherModelCallToActionDeployVertex multiDeployVertex) {
-    this.multiDeployVertex = multiDeployVertex;
+  public GoogleCloudAiplatformV1beta1PublisherModelCallToAction setFineTune(GoogleCloudAiplatformV1beta1PublisherModelCallToActionRegionalResourceReferences fineTune) {
+    this.fineTune = fineTune;
     return this;
   }
 

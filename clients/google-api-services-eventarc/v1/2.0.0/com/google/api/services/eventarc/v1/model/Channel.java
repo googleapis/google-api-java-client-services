@@ -80,6 +80,13 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   private java.lang.String pubsubTopic;
 
   /**
+   * Output only. Whether or not this Channel satisfies the requirements of physical zone separation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. The state of a Channel.
    * The value may be {@code null}.
    */
@@ -212,6 +219,23 @@ public final class Channel extends com.google.api.client.json.GenericJson {
    */
   public Channel setPubsubTopic(java.lang.String pubsubTopic) {
     this.pubsubTopic = pubsubTopic;
+    return this;
+  }
+
+  /**
+   * Output only. Whether or not this Channel satisfies the requirements of physical zone separation
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Whether or not this Channel satisfies the requirements of physical zone separation
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Channel setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

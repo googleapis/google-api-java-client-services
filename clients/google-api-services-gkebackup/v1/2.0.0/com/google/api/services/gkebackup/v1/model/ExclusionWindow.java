@@ -45,11 +45,12 @@ public final class ExclusionWindow extends com.google.api.client.json.GenericJso
   private DayOfWeekList daysOfWeek;
 
   /**
-   * Required. Specifies duration of the window. Restrictions for duration based on the recurrence
-   * type to allow some time for backup to happen: - single_occurrence_date: no restriction, but UI
-   * may warn about this when duration >= target RPO - daily window: duration < 24 hours - weekly
-   * window: - days of week includes all seven days of a week: duration < 24 hours - all other
-   * weekly window: duration < 168 hours (i.e., 24 * 7 hours)
+   * Required. Specifies duration of the window. Duration must be >= 5 minutes and < (target RPO -
+   * 20 minutes). Additional restrictions based on the recurrence type to allow some time for backup
+   * to happen: - single_occurrence_date: no restriction, but UI may warn about this when duration
+   * >= target RPO - daily window: duration < 24 hours - weekly window: - days of week includes all
+   * seven days of a week: duration < 24 hours - all other weekly window: duration < 168 hours
+   * (i.e., 24 * 7 hours)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,11 +107,12 @@ public final class ExclusionWindow extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Specifies duration of the window. Restrictions for duration based on the recurrence
-   * type to allow some time for backup to happen: - single_occurrence_date: no restriction, but UI
-   * may warn about this when duration >= target RPO - daily window: duration < 24 hours - weekly
-   * window: - days of week includes all seven days of a week: duration < 24 hours - all other
-   * weekly window: duration < 168 hours (i.e., 24 * 7 hours)
+   * Required. Specifies duration of the window. Duration must be >= 5 minutes and < (target RPO -
+   * 20 minutes). Additional restrictions based on the recurrence type to allow some time for backup
+   * to happen: - single_occurrence_date: no restriction, but UI may warn about this when duration
+   * >= target RPO - daily window: duration < 24 hours - weekly window: - days of week includes all
+   * seven days of a week: duration < 24 hours - all other weekly window: duration < 168 hours
+   * (i.e., 24 * 7 hours)
    * @return value or {@code null} for none
    */
   public String getDuration() {
@@ -118,11 +120,12 @@ public final class ExclusionWindow extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Specifies duration of the window. Restrictions for duration based on the recurrence
-   * type to allow some time for backup to happen: - single_occurrence_date: no restriction, but UI
-   * may warn about this when duration >= target RPO - daily window: duration < 24 hours - weekly
-   * window: - days of week includes all seven days of a week: duration < 24 hours - all other
-   * weekly window: duration < 168 hours (i.e., 24 * 7 hours)
+   * Required. Specifies duration of the window. Duration must be >= 5 minutes and < (target RPO -
+   * 20 minutes). Additional restrictions based on the recurrence type to allow some time for backup
+   * to happen: - single_occurrence_date: no restriction, but UI may warn about this when duration
+   * >= target RPO - daily window: duration < 24 hours - weekly window: - days of week includes all
+   * seven days of a week: duration < 24 hours - all other weekly window: duration < 168 hours
+   * (i.e., 24 * 7 hours)
    * @param duration duration or {@code null} for none
    */
   public ExclusionWindow setDuration(String duration) {

@@ -58,13 +58,6 @@ public final class GoogleCloudAiplatformV1beta1AuthConfig extends com.google.api
   private GoogleCloudAiplatformV1beta1AuthConfigHttpBasicAuthConfig httpBasicAuthConfig;
 
   /**
-   * Config for no auth.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1AuthConfigNoAuth noAuth;
-
-  /**
    * Config for user oauth.
    * The value may be {@code null}.
    */
@@ -143,23 +136,6 @@ public final class GoogleCloudAiplatformV1beta1AuthConfig extends com.google.api
    */
   public GoogleCloudAiplatformV1beta1AuthConfig setHttpBasicAuthConfig(GoogleCloudAiplatformV1beta1AuthConfigHttpBasicAuthConfig httpBasicAuthConfig) {
     this.httpBasicAuthConfig = httpBasicAuthConfig;
-    return this;
-  }
-
-  /**
-   * Config for no auth.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1AuthConfigNoAuth getNoAuth() {
-    return noAuth;
-  }
-
-  /**
-   * Config for no auth.
-   * @param noAuth noAuth or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1AuthConfig setNoAuth(GoogleCloudAiplatformV1beta1AuthConfigNoAuth noAuth) {
-    this.noAuth = noAuth;
     return this;
   }
 

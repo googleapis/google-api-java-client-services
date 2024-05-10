@@ -370,7 +370,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the recommender server.  After setting any optional
          * parameters, call the {@link UpdateConfig#execute()} method to invoke the remote operation.
          *
-         * @param name Name of insight type config. Eg,
+         * @param name Identifier. Name of insight type config. Eg,
          *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
          * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1InsightTypeConfig}
          * @return the request
@@ -399,7 +399,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of insight type config. Eg,
+           * @param name Identifier. Name of insight type config. Eg,
          *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
            * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1InsightTypeConfig}
            * @since 1.13
@@ -470,13 +470,13 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of insight type config. Eg,
+           * Identifier. Name of insight type config. Eg,
            * projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of insight type config. Eg,
+          /** Identifier. Name of insight type config. Eg,
          projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
            */
           public java.lang.String getName() {
@@ -484,7 +484,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of insight type config. Eg,
+           * Identifier. Name of insight type config. Eg,
            * projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
            */
           public UpdateConfig setName(java.lang.String name) {
@@ -1312,7 +1312,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the recommender server.  After setting any optional
          * parameters, call the {@link UpdateConfig#execute()} method to invoke the remote operation.
          *
-         * @param name Name of recommender config. Eg,
+         * @param name Identifier. Name of recommender config. Eg,
          *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
          * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1RecommenderConfig}
          * @return the request
@@ -1341,7 +1341,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of recommender config. Eg,
+           * @param name Identifier. Name of recommender config. Eg,
          *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
            * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1RecommenderConfig}
            * @since 1.13
@@ -1412,13 +1412,13 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of recommender config. Eg,
+           * Identifier. Name of recommender config. Eg,
            * projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of recommender config. Eg,
+          /** Identifier. Name of recommender config. Eg,
          projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
            */
           public java.lang.String getName() {
@@ -1426,7 +1426,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of recommender config. Eg,
+           * Identifier. Name of recommender config. Eg,
            * projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
            */
           public UpdateConfig setName(java.lang.String name) {
@@ -4382,7 +4382,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the recommender server.  After setting any optional
          * parameters, call the {@link UpdateConfig#execute()} method to invoke the remote operation.
          *
-         * @param name Name of insight type config. Eg,
+         * @param name Identifier. Name of insight type config. Eg,
          *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
          * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1InsightTypeConfig}
          * @return the request
@@ -4411,7 +4411,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of insight type config. Eg,
+           * @param name Identifier. Name of insight type config. Eg,
          *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
            * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1InsightTypeConfig}
            * @since 1.13
@@ -4482,13 +4482,13 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of insight type config. Eg,
+           * Identifier. Name of insight type config. Eg,
            * projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of insight type config. Eg,
+          /** Identifier. Name of insight type config. Eg,
          projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
            */
           public java.lang.String getName() {
@@ -4496,7 +4496,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of insight type config. Eg,
+           * Identifier. Name of insight type config. Eg,
            * projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
            */
           public UpdateConfig setName(java.lang.String name) {
@@ -5324,7 +5324,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the recommender server.  After setting any optional
          * parameters, call the {@link UpdateConfig#execute()} method to invoke the remote operation.
          *
-         * @param name Name of recommender config. Eg,
+         * @param name Identifier. Name of recommender config. Eg,
          *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
          * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1RecommenderConfig}
          * @return the request
@@ -5353,7 +5353,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of recommender config. Eg,
+           * @param name Identifier. Name of recommender config. Eg,
          *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
            * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1RecommenderConfig}
            * @since 1.13
@@ -5424,13 +5424,13 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of recommender config. Eg,
+           * Identifier. Name of recommender config. Eg,
            * projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of recommender config. Eg,
+          /** Identifier. Name of recommender config. Eg,
          projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
            */
           public java.lang.String getName() {
@@ -5438,7 +5438,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of recommender config. Eg,
+           * Identifier. Name of recommender config. Eg,
            * projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
            */
           public UpdateConfig setName(java.lang.String name) {
@@ -6734,7 +6734,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the recommender server.  After setting any optional
          * parameters, call the {@link UpdateConfig#execute()} method to invoke the remote operation.
          *
-         * @param name Name of insight type config. Eg,
+         * @param name Identifier. Name of insight type config. Eg,
          *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
          * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1InsightTypeConfig}
          * @return the request
@@ -6763,7 +6763,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of insight type config. Eg,
+           * @param name Identifier. Name of insight type config. Eg,
          *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
            * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1InsightTypeConfig}
            * @since 1.13
@@ -6834,13 +6834,13 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of insight type config. Eg,
+           * Identifier. Name of insight type config. Eg,
            * projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of insight type config. Eg,
+          /** Identifier. Name of insight type config. Eg,
          projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
            */
           public java.lang.String getName() {
@@ -6848,7 +6848,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of insight type config. Eg,
+           * Identifier. Name of insight type config. Eg,
            * projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
            */
           public UpdateConfig setName(java.lang.String name) {
@@ -7676,7 +7676,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the recommender server.  After setting any optional
          * parameters, call the {@link UpdateConfig#execute()} method to invoke the remote operation.
          *
-         * @param name Name of recommender config. Eg,
+         * @param name Identifier. Name of recommender config. Eg,
          *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
          * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1RecommenderConfig}
          * @return the request
@@ -7705,7 +7705,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
            * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of recommender config. Eg,
+           * @param name Identifier. Name of recommender config. Eg,
          *        projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
            * @param content the {@link com.google.api.services.recommender.v1.model.GoogleCloudRecommenderV1RecommenderConfig}
            * @since 1.13
@@ -7776,13 +7776,13 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of recommender config. Eg,
+           * Identifier. Name of recommender config. Eg,
            * projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of recommender config. Eg,
+          /** Identifier. Name of recommender config. Eg,
          projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
            */
           public java.lang.String getName() {
@@ -7790,7 +7790,7 @@ public class Recommender extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of recommender config. Eg,
+           * Identifier. Name of recommender config. Eg,
            * projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
            */
           public UpdateConfig setName(java.lang.String name) {

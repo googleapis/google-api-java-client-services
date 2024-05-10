@@ -107,9 +107,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * inheritance](https://cloud.google.com/resource-manager/docs/tags/tags-overview#inheritance). To
    * search against the `effective_tags`: * Use a field query. Example: -
    * `effectiveTagKeys:"123456789/env*"` - `effectiveTagKeys="123456789/env"` -
-   * `effectiveTagKeys:"env"` - `effectiveTagValues:"env"` - `effectiveTagValues:"env/prod"` -
-   * `effectiveTagValues:"123456789/env/prod*"` - `effectiveTagValues="123456789/env/prod"` -
-   * `effectiveTagValueIds="tagValues/456"`
+   * `effectiveTagKeys:"env"` - `effectiveTagKeyIds="tagKeys/123"` - `effectiveTagValues:"env"` -
+   * `effectiveTagValues:"env/prod"` - `effectiveTagValues:"123456789/env/prod*"` -
+   * `effectiveTagValues="123456789/env/prod"` - `effectiveTagValueIds="tagValues/456"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,9 +321,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The tags directly attached to this resource. To search against the `tags`: * Use a field query.
    * Example: - `tagKeys:"123456789/env*"` - `tagKeys="123456789/env"` - `tagKeys:"env"` -
-   * `tagValues:"env"` - `tagValues:"env/prod"` - `tagValues:"123456789/env/prod*"` -
-   * `tagValues="123456789/env/prod"` - `tagValueIds="tagValues/456"` * Use a free text query.
-   * Example: - `env/prod`
+   * `tagKeyIds="tagKeys/123"` - `tagValues:"env"` - `tagValues:"env/prod"` -
+   * `tagValues:"123456789/env/prod*"` - `tagValues="123456789/env/prod"` -
+   * `tagValueIds="tagValues/456"` * Use a free text query. Example: - `env/prod`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -507,9 +507,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * inheritance](https://cloud.google.com/resource-manager/docs/tags/tags-overview#inheritance). To
    * search against the `effective_tags`: * Use a field query. Example: -
    * `effectiveTagKeys:"123456789/env*"` - `effectiveTagKeys="123456789/env"` -
-   * `effectiveTagKeys:"env"` - `effectiveTagValues:"env"` - `effectiveTagValues:"env/prod"` -
-   * `effectiveTagValues:"123456789/env/prod*"` - `effectiveTagValues="123456789/env/prod"` -
-   * `effectiveTagValueIds="tagValues/456"`
+   * `effectiveTagKeys:"env"` - `effectiveTagKeyIds="tagKeys/123"` - `effectiveTagValues:"env"` -
+   * `effectiveTagValues:"env/prod"` - `effectiveTagValues:"123456789/env/prod*"` -
+   * `effectiveTagValues="123456789/env/prod"` - `effectiveTagValueIds="tagValues/456"`
    * @return value or {@code null} for none
    */
   public java.util.List<EffectiveTagDetails> getEffectiveTags() {
@@ -522,9 +522,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * inheritance](https://cloud.google.com/resource-manager/docs/tags/tags-overview#inheritance). To
    * search against the `effective_tags`: * Use a field query. Example: -
    * `effectiveTagKeys:"123456789/env*"` - `effectiveTagKeys="123456789/env"` -
-   * `effectiveTagKeys:"env"` - `effectiveTagValues:"env"` - `effectiveTagValues:"env/prod"` -
-   * `effectiveTagValues:"123456789/env/prod*"` - `effectiveTagValues="123456789/env/prod"` -
-   * `effectiveTagValueIds="tagValues/456"`
+   * `effectiveTagKeys:"env"` - `effectiveTagKeyIds="tagKeys/123"` - `effectiveTagValues:"env"` -
+   * `effectiveTagValues:"env/prod"` - `effectiveTagValues:"123456789/env/prod*"` -
+   * `effectiveTagValues="123456789/env/prod"` - `effectiveTagValueIds="tagValues/456"`
    * @param effectiveTags effectiveTags or {@code null} for none
    */
   public ResourceSearchResult setEffectiveTags(java.util.List<EffectiveTagDetails> effectiveTags) {
@@ -968,9 +968,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The tags directly attached to this resource. To search against the `tags`: * Use a field query.
    * Example: - `tagKeys:"123456789/env*"` - `tagKeys="123456789/env"` - `tagKeys:"env"` -
-   * `tagValues:"env"` - `tagValues:"env/prod"` - `tagValues:"123456789/env/prod*"` -
-   * `tagValues="123456789/env/prod"` - `tagValueIds="tagValues/456"` * Use a free text query.
-   * Example: - `env/prod`
+   * `tagKeyIds="tagKeys/123"` - `tagValues:"env"` - `tagValues:"env/prod"` -
+   * `tagValues:"123456789/env/prod*"` - `tagValues="123456789/env/prod"` -
+   * `tagValueIds="tagValues/456"` * Use a free text query. Example: - `env/prod`
    * @return value or {@code null} for none
    */
   public java.util.List<Tag> getTags() {
@@ -980,9 +980,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The tags directly attached to this resource. To search against the `tags`: * Use a field query.
    * Example: - `tagKeys:"123456789/env*"` - `tagKeys="123456789/env"` - `tagKeys:"env"` -
-   * `tagValues:"env"` - `tagValues:"env/prod"` - `tagValues:"123456789/env/prod*"` -
-   * `tagValues="123456789/env/prod"` - `tagValueIds="tagValues/456"` * Use a free text query.
-   * Example: - `env/prod`
+   * `tagKeyIds="tagKeys/123"` - `tagValues:"env"` - `tagValues:"env/prod"` -
+   * `tagValues:"123456789/env/prod*"` - `tagValues="123456789/env/prod"` -
+   * `tagValueIds="tagValues/456"` * Use a free text query. Example: - `env/prod`
    * @param tags tags or {@code null} for none
    */
   public ResourceSearchResult setTags(java.util.List<Tag> tags) {

@@ -63,17 +63,6 @@ public final class GoogleCloudDiscoveryengineV1alphaConverseConversationRequest 
   private java.lang.String filter;
 
   /**
-   * Required. The resource name of the Conversation to get. Format: `projects/{project_number}/loca
-   * tions/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-   * tion_id}`. Use `projects/{project_number}/locations/{location_id}/collections/{collection}/data
-   * Stores/{data_store_id}/conversations/-` to activate auto session mode, which automatically
-   * creates a new conversation inside a ConverseConversation session.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
    * Required. Current user input.
    * The value may be {@code null}.
    */
@@ -191,31 +180,6 @@ public final class GoogleCloudDiscoveryengineV1alphaConverseConversationRequest 
    */
   public GoogleCloudDiscoveryengineV1alphaConverseConversationRequest setFilter(java.lang.String filter) {
     this.filter = filter;
-    return this;
-  }
-
-  /**
-   * Required. The resource name of the Conversation to get. Format: `projects/{project_number}/loca
-   * tions/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-   * tion_id}`. Use `projects/{project_number}/locations/{location_id}/collections/{collection}/data
-   * Stores/{data_store_id}/conversations/-` to activate auto session mode, which automatically
-   * creates a new conversation inside a ConverseConversation session.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * Required. The resource name of the Conversation to get. Format: `projects/{project_number}/loca
-   * tions/{location_id}/collections/{collection}/dataStores/{data_store_id}/conversations/{conversa
-   * tion_id}`. Use `projects/{project_number}/locations/{location_id}/collections/{collection}/data
-   * Stores/{data_store_id}/conversations/-` to activate auto session mode, which automatically
-   * creates a new conversation inside a ConverseConversation session.
-   * @param name name or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaConverseConversationRequest setName(java.lang.String name) {
-    this.name = name;
     return this;
   }
 

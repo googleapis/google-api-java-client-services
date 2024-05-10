@@ -30,6 +30,13 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class MigrationInsight extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A Cloud database migration target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudDatabaseMigrationTarget cloudDatabaseTarget;
+
+  /**
    * Output only. A Google Compute Engine Sole Tenant target.
    * The value may be {@code null}.
    */
@@ -59,11 +66,41 @@ public final class MigrationInsight extends com.google.api.client.json.GenericJs
   private GoogleKubernetesEngineMigrationTarget gkeTarget;
 
   /**
+   * Output only. Issues associated with this migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Issue> issues;
+
+  static {
+    // hack to force ProGuard to consider Issue used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Issue.class);
+  }
+
+  /**
    * Output only. A VMWare Engine target.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VmwareEngineMigrationTarget vmwareEngineTarget;
+
+  /**
+   * Output only. A Cloud database migration target.
+   * @return value or {@code null} for none
+   */
+  public CloudDatabaseMigrationTarget getCloudDatabaseTarget() {
+    return cloudDatabaseTarget;
+  }
+
+  /**
+   * Output only. A Cloud database migration target.
+   * @param cloudDatabaseTarget cloudDatabaseTarget or {@code null} for none
+   */
+  public MigrationInsight setCloudDatabaseTarget(CloudDatabaseMigrationTarget cloudDatabaseTarget) {
+    this.cloudDatabaseTarget = cloudDatabaseTarget;
+    return this;
+  }
 
   /**
    * Output only. A Google Compute Engine Sole Tenant target.
@@ -132,6 +169,23 @@ public final class MigrationInsight extends com.google.api.client.json.GenericJs
    */
   public MigrationInsight setGkeTarget(GoogleKubernetesEngineMigrationTarget gkeTarget) {
     this.gkeTarget = gkeTarget;
+    return this;
+  }
+
+  /**
+   * Output only. Issues associated with this migration.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Issue> getIssues() {
+    return issues;
+  }
+
+  /**
+   * Output only. Issues associated with this migration.
+   * @param issues issues or {@code null} for none
+   */
+  public MigrationInsight setIssues(java.util.List<Issue> issues) {
+    this.issues = issues;
     return this;
   }
 

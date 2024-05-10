@@ -56,7 +56,7 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   private java.lang.Boolean enableIpv4;
 
   /**
-   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+   * Enable IPv6 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -228,7 +228,7 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   }
 
   /**
-   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+   * Enable IPv6 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 6.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableIpv6() {
@@ -236,7 +236,7 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   }
 
   /**
-   * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
+   * Enable IPv6 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 6.
    * @param enableIpv6 enableIpv6 or {@code null} for none
    */
   public RouterStatusBgpPeerStatus setEnableIpv6(java.lang.Boolean enableIpv6) {

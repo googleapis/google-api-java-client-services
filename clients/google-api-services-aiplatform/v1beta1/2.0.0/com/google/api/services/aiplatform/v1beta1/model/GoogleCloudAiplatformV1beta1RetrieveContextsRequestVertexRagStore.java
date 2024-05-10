@@ -30,20 +30,30 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStore extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. RagCorpora resource name. Format:
-   * `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}` Currently only one corpus is
-   * allowed. In the future we may open up multiple corpora support. However, they should be from
-   * the same project and location.
+   * Optional. Deprecated. Please use rag_resources to specify the data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ragCorpora;
 
   /**
-   * Required. RagCorpora resource name. Format:
-   * `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}` Currently only one corpus is
-   * allowed. In the future we may open up multiple corpora support. However, they should be from
-   * the same project and location.
+   * Optional. The representation of the rag source. It can be used to specify corpus only or
+   * ragfiles. Currently only support one corpus or multiple files from one corpus. In the future we
+   * may open up multiple corpora support.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStoreRagResource> ragResources;
+
+  /**
+   * Optional. Only return contexts with vector distance smaller than the threshold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double vectorDistanceThreshold;
+
+  /**
+   * Optional. Deprecated. Please use rag_resources to specify the data source.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRagCorpora() {
@@ -51,14 +61,49 @@ public final class GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagS
   }
 
   /**
-   * Required. RagCorpora resource name. Format:
-   * `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}` Currently only one corpus is
-   * allowed. In the future we may open up multiple corpora support. However, they should be from
-   * the same project and location.
+   * Optional. Deprecated. Please use rag_resources to specify the data source.
    * @param ragCorpora ragCorpora or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStore setRagCorpora(java.util.List<java.lang.String> ragCorpora) {
     this.ragCorpora = ragCorpora;
+    return this;
+  }
+
+  /**
+   * Optional. The representation of the rag source. It can be used to specify corpus only or
+   * ragfiles. Currently only support one corpus or multiple files from one corpus. In the future we
+   * may open up multiple corpora support.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStoreRagResource> getRagResources() {
+    return ragResources;
+  }
+
+  /**
+   * Optional. The representation of the rag source. It can be used to specify corpus only or
+   * ragfiles. Currently only support one corpus or multiple files from one corpus. In the future we
+   * may open up multiple corpora support.
+   * @param ragResources ragResources or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStore setRagResources(java.util.List<GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStoreRagResource> ragResources) {
+    this.ragResources = ragResources;
+    return this;
+  }
+
+  /**
+   * Optional. Only return contexts with vector distance smaller than the threshold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getVectorDistanceThreshold() {
+    return vectorDistanceThreshold;
+  }
+
+  /**
+   * Optional. Only return contexts with vector distance smaller than the threshold.
+   * @param vectorDistanceThreshold vectorDistanceThreshold or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RetrieveContextsRequestVertexRagStore setVectorDistanceThreshold(java.lang.Double vectorDistanceThreshold) {
+    this.vectorDistanceThreshold = vectorDistanceThreshold;
     return this;
   }
 

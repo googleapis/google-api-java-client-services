@@ -60,7 +60,7 @@ public final class GoogleCloudDiscoveryengineV1alphaChunk extends com.google.api
   private GoogleCloudDiscoveryengineV1alphaChunkDocumentMetadata documentMetadata;
 
   /**
-   * Unique chunk id of the current chunk.
+   * Unique chunk ID of the current chunk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +153,7 @@ public final class GoogleCloudDiscoveryengineV1alphaChunk extends com.google.api
   }
 
   /**
-   * Unique chunk id of the current chunk.
+   * Unique chunk ID of the current chunk.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -161,7 +161,7 @@ public final class GoogleCloudDiscoveryengineV1alphaChunk extends com.google.api
   }
 
   /**
-   * Unique chunk id of the current chunk.
+   * Unique chunk ID of the current chunk.
    * @param id id or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaChunk setId(java.lang.String id) {

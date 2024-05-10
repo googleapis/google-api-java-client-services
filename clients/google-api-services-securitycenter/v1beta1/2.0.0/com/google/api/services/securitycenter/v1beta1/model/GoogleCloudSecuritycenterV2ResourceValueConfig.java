@@ -32,6 +32,13 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Cloud provider this configuration applies to
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudProvider;
+
+  /**
    * Output only. Timestamp this resource value config was created.
    * The value may be {@code null}.
    */
@@ -110,6 +117,23 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Cloud provider this configuration applies to
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudProvider() {
+    return cloudProvider;
+  }
+
+  /**
+   * Cloud provider this configuration applies to
+   * @param cloudProvider cloudProvider or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ResourceValueConfig setCloudProvider(java.lang.String cloudProvider) {
+    this.cloudProvider = cloudProvider;
+    return this;
+  }
 
   /**
    * Output only. Timestamp this resource value config was created.

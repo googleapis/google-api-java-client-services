@@ -30,6 +30,14 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaChunkDocumentMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Data representation. The structured JSON data for the document. It should conform to the
+   * registered Schema or an `INVALID_ARGUMENT` error is thrown.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> structData;
+
+  /**
    * Title of the document.
    * The value may be {@code null}.
    */
@@ -42,6 +50,25 @@ public final class GoogleCloudDiscoveryengineV1alphaChunkDocumentMetadata extend
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Data representation. The structured JSON data for the document. It should conform to the
+   * registered Schema or an `INVALID_ARGUMENT` error is thrown.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getStructData() {
+    return structData;
+  }
+
+  /**
+   * Data representation. The structured JSON data for the document. It should conform to the
+   * registered Schema or an `INVALID_ARGUMENT` error is thrown.
+   * @param structData structData or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaChunkDocumentMetadata setStructData(java.util.Map<String, java.lang.Object> structData) {
+    this.structData = structData;
+    return this;
+  }
 
   /**
    * Title of the document.

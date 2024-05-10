@@ -38,14 +38,6 @@ public final class RRSetRoutingPolicy extends com.google.api.client.json.Generic
   private RRSetRoutingPolicyGeoPolicy geo;
 
   /**
-   * The selfLink attribute of the HealthCheck resource to use for this RRSetRoutingPolicy.
-   * https://cloud.google.com/compute/docs/reference/rest/v1/healthChecks
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String healthCheck;
-
-  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,25 +67,6 @@ public final class RRSetRoutingPolicy extends com.google.api.client.json.Generic
    */
   public RRSetRoutingPolicy setGeo(RRSetRoutingPolicyGeoPolicy geo) {
     this.geo = geo;
-    return this;
-  }
-
-  /**
-   * The selfLink attribute of the HealthCheck resource to use for this RRSetRoutingPolicy.
-   * https://cloud.google.com/compute/docs/reference/rest/v1/healthChecks
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getHealthCheck() {
-    return healthCheck;
-  }
-
-  /**
-   * The selfLink attribute of the HealthCheck resource to use for this RRSetRoutingPolicy.
-   * https://cloud.google.com/compute/docs/reference/rest/v1/healthChecks
-   * @param healthCheck healthCheck or {@code null} for none
-   */
-  public RRSetRoutingPolicy setHealthCheck(java.lang.String healthCheck) {
-    this.healthCheck = healthCheck;
     return this;
   }
 

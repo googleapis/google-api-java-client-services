@@ -30,11 +30,38 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class BigQueryAction extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The ID of the BigQuery job that executed the SQL in sql_script. Only set once the
+   * job has started to run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jobId;
+
+  /**
    * Output only. The generated BigQuery SQL script that will be executed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sqlScript;
+
+  /**
+   * Output only. The ID of the BigQuery job that executed the SQL in sql_script. Only set once the
+   * job has started to run.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJobId() {
+    return jobId;
+  }
+
+  /**
+   * Output only. The ID of the BigQuery job that executed the SQL in sql_script. Only set once the
+   * job has started to run.
+   * @param jobId jobId or {@code null} for none
+   */
+  public BigQueryAction setJobId(java.lang.String jobId) {
+    this.jobId = jobId;
+    return this;
+  }
 
   /**
    * Output only. The generated BigQuery SQL script that will be executed.

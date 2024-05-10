@@ -34,6 +34,13 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaIntegrationParameter extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates whether this variable contains large data and need to be uploaded to Cloud Storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean containsLargeData;
+
+  /**
    * Type of the parameter.
    * The value may be {@code null}.
    */
@@ -86,6 +93,13 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationParameter extends co
   private java.lang.String key;
 
   /**
+   * True if this parameter should be masked in the logs
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean masked;
+
+  /**
    * The identifier of the node (TaskConfig/TriggerConfig) this parameter was produced by, if it is
    * a transient param or a copy of an input param.
    * The value may be {@code null}.
@@ -99,6 +113,23 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationParameter extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean searchable;
+
+  /**
+   * Indicates whether this variable contains large data and need to be uploaded to Cloud Storage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getContainsLargeData() {
+    return containsLargeData;
+  }
+
+  /**
+   * Indicates whether this variable contains large data and need to be uploaded to Cloud Storage.
+   * @param containsLargeData containsLargeData or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationParameter setContainsLargeData(java.lang.Boolean containsLargeData) {
+    this.containsLargeData = containsLargeData;
+    return this;
+  }
 
   /**
    * Type of the parameter.
@@ -222,6 +253,23 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationParameter extends co
    */
   public GoogleCloudIntegrationsV1alphaIntegrationParameter setKey(java.lang.String key) {
     this.key = key;
+    return this;
+  }
+
+  /**
+   * True if this parameter should be masked in the logs
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMasked() {
+    return masked;
+  }
+
+  /**
+   * True if this parameter should be masked in the logs
+   * @param masked masked or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationParameter setMasked(java.lang.Boolean masked) {
+    this.masked = masked;
     return this;
   }
 

@@ -51,6 +51,13 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Output only. Only set if the repository has a KMS Key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataEncryptionState dataEncryptionState;
+
+  /**
    * Output only. The version of `@dataform/core` that was used for compilation.
    * The value may be {@code null}.
    */
@@ -130,6 +137,23 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
    */
   public CompilationResult setCompilationErrors(java.util.List<CompilationError> compilationErrors) {
     this.compilationErrors = compilationErrors;
+    return this;
+  }
+
+  /**
+   * Output only. Only set if the repository has a KMS Key.
+   * @return value or {@code null} for none
+   */
+  public DataEncryptionState getDataEncryptionState() {
+    return dataEncryptionState;
+  }
+
+  /**
+   * Output only. Only set if the repository has a KMS Key.
+   * @param dataEncryptionState dataEncryptionState or {@code null} for none
+   */
+  public CompilationResult setDataEncryptionState(DataEncryptionState dataEncryptionState) {
+    this.dataEncryptionState = dataEncryptionState;
     return this;
   }
 

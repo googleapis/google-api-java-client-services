@@ -161,14 +161,16 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.Boolean enableCDN;
 
   /**
-   * Specifies the canary migration state. Possible values are PREPARE, TEST, and FINALIZE. To begin
-   * the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE. The
-   * state must be changed to FINALIZE before the loadBalancingScheme can be changed to
-   * EXTERNAL_MANAGED. Optionally, the TEST state can be used to migrate traffic by percentage using
+   * Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and
+   * TEST_ALL_TRAFFIC. To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be
+   * changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the
+   * loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE
+   * state can be used to migrate traffic by percentage using
    * externalManagedMigrationTestingPercentage. Rolling back a migration requires the states to be
    * set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the
-   * state to be set to FINALIZE at the same time. Optionally, the TEST state can be used to migrate
-   * some traffic back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
+   * state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the TEST_BY_PERCENTAGE state
+   * can be used to migrate some traffic back to EXTERNAL or PREPARE can be used to migrate all
+   * traffic back to EXTERNAL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,8 +180,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Determines the fraction of requests that should be processed by the Global external Application
    * Load Balancer. The value of this field must be in the range [0, 100]. Session affinity options
    * will slightly affect this routing behavior, for more details, see: Session Affinity. This value
-   * is only used if the loadBalancingScheme in the BackendService is set to EXTERNAL when using the
-   * classic Application Load Balancer.
+   * can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL (when using
+   * the classic Application Load Balancer) and the migration state is TEST_BY_PERCENTAGE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -362,6 +364,13 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
+
+  /**
+   * Configures traffic steering properties of internal passthrough Network Load Balancers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceNetworkPassThroughLbTrafficPolicy networkPassThroughLbTrafficPolicy;
 
   /**
    * Settings controlling the ejection of unhealthy backend endpoints from the load balancing pool
@@ -797,14 +806,16 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies the canary migration state. Possible values are PREPARE, TEST, and FINALIZE. To begin
-   * the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE. The
-   * state must be changed to FINALIZE before the loadBalancingScheme can be changed to
-   * EXTERNAL_MANAGED. Optionally, the TEST state can be used to migrate traffic by percentage using
+   * Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and
+   * TEST_ALL_TRAFFIC. To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be
+   * changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the
+   * loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE
+   * state can be used to migrate traffic by percentage using
    * externalManagedMigrationTestingPercentage. Rolling back a migration requires the states to be
    * set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the
-   * state to be set to FINALIZE at the same time. Optionally, the TEST state can be used to migrate
-   * some traffic back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
+   * state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the TEST_BY_PERCENTAGE state
+   * can be used to migrate some traffic back to EXTERNAL or PREPARE can be used to migrate all
+   * traffic back to EXTERNAL.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalManagedMigrationState() {
@@ -812,14 +823,16 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Specifies the canary migration state. Possible values are PREPARE, TEST, and FINALIZE. To begin
-   * the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE. The
-   * state must be changed to FINALIZE before the loadBalancingScheme can be changed to
-   * EXTERNAL_MANAGED. Optionally, the TEST state can be used to migrate traffic by percentage using
+   * Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and
+   * TEST_ALL_TRAFFIC. To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be
+   * changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the
+   * loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE
+   * state can be used to migrate traffic by percentage using
    * externalManagedMigrationTestingPercentage. Rolling back a migration requires the states to be
    * set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the
-   * state to be set to FINALIZE at the same time. Optionally, the TEST state can be used to migrate
-   * some traffic back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
+   * state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the TEST_BY_PERCENTAGE state
+   * can be used to migrate some traffic back to EXTERNAL or PREPARE can be used to migrate all
+   * traffic back to EXTERNAL.
    * @param externalManagedMigrationState externalManagedMigrationState or {@code null} for none
    */
   public BackendService setExternalManagedMigrationState(java.lang.String externalManagedMigrationState) {
@@ -831,8 +844,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Determines the fraction of requests that should be processed by the Global external Application
    * Load Balancer. The value of this field must be in the range [0, 100]. Session affinity options
    * will slightly affect this routing behavior, for more details, see: Session Affinity. This value
-   * is only used if the loadBalancingScheme in the BackendService is set to EXTERNAL when using the
-   * classic Application Load Balancer.
+   * can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL (when using
+   * the classic Application Load Balancer) and the migration state is TEST_BY_PERCENTAGE.
    * @return value or {@code null} for none
    */
   public java.lang.Float getExternalManagedMigrationTestingPercentage() {
@@ -843,8 +856,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Determines the fraction of requests that should be processed by the Global external Application
    * Load Balancer. The value of this field must be in the range [0, 100]. Session affinity options
    * will slightly affect this routing behavior, for more details, see: Session Affinity. This value
-   * is only used if the loadBalancingScheme in the BackendService is set to EXTERNAL when using the
-   * classic Application Load Balancer.
+   * can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL (when using
+   * the classic Application Load Balancer) and the migration state is TEST_BY_PERCENTAGE.
    * @param externalManagedMigrationTestingPercentage externalManagedMigrationTestingPercentage or {@code null} for none
    */
   public BackendService setExternalManagedMigrationTestingPercentage(java.lang.Float externalManagedMigrationTestingPercentage) {
@@ -1289,6 +1302,23 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Configures traffic steering properties of internal passthrough Network Load Balancers.
+   * @return value or {@code null} for none
+   */
+  public BackendServiceNetworkPassThroughLbTrafficPolicy getNetworkPassThroughLbTrafficPolicy() {
+    return networkPassThroughLbTrafficPolicy;
+  }
+
+  /**
+   * Configures traffic steering properties of internal passthrough Network Load Balancers.
+   * @param networkPassThroughLbTrafficPolicy networkPassThroughLbTrafficPolicy or {@code null} for none
+   */
+  public BackendService setNetworkPassThroughLbTrafficPolicy(BackendServiceNetworkPassThroughLbTrafficPolicy networkPassThroughLbTrafficPolicy) {
+    this.networkPassThroughLbTrafficPolicy = networkPassThroughLbTrafficPolicy;
     return this;
   }
 

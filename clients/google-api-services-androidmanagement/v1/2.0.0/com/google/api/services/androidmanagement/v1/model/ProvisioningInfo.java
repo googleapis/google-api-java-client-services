@@ -52,11 +52,25 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
   private java.lang.String enterprise;
 
   /**
+   * IMEI number of the GSM device. For example, A1000031212.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imei;
+
+  /**
    * The management mode of the device or profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String managementMode;
+
+  /**
+   * MEID number of the CDMA device. For example, A00000292788E1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String meid;
 
   /**
    * The model of the device. For example, Asus Nexus 7.
@@ -78,6 +92,13 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String ownership;
+
+  /**
+   * The device serial number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serialNumber;
 
   /**
    * The API level of the Android platform version running on the device.
@@ -131,6 +152,23 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * IMEI number of the GSM device. For example, A1000031212.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImei() {
+    return imei;
+  }
+
+  /**
+   * IMEI number of the GSM device. For example, A1000031212.
+   * @param imei imei or {@code null} for none
+   */
+  public ProvisioningInfo setImei(java.lang.String imei) {
+    this.imei = imei;
+    return this;
+  }
+
+  /**
    * The management mode of the device or profile.
    * @return value or {@code null} for none
    */
@@ -144,6 +182,23 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
    */
   public ProvisioningInfo setManagementMode(java.lang.String managementMode) {
     this.managementMode = managementMode;
+    return this;
+  }
+
+  /**
+   * MEID number of the CDMA device. For example, A00000292788E1.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMeid() {
+    return meid;
+  }
+
+  /**
+   * MEID number of the CDMA device. For example, A00000292788E1.
+   * @param meid meid or {@code null} for none
+   */
+  public ProvisioningInfo setMeid(java.lang.String meid) {
+    this.meid = meid;
     return this;
   }
 
@@ -195,6 +250,23 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
    */
   public ProvisioningInfo setOwnership(java.lang.String ownership) {
     this.ownership = ownership;
+    return this;
+  }
+
+  /**
+   * The device serial number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSerialNumber() {
+    return serialNumber;
+  }
+
+  /**
+   * The device serial number.
+   * @param serialNumber serialNumber or {@code null} for none
+   */
+  public ProvisioningInfo setSerialNumber(java.lang.String serialNumber) {
+    this.serialNumber = serialNumber;
     return this;
   }
 

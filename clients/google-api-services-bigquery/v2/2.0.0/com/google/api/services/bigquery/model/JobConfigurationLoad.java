@@ -79,14 +79,13 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. [Experimental] Configures the load job to only copy files to the destination BigLake
-   * managed table with an external storage_uri, without reading file content and writing them to
-   * new files. Copying files only is supported when: * source_uris are in the same external storage
-   * system as the destination table but they do not overlap with storage_uri of the destination
-   * table. * source_format is the same file format as the destination table. * destination_table is
-   * an existing BigLake managed table. Its schema does not have default value expression. It schema
-   * does not have type parameters other than precision and scale. * No options other than the above
-   * are specified.
+   * Optional. [Experimental] Configures the load job to copy files directly to the destination
+   * BigLake managed table, bypassing file content reading and rewriting. Copying files only is
+   * supported when all the following are true: * `source_uris` are located in the same Cloud
+   * Storage location as the destination table's `storage_uri` location. * `source_format` is
+   * `PARQUET`. * `destination_table` is an existing BigLake managed table. The table's schema does
+   * not have flexible column names. The table's columns do not have type parameters other than
+   * precision and scale. * No options other than the above are specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -508,14 +507,13 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. [Experimental] Configures the load job to only copy files to the destination BigLake
-   * managed table with an external storage_uri, without reading file content and writing them to
-   * new files. Copying files only is supported when: * source_uris are in the same external storage
-   * system as the destination table but they do not overlap with storage_uri of the destination
-   * table. * source_format is the same file format as the destination table. * destination_table is
-   * an existing BigLake managed table. Its schema does not have default value expression. It schema
-   * does not have type parameters other than precision and scale. * No options other than the above
-   * are specified.
+   * Optional. [Experimental] Configures the load job to copy files directly to the destination
+   * BigLake managed table, bypassing file content reading and rewriting. Copying files only is
+   * supported when all the following are true: * `source_uris` are located in the same Cloud
+   * Storage location as the destination table's `storage_uri` location. * `source_format` is
+   * `PARQUET`. * `destination_table` is an existing BigLake managed table. The table's schema does
+   * not have flexible column names. The table's columns do not have type parameters other than
+   * precision and scale. * No options other than the above are specified.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCopyFilesOnly() {
@@ -523,14 +521,13 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. [Experimental] Configures the load job to only copy files to the destination BigLake
-   * managed table with an external storage_uri, without reading file content and writing them to
-   * new files. Copying files only is supported when: * source_uris are in the same external storage
-   * system as the destination table but they do not overlap with storage_uri of the destination
-   * table. * source_format is the same file format as the destination table. * destination_table is
-   * an existing BigLake managed table. Its schema does not have default value expression. It schema
-   * does not have type parameters other than precision and scale. * No options other than the above
-   * are specified.
+   * Optional. [Experimental] Configures the load job to copy files directly to the destination
+   * BigLake managed table, bypassing file content reading and rewriting. Copying files only is
+   * supported when all the following are true: * `source_uris` are located in the same Cloud
+   * Storage location as the destination table's `storage_uri` location. * `source_format` is
+   * `PARQUET`. * `destination_table` is an existing BigLake managed table. The table's schema does
+   * not have flexible column names. The table's columns do not have type parameters other than
+   * precision and scale. * No options other than the above are specified.
    * @param copyFilesOnly copyFilesOnly or {@code null} for none
    */
   public JobConfigurationLoad setCopyFilesOnly(java.lang.Boolean copyFilesOnly) {

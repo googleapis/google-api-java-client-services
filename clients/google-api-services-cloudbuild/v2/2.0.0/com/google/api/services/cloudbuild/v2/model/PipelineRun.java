@@ -142,6 +142,13 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
   private PipelineSpec pipelineSpec;
 
   /**
+   * Output only. Inline pipelineSpec yaml string, used by workflow run requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pipelineSpecYaml;
+
+  /**
    * Optional. Provenance configuration.
    * The value may be {@code null}.
    */
@@ -472,6 +479,23 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    */
   public PipelineRun setPipelineSpec(PipelineSpec pipelineSpec) {
     this.pipelineSpec = pipelineSpec;
+    return this;
+  }
+
+  /**
+   * Output only. Inline pipelineSpec yaml string, used by workflow run requests.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPipelineSpecYaml() {
+    return pipelineSpecYaml;
+  }
+
+  /**
+   * Output only. Inline pipelineSpec yaml string, used by workflow run requests.
+   * @param pipelineSpecYaml pipelineSpecYaml or {@code null} for none
+   */
+  public PipelineRun setPipelineSpecYaml(java.lang.String pipelineSpecYaml) {
+    this.pipelineSpecYaml = pipelineSpecYaml;
     return this;
   }
 

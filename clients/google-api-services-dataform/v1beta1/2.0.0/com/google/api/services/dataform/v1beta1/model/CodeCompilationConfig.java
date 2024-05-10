@@ -59,6 +59,12 @@ public final class CodeCompilationConfig extends com.google.api.client.json.Gene
   private java.lang.String defaultLocation;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NotebookRuntimeOptions defaultNotebookRuntimeOptions;
+
+  /**
    * Optional. The default schema (BigQuery dataset ID).
    * The value may be {@code null}.
    */
@@ -153,6 +159,21 @@ public final class CodeCompilationConfig extends com.google.api.client.json.Gene
    */
   public CodeCompilationConfig setDefaultLocation(java.lang.String defaultLocation) {
     this.defaultLocation = defaultLocation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public NotebookRuntimeOptions getDefaultNotebookRuntimeOptions() {
+    return defaultNotebookRuntimeOptions;
+  }
+
+  /**
+   * @param defaultNotebookRuntimeOptions defaultNotebookRuntimeOptions or {@code null} for none
+   */
+  public CodeCompilationConfig setDefaultNotebookRuntimeOptions(NotebookRuntimeOptions defaultNotebookRuntimeOptions) {
+    this.defaultNotebookRuntimeOptions = defaultNotebookRuntimeOptions;
     return this;
   }
 

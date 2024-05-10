@@ -101,7 +101,7 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * URLs to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
    * For example, https://networkservices.googleapis.com/beta/projects/project/locations/
-   * locationhttpFilters/httpFilter Only filters that handle outbound connection and stream events
+   * location/httpFilters/httpFilter Only filters that handle outbound connection and stream events
    * may be specified. These filters work in conjunction with a default set of HTTP filters that may
    * already be configured by Traffic Director. Traffic Director will determine the final location
    * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
@@ -429,7 +429,7 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * URLs to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
    * For example, https://networkservices.googleapis.com/beta/projects/project/locations/
-   * locationhttpFilters/httpFilter Only filters that handle outbound connection and stream events
+   * location/httpFilters/httpFilter Only filters that handle outbound connection and stream events
    * may be specified. These filters work in conjunction with a default set of HTTP filters that may
    * already be configured by Traffic Director. Traffic Director will determine the final location
    * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic
@@ -445,7 +445,7 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
   /**
    * URLs to networkservices.HttpFilter resources enabled for xDS clients using this configuration.
    * For example, https://networkservices.googleapis.com/beta/projects/project/locations/
-   * locationhttpFilters/httpFilter Only filters that handle outbound connection and stream events
+   * location/httpFilters/httpFilter Only filters that handle outbound connection and stream events
    * may be specified. These filters work in conjunction with a default set of HTTP filters that may
    * already be configured by Traffic Director. Traffic Director will determine the final location
    * of these filters within xDS configuration based on the name of the HTTP filter. If Traffic

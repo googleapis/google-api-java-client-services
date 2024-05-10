@@ -60,6 +60,15 @@ public final class AuctionPackage extends com.google.api.client.json.GenericJson
   private java.lang.String displayName;
 
   /**
+   * Output only. If set, this field contains the list of DSP specific seat ids set by media
+   * planners that are eligible to transact on this deal. The seat ID is in the calling DSP's
+   * namespace.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> eligibleSeatIds;
+
+  /**
    * Immutable. The unique identifier for the auction package. Format:
    * `buyers/{accountId}/auctionPackages/{auctionPackageId}` The auction_package_id part of name is
    * sent in the BidRequest to all RTB bidders and is returned as deal_id by the bidder in the
@@ -70,12 +79,30 @@ public final class AuctionPackage extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * Output only. The list of clients of the current buyer that are subscribed to the
-   * AuctionPackage. Format: `buyers/{buyerAccountId}/clients/{clientAccountId}`
+   * Output only. The list of buyers that are subscribed to the AuctionPackage. This field is only
+   * populated when calling as a bidder. Format: `buyers/{buyerAccountId}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> subscribedBuyers;
+
+  /**
+   * Output only. When calling as a buyer, the list of clients of the current buyer that are
+   * subscribed to the AuctionPackage. When calling as a bidder, the list of clients that are
+   * subscribed to the AuctionPackage owned by the bidder or its buyers. Format:
+   * `buyers/{buyerAccountId}/clients/{clientAccountId}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> subscribedClients;
+
+  /**
+   * Output only. The list of media planners that are subscribed to the AuctionPackage. This field
+   * is only populated when calling as a bidder.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MediaPlanner> subscribedMediaPlanners;
 
   /**
    * Output only. Time the auction package was last updated. This value is only increased when this
@@ -154,6 +181,27 @@ public final class AuctionPackage extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Output only. If set, this field contains the list of DSP specific seat ids set by media
+   * planners that are eligible to transact on this deal. The seat ID is in the calling DSP's
+   * namespace.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEligibleSeatIds() {
+    return eligibleSeatIds;
+  }
+
+  /**
+   * Output only. If set, this field contains the list of DSP specific seat ids set by media
+   * planners that are eligible to transact on this deal. The seat ID is in the calling DSP's
+   * namespace.
+   * @param eligibleSeatIds eligibleSeatIds or {@code null} for none
+   */
+  public AuctionPackage setEligibleSeatIds(java.util.List<java.lang.String> eligibleSeatIds) {
+    this.eligibleSeatIds = eligibleSeatIds;
+    return this;
+  }
+
+  /**
    * Immutable. The unique identifier for the auction package. Format:
    * `buyers/{accountId}/auctionPackages/{auctionPackageId}` The auction_package_id part of name is
    * sent in the BidRequest to all RTB bidders and is returned as deal_id by the bidder in the
@@ -177,8 +225,29 @@ public final class AuctionPackage extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The list of clients of the current buyer that are subscribed to the
-   * AuctionPackage. Format: `buyers/{buyerAccountId}/clients/{clientAccountId}`
+   * Output only. The list of buyers that are subscribed to the AuctionPackage. This field is only
+   * populated when calling as a bidder. Format: `buyers/{buyerAccountId}`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSubscribedBuyers() {
+    return subscribedBuyers;
+  }
+
+  /**
+   * Output only. The list of buyers that are subscribed to the AuctionPackage. This field is only
+   * populated when calling as a bidder. Format: `buyers/{buyerAccountId}`
+   * @param subscribedBuyers subscribedBuyers or {@code null} for none
+   */
+  public AuctionPackage setSubscribedBuyers(java.util.List<java.lang.String> subscribedBuyers) {
+    this.subscribedBuyers = subscribedBuyers;
+    return this;
+  }
+
+  /**
+   * Output only. When calling as a buyer, the list of clients of the current buyer that are
+   * subscribed to the AuctionPackage. When calling as a bidder, the list of clients that are
+   * subscribed to the AuctionPackage owned by the bidder or its buyers. Format:
+   * `buyers/{buyerAccountId}/clients/{clientAccountId}`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubscribedClients() {
@@ -186,12 +255,33 @@ public final class AuctionPackage extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The list of clients of the current buyer that are subscribed to the
-   * AuctionPackage. Format: `buyers/{buyerAccountId}/clients/{clientAccountId}`
+   * Output only. When calling as a buyer, the list of clients of the current buyer that are
+   * subscribed to the AuctionPackage. When calling as a bidder, the list of clients that are
+   * subscribed to the AuctionPackage owned by the bidder or its buyers. Format:
+   * `buyers/{buyerAccountId}/clients/{clientAccountId}`
    * @param subscribedClients subscribedClients or {@code null} for none
    */
   public AuctionPackage setSubscribedClients(java.util.List<java.lang.String> subscribedClients) {
     this.subscribedClients = subscribedClients;
+    return this;
+  }
+
+  /**
+   * Output only. The list of media planners that are subscribed to the AuctionPackage. This field
+   * is only populated when calling as a bidder.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MediaPlanner> getSubscribedMediaPlanners() {
+    return subscribedMediaPlanners;
+  }
+
+  /**
+   * Output only. The list of media planners that are subscribed to the AuctionPackage. This field
+   * is only populated when calling as a bidder.
+   * @param subscribedMediaPlanners subscribedMediaPlanners or {@code null} for none
+   */
+  public AuctionPackage setSubscribedMediaPlanners(java.util.List<MediaPlanner> subscribedMediaPlanners) {
+    this.subscribedMediaPlanners = subscribedMediaPlanners;
     return this;
   }
 

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-orgpolicy</artifactId>
-  <version>v2-rev20240325-2.0.0</version>
-  <name>Organization Policy API v2-rev20240325-2.0.0</name>
+  <version>v2-rev20240506-2.0.0</version>
+  <name>Organization Policy API v2-rev20240506-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -92,7 +92,7 @@
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.44.1/</link>
             <link>https://googleapis.dev/java/google-oauth-client/1.35.0/</link>
-            <link>https://googleapis.dev/java/google-api-client/2.4.0/</link>
+            <link>https://googleapis.dev/java/google-api-client/2.4.1/</link>
           </links>
         </configuration>
       </plugin>
@@ -125,7 +125,7 @@
     <dependency>
       <groupId>com.google.api-client</groupId>
       <artifactId>google-api-client</artifactId>
-      <version>2.4.0</version>
+      <version>2.4.1</version>
     </dependency>
   </dependencies>
 

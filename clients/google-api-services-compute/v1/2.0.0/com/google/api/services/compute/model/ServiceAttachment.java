@@ -49,15 +49,21 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String connectionPreference;
 
   /**
-   * Projects that are allowed to connect to this service attachment.
+   * Specifies which consumer projects or networks are allowed to connect to the service attachment.
+   * Each project or network has a connection limit. A given service attachment can manage
+   * connections at either the project or network level. Therefore, both the accept and reject lists
+   * for a given service attachment must contain either only projects or only networks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ServiceAttachmentConsumerProjectLimit> consumerAcceptLists;
 
   /**
-   * Projects that are not allowed to connect to this service attachment. The project can be
-   * specified using its id or number.
+   * Specifies a list of projects or networks that are not allowed to connect to this service
+   * attachment. The project can be specified using its project ID or project number and the network
+   * can be specified using its URL. A given service attachment can manage connections at either the
+   * project or network level. Therefore, both the reject and accept lists for a given service
+   * attachment must contain either only projects or only networks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +237,10 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Projects that are allowed to connect to this service attachment.
+   * Specifies which consumer projects or networks are allowed to connect to the service attachment.
+   * Each project or network has a connection limit. A given service attachment can manage
+   * connections at either the project or network level. Therefore, both the accept and reject lists
+   * for a given service attachment must contain either only projects or only networks.
    * @return value or {@code null} for none
    */
   public java.util.List<ServiceAttachmentConsumerProjectLimit> getConsumerAcceptLists() {
@@ -239,7 +248,10 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Projects that are allowed to connect to this service attachment.
+   * Specifies which consumer projects or networks are allowed to connect to the service attachment.
+   * Each project or network has a connection limit. A given service attachment can manage
+   * connections at either the project or network level. Therefore, both the accept and reject lists
+   * for a given service attachment must contain either only projects or only networks.
    * @param consumerAcceptLists consumerAcceptLists or {@code null} for none
    */
   public ServiceAttachment setConsumerAcceptLists(java.util.List<ServiceAttachmentConsumerProjectLimit> consumerAcceptLists) {
@@ -248,8 +260,11 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Projects that are not allowed to connect to this service attachment. The project can be
-   * specified using its id or number.
+   * Specifies a list of projects or networks that are not allowed to connect to this service
+   * attachment. The project can be specified using its project ID or project number and the network
+   * can be specified using its URL. A given service attachment can manage connections at either the
+   * project or network level. Therefore, both the reject and accept lists for a given service
+   * attachment must contain either only projects or only networks.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getConsumerRejectLists() {
@@ -257,8 +272,11 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Projects that are not allowed to connect to this service attachment. The project can be
-   * specified using its id or number.
+   * Specifies a list of projects or networks that are not allowed to connect to this service
+   * attachment. The project can be specified using its project ID or project number and the network
+   * can be specified using its URL. A given service attachment can manage connections at either the
+   * project or network level. Therefore, both the reject and accept lists for a given service
+   * attachment must contain either only projects or only networks.
    * @param consumerRejectLists consumerRejectLists or {@code null} for none
    */
   public ServiceAttachment setConsumerRejectLists(java.util.List<java.lang.String> consumerRejectLists) {

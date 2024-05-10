@@ -51,6 +51,14 @@ public final class GooglePrivacyDlpV2Result extends com.google.api.client.json.G
   }
 
   /**
+   * Number of rows scanned post sampling and time filtering (Applicable for row based stores such
+   * as BigQuery).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numRowsProcessed;
+
+  /**
    * Total size in bytes that were processed.
    * The value may be {@code null}.
    */
@@ -95,6 +103,25 @@ public final class GooglePrivacyDlpV2Result extends com.google.api.client.json.G
    */
   public GooglePrivacyDlpV2Result setInfoTypeStats(java.util.List<GooglePrivacyDlpV2InfoTypeStats> infoTypeStats) {
     this.infoTypeStats = infoTypeStats;
+    return this;
+  }
+
+  /**
+   * Number of rows scanned post sampling and time filtering (Applicable for row based stores such
+   * as BigQuery).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumRowsProcessed() {
+    return numRowsProcessed;
+  }
+
+  /**
+   * Number of rows scanned post sampling and time filtering (Applicable for row based stores such
+   * as BigQuery).
+   * @param numRowsProcessed numRowsProcessed or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Result setNumRowsProcessed(java.lang.Long numRowsProcessed) {
+    this.numRowsProcessed = numRowsProcessed;
     return this;
   }
 

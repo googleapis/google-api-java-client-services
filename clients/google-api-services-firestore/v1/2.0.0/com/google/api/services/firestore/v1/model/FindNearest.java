@@ -30,7 +30,7 @@ package com.google.api.services.firestore.v1.model;
 public final class FindNearest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Distance Measure to use, required.
+   * Required. The distance measure to use, required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class FindNearest extends com.google.api.client.json.GenericJson {
   private FieldReference vectorField;
 
   /**
-   * Required. The Distance Measure to use, required.
+   * Required. The distance measure to use, required.
    * @return value or {@code null} for none
    */
   public java.lang.String getDistanceMeasure() {
@@ -69,7 +69,7 @@ public final class FindNearest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The Distance Measure to use, required.
+   * Required. The distance measure to use, required.
    * @param distanceMeasure distanceMeasure or {@code null} for none
    */
   public FindNearest setDistanceMeasure(java.lang.String distanceMeasure) {

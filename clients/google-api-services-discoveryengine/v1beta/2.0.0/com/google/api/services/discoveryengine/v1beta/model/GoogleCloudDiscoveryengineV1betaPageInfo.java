@@ -31,11 +31,11 @@ public final class GoogleCloudDiscoveryengineV1betaPageInfo extends com.google.a
 
   /**
    * The most specific category associated with a category page. To represent full path of category,
-   * use '>' sign to separate different hierarchies. If '>' is part of the category name, please
-   * replace it with other character(s). Category pages include special pages such as sales or
-   * promotions. For instance, a special sale page may have the category hierarchy: `"pageCategory"
-   * : "Sales > 2017 Black Friday Deals"`. Required for `view-category-page` events. Other event
-   * types should not set this field. Otherwise, an `INVALID_ARGUMENT` error is returned.
+   * use '>' sign to separate different hierarchies. If '>' is part of the category name, replace it
+   * with other character(s). Category pages include special pages such as sales or promotions. For
+   * instance, a special sale page may have the category hierarchy: `"pageCategory" : "Sales > 2017
+   * Black Friday Deals"`. Required for `view-category-page` events. Other event types should not
+   * set this field. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,11 +72,11 @@ public final class GoogleCloudDiscoveryengineV1betaPageInfo extends com.google.a
 
   /**
    * The most specific category associated with a category page. To represent full path of category,
-   * use '>' sign to separate different hierarchies. If '>' is part of the category name, please
-   * replace it with other character(s). Category pages include special pages such as sales or
-   * promotions. For instance, a special sale page may have the category hierarchy: `"pageCategory"
-   * : "Sales > 2017 Black Friday Deals"`. Required for `view-category-page` events. Other event
-   * types should not set this field. Otherwise, an `INVALID_ARGUMENT` error is returned.
+   * use '>' sign to separate different hierarchies. If '>' is part of the category name, replace it
+   * with other character(s). Category pages include special pages such as sales or promotions. For
+   * instance, a special sale page may have the category hierarchy: `"pageCategory" : "Sales > 2017
+   * Black Friday Deals"`. Required for `view-category-page` events. Other event types should not
+   * set this field. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getPageCategory() {
@@ -85,11 +85,11 @@ public final class GoogleCloudDiscoveryengineV1betaPageInfo extends com.google.a
 
   /**
    * The most specific category associated with a category page. To represent full path of category,
-   * use '>' sign to separate different hierarchies. If '>' is part of the category name, please
-   * replace it with other character(s). Category pages include special pages such as sales or
-   * promotions. For instance, a special sale page may have the category hierarchy: `"pageCategory"
-   * : "Sales > 2017 Black Friday Deals"`. Required for `view-category-page` events. Other event
-   * types should not set this field. Otherwise, an `INVALID_ARGUMENT` error is returned.
+   * use '>' sign to separate different hierarchies. If '>' is part of the category name, replace it
+   * with other character(s). Category pages include special pages such as sales or promotions. For
+   * instance, a special sale page may have the category hierarchy: `"pageCategory" : "Sales > 2017
+   * Black Friday Deals"`. Required for `view-category-page` events. Other event types should not
+   * set this field. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * @param pageCategory pageCategory or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaPageInfo setPageCategory(java.lang.String pageCategory) {

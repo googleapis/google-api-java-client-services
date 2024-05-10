@@ -44,6 +44,15 @@ public final class AuthorizationInfo extends com.google.api.client.json.GenericJ
   private java.lang.String permission;
 
   /**
+   * The type of the permission that was checked. For data access audit logs this corresponds with
+   * the permission type that must be enabled in the project/folder/organization IAM policy in order
+   * for the log to be written.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String permissionType;
+
+  /**
    * The resource being accessed, as a REST-style or cloud resource string. For example:
    * bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID or
    * projects/PROJECTID/datasets/DATASETID
@@ -93,6 +102,27 @@ public final class AuthorizationInfo extends com.google.api.client.json.GenericJ
    */
   public AuthorizationInfo setPermission(java.lang.String permission) {
     this.permission = permission;
+    return this;
+  }
+
+  /**
+   * The type of the permission that was checked. For data access audit logs this corresponds with
+   * the permission type that must be enabled in the project/folder/organization IAM policy in order
+   * for the log to be written.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPermissionType() {
+    return permissionType;
+  }
+
+  /**
+   * The type of the permission that was checked. For data access audit logs this corresponds with
+   * the permission type that must be enabled in the project/folder/organization IAM policy in order
+   * for the log to be written.
+   * @param permissionType permissionType or {@code null} for none
+   */
+  public AuthorizationInfo setPermissionType(java.lang.String permissionType) {
+    this.permissionType = permissionType;
     return this;
   }
 

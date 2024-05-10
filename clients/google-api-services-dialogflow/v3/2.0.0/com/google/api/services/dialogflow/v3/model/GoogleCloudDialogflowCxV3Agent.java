@@ -82,6 +82,14 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   private java.lang.String displayName;
 
   /**
+   * Optional. Enable training multi-lingual models for this agent. These models will be trained on
+   * all the languages supported by the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableMultiLanguageTraining;
+
+  /**
    * Indicates if automatic spell correction is enabled in detect intent requests.
    * The value may be {@code null}.
    */
@@ -290,6 +298,25 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
    */
   public GoogleCloudDialogflowCxV3Agent setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Enable training multi-lingual models for this agent. These models will be trained on
+   * all the languages supported by the agent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableMultiLanguageTraining() {
+    return enableMultiLanguageTraining;
+  }
+
+  /**
+   * Optional. Enable training multi-lingual models for this agent. These models will be trained on
+   * all the languages supported by the agent.
+   * @param enableMultiLanguageTraining enableMultiLanguageTraining or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Agent setEnableMultiLanguageTraining(java.lang.Boolean enableMultiLanguageTraining) {
+    this.enableMultiLanguageTraining = enableMultiLanguageTraining;
     return this;
   }
 

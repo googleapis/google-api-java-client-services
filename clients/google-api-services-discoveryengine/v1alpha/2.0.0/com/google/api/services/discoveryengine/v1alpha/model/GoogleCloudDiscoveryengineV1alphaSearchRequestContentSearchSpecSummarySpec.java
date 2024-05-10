@@ -93,7 +93,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
   /**
    * The number of top results to generate the summary from. If the number of results returned is
    * less than `summaryResultCount`, the summary is generated from all of the results. At most 10
-   * results can be used to generate a summary.
+   * results for documents mode, or 50 for chunks mode, can be used to generate a summary. The
+   * chunks mode is used when SearchRequest.ContentSearchSpec.search_result_mode is set to CHUNKS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,9 +102,9 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
 
   /**
    * If true, answer will be generated from most relevant chunks from top search results. This
-   * feature will improve summary quality. Please note that with this feature enabled, not all top
-   * search results will be referenced and included in the reference list, so the citation source
-   * index only points to the search results listed in the reference list.
+   * feature will improve summary quality. Note that with this feature enabled, not all top search
+   * results will be referenced and included in the reference list, so the citation source index
+   * only points to the search results listed in the reference list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -252,7 +253,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
   /**
    * The number of top results to generate the summary from. If the number of results returned is
    * less than `summaryResultCount`, the summary is generated from all of the results. At most 10
-   * results can be used to generate a summary.
+   * results for documents mode, or 50 for chunks mode, can be used to generate a summary. The
+   * chunks mode is used when SearchRequest.ContentSearchSpec.search_result_mode is set to CHUNKS.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSummaryResultCount() {
@@ -262,7 +264,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
   /**
    * The number of top results to generate the summary from. If the number of results returned is
    * less than `summaryResultCount`, the summary is generated from all of the results. At most 10
-   * results can be used to generate a summary.
+   * results for documents mode, or 50 for chunks mode, can be used to generate a summary. The
+   * chunks mode is used when SearchRequest.ContentSearchSpec.search_result_mode is set to CHUNKS.
    * @param summaryResultCount summaryResultCount or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpec setSummaryResultCount(java.lang.Integer summaryResultCount) {
@@ -272,9 +275,9 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
 
   /**
    * If true, answer will be generated from most relevant chunks from top search results. This
-   * feature will improve summary quality. Please note that with this feature enabled, not all top
-   * search results will be referenced and included in the reference list, so the citation source
-   * index only points to the search results listed in the reference list.
+   * feature will improve summary quality. Note that with this feature enabled, not all top search
+   * results will be referenced and included in the reference list, so the citation source index
+   * only points to the search results listed in the reference list.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseSemanticChunks() {
@@ -283,9 +286,9 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
 
   /**
    * If true, answer will be generated from most relevant chunks from top search results. This
-   * feature will improve summary quality. Please note that with this feature enabled, not all top
-   * search results will be referenced and included in the reference list, so the citation source
-   * index only points to the search results listed in the reference list.
+   * feature will improve summary quality. Note that with this feature enabled, not all top search
+   * results will be referenced and included in the reference list, so the citation source index
+   * only points to the search results listed in the reference list.
    * @param useSemanticChunks useSemanticChunks or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSummarySpec setUseSemanticChunks(java.lang.Boolean useSemanticChunks) {

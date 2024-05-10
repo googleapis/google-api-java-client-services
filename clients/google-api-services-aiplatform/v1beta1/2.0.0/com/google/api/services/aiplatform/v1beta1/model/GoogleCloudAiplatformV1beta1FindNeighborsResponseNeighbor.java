@@ -39,11 +39,18 @@ public final class GoogleCloudAiplatformV1beta1FindNeighborsResponseNeighbor ext
   private GoogleCloudAiplatformV1beta1IndexDatapoint datapoint;
 
   /**
-   * The distance between the neighbor and the query vector.
+   * The distance between the neighbor and the dense embedding query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double distance;
+
+  /**
+   * The distance between the neighbor and the query sparse_embedding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double sparseDistance;
 
   /**
    * The datapoint of the neighbor. Note that full datapoints are returned only when
@@ -67,7 +74,7 @@ public final class GoogleCloudAiplatformV1beta1FindNeighborsResponseNeighbor ext
   }
 
   /**
-   * The distance between the neighbor and the query vector.
+   * The distance between the neighbor and the dense embedding query.
    * @return value or {@code null} for none
    */
   public java.lang.Double getDistance() {
@@ -75,11 +82,28 @@ public final class GoogleCloudAiplatformV1beta1FindNeighborsResponseNeighbor ext
   }
 
   /**
-   * The distance between the neighbor and the query vector.
+   * The distance between the neighbor and the dense embedding query.
    * @param distance distance or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FindNeighborsResponseNeighbor setDistance(java.lang.Double distance) {
     this.distance = distance;
+    return this;
+  }
+
+  /**
+   * The distance between the neighbor and the query sparse_embedding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getSparseDistance() {
+    return sparseDistance;
+  }
+
+  /**
+   * The distance between the neighbor and the query sparse_embedding.
+   * @param sparseDistance sparseDistance or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FindNeighborsResponseNeighbor setSparseDistance(java.lang.Double sparseDistance) {
+    this.sparseDistance = sparseDistance;
     return this;
   }
 

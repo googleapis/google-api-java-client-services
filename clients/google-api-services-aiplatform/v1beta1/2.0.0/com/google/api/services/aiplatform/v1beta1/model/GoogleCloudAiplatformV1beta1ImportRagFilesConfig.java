@@ -31,8 +31,8 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
 
   /**
    * Google Cloud Storage location. Supports importing individual files as well as entire Google
-   * Cloud Storage directories. Sample formats: *
-   * "gs://bucket_name/my_directory/object_name/my_file.txt". * "gs://bucket_name/my_directory"
+   * Cloud Storage directories. Sample formats: -
+   * `gs://bucket_name/my_directory/object_name/my_file.txt` - `gs://bucket_name/my_directory`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
 
   /**
    * Google Cloud Storage location. Supports importing individual files as well as entire Google
-   * Cloud Storage directories. Sample formats: *
-   * "gs://bucket_name/my_directory/object_name/my_file.txt". * "gs://bucket_name/my_directory"
+   * Cloud Storage directories. Sample formats: -
+   * `gs://bucket_name/my_directory/object_name/my_file.txt` - `gs://bucket_name/my_directory`
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GcsSource getGcsSource() {
@@ -64,8 +64,8 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
 
   /**
    * Google Cloud Storage location. Supports importing individual files as well as entire Google
-   * Cloud Storage directories. Sample formats: *
-   * "gs://bucket_name/my_directory/object_name/my_file.txt". * "gs://bucket_name/my_directory"
+   * Cloud Storage directories. Sample formats: -
+   * `gs://bucket_name/my_directory/object_name/my_file.txt` - `gs://bucket_name/my_directory`
    * @param gcsSource gcsSource or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setGcsSource(GoogleCloudAiplatformV1beta1GcsSource gcsSource) {

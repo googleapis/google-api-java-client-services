@@ -39,7 +39,7 @@ public final class GoogleFirestoreAdminV1BackupSchedule extends com.google.api.c
   private String createTime;
 
   /**
-   * For a schedule that runs daily at a specified time.
+   * For a schedule that runs daily.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class GoogleFirestoreAdminV1BackupSchedule extends com.google.api.c
   private String updateTime;
 
   /**
-   * For a schedule that runs weekly on a specific day and time.
+   * For a schedule that runs weekly on a specific day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class GoogleFirestoreAdminV1BackupSchedule extends com.google.api.c
   }
 
   /**
-   * For a schedule that runs daily at a specified time.
+   * For a schedule that runs daily.
    * @return value or {@code null} for none
    */
   public GoogleFirestoreAdminV1DailyRecurrence getDailyRecurrence() {
@@ -105,7 +105,7 @@ public final class GoogleFirestoreAdminV1BackupSchedule extends com.google.api.c
   }
 
   /**
-   * For a schedule that runs daily at a specified time.
+   * For a schedule that runs daily.
    * @param dailyRecurrence dailyRecurrence or {@code null} for none
    */
   public GoogleFirestoreAdminV1BackupSchedule setDailyRecurrence(GoogleFirestoreAdminV1DailyRecurrence dailyRecurrence) {
@@ -173,7 +173,7 @@ public final class GoogleFirestoreAdminV1BackupSchedule extends com.google.api.c
   }
 
   /**
-   * For a schedule that runs weekly on a specific day and time.
+   * For a schedule that runs weekly on a specific day.
    * @return value or {@code null} for none
    */
   public GoogleFirestoreAdminV1WeeklyRecurrence getWeeklyRecurrence() {
@@ -181,7 +181,7 @@ public final class GoogleFirestoreAdminV1BackupSchedule extends com.google.api.c
   }
 
   /**
-   * For a schedule that runs weekly on a specific day and time.
+   * For a schedule that runs weekly on a specific day.
    * @param weeklyRecurrence weeklyRecurrence or {@code null} for none
    */
   public GoogleFirestoreAdminV1BackupSchedule setWeeklyRecurrence(GoogleFirestoreAdminV1WeeklyRecurrence weeklyRecurrence) {

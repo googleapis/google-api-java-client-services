@@ -585,7 +585,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   public static final class ReservationUsage extends com.google.api.client.json.GenericJson {
 
     /**
-     * Reservation name or "unreserved" for on-demand resources usage.
+     * Reservation name or "unreserved" for on-demand resource usage and multi-statement queries.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -599,7 +599,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
     private java.lang.Long slotMs;
 
     /**
-     * Reservation name or "unreserved" for on-demand resources usage.
+     * Reservation name or "unreserved" for on-demand resource usage and multi-statement queries.
      * @return value or {@code null} for none
      */
     public java.lang.String getName() {
@@ -607,7 +607,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
     }
 
     /**
-     * Reservation name or "unreserved" for on-demand resources usage.
+     * Reservation name or "unreserved" for on-demand resource usage and multi-statement queries.
      * @param name name or {@code null} for none
      */
     public ReservationUsage setName(java.lang.String name) {

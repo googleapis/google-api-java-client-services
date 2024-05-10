@@ -31,6 +31,13 @@ package com.google.api.services.searchads360.v0.model;
 public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.google.api.client.json.GenericJson {
 
   /**
+   * The accessible bidding strategy referenced in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V0ResourcesAccessibleBiddingStrategy accessibleBiddingStrategy;
+
+  /**
    * The ad group referenced in the query.
    * The value may be {@code null}.
    */
@@ -406,6 +413,23 @@ public final class GoogleAdsSearchads360V0ServicesSearchAds360Row extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V0ResourcesWebpageView webpageView;
+
+  /**
+   * The accessible bidding strategy referenced in the query.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesAccessibleBiddingStrategy getAccessibleBiddingStrategy() {
+    return accessibleBiddingStrategy;
+  }
+
+  /**
+   * The accessible bidding strategy referenced in the query.
+   * @param accessibleBiddingStrategy accessibleBiddingStrategy or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ServicesSearchAds360Row setAccessibleBiddingStrategy(GoogleAdsSearchads360V0ResourcesAccessibleBiddingStrategy accessibleBiddingStrategy) {
+    this.accessibleBiddingStrategy = accessibleBiddingStrategy;
+    return this;
+  }
 
   /**
    * The ad group referenced in the query.

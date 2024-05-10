@@ -31,6 +31,19 @@ package com.google.api.services.searchads360.v0.model;
 public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Resource name of AccessibleBiddingStrategy, a read-only view of the unrestricted
+   * attributes of the attached portfolio bidding strategy identified by 'bidding_strategy'. Empty,
+   * if the campaign does not use a portfolio strategy. Unrestricted strategy attributes are
+   * available to all customers with whom the strategy is shared and are read from the
+   * AccessibleBiddingStrategy resource. In contrast, restricted attributes are only available to
+   * the owner customer of the strategy and their managers. Restricted attributes can only be read
+   * from the BiddingStrategy resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accessibleBiddingStrategy;
+
+  /**
    * The ad serving optimization status of the campaign.
    * The value may be {@code null}.
    */
@@ -385,6 +398,35 @@ public final class GoogleAdsSearchads360V0ResourcesCampaign extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean urlExpansionOptOut;
+
+  /**
+   * Output only. Resource name of AccessibleBiddingStrategy, a read-only view of the unrestricted
+   * attributes of the attached portfolio bidding strategy identified by 'bidding_strategy'. Empty,
+   * if the campaign does not use a portfolio strategy. Unrestricted strategy attributes are
+   * available to all customers with whom the strategy is shared and are read from the
+   * AccessibleBiddingStrategy resource. In contrast, restricted attributes are only available to
+   * the owner customer of the strategy and their managers. Restricted attributes can only be read
+   * from the BiddingStrategy resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccessibleBiddingStrategy() {
+    return accessibleBiddingStrategy;
+  }
+
+  /**
+   * Output only. Resource name of AccessibleBiddingStrategy, a read-only view of the unrestricted
+   * attributes of the attached portfolio bidding strategy identified by 'bidding_strategy'. Empty,
+   * if the campaign does not use a portfolio strategy. Unrestricted strategy attributes are
+   * available to all customers with whom the strategy is shared and are read from the
+   * AccessibleBiddingStrategy resource. In contrast, restricted attributes are only available to
+   * the owner customer of the strategy and their managers. Restricted attributes can only be read
+   * from the BiddingStrategy resource.
+   * @param accessibleBiddingStrategy accessibleBiddingStrategy or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCampaign setAccessibleBiddingStrategy(java.lang.String accessibleBiddingStrategy) {
+    this.accessibleBiddingStrategy = accessibleBiddingStrategy;
+    return this;
+  }
 
   /**
    * The ad serving optimization status of the campaign.

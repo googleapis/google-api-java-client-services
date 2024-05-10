@@ -53,6 +53,15 @@ public final class GoogleAnalyticsAdminV1betaAccount extends com.google.api.clie
   private java.lang.String displayName;
 
   /**
+   * Output only. The URI for a Google Marketing Platform organization resource. Only set when this
+   * account is connected to a GMP organization. Format:
+   * marketingplatformadmin.googleapis.com/organizations/{org_id}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gmpOrganization;
+
+  /**
    * Output only. Resource name of this account. Format: accounts/{account} Example: "accounts/100"
    * The value may be {@code null}.
    */
@@ -123,6 +132,27 @@ public final class GoogleAnalyticsAdminV1betaAccount extends com.google.api.clie
    */
   public GoogleAnalyticsAdminV1betaAccount setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. The URI for a Google Marketing Platform organization resource. Only set when this
+   * account is connected to a GMP organization. Format:
+   * marketingplatformadmin.googleapis.com/organizations/{org_id}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGmpOrganization() {
+    return gmpOrganization;
+  }
+
+  /**
+   * Output only. The URI for a Google Marketing Platform organization resource. Only set when this
+   * account is connected to a GMP organization. Format:
+   * marketingplatformadmin.googleapis.com/organizations/{org_id}
+   * @param gmpOrganization gmpOrganization or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1betaAccount setGmpOrganization(java.lang.String gmpOrganization) {
+    this.gmpOrganization = gmpOrganization;
     return this;
   }
 

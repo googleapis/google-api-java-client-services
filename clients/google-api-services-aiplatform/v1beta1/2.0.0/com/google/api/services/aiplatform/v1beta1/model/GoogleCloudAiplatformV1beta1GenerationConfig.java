@@ -58,6 +58,24 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private java.lang.Float presencePenalty;
 
   /**
+   * Optional. Output response mimetype of the generated candidate text. Supported mimetype: -
+   * `text/plain`: (default) Text output. - `application/json`: JSON response in the candidates. The
+   * model needs to be prompted to output the appropriate response type, otherwise the behavior is
+   * undefined. This is a preview feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String responseMimeType;
+
+  /**
+   * Optional. Control Three levels of creativity in the model output. Default:
+   * RESPONSE_STYLE_BALANCED
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String responseStyle;
+
+  /**
    * Optional. Stop sequences.
    * The value may be {@code null}.
    */
@@ -150,6 +168,48 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setPresencePenalty(java.lang.Float presencePenalty) {
     this.presencePenalty = presencePenalty;
+    return this;
+  }
+
+  /**
+   * Optional. Output response mimetype of the generated candidate text. Supported mimetype: -
+   * `text/plain`: (default) Text output. - `application/json`: JSON response in the candidates. The
+   * model needs to be prompted to output the appropriate response type, otherwise the behavior is
+   * undefined. This is a preview feature.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResponseMimeType() {
+    return responseMimeType;
+  }
+
+  /**
+   * Optional. Output response mimetype of the generated candidate text. Supported mimetype: -
+   * `text/plain`: (default) Text output. - `application/json`: JSON response in the candidates. The
+   * model needs to be prompted to output the appropriate response type, otherwise the behavior is
+   * undefined. This is a preview feature.
+   * @param responseMimeType responseMimeType or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setResponseMimeType(java.lang.String responseMimeType) {
+    this.responseMimeType = responseMimeType;
+    return this;
+  }
+
+  /**
+   * Optional. Control Three levels of creativity in the model output. Default:
+   * RESPONSE_STYLE_BALANCED
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResponseStyle() {
+    return responseStyle;
+  }
+
+  /**
+   * Optional. Control Three levels of creativity in the model output. Default:
+   * RESPONSE_STYLE_BALANCED
+   * @param responseStyle responseStyle or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setResponseStyle(java.lang.String responseStyle) {
+    this.responseStyle = responseStyle;
     return this;
   }
 

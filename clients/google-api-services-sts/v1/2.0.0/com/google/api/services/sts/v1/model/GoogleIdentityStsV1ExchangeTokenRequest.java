@@ -59,8 +59,9 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   private java.lang.String options;
 
   /**
-   * Required. An identifier for the type of requested security token. Must be
-   * `urn:ietf:params:oauth:token-type:access_token`.
+   * Required. An identifier for the type of requested security token. Can be `urn:ietf:params:oauth
+   * :token-type:access_token` or `urn:ietf:params:oauth:token-
+   * type:access_boundary_intermediate_token`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,8 +131,8 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * "//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/"}, {"key":
    * "host", "value": "sts.amazonaws.com"} . ], "method": "POST", "url":
    * "https://sts.amazonaws.com?Action=GetCallerIdentity=2011-06-15" } ``` If the token is a SAML
-   * 2.0 assertion, it must use the format defined in [the SAML 2.0 spec](https://www.oasis-
-   * open.org/committees/download.php/56776/sstc-saml-core-errata-2.0-wd-07.pdf), and the
+   * 2.0 assertion, it must use the format defined in [the SAML 2.0 spec](https://docs.oasis-
+   * open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.pdf), and the
    * `subject_token_type` must be `urn:ietf:params:oauth:token-type:saml2`. See [Verification of
    * external credentials](https://cloud.google.com/iam/docs/using-workload-identity-
    * federation#verification_of_external_credentials) for details on how SAML 2.0 assertions are
@@ -221,8 +222,9 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   }
 
   /**
-   * Required. An identifier for the type of requested security token. Must be
-   * `urn:ietf:params:oauth:token-type:access_token`.
+   * Required. An identifier for the type of requested security token. Can be `urn:ietf:params:oauth
+   * :token-type:access_token` or `urn:ietf:params:oauth:token-
+   * type:access_boundary_intermediate_token`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestedTokenType() {
@@ -230,8 +232,9 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   }
 
   /**
-   * Required. An identifier for the type of requested security token. Must be
-   * `urn:ietf:params:oauth:token-type:access_token`.
+   * Required. An identifier for the type of requested security token. Can be `urn:ietf:params:oauth
+   * :token-type:access_token` or `urn:ietf:params:oauth:token-
+   * type:access_boundary_intermediate_token`.
    * @param requestedTokenType requestedTokenType or {@code null} for none
    */
   public GoogleIdentityStsV1ExchangeTokenRequest setRequestedTokenType(java.lang.String requestedTokenType) {
@@ -315,8 +318,8 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * "//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/"}, {"key":
    * "host", "value": "sts.amazonaws.com"} . ], "method": "POST", "url":
    * "https://sts.amazonaws.com?Action=GetCallerIdentity=2011-06-15" } ``` If the token is a SAML
-   * 2.0 assertion, it must use the format defined in [the SAML 2.0 spec](https://www.oasis-
-   * open.org/committees/download.php/56776/sstc-saml-core-errata-2.0-wd-07.pdf), and the
+   * 2.0 assertion, it must use the format defined in [the SAML 2.0 spec](https://docs.oasis-
+   * open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.pdf), and the
    * `subject_token_type` must be `urn:ietf:params:oauth:token-type:saml2`. See [Verification of
    * external credentials](https://cloud.google.com/iam/docs/using-workload-identity-
    * federation#verification_of_external_credentials) for details on how SAML 2.0 assertions are
@@ -386,8 +389,8 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * "//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/"}, {"key":
    * "host", "value": "sts.amazonaws.com"} . ], "method": "POST", "url":
    * "https://sts.amazonaws.com?Action=GetCallerIdentity=2011-06-15" } ``` If the token is a SAML
-   * 2.0 assertion, it must use the format defined in [the SAML 2.0 spec](https://www.oasis-
-   * open.org/committees/download.php/56776/sstc-saml-core-errata-2.0-wd-07.pdf), and the
+   * 2.0 assertion, it must use the format defined in [the SAML 2.0 spec](https://docs.oasis-
+   * open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.pdf), and the
    * `subject_token_type` must be `urn:ietf:params:oauth:token-type:saml2`. See [Verification of
    * external credentials](https://cloud.google.com/iam/docs/using-workload-identity-
    * federation#verification_of_external_credentials) for details on how SAML 2.0 assertions are

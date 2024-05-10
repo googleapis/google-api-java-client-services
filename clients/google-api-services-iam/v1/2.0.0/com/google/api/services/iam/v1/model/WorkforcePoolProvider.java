@@ -119,6 +119,15 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private String expireTime;
 
   /**
+   * Optional. The configuration for OAuth 2.0 client used to get the additional user attributes.
+   * This should be used when users can't get the desired claims in authentication credentials.
+   * Currently this configuration is only supported with OIDC protocol.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client extraAttributesOauth2Client;
+
+  /**
    * Output only. The resource name of the provider. Format:
    * `locations/{location}/workforcePools/{workforce_pool_id}/providers/{provider_id}`
    * The value may be {@code null}.
@@ -338,6 +347,27 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    */
   public WorkforcePoolProvider setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for OAuth 2.0 client used to get the additional user attributes.
+   * This should be used when users can't get the desired claims in authentication credentials.
+   * Currently this configuration is only supported with OIDC protocol.
+   * @return value or {@code null} for none
+   */
+  public GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client getExtraAttributesOauth2Client() {
+    return extraAttributesOauth2Client;
+  }
+
+  /**
+   * Optional. The configuration for OAuth 2.0 client used to get the additional user attributes.
+   * This should be used when users can't get the desired claims in authentication credentials.
+   * Currently this configuration is only supported with OIDC protocol.
+   * @param extraAttributesOauth2Client extraAttributesOauth2Client or {@code null} for none
+   */
+  public WorkforcePoolProvider setExtraAttributesOauth2Client(GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client extraAttributesOauth2Client) {
+    this.extraAttributesOauth2Client = extraAttributesOauth2Client;
     return this;
   }
 

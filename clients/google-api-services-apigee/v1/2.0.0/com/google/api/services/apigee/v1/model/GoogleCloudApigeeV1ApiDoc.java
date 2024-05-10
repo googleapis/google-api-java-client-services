@@ -111,8 +111,13 @@ public final class GoogleCloudApigeeV1ApiDoc extends com.google.api.client.json.
   private java.lang.Long id;
 
   /**
-   * Optional. Location of the image used for the catalog item in the catalog. For portal files,
-   * this can have the format `/files/{filename}`. Max length is 2,083 characters.
+   * Optional. Location of the image used for the catalog item in the catalog. This can be either an
+   * image with an external URL or a file path for [image files stored in the portal](/apigee/docs
+   * /api-platform/publish/portal/portal-files"), for example, `/files/book-tree.jpg`. When
+   * specifying the URL of an external image, the image won't be uploaded to your assets;
+   * additionally, loading the image in the integrated portal will be subject to its availability,
+   * which may be blocked or restricted by [content security policies](/apigee/docs/api-
+   * platform/publish/portal/csp). Max length of file path is 2,083 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -360,8 +365,13 @@ public final class GoogleCloudApigeeV1ApiDoc extends com.google.api.client.json.
   }
 
   /**
-   * Optional. Location of the image used for the catalog item in the catalog. For portal files,
-   * this can have the format `/files/{filename}`. Max length is 2,083 characters.
+   * Optional. Location of the image used for the catalog item in the catalog. This can be either an
+   * image with an external URL or a file path for [image files stored in the portal](/apigee/docs
+   * /api-platform/publish/portal/portal-files"), for example, `/files/book-tree.jpg`. When
+   * specifying the URL of an external image, the image won't be uploaded to your assets;
+   * additionally, loading the image in the integrated portal will be subject to its availability,
+   * which may be blocked or restricted by [content security policies](/apigee/docs/api-
+   * platform/publish/portal/csp). Max length of file path is 2,083 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUrl() {
@@ -369,8 +379,13 @@ public final class GoogleCloudApigeeV1ApiDoc extends com.google.api.client.json.
   }
 
   /**
-   * Optional. Location of the image used for the catalog item in the catalog. For portal files,
-   * this can have the format `/files/{filename}`. Max length is 2,083 characters.
+   * Optional. Location of the image used for the catalog item in the catalog. This can be either an
+   * image with an external URL or a file path for [image files stored in the portal](/apigee/docs
+   * /api-platform/publish/portal/portal-files"), for example, `/files/book-tree.jpg`. When
+   * specifying the URL of an external image, the image won't be uploaded to your assets;
+   * additionally, loading the image in the integrated portal will be subject to its availability,
+   * which may be blocked or restricted by [content security policies](/apigee/docs/api-
+   * platform/publish/portal/csp). Max length of file path is 2,083 characters.
    * @param imageUrl imageUrl or {@code null} for none
    */
   public GoogleCloudApigeeV1ApiDoc setImageUrl(java.lang.String imageUrl) {

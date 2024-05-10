@@ -31,7 +31,7 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaProvisionClientRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Required: Cloud KMS config for AuthModule to encrypt/decrypt credentials.
+   * Optional. OPTIONAL: Cloud KMS config for AuthModule to encrypt/decrypt credentials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,30 @@ public final class GoogleCloudIntegrationsV1alphaProvisionClientRequest extends 
   private java.lang.Boolean createSampleWorkflows;
 
   /**
-   * Required. Required: Cloud KMS config for AuthModule to encrypt/decrypt credentials.
+   * Optional. Deprecated. Indicates provision with GMEK or CMEK. This field is deprecated and the
+   * provision would always be GMEK if cloud_kms_config is not present in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean provisionGmek;
+
+  /**
+   * Optional. User input run-as service account, if empty, will bring up a new default service
+   * account
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runAsServiceAccount;
+
+  /**
+   * Optional. Indicates if skip CP provision or not
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipCpProvision;
+
+  /**
+   * Optional. OPTIONAL: Cloud KMS config for AuthModule to encrypt/decrypt credentials.
    * @return value or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaCloudKmsConfig getCloudKmsConfig() {
@@ -53,7 +76,7 @@ public final class GoogleCloudIntegrationsV1alphaProvisionClientRequest extends 
   }
 
   /**
-   * Required. Required: Cloud KMS config for AuthModule to encrypt/decrypt credentials.
+   * Optional. OPTIONAL: Cloud KMS config for AuthModule to encrypt/decrypt credentials.
    * @param cloudKmsConfig cloudKmsConfig or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaProvisionClientRequest setCloudKmsConfig(GoogleCloudIntegrationsV1alphaCloudKmsConfig cloudKmsConfig) {
@@ -75,6 +98,61 @@ public final class GoogleCloudIntegrationsV1alphaProvisionClientRequest extends 
    */
   public GoogleCloudIntegrationsV1alphaProvisionClientRequest setCreateSampleWorkflows(java.lang.Boolean createSampleWorkflows) {
     this.createSampleWorkflows = createSampleWorkflows;
+    return this;
+  }
+
+  /**
+   * Optional. Deprecated. Indicates provision with GMEK or CMEK. This field is deprecated and the
+   * provision would always be GMEK if cloud_kms_config is not present in the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getProvisionGmek() {
+    return provisionGmek;
+  }
+
+  /**
+   * Optional. Deprecated. Indicates provision with GMEK or CMEK. This field is deprecated and the
+   * provision would always be GMEK if cloud_kms_config is not present in the request.
+   * @param provisionGmek provisionGmek or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaProvisionClientRequest setProvisionGmek(java.lang.Boolean provisionGmek) {
+    this.provisionGmek = provisionGmek;
+    return this;
+  }
+
+  /**
+   * Optional. User input run-as service account, if empty, will bring up a new default service
+   * account
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRunAsServiceAccount() {
+    return runAsServiceAccount;
+  }
+
+  /**
+   * Optional. User input run-as service account, if empty, will bring up a new default service
+   * account
+   * @param runAsServiceAccount runAsServiceAccount or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaProvisionClientRequest setRunAsServiceAccount(java.lang.String runAsServiceAccount) {
+    this.runAsServiceAccount = runAsServiceAccount;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if skip CP provision or not
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipCpProvision() {
+    return skipCpProvision;
+  }
+
+  /**
+   * Optional. Indicates if skip CP provision or not
+   * @param skipCpProvision skipCpProvision or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaProvisionClientRequest setSkipCpProvision(java.lang.Boolean skipCpProvision) {
+    this.skipCpProvision = skipCpProvision;
     return this;
   }
 

@@ -39,12 +39,12 @@ public final class GoogleCloudAiplatformV1beta1ServiceAccountSpec extends com.go
   private java.lang.Boolean enableCustomServiceAccount;
 
   /**
-   * Optional. Default service account that this PersistentResource's workloads run as. The
-   * workloads include: * Any runtime specified via `ResourceRuntimeSpec` on creation time, for
-   * example, Ray. * Jobs submitted to PersistentResource, if no other service account specified in
-   * the job specs. Only works when custom service account is enabled and users have the
-   * `iam.serviceAccounts.actAs` permission on this service account. Required if any containers are
-   * specified in `ResourceRuntimeSpec`.
+   * Optional. Required when all below conditions are met * `enable_custom_service_account` is true;
+   * * any runtime is specified via `ResourceRuntimeSpec` on creation time, for example, Ray The
+   * users must have `iam.serviceAccounts.actAs` permission on this service account and then the
+   * specified runtime containers will run as it. Do not set this field if you want to submit jobs
+   * using custom service account to this PersistentResource after creation, but only specify the
+   * `service_account` inside the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,12 +72,12 @@ public final class GoogleCloudAiplatformV1beta1ServiceAccountSpec extends com.go
   }
 
   /**
-   * Optional. Default service account that this PersistentResource's workloads run as. The
-   * workloads include: * Any runtime specified via `ResourceRuntimeSpec` on creation time, for
-   * example, Ray. * Jobs submitted to PersistentResource, if no other service account specified in
-   * the job specs. Only works when custom service account is enabled and users have the
-   * `iam.serviceAccounts.actAs` permission on this service account. Required if any containers are
-   * specified in `ResourceRuntimeSpec`.
+   * Optional. Required when all below conditions are met * `enable_custom_service_account` is true;
+   * * any runtime is specified via `ResourceRuntimeSpec` on creation time, for example, Ray The
+   * users must have `iam.serviceAccounts.actAs` permission on this service account and then the
+   * specified runtime containers will run as it. Do not set this field if you want to submit jobs
+   * using custom service account to this PersistentResource after creation, but only specify the
+   * `service_account` inside the job.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -85,12 +85,12 @@ public final class GoogleCloudAiplatformV1beta1ServiceAccountSpec extends com.go
   }
 
   /**
-   * Optional. Default service account that this PersistentResource's workloads run as. The
-   * workloads include: * Any runtime specified via `ResourceRuntimeSpec` on creation time, for
-   * example, Ray. * Jobs submitted to PersistentResource, if no other service account specified in
-   * the job specs. Only works when custom service account is enabled and users have the
-   * `iam.serviceAccounts.actAs` permission on this service account. Required if any containers are
-   * specified in `ResourceRuntimeSpec`.
+   * Optional. Required when all below conditions are met * `enable_custom_service_account` is true;
+   * * any runtime is specified via `ResourceRuntimeSpec` on creation time, for example, Ray The
+   * users must have `iam.serviceAccounts.actAs` permission on this service account and then the
+   * specified runtime containers will run as it. Do not set this field if you want to submit jobs
+   * using custom service account to this PersistentResource after creation, but only specify the
+   * `service_account` inside the job.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ServiceAccountSpec setServiceAccount(java.lang.String serviceAccount) {

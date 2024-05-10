@@ -53,8 +53,8 @@ public final class GoogleDevtoolsArtifactregistryV1File extends com.google.api.c
   private java.util.List<Hash> hashes;
 
   /**
-   * The name of the file, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/files/a%2Fb%2Fc.txt". If the file ID part contains slashes, they
+   * The name of the file, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/files/a%2Fb%2Fc.txt`. If the file ID part contains slashes, they
    * are escaped.
    * The value may be {@code null}.
    */
@@ -136,8 +136,8 @@ public final class GoogleDevtoolsArtifactregistryV1File extends com.google.api.c
   }
 
   /**
-   * The name of the file, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/files/a%2Fb%2Fc.txt". If the file ID part contains slashes, they
+   * The name of the file, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/files/a%2Fb%2Fc.txt`. If the file ID part contains slashes, they
    * are escaped.
    * @return value or {@code null} for none
    */
@@ -146,8 +146,8 @@ public final class GoogleDevtoolsArtifactregistryV1File extends com.google.api.c
   }
 
   /**
-   * The name of the file, for example: "projects/p1/locations/us-
-   * central1/repositories/repo1/files/a%2Fb%2Fc.txt". If the file ID part contains slashes, they
+   * The name of the file, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/files/a%2Fb%2Fc.txt`. If the file ID part contains slashes, they
    * are escaped.
    * @param name name or {@code null} for none
    */

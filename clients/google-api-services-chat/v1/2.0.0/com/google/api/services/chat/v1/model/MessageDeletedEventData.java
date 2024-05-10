@@ -17,8 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Payload for deleted message events where the `EventType` field is
- * `google.workspace.chat.message.v1.deleted`.
+ * Event payload for a deleted message. Event type: `google.workspace.chat.message.v1.deleted`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -31,16 +30,16 @@ package com.google.api.services.chat.v1.model;
 public final class MessageDeletedEventData extends com.google.api.client.json.GenericJson {
 
   /**
-   * The deleted message. Only `name`, `createTime`, `deleteTime`, and `deletionMetadata` are
-   * populated.
+   * The deleted message. Only the `name`, `createTime`, `deleteTime`, and `deletionMetadata` fields
+   * are populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Message message;
 
   /**
-   * The deleted message. Only `name`, `createTime`, `deleteTime`, and `deletionMetadata` are
-   * populated.
+   * The deleted message. Only the `name`, `createTime`, `deleteTime`, and `deletionMetadata` fields
+   * are populated.
    * @return value or {@code null} for none
    */
   public Message getMessage() {
@@ -48,8 +47,8 @@ public final class MessageDeletedEventData extends com.google.api.client.json.Ge
   }
 
   /**
-   * The deleted message. Only `name`, `createTime`, `deleteTime`, and `deletionMetadata` are
-   * populated.
+   * The deleted message. Only the `name`, `createTime`, `deleteTime`, and `deletionMetadata` fields
+   * are populated.
    * @param message message or {@code null} for none
    */
   public MessageDeletedEventData setMessage(Message message) {

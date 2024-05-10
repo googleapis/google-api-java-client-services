@@ -132,7 +132,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String gceZone;
 
   /**
-   * Gemini configuration.
+   * Gemini instance configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,9 +258,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> replicaNames;
 
   /**
-   * Optional. The pair of a primary instance and disaster recovery (DR) replica. A DR replica is a
-   * cross-region replica that you designate for failover in the event that the primary instance has
-   * regional failure.
+   * Optional. A primary instance and disaster recovery (DR) replica pair. A DR replica is a cross-
+   * region replica that you designate for failover in the event that the primary instance
+   * experiences regional failure. Only applicable to MySQL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -596,7 +596,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Gemini configuration.
+   * Gemini instance configuration.
    * @return value or {@code null} for none
    */
   public GeminiInstanceConfig getGeminiConfig() {
@@ -604,7 +604,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Gemini configuration.
+   * Gemini instance configuration.
    * @param geminiConfig geminiConfig or {@code null} for none
    */
   public DatabaseInstance setGeminiConfig(GeminiInstanceConfig geminiConfig) {
@@ -899,9 +899,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The pair of a primary instance and disaster recovery (DR) replica. A DR replica is a
-   * cross-region replica that you designate for failover in the event that the primary instance has
-   * regional failure.
+   * Optional. A primary instance and disaster recovery (DR) replica pair. A DR replica is a cross-
+   * region replica that you designate for failover in the event that the primary instance
+   * experiences regional failure. Only applicable to MySQL.
    * @return value or {@code null} for none
    */
   public ReplicationCluster getReplicationCluster() {
@@ -909,9 +909,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The pair of a primary instance and disaster recovery (DR) replica. A DR replica is a
-   * cross-region replica that you designate for failover in the event that the primary instance has
-   * regional failure.
+   * Optional. A primary instance and disaster recovery (DR) replica pair. A DR replica is a cross-
+   * region replica that you designate for failover in the event that the primary instance
+   * experiences regional failure. Only applicable to MySQL.
    * @param replicationCluster replicationCluster or {@code null} for none
    */
   public DatabaseInstance setReplicationCluster(ReplicationCluster replicationCluster) {

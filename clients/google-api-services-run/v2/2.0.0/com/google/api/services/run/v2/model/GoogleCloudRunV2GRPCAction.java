@@ -30,8 +30,8 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2GRPCAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Port number of the gRPC service. Number must be in the range 1 to 65535. If not specified,
-   * defaults to the exposed port of the container, which is the value of
+   * Optional. Port number of the gRPC service. Number must be in the range 1 to 65535. If not
+   * specified, defaults to the exposed port of the container, which is the value of
    * container.ports[0].containerPort.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class GoogleCloudRunV2GRPCAction extends com.google.api.client.json
   private java.lang.Integer port;
 
   /**
-   * Service is the name of the service to place in the gRPC HealthCheckRequest (see
+   * Optional. Service is the name of the service to place in the gRPC HealthCheckRequest (see
    * https://github.com/grpc/grpc/blob/master/doc/health-checking.md ). If this is not specified,
    * the default behavior is defined by gRPC.
    * The value may be {@code null}.
@@ -48,8 +48,8 @@ public final class GoogleCloudRunV2GRPCAction extends com.google.api.client.json
   private java.lang.String service;
 
   /**
-   * Port number of the gRPC service. Number must be in the range 1 to 65535. If not specified,
-   * defaults to the exposed port of the container, which is the value of
+   * Optional. Port number of the gRPC service. Number must be in the range 1 to 65535. If not
+   * specified, defaults to the exposed port of the container, which is the value of
    * container.ports[0].containerPort.
    * @return value or {@code null} for none
    */
@@ -58,8 +58,8 @@ public final class GoogleCloudRunV2GRPCAction extends com.google.api.client.json
   }
 
   /**
-   * Port number of the gRPC service. Number must be in the range 1 to 65535. If not specified,
-   * defaults to the exposed port of the container, which is the value of
+   * Optional. Port number of the gRPC service. Number must be in the range 1 to 65535. If not
+   * specified, defaults to the exposed port of the container, which is the value of
    * container.ports[0].containerPort.
    * @param port port or {@code null} for none
    */
@@ -69,7 +69,7 @@ public final class GoogleCloudRunV2GRPCAction extends com.google.api.client.json
   }
 
   /**
-   * Service is the name of the service to place in the gRPC HealthCheckRequest (see
+   * Optional. Service is the name of the service to place in the gRPC HealthCheckRequest (see
    * https://github.com/grpc/grpc/blob/master/doc/health-checking.md ). If this is not specified,
    * the default behavior is defined by gRPC.
    * @return value or {@code null} for none
@@ -79,7 +79,7 @@ public final class GoogleCloudRunV2GRPCAction extends com.google.api.client.json
   }
 
   /**
-   * Service is the name of the service to place in the gRPC HealthCheckRequest (see
+   * Optional. Service is the name of the service to place in the gRPC HealthCheckRequest (see
    * https://github.com/grpc/grpc/blob/master/doc/health-checking.md ). If this is not specified,
    * the default behavior is defined by gRPC.
    * @param service service or {@code null} for none

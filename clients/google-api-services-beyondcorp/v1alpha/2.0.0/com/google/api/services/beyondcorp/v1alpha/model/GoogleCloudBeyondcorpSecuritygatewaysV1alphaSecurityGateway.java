@@ -44,24 +44,18 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway e
   private java.lang.String displayName;
 
   /**
+   * Output only. IP addresses that will be used for establishing connection to the endpoints.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> externalIps;
+
+  /**
    * Identifier. Name of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * Optional. List of regions where the egress connectivity is required.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1alphaRegionConfig> regionConfigs;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudBeyondcorpSecuritygatewaysV1alphaRegionConfig used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudBeyondcorpSecuritygatewaysV1alphaRegionConfig.class);
-  }
 
   /**
    * Output only. The operational state of the SecurityGateway.
@@ -112,6 +106,23 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway e
   }
 
   /**
+   * Output only. IP addresses that will be used for establishing connection to the endpoints.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExternalIps() {
+    return externalIps;
+  }
+
+  /**
+   * Output only. IP addresses that will be used for establishing connection to the endpoints.
+   * @param externalIps externalIps or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway setExternalIps(java.util.List<java.lang.String> externalIps) {
+    this.externalIps = externalIps;
+    return this;
+  }
+
+  /**
    * Identifier. Name of the resource.
    * @return value or {@code null} for none
    */
@@ -125,23 +136,6 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway e
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Optional. List of regions where the egress connectivity is required.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1alphaRegionConfig> getRegionConfigs() {
-    return regionConfigs;
-  }
-
-  /**
-   * Optional. List of regions where the egress connectivity is required.
-   * @param regionConfigs regionConfigs or {@code null} for none
-   */
-  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaSecurityGateway setRegionConfigs(java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1alphaRegionConfig> regionConfigs) {
-    this.regionConfigs = regionConfigs;
     return this;
   }
 

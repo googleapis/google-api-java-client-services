@@ -127,17 +127,20 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   /**
    * The order in which documents are returned. Documents can be ordered by a field in an Document
    * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. For
-   * more information on ordering, see [Ordering](https://cloud.google.com/retail/docs/filter-and-
-   * order#order) If this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
+   * more information on ordering for retail search, see
+   * [Ordering](https://cloud.google.com/retail/docs/filter-and-order#order) If this field is
+   * unrecognizable, an `INVALID_ARGUMENT` is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String orderBy;
 
   /**
-   * Maximum number of Documents to return. If unspecified, defaults to a reasonable value. The
-   * maximum allowed value is 100. Values above 100 are coerced to 100. If this field is negative,
-   * an `INVALID_ARGUMENT` is returned.
+   * Maximum number of Documents to return. The maximum allowed value depends on the data type.
+   * Values above the maximum value are coerced to the maximum value. * Websites with basic
+   * indexing: Default `10`, Maximum `25`. * Websites with advanced indexing: Default `25`, Maximum
+   * `50`. * Other: Default `50`, Maximum `100`. If this field is negative, an `INVALID_ARGUMENT` is
+   * returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -471,8 +474,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   /**
    * The order in which documents are returned. Documents can be ordered by a field in an Document
    * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. For
-   * more information on ordering, see [Ordering](https://cloud.google.com/retail/docs/filter-and-
-   * order#order) If this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
+   * more information on ordering for retail search, see
+   * [Ordering](https://cloud.google.com/retail/docs/filter-and-order#order) If this field is
+   * unrecognizable, an `INVALID_ARGUMENT` is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -482,8 +486,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   /**
    * The order in which documents are returned. Documents can be ordered by a field in an Document
    * object. Leave it unset if ordered by relevance. `order_by` expression is case-sensitive. For
-   * more information on ordering, see [Ordering](https://cloud.google.com/retail/docs/filter-and-
-   * order#order) If this field is unrecognizable, an `INVALID_ARGUMENT` is returned.
+   * more information on ordering for retail search, see
+   * [Ordering](https://cloud.google.com/retail/docs/filter-and-order#order) If this field is
+   * unrecognizable, an `INVALID_ARGUMENT` is returned.
    * @param orderBy orderBy or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setOrderBy(java.lang.String orderBy) {
@@ -492,9 +497,11 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   }
 
   /**
-   * Maximum number of Documents to return. If unspecified, defaults to a reasonable value. The
-   * maximum allowed value is 100. Values above 100 are coerced to 100. If this field is negative,
-   * an `INVALID_ARGUMENT` is returned.
+   * Maximum number of Documents to return. The maximum allowed value depends on the data type.
+   * Values above the maximum value are coerced to the maximum value. * Websites with basic
+   * indexing: Default `10`, Maximum `25`. * Websites with advanced indexing: Default `25`, Maximum
+   * `50`. * Other: Default `50`, Maximum `100`. If this field is negative, an `INVALID_ARGUMENT` is
+   * returned.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -502,9 +509,11 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   }
 
   /**
-   * Maximum number of Documents to return. If unspecified, defaults to a reasonable value. The
-   * maximum allowed value is 100. Values above 100 are coerced to 100. If this field is negative,
-   * an `INVALID_ARGUMENT` is returned.
+   * Maximum number of Documents to return. The maximum allowed value depends on the data type.
+   * Values above the maximum value are coerced to the maximum value. * Websites with basic
+   * indexing: Default `10`, Maximum `25`. * Websites with advanced indexing: Default `25`, Maximum
+   * `50`. * Other: Default `50`, Maximum `100`. If this field is negative, an `INVALID_ARGUMENT` is
+   * returned.
    * @param pageSize pageSize or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setPageSize(java.lang.Integer pageSize) {

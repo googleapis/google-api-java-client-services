@@ -31,8 +31,8 @@ package com.google.api.services.metastore.v1beta.model;
 public final class MigrationExecution extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configuration information specific to migrating from self-managed hive metastore on GCP using
-   * Cloud SQL as the backend database to DPMS.
+   * Configuration information specific to migrating from self-managed hive metastore on Google
+   * Cloud using Cloud SQL as the backend database to Dataproc Metastore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +83,8 @@ public final class MigrationExecution extends com.google.api.client.json.Generic
   private java.lang.String stateMessage;
 
   /**
-   * Configuration information specific to migrating from self-managed hive metastore on GCP using
-   * Cloud SQL as the backend database to DPMS.
+   * Configuration information specific to migrating from self-managed hive metastore on Google
+   * Cloud using Cloud SQL as the backend database to Dataproc Metastore.
    * @return value or {@code null} for none
    */
   public CloudSQLMigrationConfig getCloudSqlMigrationConfig() {
@@ -92,8 +92,8 @@ public final class MigrationExecution extends com.google.api.client.json.Generic
   }
 
   /**
-   * Configuration information specific to migrating from self-managed hive metastore on GCP using
-   * Cloud SQL as the backend database to DPMS.
+   * Configuration information specific to migrating from self-managed hive metastore on Google
+   * Cloud using Cloud SQL as the backend database to Dataproc Metastore.
    * @param cloudSqlMigrationConfig cloudSqlMigrationConfig or {@code null} for none
    */
   public MigrationExecution setCloudSqlMigrationConfig(CloudSQLMigrationConfig cloudSqlMigrationConfig) {

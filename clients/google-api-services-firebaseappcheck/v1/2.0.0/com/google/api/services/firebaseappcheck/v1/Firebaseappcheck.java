@@ -2530,13 +2530,13 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the AppAttestConfig Gets to
-           * update. Example: `token_ttl`.
+           * Required. A comma-separated list of names of fields in the AppAttestConfig to update.
+           * Example: `token_ttl`.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. A comma-separated list of names of fields in the AppAttestConfig Gets to update. Example:
+          /** Required. A comma-separated list of names of fields in the AppAttestConfig to update. Example:
          `token_ttl`.
            */
           public String getUpdateMask() {
@@ -2544,8 +2544,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the AppAttestConfig Gets to
-           * update. Example: `token_ttl`.
+           * Required. A comma-separated list of names of fields in the AppAttestConfig to update.
+           * Example: `token_ttl`.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -3880,22 +3880,22 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the DeviceCheckConfig Gets to
-           * update. Example: `key_id,private_key`.
+           * Required. A comma-separated list of names of fields in the DeviceCheckConfig to update.
+           * Example: `key_id,private_key`.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. A comma-separated list of names of fields in the DeviceCheckConfig Gets to update.
-         Example: `key_id,private_key`.
+          /** Required. A comma-separated list of names of fields in the DeviceCheckConfig to update. Example:
+         `key_id,private_key`.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the DeviceCheckConfig Gets to
-           * update. Example: `key_id,private_key`.
+           * Required. A comma-separated list of names of fields in the DeviceCheckConfig to update.
+           * Example: `key_id,private_key`.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -4393,21 +4393,21 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the PlayIntegrityConfig Gets to
+           * Required. A comma-separated list of names of fields in the PlayIntegrityConfig to
            * update. Example: `token_ttl`.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. A comma-separated list of names of fields in the PlayIntegrityConfig Gets to update.
-         Example: `token_ttl`.
+          /** Required. A comma-separated list of names of fields in the PlayIntegrityConfig to update. Example:
+         `token_ttl`.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the PlayIntegrityConfig Gets to
+           * Required. A comma-separated list of names of fields in the PlayIntegrityConfig to
            * update. Example: `token_ttl`.
            */
           public Patch setUpdateMask(String updateMask) {
@@ -5944,13 +5944,13 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the SafetyNetConfig Gets to
-           * update. Example: `token_ttl`.
+           * Required. A comma-separated list of names of fields in the SafetyNetConfig to update.
+           * Example: `token_ttl`.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. A comma-separated list of names of fields in the SafetyNetConfig Gets to update. Example:
+          /** Required. A comma-separated list of names of fields in the SafetyNetConfig to update. Example:
          `token_ttl`.
            */
           public String getUpdateMask() {
@@ -5958,8 +5958,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. A comma-separated list of names of fields in the SafetyNetConfig Gets to
-           * update. Example: `token_ttl`.
+           * Required. A comma-separated list of names of fields in the SafetyNetConfig to update.
+           * Example: `token_ttl`.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

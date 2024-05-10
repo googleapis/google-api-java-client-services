@@ -3478,6 +3478,146 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
   public class Recall {
 
     /**
+     * Retrieve the last Recall token from all developer games that is associated with the PGS Player
+     * principal encoded in the provided recall session id. The API is only available for users that
+     * have active PGS Player profile.
+     *
+     * Create a request for the method "recall.lastTokenFromAllDeveloperGames".
+     *
+     * This request holds the parameters needed by the games server.  After setting any optional
+     * parameters, call the {@link LastTokenFromAllDeveloperGames#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param sessionId Required. Opaque server-generated string that encodes all the necessary information to identify the
+     *        PGS player / Google user and application.
+     * @return the request
+     */
+    public LastTokenFromAllDeveloperGames lastTokenFromAllDeveloperGames(java.lang.String sessionId) throws java.io.IOException {
+      LastTokenFromAllDeveloperGames result = new LastTokenFromAllDeveloperGames(sessionId);
+      initialize(result);
+      return result;
+    }
+
+    public class LastTokenFromAllDeveloperGames extends GamesRequest<com.google.api.services.games.model.RetrieveDeveloperGamesLastPlayerTokenResponse> {
+
+      private static final String REST_PATH = "games/v1/recall/developerGamesLastPlayerToken/{sessionId}";
+
+      /**
+       * Retrieve the last Recall token from all developer games that is associated with the PGS Player
+       * principal encoded in the provided recall session id. The API is only available for users that
+       * have active PGS Player profile.
+       *
+       * Create a request for the method "recall.lastTokenFromAllDeveloperGames".
+       *
+       * This request holds the parameters needed by the the games server.  After setting any optional
+       * parameters, call the {@link LastTokenFromAllDeveloperGames#execute()} method to invoke the
+       * remote operation. <p> {@link LastTokenFromAllDeveloperGames#initialize(com.google.api.client.go
+       * ogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param sessionId Required. Opaque server-generated string that encodes all the necessary information to identify the
+     *        PGS player / Google user and application.
+       * @since 1.13
+       */
+      protected LastTokenFromAllDeveloperGames(java.lang.String sessionId) {
+        super(Games.this, "GET", REST_PATH, null, com.google.api.services.games.model.RetrieveDeveloperGamesLastPlayerTokenResponse.class);
+        this.sessionId = com.google.api.client.util.Preconditions.checkNotNull(sessionId, "Required parameter sessionId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public LastTokenFromAllDeveloperGames set$Xgafv(java.lang.String $Xgafv) {
+        return (LastTokenFromAllDeveloperGames) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public LastTokenFromAllDeveloperGames setAccessToken(java.lang.String accessToken) {
+        return (LastTokenFromAllDeveloperGames) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public LastTokenFromAllDeveloperGames setAlt(java.lang.String alt) {
+        return (LastTokenFromAllDeveloperGames) super.setAlt(alt);
+      }
+
+      @Override
+      public LastTokenFromAllDeveloperGames setCallback(java.lang.String callback) {
+        return (LastTokenFromAllDeveloperGames) super.setCallback(callback);
+      }
+
+      @Override
+      public LastTokenFromAllDeveloperGames setFields(java.lang.String fields) {
+        return (LastTokenFromAllDeveloperGames) super.setFields(fields);
+      }
+
+      @Override
+      public LastTokenFromAllDeveloperGames setKey(java.lang.String key) {
+        return (LastTokenFromAllDeveloperGames) super.setKey(key);
+      }
+
+      @Override
+      public LastTokenFromAllDeveloperGames setOauthToken(java.lang.String oauthToken) {
+        return (LastTokenFromAllDeveloperGames) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public LastTokenFromAllDeveloperGames setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (LastTokenFromAllDeveloperGames) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public LastTokenFromAllDeveloperGames setQuotaUser(java.lang.String quotaUser) {
+        return (LastTokenFromAllDeveloperGames) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public LastTokenFromAllDeveloperGames setUploadType(java.lang.String uploadType) {
+        return (LastTokenFromAllDeveloperGames) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public LastTokenFromAllDeveloperGames setUploadProtocol(java.lang.String uploadProtocol) {
+        return (LastTokenFromAllDeveloperGames) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Opaque server-generated string that encodes all the necessary information to
+       * identify the PGS player / Google user and application.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String sessionId;
+
+      /** Required. Opaque server-generated string that encodes all the necessary information to identify the
+     PGS player / Google user and application.
+       */
+      public java.lang.String getSessionId() {
+        return sessionId;
+      }
+
+      /**
+       * Required. Opaque server-generated string that encodes all the necessary information to
+       * identify the PGS player / Google user and application.
+       */
+      public LastTokenFromAllDeveloperGames setSessionId(java.lang.String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+      }
+
+      @Override
+      public LastTokenFromAllDeveloperGames set(String parameterName, Object value) {
+        return (LastTokenFromAllDeveloperGames) super.set(parameterName, value);
+      }
+    }
+    /**
      * Associate the PGS Player principal encoded in the provided recall session id with an in-game
      * account
      *

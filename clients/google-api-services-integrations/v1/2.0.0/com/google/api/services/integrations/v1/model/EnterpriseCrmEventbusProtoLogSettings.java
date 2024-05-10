@@ -19,7 +19,7 @@ package com.google.api.services.integrations.v1.model;
 /**
  * The LogSettings define the logging attributes for an event property. These attributes are used to
  * map the property to the parameter in the log proto. Also used to define scrubbing/truncation
- * behavior and PII information. See go/integration-platform/analytics/logging_task.md for details.
+ * behavior and PII information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed

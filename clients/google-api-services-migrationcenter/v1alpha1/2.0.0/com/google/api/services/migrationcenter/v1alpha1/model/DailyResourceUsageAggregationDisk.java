@@ -37,6 +37,20 @@ public final class DailyResourceUsageAggregationDisk extends com.google.api.clie
   private DailyResourceUsageAggregationStats iops;
 
   /**
+   * Disk read I/O operations per second.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DailyResourceUsageAggregationStats readIops;
+
+  /**
+   * Disk write I/O operations per second.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DailyResourceUsageAggregationStats writeIops;
+
+  /**
    * Disk I/O operations per second.
    * @return value or {@code null} for none
    */
@@ -50,6 +64,40 @@ public final class DailyResourceUsageAggregationDisk extends com.google.api.clie
    */
   public DailyResourceUsageAggregationDisk setIops(DailyResourceUsageAggregationStats iops) {
     this.iops = iops;
+    return this;
+  }
+
+  /**
+   * Disk read I/O operations per second.
+   * @return value or {@code null} for none
+   */
+  public DailyResourceUsageAggregationStats getReadIops() {
+    return readIops;
+  }
+
+  /**
+   * Disk read I/O operations per second.
+   * @param readIops readIops or {@code null} for none
+   */
+  public DailyResourceUsageAggregationDisk setReadIops(DailyResourceUsageAggregationStats readIops) {
+    this.readIops = readIops;
+    return this;
+  }
+
+  /**
+   * Disk write I/O operations per second.
+   * @return value or {@code null} for none
+   */
+  public DailyResourceUsageAggregationStats getWriteIops() {
+    return writeIops;
+  }
+
+  /**
+   * Disk write I/O operations per second.
+   * @param writeIops writeIops or {@code null} for none
+   */
+  public DailyResourceUsageAggregationDisk setWriteIops(DailyResourceUsageAggregationStats writeIops) {
+    this.writeIops = writeIops;
     return this;
   }
 

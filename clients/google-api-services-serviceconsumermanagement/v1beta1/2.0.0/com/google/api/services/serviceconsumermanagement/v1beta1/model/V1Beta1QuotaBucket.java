@@ -85,6 +85,14 @@ public final class V1Beta1QuotaBucket extends com.google.api.client.json.Generic
   private V1Beta1ProducerQuotaPolicy producerQuotaPolicy;
 
   /**
+   * Rollout information of this quota bucket. This field is present only if the effective limit
+   * will change due to the ongoing rollout of the service config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private V1Beta1RolloutInfo rolloutInfo;
+
+  /**
    * Admin override on this quota bucket.
    * @return value or {@code null} for none
    */
@@ -210,6 +218,25 @@ public final class V1Beta1QuotaBucket extends com.google.api.client.json.Generic
    */
   public V1Beta1QuotaBucket setProducerQuotaPolicy(V1Beta1ProducerQuotaPolicy producerQuotaPolicy) {
     this.producerQuotaPolicy = producerQuotaPolicy;
+    return this;
+  }
+
+  /**
+   * Rollout information of this quota bucket. This field is present only if the effective limit
+   * will change due to the ongoing rollout of the service config.
+   * @return value or {@code null} for none
+   */
+  public V1Beta1RolloutInfo getRolloutInfo() {
+    return rolloutInfo;
+  }
+
+  /**
+   * Rollout information of this quota bucket. This field is present only if the effective limit
+   * will change due to the ongoing rollout of the service config.
+   * @param rolloutInfo rolloutInfo or {@code null} for none
+   */
+  public V1Beta1QuotaBucket setRolloutInfo(V1Beta1RolloutInfo rolloutInfo) {
+    this.rolloutInfo = rolloutInfo;
     return this;
   }
 

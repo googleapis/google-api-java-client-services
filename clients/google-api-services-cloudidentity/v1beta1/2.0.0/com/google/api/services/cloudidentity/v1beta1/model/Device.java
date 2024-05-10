@@ -253,6 +253,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String serialNumber;
 
   /**
+   * Output only. Unified device id of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String unifiedDeviceId;
+
+  /**
    * WiFi MAC addresses of device.
    * The value may be {@code null}.
    */
@@ -793,6 +800,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setSerialNumber(java.lang.String serialNumber) {
     this.serialNumber = serialNumber;
+    return this;
+  }
+
+  /**
+   * Output only. Unified device id of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUnifiedDeviceId() {
+    return unifiedDeviceId;
+  }
+
+  /**
+   * Output only. Unified device id of the device.
+   * @param unifiedDeviceId unifiedDeviceId or {@code null} for none
+   */
+  public Device setUnifiedDeviceId(java.lang.String unifiedDeviceId) {
+    this.unifiedDeviceId = unifiedDeviceId;
     return this;
   }
 

@@ -31,6 +31,20 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.client.json.GenericJson {
 
   /**
+   * The AWS metadata associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsMetadata awsMetadata;
+
+  /**
+   * Indicates which cloud provider the resource resides in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudProvider;
+
+  /**
    * The human readable name of the resource.
    * The value may be {@code null}.
    */
@@ -53,12 +67,26 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
+   * The region or location of the service (if applicable).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * The full resource name of the resource. See:
    * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Indicates which organization or tenant in the cloud provider the finding applies to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String organization;
 
   /**
    * The full resource name of resource's parent.
@@ -89,11 +117,72 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   private java.lang.String projectDisplayName;
 
   /**
+   * Provides the path to the resource within the resource hierarchy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourcePath resourcePath;
+
+  /**
+   * A string representation of the resource path. For Google Cloud, it has the format of
+   * organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}
+   * where there can be any number of folders. For AWS, it has the format of org/{organization_id}/o
+   * u/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be
+   * any number of organizational units. For Azure, it has the format of mg/{management_group_id}/mg
+   * /{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can
+   * be any number of management groups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourcePathString;
+
+  /**
+   * The parent service or product from which the resource is provided, for example, GKE or SNS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String service;
+
+  /**
    * The full resource type of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The AWS metadata associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public AwsMetadata getAwsMetadata() {
+    return awsMetadata;
+  }
+
+  /**
+   * The AWS metadata associated with the finding.
+   * @param awsMetadata awsMetadata or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1Resource setAwsMetadata(AwsMetadata awsMetadata) {
+    this.awsMetadata = awsMetadata;
+    return this;
+  }
+
+  /**
+   * Indicates which cloud provider the resource resides in.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudProvider() {
+    return cloudProvider;
+  }
+
+  /**
+   * Indicates which cloud provider the resource resides in.
+   * @param cloudProvider cloudProvider or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1Resource setCloudProvider(java.lang.String cloudProvider) {
+    this.cloudProvider = cloudProvider;
+    return this;
+  }
 
   /**
    * The human readable name of the resource.
@@ -134,6 +223,23 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
+   * The region or location of the service (if applicable).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * The region or location of the service (if applicable).
+   * @param location location or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1Resource setLocation(java.lang.String location) {
+    this.location = location;
+    return this;
+  }
+
+  /**
    * The full resource name of the resource. See:
    * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
@@ -149,6 +255,23 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
    */
   public GoogleCloudSecuritycenterV1Resource setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Indicates which organization or tenant in the cloud provider the finding applies to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrganization() {
+    return organization;
+  }
+
+  /**
+   * Indicates which organization or tenant in the cloud provider the finding applies to.
+   * @param organization organization or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1Resource setOrganization(java.lang.String organization) {
+    this.organization = organization;
     return this;
   }
 
@@ -217,6 +340,69 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
    */
   public GoogleCloudSecuritycenterV1Resource setProjectDisplayName(java.lang.String projectDisplayName) {
     this.projectDisplayName = projectDisplayName;
+    return this;
+  }
+
+  /**
+   * Provides the path to the resource within the resource hierarchy.
+   * @return value or {@code null} for none
+   */
+  public ResourcePath getResourcePath() {
+    return resourcePath;
+  }
+
+  /**
+   * Provides the path to the resource within the resource hierarchy.
+   * @param resourcePath resourcePath or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1Resource setResourcePath(ResourcePath resourcePath) {
+    this.resourcePath = resourcePath;
+    return this;
+  }
+
+  /**
+   * A string representation of the resource path. For Google Cloud, it has the format of
+   * organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}
+   * where there can be any number of folders. For AWS, it has the format of org/{organization_id}/o
+   * u/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be
+   * any number of organizational units. For Azure, it has the format of mg/{management_group_id}/mg
+   * /{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can
+   * be any number of management groups.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourcePathString() {
+    return resourcePathString;
+  }
+
+  /**
+   * A string representation of the resource path. For Google Cloud, it has the format of
+   * organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}
+   * where there can be any number of folders. For AWS, it has the format of org/{organization_id}/o
+   * u/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id} where there can be
+   * any number of organizational units. For Azure, it has the format of mg/{management_group_id}/mg
+   * /{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name} where there can
+   * be any number of management groups.
+   * @param resourcePathString resourcePathString or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1Resource setResourcePathString(java.lang.String resourcePathString) {
+    this.resourcePathString = resourcePathString;
+    return this;
+  }
+
+  /**
+   * The parent service or product from which the resource is provided, for example, GKE or SNS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getService() {
+    return service;
+  }
+
+  /**
+   * The parent service or product from which the resource is provided, for example, GKE or SNS.
+   * @param service service or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1Resource setService(java.lang.String service) {
+    this.service = service;
     return this;
   }
 

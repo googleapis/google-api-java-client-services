@@ -30,16 +30,16 @@ package com.google.api.services.bigquery.model;
 public final class UndeleteDatasetRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The exact time when the dataset was deleted. If not specified, it will undelete the
-   * most recently deleted version.
+   * Optional. The exact time when the dataset was deleted. If not specified, the most recently
+   * deleted version is undeleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String deletionTime;
 
   /**
-   * Optional. The exact time when the dataset was deleted. If not specified, it will undelete the
-   * most recently deleted version.
+   * Optional. The exact time when the dataset was deleted. If not specified, the most recently
+   * deleted version is undeleted.
    * @return value or {@code null} for none
    */
   public String getDeletionTime() {
@@ -47,8 +47,8 @@ public final class UndeleteDatasetRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The exact time when the dataset was deleted. If not specified, it will undelete the
-   * most recently deleted version.
+   * Optional. The exact time when the dataset was deleted. If not specified, the most recently
+   * deleted version is undeleted.
    * @param deletionTime deletionTime or {@code null} for none
    */
   public UndeleteDatasetRequest setDeletionTime(String deletionTime) {

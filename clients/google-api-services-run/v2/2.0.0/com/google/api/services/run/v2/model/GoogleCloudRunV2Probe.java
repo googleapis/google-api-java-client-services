@@ -31,66 +31,66 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2Probe extends com.google.api.client.json.GenericJson {
 
   /**
-   * Minimum consecutive failures for the probe to be considered failed after having succeeded.
-   * Defaults to 3. Minimum value is 1.
+   * Optional. Minimum consecutive failures for the probe to be considered failed after having
+   * succeeded. Defaults to 3. Minimum value is 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer failureThreshold;
 
   /**
-   * GRPC specifies an action involving a gRPC port. Exactly one of httpGet, tcpSocket, or grpc must
-   * be specified.
+   * Optional. GRPC specifies an action involving a gRPC port. Exactly one of httpGet, tcpSocket, or
+   * grpc must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRunV2GRPCAction grpc;
 
   /**
-   * HTTPGet specifies the http request to perform. Exactly one of httpGet, tcpSocket, or grpc must
-   * be specified.
+   * Optional. HTTPGet specifies the http request to perform. Exactly one of httpGet, tcpSocket, or
+   * grpc must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRunV2HTTPGetAction httpGet;
 
   /**
-   * Number of seconds after the container has started before the probe is initiated. Defaults to 0
-   * seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for
-   * startup probe is 240.
+   * Optional. Number of seconds after the container has started before the probe is initiated.
+   * Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum
+   * value for startup probe is 240.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer initialDelaySeconds;
 
   /**
-   * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum
-   * value for liveness probe is 3600. Maximum value for startup probe is 240. Must be greater or
-   * equal than timeout_seconds.
+   * Optional. How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
+   * 1. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. Must be
+   * greater or equal than timeout_seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer periodSeconds;
 
   /**
-   * TCPSocket specifies an action involving a TCP port. Exactly one of httpGet, tcpSocket, or grpc
-   * must be specified.
+   * Optional. TCPSocket specifies an action involving a TCP port. Exactly one of httpGet,
+   * tcpSocket, or grpc must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRunV2TCPSocketAction tcpSocket;
 
   /**
-   * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1.
-   * Maximum value is 3600. Must be smaller than period_seconds.
+   * Optional. Number of seconds after which the probe times out. Defaults to 1 second. Minimum
+   * value is 1. Maximum value is 3600. Must be smaller than period_seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer timeoutSeconds;
 
   /**
-   * Minimum consecutive failures for the probe to be considered failed after having succeeded.
-   * Defaults to 3. Minimum value is 1.
+   * Optional. Minimum consecutive failures for the probe to be considered failed after having
+   * succeeded. Defaults to 3. Minimum value is 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFailureThreshold() {
@@ -98,8 +98,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * Minimum consecutive failures for the probe to be considered failed after having succeeded.
-   * Defaults to 3. Minimum value is 1.
+   * Optional. Minimum consecutive failures for the probe to be considered failed after having
+   * succeeded. Defaults to 3. Minimum value is 1.
    * @param failureThreshold failureThreshold or {@code null} for none
    */
   public GoogleCloudRunV2Probe setFailureThreshold(java.lang.Integer failureThreshold) {
@@ -108,8 +108,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * GRPC specifies an action involving a gRPC port. Exactly one of httpGet, tcpSocket, or grpc must
-   * be specified.
+   * Optional. GRPC specifies an action involving a gRPC port. Exactly one of httpGet, tcpSocket, or
+   * grpc must be specified.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2GRPCAction getGrpc() {
@@ -117,8 +117,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * GRPC specifies an action involving a gRPC port. Exactly one of httpGet, tcpSocket, or grpc must
-   * be specified.
+   * Optional. GRPC specifies an action involving a gRPC port. Exactly one of httpGet, tcpSocket, or
+   * grpc must be specified.
    * @param grpc grpc or {@code null} for none
    */
   public GoogleCloudRunV2Probe setGrpc(GoogleCloudRunV2GRPCAction grpc) {
@@ -127,8 +127,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * HTTPGet specifies the http request to perform. Exactly one of httpGet, tcpSocket, or grpc must
-   * be specified.
+   * Optional. HTTPGet specifies the http request to perform. Exactly one of httpGet, tcpSocket, or
+   * grpc must be specified.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2HTTPGetAction getHttpGet() {
@@ -136,8 +136,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * HTTPGet specifies the http request to perform. Exactly one of httpGet, tcpSocket, or grpc must
-   * be specified.
+   * Optional. HTTPGet specifies the http request to perform. Exactly one of httpGet, tcpSocket, or
+   * grpc must be specified.
    * @param httpGet httpGet or {@code null} for none
    */
   public GoogleCloudRunV2Probe setHttpGet(GoogleCloudRunV2HTTPGetAction httpGet) {
@@ -146,9 +146,9 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * Number of seconds after the container has started before the probe is initiated. Defaults to 0
-   * seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for
-   * startup probe is 240.
+   * Optional. Number of seconds after the container has started before the probe is initiated.
+   * Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum
+   * value for startup probe is 240.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialDelaySeconds() {
@@ -156,9 +156,9 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * Number of seconds after the container has started before the probe is initiated. Defaults to 0
-   * seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for
-   * startup probe is 240.
+   * Optional. Number of seconds after the container has started before the probe is initiated.
+   * Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum
+   * value for startup probe is 240.
    * @param initialDelaySeconds initialDelaySeconds or {@code null} for none
    */
   public GoogleCloudRunV2Probe setInitialDelaySeconds(java.lang.Integer initialDelaySeconds) {
@@ -167,9 +167,9 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum
-   * value for liveness probe is 3600. Maximum value for startup probe is 240. Must be greater or
-   * equal than timeout_seconds.
+   * Optional. How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
+   * 1. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. Must be
+   * greater or equal than timeout_seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPeriodSeconds() {
@@ -177,9 +177,9 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum
-   * value for liveness probe is 3600. Maximum value for startup probe is 240. Must be greater or
-   * equal than timeout_seconds.
+   * Optional. How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is
+   * 1. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. Must be
+   * greater or equal than timeout_seconds.
    * @param periodSeconds periodSeconds or {@code null} for none
    */
   public GoogleCloudRunV2Probe setPeriodSeconds(java.lang.Integer periodSeconds) {
@@ -188,8 +188,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * TCPSocket specifies an action involving a TCP port. Exactly one of httpGet, tcpSocket, or grpc
-   * must be specified.
+   * Optional. TCPSocket specifies an action involving a TCP port. Exactly one of httpGet,
+   * tcpSocket, or grpc must be specified.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2TCPSocketAction getTcpSocket() {
@@ -197,8 +197,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * TCPSocket specifies an action involving a TCP port. Exactly one of httpGet, tcpSocket, or grpc
-   * must be specified.
+   * Optional. TCPSocket specifies an action involving a TCP port. Exactly one of httpGet,
+   * tcpSocket, or grpc must be specified.
    * @param tcpSocket tcpSocket or {@code null} for none
    */
   public GoogleCloudRunV2Probe setTcpSocket(GoogleCloudRunV2TCPSocketAction tcpSocket) {
@@ -207,8 +207,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1.
-   * Maximum value is 3600. Must be smaller than period_seconds.
+   * Optional. Number of seconds after which the probe times out. Defaults to 1 second. Minimum
+   * value is 1. Maximum value is 3600. Must be smaller than period_seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeoutSeconds() {
@@ -216,8 +216,8 @@ public final class GoogleCloudRunV2Probe extends com.google.api.client.json.Gene
   }
 
   /**
-   * Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1.
-   * Maximum value is 3600. Must be smaller than period_seconds.
+   * Optional. Number of seconds after which the probe times out. Defaults to 1 second. Minimum
+   * value is 1. Maximum value is 3600. Must be smaller than period_seconds.
    * @param timeoutSeconds timeoutSeconds or {@code null} for none
    */
   public GoogleCloudRunV2Probe setTimeoutSeconds(java.lang.Integer timeoutSeconds) {

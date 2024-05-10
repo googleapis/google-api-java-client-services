@@ -283,6 +283,50 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
+      @com.google.api.client.util.Key
+      private java.lang.Boolean temporaryEeccBypass;
+
+      /**
+     [ default: false]
+     [
+
+       */
+      public java.lang.Boolean getTemporaryEeccBypass() {
+        return temporaryEeccBypass;
+      }
+
+      public GetProfile setTemporaryEeccBypass(java.lang.Boolean temporaryEeccBypass) {
+        this.temporaryEeccBypass = temporaryEeccBypass;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       *
+       * </p>
+       */
+      public boolean isTemporaryEeccBypass() {
+        if (temporaryEeccBypass == null || temporaryEeccBypass == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return temporaryEeccBypass;
+      }
+
       @Override
       public GetProfile set(String parameterName, Object value) {
         return (GetProfile) super.set(parameterName, value);
@@ -3439,6 +3483,50 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
+        @com.google.api.client.util.Key
+        private java.lang.Boolean temporaryEeccBypass;
+
+        /**
+       [ default: false]
+       [
+
+         */
+        public java.lang.Boolean getTemporaryEeccBypass() {
+          return temporaryEeccBypass;
+        }
+
+        public Get setTemporaryEeccBypass(java.lang.Boolean temporaryEeccBypass) {
+          this.temporaryEeccBypass = temporaryEeccBypass;
+          return this;
+        }
+
+        /**
+         * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+         *
+         * <p>
+         * Boolean properties can have four possible values:
+         * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+         * or {@link Boolean#FALSE}.
+         * </p>
+         *
+         * <p>
+         * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+         * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+         * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+         * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+         * </p>
+         *
+         * <p>
+         *
+         * </p>
+         */
+        public boolean isTemporaryEeccBypass() {
+          if (temporaryEeccBypass == null || temporaryEeccBypass == com.google.api.client.util.Data.NULL_BOOLEAN) {
+            return false;
+          }
+          return temporaryEeccBypass;
+        }
+
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
@@ -4321,6 +4409,50 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
+        @com.google.api.client.util.Key
+        private java.lang.Boolean temporaryEeccBypass;
+
+        /**
+       [ default: false]
+       [
+
+         */
+        public java.lang.Boolean getTemporaryEeccBypass() {
+          return temporaryEeccBypass;
+        }
+
+        public List setTemporaryEeccBypass(java.lang.Boolean temporaryEeccBypass) {
+          this.temporaryEeccBypass = temporaryEeccBypass;
+          return this;
+        }
+
+        /**
+         * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+         *
+         * <p>
+         * Boolean properties can have four possible values:
+         * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+         * or {@link Boolean#FALSE}.
+         * </p>
+         *
+         * <p>
+         * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+         * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+         * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+         * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+         * </p>
+         *
+         * <p>
+         *
+         * </p>
+         */
+        public boolean isTemporaryEeccBypass() {
+          if (temporaryEeccBypass == null || temporaryEeccBypass == com.google.api.client.util.Data.NULL_BOOLEAN) {
+            return false;
+          }
+          return temporaryEeccBypass;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
@@ -5128,6 +5260,50 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           public Get setId(java.lang.String id) {
             this.id = id;
             return this;
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.Boolean temporaryEeccBypass;
+
+          /**
+         [ default: false]
+         [
+
+           */
+          public java.lang.Boolean getTemporaryEeccBypass() {
+            return temporaryEeccBypass;
+          }
+
+          public Get setTemporaryEeccBypass(java.lang.Boolean temporaryEeccBypass) {
+            this.temporaryEeccBypass = temporaryEeccBypass;
+            return this;
+          }
+
+          /**
+           * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+           *
+           * <p>
+           * Boolean properties can have four possible values:
+           * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+           * or {@link Boolean#FALSE}.
+           * </p>
+           *
+           * <p>
+           * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+           * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+           * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+           * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+           * </p>
+           *
+           * <p>
+           *
+           * </p>
+           */
+          public boolean isTemporaryEeccBypass() {
+            if (temporaryEeccBypass == null || temporaryEeccBypass == com.google.api.client.util.Data.NULL_BOOLEAN) {
+              return false;
+            }
+            return temporaryEeccBypass;
           }
 
           @Override
@@ -12254,6 +12430,50 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
+        @com.google.api.client.util.Key
+        private java.lang.Boolean temporaryEeccBypass;
+
+        /**
+       [ default: false]
+       [
+
+         */
+        public java.lang.Boolean getTemporaryEeccBypass() {
+          return temporaryEeccBypass;
+        }
+
+        public Get setTemporaryEeccBypass(java.lang.Boolean temporaryEeccBypass) {
+          this.temporaryEeccBypass = temporaryEeccBypass;
+          return this;
+        }
+
+        /**
+         * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+         *
+         * <p>
+         * Boolean properties can have four possible values:
+         * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+         * or {@link Boolean#FALSE}.
+         * </p>
+         *
+         * <p>
+         * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+         * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+         * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+         * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+         * </p>
+         *
+         * <p>
+         *
+         * </p>
+         */
+        public boolean isTemporaryEeccBypass() {
+          if (temporaryEeccBypass == null || temporaryEeccBypass == com.google.api.client.util.Data.NULL_BOOLEAN) {
+            return false;
+          }
+          return temporaryEeccBypass;
+        }
+
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
@@ -12510,6 +12730,50 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         public List setQ(java.lang.String q) {
           this.q = q;
           return this;
+        }
+
+        @com.google.api.client.util.Key
+        private java.lang.Boolean temporaryEeccBypass;
+
+        /**
+       [ default: false]
+       [
+
+         */
+        public java.lang.Boolean getTemporaryEeccBypass() {
+          return temporaryEeccBypass;
+        }
+
+        public List setTemporaryEeccBypass(java.lang.Boolean temporaryEeccBypass) {
+          this.temporaryEeccBypass = temporaryEeccBypass;
+          return this;
+        }
+
+        /**
+         * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+         *
+         * <p>
+         * Boolean properties can have four possible values:
+         * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+         * or {@link Boolean#FALSE}.
+         * </p>
+         *
+         * <p>
+         * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+         * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+         * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+         * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+         * </p>
+         *
+         * <p>
+         *
+         * </p>
+         */
+        public boolean isTemporaryEeccBypass() {
+          if (temporaryEeccBypass == null || temporaryEeccBypass == com.google.api.client.util.Data.NULL_BOOLEAN) {
+            return false;
+          }
+          return temporaryEeccBypass;
         }
 
         @Override

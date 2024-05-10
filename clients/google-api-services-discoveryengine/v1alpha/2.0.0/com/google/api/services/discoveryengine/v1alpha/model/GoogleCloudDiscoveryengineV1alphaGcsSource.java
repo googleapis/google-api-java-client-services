@@ -35,10 +35,11 @@ public final class GoogleCloudDiscoveryengineV1alphaGcsSource extends com.google
    * Document.id. * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by `input_uris`
    * becomes a document, with the ID set to the first 128 bits of SHA256(URI) encoded as a hex
    * string. * `custom`: One custom data JSON per row in arbitrary format that conforms to the
-   * defined Schema of the data store. This can only be used by Gen App Builder. * `csv`: A CSV file
-   * with header conforming to the defined Schema of the data store. Each entry after the header is
-   * imported as a Document. This can only be used by Gen App Builder. Supported values for user
-   * even imports: * `user_event` (default): One JSON UserEvent per line.
+   * defined Schema of the data store. This can only be used by the GENERIC Data Store vertical. *
+   * `csv`: A CSV file with header conforming to the defined Schema of the data store. Each entry
+   * after the header is imported as a Document. This can only be used by the GENERIC Data Store
+   * vertical. Supported values for user even imports: * `user_event` (default): One JSON UserEvent
+   * per line.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,10 +62,11 @@ public final class GoogleCloudDiscoveryengineV1alphaGcsSource extends com.google
    * Document.id. * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by `input_uris`
    * becomes a document, with the ID set to the first 128 bits of SHA256(URI) encoded as a hex
    * string. * `custom`: One custom data JSON per row in arbitrary format that conforms to the
-   * defined Schema of the data store. This can only be used by Gen App Builder. * `csv`: A CSV file
-   * with header conforming to the defined Schema of the data store. Each entry after the header is
-   * imported as a Document. This can only be used by Gen App Builder. Supported values for user
-   * even imports: * `user_event` (default): One JSON UserEvent per line.
+   * defined Schema of the data store. This can only be used by the GENERIC Data Store vertical. *
+   * `csv`: A CSV file with header conforming to the defined Schema of the data store. Each entry
+   * after the header is imported as a Document. This can only be used by the GENERIC Data Store
+   * vertical. Supported values for user even imports: * `user_event` (default): One JSON UserEvent
+   * per line.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSchema() {
@@ -77,10 +79,11 @@ public final class GoogleCloudDiscoveryengineV1alphaGcsSource extends com.google
    * Document.id. * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by `input_uris`
    * becomes a document, with the ID set to the first 128 bits of SHA256(URI) encoded as a hex
    * string. * `custom`: One custom data JSON per row in arbitrary format that conforms to the
-   * defined Schema of the data store. This can only be used by Gen App Builder. * `csv`: A CSV file
-   * with header conforming to the defined Schema of the data store. Each entry after the header is
-   * imported as a Document. This can only be used by Gen App Builder. Supported values for user
-   * even imports: * `user_event` (default): One JSON UserEvent per line.
+   * defined Schema of the data store. This can only be used by the GENERIC Data Store vertical. *
+   * `csv`: A CSV file with header conforming to the defined Schema of the data store. Each entry
+   * after the header is imported as a Document. This can only be used by the GENERIC Data Store
+   * vertical. Supported values for user even imports: * `user_event` (default): One JSON UserEvent
+   * per line.
    * @param dataSchema dataSchema or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaGcsSource setDataSchema(java.lang.String dataSchema) {

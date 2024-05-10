@@ -30,6 +30,63 @@ package com.google.api.services.iam.v1.model;
 @SuppressWarnings("javadoc")
 public final class DisableServiceAccountKeyRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Usable by internal google services only. An extended_status_message can be used to
+   * include additional information about the key, such as its private key data being exposed on a
+   * public repository like GitHub.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String extendedStatusMessage;
+
+  /**
+   * Optional. Describes the reason this key is being disabled. If unspecified, the default value of
+   * SERVICE_ACCOUNT_KEY_DISABLE_REASON_USER_INITIATED will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccountKeyDisableReason;
+
+  /**
+   * Optional. Usable by internal google services only. An extended_status_message can be used to
+   * include additional information about the key, such as its private key data being exposed on a
+   * public repository like GitHub.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExtendedStatusMessage() {
+    return extendedStatusMessage;
+  }
+
+  /**
+   * Optional. Usable by internal google services only. An extended_status_message can be used to
+   * include additional information about the key, such as its private key data being exposed on a
+   * public repository like GitHub.
+   * @param extendedStatusMessage extendedStatusMessage or {@code null} for none
+   */
+  public DisableServiceAccountKeyRequest setExtendedStatusMessage(java.lang.String extendedStatusMessage) {
+    this.extendedStatusMessage = extendedStatusMessage;
+    return this;
+  }
+
+  /**
+   * Optional. Describes the reason this key is being disabled. If unspecified, the default value of
+   * SERVICE_ACCOUNT_KEY_DISABLE_REASON_USER_INITIATED will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccountKeyDisableReason() {
+    return serviceAccountKeyDisableReason;
+  }
+
+  /**
+   * Optional. Describes the reason this key is being disabled. If unspecified, the default value of
+   * SERVICE_ACCOUNT_KEY_DISABLE_REASON_USER_INITIATED will be used.
+   * @param serviceAccountKeyDisableReason serviceAccountKeyDisableReason or {@code null} for none
+   */
+  public DisableServiceAccountKeyRequest setServiceAccountKeyDisableReason(java.lang.String serviceAccountKeyDisableReason) {
+    this.serviceAccountKeyDisableReason = serviceAccountKeyDisableReason;
+    return this;
+  }
+
   @Override
   public DisableServiceAccountKeyRequest set(String fieldName, Object value) {
     return (DisableServiceAccountKeyRequest) super.set(fieldName, value);

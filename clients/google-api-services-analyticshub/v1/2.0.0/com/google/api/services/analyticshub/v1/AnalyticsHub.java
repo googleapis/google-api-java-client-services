@@ -4222,17 +4222,41 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
             return this;
           }
 
-          /** The filter expression may be used to filter by Data Exchange or Listing. */
+          /**
+           * An expression for filtering the results of the request. Eligible fields for filtering
+           * are: + `listing` + `data_exchange` Alternatively, a literal wrapped in double quotes
+           * may be provided. This will be checked for an exact match against both fields above. In
+           * all cases, the full Data Exchange or Listing resource name must be provided. Some
+           * example of using filters: +
+           * data_exchange="projects/myproject/locations/us/dataExchanges/123" +
+           * listing="projects/123/locations/us/dataExchanges/456/listings/789" +
+           * "projects/myproject/locations/us/dataExchanges/123"
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** The filter expression may be used to filter by Data Exchange or Listing.
+          /** An expression for filtering the results of the request. Eligible fields for filtering are: +
+         `listing` + `data_exchange` Alternatively, a literal wrapped in double quotes may be provided. This
+         will be checked for an exact match against both fields above. In all cases, the full Data Exchange
+         or Listing resource name must be provided. Some example of using filters: +
+         data_exchange="projects/myproject/locations/us/dataExchanges/123" +
+         listing="projects/123/locations/us/dataExchanges/456/listings/789" +
+         "projects/myproject/locations/us/dataExchanges/123"
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** The filter expression may be used to filter by Data Exchange or Listing. */
+          /**
+           * An expression for filtering the results of the request. Eligible fields for filtering
+           * are: + `listing` + `data_exchange` Alternatively, a literal wrapped in double quotes
+           * may be provided. This will be checked for an exact match against both fields above. In
+           * all cases, the full Data Exchange or Listing resource name must be provided. Some
+           * example of using filters: +
+           * data_exchange="projects/myproject/locations/us/dataExchanges/123" +
+           * listing="projects/123/locations/us/dataExchanges/456/listings/789" +
+           * "projects/myproject/locations/us/dataExchanges/123"
+           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;

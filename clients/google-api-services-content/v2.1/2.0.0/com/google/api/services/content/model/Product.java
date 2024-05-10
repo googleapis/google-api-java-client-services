@@ -84,9 +84,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String ageGroup;
 
   /**
-   * A safeguard in the [Automated
-   * Discounts](https://support.google.com/merchants/answer/10295759?hl=en) and [Dynamic
-   * Promotions](https://support.google.com/merchants/answer/13949249?hl=en) projects, ensuring that
+   * A safeguard in the [Automated Discounts](//support.google.com/merchants/answer/10295759) and
+   * [Dynamic Promotions](//support.google.com/merchants/answer/13949249) projects, ensuring that
    * discounts on merchants' offers do not fall below this value, thereby preserving the offer's
    * value and profitability.
    * The value may be {@code null}.
@@ -323,6 +322,19 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String feedLabel;
 
   /**
+   * Optional. Conditions to be met for a product to have free shipping.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FreeShippingThreshold> freeShippingThreshold;
+
+  static {
+    // hack to force ProGuard to consider FreeShippingThreshold used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FreeShippingThreshold.class);
+  }
+
+  /**
    * Target gender of the item.
    * The value may be {@code null}.
    */
@@ -432,11 +444,12 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String linkTemplate;
 
   /**
-   * Loyalty points that users receive after purchasing the item. Japan only.
+   * Loyalty program information that is used to surface loyalty benefits ( for example pricing,
+   * points, etc) to the user for this item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private LoyaltyPoints loyaltyPoints;
+  private LoyaltyProgram loyaltyProgram;
 
   /**
    * The material of which the item is made.
@@ -711,6 +724,20 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String source;
 
   /**
+   * Structured description, for algorithmically (AI)-generated descriptions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductStructuredDescription structuredDescription;
+
+  /**
+   * Structured title, for algorithmically (AI)-generated titles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductStructuredTitle structuredTitle;
+
+  /**
    * Number of periods (months or years) and amount of payment per period for an item with an
    * associated subscription contract.
    * The value may be {@code null}.
@@ -900,9 +927,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A safeguard in the [Automated
-   * Discounts](https://support.google.com/merchants/answer/10295759?hl=en) and [Dynamic
-   * Promotions](https://support.google.com/merchants/answer/13949249?hl=en) projects, ensuring that
+   * A safeguard in the [Automated Discounts](//support.google.com/merchants/answer/10295759) and
+   * [Dynamic Promotions](//support.google.com/merchants/answer/13949249) projects, ensuring that
    * discounts on merchants' offers do not fall below this value, thereby preserving the offer's
    * value and profitability.
    * @return value or {@code null} for none
@@ -912,9 +938,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A safeguard in the [Automated
-   * Discounts](https://support.google.com/merchants/answer/10295759?hl=en) and [Dynamic
-   * Promotions](https://support.google.com/merchants/answer/13949249?hl=en) projects, ensuring that
+   * A safeguard in the [Automated Discounts](//support.google.com/merchants/answer/10295759) and
+   * [Dynamic Promotions](//support.google.com/merchants/answer/13949249) projects, ensuring that
    * discounts on merchants' offers do not fall below this value, thereby preserving the offer's
    * value and profitability.
    * @param autoPricingMinPrice autoPricingMinPrice or {@code null} for none
@@ -1444,6 +1469,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Conditions to be met for a product to have free shipping.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FreeShippingThreshold> getFreeShippingThreshold() {
+    return freeShippingThreshold;
+  }
+
+  /**
+   * Optional. Conditions to be met for a product to have free shipping.
+   * @param freeShippingThreshold freeShippingThreshold or {@code null} for none
+   */
+  public Product setFreeShippingThreshold(java.util.List<FreeShippingThreshold> freeShippingThreshold) {
+    this.freeShippingThreshold = freeShippingThreshold;
+    return this;
+  }
+
+  /**
    * Target gender of the item.
    * @return value or {@code null} for none
    */
@@ -1704,19 +1746,21 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Loyalty points that users receive after purchasing the item. Japan only.
+   * Loyalty program information that is used to surface loyalty benefits ( for example pricing,
+   * points, etc) to the user for this item.
    * @return value or {@code null} for none
    */
-  public LoyaltyPoints getLoyaltyPoints() {
-    return loyaltyPoints;
+  public LoyaltyProgram getLoyaltyProgram() {
+    return loyaltyProgram;
   }
 
   /**
-   * Loyalty points that users receive after purchasing the item. Japan only.
-   * @param loyaltyPoints loyaltyPoints or {@code null} for none
+   * Loyalty program information that is used to surface loyalty benefits ( for example pricing,
+   * points, etc) to the user for this item.
+   * @param loyaltyProgram loyaltyProgram or {@code null} for none
    */
-  public Product setLoyaltyPoints(LoyaltyPoints loyaltyPoints) {
-    this.loyaltyPoints = loyaltyPoints;
+  public Product setLoyaltyProgram(LoyaltyProgram loyaltyProgram) {
+    this.loyaltyProgram = loyaltyProgram;
     return this;
   }
 
@@ -2372,6 +2416,40 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setSource(java.lang.String source) {
     this.source = source;
+    return this;
+  }
+
+  /**
+   * Structured description, for algorithmically (AI)-generated descriptions.
+   * @return value or {@code null} for none
+   */
+  public ProductStructuredDescription getStructuredDescription() {
+    return structuredDescription;
+  }
+
+  /**
+   * Structured description, for algorithmically (AI)-generated descriptions.
+   * @param structuredDescription structuredDescription or {@code null} for none
+   */
+  public Product setStructuredDescription(ProductStructuredDescription structuredDescription) {
+    this.structuredDescription = structuredDescription;
+    return this;
+  }
+
+  /**
+   * Structured title, for algorithmically (AI)-generated titles.
+   * @return value or {@code null} for none
+   */
+  public ProductStructuredTitle getStructuredTitle() {
+    return structuredTitle;
+  }
+
+  /**
+   * Structured title, for algorithmically (AI)-generated titles.
+   * @param structuredTitle structuredTitle or {@code null} for none
+   */
+  public Product setStructuredTitle(ProductStructuredTitle structuredTitle) {
+    this.structuredTitle = structuredTitle;
     return this;
   }
 

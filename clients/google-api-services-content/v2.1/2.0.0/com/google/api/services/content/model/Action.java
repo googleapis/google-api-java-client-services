@@ -40,6 +40,15 @@ public final class Action extends com.google.api.client.json.GenericJson {
   private BuiltInSimpleAction builtinSimpleAction;
 
   /**
+   * Action implemented and performed in (your) third-party application. The application needs to
+   * show an additional content and input form to the merchant as specified for given action. They
+   * can trigger the action only when they provided all required inputs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BuiltInUserInputAction builtinUserInputAction;
+
+  /**
    * Label of the action button.
    * The value may be {@code null}.
    */
@@ -92,6 +101,27 @@ public final class Action extends com.google.api.client.json.GenericJson {
    */
   public Action setBuiltinSimpleAction(BuiltInSimpleAction builtinSimpleAction) {
     this.builtinSimpleAction = builtinSimpleAction;
+    return this;
+  }
+
+  /**
+   * Action implemented and performed in (your) third-party application. The application needs to
+   * show an additional content and input form to the merchant as specified for given action. They
+   * can trigger the action only when they provided all required inputs.
+   * @return value or {@code null} for none
+   */
+  public BuiltInUserInputAction getBuiltinUserInputAction() {
+    return builtinUserInputAction;
+  }
+
+  /**
+   * Action implemented and performed in (your) third-party application. The application needs to
+   * show an additional content and input form to the merchant as specified for given action. They
+   * can trigger the action only when they provided all required inputs.
+   * @param builtinUserInputAction builtinUserInputAction or {@code null} for none
+   */
+  public Action setBuiltinUserInputAction(BuiltInUserInputAction builtinUserInputAction) {
+    this.builtinUserInputAction = builtinUserInputAction;
     return this;
   }
 

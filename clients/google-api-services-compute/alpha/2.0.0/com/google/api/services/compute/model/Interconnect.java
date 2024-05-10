@@ -32,6 +32,13 @@ package com.google.api.services.compute.model;
 public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
+   * Enable or disable the Application Aware Interconnect(AAI) feature on this interconnect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean aaiEnabled;
+
+  /**
    * Administrative status of the interconnect. When this is set to true, the Interconnect is
    * functional and can carry traffic. When set to false, no packets can be carried over the
    * interconnect and no BGP routes are exchanged over it. By default, the status is set to true.
@@ -39,6 +46,14 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean adminEnabled;
+
+  /**
+   * Configuration for enabling Application Aware Interconnect (AAI) on this Cloud Interconnect
+   * connection between Google and your on-premises router.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InterconnectApplicationAwareInterconnect applicationAwareInterconnect;
 
   /**
    * [Output only] List of features available for this Interconnect connection, which can take one
@@ -298,6 +313,23 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Enable or disable the Application Aware Interconnect(AAI) feature on this interconnect.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAaiEnabled() {
+    return aaiEnabled;
+  }
+
+  /**
+   * Enable or disable the Application Aware Interconnect(AAI) feature on this interconnect.
+   * @param aaiEnabled aaiEnabled or {@code null} for none
+   */
+  public Interconnect setAaiEnabled(java.lang.Boolean aaiEnabled) {
+    this.aaiEnabled = aaiEnabled;
+    return this;
+  }
+
+  /**
    * Administrative status of the interconnect. When this is set to true, the Interconnect is
    * functional and can carry traffic. When set to false, no packets can be carried over the
    * interconnect and no BGP routes are exchanged over it. By default, the status is set to true.
@@ -315,6 +347,25 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   public Interconnect setAdminEnabled(java.lang.Boolean adminEnabled) {
     this.adminEnabled = adminEnabled;
+    return this;
+  }
+
+  /**
+   * Configuration for enabling Application Aware Interconnect (AAI) on this Cloud Interconnect
+   * connection between Google and your on-premises router.
+   * @return value or {@code null} for none
+   */
+  public InterconnectApplicationAwareInterconnect getApplicationAwareInterconnect() {
+    return applicationAwareInterconnect;
+  }
+
+  /**
+   * Configuration for enabling Application Aware Interconnect (AAI) on this Cloud Interconnect
+   * connection between Google and your on-premises router.
+   * @param applicationAwareInterconnect applicationAwareInterconnect or {@code null} for none
+   */
+  public Interconnect setApplicationAwareInterconnect(InterconnectApplicationAwareInterconnect applicationAwareInterconnect) {
+    this.applicationAwareInterconnect = applicationAwareInterconnect;
     return this;
   }
 

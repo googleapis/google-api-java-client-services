@@ -73,6 +73,14 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   private java.lang.String credentialsSecret;
 
   /**
+   * Egress bytes over a Google-managed private network. This network is shared between other users
+   * of Storage Transfer Service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean managedPrivateNetwork;
+
+  /**
    * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'.
    * This field is treated as an object prefix. As such, it should generally not begin with a '/'.
    * The value may be {@code null}.
@@ -185,6 +193,25 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
    */
   public AwsS3Data setCredentialsSecret(java.lang.String credentialsSecret) {
     this.credentialsSecret = credentialsSecret;
+    return this;
+  }
+
+  /**
+   * Egress bytes over a Google-managed private network. This network is shared between other users
+   * of Storage Transfer Service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getManagedPrivateNetwork() {
+    return managedPrivateNetwork;
+  }
+
+  /**
+   * Egress bytes over a Google-managed private network. This network is shared between other users
+   * of Storage Transfer Service.
+   * @param managedPrivateNetwork managedPrivateNetwork or {@code null} for none
+   */
+  public AwsS3Data setManagedPrivateNetwork(java.lang.Boolean managedPrivateNetwork) {
+    this.managedPrivateNetwork = managedPrivateNetwork;
     return this;
   }
 

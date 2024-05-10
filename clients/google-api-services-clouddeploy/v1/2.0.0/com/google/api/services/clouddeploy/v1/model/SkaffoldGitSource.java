@@ -37,7 +37,7 @@ public final class SkaffoldGitSource extends com.google.api.client.json.GenericJ
   private java.lang.String path;
 
   /**
-   * Optional. Git ref the package should be cloned from.
+   * Optional. Git branch or tag to use when cloning the repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class SkaffoldGitSource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Git ref the package should be cloned from.
+   * Optional. Git branch or tag to use when cloning the repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getRef() {
@@ -76,7 +76,7 @@ public final class SkaffoldGitSource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Git ref the package should be cloned from.
+   * Optional. Git branch or tag to use when cloning the repository.
    * @param ref ref or {@code null} for none
    */
   public SkaffoldGitSource setRef(java.lang.String ref) {

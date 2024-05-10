@@ -59,9 +59,13 @@ package com.google.api.services.spanner.v1.model;
  * transaction again. To maximize the chances of successfully committing the retry, the client
  * should execute the retry in the same session as the original attempt. The original session's lock
  * priority increases with each consecutive abort, meaning that each attempt has a slightly better
- * chance of success than the previous. Under some circumstances (for example, many transactions
- * attempting to modify the same row(s)), a transaction can abort many times in a short period
- * before successfully committing. Thus, it is not a good idea to cap the number of retries a
+ * chance of success than the previous. Note that the lock priority is preserved per session (not
+ * per transaction). Lock priority is set by the first read or write in the first attempt of a read-
+ * write transaction. If the application starts a new session to retry the whole transaction, the
+ * transaction loses its original lock priority. Moreover, the lock priority is only preserved if
+ * the transaction fails with an `ABORTED` error. Under some circumstances (for example, many
+ * transactions attempting to modify the same row(s)), a transaction can abort many times in a short
+ * period before successfully committing. Thus, it is not a good idea to cap the number of retries a
  * transaction can attempt; instead, it is better to limit the total amount of time spent retrying.
  * Idle transactions: A transaction is considered idle if it has no outstanding reads or SQL queries
  * and has not started a read or SQL query within the last 10 seconds. Idle transactions can be
@@ -153,8 +157,8 @@ package com.google.api.services.spanner.v1.model;
  * all rows of the table. Rather, the statement is applied atomically to partitions of the table, in
  * independent transactions. Secondary index rows are updated atomically with the base table rows. -
  * Partitioned DML does not guarantee exactly-once execution semantics against a partition. The
- * statement will be applied at least once to each partition. It is strongly recommended that the
- * DML statement should be idempotent to avoid unexpected results. For instance, it is potentially
+ * statement is applied at least once to each partition. It is strongly recommended that the DML
+ * statement should be idempotent to avoid unexpected results. For instance, it is potentially
  * dangerous to run a statement such as `UPDATE table SET column = column + 1` as it could be run
  * multiple times against some rows. - The partitions are committed automatically - there is no
  * support for Commit or Rollback. If the call returns an error, or if the client issuing the
@@ -180,15 +184,15 @@ package com.google.api.services.spanner.v1.model;
 public final class TransactionOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * When `exclude_txn_from_change_streams` is set to `true`: * Mutations from this transaction will
-   * not be recorded in change streams with DDL option `allow_txn_exclusion=true` that are tracking
-   * columns modified by these transactions. * Mutations from this transaction will be recorded in
-   * change streams with DDL option `allow_txn_exclusion=false or not set` that are tracking columns
-   * modified by these transactions. When `exclude_txn_from_change_streams` is set to `false` or not
-   * set, mutations from this transaction will be recorded in all change streams that are tracking
-   * columns modified by these transactions. `exclude_txn_from_change_streams` may only be specified
-   * for read-write or partitioned-dml transactions, otherwise the API will return an
-   * `INVALID_ARGUMENT` error.
+   * When `exclude_txn_from_change_streams` is set to `true`: * Modifications from this transaction
+   * will not be recorded in change streams with DDL option `allow_txn_exclusion=true` that are
+   * tracking columns modified by these transactions. * Modifications from this transaction will be
+   * recorded in change streams with DDL option `allow_txn_exclusion=false or not set` that are
+   * tracking columns modified by these transactions. When `exclude_txn_from_change_streams` is set
+   * to `false` or not set, Modifications from this transaction will be recorded in all change
+   * streams that are tracking columns modified by these transactions.
+   * `exclude_txn_from_change_streams` may only be specified for read-write or partitioned-dml
+   * transactions, otherwise the API will return an `INVALID_ARGUMENT` error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,15 +223,15 @@ public final class TransactionOptions extends com.google.api.client.json.Generic
   private ReadWrite readWrite;
 
   /**
-   * When `exclude_txn_from_change_streams` is set to `true`: * Mutations from this transaction will
-   * not be recorded in change streams with DDL option `allow_txn_exclusion=true` that are tracking
-   * columns modified by these transactions. * Mutations from this transaction will be recorded in
-   * change streams with DDL option `allow_txn_exclusion=false or not set` that are tracking columns
-   * modified by these transactions. When `exclude_txn_from_change_streams` is set to `false` or not
-   * set, mutations from this transaction will be recorded in all change streams that are tracking
-   * columns modified by these transactions. `exclude_txn_from_change_streams` may only be specified
-   * for read-write or partitioned-dml transactions, otherwise the API will return an
-   * `INVALID_ARGUMENT` error.
+   * When `exclude_txn_from_change_streams` is set to `true`: * Modifications from this transaction
+   * will not be recorded in change streams with DDL option `allow_txn_exclusion=true` that are
+   * tracking columns modified by these transactions. * Modifications from this transaction will be
+   * recorded in change streams with DDL option `allow_txn_exclusion=false or not set` that are
+   * tracking columns modified by these transactions. When `exclude_txn_from_change_streams` is set
+   * to `false` or not set, Modifications from this transaction will be recorded in all change
+   * streams that are tracking columns modified by these transactions.
+   * `exclude_txn_from_change_streams` may only be specified for read-write or partitioned-dml
+   * transactions, otherwise the API will return an `INVALID_ARGUMENT` error.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExcludeTxnFromChangeStreams() {
@@ -235,15 +239,15 @@ public final class TransactionOptions extends com.google.api.client.json.Generic
   }
 
   /**
-   * When `exclude_txn_from_change_streams` is set to `true`: * Mutations from this transaction will
-   * not be recorded in change streams with DDL option `allow_txn_exclusion=true` that are tracking
-   * columns modified by these transactions. * Mutations from this transaction will be recorded in
-   * change streams with DDL option `allow_txn_exclusion=false or not set` that are tracking columns
-   * modified by these transactions. When `exclude_txn_from_change_streams` is set to `false` or not
-   * set, mutations from this transaction will be recorded in all change streams that are tracking
-   * columns modified by these transactions. `exclude_txn_from_change_streams` may only be specified
-   * for read-write or partitioned-dml transactions, otherwise the API will return an
-   * `INVALID_ARGUMENT` error.
+   * When `exclude_txn_from_change_streams` is set to `true`: * Modifications from this transaction
+   * will not be recorded in change streams with DDL option `allow_txn_exclusion=true` that are
+   * tracking columns modified by these transactions. * Modifications from this transaction will be
+   * recorded in change streams with DDL option `allow_txn_exclusion=false or not set` that are
+   * tracking columns modified by these transactions. When `exclude_txn_from_change_streams` is set
+   * to `false` or not set, Modifications from this transaction will be recorded in all change
+   * streams that are tracking columns modified by these transactions.
+   * `exclude_txn_from_change_streams` may only be specified for read-write or partitioned-dml
+   * transactions, otherwise the API will return an `INVALID_ARGUMENT` error.
    * @param excludeTxnFromChangeStreams excludeTxnFromChangeStreams or {@code null} for none
    */
   public TransactionOptions setExcludeTxnFromChangeStreams(java.lang.Boolean excludeTxnFromChangeStreams) {

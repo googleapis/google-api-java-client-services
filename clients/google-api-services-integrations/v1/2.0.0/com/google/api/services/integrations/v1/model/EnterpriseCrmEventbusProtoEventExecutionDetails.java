@@ -18,7 +18,7 @@ package com.google.api.services.integrations.v1.model;
 
 /**
  * Contains the details of the execution info of this event: this includes the tasks execution
- * details plus the event execution statistics. Next available id: 10
+ * details plus the event execution statistics. Next available id: 11
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -42,6 +42,13 @@ public final class EnterpriseCrmEventbusProtoEventExecutionDetails extends com.g
    */
   @com.google.api.client.util.Key
   private java.util.List<EnterpriseCrmEventbusProtoEventExecutionSnapshot> eventExecutionSnapshot;
+
+  /**
+   * Total size of all event_execution_snapshots for an execution
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long eventExecutionSnapshotsSize;
 
   /**
    * The value may be {@code null}.
@@ -112,6 +119,23 @@ public final class EnterpriseCrmEventbusProtoEventExecutionDetails extends com.g
    */
   public EnterpriseCrmEventbusProtoEventExecutionDetails setEventExecutionSnapshot(java.util.List<EnterpriseCrmEventbusProtoEventExecutionSnapshot> eventExecutionSnapshot) {
     this.eventExecutionSnapshot = eventExecutionSnapshot;
+    return this;
+  }
+
+  /**
+   * Total size of all event_execution_snapshots for an execution
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getEventExecutionSnapshotsSize() {
+    return eventExecutionSnapshotsSize;
+  }
+
+  /**
+   * Total size of all event_execution_snapshots for an execution
+   * @param eventExecutionSnapshotsSize eventExecutionSnapshotsSize or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoEventExecutionDetails setEventExecutionSnapshotsSize(java.lang.Long eventExecutionSnapshotsSize) {
+    this.eventExecutionSnapshotsSize = eventExecutionSnapshotsSize;
     return this;
   }
 

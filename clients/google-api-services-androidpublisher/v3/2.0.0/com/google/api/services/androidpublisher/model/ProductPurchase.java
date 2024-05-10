@@ -116,8 +116,8 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   /**
    * The type of purchase of the inapp product. This field is only set if this purchase was not made
    * using the standard in-app billing flow. Possible values are: 0. Test (i.e. purchased from a
-   * license testing account) 1. Promo (i.e. purchased using a promo code) 2. Rewarded (i.e. from
-   * watching a video ad instead of paying)
+   * license testing account) 1. Promo (i.e. purchased using a promo code). Does not include Play
+   * Points purchases. 2. Rewarded (i.e. from watching a video ad instead of paying)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -348,8 +348,8 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   /**
    * The type of purchase of the inapp product. This field is only set if this purchase was not made
    * using the standard in-app billing flow. Possible values are: 0. Test (i.e. purchased from a
-   * license testing account) 1. Promo (i.e. purchased using a promo code) 2. Rewarded (i.e. from
-   * watching a video ad instead of paying)
+   * license testing account) 1. Promo (i.e. purchased using a promo code). Does not include Play
+   * Points purchases. 2. Rewarded (i.e. from watching a video ad instead of paying)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPurchaseType() {
@@ -359,8 +359,8 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   /**
    * The type of purchase of the inapp product. This field is only set if this purchase was not made
    * using the standard in-app billing flow. Possible values are: 0. Test (i.e. purchased from a
-   * license testing account) 1. Promo (i.e. purchased using a promo code) 2. Rewarded (i.e. from
-   * watching a video ad instead of paying)
+   * license testing account) 1. Promo (i.e. purchased using a promo code). Does not include Play
+   * Points purchases. 2. Rewarded (i.e. from watching a video ad instead of paying)
    * @param purchaseType purchaseType or {@code null} for none
    */
   public ProductPurchase setPurchaseType(java.lang.Integer purchaseType) {

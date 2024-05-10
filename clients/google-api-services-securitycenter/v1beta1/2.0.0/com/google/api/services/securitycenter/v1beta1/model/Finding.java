@@ -82,6 +82,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String category;
 
   /**
+   * Fields related to Cloud Armor findings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudArmor cloudArmor;
+
+  /**
    * Cloud DLP data profile that is associated with the finding.
    * The value may be {@code null}.
    */
@@ -331,6 +338,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String nextSteps;
 
   /**
+   * Notebook associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Notebook notebook;
+
+  /**
    * Contains information about the org policies associated with the finding.
    * The value may be {@code null}.
    */
@@ -530,6 +544,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setCategory(java.lang.String category) {
     this.category = category;
+    return this;
+  }
+
+  /**
+   * Fields related to Cloud Armor findings.
+   * @return value or {@code null} for none
+   */
+  public CloudArmor getCloudArmor() {
+    return cloudArmor;
+  }
+
+  /**
+   * Fields related to Cloud Armor findings.
+   * @param cloudArmor cloudArmor or {@code null} for none
+   */
+  public Finding setCloudArmor(CloudArmor cloudArmor) {
+    this.cloudArmor = cloudArmor;
     return this;
   }
 
@@ -1052,6 +1083,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setNextSteps(java.lang.String nextSteps) {
     this.nextSteps = nextSteps;
+    return this;
+  }
+
+  /**
+   * Notebook associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public Notebook getNotebook() {
+    return notebook;
+  }
+
+  /**
+   * Notebook associated with the finding.
+   * @param notebook notebook or {@code null} for none
+   */
+  public Finding setNotebook(Notebook notebook) {
+    this.notebook = notebook;
     return this;
   }
 

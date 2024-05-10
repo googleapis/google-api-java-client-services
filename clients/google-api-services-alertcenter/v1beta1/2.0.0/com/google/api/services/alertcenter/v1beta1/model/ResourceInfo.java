@@ -31,6 +31,28 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class ResourceInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Chat attachment ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String chatAttachmentId;
+
+  /**
+   * Chat message ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String chatMessageId;
+
+  /**
+   * Id to identify a device. For example, for Android devices, this is the "Android Device Id" and
+   * for Chrome OS devices, it's the "Device Virtual Id".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deviceId;
+
+  /**
    * Drive file ID.
    * The value may be {@code null}.
    */
@@ -43,6 +65,59 @@ public final class ResourceInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceTitle;
+
+  /**
+   * Chat attachment ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChatAttachmentId() {
+    return chatAttachmentId;
+  }
+
+  /**
+   * Chat attachment ID.
+   * @param chatAttachmentId chatAttachmentId or {@code null} for none
+   */
+  public ResourceInfo setChatAttachmentId(java.lang.String chatAttachmentId) {
+    this.chatAttachmentId = chatAttachmentId;
+    return this;
+  }
+
+  /**
+   * Chat message ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChatMessageId() {
+    return chatMessageId;
+  }
+
+  /**
+   * Chat message ID.
+   * @param chatMessageId chatMessageId or {@code null} for none
+   */
+  public ResourceInfo setChatMessageId(java.lang.String chatMessageId) {
+    this.chatMessageId = chatMessageId;
+    return this;
+  }
+
+  /**
+   * Id to identify a device. For example, for Android devices, this is the "Android Device Id" and
+   * for Chrome OS devices, it's the "Device Virtual Id".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeviceId() {
+    return deviceId;
+  }
+
+  /**
+   * Id to identify a device. For example, for Android devices, this is the "Android Device Id" and
+   * for Chrome OS devices, it's the "Device Virtual Id".
+   * @param deviceId deviceId or {@code null} for none
+   */
+  public ResourceInfo setDeviceId(java.lang.String deviceId) {
+    this.deviceId = deviceId;
+    return this;
+  }
 
   /**
    * Drive file ID.

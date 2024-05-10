@@ -42,6 +42,13 @@ public final class OtherRegionsSubscriptionOfferPhaseConfig extends com.google.a
   private OtherRegionsSubscriptionOfferPhasePrices absoluteDiscounts;
 
   /**
+   * Set to specify this offer is free to obtain.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OtherRegionsSubscriptionOfferPhaseFreePriceOverride free;
+
+  /**
    * The absolute price the user pays for this offer phase. The price must not be smaller than the
    * minimum price allowed for any new locations Play may launch in.
    * The value may be {@code null}.
@@ -84,6 +91,23 @@ public final class OtherRegionsSubscriptionOfferPhaseConfig extends com.google.a
    */
   public OtherRegionsSubscriptionOfferPhaseConfig setAbsoluteDiscounts(OtherRegionsSubscriptionOfferPhasePrices absoluteDiscounts) {
     this.absoluteDiscounts = absoluteDiscounts;
+    return this;
+  }
+
+  /**
+   * Set to specify this offer is free to obtain.
+   * @return value or {@code null} for none
+   */
+  public OtherRegionsSubscriptionOfferPhaseFreePriceOverride getFree() {
+    return free;
+  }
+
+  /**
+   * Set to specify this offer is free to obtain.
+   * @param free free or {@code null} for none
+   */
+  public OtherRegionsSubscriptionOfferPhaseConfig setFree(OtherRegionsSubscriptionOfferPhaseFreePriceOverride free) {
+    this.free = free;
     return this;
   }
 

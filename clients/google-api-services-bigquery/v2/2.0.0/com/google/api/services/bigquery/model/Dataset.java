@@ -137,6 +137,15 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Optional. Options defining open source compatible datasets living in the BigQuery catalog.
+   * Contains metadata of open source database, schema or namespace represented by the current
+   * dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExternalCatalogDatasetOptions externalCatalogDatasetOptions;
+
+  /**
    * Optional. Reference to a read-only external dataset defined in data catalogs outside of
    * BigQuery. Filled out when the dataset type is EXTERNAL.
    * The value may be {@code null}.
@@ -225,6 +234,15 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.Long maxTimeTravelHours;
 
   /**
+   * Optional. Output only. Restriction config for all tables and dataset. If set, restrict certain
+   * accesses on the dataset and all its tables based on the config. See [Data
+   * egress](/bigquery/docs/analytics-hub-introduction#data_egress) for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RestrictionConfig restrictions;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -269,8 +287,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Same as `type` in `ListFormatDataset`. The type of the dataset, one of: * DEFAULT
    * - only accessible by owner and authorized accounts, * PUBLIC - accessible by everyone, * LINKED
-   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog. --
-   * *BIGLAKE_METASTORE - dataset that references a database created in BigLakeMetastore service. --
+   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -509,6 +526,27 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Options defining open source compatible datasets living in the BigQuery catalog.
+   * Contains metadata of open source database, schema or namespace represented by the current
+   * dataset.
+   * @return value or {@code null} for none
+   */
+  public ExternalCatalogDatasetOptions getExternalCatalogDatasetOptions() {
+    return externalCatalogDatasetOptions;
+  }
+
+  /**
+   * Optional. Options defining open source compatible datasets living in the BigQuery catalog.
+   * Contains metadata of open source database, schema or namespace represented by the current
+   * dataset.
+   * @param externalCatalogDatasetOptions externalCatalogDatasetOptions or {@code null} for none
+   */
+  public Dataset setExternalCatalogDatasetOptions(ExternalCatalogDatasetOptions externalCatalogDatasetOptions) {
+    this.externalCatalogDatasetOptions = externalCatalogDatasetOptions;
+    return this;
+  }
+
+  /**
    * Optional. Reference to a read-only external dataset defined in data catalogs outside of
    * BigQuery. Filled out when the dataset type is EXTERNAL.
    * @return value or {@code null} for none
@@ -718,6 +756,27 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Output only. Restriction config for all tables and dataset. If set, restrict certain
+   * accesses on the dataset and all its tables based on the config. See [Data
+   * egress](/bigquery/docs/analytics-hub-introduction#data_egress) for more details.
+   * @return value or {@code null} for none
+   */
+  public RestrictionConfig getRestrictions() {
+    return restrictions;
+  }
+
+  /**
+   * Optional. Output only. Restriction config for all tables and dataset. If set, restrict certain
+   * accesses on the dataset and all its tables based on the config. See [Data
+   * egress](/bigquery/docs/analytics-hub-introduction#data_egress) for more details.
+   * @param restrictions restrictions or {@code null} for none
+   */
+  public Dataset setRestrictions(RestrictionConfig restrictions) {
+    this.restrictions = restrictions;
+    return this;
+  }
+
+  /**
    * Output only. Reserved for future use.
    * @return value or {@code null} for none
    */
@@ -807,8 +866,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Same as `type` in `ListFormatDataset`. The type of the dataset, one of: * DEFAULT
    * - only accessible by owner and authorized accounts, * PUBLIC - accessible by everyone, * LINKED
-   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog. --
-   * *BIGLAKE_METASTORE - dataset that references a database created in BigLakeMetastore service. --
+   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -818,8 +876,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Same as `type` in `ListFormatDataset`. The type of the dataset, one of: * DEFAULT
    * - only accessible by owner and authorized accounts, * PUBLIC - accessible by everyone, * LINKED
-   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog. --
-   * *BIGLAKE_METASTORE - dataset that references a database created in BigLakeMetastore service. --
+   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog.
    * @param type type or {@code null} for none
    */
   public Dataset setType(java.lang.String type) {

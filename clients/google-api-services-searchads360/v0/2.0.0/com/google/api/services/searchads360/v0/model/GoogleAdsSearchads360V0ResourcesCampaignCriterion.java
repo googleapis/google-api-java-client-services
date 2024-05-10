@@ -139,8 +139,7 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignCriterion extends com
   private java.lang.String type;
 
   /**
-   * Immutable. User List. The Similar Audiences sunset starts May 2023. Refer to https://ads-
-   * developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html for other options.
+   * Immutable. User List.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -415,8 +414,7 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignCriterion extends com
   }
 
   /**
-   * Immutable. User List. The Similar Audiences sunset starts May 2023. Refer to https://ads-
-   * developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html for other options.
+   * Immutable. User List.
    * @return value or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonUserListInfo getUserList() {
@@ -424,8 +422,7 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignCriterion extends com
   }
 
   /**
-   * Immutable. User List. The Similar Audiences sunset starts May 2023. Refer to https://ads-
-   * developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html for other options.
+   * Immutable. User List.
    * @param userList userList or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesCampaignCriterion setUserList(GoogleAdsSearchads360V0CommonUserListInfo userList) {

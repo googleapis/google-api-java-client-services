@@ -192,6 +192,14 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String terminationTime;
 
   /**
+   * Represents the Windows Server License Optimization Mode of the VM. If unspecified, the default
+   * mode is `OFF`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String windowsLicenseOptimizationMode;
+
+  /**
    * Specifies whether the instance should be automatically restarted if it is terminated by Compute
    * Engine (not terminated by a user). You can only set the automatic restart option for standard
    * instances. Preemptible instances cannot be automatically restarted. By default, this is set to
@@ -572,6 +580,25 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setTerminationTime(java.lang.String terminationTime) {
     this.terminationTime = terminationTime;
+    return this;
+  }
+
+  /**
+   * Represents the Windows Server License Optimization Mode of the VM. If unspecified, the default
+   * mode is `OFF`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWindowsLicenseOptimizationMode() {
+    return windowsLicenseOptimizationMode;
+  }
+
+  /**
+   * Represents the Windows Server License Optimization Mode of the VM. If unspecified, the default
+   * mode is `OFF`.
+   * @param windowsLicenseOptimizationMode windowsLicenseOptimizationMode or {@code null} for none
+   */
+  public Scheduling setWindowsLicenseOptimizationMode(java.lang.String windowsLicenseOptimizationMode) {
+    this.windowsLicenseOptimizationMode = windowsLicenseOptimizationMode;
     return this;
   }
 

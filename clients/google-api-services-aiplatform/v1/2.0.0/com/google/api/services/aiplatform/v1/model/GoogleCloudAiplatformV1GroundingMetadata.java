@@ -30,24 +30,11 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GroundingMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. List of grounding attributions.
+   * Optional. Google search entry for the following-up web searches.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudAiplatformV1GroundingAttribution> groundingAttributions;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudAiplatformV1GroundingAttribution used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1GroundingAttribution.class);
-  }
-
-  /**
-   * Optional. Queries executed by the retrieval tools.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> retrievalQueries;
+  private GoogleCloudAiplatformV1SearchEntryPoint searchEntryPoint;
 
   /**
    * Optional. Web search queries for the following-up web search.
@@ -57,36 +44,19 @@ public final class GoogleCloudAiplatformV1GroundingMetadata extends com.google.a
   private java.util.List<java.lang.String> webSearchQueries;
 
   /**
-   * Optional. List of grounding attributions.
+   * Optional. Google search entry for the following-up web searches.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudAiplatformV1GroundingAttribution> getGroundingAttributions() {
-    return groundingAttributions;
+  public GoogleCloudAiplatformV1SearchEntryPoint getSearchEntryPoint() {
+    return searchEntryPoint;
   }
 
   /**
-   * Optional. List of grounding attributions.
-   * @param groundingAttributions groundingAttributions or {@code null} for none
+   * Optional. Google search entry for the following-up web searches.
+   * @param searchEntryPoint searchEntryPoint or {@code null} for none
    */
-  public GoogleCloudAiplatformV1GroundingMetadata setGroundingAttributions(java.util.List<GoogleCloudAiplatformV1GroundingAttribution> groundingAttributions) {
-    this.groundingAttributions = groundingAttributions;
-    return this;
-  }
-
-  /**
-   * Optional. Queries executed by the retrieval tools.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getRetrievalQueries() {
-    return retrievalQueries;
-  }
-
-  /**
-   * Optional. Queries executed by the retrieval tools.
-   * @param retrievalQueries retrievalQueries or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1GroundingMetadata setRetrievalQueries(java.util.List<java.lang.String> retrievalQueries) {
-    this.retrievalQueries = retrievalQueries;
+  public GoogleCloudAiplatformV1GroundingMetadata setSearchEntryPoint(GoogleCloudAiplatformV1SearchEntryPoint searchEntryPoint) {
+    this.searchEntryPoint = searchEntryPoint;
     return this;
   }
 

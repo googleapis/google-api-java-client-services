@@ -31,7 +31,7 @@ public final class AssetPerformanceData extends com.google.api.client.json.Gener
 
   /**
    * Daily resource usage aggregations. Contains all of the data available for an asset, up to the
-   * last 420 days. Aggregations are sorted from oldest to most recent.
+   * last 40 days. Aggregations are sorted from oldest to most recent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class AssetPerformanceData extends com.google.api.client.json.Gener
 
   /**
    * Daily resource usage aggregations. Contains all of the data available for an asset, up to the
-   * last 420 days. Aggregations are sorted from oldest to most recent.
+   * last 40 days. Aggregations are sorted from oldest to most recent.
    * @return value or {@code null} for none
    */
   public java.util.List<DailyResourceUsageAggregation> getDailyResourceUsageAggregations() {
@@ -48,7 +48,7 @@ public final class AssetPerformanceData extends com.google.api.client.json.Gener
 
   /**
    * Daily resource usage aggregations. Contains all of the data available for an asset, up to the
-   * last 420 days. Aggregations are sorted from oldest to most recent.
+   * last 40 days. Aggregations are sorted from oldest to most recent.
    * @param dailyResourceUsageAggregations dailyResourceUsageAggregations or {@code null} for none
    */
   public AssetPerformanceData setDailyResourceUsageAggregations(java.util.List<DailyResourceUsageAggregation> dailyResourceUsageAggregations) {

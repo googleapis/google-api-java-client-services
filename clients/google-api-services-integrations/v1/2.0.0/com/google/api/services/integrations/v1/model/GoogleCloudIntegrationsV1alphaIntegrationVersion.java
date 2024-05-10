@@ -31,11 +31,25 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Cloud Logging details for the integration version
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIntegrationsV1alphaCloudLoggingDetails cloudLoggingDetails;
+
+  /**
    * Output only. Auto-generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Optional. Optional. The resource name of the template from which the integration is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String createdFromTemplate;
 
   /**
    * Optional. Flag to disable database persistence for execution data, including event execution
@@ -51,6 +65,43 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Optional. True if variable masking feature should be turned on for this version
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableVariableMasking;
+
+  /**
+   * Optional. Error Catch Task configuration for the integration. It's optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudIntegrationsV1alphaErrorCatcherConfig> errorCatcherConfigs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudIntegrationsV1alphaErrorCatcherConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudIntegrationsV1alphaErrorCatcherConfig.class);
+  }
+
+  /**
+   * Optional. Config Parameters that are expected to be passed to the integration when an
+   * integration is published. This consists of all the parameters that are expected to provide
+   * configuration in the integration execution. This gives the user the ability to provide default
+   * values, value, add information like connection url, project based configuration value and also
+   * provide data types of each parameter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudIntegrationsV1alphaIntegrationConfigParameter> integrationConfigParameters;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudIntegrationsV1alphaIntegrationConfigParameter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudIntegrationsV1alphaIntegrationConfigParameter.class);
+  }
 
   /**
    * Optional. Parameters that are expected to be passed to the integration when an event is
@@ -114,6 +165,15 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentTemplateId;
+
+  /**
+   * Optional. The run-as service account email, if set and auth config is not configured, that will
+   * be used to generate auth token to be used in Connector task, Rest caller task and Cloud
+   * function task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runAsServiceAccount;
 
   /**
    * Optional. An increasing sequence that is set when a new snapshot is created. The last created
@@ -206,6 +266,23 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   private java.lang.String userLabel;
 
   /**
+   * Optional. Cloud Logging details for the integration version
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaCloudLoggingDetails getCloudLoggingDetails() {
+    return cloudLoggingDetails;
+  }
+
+  /**
+   * Optional. Cloud Logging details for the integration version
+   * @param cloudLoggingDetails cloudLoggingDetails or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationVersion setCloudLoggingDetails(GoogleCloudIntegrationsV1alphaCloudLoggingDetails cloudLoggingDetails) {
+    this.cloudLoggingDetails = cloudLoggingDetails;
+    return this;
+  }
+
+  /**
    * Output only. Auto-generated.
    * @return value or {@code null} for none
    */
@@ -219,6 +296,23 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
    */
   public GoogleCloudIntegrationsV1alphaIntegrationVersion setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Optional. The resource name of the template from which the integration is created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreatedFromTemplate() {
+    return createdFromTemplate;
+  }
+
+  /**
+   * Optional. Optional. The resource name of the template from which the integration is created.
+   * @param createdFromTemplate createdFromTemplate or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationVersion setCreatedFromTemplate(java.lang.String createdFromTemplate) {
+    this.createdFromTemplate = createdFromTemplate;
     return this;
   }
 
@@ -255,6 +349,65 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
    */
   public GoogleCloudIntegrationsV1alphaIntegrationVersion setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. True if variable masking feature should be turned on for this version
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableVariableMasking() {
+    return enableVariableMasking;
+  }
+
+  /**
+   * Optional. True if variable masking feature should be turned on for this version
+   * @param enableVariableMasking enableVariableMasking or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationVersion setEnableVariableMasking(java.lang.Boolean enableVariableMasking) {
+    this.enableVariableMasking = enableVariableMasking;
+    return this;
+  }
+
+  /**
+   * Optional. Error Catch Task configuration for the integration. It's optional.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudIntegrationsV1alphaErrorCatcherConfig> getErrorCatcherConfigs() {
+    return errorCatcherConfigs;
+  }
+
+  /**
+   * Optional. Error Catch Task configuration for the integration. It's optional.
+   * @param errorCatcherConfigs errorCatcherConfigs or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationVersion setErrorCatcherConfigs(java.util.List<GoogleCloudIntegrationsV1alphaErrorCatcherConfig> errorCatcherConfigs) {
+    this.errorCatcherConfigs = errorCatcherConfigs;
+    return this;
+  }
+
+  /**
+   * Optional. Config Parameters that are expected to be passed to the integration when an
+   * integration is published. This consists of all the parameters that are expected to provide
+   * configuration in the integration execution. This gives the user the ability to provide default
+   * values, value, add information like connection url, project based configuration value and also
+   * provide data types of each parameter.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudIntegrationsV1alphaIntegrationConfigParameter> getIntegrationConfigParameters() {
+    return integrationConfigParameters;
+  }
+
+  /**
+   * Optional. Config Parameters that are expected to be passed to the integration when an
+   * integration is published. This consists of all the parameters that are expected to provide
+   * configuration in the integration execution. This gives the user the ability to provide default
+   * values, value, add information like connection url, project based configuration value and also
+   * provide data types of each parameter.
+   * @param integrationConfigParameters integrationConfigParameters or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationVersion setIntegrationConfigParameters(java.util.List<GoogleCloudIntegrationsV1alphaIntegrationConfigParameter> integrationConfigParameters) {
+    this.integrationConfigParameters = integrationConfigParameters;
     return this;
   }
 
@@ -390,6 +543,27 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
    */
   public GoogleCloudIntegrationsV1alphaIntegrationVersion setParentTemplateId(java.lang.String parentTemplateId) {
     this.parentTemplateId = parentTemplateId;
+    return this;
+  }
+
+  /**
+   * Optional. The run-as service account email, if set and auth config is not configured, that will
+   * be used to generate auth token to be used in Connector task, Rest caller task and Cloud
+   * function task.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRunAsServiceAccount() {
+    return runAsServiceAccount;
+  }
+
+  /**
+   * Optional. The run-as service account email, if set and auth config is not configured, that will
+   * be used to generate auth token to be used in Connector task, Rest caller task and Cloud
+   * function task.
+   * @param runAsServiceAccount runAsServiceAccount or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationVersion setRunAsServiceAccount(java.lang.String runAsServiceAccount) {
+    this.runAsServiceAccount = runAsServiceAccount;
     return this;
   }
 

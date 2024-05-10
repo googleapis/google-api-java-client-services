@@ -17,8 +17,9 @@
 package com.google.api.services.cloudsupport.v2.model;
 
 /**
- * Case comments are the main way Google Support communicates with a user who has opened a case.
- * When a user responds to Google Support, the user's responses also appear as comments.
+ * A comment associated with a support case. Case comments are the primary way for Google Support to
+ * communicate with a user who has opened a case. When a user responds to Google Support, the user's
+ * responses also appear as comments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Support API. For a detailed explanation
@@ -32,43 +33,43 @@ package com.google.api.services.cloudsupport.v2.model;
 public final class Comment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The full comment body. Maximum of 12800 characters. This can contain rich text syntax.
+   * The full comment body. Maximum of 12800 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String body;
 
   /**
-   * Output only. The time when this comment was created.
+   * Output only. The time when the comment was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. The user or Google Support agent created this comment.
+   * Output only. The user or Google Support agent who created the comment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Actor creator;
 
   /**
-   * Output only. The resource name for the comment.
+   * Output only. Identifier. The resource name of the comment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. DEPRECATED. An automatically generated plain text version of body with all rich
-   * text syntax stripped.
+   * Output only. DEPRECATED. DO NOT USE. A duplicate of the `body` field. This field is only
+   * present for legacy reasons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String plainTextBody;
 
   /**
-   * The full comment body. Maximum of 12800 characters. This can contain rich text syntax.
+   * The full comment body. Maximum of 12800 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getBody() {
@@ -76,7 +77,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full comment body. Maximum of 12800 characters. This can contain rich text syntax.
+   * The full comment body. Maximum of 12800 characters.
    * @param body body or {@code null} for none
    */
   public Comment setBody(java.lang.String body) {
@@ -85,7 +86,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when this comment was created.
+   * Output only. The time when the comment was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -93,7 +94,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when this comment was created.
+   * Output only. The time when the comment was created.
    * @param createTime createTime or {@code null} for none
    */
   public Comment setCreateTime(String createTime) {
@@ -102,7 +103,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The user or Google Support agent created this comment.
+   * Output only. The user or Google Support agent who created the comment.
    * @return value or {@code null} for none
    */
   public Actor getCreator() {
@@ -110,7 +111,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The user or Google Support agent created this comment.
+   * Output only. The user or Google Support agent who created the comment.
    * @param creator creator or {@code null} for none
    */
   public Comment setCreator(Actor creator) {
@@ -119,7 +120,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name for the comment.
+   * Output only. Identifier. The resource name of the comment.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -127,7 +128,7 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name for the comment.
+   * Output only. Identifier. The resource name of the comment.
    * @param name name or {@code null} for none
    */
   public Comment setName(java.lang.String name) {
@@ -136,8 +137,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. DEPRECATED. An automatically generated plain text version of body with all rich
-   * text syntax stripped.
+   * Output only. DEPRECATED. DO NOT USE. A duplicate of the `body` field. This field is only
+   * present for legacy reasons.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlainTextBody() {
@@ -145,8 +146,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. DEPRECATED. An automatically generated plain text version of body with all rich
-   * text syntax stripped.
+   * Output only. DEPRECATED. DO NOT USE. A duplicate of the `body` field. This field is only
+   * present for legacy reasons.
    * @param plainTextBody plainTextBody or {@code null} for none
    */
   public Comment setPlainTextBody(java.lang.String plainTextBody) {

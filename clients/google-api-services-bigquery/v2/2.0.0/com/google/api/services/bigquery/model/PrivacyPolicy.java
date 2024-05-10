@@ -38,6 +38,22 @@ public final class PrivacyPolicy extends com.google.api.client.json.GenericJson 
   private AggregationThresholdPolicy aggregationThresholdPolicy;
 
   /**
+   * Optional. Policy used for differential privacy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DifferentialPrivacyPolicy differentialPrivacyPolicy;
+
+  /**
+   * Optional. Join restriction policy is outside of the one of policies, since this policy can be
+   * set along with other policies. This policy gives data providers the ability to enforce joins on
+   * the 'join_allowed_columns' when data is queried from a privacy protected view.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JoinRestrictionPolicy joinRestrictionPolicy;
+
+  /**
    * Optional. Policy used for aggregation thresholds.
    * @return value or {@code null} for none
    */
@@ -51,6 +67,44 @@ public final class PrivacyPolicy extends com.google.api.client.json.GenericJson 
    */
   public PrivacyPolicy setAggregationThresholdPolicy(AggregationThresholdPolicy aggregationThresholdPolicy) {
     this.aggregationThresholdPolicy = aggregationThresholdPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Policy used for differential privacy.
+   * @return value or {@code null} for none
+   */
+  public DifferentialPrivacyPolicy getDifferentialPrivacyPolicy() {
+    return differentialPrivacyPolicy;
+  }
+
+  /**
+   * Optional. Policy used for differential privacy.
+   * @param differentialPrivacyPolicy differentialPrivacyPolicy or {@code null} for none
+   */
+  public PrivacyPolicy setDifferentialPrivacyPolicy(DifferentialPrivacyPolicy differentialPrivacyPolicy) {
+    this.differentialPrivacyPolicy = differentialPrivacyPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Join restriction policy is outside of the one of policies, since this policy can be
+   * set along with other policies. This policy gives data providers the ability to enforce joins on
+   * the 'join_allowed_columns' when data is queried from a privacy protected view.
+   * @return value or {@code null} for none
+   */
+  public JoinRestrictionPolicy getJoinRestrictionPolicy() {
+    return joinRestrictionPolicy;
+  }
+
+  /**
+   * Optional. Join restriction policy is outside of the one of policies, since this policy can be
+   * set along with other policies. This policy gives data providers the ability to enforce joins on
+   * the 'join_allowed_columns' when data is queried from a privacy protected view.
+   * @param joinRestrictionPolicy joinRestrictionPolicy or {@code null} for none
+   */
+  public PrivacyPolicy setJoinRestrictionPolicy(JoinRestrictionPolicy joinRestrictionPolicy) {
+    this.joinRestrictionPolicy = joinRestrictionPolicy;
     return this;
   }
 

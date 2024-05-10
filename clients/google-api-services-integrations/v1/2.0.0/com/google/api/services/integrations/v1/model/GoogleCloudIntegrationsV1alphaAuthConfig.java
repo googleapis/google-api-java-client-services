@@ -74,7 +74,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   private java.lang.String description;
 
   /**
-   * The name of the auth config.
+   * Required. The name of the auth config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   private java.lang.String lastModifierEmail;
 
   /**
-   * Resource name of the SFDC instance
+   * Resource name of the auth config. For more information, see Manage authentication profiles.
    * projects/{project}/locations/{location}/authConfigs/{authConfig}.
    * The value may be {@code null}.
    */
@@ -260,7 +260,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * The name of the auth config.
+   * Required. The name of the auth config.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -268,7 +268,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * The name of the auth config.
+   * Required. The name of the auth config.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaAuthConfig setDisplayName(java.lang.String displayName) {
@@ -360,7 +360,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * Resource name of the SFDC instance
+   * Resource name of the auth config. For more information, see Manage authentication profiles.
    * projects/{project}/locations/{location}/authConfigs/{authConfig}.
    * @return value or {@code null} for none
    */
@@ -369,7 +369,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * Resource name of the SFDC instance
+   * Resource name of the auth config. For more information, see Manage authentication profiles.
    * projects/{project}/locations/{location}/authConfigs/{authConfig}.
    * @param name name or {@code null} for none
    */

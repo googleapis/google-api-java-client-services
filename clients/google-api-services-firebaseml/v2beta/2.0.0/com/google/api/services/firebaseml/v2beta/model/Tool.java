@@ -50,6 +50,14 @@ public final class Tool extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. GoogleSearchRetrieval tool type. Specialized retrieval tool that is powered by Google
+   * search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleSearchRetrieval googleSearchRetrieval;
+
+  /**
    * Optional. Retrieval tool type. System will always execute the provided retrieval tool(s) to get
    * external knowledge to answer the prompt. Retrieval results are presented to the model for
    * generation.
@@ -80,6 +88,25 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    */
   public Tool setFunctionDeclarations(java.util.List<FunctionDeclaration> functionDeclarations) {
     this.functionDeclarations = functionDeclarations;
+    return this;
+  }
+
+  /**
+   * Optional. GoogleSearchRetrieval tool type. Specialized retrieval tool that is powered by Google
+   * search.
+   * @return value or {@code null} for none
+   */
+  public GoogleSearchRetrieval getGoogleSearchRetrieval() {
+    return googleSearchRetrieval;
+  }
+
+  /**
+   * Optional. GoogleSearchRetrieval tool type. Specialized retrieval tool that is powered by Google
+   * search.
+   * @param googleSearchRetrieval googleSearchRetrieval or {@code null} for none
+   */
+  public Tool setGoogleSearchRetrieval(GoogleSearchRetrieval googleSearchRetrieval) {
+    this.googleSearchRetrieval = googleSearchRetrieval;
     return this;
   }
 

@@ -38,6 +38,13 @@ public final class GoogleCloudAiplatformV1beta1NearestNeighborSearchOperationMet
   private java.lang.Long invalidRecordCount;
 
   /**
+   * Number of sparse records in this file we skipped due to validate errors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long invalidSparseRecordCount;
+
+  /**
    * The detail information of the partial failures encountered for those invalid records that
    * couldn't be parsed. Up to 50 partial errors will be reported.
    * The value may be {@code null}.
@@ -60,6 +67,13 @@ public final class GoogleCloudAiplatformV1beta1NearestNeighborSearchOperationMet
   private java.lang.Long validRecordCount;
 
   /**
+   * Number of sparse records in this file that were successfully processed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long validSparseRecordCount;
+
+  /**
    * Number of records in this file we skipped due to validate errors.
    * @return value or {@code null} for none
    */
@@ -73,6 +87,23 @@ public final class GoogleCloudAiplatformV1beta1NearestNeighborSearchOperationMet
    */
   public GoogleCloudAiplatformV1beta1NearestNeighborSearchOperationMetadataContentValidationStats setInvalidRecordCount(java.lang.Long invalidRecordCount) {
     this.invalidRecordCount = invalidRecordCount;
+    return this;
+  }
+
+  /**
+   * Number of sparse records in this file we skipped due to validate errors.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getInvalidSparseRecordCount() {
+    return invalidSparseRecordCount;
+  }
+
+  /**
+   * Number of sparse records in this file we skipped due to validate errors.
+   * @param invalidSparseRecordCount invalidSparseRecordCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NearestNeighborSearchOperationMetadataContentValidationStats setInvalidSparseRecordCount(java.lang.Long invalidSparseRecordCount) {
+    this.invalidSparseRecordCount = invalidSparseRecordCount;
     return this;
   }
 
@@ -126,6 +157,23 @@ public final class GoogleCloudAiplatformV1beta1NearestNeighborSearchOperationMet
    */
   public GoogleCloudAiplatformV1beta1NearestNeighborSearchOperationMetadataContentValidationStats setValidRecordCount(java.lang.Long validRecordCount) {
     this.validRecordCount = validRecordCount;
+    return this;
+  }
+
+  /**
+   * Number of sparse records in this file that were successfully processed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getValidSparseRecordCount() {
+    return validSparseRecordCount;
+  }
+
+  /**
+   * Number of sparse records in this file that were successfully processed.
+   * @param validSparseRecordCount validSparseRecordCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NearestNeighborSearchOperationMetadataContentValidationStats setValidSparseRecordCount(java.lang.Long validSparseRecordCount) {
+    this.validSparseRecordCount = validSparseRecordCount;
     return this;
   }
 

@@ -31,8 +31,8 @@ public final class GoogleCloudAiplatformV1FeatureGroup extends com.google.api.cl
 
   /**
    * Indicates that features for this group come from BigQuery Table/View. By default treats the
-   * source as a sparse time series source, which is required to have an entity_id and a
-   * feature_timestamp column in the source.
+   * source as a sparse time series source. The BigQuery source table or view must have at least one
+   * entity ID column and a column named `feature_timestamp`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +89,8 @@ public final class GoogleCloudAiplatformV1FeatureGroup extends com.google.api.cl
 
   /**
    * Indicates that features for this group come from BigQuery Table/View. By default treats the
-   * source as a sparse time series source, which is required to have an entity_id and a
-   * feature_timestamp column in the source.
+   * source as a sparse time series source. The BigQuery source table or view must have at least one
+   * entity ID column and a column named `feature_timestamp`.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1FeatureGroupBigQuery getBigQuery() {
@@ -99,8 +99,8 @@ public final class GoogleCloudAiplatformV1FeatureGroup extends com.google.api.cl
 
   /**
    * Indicates that features for this group come from BigQuery Table/View. By default treats the
-   * source as a sparse time series source, which is required to have an entity_id and a
-   * feature_timestamp column in the source.
+   * source as a sparse time series source. The BigQuery source table or view must have at least one
+   * entity ID column and a column named `feature_timestamp`.
    * @param bigQuery bigQuery or {@code null} for none
    */
   public GoogleCloudAiplatformV1FeatureGroup setBigQuery(GoogleCloudAiplatformV1FeatureGroupBigQuery bigQuery) {

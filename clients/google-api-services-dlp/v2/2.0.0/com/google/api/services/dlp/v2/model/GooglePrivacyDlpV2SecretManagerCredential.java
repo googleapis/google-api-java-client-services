@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2SecretManagerCredential extends com.google.
 
   /**
    * Required. The name of the Secret Manager resource that stores the password, in the form
-   * "projects/project-id/secrets/secret-name/versions/version".
+   * `projects/project-id/secrets/secret-name/versions/version`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2SecretManagerCredential extends com.google.
 
   /**
    * Required. The name of the Secret Manager resource that stores the password, in the form
-   * "projects/project-id/secrets/secret-name/versions/version".
+   * `projects/project-id/secrets/secret-name/versions/version`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPasswordSecretVersionName() {
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2SecretManagerCredential extends com.google.
 
   /**
    * Required. The name of the Secret Manager resource that stores the password, in the form
-   * "projects/project-id/secrets/secret-name/versions/version".
+   * `projects/project-id/secrets/secret-name/versions/version`.
    * @param passwordSecretVersionName passwordSecretVersionName or {@code null} for none
    */
   public GooglePrivacyDlpV2SecretManagerCredential setPasswordSecretVersionName(java.lang.String passwordSecretVersionName) {

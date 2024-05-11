@@ -61,6 +61,13 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
   private java.lang.String gcsBucket;
 
   /**
+   * Whether to store TTS audio. By default, TTS audio from the virtual agent is not exported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean storeTtsAudio;
+
+  /**
    * Filename pattern for exported audio.
    * @return value or {@code null} for none
    */
@@ -131,6 +138,23 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
    */
   public GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSettings setGcsBucket(java.lang.String gcsBucket) {
     this.gcsBucket = gcsBucket;
+    return this;
+  }
+
+  /**
+   * Whether to store TTS audio. By default, TTS audio from the virtual agent is not exported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getStoreTtsAudio() {
+    return storeTtsAudio;
+  }
+
+  /**
+   * Whether to store TTS audio. By default, TTS audio from the virtual agent is not exported.
+   * @param storeTtsAudio storeTtsAudio or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSettings setStoreTtsAudio(java.lang.Boolean storeTtsAudio) {
+    this.storeTtsAudio = storeTtsAudio;
     return this;
   }
 

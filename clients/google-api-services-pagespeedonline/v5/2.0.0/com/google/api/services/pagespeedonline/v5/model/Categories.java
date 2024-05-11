@@ -52,7 +52,8 @@ public final class Categories extends com.google.api.client.json.GenericJson {
   private LighthouseCategoryV5 performance;
 
   /**
-   * The Progressive-Web-App (PWA) category, containing all pwa related audits.
+   * The Progressive-Web-App (PWA) category, containing all pwa related audits. This is deprecated
+   * in Lighthouse's 12.0 release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +118,8 @@ public final class Categories extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Progressive-Web-App (PWA) category, containing all pwa related audits.
+   * The Progressive-Web-App (PWA) category, containing all pwa related audits. This is deprecated
+   * in Lighthouse's 12.0 release.
    * @return value or {@code null} for none
    */
   public LighthouseCategoryV5 getPwa() {
@@ -125,7 +127,8 @@ public final class Categories extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Progressive-Web-App (PWA) category, containing all pwa related audits.
+   * The Progressive-Web-App (PWA) category, containing all pwa related audits. This is deprecated
+   * in Lighthouse's 12.0 release.
    * @param pwa pwa or {@code null} for none
    */
   public Categories setPwa(LighthouseCategoryV5 pwa) {

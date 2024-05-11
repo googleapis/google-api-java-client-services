@@ -38,6 +38,13 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Source extends com
   private ContaineranalysisGoogleDevtoolsCloudbuildV1ConnectedRepository connectedRepository;
 
   /**
+   * If provided, get the source from this Developer Connect config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContaineranalysisGoogleDevtoolsCloudbuildV1DeveloperConnectConfig developerConnectConfig;
+
+  /**
    * If provided, get the source from this Git repository.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Source extends com
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Source setConnectedRepository(ContaineranalysisGoogleDevtoolsCloudbuildV1ConnectedRepository connectedRepository) {
     this.connectedRepository = connectedRepository;
+    return this;
+  }
+
+  /**
+   * If provided, get the source from this Developer Connect config.
+   * @return value or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1DeveloperConnectConfig getDeveloperConnectConfig() {
+    return developerConnectConfig;
+  }
+
+  /**
+   * If provided, get the source from this Developer Connect config.
+   * @param developerConnectConfig developerConnectConfig or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Source setDeveloperConnectConfig(ContaineranalysisGoogleDevtoolsCloudbuildV1DeveloperConnectConfig developerConnectConfig) {
+    this.developerConnectConfig = developerConnectConfig;
     return this;
   }
 

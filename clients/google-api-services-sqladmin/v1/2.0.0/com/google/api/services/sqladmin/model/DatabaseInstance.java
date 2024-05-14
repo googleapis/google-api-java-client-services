@@ -275,7 +275,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String rootPassword;
 
   /**
-   * The status indicating if instance satisfiesPzs. Reserved for future use.
+   * This status indicates whether the instance satisfies PZS. The status is reserved for future
+   * use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -939,7 +940,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The status indicating if instance satisfiesPzs. Reserved for future use.
+   * This status indicates whether the instance satisfies PZS. The status is reserved for future
+   * use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -947,7 +949,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The status indicating if instance satisfiesPzs. Reserved for future use.
+   * This status indicates whether the instance satisfies PZS. The status is reserved for future
+   * use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public DatabaseInstance setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {

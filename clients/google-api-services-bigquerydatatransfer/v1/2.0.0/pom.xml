@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-bigquerydatatransfer</artifactId>
-  <version>v1-rev20240323-2.0.0</version>
-  <name>BigQuery Data Transfer API v1-rev20240323-2.0.0</name>
+  <version>v1-rev20240512-2.0.0</version>
+  <name>BigQuery Data Transfer API v1-rev20240512-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -91,7 +91,7 @@
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.44.1/</link>
-            <link>https://googleapis.dev/java/google-oauth-client/1.35.0/</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.36.0/</link>
             <link>https://googleapis.dev/java/google-api-client/2.5.0/</link>
           </links>
         </configuration>

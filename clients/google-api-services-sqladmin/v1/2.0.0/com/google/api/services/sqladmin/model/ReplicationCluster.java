@@ -51,6 +51,18 @@ public final class ReplicationCluster extends com.google.api.client.json.Generic
   private java.lang.String failoverDrReplicaName;
 
   /**
+   * Output only. If set, it indicates this instance has a private service access (PSA) dns endpoint
+   * that is pointing to the primary instance of the cluster. If this instance is the primary, the
+   * dns should be pointing to this instance. After Switchover or Replica failover, this DNS
+   * endpoint points to the promoted instance. This is a read-only field, returned to the user as
+   * information. This field can exist even if a standalone instance does not yet have a replica, or
+   * had a DR replica that was deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String psaWriteEndpoint;
+
+  /**
    * Output only. Read-only field that indicates whether the replica is a DR replica. This field is
    * not set if the instance is a primary instance.
    * @return value or {@code null} for none
@@ -91,6 +103,33 @@ public final class ReplicationCluster extends com.google.api.client.json.Generic
    */
   public ReplicationCluster setFailoverDrReplicaName(java.lang.String failoverDrReplicaName) {
     this.failoverDrReplicaName = failoverDrReplicaName;
+    return this;
+  }
+
+  /**
+   * Output only. If set, it indicates this instance has a private service access (PSA) dns endpoint
+   * that is pointing to the primary instance of the cluster. If this instance is the primary, the
+   * dns should be pointing to this instance. After Switchover or Replica failover, this DNS
+   * endpoint points to the promoted instance. This is a read-only field, returned to the user as
+   * information. This field can exist even if a standalone instance does not yet have a replica, or
+   * had a DR replica that was deleted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPsaWriteEndpoint() {
+    return psaWriteEndpoint;
+  }
+
+  /**
+   * Output only. If set, it indicates this instance has a private service access (PSA) dns endpoint
+   * that is pointing to the primary instance of the cluster. If this instance is the primary, the
+   * dns should be pointing to this instance. After Switchover or Replica failover, this DNS
+   * endpoint points to the promoted instance. This is a read-only field, returned to the user as
+   * information. This field can exist even if a standalone instance does not yet have a replica, or
+   * had a DR replica that was deleted.
+   * @param psaWriteEndpoint psaWriteEndpoint or {@code null} for none
+   */
+  public ReplicationCluster setPsaWriteEndpoint(java.lang.String psaWriteEndpoint) {
+    this.psaWriteEndpoint = psaWriteEndpoint;
     return this;
   }
 

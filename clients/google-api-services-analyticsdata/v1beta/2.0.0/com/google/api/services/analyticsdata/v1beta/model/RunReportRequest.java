@@ -39,6 +39,20 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   private CohortSpec cohortSpec;
 
   /**
+   * Optional. The configuration of comparisons requested and displayed. The request only requires a
+   * comparisons field in order to receive a comparison column in the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Comparison> comparisons;
+
+  static {
+    // hack to force ProGuard to consider Comparison used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Comparison.class);
+  }
+
+  /**
    * A currency code in ISO4217 format, such as "AED", "USD", "JPY". If the field is empty, the
    * report uses the property's default currency.
    * The value may be {@code null}.
@@ -199,6 +213,25 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
    */
   public RunReportRequest setCohortSpec(CohortSpec cohortSpec) {
     this.cohortSpec = cohortSpec;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration of comparisons requested and displayed. The request only requires a
+   * comparisons field in order to receive a comparison column in the response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Comparison> getComparisons() {
+    return comparisons;
+  }
+
+  /**
+   * Optional. The configuration of comparisons requested and displayed. The request only requires a
+   * comparisons field in order to receive a comparison column in the response.
+   * @param comparisons comparisons or {@code null} for none
+   */
+  public RunReportRequest setComparisons(java.util.List<Comparison> comparisons) {
+    this.comparisons = comparisons;
     return this;
   }
 

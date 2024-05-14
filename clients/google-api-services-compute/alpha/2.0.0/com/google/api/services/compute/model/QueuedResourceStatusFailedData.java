@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Additional status detail for the FAILED state.
+ * Model definition for QueuedResourceStatusFailedData.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.compute.model;
 public final class QueuedResourceStatusFailedData extends com.google.api.client.json.GenericJson {
 
   /**
-   * The error(s) that caused the QueuedResource to enter the FAILED state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Error error;
 
   /**
-   * The error(s) that caused the QueuedResource to enter the FAILED state.
    * @return value or {@code null} for none
    */
   public Error getError() {
@@ -45,7 +43,6 @@ public final class QueuedResourceStatusFailedData extends com.google.api.client.
   }
 
   /**
-   * The error(s) that caused the QueuedResource to enter the FAILED state.
    * @param error error or {@code null} for none
    */
   public QueuedResourceStatusFailedData setError(Error error) {
@@ -64,7 +61,7 @@ public final class QueuedResourceStatusFailedData extends com.google.api.client.
   }
 
   /**
-   * The error(s) that caused the QueuedResource to enter the FAILED state.
+   * Model definition for QueuedResourceStatusFailedDataError.
    */
   public static final class Error extends com.google.api.client.json.GenericJson {
 

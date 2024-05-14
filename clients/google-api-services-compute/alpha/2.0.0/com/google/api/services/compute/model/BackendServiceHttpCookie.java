@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for QueuedResourceStatus.
+ * The HTTP cookie used for stateful session affinity.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,79 +27,88 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class QueuedResourceStatus extends com.google.api.client.json.GenericJson {
+public final class BackendServiceHttpCookie extends com.google.api.client.json.GenericJson {
 
   /**
+   * Name of the cookie.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private QueuedResourceStatusFailedData failedData;
+  private java.lang.String name;
 
   /**
+   * Path to set for the cookie.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> provisioningOperations;
+  private java.lang.String path;
 
   /**
+   * Lifetime of the cookie.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private QueuingPolicy queuingPolicy;
+  private Duration ttl;
 
   /**
+   * Name of the cookie.
    * @return value or {@code null} for none
    */
-  public QueuedResourceStatusFailedData getFailedData() {
-    return failedData;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * @param failedData failedData or {@code null} for none
+   * Name of the cookie.
+   * @param name name or {@code null} for none
    */
-  public QueuedResourceStatus setFailedData(QueuedResourceStatusFailedData failedData) {
-    this.failedData = failedData;
+  public BackendServiceHttpCookie setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   /**
+   * Path to set for the cookie.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getProvisioningOperations() {
-    return provisioningOperations;
+  public java.lang.String getPath() {
+    return path;
   }
 
   /**
-   * @param provisioningOperations provisioningOperations or {@code null} for none
+   * Path to set for the cookie.
+   * @param path path or {@code null} for none
    */
-  public QueuedResourceStatus setProvisioningOperations(java.util.List<java.lang.String> provisioningOperations) {
-    this.provisioningOperations = provisioningOperations;
+  public BackendServiceHttpCookie setPath(java.lang.String path) {
+    this.path = path;
     return this;
   }
 
   /**
+   * Lifetime of the cookie.
    * @return value or {@code null} for none
    */
-  public QueuingPolicy getQueuingPolicy() {
-    return queuingPolicy;
+  public Duration getTtl() {
+    return ttl;
   }
 
   /**
-   * @param queuingPolicy queuingPolicy or {@code null} for none
+   * Lifetime of the cookie.
+   * @param ttl ttl or {@code null} for none
    */
-  public QueuedResourceStatus setQueuingPolicy(QueuingPolicy queuingPolicy) {
-    this.queuingPolicy = queuingPolicy;
+  public BackendServiceHttpCookie setTtl(Duration ttl) {
+    this.ttl = ttl;
     return this;
   }
 
   @Override
-  public QueuedResourceStatus set(String fieldName, Object value) {
-    return (QueuedResourceStatus) super.set(fieldName, value);
+  public BackendServiceHttpCookie set(String fieldName, Object value) {
+    return (BackendServiceHttpCookie) super.set(fieldName, value);
   }
 
   @Override
-  public QueuedResourceStatus clone() {
-    return (QueuedResourceStatus) super.clone();
+  public BackendServiceHttpCookie clone() {
+    return (BackendServiceHttpCookie) super.clone();
   }
 
 }

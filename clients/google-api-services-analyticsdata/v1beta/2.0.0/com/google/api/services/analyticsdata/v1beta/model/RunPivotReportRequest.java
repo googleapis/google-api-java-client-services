@@ -39,6 +39,20 @@ public final class RunPivotReportRequest extends com.google.api.client.json.Gene
   private CohortSpec cohortSpec;
 
   /**
+   * Optional. The configuration of comparisons requested and displayed. The request requires both a
+   * comparisons field and a comparisons dimension to receive a comparison column in the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Comparison> comparisons;
+
+  static {
+    // hack to force ProGuard to consider Comparison used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Comparison.class);
+  }
+
+  /**
    * A currency code in ISO4217 format, such as "AED", "USD", "JPY". If the field is empty, the
    * report uses the property's default currency.
    * The value may be {@code null}.
@@ -169,6 +183,25 @@ public final class RunPivotReportRequest extends com.google.api.client.json.Gene
    */
   public RunPivotReportRequest setCohortSpec(CohortSpec cohortSpec) {
     this.cohortSpec = cohortSpec;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration of comparisons requested and displayed. The request requires both a
+   * comparisons field and a comparisons dimension to receive a comparison column in the response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Comparison> getComparisons() {
+    return comparisons;
+  }
+
+  /**
+   * Optional. The configuration of comparisons requested and displayed. The request requires both a
+   * comparisons field and a comparisons dimension to receive a comparison column in the response.
+   * @param comparisons comparisons or {@code null} for none
+   */
+  public RunPivotReportRequest setComparisons(java.util.List<Comparison> comparisons) {
+    this.comparisons = comparisons;
     return this;
   }
 

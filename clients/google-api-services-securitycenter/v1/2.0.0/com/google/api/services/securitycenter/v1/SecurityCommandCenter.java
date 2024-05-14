@@ -3722,6 +3722,172 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class MuteConfigs {
 
         /**
+         * Creates a mute config.
+         *
+         * Create a request for the method "muteConfigs.create".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the new mute configs's parent. Its format is
+         *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig> {
+
+          private static final String REST_PATH = "v1/{+parent}/muteConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a mute config.
+           *
+           * Create a request for the method "muteConfigs.create".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the new mute configs's parent. Its format is
+         *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig content) {
+            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the new mute configs's parent. Its format is
+           * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the new mute configs's parent. Its format is
+         "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of the new mute configs's parent. Its format is
+           * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. Unique identifier provided by the client within the parent scope. It must
+           * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+           * end with either a letter or a number, and must be 63 characters or less.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String muteConfigId;
+
+          /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
+         lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
+         a number, and must be 63 characters or less.
+           */
+          public java.lang.String getMuteConfigId() {
+            return muteConfigId;
+          }
+
+          /**
+           * Required. Unique identifier provided by the client within the parent scope. It must
+           * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+           * end with either a letter or a number, and must be 63 characters or less.
+           */
+          public Create setMuteConfigId(java.lang.String muteConfigId) {
+            this.muteConfigId = muteConfigId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
          * Deletes an existing mute config.
          *
          * Create a request for the method "muteConfigs.delete".
@@ -4044,6 +4210,205 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists mute configs.
+         *
+         * Create a request for the method "muteConfigs.list".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns the collection of mute configs. Its format is
+         *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListMuteConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/muteConfigs$");
+
+          /**
+           * Lists mute configs.
+           *
+           * Create a request for the method "muteConfigs.list".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns the collection of mute configs. Its format is
+         *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListMuteConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/muteConfigs$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent, which owns the collection of mute configs. Its format is
+           * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns the collection of mute configs. Its format is
+         "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent, which owns the collection of mute configs. Its format is
+           * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/muteConfigs$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of configs to return. The service may return fewer than this value.
+           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
+           * above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of configs to return. The service may return fewer than this value. If
+         unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
+         be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of configs to return. The service may return fewer than this value.
+           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
+           * above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve
+           * the subsequent page. When paginating, all other parameters provided to
+           * `ListMuteConfigs` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListMuteConfigs` must match the
+         call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve
+           * the subsequent page. When paginating, all other parameters provided to
+           * `ListMuteConfigs` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
         /**
@@ -13442,6 +13807,172 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class MuteConfigs {
 
         /**
+         * Creates a mute config.
+         *
+         * Create a request for the method "muteConfigs.create".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the new mute configs's parent. Its format is
+         *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig> {
+
+          private static final String REST_PATH = "v1/{+parent}/muteConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a mute config.
+           *
+           * Create a request for the method "muteConfigs.create".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the new mute configs's parent. Its format is
+         *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig content) {
+            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the new mute configs's parent. Its format is
+           * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the new mute configs's parent. Its format is
+         "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of the new mute configs's parent. Its format is
+           * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. Unique identifier provided by the client within the parent scope. It must
+           * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+           * end with either a letter or a number, and must be 63 characters or less.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String muteConfigId;
+
+          /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
+         lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
+         a number, and must be 63 characters or less.
+           */
+          public java.lang.String getMuteConfigId() {
+            return muteConfigId;
+          }
+
+          /**
+           * Required. Unique identifier provided by the client within the parent scope. It must
+           * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+           * end with either a letter or a number, and must be 63 characters or less.
+           */
+          public Create setMuteConfigId(java.lang.String muteConfigId) {
+            this.muteConfigId = muteConfigId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
          * Deletes an existing mute config.
          *
          * Create a request for the method "muteConfigs.delete".
@@ -13764,6 +14295,205 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists mute configs.
+         *
+         * Create a request for the method "muteConfigs.list".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns the collection of mute configs. Its format is
+         *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListMuteConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/muteConfigs$");
+
+          /**
+           * Lists mute configs.
+           *
+           * Create a request for the method "muteConfigs.list".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns the collection of mute configs. Its format is
+         *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListMuteConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/muteConfigs$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent, which owns the collection of mute configs. Its format is
+           * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns the collection of mute configs. Its format is
+         "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent, which owns the collection of mute configs. Its format is
+           * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/muteConfigs$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of configs to return. The service may return fewer than this value.
+           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
+           * above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of configs to return. The service may return fewer than this value. If
+         unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
+         be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of configs to return. The service may return fewer than this value.
+           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
+           * above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve
+           * the subsequent page. When paginating, all other parameters provided to
+           * `ListMuteConfigs` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListMuteConfigs` must match the
+         call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve
+           * the subsequent page. When paginating, all other parameters provided to
+           * `ListMuteConfigs` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
         /**
@@ -26830,6 +27560,172 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class MuteConfigs {
 
         /**
+         * Creates a mute config.
+         *
+         * Create a request for the method "muteConfigs.create".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the new mute configs's parent. Its format is
+         *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig> {
+
+          private static final String REST_PATH = "v1/{+parent}/muteConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a mute config.
+           *
+           * Create a request for the method "muteConfigs.create".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the new mute configs's parent. Its format is
+         *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig content) {
+            super(SecurityCommandCenter.this, "POST", REST_PATH, content, com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the new mute configs's parent. Its format is
+           * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the new mute configs's parent. Its format is
+         "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of the new mute configs's parent. Its format is
+           * "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. Unique identifier provided by the client within the parent scope. It must
+           * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+           * end with either a letter or a number, and must be 63 characters or less.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String muteConfigId;
+
+          /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
+         lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
+         a number, and must be 63 characters or less.
+           */
+          public java.lang.String getMuteConfigId() {
+            return muteConfigId;
+          }
+
+          /**
+           * Required. Unique identifier provided by the client within the parent scope. It must
+           * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
+           * end with either a letter or a number, and must be 63 characters or less.
+           */
+          public Create setMuteConfigId(java.lang.String muteConfigId) {
+            this.muteConfigId = muteConfigId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
          * Deletes an existing mute config.
          *
          * Create a request for the method "muteConfigs.delete".
@@ -27152,6 +28048,205 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists mute configs.
+         *
+         * Create a request for the method "muteConfigs.list".
+         *
+         * This request holds the parameters needed by the securitycenter server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns the collection of mute configs. Its format is
+         *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends SecurityCommandCenterRequest<com.google.api.services.securitycenter.v1.model.ListMuteConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/muteConfigs$");
+
+          /**
+           * Lists mute configs.
+           *
+           * Create a request for the method "muteConfigs.list".
+           *
+           * This request holds the parameters needed by the the securitycenter server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns the collection of mute configs. Its format is
+         *        "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(SecurityCommandCenter.this, "GET", REST_PATH, null, com.google.api.services.securitycenter.v1.model.ListMuteConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/muteConfigs$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent, which owns the collection of mute configs. Its format is
+           * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns the collection of mute configs. Its format is
+         "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent, which owns the collection of mute configs. Its format is
+           * "organizations/[organization_id]", "folders/[folder_id]", "projects/[project_id]".
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/muteConfigs$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of configs to return. The service may return fewer than this value.
+           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
+           * above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of configs to return. The service may return fewer than this value. If
+         unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
+         be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of configs to return. The service may return fewer than this value.
+           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
+           * above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve
+           * the subsequent page. When paginating, all other parameters provided to
+           * `ListMuteConfigs` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListMuteConfigs` must match the
+         call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve
+           * the subsequent page. When paginating, all other parameters provided to
+           * `ListMuteConfigs` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
         /**

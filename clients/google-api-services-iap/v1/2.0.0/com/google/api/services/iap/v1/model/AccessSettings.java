@@ -31,21 +31,21 @@ package com.google.api.services.iap.v1.model;
 public final class AccessSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Settings to configure and enable allowed domains.
+   * Optional. Settings to configure and enable allowed domains.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AllowedDomainsSettings allowedDomainsSettings;
 
   /**
-   * Configuration to allow cross-origin requests via IAP.
+   * Optional. Configuration to allow cross-origin requests via IAP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CorsSettings corsSettings;
 
   /**
-   * GCIP claims and endpoint configurations for 3p identity providers.
+   * Optional. GCIP claims and endpoint configurations for 3p identity providers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,21 +60,22 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> identitySources;
 
   /**
-   * Settings to configure IAP's OAuth behavior.
+   * Optional. Settings to configure IAP's OAuth behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OAuthSettings oauthSettings;
 
   /**
-   * Settings to configure Policy delegation for apps hosted in tenant projects. INTERNAL_ONLY.
+   * Optional. Settings to configure Policy delegation for apps hosted in tenant projects.
+   * INTERNAL_ONLY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PolicyDelegationSettings policyDelegationSettings;
 
   /**
-   * Settings to configure reauthentication policies in IAP.
+   * Optional. Settings to configure reauthentication policies in IAP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +90,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   private WorkforceIdentitySettings workforceIdentitySettings;
 
   /**
-   * Settings to configure and enable allowed domains.
+   * Optional. Settings to configure and enable allowed domains.
    * @return value or {@code null} for none
    */
   public AllowedDomainsSettings getAllowedDomainsSettings() {
@@ -97,7 +98,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings to configure and enable allowed domains.
+   * Optional. Settings to configure and enable allowed domains.
    * @param allowedDomainsSettings allowedDomainsSettings or {@code null} for none
    */
   public AccessSettings setAllowedDomainsSettings(AllowedDomainsSettings allowedDomainsSettings) {
@@ -106,7 +107,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Configuration to allow cross-origin requests via IAP.
+   * Optional. Configuration to allow cross-origin requests via IAP.
    * @return value or {@code null} for none
    */
   public CorsSettings getCorsSettings() {
@@ -114,7 +115,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Configuration to allow cross-origin requests via IAP.
+   * Optional. Configuration to allow cross-origin requests via IAP.
    * @param corsSettings corsSettings or {@code null} for none
    */
   public AccessSettings setCorsSettings(CorsSettings corsSettings) {
@@ -123,7 +124,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * GCIP claims and endpoint configurations for 3p identity providers.
+   * Optional. GCIP claims and endpoint configurations for 3p identity providers.
    * @return value or {@code null} for none
    */
   public GcipSettings getGcipSettings() {
@@ -131,7 +132,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * GCIP claims and endpoint configurations for 3p identity providers.
+   * Optional. GCIP claims and endpoint configurations for 3p identity providers.
    * @param gcipSettings gcipSettings or {@code null} for none
    */
   public AccessSettings setGcipSettings(GcipSettings gcipSettings) {
@@ -159,7 +160,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings to configure IAP's OAuth behavior.
+   * Optional. Settings to configure IAP's OAuth behavior.
    * @return value or {@code null} for none
    */
   public OAuthSettings getOauthSettings() {
@@ -167,7 +168,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings to configure IAP's OAuth behavior.
+   * Optional. Settings to configure IAP's OAuth behavior.
    * @param oauthSettings oauthSettings or {@code null} for none
    */
   public AccessSettings setOauthSettings(OAuthSettings oauthSettings) {
@@ -176,7 +177,8 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings to configure Policy delegation for apps hosted in tenant projects. INTERNAL_ONLY.
+   * Optional. Settings to configure Policy delegation for apps hosted in tenant projects.
+   * INTERNAL_ONLY.
    * @return value or {@code null} for none
    */
   public PolicyDelegationSettings getPolicyDelegationSettings() {
@@ -184,7 +186,8 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings to configure Policy delegation for apps hosted in tenant projects. INTERNAL_ONLY.
+   * Optional. Settings to configure Policy delegation for apps hosted in tenant projects.
+   * INTERNAL_ONLY.
    * @param policyDelegationSettings policyDelegationSettings or {@code null} for none
    */
   public AccessSettings setPolicyDelegationSettings(PolicyDelegationSettings policyDelegationSettings) {
@@ -193,7 +196,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings to configure reauthentication policies in IAP.
+   * Optional. Settings to configure reauthentication policies in IAP.
    * @return value or {@code null} for none
    */
   public ReauthSettings getReauthSettings() {
@@ -201,7 +204,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Settings to configure reauthentication policies in IAP.
+   * Optional. Settings to configure reauthentication policies in IAP.
    * @param reauthSettings reauthSettings or {@code null} for none
    */
   public AccessSettings setReauthSettings(ReauthSettings reauthSettings) {

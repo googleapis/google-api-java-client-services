@@ -17,8 +17,7 @@
 package com.google.api.services.iap.v1.model;
 
 /**
- * API requires a return message, but currently all response strings will fit in the status and
- * public message. In the future, this response can hold AST validation info.
+ * IAP Expression Linter endpoint returns empty response body.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity-Aware Proxy API. For a detailed

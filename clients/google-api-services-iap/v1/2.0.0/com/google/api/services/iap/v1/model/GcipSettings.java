@@ -39,10 +39,11 @@ public final class GcipSettings extends com.google.api.client.json.GenericJson {
   private java.lang.String loginPageUri;
 
   /**
-   * GCIP tenant ids that are linked to the IAP resource. tenant_ids could be a string beginning
-   * with a number character to indicate authenticating with GCIP tenant flow, or in the format of _
-   * to indicate authenticating with GCIP agent flow. If agent flow is used, tenant_ids should only
-   * contain one single element, while for tenant flow, tenant_ids can contain multiple elements.
+   * Optional. GCIP tenant ids that are linked to the IAP resource. tenant_ids could be a string
+   * beginning with a number character to indicate authenticating with GCIP tenant flow, or in the
+   * format of _ to indicate authenticating with GCIP agent flow. If agent flow is used, tenant_ids
+   * should only contain one single element, while for tenant flow, tenant_ids can contain multiple
+   * elements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,10 +69,11 @@ public final class GcipSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GCIP tenant ids that are linked to the IAP resource. tenant_ids could be a string beginning
-   * with a number character to indicate authenticating with GCIP tenant flow, or in the format of _
-   * to indicate authenticating with GCIP agent flow. If agent flow is used, tenant_ids should only
-   * contain one single element, while for tenant flow, tenant_ids can contain multiple elements.
+   * Optional. GCIP tenant ids that are linked to the IAP resource. tenant_ids could be a string
+   * beginning with a number character to indicate authenticating with GCIP tenant flow, or in the
+   * format of _ to indicate authenticating with GCIP agent flow. If agent flow is used, tenant_ids
+   * should only contain one single element, while for tenant flow, tenant_ids can contain multiple
+   * elements.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTenantIds() {
@@ -79,10 +81,11 @@ public final class GcipSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GCIP tenant ids that are linked to the IAP resource. tenant_ids could be a string beginning
-   * with a number character to indicate authenticating with GCIP tenant flow, or in the format of _
-   * to indicate authenticating with GCIP agent flow. If agent flow is used, tenant_ids should only
-   * contain one single element, while for tenant flow, tenant_ids can contain multiple elements.
+   * Optional. GCIP tenant ids that are linked to the IAP resource. tenant_ids could be a string
+   * beginning with a number character to indicate authenticating with GCIP tenant flow, or in the
+   * format of _ to indicate authenticating with GCIP agent flow. If agent flow is used, tenant_ids
+   * should only contain one single element, while for tenant flow, tenant_ids can contain multiple
+   * elements.
    * @param tenantIds tenantIds or {@code null} for none
    */
   public GcipSettings setTenantIds(java.util.List<java.lang.String> tenantIds) {

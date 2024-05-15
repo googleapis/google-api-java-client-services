@@ -31,29 +31,29 @@ package com.google.api.services.iap.v1.model;
 public final class TunnelDestGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Unordered list. List of CIDRs that this group applies to.
+   * Optional. Unordered list. List of CIDRs that this group applies to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> cidrs;
 
   /**
-   * Unordered list. List of FQDNs that this group applies to.
+   * Optional. Unordered list. List of FQDNs that this group applies to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> fqdns;
 
   /**
-   * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project and
-   * contain only lower case letters (a-z) and dashes (-).
+   * Identifier. Identifier for the TunnelDestGroup. Must be unique within the project and contain
+   * only lower case letters (a-z) and dashes (-).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Unordered list. List of CIDRs that this group applies to.
+   * Optional. Unordered list. List of CIDRs that this group applies to.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCidrs() {
@@ -61,7 +61,7 @@ public final class TunnelDestGroup extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Unordered list. List of CIDRs that this group applies to.
+   * Optional. Unordered list. List of CIDRs that this group applies to.
    * @param cidrs cidrs or {@code null} for none
    */
   public TunnelDestGroup setCidrs(java.util.List<java.lang.String> cidrs) {
@@ -70,7 +70,7 @@ public final class TunnelDestGroup extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Unordered list. List of FQDNs that this group applies to.
+   * Optional. Unordered list. List of FQDNs that this group applies to.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFqdns() {
@@ -78,7 +78,7 @@ public final class TunnelDestGroup extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Unordered list. List of FQDNs that this group applies to.
+   * Optional. Unordered list. List of FQDNs that this group applies to.
    * @param fqdns fqdns or {@code null} for none
    */
   public TunnelDestGroup setFqdns(java.util.List<java.lang.String> fqdns) {
@@ -87,8 +87,8 @@ public final class TunnelDestGroup extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project and
-   * contain only lower case letters (a-z) and dashes (-).
+   * Identifier. Identifier for the TunnelDestGroup. Must be unique within the project and contain
+   * only lower case letters (a-z) and dashes (-).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -96,8 +96,8 @@ public final class TunnelDestGroup extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project and
-   * contain only lower case letters (a-z) and dashes (-).
+   * Identifier. Identifier for the TunnelDestGroup. Must be unique within the project and contain
+   * only lower case letters (a-z) and dashes (-).
    * @param name name or {@code null} for none
    */
   public TunnelDestGroup setName(java.lang.String name) {

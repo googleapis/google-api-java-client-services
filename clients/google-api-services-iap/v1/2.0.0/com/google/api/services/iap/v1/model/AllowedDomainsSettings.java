@@ -32,21 +32,21 @@ package com.google.api.services.iap.v1.model;
 public final class AllowedDomainsSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of trusted domains.
+   * Optional. List of trusted domains.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> domains;
 
   /**
-   * Configuration for customers to opt in for the feature.
+   * Optional. Configuration for customers to opt in for the feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enable;
 
   /**
-   * List of trusted domains.
+   * Optional. List of trusted domains.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDomains() {
@@ -54,7 +54,7 @@ public final class AllowedDomainsSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * List of trusted domains.
+   * Optional. List of trusted domains.
    * @param domains domains or {@code null} for none
    */
   public AllowedDomainsSettings setDomains(java.util.List<java.lang.String> domains) {
@@ -63,7 +63,7 @@ public final class AllowedDomainsSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Configuration for customers to opt in for the feature.
+   * Optional. Configuration for customers to opt in for the feature.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnable() {
@@ -71,7 +71,7 @@ public final class AllowedDomainsSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Configuration for customers to opt in for the feature.
+   * Optional. Configuration for customers to opt in for the feature.
    * @param enable enable or {@code null} for none
    */
   public AllowedDomainsSettings setEnable(java.lang.Boolean enable) {

@@ -41,7 +41,7 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
   private java.lang.String loginHint;
 
   /**
-   * List of client ids allowed to use IAP programmatically.
+   * Optional. List of client ids allowed to use IAP programmatically.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * List of client ids allowed to use IAP programmatically.
+   * Optional. List of client ids allowed to use IAP programmatically.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProgrammaticClients() {
@@ -79,7 +79,7 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * List of client ids allowed to use IAP programmatically.
+   * Optional. List of client ids allowed to use IAP programmatically.
    * @param programmaticClients programmaticClients or {@code null} for none
    */
   public OAuthSettings setProgrammaticClients(java.util.List<java.lang.String> programmaticClients) {

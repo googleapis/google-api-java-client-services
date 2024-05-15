@@ -2055,6 +2055,31 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /**
+           * Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A
+           * random UUID is recommended. This request is only idempotent if a `request_id` is
+           * provided.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A random UUID is
+         recommended. This request is only idempotent if a `request_id` is provided.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A
+           * random UUID is recommended. This request is only idempotent if a `request_id` is
+           * provided.
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -2192,6 +2217,31 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
                   "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A
+           * random UUID is recommended. This request is only idempotent if a `request_id` is
+           * provided.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A random UUID is
+         recommended. This request is only idempotent if a `request_id` is provided.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A
+           * random UUID is recommended. This request is only idempotent if a `request_id` is
+           * provided.
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
             return this;
           }
 
@@ -2855,6 +2905,54 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
                   "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the OS policy assignment is not found, a new OS policy
+           * assignment will be created. In this situation, `update_mask` is ignored.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the OS policy assignment is not found, a new OS policy assignment
+         will be created. In this situation, `update_mask` is ignored.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the OS policy assignment is not found, a new OS policy
+           * assignment will be created. In this situation, `update_mask` is ignored.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A
+           * random UUID is recommended. This request is only idempotent if a `request_id` is
+           * provided.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A random UUID is
+         recommended. This request is only idempotent if a `request_id` is provided.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A
+           * random UUID is recommended. This request is only idempotent if a `request_id` is
+           * provided.
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
             return this;
           }
 

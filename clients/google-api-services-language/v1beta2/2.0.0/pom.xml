@@ -91,7 +91,7 @@
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.44.1/</link>
-            <link>https://googleapis.dev/java/google-oauth-client/1.35.0/</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.36.0/</link>
             <link>https://googleapis.dev/java/google-api-client/2.5.0/</link>
           </links>
         </configuration>

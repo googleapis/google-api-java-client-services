@@ -17,7 +17,7 @@
 package com.google.api.services.admob.v1beta.model;
 
 /**
- * Describes an AdMob mediation group.
+ * Describes an AdMob Mediation group.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AdMob API. For a detailed explanation see:

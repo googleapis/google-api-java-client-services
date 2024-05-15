@@ -30,6 +30,33 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1SearchTextResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Experimental: See https://developers.google.com/maps/documentation/places/web-
+   * service/experimental/places-generative for more details. A list of contextual contents where
+   * each entry associates to the corresponding place in the same index in the places field. The
+   * contents that are relevant to the `text_query` in the request are preferred. If the contextual
+   * content is not available for one of the places, it will return non-contextual content. It will
+   * be empty only when the content is unavailable for this place. This list should have as many
+   * entries as the list of places if requested.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleMapsPlacesV1ContextualContent> contextualContents;
+
+  static {
+    // hack to force ProGuard to consider GoogleMapsPlacesV1ContextualContent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleMapsPlacesV1ContextualContent.class);
+  }
+
+  /**
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted or
+   * empty, there are no subsequent pages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
    * A list of places that meet the user's text search criteria.
    * The value may be {@code null}.
    */
@@ -40,6 +67,54 @@ public final class GoogleMapsPlacesV1SearchTextResponse extends com.google.api.c
     // hack to force ProGuard to consider GoogleMapsPlacesV1Place used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleMapsPlacesV1Place.class);
+  }
+
+  /**
+   * Experimental: See https://developers.google.com/maps/documentation/places/web-
+   * service/experimental/places-generative for more details. A list of contextual contents where
+   * each entry associates to the corresponding place in the same index in the places field. The
+   * contents that are relevant to the `text_query` in the request are preferred. If the contextual
+   * content is not available for one of the places, it will return non-contextual content. It will
+   * be empty only when the content is unavailable for this place. This list should have as many
+   * entries as the list of places if requested.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleMapsPlacesV1ContextualContent> getContextualContents() {
+    return contextualContents;
+  }
+
+  /**
+   * Experimental: See https://developers.google.com/maps/documentation/places/web-
+   * service/experimental/places-generative for more details. A list of contextual contents where
+   * each entry associates to the corresponding place in the same index in the places field. The
+   * contents that are relevant to the `text_query` in the request are preferred. If the contextual
+   * content is not available for one of the places, it will return non-contextual content. It will
+   * be empty only when the content is unavailable for this place. This list should have as many
+   * entries as the list of places if requested.
+   * @param contextualContents contextualContents or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchTextResponse setContextualContents(java.util.List<GoogleMapsPlacesV1ContextualContent> contextualContents) {
+    this.contextualContents = contextualContents;
+    return this;
+  }
+
+  /**
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted or
+   * empty, there are no subsequent pages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
+  }
+
+  /**
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted or
+   * empty, there are no subsequent pages.
+   * @param nextPageToken nextPageToken or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchTextResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
+    return this;
   }
 
   /**

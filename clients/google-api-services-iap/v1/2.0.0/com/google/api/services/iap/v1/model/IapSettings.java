@@ -31,14 +31,14 @@ package com.google.api.services.iap.v1.model;
 public final class IapSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Top level wrapper for all access related setting in IAP
+   * Optional. Top level wrapper for all access related setting in IAP
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AccessSettings accessSettings;
 
   /**
-   * Top level wrapper for all application related settings in IAP
+   * Optional. Top level wrapper for all application related settings in IAP
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class IapSettings extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Top level wrapper for all access related setting in IAP
+   * Optional. Top level wrapper for all access related setting in IAP
    * @return value or {@code null} for none
    */
   public AccessSettings getAccessSettings() {
@@ -60,7 +60,7 @@ public final class IapSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Top level wrapper for all access related setting in IAP
+   * Optional. Top level wrapper for all access related setting in IAP
    * @param accessSettings accessSettings or {@code null} for none
    */
   public IapSettings setAccessSettings(AccessSettings accessSettings) {
@@ -69,7 +69,7 @@ public final class IapSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Top level wrapper for all application related settings in IAP
+   * Optional. Top level wrapper for all application related settings in IAP
    * @return value or {@code null} for none
    */
   public ApplicationSettings getApplicationSettings() {
@@ -77,7 +77,7 @@ public final class IapSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Top level wrapper for all application related settings in IAP
+   * Optional. Top level wrapper for all application related settings in IAP
    * @param applicationSettings applicationSettings or {@code null} for none
    */
   public IapSettings setApplicationSettings(ApplicationSettings applicationSettings) {

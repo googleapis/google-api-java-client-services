@@ -38,6 +38,13 @@ public final class HttpConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String proxySecretVersionName;
 
   /**
+   * Optional. Cloud Storage object storing the certificate to use with the HTTP proxy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GCSLocation proxySslCaInfo;
+
+  /**
    * SecretVersion resource of the HTTP proxy URL. The proxy URL should be in format
    * protocol://@]proxyhost[:port].
    * @return value or {@code null} for none
@@ -53,6 +60,23 @@ public final class HttpConfig extends com.google.api.client.json.GenericJson {
    */
   public HttpConfig setProxySecretVersionName(java.lang.String proxySecretVersionName) {
     this.proxySecretVersionName = proxySecretVersionName;
+    return this;
+  }
+
+  /**
+   * Optional. Cloud Storage object storing the certificate to use with the HTTP proxy.
+   * @return value or {@code null} for none
+   */
+  public GCSLocation getProxySslCaInfo() {
+    return proxySslCaInfo;
+  }
+
+  /**
+   * Optional. Cloud Storage object storing the certificate to use with the HTTP proxy.
+   * @param proxySslCaInfo proxySslCaInfo or {@code null} for none
+   */
+  public HttpConfig setProxySslCaInfo(GCSLocation proxySslCaInfo) {
+    this.proxySslCaInfo = proxySslCaInfo;
     return this;
   }
 

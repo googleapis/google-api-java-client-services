@@ -189,7 +189,7 @@ public final class Build extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccount;
 
   /**
-   * The location of the source files to build.
+   * Optional. The location of the source files to build.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -628,7 +628,7 @@ public final class Build extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The location of the source files to build.
+   * Optional. The location of the source files to build.
    * @return value or {@code null} for none
    */
   public Source getSource() {
@@ -636,7 +636,7 @@ public final class Build extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The location of the source files to build.
+   * Optional. The location of the source files to build.
    * @param source source or {@code null} for none
    */
   public Build setSource(Source source) {

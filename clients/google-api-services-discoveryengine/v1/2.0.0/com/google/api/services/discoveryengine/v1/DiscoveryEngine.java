@@ -3199,6 +3199,149 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             public class Operations {
 
               /**
+               * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+               * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+               * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+               * methods to check whether the cancellation succeeded or whether the operation completed despite
+               * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+               * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+               * `Code.CANCELLED`.
+               *
+               * Create a request for the method "operations.cancel".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+               *
+               * @param name The name of the operation resource to be cancelled.
+               * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleLongrunningCancelOperationRequest}
+               * @return the request
+               */
+              public Cancel cancel(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleLongrunningCancelOperationRequest content) throws java.io.IOException {
+                Cancel result = new Cancel(name, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Cancel extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleProtobufEmpty> {
+
+                private static final String REST_PATH = "v1/{+name}:cancel";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/operations/[^/]+$");
+
+                /**
+                 * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+                 * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+                 * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+                 * methods to check whether the cancellation succeeded or whether the operation completed despite
+                 * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+                 * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+                 * `Code.CANCELLED`.
+                 *
+                 * Create a request for the method "operations.cancel".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name The name of the operation resource to be cancelled.
+                 * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleLongrunningCancelOperationRequest}
+                 * @since 1.13
+                 */
+                protected Cancel(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleLongrunningCancelOperationRequest content) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.GoogleProtobufEmpty.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/operations/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Cancel set$Xgafv(java.lang.String $Xgafv) {
+                  return (Cancel) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Cancel setAccessToken(java.lang.String accessToken) {
+                  return (Cancel) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Cancel setAlt(java.lang.String alt) {
+                  return (Cancel) super.setAlt(alt);
+                }
+
+                @Override
+                public Cancel setCallback(java.lang.String callback) {
+                  return (Cancel) super.setCallback(callback);
+                }
+
+                @Override
+                public Cancel setFields(java.lang.String fields) {
+                  return (Cancel) super.setFields(fields);
+                }
+
+                @Override
+                public Cancel setKey(java.lang.String key) {
+                  return (Cancel) super.setKey(key);
+                }
+
+                @Override
+                public Cancel setOauthToken(java.lang.String oauthToken) {
+                  return (Cancel) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Cancel) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Cancel setQuotaUser(java.lang.String quotaUser) {
+                  return (Cancel) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Cancel setUploadType(java.lang.String uploadType) {
+                  return (Cancel) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Cancel) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** The name of the operation resource to be cancelled. */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** The name of the operation resource to be cancelled.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /** The name of the operation resource to be cancelled. */
+                public Cancel setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/branches/[^/]+/operations/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Cancel set(String parameterName, Object value) {
+                  return (Cancel) super.set(parameterName, value);
+                }
+              }
+              /**
                * Gets the latest state of a long-running operation. Clients can use this method to poll the
                * operation result at intervals as recommended by the API service.
                *
@@ -15741,6 +15884,149 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           public class Operations {
 
             /**
+             * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+             * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+             * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+             * methods to check whether the cancellation succeeded or whether the operation completed despite
+             * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+             * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+             * `Code.CANCELLED`.
+             *
+             * Create a request for the method "operations.cancel".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+             *
+             * @param name The name of the operation resource to be cancelled.
+             * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleLongrunningCancelOperationRequest}
+             * @return the request
+             */
+            public Cancel cancel(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleLongrunningCancelOperationRequest content) throws java.io.IOException {
+              Cancel result = new Cancel(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Cancel extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleProtobufEmpty> {
+
+              private static final String REST_PATH = "v1/{+name}:cancel";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+/operations/[^/]+$");
+
+              /**
+               * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+               * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+               * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+               * methods to check whether the cancellation succeeded or whether the operation completed despite
+               * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+               * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+               * `Code.CANCELLED`.
+               *
+               * Create a request for the method "operations.cancel".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The name of the operation resource to be cancelled.
+               * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleLongrunningCancelOperationRequest}
+               * @since 1.13
+               */
+              protected Cancel(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleLongrunningCancelOperationRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.GoogleProtobufEmpty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+/operations/[^/]+$");
+                }
+              }
+
+              @Override
+              public Cancel set$Xgafv(java.lang.String $Xgafv) {
+                return (Cancel) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Cancel setAccessToken(java.lang.String accessToken) {
+                return (Cancel) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Cancel setAlt(java.lang.String alt) {
+                return (Cancel) super.setAlt(alt);
+              }
+
+              @Override
+              public Cancel setCallback(java.lang.String callback) {
+                return (Cancel) super.setCallback(callback);
+              }
+
+              @Override
+              public Cancel setFields(java.lang.String fields) {
+                return (Cancel) super.setFields(fields);
+              }
+
+              @Override
+              public Cancel setKey(java.lang.String key) {
+                return (Cancel) super.setKey(key);
+              }
+
+              @Override
+              public Cancel setOauthToken(java.lang.String oauthToken) {
+                return (Cancel) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Cancel) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Cancel setQuotaUser(java.lang.String quotaUser) {
+                return (Cancel) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Cancel setUploadType(java.lang.String uploadType) {
+                return (Cancel) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Cancel) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the operation resource to be cancelled. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the operation resource to be cancelled.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The name of the operation resource to be cancelled. */
+              public Cancel setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/branches/[^/]+/operations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Cancel set(String parameterName, Object value) {
+                return (Cancel) super.set(parameterName, value);
+              }
+            }
+            /**
              * Gets the latest state of a long-running operation. Clients can use this method to poll the
              * operation result at intervals as recommended by the API service.
              *
@@ -21303,6 +21589,168 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
       }
       /**
+       * An accessor for creating requests from the GroundingConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+       *   {@code DiscoveryEngine.GroundingConfigs.List request = discoveryengine.groundingConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public GroundingConfigs groundingConfigs() {
+        return new GroundingConfigs();
+      }
+
+      /**
+       * The "groundingConfigs" collection of methods.
+       */
+      public class GroundingConfigs {
+
+        /**
+         * Performs a grounding check.
+         *
+         * Create a request for the method "groundingConfigs.check".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Check#execute()} method to invoke the remote operation.
+         *
+         * @param groundingConfig Required. The resource name of the grounding config, such as
+         *        `projects/locations/global/groundingConfigs/default_grounding_config`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1CheckGroundingRequest}
+         * @return the request
+         */
+        public Check check(java.lang.String groundingConfig, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1CheckGroundingRequest content) throws java.io.IOException {
+          Check result = new Check(groundingConfig, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Check extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1CheckGroundingResponse> {
+
+          private static final String REST_PATH = "v1/{+groundingConfig}:check";
+
+          private final java.util.regex.Pattern GROUNDING_CONFIG_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/groundingConfigs/[^/]+$");
+
+          /**
+           * Performs a grounding check.
+           *
+           * Create a request for the method "groundingConfigs.check".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Check#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Check#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param groundingConfig Required. The resource name of the grounding config, such as
+         *        `projects/locations/global/groundingConfigs/default_grounding_config`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1CheckGroundingRequest}
+           * @since 1.13
+           */
+          protected Check(java.lang.String groundingConfig, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1CheckGroundingRequest content) {
+            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1CheckGroundingResponse.class);
+            this.groundingConfig = com.google.api.client.util.Preconditions.checkNotNull(groundingConfig, "Required parameter groundingConfig must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(GROUNDING_CONFIG_PATTERN.matcher(groundingConfig).matches(),
+                  "Parameter groundingConfig must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/groundingConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Check set$Xgafv(java.lang.String $Xgafv) {
+            return (Check) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Check setAccessToken(java.lang.String accessToken) {
+            return (Check) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Check setAlt(java.lang.String alt) {
+            return (Check) super.setAlt(alt);
+          }
+
+          @Override
+          public Check setCallback(java.lang.String callback) {
+            return (Check) super.setCallback(callback);
+          }
+
+          @Override
+          public Check setFields(java.lang.String fields) {
+            return (Check) super.setFields(fields);
+          }
+
+          @Override
+          public Check setKey(java.lang.String key) {
+            return (Check) super.setKey(key);
+          }
+
+          @Override
+          public Check setOauthToken(java.lang.String oauthToken) {
+            return (Check) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Check setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Check) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Check setQuotaUser(java.lang.String quotaUser) {
+            return (Check) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Check setUploadType(java.lang.String uploadType) {
+            return (Check) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Check setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Check) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the grounding config, such as
+           * `projects/locations/global/groundingConfigs/default_grounding_config`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String groundingConfig;
+
+          /** Required. The resource name of the grounding config, such as
+         `projects/locations/global/groundingConfigs/default_grounding_config`.
+           */
+          public java.lang.String getGroundingConfig() {
+            return groundingConfig;
+          }
+
+          /**
+           * Required. The resource name of the grounding config, such as
+           * `projects/locations/global/groundingConfigs/default_grounding_config`.
+           */
+          public Check setGroundingConfig(java.lang.String groundingConfig) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(GROUNDING_CONFIG_PATTERN.matcher(groundingConfig).matches(),
+                  "Parameter groundingConfig must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/groundingConfigs/[^/]+$");
+            }
+            this.groundingConfig = groundingConfig;
+            return this;
+          }
+
+          @Override
+          public Check set(String parameterName, Object value) {
+            return (Check) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Operations collection.
        *
        * <p>The typical use is:</p>
@@ -21850,6 +22298,149 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
      */
     public class Operations {
 
+      /**
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+       * methods to check whether the cancellation succeeded or whether the operation completed despite
+       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+       * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+       * `Code.CANCELLED`.
+       *
+       * Create a request for the method "operations.cancel".
+       *
+       * This request holds the parameters needed by the discoveryengine server.  After setting any
+       * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation resource to be cancelled.
+       * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleLongrunningCancelOperationRequest}
+       * @return the request
+       */
+      public Cancel cancel(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleLongrunningCancelOperationRequest content) throws java.io.IOException {
+        Cancel result = new Cancel(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Cancel extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1/{+name}:cancel";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
+
+        /**
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * `Code.CANCELLED`.
+         *
+         * Create a request for the method "operations.cancel".
+         *
+         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation resource to be cancelled.
+         * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleLongrunningCancelOperationRequest}
+         * @since 1.13
+         */
+        protected Cancel(java.lang.String name, com.google.api.services.discoveryengine.v1.model.GoogleLongrunningCancelOperationRequest content) {
+          super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/operations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Cancel set$Xgafv(java.lang.String $Xgafv) {
+          return (Cancel) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Cancel setAccessToken(java.lang.String accessToken) {
+          return (Cancel) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Cancel setAlt(java.lang.String alt) {
+          return (Cancel) super.setAlt(alt);
+        }
+
+        @Override
+        public Cancel setCallback(java.lang.String callback) {
+          return (Cancel) super.setCallback(callback);
+        }
+
+        @Override
+        public Cancel setFields(java.lang.String fields) {
+          return (Cancel) super.setFields(fields);
+        }
+
+        @Override
+        public Cancel setKey(java.lang.String key) {
+          return (Cancel) super.setKey(key);
+        }
+
+        @Override
+        public Cancel setOauthToken(java.lang.String oauthToken) {
+          return (Cancel) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Cancel) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Cancel setQuotaUser(java.lang.String quotaUser) {
+          return (Cancel) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Cancel setUploadType(java.lang.String uploadType) {
+          return (Cancel) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Cancel) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation resource to be cancelled. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation resource to be cancelled.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation resource to be cancelled. */
+        public Cancel setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/operations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Cancel set(String parameterName, Object value) {
+          return (Cancel) super.set(parameterName, value);
+        }
+      }
       /**
        * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.

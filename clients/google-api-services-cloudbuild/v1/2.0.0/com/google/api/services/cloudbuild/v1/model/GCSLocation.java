@@ -17,8 +17,7 @@
 package com.google.api.services.cloudbuild.v1.model;
 
 /**
- * Location of the source manifest in Cloud Storage. This feature is in Preview; see description
- * [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
+ * Represents a storage location in Cloud Storage
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:
@@ -28,11 +27,10 @@ package com.google.api.services.cloudbuild.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class StorageSourceManifest extends com.google.api.client.json.GenericJson {
+public final class GCSLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Cloud Storage bucket containing the source manifest (see [Bucket Name
-   * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+   * Cloud Storage bucket. See https://cloud.google.com/storage/docs/naming#requirements
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,15 +45,14 @@ public final class StorageSourceManifest extends com.google.api.client.json.Gene
   private java.lang.Long generation;
 
   /**
-   * Required. Cloud Storage object containing the source manifest. This object must be a JSON file.
+   * Cloud Storage object. See https://cloud.google.com/storage/docs/naming#objectnames
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("object")
   private java.lang.String object__;
 
   /**
-   * Required. Cloud Storage bucket containing the source manifest (see [Bucket Name
-   * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+   * Cloud Storage bucket. See https://cloud.google.com/storage/docs/naming#requirements
    * @return value or {@code null} for none
    */
   public java.lang.String getBucket() {
@@ -63,11 +60,10 @@ public final class StorageSourceManifest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Cloud Storage bucket containing the source manifest (see [Bucket Name
-   * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+   * Cloud Storage bucket. See https://cloud.google.com/storage/docs/naming#requirements
    * @param bucket bucket or {@code null} for none
    */
-  public StorageSourceManifest setBucket(java.lang.String bucket) {
+  public GCSLocation setBucket(java.lang.String bucket) {
     this.bucket = bucket;
     return this;
   }
@@ -86,13 +82,13 @@ public final class StorageSourceManifest extends com.google.api.client.json.Gene
    * will be used.
    * @param generation generation or {@code null} for none
    */
-  public StorageSourceManifest setGeneration(java.lang.Long generation) {
+  public GCSLocation setGeneration(java.lang.Long generation) {
     this.generation = generation;
     return this;
   }
 
   /**
-   * Required. Cloud Storage object containing the source manifest. This object must be a JSON file.
+   * Cloud Storage object. See https://cloud.google.com/storage/docs/naming#objectnames
    * @return value or {@code null} for none
    */
   public java.lang.String getObject() {
@@ -100,22 +96,22 @@ public final class StorageSourceManifest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Cloud Storage object containing the source manifest. This object must be a JSON file.
+   * Cloud Storage object. See https://cloud.google.com/storage/docs/naming#objectnames
    * @param object__ object__ or {@code null} for none
    */
-  public StorageSourceManifest setObject(java.lang.String object__) {
+  public GCSLocation setObject(java.lang.String object__) {
     this.object__ = object__;
     return this;
   }
 
   @Override
-  public StorageSourceManifest set(String fieldName, Object value) {
-    return (StorageSourceManifest) super.set(fieldName, value);
+  public GCSLocation set(String fieldName, Object value) {
+    return (GCSLocation) super.set(fieldName, value);
   }
 
   @Override
-  public StorageSourceManifest clone() {
-    return (StorageSourceManifest) super.clone();
+  public GCSLocation clone() {
+    return (GCSLocation) super.clone();
   }
 
 }

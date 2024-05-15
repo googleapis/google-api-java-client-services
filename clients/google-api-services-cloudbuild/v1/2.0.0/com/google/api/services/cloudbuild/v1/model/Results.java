@@ -55,7 +55,7 @@ public final class Results extends com.google.api.client.json.GenericJson {
    * List of build step outputs, produced by builder images, in the order corresponding to build
    * step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can
    * produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 50KB of data is
-   * stored.
+   * stored. Note that the `$BUILDER_OUTPUT` variable is read-only and can't be substituted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +160,7 @@ public final class Results extends com.google.api.client.json.GenericJson {
    * List of build step outputs, produced by builder images, in the order corresponding to build
    * step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can
    * produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 50KB of data is
-   * stored.
+   * stored. Note that the `$BUILDER_OUTPUT` variable is read-only and can't be substituted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBuildStepOutputs() {
@@ -171,7 +171,7 @@ public final class Results extends com.google.api.client.json.GenericJson {
    * List of build step outputs, produced by builder images, in the order corresponding to build
    * step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can
    * produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 50KB of data is
-   * stored.
+   * stored. Note that the `$BUILDER_OUTPUT` variable is read-only and can't be substituted.
    * @param buildStepOutputs buildStepOutputs or {@code null} for none
    */
   public Results setBuildStepOutputs(java.util.List<java.lang.String> buildStepOutputs) {

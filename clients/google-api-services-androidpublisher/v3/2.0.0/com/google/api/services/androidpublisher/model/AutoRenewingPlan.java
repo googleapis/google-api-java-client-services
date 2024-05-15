@@ -39,6 +39,13 @@ public final class AutoRenewingPlan extends com.google.api.client.json.GenericJs
   private java.lang.Boolean autoRenewEnabled;
 
   /**
+   * The installment plan commitment and state related info for the auto renewing plan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstallmentPlan installmentDetails;
+
+  /**
    * The information of the last price change for the item since subscription signup.
    * The value may be {@code null}.
    */
@@ -61,6 +68,23 @@ public final class AutoRenewingPlan extends com.google.api.client.json.GenericJs
    */
   public AutoRenewingPlan setAutoRenewEnabled(java.lang.Boolean autoRenewEnabled) {
     this.autoRenewEnabled = autoRenewEnabled;
+    return this;
+  }
+
+  /**
+   * The installment plan commitment and state related info for the auto renewing plan.
+   * @return value or {@code null} for none
+   */
+  public InstallmentPlan getInstallmentDetails() {
+    return installmentDetails;
+  }
+
+  /**
+   * The installment plan commitment and state related info for the auto renewing plan.
+   * @param installmentDetails installmentDetails or {@code null} for none
+   */
+  public AutoRenewingPlan setInstallmentDetails(InstallmentPlan installmentDetails) {
+    this.installmentDetails = installmentDetails;
     return this;
   }
 

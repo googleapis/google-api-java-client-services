@@ -47,6 +47,13 @@ public final class BasePlan extends com.google.api.client.json.GenericJson {
   private java.lang.String basePlanId;
 
   /**
+   * Set for installments base plans where a user is committed to a specified number of payments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstallmentsBasePlanType installmentsBasePlanType;
+
+  /**
    * List of up to 20 custom tags specified for this base plan, and returned to the app through the
    * billing library. Subscription offers for this base plan will also receive these offer tags in
    * the billing library.
@@ -122,6 +129,23 @@ public final class BasePlan extends com.google.api.client.json.GenericJson {
    */
   public BasePlan setBasePlanId(java.lang.String basePlanId) {
     this.basePlanId = basePlanId;
+    return this;
+  }
+
+  /**
+   * Set for installments base plans where a user is committed to a specified number of payments.
+   * @return value or {@code null} for none
+   */
+  public InstallmentsBasePlanType getInstallmentsBasePlanType() {
+    return installmentsBasePlanType;
+  }
+
+  /**
+   * Set for installments base plans where a user is committed to a specified number of payments.
+   * @param installmentsBasePlanType installmentsBasePlanType or {@code null} for none
+   */
+  public BasePlan setInstallmentsBasePlanType(InstallmentsBasePlanType installmentsBasePlanType) {
+    this.installmentsBasePlanType = installmentsBasePlanType;
     return this;
   }
 

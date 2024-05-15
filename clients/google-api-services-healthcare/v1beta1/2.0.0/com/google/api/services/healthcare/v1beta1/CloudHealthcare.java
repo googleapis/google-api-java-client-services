@@ -19797,6 +19797,164 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Export resources including historical versions from the FHIR store to the specified destination.
+           * The exported resource, along with previous versions, will be exported in one or more FHIR history
+           * bundles. This method returns an Operation that can be used to track the status of the export by
+           * calling GetOperation. Immediate fatal errors appear in the error field, errors are also logged to
+           * Cloud Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs
+           * /how-tos/logging)). Otherwise, when the operation finishes, a detailed response of type
+           * ExportResourcesResponse is returned in the response field. The metadata field type for this
+           * operation is OperationMetadata.
+           *
+           * Create a request for the method "fhirStores.exportHistory".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link ExportHistory#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the FHIR store to export resource from, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportResourcesHistoryRequest}
+           * @return the request
+           */
+          public ExportHistory exportHistory(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ExportResourcesHistoryRequest content) throws java.io.IOException {
+            ExportHistory result = new ExportHistory(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ExportHistory extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:exportHistory";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Export resources including historical versions from the FHIR store to the specified
+             * destination. The exported resource, along with previous versions, will be exported in one or
+             * more FHIR history bundles. This method returns an Operation that can be used to track the
+             * status of the export by calling GetOperation. Immediate fatal errors appear in the error field,
+             * errors are also logged to Cloud Logging (see [Viewing error logs in Cloud
+             * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). Otherwise, when the
+             * operation finishes, a detailed response of type ExportResourcesResponse is returned in the
+             * response field. The metadata field type for this operation is OperationMetadata.
+             *
+             * Create a request for the method "fhirStores.exportHistory".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link ExportHistory#execute()} method to invoke the remote
+             * operation. <p> {@link ExportHistory#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The name of the FHIR store to export resource from, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportResourcesHistoryRequest}
+             * @since 1.13
+             */
+            protected ExportHistory(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ExportResourcesHistoryRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public ExportHistory set$Xgafv(java.lang.String $Xgafv) {
+              return (ExportHistory) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ExportHistory setAccessToken(java.lang.String accessToken) {
+              return (ExportHistory) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ExportHistory setAlt(java.lang.String alt) {
+              return (ExportHistory) super.setAlt(alt);
+            }
+
+            @Override
+            public ExportHistory setCallback(java.lang.String callback) {
+              return (ExportHistory) super.setCallback(callback);
+            }
+
+            @Override
+            public ExportHistory setFields(java.lang.String fields) {
+              return (ExportHistory) super.setFields(fields);
+            }
+
+            @Override
+            public ExportHistory setKey(java.lang.String key) {
+              return (ExportHistory) super.setKey(key);
+            }
+
+            @Override
+            public ExportHistory setOauthToken(java.lang.String oauthToken) {
+              return (ExportHistory) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ExportHistory setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ExportHistory) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ExportHistory setQuotaUser(java.lang.String quotaUser) {
+              return (ExportHistory) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ExportHistory setUploadType(java.lang.String uploadType) {
+              return (ExportHistory) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ExportHistory setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ExportHistory) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the FHIR store to export resource from, in the format `projects
+             * /{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id
+             * }`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the FHIR store to export resource from, in the format
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the FHIR store to export resource from, in the format `projects
+             * /{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id
+             * }`.
+             */
+            public ExportHistory setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ExportHistory set(String parameterName, Object value) {
+              return (ExportHistory) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the configuration of the specified FHIR store.
            *
            * Create a request for the method "fhirStores.get".
@@ -20498,6 +20656,164 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             @Override
             public CloudHealthcareImport set(String parameterName, Object value) {
               return (CloudHealthcareImport) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Import resource historical versions from Cloud Storage source to destination fhir store. The
+           * exported resource, along with previous versions, will be exported in one or more FHIR history
+           * bundles. This method returns an Operation that can be used to track the status of the export by
+           * calling GetOperation. Immediate fatal errors appear in the error field, errors are also logged to
+           * Cloud Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs
+           * /how-tos/logging)). Otherwise, when the operation finishes, a detailed response of type
+           * ImportResourcesResponse is returned in the response field. The metadata field type for this
+           * operation is OperationMetadata.
+           *
+           * Create a request for the method "fhirStores.importHistory".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link ImportHistory#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the FHIR store to import FHIR resources to, in the format of
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportResourcesHistoryRequest}
+           * @return the request
+           */
+          public ImportHistory importHistory(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ImportResourcesHistoryRequest content) throws java.io.IOException {
+            ImportHistory result = new ImportHistory(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ImportHistory extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:importHistory";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Import resource historical versions from Cloud Storage source to destination fhir store. The
+             * exported resource, along with previous versions, will be exported in one or more FHIR history
+             * bundles. This method returns an Operation that can be used to track the status of the export by
+             * calling GetOperation. Immediate fatal errors appear in the error field, errors are also logged
+             * to Cloud Logging (see [Viewing error logs in Cloud
+             * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). Otherwise, when the
+             * operation finishes, a detailed response of type ImportResourcesResponse is returned in the
+             * response field. The metadata field type for this operation is OperationMetadata.
+             *
+             * Create a request for the method "fhirStores.importHistory".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link ImportHistory#execute()} method to invoke the remote
+             * operation. <p> {@link ImportHistory#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The name of the FHIR store to import FHIR resources to, in the format of
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportResourcesHistoryRequest}
+             * @since 1.13
+             */
+            protected ImportHistory(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ImportResourcesHistoryRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public ImportHistory set$Xgafv(java.lang.String $Xgafv) {
+              return (ImportHistory) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ImportHistory setAccessToken(java.lang.String accessToken) {
+              return (ImportHistory) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ImportHistory setAlt(java.lang.String alt) {
+              return (ImportHistory) super.setAlt(alt);
+            }
+
+            @Override
+            public ImportHistory setCallback(java.lang.String callback) {
+              return (ImportHistory) super.setCallback(callback);
+            }
+
+            @Override
+            public ImportHistory setFields(java.lang.String fields) {
+              return (ImportHistory) super.setFields(fields);
+            }
+
+            @Override
+            public ImportHistory setKey(java.lang.String key) {
+              return (ImportHistory) super.setKey(key);
+            }
+
+            @Override
+            public ImportHistory setOauthToken(java.lang.String oauthToken) {
+              return (ImportHistory) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ImportHistory setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ImportHistory) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ImportHistory setQuotaUser(java.lang.String quotaUser) {
+              return (ImportHistory) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ImportHistory setUploadType(java.lang.String uploadType) {
+              return (ImportHistory) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ImportHistory setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ImportHistory) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the FHIR store to import FHIR resources to, in the format of `p
+             * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_s
+             * tore_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the FHIR store to import FHIR resources to, in the format of
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the FHIR store to import FHIR resources to, in the format of `p
+             * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_s
+             * tore_id}`.
+             */
+            public ImportHistory setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ImportHistory set(String parameterName, Object value) {
+              return (ImportHistory) super.set(parameterName, value);
             }
           }
           /**

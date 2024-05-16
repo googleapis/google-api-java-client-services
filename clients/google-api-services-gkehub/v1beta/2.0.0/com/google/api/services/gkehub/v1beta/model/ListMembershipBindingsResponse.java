@@ -45,6 +45,13 @@ public final class ListMembershipBindingsResponse extends com.google.api.client.
   private java.lang.String nextPageToken;
 
   /**
+   * List of locations that could not be reached while fetching this list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The list of membership_bindings
    * @return value or {@code null} for none
    */
@@ -77,6 +84,23 @@ public final class ListMembershipBindingsResponse extends com.google.api.client.
    */
   public ListMembershipBindingsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * List of locations that could not be reached while fetching this list.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * List of locations that could not be reached while fetching this list.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListMembershipBindingsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

@@ -77,6 +77,14 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.String productId;
 
   /**
+   * Optional. Countries where the purchase of this subscription is restricted to payment methods
+   * registered in the same country. If empty, no payment location restrictions are imposed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RestrictedPaymentCountries restrictedPaymentCountries;
+
+  /**
    * Details about taxes and legal compliance.
    * The value may be {@code null}.
    */
@@ -175,6 +183,25 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setProductId(java.lang.String productId) {
     this.productId = productId;
+    return this;
+  }
+
+  /**
+   * Optional. Countries where the purchase of this subscription is restricted to payment methods
+   * registered in the same country. If empty, no payment location restrictions are imposed.
+   * @return value or {@code null} for none
+   */
+  public RestrictedPaymentCountries getRestrictedPaymentCountries() {
+    return restrictedPaymentCountries;
+  }
+
+  /**
+   * Optional. Countries where the purchase of this subscription is restricted to payment methods
+   * registered in the same country. If empty, no payment location restrictions are imposed.
+   * @param restrictedPaymentCountries restrictedPaymentCountries or {@code null} for none
+   */
+  public Subscription setRestrictedPaymentCountries(RestrictedPaymentCountries restrictedPaymentCountries) {
+    this.restrictedPaymentCountries = restrictedPaymentCountries;
     return this;
   }
 

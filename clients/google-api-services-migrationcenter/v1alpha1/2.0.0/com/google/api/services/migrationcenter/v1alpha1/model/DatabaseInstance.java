@@ -30,13 +30,6 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class DatabaseInstance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The instance's hosts.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<DatabaseInstanceHost> hosts;
-
-  /**
    * The instance's name.
    * The value may be {@code null}.
    */
@@ -49,23 +42,6 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String role;
-
-  /**
-   * Optional. The instance's hosts.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<DatabaseInstanceHost> getHosts() {
-    return hosts;
-  }
-
-  /**
-   * Optional. The instance's hosts.
-   * @param hosts hosts or {@code null} for none
-   */
-  public DatabaseInstance setHosts(java.util.List<DatabaseInstanceHost> hosts) {
-    this.hosts = hosts;
-    return this;
-  }
 
   /**
    * The instance's name.

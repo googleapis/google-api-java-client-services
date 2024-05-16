@@ -30,7 +30,7 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class AutomationRolloutMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The IDs of the AutomationRuns initiated by an advance rollout rule.
+   * Output only. The names of the AutomationRuns initiated by an advance rollout rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,21 +44,21 @@ public final class AutomationRolloutMetadata extends com.google.api.client.json.
   private java.lang.String currentRepairAutomationRun;
 
   /**
-   * Output only. The ID of the AutomationRun initiated by a promote release rule.
+   * Output only. The name of the AutomationRun initiated by a promote release rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String promoteAutomationRun;
 
   /**
-   * Output only. The IDs of the AutomationRuns initiated by a repair rollout rule.
+   * Output only. The names of the AutomationRuns initiated by a repair rollout rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> repairAutomationRuns;
 
   /**
-   * Output only. The IDs of the AutomationRuns initiated by an advance rollout rule.
+   * Output only. The names of the AutomationRuns initiated by an advance rollout rule.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdvanceAutomationRuns() {
@@ -66,7 +66,7 @@ public final class AutomationRolloutMetadata extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The IDs of the AutomationRuns initiated by an advance rollout rule.
+   * Output only. The names of the AutomationRuns initiated by an advance rollout rule.
    * @param advanceAutomationRuns advanceAutomationRuns or {@code null} for none
    */
   public AutomationRolloutMetadata setAdvanceAutomationRuns(java.util.List<java.lang.String> advanceAutomationRuns) {
@@ -92,7 +92,7 @@ public final class AutomationRolloutMetadata extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The ID of the AutomationRun initiated by a promote release rule.
+   * Output only. The name of the AutomationRun initiated by a promote release rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getPromoteAutomationRun() {
@@ -100,7 +100,7 @@ public final class AutomationRolloutMetadata extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The ID of the AutomationRun initiated by a promote release rule.
+   * Output only. The name of the AutomationRun initiated by a promote release rule.
    * @param promoteAutomationRun promoteAutomationRun or {@code null} for none
    */
   public AutomationRolloutMetadata setPromoteAutomationRun(java.lang.String promoteAutomationRun) {
@@ -109,7 +109,7 @@ public final class AutomationRolloutMetadata extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The IDs of the AutomationRuns initiated by a repair rollout rule.
+   * Output only. The names of the AutomationRuns initiated by a repair rollout rule.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRepairAutomationRuns() {
@@ -117,7 +117,7 @@ public final class AutomationRolloutMetadata extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The IDs of the AutomationRuns initiated by a repair rollout rule.
+   * Output only. The names of the AutomationRuns initiated by a repair rollout rule.
    * @param repairAutomationRuns repairAutomationRuns or {@code null} for none
    */
   public AutomationRolloutMetadata setRepairAutomationRuns(java.util.List<java.lang.String> repairAutomationRuns) {

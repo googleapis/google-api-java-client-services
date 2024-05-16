@@ -45,6 +45,13 @@ public final class ListMembershipRBACRoleBindingsResponse extends com.google.api
   private java.util.List<RBACRoleBinding> rbacrolebindings;
 
   /**
+   * List of locations that could not be reached while fetching this list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * A token to request the next page of resources from the `ListMembershipRBACRoleBindings` method.
    * The value of an empty string means that there are no more resources to return.
    * @return value or {@code null} for none
@@ -77,6 +84,23 @@ public final class ListMembershipRBACRoleBindingsResponse extends com.google.api
    */
   public ListMembershipRBACRoleBindingsResponse setRbacrolebindings(java.util.List<RBACRoleBinding> rbacrolebindings) {
     this.rbacrolebindings = rbacrolebindings;
+    return this;
+  }
+
+  /**
+   * List of locations that could not be reached while fetching this list.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * List of locations that could not be reached while fetching this list.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListMembershipRBACRoleBindingsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

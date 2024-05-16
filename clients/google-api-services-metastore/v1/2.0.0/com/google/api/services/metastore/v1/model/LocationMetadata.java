@@ -31,6 +31,19 @@ package com.google.api.services.metastore.v1.model;
 public final class LocationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Possible configurations supported if the current region is a custom region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CustomRegionMetadata> customRegionMetadata;
+
+  static {
+    // hack to force ProGuard to consider CustomRegionMetadata used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CustomRegionMetadata.class);
+  }
+
+  /**
    * The multi-region metadata if the current region is a multi-region.
    * The value may be {@code null}.
    */
@@ -50,6 +63,23 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
     // hack to force ProGuard to consider HiveMetastoreVersion used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(HiveMetastoreVersion.class);
+  }
+
+  /**
+   * Possible configurations supported if the current region is a custom region.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CustomRegionMetadata> getCustomRegionMetadata() {
+    return customRegionMetadata;
+  }
+
+  /**
+   * Possible configurations supported if the current region is a custom region.
+   * @param customRegionMetadata customRegionMetadata or {@code null} for none
+   */
+  public LocationMetadata setCustomRegionMetadata(java.util.List<CustomRegionMetadata> customRegionMetadata) {
+    this.customRegionMetadata = customRegionMetadata;
+    return this;
   }
 
   /**

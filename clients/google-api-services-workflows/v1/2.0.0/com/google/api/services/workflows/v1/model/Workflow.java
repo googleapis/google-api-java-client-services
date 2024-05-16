@@ -30,6 +30,22 @@ package com.google.api.services.workflows.v1.model;
 public final class Workflow extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A list of all KMS crypto keys used to encrypt or decrpt the data associated with
+   * the workflow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allKmsKeys;
+
+  /**
+   * Output only. A list of all KMS crypto keys versions used to encrypt or decrpt the data
+   * associated with the workflow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allKmsKeysVersions;
+
+  /**
    * Optional. Describes the level of platform logging to apply to calls and call responses during
    * executions of this workflow. If both the workflow and the execution specify a logging level,
    * the execution level takes precedence.
@@ -56,6 +72,15 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String cryptoKeyName;
+
+  /**
+   * Output only. The resource name of a KMS crypto key version used to encrypt or decrypt the data
+   * associated with the workflow. Format: projects/{project}/locations/{location}/keyRings/{keyRing
+   * }/cryptoKeys/{cryptoKey}/cryptoKeyVersions/{cryptoKeyVersion}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cryptoKeyVersion;
 
   /**
    * Description of the workflow provided by the user. Must be at most 1000 Unicode characters long.
@@ -154,6 +179,44 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> userEnvVars;
 
   /**
+   * Output only. A list of all KMS crypto keys used to encrypt or decrpt the data associated with
+   * the workflow.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllKmsKeys() {
+    return allKmsKeys;
+  }
+
+  /**
+   * Output only. A list of all KMS crypto keys used to encrypt or decrpt the data associated with
+   * the workflow.
+   * @param allKmsKeys allKmsKeys or {@code null} for none
+   */
+  public Workflow setAllKmsKeys(java.util.List<java.lang.String> allKmsKeys) {
+    this.allKmsKeys = allKmsKeys;
+    return this;
+  }
+
+  /**
+   * Output only. A list of all KMS crypto keys versions used to encrypt or decrpt the data
+   * associated with the workflow.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllKmsKeysVersions() {
+    return allKmsKeysVersions;
+  }
+
+  /**
+   * Output only. A list of all KMS crypto keys versions used to encrypt or decrpt the data
+   * associated with the workflow.
+   * @param allKmsKeysVersions allKmsKeysVersions or {@code null} for none
+   */
+  public Workflow setAllKmsKeysVersions(java.util.List<java.lang.String> allKmsKeysVersions) {
+    this.allKmsKeysVersions = allKmsKeysVersions;
+    return this;
+  }
+
+  /**
    * Optional. Describes the level of platform logging to apply to calls and call responses during
    * executions of this workflow. If both the workflow and the execution specify a logging level,
    * the execution level takes precedence.
@@ -215,6 +278,27 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
    */
   public Workflow setCryptoKeyName(java.lang.String cryptoKeyName) {
     this.cryptoKeyName = cryptoKeyName;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of a KMS crypto key version used to encrypt or decrypt the data
+   * associated with the workflow. Format: projects/{project}/locations/{location}/keyRings/{keyRing
+   * }/cryptoKeys/{cryptoKey}/cryptoKeyVersions/{cryptoKeyVersion}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCryptoKeyVersion() {
+    return cryptoKeyVersion;
+  }
+
+  /**
+   * Output only. The resource name of a KMS crypto key version used to encrypt or decrypt the data
+   * associated with the workflow. Format: projects/{project}/locations/{location}/keyRings/{keyRing
+   * }/cryptoKeys/{cryptoKey}/cryptoKeyVersions/{cryptoKeyVersion}
+   * @param cryptoKeyVersion cryptoKeyVersion or {@code null} for none
+   */
+  public Workflow setCryptoKeyVersion(java.lang.String cryptoKeyVersion) {
+    this.cryptoKeyVersion = cryptoKeyVersion;
     return this;
   }
 

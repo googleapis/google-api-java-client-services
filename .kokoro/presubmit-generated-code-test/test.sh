@@ -84,7 +84,7 @@ function update_pom_version() {
   version=$2
   xmllint --shell "${pom_file}" &>/dev/null <<EOF
 setns x=http://maven.apache.org/POM/4.0.0
-cd .//x:project/version
+cd .//x:project/x:version
 set "${version}"
 save "${pom_file}"
 EOF
@@ -109,8 +109,11 @@ cd "${KOKORO_GITHUB_DIR}/google-api-java-client-services/clients/google-api-serv
 RESOURCEMANAGER_LIBRARY_VERSION=$(parse_pom_version pom.xml)
 RESOURCEMANAGER_LIBRARY_SNAPSHOT_VERSION="${RESOURCEMANAGER_LIBRARY_VERSION}-SNAPSHOT"
 update_pom_version pom.xml "${RESOURCEMANAGER_LIBRARY_VERSION}-SNAPSHOT"
+echo "Code diff by setting the SNAPSHOT version:"
+git diff .
+echo "-----"
 echo "Installing google-api-services-cloudresourcemanager version ${RESOURCEMANAGER_LIBRARY_VERSION}"
-mvn  -B -ntp install -Dclirr.skip=true -Dmaven.javadoc.skip=true
+mvn -V -B -ntp install -Dclirr.skip=true -Dmaven.javadoc.skip=true
 
 echo
 echo

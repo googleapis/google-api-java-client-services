@@ -68,14 +68,6 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
   private java.lang.String responseMimeType;
 
   /**
-   * Optional. Control Three levels of creativity in the model output. Default:
-   * RESPONSE_STYLE_BALANCED
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String responseStyle;
-
-  /**
    * Optional. Stop sequences.
    * The value may be {@code null}.
    */
@@ -191,25 +183,6 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
    */
   public GenerationConfig setResponseMimeType(java.lang.String responseMimeType) {
     this.responseMimeType = responseMimeType;
-    return this;
-  }
-
-  /**
-   * Optional. Control Three levels of creativity in the model output. Default:
-   * RESPONSE_STYLE_BALANCED
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getResponseStyle() {
-    return responseStyle;
-  }
-
-  /**
-   * Optional. Control Three levels of creativity in the model output. Default:
-   * RESPONSE_STYLE_BALANCED
-   * @param responseStyle responseStyle or {@code null} for none
-   */
-  public GenerationConfig setResponseStyle(java.lang.String responseStyle) {
-    this.responseStyle = responseStyle;
     return this;
   }
 

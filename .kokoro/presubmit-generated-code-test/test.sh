@@ -28,6 +28,11 @@ echo --------
 
 KOKORO_GITHUB_DIR=$(realpath github)
 
+###
+#
+# Step 1: Return success if there's no test or generator changes
+#
+###
 cd github/google-api-java-client-services
 # Add project as safe to run `git diff`
 git config --global --add safe.directory "$(realpath .)"
@@ -39,6 +44,11 @@ if [ -z "${diff_result}" ]; then
   exit 0
 fi
 
+###
+#
+# Step 2: Prepare tools for Apiary Java code generator
+#
+###
 cd "${KOKORO_GITHUB_DIR}"
 
 # google-api-java-client-services and discovery-artifact-manager should
@@ -52,6 +62,41 @@ echo "using $(python2 --version)"
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
 python2 get-pip.py
 
+###
+#
+# Step 3: Run the generator for cloudresourcemanager
+#
+###
 bash ./google-api-java-client-services/.github/workflows/generate.sh cloudresourcemanager
 
 
+###
+#
+# Step 4: Compile the generated code and install the module to local Maven repository
+#
+###
+# For xmllint command
+apt-get -y install libxml2-utils
+
+function parse_pom_version {
+  pom_file=$1
+  # Namespace (xmlns) prevents xmllint from specifying tag names in XPath
+  result=$(sed -e 's/xmlns=".*"//' "${pom_file}" | xmllint --xpath '/project/version/text()' -)
+
+  if [ -z "${result}" ]; then
+    echo "Version is not found in $1"
+    exit 1
+  fi
+  echo "$result"
+}
+
+LATEST_RESOURCEMANAGER_API_VERSION=v3
+LATEST_VARIANT=2.0.0
+
+cd "./google-api-java-client-services/clients/google-api-services-cloudresourcemanager/${LATEST_RESOURCEMANAGER_API_VERSION}/${LATEST_VARIANT}"
+RESOURCEMANAGER_LIBRARY_VERSION=$(parse_pom_version pom.xml)
+echo "Installing google-api-services-cloudresourcemanager version ${RESOURCEMANAGER_LIBRARY_VERSION}"
+mvn  -B -ntp install -Dclirr.skip=true -Dmaven.javadoc.skip=true
+
+# Current working directory
+echo "Build finished"

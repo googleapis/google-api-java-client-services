@@ -15,14 +15,6 @@
 
 # Fail on any non-zero status code
 set -eo pipefail
-set -x
-
-echo "Current working directory"
-pwd
-echo "Content of current working directory"
-echo --------
-ls
-echo --------
 
 # Kokoro checks out the google-api-java-client-services repository
 # under this "github" directory.
@@ -123,5 +115,4 @@ echo
 cd "${KOKORO_GITHUB_DIR}/google-api-java-client-services/generator/tests/java-integration-test"
 mvn -V -B -ntp test -Dcloudresourcemanager.version="${RESOURCEMANAGER_LIBRARY_SNAPSHOT_VERSION}"
 
-# Current working directory
 echo "Build finished"

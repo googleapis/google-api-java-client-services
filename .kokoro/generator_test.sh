@@ -12,12 +12,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+set -x
 EXIT_STATUS=0
 
 pushd $(dirname "$0")/..
 
 # Install the generator directory without dependencies first and then install the dependencies with hash checking.
+python3 -m pip install --upgrade pip
 python3 -m pip install --no-deps -e generator/ --user
 python3 -m pip install --require-hashes -r generator/generator_requirements.txt --user
 

@@ -55,6 +55,14 @@ public final class ProductCertification extends com.google.api.client.json.Gener
   private java.lang.String certificationName;
 
   /**
+   * The certification value (also known as class, level or grade), for example "A+", "C", "gold".
+   * Maximum length is 2000 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String certificationValue;
+
+  /**
    * The certification authority, for example "European_Commission". Maximum length is 2000
    * characters.
    * @return value or {@code null} for none
@@ -104,6 +112,25 @@ public final class ProductCertification extends com.google.api.client.json.Gener
    */
   public ProductCertification setCertificationName(java.lang.String certificationName) {
     this.certificationName = certificationName;
+    return this;
+  }
+
+  /**
+   * The certification value (also known as class, level or grade), for example "A+", "C", "gold".
+   * Maximum length is 2000 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCertificationValue() {
+    return certificationValue;
+  }
+
+  /**
+   * The certification value (also known as class, level or grade), for example "A+", "C", "gold".
+   * Maximum length is 2000 characters.
+   * @param certificationValue certificationValue or {@code null} for none
+   */
+  public ProductCertification setCertificationValue(java.lang.String certificationValue) {
+    this.certificationValue = certificationValue;
     return this;
   }
 

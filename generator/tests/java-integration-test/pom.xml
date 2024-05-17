@@ -20,7 +20,8 @@
         <maven.compiler.target>8</maven.compiler.target>
         <!-- When running the Maven command, this version is updated via
           the system properties to point to the locally-installed library
-          version. For example, -Dcloudresourcemanager.version=v3-rev20240310-2.0.0-SNAPSHOT -->
+          version. For example, -Dcloudresourcemanager.version=v3-rev20240310-2.0.0-SNAPSHOT.
+          Therefore, there's no need for RenovateBot/DependaBot to touch this. -->
         <cloudresourcemanager.version>1.0-placeholder</cloudresourcemanager.version>
     </properties>
 

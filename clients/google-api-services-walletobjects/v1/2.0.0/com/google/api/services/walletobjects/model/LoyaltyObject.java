@@ -45,7 +45,8 @@ public final class LoyaltyObject extends com.google.api.client.json.GenericJson 
   private java.lang.String accountName;
 
   /**
-   * Optional information about the partner app link.
+   * Optional app or website link that will be displayed as a button on the front of the pass. If
+   * AppLinkData is provided for the corresponding class only object AppLinkData will be displayed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -299,7 +300,8 @@ public final class LoyaltyObject extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional information about the partner app link.
+   * Optional app or website link that will be displayed as a button on the front of the pass. If
+   * AppLinkData is provided for the corresponding class only object AppLinkData will be displayed.
    * @return value or {@code null} for none
    */
   public AppLinkData getAppLinkData() {
@@ -307,7 +309,8 @@ public final class LoyaltyObject extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional information about the partner app link.
+   * Optional app or website link that will be displayed as a button on the front of the pass. If
+   * AppLinkData is provided for the corresponding class only object AppLinkData will be displayed.
    * @param appLinkData appLinkData or {@code null} for none
    */
   public LoyaltyObject setAppLinkData(AppLinkData appLinkData) {

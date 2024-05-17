@@ -51,7 +51,7 @@ git clone --depth 1 https://github.com/googleapis/discovery-artifact-manager
 
 # Preparation commands from .github/workflows/generate.yaml
 apt update
-apt install python3.11 -y
+apt install python3 -y
 echo "using $(python3 --version)"
 curl https://bootstrap.pypa.io/pip/3.6/get-pip.py -o get-pip.py
 python3 get-pip.py

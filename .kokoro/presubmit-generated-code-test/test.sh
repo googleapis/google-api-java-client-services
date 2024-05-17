@@ -47,7 +47,7 @@ git clone --depth 1 https://github.com/googleapis/discovery-artifact-manager
 
 # Preparation commands from .github/workflows/generate.yaml
 apt update
-apt install python2
+apt install python2 -y
 echo "using $(python2 --version)"
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
 python2 get-pip.py

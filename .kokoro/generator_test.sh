@@ -17,6 +17,11 @@ EXIT_STATUS=0
 
 pushd $(dirname "$0")/..
 
+# Without "apt update", the container image would give Python 3.5,
+# which was outdated to support the latest absl-py.
+apt update
+apt install python3 -y
+
 # Install the generator directory without dependencies first and then install the dependencies with hash checking.
 echo "using $(python3 --version)"
 curl https://bootstrap.pypa.io/pip/3.6/get-pip.py -o get-pip.py

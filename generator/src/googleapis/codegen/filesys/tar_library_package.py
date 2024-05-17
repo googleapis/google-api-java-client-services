@@ -22,7 +22,7 @@ components generated and required by a library.
 __author__ = 'sammccall@google.com (Sam McCall)'
 
 from io import BytesIO
-import StringIO
+from io import StringIO
 import tarfile
 import time
 
@@ -66,9 +66,9 @@ class TarLibraryPackage(LibraryPackage):
     if self._current_file_data:
       info = tarfile.TarInfo(self._current_file_name)
       info.mtime = time.time()
-      info.mode = 0644
+      info.mode = 0o644
       data = self._current_file_data.getvalue()
-      if isinstance(data, unicode):
+      if isinstance(data, str):
         data = data.encode('utf-8')
       info.size = len(data)
       self._tar.addfile(info, BytesIO(data))

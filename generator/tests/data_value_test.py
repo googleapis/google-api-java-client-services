@@ -135,7 +135,7 @@ class DataValueRenderingTest(basetest.TestCase):
     template = django_template.Template(source)
 
     context = self._GetContext({'data': dv})
-    self.assertEquals('"four"', template.render(context))
+    self.assertEqual('"four"', template.render(context))
 
     context = self._GetContext({'data': 'foo'})
     self.assertRaises(

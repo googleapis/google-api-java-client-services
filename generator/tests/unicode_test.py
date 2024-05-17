@@ -47,7 +47,7 @@ class UnicodeTest(basetest.TestCase):
   def testGiveMeAName(self):
     an_api = self.ApiFromDiscoveryDoc(self._TEST_DISCOVERY_DOC)
 
-    accented = u'\xdaRL'  # "URL" with an accent
+    accented = '\xdaRL'  # "URL" with an accent
 
     # An object which holds a count. This is just to have an object to
     # increment as a side-effect of a lambda.
@@ -68,7 +68,7 @@ class UnicodeTest(basetest.TestCase):
 
     url_counter = Counter()
     an_api.VisitAll(lambda x: CheckDescription(url_counter, x, accented))
-    self.assertEquals(rl_counter.value, url_counter.value)
+    self.assertEqual(rl_counter.value, url_counter.value)
 
     def CheckEnumDescription(counter, x, match):
       enum_type = x.values.get('enumType')
@@ -78,7 +78,7 @@ class UnicodeTest(basetest.TestCase):
 
     enum_counter = Counter()
     an_api.VisitAll(lambda x: CheckEnumDescription(enum_counter, x, accented))
-    self.assertEquals(2, enum_counter.value)
+    self.assertEqual(2, enum_counter.value)
 
 
 if __name__ == '__main__':

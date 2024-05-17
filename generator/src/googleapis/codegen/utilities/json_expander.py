@@ -55,8 +55,8 @@ def ExpandJsonTemplate(json_data, extra_context=None, use_self=True):
     if isinstance(obj, list):
       return [RecursiveExpand(x) for x in obj]
     elif isinstance(obj, dict):
-      return dict((k, RecursiveExpand(v)) for k, v in obj.iteritems())
-    elif isinstance(obj, (str, unicode)):
+      return dict((k, RecursiveExpand(v)) for k, v in obj.items())
+    elif isinstance(obj, str):
       return Template(obj).safe_substitute(context)
     else:
       return obj

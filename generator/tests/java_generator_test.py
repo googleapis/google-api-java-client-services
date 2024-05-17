@@ -41,23 +41,23 @@ class JavaApiTest(basetest.TestCase):
                 }
             }
         })
-    self.assertEquals('Foo', api.ToClassName('foo', api))
-    self.assertEquals('DummyClass', api.ToClassName('class', None))
-    self.assertEquals('DummyDefault', api.ToClassName('default', None))
-    self.assertEquals('DummyImport', api.ToClassName('import', None))
-    self.assertEquals('DummyObject', api.ToClassName('object', None))
-    self.assertEquals('DummyString', api.ToClassName('string', None))
-    self.assertEquals('DummyTrue', api.ToClassName('true', None))
-    self.assertEquals('dummy', api.values['name'])
-    self.assertEquals('Dummy', api._class_name)
+    self.assertEqual('Foo', api.ToClassName('foo', api))
+    self.assertEqual('DummyClass', api.ToClassName('class', None))
+    self.assertEqual('DummyDefault', api.ToClassName('default', None))
+    self.assertEqual('DummyImport', api.ToClassName('import', None))
+    self.assertEqual('DummyObject', api.ToClassName('object', None))
+    self.assertEqual('DummyString', api.ToClassName('string', None))
+    self.assertEqual('DummyTrue', api.ToClassName('true', None))
+    self.assertEqual('dummy', api.values['name'])
+    self.assertEqual('Dummy', api._class_name)
 
     # Test the renaming of the object when it matches the API name.
-    self.assertEquals('Dummy', api.ToClassName('dummy', api))
+    self.assertEqual('Dummy', api.ToClassName('dummy', api))
     foo = api._resources[0]
-    self.assertEquals('DummyOperations',
+    self.assertEqual('DummyOperations',
                       api.ToClassName('dummy', foo, element_type='resource'))
     bar = foo._methods[0]
-    self.assertEquals('DummyOperation',
+    self.assertEqual('DummyOperation',
                       api.ToClassName('dummy', bar, element_type='method'))
 
   def testToClassNameWithCanonical(self):
@@ -67,9 +67,9 @@ class JavaApiTest(basetest.TestCase):
         'version': 'v1',
         'resources': {}
         })
-    self.assertEquals('dummy', api.values['name'])
-    self.assertEquals('DummyService', api._class_name)
-    self.assertEquals('DummyServiceClass', api.ToClassName('class', None))
+    self.assertEqual('dummy', api.values['name'])
+    self.assertEqual('DummyService', api._class_name)
+    self.assertEqual('DummyServiceClass', api.ToClassName('class', None))
 
   def testGetCodeTypeFromDictionary(self):
     """Test mapping of JSON schema types to Java class names."""
@@ -90,7 +90,7 @@ class JavaApiTest(basetest.TestCase):
         ['java.math.BigInteger', {'type': 'string', 'format': 'uint64'}],
     ]
     for test_case in test_cases:
-      self.assertEquals(
+      self.assertEqual(
           test_case[0],
           language_model.GetCodeTypeFromDictionary(test_case[1]))
 
@@ -113,7 +113,7 @@ class JavaApiTest(basetest.TestCase):
     ]
 
     for test_case in test_cases:
-      self.assertEquals(
+      self.assertEqual(
           test_case[0],
           language_model.GetPrimitiveTypeFromDictionary(test_case[1]))
 
@@ -159,7 +159,7 @@ class JavaGeneratorTest(basetest.TestCase):
     gen.AnnotateApiForLanguage(gen.api)
     found_big_integer = False
     found_date_time = False
-    for schema in gen._api._schemas.values():
+    for schema in list(gen._api._schemas.values()):
       import_manager = schema.values.get('importManager')
       for import_list in import_manager.ImportLists():
         for import_def in import_list:
@@ -189,15 +189,15 @@ class JavaLanguageModelTest(basetest.TestCase):
       return gen
 
     gen = MakeGen('google.com')
-    self.assertEquals('com/google/api/services/fake', gen.api.module.path)
-    self.assertEquals('com/google/api/services/fake/model',
+    self.assertEqual('com/google/api/services/fake', gen.api.module.path)
+    self.assertEqual('com/google/api/services/fake/model',
                       gen.api.model_module.path)
 
     gen = MakeGen('not-google.com')
-    self.assertEquals('com/not_google/fake', gen.api.module.path)
-    self.assertEquals('com.not_google.fake', gen.api.module.name)
+    self.assertEqual('com/not_google/fake', gen.api.module.path)
+    self.assertEqual('com.not_google.fake', gen.api.module.name)
     gen = MakeGen('my-custom_app.appspot.com')
-    self.assertEquals('com/appspot/my_custom_app/fake', gen.api.module.path)
+    self.assertEqual('com/appspot/my_custom_app/fake', gen.api.module.path)
 
   def testDefaultPathWithPackagePathAndCanonicalName(self):
     """Test the package path generation."""
@@ -217,20 +217,20 @@ class JavaLanguageModelTest(basetest.TestCase):
       return gen
 
     gen = MakeGen()
-    self.assertEquals('com/google/api/services/my/path/canonicalname',
+    self.assertEqual('com/google/api/services/my/path/canonicalname',
                       gen.api.module.path)
-    self.assertEquals('com/google/api/services/my/path/canonicalname/model',
+    self.assertEqual('com/google/api/services/my/path/canonicalname/model',
                       gen.api.model_module.path)
 
   def testAllowedCharacters(self):
     # make sure $ is allowed in a name and that @ is not
 
     model = java_generator.JavaLanguageModel()
-    self.assertEquals('$ref',
+    self.assertEqual('$ref',
                       model.TransformString(None, '$ref', model.member_policy))
-    self.assertEquals('set$ref',
+    self.assertEqual('set$ref',
                       model.TransformString(None, '$ref', model.setter_policy))
-    self.assertEquals('getId',
+    self.assertEqual('getId',
                       model.TransformString(None, '@id', model.getter_policy))
 
 

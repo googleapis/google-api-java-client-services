@@ -51,7 +51,7 @@ class GeneratorLookupTest(basetest.TestCase):
     raw_features = json.load(open(features_path))
     generator_name = raw_features['generator']
     gen = generator_lookup.GetGeneratorByLanguage(generator_name)
-    self.assertEquals(java_generator.Java14Generator, gen)
+    self.assertEqual(java_generator.Java14Generator, gen)
 
 
 if __name__ == '__main__':

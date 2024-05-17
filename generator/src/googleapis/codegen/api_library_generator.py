@@ -105,17 +105,17 @@ class ApiLibraryGenerator(TemplateGenerator):
         '___language_version___': self.language_version or '',
         }
 
-    for key, value in self.features.iteritems():
-      if isinstance(value, (unicode, str)):
+    for key, value in list(self.features.items()):
+      if isinstance(value, str):
         self._path_replacements['___features_%s___' % key] = value
 
-    if not isinstance(self._api.values['revision'], (unicode, str)):
+    if not isinstance(self._api.values['revision'], str):
         # Make sure revision is a string
       self._path_replacements['___api_revision___'] = str(
           self._api.values['revision'])
 
-    for key, value in self._api.values.iteritems():
-      if isinstance(value, (unicode, str)):
+    for key, value in list(self._api.values.items()):
+      if isinstance(value, str):
         self._path_replacements['___api_%s___' % key] = value
 
     self._path_replacements.update(path_replacements or {})
@@ -184,7 +184,7 @@ class ApiLibraryGenerator(TemplateGenerator):
       api: (Api) The Api.
     """
     self.AnnotateApi(api)
-    for schema in api.all_schemas.values():
+    for schema in list(api.all_schemas.values()):
       # TODO(user): remove this after completing the transition away from
       # package in all the templates
       schema.SetTemplateValue('package', self.model_module)

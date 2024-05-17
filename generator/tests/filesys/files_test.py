@@ -34,12 +34,12 @@ class FilesTest(basetest.TestCase):
   def testGetFileContentsLocal(self):
     filename = os.path.join(self.tempdir, 'a')
     contents = files.GetFileContents(filename)
-    self.assertEquals('a', contents)
+    self.assertEqual('a', contents)
 
   def testIterFilesLocal(self):
     listing = sorted(files.IterFiles(self.tempdir))
     expected = [os.path.join(self.tempdir, x) for x in 'abc']
-    self.assertEquals(expected, listing)
+    self.assertEqual(expected, listing)
 
   def testIsFileLocal(self):
     self.assertTrue(files.IsFile(os.path.join(self.tempdir, 'a')))

@@ -30,7 +30,7 @@ class DataTypesTest(basetest.TestCase):
     api = template_objects.CodeObject({}, None)
     void = data_types.Void(api)
     api.SetLanguageModel(language_model.LanguageModel())
-    self.assertEquals('void', void.code_type)
+    self.assertEqual('void', void.code_type)
 
   def testVoidDataTypeOverride(self):
     class FakeLM(language_model.LanguageModel):
@@ -40,7 +40,7 @@ class DataTypesTest(basetest.TestCase):
     api = template_objects.CodeObject({}, None)
     void = data_types.Void(api)
     api.SetLanguageModel(FakeLM())
-    self.assertEquals('the absence of all', void.code_type)
+    self.assertEqual('the absence of all', void.code_type)
 
 
 if __name__ == '__main__':

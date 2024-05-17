@@ -288,7 +288,7 @@ class CachingTemplateLoader(object):
     return template
 
   def _LoadTemplate(self, template_path):
-    source = files.GetFileContents(template_path).decode('utf-8')
+    source = files.GetFileContents(template_path)
     return django_template.Template(source)
 
 
@@ -1274,7 +1274,7 @@ class TemplateNode(django_template.Node):
     template_path = os.path.join(context['template_dir'], self._template_name)
     # Collect new additions to the context
     newvars = {}
-    for target, source in self._bindings.iteritems():
+    for target, source in list(self._bindings.items()):
       try:
         newvars[target] = django_template.resolve_variable(source, context)
       except django_template.base.VariableDoesNotExist:
@@ -1355,7 +1355,7 @@ def CallTemplate(unused_parser, token):
     if len(toks) % 2 != 0:
       raise django_template.TemplateSyntaxError(
           'odd number of keys and values found')
-    bindings = dict(zip(toks[0::2], toks[1::2]))
+    bindings = dict(list(zip(toks[0::2], toks[1::2])))
 
   return TemplateNode('%s.tmpl' % template, bindings)
 

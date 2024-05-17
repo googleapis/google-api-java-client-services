@@ -33,7 +33,7 @@ class MavenUtilsTest(basetest.TestCase):
          'google-api-services-admin-reports'),
         ]
     for kwargs, artifact_id in args:
-      self.assertEquals(artifact_id, maven_utils.GetMavenArtifactId(**kwargs))
+      self.assertEqual(artifact_id, maven_utils.GetMavenArtifactId(**kwargs))
 
   def testMavenArtifactIdAndModulePath(self):
 
@@ -50,7 +50,7 @@ class MavenUtilsTest(basetest.TestCase):
           package_path=api_def.get('packagePath'),
           canonical_name=api_def.get('canonicalName'),
           owner_domain=api_def['ownerDomain'])
-      self.assertEquals(expected, actual)
+      self.assertEqual(expected, actual)
     TestApi({'name': 'admin',
              'version': 'directory_v1',
              'canonicalName': 'directory',
@@ -67,8 +67,8 @@ class MavenUtilsTest(basetest.TestCase):
              'ownerDomain': 'google.com'})
 
   def testGetMavenGroupId(self):
-    self.assertEquals('com.foo.bar', maven_utils.GetMavenGroupId('bar.foo.com'))
-    self.assertEquals('com.google.apis',
+    self.assertEqual('com.foo.bar', maven_utils.GetMavenGroupId('bar.foo.com'))
+    self.assertEqual('com.google.apis',
                       maven_utils.GetMavenGroupId('google.com'))
 
   def testGetMavenVersion(self):
@@ -77,12 +77,12 @@ class MavenUtilsTest(basetest.TestCase):
                   'revision': 3,
                   'ownerDomain': 'google.com'}
     lv = '1.5'
-    self.assertEquals('v1-rev3-1.5',
+    self.assertEqual('v1-rev3-1.5',
                       maven_utils.GetMavenVersion(google_api, lv))
     endpoints_api = {'name': 'api',
                      'version': 'v1',
                      'ownerDomain': 'bestbuy.com'}
-    self.assertEquals('v1-1.5-SNAPSHOT',
+    self.assertEqual('v1-1.5-SNAPSHOT',
                       maven_utils.GetMavenVersion(endpoints_api, lv))
 
 

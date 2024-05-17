@@ -22,7 +22,7 @@ components generated and required by a library.
 __author__ = 'aiuto@google.com (Tony Aiuto)'
 
 import os
-import StringIO
+from io import StringIO
 import zipfile
 
 from googleapis.codegen.filesys.library_package import LibraryPackage
@@ -88,7 +88,7 @@ class ZipLibraryPackage(LibraryPackage):
       # high order 16 bit, and the MS-DOS FAT attributes in the lower 16.
       # man 2 stat tells us that 040755 should be a drwxr-xr-x style file,
       # and word of mouth tells me that bit 4 marks directories in FAT.
-      info.external_attr = (040755 << 16) | 0x10
+      info.external_attr = (0o40755 << 16) | 0x10
       self._zip.writestr(info, '')
 
   def EndFile(self):
@@ -97,10 +97,10 @@ class ZipLibraryPackage(LibraryPackage):
       info = zipfile.ZipInfo(self._current_file_name,
                              date_time=self.ZipTimestamp())
       # This is a chmod 0644, but you have to read the zipfile sources to know
-      info.external_attr = 0644 << 16
+      info.external_attr = 0o644 << 16
       data = self._current_file_data.getvalue()
       # File contents may be utf-8
-      if isinstance(data, unicode):
+      if isinstance(data, str):
         data = data.encode('utf-8')
       self._zip.writestr(info, data)
       self._current_file_data.close()

@@ -16,6 +16,9 @@
 # Fail on any non-zero status code
 set -eo pipefail
 
+# Debug
+set -x
+
 echo "Current working directory"
 pwd
 echo "Content of current working directory"
@@ -23,15 +26,32 @@ echo --------
 ls
 echo --------
 
-# Add project as safe to run `git diff`
-git config --global --add safe.directory $(realpath .)
+KOKORO_GITHUB_DIR=$(realpath github)
 
-diff_result=$(git diff --name-only "${KOKORO_GITHUB_PULL_REQUEST_TARGET_BRANCH}...${KOKORO_GITHUB_PULL_REQUEST_COMMIT}" -- generator/  .kokoro/presubmit-generated-code-test/)
+cd github/google-api-java-client-services
+# Add project as safe to run `git diff`
+git config --global --add safe.directory "$(realpath .)"
+
+diff_result=$(git diff --name-only "${KOKORO_GITHUB_PULL_REQUEST_TARGET_BRANCH}...${KOKORO_GITHUB_PULL_REQUEST_COMMIT}" -- generator/  .kokoro/)
 if [ -z "${diff_result}" ]; then
   # Skip compilation + Running tests
   echo "No differences found in the PR branch. Returning success."
   exit 0
 fi
 
+cd "${KOKORO_GITHUB_DIR}"
+
+# google-api-java-client-services and discovery-artifact-manager should
+# be checked out as siblings
+git clone https://github.com/googleapis/discovery-artifact-manager
+
+# Preparation commands from .github/workflows/generate.yaml
+sudo apt update
+sudo apt install python2
+echo "using $(python2 --version)"
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+python2 get-pip.py
+
+bash ./google-api-java-client-services/.github/workflows/generate.sh cloudresourcemanager
 
 

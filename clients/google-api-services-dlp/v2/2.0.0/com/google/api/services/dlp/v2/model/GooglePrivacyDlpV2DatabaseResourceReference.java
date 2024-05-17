@@ -31,21 +31,69 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2DatabaseResourceReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The instance where this resource is located. For example: Cloud SQL's instance id.
+   * Required. Name of a database within the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String database;
+
+  /**
+   * Required. Name of a database resource, for example, a table within the database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseResource;
+
+  /**
+   * Required. The instance where this resource is located. For example: Cloud SQL instance ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instance;
 
   /**
-   * Required. If within a project-level config, then this must match the config's project id.
+   * Required. If within a project-level config, then this must match the config's project ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * Required. The instance where this resource is located. For example: Cloud SQL's instance id.
+   * Required. Name of a database within the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabase() {
+    return database;
+  }
+
+  /**
+   * Required. Name of a database within the instance.
+   * @param database database or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DatabaseResourceReference setDatabase(java.lang.String database) {
+    this.database = database;
+    return this;
+  }
+
+  /**
+   * Required. Name of a database resource, for example, a table within the database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseResource() {
+    return databaseResource;
+  }
+
+  /**
+   * Required. Name of a database resource, for example, a table within the database.
+   * @param databaseResource databaseResource or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DatabaseResourceReference setDatabaseResource(java.lang.String databaseResource) {
+    this.databaseResource = databaseResource;
+    return this;
+  }
+
+  /**
+   * Required. The instance where this resource is located. For example: Cloud SQL instance ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstance() {
@@ -53,7 +101,7 @@ public final class GooglePrivacyDlpV2DatabaseResourceReference extends com.googl
   }
 
   /**
-   * Required. The instance where this resource is located. For example: Cloud SQL's instance id.
+   * Required. The instance where this resource is located. For example: Cloud SQL instance ID.
    * @param instance instance or {@code null} for none
    */
   public GooglePrivacyDlpV2DatabaseResourceReference setInstance(java.lang.String instance) {
@@ -62,7 +110,7 @@ public final class GooglePrivacyDlpV2DatabaseResourceReference extends com.googl
   }
 
   /**
-   * Required. If within a project-level config, then this must match the config's project id.
+   * Required. If within a project-level config, then this must match the config's project ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -70,7 +118,7 @@ public final class GooglePrivacyDlpV2DatabaseResourceReference extends com.googl
   }
 
   /**
-   * Required. If within a project-level config, then this must match the config's project id.
+   * Required. If within a project-level config, then this must match the config's project ID.
    * @param projectId projectId or {@code null} for none
    */
   public GooglePrivacyDlpV2DatabaseResourceReference setProjectId(java.lang.String projectId) {

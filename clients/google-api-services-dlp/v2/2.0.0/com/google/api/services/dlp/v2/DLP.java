@@ -3121,17 +3121,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
-          /** Optional. * Supported fields/values - `state` - MISSING|AVAILABLE|ERROR */
+          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. * Supported fields/values - `state` - MISSING|AVAILABLE|ERROR
+          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. * Supported fields/values - `state` - MISSING|AVAILABLE|ERROR */
+          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR */
           public Search setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -15802,17 +15802,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
-          /** Optional. * Supported fields/values - `state` - MISSING|AVAILABLE|ERROR */
+          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. * Supported fields/values - `state` - MISSING|AVAILABLE|ERROR
+          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. * Supported fields/values - `state` - MISSING|AVAILABLE|ERROR */
+          /** Optional. Supported field/value: `state` - MISSING|AVAILABLE|ERROR */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -16143,17 +16143,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
-          /** Optional. * Supported fields/values - `state` - MISSING|AVAILABLE|ERROR */
+          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. * Supported fields/values - `state` - MISSING|AVAILABLE|ERROR
+          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. * Supported fields/values - `state` - MISSING|AVAILABLE|ERROR */
+          /** Optional. Supported field/value: - `state` - MISSING|AVAILABLE|ERROR */
           public Search setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;

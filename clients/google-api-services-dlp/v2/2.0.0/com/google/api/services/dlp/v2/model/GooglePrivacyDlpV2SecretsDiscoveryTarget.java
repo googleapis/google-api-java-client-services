@@ -17,10 +17,13 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Use IAM authentication to connect. This requires the Cloud SQL IAM feature to be enabled on the
- * instance, which is not the default for Cloud SQL. See
- * https://cloud.google.com/sql/docs/postgres/authentication and
- * https://cloud.google.com/sql/docs/mysql/authentication.
+ * Discovery target for credentials and secrets in Cloud resource metadata. This target does not
+ * include any filtering or frequency controls. Cloud DLP will scan Cloud resource metadata for
+ * secrets daily. No inspect template should be included in the discovery config for a security
+ * benchmarks scan. Instead, the built-in list of Secrets and Credentials infoTypes will be used
+ * (see https://cloud.google.com/sensitive-data-protection/docs/infotypes-
+ * reference#credentials_and_secrets). Credentials and secrets discovered will be reported as
+ * vulnerabilities to Security Command Center.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
@@ -31,16 +34,16 @@ package com.google.api.services.dlp.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GooglePrivacyDlpV2CloudSqlIamCredential extends com.google.api.client.json.GenericJson {
+public final class GooglePrivacyDlpV2SecretsDiscoveryTarget extends com.google.api.client.json.GenericJson {
 
   @Override
-  public GooglePrivacyDlpV2CloudSqlIamCredential set(String fieldName, Object value) {
-    return (GooglePrivacyDlpV2CloudSqlIamCredential) super.set(fieldName, value);
+  public GooglePrivacyDlpV2SecretsDiscoveryTarget set(String fieldName, Object value) {
+    return (GooglePrivacyDlpV2SecretsDiscoveryTarget) super.set(fieldName, value);
   }
 
   @Override
-  public GooglePrivacyDlpV2CloudSqlIamCredential clone() {
-    return (GooglePrivacyDlpV2CloudSqlIamCredential) super.clone();
+  public GooglePrivacyDlpV2SecretsDiscoveryTarget clone() {
+    return (GooglePrivacyDlpV2SecretsDiscoveryTarget) super.clone();
   }
 
 }

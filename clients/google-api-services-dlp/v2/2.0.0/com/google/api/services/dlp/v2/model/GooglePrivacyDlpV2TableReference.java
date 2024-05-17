@@ -17,7 +17,8 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * How frequently to modify the profile when the table's schema is modified.
+ * Message defining the location of a BigQuery table with the projectId inferred from the parent
+ * project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
@@ -28,64 +29,64 @@ package com.google.api.services.dlp.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GooglePrivacyDlpV2SchemaModifiedCadence extends com.google.api.client.json.GenericJson {
+public final class GooglePrivacyDlpV2TableReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * Frequency to regenerate data profiles when the schema is modified. Defaults to monthly.
+   * Dataset ID of the table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String frequency;
+  private java.lang.String datasetId;
 
   /**
-   * The types of schema modifications to consider. Defaults to NEW_COLUMNS.
+   * Name of the table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> types;
+  private java.lang.String tableId;
 
   /**
-   * Frequency to regenerate data profiles when the schema is modified. Defaults to monthly.
+   * Dataset ID of the table.
    * @return value or {@code null} for none
    */
-  public java.lang.String getFrequency() {
-    return frequency;
+  public java.lang.String getDatasetId() {
+    return datasetId;
   }
 
   /**
-   * Frequency to regenerate data profiles when the schema is modified. Defaults to monthly.
-   * @param frequency frequency or {@code null} for none
+   * Dataset ID of the table.
+   * @param datasetId datasetId or {@code null} for none
    */
-  public GooglePrivacyDlpV2SchemaModifiedCadence setFrequency(java.lang.String frequency) {
-    this.frequency = frequency;
+  public GooglePrivacyDlpV2TableReference setDatasetId(java.lang.String datasetId) {
+    this.datasetId = datasetId;
     return this;
   }
 
   /**
-   * The types of schema modifications to consider. Defaults to NEW_COLUMNS.
+   * Name of the table.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getTypes() {
-    return types;
+  public java.lang.String getTableId() {
+    return tableId;
   }
 
   /**
-   * The types of schema modifications to consider. Defaults to NEW_COLUMNS.
-   * @param types types or {@code null} for none
+   * Name of the table.
+   * @param tableId tableId or {@code null} for none
    */
-  public GooglePrivacyDlpV2SchemaModifiedCadence setTypes(java.util.List<java.lang.String> types) {
-    this.types = types;
+  public GooglePrivacyDlpV2TableReference setTableId(java.lang.String tableId) {
+    this.tableId = tableId;
     return this;
   }
 
   @Override
-  public GooglePrivacyDlpV2SchemaModifiedCadence set(String fieldName, Object value) {
-    return (GooglePrivacyDlpV2SchemaModifiedCadence) super.set(fieldName, value);
+  public GooglePrivacyDlpV2TableReference set(String fieldName, Object value) {
+    return (GooglePrivacyDlpV2TableReference) super.set(fieldName, value);
   }
 
   @Override
-  public GooglePrivacyDlpV2SchemaModifiedCadence clone() {
-    return (GooglePrivacyDlpV2SchemaModifiedCadence) super.clone();
+  public GooglePrivacyDlpV2TableReference clone() {
+    return (GooglePrivacyDlpV2TableReference) super.clone();
   }
 
 }

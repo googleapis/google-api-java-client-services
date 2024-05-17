@@ -51,7 +51,7 @@ public final class GooglePrivacyDlpV2Result extends com.google.api.client.json.G
   }
 
   /**
-   * Number of rows scanned post sampling and time filtering (Applicable for row based stores such
+   * Number of rows scanned after sampling and time filtering (applicable for row based stores such
    * as BigQuery).
    * The value may be {@code null}.
    */
@@ -107,7 +107,7 @@ public final class GooglePrivacyDlpV2Result extends com.google.api.client.json.G
   }
 
   /**
-   * Number of rows scanned post sampling and time filtering (Applicable for row based stores such
+   * Number of rows scanned after sampling and time filtering (applicable for row based stores such
    * as BigQuery).
    * @return value or {@code null} for none
    */
@@ -116,7 +116,7 @@ public final class GooglePrivacyDlpV2Result extends com.google.api.client.json.G
   }
 
   /**
-   * Number of rows scanned post sampling and time filtering (Applicable for row based stores such
+   * Number of rows scanned after sampling and time filtering (applicable for row based stores such
    * as BigQuery).
    * @param numRowsProcessed numRowsProcessed or {@code null} for none
    */

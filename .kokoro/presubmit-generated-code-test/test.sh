@@ -43,6 +43,8 @@ if [ -z "${diff_result}" ]; then
   exit 0
 fi
 
+echo "There are generator-related changes: ${diff_result}"
+
 echo
 echo
 echo "Step 2: Prepare tools for Apiary Java code generator"

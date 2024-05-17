@@ -27,7 +27,7 @@ public class ResourceManagerIntegrationTest {
 
         Projects projects = cloudResourceManager.projects();
 
-        Get get = projects.get("projects/cloud-java-ci-sample");
+        Get get = projects.get("projects/cloud-java-ci-test");
 
         Project project = get.execute();
         System.out.println("Project display name: " + project.getDisplayName());

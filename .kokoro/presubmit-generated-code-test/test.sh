@@ -104,7 +104,7 @@ update_pom_version pom.xml "${RESOURCEMANAGER_LIBRARY_SNAPSHOT_VERSION}"
 echo "Code diff by setting the SNAPSHOT version:"
 git diff .
 echo "-----"
-echo "Installing google-api-services-cloudresourcemanager version ${RESOURCEMANAGER_LIBRARY_VERSION}"
+echo "Installing google-api-services-cloudresourcemanager version ${RESOURCEMANAGER_LIBRARY_SNAPSHOT_VERSION}"
 mvn -V -B -ntp install -Dclirr.skip=true -Dmaven.javadoc.skip=true
 
 echo

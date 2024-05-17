@@ -12,9 +12,11 @@ import com.google.api.services.cloudresourcemanager.v3.model.Project;
 import com.google.auth.http.HttpCredentialsAdapter;
 import com.google.auth.oauth2.GoogleCredentials;
 
+import static org.junit.Assert.assertEquals;
+
 public class ResourceManagerIntegrationTest {
     @Test
-    public void testCloudResourceManager() throws Exception {
+    public void testCloudResourceManager_projectDisplayName() throws Exception {
         GoogleCredentials credentials = GoogleCredentials.getApplicationDefault();
 
         NetHttpTransport transport = GoogleNetHttpTransport.newTrustedTransport();
@@ -30,6 +32,6 @@ public class ResourceManagerIntegrationTest {
         Get get = projects.get("projects/cloud-java-ci-test");
 
         Project project = get.execute();
-        System.out.println("Project display name: " + project.getDisplayName());
+        assertEquals("cloud-java-ci-test", project.getDisplayName());
     }
 }

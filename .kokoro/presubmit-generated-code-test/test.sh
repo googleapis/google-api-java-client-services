@@ -15,6 +15,7 @@
 
 # Fail on any non-zero status code
 set -eo pipefail
+set -x
 
 echo "Current working directory"
 pwd
@@ -78,7 +79,18 @@ echo
 # For xmllint command
 apt-get -y install libxml2-utils
 
-function parse_pom_version {
+function update_pom_version() {
+  pom_file=$1
+  version=$2
+  xmllint --shell "${pom_file}" &>/dev/null <<EOF
+setns x=http://maven.apache.org/POM/4.0.0
+cd .//x:project/version
+set "${version}"
+save "${pom_file}"
+EOF
+}
+
+function parse_pom_version() {
   pom_file=$1
   # Namespace (xmlns) prevents xmllint from specifying tag names in XPath
   result=$(sed -e 's/xmlns=".*"//' "${pom_file}" | xmllint --xpath '/project/version/text()' -)
@@ -95,6 +107,8 @@ LATEST_VARIANT=2.0.0
 
 cd "${KOKORO_GITHUB_DIR}/google-api-java-client-services/clients/google-api-services-cloudresourcemanager/${LATEST_RESOURCEMANAGER_API_VERSION}/${LATEST_VARIANT}"
 RESOURCEMANAGER_LIBRARY_VERSION=$(parse_pom_version pom.xml)
+RESOURCEMANAGER_LIBRARY_SNAPSHOT_VERSION="${RESOURCEMANAGER_LIBRARY_VERSION}-SNAPSHOT"
+update_pom_version pom.xml "${RESOURCEMANAGER_LIBRARY_VERSION}-SNAPSHOT"
 echo "Installing google-api-services-cloudresourcemanager version ${RESOURCEMANAGER_LIBRARY_VERSION}"
 mvn  -B -ntp install -Dclirr.skip=true -Dmaven.javadoc.skip=true
 
@@ -104,7 +118,7 @@ echo "Step 5: Run the integration test that uses Cloud ResourceManager library"
 echo
 
 cd "${KOKORO_GITHUB_DIR}/google-api-java-client-services/generator/tests/java-integration-test"
-mvn -V -B -ntp test -Dcloudresourcemanager.version="${RESOURCEMANAGER_LIBRARY_VERSION}"
+mvn -V -B -ntp test -Dcloudresourcemanager.version="${RESOURCEMANAGER_LIBRARY_SNAPSHOT_VERSION}"
 
 # Current working directory
 echo "Build finished"

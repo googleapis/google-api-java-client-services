@@ -43,11 +43,11 @@ cd "${KOKORO_GITHUB_DIR}"
 
 # google-api-java-client-services and discovery-artifact-manager should
 # be checked out as siblings
-git clone https://github.com/googleapis/discovery-artifact-manager
+git clone --depth 1 https://github.com/googleapis/discovery-artifact-manager
 
 # Preparation commands from .github/workflows/generate.yaml
-sudo apt update
-sudo apt install python2
+apt update
+apt install python2
 echo "using $(python2 --version)"
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
 python2 get-pip.py

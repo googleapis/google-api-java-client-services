@@ -94,13 +94,35 @@ function parse_pom_version() {
   echo "$result"
 }
 
+function update_compiler_option_to_java8() {
+  # JDK 21 does not accept '-source 7' option
+  pom_file=$1
+  xmllint --shell "${pom_file}" &>/dev/null <<EOF
+setns x=http://maven.apache.org/POM/4.0.0
+cd .//x:artifactId[text()="maven-compiler-plugin"]
+cd ../x:configuration/x:source
+set 1.8
+cd ../x:target
+set 1.8
+save $pom_file
+EOF
+}
+
 LATEST_RESOURCEMANAGER_API_VERSION=v3
 LATEST_VARIANT=2.0.0
 
 cd "${KOKORO_GITHUB_DIR}/google-api-java-client-services/clients/google-api-services-cloudresourcemanager/${LATEST_RESOURCEMANAGER_API_VERSION}/${LATEST_VARIANT}"
 RESOURCEMANAGER_LIBRARY_VERSION=$(parse_pom_version pom.xml)
 RESOURCEMANAGER_LIBRARY_SNAPSHOT_VERSION="${RESOURCEMANAGER_LIBRARY_VERSION}-SNAPSHOT"
+
+# Setting "-SNAPSHOT" version ensures that this test actually uses
+# the artifact locally installed, rather than one from Maven Central.
 update_pom_version pom.xml "${RESOURCEMANAGER_LIBRARY_SNAPSHOT_VERSION}"
+
+# As of May 2024, the library build settings support Java 7 (-source 7),
+# however, JDK 21 does not support that option any more.
+update_compiler_option_to_java8 pom.xml
+
 echo "Code diff by setting the SNAPSHOT version:"
 git diff .
 echo "-----"

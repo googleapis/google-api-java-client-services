@@ -30,36 +30,36 @@ package com.google.api.services.walletobjects.model;
 public final class AppLinkDataAppLinkInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional image to be displayed in the App Link Module
+   * Deprecated. Image isn't supported in the app link module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Image appLogoImage;
 
   /**
-   * Url to follow when opening the App Link Module on clients. It will be used by partners to open
-   * their webpage or deeplink into their app.
+   * Target to follow when opening the app link on clients. It will be used by partners to open
+   * their app or webpage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AppLinkDataAppLinkInfoAppTarget appTarget;
 
   /**
-   * String to be displayed in the description of the App Link Module Required
+   * Deprecated. Description isn't supported in the app link module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LocalizedString description;
 
   /**
-   * String to be displayed in the title of the App Link Module Required
+   * Deprecated. Title isn't supported in the app link module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LocalizedString title;
 
   /**
-   * Optional image to be displayed in the App Link Module
+   * Deprecated. Image isn't supported in the app link module.
    * @return value or {@code null} for none
    */
   public Image getAppLogoImage() {
@@ -67,7 +67,7 @@ public final class AppLinkDataAppLinkInfo extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional image to be displayed in the App Link Module
+   * Deprecated. Image isn't supported in the app link module.
    * @param appLogoImage appLogoImage or {@code null} for none
    */
   public AppLinkDataAppLinkInfo setAppLogoImage(Image appLogoImage) {
@@ -76,8 +76,8 @@ public final class AppLinkDataAppLinkInfo extends com.google.api.client.json.Gen
   }
 
   /**
-   * Url to follow when opening the App Link Module on clients. It will be used by partners to open
-   * their webpage or deeplink into their app.
+   * Target to follow when opening the app link on clients. It will be used by partners to open
+   * their app or webpage.
    * @return value or {@code null} for none
    */
   public AppLinkDataAppLinkInfoAppTarget getAppTarget() {
@@ -85,8 +85,8 @@ public final class AppLinkDataAppLinkInfo extends com.google.api.client.json.Gen
   }
 
   /**
-   * Url to follow when opening the App Link Module on clients. It will be used by partners to open
-   * their webpage or deeplink into their app.
+   * Target to follow when opening the app link on clients. It will be used by partners to open
+   * their app or webpage.
    * @param appTarget appTarget or {@code null} for none
    */
   public AppLinkDataAppLinkInfo setAppTarget(AppLinkDataAppLinkInfoAppTarget appTarget) {
@@ -95,7 +95,7 @@ public final class AppLinkDataAppLinkInfo extends com.google.api.client.json.Gen
   }
 
   /**
-   * String to be displayed in the description of the App Link Module Required
+   * Deprecated. Description isn't supported in the app link module.
    * @return value or {@code null} for none
    */
   public LocalizedString getDescription() {
@@ -103,7 +103,7 @@ public final class AppLinkDataAppLinkInfo extends com.google.api.client.json.Gen
   }
 
   /**
-   * String to be displayed in the description of the App Link Module Required
+   * Deprecated. Description isn't supported in the app link module.
    * @param description description or {@code null} for none
    */
   public AppLinkDataAppLinkInfo setDescription(LocalizedString description) {
@@ -112,7 +112,7 @@ public final class AppLinkDataAppLinkInfo extends com.google.api.client.json.Gen
   }
 
   /**
-   * String to be displayed in the title of the App Link Module Required
+   * Deprecated. Title isn't supported in the app link module.
    * @return value or {@code null} for none
    */
   public LocalizedString getTitle() {
@@ -120,7 +120,7 @@ public final class AppLinkDataAppLinkInfo extends com.google.api.client.json.Gen
   }
 
   /**
-   * String to be displayed in the title of the App Link Module Required
+   * Deprecated. Title isn't supported in the app link module.
    * @param title title or {@code null} for none
    */
   public AppLinkDataAppLinkInfo setTitle(LocalizedString title) {

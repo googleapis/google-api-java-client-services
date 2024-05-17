@@ -17,8 +17,8 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Use IAM auth to connect. This requires the Cloud SQL IAM feature to be enabled on the instance,
- * which is not the default for Cloud SQL. See
+ * Use IAM authentication to connect. This requires the Cloud SQL IAM feature to be enabled on the
+ * instance, which is not the default for Cloud SQL. See
  * https://cloud.google.com/sql/docs/postgres/authentication and
  * https://cloud.google.com/sql/docs/mysql/authentication.
  *

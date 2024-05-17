@@ -39,6 +39,13 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitConfigHttpConfi
   private java.lang.String proxySecretVersionName;
 
   /**
+   * Optional. Cloud Storage object storing the certificate to use with the HTTP proxy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContaineranalysisGoogleDevtoolsCloudbuildV1GCSLocation proxySslCaInfo;
+
+  /**
    * SecretVersion resource of the HTTP proxy URL. The proxy URL should be in format
    * protocol://@]proxyhost[:port].
    * @return value or {@code null} for none
@@ -54,6 +61,23 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitConfigHttpConfi
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1GitConfigHttpConfig setProxySecretVersionName(java.lang.String proxySecretVersionName) {
     this.proxySecretVersionName = proxySecretVersionName;
+    return this;
+  }
+
+  /**
+   * Optional. Cloud Storage object storing the certificate to use with the HTTP proxy.
+   * @return value or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1GCSLocation getProxySslCaInfo() {
+    return proxySslCaInfo;
+  }
+
+  /**
+   * Optional. Cloud Storage object storing the certificate to use with the HTTP proxy.
+   * @param proxySslCaInfo proxySslCaInfo or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1GitConfigHttpConfig setProxySslCaInfo(ContaineranalysisGoogleDevtoolsCloudbuildV1GCSLocation proxySslCaInfo) {
+    this.proxySslCaInfo = proxySslCaInfo;
     return this;
   }
 

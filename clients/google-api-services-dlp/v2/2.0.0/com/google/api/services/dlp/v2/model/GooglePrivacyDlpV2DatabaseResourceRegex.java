@@ -56,8 +56,8 @@ public final class GooglePrivacyDlpV2DatabaseResourceRegex extends com.google.ap
   private java.lang.String instanceRegex;
 
   /**
-   * For organizations, if unset, will match all projects. Has no effect for Data Profile
-   * configurations created within a project.
+   * For organizations, if unset, will match all projects. Has no effect for configurations created
+   * within a project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,8 +119,8 @@ public final class GooglePrivacyDlpV2DatabaseResourceRegex extends com.google.ap
   }
 
   /**
-   * For organizations, if unset, will match all projects. Has no effect for Data Profile
-   * configurations created within a project.
+   * For organizations, if unset, will match all projects. Has no effect for configurations created
+   * within a project.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectIdRegex() {
@@ -128,8 +128,8 @@ public final class GooglePrivacyDlpV2DatabaseResourceRegex extends com.google.ap
   }
 
   /**
-   * For organizations, if unset, will match all projects. Has no effect for Data Profile
-   * configurations created within a project.
+   * For organizations, if unset, will match all projects. Has no effect for configurations created
+   * within a project.
    * @param projectIdRegex projectIdRegex or {@code null} for none
    */
   public GooglePrivacyDlpV2DatabaseResourceRegex setProjectIdRegex(java.lang.String projectIdRegex) {

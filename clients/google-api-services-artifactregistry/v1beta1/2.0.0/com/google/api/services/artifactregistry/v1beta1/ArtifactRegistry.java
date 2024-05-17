@@ -2278,17 +2278,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** The maximum number of files to return. */
+            /** The maximum number of files to return. Maximum page size is 1,000. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of files to return.
+            /** The maximum number of files to return. Maximum page size is 1,000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** The maximum number of files to return. */
+            /** The maximum number of files to return. Maximum page size is 1,000. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
@@ -3384,17 +3384,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
                 return this;
               }
 
-              /** The maximum number of tags to return. Maximum page size is 10,000. */
+              /** The maximum number of tags to return. Maximum page size is 1,000. */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of tags to return. Maximum page size is 10,000.
+              /** The maximum number of tags to return. Maximum page size is 1,000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /** The maximum number of tags to return. Maximum page size is 10,000. */
+              /** The maximum number of tags to return. Maximum page size is 1,000. */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;

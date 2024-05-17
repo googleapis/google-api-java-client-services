@@ -3196,17 +3196,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** The maximum number of artifacts to return. */
+            /** The maximum number of artifacts to return. Maximum page size is 1,000. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of artifacts to return.
+            /** The maximum number of artifacts to return. Maximum page size is 1,000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** The maximum number of artifacts to return. */
+            /** The maximum number of artifacts to return. Maximum page size is 1,000. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
@@ -3751,17 +3751,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** The maximum number of files to return. */
+            /** The maximum number of files to return. Maximum page size is 1,000. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of files to return.
+            /** The maximum number of files to return. Maximum page size is 1,000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** The maximum number of files to return. */
+            /** The maximum number of files to return. Maximum page size is 1,000. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
@@ -3811,9 +3811,9 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
         public class GenericArtifacts {
 
           /**
-           * Directly uploads a Generic artifact. The returned Operation will complete once the resources are
-           * uploaded. Package, Version, and File resources are created based on the uploaded artifact.
-           * Uploaded artifacts that conflict with existing resources will raise an ALREADY_EXISTS error.
+           * Directly uploads a Generic artifact. The returned operation will complete once the resources are
+           * uploaded. Package, version, and file resources are created based on the uploaded artifact.
+           * Uploaded artifacts that conflict with existing resources will raise an `ALREADY_EXISTS` error.
            *
            * Create a request for the method "genericArtifacts.upload".
            *
@@ -3831,9 +3831,9 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Directly uploads a Generic artifact. The returned Operation will complete once the resources are
-           * uploaded. Package, Version, and File resources are created based on the uploaded artifact.
-           * Uploaded artifacts that conflict with existing resources will raise an ALREADY_EXISTS error.
+           * Directly uploads a Generic artifact. The returned operation will complete once the resources are
+           * uploaded. Package, version, and file resources are created based on the uploaded artifact.
+           * Uploaded artifacts that conflict with existing resources will raise an `ALREADY_EXISTS` error.
            *
            * Create a request for the method "genericArtifacts.upload".
            *
@@ -3864,9 +3864,9 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
 
             /**
-             * Directly uploads a Generic artifact. The returned Operation will complete once the resources
-             * are uploaded. Package, Version, and File resources are created based on the uploaded artifact.
-             * Uploaded artifacts that conflict with existing resources will raise an ALREADY_EXISTS error.
+             * Directly uploads a Generic artifact. The returned operation will complete once the resources
+             * are uploaded. Package, version, and file resources are created based on the uploaded artifact.
+             * Uploaded artifacts that conflict with existing resources will raise an `ALREADY_EXISTS` error.
              *
              * Create a request for the method "genericArtifacts.upload".
              *
@@ -3891,9 +3891,9 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Directly uploads a Generic artifact. The returned Operation will complete once the resources
-             * are uploaded. Package, Version, and File resources are created based on the uploaded artifact.
-             * Uploaded artifacts that conflict with existing resources will raise an ALREADY_EXISTS error.
+             * Directly uploads a Generic artifact. The returned operation will complete once the resources
+             * are uploaded. Package, version, and file resources are created based on the uploaded artifact.
+             * Uploaded artifacts that conflict with existing resources will raise an `ALREADY_EXISTS` error.
              *
              * Create a request for the method "genericArtifacts.upload".
              *
@@ -5061,17 +5061,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** The maximum number of artifacts to return. */
+            /** The maximum number of artifacts to return. Maximum page size is 1,000. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of artifacts to return.
+            /** The maximum number of artifacts to return. Maximum page size is 1,000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** The maximum number of artifacts to return. */
+            /** The maximum number of artifacts to return. Maximum page size is 1,000. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
@@ -5391,17 +5391,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** The maximum number of artifacts to return. */
+            /** The maximum number of artifacts to return. Maximum page size is 1,000. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of artifacts to return.
+            /** The maximum number of artifacts to return. Maximum page size is 1,000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** The maximum number of artifacts to return. */
+            /** The maximum number of artifacts to return. Maximum page size is 1,000. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
@@ -6667,17 +6667,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
                 return this;
               }
 
-              /** The maximum number of tags to return. Maximum page size is 10,000. */
+              /** The maximum number of tags to return. Maximum page size is 1,000. */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of tags to return. Maximum page size is 10,000.
+              /** The maximum number of tags to return. Maximum page size is 1,000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /** The maximum number of tags to return. Maximum page size is 10,000. */
+              /** The maximum number of tags to return. Maximum page size is 1,000. */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
@@ -7839,17 +7839,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** The maximum number of artifacts to return. */
+            /** The maximum number of artifacts to return. Maximum page size is 1,000. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of artifacts to return.
+            /** The maximum number of artifacts to return. Maximum page size is 1,000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** The maximum number of artifacts to return. */
+            /** The maximum number of artifacts to return. Maximum page size is 1,000. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;

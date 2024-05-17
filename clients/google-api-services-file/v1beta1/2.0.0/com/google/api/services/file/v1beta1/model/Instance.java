@@ -150,6 +150,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String protocol;
 
   /**
+   * Optional. Replicaition configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Replication replication;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -461,6 +468,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setProtocol(java.lang.String protocol) {
     this.protocol = protocol;
+    return this;
+  }
+
+  /**
+   * Optional. Replicaition configuration.
+   * @return value or {@code null} for none
+   */
+  public Replication getReplication() {
+    return replication;
+  }
+
+  /**
+   * Optional. Replicaition configuration.
+   * @param replication replication or {@code null} for none
+   */
+  public Instance setReplication(Replication replication) {
+    this.replication = replication;
     return this;
   }
 

@@ -46,6 +46,13 @@ public final class ComplianceOccurrence extends com.google.api.client.json.Gener
   private java.util.List<NonCompliantFile> nonCompliantFiles;
 
   /**
+   * The OS and config version the benchmark was run on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComplianceVersion version;
+
+  /**
    * The reason for non compliance of these files.
    * @return value or {@code null} for none
    */
@@ -76,6 +83,23 @@ public final class ComplianceOccurrence extends com.google.api.client.json.Gener
    */
   public ComplianceOccurrence setNonCompliantFiles(java.util.List<NonCompliantFile> nonCompliantFiles) {
     this.nonCompliantFiles = nonCompliantFiles;
+    return this;
+  }
+
+  /**
+   * The OS and config version the benchmark was run on.
+   * @return value or {@code null} for none
+   */
+  public ComplianceVersion getVersion() {
+    return version;
+  }
+
+  /**
+   * The OS and config version the benchmark was run on.
+   * @param version version or {@code null} for none
+   */
+  public ComplianceOccurrence setVersion(ComplianceVersion version) {
+    this.version = version;
     return this;
   }
 

@@ -82,7 +82,7 @@ apt-get -y install libxml2-utils
 function update_pom_version() {
   pom_file=$1
   version=$2
-  xmllint --shell "${pom_file}" &>/dev/null <<EOF
+  xmllint --shell "${pom_file}" <<EOF
 setns x=http://maven.apache.org/POM/4.0.0
 cd .//x:project/x:version
 set "${version}"
@@ -108,7 +108,7 @@ LATEST_VARIANT=2.0.0
 cd "${KOKORO_GITHUB_DIR}/google-api-java-client-services/clients/google-api-services-cloudresourcemanager/${LATEST_RESOURCEMANAGER_API_VERSION}/${LATEST_VARIANT}"
 RESOURCEMANAGER_LIBRARY_VERSION=$(parse_pom_version pom.xml)
 RESOURCEMANAGER_LIBRARY_SNAPSHOT_VERSION="${RESOURCEMANAGER_LIBRARY_VERSION}-SNAPSHOT"
-update_pom_version pom.xml "${RESOURCEMANAGER_LIBRARY_VERSION}-SNAPSHOT"
+update_pom_version pom.xml "${RESOURCEMANAGER_LIBRARY_SNAPSHOT_VERSION}"
 echo "Code diff by setting the SNAPSHOT version:"
 git diff .
 echo "-----"

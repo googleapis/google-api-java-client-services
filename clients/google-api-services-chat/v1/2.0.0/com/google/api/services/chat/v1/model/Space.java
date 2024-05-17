@@ -31,10 +31,10 @@ package com.google.api.services.chat.v1.model;
 public final class Space extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Whether the Chat app was installed by a Google Workspace administrator.
-   * Administrators can install a Chat app for their domain, organizational unit, or a group of
-   * users. Administrators can only install Chat apps for direct messaging between users and the
-   * app. To support admin install, your app must feature direct messaging.
+   * Output only. For direct message (DM) spaces with a Chat app, whether the space was created by a
+   * Google Workspace administrator. Administrators can install and set up a direct message with a
+   * Chat app on behalf of users in their organization. To support admin install, your Chat app must
+   * feature direct messaging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,10 +147,10 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Output only. Whether the Chat app was installed by a Google Workspace administrator.
-   * Administrators can install a Chat app for their domain, organizational unit, or a group of
-   * users. Administrators can only install Chat apps for direct messaging between users and the
-   * app. To support admin install, your app must feature direct messaging.
+   * Output only. For direct message (DM) spaces with a Chat app, whether the space was created by a
+   * Google Workspace administrator. Administrators can install and set up a direct message with a
+   * Chat app on behalf of users in their organization. To support admin install, your Chat app must
+   * feature direct messaging.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAdminInstalled() {
@@ -158,10 +158,10 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether the Chat app was installed by a Google Workspace administrator.
-   * Administrators can install a Chat app for their domain, organizational unit, or a group of
-   * users. Administrators can only install Chat apps for direct messaging between users and the
-   * app. To support admin install, your app must feature direct messaging.
+   * Output only. For direct message (DM) spaces with a Chat app, whether the space was created by a
+   * Google Workspace administrator. Administrators can install and set up a direct message with a
+   * Chat app on behalf of users in their organization. To support admin install, your Chat app must
+   * feature direct messaging.
    * @param adminInstalled adminInstalled or {@code null} for none
    */
   public Space setAdminInstalled(java.lang.Boolean adminInstalled) {

@@ -16,9 +16,6 @@
 # Fail on any non-zero status code
 set -eo pipefail
 
-# Debug
-set -x
-
 echo "Current working directory"
 pwd
 echo "Content of current working directory"
@@ -26,14 +23,16 @@ echo --------
 ls
 echo --------
 
+# Kokoro checks out the google-api-java-client-services repository
+# under this "github" directory.
 KOKORO_GITHUB_DIR=$(realpath github)
 
-###
-#
-# Step 1: Return success if there's no test or generator changes
-#
-###
-cd github/google-api-java-client-services
+echo
+echo
+echo "Step 1: Return success if there is no test or generator changes"
+echo
+
+cd "${KOKORO_GITHUB_DIR}/google-api-java-client-services"
 # Add project as safe to run `git diff`
 git config --global --add safe.directory "$(realpath .)"
 
@@ -44,11 +43,11 @@ if [ -z "${diff_result}" ]; then
   exit 0
 fi
 
-###
-#
-# Step 2: Prepare tools for Apiary Java code generator
-#
-###
+echo
+echo
+echo "Step 2: Prepare tools for Apiary Java code generator"
+echo
+
 cd "${KOKORO_GITHUB_DIR}"
 
 # google-api-java-client-services and discovery-artifact-manager should
@@ -62,20 +61,18 @@ echo "using $(python2 --version)"
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
 python2 get-pip.py
 
-###
-#
-# Step 3: Run the generator for cloudresourcemanager
-#
-###
+echo
+echo
+echo "Step 3: Run the generator for cloudresourcemanager"
+echo
+
 bash ./google-api-java-client-services/.github/workflows/generate.sh cloudresourcemanager
 
 
-###
-#
-# Step 4: Compile the generated code and install the module to local Maven repository
-#
-###
-
+echo
+echo
+echo "Step 4: Compile the generated code and install the module to local Maven repository"
+echo
 # For xmllint command
 apt-get -y install libxml2-utils
 
@@ -99,14 +96,13 @@ RESOURCEMANAGER_LIBRARY_VERSION=$(parse_pom_version pom.xml)
 echo "Installing google-api-services-cloudresourcemanager version ${RESOURCEMANAGER_LIBRARY_VERSION}"
 mvn  -B -ntp install -Dclirr.skip=true -Dmaven.javadoc.skip=true
 
-###
-#
-# Step 5: Run the integration test that uses Cloud ResourceManager library
-#
-###
+echo
+echo
+echo "Step 5: Run the integration test that uses Cloud ResourceManager library"
+echo
 
 cd "${KOKORO_GITHUB_DIR}/google-api-java-client-services/generator/tests/java-integration-test"
-mvn -B -ntp test -Dcloudresourcemanager.version="${RESOURCEMANAGER_LIBRARY_VERSION}"
+mvn -V -B -ntp test -Dcloudresourcemanager.version="${RESOURCEMANAGER_LIBRARY_VERSION}"
 
 # Current working directory
 echo "Build finished"

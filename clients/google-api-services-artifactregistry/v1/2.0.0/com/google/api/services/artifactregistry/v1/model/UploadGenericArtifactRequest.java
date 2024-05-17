@@ -33,27 +33,18 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class UploadGenericArtifactRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the file of the generic artifact to be uploaded. E.g. "example-file.zip" The
-   * filename should only include letters, numbers, and url safe characters, i.e. [a-zA-Z0-9-_.~@].
+   * The name of the file of the generic artifact to be uploaded. E.g. `example-file.zip` The
+   * filename is limited to letters, numbers, and url safe characters, i.e. [a-zA-Z0-9-_.~@].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filename;
 
   /**
-   * Deprecated. Use package_id, version_id and filename instead. The resource name of the generic
-   * artifact. E.g.
-   * "projects/math/locations/us/repositories/operations/genericArtifacts/addition/1.0.0/add.py"
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
    * The ID of the package of the generic artifact. If the package does not exist, a new package
-   * will be created. E.g. "pkg-1" The package_id must start with a letter, end with a letter or
-   * number, only contain letters, numbers, hyphens and periods i.e. [a-z0-9-.], and cannot exceed
-   * 256 characters.
+   * will be created. The `package_id` must start with a letter, end with a letter or number, only
+   * contain letters, numbers, hyphens and periods i.e. [a-z0-9-.], and cannot exceed 256
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,19 +52,17 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
 
   /**
    * The ID of the version of the generic artifact. If the version does not exist, a new version
-   * will be created. E.g."1.0.0" The version_id must start and end with a letter or number, can
-   * only contain lowercase letters, numbers, hyphens and periods, i.e. [a-z0-9-.] and cannot exceed
-   * a total of 128 characters. While "latest" is a well-known name for the latest version of a
-   * package, it is not yet supported and is reserved for future use. Creating a version called
-   * "latest" is not allowed.
+   * will be created. The version_id must start and end with a letter or number, can only contain
+   * lowercase letters, numbers, hyphens and periods, i.e. [a-z0-9-.] and cannot exceed a total of
+   * 128 characters. Creating a version called `latest` is not allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String versionId;
 
   /**
-   * The name of the file of the generic artifact to be uploaded. E.g. "example-file.zip" The
-   * filename should only include letters, numbers, and url safe characters, i.e. [a-zA-Z0-9-_.~@].
+   * The name of the file of the generic artifact to be uploaded. E.g. `example-file.zip` The
+   * filename is limited to letters, numbers, and url safe characters, i.e. [a-zA-Z0-9-_.~@].
    * @return value or {@code null} for none
    */
   public java.lang.String getFilename() {
@@ -81,8 +70,8 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
   }
 
   /**
-   * The name of the file of the generic artifact to be uploaded. E.g. "example-file.zip" The
-   * filename should only include letters, numbers, and url safe characters, i.e. [a-zA-Z0-9-_.~@].
+   * The name of the file of the generic artifact to be uploaded. E.g. `example-file.zip` The
+   * filename is limited to letters, numbers, and url safe characters, i.e. [a-zA-Z0-9-_.~@].
    * @param filename filename or {@code null} for none
    */
   public UploadGenericArtifactRequest setFilename(java.lang.String filename) {
@@ -91,31 +80,10 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
   }
 
   /**
-   * Deprecated. Use package_id, version_id and filename instead. The resource name of the generic
-   * artifact. E.g.
-   * "projects/math/locations/us/repositories/operations/genericArtifacts/addition/1.0.0/add.py"
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * Deprecated. Use package_id, version_id and filename instead. The resource name of the generic
-   * artifact. E.g.
-   * "projects/math/locations/us/repositories/operations/genericArtifacts/addition/1.0.0/add.py"
-   * @param name name or {@code null} for none
-   */
-  public UploadGenericArtifactRequest setName(java.lang.String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
    * The ID of the package of the generic artifact. If the package does not exist, a new package
-   * will be created. E.g. "pkg-1" The package_id must start with a letter, end with a letter or
-   * number, only contain letters, numbers, hyphens and periods i.e. [a-z0-9-.], and cannot exceed
-   * 256 characters.
+   * will be created. The `package_id` must start with a letter, end with a letter or number, only
+   * contain letters, numbers, hyphens and periods i.e. [a-z0-9-.], and cannot exceed 256
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getPackageId() {
@@ -124,9 +92,9 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
 
   /**
    * The ID of the package of the generic artifact. If the package does not exist, a new package
-   * will be created. E.g. "pkg-1" The package_id must start with a letter, end with a letter or
-   * number, only contain letters, numbers, hyphens and periods i.e. [a-z0-9-.], and cannot exceed
-   * 256 characters.
+   * will be created. The `package_id` must start with a letter, end with a letter or number, only
+   * contain letters, numbers, hyphens and periods i.e. [a-z0-9-.], and cannot exceed 256
+   * characters.
    * @param packageId packageId or {@code null} for none
    */
   public UploadGenericArtifactRequest setPackageId(java.lang.String packageId) {
@@ -136,11 +104,9 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
 
   /**
    * The ID of the version of the generic artifact. If the version does not exist, a new version
-   * will be created. E.g."1.0.0" The version_id must start and end with a letter or number, can
-   * only contain lowercase letters, numbers, hyphens and periods, i.e. [a-z0-9-.] and cannot exceed
-   * a total of 128 characters. While "latest" is a well-known name for the latest version of a
-   * package, it is not yet supported and is reserved for future use. Creating a version called
-   * "latest" is not allowed.
+   * will be created. The version_id must start and end with a letter or number, can only contain
+   * lowercase letters, numbers, hyphens and periods, i.e. [a-z0-9-.] and cannot exceed a total of
+   * 128 characters. Creating a version called `latest` is not allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersionId() {
@@ -149,11 +115,9 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
 
   /**
    * The ID of the version of the generic artifact. If the version does not exist, a new version
-   * will be created. E.g."1.0.0" The version_id must start and end with a letter or number, can
-   * only contain lowercase letters, numbers, hyphens and periods, i.e. [a-z0-9-.] and cannot exceed
-   * a total of 128 characters. While "latest" is a well-known name for the latest version of a
-   * package, it is not yet supported and is reserved for future use. Creating a version called
-   * "latest" is not allowed.
+   * will be created. The version_id must start and end with a letter or number, can only contain
+   * lowercase letters, numbers, hyphens and periods, i.e. [a-z0-9-.] and cannot exceed a total of
+   * 128 characters. Creating a version called `latest` is not allowed.
    * @param versionId versionId or {@code null} for none
    */
   public UploadGenericArtifactRequest setVersionId(java.lang.String versionId) {

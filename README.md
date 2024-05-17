@@ -176,6 +176,7 @@ packages on [Maven Central][maven-search].
 | Google Site Verification API | [v1](clients/google-api-services-siteVerification/v1) |
 | Google Slides API | [v1](clients/google-api-services-slides/v1) |
 | Google Vault API | [v1](clients/google-api-services-vault/v1) |
+| Google Wallet API | [v1](clients/google-api-services-walletobjects/v1) |
 | Google Workspace Alert Center API | [v1beta1](clients/google-api-services-alertcenter/v1beta1) |
 | Google Workspace Reseller API | [v1](clients/google-api-services-reseller/v1) |
 | Groups Migration API | [v1](clients/google-api-services-groupsmigration/v1) |

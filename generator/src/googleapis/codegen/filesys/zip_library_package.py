@@ -22,7 +22,7 @@ components generated and required by a library.
 __author__ = 'aiuto@google.com (Tony Aiuto)'
 
 import os
-from io import StringIO
+from io import BytesIO
 import zipfile
 
 from googleapis.codegen.filesys.library_package import LibraryPackage
@@ -52,10 +52,11 @@ class ZipLibraryPackage(LibraryPackage):
       A file-like object to write the contents to.
     """
     self.EndFile()
-    self._current_file_data = StringIO.StringIO()
+    self._current_file_data = BytesIO()
     name = '%s%s' % (self._file_path_prefix, name)
     # Let this explode if the name is not ascii.
-    self._current_file_name = name.encode('ascii')
+    name.encode('ascii')
+    self._current_file_name = name
     self.CreateDirectory(os.path.dirname(self._current_file_name))
     return self._current_file_data
 
@@ -81,7 +82,7 @@ class ZipLibraryPackage(LibraryPackage):
     for directory in to_create:
       # Create the directory entry.  File and directory names must be
       # ascii.
-      info = zipfile.ZipInfo((directory + '/').encode('ascii'),
+      info = zipfile.ZipInfo(directory + '/',
                              date_time=self.ZipTimestamp())
       # Notes from the web and zipfile sources:
       # external_attr is 32 in size, with the unix permissions in the

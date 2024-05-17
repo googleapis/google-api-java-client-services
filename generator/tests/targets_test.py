@@ -18,11 +18,11 @@ __author__ = 'jcgregorio@google.com (Joe Gregorio)'
 
 import os
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen import targets
 
 
-class BaseTargetsTest(basetest.TestCase):
+class BaseTargetsTest(absltest.TestCase):
 
   def setUp(self):
     testdata_dir = os.path.join(os.path.dirname(__file__), 'testdata')
@@ -67,4 +67,4 @@ class FeaturesLoadingTest(BaseTargetsTest):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

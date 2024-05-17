@@ -18,13 +18,13 @@ EXIT_STATUS=0
 pushd $(dirname "$0")/..
 
 # Install the generator directory without dependencies first and then install the dependencies with hash checking.
-python2 -m pip install --no-deps -e generator/ --user
-python2 -m pip install --require-hashes -r generator/generator_requirements.txt --user
+python3 -m pip install --no-deps -e generator/ --user
+python3 -m pip install --require-hashes -r generator/generator_requirements.txt --user
 
 pushd generator
 for file in `find tests/ -name '*_test.py'`
 do
-  python2 $file
+  python3 $file
   es=$?
   if [ $es -ne 0 ]; then
       EXIT_STATUS=$es

@@ -22,14 +22,14 @@ import hashlib
 import os
 import textwrap
 
-from google.apputils import basetest
+from absl.testing import absltest
 # pylint: disable=unused-import
 from googleapis.codegen import django_helpers
 from googleapis.codegen import template_helpers
 from django import template as django_template  # pylint: disable=g-bad-import-order
 
 
-class TemplateHelpersTest(basetest.TestCase):
+class TemplateHelpersTest(absltest.TestCase):
 
   _TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'testdata')
 
@@ -653,7 +653,7 @@ class TemplateHelpersTest(basetest.TestCase):
     self.assertEqual('bar', self.name_to_content['y'])
 
 
-class TemplateGlobalsTest(basetest.TestCase):
+class TemplateGlobalsTest(absltest.TestCase):
 
   def testSetContext(self):
     self.assertIsNone(template_helpers.GetCurrentContext())
@@ -665,4 +665,4 @@ class TemplateGlobalsTest(basetest.TestCase):
     self.assertIsNone(template_helpers.GetCurrentContext())
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

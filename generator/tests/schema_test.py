@@ -18,7 +18,7 @@
 __author__ = 'aiuto@google.com (Tony Aiuto)'
 
 
-from google.apputils import basetest
+from absl.testing import absltest
 
 from googleapis.codegen import language_model
 from googleapis.codegen.api import Api
@@ -52,7 +52,7 @@ def MakeApiWithSchemas(schemas):
   return api
 
 
-class SchemaTest(basetest.TestCase):
+class SchemaTest(absltest.TestCase):
   """Tests for the Schema class."""
 
   def testArrayOfArray(self):
@@ -352,4 +352,4 @@ class SchemaTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

@@ -20,11 +20,11 @@
 
 __author__ = 'wclarkso@google.com (Will Clarkson)'
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen.utilities import name_validator
 
 
-class NameValidatorTest(basetest.TestCase):
+class NameValidatorTest(absltest.TestCase):
 
   def testVariableNameValidator(self):
     good_names = ['$ref', '_a', '_private', 'a_var.name', 't1', 'max-results',
@@ -99,4 +99,4 @@ class NameValidatorTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

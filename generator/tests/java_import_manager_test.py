@@ -17,7 +17,7 @@
 
 __author__ = 'rmistry@google.com (Ravi Mistry)'
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen.java_import_manager import JavaImportManager
 
 
@@ -34,7 +34,7 @@ class MockSchema(object):
     return self._template_values_dict.get(template_name)
 
 
-class JavaImportManagerTest(basetest.TestCase):
+class JavaImportManagerTest(absltest.TestCase):
 
   def setUp(self):
     super(JavaImportManagerTest, self).setUp()
@@ -100,4 +100,4 @@ class JavaImportManagerTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

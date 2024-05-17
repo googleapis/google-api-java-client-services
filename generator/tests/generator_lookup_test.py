@@ -21,14 +21,14 @@ import json
 import os
 
 
-from google.apputils import basetest
+from absl.testing import absltest
 
 from googleapis.codegen import generator_lookup
 from googleapis.codegen import java_generator
 from googleapis.codegen import targets
 
 
-class GeneratorLookupTest(basetest.TestCase):
+class GeneratorLookupTest(absltest.TestCase):
 
   def testDetermineGenerator(self):
     test_gen = generator_lookup.GetGeneratorByLanguage('java')
@@ -55,4 +55,4 @@ class GeneratorLookupTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

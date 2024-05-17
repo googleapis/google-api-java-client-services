@@ -17,13 +17,13 @@
 
 __author__ = 'aiuto@google.com (Tony Aiuto)'
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen import data_types
 from googleapis.codegen import data_value
 from googleapis.codegen import java_generator
 
 
-class JavaApiTest(basetest.TestCase):
+class JavaApiTest(absltest.TestCase):
 
   def testToClassName(self):
     """Test creating safe class names from object names."""
@@ -118,7 +118,7 @@ class JavaApiTest(basetest.TestCase):
           language_model.GetPrimitiveTypeFromDictionary(test_case[1]))
 
 
-class JavaGeneratorTest(basetest.TestCase):
+class JavaGeneratorTest(absltest.TestCase):
 
   def testImportsForArray(self):
     """Test if we get the right imports for an array.
@@ -171,7 +171,7 @@ class JavaGeneratorTest(basetest.TestCase):
     self.assertTrue(found_date_time)
 
 
-class JavaLanguageModelTest(basetest.TestCase):
+class JavaLanguageModelTest(absltest.TestCase):
   """Tests for features implemented in the language model."""
 
 
@@ -234,7 +234,7 @@ class JavaLanguageModelTest(basetest.TestCase):
                       model.TransformString(None, '@id', model.getter_policy))
 
 
-class JavaLanguageModelDataValueTest(basetest.TestCase):
+class JavaLanguageModelDataValueTest(absltest.TestCase):
   """Tests for DataValue integration."""
 
   def setUp(self):
@@ -267,7 +267,7 @@ class JavaLanguageModelDataValueTest(basetest.TestCase):
     self.assertEqual('42L', render_method(dv))
 
 
-class Java14LanguageModelTest(basetest.TestCase):
+class Java14LanguageModelTest(absltest.TestCase):
 
   def setUp(self):
     self.language_model = java_generator.JavaLanguageModel()
@@ -292,4 +292,4 @@ class Java14LanguageModelTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

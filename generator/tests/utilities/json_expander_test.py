@@ -16,11 +16,11 @@
 
 __author__ = "smulloni@google.com (Jacob Smullyan)"
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen.utilities import json_expander
 
 
-class JsonExpanderTest(basetest.TestCase):
+class JsonExpanderTest(absltest.TestCase):
 
   def testExpand(self):
     x_val = "foo"
@@ -51,4 +51,4 @@ class JsonExpanderTest(basetest.TestCase):
 
 
 if __name__ == "__main__":
-  basetest.main()
+  absltest.main()

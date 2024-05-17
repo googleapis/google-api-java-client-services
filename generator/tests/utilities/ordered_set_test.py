@@ -14,12 +14,12 @@
 #  limitations under the License.
 """Tests for ordered_set.py."""
 
-from google.apputils import basetest
+from absl.testing import absltest
 
 from googleapis.codegen.utilities import ordered_set
 
 
-class OrderedSetTest(basetest.TestCase):
+class OrderedSetTest(absltest.TestCase):
 
   def testFrozenSet(self):
     s = ordered_set.FrozenOrderedSet(list(range(5)))
@@ -42,4 +42,4 @@ class OrderedSetTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

@@ -17,11 +17,11 @@
 
 __author__ = 'aiuto@google.com (Tony Aiuto)'
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen import language_model
 
 
-class DocumentingLanguageModelTest(basetest.TestCase):
+class DocumentingLanguageModelTest(absltest.TestCase):
 
   def testDocumentingLanguageModel(self):
     dlm = language_model.DocumentingLanguageModel()
@@ -33,4 +33,4 @@ class DocumentingLanguageModelTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

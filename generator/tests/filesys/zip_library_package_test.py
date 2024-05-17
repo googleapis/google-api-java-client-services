@@ -24,13 +24,13 @@ import os
 import zipfile
 
 import gflags as flags
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen.filesys import zip_library_package
 
 FLAGS = flags.FLAGS
 
 
-class ZipLibraryPackageTest(basetest.TestCase):
+class ZipLibraryPackageTest(absltest.TestCase):
   _FILE_NAME = 'a_test'
   _DISALLOWED_FILE_NAME = 'unicode_☃☄'
   _FILE_CONTENTS = 'this is a test - ☃☄'
@@ -212,4 +212,4 @@ class ZipLibraryPackageTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

@@ -19,11 +19,11 @@
 
 __author__ = 'aiuto@google.com (Tony Aiuto)'
 
-from google.apputils import basetest
+from absl.testing import absltest
 import googleapis.codegen.utilities as utilities
 
 
-class UtilitiesTest(basetest.TestCase):
+class UtilitiesTest(absltest.TestCase):
 
   def testCamelCase(self):
     """Basic CamelCase functionality."""
@@ -96,4 +96,4 @@ class UtilitiesTest(basetest.TestCase):
     self.assertEqual('abc', utilities.NoSpaces('a b  c '))
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

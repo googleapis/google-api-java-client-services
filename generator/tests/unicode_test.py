@@ -19,14 +19,14 @@ import json
 import os
 
 import gflags as flags
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen import api
 
 FLAGS = flags.FLAGS
 
 
 
-class UnicodeTest(basetest.TestCase):
+class UnicodeTest(absltest.TestCase):
 
   _TEST_DISCOVERY_DOC = 'unicode.json'
 
@@ -41,7 +41,7 @@ class UnicodeTest(basetest.TestCase):
     """
 
     with open(os.path.join(os.path.dirname(__file__), 'testdata', path)) as f:
-      discovery_doc = json.loads(f.read().decode('utf-8'))
+      discovery_doc = json.loads(f.read())
     return api.Api(discovery_doc)
 
   def testGiveMeAName(self):
@@ -82,4 +82,4 @@ class UnicodeTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

@@ -24,13 +24,13 @@ import os
 import tarfile
 
 import gflags as flags
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen.filesys import tar_library_package
 
 FLAGS = flags.FLAGS
 
 
-class TarLibraryPackageTest(basetest.TestCase):
+class TarLibraryPackageTest(absltest.TestCase):
   _FILE_NAME = 'a_test'
   _DISALLOWED_FILE_NAME = 'unicode_☃☄'
   _FILE_CONTENTS = 'this is a test - ☃☄'
@@ -159,4 +159,4 @@ class TarLibraryPackageTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

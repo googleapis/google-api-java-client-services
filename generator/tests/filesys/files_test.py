@@ -17,11 +17,11 @@ import os
 import shutil
 import tempfile
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen.filesys import files
 
 
-class FilesTest(basetest.TestCase):
+class FilesTest(absltest.TestCase):
 
   def setUp(self):
     self.tempdir = tempfile.mkdtemp()
@@ -46,4 +46,4 @@ class FilesTest(basetest.TestCase):
     self.assertFalse(files.IsFile(self.tempdir))
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

@@ -18,13 +18,13 @@ __author__ = 'aiuto@google.com (Tony Aiuto)'
 
 
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen import data_types
 from googleapis.codegen import language_model
 from googleapis.codegen import template_objects
 
 
-class DataTypesTest(basetest.TestCase):
+class DataTypesTest(absltest.TestCase):
 
   def testVoidDataTypeDefault(self):
     api = template_objects.CodeObject({}, None)
@@ -44,4 +44,4 @@ class DataTypesTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

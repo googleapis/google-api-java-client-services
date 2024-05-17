@@ -55,10 +55,11 @@ class TarLibraryPackage(LibraryPackage):
       A file-like object to write the contents to.
     """
     self.EndFile()
-    self._current_file_data = StringIO.StringIO()
+    self._current_file_data = StringIO()
     name = '%s%s' % (self._file_path_prefix, name)
     # Let this explode if the name is not ascii.
-    self._current_file_name = name.encode('ascii')
+    name.encode('ascii')
+    self._current_file_name = name
     return self._current_file_data
 
   def EndFile(self):

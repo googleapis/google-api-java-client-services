@@ -22,7 +22,7 @@ import os
 
 
 import gflags as flags
-from google.apputils import basetest
+from absl.testing import absltest
 
 from googleapis.codegen import data_types
 from googleapis.codegen import language_model
@@ -46,7 +46,7 @@ class FakeLanguageModel(language_model.LanguageModel):
     return 'Array[%s]' % s
 
 
-class ApiTest(basetest.TestCase):
+class ApiTest(absltest.TestCase):
 
   # The base discovery doc for most tests.
   _TEST_DISCOVERY_DOC = 'sample_discovery.json'
@@ -683,7 +683,7 @@ class ApiTest(basetest.TestCase):
     self.assertTrue(api2.values['exponentialBackoffDefault'])
 
 
-class ApiModulesTest(basetest.TestCase):
+class ApiModulesTest(absltest.TestCase):
 
   def setUp(self):
     self.discovery_doc = json.loads(
@@ -738,4 +738,4 @@ def FindByWireName(list_of_resource_or_method, wire_name):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

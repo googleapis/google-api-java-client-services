@@ -19,12 +19,12 @@ __author__ = 'aiuto@google.com (Tony Aiuto)'
 
 
 from django import template as django_template  # pylint:disable=g-bad-import-order
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen import language_model
 from googleapis.codegen import template_objects
 
 
-class TemplateObjectsTest(basetest.TestCase):
+class TemplateObjectsTest(absltest.TestCase):
 
   def setUp(self):
     super(TemplateObjectsTest, self).setUp()
@@ -119,7 +119,7 @@ class TemplateObjectsTest(basetest.TestCase):
     self._TestRender(t, {'o': useable}, 'here I am')
 
 
-class ConstantTest(basetest.TestCase):
+class ConstantTest(absltest.TestCase):
 
   def setUp(self):
     super(ConstantTest, self).setUp()
@@ -171,4 +171,4 @@ class ConstantTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

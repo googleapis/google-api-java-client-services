@@ -14,12 +14,12 @@
 #  limitations under the License.
 
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen import java_generator
 from googleapis.codegen.utilities import maven_utils
 
 
-class MavenUtilsTest(basetest.TestCase):
+class MavenUtilsTest(absltest.TestCase):
 
   def testGetMavenArtifactId(self):
     args = [
@@ -87,4 +87,4 @@ class MavenUtilsTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

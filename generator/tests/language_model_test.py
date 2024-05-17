@@ -17,7 +17,7 @@
 
 __author__ = 'akesling@google.com (Alex Kesling)'
 
-from google.apputils import basetest
+from absl.testing import absltest
 
 from googleapis.codegen import data_types
 from googleapis.codegen import data_value
@@ -25,7 +25,7 @@ from googleapis.codegen import language_model
 from googleapis.codegen.template_objects import CodeObject
 
 
-class LanguageModelTest(basetest.TestCase):
+class LanguageModelTest(absltest.TestCase):
 
   def setUp(self):
     self.language_model = language_model.LanguageModel()
@@ -98,7 +98,7 @@ class LanguageModelTest(basetest.TestCase):
     self.assertRaises(ValueError, render_method, float_dv)
 
 
-class LanguagePolicyTest(basetest.TestCase):
+class LanguagePolicyTest(absltest.TestCase):
 
   def testApplyCaseTransform(self):
 
@@ -262,4 +262,4 @@ class LanguagePolicyTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

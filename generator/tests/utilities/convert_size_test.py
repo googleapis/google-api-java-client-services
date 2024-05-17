@@ -14,11 +14,11 @@
 #  limitations under the License.
 
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen.utilities import convert_size
 
 
-class ConvertSizeTest(basetest.TestCase):
+class ConvertSizeTest(absltest.TestCase):
   """Test for unit conversion."""
 
   def testConvertSize(self):
@@ -32,4 +32,4 @@ class ConvertSizeTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

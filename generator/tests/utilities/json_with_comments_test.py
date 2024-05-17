@@ -14,12 +14,12 @@
 #  limitations under the License.
 """Tests for json_with_comments.py."""
 
-from google.apputils import basetest
+from absl.testing import absltest
 
 from googleapis.codegen.utilities import json_with_comments
 
 
-class JsonWithCommentsTest(basetest.TestCase):
+class JsonWithCommentsTest(absltest.TestCase):
 
   SOME_JSON_WITH_COMMENTS = """
     # Garlic and sapphires in the mud
@@ -49,4 +49,4 @@ class JsonWithCommentsTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

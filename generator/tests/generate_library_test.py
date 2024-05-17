@@ -16,9 +16,9 @@
 
 import os
 
-from google.apputils import app
-import gflags as flags
-from google.apputils import basetest
+from absl import app
+from absl import flags
+from absl.testing import absltest
 from googleapis.codegen import generate_library
 
 FLAGS = flags.FLAGS
@@ -28,7 +28,7 @@ def CallGeneratorMain():
   generate_library.main([])
 
 
-class GenerateLibraryTest(basetest.TestCase):
+class GenerateLibraryTest(absltest.TestCase):
 
   def AssertRaisesContainingText(self, expected_exception, function,
                                  expected_text):
@@ -79,4 +79,4 @@ class GenerateLibraryTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

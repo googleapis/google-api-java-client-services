@@ -19,7 +19,7 @@ pushd $(dirname "$0")/..
 
 # Install the generator directory without dependencies first and then install the dependencies with hash checking.
 echo "using $(python3 --version)"
-curl https://bootstrap.pypa.io/pip/3.5/get-pip.py -o get-pip.py
+curl https://bootstrap.pypa.io/pip/3.6/get-pip.py -o get-pip.py
 python3 get-pip.py
 python3 -m pip install --no-deps -e generator/ --user
 python3 -m pip install --require-hashes -r generator/generator_requirements.txt --user

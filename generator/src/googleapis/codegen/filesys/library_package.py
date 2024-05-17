@@ -83,7 +83,7 @@ class LibraryPackage(object):
       name: (str) name the file should have in the archive.
     """
     output_stream = self.StartFile(name)
-    output_stream.write(files.GetFileContents(path))
+    output_stream.write(files.GetFileContents(path).encode('utf-8'))
     self.EndFile()
 
   def IncludeManyFiles(self, paths, strip_prefix='', new_prefix=None):

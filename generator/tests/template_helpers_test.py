@@ -627,7 +627,7 @@ class TemplateHelpersTest(absltest.TestCase):
         '{% checksummed_div %}'
         'someId'
         '{% divbody %}' + source + '{% endchecksummed_div %}')
-    checksum = hashlib.sha1(source).hexdigest()
+    checksum = hashlib.sha1(source.encode('utf-8')).hexdigest()
     expected = ('<div id="someId" checksum="%s">' % checksum +
                 source +
                 '</div>')

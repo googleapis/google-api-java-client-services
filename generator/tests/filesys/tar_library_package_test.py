@@ -33,7 +33,8 @@ FLAGS = flags.FLAGS
 class TarLibraryPackageTest(absltest.TestCase):
   _FILE_NAME = 'a_test'
   _DISALLOWED_FILE_NAME = 'unicode_☃☄'
-  _FILE_CONTENTS = 'this is a test - ☃☄'
+  # Content is in bytes.
+  _FILE_CONTENTS = 'this is a test - ☃☄'.encode('utf-8')
   _TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'testdata')
 
   def setUp(self):
@@ -60,7 +61,7 @@ class TarLibraryPackageTest(absltest.TestCase):
     info_list = archive.getmembers()
     self.assertEqual(1, len(info_list))
     self.assertEqual(self._FILE_NAME, info_list[0].name)
-    self.assertEqual(len(self._FILE_CONTENTS.encode('utf-8')),
+    self.assertEqual(len(self._FILE_CONTENTS),
                       info_list[0].size)
 
   def testBasicWriteFileUncompressed(self):
@@ -77,7 +78,7 @@ class TarLibraryPackageTest(absltest.TestCase):
     info_list = archive.getmembers()
     self.assertEqual(1, len(info_list))
     self.assertEqual(self._FILE_NAME, info_list[0].name)
-    self.assertEqual(len(self._FILE_CONTENTS.encode('utf-8')),
+    self.assertEqual(len(self._FILE_CONTENTS),
                       info_list[0].size)
 
   def testStartAutomaticallyClosesPreviousFile(self):

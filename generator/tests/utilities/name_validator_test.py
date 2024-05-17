@@ -90,7 +90,8 @@ class NameValidatorTest(absltest.TestCase):
 
   def testUtf8InComment(self):
     comment = 'Base64-encoded (RFC 4648 §5) data.'
-    unicode_comment = comment.decode('utf-8')
+    # In python3, strings are unicode
+    unicode_comment = comment
     self.assertEqual(unicode_comment,
                      name_validator.ValidateAndSanitizeComment(comment))
     self.assertEqual(

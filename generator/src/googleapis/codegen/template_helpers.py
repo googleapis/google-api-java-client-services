@@ -1513,7 +1513,7 @@ class DivChecksumNode(django_template.Node):
   def render(self, context):  # pylint:disable=g-bad-name
     body = self._body_nodes.render(context)
     element_id = self._id_nodes.render(context)
-    checksum = hashlib.sha1(body).hexdigest()
+    checksum = hashlib.sha1(body.encode('utf-8')).hexdigest()
     return ('<div id="%s" checksum="%s">%s</div>' %
             (element_id, checksum, body))
 

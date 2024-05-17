@@ -82,11 +82,11 @@ apt-get -y install libxml2-utils
 function update_pom_version() {
   pom_file=$1
   version=$2
-  xmllint --shell "${pom_file}" <<EOF
+  xmllint --shell "${pom_file}" &>/dev/null <<EOF
 setns x=http://maven.apache.org/POM/4.0.0
 cd .//x:project/x:version
-set "${version}"
-save "${pom_file}"
+set $version
+save $pom_file
 EOF
 }
 

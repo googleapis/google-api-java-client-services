@@ -31,6 +31,28 @@ package com.google.api.services.chromemanagement.v1.model;
 public final class GoogleChromeManagementV1TelemetryEvent extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Payload for app install event. Present only when `event_type` is `APP_INSTALLED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1TelemetryAppInstallEvent appInstallEvent;
+
+  /**
+   * Output only. Payload for app launch event.Present only when `event_type` is `APP_LAUNCHED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1TelemetryAppLaunchEvent appLaunchEvent;
+
+  /**
+   * Output only. Payload for app uninstall event. Present only when `event_type` is
+   * `APP_UNINSTALLED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1TelemetryAppUninstallEvent appUninstallEvent;
+
+  /**
    * Output only. Payload for audio severe underrun event. Present only when the `event_type` field
    * is `AUDIO_SEVERE_UNDERRUN`.
    * The value may be {@code null}.
@@ -112,6 +134,59 @@ public final class GoogleChromeManagementV1TelemetryEvent extends com.google.api
    */
   @com.google.api.client.util.Key
   private GoogleChromeManagementV1TelemetryNetworkSignalStrengthEvent wifiSignalStrengthEvent;
+
+  /**
+   * Output only. Payload for app install event. Present only when `event_type` is `APP_INSTALLED`.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryAppInstallEvent getAppInstallEvent() {
+    return appInstallEvent;
+  }
+
+  /**
+   * Output only. Payload for app install event. Present only when `event_type` is `APP_INSTALLED`.
+   * @param appInstallEvent appInstallEvent or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryEvent setAppInstallEvent(GoogleChromeManagementV1TelemetryAppInstallEvent appInstallEvent) {
+    this.appInstallEvent = appInstallEvent;
+    return this;
+  }
+
+  /**
+   * Output only. Payload for app launch event.Present only when `event_type` is `APP_LAUNCHED`.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryAppLaunchEvent getAppLaunchEvent() {
+    return appLaunchEvent;
+  }
+
+  /**
+   * Output only. Payload for app launch event.Present only when `event_type` is `APP_LAUNCHED`.
+   * @param appLaunchEvent appLaunchEvent or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryEvent setAppLaunchEvent(GoogleChromeManagementV1TelemetryAppLaunchEvent appLaunchEvent) {
+    this.appLaunchEvent = appLaunchEvent;
+    return this;
+  }
+
+  /**
+   * Output only. Payload for app uninstall event. Present only when `event_type` is
+   * `APP_UNINSTALLED`.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryAppUninstallEvent getAppUninstallEvent() {
+    return appUninstallEvent;
+  }
+
+  /**
+   * Output only. Payload for app uninstall event. Present only when `event_type` is
+   * `APP_UNINSTALLED`.
+   * @param appUninstallEvent appUninstallEvent or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryEvent setAppUninstallEvent(GoogleChromeManagementV1TelemetryAppUninstallEvent appUninstallEvent) {
+    this.appUninstallEvent = appUninstallEvent;
+    return this;
+  }
 
   /**
    * Output only. Payload for audio severe underrun event. Present only when the `event_type` field

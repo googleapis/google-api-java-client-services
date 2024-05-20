@@ -37,6 +37,14 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean allowMultipleUsersPerObject;
 
   /**
+   * Optional app or website link that will be displayed as a button on the front of the pass. If
+   * AppLinkData is provided for the corresponding object that will be used instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppLinkData appLinkData;
+
+  /**
    * Policies for boarding and seating. These will inform which labels will be shown to users.
    * The value may be {@code null}.
    */
@@ -382,6 +390,25 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
    */
   public FlightClass setAllowMultipleUsersPerObject(java.lang.Boolean allowMultipleUsersPerObject) {
     this.allowMultipleUsersPerObject = allowMultipleUsersPerObject;
+    return this;
+  }
+
+  /**
+   * Optional app or website link that will be displayed as a button on the front of the pass. If
+   * AppLinkData is provided for the corresponding object that will be used instead.
+   * @return value or {@code null} for none
+   */
+  public AppLinkData getAppLinkData() {
+    return appLinkData;
+  }
+
+  /**
+   * Optional app or website link that will be displayed as a button on the front of the pass. If
+   * AppLinkData is provided for the corresponding object that will be used instead.
+   * @param appLinkData appLinkData or {@code null} for none
+   */
+  public FlightClass setAppLinkData(AppLinkData appLinkData) {
+    this.appLinkData = appLinkData;
     return this;
   }
 

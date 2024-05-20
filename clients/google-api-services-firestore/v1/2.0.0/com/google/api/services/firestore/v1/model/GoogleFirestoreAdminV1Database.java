@@ -125,6 +125,14 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String pointInTimeRecoveryEnablement;
 
   /**
+   * Output only. The database resource's prior database ID. This field is only populated for
+   * deleted databases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String previousId;
+
+  /**
    * The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-datastore
    * for information about how to choose.
    * The value may be {@code null}.
@@ -380,6 +388,25 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   public GoogleFirestoreAdminV1Database setPointInTimeRecoveryEnablement(java.lang.String pointInTimeRecoveryEnablement) {
     this.pointInTimeRecoveryEnablement = pointInTimeRecoveryEnablement;
+    return this;
+  }
+
+  /**
+   * Output only. The database resource's prior database ID. This field is only populated for
+   * deleted databases.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPreviousId() {
+    return previousId;
+  }
+
+  /**
+   * Output only. The database resource's prior database ID. This field is only populated for
+   * deleted databases.
+   * @param previousId previousId or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setPreviousId(java.lang.String previousId) {
+    this.previousId = previousId;
     return this;
   }
 

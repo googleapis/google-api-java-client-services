@@ -37,6 +37,14 @@ public final class GoogleFirestoreAdminV1WeeklyRecurrence extends com.google.api
   private java.lang.String day;
 
   /**
+   * Time of the day. If day is today, the first run will happen today if schedule creation time
+   * precedes time_of_day, and the next week otherwise.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimeOfDay time;
+
+  /**
    * The day of week to run. DAY_OF_WEEK_UNSPECIFIED is not allowed.
    * @return value or {@code null} for none
    */
@@ -50,6 +58,25 @@ public final class GoogleFirestoreAdminV1WeeklyRecurrence extends com.google.api
    */
   public GoogleFirestoreAdminV1WeeklyRecurrence setDay(java.lang.String day) {
     this.day = day;
+    return this;
+  }
+
+  /**
+   * Time of the day. If day is today, the first run will happen today if schedule creation time
+   * precedes time_of_day, and the next week otherwise.
+   * @return value or {@code null} for none
+   */
+  public TimeOfDay getTime() {
+    return time;
+  }
+
+  /**
+   * Time of the day. If day is today, the first run will happen today if schedule creation time
+   * precedes time_of_day, and the next week otherwise.
+   * @param time time or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1WeeklyRecurrence setTime(TimeOfDay time) {
+    this.time = time;
     return this;
   }
 

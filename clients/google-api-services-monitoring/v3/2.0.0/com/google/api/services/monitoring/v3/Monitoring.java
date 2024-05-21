@@ -11263,7 +11263,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
   public class UptimeCheckIps {
 
     /**
-     * Returns the list of IP addresses that checkers run from
+     * Returns the list of IP addresses that checkers run from.
      *
      * Create a request for the method "uptimeCheckIps.list".
      *
@@ -11283,7 +11283,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       private static final String REST_PATH = "v3/uptimeCheckIps";
 
       /**
-       * Returns the list of IP addresses that checkers run from
+       * Returns the list of IP addresses that checkers run from.
        *
        * Create a request for the method "uptimeCheckIps.list".
        *

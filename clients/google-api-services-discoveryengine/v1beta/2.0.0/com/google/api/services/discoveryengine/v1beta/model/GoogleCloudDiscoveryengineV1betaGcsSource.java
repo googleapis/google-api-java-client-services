@@ -38,7 +38,7 @@ public final class GoogleCloudDiscoveryengineV1betaGcsSource extends com.google.
    * defined Schema of the data store. This can only be used by the GENERIC Data Store vertical. *
    * `csv`: A CSV file with header conforming to the defined Schema of the data store. Each entry
    * after the header is imported as a Document. This can only be used by the GENERIC Data Store
-   * vertical. Supported values for user even imports: * `user_event` (default): One JSON UserEvent
+   * vertical. Supported values for user event imports: * `user_event` (default): One JSON UserEvent
    * per line.
    * The value may be {@code null}.
    */
@@ -46,8 +46,8 @@ public final class GoogleCloudDiscoveryengineV1betaGcsSource extends com.google.
   private java.lang.String dataSchema;
 
   /**
-   * Required. Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs can
-   * match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
+   * Required. Cloud Storage URIs to input files. Each URI can be up to 2000 characters long. URIs
+   * can match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
    * matching one or more files, such as `gs://bucket/directory.json`. A request can contain at most
    * 100 files (or 100,000 files if `data_schema` is `content`). Each file can be up to 2 GB (or 100
    * MB if `data_schema` is `content`).
@@ -65,7 +65,7 @@ public final class GoogleCloudDiscoveryengineV1betaGcsSource extends com.google.
    * defined Schema of the data store. This can only be used by the GENERIC Data Store vertical. *
    * `csv`: A CSV file with header conforming to the defined Schema of the data store. Each entry
    * after the header is imported as a Document. This can only be used by the GENERIC Data Store
-   * vertical. Supported values for user even imports: * `user_event` (default): One JSON UserEvent
+   * vertical. Supported values for user event imports: * `user_event` (default): One JSON UserEvent
    * per line.
    * @return value or {@code null} for none
    */
@@ -82,7 +82,7 @@ public final class GoogleCloudDiscoveryengineV1betaGcsSource extends com.google.
    * defined Schema of the data store. This can only be used by the GENERIC Data Store vertical. *
    * `csv`: A CSV file with header conforming to the defined Schema of the data store. Each entry
    * after the header is imported as a Document. This can only be used by the GENERIC Data Store
-   * vertical. Supported values for user even imports: * `user_event` (default): One JSON UserEvent
+   * vertical. Supported values for user event imports: * `user_event` (default): One JSON UserEvent
    * per line.
    * @param dataSchema dataSchema or {@code null} for none
    */
@@ -92,8 +92,8 @@ public final class GoogleCloudDiscoveryengineV1betaGcsSource extends com.google.
   }
 
   /**
-   * Required. Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs can
-   * match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
+   * Required. Cloud Storage URIs to input files. Each URI can be up to 2000 characters long. URIs
+   * can match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
    * matching one or more files, such as `gs://bucket/directory.json`. A request can contain at most
    * 100 files (or 100,000 files if `data_schema` is `content`). Each file can be up to 2 GB (or 100
    * MB if `data_schema` is `content`).
@@ -104,8 +104,8 @@ public final class GoogleCloudDiscoveryengineV1betaGcsSource extends com.google.
   }
 
   /**
-   * Required. Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs can
-   * match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
+   * Required. Cloud Storage URIs to input files. Each URI can be up to 2000 characters long. URIs
+   * can match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
    * matching one or more files, such as `gs://bucket/directory.json`. A request can contain at most
    * 100 files (or 100,000 files if `data_schema` is `content`). Each file can be up to 2 GB (or 100
    * MB if `data_schema` is `content`).

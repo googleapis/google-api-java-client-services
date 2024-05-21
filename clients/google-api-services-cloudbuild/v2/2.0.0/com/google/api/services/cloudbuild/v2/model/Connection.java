@@ -31,7 +31,7 @@ package com.google.api.services.cloudbuild.v2.model;
 public final class Connection extends com.google.api.client.json.GenericJson {
 
   /**
-   * Allows clients to store small amounts of arbitrary data.
+   * Optional. Allows clients to store small amounts of arbitrary data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +59,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * If disabled is set to true, functionality is disabled for this connection. Repository based API
-   * methods and webhooks processing for repositories in this connection will be disabled.
+   * Optional. If disabled is set to true, functionality is disabled for this connection. Repository
+   * based API methods and webhooks processing for repositories in this connection will be disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +125,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Allows clients to store small amounts of arbitrary data.
+   * Optional. Allows clients to store small amounts of arbitrary data.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -133,7 +133,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Allows clients to store small amounts of arbitrary data.
+   * Optional. Allows clients to store small amounts of arbitrary data.
    * @param annotations annotations or {@code null} for none
    */
   public Connection setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -193,8 +193,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If disabled is set to true, functionality is disabled for this connection. Repository based API
-   * methods and webhooks processing for repositories in this connection will be disabled.
+   * Optional. If disabled is set to true, functionality is disabled for this connection. Repository
+   * based API methods and webhooks processing for repositories in this connection will be disabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -202,8 +202,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If disabled is set to true, functionality is disabled for this connection. Repository based API
-   * methods and webhooks processing for repositories in this connection will be disabled.
+   * Optional. If disabled is set to true, functionality is disabled for this connection. Repository
+   * based API methods and webhooks processing for repositories in this connection will be disabled.
    * @param disabled disabled or {@code null} for none
    */
   public Connection setDisabled(java.lang.Boolean disabled) {

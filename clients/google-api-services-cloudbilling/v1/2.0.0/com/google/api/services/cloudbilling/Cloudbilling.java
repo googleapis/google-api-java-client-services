@@ -3259,7 +3259,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the cloudbilling server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the service. Example: "services/DA34-426B-A397"
+       * @param parent Required. The name of the service. Example: "services/6F81-5844-456A"
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3285,7 +3285,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the service. Example: "services/DA34-426B-A397"
+         * @param parent Required. The name of the service. Example: "services/6F81-5844-456A"
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3363,17 +3363,17 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The name of the service. Example: "services/DA34-426B-A397" */
+        /** Required. The name of the service. Example: "services/6F81-5844-456A" */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the service. Example: "services/DA34-426B-A397"
+        /** Required. The name of the service. Example: "services/6F81-5844-456A"
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The name of the service. Example: "services/DA34-426B-A397" */
+        /** Required. The name of the service. Example: "services/6F81-5844-456A" */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

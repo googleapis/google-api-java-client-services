@@ -444,12 +444,28 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String linkTemplate;
 
   /**
-   * Loyalty program information that is used to surface loyalty benefits ( for example pricing,
-   * points, etc) to the user for this item.
+   * Loyalty program information that is used to surface loyalty benefits ( for example, better
+   * pricing, points, etc) to the user of this item. This signular field points to the latest
+   * uploaded loyalty program info. This field will be deprecated in the coming weeks and should not
+   * be used in favor of the plural 'LoyaltyProgram' field below.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LoyaltyProgram loyaltyProgram;
+
+  /**
+   * Optional. A list of loyalty program information that is used to surface loyalty benefits (for
+   * example, better pricing, points, etc) to the user of this item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LoyaltyProgram> loyaltyPrograms;
+
+  static {
+    // hack to force ProGuard to consider LoyaltyProgram used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LoyaltyProgram.class);
+  }
 
   /**
    * The material of which the item is made.
@@ -1746,8 +1762,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Loyalty program information that is used to surface loyalty benefits ( for example pricing,
-   * points, etc) to the user for this item.
+   * Loyalty program information that is used to surface loyalty benefits ( for example, better
+   * pricing, points, etc) to the user of this item. This signular field points to the latest
+   * uploaded loyalty program info. This field will be deprecated in the coming weeks and should not
+   * be used in favor of the plural 'LoyaltyProgram' field below.
    * @return value or {@code null} for none
    */
   public LoyaltyProgram getLoyaltyProgram() {
@@ -1755,12 +1773,33 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Loyalty program information that is used to surface loyalty benefits ( for example pricing,
-   * points, etc) to the user for this item.
+   * Loyalty program information that is used to surface loyalty benefits ( for example, better
+   * pricing, points, etc) to the user of this item. This signular field points to the latest
+   * uploaded loyalty program info. This field will be deprecated in the coming weeks and should not
+   * be used in favor of the plural 'LoyaltyProgram' field below.
    * @param loyaltyProgram loyaltyProgram or {@code null} for none
    */
   public Product setLoyaltyProgram(LoyaltyProgram loyaltyProgram) {
     this.loyaltyProgram = loyaltyProgram;
+    return this;
+  }
+
+  /**
+   * Optional. A list of loyalty program information that is used to surface loyalty benefits (for
+   * example, better pricing, points, etc) to the user of this item.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LoyaltyProgram> getLoyaltyPrograms() {
+    return loyaltyPrograms;
+  }
+
+  /**
+   * Optional. A list of loyalty program information that is used to surface loyalty benefits (for
+   * example, better pricing, points, etc) to the user of this item.
+   * @param loyaltyPrograms loyaltyPrograms or {@code null} for none
+   */
+  public Product setLoyaltyPrograms(java.util.List<LoyaltyProgram> loyaltyPrograms) {
+    this.loyaltyPrograms = loyaltyPrograms;
     return this;
   }
 

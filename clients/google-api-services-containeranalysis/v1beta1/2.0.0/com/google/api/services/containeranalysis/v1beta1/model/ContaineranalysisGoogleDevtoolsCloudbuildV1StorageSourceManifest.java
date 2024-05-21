@@ -32,7 +32,7 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Storage bucket containing the source manifest (see [Bucket Name
+   * Required. Cloud Storage bucket containing the source manifest (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
    * The value may be {@code null}.
    */
@@ -48,14 +48,14 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManif
   private java.lang.Long generation;
 
   /**
-   * Cloud Storage object containing the source manifest. This object must be a JSON file.
+   * Required. Cloud Storage object containing the source manifest. This object must be a JSON file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("object")
   private java.lang.String object__;
 
   /**
-   * Cloud Storage bucket containing the source manifest (see [Bucket Name
+   * Required. Cloud Storage bucket containing the source manifest (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
    * @return value or {@code null} for none
    */
@@ -64,7 +64,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManif
   }
 
   /**
-   * Cloud Storage bucket containing the source manifest (see [Bucket Name
+   * Required. Cloud Storage bucket containing the source manifest (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
    * @param bucket bucket or {@code null} for none
    */
@@ -93,7 +93,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManif
   }
 
   /**
-   * Cloud Storage object containing the source manifest. This object must be a JSON file.
+   * Required. Cloud Storage object containing the source manifest. This object must be a JSON file.
    * @return value or {@code null} for none
    */
   public java.lang.String getObject() {
@@ -101,7 +101,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManif
   }
 
   /**
-   * Cloud Storage object containing the source manifest. This object must be a JSON file.
+   * Required. Cloud Storage object containing the source manifest. This object must be a JSON file.
    * @param object__ object__ or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest setObject(java.lang.String object__) {

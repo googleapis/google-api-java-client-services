@@ -39,16 +39,16 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource exte
   private java.lang.String bucket;
 
   /**
-   * Cloud Storage generation for the object. If the generation is omitted, the latest generation
-   * will be used.
+   * Optional. Cloud Storage generation for the object. If the generation is omitted, the latest
+   * generation will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long generation;
 
   /**
-   * Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped
-   * archive file (`.tar.gz`) containing source to build.
+   * Required. Cloud Storage object containing the source. This object must be a zipped (`.zip`) or
+   * gzipped archive file (`.tar.gz`) containing source to build.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("object")
@@ -81,8 +81,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource exte
   }
 
   /**
-   * Cloud Storage generation for the object. If the generation is omitted, the latest generation
-   * will be used.
+   * Optional. Cloud Storage generation for the object. If the generation is omitted, the latest
+   * generation will be used.
    * @return value or {@code null} for none
    */
   public java.lang.Long getGeneration() {
@@ -90,8 +90,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource exte
   }
 
   /**
-   * Cloud Storage generation for the object. If the generation is omitted, the latest generation
-   * will be used.
+   * Optional. Cloud Storage generation for the object. If the generation is omitted, the latest
+   * generation will be used.
    * @param generation generation or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource setGeneration(java.lang.Long generation) {
@@ -100,8 +100,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource exte
   }
 
   /**
-   * Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped
-   * archive file (`.tar.gz`) containing source to build.
+   * Required. Cloud Storage object containing the source. This object must be a zipped (`.zip`) or
+   * gzipped archive file (`.tar.gz`) containing source to build.
    * @return value or {@code null} for none
    */
   public java.lang.String getObject() {
@@ -109,8 +109,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource exte
   }
 
   /**
-   * Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped
-   * archive file (`.tar.gz`) containing source to build.
+   * Required. Cloud Storage object containing the source. This object must be a zipped (`.zip`) or
+   * gzipped archive file (`.tar.gz`) containing source to build.
    * @param object__ object__ or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource setObject(java.lang.String object__) {

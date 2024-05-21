@@ -31,19 +31,19 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Directory, relative to the source root, in which to run the build. This must be a relative
-   * path. If a step's `dir` is specified and is an absolute path, this value is ignored for that
-   * step's execution.
+   * Optional. Directory, relative to the source root, in which to run the build. This must be a
+   * relative path. If a step's `dir` is specified and is an absolute path, this value is ignored
+   * for that step's execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dir;
 
   /**
-   * The revision to fetch from the Git repository such as a branch, a tag, a commit SHA, or any Git
-   * ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository; therefore make
-   * sure that the string you provide for `revision` is parsable by the command. For information on
-   * string values accepted by `git fetch`, see https://git-
+   * Optional. The revision to fetch from the Git repository such as a branch, a tag, a commit SHA,
+   * or any Git ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository;
+   * therefore make sure that the string you provide for `revision` is parsable by the command. For
+   * information on string values accepted by `git fetch`, see https://git-
    * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see https
    * ://git-scm.com/docs/git-fetch.
    * The value may be {@code null}.
@@ -52,17 +52,17 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource extends 
   private java.lang.String revision;
 
   /**
-   * Location of the Git repo to build. This will be used as a `git remote`, see https://git-
-   * scm.com/docs/git-remote.
+   * Required. Location of the Git repo to build. This will be used as a `git remote`, see https
+   * ://git-scm.com/docs/git-remote.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
 
   /**
-   * Directory, relative to the source root, in which to run the build. This must be a relative
-   * path. If a step's `dir` is specified and is an absolute path, this value is ignored for that
-   * step's execution.
+   * Optional. Directory, relative to the source root, in which to run the build. This must be a
+   * relative path. If a step's `dir` is specified and is an absolute path, this value is ignored
+   * for that step's execution.
    * @return value or {@code null} for none
    */
   public java.lang.String getDir() {
@@ -70,9 +70,9 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource extends 
   }
 
   /**
-   * Directory, relative to the source root, in which to run the build. This must be a relative
-   * path. If a step's `dir` is specified and is an absolute path, this value is ignored for that
-   * step's execution.
+   * Optional. Directory, relative to the source root, in which to run the build. This must be a
+   * relative path. If a step's `dir` is specified and is an absolute path, this value is ignored
+   * for that step's execution.
    * @param dir dir or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource setDir(java.lang.String dir) {
@@ -81,10 +81,10 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource extends 
   }
 
   /**
-   * The revision to fetch from the Git repository such as a branch, a tag, a commit SHA, or any Git
-   * ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository; therefore make
-   * sure that the string you provide for `revision` is parsable by the command. For information on
-   * string values accepted by `git fetch`, see https://git-
+   * Optional. The revision to fetch from the Git repository such as a branch, a tag, a commit SHA,
+   * or any Git ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository;
+   * therefore make sure that the string you provide for `revision` is parsable by the command. For
+   * information on string values accepted by `git fetch`, see https://git-
    * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see https
    * ://git-scm.com/docs/git-fetch.
    * @return value or {@code null} for none
@@ -94,10 +94,10 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource extends 
   }
 
   /**
-   * The revision to fetch from the Git repository such as a branch, a tag, a commit SHA, or any Git
-   * ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository; therefore make
-   * sure that the string you provide for `revision` is parsable by the command. For information on
-   * string values accepted by `git fetch`, see https://git-
+   * Optional. The revision to fetch from the Git repository such as a branch, a tag, a commit SHA,
+   * or any Git ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository;
+   * therefore make sure that the string you provide for `revision` is parsable by the command. For
+   * information on string values accepted by `git fetch`, see https://git-
    * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see https
    * ://git-scm.com/docs/git-fetch.
    * @param revision revision or {@code null} for none
@@ -108,8 +108,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource extends 
   }
 
   /**
-   * Location of the Git repo to build. This will be used as a `git remote`, see https://git-
-   * scm.com/docs/git-remote.
+   * Required. Location of the Git repo to build. This will be used as a `git remote`, see https
+   * ://git-scm.com/docs/git-remote.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -117,8 +117,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource extends 
   }
 
   /**
-   * Location of the Git repo to build. This will be used as a `git remote`, see https://git-
-   * scm.com/docs/git-remote.
+   * Required. Location of the Git repo to build. This will be used as a `git remote`, see https
+   * ://git-scm.com/docs/git-remote.
    * @param url url or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource setUrl(java.lang.String url) {

@@ -190,7 +190,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends com.
   private java.lang.String serviceAccount;
 
   /**
-   * The location of the source files to build.
+   * Optional. The location of the source files to build.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -629,7 +629,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends com.
   }
 
   /**
-   * The location of the source files to build.
+   * Optional. The location of the source files to build.
    * @return value or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Source getSource() {
@@ -637,7 +637,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends com.
   }
 
   /**
-   * The location of the source files to build.
+   * Optional. The location of the source files to build.
    * @param source source or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Build setSource(ContaineranalysisGoogleDevtoolsCloudbuildV1Source source) {

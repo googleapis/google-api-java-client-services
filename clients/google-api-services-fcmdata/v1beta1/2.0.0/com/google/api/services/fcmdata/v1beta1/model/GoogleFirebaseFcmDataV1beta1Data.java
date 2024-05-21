@@ -31,12 +31,20 @@ package com.google.api.services.fcmdata.v1beta1.model;
 public final class GoogleFirebaseFcmDataV1beta1Data extends com.google.api.client.json.GenericJson {
 
   /**
-   * Count of messages accepted by FCM intended to Android devices. The targeted device must have
+   * Count of messages accepted by FCM intended for Android devices. The targeted device must have
    * opted in to the collection of usage and diagnostic information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long countMessagesAccepted;
+
+  /**
+   * Count of notifications accepted by FCM intended for Android devices. The targeted device must
+   * have opted in to the collection of usage and diagnostic information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long countNotificationsAccepted;
 
   /**
    * Additional information about delivery performance for messages that were successfully
@@ -61,7 +69,14 @@ public final class GoogleFirebaseFcmDataV1beta1Data extends com.google.api.clien
   private GoogleFirebaseFcmDataV1beta1MessageOutcomePercents messageOutcomePercents;
 
   /**
-   * Count of messages accepted by FCM intended to Android devices. The targeted device must have
+   * Additional insights about proxy notification delivery.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirebaseFcmDataV1beta1ProxyNotificationInsightPercents proxyNotificationInsightPercents;
+
+  /**
+   * Count of messages accepted by FCM intended for Android devices. The targeted device must have
    * opted in to the collection of usage and diagnostic information.
    * @return value or {@code null} for none
    */
@@ -70,12 +85,31 @@ public final class GoogleFirebaseFcmDataV1beta1Data extends com.google.api.clien
   }
 
   /**
-   * Count of messages accepted by FCM intended to Android devices. The targeted device must have
+   * Count of messages accepted by FCM intended for Android devices. The targeted device must have
    * opted in to the collection of usage and diagnostic information.
    * @param countMessagesAccepted countMessagesAccepted or {@code null} for none
    */
   public GoogleFirebaseFcmDataV1beta1Data setCountMessagesAccepted(java.lang.Long countMessagesAccepted) {
     this.countMessagesAccepted = countMessagesAccepted;
+    return this;
+  }
+
+  /**
+   * Count of notifications accepted by FCM intended for Android devices. The targeted device must
+   * have opted in to the collection of usage and diagnostic information.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCountNotificationsAccepted() {
+    return countNotificationsAccepted;
+  }
+
+  /**
+   * Count of notifications accepted by FCM intended for Android devices. The targeted device must
+   * have opted in to the collection of usage and diagnostic information.
+   * @param countNotificationsAccepted countNotificationsAccepted or {@code null} for none
+   */
+  public GoogleFirebaseFcmDataV1beta1Data setCountNotificationsAccepted(java.lang.Long countNotificationsAccepted) {
+    this.countNotificationsAccepted = countNotificationsAccepted;
     return this;
   }
 
@@ -129,6 +163,23 @@ public final class GoogleFirebaseFcmDataV1beta1Data extends com.google.api.clien
    */
   public GoogleFirebaseFcmDataV1beta1Data setMessageOutcomePercents(GoogleFirebaseFcmDataV1beta1MessageOutcomePercents messageOutcomePercents) {
     this.messageOutcomePercents = messageOutcomePercents;
+    return this;
+  }
+
+  /**
+   * Additional insights about proxy notification delivery.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirebaseFcmDataV1beta1ProxyNotificationInsightPercents getProxyNotificationInsightPercents() {
+    return proxyNotificationInsightPercents;
+  }
+
+  /**
+   * Additional insights about proxy notification delivery.
+   * @param proxyNotificationInsightPercents proxyNotificationInsightPercents or {@code null} for none
+   */
+  public GoogleFirebaseFcmDataV1beta1Data setProxyNotificationInsightPercents(GoogleFirebaseFcmDataV1beta1ProxyNotificationInsightPercents proxyNotificationInsightPercents) {
+    this.proxyNotificationInsightPercents = proxyNotificationInsightPercents;
     return this;
   }
 

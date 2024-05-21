@@ -1135,7 +1135,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name of the space, in the form "spaces". Format: `spaces/{space}`
+     * @param name Required. Resource name of the space, in the form `spaces/{space}`. Format: `spaces/{space}`
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -1166,7 +1166,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name of the space, in the form "spaces". Format: `spaces/{space}`
+       * @param name Required. Resource name of the space, in the form `spaces/{space}`. Format: `spaces/{space}`
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -1244,17 +1244,23 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Resource name of the space, in the form "spaces". Format: `spaces/{space}` */
+      /**
+       * Required. Resource name of the space, in the form `spaces/{space}`. Format:
+       * `spaces/{space}`
+       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name of the space, in the form "spaces". Format: `spaces/{space}`
+      /** Required. Resource name of the space, in the form `spaces/{space}`. Format: `spaces/{space}`
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. Resource name of the space, in the form "spaces". Format: `spaces/{space}` */
+      /**
+       * Required. Resource name of the space, in the form `spaces/{space}`. Format:
+       * `spaces/{space}`
+       */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4370,7 +4376,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the chat server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the attachment, in the form `spaces/messages/attachments`.
+         * @param name Required. Resource name of the attachment, in the form
+         *        `spaces/{space}/messages/{message}/attachments/{attachment}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -4400,7 +4407,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the attachment, in the form `spaces/messages/attachments`.
+           * @param name Required. Resource name of the attachment, in the form
+         *        `spaces/{space}/messages/{message}/attachments/{attachment}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -4479,19 +4487,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Required. Resource name of the attachment, in the form `spaces/messages/attachments`.
+           * Required. Resource name of the attachment, in the form
+           * `spaces/{space}/messages/{message}/attachments/{attachment}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Resource name of the attachment, in the form `spaces/messages/attachments`.
+          /** Required. Resource name of the attachment, in the form
+         `spaces/{space}/messages/{message}/attachments/{attachment}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Resource name of the attachment, in the form `spaces/messages/attachments`.
+           * Required. Resource name of the attachment, in the form
+           * `spaces/{space}/messages/{message}/attachments/{attachment}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

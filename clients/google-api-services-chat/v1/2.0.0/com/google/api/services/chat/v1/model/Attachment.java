@@ -68,7 +68,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   private DriveDataRef driveDataRef;
 
   /**
-   * Resource name of the attachment, in the form `spaces/messages/attachments`.
+   * Resource name of the attachment, in the form
+   * `spaces/{space}/messages/{message}/attachments/{attachment}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +182,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the attachment, in the form `spaces/messages/attachments`.
+   * Resource name of the attachment, in the form
+   * `spaces/{space}/messages/{message}/attachments/{attachment}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -189,7 +191,8 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the attachment, in the form `spaces/messages/attachments`.
+   * Resource name of the attachment, in the form
+   * `spaces/{space}/messages/{message}/attachments/{attachment}`.
    * @param name name or {@code null} for none
    */
   public Attachment setName(java.lang.String name) {

@@ -37,8 +37,8 @@ public final class GoogleDevtoolsCloudbuildV2GitLabConfig extends com.google.api
   private UserCredential authorizerCredential;
 
   /**
-   * The URI of the GitLab Enterprise host this connection is for. If not specified, the default
-   * value is https://gitlab.com.
+   * Optional. The URI of the GitLab Enterprise host this connection is for. If not specified, the
+   * default value is https://gitlab.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,17 +59,17 @@ public final class GoogleDevtoolsCloudbuildV2GitLabConfig extends com.google.api
   private java.lang.String serverVersion;
 
   /**
-   * Configuration for using Service Directory to privately connect to a GitLab Enterprise server.
-   * This should only be set if the GitLab Enterprise server is hosted on-premises and not reachable
-   * by public internet. If this field is left empty, calls to the GitLab Enterprise server will be
-   * made over the public internet.
+   * Optional. Configuration for using Service Directory to privately connect to a GitLab Enterprise
+   * server. This should only be set if the GitLab Enterprise server is hosted on-premises and not
+   * reachable by public internet. If this field is left empty, calls to the GitLab Enterprise
+   * server will be made over the public internet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleDevtoolsCloudbuildV2ServiceDirectoryConfig serviceDirectoryConfig;
 
   /**
-   * SSL certificate to use for requests to GitLab Enterprise.
+   * Optional. SSL certificate to use for requests to GitLab Enterprise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,8 +101,8 @@ public final class GoogleDevtoolsCloudbuildV2GitLabConfig extends com.google.api
   }
 
   /**
-   * The URI of the GitLab Enterprise host this connection is for. If not specified, the default
-   * value is https://gitlab.com.
+   * Optional. The URI of the GitLab Enterprise host this connection is for. If not specified, the
+   * default value is https://gitlab.com.
    * @return value or {@code null} for none
    */
   public java.lang.String getHostUri() {
@@ -110,8 +110,8 @@ public final class GoogleDevtoolsCloudbuildV2GitLabConfig extends com.google.api
   }
 
   /**
-   * The URI of the GitLab Enterprise host this connection is for. If not specified, the default
-   * value is https://gitlab.com.
+   * Optional. The URI of the GitLab Enterprise host this connection is for. If not specified, the
+   * default value is https://gitlab.com.
    * @param hostUri hostUri or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV2GitLabConfig setHostUri(java.lang.String hostUri) {
@@ -154,10 +154,10 @@ public final class GoogleDevtoolsCloudbuildV2GitLabConfig extends com.google.api
   }
 
   /**
-   * Configuration for using Service Directory to privately connect to a GitLab Enterprise server.
-   * This should only be set if the GitLab Enterprise server is hosted on-premises and not reachable
-   * by public internet. If this field is left empty, calls to the GitLab Enterprise server will be
-   * made over the public internet.
+   * Optional. Configuration for using Service Directory to privately connect to a GitLab Enterprise
+   * server. This should only be set if the GitLab Enterprise server is hosted on-premises and not
+   * reachable by public internet. If this field is left empty, calls to the GitLab Enterprise
+   * server will be made over the public internet.
    * @return value or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV2ServiceDirectoryConfig getServiceDirectoryConfig() {
@@ -165,10 +165,10 @@ public final class GoogleDevtoolsCloudbuildV2GitLabConfig extends com.google.api
   }
 
   /**
-   * Configuration for using Service Directory to privately connect to a GitLab Enterprise server.
-   * This should only be set if the GitLab Enterprise server is hosted on-premises and not reachable
-   * by public internet. If this field is left empty, calls to the GitLab Enterprise server will be
-   * made over the public internet.
+   * Optional. Configuration for using Service Directory to privately connect to a GitLab Enterprise
+   * server. This should only be set if the GitLab Enterprise server is hosted on-premises and not
+   * reachable by public internet. If this field is left empty, calls to the GitLab Enterprise
+   * server will be made over the public internet.
    * @param serviceDirectoryConfig serviceDirectoryConfig or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV2GitLabConfig setServiceDirectoryConfig(GoogleDevtoolsCloudbuildV2ServiceDirectoryConfig serviceDirectoryConfig) {
@@ -177,7 +177,7 @@ public final class GoogleDevtoolsCloudbuildV2GitLabConfig extends com.google.api
   }
 
   /**
-   * SSL certificate to use for requests to GitLab Enterprise.
+   * Optional. SSL certificate to use for requests to GitLab Enterprise.
    * @return value or {@code null} for none
    */
   public java.lang.String getSslCa() {
@@ -185,7 +185,7 @@ public final class GoogleDevtoolsCloudbuildV2GitLabConfig extends com.google.api
   }
 
   /**
-   * SSL certificate to use for requests to GitLab Enterprise.
+   * Optional. SSL certificate to use for requests to GitLab Enterprise.
    * @param sslCa sslCa or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV2GitLabConfig setSslCa(java.lang.String sslCa) {

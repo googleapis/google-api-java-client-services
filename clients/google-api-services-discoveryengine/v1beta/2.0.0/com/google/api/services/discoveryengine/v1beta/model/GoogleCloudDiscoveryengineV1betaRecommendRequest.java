@@ -37,11 +37,10 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
    * to true under the `params` field, then attribute-based expressions are expected instead of the
    * above described tag-based syntax. Examples: * (launguage: ANY("en", "es")) AND NOT (categories:
    * ANY("Movie")) * (available: true) AND (launguage: ANY("en", "es")) OR (categories:
-   * ANY("Movie")) If your filter blocks all results, the API will return generic (unfiltered)
-   * popular Documents. If you only want results strictly matching the filters, set
-   * `strictFiltering` to True in RecommendRequest.params to receive empty results instead. Note
-   * that the API will never return Documents with `storageStatus` of `EXPIRED` or `DELETED`
-   * regardless of filter choices.
+   * ANY("Movie")) If your filter blocks all results, the API returns generic (unfiltered) popular
+   * Documents. If you only want results strictly matching the filters, set `strictFiltering` to
+   * `true` in RecommendRequest.params to receive empty results instead. Note that the API never
+   * returns Documents with `storageStatus` as `EXPIRED` or `DELETED` regardless of filter choices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,8 +48,8 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
 
   /**
    * Maximum number of results to return. Set this property to the number of recommendation results
-   * needed. If zero, the service will choose a reasonable default. The maximum allowed value is
-   * 100. Values above 100 will be coerced to 100.
+   * needed. If zero, the service chooses a reasonable default. The maximum allowed value is 100.
+   * Values above 100 are set to 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,18 +57,18 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
 
   /**
    * Additional domain specific parameters for the recommendations. Allowed values: *
-   * `returnDocument`: Boolean. If set to true, the associated Document object will be returned in
+   * `returnDocument`: Boolean. If set to `true`, the associated Document object is returned in
    * RecommendResponse.RecommendationResult.document. * `returnScore`: Boolean. If set to true, the
-   * recommendation 'score' corresponding to each returned Document will be set in
-   * RecommendResponse.RecommendationResult.metadata. The given 'score' indicates the probability of
-   * a Document conversion given the user's context and history. * `strictFiltering`: Boolean. True
-   * by default. If set to false, the service will return generic (unfiltered) popular Documents
-   * instead of empty if your filter blocks all recommendation results. * `diversityLevel`: String.
-   * Default empty. If set to be non-empty, then it needs to be one of: * `no-diversity` * `low-
-   * diversity` * `medium-diversity` * `high-diversity` * `auto-diversity` This gives request-level
-   * control and adjusts recommendation results based on Document category. *
-   * `attributeFilteringSyntax`: Boolean. False by default. If set to true, the `filter` field is
-   * interpreted according to the new, attribute-based syntax.
+   * recommendation score corresponding to each returned Document is set in
+   * RecommendResponse.RecommendationResult.metadata. The given score indicates the probability of a
+   * Document conversion given the user's context and history. * `strictFiltering`: Boolean. True by
+   * default. If set to `false`, the service returns generic (unfiltered) popular Documents instead
+   * of empty if your filter blocks all recommendation results. * `diversityLevel`: String. Default
+   * empty. If set to be non-empty, then it needs to be one of: * `no-diversity` * `low-diversity` *
+   * `medium-diversity` * `high-diversity` * `auto-diversity` This gives request-level control and
+   * adjusts recommendation results based on Document category. * `attributeFilteringSyntax`:
+   * Boolean. False by default. If set to true, the `filter` field is interpreted according to the
+   * new, attribute-based syntax.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +104,7 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
   private java.util.Map<String, java.lang.String> userLabels;
 
   /**
-   * Use validate only mode for this recommendation query. If set to true, a fake model will be used
+   * Use validate only mode for this recommendation query. If set to `true`, a fake model is used
    * that returns arbitrary Document IDs. Note that the validate only mode should only be used for
    * testing the API, or if the model is not ready.
    * The value may be {@code null}.
@@ -121,11 +120,10 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
    * to true under the `params` field, then attribute-based expressions are expected instead of the
    * above described tag-based syntax. Examples: * (launguage: ANY("en", "es")) AND NOT (categories:
    * ANY("Movie")) * (available: true) AND (launguage: ANY("en", "es")) OR (categories:
-   * ANY("Movie")) If your filter blocks all results, the API will return generic (unfiltered)
-   * popular Documents. If you only want results strictly matching the filters, set
-   * `strictFiltering` to True in RecommendRequest.params to receive empty results instead. Note
-   * that the API will never return Documents with `storageStatus` of `EXPIRED` or `DELETED`
-   * regardless of filter choices.
+   * ANY("Movie")) If your filter blocks all results, the API returns generic (unfiltered) popular
+   * Documents. If you only want results strictly matching the filters, set `strictFiltering` to
+   * `true` in RecommendRequest.params to receive empty results instead. Note that the API never
+   * returns Documents with `storageStatus` as `EXPIRED` or `DELETED` regardless of filter choices.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -140,11 +138,10 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
    * to true under the `params` field, then attribute-based expressions are expected instead of the
    * above described tag-based syntax. Examples: * (launguage: ANY("en", "es")) AND NOT (categories:
    * ANY("Movie")) * (available: true) AND (launguage: ANY("en", "es")) OR (categories:
-   * ANY("Movie")) If your filter blocks all results, the API will return generic (unfiltered)
-   * popular Documents. If you only want results strictly matching the filters, set
-   * `strictFiltering` to True in RecommendRequest.params to receive empty results instead. Note
-   * that the API will never return Documents with `storageStatus` of `EXPIRED` or `DELETED`
-   * regardless of filter choices.
+   * ANY("Movie")) If your filter blocks all results, the API returns generic (unfiltered) popular
+   * Documents. If you only want results strictly matching the filters, set `strictFiltering` to
+   * `true` in RecommendRequest.params to receive empty results instead. Note that the API never
+   * returns Documents with `storageStatus` as `EXPIRED` or `DELETED` regardless of filter choices.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaRecommendRequest setFilter(java.lang.String filter) {
@@ -154,8 +151,8 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
 
   /**
    * Maximum number of results to return. Set this property to the number of recommendation results
-   * needed. If zero, the service will choose a reasonable default. The maximum allowed value is
-   * 100. Values above 100 will be coerced to 100.
+   * needed. If zero, the service chooses a reasonable default. The maximum allowed value is 100.
+   * Values above 100 are set to 100.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -164,8 +161,8 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
 
   /**
    * Maximum number of results to return. Set this property to the number of recommendation results
-   * needed. If zero, the service will choose a reasonable default. The maximum allowed value is
-   * 100. Values above 100 will be coerced to 100.
+   * needed. If zero, the service chooses a reasonable default. The maximum allowed value is 100.
+   * Values above 100 are set to 100.
    * @param pageSize pageSize or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaRecommendRequest setPageSize(java.lang.Integer pageSize) {
@@ -175,18 +172,18 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
 
   /**
    * Additional domain specific parameters for the recommendations. Allowed values: *
-   * `returnDocument`: Boolean. If set to true, the associated Document object will be returned in
+   * `returnDocument`: Boolean. If set to `true`, the associated Document object is returned in
    * RecommendResponse.RecommendationResult.document. * `returnScore`: Boolean. If set to true, the
-   * recommendation 'score' corresponding to each returned Document will be set in
-   * RecommendResponse.RecommendationResult.metadata. The given 'score' indicates the probability of
-   * a Document conversion given the user's context and history. * `strictFiltering`: Boolean. True
-   * by default. If set to false, the service will return generic (unfiltered) popular Documents
-   * instead of empty if your filter blocks all recommendation results. * `diversityLevel`: String.
-   * Default empty. If set to be non-empty, then it needs to be one of: * `no-diversity` * `low-
-   * diversity` * `medium-diversity` * `high-diversity` * `auto-diversity` This gives request-level
-   * control and adjusts recommendation results based on Document category. *
-   * `attributeFilteringSyntax`: Boolean. False by default. If set to true, the `filter` field is
-   * interpreted according to the new, attribute-based syntax.
+   * recommendation score corresponding to each returned Document is set in
+   * RecommendResponse.RecommendationResult.metadata. The given score indicates the probability of a
+   * Document conversion given the user's context and history. * `strictFiltering`: Boolean. True by
+   * default. If set to `false`, the service returns generic (unfiltered) popular Documents instead
+   * of empty if your filter blocks all recommendation results. * `diversityLevel`: String. Default
+   * empty. If set to be non-empty, then it needs to be one of: * `no-diversity` * `low-diversity` *
+   * `medium-diversity` * `high-diversity` * `auto-diversity` This gives request-level control and
+   * adjusts recommendation results based on Document category. * `attributeFilteringSyntax`:
+   * Boolean. False by default. If set to true, the `filter` field is interpreted according to the
+   * new, attribute-based syntax.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -195,18 +192,18 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
 
   /**
    * Additional domain specific parameters for the recommendations. Allowed values: *
-   * `returnDocument`: Boolean. If set to true, the associated Document object will be returned in
+   * `returnDocument`: Boolean. If set to `true`, the associated Document object is returned in
    * RecommendResponse.RecommendationResult.document. * `returnScore`: Boolean. If set to true, the
-   * recommendation 'score' corresponding to each returned Document will be set in
-   * RecommendResponse.RecommendationResult.metadata. The given 'score' indicates the probability of
-   * a Document conversion given the user's context and history. * `strictFiltering`: Boolean. True
-   * by default. If set to false, the service will return generic (unfiltered) popular Documents
-   * instead of empty if your filter blocks all recommendation results. * `diversityLevel`: String.
-   * Default empty. If set to be non-empty, then it needs to be one of: * `no-diversity` * `low-
-   * diversity` * `medium-diversity` * `high-diversity` * `auto-diversity` This gives request-level
-   * control and adjusts recommendation results based on Document category. *
-   * `attributeFilteringSyntax`: Boolean. False by default. If set to true, the `filter` field is
-   * interpreted according to the new, attribute-based syntax.
+   * recommendation score corresponding to each returned Document is set in
+   * RecommendResponse.RecommendationResult.metadata. The given score indicates the probability of a
+   * Document conversion given the user's context and history. * `strictFiltering`: Boolean. True by
+   * default. If set to `false`, the service returns generic (unfiltered) popular Documents instead
+   * of empty if your filter blocks all recommendation results. * `diversityLevel`: String. Default
+   * empty. If set to be non-empty, then it needs to be one of: * `no-diversity` * `low-diversity` *
+   * `medium-diversity` * `high-diversity` * `auto-diversity` This gives request-level control and
+   * adjusts recommendation results based on Document category. * `attributeFilteringSyntax`:
+   * Boolean. False by default. If set to true, the `filter` field is interpreted according to the
+   * new, attribute-based syntax.
    * @param params params or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaRecommendRequest setParams(java.util.Map<String, java.lang.Object> params) {
@@ -279,7 +276,7 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
   }
 
   /**
-   * Use validate only mode for this recommendation query. If set to true, a fake model will be used
+   * Use validate only mode for this recommendation query. If set to `true`, a fake model is used
    * that returns arbitrary Document IDs. Note that the validate only mode should only be used for
    * testing the API, or if the model is not ready.
    * @return value or {@code null} for none
@@ -289,7 +286,7 @@ public final class GoogleCloudDiscoveryengineV1betaRecommendRequest extends com.
   }
 
   /**
-   * Use validate only mode for this recommendation query. If set to true, a fake model will be used
+   * Use validate only mode for this recommendation query. If set to `true`, a fake model is used
    * that returns arbitrary Document IDs. Note that the validate only mode should only be used for
    * testing the API, or if the model is not ready.
    * @param validateOnly validateOnly or {@code null} for none

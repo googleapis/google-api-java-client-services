@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The document data snippet in the search response. Only fields that are marked as retrievable
+   * The document data snippet in the search response. Only fields that are marked as `retrievable`
    * are populated.
    * The value may be {@code null}.
    */
@@ -58,7 +58,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult ex
   }
 
   /**
-   * The document data snippet in the search response. Only fields that are marked as retrievable
+   * The document data snippet in the search response. Only fields that are marked as `retrievable`
    * are populated.
    * @return value or {@code null} for none
    */
@@ -67,7 +67,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult ex
   }
 
   /**
-   * The document data snippet in the search response. Only fields that are marked as retrievable
+   * The document data snippet in the search response. Only fields that are marked as `retrievable`
    * are populated.
    * @param document document or {@code null} for none
    */

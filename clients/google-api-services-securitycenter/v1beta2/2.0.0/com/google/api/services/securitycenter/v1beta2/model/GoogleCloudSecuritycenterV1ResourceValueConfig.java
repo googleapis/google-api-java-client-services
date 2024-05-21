@@ -17,8 +17,8 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * A resource value config (RVC) is a mapping configuration of user's resources to resource values.
- * Used in Attack path simulations.
+ * A resource value configuration (RVC) is a mapping configuration of user's resources to resource
+ * values. Used in Attack path simulations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -39,30 +39,31 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   private java.lang.String cloudProvider;
 
   /**
-   * Output only. Timestamp this resource value config was created.
+   * Output only. Timestamp this resource value configuration was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Description of the resource value config.
+   * Description of the resource value configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Name for the resource value config
+   * Name for the resource value configuration
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * List of resource labels to search for, evaluated with AND. E.g. "resource_labels_selector":
-   * {"key": "value", "env": "prod"} will match resources with labels "key": "value" AND "env":
-   * "prod" https://cloud.google.com/resource-manager/docs/creating-managing-labels
+   * List of resource labels to search for, evaluated with AND. For example,
+   * "resource_labels_selector": {"key": "value", "env": "prod"} will match resources with labels
+   * "key": "value" AND "env": "prod" https://cloud.google.com/resource-manager/docs/creating-
+   * managing-labels
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +71,8 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
 
   /**
    * Apply resource_value only to resources that match resource_type. resource_type will be checked
-   * with "AND" of other resources. E.g. "storage.googleapis.com/Bucket" with resource_value "HIGH"
-   * will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
+   * with AND of other resources. For example, "storage.googleapis.com/Bucket" with resource_value
+   * "HIGH" will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +86,9 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   private java.lang.String resourceValue;
 
   /**
-   * Project or folder to scope this config to. For example, "project/456" would apply this config
-   * only to resources in "project/456" scope will be checked with "AND" of other resources.
+   * Project or folder to scope this configuration to. For example, "project/456" would apply this
+   * configuration only to resources in "project/456" scope will be checked with AND of other
+   * resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,15 +105,15 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
 
   /**
    * Required. Tag values combined with AND to check against. Values in the form "tagValues/123"
-   * E.g. [ "tagValues/123", "tagValues/456", "tagValues/789" ] https://cloud.google.com/resource-
-   * manager/docs/tags/tags-creating-and-managing
+   * Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ] https://cloud.google.com
+   * /resource-manager/docs/tags/tags-creating-and-managing
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tagValues;
 
   /**
-   * Output only. Timestamp this resource value config was last updated.
+   * Output only. Timestamp this resource value configuration was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +137,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * Output only. Timestamp this resource value config was created.
+   * Output only. Timestamp this resource value configuration was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -143,7 +145,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * Output only. Timestamp this resource value config was created.
+   * Output only. Timestamp this resource value configuration was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceValueConfig setCreateTime(String createTime) {
@@ -152,7 +154,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * Description of the resource value config.
+   * Description of the resource value configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -160,7 +162,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * Description of the resource value config.
+   * Description of the resource value configuration.
    * @param description description or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceValueConfig setDescription(java.lang.String description) {
@@ -169,7 +171,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * Name for the resource value config
+   * Name for the resource value configuration
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -177,7 +179,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * Name for the resource value config
+   * Name for the resource value configuration
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceValueConfig setName(java.lang.String name) {
@@ -186,9 +188,10 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * List of resource labels to search for, evaluated with AND. E.g. "resource_labels_selector":
-   * {"key": "value", "env": "prod"} will match resources with labels "key": "value" AND "env":
-   * "prod" https://cloud.google.com/resource-manager/docs/creating-managing-labels
+   * List of resource labels to search for, evaluated with AND. For example,
+   * "resource_labels_selector": {"key": "value", "env": "prod"} will match resources with labels
+   * "key": "value" AND "env": "prod" https://cloud.google.com/resource-manager/docs/creating-
+   * managing-labels
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getResourceLabelsSelector() {
@@ -196,9 +199,10 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * List of resource labels to search for, evaluated with AND. E.g. "resource_labels_selector":
-   * {"key": "value", "env": "prod"} will match resources with labels "key": "value" AND "env":
-   * "prod" https://cloud.google.com/resource-manager/docs/creating-managing-labels
+   * List of resource labels to search for, evaluated with AND. For example,
+   * "resource_labels_selector": {"key": "value", "env": "prod"} will match resources with labels
+   * "key": "value" AND "env": "prod" https://cloud.google.com/resource-manager/docs/creating-
+   * managing-labels
    * @param resourceLabelsSelector resourceLabelsSelector or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceValueConfig setResourceLabelsSelector(java.util.Map<String, java.lang.String> resourceLabelsSelector) {
@@ -208,8 +212,8 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
 
   /**
    * Apply resource_value only to resources that match resource_type. resource_type will be checked
-   * with "AND" of other resources. E.g. "storage.googleapis.com/Bucket" with resource_value "HIGH"
-   * will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
+   * with AND of other resources. For example, "storage.googleapis.com/Bucket" with resource_value
+   * "HIGH" will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -218,8 +222,8 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
 
   /**
    * Apply resource_value only to resources that match resource_type. resource_type will be checked
-   * with "AND" of other resources. E.g. "storage.googleapis.com/Bucket" with resource_value "HIGH"
-   * will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
+   * with AND of other resources. For example, "storage.googleapis.com/Bucket" with resource_value
+   * "HIGH" will apply "HIGH" value only to "storage.googleapis.com/Bucket" resources.
    * @param resourceType resourceType or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceValueConfig setResourceType(java.lang.String resourceType) {
@@ -245,8 +249,9 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * Project or folder to scope this config to. For example, "project/456" would apply this config
-   * only to resources in "project/456" scope will be checked with "AND" of other resources.
+   * Project or folder to scope this configuration to. For example, "project/456" would apply this
+   * configuration only to resources in "project/456" scope will be checked with AND of other
+   * resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getScope() {
@@ -254,8 +259,9 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * Project or folder to scope this config to. For example, "project/456" would apply this config
-   * only to resources in "project/456" scope will be checked with "AND" of other resources.
+   * Project or folder to scope this configuration to. For example, "project/456" would apply this
+   * configuration only to resources in "project/456" scope will be checked with AND of other
+   * resources.
    * @param scope scope or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceValueConfig setScope(java.lang.String scope) {
@@ -286,8 +292,8 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
 
   /**
    * Required. Tag values combined with AND to check against. Values in the form "tagValues/123"
-   * E.g. [ "tagValues/123", "tagValues/456", "tagValues/789" ] https://cloud.google.com/resource-
-   * manager/docs/tags/tags-creating-and-managing
+   * Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ] https://cloud.google.com
+   * /resource-manager/docs/tags/tags-creating-and-managing
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTagValues() {
@@ -296,8 +302,8 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
 
   /**
    * Required. Tag values combined with AND to check against. Values in the form "tagValues/123"
-   * E.g. [ "tagValues/123", "tagValues/456", "tagValues/789" ] https://cloud.google.com/resource-
-   * manager/docs/tags/tags-creating-and-managing
+   * Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ] https://cloud.google.com
+   * /resource-manager/docs/tags/tags-creating-and-managing
    * @param tagValues tagValues or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceValueConfig setTagValues(java.util.List<java.lang.String> tagValues) {
@@ -306,7 +312,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * Output only. Timestamp this resource value config was last updated.
+   * Output only. Timestamp this resource value configuration was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -314,7 +320,7 @@ public final class GoogleCloudSecuritycenterV1ResourceValueConfig extends com.go
   }
 
   /**
-   * Output only. Timestamp this resource value config was last updated.
+   * Output only. Timestamp this resource value configuration was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceValueConfig setUpdateTime(String updateTime) {

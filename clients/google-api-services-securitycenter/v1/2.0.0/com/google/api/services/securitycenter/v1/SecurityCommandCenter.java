@@ -17714,7 +17714,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Name for the resource value config
+       * @param name Name for the resource value configuration
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ResourceValueConfig}
        * @return the request
        */
@@ -17742,7 +17742,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name for the resource value config
+         * @param name Name for the resource value configuration
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ResourceValueConfig}
          * @since 1.13
          */
@@ -17811,17 +17811,17 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name for the resource value config */
+        /** Name for the resource value configuration */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name for the resource value config
+        /** Name for the resource value configuration
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name for the resource value config */
+        /** Name for the resource value configuration */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

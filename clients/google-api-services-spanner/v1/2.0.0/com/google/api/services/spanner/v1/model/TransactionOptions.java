@@ -30,7 +30,7 @@ package com.google.api.services.spanner.v1.model;
  * strong read (where Spanner will select a timestamp such that the read is guaranteed to see the
  * effects of all transactions that have committed before the start of the read). Snapshot read-only
  * transactions do not need to be committed. Queries on change streams must be performed with the
- * snapshot read-only transaction mode, specifying a strong read. Please see
+ * snapshot read-only transaction mode, specifying a strong read. See
  * TransactionOptions.ReadOnly.strong for more details. 3. Partitioned DML. This type of transaction
  * is used to execute a single Partitioned DML statement. Partitioned DML partitions the key space
  * and runs the DML statement over each partition in parallel using separate, internal transactions

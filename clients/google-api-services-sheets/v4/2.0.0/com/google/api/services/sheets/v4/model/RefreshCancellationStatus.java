@@ -17,7 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * The status of a refresh cancellation. You can send cancel request to explicitly cancel one or
+ * The status of a refresh cancellation. You can send a cancel request to explicitly cancel one or
  * multiple data source object refreshes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -30,21 +30,21 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaSearchResponseGuidedSearchResultRefinementAttribute extends com.google.api.client.json.GenericJson {
 
   /**
-   * Attribute key used to refine the results e.g. 'movie_type'.
+   * Attribute key used to refine the results. For example, `"movie_type"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attributeKey;
 
   /**
-   * Attribute value used to refine the results e.g. 'drama'.
+   * Attribute value used to refine the results. For example, `"drama"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attributeValue;
 
   /**
-   * Attribute key used to refine the results e.g. 'movie_type'.
+   * Attribute key used to refine the results. For example, `"movie_type"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributeKey() {
@@ -52,7 +52,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponseGuidedSearchRe
   }
 
   /**
-   * Attribute key used to refine the results e.g. 'movie_type'.
+   * Attribute key used to refine the results. For example, `"movie_type"`.
    * @param attributeKey attributeKey or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchResponseGuidedSearchResultRefinementAttribute setAttributeKey(java.lang.String attributeKey) {
@@ -61,7 +61,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponseGuidedSearchRe
   }
 
   /**
-   * Attribute value used to refine the results e.g. 'drama'.
+   * Attribute value used to refine the results. For example, `"drama"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributeValue() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponseGuidedSearchRe
   }
 
   /**
-   * Attribute value used to refine the results e.g. 'drama'.
+   * Attribute value used to refine the results. For example, `"drama"`.
    * @param attributeValue attributeValue or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchResponseGuidedSearchResultRefinementAttribute setAttributeValue(java.lang.String attributeValue) {

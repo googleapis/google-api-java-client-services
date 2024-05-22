@@ -30,16 +30,16 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1SearchRequestSpellCorrectionSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The mode under which spell correction should take effect to replace the original search query.
-   * Default to Mode.AUTO.
+   * The mode under which spell correction replaces the original search query. Defaults to
+   * Mode.AUTO.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mode;
 
   /**
-   * The mode under which spell correction should take effect to replace the original search query.
-   * Default to Mode.AUTO.
+   * The mode under which spell correction replaces the original search query. Defaults to
+   * Mode.AUTO.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -47,8 +47,8 @@ public final class GoogleCloudDiscoveryengineV1SearchRequestSpellCorrectionSpec 
   }
 
   /**
-   * The mode under which spell correction should take effect to replace the original search query.
-   * Default to Mode.AUTO.
+   * The mode under which spell correction replaces the original search query. Defaults to
+   * Mode.AUTO.
    * @param mode mode or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1SearchRequestSpellCorrectionSpec setMode(java.lang.String mode) {

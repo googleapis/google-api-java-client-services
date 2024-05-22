@@ -38,11 +38,25 @@ public final class DeliverInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String ipAddress;
 
   /**
+   * PSC Google API target the packet is delivered to (if applicable).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscGoogleApiTarget;
+
+  /**
    * URI of the resource that the packet is delivered to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceUri;
+
+  /**
+   * Name of the Cloud Storage Bucket the packet is delivered to (if applicable).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storageBucket;
 
   /**
    * Target type where the packet is delivered to.
@@ -69,6 +83,23 @@ public final class DeliverInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * PSC Google API target the packet is delivered to (if applicable).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscGoogleApiTarget() {
+    return pscGoogleApiTarget;
+  }
+
+  /**
+   * PSC Google API target the packet is delivered to (if applicable).
+   * @param pscGoogleApiTarget pscGoogleApiTarget or {@code null} for none
+   */
+  public DeliverInfo setPscGoogleApiTarget(java.lang.String pscGoogleApiTarget) {
+    this.pscGoogleApiTarget = pscGoogleApiTarget;
+    return this;
+  }
+
+  /**
    * URI of the resource that the packet is delivered to.
    * @return value or {@code null} for none
    */
@@ -82,6 +113,23 @@ public final class DeliverInfo extends com.google.api.client.json.GenericJson {
    */
   public DeliverInfo setResourceUri(java.lang.String resourceUri) {
     this.resourceUri = resourceUri;
+    return this;
+  }
+
+  /**
+   * Name of the Cloud Storage Bucket the packet is delivered to (if applicable).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStorageBucket() {
+    return storageBucket;
+  }
+
+  /**
+   * Name of the Cloud Storage Bucket the packet is delivered to (if applicable).
+   * @param storageBucket storageBucket or {@code null} for none
+   */
+  public DeliverInfo setStorageBucket(java.lang.String storageBucket) {
+    this.storageBucket = storageBucket;
     return this;
   }
 

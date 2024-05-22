@@ -16,64 +16,38 @@
 
 set -ex
 
-SERVICE=$1
-VARIANT=$2
-ROOT_DIR=$(realpath $(dirname "${BASH_SOURCE[0]}")/../../../)
+service=$1
+variant=$2
 
-LATEST_VARIANT=2.0.0
+export root_dir=$(realpath $(dirname "${BASH_SOURCE[0]}")/../../../)
 
-if [[ -z "${SERVICE}" ]]
+latest_variant=2.0.0
+
+if [[ -z "${service}" ]]
 then
   echo "Usage: ${0} <service> [variant]"
   exit 1
 fi
 
 # Default to use the latest variant
-if [[ -z "${VARIANT}" ]]
+if [[ -z "${variant}" ]]
 then
-  VARIANT=${LATEST_VARIANT}
+  variant=${latest_variant}
 fi
 
 # Install the local generator without dependencies first and then install the dependencies with hash checking.
-python3 -m pip install --no-deps -e ${ROOT_DIR}/google-api-java-client-services/generator --user -q
-python3 -m pip install --require-hashes -r ${ROOT_DIR}/google-api-java-client-services/generator/generator_requirements.txt --user
+python3 -m pip install --no-deps -e ${root_dir}/google-api-java-client-services/generator --user -q
+python3 -m pip install --require-hashes -r ${root_dir}/google-api-java-client-services/generator/generator_requirements.txt --user
 
-pushd ${ROOT_DIR}/discovery-artifact-manager
+# load utility functions
+source "${root_dir}/google-api-java-client-services/.github/workflows/utils.sh"
 
-for DISCOVERY in `ls discoveries/${SERVICE}.*.json`
+pushd ${root_dir}/discovery-artifact-manager
+
+should_compile='false'
+for discovery in `ls discoveries/${service}.*.json`
 do
-  VERSION=$(basename ${DISCOVERY} | sed 's/\.json//' | cut -d. -f2-)
-  TARGET_DIR=${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/${VARIANT}
-  OUTPUT_DIR=$(mktemp -d)
-  echo ${DISCOVERY}
-  echo ${VERSION}
-  echo ${OUTPUT_DIR}
-  # run the local generator
-  python3 -m googleapis.codegen \
-      --output_dir=${OUTPUT_DIR} \
-      --input=${DISCOVERY} \
-      --language=java \
-      --language_variant=${VARIANT} \
-      --package_path=api/services
-
-  if [ $(find "${OUTPUT_DIR}" -mindepth 1 | wc -l) == '0' ]; then
-    echo 'the generation produced no files'
-    exit 1
-  fi
-
-  # for new libraries, we create the destination folder
-  mkdir -p "${TARGET_DIR}"
-  # transfer generated source into the wiped-out service's source folder
-  rm -rdf ${TARGET_DIR}/*
-  cp -r ${OUTPUT_DIR}/* "${TARGET_DIR}"
-
-  # Copy the latest variant's README to the main service location
-  # Generation of libraries with older variants should not update the root README
-  cp ${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/${LATEST_VARIANT}/README.md ${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/README.md
-
-  pushd ${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/${LATEST_VARIANT}
-  mvn compile
-  popd
+  generate_from_discovery "${discovery}" "${variant}"
 done
 
 popd

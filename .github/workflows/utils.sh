@@ -32,8 +32,9 @@ generate_from_discovery() {
   cp ${root_dir}/google-api-java-client-services/clients/google-api-services-${service}/${version}/${variant}/README.md ${root_dir}/google-api-java-client-services/clients/google-api-services-${service}/${version}/README.md
 
   if [[ "${compile}" == "true" ]];then
-    pushd ${root_dir}/google-api-java-client-services/clients/google-api-services-${service}/${version}/${latest_variant}
-    mvn compile
+    pushd ${root_dir}/google-api-java-client-services/clients/google-api-services-${service}/${version}/${variant}
+    # failed_libs should be exported from the calling script
+    mvn compile || basename "${discovery}" >> "${failed_libs}"
     popd
   fi
 }

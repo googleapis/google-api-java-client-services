@@ -70,5 +70,11 @@ do
   # Copy the latest variant's README to the main service location
   # Generation of libraries with older variants should not update the root README
   cp ${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/${LATEST_VARIANT}/README.md ${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/README.md
+
+  pushd ${ROOT_DIR}/google-api-java-client-services/clients/google-api-services-${SERVICE}/${VERSION}/${LATEST_VARIANT}
+  mvn compile
+  popd
 done
+
+popd
 

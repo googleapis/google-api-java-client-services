@@ -33,9 +33,9 @@ public final class GoogleCloudRunV2CloudSqlInstance extends com.google.api.clien
 
   /**
    * The Cloud SQL instance connection names, as can be found in
-   * https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql
-   * /connect-run for more information on how to connect Cloud SQL and Cloud Run. Format:
-   * {project}:{location}:{instance}
+   * https://console.cloud.google.com/sql/instances. Visit
+   * https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect
+   * Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,9 +43,9 @@ public final class GoogleCloudRunV2CloudSqlInstance extends com.google.api.clien
 
   /**
    * The Cloud SQL instance connection names, as can be found in
-   * https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql
-   * /connect-run for more information on how to connect Cloud SQL and Cloud Run. Format:
-   * {project}:{location}:{instance}
+   * https://console.cloud.google.com/sql/instances. Visit
+   * https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect
+   * Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInstances() {
@@ -54,9 +54,9 @@ public final class GoogleCloudRunV2CloudSqlInstance extends com.google.api.clien
 
   /**
    * The Cloud SQL instance connection names, as can be found in
-   * https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql
-   * /connect-run for more information on how to connect Cloud SQL and Cloud Run. Format:
-   * {project}:{location}:{instance}
+   * https://console.cloud.google.com/sql/instances. Visit
+   * https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect
+   * Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}
    * @param instances instances or {@code null} for none
    */
   public GoogleCloudRunV2CloudSqlInstance setInstances(java.util.List<java.lang.String> instances) {

@@ -43,7 +43,7 @@ public final class KeyHandle extends com.google.api.client.json.GenericJson {
   private java.lang.String kmsKey;
 
   /**
-   * Output only. Identifier. Name of the KeyHandle resource, e.g.
+   * Identifier. Name of the KeyHandle resource, e.g.
    * `projects/{PROJECT_ID}/locations/{LOCATION}/keyHandles/{KEY_HANDLE_ID}`.
    * The value may be {@code null}.
    */
@@ -84,7 +84,7 @@ public final class KeyHandle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Identifier. Name of the KeyHandle resource, e.g.
+   * Identifier. Name of the KeyHandle resource, e.g.
    * `projects/{PROJECT_ID}/locations/{LOCATION}/keyHandles/{KEY_HANDLE_ID}`.
    * @return value or {@code null} for none
    */
@@ -93,7 +93,7 @@ public final class KeyHandle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Identifier. Name of the KeyHandle resource, e.g.
+   * Identifier. Name of the KeyHandle resource, e.g.
    * `projects/{PROJECT_ID}/locations/{LOCATION}/keyHandles/{KEY_HANDLE_ID}`.
    * @param name name or {@code null} for none
    */

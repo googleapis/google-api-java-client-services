@@ -62,6 +62,14 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean includeVolumeData;
 
   /**
+   * Optional. If false, Backups will fail when Backup for GKE detects Kubernetes configuration that
+   * is non-standard or requires additional setup to restore. Default: False
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean permissiveMode;
+
+  /**
    * If set, include just the resources referenced by the listed ProtectedApplications.
    * The value may be {@code null}.
    */
@@ -148,6 +156,25 @@ public final class BackupConfig extends com.google.api.client.json.GenericJson {
    */
   public BackupConfig setIncludeVolumeData(java.lang.Boolean includeVolumeData) {
     this.includeVolumeData = includeVolumeData;
+    return this;
+  }
+
+  /**
+   * Optional. If false, Backups will fail when Backup for GKE detects Kubernetes configuration that
+   * is non-standard or requires additional setup to restore. Default: False
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPermissiveMode() {
+    return permissiveMode;
+  }
+
+  /**
+   * Optional. If false, Backups will fail when Backup for GKE detects Kubernetes configuration that
+   * is non-standard or requires additional setup to restore. Default: False
+   * @param permissiveMode permissiveMode or {@code null} for none
+   */
+  public BackupConfig setPermissiveMode(java.lang.Boolean permissiveMode) {
+    this.permissiveMode = permissiveMode;
     return this;
   }
 

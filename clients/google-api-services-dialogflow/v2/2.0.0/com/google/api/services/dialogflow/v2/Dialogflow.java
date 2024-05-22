@@ -5039,8 +5039,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Assist](https://cloud.google.com/dialogflow/docs/#aa) or other CCAI products now or in the
              * future, consider using AnalyzeContent instead of `DetectIntent`. `AnalyzeContent` has additional
              * functionality for Agent Assist and other CCAI products. Note: Always use agent versions for
-             * production traffic. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs
-             * /agents-versions).
+             * production traffic. See [Versions and
+             * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
              *
              * Create a request for the method "sessions.detectIntent".
              *
@@ -5193,8 +5193,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              session identifiers (preferably hashed). The length of the `Session ID` and `User ID` must not
              exceed 36 characters. For more information, see the [API interactions
              guide](https://cloud.google.com/dialogflow/docs/api-overview). Note: Always use agent versions for
-             production traffic. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs
-             /agents-versions).
+             production traffic. See [Versions and
+             environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
                */
               public java.lang.String getSession() {
                 return session;
@@ -9245,8 +9245,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Deletes the specified document. This method is a [long-running
            * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
            * `Operation` type has the following method-specific fields: - `metadata`:
-           * KnowledgeOperationMetadata - `response`: An [Empty message](https://developers.google.com
-           * /protocol-buffers/docs/reference/google.protobuf#empty)
+           * KnowledgeOperationMetadata - `response`: An [Empty
+           * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
            *
            * Create a request for the method "documents.delete".
            *
@@ -9274,8 +9274,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Deletes the specified document. This method is a [long-running
              * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
              * returned `Operation` type has the following method-specific fields: - `metadata`:
-             * KnowledgeOperationMetadata - `response`: An [Empty message](https://developers.google.com
-             * /protocol-buffers/docs/reference/google.protobuf#empty)
+             * KnowledgeOperationMetadata - `response`: An [Empty
+             * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
              *
              * Create a request for the method "documents.delete".
              *
@@ -10260,8 +10260,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * Assist](https://cloud.google.com/dialogflow/docs/#aa) or other CCAI products now or in the
          * future, consider using AnalyzeContent instead of `DetectIntent`. `AnalyzeContent` has additional
          * functionality for Agent Assist and other CCAI products. Note: Always use agent versions for
-         * production traffic. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs
-         * /agents-versions).
+         * production traffic. See [Versions and
+         * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
          *
          * Create a request for the method "sessions.detectIntent".
          *
@@ -10414,8 +10414,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          session identifiers (preferably hashed). The length of the `Session ID` and `User ID` must not
          exceed 36 characters. For more information, see the [API interactions
          guide](https://cloud.google.com/dialogflow/docs/api-overview). Note: Always use agent versions for
-         production traffic. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs
-         /agents-versions).
+         production traffic. See [Versions and
+         environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
            */
           public java.lang.String getSession() {
             return session;
@@ -17200,8 +17200,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         /**
          * Adds a text (chat, for example), or audio (phone recording, for example) message from a
          * participant into the conversation. Note: Always use agent versions for production traffic sent to
-         * virtual agents. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs
-         * /agents-versions).
+         * virtual agents. See [Versions and
+         * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
          *
          * Create a request for the method "participants.analyzeContent".
          *
@@ -17229,8 +17229,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Adds a text (chat, for example), or audio (phone recording, for example) message from a
            * participant into the conversation. Note: Always use agent versions for production traffic sent
-           * to virtual agents. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs
-           * /agents-versions).
+           * to virtual agents. See [Versions and
+           * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
            *
            * Create a request for the method "participants.analyzeContent".
            *
@@ -19731,8 +19731,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * Deletes the specified document. This method is a [long-running
          * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
          * `Operation` type has the following method-specific fields: - `metadata`:
-         * KnowledgeOperationMetadata - `response`: An [Empty message](https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#empty)
+         * KnowledgeOperationMetadata - `response`: An [Empty
+         * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
          *
          * Create a request for the method "documents.delete".
          *
@@ -19760,8 +19760,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Deletes the specified document. This method is a [long-running
            * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
            * returned `Operation` type has the following method-specific fields: - `metadata`:
-           * KnowledgeOperationMetadata - `response`: An [Empty message](https://developers.google.com
-           * /protocol-buffers/docs/reference/google.protobuf#empty)
+           * KnowledgeOperationMetadata - `response`: An [Empty
+           * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
            *
            * Create a request for the method "documents.delete".
            *
@@ -25854,8 +25854,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               /**
                * Optional. The language used to access language-specific data. If not specified, the
                * agent's default language is used. For more information, see [Multilingual intent
-               * and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual
-               * #intent-entity).
+               * and entity data](https://cloud.google.com/dialogflow/docs/agents-
+               * multilingual#intent-entity).
                */
               @com.google.api.client.util.Key
               private java.lang.String languageCode;
@@ -25871,8 +25871,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               /**
                * Optional. The language used to access language-specific data. If not specified, the
                * agent's default language is used. For more information, see [Multilingual intent
-               * and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual
-               * #intent-entity).
+               * and entity data](https://cloud.google.com/dialogflow/docs/agents-
+               * multilingual#intent-entity).
                */
               public List setLanguageCode(java.lang.String languageCode) {
                 this.languageCode = languageCode;
@@ -26118,8 +26118,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Assist](https://cloud.google.com/dialogflow/docs/#aa) or other CCAI products now or in the
                * future, consider using AnalyzeContent instead of `DetectIntent`. `AnalyzeContent` has additional
                * functionality for Agent Assist and other CCAI products. Note: Always use agent versions for
-               * production traffic. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs
-               * /agents-versions).
+               * production traffic. See [Versions and
+               * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
                *
                * Create a request for the method "sessions.detectIntent".
                *
@@ -26272,8 +26272,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                session identifiers (preferably hashed). The length of the `Session ID` and `User ID` must not
                exceed 36 characters. For more information, see the [API interactions
                guide](https://cloud.google.com/dialogflow/docs/api-overview). Note: Always use agent versions for
-               production traffic. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs
-               /agents-versions).
+               production traffic. See [Versions and
+               environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
                  */
                 public java.lang.String getSession() {
                   return session;
@@ -29488,8 +29488,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Assist](https://cloud.google.com/dialogflow/docs/#aa) or other CCAI products now or in the
            * future, consider using AnalyzeContent instead of `DetectIntent`. `AnalyzeContent` has additional
            * functionality for Agent Assist and other CCAI products. Note: Always use agent versions for
-           * production traffic. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs
-           * /agents-versions).
+           * production traffic. See [Versions and
+           * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
            *
            * Create a request for the method "sessions.detectIntent".
            *
@@ -29642,8 +29642,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            session identifiers (preferably hashed). The length of the `Session ID` and `User ID` must not
            exceed 36 characters. For more information, see the [API interactions
            guide](https://cloud.google.com/dialogflow/docs/api-overview). Note: Always use agent versions for
-           production traffic. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs
-           /agents-versions).
+           production traffic. See [Versions and
+           environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
              */
             public java.lang.String getSession() {
               return session;
@@ -36863,8 +36863,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Adds a text (chat, for example), or audio (phone recording, for example) message from a
            * participant into the conversation. Note: Always use agent versions for production traffic sent to
-           * virtual agents. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs
-           * /agents-versions).
+           * virtual agents. See [Versions and
+           * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
            *
            * Create a request for the method "participants.analyzeContent".
            *
@@ -36892,8 +36892,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             /**
              * Adds a text (chat, for example), or audio (phone recording, for example) message from a
              * participant into the conversation. Note: Always use agent versions for production traffic sent
-             * to virtual agents. See [Versions and environments](https://cloud.google.com/dialogflow/es/docs
-             * /agents-versions).
+             * to virtual agents. See [Versions and
+             * environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
              *
              * Create a request for the method "participants.analyzeContent".
              *
@@ -39394,8 +39394,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Deletes the specified document. This method is a [long-running
            * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
            * `Operation` type has the following method-specific fields: - `metadata`:
-           * KnowledgeOperationMetadata - `response`: An [Empty message](https://developers.google.com
-           * /protocol-buffers/docs/reference/google.protobuf#empty)
+           * KnowledgeOperationMetadata - `response`: An [Empty
+           * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
            *
            * Create a request for the method "documents.delete".
            *
@@ -39423,8 +39423,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Deletes the specified document. This method is a [long-running
              * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
              * returned `Operation` type has the following method-specific fields: - `metadata`:
-             * KnowledgeOperationMetadata - `response`: An [Empty message](https://developers.google.com
-             * /protocol-buffers/docs/reference/google.protobuf#empty)
+             * KnowledgeOperationMetadata - `response`: An [Empty
+             * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
              *
              * Create a request for the method "documents.delete".
              *

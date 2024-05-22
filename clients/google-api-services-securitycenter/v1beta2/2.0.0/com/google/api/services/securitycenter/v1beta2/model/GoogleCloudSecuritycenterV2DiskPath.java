@@ -31,8 +31,8 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2DiskPath extends com.google.api.client.json.GenericJson {
 
   /**
-   * UUID of the partition (format https://wiki.archlinux.org/title/persistent_block_device_naming
-   * #by-uuid)
+   * UUID of the partition (format
+   * https://wiki.archlinux.org/title/persistent_block_device_naming#by-uuid)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class GoogleCloudSecuritycenterV2DiskPath extends com.google.api.cl
   private java.lang.String relativePath;
 
   /**
-   * UUID of the partition (format https://wiki.archlinux.org/title/persistent_block_device_naming
-   * #by-uuid)
+   * UUID of the partition (format
+   * https://wiki.archlinux.org/title/persistent_block_device_naming#by-uuid)
    * @return value or {@code null} for none
    */
   public java.lang.String getPartitionUuid() {
@@ -56,8 +56,8 @@ public final class GoogleCloudSecuritycenterV2DiskPath extends com.google.api.cl
   }
 
   /**
-   * UUID of the partition (format https://wiki.archlinux.org/title/persistent_block_device_naming
-   * #by-uuid)
+   * UUID of the partition (format
+   * https://wiki.archlinux.org/title/persistent_block_device_naming#by-uuid)
    * @param partitionUuid partitionUuid or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DiskPath setPartitionUuid(java.lang.String partitionUuid) {

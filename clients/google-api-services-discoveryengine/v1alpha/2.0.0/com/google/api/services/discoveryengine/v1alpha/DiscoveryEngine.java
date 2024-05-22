@@ -428,8 +428,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
     }
     /**
      * Updates service terms for this project. This method can be used to retroactively accept the
-     * latest terms. Terms available for update: * [Terms for data use](https://cloud.google.com/retail
-     * /data-use-terms)
+     * latest terms. Terms available for update: * [Terms for data
+     * use](https://cloud.google.com/retail/data-use-terms)
      *
      * Create a request for the method "projects.reportConsentChange".
      *
@@ -3435,34 +3435,34 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * Required. The ID to use for the Document, which will become the final component
-                 * of the Document.name. If the caller does not have permission to create the
-                 * Document, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
-                 * returned. This field must be unique among all Documents with the same parent.
-                 * Otherwise, an `ALREADY_EXISTS` error is returned. This field must conform to
+                 * Required. The ID to use for the Document, which becomes the final component of
+                 * the Document.name. If the caller does not have permission to create the Document,
+                 * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned.
+                 * This field must be unique among all Documents with the same parent. Otherwise, an
+                 * `ALREADY_EXISTS` error is returned. This field must conform to
                  * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of
                  * 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String documentId;
 
-                /** Required. The ID to use for the Document, which will become the final component of the
-               Document.name. If the caller does not have permission to create the Document, regardless of whether
-               or not it exists, a `PERMISSION_DENIED` error is returned. This field must be unique among all
-               Documents with the same parent. Otherwise, an `ALREADY_EXISTS` error is returned. This field must
-               conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
-               characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+                /** Required. The ID to use for the Document, which becomes the final component of the Document.name.
+               If the caller does not have permission to create the Document, regardless of whether or not it
+               exists, a `PERMISSION_DENIED` error is returned. This field must be unique among all Documents with
+               the same parent. Otherwise, an `ALREADY_EXISTS` error is returned. This field must conform to
+               [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters.
+               Otherwise, an `INVALID_ARGUMENT` error is returned.
                  */
                 public java.lang.String getDocumentId() {
                   return documentId;
                 }
 
                 /**
-                 * Required. The ID to use for the Document, which will become the final component
-                 * of the Document.name. If the caller does not have permission to create the
-                 * Document, regardless of whether or not it exists, a `PERMISSION_DENIED` error is
-                 * returned. This field must be unique among all Documents with the same parent.
-                 * Otherwise, an `ALREADY_EXISTS` error is returned. This field must conform to
+                 * Required. The ID to use for the Document, which becomes the final component of
+                 * the Document.name. If the caller does not have permission to create the Document,
+                 * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned.
+                 * This field must be unique among all Documents with the same parent. Otherwise, an
+                 * `ALREADY_EXISTS` error is returned. This field must conform to
                  * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of
                  * 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
                  */
@@ -3988,8 +3988,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 }
               }
               /**
-               * Bulk import of multiple Documents. Request processing may be synchronous. Non-existing items will
-               * be created. Note: It is possible for a subset of the Documents to be successfully updated.
+               * Bulk import of multiple Documents. Request processing may be synchronous. Non-existing items are
+               * created. Note: It is possible for a subset of the Documents to be successfully updated.
                *
                * Create a request for the method "documents.import".
                *
@@ -4018,7 +4018,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
                 /**
                  * Bulk import of multiple Documents. Request processing may be synchronous. Non-existing items
-                 * will be created. Note: It is possible for a subset of the Documents to be successfully updated.
+                 * are created. Note: It is possible for a subset of the Documents to be successfully updated.
                  *
                  * Create a request for the method "documents.import".
                  *
@@ -4295,15 +4295,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
                 /**
                  * Maximum number of Documents to return. If unspecified, defaults to 100. The
-                 * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this
-                 * field is negative, an `INVALID_ARGUMENT` error is returned.
+                 * maximum allowed value is 1000. Values above 1000 are set to 1000. If this field
+                 * is negative, an `INVALID_ARGUMENT` error is returned.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.Integer pageSize;
 
                 /** Maximum number of Documents to return. If unspecified, defaults to 100. The maximum allowed value
-               is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an
-               `INVALID_ARGUMENT` error is returned.
+               is 1000. Values above 1000 are set to 1000. If this field is negative, an `INVALID_ARGUMENT` error
+               is returned.
                  */
                 public java.lang.Integer getPageSize() {
                   return pageSize;
@@ -4311,8 +4311,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
                 /**
                  * Maximum number of Documents to return. If unspecified, defaults to 100. The
-                 * maximum allowed value is 1000. Values above 1000 will be coerced to 1000. If this
-                 * field is negative, an `INVALID_ARGUMENT` error is returned.
+                 * maximum allowed value is 1000. Values above 1000 are set to 1000. If this field
+                 * is negative, an `INVALID_ARGUMENT` error is returned.
                  */
                 public List setPageSize(java.lang.Integer pageSize) {
                   this.pageSize = pageSize;
@@ -4498,19 +4498,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * If set to true, and the Document is not found, a new Document will be created.
+                 * If set to `true` and the Document is not found, a new Document is be created.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.Boolean allowMissing;
 
-                /** If set to true, and the Document is not found, a new Document will be created.
+                /** If set to `true` and the Document is not found, a new Document is be created.
                  */
                 public java.lang.Boolean getAllowMissing() {
                   return allowMissing;
                 }
 
                 /**
-                 * If set to true, and the Document is not found, a new Document will be created.
+                 * If set to `true` and the Document is not found, a new Document is be created.
                  */
                 public Patch setAllowMissing(java.lang.Boolean allowMissing) {
                   this.allowMissing = allowMissing;
@@ -4519,13 +4519,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
                 /**
                  * Indicates which fields in the provided imported 'document' to update. If not set,
-                 * will by default update all fields.
+                 * by default updates all fields.
                  */
                 @com.google.api.client.util.Key
                 private String updateMask;
 
-                /** Indicates which fields in the provided imported 'document' to update. If not set, will by default
-               update all fields.
+                /** Indicates which fields in the provided imported 'document' to update. If not set, by default
+               updates all fields.
                  */
                 public String getUpdateMask() {
                   return updateMask;
@@ -4533,7 +4533,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
                 /**
                  * Indicates which fields in the provided imported 'document' to update. If not set,
-                 * will by default update all fields.
+                 * by default updates all fields.
                  */
                 public Patch setUpdateMask(String updateMask) {
                   this.updateMask = updateMask;
@@ -7675,16 +7675,16 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The ID to use for the Schema, which will become the final component of
-               * the Schema.name. This field should conform to
+               * Required. The ID to use for the Schema, which becomes the final component of the
+               * Schema.name. This field should conform to
                * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
                * characters.
                */
               @com.google.api.client.util.Key
               private java.lang.String schemaId;
 
-              /** Required. The ID to use for the Schema, which will become the final component of the Schema.name.
-             This field should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length
+              /** Required. The ID to use for the Schema, which becomes the final component of the Schema.name. This
+             field should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length
              limit of 63 characters.
                */
               public java.lang.String getSchemaId() {
@@ -7692,8 +7692,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The ID to use for the Schema, which will become the final component of
-               * the Schema.name. This field should conform to
+               * Required. The ID to use for the Schema, which becomes the final component of the
+               * Schema.name. This field should conform to
                * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
                * characters.
                */
@@ -8142,15 +8142,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * The maximum number of Schemas to return. The service may return fewer than this
-               * value. If unspecified, at most 100 Schemas will be returned. The maximum value is
-               * 1000; values above 1000 will be coerced to 1000.
+               * value. If unspecified, at most 100 Schemas are returned. The maximum value is 1000;
+               * values above 1000 are set to 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
               /** The maximum number of Schemas to return. The service may return fewer than this value. If
-             unspecified, at most 100 Schemas will be returned. The maximum value is 1000; values above 1000
-             will be coerced to 1000.
+             unspecified, at most 100 Schemas are returned. The maximum value is 1000; values above 1000 are set
+             to 1000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
@@ -8158,8 +8158,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * The maximum number of Schemas to return. The service may return fewer than this
-               * value. If unspecified, at most 100 Schemas will be returned. The maximum value is
-               * 1000; values above 1000 will be coerced to 1000.
+               * value. If unspecified, at most 100 Schemas are returned. The maximum value is 1000;
+               * values above 1000 are set to 1000.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -8340,13 +8340,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * If set to true, and the Schema is not found, a new Schema will be created. In this
+               * If set to true, and the Schema is not found, a new Schema is created. In this
                * situation, `update_mask` is ignored.
                */
               @com.google.api.client.util.Key
               private java.lang.Boolean allowMissing;
 
-              /** If set to true, and the Schema is not found, a new Schema will be created. In this situation,
+              /** If set to true, and the Schema is not found, a new Schema is created. In this situation,
              `update_mask` is ignored.
                */
               public java.lang.Boolean getAllowMissing() {
@@ -8354,7 +8354,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * If set to true, and the Schema is not found, a new Schema will be created. In this
+               * If set to true, and the Schema is not found, a new Schema is created. In this
                * situation, `update_mask` is ignored.
                */
               public Patch setAllowMissing(java.lang.Boolean allowMissing) {
@@ -9409,8 +9409,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * @param servingConfig Required. Full resource name of a ServingConfig:
              *        `projects/locations/global/collections/engines/servingConfigs`, or
              *        `projects/locations/global/collections/dataStores/servingConfigs` One default serving
-             *        config is created along with your recommendation engine creation. The engine ID will be
-             *        used as the ID of the default serving config. For example, for Engine
+             *        config is created along with your recommendation engine creation. The engine ID is used as
+             *        the ID of the default serving config. For example, for Engine
              *        `projects/locations/global/collections/engines/my-engine`, you can use
              *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
              *        your RecommendationService.Recommend requests.
@@ -9444,8 +9444,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * @param servingConfig Required. Full resource name of a ServingConfig:
              *        `projects/locations/global/collections/engines/servingConfigs`, or
              *        `projects/locations/global/collections/dataStores/servingConfigs` One default serving
-             *        config is created along with your recommendation engine creation. The engine ID will be
-             *        used as the ID of the default serving config. For example, for Engine
+             *        config is created along with your recommendation engine creation. The engine ID is used as
+             *        the ID of the default serving config. For example, for Engine
              *        `projects/locations/global/collections/engines/my-engine`, you can use
              *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
              *        your RecommendationService.Recommend requests.
@@ -9522,8 +9522,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * `projects/locations/global/collections/engines/servingConfigs`, or
                * `projects/locations/global/collections/dataStores/servingConfigs` One default
                * serving config is created along with your recommendation engine creation. The
-               * engine ID will be used as the ID of the default serving config. For example, for
-               * Engine `projects/locations/global/collections/engines/my-engine`, you can use
+               * engine ID is used as the ID of the default serving config. For example, for Engine
+               * `projects/locations/global/collections/engines/my-engine`, you can use
                * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
                * for your RecommendationService.Recommend requests.
                */
@@ -9533,7 +9533,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /** Required. Full resource name of a ServingConfig:
              `projects/locations/global/collections/engines/servingConfigs`, or
              `projects/locations/global/collections/dataStores/servingConfigs` One default serving config is
-             created along with your recommendation engine creation. The engine ID will be used as the ID of the
+             created along with your recommendation engine creation. The engine ID is used as the ID of the
              default serving config. For example, for Engine `projects/locations/global/collections/engines/my-
              engine`, you can use `projects/locations/global/collections/engines/my-engine/servingConfigs/my-
              engine` for your RecommendationService.Recommend requests.
@@ -9547,8 +9547,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * `projects/locations/global/collections/engines/servingConfigs`, or
                * `projects/locations/global/collections/dataStores/servingConfigs` One default
                * serving config is created along with your recommendation engine creation. The
-               * engine ID will be used as the ID of the default serving config. For example, for
-               * Engine `projects/locations/global/collections/engines/my-engine`, you can use
+               * engine ID is used as the ID of the default serving config. For example, for Engine
+               * `projects/locations/global/collections/engines/my-engine`, you can use
                * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
                * for your RecommendationService.Recommend requests.
                */
@@ -13791,7 +13791,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Bulk import of User events. Request processing might be synchronous. Events that already exist
+             * Bulk import of user events. Request processing might be synchronous. Events that already exist
              * are skipped. Use this method for backfilling historical user events. Operation.response is of
              * type ImportResponse. Note that it is possible for a subset of the items to be successfully
              * inserted. Operation.metadata is of type ImportMetadata.
@@ -13821,7 +13821,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
 
               /**
-               * Bulk import of User events. Request processing might be synchronous. Events that already exist
+               * Bulk import of user events. Request processing might be synchronous. Events that already exist
                * are skipped. Use this method for backfilling historical user events. Operation.response is of
                * type ImportResponse. Note that it is possible for a subset of the items to be successfully
                * inserted. Operation.metadata is of type ImportMetadata.
@@ -17609,8 +17609,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * @param servingConfig Required. Full resource name of a ServingConfig:
              *        `projects/locations/global/collections/engines/servingConfigs`, or
              *        `projects/locations/global/collections/dataStores/servingConfigs` One default serving
-             *        config is created along with your recommendation engine creation. The engine ID will be
-             *        used as the ID of the default serving config. For example, for Engine
+             *        config is created along with your recommendation engine creation. The engine ID is used as
+             *        the ID of the default serving config. For example, for Engine
              *        `projects/locations/global/collections/engines/my-engine`, you can use
              *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
              *        your RecommendationService.Recommend requests.
@@ -17644,8 +17644,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * @param servingConfig Required. Full resource name of a ServingConfig:
              *        `projects/locations/global/collections/engines/servingConfigs`, or
              *        `projects/locations/global/collections/dataStores/servingConfigs` One default serving
-             *        config is created along with your recommendation engine creation. The engine ID will be
-             *        used as the ID of the default serving config. For example, for Engine
+             *        config is created along with your recommendation engine creation. The engine ID is used as
+             *        the ID of the default serving config. For example, for Engine
              *        `projects/locations/global/collections/engines/my-engine`, you can use
              *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
              *        your RecommendationService.Recommend requests.
@@ -17722,8 +17722,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * `projects/locations/global/collections/engines/servingConfigs`, or
                * `projects/locations/global/collections/dataStores/servingConfigs` One default
                * serving config is created along with your recommendation engine creation. The
-               * engine ID will be used as the ID of the default serving config. For example, for
-               * Engine `projects/locations/global/collections/engines/my-engine`, you can use
+               * engine ID is used as the ID of the default serving config. For example, for Engine
+               * `projects/locations/global/collections/engines/my-engine`, you can use
                * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
                * for your RecommendationService.Recommend requests.
                */
@@ -17733,7 +17733,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /** Required. Full resource name of a ServingConfig:
              `projects/locations/global/collections/engines/servingConfigs`, or
              `projects/locations/global/collections/dataStores/servingConfigs` One default serving config is
-             created along with your recommendation engine creation. The engine ID will be used as the ID of the
+             created along with your recommendation engine creation. The engine ID is used as the ID of the
              default serving config. For example, for Engine `projects/locations/global/collections/engines/my-
              engine`, you can use `projects/locations/global/collections/engines/my-engine/servingConfigs/my-
              engine` for your RecommendationService.Recommend requests.
@@ -17747,8 +17747,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * `projects/locations/global/collections/engines/servingConfigs`, or
                * `projects/locations/global/collections/dataStores/servingConfigs` One default
                * serving config is created along with your recommendation engine creation. The
-               * engine ID will be used as the ID of the default serving config. For example, for
-               * Engine `projects/locations/global/collections/engines/my-engine`, you can use
+               * engine ID is used as the ID of the default serving config. For example, for Engine
+               * `projects/locations/global/collections/engines/my-engine`, you can use
                * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
                * for your RecommendationService.Recommend requests.
                */
@@ -21179,8 +21179,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Required. The ID to use for the Document, which will become the final component of
-               * the Document.name. If the caller does not have permission to create the Document,
+               * Required. The ID to use for the Document, which becomes the final component of the
+               * Document.name. If the caller does not have permission to create the Document,
                * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned.
                * This field must be unique among all Documents with the same parent. Otherwise, an
                * `ALREADY_EXISTS` error is returned. This field must conform to
@@ -21190,20 +21190,20 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               @com.google.api.client.util.Key
               private java.lang.String documentId;
 
-              /** Required. The ID to use for the Document, which will become the final component of the
-             Document.name. If the caller does not have permission to create the Document, regardless of whether
-             or not it exists, a `PERMISSION_DENIED` error is returned. This field must be unique among all
-             Documents with the same parent. Otherwise, an `ALREADY_EXISTS` error is returned. This field must
-             conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
-             characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+              /** Required. The ID to use for the Document, which becomes the final component of the Document.name.
+             If the caller does not have permission to create the Document, regardless of whether or not it
+             exists, a `PERMISSION_DENIED` error is returned. This field must be unique among all Documents with
+             the same parent. Otherwise, an `ALREADY_EXISTS` error is returned. This field must conform to
+             [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters.
+             Otherwise, an `INVALID_ARGUMENT` error is returned.
                */
               public java.lang.String getDocumentId() {
                 return documentId;
               }
 
               /**
-               * Required. The ID to use for the Document, which will become the final component of
-               * the Document.name. If the caller does not have permission to create the Document,
+               * Required. The ID to use for the Document, which becomes the final component of the
+               * Document.name. If the caller does not have permission to create the Document,
                * regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned.
                * This field must be unique among all Documents with the same parent. Otherwise, an
                * `ALREADY_EXISTS` error is returned. This field must conform to
@@ -21732,8 +21732,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Bulk import of multiple Documents. Request processing may be synchronous. Non-existing items will
-             * be created. Note: It is possible for a subset of the Documents to be successfully updated.
+             * Bulk import of multiple Documents. Request processing may be synchronous. Non-existing items are
+             * created. Note: It is possible for a subset of the Documents to be successfully updated.
              *
              * Create a request for the method "documents.import".
              *
@@ -21762,7 +21762,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Bulk import of multiple Documents. Request processing may be synchronous. Non-existing items
-               * will be created. Note: It is possible for a subset of the Documents to be successfully updated.
+               * are created. Note: It is possible for a subset of the Documents to be successfully updated.
                *
                * Create a request for the method "documents.import".
                *
@@ -22037,15 +22037,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Maximum number of Documents to return. If unspecified, defaults to 100. The maximum
-               * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is
+               * allowed value is 1000. Values above 1000 are set to 1000. If this field is
                * negative, an `INVALID_ARGUMENT` error is returned.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
               /** Maximum number of Documents to return. If unspecified, defaults to 100. The maximum allowed value
-             is 1000. Values above 1000 will be coerced to 1000. If this field is negative, an
-             `INVALID_ARGUMENT` error is returned.
+             is 1000. Values above 1000 are set to 1000. If this field is negative, an `INVALID_ARGUMENT` error
+             is returned.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
@@ -22053,7 +22053,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Maximum number of Documents to return. If unspecified, defaults to 100. The maximum
-               * allowed value is 1000. Values above 1000 will be coerced to 1000. If this field is
+               * allowed value is 1000. Values above 1000 are set to 1000. If this field is
                * negative, an `INVALID_ARGUMENT` error is returned.
                */
               public List setPageSize(java.lang.Integer pageSize) {
@@ -22239,17 +22239,17 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** If set to true, and the Document is not found, a new Document will be created. */
+              /** If set to `true` and the Document is not found, a new Document is be created. */
               @com.google.api.client.util.Key
               private java.lang.Boolean allowMissing;
 
-              /** If set to true, and the Document is not found, a new Document will be created.
+              /** If set to `true` and the Document is not found, a new Document is be created.
                */
               public java.lang.Boolean getAllowMissing() {
                 return allowMissing;
               }
 
-              /** If set to true, and the Document is not found, a new Document will be created. */
+              /** If set to `true` and the Document is not found, a new Document is be created. */
               public Patch setAllowMissing(java.lang.Boolean allowMissing) {
                 this.allowMissing = allowMissing;
                 return this;
@@ -22257,13 +22257,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Indicates which fields in the provided imported 'document' to update. If not set,
-               * will by default update all fields.
+               * by default updates all fields.
                */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** Indicates which fields in the provided imported 'document' to update. If not set, will by default
-             update all fields.
+              /** Indicates which fields in the provided imported 'document' to update. If not set, by default
+             updates all fields.
                */
               public String getUpdateMask() {
                 return updateMask;
@@ -22271,7 +22271,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * Indicates which fields in the provided imported 'document' to update. If not set,
-               * will by default update all fields.
+               * by default updates all fields.
                */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
@@ -25235,7 +25235,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The ID to use for the Schema, which will become the final component of the
+             * Required. The ID to use for the Schema, which becomes the final component of the
              * Schema.name. This field should conform to
              * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
              * characters.
@@ -25243,8 +25243,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @com.google.api.client.util.Key
             private java.lang.String schemaId;
 
-            /** Required. The ID to use for the Schema, which will become the final component of the Schema.name.
-           This field should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length
+            /** Required. The ID to use for the Schema, which becomes the final component of the Schema.name. This
+           field should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length
            limit of 63 characters.
              */
             public java.lang.String getSchemaId() {
@@ -25252,7 +25252,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The ID to use for the Schema, which will become the final component of the
+             * Required. The ID to use for the Schema, which becomes the final component of the
              * Schema.name. This field should conform to
              * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
              * characters.
@@ -25702,15 +25702,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * The maximum number of Schemas to return. The service may return fewer than this
-             * value. If unspecified, at most 100 Schemas will be returned. The maximum value is
-             * 1000; values above 1000 will be coerced to 1000.
+             * value. If unspecified, at most 100 Schemas are returned. The maximum value is 1000;
+             * values above 1000 are set to 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
             /** The maximum number of Schemas to return. The service may return fewer than this value. If
-           unspecified, at most 100 Schemas will be returned. The maximum value is 1000; values above 1000
-           will be coerced to 1000.
+           unspecified, at most 100 Schemas are returned. The maximum value is 1000; values above 1000 are set
+           to 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
@@ -25718,8 +25718,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * The maximum number of Schemas to return. The service may return fewer than this
-             * value. If unspecified, at most 100 Schemas will be returned. The maximum value is
-             * 1000; values above 1000 will be coerced to 1000.
+             * value. If unspecified, at most 100 Schemas are returned. The maximum value is 1000;
+             * values above 1000 are set to 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -25900,13 +25900,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * If set to true, and the Schema is not found, a new Schema will be created. In this
+             * If set to true, and the Schema is not found, a new Schema is created. In this
              * situation, `update_mask` is ignored.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean allowMissing;
 
-            /** If set to true, and the Schema is not found, a new Schema will be created. In this situation,
+            /** If set to true, and the Schema is not found, a new Schema is created. In this situation,
            `update_mask` is ignored.
              */
             public java.lang.Boolean getAllowMissing() {
@@ -25914,7 +25914,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * If set to true, and the Schema is not found, a new Schema will be created. In this
+             * If set to true, and the Schema is not found, a new Schema is created. In this
              * situation, `update_mask` is ignored.
              */
             public Patch setAllowMissing(java.lang.Boolean allowMissing) {
@@ -26619,8 +26619,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * @param servingConfig Required. Full resource name of a ServingConfig:
            *        `projects/locations/global/collections/engines/servingConfigs`, or
            *        `projects/locations/global/collections/dataStores/servingConfigs` One default serving
-           *        config is created along with your recommendation engine creation. The engine ID will be
-           *        used as the ID of the default serving config. For example, for Engine
+           *        config is created along with your recommendation engine creation. The engine ID is used as
+           *        the ID of the default serving config. For example, for Engine
            *        `projects/locations/global/collections/engines/my-engine`, you can use
            *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
            *        your RecommendationService.Recommend requests.
@@ -26654,8 +26654,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * @param servingConfig Required. Full resource name of a ServingConfig:
            *        `projects/locations/global/collections/engines/servingConfigs`, or
            *        `projects/locations/global/collections/dataStores/servingConfigs` One default serving
-           *        config is created along with your recommendation engine creation. The engine ID will be
-           *        used as the ID of the default serving config. For example, for Engine
+           *        config is created along with your recommendation engine creation. The engine ID is used as
+           *        the ID of the default serving config. For example, for Engine
            *        `projects/locations/global/collections/engines/my-engine`, you can use
            *        `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine` for
            *        your RecommendationService.Recommend requests.
@@ -26731,8 +26731,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Required. Full resource name of a ServingConfig:
              * `projects/locations/global/collections/engines/servingConfigs`, or
              * `projects/locations/global/collections/dataStores/servingConfigs` One default serving
-             * config is created along with your recommendation engine creation. The engine ID will
-             * be used as the ID of the default serving config. For example, for Engine
+             * config is created along with your recommendation engine creation. The engine ID is
+             * used as the ID of the default serving config. For example, for Engine
              * `projects/locations/global/collections/engines/my-engine`, you can use
              * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
              * for your RecommendationService.Recommend requests.
@@ -26743,7 +26743,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /** Required. Full resource name of a ServingConfig:
            `projects/locations/global/collections/engines/servingConfigs`, or
            `projects/locations/global/collections/dataStores/servingConfigs` One default serving config is
-           created along with your recommendation engine creation. The engine ID will be used as the ID of the
+           created along with your recommendation engine creation. The engine ID is used as the ID of the
            default serving config. For example, for Engine `projects/locations/global/collections/engines/my-
            engine`, you can use `projects/locations/global/collections/engines/my-engine/servingConfigs/my-
            engine` for your RecommendationService.Recommend requests.
@@ -26756,8 +26756,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Required. Full resource name of a ServingConfig:
              * `projects/locations/global/collections/engines/servingConfigs`, or
              * `projects/locations/global/collections/dataStores/servingConfigs` One default serving
-             * config is created along with your recommendation engine creation. The engine ID will
-             * be used as the ID of the default serving config. For example, for Engine
+             * config is created along with your recommendation engine creation. The engine ID is
+             * used as the ID of the default serving config. For example, for Engine
              * `projects/locations/global/collections/engines/my-engine`, you can use
              * `projects/locations/global/collections/engines/my-engine/servingConfigs/my-engine`
              * for your RecommendationService.Recommend requests.
@@ -29944,7 +29944,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Bulk import of User events. Request processing might be synchronous. Events that already exist
+           * Bulk import of user events. Request processing might be synchronous. Events that already exist
            * are skipped. Use this method for backfilling historical user events. Operation.response is of
            * type ImportResponse. Note that it is possible for a subset of the items to be successfully
            * inserted. Operation.metadata is of type ImportMetadata.
@@ -29974,7 +29974,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
 
             /**
-             * Bulk import of User events. Request processing might be synchronous. Events that already exist
+             * Bulk import of user events. Request processing might be synchronous. Events that already exist
              * are skipped. Use this method for backfilling historical user events. Operation.response is of
              * type ImportResponse. Note that it is possible for a subset of the items to be successfully
              * inserted. Operation.metadata is of type ImportMetadata.

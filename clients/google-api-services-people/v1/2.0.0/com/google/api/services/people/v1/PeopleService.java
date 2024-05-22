@@ -1748,8 +1748,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * Provides a list of contacts in the authenticated user's other contacts that matches the search
      * query. The query matches on a contact's `names`, `emailAddresses`, and `phoneNumbers` fields that
      * are from the OTHER_CONTACT source. **IMPORTANT**: Before searching, clients should send a warmup
-     * request with an empty query to update the cache. See https://developers.google.com/people/v1
-     * /other-contacts#search_the_users_other_contacts
+     * request with an empty query to update the cache. See
+     * https://developers.google.com/people/v1/other-contacts#search_the_users_other_contacts
      *
      * Create a request for the method "otherContacts.search".
      *
@@ -3158,20 +3158,21 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The resource names of the people to provide information about. It's repeatable.
-       * The URL query parameter should be resourceNames==&... - To get information about the
-       * authenticated user, specify `people/me`. - To get information about a google account,
-       * specify `people/{account_id}`. - To get information about a contact, specify the resource
-       * name that identifies the contact as returned by `people.connections.list`. There is a
-       * maximum of 200 resource names.
+       * The URL query parameter should be resourceNames=&resourceNames=&... - To get information
+       * about the authenticated user, specify `people/me`. - To get information about a google
+       * account, specify `people/{account_id}`. - To get information about a contact, specify the
+       * resource name that identifies the contact as returned by `people.connections.list`. There
+       * is a maximum of 200 resource names.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> resourceNames;
 
       /** Required. The resource names of the people to provide information about. It's repeatable. The URL
-     query parameter should be resourceNames==&... - To get information about the authenticated user,
-     specify `people/me`. - To get information about a google account, specify `people/{account_id}`. -
-     To get information about a contact, specify the resource name that identifies the contact as
-     returned by `people.connections.list`. There is a maximum of 200 resource names.
+     query parameter should be resourceNames=&resourceNames=&... - To get information about the
+     authenticated user, specify `people/me`. - To get information about a google account, specify
+     `people/{account_id}`. - To get information about a contact, specify the resource name that
+     identifies the contact as returned by `people.connections.list`. There is a maximum of 200 resource
+     names.
        */
       public java.util.List<java.lang.String> getResourceNames() {
         return resourceNames;
@@ -3179,11 +3180,11 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The resource names of the people to provide information about. It's repeatable.
-       * The URL query parameter should be resourceNames==&... - To get information about the
-       * authenticated user, specify `people/me`. - To get information about a google account,
-       * specify `people/{account_id}`. - To get information about a contact, specify the resource
-       * name that identifies the contact as returned by `people.connections.list`. There is a
-       * maximum of 200 resource names.
+       * The URL query parameter should be resourceNames=&resourceNames=&... - To get information
+       * about the authenticated user, specify `people/me`. - To get information about a google
+       * account, specify `people/{account_id}`. - To get information about a contact, specify the
+       * resource name that identifies the contact as returned by `people.connections.list`. There
+       * is a maximum of 200 resource names.
        */
       public GetBatchGet setResourceNames(java.util.List<java.lang.String> resourceNames) {
         this.resourceNames = resourceNames;

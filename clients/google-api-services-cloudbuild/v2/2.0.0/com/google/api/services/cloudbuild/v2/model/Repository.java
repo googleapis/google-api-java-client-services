@@ -30,7 +30,7 @@ package com.google.api.services.cloudbuild.v2.model;
 public final class Repository extends com.google.api.client.json.GenericJson {
 
   /**
-   * Allows clients to store small amounts of arbitrary data.
+   * Optional. Allows clients to store small amounts of arbitrary data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String webhookId;
 
   /**
-   * Allows clients to store small amounts of arbitrary data.
+   * Optional. Allows clients to store small amounts of arbitrary data.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -89,7 +89,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Allows clients to store small amounts of arbitrary data.
+   * Optional. Allows clients to store small amounts of arbitrary data.
    * @param annotations annotations or {@code null} for none
    */
   public Repository setAnnotations(java.util.Map<String, java.lang.String> annotations) {

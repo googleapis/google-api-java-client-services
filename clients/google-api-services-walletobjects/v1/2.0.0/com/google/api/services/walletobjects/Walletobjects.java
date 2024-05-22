@@ -9914,8 +9914,8 @@ public class Walletobjects extends com.google.api.client.googleapis.services.jso
 
       /**
        * Uploads rotating barcode values for the transit object referenced by the given object ID. Note
-       * the max upload size is specified in google3/production/config/cdd/apps-upload/customers
-       * /payments-consumer-passes/config.gcl and enforced by Scotty.
+       * the max upload size is specified in google3/production/config/cdd/apps-
+       * upload/customers/payments-consumer-passes/config.gcl and enforced by Scotty.
        *
        * Create a request for the method "media.upload".
        *
@@ -9939,8 +9939,8 @@ public class Walletobjects extends com.google.api.client.googleapis.services.jso
 
       /**
        * Uploads rotating barcode values for the transit object referenced by the given object ID. Note
-       * the max upload size is specified in google3/production/config/cdd/apps-upload/customers
-       * /payments-consumer-passes/config.gcl and enforced by Scotty.
+       * the max upload size is specified in google3/production/config/cdd/apps-
+       * upload/customers/payments-consumer-passes/config.gcl and enforced by Scotty.
        *
        * Create a request for the method "media.upload".
        *

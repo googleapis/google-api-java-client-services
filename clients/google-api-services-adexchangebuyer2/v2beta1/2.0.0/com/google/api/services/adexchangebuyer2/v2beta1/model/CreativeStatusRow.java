@@ -39,8 +39,8 @@ public final class CreativeStatusRow extends com.google.api.client.json.GenericJ
   private MetricValue bidCount;
 
   /**
-   * The ID of the creative status. See [creative-status-codes](https://developers.google.com
-   * /authorized-buyers/rtb/downloads/creative-status-codes).
+   * The ID of the creative status. See [creative-status-
+   * codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-codes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class CreativeStatusRow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The ID of the creative status. See [creative-status-codes](https://developers.google.com
-   * /authorized-buyers/rtb/downloads/creative-status-codes).
+   * The ID of the creative status. See [creative-status-
+   * codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-codes).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCreativeStatusId() {
@@ -80,8 +80,8 @@ public final class CreativeStatusRow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The ID of the creative status. See [creative-status-codes](https://developers.google.com
-   * /authorized-buyers/rtb/downloads/creative-status-codes).
+   * The ID of the creative status. See [creative-status-
+   * codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-codes).
    * @param creativeStatusId creativeStatusId or {@code null} for none
    */
   public CreativeStatusRow setCreativeStatusId(java.lang.Integer creativeStatusId) {

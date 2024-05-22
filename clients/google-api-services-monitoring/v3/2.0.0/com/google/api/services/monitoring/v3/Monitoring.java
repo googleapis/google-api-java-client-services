@@ -6236,8 +6236,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /** A comma-separated list of fields by which to sort the result. Supports the same set of fields as in
        filter. Entries can be prefixed with a minus sign to sort in descending rather than ascending
-       order.For more details, see sorting and filtering (https://cloud.google.com/monitoring/api/v3
-       /sorting-and-filtering).
+       order.For more details, see sorting and filtering
+       (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering).
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -7520,8 +7520,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Creates or adds data to one or more time series. The response is empty if all time series in
          * the request were written. If any time series could not be written, a corresponding failure
          * message is included in the error response. This method does not support resource locations
-         * constraint of an organization policy (https://cloud.google.com/resource-manager/docs
-         * /organization-policy/defining-locations#setting_the_organization_policy).
+         * constraint of an organization policy (https://cloud.google.com/resource-
+         * manager/docs/organization-policy/defining-locations#setting_the_organization_policy).
          *
          * Create a request for the method "timeSeries.create".
          *
@@ -9195,8 +9195,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         private java.lang.String filter;
 
         /** If provided, this field specifies the criteria that must be met by uptime checks to be included in
-       the response.For more details, see Filtering syntax (https://cloud.google.com/monitoring/api/v3
-       /sorting-and-filtering#filter_syntax).
+       the response.For more details, see Filtering syntax
+       (https://cloud.google.com/monitoring/api/v3/sorting-and-filtering#filter_syntax).
          */
         public java.lang.String getFilter() {
           return filter;
@@ -11263,7 +11263,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
   public class UptimeCheckIps {
 
     /**
-     * Returns the list of IP addresses that checkers run from
+     * Returns the list of IP addresses that checkers run from.
      *
      * Create a request for the method "uptimeCheckIps.list".
      *
@@ -11283,7 +11283,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       private static final String REST_PATH = "v3/uptimeCheckIps";
 
       /**
-       * Returns the list of IP addresses that checkers run from
+       * Returns the list of IP addresses that checkers run from.
        *
        * Create a request for the method "uptimeCheckIps.list".
        *

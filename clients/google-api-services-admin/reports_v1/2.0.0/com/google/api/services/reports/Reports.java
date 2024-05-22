@@ -511,16 +511,17 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * relational operator. In the first example, the request returns all edited documents with a
        * `doc_id` value equal to `12345`. In the second example, the report returns any edited
        * documents where the `doc_id` value is not equal to `98765`. The `<>` operator is URL-
-       * encoded in the request's query string (`%3C%3E`): ``` GET...=edit=doc_id==12345
-       * GET...=edit=doc_id%3C%3E98765 ``` A `filters` query supports these relational operators: *
-       * `==`—'equal to'. * `<>`—'not equal to'. Must be URL-encoded (%3C%3E). * `<`—'less than'.
-       * Must be URL-encoded (%3C). * `<=`—'less than or equal to'. Must be URL-encoded (%3C=). *
-       * `>`—'greater than'. Must be URL-encoded (%3E). * `>=`—'greater than or equal to'. Must be
-       * URL-encoded (%3E=). **Note:** The API doesn't accept multiple values of the same parameter.
-       * If a parameter is supplied more than once in the API request, the API only accepts the last
-       * value of that parameter. In addition, if an invalid parameter is supplied in the API
-       * request, the API ignores that parameter and returns the response corresponding to the
-       * remaining valid parameters. If no parameters are requested, all parameters are returned.
+       * encoded in the request's query string (`%3C%3E`): ```
+       * GET...&eventName=edit&filters=doc_id==12345 GET...&eventName=edit&filters=doc_id%3C%3E98765
+       * ``` A `filters` query supports these relational operators: * `==`—'equal to'. * `<>`—'not
+       * equal to'. Must be URL-encoded (%3C%3E). * `<`—'less than'. Must be URL-encoded (%3C). *
+       * `<=`—'less than or equal to'. Must be URL-encoded (%3C=). * `>`—'greater than'. Must be
+       * URL-encoded (%3E). * `>=`—'greater than or equal to'. Must be URL-encoded (%3E=). **Note:**
+       * The API doesn't accept multiple values of the same parameter. If a parameter is supplied
+       * more than once in the API request, the API only accepts the last value of that parameter.
+       * In addition, if an invalid parameter is supplied in the API request, the API ignores that
+       * parameter and returns the response corresponding to the remaining valid parameters. If no
+       * parameters are requested, all parameters are returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String filters;
@@ -537,15 +538,16 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
      the relational operator. In the first example, the request returns all edited documents with a
      `doc_id` value equal to `12345`. In the second example, the report returns any edited documents
      where the `doc_id` value is not equal to `98765`. The `<>` operator is URL-encoded in the request's
-     query string (`%3C%3E`): ``` GET...=edit=doc_id==12345 GET...=edit=doc_id%3C%3E98765 ``` A
-     `filters` query supports these relational operators: * `==`—'equal to'. * `<>`—'not equal to'. Must
-     be URL-encoded (%3C%3E). * `<`—'less than'. Must be URL-encoded (%3C). * `<=`—'less than or equal
-     to'. Must be URL-encoded (%3C=). * `>`—'greater than'. Must be URL-encoded (%3E). * `>=`—'greater
-     than or equal to'. Must be URL-encoded (%3E=). **Note:** The API doesn't accept multiple values of
-     the same parameter. If a parameter is supplied more than once in the API request, the API only
-     accepts the last value of that parameter. In addition, if an invalid parameter is supplied in the
-     API request, the API ignores that parameter and returns the response corresponding to the remaining
-     valid parameters. If no parameters are requested, all parameters are returned.
+     query string (`%3C%3E`): ``` GET...&eventName=edit&filters=doc_id==12345
+     GET...&eventName=edit&filters=doc_id%3C%3E98765 ``` A `filters` query supports these relational
+     operators: * `==`—'equal to'. * `<>`—'not equal to'. Must be URL-encoded (%3C%3E). * `<`—'less
+     than'. Must be URL-encoded (%3C). * `<=`—'less than or equal to'. Must be URL-encoded (%3C=). *
+     `>`—'greater than'. Must be URL-encoded (%3E). * `>=`—'greater than or equal to'. Must be URL-
+     encoded (%3E=). **Note:** The API doesn't accept multiple values of the same parameter. If a
+     parameter is supplied more than once in the API request, the API only accepts the last value of
+     that parameter. In addition, if an invalid parameter is supplied in the API request, the API
+     ignores that parameter and returns the response corresponding to the remaining valid parameters. If
+     no parameters are requested, all parameters are returned.
        */
       public java.lang.String getFilters() {
         return filters;
@@ -565,16 +567,17 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * relational operator. In the first example, the request returns all edited documents with a
        * `doc_id` value equal to `12345`. In the second example, the report returns any edited
        * documents where the `doc_id` value is not equal to `98765`. The `<>` operator is URL-
-       * encoded in the request's query string (`%3C%3E`): ``` GET...=edit=doc_id==12345
-       * GET...=edit=doc_id%3C%3E98765 ``` A `filters` query supports these relational operators: *
-       * `==`—'equal to'. * `<>`—'not equal to'. Must be URL-encoded (%3C%3E). * `<`—'less than'.
-       * Must be URL-encoded (%3C). * `<=`—'less than or equal to'. Must be URL-encoded (%3C=). *
-       * `>`—'greater than'. Must be URL-encoded (%3E). * `>=`—'greater than or equal to'. Must be
-       * URL-encoded (%3E=). **Note:** The API doesn't accept multiple values of the same parameter.
-       * If a parameter is supplied more than once in the API request, the API only accepts the last
-       * value of that parameter. In addition, if an invalid parameter is supplied in the API
-       * request, the API ignores that parameter and returns the response corresponding to the
-       * remaining valid parameters. If no parameters are requested, all parameters are returned.
+       * encoded in the request's query string (`%3C%3E`): ```
+       * GET...&eventName=edit&filters=doc_id==12345 GET...&eventName=edit&filters=doc_id%3C%3E98765
+       * ``` A `filters` query supports these relational operators: * `==`—'equal to'. * `<>`—'not
+       * equal to'. Must be URL-encoded (%3C%3E). * `<`—'less than'. Must be URL-encoded (%3C). *
+       * `<=`—'less than or equal to'. Must be URL-encoded (%3C=). * `>`—'greater than'. Must be
+       * URL-encoded (%3E). * `>=`—'greater than or equal to'. Must be URL-encoded (%3E=). **Note:**
+       * The API doesn't accept multiple values of the same parameter. If a parameter is supplied
+       * more than once in the API request, the API only accepts the last value of that parameter.
+       * In addition, if an invalid parameter is supplied in the API request, the API ignores that
+       * parameter and returns the response corresponding to the remaining valid parameters. If no
+       * parameters are requested, all parameters are returned.
        */
       public List setFilters(java.lang.String filters) {
         if (!getSuppressPatternChecks()) {
@@ -1088,16 +1091,17 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * relational operator. In the first example, the request returns all edited documents with a
        * `doc_id` value equal to `12345`. In the second example, the report returns any edited
        * documents where the `doc_id` value is not equal to `98765`. The `<>` operator is URL-
-       * encoded in the request's query string (`%3C%3E`): ``` GET...=edit=doc_id==12345
-       * GET...=edit=doc_id%3C%3E98765 ``` A `filters` query supports these relational operators: *
-       * `==`—'equal to'. * `<>`—'not equal to'. Must be URL-encoded (%3C%3E). * `<`—'less than'.
-       * Must be URL-encoded (%3C). * `<=`—'less than or equal to'. Must be URL-encoded (%3C=). *
-       * `>`—'greater than'. Must be URL-encoded (%3E). * `>=`—'greater than or equal to'. Must be
-       * URL-encoded (%3E=). **Note:** The API doesn't accept multiple values of the same parameter.
-       * If a parameter is supplied more than once in the API request, the API only accepts the last
-       * value of that parameter. In addition, if an invalid parameter is supplied in the API
-       * request, the API ignores that parameter and returns the response corresponding to the
-       * remaining valid parameters. If no parameters are requested, all parameters are returned.
+       * encoded in the request's query string (`%3C%3E`): ```
+       * GET...&eventName=edit&filters=doc_id==12345 GET...&eventName=edit&filters=doc_id%3C%3E98765
+       * ``` A `filters` query supports these relational operators: * `==`—'equal to'. * `<>`—'not
+       * equal to'. Must be URL-encoded (%3C%3E). * `<`—'less than'. Must be URL-encoded (%3C). *
+       * `<=`—'less than or equal to'. Must be URL-encoded (%3C=). * `>`—'greater than'. Must be
+       * URL-encoded (%3E). * `>=`—'greater than or equal to'. Must be URL-encoded (%3E=). **Note:**
+       * The API doesn't accept multiple values of the same parameter. If a parameter is supplied
+       * more than once in the API request, the API only accepts the last value of that parameter.
+       * In addition, if an invalid parameter is supplied in the API request, the API ignores that
+       * parameter and returns the response corresponding to the remaining valid parameters. If no
+       * parameters are requested, all parameters are returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String filters;
@@ -1114,15 +1118,16 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
      the relational operator. In the first example, the request returns all edited documents with a
      `doc_id` value equal to `12345`. In the second example, the report returns any edited documents
      where the `doc_id` value is not equal to `98765`. The `<>` operator is URL-encoded in the request's
-     query string (`%3C%3E`): ``` GET...=edit=doc_id==12345 GET...=edit=doc_id%3C%3E98765 ``` A
-     `filters` query supports these relational operators: * `==`—'equal to'. * `<>`—'not equal to'. Must
-     be URL-encoded (%3C%3E). * `<`—'less than'. Must be URL-encoded (%3C). * `<=`—'less than or equal
-     to'. Must be URL-encoded (%3C=). * `>`—'greater than'. Must be URL-encoded (%3E). * `>=`—'greater
-     than or equal to'. Must be URL-encoded (%3E=). **Note:** The API doesn't accept multiple values of
-     the same parameter. If a parameter is supplied more than once in the API request, the API only
-     accepts the last value of that parameter. In addition, if an invalid parameter is supplied in the
-     API request, the API ignores that parameter and returns the response corresponding to the remaining
-     valid parameters. If no parameters are requested, all parameters are returned.
+     query string (`%3C%3E`): ``` GET...&eventName=edit&filters=doc_id==12345
+     GET...&eventName=edit&filters=doc_id%3C%3E98765 ``` A `filters` query supports these relational
+     operators: * `==`—'equal to'. * `<>`—'not equal to'. Must be URL-encoded (%3C%3E). * `<`—'less
+     than'. Must be URL-encoded (%3C). * `<=`—'less than or equal to'. Must be URL-encoded (%3C=). *
+     `>`—'greater than'. Must be URL-encoded (%3E). * `>=`—'greater than or equal to'. Must be URL-
+     encoded (%3E=). **Note:** The API doesn't accept multiple values of the same parameter. If a
+     parameter is supplied more than once in the API request, the API only accepts the last value of
+     that parameter. In addition, if an invalid parameter is supplied in the API request, the API
+     ignores that parameter and returns the response corresponding to the remaining valid parameters. If
+     no parameters are requested, all parameters are returned.
        */
       public java.lang.String getFilters() {
         return filters;
@@ -1142,16 +1147,17 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * relational operator. In the first example, the request returns all edited documents with a
        * `doc_id` value equal to `12345`. In the second example, the report returns any edited
        * documents where the `doc_id` value is not equal to `98765`. The `<>` operator is URL-
-       * encoded in the request's query string (`%3C%3E`): ``` GET...=edit=doc_id==12345
-       * GET...=edit=doc_id%3C%3E98765 ``` A `filters` query supports these relational operators: *
-       * `==`—'equal to'. * `<>`—'not equal to'. Must be URL-encoded (%3C%3E). * `<`—'less than'.
-       * Must be URL-encoded (%3C). * `<=`—'less than or equal to'. Must be URL-encoded (%3C=). *
-       * `>`—'greater than'. Must be URL-encoded (%3E). * `>=`—'greater than or equal to'. Must be
-       * URL-encoded (%3E=). **Note:** The API doesn't accept multiple values of the same parameter.
-       * If a parameter is supplied more than once in the API request, the API only accepts the last
-       * value of that parameter. In addition, if an invalid parameter is supplied in the API
-       * request, the API ignores that parameter and returns the response corresponding to the
-       * remaining valid parameters. If no parameters are requested, all parameters are returned.
+       * encoded in the request's query string (`%3C%3E`): ```
+       * GET...&eventName=edit&filters=doc_id==12345 GET...&eventName=edit&filters=doc_id%3C%3E98765
+       * ``` A `filters` query supports these relational operators: * `==`—'equal to'. * `<>`—'not
+       * equal to'. Must be URL-encoded (%3C%3E). * `<`—'less than'. Must be URL-encoded (%3C). *
+       * `<=`—'less than or equal to'. Must be URL-encoded (%3C=). * `>`—'greater than'. Must be
+       * URL-encoded (%3E). * `>=`—'greater than or equal to'. Must be URL-encoded (%3E=). **Note:**
+       * The API doesn't accept multiple values of the same parameter. If a parameter is supplied
+       * more than once in the API request, the API only accepts the last value of that parameter.
+       * In addition, if an invalid parameter is supplied in the API request, the API ignores that
+       * parameter and returns the response corresponding to the remaining valid parameters. If no
+       * parameters are requested, all parameters are returned.
        */
       public Watch setFilters(java.lang.String filters) {
         if (!getSuppressPatternChecks()) {
@@ -2012,12 +2018,12 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * example, the `<>` 'not equal to' operator is URL-encoded in the request's query string
        * (%3C%3E): GET
        * https://www.googleapis.com/admin/reports/v1/usage/gplus_communities/all/dates/2017-12-01
-       * ?parameters=gplus:community_name,gplus:num_total_members =gplus:num_total_members%3C%3E0
-       * The relational operators include: - `==` - 'equal to'. - `<>` - 'not equal to'. It is URL-
-       * encoded (%3C%3E). - `<` - 'less than'. It is URL-encoded (%3C). - `<=` - 'less than or
-       * equal to'. It is URL-encoded (%3C=). - `>` - 'greater than'. It is URL-encoded (%3E). -
-       * `>=` - 'greater than or equal to'. It is URL-encoded (%3E=). Filters can only be applied to
-       * numeric parameters.
+       * ?parameters=gplus:community_name,gplus:num_total_members
+       * &filters=gplus:num_total_members%3C%3E0 The relational operators include: - `==` - 'equal
+       * to'. - `<>` - 'not equal to'. It is URL-encoded (%3C%3E). - `<` - 'less than'. It is URL-
+       * encoded (%3C). - `<=` - 'less than or equal to'. It is URL-encoded (%3C=). - `>` - 'greater
+       * than'. It is URL-encoded (%3E). - `>=` - 'greater than or equal to'. It is URL-encoded
+       * (%3E=). Filters can only be applied to numeric parameters.
        */
       @com.google.api.client.util.Key
       private java.lang.String filters;
@@ -2029,8 +2035,8 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
      `[application name]:parameter name[parameter value],...`. In this example, the `<>` 'not equal to'
      operator is URL-encoded in the request's query string (%3C%3E): GET
      https://www.googleapis.com/admin/reports/v1/usage/gplus_communities/all/dates/2017-12-01
-     ?parameters=gplus:community_name,gplus:num_total_members =gplus:num_total_members%3C%3E0 The
-     relational operators include: - `==` - 'equal to'. - `<>` - 'not equal to'. It is URL-encoded
+     ?parameters=gplus:community_name,gplus:num_total_members &filters=gplus:num_total_members%3C%3E0
+     The relational operators include: - `==` - 'equal to'. - `<>` - 'not equal to'. It is URL-encoded
      (%3C%3E). - `<` - 'less than'. It is URL-encoded (%3C). - `<=` - 'less than or equal to'. It is
      URL-encoded (%3C=). - `>` - 'greater than'. It is URL-encoded (%3E). - `>=` - 'greater than or
      equal to'. It is URL-encoded (%3E=). Filters can only be applied to numeric parameters.
@@ -2048,12 +2054,12 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * example, the `<>` 'not equal to' operator is URL-encoded in the request's query string
        * (%3C%3E): GET
        * https://www.googleapis.com/admin/reports/v1/usage/gplus_communities/all/dates/2017-12-01
-       * ?parameters=gplus:community_name,gplus:num_total_members =gplus:num_total_members%3C%3E0
-       * The relational operators include: - `==` - 'equal to'. - `<>` - 'not equal to'. It is URL-
-       * encoded (%3C%3E). - `<` - 'less than'. It is URL-encoded (%3C). - `<=` - 'less than or
-       * equal to'. It is URL-encoded (%3C=). - `>` - 'greater than'. It is URL-encoded (%3E). -
-       * `>=` - 'greater than or equal to'. It is URL-encoded (%3E=). Filters can only be applied to
-       * numeric parameters.
+       * ?parameters=gplus:community_name,gplus:num_total_members
+       * &filters=gplus:num_total_members%3C%3E0 The relational operators include: - `==` - 'equal
+       * to'. - `<>` - 'not equal to'. It is URL-encoded (%3C%3E). - `<` - 'less than'. It is URL-
+       * encoded (%3C). - `<=` - 'less than or equal to'. It is URL-encoded (%3C=). - `>` - 'greater
+       * than'. It is URL-encoded (%3E). - `>=` - 'greater than or equal to'. It is URL-encoded
+       * (%3E=). Filters can only be applied to numeric parameters.
        */
       public Get setFilters(java.lang.String filters) {
         if (!getSuppressPatternChecks()) {
@@ -2431,11 +2437,11 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * example, the `<>` 'not equal to' operator is URL-encoded in the request's query string
        * (%3C%3E): GET https://www.googleapis.com/admin/reports/v1/usage/users/all/dates/2013-03-03
        * ?parameters=accounts:last_login_time
-       * =accounts:last_login_time%3C%3E2010-10-28T10:26:35.000Z The relational operators include: -
-       * `==` - 'equal to'. - `<>` - 'not equal to'. It is URL-encoded (%3C%3E). - `<` - 'less
-       * than'. It is URL-encoded (%3C). - `<=` - 'less than or equal to'. It is URL-encoded (%3C=).
-       * - `>` - 'greater than'. It is URL-encoded (%3E). - `>=` - 'greater than or equal to'. It is
-       * URL-encoded (%3E=).
+       * &filters=accounts:last_login_time%3C%3E2010-10-28T10:26:35.000Z The relational operators
+       * include: - `==` - 'equal to'. - `<>` - 'not equal to'. It is URL-encoded (%3C%3E). - `<` -
+       * 'less than'. It is URL-encoded (%3C). - `<=` - 'less than or equal to'. It is URL-encoded
+       * (%3C=). - `>` - 'greater than'. It is URL-encoded (%3E). - `>=` - 'greater than or equal
+       * to'. It is URL-encoded (%3E=).
        */
       @com.google.api.client.util.Key
       private java.lang.String filters;
@@ -2447,11 +2453,11 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
      name]:parameter name[parameter value],...`. In this example, the `<>` 'not equal to' operator is
      URL-encoded in the request's query string (%3C%3E): GET
      https://www.googleapis.com/admin/reports/v1/usage/users/all/dates/2013-03-03
-     ?parameters=accounts:last_login_time =accounts:last_login_time%3C%3E2010-10-28T10:26:35.000Z The
-     relational operators include: - `==` - 'equal to'. - `<>` - 'not equal to'. It is URL-encoded
-     (%3C%3E). - `<` - 'less than'. It is URL-encoded (%3C). - `<=` - 'less than or equal to'. It is
-     URL-encoded (%3C=). - `>` - 'greater than'. It is URL-encoded (%3E). - `>=` - 'greater than or
-     equal to'. It is URL-encoded (%3E=).
+     ?parameters=accounts:last_login_time
+     &filters=accounts:last_login_time%3C%3E2010-10-28T10:26:35.000Z The relational operators include: -
+     `==` - 'equal to'. - `<>` - 'not equal to'. It is URL-encoded (%3C%3E). - `<` - 'less than'. It is
+     URL-encoded (%3C). - `<=` - 'less than or equal to'. It is URL-encoded (%3C=). - `>` - 'greater
+     than'. It is URL-encoded (%3E). - `>=` - 'greater than or equal to'. It is URL-encoded (%3E=).
        */
       public java.lang.String getFilters() {
         return filters;
@@ -2466,11 +2472,11 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        * example, the `<>` 'not equal to' operator is URL-encoded in the request's query string
        * (%3C%3E): GET https://www.googleapis.com/admin/reports/v1/usage/users/all/dates/2013-03-03
        * ?parameters=accounts:last_login_time
-       * =accounts:last_login_time%3C%3E2010-10-28T10:26:35.000Z The relational operators include: -
-       * `==` - 'equal to'. - `<>` - 'not equal to'. It is URL-encoded (%3C%3E). - `<` - 'less
-       * than'. It is URL-encoded (%3C). - `<=` - 'less than or equal to'. It is URL-encoded (%3C=).
-       * - `>` - 'greater than'. It is URL-encoded (%3E). - `>=` - 'greater than or equal to'. It is
-       * URL-encoded (%3E=).
+       * &filters=accounts:last_login_time%3C%3E2010-10-28T10:26:35.000Z The relational operators
+       * include: - `==` - 'equal to'. - `<>` - 'not equal to'. It is URL-encoded (%3C%3E). - `<` -
+       * 'less than'. It is URL-encoded (%3C). - `<=` - 'less than or equal to'. It is URL-encoded
+       * (%3C=). - `>` - 'greater than'. It is URL-encoded (%3E). - `>=` - 'greater than or equal
+       * to'. It is URL-encoded (%3E=).
        */
       public Get setFilters(java.lang.String filters) {
         if (!getSuppressPatternChecks()) {

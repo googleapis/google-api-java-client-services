@@ -18,7 +18,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
  * UserEvent captures all metadata information Discovery Engine API needs to know about how end
- * users interact with customers' website.
+ * users interact with your website.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -194,8 +194,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
 
   /**
    * A list of identifiers for the independent experiment groups this user event belongs to. This is
-   * used to distinguish between user events associated with different experiment setups on the
-   * customer end.
+   * used to distinguish between user events associated with different experiment setups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -574,8 +573,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
 
   /**
    * A list of identifiers for the independent experiment groups this user event belongs to. This is
-   * used to distinguish between user events associated with different experiment setups on the
-   * customer end.
+   * used to distinguish between user events associated with different experiment setups.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTagIds() {
@@ -584,8 +582,7 @@ public final class GoogleCloudDiscoveryengineV1alphaUserEvent extends com.google
 
   /**
    * A list of identifiers for the independent experiment groups this user event belongs to. This is
-   * used to distinguish between user events associated with different experiment setups on the
-   * customer end.
+   * used to distinguish between user events associated with different experiment setups.
    * @param tagIds tagIds or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaUserEvent setTagIds(java.util.List<java.lang.String> tagIds) {

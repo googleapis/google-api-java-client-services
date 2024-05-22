@@ -47,13 +47,14 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
    * `runReport` and `batchRunReports`. See [Realtime
    * Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-api-
    * schema#dimensions) for the list of dimension names supported by the `runRealtimeReport` method.
-   * See [Funnel Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1
-   * /exploration-api-schema#dimensions) for the list of dimension names supported by the
-   * `runFunnelReport` method. If `dimensionExpression` is specified, `name` can be any string that
-   * you would like within the allowed character set. For example if a `dimensionExpression`
-   * concatenates `country` and `city`, you could call that dimension `countryAndCity`. Dimension
-   * names that you choose must match the regular expression `^[a-zA-Z0-9_]$`. Dimensions are
-   * referenced by `name` in `dimensionFilter`, `orderBys`, `dimensionExpression`, and `pivots`.
+   * See [Funnel
+   * Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/exploration-
+   * api-schema#dimensions) for the list of dimension names supported by the `runFunnelReport`
+   * method. If `dimensionExpression` is specified, `name` can be any string that you would like
+   * within the allowed character set. For example if a `dimensionExpression` concatenates `country`
+   * and `city`, you could call that dimension `countryAndCity`. Dimension names that you choose
+   * must match the regular expression `^[a-zA-Z0-9_]$`. Dimensions are referenced by `name` in
+   * `dimensionFilter`, `orderBys`, `dimensionExpression`, and `pivots`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,13 +86,14 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
    * `runReport` and `batchRunReports`. See [Realtime
    * Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-api-
    * schema#dimensions) for the list of dimension names supported by the `runRealtimeReport` method.
-   * See [Funnel Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1
-   * /exploration-api-schema#dimensions) for the list of dimension names supported by the
-   * `runFunnelReport` method. If `dimensionExpression` is specified, `name` can be any string that
-   * you would like within the allowed character set. For example if a `dimensionExpression`
-   * concatenates `country` and `city`, you could call that dimension `countryAndCity`. Dimension
-   * names that you choose must match the regular expression `^[a-zA-Z0-9_]$`. Dimensions are
-   * referenced by `name` in `dimensionFilter`, `orderBys`, `dimensionExpression`, and `pivots`.
+   * See [Funnel
+   * Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/exploration-
+   * api-schema#dimensions) for the list of dimension names supported by the `runFunnelReport`
+   * method. If `dimensionExpression` is specified, `name` can be any string that you would like
+   * within the allowed character set. For example if a `dimensionExpression` concatenates `country`
+   * and `city`, you could call that dimension `countryAndCity`. Dimension names that you choose
+   * must match the regular expression `^[a-zA-Z0-9_]$`. Dimensions are referenced by `name` in
+   * `dimensionFilter`, `orderBys`, `dimensionExpression`, and `pivots`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -105,13 +107,14 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
    * `runReport` and `batchRunReports`. See [Realtime
    * Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-api-
    * schema#dimensions) for the list of dimension names supported by the `runRealtimeReport` method.
-   * See [Funnel Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1
-   * /exploration-api-schema#dimensions) for the list of dimension names supported by the
-   * `runFunnelReport` method. If `dimensionExpression` is specified, `name` can be any string that
-   * you would like within the allowed character set. For example if a `dimensionExpression`
-   * concatenates `country` and `city`, you could call that dimension `countryAndCity`. Dimension
-   * names that you choose must match the regular expression `^[a-zA-Z0-9_]$`. Dimensions are
-   * referenced by `name` in `dimensionFilter`, `orderBys`, `dimensionExpression`, and `pivots`.
+   * See [Funnel
+   * Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/exploration-
+   * api-schema#dimensions) for the list of dimension names supported by the `runFunnelReport`
+   * method. If `dimensionExpression` is specified, `name` can be any string that you would like
+   * within the allowed character set. For example if a `dimensionExpression` concatenates `country`
+   * and `city`, you could call that dimension `countryAndCity`. Dimension names that you choose
+   * must match the regular expression `^[a-zA-Z0-9_]$`. Dimensions are referenced by `name` in
+   * `dimensionFilter`, `orderBys`, `dimensionExpression`, and `pivots`.
    * @param name name or {@code null} for none
    */
   public Dimension setName(java.lang.String name) {

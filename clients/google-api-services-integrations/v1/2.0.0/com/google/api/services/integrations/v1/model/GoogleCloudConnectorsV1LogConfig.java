@@ -38,6 +38,13 @@ public final class GoogleCloudConnectorsV1LogConfig extends com.google.api.clien
   private java.lang.Boolean enabled;
 
   /**
+   * Optional. Log configuration level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String level;
+
+  /**
    * Enabled represents whether logging is enabled or not for a connection.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class GoogleCloudConnectorsV1LogConfig extends com.google.api.clien
    */
   public GoogleCloudConnectorsV1LogConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * Optional. Log configuration level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLevel() {
+    return level;
+  }
+
+  /**
+   * Optional. Log configuration level.
+   * @param level level or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1LogConfig setLevel(java.lang.String level) {
+    this.level = level;
     return this;
   }
 

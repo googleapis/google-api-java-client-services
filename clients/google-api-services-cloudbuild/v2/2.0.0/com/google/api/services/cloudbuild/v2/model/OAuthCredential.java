@@ -30,8 +30,8 @@ package com.google.api.services.cloudbuild.v2.model;
 public final class OAuthCredential extends com.google.api.client.json.GenericJson {
 
   /**
-   * A SecretManager resource containing the OAuth token that authorizes the Cloud Build connection.
-   * Format: `projects/secrets/versions`.
+   * Optional. A SecretManager resource containing the OAuth token that authorizes the Cloud Build
+   * connection. Format: `projects/secrets/versions`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class OAuthCredential extends com.google.api.client.json.GenericJso
   private java.lang.String username;
 
   /**
-   * A SecretManager resource containing the OAuth token that authorizes the Cloud Build connection.
-   * Format: `projects/secrets/versions`.
+   * Optional. A SecretManager resource containing the OAuth token that authorizes the Cloud Build
+   * connection. Format: `projects/secrets/versions`.
    * @return value or {@code null} for none
    */
   public java.lang.String getOauthTokenSecretVersion() {
@@ -54,8 +54,8 @@ public final class OAuthCredential extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A SecretManager resource containing the OAuth token that authorizes the Cloud Build connection.
-   * Format: `projects/secrets/versions`.
+   * Optional. A SecretManager resource containing the OAuth token that authorizes the Cloud Build
+   * connection. Format: `projects/secrets/versions`.
    * @param oauthTokenSecretVersion oauthTokenSecretVersion or {@code null} for none
    */
   public OAuthCredential setOauthTokenSecretVersion(java.lang.String oauthTokenSecretVersion) {

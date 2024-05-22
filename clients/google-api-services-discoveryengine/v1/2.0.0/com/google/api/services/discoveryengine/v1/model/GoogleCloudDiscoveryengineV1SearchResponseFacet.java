@@ -37,7 +37,7 @@ public final class GoogleCloudDiscoveryengineV1SearchResponseFacet extends com.g
   private java.lang.Boolean dynamicFacet;
 
   /**
-   * The key for this facet. E.g., "colors" or "price". It matches
+   * The key for this facet. For example, `"colors"` or `"price"`. It matches
    * SearchRequest.FacetSpec.FacetKey.key.
    * The value may be {@code null}.
    */
@@ -69,7 +69,7 @@ public final class GoogleCloudDiscoveryengineV1SearchResponseFacet extends com.g
   }
 
   /**
-   * The key for this facet. E.g., "colors" or "price". It matches
+   * The key for this facet. For example, `"colors"` or `"price"`. It matches
    * SearchRequest.FacetSpec.FacetKey.key.
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class GoogleCloudDiscoveryengineV1SearchResponseFacet extends com.g
   }
 
   /**
-   * The key for this facet. E.g., "colors" or "price". It matches
+   * The key for this facet. For example, `"colors"` or `"price"`. It matches
    * SearchRequest.FacetSpec.FacetKey.key.
    * @param key key or {@code null} for none
    */

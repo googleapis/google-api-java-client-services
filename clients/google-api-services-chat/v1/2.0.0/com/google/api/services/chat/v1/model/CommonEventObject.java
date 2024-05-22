@@ -34,8 +34,8 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   /**
    * A map containing the values that a user inputs in a widget from a card or dialog. The map keys
    * are the string IDs assigned to each widget, and the values represent inputs to the widget. For
-   * details, see [Process information inputted by users](https://developers.google.com/chat/ui
-   * /read-form-data).
+   * details, see [Process information inputted by
+   * users](https://developers.google.com/chat/ui/read-form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,8 +93,8 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   /**
    * A map containing the values that a user inputs in a widget from a card or dialog. The map keys
    * are the string IDs assigned to each widget, and the values represent inputs to the widget. For
-   * details, see [Process information inputted by users](https://developers.google.com/chat/ui
-   * /read-form-data).
+   * details, see [Process information inputted by
+   * users](https://developers.google.com/chat/ui/read-form-data).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Inputs> getFormInputs() {
@@ -104,8 +104,8 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
   /**
    * A map containing the values that a user inputs in a widget from a card or dialog. The map keys
    * are the string IDs assigned to each widget, and the values represent inputs to the widget. For
-   * details, see [Process information inputted by users](https://developers.google.com/chat/ui
-   * /read-form-data).
+   * details, see [Process information inputted by
+   * users](https://developers.google.com/chat/ui/read-form-data).
    * @param formInputs formInputs or {@code null} for none
    */
   public CommonEventObject setFormInputs(java.util.Map<String, Inputs> formInputs) {

@@ -18,8 +18,8 @@ package com.google.api.services.realtimebidding.v1.model;
 
 /**
  * This has been sunset as of October 2023, and will return an error response if called. For more
- * information, see the release notes: https://developers.google.com/authorized-buyers/apis/relnotes
- * #real-time-bidding-api Response for a request to get remarketing tag.
+ * information, see the release notes: https://developers.google.com/authorized-
+ * buyers/apis/relnotes#real-time-bidding-api Response for a request to get remarketing tag.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Real-time Bidding API. For a detailed explanation

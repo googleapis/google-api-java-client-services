@@ -14,30 +14,30 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.integrations.v1.model;
+package com.google.api.services.contentwarehouse.v1.model;
 
 /**
- * Model definition for GoogleProtobufStruct.
+ * Metadata object for UpdateDocument request (currently empty).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Application Integration API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Document AI Warehouse API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleProtobufStruct extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudContentwarehouseV1UpdateDocumentMetadata extends com.google.api.client.json.GenericJson {
 
   @Override
-  public GoogleProtobufStruct set(String fieldName, Object value) {
-    return (GoogleProtobufStruct) super.set(fieldName, value);
+  public GoogleCloudContentwarehouseV1UpdateDocumentMetadata set(String fieldName, Object value) {
+    return (GoogleCloudContentwarehouseV1UpdateDocumentMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleProtobufStruct clone() {
-    return (GoogleProtobufStruct) super.clone();
+  public GoogleCloudContentwarehouseV1UpdateDocumentMetadata clone() {
+    return (GoogleCloudContentwarehouseV1UpdateDocumentMetadata) super.clone();
   }
 
 }

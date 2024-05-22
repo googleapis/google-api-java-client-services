@@ -84,7 +84,7 @@ public final class GoogleCloudDiscoveryengineV1alphaChunk extends com.google.api
 
   /**
    * Represents the relevance score based on similarity. Higher score represents the chunk
-   * relevance. The score is in range [0.0, 1.0]. Only populated on SearchService.SearchResponse
+   * relevance. The score is in range [-1.0, 1.0]. Only populated on SearchService.SearchResponse
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,7 +217,7 @@ public final class GoogleCloudDiscoveryengineV1alphaChunk extends com.google.api
 
   /**
    * Represents the relevance score based on similarity. Higher score represents the chunk
-   * relevance. The score is in range [0.0, 1.0]. Only populated on SearchService.SearchResponse
+   * relevance. The score is in range [-1.0, 1.0]. Only populated on SearchService.SearchResponse
    * @return value or {@code null} for none
    */
   public java.lang.Double getRelevanceScore() {
@@ -226,7 +226,7 @@ public final class GoogleCloudDiscoveryengineV1alphaChunk extends com.google.api
 
   /**
    * Represents the relevance score based on similarity. Higher score represents the chunk
-   * relevance. The score is in range [0.0, 1.0]. Only populated on SearchService.SearchResponse
+   * relevance. The score is in range [-1.0, 1.0]. Only populated on SearchService.SearchResponse
    * @param relevanceScore relevanceScore or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaChunk setRelevanceScore(java.lang.Double relevanceScore) {

@@ -20,8 +20,8 @@ package com.google.api.services.appengine.model;
  * Google Cloud Endpoints (https://cloud.google.com/endpoints) configuration. The Endpoints API
  * Service provides tooling for serving Open API and gRPC endpoints via an NGINX proxy. Only valid
  * for App Engine Flexible environment deployments.The fields here refer to the name and
- * configuration ID of a "service" resource in the Service Management API (https://cloud.google.com
- * /service-management/overview).
+ * configuration ID of a "service" resource in the Service Management API
+ * (https://cloud.google.com/service-management/overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Engine Admin API. For a detailed explanation see:

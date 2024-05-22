@@ -25,8 +25,8 @@ package com.google.api.services.dialogflow.v2beta1.model;
  * identified by string names. When an intent is matched, any configured output contexts for that
  * intent become active. While any contexts are active, Dialogflow is more likely to match intents
  * that are configured with input contexts that correspond to the currently active contexts. For
- * more information about context, see the [Contexts guide](https://cloud.google.com/dialogflow/docs
- * /contexts-overview).
+ * more information about context, see the [Contexts
+ * guide](https://cloud.google.com/dialogflow/docs/contexts-overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

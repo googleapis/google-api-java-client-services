@@ -19,8 +19,8 @@ package com.google.api.services.containeranalysis.v1alpha1.model;
 /**
  * Pairs a set of secret environment variables containing encrypted values with the Cloud KMS key to
  * use to decrypt the value. Note: Use `kmsKeyName` with `available_secrets` instead of using
- * `kmsKeyName` with `secret`. For instructions see: https://cloud.google.com/cloud-build/docs
- * /securing-builds/use-encrypted-credentials.
+ * `kmsKeyName` with `secret`. For instructions see: https://cloud.google.com/cloud-
+ * build/docs/securing-builds/use-encrypted-credentials.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation

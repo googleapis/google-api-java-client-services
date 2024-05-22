@@ -57,8 +57,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseMetadata extends
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId;
 
   /**
-   * Required. Database name. Resource name to follow CAIS resource_name format as noted here go
-   * /condor-common-datamodel
+   * Required. Database name. Resource name to follow CAIS resource_name format as noted here
+   * go/condor-common-datamodel
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,8 +129,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseMetadata extends
   }
 
   /**
-   * Required. Database name. Resource name to follow CAIS resource_name format as noted here go
-   * /condor-common-datamodel
+   * Required. Database name. Resource name to follow CAIS resource_name format as noted here
+   * go/condor-common-datamodel
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -138,8 +138,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseMetadata extends
   }
 
   /**
-   * Required. Database name. Resource name to follow CAIS resource_name format as noted here go
-   * /condor-common-datamodel
+   * Required. Database name. Resource name to follow CAIS resource_name format as noted here
+   * go/condor-common-datamodel
    * @param resourceName resourceName or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseMetadata setResourceName(java.lang.String resourceName) {

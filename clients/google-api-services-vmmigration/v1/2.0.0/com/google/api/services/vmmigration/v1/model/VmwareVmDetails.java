@@ -79,8 +79,8 @@ public final class VmwareVmDetails extends com.google.api.client.json.GenericJso
   private java.lang.String displayName;
 
   /**
-   * The VM's OS. See for example https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910
-   * -60ac-438b-8b9b-6122f4d14524/16b7274a-bf8b-4b4c-a05e-
+   * The VM's OS. See for example https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910-
+   * 60ac-438b-8b9b-6122f4d14524/16b7274a-bf8b-4b4c-a05e-
    * 746f2aa93c8c/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this
    * might hold.
    * The value may be {@code null}.
@@ -237,8 +237,8 @@ public final class VmwareVmDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The VM's OS. See for example https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910
-   * -60ac-438b-8b9b-6122f4d14524/16b7274a-bf8b-4b4c-a05e-
+   * The VM's OS. See for example https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910-
+   * 60ac-438b-8b9b-6122f4d14524/16b7274a-bf8b-4b4c-a05e-
    * 746f2aa93c8c/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this
    * might hold.
    * @return value or {@code null} for none
@@ -248,8 +248,8 @@ public final class VmwareVmDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The VM's OS. See for example https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910
-   * -60ac-438b-8b9b-6122f4d14524/16b7274a-bf8b-4b4c-a05e-
+   * The VM's OS. See for example https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910-
+   * 60ac-438b-8b9b-6122f4d14524/16b7274a-bf8b-4b4c-a05e-
    * 746f2aa93c8c/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this
    * might hold.
    * @param guestDescription guestDescription or {@code null} for none

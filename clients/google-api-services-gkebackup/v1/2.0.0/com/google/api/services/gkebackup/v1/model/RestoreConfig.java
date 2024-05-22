@@ -80,6 +80,13 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean noNamespaces;
 
   /**
+   * Optional. RestoreOrder contains custom ordering to use on a Restore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RestoreOrder restoreOrder;
+
+  /**
    * A list of selected ProtectedApplications to restore. The listed ProtectedApplications and all
    * the resources to which they refer will be restored.
    * The value may be {@code null}.
@@ -122,6 +129,15 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String volumeDataRestorePolicy;
+
+  /**
+   * Optional. A table that binds volumes by their scope to a restore policy. Bindings must have a
+   * unique scope. Any volumes not scoped in the bindings are subject to the policy defined in
+   * volume_data_restore_policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<VolumeDataRestorePolicyBinding> volumeDataRestorePolicyBindings;
 
   /**
    * Restore all namespaced resources in the Backup if set to "True". Specifying this field to
@@ -242,6 +258,23 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. RestoreOrder contains custom ordering to use on a Restore.
+   * @return value or {@code null} for none
+   */
+  public RestoreOrder getRestoreOrder() {
+    return restoreOrder;
+  }
+
+  /**
+   * Optional. RestoreOrder contains custom ordering to use on a Restore.
+   * @param restoreOrder restoreOrder or {@code null} for none
+   */
+  public RestoreConfig setRestoreOrder(RestoreOrder restoreOrder) {
+    this.restoreOrder = restoreOrder;
+    return this;
+  }
+
+  /**
    * A list of selected ProtectedApplications to restore. The listed ProtectedApplications and all
    * the resources to which they refer will be restored.
    * @return value or {@code null} for none
@@ -341,6 +374,27 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
    */
   public RestoreConfig setVolumeDataRestorePolicy(java.lang.String volumeDataRestorePolicy) {
     this.volumeDataRestorePolicy = volumeDataRestorePolicy;
+    return this;
+  }
+
+  /**
+   * Optional. A table that binds volumes by their scope to a restore policy. Bindings must have a
+   * unique scope. Any volumes not scoped in the bindings are subject to the policy defined in
+   * volume_data_restore_policy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<VolumeDataRestorePolicyBinding> getVolumeDataRestorePolicyBindings() {
+    return volumeDataRestorePolicyBindings;
+  }
+
+  /**
+   * Optional. A table that binds volumes by their scope to a restore policy. Bindings must have a
+   * unique scope. Any volumes not scoped in the bindings are subject to the policy defined in
+   * volume_data_restore_policy.
+   * @param volumeDataRestorePolicyBindings volumeDataRestorePolicyBindings or {@code null} for none
+   */
+  public RestoreConfig setVolumeDataRestorePolicyBindings(java.util.List<VolumeDataRestorePolicyBinding> volumeDataRestorePolicyBindings) {
+    this.volumeDataRestorePolicyBindings = volumeDataRestorePolicyBindings;
     return this;
   }
 

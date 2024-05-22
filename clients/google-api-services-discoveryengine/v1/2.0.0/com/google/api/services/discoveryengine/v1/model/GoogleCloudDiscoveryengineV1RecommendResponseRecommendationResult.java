@@ -44,8 +44,8 @@ public final class GoogleCloudDiscoveryengineV1RecommendResponseRecommendationRe
   private java.lang.String id;
 
   /**
-   * Additional Document metadata / annotations. Possible values: * `score`: Recommendation score in
-   * double value. Is set if `returnScore` is set to true in RecommendRequest.params.
+   * Additional Document metadata or annotations. Possible values: * `score`: Recommendation score
+   * in double value. Is set if `returnScore` is set to true in RecommendRequest.params.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,8 +86,8 @@ public final class GoogleCloudDiscoveryengineV1RecommendResponseRecommendationRe
   }
 
   /**
-   * Additional Document metadata / annotations. Possible values: * `score`: Recommendation score in
-   * double value. Is set if `returnScore` is set to true in RecommendRequest.params.
+   * Additional Document metadata or annotations. Possible values: * `score`: Recommendation score
+   * in double value. Is set if `returnScore` is set to true in RecommendRequest.params.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -95,8 +95,8 @@ public final class GoogleCloudDiscoveryengineV1RecommendResponseRecommendationRe
   }
 
   /**
-   * Additional Document metadata / annotations. Possible values: * `score`: Recommendation score in
-   * double value. Is set if `returnScore` is set to true in RecommendRequest.params.
+   * Additional Document metadata or annotations. Possible values: * `score`: Recommendation score
+   * in double value. Is set if `returnScore` is set to true in RecommendRequest.params.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1RecommendResponseRecommendationResult setMetadata(java.util.Map<String, java.lang.Object> metadata) {

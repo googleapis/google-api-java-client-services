@@ -46,6 +46,14 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallAction extends com.go
   private GoogleCloudRecaptchaenterpriseV1FirewallActionBlockAction block;
 
   /**
+   * This action will inject reCAPTCHA JavaScript code into the HTML page returned by the site
+   * backend.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1FirewallActionIncludeRecaptchaScriptAction includeRecaptchaScript;
+
+  /**
    * This action will redirect the request to a ReCaptcha interstitial to attach a token.
    * The value may be {@code null}.
    */
@@ -99,6 +107,25 @@ public final class GoogleCloudRecaptchaenterpriseV1FirewallAction extends com.go
    */
   public GoogleCloudRecaptchaenterpriseV1FirewallAction setBlock(GoogleCloudRecaptchaenterpriseV1FirewallActionBlockAction block) {
     this.block = block;
+    return this;
+  }
+
+  /**
+   * This action will inject reCAPTCHA JavaScript code into the HTML page returned by the site
+   * backend.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1FirewallActionIncludeRecaptchaScriptAction getIncludeRecaptchaScript() {
+    return includeRecaptchaScript;
+  }
+
+  /**
+   * This action will inject reCAPTCHA JavaScript code into the HTML page returned by the site
+   * backend.
+   * @param includeRecaptchaScript includeRecaptchaScript or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1FirewallAction setIncludeRecaptchaScript(GoogleCloudRecaptchaenterpriseV1FirewallActionIncludeRecaptchaScriptAction includeRecaptchaScript) {
+    this.includeRecaptchaScript = includeRecaptchaScript;
     return this;
   }
 

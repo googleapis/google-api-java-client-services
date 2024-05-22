@@ -17,8 +17,9 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Information about [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs
- * /cloud-armor-overview#google-cloud-armor-adaptive-protection).
+ * Information about [Google Cloud Armor Adaptive
+ * Protection](https://cloud.google.com/armor/docs/cloud-armor-overview#google-cloud-armor-adaptive-
+ * protection).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed

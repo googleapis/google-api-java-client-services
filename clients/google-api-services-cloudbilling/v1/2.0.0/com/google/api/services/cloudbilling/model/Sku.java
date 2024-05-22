@@ -17,7 +17,7 @@
 package com.google.api.services.cloudbilling.model;
 
 /**
- * Encapsulates a single SKU in Google Cloud Platform
+ * Encapsulates a single SKU in Google Cloud
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing API. For a detailed explanation see:
@@ -51,7 +51,7 @@ public final class Sku extends com.google.api.client.json.GenericJson {
   private GeoTaxonomy geoTaxonomy;
 
   /**
-   * The resource name for the SKU. Example: "services/DA34-426B-A397/skus/AA95-CD31-42FE"
+   * The resource name for the SKU. Example: "services/6F81-5844-456A/skus/D041-B8A1-6E0B"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +87,7 @@ public final class Sku extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> serviceRegions;
 
   /**
-   * The identifier for the SKU. Example: "AA95-CD31-42FE"
+   * The identifier for the SKU. Example: "D041-B8A1-6E0B"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +145,7 @@ public final class Sku extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name for the SKU. Example: "services/DA34-426B-A397/skus/AA95-CD31-42FE"
+   * The resource name for the SKU. Example: "services/6F81-5844-456A/skus/D041-B8A1-6E0B"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -153,7 +153,7 @@ public final class Sku extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name for the SKU. Example: "services/DA34-426B-A397/skus/AA95-CD31-42FE"
+   * The resource name for the SKU. Example: "services/6F81-5844-456A/skus/D041-B8A1-6E0B"
    * @param name name or {@code null} for none
    */
   public Sku setName(java.lang.String name) {
@@ -217,7 +217,7 @@ public final class Sku extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The identifier for the SKU. Example: "AA95-CD31-42FE"
+   * The identifier for the SKU. Example: "D041-B8A1-6E0B"
    * @return value or {@code null} for none
    */
   public java.lang.String getSkuId() {
@@ -225,7 +225,7 @@ public final class Sku extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The identifier for the SKU. Example: "AA95-CD31-42FE"
+   * The identifier for the SKU. Example: "D041-B8A1-6E0B"
    * @param skuId skuId or {@code null} for none
    */
   public Sku setSkuId(java.lang.String skuId) {

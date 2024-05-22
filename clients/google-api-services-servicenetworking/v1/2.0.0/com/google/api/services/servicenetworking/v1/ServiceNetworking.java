@@ -1723,8 +1723,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * @param name Required. The private service connection that connects to a service producer organization. The name
        *        includes both the private service name and the VPC network peering name in the format of
        *        `services/{peering_service_name}/connections/{vpc_peering_name}`. For Google services that
-       *        support this functionality, this is `services/servicenetworking.googleapis.com/connections
-       *        /servicenetworking-googleapis-com`.
+       *        support this functionality, this is
+       *        `services/servicenetworking.googleapis.com/connections/servicenetworking-googleapis-com`.
        * @param content the {@link com.google.api.services.servicenetworking.v1.model.DeleteConnectionRequest}
        * @return the request
        */
@@ -1755,8 +1755,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
          * @param name Required. The private service connection that connects to a service producer organization. The name
        *        includes both the private service name and the VPC network peering name in the format of
        *        `services/{peering_service_name}/connections/{vpc_peering_name}`. For Google services that
-       *        support this functionality, this is `services/servicenetworking.googleapis.com/connections
-       *        /servicenetworking-googleapis-com`.
+       *        support this functionality, this is
+       *        `services/servicenetworking.googleapis.com/connections/servicenetworking-googleapis-com`.
          * @param content the {@link com.google.api.services.servicenetworking.v1.model.DeleteConnectionRequest}
          * @since 1.13
          */
@@ -1838,8 +1838,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         /** Required. The private service connection that connects to a service producer organization. The name
        includes both the private service name and the VPC network peering name in the format of
        `services/{peering_service_name}/connections/{vpc_peering_name}`. For Google services that support
-       this functionality, this is `services/servicenetworking.googleapis.com/connections
-       /servicenetworking-googleapis-com`.
+       this functionality, this is
+       `services/servicenetworking.googleapis.com/connections/servicenetworking-googleapis-com`.
          */
         public java.lang.String getName() {
           return name;
@@ -2068,8 +2068,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * @param name The private service connection that connects to a service producer organization. The name includes
        *        both the private service name and the VPC network peering name in the format of
        *        `services/{peering_service_name}/connections/{vpc_peering_name}`. For Google services that
-       *        support this functionality, this is `services/servicenetworking.googleapis.com/connections
-       *        /servicenetworking-googleapis-com`.
+       *        support this functionality, this is
+       *        `services/servicenetworking.googleapis.com/connections/servicenetworking-googleapis-com`.
        * @param content the {@link com.google.api.services.servicenetworking.v1.model.Connection}
        * @return the request
        */
@@ -2100,8 +2100,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
          * @param name The private service connection that connects to a service producer organization. The name includes
        *        both the private service name and the VPC network peering name in the format of
        *        `services/{peering_service_name}/connections/{vpc_peering_name}`. For Google services that
-       *        support this functionality, this is `services/servicenetworking.googleapis.com/connections
-       *        /servicenetworking-googleapis-com`.
+       *        support this functionality, this is
+       *        `services/servicenetworking.googleapis.com/connections/servicenetworking-googleapis-com`.
          * @param content the {@link com.google.api.services.servicenetworking.v1.model.Connection}
          * @since 1.13
          */
@@ -2183,8 +2183,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         /** The private service connection that connects to a service producer organization. The name includes
        both the private service name and the VPC network peering name in the format of
        `services/{peering_service_name}/connections/{vpc_peering_name}`. For Google services that support
-       this functionality, this is `services/servicenetworking.googleapis.com/connections
-       /servicenetworking-googleapis-com`.
+       this functionality, this is
+       `services/servicenetworking.googleapis.com/connections/servicenetworking-googleapis-com`.
          */
         public java.lang.String getName() {
           return name;

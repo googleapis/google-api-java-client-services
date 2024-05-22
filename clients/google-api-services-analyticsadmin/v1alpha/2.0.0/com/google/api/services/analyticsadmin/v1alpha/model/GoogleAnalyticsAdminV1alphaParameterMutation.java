@@ -44,7 +44,7 @@ public final class GoogleAnalyticsAdminV1alphaParameterMutation extends com.goog
    * Required. The value mutation to perform. * Must be less than 100 characters. * To specify a
    * constant value for the param, use the value's string. * To copy value from another parameter,
    * use syntax like "[[other_parameter]]" For more details, see this [help center
-   * article](https://support.google.com/analytics/answer/10085872#modify-an-event=%2Cin-this-
+   * article](https://support.google.com/analytics/answer/10085872#modify-an-event&zippy=%2Cin-this-
    * article%2Cmodify-parameters).
    * The value may be {@code null}.
    */
@@ -78,7 +78,7 @@ public final class GoogleAnalyticsAdminV1alphaParameterMutation extends com.goog
    * Required. The value mutation to perform. * Must be less than 100 characters. * To specify a
    * constant value for the param, use the value's string. * To copy value from another parameter,
    * use syntax like "[[other_parameter]]" For more details, see this [help center
-   * article](https://support.google.com/analytics/answer/10085872#modify-an-event=%2Cin-this-
+   * article](https://support.google.com/analytics/answer/10085872#modify-an-event&zippy=%2Cin-this-
    * article%2Cmodify-parameters).
    * @return value or {@code null} for none
    */
@@ -90,7 +90,7 @@ public final class GoogleAnalyticsAdminV1alphaParameterMutation extends com.goog
    * Required. The value mutation to perform. * Must be less than 100 characters. * To specify a
    * constant value for the param, use the value's string. * To copy value from another parameter,
    * use syntax like "[[other_parameter]]" For more details, see this [help center
-   * article](https://support.google.com/analytics/answer/10085872#modify-an-event=%2Cin-this-
+   * article](https://support.google.com/analytics/answer/10085872#modify-an-event&zippy=%2Cin-this-
    * article%2Cmodify-parameters).
    * @param parameterValue parameterValue or {@code null} for none
    */

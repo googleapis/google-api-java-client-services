@@ -1649,16 +1649,16 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * possible to update multiple members of a map field simultaneously in the same request.
            * For example, to set the labels "label1" and "label2" while clearing "label3" (assuming
            * it already exists), one can provide the paths "labels.label1", "labels.label2", and
-           * "labels.label3" and populate the patch environment as follows: { "labels":{ "label1
-           * ":"new-label1-value" "label2":"new-label2-value" } } Note that in the above example,
-           * any existing labels that are not included in the `updateMask` will be unaffected. It is
-           * also possible to replace an entire map field by providing the map field's path in the
-           * `updateMask`. The new value of the field will be that which is provided in the patch
-           * environment. For example, to delete all pre-existing user-specified PyPI packages and
-           * install botocore at version 1.7.14, the `updateMask` would contain the path
-           * "config.softwareConfig.pypiPackages", and the patch environment would be the following:
-           * { "config":{ "softwareConfig":{ "pypiPackages":{ "botocore":"==1.7.14" } } } }
-           * **Note:** Only the following fields can be updated: *
+           * "labels.label3" and populate the patch environment as follows: { "labels":{
+           * "label1":"new-label1-value" "label2":"new-label2-value" } } Note that in the above
+           * example, any existing labels that are not included in the `updateMask` will be
+           * unaffected. It is also possible to replace an entire map field by providing the map
+           * field's path in the `updateMask`. The new value of the field will be that which is
+           * provided in the patch environment. For example, to delete all pre-existing user-
+           * specified PyPI packages and install botocore at version 1.7.14, the `updateMask` would
+           * contain the path "config.softwareConfig.pypiPackages", and the patch environment would
+           * be the following: { "config":{ "softwareConfig":{ "pypiPackages":{
+           * "botocore":"==1.7.14" } } } } **Note:** Only the following fields can be updated: *
            * `config.softwareConfig.pypiPackages` * Replace all custom custom PyPI packages. If a
            * replacement package map is not included in `environment`, all custom PyPI packages are
            * cleared. It is an error to provide both this mask and a mask specifying an individual
@@ -1804,16 +1804,16 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * possible to update multiple members of a map field simultaneously in the same request.
            * For example, to set the labels "label1" and "label2" while clearing "label3" (assuming
            * it already exists), one can provide the paths "labels.label1", "labels.label2", and
-           * "labels.label3" and populate the patch environment as follows: { "labels":{ "label1
-           * ":"new-label1-value" "label2":"new-label2-value" } } Note that in the above example,
-           * any existing labels that are not included in the `updateMask` will be unaffected. It is
-           * also possible to replace an entire map field by providing the map field's path in the
-           * `updateMask`. The new value of the field will be that which is provided in the patch
-           * environment. For example, to delete all pre-existing user-specified PyPI packages and
-           * install botocore at version 1.7.14, the `updateMask` would contain the path
-           * "config.softwareConfig.pypiPackages", and the patch environment would be the following:
-           * { "config":{ "softwareConfig":{ "pypiPackages":{ "botocore":"==1.7.14" } } } }
-           * **Note:** Only the following fields can be updated: *
+           * "labels.label3" and populate the patch environment as follows: { "labels":{
+           * "label1":"new-label1-value" "label2":"new-label2-value" } } Note that in the above
+           * example, any existing labels that are not included in the `updateMask` will be
+           * unaffected. It is also possible to replace an entire map field by providing the map
+           * field's path in the `updateMask`. The new value of the field will be that which is
+           * provided in the patch environment. For example, to delete all pre-existing user-
+           * specified PyPI packages and install botocore at version 1.7.14, the `updateMask` would
+           * contain the path "config.softwareConfig.pypiPackages", and the patch environment would
+           * be the following: { "config":{ "softwareConfig":{ "pypiPackages":{
+           * "botocore":"==1.7.14" } } } } **Note:** Only the following fields can be updated: *
            * `config.softwareConfig.pypiPackages` * Replace all custom custom PyPI packages. If a
            * replacement package map is not included in `environment`, all custom PyPI packages are
            * cleared. It is an error to provide both this mask and a mask specifying an individual

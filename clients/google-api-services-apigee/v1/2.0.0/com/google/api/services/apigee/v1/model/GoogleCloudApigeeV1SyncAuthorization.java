@@ -50,8 +50,8 @@ public final class GoogleCloudApigeeV1SyncAuthorization extends com.google.api.c
    * service_account@my_project_id.iam.gserviceaccount.com` You might specify multiple service
    * accounts, for example, if you have multiple environments and wish to assign a unique service
    * account to each one. The service accounts must have **Apigee Synchronizer Manager** role. See
-   * also [Create service accounts](https://cloud.google.com/apigee/docs/hybrid/latest/sa-about
-   * #create-the-service-accounts).
+   * also [Create service accounts](https://cloud.google.com/apigee/docs/hybrid/latest/sa-
+   * about#create-the-service-accounts).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,8 +137,8 @@ public final class GoogleCloudApigeeV1SyncAuthorization extends com.google.api.c
    * service_account@my_project_id.iam.gserviceaccount.com` You might specify multiple service
    * accounts, for example, if you have multiple environments and wish to assign a unique service
    * account to each one. The service accounts must have **Apigee Synchronizer Manager** role. See
-   * also [Create service accounts](https://cloud.google.com/apigee/docs/hybrid/latest/sa-about
-   * #create-the-service-accounts).
+   * also [Create service accounts](https://cloud.google.com/apigee/docs/hybrid/latest/sa-
+   * about#create-the-service-accounts).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIdentities() {
@@ -152,8 +152,8 @@ public final class GoogleCloudApigeeV1SyncAuthorization extends com.google.api.c
    * service_account@my_project_id.iam.gserviceaccount.com` You might specify multiple service
    * accounts, for example, if you have multiple environments and wish to assign a unique service
    * account to each one. The service accounts must have **Apigee Synchronizer Manager** role. See
-   * also [Create service accounts](https://cloud.google.com/apigee/docs/hybrid/latest/sa-about
-   * #create-the-service-accounts).
+   * also [Create service accounts](https://cloud.google.com/apigee/docs/hybrid/latest/sa-
+   * about#create-the-service-accounts).
    * @param identities identities or {@code null} for none
    */
   public GoogleCloudApigeeV1SyncAuthorization setIdentities(java.util.List<java.lang.String> identities) {

@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-fcmdata</artifactId>
-      <version>v1beta1-rev20220405-2.0.0</version>
+      <version>v1beta1-rev20240519-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-fcmdata:v1beta1-rev20220405-2.0.0'
+  implementation 'com.google.apis:google-api-services-fcmdata:v1beta1-rev20240519-2.0.0'
 }
 ```
 

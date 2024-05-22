@@ -42,8 +42,8 @@ public final class ChannelConversionPing extends com.google.api.client.json.Gene
    * descretion to decide which schema to use (http vs https) Example of a returned url:
    * //googleads.g.doubleclick.net/pagead/
    * viewthroughconversion/962985656/?data=path%3DtHe_path%3Btype%3D
-   * cview%3Butuid%3DGISQtTNGYqaYl4sKxoVvKA=default The caller must append biscotti authentication
-   * (ms param in case of mobile, for example) to this ping.
+   * cview%3Butuid%3DGISQtTNGYqaYl4sKxoVvKA&labe=default The caller must append biscotti
+   * authentication (ms param in case of mobile, for example) to this ping.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class ChannelConversionPing extends com.google.api.client.json.Gene
    * descretion to decide which schema to use (http vs https) Example of a returned url:
    * //googleads.g.doubleclick.net/pagead/
    * viewthroughconversion/962985656/?data=path%3DtHe_path%3Btype%3D
-   * cview%3Butuid%3DGISQtTNGYqaYl4sKxoVvKA=default The caller must append biscotti authentication
-   * (ms param in case of mobile, for example) to this ping.
+   * cview%3Butuid%3DGISQtTNGYqaYl4sKxoVvKA&labe=default The caller must append biscotti
+   * authentication (ms param in case of mobile, for example) to this ping.
    * @return value or {@code null} for none
    */
   public java.lang.String getConversionUrl() {
@@ -84,8 +84,8 @@ public final class ChannelConversionPing extends com.google.api.client.json.Gene
    * descretion to decide which schema to use (http vs https) Example of a returned url:
    * //googleads.g.doubleclick.net/pagead/
    * viewthroughconversion/962985656/?data=path%3DtHe_path%3Btype%3D
-   * cview%3Butuid%3DGISQtTNGYqaYl4sKxoVvKA=default The caller must append biscotti authentication
-   * (ms param in case of mobile, for example) to this ping.
+   * cview%3Butuid%3DGISQtTNGYqaYl4sKxoVvKA&labe=default The caller must append biscotti
+   * authentication (ms param in case of mobile, for example) to this ping.
    * @param conversionUrl conversionUrl or {@code null} for none
    */
   public ChannelConversionPing setConversionUrl(java.lang.String conversionUrl) {

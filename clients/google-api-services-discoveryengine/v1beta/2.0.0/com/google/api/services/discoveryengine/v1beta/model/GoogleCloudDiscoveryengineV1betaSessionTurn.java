@@ -30,7 +30,8 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaSessionTurn extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the answer to the user query.
+   * The resource name of the answer to the user query. Only set if the answer generation (/answer
+   * API call) happened in this turn.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,8 @@ public final class GoogleCloudDiscoveryengineV1betaSessionTurn extends com.googl
   private GoogleCloudDiscoveryengineV1betaQuery query;
 
   /**
-   * The resource name of the answer to the user query.
+   * The resource name of the answer to the user query. Only set if the answer generation (/answer
+   * API call) happened in this turn.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswer() {
@@ -52,7 +54,8 @@ public final class GoogleCloudDiscoveryengineV1betaSessionTurn extends com.googl
   }
 
   /**
-   * The resource name of the answer to the user query.
+   * The resource name of the answer to the user query. Only set if the answer generation (/answer
+   * API call) happened in this turn.
    * @param answer answer or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSessionTurn setAnswer(java.lang.String answer) {

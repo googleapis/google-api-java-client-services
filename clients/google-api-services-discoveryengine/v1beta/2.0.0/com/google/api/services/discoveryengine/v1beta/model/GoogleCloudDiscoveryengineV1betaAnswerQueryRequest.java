@@ -83,8 +83,8 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequest extends co
 
   /**
    * The session resource name. Not required. When session field is not set, the API is in
-   * sessionless mode. We support auto session mode: users can use the wildcard symbol “-” as
-   * session id. A new id will be automatically generated and assigned.
+   * sessionless mode. We support auto session mode: users can use the wildcard symbol `-` as
+   * session ID. A new ID will be automatically generated and assigned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -228,8 +228,8 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequest extends co
 
   /**
    * The session resource name. Not required. When session field is not set, the API is in
-   * sessionless mode. We support auto session mode: users can use the wildcard symbol “-” as
-   * session id. A new id will be automatically generated and assigned.
+   * sessionless mode. We support auto session mode: users can use the wildcard symbol `-` as
+   * session ID. A new ID will be automatically generated and assigned.
    * @return value or {@code null} for none
    */
   public java.lang.String getSession() {
@@ -238,8 +238,8 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequest extends co
 
   /**
    * The session resource name. Not required. When session field is not set, the API is in
-   * sessionless mode. We support auto session mode: users can use the wildcard symbol “-” as
-   * session id. A new id will be automatically generated and assigned.
+   * sessionless mode. We support auto session mode: users can use the wildcard symbol `-` as
+   * session ID. A new ID will be automatically generated and assigned.
    * @param session session or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaAnswerQueryRequest setSession(java.lang.String session) {

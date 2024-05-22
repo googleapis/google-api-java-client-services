@@ -75,9 +75,8 @@ public final class GoogleCloudApigeeV1Export extends com.google.api.client.json.
 
   /**
    * Output only. Self link of the export job. A URI that can be used to retrieve the status of an
-   * export job. Example:
-   * `/organizations/myorg/environments/myenv/analytics/exports/9cfc0d85-0f30-46d6-ae6f-
-   * 318d0cb961bd`
+   * export job. Example: `/organizations/myorg/environments/myenv/analytics/exports/9cfc0d85-0f30-
+   * 46d6-ae6f-318d0cb961bd`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,9 +205,8 @@ public final class GoogleCloudApigeeV1Export extends com.google.api.client.json.
 
   /**
    * Output only. Self link of the export job. A URI that can be used to retrieve the status of an
-   * export job. Example:
-   * `/organizations/myorg/environments/myenv/analytics/exports/9cfc0d85-0f30-46d6-ae6f-
-   * 318d0cb961bd`
+   * export job. Example: `/organizations/myorg/environments/myenv/analytics/exports/9cfc0d85-0f30-
+   * 46d6-ae6f-318d0cb961bd`
    * @return value or {@code null} for none
    */
   public java.lang.String getSelf() {
@@ -217,9 +215,8 @@ public final class GoogleCloudApigeeV1Export extends com.google.api.client.json.
 
   /**
    * Output only. Self link of the export job. A URI that can be used to retrieve the status of an
-   * export job. Example:
-   * `/organizations/myorg/environments/myenv/analytics/exports/9cfc0d85-0f30-46d6-ae6f-
-   * 318d0cb961bd`
+   * export job. Example: `/organizations/myorg/environments/myenv/analytics/exports/9cfc0d85-0f30-
+   * 46d6-ae6f-318d0cb961bd`
    * @param self self or {@code null} for none
    */
   public GoogleCloudApigeeV1Export setSelf(java.lang.String self) {

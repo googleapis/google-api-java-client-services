@@ -1191,9 +1191,10 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        *        projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's
        *        [`ProjectNumber`](https://firebase.google.com/docs/reference/firebase-
        *        management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_number)
-       *        ***(recommended)*** or its [`ProjectId`](https://firebase.google.com/docs/reference
-       *        /firebase-management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn more
-       *        about using project identifiers in Google's [AIP 2510
+       *        ***(recommended)*** or its
+       *        [`ProjectId`](https://firebase.google.com/docs/reference/firebase-
+       *        management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn more about
+       *        using project identifiers in Google's [AIP 2510
        *        standard](https://google.aip.dev/cloud/2510).
        * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Site}
        * @return the request
@@ -1226,9 +1227,10 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        *        projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's
        *        [`ProjectNumber`](https://firebase.google.com/docs/reference/firebase-
        *        management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_number)
-       *        ***(recommended)*** or its [`ProjectId`](https://firebase.google.com/docs/reference
-       *        /firebase-management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn more
-       *        about using project identifiers in Google's [AIP 2510
+       *        ***(recommended)*** or its
+       *        [`ProjectId`](https://firebase.google.com/docs/reference/firebase-
+       *        management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn more about
+       *        using project identifiers in Google's [AIP 2510
        *        standard](https://google.aip.dev/cloud/2510).
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Site}
          * @since 1.13
@@ -1303,9 +1305,10 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's
          * [`ProjectNumber`](https://firebase.google.com/docs/reference/firebase-
          * management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_number)
-         * ***(recommended)*** or its [`ProjectId`](https://firebase.google.com/docs/reference
-         * /firebase-management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn more
-         * about using project identifiers in Google's [AIP 2510
+         * ***(recommended)*** or its
+         * [`ProjectId`](https://firebase.google.com/docs/reference/firebase-
+         * management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn more about
+         * using project identifiers in Google's [AIP 2510
          * standard](https://google.aip.dev/cloud/2510).
          */
         @com.google.api.client.util.Key
@@ -1328,9 +1331,10 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * projects/PROJECT_IDENTIFIER/sites/SITE_ID PROJECT_IDENTIFIER: the Firebase project's
          * [`ProjectNumber`](https://firebase.google.com/docs/reference/firebase-
          * management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_number)
-         * ***(recommended)*** or its [`ProjectId`](https://firebase.google.com/docs/reference
-         * /firebase-management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn more
-         * about using project identifiers in Google's [AIP 2510
+         * ***(recommended)*** or its
+         * [`ProjectId`](https://firebase.google.com/docs/reference/firebase-
+         * management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_id). Learn more about
+         * using project identifiers in Google's [AIP 2510
          * standard](https://google.aip.dev/cloud/2510).
          */
         public Patch setName(java.lang.String name) {

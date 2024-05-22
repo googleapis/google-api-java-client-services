@@ -1405,8 +1405,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
      * `getSyncAuthorization`. Pass that ETag when calling [setSyncAuthorization](setSyncAuthorization)
      * to ensure that you are updating the correct version. If you don't pass the ETag in the call to
      * `setSyncAuthorization`, then the existing authorization is overwritten indiscriminately. For more
-     * information, see [Configure the Synchronizer](https://cloud.google.com/apigee/docs/hybrid/latest
-     * /synchronizer-access). **Note**: Available to Apigee hybrid only.
+     * information, see [Configure the
+     * Synchronizer](https://cloud.google.com/apigee/docs/hybrid/latest/synchronizer-access). **Note**:
+     * Available to Apigee hybrid only.
      *
      * Create a request for the method "organizations.getSyncAuthorization".
      *
@@ -32731,8 +32732,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * After the query is completed, use this API to retrieve the results. If the request succeeds, and
          * there is a non-zero result set, the result is downloaded to the client as a zipped JSON file. The
-         * name of the downloaded file will be: OfflineQueryResult-.zip Example: `OfflineQueryResult-
-         * 9cfc0d85-0f30-46d6-ae6f-318d0cb961bd.zip`
+         * name of the downloaded file will be: OfflineQueryResult-.zip Example:
+         * `OfflineQueryResult-9cfc0d85-0f30-46d6-ae6f-318d0cb961bd.zip`
          *
          * Create a request for the method "queries.getResult".
          *
@@ -33896,8 +33897,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       public class Resourcefiles {
 
         /**
-         * Creates a resource file. Specify the `Content-Type` as `application/octet-stream` or `multipart
-         * /form-data`. For more information about resource files, see [Resource
+         * Creates a resource file. Specify the `Content-Type` as `application/octet-stream` or
+         * `multipart/form-data`. For more information about resource files, see [Resource
          * files](https://cloud.google.com/apigee/docs/api-platform/develop/resource-files).
          *
          * Create a request for the method "resourcefiles.create".
@@ -33924,8 +33925,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+$");
 
           /**
-           * Creates a resource file. Specify the `Content-Type` as `application/octet-stream` or `multipart
-           * /form-data`. For more information about resource files, see [Resource
+           * Creates a resource file. Specify the `Content-Type` as `application/octet-stream` or
+           * `multipart/form-data`. For more information about resource files, see [Resource
            * files](https://cloud.google.com/apigee/docs/api-platform/develop/resource-files).
            *
            * Create a request for the method "resourcefiles.create".
@@ -34795,8 +34796,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Updates a resource file. Specify the `Content-Type` as `application/octet-stream` or `multipart
-         * /form-data`. For more information about resource files, see [Resource
+         * Updates a resource file. Specify the `Content-Type` as `application/octet-stream` or
+         * `multipart/form-data`. For more information about resource files, see [Resource
          * files](https://cloud.google.com/apigee/docs/api-platform/develop/resource-files).
          *
          * Create a request for the method "resourcefiles.update".
@@ -34825,8 +34826,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+$");
 
           /**
-           * Updates a resource file. Specify the `Content-Type` as `application/octet-stream` or `multipart
-           * /form-data`. For more information about resource files, see [Resource
+           * Updates a resource file. Specify the `Content-Type` as `application/octet-stream` or
+           * `multipart/form-data`. For more information about resource files, see [Resource
            * files](https://cloud.google.com/apigee/docs/api-platform/develop/resource-files).
            *
            * Create a request for the method "resourcefiles.update".
@@ -36485,8 +36486,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           private java.lang.String name;
 
           /** Immutable. Name of the security incident resource. Format:
-         organizations/{org}/environments/{environment}/securityIncidents/{incident} Example: organizations
-         /apigee-org/environments/dev/securityIncidents/1234-5678-9101-1111
+         organizations/{org}/environments/{environment}/securityIncidents/{incident} Example:
+         organizations/apigee-org/environments/dev/securityIncidents/1234-5678-9101-1111
            */
           public java.lang.String getName() {
             return name;
@@ -40654,8 +40655,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * After the query is completed, use this API to retrieve the results. If the request succeeds, and
        * there is a non-zero result set, the result is downloaded to the client as a zipped JSON file. The
-       * name of the downloaded file will be: OfflineQueryResult-.zip Example: `OfflineQueryResult-
-       * 9cfc0d85-0f30-46d6-ae6f-318d0cb961bd.zip`
+       * name of the downloaded file will be: OfflineQueryResult-.zip Example:
+       * `OfflineQueryResult-9cfc0d85-0f30-46d6-ae6f-318d0cb961bd.zip`
        *
        * Create a request for the method "hostQueries.getResult".
        *
@@ -41521,8 +41522,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * After the query is completed, use this API to retrieve the results. If the request succeeds, and
        * there is a non-zero result set, the result is downloaded to the client as a zipped JSON file. The
-       * name of the downloaded file will be: OfflineQueryResult-.zip Example: `OfflineQueryResult-
-       * 9cfc0d85-0f30-46d6-ae6f-318d0cb961bd.zip`
+       * name of the downloaded file will be: OfflineQueryResult-.zip Example:
+       * `OfflineQueryResult-9cfc0d85-0f30-46d6-ae6f-318d0cb961bd.zip`
        *
        * Create a request for the method "hostSecurityReports.getResult".
        *

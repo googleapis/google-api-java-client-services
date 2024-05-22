@@ -82,8 +82,8 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
    * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-balancing/docs
-   * /backend-service).
+   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-
+   * balancing/docs/backend-service).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,8 +206,8 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
    * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-balancing/docs
-   * /backend-service).
+   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-
+   * balancing/docs/backend-service).
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -217,8 +217,8 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
    * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-balancing/docs
-   * /backend-service).
+   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-
+   * balancing/docs/backend-service).
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
   public LbTrafficExtension setLoadBalancingScheme(java.lang.String loadBalancingScheme) {

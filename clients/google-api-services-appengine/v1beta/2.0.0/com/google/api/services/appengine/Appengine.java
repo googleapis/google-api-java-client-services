@@ -693,9 +693,9 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
      * message about a missing feature, for example, Error retrieving the App Engine service account. If
      * you have deleted your App Engine service account, this will not be able to recreate it. Instead,
      * you should attempt to use the IAM undelete API if possible at https://cloud.google.com/iam/refere
-     * nce/rest/v1/projects.serviceAccounts/undelete?apix_params=%7B"name"%3A"projects%2F-%2FserviceAcco
-     * unts%2Funique_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the numeric ID can be
-     * found in the Cloud Console Activity Log.
+     * nce/rest/v1/projects.serviceAccounts/undelete?apix_params=%7B"name"%3A"projects%2F-
+     * %2FserviceAccounts%2Funique_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the
+     * numeric ID can be found in the Cloud Console Activity Log.
      *
      * Create a request for the method "apps.repair".
      *
@@ -4842,8 +4842,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * shardBy (https://cloud.google.com/appengine/docs/admin-
          * api/reference/rest/v1beta/apps.services#ShardBy) field in the Service resource. Gradual
          * traffic migration is not supported in the App Engine flexible environment. For examples,
-         * see Migrating and Splitting Traffic (https://cloud.google.com/appengine/docs/admin-api
-         * /migrating-splitting-traffic).
+         * see Migrating and Splitting Traffic (https://cloud.google.com/appengine/docs/admin-
+         * api/migrating-splitting-traffic).
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean migrateTraffic;
@@ -4875,8 +4875,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * shardBy (https://cloud.google.com/appengine/docs/admin-
          * api/reference/rest/v1beta/apps.services#ShardBy) field in the Service resource. Gradual
          * traffic migration is not supported in the App Engine flexible environment. For examples,
-         * see Migrating and Splitting Traffic (https://cloud.google.com/appengine/docs/admin-api
-         * /migrating-splitting-traffic).
+         * see Migrating and Splitting Traffic (https://cloud.google.com/appengine/docs/admin-
+         * api/migrating-splitting-traffic).
          */
         public Patch setMigrateTraffic(java.lang.Boolean migrateTraffic) {
           this.migrateTraffic = migrateTraffic;
@@ -5668,9 +5668,10 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)
          * automatic_scaling.cool_down_period_sec (https://cloud.google.com/appengine/docs/admin-
          * api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)
-         * automatic_scaling.cpu_utilization.target_utilization (https://cloud.google.com/appengine/docs
-         * /admin-api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)manual
-         * scaling in the flexible environment: manual_scaling.instances
+         * automatic_scaling.cpu_utilization.target_utilization
+         * (https://cloud.google.com/appengine/docs/admin-
+         * api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)manual scaling
+         * in the flexible environment: manual_scaling.instances
          * (https://cloud.google.com/appengine/docs/admin-
          * api/reference/rest/v1beta/apps.services.versions#manualscaling)
          *
@@ -5731,8 +5732,9 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)
            * automatic_scaling.cool_down_period_sec (https://cloud.google.com/appengine/docs/admin-
            * api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)
-           * automatic_scaling.cpu_utilization.target_utilization (https://cloud.google.com/appengine/docs
-           * /admin-api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)manual
+           * automatic_scaling.cpu_utilization.target_utilization
+           * (https://cloud.google.com/appengine/docs/admin-
+           * api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)manual
            * scaling in the flexible environment: manual_scaling.instances
            * (https://cloud.google.com/appengine/docs/admin-
            * api/reference/rest/v1beta/apps.services.versions#manualscaling)

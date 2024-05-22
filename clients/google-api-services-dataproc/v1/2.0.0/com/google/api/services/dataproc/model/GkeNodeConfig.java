@@ -57,8 +57,8 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Integer localSsdCount;
 
   /**
-   * Optional. The name of a Compute Engine machine type (https://cloud.google.com/compute/docs
-   * /machine-types).
+   * Optional. The name of a Compute Engine machine type
+   * (https://cloud.google.com/compute/docs/machine-types).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,8 +160,8 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The name of a Compute Engine machine type (https://cloud.google.com/compute/docs
-   * /machine-types).
+   * Optional. The name of a Compute Engine machine type
+   * (https://cloud.google.com/compute/docs/machine-types).
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -169,8 +169,8 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The name of a Compute Engine machine type (https://cloud.google.com/compute/docs
-   * /machine-types).
+   * Optional. The name of a Compute Engine machine type
+   * (https://cloud.google.com/compute/docs/machine-types).
    * @param machineType machineType or {@code null} for none
    */
   public GkeNodeConfig setMachineType(java.lang.String machineType) {

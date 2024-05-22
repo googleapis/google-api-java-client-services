@@ -305,26 +305,27 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * `ASSERT`: [`ASSERT`](/bigquery/docs/reference/standard-sql/debugging-statements#assert)
    * statement. * `INSERT`: [`INSERT`](/bigquery/docs/reference/standard-sql/dml-
    * syntax#insert_statement) statement. * `UPDATE`: [`UPDATE`](/bigquery/docs/reference/standard-
-   * sql/query-syntax#update_statement) statement. * `DELETE`: [`DELETE`](/bigquery/docs/reference
-   * /standard-sql/data-manipulation-language) statement. * `MERGE`:
-   * [`MERGE`](/bigquery/docs/reference/standard-sql/data-manipulation-language) statement. *
-   * `CREATE_TABLE`: [`CREATE TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * sql/query-syntax#update_statement) statement. * `DELETE`:
+   * [`DELETE`](/bigquery/docs/reference/standard-sql/data-manipulation-language) statement. *
+   * `MERGE`: [`MERGE`](/bigquery/docs/reference/standard-sql/data-manipulation-language) statement.
+   * * `CREATE_TABLE`: [`CREATE TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_table_statement) statement, without `AS SELECT`. * `CREATE_TABLE_AS_SELECT`:
    * [`CREATE TABLE AS SELECT`](/bigquery/docs/reference/standard-sql/data-definition-
-   * language#query_statement) statement. * `CREATE_VIEW`: [`CREATE VIEW`](/bigquery/docs/reference
-   * /standard-sql/data-definition-language#create_view_statement) statement. * `CREATE_MODEL`:
-   * [`CREATE MODEL`](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
-   * create#create_model_statement) statement. * `CREATE_MATERIALIZED_VIEW`: [`CREATE MATERIALIZED
-   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#query_statement) statement. * `CREATE_VIEW`: [`CREATE
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-language#create_view_statement)
+   * statement. * `CREATE_MODEL`: [`CREATE MODEL`](/bigquery-ml/docs/reference/standard-
+   * sql/bigqueryml-syntax-create#create_model_statement) statement. * `CREATE_MATERIALIZED_VIEW`:
+   * [`CREATE MATERIALIZED VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_materialized_view_statement) statement. * `CREATE_FUNCTION`: [`CREATE
    * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_function_statement) statement. * `CREATE_TABLE_FUNCTION`: [`CREATE TABLE
    * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_table_function_statement) statement. * `CREATE_PROCEDURE`: [`CREATE
    * PROCEDURE`](/bigquery/docs/reference/standard-sql/data-definition-language#create_procedure)
-   * statement. * `CREATE_ROW_ACCESS_POLICY`: [`CREATE ROW ACCESS POLICY`](/bigquery/docs/reference
-   * /standard-sql/data-definition-language#create_row_access_policy_statement) statement. *
-   * `CREATE_SCHEMA`: [`CREATE SCHEMA`](/bigquery/docs/reference/standard-sql/data-definition-
+   * statement. * `CREATE_ROW_ACCESS_POLICY`: [`CREATE ROW ACCESS
+   * POLICY`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_row_access_policy_statement) statement. * `CREATE_SCHEMA`: [`CREATE
+   * SCHEMA`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_schema_statement) statement. * `CREATE_SNAPSHOT_TABLE`: [`CREATE SNAPSHOT
    * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_snapshot_table_statement) statement. * `CREATE_SEARCH_INDEX`: [`CREATE SEARCH
@@ -360,13 +361,14 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * language#aalter_schema_set_options_statement) statement. * `SCRIPT`:
    * [`SCRIPT`](/bigquery/docs/reference/standard-sql/procedural-language). * `TRUNCATE_TABLE`:
    * [`TRUNCATE TABLE`](/bigquery/docs/reference/standard-sql/dml-syntax#truncate_table_statement)
-   * statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE EXTERNAL TABLE`](/bigquery/docs/reference
-   * /standard-sql/data-definition-language#create_external_table_statement) statement. *
-   * `EXPORT_DATA`: [`EXPORT DATA`](/bigquery/docs/reference/standard-sql/other-
-   * statements#export_data_statement) statement. * `EXPORT_MODEL`: [`EXPORT MODEL`](/bigquery-
-   * ml/docs/reference/standard-sql/bigqueryml-syntax-export-model) statement. * `LOAD_DATA`: [`LOAD
-   * DATA`](/bigquery/docs/reference/standard-sql/other-statements#load_data_statement) statement. *
-   * `CALL`: [`CALL`](/bigquery/docs/reference/standard-sql/procedural-language#call) statement.
+   * statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE EXTERNAL
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_external_table_statement) statement. * `EXPORT_DATA`: [`EXPORT
+   * DATA`](/bigquery/docs/reference/standard-sql/other-statements#export_data_statement) statement.
+   * * `EXPORT_MODEL`: [`EXPORT MODEL`](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
+   * export-model) statement. * `LOAD_DATA`: [`LOAD DATA`](/bigquery/docs/reference/standard-
+   * sql/other-statements#load_data_statement) statement. * `CALL`:
+   * [`CALL`](/bigquery/docs/reference/standard-sql/procedural-language#call) statement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1055,26 +1057,27 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * `ASSERT`: [`ASSERT`](/bigquery/docs/reference/standard-sql/debugging-statements#assert)
    * statement. * `INSERT`: [`INSERT`](/bigquery/docs/reference/standard-sql/dml-
    * syntax#insert_statement) statement. * `UPDATE`: [`UPDATE`](/bigquery/docs/reference/standard-
-   * sql/query-syntax#update_statement) statement. * `DELETE`: [`DELETE`](/bigquery/docs/reference
-   * /standard-sql/data-manipulation-language) statement. * `MERGE`:
-   * [`MERGE`](/bigquery/docs/reference/standard-sql/data-manipulation-language) statement. *
-   * `CREATE_TABLE`: [`CREATE TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * sql/query-syntax#update_statement) statement. * `DELETE`:
+   * [`DELETE`](/bigquery/docs/reference/standard-sql/data-manipulation-language) statement. *
+   * `MERGE`: [`MERGE`](/bigquery/docs/reference/standard-sql/data-manipulation-language) statement.
+   * * `CREATE_TABLE`: [`CREATE TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_table_statement) statement, without `AS SELECT`. * `CREATE_TABLE_AS_SELECT`:
    * [`CREATE TABLE AS SELECT`](/bigquery/docs/reference/standard-sql/data-definition-
-   * language#query_statement) statement. * `CREATE_VIEW`: [`CREATE VIEW`](/bigquery/docs/reference
-   * /standard-sql/data-definition-language#create_view_statement) statement. * `CREATE_MODEL`:
-   * [`CREATE MODEL`](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
-   * create#create_model_statement) statement. * `CREATE_MATERIALIZED_VIEW`: [`CREATE MATERIALIZED
-   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#query_statement) statement. * `CREATE_VIEW`: [`CREATE
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-language#create_view_statement)
+   * statement. * `CREATE_MODEL`: [`CREATE MODEL`](/bigquery-ml/docs/reference/standard-
+   * sql/bigqueryml-syntax-create#create_model_statement) statement. * `CREATE_MATERIALIZED_VIEW`:
+   * [`CREATE MATERIALIZED VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_materialized_view_statement) statement. * `CREATE_FUNCTION`: [`CREATE
    * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_function_statement) statement. * `CREATE_TABLE_FUNCTION`: [`CREATE TABLE
    * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_table_function_statement) statement. * `CREATE_PROCEDURE`: [`CREATE
    * PROCEDURE`](/bigquery/docs/reference/standard-sql/data-definition-language#create_procedure)
-   * statement. * `CREATE_ROW_ACCESS_POLICY`: [`CREATE ROW ACCESS POLICY`](/bigquery/docs/reference
-   * /standard-sql/data-definition-language#create_row_access_policy_statement) statement. *
-   * `CREATE_SCHEMA`: [`CREATE SCHEMA`](/bigquery/docs/reference/standard-sql/data-definition-
+   * statement. * `CREATE_ROW_ACCESS_POLICY`: [`CREATE ROW ACCESS
+   * POLICY`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_row_access_policy_statement) statement. * `CREATE_SCHEMA`: [`CREATE
+   * SCHEMA`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_schema_statement) statement. * `CREATE_SNAPSHOT_TABLE`: [`CREATE SNAPSHOT
    * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_snapshot_table_statement) statement. * `CREATE_SEARCH_INDEX`: [`CREATE SEARCH
@@ -1110,13 +1113,14 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * language#aalter_schema_set_options_statement) statement. * `SCRIPT`:
    * [`SCRIPT`](/bigquery/docs/reference/standard-sql/procedural-language). * `TRUNCATE_TABLE`:
    * [`TRUNCATE TABLE`](/bigquery/docs/reference/standard-sql/dml-syntax#truncate_table_statement)
-   * statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE EXTERNAL TABLE`](/bigquery/docs/reference
-   * /standard-sql/data-definition-language#create_external_table_statement) statement. *
-   * `EXPORT_DATA`: [`EXPORT DATA`](/bigquery/docs/reference/standard-sql/other-
-   * statements#export_data_statement) statement. * `EXPORT_MODEL`: [`EXPORT MODEL`](/bigquery-
-   * ml/docs/reference/standard-sql/bigqueryml-syntax-export-model) statement. * `LOAD_DATA`: [`LOAD
-   * DATA`](/bigquery/docs/reference/standard-sql/other-statements#load_data_statement) statement. *
-   * `CALL`: [`CALL`](/bigquery/docs/reference/standard-sql/procedural-language#call) statement.
+   * statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE EXTERNAL
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_external_table_statement) statement. * `EXPORT_DATA`: [`EXPORT
+   * DATA`](/bigquery/docs/reference/standard-sql/other-statements#export_data_statement) statement.
+   * * `EXPORT_MODEL`: [`EXPORT MODEL`](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
+   * export-model) statement. * `LOAD_DATA`: [`LOAD DATA`](/bigquery/docs/reference/standard-
+   * sql/other-statements#load_data_statement) statement. * `CALL`:
+   * [`CALL`](/bigquery/docs/reference/standard-sql/procedural-language#call) statement.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatementType() {
@@ -1129,26 +1133,27 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * `ASSERT`: [`ASSERT`](/bigquery/docs/reference/standard-sql/debugging-statements#assert)
    * statement. * `INSERT`: [`INSERT`](/bigquery/docs/reference/standard-sql/dml-
    * syntax#insert_statement) statement. * `UPDATE`: [`UPDATE`](/bigquery/docs/reference/standard-
-   * sql/query-syntax#update_statement) statement. * `DELETE`: [`DELETE`](/bigquery/docs/reference
-   * /standard-sql/data-manipulation-language) statement. * `MERGE`:
-   * [`MERGE`](/bigquery/docs/reference/standard-sql/data-manipulation-language) statement. *
-   * `CREATE_TABLE`: [`CREATE TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * sql/query-syntax#update_statement) statement. * `DELETE`:
+   * [`DELETE`](/bigquery/docs/reference/standard-sql/data-manipulation-language) statement. *
+   * `MERGE`: [`MERGE`](/bigquery/docs/reference/standard-sql/data-manipulation-language) statement.
+   * * `CREATE_TABLE`: [`CREATE TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_table_statement) statement, without `AS SELECT`. * `CREATE_TABLE_AS_SELECT`:
    * [`CREATE TABLE AS SELECT`](/bigquery/docs/reference/standard-sql/data-definition-
-   * language#query_statement) statement. * `CREATE_VIEW`: [`CREATE VIEW`](/bigquery/docs/reference
-   * /standard-sql/data-definition-language#create_view_statement) statement. * `CREATE_MODEL`:
-   * [`CREATE MODEL`](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
-   * create#create_model_statement) statement. * `CREATE_MATERIALIZED_VIEW`: [`CREATE MATERIALIZED
-   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#query_statement) statement. * `CREATE_VIEW`: [`CREATE
+   * VIEW`](/bigquery/docs/reference/standard-sql/data-definition-language#create_view_statement)
+   * statement. * `CREATE_MODEL`: [`CREATE MODEL`](/bigquery-ml/docs/reference/standard-
+   * sql/bigqueryml-syntax-create#create_model_statement) statement. * `CREATE_MATERIALIZED_VIEW`:
+   * [`CREATE MATERIALIZED VIEW`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_materialized_view_statement) statement. * `CREATE_FUNCTION`: [`CREATE
    * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_function_statement) statement. * `CREATE_TABLE_FUNCTION`: [`CREATE TABLE
    * FUNCTION`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_table_function_statement) statement. * `CREATE_PROCEDURE`: [`CREATE
    * PROCEDURE`](/bigquery/docs/reference/standard-sql/data-definition-language#create_procedure)
-   * statement. * `CREATE_ROW_ACCESS_POLICY`: [`CREATE ROW ACCESS POLICY`](/bigquery/docs/reference
-   * /standard-sql/data-definition-language#create_row_access_policy_statement) statement. *
-   * `CREATE_SCHEMA`: [`CREATE SCHEMA`](/bigquery/docs/reference/standard-sql/data-definition-
+   * statement. * `CREATE_ROW_ACCESS_POLICY`: [`CREATE ROW ACCESS
+   * POLICY`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_row_access_policy_statement) statement. * `CREATE_SCHEMA`: [`CREATE
+   * SCHEMA`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_schema_statement) statement. * `CREATE_SNAPSHOT_TABLE`: [`CREATE SNAPSHOT
    * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_snapshot_table_statement) statement. * `CREATE_SEARCH_INDEX`: [`CREATE SEARCH
@@ -1184,13 +1189,14 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * language#aalter_schema_set_options_statement) statement. * `SCRIPT`:
    * [`SCRIPT`](/bigquery/docs/reference/standard-sql/procedural-language). * `TRUNCATE_TABLE`:
    * [`TRUNCATE TABLE`](/bigquery/docs/reference/standard-sql/dml-syntax#truncate_table_statement)
-   * statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE EXTERNAL TABLE`](/bigquery/docs/reference
-   * /standard-sql/data-definition-language#create_external_table_statement) statement. *
-   * `EXPORT_DATA`: [`EXPORT DATA`](/bigquery/docs/reference/standard-sql/other-
-   * statements#export_data_statement) statement. * `EXPORT_MODEL`: [`EXPORT MODEL`](/bigquery-
-   * ml/docs/reference/standard-sql/bigqueryml-syntax-export-model) statement. * `LOAD_DATA`: [`LOAD
-   * DATA`](/bigquery/docs/reference/standard-sql/other-statements#load_data_statement) statement. *
-   * `CALL`: [`CALL`](/bigquery/docs/reference/standard-sql/procedural-language#call) statement.
+   * statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE EXTERNAL
+   * TABLE`](/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_external_table_statement) statement. * `EXPORT_DATA`: [`EXPORT
+   * DATA`](/bigquery/docs/reference/standard-sql/other-statements#export_data_statement) statement.
+   * * `EXPORT_MODEL`: [`EXPORT MODEL`](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
+   * export-model) statement. * `LOAD_DATA`: [`LOAD DATA`](/bigquery/docs/reference/standard-
+   * sql/other-statements#load_data_statement) statement. * `CALL`:
+   * [`CALL`](/bigquery/docs/reference/standard-sql/procedural-language#call) statement.
    * @param statementType statementType or {@code null} for none
    */
   public JobStatistics2 setStatementType(java.lang.String statementType) {

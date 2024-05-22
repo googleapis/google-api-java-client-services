@@ -3684,8 +3684,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the identitytoolkit server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-project/oauthIdpConfigs
-       *        /oauth-config-id'. Ignored during create requests.
+       * @param name The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-
+       *        project/oauthIdpConfigs/oauth-config-id'. Ignored during create requests.
        * @param content the {@link com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig}
        * @return the request
        */
@@ -3713,8 +3713,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-project/oauthIdpConfigs
-       *        /oauth-config-id'. Ignored during create requests.
+         * @param name The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-
+       *        project/oauthIdpConfigs/oauth-config-id'. Ignored during create requests.
          * @param content the {@link com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig}
          * @since 1.13
          */
@@ -3790,8 +3790,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-project/oauthIdpConfigs
-       /oauth-config-id'. Ignored during create requests.
+        /** The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-
+       project/oauthIdpConfigs/oauth-config-id'. Ignored during create requests.
          */
         public java.lang.String getName() {
           return name;
@@ -4700,8 +4700,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Output only. Resource name of a tenant. For example: "projects/{project-id}/tenants
-         * /{tenant-id}"
+         * Output only. Resource name of a tenant. For example: "projects/{project-
+         * id}/tenants/{tenant-id}"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -4713,8 +4713,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Output only. Resource name of a tenant. For example: "projects/{project-id}/tenants
-         * /{tenant-id}"
+         * Output only. Resource name of a tenant. For example: "projects/{project-
+         * id}/tenants/{tenant-id}"
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4728,8 +4728,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
 
         /**
          * If provided, only update fields set in the update mask. Otherwise, all settable fields
-         * will be updated. For the `FieldMask` definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#fieldmask
+         * will be updated. For the `FieldMask` definition, see
+         * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -4744,8 +4744,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
 
         /**
          * If provided, only update fields set in the update mask. Otherwise, all settable fields
-         * will be updated. For the `FieldMask` definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#fieldmask
+         * will be updated. For the `FieldMask` definition, see
+         * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -7286,8 +7286,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the identitytoolkit server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-project/oauthIdpConfigs
-         *        /oauth-config-id'. Ignored during create requests.
+         * @param name The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-
+         *        project/oauthIdpConfigs/oauth-config-id'. Ignored during create requests.
          * @param content the {@link com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig}
          * @return the request
          */
@@ -7315,8 +7315,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-project/oauthIdpConfigs
-         *        /oauth-config-id'. Ignored during create requests.
+           * @param name The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-
+         *        project/oauthIdpConfigs/oauth-config-id'. Ignored during create requests.
            * @param content the {@link com.google.api.services.identitytoolkit.v2.model.GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig}
            * @since 1.13
            */
@@ -7392,8 +7392,8 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-project/oauthIdpConfigs
-         /oauth-config-id'. Ignored during create requests.
+          /** The name of the OAuthIdpConfig resource, for example: 'projects/my-awesome-
+         project/oauthIdpConfigs/oauth-config-id'. Ignored during create requests.
            */
           public java.lang.String getName() {
             return name;
@@ -7876,6 +7876,11 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
     public Builder setGoogleClientRequestInitializer(
         com.google.api.client.googleapis.services.GoogleClientRequestInitializer googleClientRequestInitializer) {
       return (Builder) super.setGoogleClientRequestInitializer(googleClientRequestInitializer);
+    }
+
+    @Override
+    public Builder setUniverseDomain(String universeDomain) {
+      return (Builder) super.setUniverseDomain(universeDomain);
     }
   }
 }

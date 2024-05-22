@@ -1496,19 +1496,20 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * Required. A comma-separated list of paths, relative to `Environment`, of fields to
            * update. For example, to set the version of scikit-learn to install in the environment
            * to 0.19.0 and to remove an existing installation of numpy, the `updateMask` parameter
-           * would include the following two `paths` values: "config.softwareConfig.pypiPackages
-           * .scikit-learn" and "config.softwareConfig.pypiPackages.numpy". The included patch
-           * environment would specify the scikit-learn version as follows: { "config":{
-           * "softwareConfig":{ "pypiPackages":{ "scikit-learn":"==0.19.0" } } } } Note that in the
-           * above example, any existing PyPI packages other than scikit-learn and numpy will be
-           * unaffected. Only one update type may be included in a single request's `updateMask`.
-           * For example, one cannot update both the PyPI packages and labels in the same request.
-           * However, it is possible to update multiple members of a map field simultaneously in the
-           * same request. For example, to set the labels "label1" and "label2" while clearing
-           * "label3" (assuming it already exists), one can provide the paths "labels.label1",
-           * "labels.label2", and "labels.label3" and populate the patch environment as follows: {
-           * "labels":{ "label1":"new-label1-value" "label2":"new-label2-value" } } Note that in the
-           * above example, any existing labels that are not included in the `updateMask` will be
+           * would include the following two `paths` values:
+           * "config.softwareConfig.pypiPackages.scikit-learn" and
+           * "config.softwareConfig.pypiPackages.numpy". The included patch environment would
+           * specify the scikit-learn version as follows: { "config":{ "softwareConfig":{
+           * "pypiPackages":{ "scikit-learn":"==0.19.0" } } } } Note that in the above example, any
+           * existing PyPI packages other than scikit-learn and numpy will be unaffected. Only one
+           * update type may be included in a single request's `updateMask`. For example, one cannot
+           * update both the PyPI packages and labels in the same request. However, it is possible
+           * to update multiple members of a map field simultaneously in the same request. For
+           * example, to set the labels "label1" and "label2" while clearing "label3" (assuming it
+           * already exists), one can provide the paths "labels.label1", "labels.label2", and
+           * "labels.label3" and populate the patch environment as follows: { "labels":{
+           * "label1":"new-label1-value" "label2":"new-label2-value" } } Note that in the above
+           * example, any existing labels that are not included in the `updateMask` will be
            * unaffected. It is also possible to replace an entire map field by providing the map
            * field's path in the `updateMask`. The new value of the field will be that which is
            * provided in the patch environment. For example, to delete all pre-existing user-
@@ -1626,19 +1627,20 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * Required. A comma-separated list of paths, relative to `Environment`, of fields to
            * update. For example, to set the version of scikit-learn to install in the environment
            * to 0.19.0 and to remove an existing installation of numpy, the `updateMask` parameter
-           * would include the following two `paths` values: "config.softwareConfig.pypiPackages
-           * .scikit-learn" and "config.softwareConfig.pypiPackages.numpy". The included patch
-           * environment would specify the scikit-learn version as follows: { "config":{
-           * "softwareConfig":{ "pypiPackages":{ "scikit-learn":"==0.19.0" } } } } Note that in the
-           * above example, any existing PyPI packages other than scikit-learn and numpy will be
-           * unaffected. Only one update type may be included in a single request's `updateMask`.
-           * For example, one cannot update both the PyPI packages and labels in the same request.
-           * However, it is possible to update multiple members of a map field simultaneously in the
-           * same request. For example, to set the labels "label1" and "label2" while clearing
-           * "label3" (assuming it already exists), one can provide the paths "labels.label1",
-           * "labels.label2", and "labels.label3" and populate the patch environment as follows: {
-           * "labels":{ "label1":"new-label1-value" "label2":"new-label2-value" } } Note that in the
-           * above example, any existing labels that are not included in the `updateMask` will be
+           * would include the following two `paths` values:
+           * "config.softwareConfig.pypiPackages.scikit-learn" and
+           * "config.softwareConfig.pypiPackages.numpy". The included patch environment would
+           * specify the scikit-learn version as follows: { "config":{ "softwareConfig":{
+           * "pypiPackages":{ "scikit-learn":"==0.19.0" } } } } Note that in the above example, any
+           * existing PyPI packages other than scikit-learn and numpy will be unaffected. Only one
+           * update type may be included in a single request's `updateMask`. For example, one cannot
+           * update both the PyPI packages and labels in the same request. However, it is possible
+           * to update multiple members of a map field simultaneously in the same request. For
+           * example, to set the labels "label1" and "label2" while clearing "label3" (assuming it
+           * already exists), one can provide the paths "labels.label1", "labels.label2", and
+           * "labels.label3" and populate the patch environment as follows: { "labels":{
+           * "label1":"new-label1-value" "label2":"new-label2-value" } } Note that in the above
+           * example, any existing labels that are not included in the `updateMask` will be
            * unaffected. It is also possible to replace an entire map field by providing the map
            * field's path in the `updateMask`. The new value of the field will be that which is
            * provided in the patch environment. For example, to delete all pre-existing user-

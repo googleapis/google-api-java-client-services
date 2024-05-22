@@ -31,32 +31,61 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class ForwardingRuleInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of a Compute Engine forwarding rule.
+   * Name of the forwarding rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Port range defined in the forwarding rule that matches the test.
+   * Name of the load balancer the forwarding rule belongs to. Empty for forwarding rules not
+   * related to load balancers (like PSC forwarding rules).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String loadBalancerName;
+
+  /**
+   * Port range defined in the forwarding rule that matches the packet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String matchedPortRange;
 
   /**
-   * Protocol defined in the forwarding rule that matches the test.
+   * Protocol defined in the forwarding rule that matches the packet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String matchedProtocol;
 
   /**
-   * Network URI. Only valid for Internal Load Balancer.
+   * Network URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkUri;
+
+  /**
+   * PSC Google API target this forwarding rule targets (if applicable).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscGoogleApiTarget;
+
+  /**
+   * URI of the PSC service attachment this forwarding rule targets (if applicable).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscServiceAttachmentUri;
+
+  /**
+   * Region of the forwarding rule. Set only for regional forwarding rules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
 
   /**
    * Target type of the forwarding rule.
@@ -66,7 +95,7 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   private java.lang.String target;
 
   /**
-   * URI of a Compute Engine forwarding rule.
+   * URI of the forwarding rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +109,7 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   private java.lang.String vip;
 
   /**
-   * Name of a Compute Engine forwarding rule.
+   * Name of the forwarding rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -88,7 +117,7 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name of a Compute Engine forwarding rule.
+   * Name of the forwarding rule.
    * @param displayName displayName or {@code null} for none
    */
   public ForwardingRuleInfo setDisplayName(java.lang.String displayName) {
@@ -97,7 +126,26 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Port range defined in the forwarding rule that matches the test.
+   * Name of the load balancer the forwarding rule belongs to. Empty for forwarding rules not
+   * related to load balancers (like PSC forwarding rules).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLoadBalancerName() {
+    return loadBalancerName;
+  }
+
+  /**
+   * Name of the load balancer the forwarding rule belongs to. Empty for forwarding rules not
+   * related to load balancers (like PSC forwarding rules).
+   * @param loadBalancerName loadBalancerName or {@code null} for none
+   */
+  public ForwardingRuleInfo setLoadBalancerName(java.lang.String loadBalancerName) {
+    this.loadBalancerName = loadBalancerName;
+    return this;
+  }
+
+  /**
+   * Port range defined in the forwarding rule that matches the packet.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatchedPortRange() {
@@ -105,7 +153,7 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Port range defined in the forwarding rule that matches the test.
+   * Port range defined in the forwarding rule that matches the packet.
    * @param matchedPortRange matchedPortRange or {@code null} for none
    */
   public ForwardingRuleInfo setMatchedPortRange(java.lang.String matchedPortRange) {
@@ -114,7 +162,7 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Protocol defined in the forwarding rule that matches the test.
+   * Protocol defined in the forwarding rule that matches the packet.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatchedProtocol() {
@@ -122,7 +170,7 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Protocol defined in the forwarding rule that matches the test.
+   * Protocol defined in the forwarding rule that matches the packet.
    * @param matchedProtocol matchedProtocol or {@code null} for none
    */
   public ForwardingRuleInfo setMatchedProtocol(java.lang.String matchedProtocol) {
@@ -131,7 +179,7 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Network URI. Only valid for Internal Load Balancer.
+   * Network URI.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -139,11 +187,62 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Network URI. Only valid for Internal Load Balancer.
+   * Network URI.
    * @param networkUri networkUri or {@code null} for none
    */
   public ForwardingRuleInfo setNetworkUri(java.lang.String networkUri) {
     this.networkUri = networkUri;
+    return this;
+  }
+
+  /**
+   * PSC Google API target this forwarding rule targets (if applicable).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscGoogleApiTarget() {
+    return pscGoogleApiTarget;
+  }
+
+  /**
+   * PSC Google API target this forwarding rule targets (if applicable).
+   * @param pscGoogleApiTarget pscGoogleApiTarget or {@code null} for none
+   */
+  public ForwardingRuleInfo setPscGoogleApiTarget(java.lang.String pscGoogleApiTarget) {
+    this.pscGoogleApiTarget = pscGoogleApiTarget;
+    return this;
+  }
+
+  /**
+   * URI of the PSC service attachment this forwarding rule targets (if applicable).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscServiceAttachmentUri() {
+    return pscServiceAttachmentUri;
+  }
+
+  /**
+   * URI of the PSC service attachment this forwarding rule targets (if applicable).
+   * @param pscServiceAttachmentUri pscServiceAttachmentUri or {@code null} for none
+   */
+  public ForwardingRuleInfo setPscServiceAttachmentUri(java.lang.String pscServiceAttachmentUri) {
+    this.pscServiceAttachmentUri = pscServiceAttachmentUri;
+    return this;
+  }
+
+  /**
+   * Region of the forwarding rule. Set only for regional forwarding rules.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * Region of the forwarding rule. Set only for regional forwarding rules.
+   * @param region region or {@code null} for none
+   */
+  public ForwardingRuleInfo setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 
@@ -165,7 +264,7 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * URI of a Compute Engine forwarding rule.
+   * URI of the forwarding rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -173,7 +272,7 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * URI of a Compute Engine forwarding rule.
+   * URI of the forwarding rule.
    * @param uri uri or {@code null} for none
    */
   public ForwardingRuleInfo setUri(java.lang.String uri) {

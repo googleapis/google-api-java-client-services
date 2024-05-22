@@ -30,23 +30,23 @@ package com.google.api.services.cloudbuild.v2.model;
 public final class GitHubConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * GitHub App installation id.
+   * Optional. GitHub App installation id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long appInstallationId;
 
   /**
-   * OAuth credential of the account that authorized the Cloud Build GitHub App. It is recommended
-   * to use a robot account instead of a human user account. The OAuth token must be tied to the
-   * Cloud Build GitHub App.
+   * Optional. OAuth credential of the account that authorized the Cloud Build GitHub App. It is
+   * recommended to use a robot account instead of a human user account. The OAuth token must be
+   * tied to the Cloud Build GitHub App.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private OAuthCredential authorizerCredential;
 
   /**
-   * GitHub App installation id.
+   * Optional. GitHub App installation id.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAppInstallationId() {
@@ -54,7 +54,7 @@ public final class GitHubConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GitHub App installation id.
+   * Optional. GitHub App installation id.
    * @param appInstallationId appInstallationId or {@code null} for none
    */
   public GitHubConfig setAppInstallationId(java.lang.Long appInstallationId) {
@@ -63,9 +63,9 @@ public final class GitHubConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * OAuth credential of the account that authorized the Cloud Build GitHub App. It is recommended
-   * to use a robot account instead of a human user account. The OAuth token must be tied to the
-   * Cloud Build GitHub App.
+   * Optional. OAuth credential of the account that authorized the Cloud Build GitHub App. It is
+   * recommended to use a robot account instead of a human user account. The OAuth token must be
+   * tied to the Cloud Build GitHub App.
    * @return value or {@code null} for none
    */
   public OAuthCredential getAuthorizerCredential() {
@@ -73,9 +73,9 @@ public final class GitHubConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * OAuth credential of the account that authorized the Cloud Build GitHub App. It is recommended
-   * to use a robot account instead of a human user account. The OAuth token must be tied to the
-   * Cloud Build GitHub App.
+   * Optional. OAuth credential of the account that authorized the Cloud Build GitHub App. It is
+   * recommended to use a robot account instead of a human user account. The OAuth token must be
+   * tied to the Cloud Build GitHub App.
    * @param authorizerCredential authorizerCredential or {@code null} for none
    */
   public GitHubConfig setAuthorizerCredential(OAuthCredential authorizerCredential) {

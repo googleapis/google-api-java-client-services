@@ -1184,9 +1184,9 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
              *        include OSPolicyAssignmentReports for all OSPolicyAssignments in the project/location.
              *        Either {instance} or {assignment} must be `-`. For example: `projects/{project}/locations/
              *        {location}/instances/{instance}/osPolicyAssignments/-/reports` returns all reports for the
-             *        instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments
-             *        /{assignment-id}/reports` returns all the reports for the given assignment across all
-             *        instances.
+             *        instance
+             *        `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-
+             *        id}/reports` returns all the reports for the given assignment across all instances.
              *        `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
              *        returns all the reports for all assignments across all instances.
              * @return the request
@@ -1223,9 +1223,9 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
              *        include OSPolicyAssignmentReports for all OSPolicyAssignments in the project/location.
              *        Either {instance} or {assignment} must be `-`. For example: `projects/{project}/locations/
              *        {location}/instances/{instance}/osPolicyAssignments/-/reports` returns all reports for the
-             *        instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments
-             *        /{assignment-id}/reports` returns all the reports for the given assignment across all
-             *        instances.
+             *        instance
+             *        `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-
+             *        id}/reports` returns all the reports for the given assignment across all instances.
              *        `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
              *        returns all the reports for all assignments across all instances.
                * @since 1.13
@@ -1316,9 +1316,9 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
                * for all OSPolicyAssignments in the project/location. Either {instance} or
                * {assignment} must be `-`. For example: `projects/{project}/locations/{location}/ins
                * tances/{instance}/osPolicyAssignments/-/reports` returns all reports for the
-               * instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments
-               * /{assignment-id}/reports` returns all the reports for the given assignment across
-               * all instances.
+               * instance `projects/{project}/locations/{location}/instances/-
+               * /osPolicyAssignments/{assignment-id}/reports` returns all the reports for the given
+               * assignment across all instances.
                * `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
                * returns all the reports for all assignments across all instances.
                */
@@ -1355,9 +1355,9 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
                * for all OSPolicyAssignments in the project/location. Either {instance} or
                * {assignment} must be `-`. For example: `projects/{project}/locations/{location}/ins
                * tances/{instance}/osPolicyAssignments/-/reports` returns all reports for the
-               * instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments
-               * /{assignment-id}/reports` returns all the reports for the given assignment across
-               * all instances.
+               * instance `projects/{project}/locations/{location}/instances/-
+               * /osPolicyAssignments/{assignment-id}/reports` returns all the reports for the given
+               * assignment across all instances.
                * `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
                * returns all the reports for all assignments across all instances.
                */
@@ -1783,13 +1783,13 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             private java.lang.String filter;
 
             /** This field supports filtering by the severity level for the vulnerability. For a list of severity
-           levels, see [Severity levels for vulnerabilities](https://cloud.google.com/container-analysis/docs
-           /container-scanning-overview#severity_levels_for_vulnerabilities). The filter field follows the
-           rules described in the [AIP-160](https://google.aip.dev/160) guidelines as follows: + **Filter for
-           a specific severity type**: you can list reports that contain vulnerabilities that are classified
-           as medium by specifying `vulnerabilities.details.severity:MEDIUM`. + **Filter for a range of
-           severities** : you can list reports that have vulnerabilities that are classified as critical or
-           high by specifying `vulnerabilities.details.severity:HIGH OR
+           levels, see [Severity levels for vulnerabilities](https://cloud.google.com/container-
+           analysis/docs/container-scanning-overview#severity_levels_for_vulnerabilities). The filter field
+           follows the rules described in the [AIP-160](https://google.aip.dev/160) guidelines as follows: +
+           **Filter for a specific severity type**: you can list reports that contain vulnerabilities that are
+           classified as medium by specifying `vulnerabilities.details.severity:MEDIUM`. + **Filter for a
+           range of severities** : you can list reports that have vulnerabilities that are classified as
+           critical or high by specifying `vulnerabilities.details.severity:HIGH OR
            vulnerabilities.details.severity:CRITICAL`
              */
             public java.lang.String getFilter() {

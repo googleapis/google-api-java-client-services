@@ -30,22 +30,22 @@ package com.google.api.services.vmmigration.v1.model;
 public final class VmAttachmentDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Specifies a unique device name of your choice that is reflected into the /dev/disk
-   * /by-id/google-* tree of a Linux operating system running within the instance. If not specified,
-   * the server chooses a default device name to apply to this disk, in the form persistent-disk-x,
-   * where x is a number assigned by Google Compute Engine. This field is only applicable for
-   * persistent disks.
+   * Optional. Specifies a unique device name of your choice that is reflected into the
+   * /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. If not
+   * specified, the server chooses a default device name to apply to this disk, in the form
+   * persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only
+   * applicable for persistent disks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deviceName;
 
   /**
-   * Optional. Specifies a unique device name of your choice that is reflected into the /dev/disk
-   * /by-id/google-* tree of a Linux operating system running within the instance. If not specified,
-   * the server chooses a default device name to apply to this disk, in the form persistent-disk-x,
-   * where x is a number assigned by Google Compute Engine. This field is only applicable for
-   * persistent disks.
+   * Optional. Specifies a unique device name of your choice that is reflected into the
+   * /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. If not
+   * specified, the server chooses a default device name to apply to this disk, in the form
+   * persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only
+   * applicable for persistent disks.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceName() {
@@ -53,11 +53,11 @@ public final class VmAttachmentDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifies a unique device name of your choice that is reflected into the /dev/disk
-   * /by-id/google-* tree of a Linux operating system running within the instance. If not specified,
-   * the server chooses a default device name to apply to this disk, in the form persistent-disk-x,
-   * where x is a number assigned by Google Compute Engine. This field is only applicable for
-   * persistent disks.
+   * Optional. Specifies a unique device name of your choice that is reflected into the
+   * /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. If not
+   * specified, the server chooses a default device name to apply to this disk, in the form
+   * persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only
+   * applicable for persistent disks.
    * @param deviceName deviceName or {@code null} for none
    */
   public VmAttachmentDetails setDeviceName(java.lang.String deviceName) {

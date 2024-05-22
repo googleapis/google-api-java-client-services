@@ -30,6 +30,14 @@ package com.google.api.services.walletobjects.model;
 public final class GenericClass extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional app or website link that will be displayed as a button on the front of the pass. If
+   * AppLinkData is provided for the corresponding object that will be used instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppLinkData appLinkData;
+
+  /**
    * Callback options to be used to call the issuer back for every save/delete of an object for this
    * class by the end-user. All objects of this class are eligible for the callback.
    * The value may be {@code null}.
@@ -125,6 +133,25 @@ public final class GenericClass extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String viewUnlockRequirement;
+
+  /**
+   * Optional app or website link that will be displayed as a button on the front of the pass. If
+   * AppLinkData is provided for the corresponding object that will be used instead.
+   * @return value or {@code null} for none
+   */
+  public AppLinkData getAppLinkData() {
+    return appLinkData;
+  }
+
+  /**
+   * Optional app or website link that will be displayed as a button on the front of the pass. If
+   * AppLinkData is provided for the corresponding object that will be used instead.
+   * @param appLinkData appLinkData or {@code null} for none
+   */
+  public GenericClass setAppLinkData(AppLinkData appLinkData) {
+    this.appLinkData = appLinkData;
+    return this;
+  }
 
   /**
    * Callback options to be used to call the issuer back for every save/delete of an object for this

@@ -87,9 +87,10 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
 
   /**
    * Required. The primary text. Supports simple formatting. For more information about formatting
-   * text, see [Formatting text in Google Chat apps](https://developers.google.com/workspace/chat
-   * /format-messages#card-formatting) and [Formatting text in Google Workspace Add-
-   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+   * text, see [Formatting text in Google Chat
+   * apps](https://developers.google.com/workspace/chat/format-messages#card-formatting) and
+   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * ons/concepts/widgets#text_formatting).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,9 +236,10 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
 
   /**
    * Required. The primary text. Supports simple formatting. For more information about formatting
-   * text, see [Formatting text in Google Chat apps](https://developers.google.com/workspace/chat
-   * /format-messages#card-formatting) and [Formatting text in Google Workspace Add-
-   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+   * text, see [Formatting text in Google Chat
+   * apps](https://developers.google.com/workspace/chat/format-messages#card-formatting) and
+   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * ons/concepts/widgets#text_formatting).
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -246,9 +248,10 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
 
   /**
    * Required. The primary text. Supports simple formatting. For more information about formatting
-   * text, see [Formatting text in Google Chat apps](https://developers.google.com/workspace/chat
-   * /format-messages#card-formatting) and [Formatting text in Google Workspace Add-
-   * ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+   * text, see [Formatting text in Google Chat
+   * apps](https://developers.google.com/workspace/chat/format-messages#card-formatting) and
+   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * ons/concepts/widgets#text_formatting).
    * @param text text or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setText(java.lang.String text) {

@@ -100,10 +100,11 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   /**
    * The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is
    * true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`)
-   * to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
-   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to
-   * use. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be
-   * changed after the node pool has been created.
+   * to have a range chosen with a specific netmask. Set to a
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `10.96.0.0/14`) to pick a specific range to use. Only applicable if
+   * `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool
+   * has been created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,10 +259,11 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   /**
    * The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is
    * true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`)
-   * to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
-   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to
-   * use. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be
-   * changed after the node pool has been created.
+   * to have a range chosen with a specific netmask. Set to a
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `10.96.0.0/14`) to pick a specific range to use. Only applicable if
+   * `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool
+   * has been created.
    * @return value or {@code null} for none
    */
   public java.lang.String getPodIpv4CidrBlock() {
@@ -271,10 +273,11 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   /**
    * The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is
    * true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`)
-   * to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki
-   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to
-   * use. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be
-   * changed after the node pool has been created.
+   * to have a range chosen with a specific netmask. Set to a
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `10.96.0.0/14`) to pick a specific range to use. Only applicable if
+   * `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool
+   * has been created.
    * @param podIpv4CidrBlock podIpv4CidrBlock or {@code null} for none
    */
   public NodeNetworkConfig setPodIpv4CidrBlock(java.lang.String podIpv4CidrBlock) {

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
+ * MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,14 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2MitreAttack extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional MITRE ATT tactics related to this finding, if any.
+   * Additional MITRE ATT&CK tactics related to this finding, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> additionalTactics;
 
   /**
-   * Additional MITRE ATT techniques related to this finding, if any, along with any of their
+   * Additional MITRE ATT&CK techniques related to this finding, if any, along with any of their
    * respective parent techniques.
    * The value may be {@code null}.
    */
@@ -46,32 +46,32 @@ public final class GoogleCloudSecuritycenterV2MitreAttack extends com.google.api
   private java.util.List<java.lang.String> additionalTechniques;
 
   /**
-   * The MITRE ATT tactic most closely represented by this finding, if any.
+   * The MITRE ATT&CK tactic most closely represented by this finding, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryTactic;
 
   /**
-   * The MITRE ATT technique most closely represented by this finding, if any. primary_techniques is
-   * a repeated field because there are multiple levels of MITRE ATT techniques. If the technique
-   * most closely represented by this finding is a sub-technique (e.g. `SCANNING_IP_BLOCKS`), both
-   * the sub-technique and its parent technique(s) will be listed (e.g. `SCANNING_IP_BLOCKS`,
-   * `ACTIVE_SCANNING`).
+   * The MITRE ATT&CK technique most closely represented by this finding, if any. primary_techniques
+   * is a repeated field because there are multiple levels of MITRE ATT&CK techniques. If the
+   * technique most closely represented by this finding is a sub-technique (e.g.
+   * `SCANNING_IP_BLOCKS`), both the sub-technique and its parent technique(s) will be listed (e.g.
+   * `SCANNING_IP_BLOCKS`, `ACTIVE_SCANNING`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> primaryTechniques;
 
   /**
-   * The MITRE ATT version referenced by the above fields. E.g. "8".
+   * The MITRE ATT&CK version referenced by the above fields. E.g. "8".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Additional MITRE ATT tactics related to this finding, if any.
+   * Additional MITRE ATT&CK tactics related to this finding, if any.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdditionalTactics() {
@@ -79,7 +79,7 @@ public final class GoogleCloudSecuritycenterV2MitreAttack extends com.google.api
   }
 
   /**
-   * Additional MITRE ATT tactics related to this finding, if any.
+   * Additional MITRE ATT&CK tactics related to this finding, if any.
    * @param additionalTactics additionalTactics or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2MitreAttack setAdditionalTactics(java.util.List<java.lang.String> additionalTactics) {
@@ -88,7 +88,7 @@ public final class GoogleCloudSecuritycenterV2MitreAttack extends com.google.api
   }
 
   /**
-   * Additional MITRE ATT techniques related to this finding, if any, along with any of their
+   * Additional MITRE ATT&CK techniques related to this finding, if any, along with any of their
    * respective parent techniques.
    * @return value or {@code null} for none
    */
@@ -97,7 +97,7 @@ public final class GoogleCloudSecuritycenterV2MitreAttack extends com.google.api
   }
 
   /**
-   * Additional MITRE ATT techniques related to this finding, if any, along with any of their
+   * Additional MITRE ATT&CK techniques related to this finding, if any, along with any of their
    * respective parent techniques.
    * @param additionalTechniques additionalTechniques or {@code null} for none
    */
@@ -107,7 +107,7 @@ public final class GoogleCloudSecuritycenterV2MitreAttack extends com.google.api
   }
 
   /**
-   * The MITRE ATT tactic most closely represented by this finding, if any.
+   * The MITRE ATT&CK tactic most closely represented by this finding, if any.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryTactic() {
@@ -115,7 +115,7 @@ public final class GoogleCloudSecuritycenterV2MitreAttack extends com.google.api
   }
 
   /**
-   * The MITRE ATT tactic most closely represented by this finding, if any.
+   * The MITRE ATT&CK tactic most closely represented by this finding, if any.
    * @param primaryTactic primaryTactic or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2MitreAttack setPrimaryTactic(java.lang.String primaryTactic) {
@@ -124,11 +124,11 @@ public final class GoogleCloudSecuritycenterV2MitreAttack extends com.google.api
   }
 
   /**
-   * The MITRE ATT technique most closely represented by this finding, if any. primary_techniques is
-   * a repeated field because there are multiple levels of MITRE ATT techniques. If the technique
-   * most closely represented by this finding is a sub-technique (e.g. `SCANNING_IP_BLOCKS`), both
-   * the sub-technique and its parent technique(s) will be listed (e.g. `SCANNING_IP_BLOCKS`,
-   * `ACTIVE_SCANNING`).
+   * The MITRE ATT&CK technique most closely represented by this finding, if any. primary_techniques
+   * is a repeated field because there are multiple levels of MITRE ATT&CK techniques. If the
+   * technique most closely represented by this finding is a sub-technique (e.g.
+   * `SCANNING_IP_BLOCKS`), both the sub-technique and its parent technique(s) will be listed (e.g.
+   * `SCANNING_IP_BLOCKS`, `ACTIVE_SCANNING`).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPrimaryTechniques() {
@@ -136,11 +136,11 @@ public final class GoogleCloudSecuritycenterV2MitreAttack extends com.google.api
   }
 
   /**
-   * The MITRE ATT technique most closely represented by this finding, if any. primary_techniques is
-   * a repeated field because there are multiple levels of MITRE ATT techniques. If the technique
-   * most closely represented by this finding is a sub-technique (e.g. `SCANNING_IP_BLOCKS`), both
-   * the sub-technique and its parent technique(s) will be listed (e.g. `SCANNING_IP_BLOCKS`,
-   * `ACTIVE_SCANNING`).
+   * The MITRE ATT&CK technique most closely represented by this finding, if any. primary_techniques
+   * is a repeated field because there are multiple levels of MITRE ATT&CK techniques. If the
+   * technique most closely represented by this finding is a sub-technique (e.g.
+   * `SCANNING_IP_BLOCKS`), both the sub-technique and its parent technique(s) will be listed (e.g.
+   * `SCANNING_IP_BLOCKS`, `ACTIVE_SCANNING`).
    * @param primaryTechniques primaryTechniques or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2MitreAttack setPrimaryTechniques(java.util.List<java.lang.String> primaryTechniques) {
@@ -149,7 +149,7 @@ public final class GoogleCloudSecuritycenterV2MitreAttack extends com.google.api
   }
 
   /**
-   * The MITRE ATT version referenced by the above fields. E.g. "8".
+   * The MITRE ATT&CK version referenced by the above fields. E.g. "8".
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -157,7 +157,7 @@ public final class GoogleCloudSecuritycenterV2MitreAttack extends com.google.api
   }
 
   /**
-   * The MITRE ATT version referenced by the above fields. E.g. "8".
+   * The MITRE ATT&CK version referenced by the above fields. E.g. "8".
    * @param version version or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2MitreAttack setVersion(java.lang.String version) {

@@ -102,6 +102,14 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Applicable only for databases that use dual region instance configurations.
+   * Contains information about the quorum.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QuorumInfo quorumInfo;
+
+  /**
    * Output only. If true, the database is being updated. If false, there are no ongoing update
    * operations for the database.
    * The value may be {@code null}.
@@ -298,6 +306,25 @@ public final class Database extends com.google.api.client.json.GenericJson {
    */
   public Database setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Applicable only for databases that use dual region instance configurations.
+   * Contains information about the quorum.
+   * @return value or {@code null} for none
+   */
+  public QuorumInfo getQuorumInfo() {
+    return quorumInfo;
+  }
+
+  /**
+   * Output only. Applicable only for databases that use dual region instance configurations.
+   * Contains information about the quorum.
+   * @param quorumInfo quorumInfo or {@code null} for none
+   */
+  public Database setQuorumInfo(QuorumInfo quorumInfo) {
+    this.quorumInfo = quorumInfo;
     return this;
   }
 

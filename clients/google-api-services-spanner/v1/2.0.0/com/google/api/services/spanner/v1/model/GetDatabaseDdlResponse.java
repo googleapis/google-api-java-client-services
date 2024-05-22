@@ -32,8 +32,8 @@ public final class GetDatabaseDdlResponse extends com.google.api.client.json.Gen
   /**
    * Proto descriptors stored in the database. Contains a protobuf-serialized [google.protobuf.FileD
    * escriptorSet](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/descrip
-   * tor.proto). For more details, see protobuffer [self description](https://developers.google.com
-   * /protocol-buffers/docs/techniques#self-description).
+   * tor.proto). For more details, see protobuffer [self
+   * description](https://developers.google.com/protocol-buffers/docs/techniques#self-description).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +50,8 @@ public final class GetDatabaseDdlResponse extends com.google.api.client.json.Gen
   /**
    * Proto descriptors stored in the database. Contains a protobuf-serialized [google.protobuf.FileD
    * escriptorSet](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/descrip
-   * tor.proto). For more details, see protobuffer [self description](https://developers.google.com
-   * /protocol-buffers/docs/techniques#self-description).
+   * tor.proto). For more details, see protobuffer [self
+   * description](https://developers.google.com/protocol-buffers/docs/techniques#self-description).
    * @see #decodeProtoDescriptors()
    * @return value or {@code null} for none
    */
@@ -62,8 +62,8 @@ public final class GetDatabaseDdlResponse extends com.google.api.client.json.Gen
   /**
    * Proto descriptors stored in the database. Contains a protobuf-serialized [google.protobuf.FileD
    * escriptorSet](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/descrip
-   * tor.proto). For more details, see protobuffer [self description](https://developers.google.com
-   * /protocol-buffers/docs/techniques#self-description).
+   * tor.proto). For more details, see protobuffer [self
+   * description](https://developers.google.com/protocol-buffers/docs/techniques#self-description).
    * @see #getProtoDescriptors()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -76,8 +76,8 @@ public final class GetDatabaseDdlResponse extends com.google.api.client.json.Gen
   /**
    * Proto descriptors stored in the database. Contains a protobuf-serialized [google.protobuf.FileD
    * escriptorSet](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/descrip
-   * tor.proto). For more details, see protobuffer [self description](https://developers.google.com
-   * /protocol-buffers/docs/techniques#self-description).
+   * tor.proto). For more details, see protobuffer [self
+   * description](https://developers.google.com/protocol-buffers/docs/techniques#self-description).
    * @see #encodeProtoDescriptors()
    * @param protoDescriptors protoDescriptors or {@code null} for none
    */
@@ -89,8 +89,8 @@ public final class GetDatabaseDdlResponse extends com.google.api.client.json.Gen
   /**
    * Proto descriptors stored in the database. Contains a protobuf-serialized [google.protobuf.FileD
    * escriptorSet](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/descrip
-   * tor.proto). For more details, see protobuffer [self description](https://developers.google.com
-   * /protocol-buffers/docs/techniques#self-description).
+   * tor.proto). For more details, see protobuffer [self
+   * description](https://developers.google.com/protocol-buffers/docs/techniques#self-description).
    * @see #setProtoDescriptors()
    *
    * <p>

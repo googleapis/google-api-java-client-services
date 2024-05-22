@@ -58,8 +58,8 @@ public final class DatabaseMetadata extends com.google.api.client.json.GenericJs
   private DatabaseResourceId resourceId;
 
   /**
-   * Required. Database name. Resource name to follow CAIS resource_name format as noted here go
-   * /condor-common-datamodel
+   * Required. Database name. Resource name to follow CAIS resource_name format as noted here
+   * go/condor-common-datamodel
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,8 +130,8 @@ public final class DatabaseMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Database name. Resource name to follow CAIS resource_name format as noted here go
-   * /condor-common-datamodel
+   * Required. Database name. Resource name to follow CAIS resource_name format as noted here
+   * go/condor-common-datamodel
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -139,8 +139,8 @@ public final class DatabaseMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Database name. Resource name to follow CAIS resource_name format as noted here go
-   * /condor-common-datamodel
+   * Required. Database name. Resource name to follow CAIS resource_name format as noted here
+   * go/condor-common-datamodel
    * @param resourceName resourceName or {@code null} for none
    */
   public DatabaseMetadata setResourceName(java.lang.String resourceName) {

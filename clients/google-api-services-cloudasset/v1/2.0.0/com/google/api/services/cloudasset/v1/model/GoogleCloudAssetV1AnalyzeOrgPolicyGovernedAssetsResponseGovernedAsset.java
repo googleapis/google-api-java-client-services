@@ -33,8 +33,9 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   /**
    * The consolidated policy for the analyzed asset. The consolidated policy is computed by merging
    * and evaluating AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.policy_bundle. The
-   * evaluation will respect the organization policy [hierarchy rules](https://cloud.google.com
-   * /resource-manager/docs/organization-policy/understanding-hierarchy).
+   * evaluation will respect the organization policy [hierarchy
+   * rules](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-
+   * hierarchy).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,8 +76,9 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   /**
    * The consolidated policy for the analyzed asset. The consolidated policy is computed by merging
    * and evaluating AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.policy_bundle. The
-   * evaluation will respect the organization policy [hierarchy rules](https://cloud.google.com
-   * /resource-manager/docs/organization-policy/understanding-hierarchy).
+   * evaluation will respect the organization policy [hierarchy
+   * rules](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-
+   * hierarchy).
    * @return value or {@code null} for none
    */
   public AnalyzerOrgPolicy getConsolidatedPolicy() {
@@ -86,8 +88,9 @@ public final class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGover
   /**
    * The consolidated policy for the analyzed asset. The consolidated policy is computed by merging
    * and evaluating AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.policy_bundle. The
-   * evaluation will respect the organization policy [hierarchy rules](https://cloud.google.com
-   * /resource-manager/docs/organization-policy/understanding-hierarchy).
+   * evaluation will respect the organization policy [hierarchy
+   * rules](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-
+   * hierarchy).
    * @param consolidatedPolicy consolidatedPolicy or {@code null} for none
    */
   public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset setConsolidatedPolicy(AnalyzerOrgPolicy consolidatedPolicy) {

@@ -196,6 +196,14 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private RouteInfo route;
 
   /**
+   * Display information of a Serverless network endpoint group backend. Used only for return
+   * traces.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServerlessNegInfo serverlessNeg;
+
+  /**
    * Each step is in one of the pre-defined states.
    * The value may be {@code null}.
    */
@@ -624,6 +632,25 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setRoute(RouteInfo route) {
     this.route = route;
+    return this;
+  }
+
+  /**
+   * Display information of a Serverless network endpoint group backend. Used only for return
+   * traces.
+   * @return value or {@code null} for none
+   */
+  public ServerlessNegInfo getServerlessNeg() {
+    return serverlessNeg;
+  }
+
+  /**
+   * Display information of a Serverless network endpoint group backend. Used only for return
+   * traces.
+   * @param serverlessNeg serverlessNeg or {@code null} for none
+   */
+  public Step setServerlessNeg(ServerlessNegInfo serverlessNeg) {
+    this.serverlessNeg = serverlessNeg;
     return this;
   }
 

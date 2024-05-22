@@ -18,8 +18,8 @@ package com.google.api.services.gkeonprem.v1.model;
 
 /**
  * KubeletConfig defines the modifiable kubelet configurations for bare metal machines. Note: this
- * list includes fields supported in GKE (see https://cloud.google.com/kubernetes-engine/docs/how-to
- * /node-system-config#kubelet-options).
+ * list includes fields supported in GKE (see https://cloud.google.com/kubernetes-engine/docs/how-
+ * to/node-system-config#kubelet-options).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Anthos On-Prem API. For a detailed explanation see:

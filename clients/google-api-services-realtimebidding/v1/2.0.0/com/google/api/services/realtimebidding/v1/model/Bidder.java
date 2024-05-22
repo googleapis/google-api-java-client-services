@@ -51,8 +51,8 @@ public final class Bidder extends com.google.api.client.json.GenericJson {
   private java.lang.String cookieMatchingNetworkId;
 
   /**
-   * Output only. The base URL used in cookie match requests. Refer to https://developers.google.com
-   * /authorized-buyers/rtb/cookie-guide for further information.
+   * Output only. The base URL used in cookie match requests. Refer to
+   * https://developers.google.com/authorized-buyers/rtb/cookie-guide for further information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +123,8 @@ public final class Bidder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The base URL used in cookie match requests. Refer to https://developers.google.com
-   * /authorized-buyers/rtb/cookie-guide for further information.
+   * Output only. The base URL used in cookie match requests. Refer to
+   * https://developers.google.com/authorized-buyers/rtb/cookie-guide for further information.
    * @return value or {@code null} for none
    */
   public java.lang.String getCookieMatchingUrl() {
@@ -132,8 +132,8 @@ public final class Bidder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The base URL used in cookie match requests. Refer to https://developers.google.com
-   * /authorized-buyers/rtb/cookie-guide for further information.
+   * Output only. The base URL used in cookie match requests. Refer to
+   * https://developers.google.com/authorized-buyers/rtb/cookie-guide for further information.
    * @param cookieMatchingUrl cookieMatchingUrl or {@code null} for none
    */
   public Bidder setCookieMatchingUrl(java.lang.String cookieMatchingUrl) {

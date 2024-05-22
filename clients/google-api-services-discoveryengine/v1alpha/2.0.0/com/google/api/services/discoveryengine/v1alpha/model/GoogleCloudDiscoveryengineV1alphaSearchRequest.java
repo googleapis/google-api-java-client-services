@@ -31,7 +31,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * Boost specification to boost certain documents. For more information on boosting, see
-   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
+   * [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,9 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec customFineTuningSpec;
 
   /**
-   * A list of data store specs to apply on a search call.
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,11 +168,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   /**
    * Additional search parameters. For public website search only, supported values are: *
    * `user_country_code`: string. Default empty. If set to non-empty, results are restricted or
-   * boosted based on the location provided. Example: user_country_code: "au" For available codes
-   * see [Country Codes](https://developers.google.com/custom-
+   * boosted based on the location provided. For example, `user_country_code: "au"` For available
+   * codes see [Country Codes](https://developers.google.com/custom-
    * search/docs/json_api_reference#countryCodes) * `search_type`: double. Default empty. Enables
    * non-webpage searching depending on the value. The only valid non-default value is 1, which
-   * enables image searching. Example: search_type: 1
+   * enables image searching. For example, `search_type: 1`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -260,7 +262,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * Boost specification to boost certain documents. For more information on boosting, see
-   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
+   * [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec getBoostSpec() {
@@ -269,7 +271,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * Boost specification to boost certain documents. For more information on boosting, see
-   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
+   * [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
    * @param boostSpec boostSpec or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setBoostSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec boostSpec) {
@@ -362,7 +364,9 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * A list of data store specs to apply on a search call.
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> getDataStoreSpecs() {
@@ -370,7 +374,9 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * A list of data store specs to apply on a search call.
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
    * @param dataStoreSpecs dataStoreSpecs or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setDataStoreSpecs(java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> dataStoreSpecs) {
@@ -571,11 +577,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   /**
    * Additional search parameters. For public website search only, supported values are: *
    * `user_country_code`: string. Default empty. If set to non-empty, results are restricted or
-   * boosted based on the location provided. Example: user_country_code: "au" For available codes
-   * see [Country Codes](https://developers.google.com/custom-
+   * boosted based on the location provided. For example, `user_country_code: "au"` For available
+   * codes see [Country Codes](https://developers.google.com/custom-
    * search/docs/json_api_reference#countryCodes) * `search_type`: double. Default empty. Enables
    * non-webpage searching depending on the value. The only valid non-default value is 1, which
-   * enables image searching. Example: search_type: 1
+   * enables image searching. For example, `search_type: 1`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -585,11 +591,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   /**
    * Additional search parameters. For public website search only, supported values are: *
    * `user_country_code`: string. Default empty. If set to non-empty, results are restricted or
-   * boosted based on the location provided. Example: user_country_code: "au" For available codes
-   * see [Country Codes](https://developers.google.com/custom-
+   * boosted based on the location provided. For example, `user_country_code: "au"` For available
+   * codes see [Country Codes](https://developers.google.com/custom-
    * search/docs/json_api_reference#countryCodes) * `search_type`: double. Default empty. Enables
    * non-webpage searching depending on the value. The only valid non-default value is 1, which
-   * enables image searching. Example: search_type: 1
+   * enables image searching. For example, `search_type: 1`
    * @param params params or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setParams(java.util.Map<String, java.lang.Object> params) {

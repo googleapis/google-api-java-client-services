@@ -42,8 +42,8 @@ public final class GoogleCloudPolicysimulatorV1alphaBindingExplanation extends c
 
   /**
    * A condition expression that prevents this binding from granting access unless the expression
-   * evaluates to `true`. To learn about IAM Conditions, see
-   * https://cloud.google.com/iam/docs/conditions-overview.
+   * evaluates to `true`. To learn about IAM Conditions, see https://cloud.google.com/iam/docs
+   * /conditions-overview.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +123,8 @@ public final class GoogleCloudPolicysimulatorV1alphaBindingExplanation extends c
 
   /**
    * A condition expression that prevents this binding from granting access unless the expression
-   * evaluates to `true`. To learn about IAM Conditions, see
-   * https://cloud.google.com/iam/docs/conditions-overview.
+   * evaluates to `true`. To learn about IAM Conditions, see https://cloud.google.com/iam/docs
+   * /conditions-overview.
    * @return value or {@code null} for none
    */
   public GoogleTypeExpr getCondition() {
@@ -133,8 +133,8 @@ public final class GoogleCloudPolicysimulatorV1alphaBindingExplanation extends c
 
   /**
    * A condition expression that prevents this binding from granting access unless the expression
-   * evaluates to `true`. To learn about IAM Conditions, see
-   * https://cloud.google.com/iam/docs/conditions-overview.
+   * evaluates to `true`. To learn about IAM Conditions, see https://cloud.google.com/iam/docs
+   * /conditions-overview.
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1alphaBindingExplanation setCondition(GoogleTypeExpr condition) {

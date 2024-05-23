@@ -2766,8 +2766,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Returns permissions that a caller has on the Identity-Aware Proxy protected resource. More
-     * information about managing access via IAP can be found at:
-     * https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
+     * information about managing access via IAP can be found at: https://cloud.google.com/iap/docs
+     * /managing-access#managing_access_via_the_api
      *
      * Create a request for the method "v1.testIamPermissions".
      *
@@ -2795,8 +2795,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Returns permissions that a caller has on the Identity-Aware Proxy protected resource. More
-       * information about managing access via IAP can be found at:
-       * https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
+       * information about managing access via IAP can be found at: https://cloud.google.com/iap/docs
+       * /managing-access#managing_access_via_the_api
        *
        * Create a request for the method "v1.testIamPermissions".
        *

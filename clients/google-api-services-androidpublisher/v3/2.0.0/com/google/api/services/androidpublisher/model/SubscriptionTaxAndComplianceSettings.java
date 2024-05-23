@@ -33,9 +33,8 @@ public final class SubscriptionTaxAndComplianceSettings extends com.google.api.c
   /**
    * Digital content or service classification for products distributed to users in the European
    * Economic Area (EEA). The withdrawal regime under EEA consumer laws depends on this
-   * classification. Refer to the [Help Center
-   * article](https://support.google.com/googleplay/android-developer/answer/10463498) for more
-   * information.
+   * classification. Refer to the [Help Center article](https://support.google.com/googleplay
+   * /android-developer/answer/10463498) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,9 +64,8 @@ public final class SubscriptionTaxAndComplianceSettings extends com.google.api.c
   /**
    * Digital content or service classification for products distributed to users in the European
    * Economic Area (EEA). The withdrawal regime under EEA consumer laws depends on this
-   * classification. Refer to the [Help Center
-   * article](https://support.google.com/googleplay/android-developer/answer/10463498) for more
-   * information.
+   * classification. Refer to the [Help Center article](https://support.google.com/googleplay
+   * /android-developer/answer/10463498) for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getEeaWithdrawalRightType() {
@@ -77,9 +75,8 @@ public final class SubscriptionTaxAndComplianceSettings extends com.google.api.c
   /**
    * Digital content or service classification for products distributed to users in the European
    * Economic Area (EEA). The withdrawal regime under EEA consumer laws depends on this
-   * classification. Refer to the [Help Center
-   * article](https://support.google.com/googleplay/android-developer/answer/10463498) for more
-   * information.
+   * classification. Refer to the [Help Center article](https://support.google.com/googleplay
+   * /android-developer/answer/10463498) for more information.
    * @param eeaWithdrawalRightType eeaWithdrawalRightType or {@code null} for none
    */
   public SubscriptionTaxAndComplianceSettings setEeaWithdrawalRightType(java.lang.String eeaWithdrawalRightType) {

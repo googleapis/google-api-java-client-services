@@ -32,9 +32,9 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class GoogleAppsCloudidentityDevicesV1BrowserAttributes extends com.google.api.client.json.GenericJson {
 
   /**
-   * Represents the current state of the [Chrome browser
-   * attributes](https://cloud.google.com/access-context-manager/docs/browser-attributes) sent by
-   * the [Endpoint Verification extension](https://chromewebstore.google.com/detail/endpoint-
+   * Represents the current state of the [Chrome browser attributes](https://cloud.google.com
+   * /access-context-manager/docs/browser-attributes) sent by the [Endpoint Verification
+   * extension](https://chromewebstore.google.com/detail/endpoint-
    * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
    * The value may be {@code null}.
    */
@@ -56,9 +56,9 @@ public final class GoogleAppsCloudidentityDevicesV1BrowserAttributes extends com
   private String lastProfileSyncTime;
 
   /**
-   * Represents the current state of the [Chrome browser
-   * attributes](https://cloud.google.com/access-context-manager/docs/browser-attributes) sent by
-   * the [Endpoint Verification extension](https://chromewebstore.google.com/detail/endpoint-
+   * Represents the current state of the [Chrome browser attributes](https://cloud.google.com
+   * /access-context-manager/docs/browser-attributes) sent by the [Endpoint Verification
+   * extension](https://chromewebstore.google.com/detail/endpoint-
    * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
    * @return value or {@code null} for none
    */
@@ -67,9 +67,9 @@ public final class GoogleAppsCloudidentityDevicesV1BrowserAttributes extends com
   }
 
   /**
-   * Represents the current state of the [Chrome browser
-   * attributes](https://cloud.google.com/access-context-manager/docs/browser-attributes) sent by
-   * the [Endpoint Verification extension](https://chromewebstore.google.com/detail/endpoint-
+   * Represents the current state of the [Chrome browser attributes](https://cloud.google.com
+   * /access-context-manager/docs/browser-attributes) sent by the [Endpoint Verification
+   * extension](https://chromewebstore.google.com/detail/endpoint-
    * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
    * @param chromeBrowserInfo chromeBrowserInfo or {@code null} for none
    */

@@ -37,8 +37,8 @@ public final class GoogleCloudAiplatformV1beta1NetworkSpec extends com.google.ap
   private java.lang.Boolean enableInternetAccess;
 
   /**
-   * The full name of the Google Compute Engine
-   * [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks)
+   * The full name of the Google Compute Engine [network](https://cloud.google.com//compute/docs
+   * /networks-and-firewalls#networks)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +70,8 @@ public final class GoogleCloudAiplatformV1beta1NetworkSpec extends com.google.ap
   }
 
   /**
-   * The full name of the Google Compute Engine
-   * [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks)
+   * The full name of the Google Compute Engine [network](https://cloud.google.com//compute/docs
+   * /networks-and-firewalls#networks)
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -79,8 +79,8 @@ public final class GoogleCloudAiplatformV1beta1NetworkSpec extends com.google.ap
   }
 
   /**
-   * The full name of the Google Compute Engine
-   * [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks)
+   * The full name of the Google Compute Engine [network](https://cloud.google.com//compute/docs
+   * /networks-and-firewalls#networks)
    * @param network network or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1NetworkSpec setNetwork(java.lang.String network) {

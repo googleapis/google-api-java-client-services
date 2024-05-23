@@ -61,10 +61,10 @@ public final class DocumentOutputConfig extends com.google.api.client.json.Gener
   /**
    * Optional. Specifies the translated document's mime_type. If not specified, the translated
    * file's mime type will be the same as the input file's mime type. Currently only support the
-   * output mime type to be the same as input mime type. - application/pdf -
-   * application/vnd.openxmlformats-officedocument.wordprocessingml.document -
-   * application/vnd.openxmlformats-officedocument.presentationml.presentation -
-   * application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+   * output mime type to be the same as input mime type. - application/pdf - application/vnd
+   * .openxmlformats-officedocument.wordprocessingml.document - application/vnd.openxmlformats-
+   * officedocument.presentationml.presentation - application/vnd.openxmlformats-
+   * officedocument.spreadsheetml.sheet
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,10 +132,10 @@ public final class DocumentOutputConfig extends com.google.api.client.json.Gener
   /**
    * Optional. Specifies the translated document's mime_type. If not specified, the translated
    * file's mime type will be the same as the input file's mime type. Currently only support the
-   * output mime type to be the same as input mime type. - application/pdf -
-   * application/vnd.openxmlformats-officedocument.wordprocessingml.document -
-   * application/vnd.openxmlformats-officedocument.presentationml.presentation -
-   * application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+   * output mime type to be the same as input mime type. - application/pdf - application/vnd
+   * .openxmlformats-officedocument.wordprocessingml.document - application/vnd.openxmlformats-
+   * officedocument.presentationml.presentation - application/vnd.openxmlformats-
+   * officedocument.spreadsheetml.sheet
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -145,10 +145,10 @@ public final class DocumentOutputConfig extends com.google.api.client.json.Gener
   /**
    * Optional. Specifies the translated document's mime_type. If not specified, the translated
    * file's mime type will be the same as the input file's mime type. Currently only support the
-   * output mime type to be the same as input mime type. - application/pdf -
-   * application/vnd.openxmlformats-officedocument.wordprocessingml.document -
-   * application/vnd.openxmlformats-officedocument.presentationml.presentation -
-   * application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+   * output mime type to be the same as input mime type. - application/pdf - application/vnd
+   * .openxmlformats-officedocument.wordprocessingml.document - application/vnd.openxmlformats-
+   * officedocument.presentationml.presentation - application/vnd.openxmlformats-
+   * officedocument.spreadsheetml.sheet
    * @param mimeType mimeType or {@code null} for none
    */
   public DocumentOutputConfig setMimeType(java.lang.String mimeType) {

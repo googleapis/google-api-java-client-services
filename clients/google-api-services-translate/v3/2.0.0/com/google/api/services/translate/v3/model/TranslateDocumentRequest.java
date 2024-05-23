@@ -101,10 +101,10 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
 
   /**
    * Optional. The `model` type requested for this translation. The format depends on model type: -
-   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-
-   * id}/models/{model-id}` - General (built-in) models: `projects/{project-number-or-
-   * id}/locations/{location-id}/models/general/nmt`, If not provided, the default Google model
-   * (NMT) will be used for translation.
+   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-id}/models
+   * /{model-id}` - General (built-in) models: `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/nmt`, If not provided, the default Google model (NMT) will be used for
+   * translation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -293,10 +293,10 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
 
   /**
    * Optional. The `model` type requested for this translation. The format depends on model type: -
-   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-
-   * id}/models/{model-id}` - General (built-in) models: `projects/{project-number-or-
-   * id}/locations/{location-id}/models/general/nmt`, If not provided, the default Google model
-   * (NMT) will be used for translation.
+   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-id}/models
+   * /{model-id}` - General (built-in) models: `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/nmt`, If not provided, the default Google model (NMT) will be used for
+   * translation.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -305,10 +305,10 @@ public final class TranslateDocumentRequest extends com.google.api.client.json.G
 
   /**
    * Optional. The `model` type requested for this translation. The format depends on model type: -
-   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-
-   * id}/models/{model-id}` - General (built-in) models: `projects/{project-number-or-
-   * id}/locations/{location-id}/models/general/nmt`, If not provided, the default Google model
-   * (NMT) will be used for translation.
+   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-id}/models
+   * /{model-id}` - General (built-in) models: `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/nmt`, If not provided, the default Google model (NMT) will be used for
+   * translation.
    * @param model model or {@code null} for none
    */
   public TranslateDocumentRequest setModel(java.lang.String model) {

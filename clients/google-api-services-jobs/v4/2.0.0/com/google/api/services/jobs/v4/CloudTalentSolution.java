@@ -1868,8 +1868,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the company to be retrieved. The format is
-         *        "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for example,
-         *        "projects/api-test-project/tenants/foo/companies/bar".
+         *        "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for example, "projects
+         *        /api-test-project/tenants/foo/companies/bar".
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1896,8 +1896,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the company to be retrieved. The format is
-         *        "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for example,
-         *        "projects/api-test-project/tenants/foo/companies/bar".
+         *        "projects/{project_id}/tenants/{tenant_id}/companies/{company_id}", for example, "projects
+         *        /api-test-project/tenants/foo/companies/bar".
            * @since 1.13
            */
           protected Get(java.lang.String name) {

@@ -39,8 +39,8 @@ public final class ResolveServiceRequest extends com.google.api.client.json.Gene
    * filters: * `annotations.owner` returns endpoints that have a annotation with the key `owner`,
    * this is the same as `annotations:owner` * `annotations.protocol=gRPC` returns endpoints that
    * have key/value `protocol=gRPC` * `address=192.108.1.105` returns endpoints that have this
-   * address * `port>8080` returns endpoints that have port number larger than 8080 *
-   * `name>projects/my-project/locations/us-east1/namespaces/my-namespace/services/my-
+   * address * `port>8080` returns endpoints that have port number larger than 8080 * `name>projects
+   * /my-project/locations/us-east1/namespaces/my-namespace/services/my-
    * service/endpoints/endpoint-c` returns endpoints that have name that is alphabetically later
    * than the string, so "endpoint-e" is returned but "endpoint-a" is not * `name=projects/my-
    * project/locations/us-central1/namespaces/my-namespace/services/my-service/endpoints/ep-1`
@@ -72,8 +72,8 @@ public final class ResolveServiceRequest extends com.google.api.client.json.Gene
    * filters: * `annotations.owner` returns endpoints that have a annotation with the key `owner`,
    * this is the same as `annotations:owner` * `annotations.protocol=gRPC` returns endpoints that
    * have key/value `protocol=gRPC` * `address=192.108.1.105` returns endpoints that have this
-   * address * `port>8080` returns endpoints that have port number larger than 8080 *
-   * `name>projects/my-project/locations/us-east1/namespaces/my-namespace/services/my-
+   * address * `port>8080` returns endpoints that have port number larger than 8080 * `name>projects
+   * /my-project/locations/us-east1/namespaces/my-namespace/services/my-
    * service/endpoints/endpoint-c` returns endpoints that have name that is alphabetically later
    * than the string, so "endpoint-e" is returned but "endpoint-a" is not * `name=projects/my-
    * project/locations/us-central1/namespaces/my-namespace/services/my-service/endpoints/ep-1`
@@ -97,8 +97,8 @@ public final class ResolveServiceRequest extends com.google.api.client.json.Gene
    * filters: * `annotations.owner` returns endpoints that have a annotation with the key `owner`,
    * this is the same as `annotations:owner` * `annotations.protocol=gRPC` returns endpoints that
    * have key/value `protocol=gRPC` * `address=192.108.1.105` returns endpoints that have this
-   * address * `port>8080` returns endpoints that have port number larger than 8080 *
-   * `name>projects/my-project/locations/us-east1/namespaces/my-namespace/services/my-
+   * address * `port>8080` returns endpoints that have port number larger than 8080 * `name>projects
+   * /my-project/locations/us-east1/namespaces/my-namespace/services/my-
    * service/endpoints/endpoint-c` returns endpoints that have name that is alphabetically later
    * than the string, so "endpoint-e" is returned but "endpoint-a" is not * `name=projects/my-
    * project/locations/us-central1/namespaces/my-namespace/services/my-service/endpoints/ep-1`

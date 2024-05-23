@@ -181,7 +181,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The [project ID](https://support.google.com/cloud/answer/6158840?hl=en&ref_topic=6158848) for this
+       * @param parent The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for this
        *        request, in the format `projects/[PROJECT_ID]`.
        * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.RuntimeConfig}
        * @return the request
@@ -210,7 +210,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The [project ID](https://support.google.com/cloud/answer/6158840?hl=en&ref_topic=6158848) for this
+         * @param parent The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for this
        *        request, in the format `projects/[PROJECT_ID]`.
          * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.RuntimeConfig}
          * @since 1.13
@@ -281,13 +281,13 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The [project ID](https://support.google.com/cloud/answer/6158840?hl=en&ref_topic=6158848)
-         * for this request, in the format `projects/[PROJECT_ID]`.
+         * The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for
+         * this request, in the format `projects/[PROJECT_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The [project ID](https://support.google.com/cloud/answer/6158840?hl=en&ref_topic=6158848) for this
+        /** The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for this
        request, in the format `projects/[PROJECT_ID]`.
          */
         public java.lang.String getParent() {
@@ -295,8 +295,8 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The [project ID](https://support.google.com/cloud/answer/6158840?hl=en&ref_topic=6158848)
-         * for this request, in the format `projects/[PROJECT_ID]`.
+         * The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for
+         * this request, in the format `projects/[PROJECT_ID]`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -833,7 +833,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The [project ID](https://support.google.com/cloud/answer/6158840?hl=en&ref_topic=6158848) for this
+       * @param parent The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for this
        *        request, in the format `projects/[PROJECT_ID]`.
        * @return the request
        */
@@ -860,7 +860,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The [project ID](https://support.google.com/cloud/answer/6158840?hl=en&ref_topic=6158848) for this
+         * @param parent The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for this
        *        request, in the format `projects/[PROJECT_ID]`.
          * @since 1.13
          */
@@ -940,13 +940,13 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The [project ID](https://support.google.com/cloud/answer/6158840?hl=en&ref_topic=6158848)
-         * for this request, in the format `projects/[PROJECT_ID]`.
+         * The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for
+         * this request, in the format `projects/[PROJECT_ID]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The [project ID](https://support.google.com/cloud/answer/6158840?hl=en&ref_topic=6158848) for this
+        /** The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for this
        request, in the format `projects/[PROJECT_ID]`.
          */
         public java.lang.String getParent() {
@@ -954,8 +954,8 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
 
         /**
-         * The [project ID](https://support.google.com/cloud/answer/6158840?hl=en&ref_topic=6158848)
-         * for this request, in the format `projects/[PROJECT_ID]`.
+         * The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for
+         * this request, in the format `projects/[PROJECT_ID]`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1823,8 +1823,8 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           /**
            * Creates a variable within the given configuration. You cannot create a variable with a name
            * that is a prefix of an existing variable name, or a name that has an existing variable name as
-           * a prefix. To learn more about creating a variable, read the [Setting and Getting
-           * Data](/deployment-manager/runtime-configurator/set-and-get-variables) documentation.
+           * a prefix. To learn more about creating a variable, read the [Setting and Getting Data
+           * ](/deployment-manager/runtime-configurator/set-and-get-variables) documentation.
            *
            * Create a request for the method "variables.create".
            *

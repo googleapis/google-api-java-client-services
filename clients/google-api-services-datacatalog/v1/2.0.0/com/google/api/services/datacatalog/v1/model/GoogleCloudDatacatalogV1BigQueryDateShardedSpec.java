@@ -18,8 +18,8 @@ package com.google.api.services.datacatalog.v1.model;
 
 /**
  * Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name pattern. For more
- * information, see [Introduction to partitioned tables]
- * (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
+ * information, see [Introduction to partitioned tables] (https://cloud.google.com/bigquery/docs
+ * /partitioned-tables#partitioning_versus_sharding).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed

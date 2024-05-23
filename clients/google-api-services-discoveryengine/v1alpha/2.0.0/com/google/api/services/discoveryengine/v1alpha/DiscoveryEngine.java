@@ -428,8 +428,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
     }
     /**
      * Updates service terms for this project. This method can be used to retroactively accept the
-     * latest terms. Terms available for update: * [Terms for data
-     * use](https://cloud.google.com/retail/data-use-terms)
+     * latest terms. Terms available for update: * [Terms for data use](https://cloud.google.com/retail
+     * /data-use-terms)
      *
      * Create a request for the method "projects.reportConsentChange".
      *

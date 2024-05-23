@@ -18,9 +18,8 @@ package com.google.api.services.osconfig.v1beta.model;
 
 /**
  * Patch details for a VM instance. For more information about reviewing VM instance details, see
- * [Listing all VM instance details for a specific patch
- * job](https://cloud.google.com/compute/docs/os-patch-management/manage-patch-jobs#list-instance-
- * details).
+ * [Listing all VM instance details for a specific patch job](https://cloud.google.com/compute/docs
+ * /os-patch-management/manage-patch-jobs#list-instance-details).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the OS Config API. For a detailed explanation see:

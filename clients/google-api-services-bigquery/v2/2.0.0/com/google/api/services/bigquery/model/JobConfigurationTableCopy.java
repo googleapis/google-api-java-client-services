@@ -18,8 +18,8 @@ package com.google.api.services.bigquery.model;
 
 /**
  * JobConfigurationTableCopy configures a job that copies data from one table to another. For more
- * information on copying tables, see [Copy a
- * table](https://cloud.google.com/bigquery/docs/managing-tables#copy-table).
+ * information on copying tables, see [Copy a table](https://cloud.google.com/bigquery/docs
+ * /managing-tables#copy-table).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:

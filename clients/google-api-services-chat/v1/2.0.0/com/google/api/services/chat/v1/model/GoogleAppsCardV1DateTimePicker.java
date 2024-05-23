@@ -45,8 +45,8 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
 
   /**
    * The name by which the `DateTimePicker` is identified in a form input event. For details about
-   * working with form inputs, see [Receive form
-   * data](https://developers.google.com/workspace/chat/read-form-data).
+   * working with form inputs, see [Receive form data](https://developers.google.com/workspace/chat
+   * /read-form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +110,8 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
 
   /**
    * The name by which the `DateTimePicker` is identified in a form input event. For details about
-   * working with form inputs, see [Receive form
-   * data](https://developers.google.com/workspace/chat/read-form-data).
+   * working with form inputs, see [Receive form data](https://developers.google.com/workspace/chat
+   * /read-form-data).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -120,8 +120,8 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
 
   /**
    * The name by which the `DateTimePicker` is identified in a form input event. For details about
-   * working with form inputs, see [Receive form
-   * data](https://developers.google.com/workspace/chat/read-form-data).
+   * working with form inputs, see [Receive form data](https://developers.google.com/workspace/chat
+   * /read-form-data).
    * @param name name or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setName(java.lang.String name) {

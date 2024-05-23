@@ -37,8 +37,8 @@ public final class PrinterModel extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Make and model as represented in "make_and_model" field in Printer object. eq. "brother
-   * mfc-8840d"
+   * Make and model as represented in "make_and_model" field in Printer object. eq. "brother mfc-
+   * 8840d"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class PrinterModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Make and model as represented in "make_and_model" field in Printer object. eq. "brother
-   * mfc-8840d"
+   * Make and model as represented in "make_and_model" field in Printer object. eq. "brother mfc-
+   * 8840d"
    * @return value or {@code null} for none
    */
   public java.lang.String getMakeAndModel() {
@@ -78,8 +78,8 @@ public final class PrinterModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Make and model as represented in "make_and_model" field in Printer object. eq. "brother
-   * mfc-8840d"
+   * Make and model as represented in "make_and_model" field in Printer object. eq. "brother mfc-
+   * 8840d"
    * @param makeAndModel makeAndModel or {@code null} for none
    */
   public PrinterModel setMakeAndModel(java.lang.String makeAndModel) {

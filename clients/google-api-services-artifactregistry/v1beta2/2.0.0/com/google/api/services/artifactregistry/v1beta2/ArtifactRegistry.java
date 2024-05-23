@@ -2916,8 +2916,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The name of the repository whose files will be listed. For example:
-           *        "projects/p1/locations/us-central1/repositories/repo1
+           * @param parent Required. The name of the repository whose files will be listed. For example: "projects/p1/locations
+           *        /us-central1/repositories/repo1
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2943,8 +2943,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The name of the repository whose files will be listed. For example:
-           *        "projects/p1/locations/us-central1/repositories/repo1
+             * @param parent Required. The name of the repository whose files will be listed. For example: "projects/p1/locations
+           *        /us-central1/repositories/repo1
              * @since 1.13
              */
             protected List(java.lang.String parent) {

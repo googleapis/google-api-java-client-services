@@ -78,8 +78,8 @@ public final class InventorySoftwarePackage extends com.google.api.client.json.G
 
   /**
    * Yum package info. For details about the yum package manager, see
-   * https://access.redhat.com/documentation/en-
-   * us/red_hat_enterprise_linux/6/html/deployment_guide/ch-yum.
+   * https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide
+   * /ch-yum.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,8 +215,8 @@ public final class InventorySoftwarePackage extends com.google.api.client.json.G
 
   /**
    * Yum package info. For details about the yum package manager, see
-   * https://access.redhat.com/documentation/en-
-   * us/red_hat_enterprise_linux/6/html/deployment_guide/ch-yum.
+   * https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide
+   * /ch-yum.
    * @return value or {@code null} for none
    */
   public InventoryVersionedPackage getYumPackage() {
@@ -225,8 +225,8 @@ public final class InventorySoftwarePackage extends com.google.api.client.json.G
 
   /**
    * Yum package info. For details about the yum package manager, see
-   * https://access.redhat.com/documentation/en-
-   * us/red_hat_enterprise_linux/6/html/deployment_guide/ch-yum.
+   * https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide
+   * /ch-yum.
    * @param yumPackage yumPackage or {@code null} for none
    */
   public InventorySoftwarePackage setYumPackage(InventoryVersionedPackage yumPackage) {

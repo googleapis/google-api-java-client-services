@@ -87,13 +87,6 @@ public final class GoogleCloudIntegrationsV1alphaExecution extends com.google.ap
   private java.lang.String name;
 
   /**
-   * Output only. Replay info for the execution
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudIntegrationsV1alphaExecutionReplayInfo replayInfo;
-
-  /**
    * Event parameters come in as part of the request.
    * The value may be {@code null}.
    */
@@ -289,23 +282,6 @@ public final class GoogleCloudIntegrationsV1alphaExecution extends com.google.ap
    */
   public GoogleCloudIntegrationsV1alphaExecution setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Output only. Replay info for the execution
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudIntegrationsV1alphaExecutionReplayInfo getReplayInfo() {
-    return replayInfo;
-  }
-
-  /**
-   * Output only. Replay info for the execution
-   * @param replayInfo replayInfo or {@code null} for none
-   */
-  public GoogleCloudIntegrationsV1alphaExecution setReplayInfo(GoogleCloudIntegrationsV1alphaExecutionReplayInfo replayInfo) {
-    this.replayInfo = replayInfo;
     return this;
   }
 

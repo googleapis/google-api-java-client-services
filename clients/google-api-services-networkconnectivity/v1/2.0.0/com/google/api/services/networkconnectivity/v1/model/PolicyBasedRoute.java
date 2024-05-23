@@ -85,8 +85,8 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Required. Fully-qualified URL of the network that this route applies to, for example:
-   * projects/my-project/global/networks/my-network.
+   * Required. Fully-qualified URL of the network that this route applies to, for example: projects
+   * /my-project/global/networks/my-network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -272,8 +272,8 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Fully-qualified URL of the network that this route applies to, for example:
-   * projects/my-project/global/networks/my-network.
+   * Required. Fully-qualified URL of the network that this route applies to, for example: projects
+   * /my-project/global/networks/my-network.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -281,8 +281,8 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Fully-qualified URL of the network that this route applies to, for example:
-   * projects/my-project/global/networks/my-network.
+   * Required. Fully-qualified URL of the network that this route applies to, for example: projects
+   * /my-project/global/networks/my-network.
    * @param network network or {@code null} for none
    */
   public PolicyBasedRoute setNetwork(java.lang.String network) {

@@ -31,17 +31,8 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique stable account identifier of the member. The identifier corresponds to an
-   * `account_id` provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String accountId;
-
-  /**
-   * Deprecated: use `account_id` instead. The unique stable hashed account identifier of the
-   * member. The identifier corresponds to a `hashed_account_id` provided in a previous
-   * `CreateAssessment` or `AnnotateAssessment` call.
+   * The unique stable hashed user identifier of the member. The identifier corresponds to a
+   * `hashed_account_id` provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,28 +47,8 @@ public final class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership
   private java.lang.String name;
 
   /**
-   * The unique stable account identifier of the member. The identifier corresponds to an
-   * `account_id` provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAccountId() {
-    return accountId;
-  }
-
-  /**
-   * The unique stable account identifier of the member. The identifier corresponds to an
-   * `account_id` provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
-   * @param accountId accountId or {@code null} for none
-   */
-  public GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership setAccountId(java.lang.String accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Deprecated: use `account_id` instead. The unique stable hashed account identifier of the
-   * member. The identifier corresponds to a `hashed_account_id` provided in a previous
-   * `CreateAssessment` or `AnnotateAssessment` call.
+   * The unique stable hashed user identifier of the member. The identifier corresponds to a
+   * `hashed_account_id` provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
    * @see #decodeHashedAccountId()
    * @return value or {@code null} for none
    */
@@ -86,9 +57,8 @@ public final class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership
   }
 
   /**
-   * Deprecated: use `account_id` instead. The unique stable hashed account identifier of the
-   * member. The identifier corresponds to a `hashed_account_id` provided in a previous
-   * `CreateAssessment` or `AnnotateAssessment` call.
+   * The unique stable hashed user identifier of the member. The identifier corresponds to a
+   * `hashed_account_id` provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
    * @see #getHashedAccountId()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -99,9 +69,8 @@ public final class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership
   }
 
   /**
-   * Deprecated: use `account_id` instead. The unique stable hashed account identifier of the
-   * member. The identifier corresponds to a `hashed_account_id` provided in a previous
-   * `CreateAssessment` or `AnnotateAssessment` call.
+   * The unique stable hashed user identifier of the member. The identifier corresponds to a
+   * `hashed_account_id` provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
    * @see #encodeHashedAccountId()
    * @param hashedAccountId hashedAccountId or {@code null} for none
    */
@@ -111,9 +80,8 @@ public final class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroupMembership
   }
 
   /**
-   * Deprecated: use `account_id` instead. The unique stable hashed account identifier of the
-   * member. The identifier corresponds to a `hashed_account_id` provided in a previous
-   * `CreateAssessment` or `AnnotateAssessment` call.
+   * The unique stable hashed user identifier of the member. The identifier corresponds to a
+   * `hashed_account_id` provided in a previous `CreateAssessment` or `AnnotateAssessment` call.
    * @see #setHashedAccountId()
    *
    * <p>

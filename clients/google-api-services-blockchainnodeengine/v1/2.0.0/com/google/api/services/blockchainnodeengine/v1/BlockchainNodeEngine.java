@@ -1273,8 +1273,8 @@ public class BlockchainNodeEngine extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the blockchainnodeengine server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The fully qualified name of the blockchain node. e.g. `projects/my-
-         *        project/locations/us-central1/blockchainNodes/my-node`.
+         * @param name Output only. The fully qualified name of the blockchain node. e.g. `projects/my-project/locations
+         *        /us-central1/blockchainNodes/my-node`.
          * @param content the {@link com.google.api.services.blockchainnodeengine.v1.model.BlockchainNode}
          * @return the request
          */
@@ -1302,8 +1302,8 @@ public class BlockchainNodeEngine extends com.google.api.client.googleapis.servi
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The fully qualified name of the blockchain node. e.g. `projects/my-
-         *        project/locations/us-central1/blockchainNodes/my-node`.
+           * @param name Output only. The fully qualified name of the blockchain node. e.g. `projects/my-project/locations
+         *        /us-central1/blockchainNodes/my-node`.
            * @param content the {@link com.google.api.services.blockchainnodeengine.v1.model.BlockchainNode}
            * @since 1.13
            */
@@ -1379,8 +1379,8 @@ public class BlockchainNodeEngine extends com.google.api.client.googleapis.servi
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The fully qualified name of the blockchain node. e.g. `projects/my-
-         project/locations/us-central1/blockchainNodes/my-node`.
+          /** Output only. The fully qualified name of the blockchain node. e.g. `projects/my-project/locations
+         /us-central1/blockchainNodes/my-node`.
            */
           public java.lang.String getName() {
             return name;

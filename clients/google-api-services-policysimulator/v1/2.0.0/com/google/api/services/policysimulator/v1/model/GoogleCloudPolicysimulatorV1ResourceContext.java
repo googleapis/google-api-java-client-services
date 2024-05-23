@@ -31,12 +31,11 @@ package com.google.api.services.policysimulator.v1.model;
 public final class GoogleCloudPolicysimulatorV1ResourceContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ancestry path of the resource in Google Cloud [resource
-   * hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
-   * represented as a list of relative resource names. An ancestry path starts with the closest
-   * ancestor in the hierarchy and ends at root. If the resource is a project, folder, or
-   * organization, the ancestry path starts from the resource itself. Example:
-   * `["projects/123456789", "folders/5432", "organizations/1234"]`
+   * The ancestry path of the resource in Google Cloud [resource hierarchy](https://cloud.google.com
+   * /resource-manager/docs/cloud-platform-resource-hierarchy), represented as a list of relative
+   * resource names. An ancestry path starts with the closest ancestor in the hierarchy and ends at
+   * root. If the resource is a project, folder, or organization, the ancestry path starts from the
+   * resource itself. Example: `["projects/123456789", "folders/5432", "organizations/1234"]`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,12 +61,11 @@ public final class GoogleCloudPolicysimulatorV1ResourceContext extends com.googl
   private java.lang.String resource;
 
   /**
-   * The ancestry path of the resource in Google Cloud [resource
-   * hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
-   * represented as a list of relative resource names. An ancestry path starts with the closest
-   * ancestor in the hierarchy and ends at root. If the resource is a project, folder, or
-   * organization, the ancestry path starts from the resource itself. Example:
-   * `["projects/123456789", "folders/5432", "organizations/1234"]`
+   * The ancestry path of the resource in Google Cloud [resource hierarchy](https://cloud.google.com
+   * /resource-manager/docs/cloud-platform-resource-hierarchy), represented as a list of relative
+   * resource names. An ancestry path starts with the closest ancestor in the hierarchy and ends at
+   * root. If the resource is a project, folder, or organization, the ancestry path starts from the
+   * resource itself. Example: `["projects/123456789", "folders/5432", "organizations/1234"]`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAncestors() {
@@ -75,12 +73,11 @@ public final class GoogleCloudPolicysimulatorV1ResourceContext extends com.googl
   }
 
   /**
-   * The ancestry path of the resource in Google Cloud [resource
-   * hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
-   * represented as a list of relative resource names. An ancestry path starts with the closest
-   * ancestor in the hierarchy and ends at root. If the resource is a project, folder, or
-   * organization, the ancestry path starts from the resource itself. Example:
-   * `["projects/123456789", "folders/5432", "organizations/1234"]`
+   * The ancestry path of the resource in Google Cloud [resource hierarchy](https://cloud.google.com
+   * /resource-manager/docs/cloud-platform-resource-hierarchy), represented as a list of relative
+   * resource names. An ancestry path starts with the closest ancestor in the hierarchy and ends at
+   * root. If the resource is a project, folder, or organization, the ancestry path starts from the
+   * resource itself. Example: `["projects/123456789", "folders/5432", "organizations/1234"]`
    * @param ancestors ancestors or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1ResourceContext setAncestors(java.util.List<java.lang.String> ancestors) {

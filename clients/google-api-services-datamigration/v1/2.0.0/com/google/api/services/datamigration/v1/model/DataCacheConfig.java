@@ -18,8 +18,8 @@ package com.google.api.services.datamigration.v1.model;
 
 /**
  * Data cache is an optional feature available for Cloud SQL for MySQL Enterprise Plus edition only.
- * For more information on data cache, see [Data cache
- * overview](https://cloud.google.com/sql/help/mysql-data-cache) in Cloud SQL documentation.
+ * For more information on data cache, see [Data cache overview](https://cloud.google.com/sql/help
+ * /mysql-data-cache) in Cloud SQL documentation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation

@@ -52,13 +52,6 @@ public final class EnterpriseCrmEventbusProtoExternalTraffic extends com.google.
   private java.lang.String location;
 
   /**
-   * Enqueue the execution request due to quota issue
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean retryRequestForQuota;
-
-  /**
    * LINT.ThenChange(//depot/google3/enterprise/crm/eventbus/proto/product.proto:product, //depot/go
    * ogle3/java/com/google/enterprise/crm/integrationplatform/api/utils/ConverterUtils.java:source_t
    * o_product)
@@ -115,23 +108,6 @@ public final class EnterpriseCrmEventbusProtoExternalTraffic extends com.google.
    */
   public EnterpriseCrmEventbusProtoExternalTraffic setLocation(java.lang.String location) {
     this.location = location;
-    return this;
-  }
-
-  /**
-   * Enqueue the execution request due to quota issue
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getRetryRequestForQuota() {
-    return retryRequestForQuota;
-  }
-
-  /**
-   * Enqueue the execution request due to quota issue
-   * @param retryRequestForQuota retryRequestForQuota or {@code null} for none
-   */
-  public EnterpriseCrmEventbusProtoExternalTraffic setRetryRequestForQuota(java.lang.Boolean retryRequestForQuota) {
-    this.retryRequestForQuota = retryRequestForQuota;
     return this;
   }
 

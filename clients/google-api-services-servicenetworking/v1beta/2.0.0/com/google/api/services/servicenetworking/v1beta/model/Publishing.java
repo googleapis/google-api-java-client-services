@@ -98,6 +98,8 @@ public final class Publishing extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Link to a *public* URI where users can report issues. Example:
+   * https://issuetracker.google.com/issues/new?component=190865=1161103
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,6 +256,8 @@ public final class Publishing extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Link to a *public* URI where users can report issues. Example:
+   * https://issuetracker.google.com/issues/new?component=190865=1161103
    * @return value or {@code null} for none
    */
   public java.lang.String getNewIssueUri() {
@@ -261,6 +265,8 @@ public final class Publishing extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Link to a *public* URI where users can report issues. Example:
+   * https://issuetracker.google.com/issues/new?component=190865=1161103
    * @param newIssueUri newIssueUri or {@code null} for none
    */
   public Publishing setNewIssueUri(java.lang.String newIssueUri) {

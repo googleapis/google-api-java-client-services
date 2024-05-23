@@ -1581,9 +1581,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Validates a [SafetyNet
-       * token](https://developer.android.com/training/safetynet/attestation#request-attestation-step). If
-       * valid, returns an AppCheckToken.
+       * Validates a [SafetyNet token](https://developer.android.com/training/safetynet/attestation
+       * #request-attestation-step). If valid, returns an AppCheckToken.
        *
        * Create a request for the method "apps.exchangeSafetyNetToken".
        *
@@ -1612,9 +1611,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
             java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
 
         /**
-         * Validates a [SafetyNet
-         * token](https://developer.android.com/training/safetynet/attestation#request-attestation-step).
-         * If valid, returns an AppCheckToken.
+         * Validates a [SafetyNet token](https://developer.android.com/training/safetynet/attestation
+         * #request-attestation-step). If valid, returns an AppCheckToken.
          *
          * Create a request for the method "apps.exchangeSafetyNetToken".
          *

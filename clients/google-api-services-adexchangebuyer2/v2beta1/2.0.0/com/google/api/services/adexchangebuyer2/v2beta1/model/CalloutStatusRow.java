@@ -32,8 +32,8 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 public final class CalloutStatusRow extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the callout status. See [callout-status-
-   * codes](https://developers.google.com/authorized-buyers/rtb/downloads/callout-status-codes).
+   * The ID of the callout status. See [callout-status-codes](https://developers.google.com
+   * /authorized-buyers/rtb/downloads/callout-status-codes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +55,8 @@ public final class CalloutStatusRow extends com.google.api.client.json.GenericJs
   private RowDimensions rowDimensions;
 
   /**
-   * The ID of the callout status. See [callout-status-
-   * codes](https://developers.google.com/authorized-buyers/rtb/downloads/callout-status-codes).
+   * The ID of the callout status. See [callout-status-codes](https://developers.google.com
+   * /authorized-buyers/rtb/downloads/callout-status-codes).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCalloutStatusId() {
@@ -64,8 +64,8 @@ public final class CalloutStatusRow extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The ID of the callout status. See [callout-status-
-   * codes](https://developers.google.com/authorized-buyers/rtb/downloads/callout-status-codes).
+   * The ID of the callout status. See [callout-status-codes](https://developers.google.com
+   * /authorized-buyers/rtb/downloads/callout-status-codes).
    * @param calloutStatusId calloutStatusId or {@code null} for none
    */
   public CalloutStatusRow setCalloutStatusId(java.lang.Integer calloutStatusId) {

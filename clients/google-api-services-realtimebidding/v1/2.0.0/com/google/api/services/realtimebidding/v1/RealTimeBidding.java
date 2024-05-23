@@ -4252,10 +4252,10 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
     }
     /**
      * This has been sunset as of October 2023, and will return an error response if called. For more
-     * information, see the release notes: https://developers.google.com/authorized-
-     * buyers/apis/relnotes#real-time-bidding-api Gets remarketing tag for a buyer. A remarketing tag is
-     * a piece of JavaScript code that can be placed on a web page. When a user visits a page containing
-     * a remarketing tag, Google adds the user to a user list.
+     * information, see the release notes: https://developers.google.com/authorized-buyers/apis/relnotes
+     * #real-time-bidding-api Gets remarketing tag for a buyer. A remarketing tag is a piece of
+     * JavaScript code that can be placed on a web page. When a user visits a page containing a
+     * remarketing tag, Google adds the user to a user list.
      *
      * Create a request for the method "buyers.getRemarketingTag".
      *
@@ -5827,10 +5827,10 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
       }
       /**
        * This has been sunset as of October 2023, and will return an error response if called. For more
-       * information, see the release notes: https://developers.google.com/authorized-
-       * buyers/apis/relnotes#real-time-bidding-api Gets remarketing tag for a buyer. A remarketing tag is
-       * a piece of JavaScript code that can be placed on a web page. When a user visits a page containing
-       * a remarketing tag, Google adds the user to a user list.
+       * information, see the release notes: https://developers.google.com/authorized-buyers/apis/relnotes
+       * #real-time-bidding-api Gets remarketing tag for a buyer. A remarketing tag is a piece of
+       * JavaScript code that can be placed on a web page. When a user visits a page containing a
+       * remarketing tag, Google adds the user to a user list.
        *
        * Create a request for the method "userLists.getRemarketingTag".
        *

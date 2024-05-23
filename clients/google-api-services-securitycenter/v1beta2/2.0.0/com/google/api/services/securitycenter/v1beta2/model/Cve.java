@@ -32,8 +32,8 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class Cve extends com.google.api.client.json.GenericJson {
 
   /**
-   * Describe Common Vulnerability Scoring System specified at
-   * https://www.first.org/cvss/v3.1/specification-document
+   * Describe Common Vulnerability Scoring System specified at https://www.first.org/cvss/v3.1
+   * /specification-document
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +90,8 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean zeroDay;
 
   /**
-   * Describe Common Vulnerability Scoring System specified at
-   * https://www.first.org/cvss/v3.1/specification-document
+   * Describe Common Vulnerability Scoring System specified at https://www.first.org/cvss/v3.1
+   * /specification-document
    * @return value or {@code null} for none
    */
   public Cvssv3 getCvssv3() {
@@ -99,8 +99,8 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Describe Common Vulnerability Scoring System specified at
-   * https://www.first.org/cvss/v3.1/specification-document
+   * Describe Common Vulnerability Scoring System specified at https://www.first.org/cvss/v3.1
+   * /specification-document
    * @param cvssv3 cvssv3 or {@code null} for none
    */
   public Cve setCvssv3(Cvssv3 cvssv3) {

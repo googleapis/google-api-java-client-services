@@ -67,8 +67,8 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    * specify the include-prefix as `logs/y=2015/requests.gz`. * None of the include-prefix values
    * can be empty, if specified. * Each include-prefix must include a distinct portion of the object
    * namespace. No include-prefix may be a prefix of another include-prefix. The max size of
-   * `include_prefixes` is 1000. For more information, see [Filtering objects from
-   * transfers](/storage-transfer/docs/filtering-objects-from-transfers).
+   * `include_prefixes` is 1000. For more information, see [Filtering objects from transfers
+   * ](/storage-transfer/docs/filtering-objects-from-transfers).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,8 +174,8 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    * specify the include-prefix as `logs/y=2015/requests.gz`. * None of the include-prefix values
    * can be empty, if specified. * Each include-prefix must include a distinct portion of the object
    * namespace. No include-prefix may be a prefix of another include-prefix. The max size of
-   * `include_prefixes` is 1000. For more information, see [Filtering objects from
-   * transfers](/storage-transfer/docs/filtering-objects-from-transfers).
+   * `include_prefixes` is 1000. For more information, see [Filtering objects from transfers
+   * ](/storage-transfer/docs/filtering-objects-from-transfers).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludePrefixes() {
@@ -195,8 +195,8 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    * specify the include-prefix as `logs/y=2015/requests.gz`. * None of the include-prefix values
    * can be empty, if specified. * Each include-prefix must include a distinct portion of the object
    * namespace. No include-prefix may be a prefix of another include-prefix. The max size of
-   * `include_prefixes` is 1000. For more information, see [Filtering objects from
-   * transfers](/storage-transfer/docs/filtering-objects-from-transfers).
+   * `include_prefixes` is 1000. For more information, see [Filtering objects from transfers
+   * ](/storage-transfer/docs/filtering-objects-from-transfers).
    * @param includePrefixes includePrefixes or {@code null} for none
    */
   public ObjectConditions setIncludePrefixes(java.util.List<java.lang.String> includePrefixes) {

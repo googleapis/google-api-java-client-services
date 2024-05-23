@@ -42,9 +42,8 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. The service account to use to write to BigQuery. The subscription creator or updater
    * that specifies this field must have `iam.serviceAccounts.actAs` permission on the service
-   * account. If not specified, the Pub/Sub [service
-   * agent](https://cloud.google.com/iam/docs/service-agents), service-{project_number}@gcp-sa-
-   * pubsub.iam.gserviceaccount.com, is used.
+   * account. If not specified, the Pub/Sub [service agent](https://cloud.google.com/iam/docs
+   * /service-agents), service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,9 +117,8 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. The service account to use to write to BigQuery. The subscription creator or updater
    * that specifies this field must have `iam.serviceAccounts.actAs` permission on the service
-   * account. If not specified, the Pub/Sub [service
-   * agent](https://cloud.google.com/iam/docs/service-agents), service-{project_number}@gcp-sa-
-   * pubsub.iam.gserviceaccount.com, is used.
+   * account. If not specified, the Pub/Sub [service agent](https://cloud.google.com/iam/docs
+   * /service-agents), service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountEmail() {
@@ -130,9 +128,8 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. The service account to use to write to BigQuery. The subscription creator or updater
    * that specifies this field must have `iam.serviceAccounts.actAs` permission on the service
-   * account. If not specified, the Pub/Sub [service
-   * agent](https://cloud.google.com/iam/docs/service-agents), service-{project_number}@gcp-sa-
-   * pubsub.iam.gserviceaccount.com, is used.
+   * account. If not specified, the Pub/Sub [service agent](https://cloud.google.com/iam/docs
+   * /service-agents), service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.
    * @param serviceAccountEmail serviceAccountEmail or {@code null} for none
    */
   public BigQueryConfig setServiceAccountEmail(java.lang.String serviceAccountEmail) {

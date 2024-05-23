@@ -5221,9 +5221,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
        resource type's `name` value format is described below: *
        [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get): `roles/{ROLE_NAME}`.
-       This method returns results from all [predefined
-       roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM. Example
-       request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` *
+       This method returns results from all [predefined roles](https://cloud.google.com/iam/docs
+       /understanding-roles#predefined_roles) in IAM. Example request URL:
+       `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` *
        [projects.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
@@ -12256,9 +12256,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
        resource type's `name` value format is described below: *
        [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get): `roles/{ROLE_NAME}`.
-       This method returns results from all [predefined
-       roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM. Example
-       request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` *
+       This method returns results from all [predefined roles](https://cloud.google.com/iam/docs
+       /understanding-roles#predefined_roles) in IAM. Example request URL:
+       `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` *
        [projects.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
@@ -13088,8 +13088,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the project associated with the service accounts, such as
-       *        `projects/my-project-123`.
+       * @param name Required. The resource name of the project associated with the service accounts, such as `projects
+       *        /my-project-123`.
        * @param content the {@link com.google.api.services.iam.v1.model.CreateServiceAccountRequest}
        * @return the request
        */
@@ -13116,8 +13116,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the project associated with the service accounts, such as
-       *        `projects/my-project-123`.
+         * @param name Required. The resource name of the project associated with the service accounts, such as `projects
+       *        /my-project-123`.
          * @param content the {@link com.google.api.services.iam.v1.model.CreateServiceAccountRequest}
          * @since 1.13
          */
@@ -13193,8 +13193,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the project associated with the service accounts, such as
-       `projects/my-project-123`.
+        /** Required. The resource name of the project associated with the service accounts, such as `projects
+       /my-project-123`.
          */
         public java.lang.String getName() {
           return name;
@@ -14160,8 +14160,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the iam server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the project associated with the service accounts, such as
-       *        `projects/my-project-123`.
+       * @param name Required. The resource name of the project associated with the service accounts, such as `projects
+       *        /my-project-123`.
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -14187,8 +14187,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the project associated with the service accounts, such as
-       *        `projects/my-project-123`.
+         * @param name Required. The resource name of the project associated with the service accounts, such as `projects
+       *        /my-project-123`.
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -14273,8 +14273,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the project associated with the service accounts, such as
-       `projects/my-project-123`.
+        /** Required. The resource name of the project associated with the service accounts, such as `projects
+       /my-project-123`.
          */
         public java.lang.String getName() {
           return name;
@@ -14566,8 +14566,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * the resource's `getIamPolicy` method to get its current IAM policy. 2. Edit the policy so that
          * it binds the service account to an IAM role for the resource. 3. Call the resource's
          * `setIamPolicy` method to update its IAM policy. For detailed instructions, see [Manage access
-         * to project, folders, and organizations](https://cloud.google.com/iam/help/service-
-         * accounts/granting-access-to-service-accounts) or [Manage access to other
+         * to project, folders, and organizations](https://cloud.google.com/iam/help/service-accounts
+         * /granting-access-to-service-accounts) or [Manage access to other
          * resources](https://cloud.google.com/iam/help/access/manage-other-resources).
          *
          * Create a request for the method "serviceAccounts.setIamPolicy".
@@ -15907,9 +15907,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
          `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-` wildcard
          character, because it can cause response messages to contain misleading error codes. For example,
-         if you try to access the service account key
-         `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the response
-         contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
+         if you try to access the service account key `projects/-/serviceAccounts/fake@example.com/keys
+         /fake-key`, which does not exist, the response contains an HTTP `403 Forbidden` error instead of a
+         `404 Not Found` error.
            */
           public java.lang.String getName() {
             return name;
@@ -16089,9 +16089,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
          `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-` wildcard
          character, because it can cause response messages to contain misleading error codes. For example,
-         if you try to access the service account key
-         `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the response
-         contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
+         if you try to access the service account key `projects/-/serviceAccounts/fake@example.com/keys
+         /fake-key`, which does not exist, the response contains an HTTP `403 Forbidden` error instead of a
+         `404 Not Found` error.
            */
           public java.lang.String getName() {
             return name;
@@ -16268,9 +16268,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
          `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-` wildcard
          character, because it can cause response messages to contain misleading error codes. For example,
-         if you try to access the service account key
-         `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the response
-         contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
+         if you try to access the service account key `projects/-/serviceAccounts/fake@example.com/keys
+         /fake-key`, which does not exist, the response contains an HTTP `403 Forbidden` error instead of a
+         `404 Not Found` error.
            */
           public java.lang.String getName() {
             return name;
@@ -16455,9 +16455,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          `projects/-/serviceAccounts/{EMAIL_ADDRESS}/keys/{KEY_ID}` *
          `projects/-/serviceAccounts/{UNIQUE_ID}/keys/{KEY_ID}` When possible, avoid using the `-` wildcard
          character, because it can cause response messages to contain misleading error codes. For example,
-         if you try to access the service account key
-         `projects/-/serviceAccounts/fake@example.com/keys/fake-key`, which does not exist, the response
-         contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
+         if you try to access the service account key `projects/-/serviceAccounts/fake@example.com/keys
+         /fake-key`, which does not exist, the response contains an HTTP `403 Forbidden` error instead of a
+         `404 Not Found` error.
            */
           public java.lang.String getName() {
             return name;
@@ -17242,9 +17242,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
      [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
      resource type's `name` value format is described below: *
      [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get): `roles/{ROLE_NAME}`.
-     This method returns results from all [predefined
-     roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM. Example
-     request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` *
+     This method returns results from all [predefined roles](https://cloud.google.com/iam/docs
+     /understanding-roles#predefined_roles) in IAM. Example request URL:
+     `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` *
      [projects.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
      `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
      roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
@@ -17452,8 +17452,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
        * Example request URL: `https://iam.googleapis.com/v1/roles` * [projects.roles.list](https://
        * cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list): `projects/{PROJECT_ID}`.
-       * This method lists all project-level [custom
-       * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
+       * This method lists all project-level [custom roles](https://cloud.google.com/iam/docs
+       * /understanding-custom-roles). Example request URL:
        * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.list](ht
        * tps://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
        * `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
@@ -17498,8 +17498,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
        * Example request URL: `https://iam.googleapis.com/v1/roles` * [projects.roles.list](https://
        * cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list): `projects/{PROJECT_ID}`.
-       * This method lists all project-level [custom
-       * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
+       * This method lists all project-level [custom roles](https://cloud.google.com/iam/docs
+       * /understanding-custom-roles). Example request URL:
        * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.list](ht
        * tps://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
        * `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom

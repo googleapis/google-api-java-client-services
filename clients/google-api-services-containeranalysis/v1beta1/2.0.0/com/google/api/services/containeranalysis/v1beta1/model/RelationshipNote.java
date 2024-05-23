@@ -17,8 +17,8 @@
 package com.google.api.services.containeranalysis.v1beta1.model;
 
 /**
- * RelationshipNote represents an SPDX Relationship section: https://spdx.github.io/spdx-
- * spec/7-relationships-between-SPDX-elements/
+ * RelationshipNote represents an SPDX Relationship section: https://spdx.github.io/spdx-spec/7
+ * -relationships-between-SPDX-elements/
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation

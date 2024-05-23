@@ -111,9 +111,8 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   private java.lang.String vertexAiModelId;
 
   /**
-   * Output only. The model version in the [Vertex AI Model
-   * Registry](https://cloud.google.com/vertex-ai/docs/model-registry/introduction) for this
-   * training run.
+   * Output only. The model version in the [Vertex AI Model Registry](https://cloud.google.com
+   * /vertex-ai/docs/model-registry/introduction) for this training run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,9 +284,8 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The model version in the [Vertex AI Model
-   * Registry](https://cloud.google.com/vertex-ai/docs/model-registry/introduction) for this
-   * training run.
+   * Output only. The model version in the [Vertex AI Model Registry](https://cloud.google.com
+   * /vertex-ai/docs/model-registry/introduction) for this training run.
    * @return value or {@code null} for none
    */
   public java.lang.String getVertexAiModelVersion() {
@@ -295,9 +293,8 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The model version in the [Vertex AI Model
-   * Registry](https://cloud.google.com/vertex-ai/docs/model-registry/introduction) for this
-   * training run.
+   * Output only. The model version in the [Vertex AI Model Registry](https://cloud.google.com
+   * /vertex-ai/docs/model-registry/introduction) for this training run.
    * @param vertexAiModelVersion vertexAiModelVersion or {@code null} for none
    */
   public TrainingRun setVertexAiModelVersion(java.lang.String vertexAiModelVersion) {

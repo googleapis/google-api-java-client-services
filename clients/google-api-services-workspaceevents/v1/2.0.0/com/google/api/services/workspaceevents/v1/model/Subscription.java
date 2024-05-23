@@ -34,9 +34,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The user who authorized the creation of the subscription. Format: `users/{user}`
-   * For Google Workspace users, the `{user}` value is the
-   * [`user.id`](https://developers.google.com/admin-
-   * sdk/directory/reference/rest/v1/users#User.FIELDS.ids) field from the Directory API.
+   * For Google Workspace users, the `{user}` value is the [`user.id`](https://developers.google.com
+   * /admin-sdk/directory/reference/rest/v1/users#User.FIELDS.ids) field from the Directory API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,9 +164,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The user who authorized the creation of the subscription. Format: `users/{user}`
-   * For Google Workspace users, the `{user}` value is the
-   * [`user.id`](https://developers.google.com/admin-
-   * sdk/directory/reference/rest/v1/users#User.FIELDS.ids) field from the Directory API.
+   * For Google Workspace users, the `{user}` value is the [`user.id`](https://developers.google.com
+   * /admin-sdk/directory/reference/rest/v1/users#User.FIELDS.ids) field from the Directory API.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthority() {
@@ -176,9 +174,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The user who authorized the creation of the subscription. Format: `users/{user}`
-   * For Google Workspace users, the `{user}` value is the
-   * [`user.id`](https://developers.google.com/admin-
-   * sdk/directory/reference/rest/v1/users#User.FIELDS.ids) field from the Directory API.
+   * For Google Workspace users, the `{user}` value is the [`user.id`](https://developers.google.com
+   * /admin-sdk/directory/reference/rest/v1/users#User.FIELDS.ids) field from the Directory API.
    * @param authority authority or {@code null} for none
    */
   public Subscription setAuthority(java.lang.String authority) {

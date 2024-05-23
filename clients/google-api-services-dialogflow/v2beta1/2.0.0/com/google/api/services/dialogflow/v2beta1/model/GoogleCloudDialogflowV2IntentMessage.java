@@ -18,8 +18,8 @@ package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
  * A rich response message. Corresponds to the intent `Response` field in the Dialogflow console.
- * For more information, see [Rich response
- * messages](https://cloud.google.com/dialogflow/docs/intents-rich-messages).
+ * For more information, see [Rich response messages](https://cloud.google.com/dialogflow/docs
+ * /intents-rich-messages).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

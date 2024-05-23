@@ -41,8 +41,8 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
    * can't be published to Pub/Sub, errors are logged to Cloud Logging (see [Viewing error logs in
    * Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). If the number of
    * errors exceeds a certain rate, some aren't submitted. Note that not all operations trigger
-   * notifications, see [Configuring Pub/Sub
-   * notifications](https://cloud.google.com/healthcare/docs/how-tos/pubsub) for specific details.
+   * notifications, see [Configuring Pub/Sub notifications](https://cloud.google.com/healthcare/docs
+   * /how-tos/pubsub) for specific details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
    * can't be published to Pub/Sub, errors are logged to Cloud Logging (see [Viewing error logs in
    * Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). If the number of
    * errors exceeds a certain rate, some aren't submitted. Note that not all operations trigger
-   * notifications, see [Configuring Pub/Sub
-   * notifications](https://cloud.google.com/healthcare/docs/how-tos/pubsub) for specific details.
+   * notifications, see [Configuring Pub/Sub notifications](https://cloud.google.com/healthcare/docs
+   * /how-tos/pubsub) for specific details.
    * @return value or {@code null} for none
    */
   public java.lang.String getPubsubTopic() {
@@ -88,8 +88,8 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
    * can't be published to Pub/Sub, errors are logged to Cloud Logging (see [Viewing error logs in
    * Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). If the number of
    * errors exceeds a certain rate, some aren't submitted. Note that not all operations trigger
-   * notifications, see [Configuring Pub/Sub
-   * notifications](https://cloud.google.com/healthcare/docs/how-tos/pubsub) for specific details.
+   * notifications, see [Configuring Pub/Sub notifications](https://cloud.google.com/healthcare/docs
+   * /how-tos/pubsub) for specific details.
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */
   public NotificationConfig setPubsubTopic(java.lang.String pubsubTopic) {

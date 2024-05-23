@@ -17,8 +17,8 @@
 package com.google.api.services.container.model;
 
 /**
- * Configuration options for the NetworkPolicy feature.
- * https://kubernetes.io/docs/concepts/services-networking/networkpolicies/
+ * Configuration options for the NetworkPolicy feature. https://kubernetes.io/docs/concepts
+ * /services-networking/networkpolicies/
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

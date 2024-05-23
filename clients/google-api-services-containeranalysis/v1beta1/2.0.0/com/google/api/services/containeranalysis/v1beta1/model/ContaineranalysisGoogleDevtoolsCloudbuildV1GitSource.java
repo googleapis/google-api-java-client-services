@@ -44,16 +44,16 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource extends 
    * or any Git ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository;
    * therefore make sure that the string you provide for `revision` is parsable by the command. For
    * information on string values accepted by `git fetch`, see https://git-
-   * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see
-   * https://git-scm.com/docs/git-fetch.
+   * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see https
+   * ://git-scm.com/docs/git-fetch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String revision;
 
   /**
-   * Required. Location of the Git repo to build. This will be used as a `git remote`, see
-   * https://git-scm.com/docs/git-remote.
+   * Required. Location of the Git repo to build. This will be used as a `git remote`, see https
+   * ://git-scm.com/docs/git-remote.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +85,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource extends 
    * or any Git ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository;
    * therefore make sure that the string you provide for `revision` is parsable by the command. For
    * information on string values accepted by `git fetch`, see https://git-
-   * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see
-   * https://git-scm.com/docs/git-fetch.
+   * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see https
+   * ://git-scm.com/docs/git-fetch.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevision() {
@@ -98,8 +98,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource extends 
    * or any Git ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository;
    * therefore make sure that the string you provide for `revision` is parsable by the command. For
    * information on string values accepted by `git fetch`, see https://git-
-   * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see
-   * https://git-scm.com/docs/git-fetch.
+   * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see https
+   * ://git-scm.com/docs/git-fetch.
    * @param revision revision or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource setRevision(java.lang.String revision) {
@@ -108,8 +108,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource extends 
   }
 
   /**
-   * Required. Location of the Git repo to build. This will be used as a `git remote`, see
-   * https://git-scm.com/docs/git-remote.
+   * Required. Location of the Git repo to build. This will be used as a `git remote`, see https
+   * ://git-scm.com/docs/git-remote.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -117,8 +117,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource extends 
   }
 
   /**
-   * Required. Location of the Git repo to build. This will be used as a `git remote`, see
-   * https://git-scm.com/docs/git-remote.
+   * Required. Location of the Git repo to build. This will be used as a `git remote`, see https
+   * ://git-scm.com/docs/git-remote.
    * @param url url or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource setUrl(java.lang.String url) {

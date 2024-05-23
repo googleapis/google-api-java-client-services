@@ -278,9 +278,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private SlashCommand slashCommand;
 
   /**
-   * If your Chat app [authenticates as a
-   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
-   * output populates the
+   * If your Chat app [authenticates as a user](https://developers.google.com/workspace/chat
+   * /authenticate-authorize-chat-user), the output populates the
    * [space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces) `name`.
    * The value may be {@code null}.
    */
@@ -796,9 +795,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If your Chat app [authenticates as a
-   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
-   * output populates the
+   * If your Chat app [authenticates as a user](https://developers.google.com/workspace/chat
+   * /authenticate-authorize-chat-user), the output populates the
    * [space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces) `name`.
    * @return value or {@code null} for none
    */
@@ -807,9 +805,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If your Chat app [authenticates as a
-   * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
-   * output populates the
+   * If your Chat app [authenticates as a user](https://developers.google.com/workspace/chat
+   * /authenticate-authorize-chat-user), the output populates the
    * [space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces) `name`.
    * @param space space or {@code null} for none
    */

@@ -283,9 +283,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Target project and location to make a call. Format: `projects/{project-
-         * id}/locations/{location-id}`. If no location is specified, a region will be chosen
-         * automatically.
+         * Target project and location to make a call. Format: `projects/{project-id}/locations
+         * /{location-id}`. If no location is specified, a region will be chosen automatically.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
@@ -298,9 +297,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Target project and location to make a call. Format: `projects/{project-
-         * id}/locations/{location-id}`. If no location is specified, a region will be chosen
-         * automatically.
+         * Target project and location to make a call. Format: `projects/{project-id}/locations
+         * /{location-id}`. If no location is specified, a region will be chosen automatically.
          */
         public BatchProcess setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -427,9 +425,9 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Target project and location to make a call. Format: `projects/{project-
-         * id}/locations/{location-id}`. If no location is specified, a region will be chosen
-         * automatically. This field is only populated when used in ProcessDocument method.
+         * Target project and location to make a call. Format: `projects/{project-id}/locations
+         * /{location-id}`. If no location is specified, a region will be chosen automatically. This
+         * field is only populated when used in ProcessDocument method.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
@@ -443,9 +441,9 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Target project and location to make a call. Format: `projects/{project-
-         * id}/locations/{location-id}`. If no location is specified, a region will be chosen
-         * automatically. This field is only populated when used in ProcessDocument method.
+         * Target project and location to make a call. Format: `projects/{project-id}/locations
+         * /{location-id}`. If no location is specified, a region will be chosen automatically. This
+         * field is only populated when used in ProcessDocument method.
          */
         public Process setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -614,9 +612,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Target project and location to make a call. Format: `projects/{project-
-           * id}/locations/{location-id}`. If no location is specified, a region will be chosen
-           * automatically.
+           * Target project and location to make a call. Format: `projects/{project-id}/locations
+           * /{location-id}`. If no location is specified, a region will be chosen automatically.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -629,9 +626,8 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Target project and location to make a call. Format: `projects/{project-
-           * id}/locations/{location-id}`. If no location is specified, a region will be chosen
-           * automatically.
+           * Target project and location to make a call. Format: `projects/{project-id}/locations
+           * /{location-id}`. If no location is specified, a region will be chosen automatically.
            */
           public BatchProcess setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -758,9 +754,9 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Target project and location to make a call. Format: `projects/{project-
-           * id}/locations/{location-id}`. If no location is specified, a region will be chosen
-           * automatically. This field is only populated when used in ProcessDocument method.
+           * Target project and location to make a call. Format: `projects/{project-id}/locations
+           * /{location-id}`. If no location is specified, a region will be chosen automatically.
+           * This field is only populated when used in ProcessDocument method.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -774,9 +770,9 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Target project and location to make a call. Format: `projects/{project-
-           * id}/locations/{location-id}`. If no location is specified, a region will be chosen
-           * automatically. This field is only populated when used in ProcessDocument method.
+           * Target project and location to make a call. Format: `projects/{project-id}/locations
+           * /{location-id}`. If no location is specified, a region will be chosen automatically.
+           * This field is only populated when used in ProcessDocument method.
            */
           public Process setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

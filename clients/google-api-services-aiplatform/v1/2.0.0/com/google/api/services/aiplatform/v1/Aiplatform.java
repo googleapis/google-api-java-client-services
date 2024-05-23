@@ -16084,8 +16084,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Perform an online prediction with an arbitrary HTTP payload. The response includes the following
-         * HTTP headers: * `X-Vertex-AI-Endpoint-Id`: ID of the Endpoint that served this prediction. *
-         * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's DeployedModel that served this prediction.
+         * HTTP headers: * `X-Vertex-AI-Endpoint-Id`: ID of the Endpoint that served this prediction. * `X
+         * -Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's DeployedModel that served this prediction.
          *
          * Create a request for the method "endpoints.rawPredict".
          *
@@ -64455,8 +64455,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
           /**
            * Perform an online prediction with an arbitrary HTTP payload. The response includes the following
-           * HTTP headers: * `X-Vertex-AI-Endpoint-Id`: ID of the Endpoint that served this prediction. *
-           * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's DeployedModel that served this prediction.
+           * HTTP headers: * `X-Vertex-AI-Endpoint-Id`: ID of the Endpoint that served this prediction. * `X
+           * -Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's DeployedModel that served this prediction.
            *
            * Create a request for the method "models.rawPredict".
            *

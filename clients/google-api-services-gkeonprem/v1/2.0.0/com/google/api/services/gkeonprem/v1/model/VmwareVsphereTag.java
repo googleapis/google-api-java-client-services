@@ -18,8 +18,8 @@ package com.google.api.services.gkeonprem.v1.model;
 
 /**
  * VmwareVsphereTag describes a vSphere tag to be placed on VMs in the node pool. For more
- * information, see https://docs.vmware.com/en/VMware-
- * vSphere/7.0/com.vmware.vsphere.vcenterhost.doc/GUID-E8E854DD-AA97-4E0C-8419-CE84F93C4058.html
+ * information, see https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vcenterhost.doc
+ * /GUID-E8E854DD-AA97-4E0C-8419-CE84F93C4058.html
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Anthos On-Prem API. For a detailed explanation see:

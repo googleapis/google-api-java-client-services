@@ -31,12 +31,16 @@ package com.google.api.services.streetviewpublish.v1.model;
 public final class BatchDeletePhotosRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. IDs of the Photos. HTTP GET requests require the following syntax for the URL query
+   * parameter: `photoIds==&...`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> photoIds;
 
   /**
+   * Required. IDs of the Photos. HTTP GET requests require the following syntax for the URL query
+   * parameter: `photoIds==&...`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPhotoIds() {
@@ -44,6 +48,8 @@ public final class BatchDeletePhotosRequest extends com.google.api.client.json.G
   }
 
   /**
+   * Required. IDs of the Photos. HTTP GET requests require the following syntax for the URL query
+   * parameter: `photoIds==&...`.
    * @param photoIds photoIds or {@code null} for none
    */
   public BatchDeletePhotosRequest setPhotoIds(java.util.List<java.lang.String> photoIds) {

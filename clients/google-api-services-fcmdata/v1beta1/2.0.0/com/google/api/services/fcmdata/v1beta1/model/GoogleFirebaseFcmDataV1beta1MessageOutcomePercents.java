@@ -60,10 +60,10 @@ public final class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends co
 
   /**
    * The percentage of accepted messages that were dropped due to [too many undelivered non-
-   * collapsible messages](https://firebase.google.com/docs/cloud-messaging/concept-
-   * options#collapsible_and_non-collapsible_messages). Specifically, each app instance can only
-   * have 100 pending messages stored on our servers for a device which is disconnected. When that
-   * device reconnects, those messages are delivered. When there are more than the maximum pending
+   * collapsible messages](https://firebase.google.com/docs/cloud-messaging/concept-options
+   * #collapsible_and_non-collapsible_messages). Specifically, each app instance can only have 100
+   * pending messages stored on our servers for a device which is disconnected. When that device
+   * reconnects, those messages are delivered. When there are more than the maximum pending
    * messages, we call [OnDeletedMessages()](https://firebase.google.com/docs/cloud-
    * messaging/android/receive#override-ondeletedmessages) in our SDK instead of delivering the
    * messages.
@@ -145,10 +145,10 @@ public final class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends co
 
   /**
    * The percentage of accepted messages that were dropped due to [too many undelivered non-
-   * collapsible messages](https://firebase.google.com/docs/cloud-messaging/concept-
-   * options#collapsible_and_non-collapsible_messages). Specifically, each app instance can only
-   * have 100 pending messages stored on our servers for a device which is disconnected. When that
-   * device reconnects, those messages are delivered. When there are more than the maximum pending
+   * collapsible messages](https://firebase.google.com/docs/cloud-messaging/concept-options
+   * #collapsible_and_non-collapsible_messages). Specifically, each app instance can only have 100
+   * pending messages stored on our servers for a device which is disconnected. When that device
+   * reconnects, those messages are delivered. When there are more than the maximum pending
    * messages, we call [OnDeletedMessages()](https://firebase.google.com/docs/cloud-
    * messaging/android/receive#override-ondeletedmessages) in our SDK instead of delivering the
    * messages.
@@ -160,10 +160,10 @@ public final class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends co
 
   /**
    * The percentage of accepted messages that were dropped due to [too many undelivered non-
-   * collapsible messages](https://firebase.google.com/docs/cloud-messaging/concept-
-   * options#collapsible_and_non-collapsible_messages). Specifically, each app instance can only
-   * have 100 pending messages stored on our servers for a device which is disconnected. When that
-   * device reconnects, those messages are delivered. When there are more than the maximum pending
+   * collapsible messages](https://firebase.google.com/docs/cloud-messaging/concept-options
+   * #collapsible_and_non-collapsible_messages). Specifically, each app instance can only have 100
+   * pending messages stored on our servers for a device which is disconnected. When that device
+   * reconnects, those messages are delivered. When there are more than the maximum pending
    * messages, we call [OnDeletedMessages()](https://firebase.google.com/docs/cloud-
    * messaging/android/receive#override-ondeletedmessages) in our SDK instead of delivering the
    * messages.

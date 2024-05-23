@@ -1106,8 +1106,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
      * counted. Use of the App Check token elsewhere will not mark the token as being already consumed.
      * The caller must have the [`firebaseappcheck.appCheckTokens.verify`](https://firebase.google.com/d
      * ocs/projects/iam/permissions#app-check) permission to call this method. This permission is part
-     * of the [Firebase App Check Token Verifier
-     * role](https://firebase.google.com/docs/projects/iam/roles-predefined-product#app-check).
+     * of the [Firebase App Check Token Verifier role](https://firebase.google.com/docs/projects/iam
+     * /roles-predefined-product#app-check).
      *
      * Create a request for the method "projects.verifyAppCheckToken".
      *
@@ -1429,9 +1429,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the
-         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
-         * started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
+         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String app;
@@ -1460,9 +1459,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the
-         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
-         * started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
+         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
          */
         public ExchangeAppAttestAssertion setApp(java.lang.String app) {
           if (!getSuppressPatternChecks()) {
@@ -1618,9 +1616,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the
-         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
-         * started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
+         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String app;
@@ -1649,9 +1646,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the
-         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
-         * started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
+         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
          */
         public ExchangeAppAttestAttestation setApp(java.lang.String app) {
           if (!getSuppressPatternChecks()) {
@@ -1958,9 +1954,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the
-         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
-         * started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
+         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String app;
@@ -1989,9 +1984,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the
-         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
-         * started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
+         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
          */
         public ExchangeDebugToken setApp(java.lang.String app) {
           if (!getSuppressPatternChecks()) {
@@ -2779,9 +2773,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Validates a [SafetyNet
-       * token](https://developer.android.com/training/safetynet/attestation#request-attestation-step). If
-       * valid, returns an AppCheckToken.
+       * Validates a [SafetyNet token](https://developer.android.com/training/safetynet/attestation
+       * #request-attestation-step). If valid, returns an AppCheckToken.
        *
        * Create a request for the method "apps.exchangeSafetyNetToken".
        *
@@ -2810,9 +2803,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
             java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
 
         /**
-         * Validates a [SafetyNet
-         * token](https://developer.android.com/training/safetynet/attestation#request-attestation-step).
-         * If valid, returns an AppCheckToken.
+         * Validates a [SafetyNet token](https://developer.android.com/training/safetynet/attestation
+         * #request-attestation-step). If valid, returns an AppCheckToken.
          *
          * Create a request for the method "apps.exchangeSafetyNetToken".
          *
@@ -3070,9 +3062,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the
-         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
-         * started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
+         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String app;
@@ -3101,9 +3092,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the
-         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
-         * started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
+         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
          */
         public GenerateAppAttestChallenge setApp(java.lang.String app) {
           if (!getSuppressPatternChecks()) {

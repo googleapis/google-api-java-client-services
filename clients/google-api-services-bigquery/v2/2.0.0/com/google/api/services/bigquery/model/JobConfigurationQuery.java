@@ -93,9 +93,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   /**
    * Optional. Specifies the default dataset to use for unqualified table names in the query. This
    * setting does not alter behavior of unqualified dataset names. Setting the system variable
-   * `@@dataset_id` achieves the same behavior. See
-   * https://cloud.google.com/bigquery/docs/reference/system-variables for more information on
-   * system variables.
+   * `@@dataset_id` achieves the same behavior. See https://cloud.google.com/bigquery/docs/reference
+   * /system-variables for more information on system variables.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -449,9 +448,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   /**
    * Optional. Specifies the default dataset to use for unqualified table names in the query. This
    * setting does not alter behavior of unqualified dataset names. Setting the system variable
-   * `@@dataset_id` achieves the same behavior. See
-   * https://cloud.google.com/bigquery/docs/reference/system-variables for more information on
-   * system variables.
+   * `@@dataset_id` achieves the same behavior. See https://cloud.google.com/bigquery/docs/reference
+   * /system-variables for more information on system variables.
    * @return value or {@code null} for none
    */
   public DatasetReference getDefaultDataset() {
@@ -461,9 +459,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   /**
    * Optional. Specifies the default dataset to use for unqualified table names in the query. This
    * setting does not alter behavior of unqualified dataset names. Setting the system variable
-   * `@@dataset_id` achieves the same behavior. See
-   * https://cloud.google.com/bigquery/docs/reference/system-variables for more information on
-   * system variables.
+   * `@@dataset_id` achieves the same behavior. See https://cloud.google.com/bigquery/docs/reference
+   * /system-variables for more information on system variables.
    * @param defaultDataset defaultDataset or {@code null} for none
    */
   public JobConfigurationQuery setDefaultDataset(DatasetReference defaultDataset) {

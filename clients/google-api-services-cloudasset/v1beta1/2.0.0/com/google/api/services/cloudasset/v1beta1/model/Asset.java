@@ -20,8 +20,8 @@ package com.google.api.services.cloudasset.v1beta1.model;
  * An asset in Google Cloud. An asset can be any resource in the Google Cloud [resource
  * hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy), a
  * resource outside the Google Cloud resource hierarchy (such as Google Kubernetes Engine clusters
- * and objects), or a policy (e.g. IAM policy). See [Supported asset
- * types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for more information.
+ * and objects), or a policy (e.g. IAM policy). See [Supported asset types](https://cloud.google.com
+ * /asset-inventory/docs/supported-asset-types) for more information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -81,9 +81,9 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * A representation of an [organization policy](https://cloud.google.com/resource-
-   * manager/docs/organization-policy/overview#organization_policy). There can be more than one
-   * organization policy with different constraints set on a given resource.
+   * A representation of an [organization policy](https://cloud.google.com/resource-manager/docs
+   * /organization-policy/overview#organization_policy). There can be more than one organization
+   * policy with different constraints set on a given resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,9 +214,9 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A representation of an [organization policy](https://cloud.google.com/resource-
-   * manager/docs/organization-policy/overview#organization_policy). There can be more than one
-   * organization policy with different constraints set on a given resource.
+   * A representation of an [organization policy](https://cloud.google.com/resource-manager/docs
+   * /organization-policy/overview#organization_policy). There can be more than one organization
+   * policy with different constraints set on a given resource.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudOrgpolicyV1Policy> getOrgPolicy() {
@@ -224,9 +224,9 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A representation of an [organization policy](https://cloud.google.com/resource-
-   * manager/docs/organization-policy/overview#organization_policy). There can be more than one
-   * organization policy with different constraints set on a given resource.
+   * A representation of an [organization policy](https://cloud.google.com/resource-manager/docs
+   * /organization-policy/overview#organization_policy). There can be more than one organization
+   * policy with different constraints set on a given resource.
    * @param orgPolicy orgPolicy or {@code null} for none
    */
   public Asset setOrgPolicy(java.util.List<GoogleCloudOrgpolicyV1Policy> orgPolicy) {

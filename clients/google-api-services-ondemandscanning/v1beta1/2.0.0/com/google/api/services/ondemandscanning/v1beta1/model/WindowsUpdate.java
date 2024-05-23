@@ -18,8 +18,8 @@ package com.google.api.services.ondemandscanning.v1beta1.model;
 
 /**
  * Windows Update represents the metadata about the update for the Windows operating system. The
- * fields in this message come from the Windows Update API documented at
- * https://docs.microsoft.com/en-us/windows/win32/api/wuapi/nn-wuapi-iupdate.
+ * fields in this message come from the Windows Update API documented at https://docs.microsoft.com
+ * /en-us/windows/win32/api/wuapi/nn-wuapi-iupdate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the On-Demand Scanning API. For a detailed explanation

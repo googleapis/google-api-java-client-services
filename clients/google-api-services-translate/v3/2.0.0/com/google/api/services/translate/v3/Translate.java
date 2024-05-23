@@ -161,11 +161,11 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the translate server.  After setting any optional
      * parameters, call the {@link DetectLanguage#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-     *        `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
-     *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-     *        `projects/{project-number-or-id}`. Only models within the same region (has same location-
-     *        id) can be used. Otherwise an INVALID_ARGUMENT (400) error is returned.
+     * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     *        /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
+     *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+     *        /{project-number-or-id}`. Only models within the same region (has same location-id) can be
+     *        used. Otherwise an INVALID_ARGUMENT (400) error is returned.
      * @param content the {@link com.google.api.services.translate.v3.model.DetectLanguageRequest}
      * @return the request
      */
@@ -193,11 +193,11 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-     *        `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
-     *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-     *        `projects/{project-number-or-id}`. Only models within the same region (has same location-
-     *        id) can be used. Otherwise an INVALID_ARGUMENT (400) error is returned.
+       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     *        /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
+     *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+     *        /{project-number-or-id}`. Only models within the same region (has same location-id) can be
+     *        used. Otherwise an INVALID_ARGUMENT (400) error is returned.
        * @param content the {@link com.google.api.services.translate.v3.model.DetectLanguageRequest}
        * @since 1.13
        */
@@ -269,17 +269,17 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Required. Project or location to make a call. Must refer to a caller's project. Format:
        * `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
-       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       * `projects/{project-number-or-id}`. Only models within the same region (has same location-
-       * id) can be used. Otherwise an INVALID_ARGUMENT (400) error is returned.
+       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       * /{project-number-or-id}`. Only models within the same region (has same location-id) can be
+       * used. Otherwise an INVALID_ARGUMENT (400) error is returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Project or location to make a call. Must refer to a caller's project. Format:
-     `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
-     global calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-
-     or-id}`. Only models within the same region (has same location-id) can be used. Otherwise an
+      /** Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For global
+     calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+     Only models within the same region (has same location-id) can be used. Otherwise an
      INVALID_ARGUMENT (400) error is returned.
        */
       public java.lang.String getParent() {
@@ -289,9 +289,9 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Required. Project or location to make a call. Must refer to a caller's project. Format:
        * `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
-       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       * `projects/{project-number-or-id}`. Only models within the same region (has same location-
-       * id) can be used. Otherwise an INVALID_ARGUMENT (400) error is returned.
+       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       * /{project-number-or-id}`. Only models within the same region (has same location-id) can be
+       * used. Otherwise an INVALID_ARGUMENT (400) error is returned.
        */
       public DetectLanguage setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -317,12 +317,12 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
      * parameters, call the {@link GetSupportedLanguages#execute()} method to invoke the remote
      * operation.
      *
-     * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-     *        `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-
-     *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-     *        `projects/{project-number-or-id}`. Non-global location is required for AutoML models. Only
-     *        models within the same region (have same location-id) can be used, otherwise an
-     *        INVALID_ARGUMENT (400) error is returned.
+     * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     *        /{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For
+     *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+     *        /{project-number-or-id}`. Non-global location is required for AutoML models. Only models
+     *        within the same region (have same location-id) can be used, otherwise an INVALID_ARGUMENT
+     *        (400) error is returned.
      * @return the request
      */
     public GetSupportedLanguages getSupportedLanguages(java.lang.String parent) throws java.io.IOException {
@@ -349,12 +349,12 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-     *        `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-
-     *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-     *        `projects/{project-number-or-id}`. Non-global location is required for AutoML models. Only
-     *        models within the same region (have same location-id) can be used, otherwise an
-     *        INVALID_ARGUMENT (400) error is returned.
+       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     *        /{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For
+     *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+     *        /{project-number-or-id}`. Non-global location is required for AutoML models. Only models
+     *        within the same region (have same location-id) can be used, otherwise an INVALID_ARGUMENT
+     *        (400) error is returned.
        * @since 1.13
        */
       protected GetSupportedLanguages(java.lang.String parent) {
@@ -435,19 +435,19 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Required. Project or location to make a call. Must refer to a caller's project. Format:
        * `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-
-       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       * `projects/{project-number-or-id}`. Non-global location is required for AutoML models. Only
-       * models within the same region (have same location-id) can be used, otherwise an
-       * INVALID_ARGUMENT (400) error is returned.
+       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       * /{project-number-or-id}`. Non-global location is required for AutoML models. Only models
+       * within the same region (have same location-id) can be used, otherwise an INVALID_ARGUMENT
+       * (400) error is returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Project or location to make a call. Must refer to a caller's project. Format:
-     `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For
-     global calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-
-     or-id}`. Non-global location is required for AutoML models. Only models within the same region
-     (have same location-id) can be used, otherwise an INVALID_ARGUMENT (400) error is returned.
+      /** Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     /{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For global
+     calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+     Non-global location is required for AutoML models. Only models within the same region (have same
+     location-id) can be used, otherwise an INVALID_ARGUMENT (400) error is returned.
        */
       public java.lang.String getParent() {
         return parent;
@@ -456,10 +456,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Required. Project or location to make a call. Must refer to a caller's project. Format:
        * `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-
-       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       * `projects/{project-number-or-id}`. Non-global location is required for AutoML models. Only
-       * models within the same region (have same location-id) can be used, otherwise an
-       * INVALID_ARGUMENT (400) error is returned.
+       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       * /{project-number-or-id}`. Non-global location is required for AutoML models. Only models
+       * within the same region (have same location-id) can be used, otherwise an INVALID_ARGUMENT
+       * (400) error is returned.
        */
       public GetSupportedLanguages setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -539,10 +539,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the translate server.  After setting any optional
      * parameters, call the {@link RomanizeText#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-     *        `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
-     *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-     *        `projects/{project-number-or-id}`.
+     * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     *        /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
+     *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+     *        /{project-number-or-id}`.
      * @param content the {@link com.google.api.services.translate.v3.model.RomanizeTextRequest}
      * @return the request
      */
@@ -570,10 +570,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * RomanizeText#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-     *        `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
-     *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-     *        `projects/{project-number-or-id}`.
+       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     *        /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
+     *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+     *        /{project-number-or-id}`.
        * @param content the {@link com.google.api.services.translate.v3.model.RomanizeTextRequest}
        * @since 1.13
        */
@@ -645,16 +645,15 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Required. Project or location to make a call. Must refer to a caller's project. Format:
        * `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
-       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       * `projects/{project-number-or-id}`.
+       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       * /{project-number-or-id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Project or location to make a call. Must refer to a caller's project. Format:
-     `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
-     global calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-
-     or-id}`.
+      /** Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For global
+     calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
        */
       public java.lang.String getParent() {
         return parent;
@@ -663,8 +662,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Required. Project or location to make a call. Must refer to a caller's project. Format:
        * `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
-       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       * `projects/{project-number-or-id}`.
+       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       * /{project-number-or-id}`.
        */
       public RomanizeText setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -689,12 +688,12 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the translate server.  After setting any optional
      * parameters, call the {@link TranslateText#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-     *        `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-
-     *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-     *        `projects/{project-number-or-id}`. Non-global location is required for requests using
-     *        AutoML models or custom glossaries. Models and glossaries must be within the same region
-     *        (have same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
+     * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     *        /{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For
+     *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+     *        /{project-number-or-id}`. Non-global location is required for requests using AutoML models
+     *        or custom glossaries. Models and glossaries must be within the same region (have same
+     *        location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
      * @param content the {@link com.google.api.services.translate.v3.model.TranslateTextRequest}
      * @return the request
      */
@@ -722,12 +721,12 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-     *        `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-
-     *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-     *        `projects/{project-number-or-id}`. Non-global location is required for requests using
-     *        AutoML models or custom glossaries. Models and glossaries must be within the same region
-     *        (have same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
+       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     *        /{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For
+     *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+     *        /{project-number-or-id}`. Non-global location is required for requests using AutoML models
+     *        or custom glossaries. Models and glossaries must be within the same region (have same
+     *        location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
        * @param content the {@link com.google.api.services.translate.v3.model.TranslateTextRequest}
        * @since 1.13
        */
@@ -799,20 +798,20 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Required. Project or location to make a call. Must refer to a caller's project. Format:
        * `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-
-       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       * `projects/{project-number-or-id}`. Non-global location is required for requests using
-       * AutoML models or custom glossaries. Models and glossaries must be within the same region
-       * (have same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
+       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       * /{project-number-or-id}`. Non-global location is required for requests using AutoML models
+       * or custom glossaries. Models and glossaries must be within the same region (have same
+       * location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Project or location to make a call. Must refer to a caller's project. Format:
-     `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For
-     global calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-
-     or-id}`. Non-global location is required for requests using AutoML models or custom glossaries.
-     Models and glossaries must be within the same region (have same location-id), otherwise an
-     INVALID_ARGUMENT (400) error is returned.
+      /** Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+     /{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For global
+     calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+     Non-global location is required for requests using AutoML models or custom glossaries. Models and
+     glossaries must be within the same region (have same location-id), otherwise an INVALID_ARGUMENT
+     (400) error is returned.
        */
       public java.lang.String getParent() {
         return parent;
@@ -821,10 +820,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Required. Project or location to make a call. Must refer to a caller's project. Format:
        * `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-
-       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       * `projects/{project-number-or-id}`. Non-global location is required for requests using
-       * AutoML models or custom glossaries. Models and glossaries must be within the same region
-       * (have same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
+       * id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       * /{project-number-or-id}`. Non-global location is required for requests using AutoML models
+       * or custom glossaries. Models and glossaries must be within the same region (have same
+       * location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
        */
       public TranslateText setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -870,8 +869,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the translate server.  After setting any optional
        * parameters, call the {@link AdaptiveMtTranslate#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-
-       *        id}/locations/{location-id}`.
+       * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       *        /{location-id}`.
        * @param content the {@link com.google.api.services.translate.v3.model.AdaptiveMtTranslateRequest}
        * @return the request
        */
@@ -899,8 +898,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-
-       *        id}/locations/{location-id}`.
+         * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       *        /{location-id}`.
          * @param content the {@link com.google.api.services.translate.v3.model.AdaptiveMtTranslateRequest}
          * @since 1.13
          */
@@ -976,8 +975,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Location to make a regional call. Format: `projects/{project-number-or-
-       id}/locations/{location-id}`.
+        /** Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       /{location-id}`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -1015,10 +1014,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * parameters, call the {@link BatchTranslateDocument#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-
-       *        id}/locations/{location-id}`. The `global` location is not supported for batch
-       *        translation. Only AutoML Translation models or glossaries within the same region (have the
-       *        same location-id) can be used, otherwise an INVALID_ARGUMENT (400) error is returned.
+       * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       *        /{location-id}`. The `global` location is not supported for batch translation. Only AutoML
+       *        Translation models or glossaries within the same region (have the same location-id) can be
+       *        used, otherwise an INVALID_ARGUMENT (400) error is returned.
        * @param content the {@link com.google.api.services.translate.v3.model.BatchTranslateDocumentRequest}
        * @return the request
        */
@@ -1050,10 +1049,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-
-       *        id}/locations/{location-id}`. The `global` location is not supported for batch
-       *        translation. Only AutoML Translation models or glossaries within the same region (have the
-       *        same location-id) can be used, otherwise an INVALID_ARGUMENT (400) error is returned.
+         * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       *        /{location-id}`. The `global` location is not supported for batch translation. Only AutoML
+       *        Translation models or glossaries within the same region (have the same location-id) can be
+       *        used, otherwise an INVALID_ARGUMENT (400) error is returned.
          * @param content the {@link com.google.api.services.translate.v3.model.BatchTranslateDocumentRequest}
          * @since 1.13
          */
@@ -1131,10 +1130,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Location to make a regional call. Format: `projects/{project-number-or-
-       id}/locations/{location-id}`. The `global` location is not supported for batch translation. Only
-       AutoML Translation models or glossaries within the same region (have the same location-id) can be
-       used, otherwise an INVALID_ARGUMENT (400) error is returned.
+        /** Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       /{location-id}`. The `global` location is not supported for batch translation. Only AutoML
+       Translation models or glossaries within the same region (have the same location-id) can be used,
+       otherwise an INVALID_ARGUMENT (400) error is returned.
          */
         public java.lang.String getParent() {
           return parent;
@@ -1281,11 +1280,11 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Required. Location to make a call. Must refer to a caller's project. Format:
-         * `projects/{project-number-or-id}/locations/{location-id}`. The `global` location is not
-         * supported for batch translation. Only AutoML Translation models or glossaries within the
-         * same region (have the same location-id) can be used, otherwise an INVALID_ARGUMENT (400)
-         * error is returned.
+         * Required. Location to make a call. Must refer to a caller's project. Format: `projects
+         * /{project-number-or-id}/locations/{location-id}`. The `global` location is not supported
+         * for batch translation. Only AutoML Translation models or glossaries within the same
+         * region (have the same location-id) can be used, otherwise an INVALID_ARGUMENT (400) error
+         * is returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
@@ -1300,11 +1299,11 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Required. Location to make a call. Must refer to a caller's project. Format:
-         * `projects/{project-number-or-id}/locations/{location-id}`. The `global` location is not
-         * supported for batch translation. Only AutoML Translation models or glossaries within the
-         * same region (have the same location-id) can be used, otherwise an INVALID_ARGUMENT (400)
-         * error is returned.
+         * Required. Location to make a call. Must refer to a caller's project. Format: `projects
+         * /{project-number-or-id}/locations/{location-id}`. The `global` location is not supported
+         * for batch translation. Only AutoML Translation models or glossaries within the same
+         * region (have the same location-id) can be used, otherwise an INVALID_ARGUMENT (400) error
+         * is returned.
          */
         public BatchTranslateText setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1329,11 +1328,11 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the translate server.  After setting any optional
        * parameters, call the {@link DetectLanguage#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-       *        `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
-       *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       *        `projects/{project-number-or-id}`. Only models within the same region (has same location-
-       *        id) can be used. Otherwise an INVALID_ARGUMENT (400) error is returned.
+       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       *        /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
+       *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       *        /{project-number-or-id}`. Only models within the same region (has same location-id) can be
+       *        used. Otherwise an INVALID_ARGUMENT (400) error is returned.
        * @param content the {@link com.google.api.services.translate.v3.model.DetectLanguageRequest}
        * @return the request
        */
@@ -1361,11 +1360,11 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-       *        `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
-       *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       *        `projects/{project-number-or-id}`. Only models within the same region (has same location-
-       *        id) can be used. Otherwise an INVALID_ARGUMENT (400) error is returned.
+         * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       *        /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
+       *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       *        /{project-number-or-id}`. Only models within the same region (has same location-id) can be
+       *        used. Otherwise an INVALID_ARGUMENT (400) error is returned.
          * @param content the {@link com.google.api.services.translate.v3.model.DetectLanguageRequest}
          * @since 1.13
          */
@@ -1444,10 +1443,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Project or location to make a call. Must refer to a caller's project. Format:
-       `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
-       global calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-
-       or-id}`. Only models within the same region (has same location-id) can be used. Otherwise an
+        /** Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For global
+       calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+       Only models within the same region (has same location-id) can be used. Otherwise an
        INVALID_ARGUMENT (400) error is returned.
          */
         public java.lang.String getParent() {
@@ -1623,12 +1622,12 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * parameters, call the {@link GetSupportedLanguages#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-       *        `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-
-       *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       *        `projects/{project-number-or-id}`. Non-global location is required for AutoML models. Only
-       *        models within the same region (have same location-id) can be used, otherwise an
-       *        INVALID_ARGUMENT (400) error is returned.
+       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       *        /{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For
+       *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       *        /{project-number-or-id}`. Non-global location is required for AutoML models. Only models
+       *        within the same region (have same location-id) can be used, otherwise an INVALID_ARGUMENT
+       *        (400) error is returned.
        * @return the request
        */
       public GetSupportedLanguages getSupportedLanguages(java.lang.String parent) throws java.io.IOException {
@@ -1655,12 +1654,12 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-       *        `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-
-       *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       *        `projects/{project-number-or-id}`. Non-global location is required for AutoML models. Only
-       *        models within the same region (have same location-id) can be used, otherwise an
-       *        INVALID_ARGUMENT (400) error is returned.
+         * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       *        /{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For
+       *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       *        /{project-number-or-id}`. Non-global location is required for AutoML models. Only models
+       *        within the same region (have same location-id) can be used, otherwise an INVALID_ARGUMENT
+       *        (400) error is returned.
          * @since 1.13
          */
         protected GetSupportedLanguages(java.lang.String parent) {
@@ -1740,20 +1739,20 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Required. Project or location to make a call. Must refer to a caller's project. Format:
-         * `projects/{project-number-or-id}` or `projects/{project-number-or-
-         * id}/locations/{location-id}`. For global calls, use `projects/{project-number-or-
-         * id}/locations/global` or `projects/{project-number-or-id}`. Non-global location is
-         * required for AutoML models. Only models within the same region (have same location-id)
-         * can be used, otherwise an INVALID_ARGUMENT (400) error is returned.
+         * `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations
+         * /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global`
+         * or `projects/{project-number-or-id}`. Non-global location is required for AutoML models.
+         * Only models within the same region (have same location-id) can be used, otherwise an
+         * INVALID_ARGUMENT (400) error is returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Project or location to make a call. Must refer to a caller's project. Format:
-       `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For
-       global calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-
-       or-id}`. Non-global location is required for AutoML models. Only models within the same region
-       (have same location-id) can be used, otherwise an INVALID_ARGUMENT (400) error is returned.
+        /** Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       /{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For global
+       calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+       Non-global location is required for AutoML models. Only models within the same region (have same
+       location-id) can be used, otherwise an INVALID_ARGUMENT (400) error is returned.
          */
         public java.lang.String getParent() {
           return parent;
@@ -1761,11 +1760,11 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Required. Project or location to make a call. Must refer to a caller's project. Format:
-         * `projects/{project-number-or-id}` or `projects/{project-number-or-
-         * id}/locations/{location-id}`. For global calls, use `projects/{project-number-or-
-         * id}/locations/global` or `projects/{project-number-or-id}`. Non-global location is
-         * required for AutoML models. Only models within the same region (have same location-id)
-         * can be used, otherwise an INVALID_ARGUMENT (400) error is returned.
+         * `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations
+         * /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global`
+         * or `projects/{project-number-or-id}`. Non-global location is required for AutoML models.
+         * Only models within the same region (have same location-id) can be used, otherwise an
+         * INVALID_ARGUMENT (400) error is returned.
          */
         public GetSupportedLanguages setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2047,10 +2046,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the translate server.  After setting any optional
        * parameters, call the {@link RomanizeText#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-       *        `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
-       *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       *        `projects/{project-number-or-id}`.
+       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       *        /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
+       *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       *        /{project-number-or-id}`.
        * @param content the {@link com.google.api.services.translate.v3.model.RomanizeTextRequest}
        * @return the request
        */
@@ -2078,10 +2077,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * RomanizeText#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-       *        `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-
-       *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       *        `projects/{project-number-or-id}`.
+         * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       *        /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
+       *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       *        /{project-number-or-id}`.
          * @param content the {@link com.google.api.services.translate.v3.model.RomanizeTextRequest}
          * @since 1.13
          */
@@ -2159,10 +2158,9 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Project or location to make a call. Must refer to a caller's project. Format:
-       `projects/{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For
-       global calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-
-       or-id}`.
+        /** Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       /{project-number-or-id}/locations/{location-id}` or `projects/{project-number-or-id}`. For global
+       calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -2197,12 +2195,11 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the translate server.  After setting any optional
        * parameters, call the {@link TranslateDocument#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-
-       *        id}/locations/{location-id}`. For global calls, use `projects/{project-number-or-
-       *        id}/locations/global` or `projects/{project-number-or-id}`. Non-global location is
-       *        required for requests using AutoML models or custom glossaries. Models and glossaries must
-       *        be within the same region (have the same location-id), otherwise an INVALID_ARGUMENT (400)
-       *        error is returned.
+       * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       *        /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global`
+       *        or `projects/{project-number-or-id}`. Non-global location is required for requests using
+       *        AutoML models or custom glossaries. Models and glossaries must be within the same region
+       *        (have the same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
        * @param content the {@link com.google.api.services.translate.v3.model.TranslateDocumentRequest}
        * @return the request
        */
@@ -2230,12 +2227,11 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * stractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-
-       *        id}/locations/{location-id}`. For global calls, use `projects/{project-number-or-
-       *        id}/locations/global` or `projects/{project-number-or-id}`. Non-global location is
-       *        required for requests using AutoML models or custom glossaries. Models and glossaries must
-       *        be within the same region (have the same location-id), otherwise an INVALID_ARGUMENT (400)
-       *        error is returned.
+         * @param parent Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       *        /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global`
+       *        or `projects/{project-number-or-id}`. Non-global location is required for requests using
+       *        AutoML models or custom glossaries. Models and glossaries must be within the same region
+       *        (have the same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
          * @param content the {@link com.google.api.services.translate.v3.model.TranslateDocumentRequest}
          * @since 1.13
          */
@@ -2315,11 +2311,11 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Location to make a regional call. Format: `projects/{project-number-or-
-       id}/locations/{location-id}`. For global calls, use `projects/{project-number-or-
-       id}/locations/global` or `projects/{project-number-or-id}`. Non-global location is required for
-       requests using AutoML models or custom glossaries. Models and glossaries must be within the same
-       region (have the same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
+        /** Required. Location to make a regional call. Format: `projects/{project-number-or-id}/locations
+       /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
+       `projects/{project-number-or-id}`. Non-global location is required for requests using AutoML models
+       or custom glossaries. Models and glossaries must be within the same region (have the same location-
+       id), otherwise an INVALID_ARGUMENT (400) error is returned.
          */
         public java.lang.String getParent() {
           return parent;
@@ -2356,12 +2352,12 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the translate server.  After setting any optional
        * parameters, call the {@link TranslateText#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-       *        `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-
-       *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       *        `projects/{project-number-or-id}`. Non-global location is required for requests using
-       *        AutoML models or custom glossaries. Models and glossaries must be within the same region
-       *        (have same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
+       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       *        /{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For
+       *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       *        /{project-number-or-id}`. Non-global location is required for requests using AutoML models
+       *        or custom glossaries. Models and glossaries must be within the same region (have same
+       *        location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
        * @param content the {@link com.google.api.services.translate.v3.model.TranslateTextRequest}
        * @return the request
        */
@@ -2389,12 +2385,12 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
-       *        `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-
-       *        id}`. For global calls, use `projects/{project-number-or-id}/locations/global` or
-       *        `projects/{project-number-or-id}`. Non-global location is required for requests using
-       *        AutoML models or custom glossaries. Models and glossaries must be within the same region
-       *        (have same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
+         * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       *        /{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For
+       *        global calls, use `projects/{project-number-or-id}/locations/global` or `projects
+       *        /{project-number-or-id}`. Non-global location is required for requests using AutoML models
+       *        or custom glossaries. Models and glossaries must be within the same region (have same
+       *        location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
          * @param content the {@link com.google.api.services.translate.v3.model.TranslateTextRequest}
          * @since 1.13
          */
@@ -2465,22 +2461,21 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Required. Project or location to make a call. Must refer to a caller's project. Format:
-         * `projects/{project-number-or-id}` or `projects/{project-number-or-
-         * id}/locations/{location-id}`. For global calls, use `projects/{project-number-or-
-         * id}/locations/global` or `projects/{project-number-or-id}`. Non-global location is
-         * required for requests using AutoML models or custom glossaries. Models and glossaries
-         * must be within the same region (have same location-id), otherwise an INVALID_ARGUMENT
-         * (400) error is returned.
+         * `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations
+         * /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global`
+         * or `projects/{project-number-or-id}`. Non-global location is required for requests using
+         * AutoML models or custom glossaries. Models and glossaries must be within the same region
+         * (have same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Project or location to make a call. Must refer to a caller's project. Format:
-       `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For
-       global calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-
-       or-id}`. Non-global location is required for requests using AutoML models or custom glossaries.
-       Models and glossaries must be within the same region (have same location-id), otherwise an
-       INVALID_ARGUMENT (400) error is returned.
+        /** Required. Project or location to make a call. Must refer to a caller's project. Format: `projects
+       /{project-number-or-id}` or `projects/{project-number-or-id}/locations/{location-id}`. For global
+       calls, use `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+       Non-global location is required for requests using AutoML models or custom glossaries. Models and
+       glossaries must be within the same region (have same location-id), otherwise an INVALID_ARGUMENT
+       (400) error is returned.
          */
         public java.lang.String getParent() {
           return parent;
@@ -2488,12 +2483,11 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Required. Project or location to make a call. Must refer to a caller's project. Format:
-         * `projects/{project-number-or-id}` or `projects/{project-number-or-
-         * id}/locations/{location-id}`. For global calls, use `projects/{project-number-or-
-         * id}/locations/global` or `projects/{project-number-or-id}`. Non-global location is
-         * required for requests using AutoML models or custom glossaries. Models and glossaries
-         * must be within the same region (have same location-id), otherwise an INVALID_ARGUMENT
-         * (400) error is returned.
+         * `projects/{project-number-or-id}` or `projects/{project-number-or-id}/locations
+         * /{location-id}`. For global calls, use `projects/{project-number-or-id}/locations/global`
+         * or `projects/{project-number-or-id}`. Non-global location is required for requests using
+         * AutoML models or custom glossaries. Models and glossaries must be within the same region
+         * (have same location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
          */
         public TranslateText setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2539,8 +2533,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the translate server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-
-         *        id}/locations/{location-id}`
+         * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         *        /{location-id}`
          * @param content the {@link com.google.api.services.translate.v3.model.AdaptiveMtDataset}
          * @return the request
          */
@@ -2568,8 +2562,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-
-         *        id}/locations/{location-id}`
+           * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         *        /{location-id}`
            * @param content the {@link com.google.api.services.translate.v3.model.AdaptiveMtDataset}
            * @since 1.13
            */
@@ -2645,8 +2639,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the parent project. In form of `projects/{project-number-or-
-         id}/locations/{location-id}`
+          /** Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         /{location-id}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -3105,8 +3099,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the translate server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The resource name of the project from which to list the Adaptive MT datasets.
-         *        `projects/{project-number-or-id}/locations/{location-id}`
+         * @param parent Required. The resource name of the project from which to list the Adaptive MT datasets. `projects
+         *        /{project-number-or-id}/locations/{location-id}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3132,8 +3126,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The resource name of the project from which to list the Adaptive MT datasets.
-         *        `projects/{project-number-or-id}/locations/{location-id}`
+           * @param parent Required. The resource name of the project from which to list the Adaptive MT datasets. `projects
+         *        /{project-number-or-id}/locations/{location-id}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3218,8 +3212,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The resource name of the project from which to list the Adaptive MT datasets.
-         `projects/{project-number-or-id}/locations/{location-id}`
+          /** Required. The resource name of the project from which to list the Adaptive MT datasets. `projects
+         /{project-number-or-id}/locations/{location-id}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -4657,8 +4651,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Name of the dataset. In form of `projects/{project-number-or-
-           * id}/locations/{location-id}/datasets/{dataset-id}`
+           * Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations
+           * /{location-id}/datasets/{dataset-id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String dataset;
@@ -4671,8 +4665,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Name of the dataset. In form of `projects/{project-number-or-
-           * id}/locations/{location-id}/datasets/{dataset-id}`
+           * Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations
+           * /{location-id}/datasets/{dataset-id}`
            */
           public ExportData setDataset(java.lang.String dataset) {
             if (!getSuppressPatternChecks()) {
@@ -4935,8 +4929,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Name of the dataset. In form of `projects/{project-number-or-
-           * id}/locations/{location-id}/datasets/{dataset-id}`
+           * Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations
+           * /{location-id}/datasets/{dataset-id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String dataset;
@@ -4949,8 +4943,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. Name of the dataset. In form of `projects/{project-number-or-
-           * id}/locations/{location-id}/datasets/{dataset-id}`
+           * Required. Name of the dataset. In form of `projects/{project-number-or-id}/locations
+           * /{location-id}/datasets/{dataset-id}`
            */
           public ImportData setDataset(java.lang.String dataset) {
             if (!getSuppressPatternChecks()) {
@@ -4975,8 +4969,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the translate server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-
-         *        id}/locations/{location-id}`
+         * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         *        /{location-id}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5002,8 +4996,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-
-         *        id}/locations/{location-id}`
+           * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         *        /{location-id}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5088,8 +5082,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the parent project. In form of `projects/{project-number-or-
-         id}/locations/{location-id}`
+          /** Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         /{location-id}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -5182,8 +5176,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the translate server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Name of the parent dataset. In form of `projects/{project-number-or-
-           *        id}/locations/{location-id}/datasets/{dataset-id}`
+           * @param parent Required. Name of the parent dataset. In form of `projects/{project-number-or-id}/locations
+           *        /{location-id}/datasets/{dataset-id}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -5209,8 +5203,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Name of the parent dataset. In form of `projects/{project-number-or-
-           *        id}/locations/{location-id}/datasets/{dataset-id}`
+             * @param parent Required. Name of the parent dataset. In form of `projects/{project-number-or-id}/locations
+           *        /{location-id}/datasets/{dataset-id}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -5295,8 +5289,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Name of the parent dataset. In form of `projects/{project-number-or-
-           id}/locations/{location-id}/datasets/{dataset-id}`
+            /** Required. Name of the parent dataset. In form of `projects/{project-number-or-id}/locations
+           /{location-id}/datasets/{dataset-id}`
              */
             public java.lang.String getParent() {
               return parent;
@@ -6163,8 +6157,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The resource name of the glossary. Glossary names have the form
-           * `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
+           * Required. The resource name of the glossary. Glossary names have the form `projects
+           * /{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -6177,8 +6171,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The resource name of the glossary. Glossary names have the form
-           * `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
+           * Required. The resource name of the glossary. Glossary names have the form `projects
+           * /{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -7383,8 +7377,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the translate server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-
-         *        id}/locations/{location-id}`
+         * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         *        /{location-id}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -7410,8 +7404,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-
-         *        id}/locations/{location-id}`
+           * @param parent Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         *        /{location-id}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7496,8 +7490,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the parent project. In form of `projects/{project-number-or-
-         id}/locations/{location-id}`
+          /** Required. Name of the parent project. In form of `projects/{project-number-or-id}/locations
+         /{location-id}`
            */
           public java.lang.String getParent() {
             return parent;

@@ -71,8 +71,8 @@ public final class GoogleCloudResourcesettingsV1Setting extends com.google.api.c
    * The resource name of the setting. Must be in one of the following forms: *
    * `projects/{project_number}/settings/{setting_name}` *
    * `folders/{folder_id}/settings/{setting_name}` *
-   * `organizations/{organization_id}/settings/{setting_name}` For example,
-   * "/projects/123/settings/gcp-enableMyFeature"
+   * `organizations/{organization_id}/settings/{setting_name}` For example, "/projects/123/settings
+   * /gcp-enableMyFeature"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,8 +168,8 @@ public final class GoogleCloudResourcesettingsV1Setting extends com.google.api.c
    * The resource name of the setting. Must be in one of the following forms: *
    * `projects/{project_number}/settings/{setting_name}` *
    * `folders/{folder_id}/settings/{setting_name}` *
-   * `organizations/{organization_id}/settings/{setting_name}` For example,
-   * "/projects/123/settings/gcp-enableMyFeature"
+   * `organizations/{organization_id}/settings/{setting_name}` For example, "/projects/123/settings
+   * /gcp-enableMyFeature"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -180,8 +180,8 @@ public final class GoogleCloudResourcesettingsV1Setting extends com.google.api.c
    * The resource name of the setting. Must be in one of the following forms: *
    * `projects/{project_number}/settings/{setting_name}` *
    * `folders/{folder_id}/settings/{setting_name}` *
-   * `organizations/{organization_id}/settings/{setting_name}` For example,
-   * "/projects/123/settings/gcp-enableMyFeature"
+   * `organizations/{organization_id}/settings/{setting_name}` For example, "/projects/123/settings
+   * /gcp-enableMyFeature"
    * @param name name or {@code null} for none
    */
   public GoogleCloudResourcesettingsV1Setting setName(java.lang.String name) {

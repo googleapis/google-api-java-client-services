@@ -40,9 +40,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Message that contains the service type and service labels of this service if it is a basic
-   * service. Documentation and examples here
-   * (https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-
-   * svc-w-basic-sli).
+   * service. Documentation and examples here (https://cloud.google.com/stackdriver/docs/solutions
+   * /slo-monitoring/api/api-structures#basic-svc-w-basic-sli).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,9 +163,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Message that contains the service type and service labels of this service if it is a basic
-   * service. Documentation and examples here
-   * (https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-
-   * svc-w-basic-sli).
+   * service. Documentation and examples here (https://cloud.google.com/stackdriver/docs/solutions
+   * /slo-monitoring/api/api-structures#basic-svc-w-basic-sli).
    * @return value or {@code null} for none
    */
   public BasicService getBasicService() {
@@ -175,9 +173,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Message that contains the service type and service labels of this service if it is a basic
-   * service. Documentation and examples here
-   * (https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-
-   * svc-w-basic-sli).
+   * service. Documentation and examples here (https://cloud.google.com/stackdriver/docs/solutions
+   * /slo-monitoring/api/api-structures#basic-svc-w-basic-sli).
    * @param basicService basicService or {@code null} for none
    */
   public Service setBasicService(BasicService basicService) {

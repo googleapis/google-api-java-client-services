@@ -1791,8 +1791,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-
-           * buyers/apis/guides/list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+           * /list-filters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -1804,8 +1804,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-
-           * buyers/apis/guides/list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+           * /list-filters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -2755,8 +2755,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-
-           * buyers/apis/guides/list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+           * /list-filters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -2768,8 +2768,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-
-           * buyers/apis/guides/list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+           * /list-filters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -4934,10 +4934,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
          *
          * @param name Required. The integration resource name. Format:
          *        projects/{gcp_project_id}/locations/{location}/integrations/{integration_id}
-         * @param content the {@link com.google.api.services.integrations.v1.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent}
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleProtobufStruct}
          * @return the request
          */
-        public ExecuteEvent executeEvent(java.lang.String name, com.google.api.services.integrations.v1.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent content) throws java.io.IOException {
+        public ExecuteEvent executeEvent(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleProtobufStruct content) throws java.io.IOException {
           ExecuteEvent result = new ExecuteEvent(name, content);
           initialize(result);
           return result;
@@ -4964,10 +4964,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            *
            * @param name Required. The integration resource name. Format:
          *        projects/{gcp_project_id}/locations/{location}/integrations/{integration_id}
-           * @param content the {@link com.google.api.services.integrations.v1.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent}
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleProtobufStruct}
            * @since 1.13
            */
-          protected ExecuteEvent(java.lang.String name, com.google.api.services.integrations.v1.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent content) {
+          protected ExecuteEvent(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleProtobufStruct content) {
             super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteEventResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -9452,8 +9452,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -9465,8 +9465,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -10418,8 +10418,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -10431,8 +10431,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -15285,8 +15285,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -15298,8 +15298,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -16886,8 +16886,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-
-           * buyers/apis/guides/list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+           * /list-filters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -16899,8 +16899,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-
-           * buyers/apis/guides/list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+           * /list-filters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -17684,8 +17684,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -17697,8 +17697,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-
-             * buyers/apis/guides/list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
+             * /list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

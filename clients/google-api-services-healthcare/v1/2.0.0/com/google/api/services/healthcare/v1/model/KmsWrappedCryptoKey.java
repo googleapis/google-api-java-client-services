@@ -20,8 +20,8 @@ package com.google.api.services.healthcare.v1.model;
  * Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-,
  * or 256-bit key. The key must grant the Cloud IAM permission
  * `cloudkms.cryptoKeyVersions.useToDecrypt` to the project's Cloud Healthcare Service Agent service
- * account. For more information, see [Creating a wrapped key]
- * (https://cloud.google.com/dlp/docs/create-wrapped-key).
+ * account. For more information, see [Creating a wrapped key] (https://cloud.google.com/dlp/docs
+ * /create-wrapped-key).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

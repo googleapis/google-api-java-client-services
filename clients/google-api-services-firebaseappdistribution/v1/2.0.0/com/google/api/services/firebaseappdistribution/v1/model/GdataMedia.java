@@ -165,7 +165,7 @@ public final class GdataMedia extends com.google.api.client.json.GenericJson {
    * Deprecated, use one of explicit hash type fields instead. These two hash related fields will
    * only be populated on Scotty based media uploads and will contain the content of the hash group
    * in the NotificationRequest:
-   * http://cs/#google3/uploader/service/proto/upload_listener.proto&q=class:Hash Hex encoded hash
+   * http://cs/#google3/uploader/service/proto/upload_listener.proto=class:Hash Hex encoded hash
    * value of the uploaded media.
    * The value may be {@code null}.
    */
@@ -667,7 +667,7 @@ public final class GdataMedia extends com.google.api.client.json.GenericJson {
    * Deprecated, use one of explicit hash type fields instead. These two hash related fields will
    * only be populated on Scotty based media uploads and will contain the content of the hash group
    * in the NotificationRequest:
-   * http://cs/#google3/uploader/service/proto/upload_listener.proto&q=class:Hash Hex encoded hash
+   * http://cs/#google3/uploader/service/proto/upload_listener.proto=class:Hash Hex encoded hash
    * value of the uploaded media.
    * @return value or {@code null} for none
    */
@@ -679,7 +679,7 @@ public final class GdataMedia extends com.google.api.client.json.GenericJson {
    * Deprecated, use one of explicit hash type fields instead. These two hash related fields will
    * only be populated on Scotty based media uploads and will contain the content of the hash group
    * in the NotificationRequest:
-   * http://cs/#google3/uploader/service/proto/upload_listener.proto&q=class:Hash Hex encoded hash
+   * http://cs/#google3/uploader/service/proto/upload_listener.proto=class:Hash Hex encoded hash
    * value of the uploaded media.
    * @param hash hash or {@code null} for none
    */

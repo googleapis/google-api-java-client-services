@@ -18,9 +18,8 @@ package com.google.api.services.ml.v1.model;
 
 /**
  * Specification of a custom container for serving predictions. This message is a subset of the
- * [Kubernetes Container v1 core
- * specification](https://kubernetes.io/docs/reference/generated/kubernetes-
- * api/v1.18/#container-v1-core).
+ * [Kubernetes Container v1 core specification](https://kubernetes.io/docs/reference/generated
+ * /kubernetes-api/v1.18/#container-v1-core).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AI Platform Training & Prediction API. For a detailed
@@ -114,15 +113,15 @@ public final class GoogleCloudMlV1ContainerSpec extends com.google.api.client.js
    * then this URI must begin with `us-central1-docker.pkg.dev`. To use a custom container, the [AI
    * Platform Google-managed service account](/ai-platform/prediction/docs/custom-service-
    * account#default) must have permission to pull (read) the Docker image at this URI. The AI
-   * Platform Google-managed service account has the following format:
-   * `service-{PROJECT_NUMBER}@cloud-ml.google.com.iam.gserviceaccount.com` {PROJECT_NUMBER} is
-   * replaced by your Google Cloud project number. By default, this service account has necessary
-   * permissions to pull an Artifact Registry image in the same Google Cloud project where you are
-   * using AI Platform Prediction. In this case, no configuration is necessary. If you want to use
-   * an image from a different Google Cloud project, learn how to [grant the Artifact Registry
-   * Reader (roles/artifactregistry.reader) role for a repository](/artifact-registry/docs/access-
-   * control#grant-repo) to your projet's AI Platform Google-managed service account. To learn about
-   * the requirements for the Docker image itself, read [Custom container requirements](/ai-
+   * Platform Google-managed service account has the following format: `service-{PROJECT_NUMBER
+   * }@cloud-ml.google.com.iam.gserviceaccount.com` {PROJECT_NUMBER} is replaced by your Google
+   * Cloud project number. By default, this service account has necessary permissions to pull an
+   * Artifact Registry image in the same Google Cloud project where you are using AI Platform
+   * Prediction. In this case, no configuration is necessary. If you want to use an image from a
+   * different Google Cloud project, learn how to [grant the Artifact Registry Reader
+   * (roles/artifactregistry.reader) role for a repository](/artifact-registry/docs/access-control
+   * #grant-repo) to your projet's AI Platform Google-managed service account. To learn about the
+   * requirements for the Docker image itself, read [Custom container requirements](/ai-
    * platform/prediction/docs/custom-container-requirements).
    * The value may be {@code null}.
    */
@@ -311,15 +310,15 @@ public final class GoogleCloudMlV1ContainerSpec extends com.google.api.client.js
    * then this URI must begin with `us-central1-docker.pkg.dev`. To use a custom container, the [AI
    * Platform Google-managed service account](/ai-platform/prediction/docs/custom-service-
    * account#default) must have permission to pull (read) the Docker image at this URI. The AI
-   * Platform Google-managed service account has the following format:
-   * `service-{PROJECT_NUMBER}@cloud-ml.google.com.iam.gserviceaccount.com` {PROJECT_NUMBER} is
-   * replaced by your Google Cloud project number. By default, this service account has necessary
-   * permissions to pull an Artifact Registry image in the same Google Cloud project where you are
-   * using AI Platform Prediction. In this case, no configuration is necessary. If you want to use
-   * an image from a different Google Cloud project, learn how to [grant the Artifact Registry
-   * Reader (roles/artifactregistry.reader) role for a repository](/artifact-registry/docs/access-
-   * control#grant-repo) to your projet's AI Platform Google-managed service account. To learn about
-   * the requirements for the Docker image itself, read [Custom container requirements](/ai-
+   * Platform Google-managed service account has the following format: `service-{PROJECT_NUMBER
+   * }@cloud-ml.google.com.iam.gserviceaccount.com` {PROJECT_NUMBER} is replaced by your Google
+   * Cloud project number. By default, this service account has necessary permissions to pull an
+   * Artifact Registry image in the same Google Cloud project where you are using AI Platform
+   * Prediction. In this case, no configuration is necessary. If you want to use an image from a
+   * different Google Cloud project, learn how to [grant the Artifact Registry Reader
+   * (roles/artifactregistry.reader) role for a repository](/artifact-registry/docs/access-control
+   * #grant-repo) to your projet's AI Platform Google-managed service account. To learn about the
+   * requirements for the Docker image itself, read [Custom container requirements](/ai-
    * platform/prediction/docs/custom-container-requirements).
    * @return value or {@code null} for none
    */
@@ -336,15 +335,15 @@ public final class GoogleCloudMlV1ContainerSpec extends com.google.api.client.js
    * then this URI must begin with `us-central1-docker.pkg.dev`. To use a custom container, the [AI
    * Platform Google-managed service account](/ai-platform/prediction/docs/custom-service-
    * account#default) must have permission to pull (read) the Docker image at this URI. The AI
-   * Platform Google-managed service account has the following format:
-   * `service-{PROJECT_NUMBER}@cloud-ml.google.com.iam.gserviceaccount.com` {PROJECT_NUMBER} is
-   * replaced by your Google Cloud project number. By default, this service account has necessary
-   * permissions to pull an Artifact Registry image in the same Google Cloud project where you are
-   * using AI Platform Prediction. In this case, no configuration is necessary. If you want to use
-   * an image from a different Google Cloud project, learn how to [grant the Artifact Registry
-   * Reader (roles/artifactregistry.reader) role for a repository](/artifact-registry/docs/access-
-   * control#grant-repo) to your projet's AI Platform Google-managed service account. To learn about
-   * the requirements for the Docker image itself, read [Custom container requirements](/ai-
+   * Platform Google-managed service account has the following format: `service-{PROJECT_NUMBER
+   * }@cloud-ml.google.com.iam.gserviceaccount.com` {PROJECT_NUMBER} is replaced by your Google
+   * Cloud project number. By default, this service account has necessary permissions to pull an
+   * Artifact Registry image in the same Google Cloud project where you are using AI Platform
+   * Prediction. In this case, no configuration is necessary. If you want to use an image from a
+   * different Google Cloud project, learn how to [grant the Artifact Registry Reader
+   * (roles/artifactregistry.reader) role for a repository](/artifact-registry/docs/access-control
+   * #grant-repo) to your projet's AI Platform Google-managed service account. To learn about the
+   * requirements for the Docker image itself, read [Custom container requirements](/ai-
    * platform/prediction/docs/custom-container-requirements).
    * @param image image or {@code null} for none
    */

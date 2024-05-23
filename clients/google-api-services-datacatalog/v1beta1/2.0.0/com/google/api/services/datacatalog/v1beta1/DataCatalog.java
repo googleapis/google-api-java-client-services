@@ -430,8 +430,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
        * `pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
        * `bigquery.table.project_id.dataset_id.table_id` * `bigquery.dataset.project_id.dataset_id`
        * * `datacatalog.entry.project_id.location_id.entry_group_id.entry_id` `*_id`s should satisfy
-       * the standard SQL rules for identifiers.
-       * https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical.
+       * the standard SQL rules for identifiers. https://cloud.google.com/bigquery/docs/reference
+       * /standard-sql/lexical.
        */
       @com.google.api.client.util.Key
       private java.lang.String sqlResource;
@@ -452,8 +452,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
        * `pubsub.project_id.topic_id` * ``pubsub.project_id.`topic.id.with.dots` `` *
        * `bigquery.table.project_id.dataset_id.table_id` * `bigquery.dataset.project_id.dataset_id`
        * * `datacatalog.entry.project_id.location_id.entry_group_id.entry_id` `*_id`s should satisfy
-       * the standard SQL rules for identifiers.
-       * https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical.
+       * the standard SQL rules for identifiers. https://cloud.google.com/bigquery/docs/reference
+       * /standard-sql/lexical.
        */
       public Lookup setSqlResource(java.lang.String sqlResource) {
         this.sqlResource = sqlResource;
@@ -1380,8 +1380,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
         }
         /**
          * Updates an EntryGroup. The user should enable the Data Catalog API in the project identified by
-         * the `entry_group.name` parameter (see [Data Catalog Resource Project]
-         * (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
+         * the `entry_group.name` parameter (see [Data Catalog Resource Project] (https://cloud.google.com
+         * /data-catalog/docs/concepts/resource-project) for more information).
          *
          * Create a request for the method "entryGroups.patch".
          *
@@ -1410,8 +1410,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
           /**
            * Updates an EntryGroup. The user should enable the Data Catalog API in the project identified by
-           * the `entry_group.name` parameter (see [Data Catalog Resource Project]
-           * (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
+           * the `entry_group.name` parameter (see [Data Catalog Resource Project] (https://cloud.google.com
+           * /data-catalog/docs/concepts/resource-project) for more information).
            *
            * Create a request for the method "entryGroups.patch".
            *
@@ -2757,8 +2757,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
             /**
              * Updates an existing entry. Users should enable the Data Catalog API in the project identified
-             * by the `entry.name` parameter (see [Data Catalog Resource Project]
-             * (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
+             * by the `entry.name` parameter (see [Data Catalog Resource Project] (https://cloud.google.com
+             * /data-catalog/docs/concepts/resource-project) for more information).
              *
              * Create a request for the method "entries.patch".
              *
@@ -6175,9 +6175,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
           }
           /**
            * Renames a field in a tag template. The user should enable the Data Catalog API in the project
-           * identified by the `name` parameter (see [Data Catalog Resource
-           * Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more
-           * information).
+           * identified by the `name` parameter (see [Data Catalog Resource Project](https://cloud.google.com
+           * /data-catalog/docs/concepts/resource-project) for more information).
            *
            * Create a request for the method "fields.rename".
            *

@@ -33,8 +33,8 @@ public final class GoogleCloudAiplatformV1beta1ExtensionPrivateServiceConnectCon
    * Required. The Service Directory resource name in which the service endpoints associated to the
    * extension are registered. Format:
    * `projects/{project_id}/locations/{location_id}/namespaces/{namespace_id}/services/{service_id}`
-   * - The Vertex AI Extension Service Agent (https://cloud.google.com/vertex-
-   * ai/docs/general/access-control#service-agents) should be granted `servicedirectory.viewer` and
+   * - The Vertex AI Extension Service Agent (https://cloud.google.com/vertex-ai/docs/general
+   * /access-control#service-agents) should be granted `servicedirectory.viewer` and
    * `servicedirectory.pscAuthorizedService` roles on the resource.
    * The value may be {@code null}.
    */
@@ -45,8 +45,8 @@ public final class GoogleCloudAiplatformV1beta1ExtensionPrivateServiceConnectCon
    * Required. The Service Directory resource name in which the service endpoints associated to the
    * extension are registered. Format:
    * `projects/{project_id}/locations/{location_id}/namespaces/{namespace_id}/services/{service_id}`
-   * - The Vertex AI Extension Service Agent (https://cloud.google.com/vertex-
-   * ai/docs/general/access-control#service-agents) should be granted `servicedirectory.viewer` and
+   * - The Vertex AI Extension Service Agent (https://cloud.google.com/vertex-ai/docs/general
+   * /access-control#service-agents) should be granted `servicedirectory.viewer` and
    * `servicedirectory.pscAuthorizedService` roles on the resource.
    * @return value or {@code null} for none
    */
@@ -58,8 +58,8 @@ public final class GoogleCloudAiplatformV1beta1ExtensionPrivateServiceConnectCon
    * Required. The Service Directory resource name in which the service endpoints associated to the
    * extension are registered. Format:
    * `projects/{project_id}/locations/{location_id}/namespaces/{namespace_id}/services/{service_id}`
-   * - The Vertex AI Extension Service Agent (https://cloud.google.com/vertex-
-   * ai/docs/general/access-control#service-agents) should be granted `servicedirectory.viewer` and
+   * - The Vertex AI Extension Service Agent (https://cloud.google.com/vertex-ai/docs/general
+   * /access-control#service-agents) should be granted `servicedirectory.viewer` and
    * `servicedirectory.pscAuthorizedService` roles on the resource.
    * @param serviceDirectory serviceDirectory or {@code null} for none
    */

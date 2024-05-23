@@ -9088,8 +9088,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. The resource name of the TagHold to delete. Must be of the form:
-         * `tagValues/{tag-value-id}/tagHolds/{tag-hold-id}`.
+         * Required. The resource name of the TagHold to delete. Must be of the form: `tagValues
+         * /{tag-value-id}/tagHolds/{tag-hold-id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -9102,8 +9102,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. The resource name of the TagHold to delete. Must be of the form:
-         * `tagValues/{tag-value-id}/tagHolds/{tag-hold-id}`.
+         * Required. The resource name of the TagHold to delete. Must be of the form: `tagValues
+         * /{tag-value-id}/tagHolds/{tag-hold-id}`.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -9300,10 +9300,10 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         /** Optional. Criteria used to select a subset of TagHolds parented by the TagValue to return. This
        field follows the syntax defined by aip.dev/160; the `holder` and `origin` fields are supported for
        filtering. Currently only `AND` syntax is supported. Some example queries are: * `holder =
-       //compute.googleapis.com/compute/projects/myproject/regions/us-
-       east-1/instanceGroupManagers/instance-group` * `origin = 35678234` * `holder =
-       //compute.googleapis.com/compute/projects/myproject/regions/us-
-       east-1/instanceGroupManagers/instance-group AND origin = 35678234`
+       //compute.googleapis.com/compute/projects/myproject/regions/us-east-1/instanceGroupManagers
+       /instance-group` * `origin = 35678234` * `holder =
+       //compute.googleapis.com/compute/projects/myproject/regions/us-east-1/instanceGroupManagers
+       /instance-group AND origin = 35678234`
          */
         public java.lang.String getFilter() {
           return filter;

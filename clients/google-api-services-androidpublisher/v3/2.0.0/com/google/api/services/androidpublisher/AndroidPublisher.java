@@ -2875,9 +2875,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         /**
          * Uploads a new Android App Bundle to this edit. If you are using the Google API client
          * libraries, please increase the timeout of the http request before calling this endpoint (a
-         * timeout of 2 minutes is recommended). See [Timeouts and
-         * Errors](https://developers.google.com/api-client-library/java/google-api-java-client/errors)
-         * for an example in java.
+         * timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com
+         * /api-client-library/java/google-api-java-client/errors) for an example in java.
          *
          * Create a request for the method "bundles.upload".
          *
@@ -2900,9 +2899,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         /**
          * Uploads a new Android App Bundle to this edit. If you are using the Google API client
          * libraries, please increase the timeout of the http request before calling this endpoint (a
-         * timeout of 2 minutes is recommended). See [Timeouts and
-         * Errors](https://developers.google.com/api-client-library/java/google-api-java-client/errors)
-         * for an example in java.
+         * timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com
+         * /api-client-library/java/google-api-java-client/errors) for an example in java.
          *
          * Create a request for the method "bundles.upload".
          *
@@ -7194,8 +7192,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param track Identifier of the track. [More on track name](https://developers.google.com/android-
-       *        publisher/tracks#ff-track-name)
+       * @param track Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks
+       *        #ff-track-name)
        * @return the request
        */
       public Get get(java.lang.String packageName, java.lang.String editId, java.lang.String track) throws java.io.IOException {
@@ -7220,8 +7218,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param track Identifier of the track. [More on track name](https://developers.google.com/android-
-       *        publisher/tracks#ff-track-name)
+         * @param track Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks
+       *        #ff-track-name)
          * @since 1.13
          */
         protected Get(java.lang.String packageName, java.lang.String editId, java.lang.String track) {
@@ -7510,8 +7508,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param track Identifier of the track. [More on track name](https://developers.google.com/android-
-       *        publisher/tracks#ff-track-name)
+       * @param track Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks
+       *        #ff-track-name)
        * @param content the {@link com.google.api.services.androidpublisher.model.Track}
        * @return the request
        */
@@ -7538,8 +7536,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param track Identifier of the track. [More on track name](https://developers.google.com/android-
-       *        publisher/tracks#ff-track-name)
+         * @param track Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks
+       *        #ff-track-name)
          * @param content the {@link com.google.api.services.androidpublisher.model.Track}
          * @since 1.13
          */
@@ -7675,8 +7673,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Package name of the app.
        * @param editId Identifier of the edit.
-       * @param track Identifier of the track. [More on track name](https://developers.google.com/android-
-       *        publisher/tracks#ff-track-name)
+       * @param track Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks
+       *        #ff-track-name)
        * @param content the {@link com.google.api.services.androidpublisher.model.Track}
        * @return the request
        */
@@ -7703,8 +7701,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Package name of the app.
          * @param editId Identifier of the edit.
-         * @param track Identifier of the track. [More on track name](https://developers.google.com/android-
-       *        publisher/tracks#ff-track-name)
+         * @param track Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks
+       *        #ff-track-name)
          * @param content the {@link com.google.api.services.androidpublisher.model.Track}
          * @since 1.13
          */
@@ -9157,9 +9155,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     /**
      * Deletes in-app products (managed products or subscriptions). Set the latencyTolerance field on
      * nested requests to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to achieve maximum update
-     * throughput. This method should not be used to delete subscriptions. See [this
-     * article](https://android-developers.googleblog.com/2023/06/changes-to-google-play-developer-api-
-     * june-2023.html) for more information.
+     * throughput. This method should not be used to delete subscriptions. See [this article](https
+     * ://android-developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html)
+     * for more information.
      *
      * Create a request for the method "inappproducts.batchDelete".
      *
@@ -9184,9 +9182,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /**
        * Deletes in-app products (managed products or subscriptions). Set the latencyTolerance field on
        * nested requests to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to achieve maximum update
-       * throughput. This method should not be used to delete subscriptions. See [this
-       * article](https://android-developers.googleblog.com/2023/06/changes-to-google-play-developer-
-       * api-june-2023.html) for more information.
+       * throughput. This method should not be used to delete subscriptions. See [this article](https
+       * ://android-developers.googleblog.com/2023/06/changes-to-google-play-developer-api-
+       * june-2023.html) for more information.
        *
        * Create a request for the method "inappproducts.batchDelete".
        *
@@ -10051,9 +10049,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * number of in-app products, the response may be paginated. In this case the response field
        * `tokenPagination.nextPageToken` will be set and the caller should provide its value as a
        * `token` request parameter to retrieve the next page. This method should no longer be used to
-       * retrieve subscriptions. See [this article](https://android-
-       * developers.googleblog.com/2023/06/changes-to-google-play-developer-api-june-2023.html) for more
-       * information.
+       * retrieve subscriptions. See [this article](https://android-developers.googleblog.com/2023/06
+       * /changes-to-google-play-developer-api-june-2023.html) for more information.
        *
        * Create a request for the method "inappproducts.list".
        *
@@ -10637,8 +10634,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     /**
      * Uploads an APK to internal app sharing. If you are using the Google API client libraries, please
      * increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is
-     * recommended). See [Timeouts and Errors](https://developers.google.com/api-client-
-     * library/java/google-api-java-client/errors) for an example in java.
+     * recommended). See [Timeouts and Errors](https://developers.google.com/api-client-library/java
+     * /google-api-java-client/errors) for an example in java.
      *
      * Create a request for the method "internalappsharingartifacts.uploadapk".
      *
@@ -10657,8 +10654,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     /**
      * Uploads an APK to internal app sharing. If you are using the Google API client libraries, please
      * increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is
-     * recommended). See [Timeouts and Errors](https://developers.google.com/api-client-
-     * library/java/google-api-java-client/errors) for an example in java.
+     * recommended). See [Timeouts and Errors](https://developers.google.com/api-client-library/java
+     * /google-api-java-client/errors) for an example in java.
      *
      * Create a request for the method "internalappsharingartifacts.uploadapk".
      *
@@ -10866,9 +10863,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /**
        * Uploads an app bundle to internal app sharing. If you are using the Google API client
        * libraries, please increase the timeout of the http request before calling this endpoint (a
-       * timeout of 2 minutes is recommended). See [Timeouts and
-       * Errors](https://developers.google.com/api-client-library/java/google-api-java-client/errors)
-       * for an example in java.
+       * timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com
+       * /api-client-library/java/google-api-java-client/errors) for an example in java.
        *
        * Create a request for the method "internalappsharingartifacts.uploadbundle".
        *
@@ -10889,9 +10885,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /**
        * Uploads an app bundle to internal app sharing. If you are using the Google API client
        * libraries, please increase the timeout of the http request before calling this endpoint (a
-       * timeout of 2 minutes is recommended). See [Timeouts and
-       * Errors](https://developers.google.com/api-client-library/java/google-api-java-client/errors)
-       * for an example in java.
+       * timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com
+       * /api-client-library/java/google-api-java-client/errors) for an example in java.
        *
        * Create a request for the method "internalappsharingartifacts.uploadbundle".
        *
@@ -11729,12 +11724,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         /**
          * Required. A string representing the version of available regions being used for the
          * specified resource. Regional prices for the resource have to be specified according to
-         * the information published in [this
-         * article](https://support.google.com/googleplay/android-developer/answer/10532353). Each
-         * time the supported locations substantially change, the version will be incremented. Using
-         * this field will ensure that creating and updating the resource with an older region's
-         * version and set of regional prices and currencies will succeed even though a new version
-         * is available. The latest version is 2022/02.
+         * the information published in [this article](https://support.google.com/googleplay
+         * /android-developer/answer/10532353). Each time the supported locations substantially
+         * change, the version will be incremented. Using this field will ensure that creating and
+         * updating the resource with an older region's version and set of regional prices and
+         * currencies will succeed even though a new version is available. The latest version is
+         * 2022/02.
          */
         @com.google.api.client.util.Key("regionsVersion.version")
         private java.lang.String regionsVersionVersion;
@@ -11754,12 +11749,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         /**
          * Required. A string representing the version of available regions being used for the
          * specified resource. Regional prices for the resource have to be specified according to
-         * the information published in [this
-         * article](https://support.google.com/googleplay/android-developer/answer/10532353). Each
-         * time the supported locations substantially change, the version will be incremented. Using
-         * this field will ensure that creating and updating the resource with an older region's
-         * version and set of regional prices and currencies will succeed even though a new version
-         * is available. The latest version is 2022/02.
+         * the information published in [this article](https://support.google.com/googleplay
+         * /android-developer/answer/10532353). Each time the supported locations substantially
+         * change, the version will be incremented. Using this field will ensure that creating and
+         * updating the resource with an older region's version and set of regional prices and
+         * currencies will succeed even though a new version is available. The latest version is
+         * 2022/02.
          */
         public Create setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
           this.regionsVersionVersion = regionsVersionVersion;
@@ -12446,12 +12441,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         /**
          * Required. A string representing the version of available regions being used for the
          * specified resource. Regional prices for the resource have to be specified according to
-         * the information published in [this
-         * article](https://support.google.com/googleplay/android-developer/answer/10532353). Each
-         * time the supported locations substantially change, the version will be incremented. Using
-         * this field will ensure that creating and updating the resource with an older region's
-         * version and set of regional prices and currencies will succeed even though a new version
-         * is available. The latest version is 2022/02.
+         * the information published in [this article](https://support.google.com/googleplay
+         * /android-developer/answer/10532353). Each time the supported locations substantially
+         * change, the version will be incremented. Using this field will ensure that creating and
+         * updating the resource with an older region's version and set of regional prices and
+         * currencies will succeed even though a new version is available. The latest version is
+         * 2022/02.
          */
         @com.google.api.client.util.Key("regionsVersion.version")
         private java.lang.String regionsVersionVersion;
@@ -12471,12 +12466,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         /**
          * Required. A string representing the version of available regions being used for the
          * specified resource. Regional prices for the resource have to be specified according to
-         * the information published in [this
-         * article](https://support.google.com/googleplay/android-developer/answer/10532353). Each
-         * time the supported locations substantially change, the version will be incremented. Using
-         * this field will ensure that creating and updating the resource with an older region's
-         * version and set of regional prices and currencies will succeed even though a new version
-         * is available. The latest version is 2022/02.
+         * the information published in [this article](https://support.google.com/googleplay
+         * /android-developer/answer/10532353). Each time the supported locations substantially
+         * change, the version will be incremented. Using this field will ensure that creating and
+         * updating the resource with an older region's version and set of regional prices and
+         * currencies will succeed even though a new version is available. The latest version is
+         * 2022/02.
          */
         public Patch setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
           this.regionsVersionVersion = regionsVersionVersion;
@@ -14468,12 +14463,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
             /**
              * Required. A string representing the version of available regions being used for the
              * specified resource. Regional prices for the resource have to be specified according
-             * to the information published in [this
-             * article](https://support.google.com/googleplay/android-developer/answer/10532353).
-             * Each time the supported locations substantially change, the version will be
-             * incremented. Using this field will ensure that creating and updating the resource
-             * with an older region's version and set of regional prices and currencies will succeed
-             * even though a new version is available. The latest version is 2022/02.
+             * to the information published in [this article](https://support.google.com/googleplay
+             * /android-developer/answer/10532353). Each time the supported locations substantially
+             * change, the version will be incremented. Using this field will ensure that creating
+             * and updating the resource with an older region's version and set of regional prices
+             * and currencies will succeed even though a new version is available. The latest
+             * version is 2022/02.
              */
             @com.google.api.client.util.Key("regionsVersion.version")
             private java.lang.String regionsVersionVersion;
@@ -14493,12 +14488,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
             /**
              * Required. A string representing the version of available regions being used for the
              * specified resource. Regional prices for the resource have to be specified according
-             * to the information published in [this
-             * article](https://support.google.com/googleplay/android-developer/answer/10532353).
-             * Each time the supported locations substantially change, the version will be
-             * incremented. Using this field will ensure that creating and updating the resource
-             * with an older region's version and set of regional prices and currencies will succeed
-             * even though a new version is available. The latest version is 2022/02.
+             * to the information published in [this article](https://support.google.com/googleplay
+             * /android-developer/answer/10532353). Each time the supported locations substantially
+             * change, the version will be incremented. Using this field will ensure that creating
+             * and updating the resource with an older region's version and set of regional prices
+             * and currencies will succeed even though a new version is available. The latest
+             * version is 2022/02.
              */
             public Create setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
               this.regionsVersionVersion = regionsVersionVersion;
@@ -15520,12 +15515,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
             /**
              * Required. A string representing the version of available regions being used for the
              * specified resource. Regional prices for the resource have to be specified according
-             * to the information published in [this
-             * article](https://support.google.com/googleplay/android-developer/answer/10532353).
-             * Each time the supported locations substantially change, the version will be
-             * incremented. Using this field will ensure that creating and updating the resource
-             * with an older region's version and set of regional prices and currencies will succeed
-             * even though a new version is available. The latest version is 2022/02.
+             * to the information published in [this article](https://support.google.com/googleplay
+             * /android-developer/answer/10532353). Each time the supported locations substantially
+             * change, the version will be incremented. Using this field will ensure that creating
+             * and updating the resource with an older region's version and set of regional prices
+             * and currencies will succeed even though a new version is available. The latest
+             * version is 2022/02.
              */
             @com.google.api.client.util.Key("regionsVersion.version")
             private java.lang.String regionsVersionVersion;
@@ -15545,12 +15540,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
             /**
              * Required. A string representing the version of available regions being used for the
              * specified resource. Regional prices for the resource have to be specified according
-             * to the information published in [this
-             * article](https://support.google.com/googleplay/android-developer/answer/10532353).
-             * Each time the supported locations substantially change, the version will be
-             * incremented. Using this field will ensure that creating and updating the resource
-             * with an older region's version and set of regional prices and currencies will succeed
-             * even though a new version is available. The latest version is 2022/02.
+             * to the information published in [this article](https://support.google.com/googleplay
+             * /android-developer/answer/10532353). Each time the supported locations substantially
+             * change, the version will be incremented. Using this field will ensure that creating
+             * and updating the resource with an older region's version and set of regional prices
+             * and currencies will succeed even though a new version is available. The latest
+             * version is 2022/02.
              */
             public Patch setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
               this.regionsVersionVersion = regionsVersionVersion;

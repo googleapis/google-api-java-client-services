@@ -3224,10 +3224,9 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
     /**
      * Initiates a manual failover of a high availability (HA) primary instance to a standby instance,
      * which becomes the primary instance. Users are then rerouted to the new primary. For more
-     * information, see the [Overview of high
-     * availability](https://cloud.google.com/sql/docs/mysql/high-availability) page in the Cloud SQL
-     * documentation. If using Legacy HA (MySQL only), this causes the instance to failover to its
-     * failover replica instance.
+     * information, see the [Overview of high availability](https://cloud.google.com/sql/docs/mysql
+     * /high-availability) page in the Cloud SQL documentation. If using Legacy HA (MySQL only), this
+     * causes the instance to failover to its failover replica instance.
      *
      * Create a request for the method "instances.failover".
      *
@@ -3252,10 +3251,9 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Initiates a manual failover of a high availability (HA) primary instance to a standby instance,
        * which becomes the primary instance. Users are then rerouted to the new primary. For more
-       * information, see the [Overview of high
-       * availability](https://cloud.google.com/sql/docs/mysql/high-availability) page in the Cloud SQL
-       * documentation. If using Legacy HA (MySQL only), this causes the instance to failover to its
-       * failover replica instance.
+       * information, see the [Overview of high availability](https://cloud.google.com/sql/docs/mysql
+       * /high-availability) page in the Cloud SQL documentation. If using Legacy HA (MySQL only), this
+       * causes the instance to failover to its failover replica instance.
        *
        * Create a request for the method "instances.failover".
        *

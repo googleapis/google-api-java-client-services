@@ -17,8 +17,8 @@
 package com.google.api.services.osconfig.v1alpha.model;
 
 /**
- * Common Vulnerability Scoring System version 3. For details, see
- * https://www.first.org/cvss/specification-document
+ * Common Vulnerability Scoring System version 3. For details, see https://www.first.org/cvss
+ * /specification-document
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the OS Config API. For a detailed explanation see:
@@ -54,8 +54,8 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
   private java.lang.String availabilityImpact;
 
   /**
-   * The base score is a function of the base metric scores.
-   * https://www.first.org/cvss/specification-document#Base-Metrics
+   * The base score is a function of the base metric scores. https://www.first.org/cvss
+   * /specification-document#Base-Metrics
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,8 +171,8 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The base score is a function of the base metric scores.
-   * https://www.first.org/cvss/specification-document#Base-Metrics
+   * The base score is a function of the base metric scores. https://www.first.org/cvss
+   * /specification-document#Base-Metrics
    * @return value or {@code null} for none
    */
   public java.lang.Float getBaseScore() {
@@ -180,8 +180,8 @@ public final class CVSSv3 extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The base score is a function of the base metric scores.
-   * https://www.first.org/cvss/specification-document#Base-Metrics
+   * The base score is a function of the base metric scores. https://www.first.org/cvss
+   * /specification-document#Base-Metrics
    * @param baseScore baseScore or {@code null} for none
    */
   public CVSSv3 setBaseScore(java.lang.Float baseScore) {

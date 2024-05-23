@@ -86,11 +86,11 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.util.Map<String, java.lang.Object>> customSchemas;
 
   /**
-   * Output only. The customer ID to [retrieve all account users](/admin-
-   * sdk/directory/v1/guides/manage-users.html#get_all_users). You can use the alias `my_customer`
-   * to represent your account's `customerId`. As a reseller administrator, you can use the resold
-   * customer account's `customerId`. To get a `customerId`, use the account's primary domain in the
-   * `domain` parameter of a [users.list](/admin-sdk/directory/v1/reference/users/list) request.
+   * Output only. The customer ID to [retrieve all account users](/admin-sdk/directory/v1/guides
+   * /manage-users.html#get_all_users). You can use the alias `my_customer` to represent your
+   * account's `customerId`. As a reseller administrator, you can use the resold customer account's
+   * `customerId`. To get a `customerId`, use the account's primary domain in the `domain` parameter
+   * of a [users.list](/admin-sdk/directory/v1/reference/users/list) request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,8 +181,8 @@ public final class User extends com.google.api.client.json.GenericJson {
    * Output only. Indicates a user with super admininistrator privileges. The `isAdmin` property can
    * only be edited in the [Make a user an administrator](/admin-sdk/directory/v1/guides/manage-
    * users.html#make_admin) operation ( [makeAdmin](/admin-
-   * sdk/directory/v1/reference/users/makeAdmin.html) method). If edited in the user
-   * [insert](/admin-sdk/directory/v1/reference/users/insert.html) or [update](/admin-
+   * sdk/directory/v1/reference/users/makeAdmin.html) method). If edited in the user [insert
+   * ](/admin-sdk/directory/v1/reference/users/insert.html) or [update](/admin-
    * sdk/directory/v1/reference/users/update.html) methods, the edit is ignored by the API service.
    * The value may be {@code null}.
    */
@@ -525,11 +525,11 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The customer ID to [retrieve all account users](/admin-
-   * sdk/directory/v1/guides/manage-users.html#get_all_users). You can use the alias `my_customer`
-   * to represent your account's `customerId`. As a reseller administrator, you can use the resold
-   * customer account's `customerId`. To get a `customerId`, use the account's primary domain in the
-   * `domain` parameter of a [users.list](/admin-sdk/directory/v1/reference/users/list) request.
+   * Output only. The customer ID to [retrieve all account users](/admin-sdk/directory/v1/guides
+   * /manage-users.html#get_all_users). You can use the alias `my_customer` to represent your
+   * account's `customerId`. As a reseller administrator, you can use the resold customer account's
+   * `customerId`. To get a `customerId`, use the account's primary domain in the `domain` parameter
+   * of a [users.list](/admin-sdk/directory/v1/reference/users/list) request.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerId() {
@@ -537,11 +537,11 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The customer ID to [retrieve all account users](/admin-
-   * sdk/directory/v1/guides/manage-users.html#get_all_users). You can use the alias `my_customer`
-   * to represent your account's `customerId`. As a reseller administrator, you can use the resold
-   * customer account's `customerId`. To get a `customerId`, use the account's primary domain in the
-   * `domain` parameter of a [users.list](/admin-sdk/directory/v1/reference/users/list) request.
+   * Output only. The customer ID to [retrieve all account users](/admin-sdk/directory/v1/guides
+   * /manage-users.html#get_all_users). You can use the alias `my_customer` to represent your
+   * account's `customerId`. As a reseller administrator, you can use the resold customer account's
+   * `customerId`. To get a `customerId`, use the account's primary domain in the `domain` parameter
+   * of a [users.list](/admin-sdk/directory/v1/reference/users/list) request.
    * @param customerId customerId or {@code null} for none
    */
   public User setCustomerId(java.lang.String customerId) {
@@ -745,8 +745,8 @@ public final class User extends com.google.api.client.json.GenericJson {
    * Output only. Indicates a user with super admininistrator privileges. The `isAdmin` property can
    * only be edited in the [Make a user an administrator](/admin-sdk/directory/v1/guides/manage-
    * users.html#make_admin) operation ( [makeAdmin](/admin-
-   * sdk/directory/v1/reference/users/makeAdmin.html) method). If edited in the user
-   * [insert](/admin-sdk/directory/v1/reference/users/insert.html) or [update](/admin-
+   * sdk/directory/v1/reference/users/makeAdmin.html) method). If edited in the user [insert
+   * ](/admin-sdk/directory/v1/reference/users/insert.html) or [update](/admin-
    * sdk/directory/v1/reference/users/update.html) methods, the edit is ignored by the API service.
    * @return value or {@code null} for none
    */
@@ -758,8 +758,8 @@ public final class User extends com.google.api.client.json.GenericJson {
    * Output only. Indicates a user with super admininistrator privileges. The `isAdmin` property can
    * only be edited in the [Make a user an administrator](/admin-sdk/directory/v1/guides/manage-
    * users.html#make_admin) operation ( [makeAdmin](/admin-
-   * sdk/directory/v1/reference/users/makeAdmin.html) method). If edited in the user
-   * [insert](/admin-sdk/directory/v1/reference/users/insert.html) or [update](/admin-
+   * sdk/directory/v1/reference/users/makeAdmin.html) method). If edited in the user [insert
+   * ](/admin-sdk/directory/v1/reference/users/insert.html) or [update](/admin-
    * sdk/directory/v1/reference/users/update.html) methods, the edit is ignored by the API service.
    * @param isAdmin isAdmin or {@code null} for none
    */

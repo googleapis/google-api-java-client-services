@@ -62,9 +62,8 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRule extends com.goog
    * channels_. The other types of notification channels are _not_ supported, such as Slack, SMS, or
    * PagerDuty. If you want to [send budget notifications to
    * Slack](https://cloud.google.com/billing/docs/how-to/notify#send_notifications_to_slack), use a
-   * pubsubTopic and configure [programmatic
-   * notifications](https://cloud.google.com/billing/docs/how-to/budgets-programmatic-
-   * notifications).
+   * pubsubTopic and configure [programmatic notifications](https://cloud.google.com/billing/docs
+   * /how-to/budgets-programmatic-notifications).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,9 +159,8 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRule extends com.goog
    * channels_. The other types of notification channels are _not_ supported, such as Slack, SMS, or
    * PagerDuty. If you want to [send budget notifications to
    * Slack](https://cloud.google.com/billing/docs/how-to/notify#send_notifications_to_slack), use a
-   * pubsubTopic and configure [programmatic
-   * notifications](https://cloud.google.com/billing/docs/how-to/budgets-programmatic-
-   * notifications).
+   * pubsubTopic and configure [programmatic notifications](https://cloud.google.com/billing/docs
+   * /how-to/budgets-programmatic-notifications).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMonitoringNotificationChannels() {
@@ -182,9 +180,8 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRule extends com.goog
    * channels_. The other types of notification channels are _not_ supported, such as Slack, SMS, or
    * PagerDuty. If you want to [send budget notifications to
    * Slack](https://cloud.google.com/billing/docs/how-to/notify#send_notifications_to_slack), use a
-   * pubsubTopic and configure [programmatic
-   * notifications](https://cloud.google.com/billing/docs/how-to/budgets-programmatic-
-   * notifications).
+   * pubsubTopic and configure [programmatic notifications](https://cloud.google.com/billing/docs
+   * /how-to/budgets-programmatic-notifications).
    * @param monitoringNotificationChannels monitoringNotificationChannels or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1NotificationsRule setMonitoringNotificationChannels(java.util.List<java.lang.String> monitoringNotificationChannels) {

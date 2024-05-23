@@ -17,8 +17,8 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Information about the [Google Cloud Armor security
- * policy](https://cloud.google.com/armor/docs/security-policy-overview) relevant to the finding.
+ * Information about the [Google Cloud Armor security policy](https://cloud.google.com/armor/docs
+ * /security-policy-overview) relevant to the finding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed

@@ -40,8 +40,8 @@ public final class GoogleCloudPolicysimulatorV1Replay extends com.google.api.cli
    * Output only. The resource name of the `Replay`, which has the following format:
    * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`, where
    * `{resource-id}` is the ID of the project, folder, or organization that owns the Replay.
-   * Example: `projects/my-example-
-   * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
+   * Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-4d7d-
+   * 8e03-479ce1833c36`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,8 +82,8 @@ public final class GoogleCloudPolicysimulatorV1Replay extends com.google.api.cli
    * Output only. The resource name of the `Replay`, which has the following format:
    * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`, where
    * `{resource-id}` is the ID of the project, folder, or organization that owns the Replay.
-   * Example: `projects/my-example-
-   * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
+   * Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-4d7d-
+   * 8e03-479ce1833c36`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -94,8 +94,8 @@ public final class GoogleCloudPolicysimulatorV1Replay extends com.google.api.cli
    * Output only. The resource name of the `Replay`, which has the following format:
    * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`, where
    * `{resource-id}` is the ID of the project, folder, or organization that owns the Replay.
-   * Example: `projects/my-example-
-   * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
+   * Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-4d7d-
+   * 8e03-479ce1833c36`
    * @param name name or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1Replay setName(java.lang.String name) {

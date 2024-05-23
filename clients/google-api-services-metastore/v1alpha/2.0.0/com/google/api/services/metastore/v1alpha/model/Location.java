@@ -60,8 +60,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
-   * Resource name for the location, which may vary between implementations. For example:
-   * "projects/example-project/locations/us-east1"
+   * Resource name for the location, which may vary between implementations. For example: "projects
+   * /example-project/locations/us-east1"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,8 +138,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name for the location, which may vary between implementations. For example:
-   * "projects/example-project/locations/us-east1"
+   * Resource name for the location, which may vary between implementations. For example: "projects
+   * /example-project/locations/us-east1"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -147,8 +147,8 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name for the location, which may vary between implementations. For example:
-   * "projects/example-project/locations/us-east1"
+   * Resource name for the location, which may vary between implementations. For example: "projects
+   * /example-project/locations/us-east1"
    * @param name name or {@code null} for none
    */
   public Location setName(java.lang.String name) {

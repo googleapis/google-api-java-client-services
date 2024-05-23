@@ -51,9 +51,8 @@ public final class UpdateBucketRequest extends com.google.api.client.json.Generi
   /**
    * Required. Field mask that specifies the fields in bucket that need an update. A bucket field
    * will be overwritten if, and only if, it is in the update mask. name and output only fields
-   * cannot be updated.For a detailed FieldMask definition, see:
-   * https://developers.google.com/protocol-
-   * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+   * cannot be updated.For a detailed FieldMask definition, see: https://developers.google.com
+   * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
    * updateMask=retention_days
    * The value may be {@code null}.
    */
@@ -107,9 +106,8 @@ public final class UpdateBucketRequest extends com.google.api.client.json.Generi
   /**
    * Required. Field mask that specifies the fields in bucket that need an update. A bucket field
    * will be overwritten if, and only if, it is in the update mask. name and output only fields
-   * cannot be updated.For a detailed FieldMask definition, see:
-   * https://developers.google.com/protocol-
-   * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+   * cannot be updated.For a detailed FieldMask definition, see: https://developers.google.com
+   * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
    * updateMask=retention_days
    * @return value or {@code null} for none
    */
@@ -120,9 +118,8 @@ public final class UpdateBucketRequest extends com.google.api.client.json.Generi
   /**
    * Required. Field mask that specifies the fields in bucket that need an update. A bucket field
    * will be overwritten if, and only if, it is in the update mask. name and output only fields
-   * cannot be updated.For a detailed FieldMask definition, see:
-   * https://developers.google.com/protocol-
-   * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+   * cannot be updated.For a detailed FieldMask definition, see: https://developers.google.com
+   * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
    * updateMask=retention_days
    * @param updateMask updateMask or {@code null} for none
    */

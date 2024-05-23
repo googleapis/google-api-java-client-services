@@ -53,10 +53,9 @@ public final class QueryOptions extends com.google.api.client.json.GenericJson {
    * integer (from the list of supported optimizer versions) overrides the default optimizer version
    * for query execution. The list of supported optimizer versions can be queried from
    * SPANNER_SYS.SUPPORTED_OPTIMIZER_VERSIONS. Executing a SQL statement with an invalid optimizer
-   * version fails with an `INVALID_ARGUMENT` error. See
-   * https://cloud.google.com/spanner/docs/query-optimizer/manage-query-optimizer for more
-   * information on managing the query optimizer. The `optimizer_version` statement hint has
-   * precedence over this setting.
+   * version fails with an `INVALID_ARGUMENT` error. See https://cloud.google.com/spanner/docs
+   * /query-optimizer/manage-query-optimizer for more information on managing the query optimizer.
+   * The `optimizer_version` statement hint has precedence over this setting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,10 +104,9 @@ public final class QueryOptions extends com.google.api.client.json.GenericJson {
    * integer (from the list of supported optimizer versions) overrides the default optimizer version
    * for query execution. The list of supported optimizer versions can be queried from
    * SPANNER_SYS.SUPPORTED_OPTIMIZER_VERSIONS. Executing a SQL statement with an invalid optimizer
-   * version fails with an `INVALID_ARGUMENT` error. See
-   * https://cloud.google.com/spanner/docs/query-optimizer/manage-query-optimizer for more
-   * information on managing the query optimizer. The `optimizer_version` statement hint has
-   * precedence over this setting.
+   * version fails with an `INVALID_ARGUMENT` error. See https://cloud.google.com/spanner/docs
+   * /query-optimizer/manage-query-optimizer for more information on managing the query optimizer.
+   * The `optimizer_version` statement hint has precedence over this setting.
    * @return value or {@code null} for none
    */
   public java.lang.String getOptimizerVersion() {
@@ -123,10 +121,9 @@ public final class QueryOptions extends com.google.api.client.json.GenericJson {
    * integer (from the list of supported optimizer versions) overrides the default optimizer version
    * for query execution. The list of supported optimizer versions can be queried from
    * SPANNER_SYS.SUPPORTED_OPTIMIZER_VERSIONS. Executing a SQL statement with an invalid optimizer
-   * version fails with an `INVALID_ARGUMENT` error. See
-   * https://cloud.google.com/spanner/docs/query-optimizer/manage-query-optimizer for more
-   * information on managing the query optimizer. The `optimizer_version` statement hint has
-   * precedence over this setting.
+   * version fails with an `INVALID_ARGUMENT` error. See https://cloud.google.com/spanner/docs
+   * /query-optimizer/manage-query-optimizer for more information on managing the query optimizer.
+   * The `optimizer_version` statement hint has precedence over this setting.
    * @param optimizerVersion optimizerVersion or {@code null} for none
    */
   public QueryOptions setOptimizerVersion(java.lang.String optimizerVersion) {

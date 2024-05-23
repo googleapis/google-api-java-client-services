@@ -39,8 +39,8 @@ public final class GenericArtifact extends com.google.api.client.json.GenericJso
 
   /**
    * Resource name of the generic artifact. project, location, repository, package_id and version_id
-   * create a unique generic artifact. i.e. "projects/test-project/locations/us-
-   * west4/repositories/test-repo/ genericArtifacts/package_id:version_id"
+   * create a unique generic artifact. i.e. "projects/test-project/locations/us-west4/repositories
+   * /test-repo/ genericArtifacts/package_id:version_id"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +79,8 @@ public final class GenericArtifact extends com.google.api.client.json.GenericJso
 
   /**
    * Resource name of the generic artifact. project, location, repository, package_id and version_id
-   * create a unique generic artifact. i.e. "projects/test-project/locations/us-
-   * west4/repositories/test-repo/ genericArtifacts/package_id:version_id"
+   * create a unique generic artifact. i.e. "projects/test-project/locations/us-west4/repositories
+   * /test-repo/ genericArtifacts/package_id:version_id"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -89,8 +89,8 @@ public final class GenericArtifact extends com.google.api.client.json.GenericJso
 
   /**
    * Resource name of the generic artifact. project, location, repository, package_id and version_id
-   * create a unique generic artifact. i.e. "projects/test-project/locations/us-
-   * west4/repositories/test-repo/ genericArtifacts/package_id:version_id"
+   * create a unique generic artifact. i.e. "projects/test-project/locations/us-west4/repositories
+   * /test-repo/ genericArtifacts/package_id:version_id"
    * @param name name or {@code null} for none
    */
   public GenericArtifact setName(java.lang.String name) {

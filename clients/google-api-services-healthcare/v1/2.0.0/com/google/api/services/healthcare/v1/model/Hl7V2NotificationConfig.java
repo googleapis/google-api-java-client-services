@@ -78,8 +78,8 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    * healthcare.iam.gserviceaccount.com, must have publisher permissions on the given Pub/Sub topic.
    * Not having adequate permissions causes the calls that send notifications to fail. If a
    * notification cannot be published to Pub/Sub, errors are logged to Cloud Logging. For more
-   * information, see [Viewing error logs in Cloud
-   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
+   * information, see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs
+   * /how-tos/logging)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,8 +174,8 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    * healthcare.iam.gserviceaccount.com, must have publisher permissions on the given Pub/Sub topic.
    * Not having adequate permissions causes the calls that send notifications to fail. If a
    * notification cannot be published to Pub/Sub, errors are logged to Cloud Logging. For more
-   * information, see [Viewing error logs in Cloud
-   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
+   * information, see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs
+   * /how-tos/logging)).
    * @return value or {@code null} for none
    */
   public java.lang.String getPubsubTopic() {
@@ -194,8 +194,8 @@ public final class Hl7V2NotificationConfig extends com.google.api.client.json.Ge
    * healthcare.iam.gserviceaccount.com, must have publisher permissions on the given Pub/Sub topic.
    * Not having adequate permissions causes the calls that send notifications to fail. If a
    * notification cannot be published to Pub/Sub, errors are logged to Cloud Logging. For more
-   * information, see [Viewing error logs in Cloud
-   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
+   * information, see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs
+   * /how-tos/logging)).
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */
   public Hl7V2NotificationConfig setPubsubTopic(java.lang.String pubsubTopic) {

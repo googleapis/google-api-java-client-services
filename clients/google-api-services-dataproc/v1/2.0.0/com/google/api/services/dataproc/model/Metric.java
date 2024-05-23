@@ -30,12 +30,11 @@ package com.google.api.services.dataproc.model;
 public final class Metric extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Specify one or more Custom metrics
-   * (https://cloud.google.com/dataproc/docs/guides/dataproc-metrics#custom_metrics) to collect for
-   * the metric course (for the SPARK metric source (any Spark metric
-   * (https://spark.apache.org/docs/latest/monitoring.html#metrics) can be specified).Provide
-   * metrics in the following format: METRIC_SOURCE: INSTANCE:GROUP:METRIC Use camelcase as
-   * appropriate.Examples: yarn:ResourceManager:QueueMetrics:AppsCompleted
+   * Optional. Specify one or more Custom metrics (https://cloud.google.com/dataproc/docs/guides
+   * /dataproc-metrics#custom_metrics) to collect for the metric course (for the SPARK metric source
+   * (any Spark metric (https://spark.apache.org/docs/latest/monitoring.html#metrics) can be
+   * specified).Provide metrics in the following format: METRIC_SOURCE: INSTANCE:GROUP:METRIC Use
+   * camelcase as appropriate.Examples: yarn:ResourceManager:QueueMetrics:AppsCompleted
    * spark:driver:DAGScheduler:job.allJobs
    * sparkHistoryServer:JVM:Memory:NonHeapMemoryUsage.committed
    * hiveserver2:JVM:Memory:NonHeapMemoryUsage.used Notes: Only the specified overridden metrics are
@@ -59,12 +58,11 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   private java.lang.String metricSource;
 
   /**
-   * Optional. Specify one or more Custom metrics
-   * (https://cloud.google.com/dataproc/docs/guides/dataproc-metrics#custom_metrics) to collect for
-   * the metric course (for the SPARK metric source (any Spark metric
-   * (https://spark.apache.org/docs/latest/monitoring.html#metrics) can be specified).Provide
-   * metrics in the following format: METRIC_SOURCE: INSTANCE:GROUP:METRIC Use camelcase as
-   * appropriate.Examples: yarn:ResourceManager:QueueMetrics:AppsCompleted
+   * Optional. Specify one or more Custom metrics (https://cloud.google.com/dataproc/docs/guides
+   * /dataproc-metrics#custom_metrics) to collect for the metric course (for the SPARK metric source
+   * (any Spark metric (https://spark.apache.org/docs/latest/monitoring.html#metrics) can be
+   * specified).Provide metrics in the following format: METRIC_SOURCE: INSTANCE:GROUP:METRIC Use
+   * camelcase as appropriate.Examples: yarn:ResourceManager:QueueMetrics:AppsCompleted
    * spark:driver:DAGScheduler:job.allJobs
    * sparkHistoryServer:JVM:Memory:NonHeapMemoryUsage.committed
    * hiveserver2:JVM:Memory:NonHeapMemoryUsage.used Notes: Only the specified overridden metrics are
@@ -80,12 +78,11 @@ public final class Metric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specify one or more Custom metrics
-   * (https://cloud.google.com/dataproc/docs/guides/dataproc-metrics#custom_metrics) to collect for
-   * the metric course (for the SPARK metric source (any Spark metric
-   * (https://spark.apache.org/docs/latest/monitoring.html#metrics) can be specified).Provide
-   * metrics in the following format: METRIC_SOURCE: INSTANCE:GROUP:METRIC Use camelcase as
-   * appropriate.Examples: yarn:ResourceManager:QueueMetrics:AppsCompleted
+   * Optional. Specify one or more Custom metrics (https://cloud.google.com/dataproc/docs/guides
+   * /dataproc-metrics#custom_metrics) to collect for the metric course (for the SPARK metric source
+   * (any Spark metric (https://spark.apache.org/docs/latest/monitoring.html#metrics) can be
+   * specified).Provide metrics in the following format: METRIC_SOURCE: INSTANCE:GROUP:METRIC Use
+   * camelcase as appropriate.Examples: yarn:ResourceManager:QueueMetrics:AppsCompleted
    * spark:driver:DAGScheduler:job.allJobs
    * sparkHistoryServer:JVM:Memory:NonHeapMemoryUsage.committed
    * hiveserver2:JVM:Memory:NonHeapMemoryUsage.used Notes: Only the specified overridden metrics are

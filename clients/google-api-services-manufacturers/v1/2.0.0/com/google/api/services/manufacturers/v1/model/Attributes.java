@@ -201,8 +201,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String mpn;
 
   /**
-   * Nutrition Attributes. See more at
-   * https://support.google.com/manufacturers/answer/12098458#food-servings.
+   * Nutrition Attributes. See more at https://support.google.com/manufacturers/answer/12098458
+   * #food-servings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -761,8 +761,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Nutrition Attributes. See more at
-   * https://support.google.com/manufacturers/answer/12098458#food-servings.
+   * Nutrition Attributes. See more at https://support.google.com/manufacturers/answer/12098458
+   * #food-servings.
    * @return value or {@code null} for none
    */
   public Nutrition getNutrition() {
@@ -770,8 +770,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Nutrition Attributes. See more at
-   * https://support.google.com/manufacturers/answer/12098458#food-servings.
+   * Nutrition Attributes. See more at https://support.google.com/manufacturers/answer/12098458
+   * #food-servings.
    * @param nutrition nutrition or {@code null} for none
    */
   public Attributes setNutrition(Nutrition nutrition) {

@@ -18,9 +18,9 @@ package com.google.api.services.healthcare.v1beta1.model;
 
 /**
  * Configures consent audit log config for FHIR create, read, update, and delete (CRUD) operations.
- * Cloud audit log for healthcare API must be
- * [enabled](https://cloud.google.com/logging/docs/audit/configure-data-access#config-console-
- * enable). The consent-related logs are included as part of `protoPayload.metadata`.
+ * Cloud audit log for healthcare API must be [enabled](https://cloud.google.com/logging/docs/audit
+ * /configure-data-access#config-console-enable). The consent-related logs are included as part of
+ * `protoPayload.metadata`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

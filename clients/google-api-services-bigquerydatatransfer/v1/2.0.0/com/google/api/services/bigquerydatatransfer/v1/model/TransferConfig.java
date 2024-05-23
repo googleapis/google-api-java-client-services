@@ -45,9 +45,8 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Data source ID. This cannot be changed once data transfer is created. The full list of
-   * available data source IDs can be returned through an API call:
-   * https://cloud.google.com/bigquery-
-   * transfer/docs/reference/datatransfer/rest/v1/projects.locations.dataSources/list
+   * available data source IDs can be returned through an API call: https://cloud.google.com
+   * /bigquery-transfer/docs/reference/datatransfer/rest/v1/projects.locations.dataSources/list
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -210,9 +209,8 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Data source ID. This cannot be changed once data transfer is created. The full list of
-   * available data source IDs can be returned through an API call:
-   * https://cloud.google.com/bigquery-
-   * transfer/docs/reference/datatransfer/rest/v1/projects.locations.dataSources/list
+   * available data source IDs can be returned through an API call: https://cloud.google.com
+   * /bigquery-transfer/docs/reference/datatransfer/rest/v1/projects.locations.dataSources/list
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSourceId() {
@@ -221,9 +219,8 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Data source ID. This cannot be changed once data transfer is created. The full list of
-   * available data source IDs can be returned through an API call:
-   * https://cloud.google.com/bigquery-
-   * transfer/docs/reference/datatransfer/rest/v1/projects.locations.dataSources/list
+   * available data source IDs can be returned through an API call: https://cloud.google.com
+   * /bigquery-transfer/docs/reference/datatransfer/rest/v1/projects.locations.dataSources/list
    * @param dataSourceId dataSourceId or {@code null} for none
    */
   public TransferConfig setDataSourceId(java.lang.String dataSourceId) {

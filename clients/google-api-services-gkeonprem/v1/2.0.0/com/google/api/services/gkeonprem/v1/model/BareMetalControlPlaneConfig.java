@@ -31,9 +31,8 @@ public final class BareMetalControlPlaneConfig extends com.google.api.client.jso
 
   /**
    * Customizes the default API server args. Only a subset of customized flags are supported. For
-   * the exact format, refer to the [API server
-   * documentation](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-
-   * apiserver/).
+   * the exact format, refer to the [API server documentation](https://kubernetes.io/docs/reference
+   * /command-line-tools-reference/kube-apiserver/).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +53,8 @@ public final class BareMetalControlPlaneConfig extends com.google.api.client.jso
 
   /**
    * Customizes the default API server args. Only a subset of customized flags are supported. For
-   * the exact format, refer to the [API server
-   * documentation](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-
-   * apiserver/).
+   * the exact format, refer to the [API server documentation](https://kubernetes.io/docs/reference
+   * /command-line-tools-reference/kube-apiserver/).
    * @return value or {@code null} for none
    */
   public java.util.List<BareMetalApiServerArgument> getApiServerArgs() {
@@ -65,9 +63,8 @@ public final class BareMetalControlPlaneConfig extends com.google.api.client.jso
 
   /**
    * Customizes the default API server args. Only a subset of customized flags are supported. For
-   * the exact format, refer to the [API server
-   * documentation](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-
-   * apiserver/).
+   * the exact format, refer to the [API server documentation](https://kubernetes.io/docs/reference
+   * /command-line-tools-reference/kube-apiserver/).
    * @param apiServerArgs apiServerArgs or {@code null} for none
    */
   public BareMetalControlPlaneConfig setApiServerArgs(java.util.List<BareMetalApiServerArgument> apiServerArgs) {

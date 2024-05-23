@@ -38,8 +38,8 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Container Image URI to a DLVM Example: 'gcr.io/deeplearning-platform-release/base-cu100' More
-   * examples can be found at: https://cloud.google.com/ai-platform/deep-learning-
-   * containers/docs/choosing-container
+   * examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs
+   * /choosing-container
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,8 +179,8 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Container Image URI to a DLVM Example: 'gcr.io/deeplearning-platform-release/base-cu100' More
-   * examples can be found at: https://cloud.google.com/ai-platform/deep-learning-
-   * containers/docs/choosing-container
+   * examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs
+   * /choosing-container
    * @return value or {@code null} for none
    */
   public java.lang.String getContainerImageUri() {
@@ -189,8 +189,8 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
 
   /**
    * Container Image URI to a DLVM Example: 'gcr.io/deeplearning-platform-release/base-cu100' More
-   * examples can be found at: https://cloud.google.com/ai-platform/deep-learning-
-   * containers/docs/choosing-container
+   * examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs
+   * /choosing-container
    * @param containerImageUri containerImageUri or {@code null} for none
    */
   public ExecutionTemplate setContainerImageUri(java.lang.String containerImageUri) {

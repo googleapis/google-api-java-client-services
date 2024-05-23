@@ -1894,8 +1894,8 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
             /**
              * Makes a recommendation prediction. If using API Key based authentication, the API Key must be
-             * registered using the PredictionApiKeyRegistry service. [Learn
-             * more](https://cloud.google.com/recommendations-ai/docs/setting-up#register-key).
+             * registered using the PredictionApiKeyRegistry service. [Learn more](https://cloud.google.com
+             * /recommendations-ai/docs/setting-up#register-key).
              *
              * Create a request for the method "placements.predict".
              *
@@ -1921,8 +1921,8 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
 
               /**
                * Makes a recommendation prediction. If using API Key based authentication, the API Key must be
-               * registered using the PredictionApiKeyRegistry service. [Learn
-               * more](https://cloud.google.com/recommendations-ai/docs/setting-up#register-key).
+               * registered using the PredictionApiKeyRegistry service. [Learn more](https://cloud.google.com
+               * /recommendations-ai/docs/setting-up#register-key).
                *
                * Create a request for the method "placements.predict".
                *

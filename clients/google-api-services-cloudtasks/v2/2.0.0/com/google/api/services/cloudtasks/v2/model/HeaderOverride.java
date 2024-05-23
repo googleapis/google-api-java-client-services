@@ -32,8 +32,8 @@ public final class HeaderOverride extends com.google.api.client.json.GenericJson
   /**
    * Header embodying a key and a value. Do not put business sensitive or personally identifying
    * data in the HTTP Header Override Configuration or other similar fields in accordance with
-   * Section 12 (Resource Fields) of the [Service Specific
-   * Terms](https://cloud.google.com/terms/service-terms).
+   * Section 12 (Resource Fields) of the [Service Specific Terms](https://cloud.google.com/terms
+   * /service-terms).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +42,8 @@ public final class HeaderOverride extends com.google.api.client.json.GenericJson
   /**
    * Header embodying a key and a value. Do not put business sensitive or personally identifying
    * data in the HTTP Header Override Configuration or other similar fields in accordance with
-   * Section 12 (Resource Fields) of the [Service Specific
-   * Terms](https://cloud.google.com/terms/service-terms).
+   * Section 12 (Resource Fields) of the [Service Specific Terms](https://cloud.google.com/terms
+   * /service-terms).
    * @return value or {@code null} for none
    */
   public Header getHeader() {
@@ -53,8 +53,8 @@ public final class HeaderOverride extends com.google.api.client.json.GenericJson
   /**
    * Header embodying a key and a value. Do not put business sensitive or personally identifying
    * data in the HTTP Header Override Configuration or other similar fields in accordance with
-   * Section 12 (Resource Fields) of the [Service Specific
-   * Terms](https://cloud.google.com/terms/service-terms).
+   * Section 12 (Resource Fields) of the [Service Specific Terms](https://cloud.google.com/terms
+   * /service-terms).
    * @param header header or {@code null} for none
    */
   public HeaderOverride setHeader(Header header) {

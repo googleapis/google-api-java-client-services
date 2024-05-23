@@ -30,16 +30,16 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1GcsSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Google Cloud Storage URIs for the inputs. A URI is of the form:
-   * `gs://bucket/object-prefix-or-name` Whether a prefix or name is used depends on the use case.
+   * Required. The Google Cloud Storage URIs for the inputs. A URI is of the form: `gs://bucket
+   * /object-prefix-or-name` Whether a prefix or name is used depends on the use case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Required. The Google Cloud Storage URIs for the inputs. A URI is of the form:
-   * `gs://bucket/object-prefix-or-name` Whether a prefix or name is used depends on the use case.
+   * Required. The Google Cloud Storage URIs for the inputs. A URI is of the form: `gs://bucket
+   * /object-prefix-or-name` Whether a prefix or name is used depends on the use case.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -47,8 +47,8 @@ public final class GoogleCloudDialogflowV2beta1GcsSource extends com.google.api.
   }
 
   /**
-   * Required. The Google Cloud Storage URIs for the inputs. A URI is of the form:
-   * `gs://bucket/object-prefix-or-name` Whether a prefix or name is used depends on the use case.
+   * Required. The Google Cloud Storage URIs for the inputs. A URI is of the form: `gs://bucket
+   * /object-prefix-or-name` Whether a prefix or name is used depends on the use case.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GcsSource setUri(java.lang.String uri) {

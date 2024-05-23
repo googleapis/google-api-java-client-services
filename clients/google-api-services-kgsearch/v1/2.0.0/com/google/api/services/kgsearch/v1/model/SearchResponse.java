@@ -32,8 +32,8 @@ package com.google.api.services.kgsearch.v1.model;
 public final class SearchResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The local context applicable for the response. See more details at http://www.w3.org/TR/json-
-   * ld/#context-definitions.
+   * The local context applicable for the response. See more details at http://www.w3.org/TR/json-ld
+   * /#context-definitions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("@context")
@@ -54,8 +54,8 @@ public final class SearchResponse extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.Object> itemListElement;
 
   /**
-   * The local context applicable for the response. See more details at http://www.w3.org/TR/json-
-   * ld/#context-definitions.
+   * The local context applicable for the response. See more details at http://www.w3.org/TR/json-ld
+   * /#context-definitions.
    * @return value or {@code null} for none
    */
   public java.lang.Object getContext() {
@@ -63,8 +63,8 @@ public final class SearchResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The local context applicable for the response. See more details at http://www.w3.org/TR/json-
-   * ld/#context-definitions.
+   * The local context applicable for the response. See more details at http://www.w3.org/TR/json-ld
+   * /#context-definitions.
    * @param context context or {@code null} for none
    */
   public SearchResponse setContext(java.lang.Object context) {

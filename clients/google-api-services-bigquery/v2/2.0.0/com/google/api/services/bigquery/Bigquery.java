@@ -827,8 +827,8 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
 
       /** An expression for filtering the results of the request by label. The syntax is \"labels.[:]\".
      Multiple filters can be ANDed together by connecting with a space. Example:
-     \"labels.department:receiving labels.active\". See [Filtering datasets using
-     labels](/bigquery/docs/filtering-labels#filtering_datasets_using_labels) for details.
+     \"labels.department:receiving labels.active\". See [Filtering datasets using labels](/bigquery/docs
+     /filtering-labels#filtering_datasets_using_labels) for details.
        */
       public java.lang.String getFilter() {
         return filter;

@@ -31,16 +31,16 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1ProcessorTypeLocationInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The location ID. For supported locations, refer to [regional and multi-regional
-   * support](/document-ai/docs/regions).
+   * The location ID. For supported locations, refer to [regional and multi-regional support
+   * ](/document-ai/docs/regions).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String locationId;
 
   /**
-   * The location ID. For supported locations, refer to [regional and multi-regional
-   * support](/document-ai/docs/regions).
+   * The location ID. For supported locations, refer to [regional and multi-regional support
+   * ](/document-ai/docs/regions).
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -48,8 +48,8 @@ public final class GoogleCloudDocumentaiV1ProcessorTypeLocationInfo extends com.
   }
 
   /**
-   * The location ID. For supported locations, refer to [regional and multi-regional
-   * support](/document-ai/docs/regions).
+   * The location ID. For supported locations, refer to [regional and multi-regional support
+   * ](/document-ai/docs/regions).
    * @param locationId locationId or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessorTypeLocationInfo setLocationId(java.lang.String locationId) {

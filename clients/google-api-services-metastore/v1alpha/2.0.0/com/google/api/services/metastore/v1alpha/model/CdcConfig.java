@@ -51,10 +51,10 @@ public final class CdcConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The URL of the subnetwork resource to create the VM instance hosting the reverse
-   * proxy in. More context in https://cloud.google.com/datastream/docs/private-
-   * connectivity#reverse-csql-proxy The subnetwork should reside in the network provided in the
-   * request that Datastream will peer to and should be in the same region as Datastream, in the
-   * following format. projects/{project_id}/regions/{region_id}/subnetworks/{subnetwork_id}
+   * proxy in. More context in https://cloud.google.com/datastream/docs/private-connectivity
+   * #reverse-csql-proxy The subnetwork should reside in the network provided in the request that
+   * Datastream will peer to and should be in the same region as Datastream, in the following
+   * format. projects/{project_id}/regions/{region_id}/subnetworks/{subnetwork_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,10 +136,10 @@ public final class CdcConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The URL of the subnetwork resource to create the VM instance hosting the reverse
-   * proxy in. More context in https://cloud.google.com/datastream/docs/private-
-   * connectivity#reverse-csql-proxy The subnetwork should reside in the network provided in the
-   * request that Datastream will peer to and should be in the same region as Datastream, in the
-   * following format. projects/{project_id}/regions/{region_id}/subnetworks/{subnetwork_id}
+   * proxy in. More context in https://cloud.google.com/datastream/docs/private-connectivity
+   * #reverse-csql-proxy The subnetwork should reside in the network provided in the request that
+   * Datastream will peer to and should be in the same region as Datastream, in the following
+   * format. projects/{project_id}/regions/{region_id}/subnetworks/{subnetwork_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getReverseProxySubnet() {
@@ -148,10 +148,10 @@ public final class CdcConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The URL of the subnetwork resource to create the VM instance hosting the reverse
-   * proxy in. More context in https://cloud.google.com/datastream/docs/private-
-   * connectivity#reverse-csql-proxy The subnetwork should reside in the network provided in the
-   * request that Datastream will peer to and should be in the same region as Datastream, in the
-   * following format. projects/{project_id}/regions/{region_id}/subnetworks/{subnetwork_id}
+   * proxy in. More context in https://cloud.google.com/datastream/docs/private-connectivity
+   * #reverse-csql-proxy The subnetwork should reside in the network provided in the request that
+   * Datastream will peer to and should be in the same region as Datastream, in the following
+   * format. projects/{project_id}/regions/{region_id}/subnetworks/{subnetwork_id}
    * @param reverseProxySubnet reverseProxySubnet or {@code null} for none
    */
   public CdcConfig setReverseProxySubnet(java.lang.String reverseProxySubnet) {

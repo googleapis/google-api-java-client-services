@@ -91,8 +91,8 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   private CriteriaTargeting userListTargeting;
 
   /**
-   * Output only. The verticals included or excluded as defined in
-   * https://developers.google.com/authorized-buyers/rtb/downloads/publisher-verticals
+   * Output only. The verticals included or excluded as defined in https://developers.google.com
+   * /authorized-buyers/rtb/downloads/publisher-verticals
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,8 +246,8 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. The verticals included or excluded as defined in
-   * https://developers.google.com/authorized-buyers/rtb/downloads/publisher-verticals
+   * Output only. The verticals included or excluded as defined in https://developers.google.com
+   * /authorized-buyers/rtb/downloads/publisher-verticals
    * @return value or {@code null} for none
    */
   public CriteriaTargeting getVerticalTargeting() {
@@ -255,8 +255,8 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. The verticals included or excluded as defined in
-   * https://developers.google.com/authorized-buyers/rtb/downloads/publisher-verticals
+   * Output only. The verticals included or excluded as defined in https://developers.google.com
+   * /authorized-buyers/rtb/downloads/publisher-verticals
    * @param verticalTargeting verticalTargeting or {@code null} for none
    */
   public MarketplaceTargeting setVerticalTargeting(CriteriaTargeting verticalTargeting) {

@@ -41,11 +41,10 @@ public final class EncryptionConfig extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. The Cloud KMS key resource name to use for cluster persistent disk and job argument
-   * encryption. See Use CMEK with cluster data
-   * (https://cloud.google.com//dataproc/docs/concepts/configuring-clusters/customer-managed-
-   * encryption#use_cmek_with_cluster_data) for more information.When this key resource name is
-   * provided, the following job arguments of the following job types submitted to the cluster are
-   * encrypted using CMEK: FlinkJob args
+   * encryption. See Use CMEK with cluster data (https://cloud.google.com//dataproc/docs/concepts
+   * /configuring-clusters/customer-managed-encryption#use_cmek_with_cluster_data) for more
+   * information.When this key resource name is provided, the following job arguments of the
+   * following job types submitted to the cluster are encrypted using CMEK: FlinkJob args
    * (https://cloud.google.com/dataproc/docs/reference/rest/v1/FlinkJob) HadoopJob args
    * (https://cloud.google.com/dataproc/docs/reference/rest/v1/HadoopJob) SparkJob args
    * (https://cloud.google.com/dataproc/docs/reference/rest/v1/SparkJob) SparkRJob args
@@ -88,11 +87,10 @@ public final class EncryptionConfig extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. The Cloud KMS key resource name to use for cluster persistent disk and job argument
-   * encryption. See Use CMEK with cluster data
-   * (https://cloud.google.com//dataproc/docs/concepts/configuring-clusters/customer-managed-
-   * encryption#use_cmek_with_cluster_data) for more information.When this key resource name is
-   * provided, the following job arguments of the following job types submitted to the cluster are
-   * encrypted using CMEK: FlinkJob args
+   * encryption. See Use CMEK with cluster data (https://cloud.google.com//dataproc/docs/concepts
+   * /configuring-clusters/customer-managed-encryption#use_cmek_with_cluster_data) for more
+   * information.When this key resource name is provided, the following job arguments of the
+   * following job types submitted to the cluster are encrypted using CMEK: FlinkJob args
    * (https://cloud.google.com/dataproc/docs/reference/rest/v1/FlinkJob) HadoopJob args
    * (https://cloud.google.com/dataproc/docs/reference/rest/v1/HadoopJob) SparkJob args
    * (https://cloud.google.com/dataproc/docs/reference/rest/v1/SparkJob) SparkRJob args
@@ -113,11 +111,10 @@ public final class EncryptionConfig extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. The Cloud KMS key resource name to use for cluster persistent disk and job argument
-   * encryption. See Use CMEK with cluster data
-   * (https://cloud.google.com//dataproc/docs/concepts/configuring-clusters/customer-managed-
-   * encryption#use_cmek_with_cluster_data) for more information.When this key resource name is
-   * provided, the following job arguments of the following job types submitted to the cluster are
-   * encrypted using CMEK: FlinkJob args
+   * encryption. See Use CMEK with cluster data (https://cloud.google.com//dataproc/docs/concepts
+   * /configuring-clusters/customer-managed-encryption#use_cmek_with_cluster_data) for more
+   * information.When this key resource name is provided, the following job arguments of the
+   * following job types submitted to the cluster are encrypted using CMEK: FlinkJob args
    * (https://cloud.google.com/dataproc/docs/reference/rest/v1/FlinkJob) HadoopJob args
    * (https://cloud.google.com/dataproc/docs/reference/rest/v1/HadoopJob) SparkJob args
    * (https://cloud.google.com/dataproc/docs/reference/rest/v1/SparkJob) SparkRJob args

@@ -22,8 +22,8 @@ package com.google.api.services.dialogflow.v3.model;
  * session entity type at the session level to extend or replace a custom entity type at the user
  * session level (we refer to the entity types defined at the agent level as "custom entity types").
  * Note: session entity types apply to all queries, regardless of the language. For more information
- * about entity types, see the [Dialogflow
- * documentation](https://cloud.google.com/dialogflow/docs/entities-overview).
+ * about entity types, see the [Dialogflow documentation](https://cloud.google.com/dialogflow/docs
+ * /entities-overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

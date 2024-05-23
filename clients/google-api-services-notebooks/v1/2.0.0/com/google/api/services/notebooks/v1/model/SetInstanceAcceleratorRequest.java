@@ -31,9 +31,8 @@ public final class SetInstanceAcceleratorRequest extends com.google.api.client.j
 
   /**
    * Required. Count of cores of this accelerator. Note that not all combinations of `type` and
-   * `core_count` are valid. See [GPUs on Compute
-   * Engine](https://cloud.google.com/compute/docs/gpus/#gpus-list) to find a valid combination.
-   * TPUs are not supported.
+   * `core_count` are valid. See [GPUs on Compute Engine](https://cloud.google.com/compute/docs/gpus
+   * /#gpus-list) to find a valid combination. TPUs are not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -48,9 +47,8 @@ public final class SetInstanceAcceleratorRequest extends com.google.api.client.j
 
   /**
    * Required. Count of cores of this accelerator. Note that not all combinations of `type` and
-   * `core_count` are valid. See [GPUs on Compute
-   * Engine](https://cloud.google.com/compute/docs/gpus/#gpus-list) to find a valid combination.
-   * TPUs are not supported.
+   * `core_count` are valid. See [GPUs on Compute Engine](https://cloud.google.com/compute/docs/gpus
+   * /#gpus-list) to find a valid combination. TPUs are not supported.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCoreCount() {
@@ -59,9 +57,8 @@ public final class SetInstanceAcceleratorRequest extends com.google.api.client.j
 
   /**
    * Required. Count of cores of this accelerator. Note that not all combinations of `type` and
-   * `core_count` are valid. See [GPUs on Compute
-   * Engine](https://cloud.google.com/compute/docs/gpus/#gpus-list) to find a valid combination.
-   * TPUs are not supported.
+   * `core_count` are valid. See [GPUs on Compute Engine](https://cloud.google.com/compute/docs/gpus
+   * /#gpus-list) to find a valid combination. TPUs are not supported.
    * @param coreCount coreCount or {@code null} for none
    */
   public SetInstanceAcceleratorRequest setCoreCount(java.lang.Long coreCount) {

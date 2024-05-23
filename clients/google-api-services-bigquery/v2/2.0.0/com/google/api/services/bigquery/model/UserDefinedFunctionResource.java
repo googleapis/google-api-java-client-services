@@ -20,8 +20,8 @@ package com.google.api.services.bigquery.model;
  * This is used for defining User Defined Function (UDF) resources only when using legacy SQL. Users
  * of GoogleSQL should leverage either DDL (e.g. CREATE [TEMPORARY] FUNCTION ... ) or the Routines
  * API to define UDF resources. For additional information on migrating, see:
- * https://cloud.google.com/bigquery/docs/reference/standard-sql/migrating-from-legacy-
- * sql#differences_in_user-defined_javascript_functions
+ * https://cloud.google.com/bigquery/docs/reference/standard-sql/migrating-from-legacy-sql
+ * #differences_in_user-defined_javascript_functions
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:

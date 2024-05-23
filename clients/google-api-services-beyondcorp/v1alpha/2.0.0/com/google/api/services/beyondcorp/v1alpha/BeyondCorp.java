@@ -1060,12 +1060,12 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
             /**
              * Optional. A filter specifying constraints of a list operation. All fields in the
              * PartnerTenant message are supported. For example, the following query will return the
-             * PartnerTenants with displayName "test-tenant" organizations/${ORG_ID}/locations/${LOC
-             * ATION}/partnerTenants?filter=displayName="test-tenant" Nested fields are also
-             * supported. The follow query will return PartnerTenants with internal_tenant_id "1234"
-             * organizations/${ORG_ID}/locations/${LOCATION}/partnerTenants?filter=partnerMetadata.i
-             * nternalTenantId="1234" For more information, please refer to
-             * https://google.aip.dev/160.
+             * PartnerTenants with displayName "test-tenant"
+             * organizations/${ORG_ID}/locations/${LOCATION}/partnerTenants?filter=displayName
+             * ="test-tenant" Nested fields are also supported. The follow query will return
+             * PartnerTenants with internal_tenant_id "1234" organizations/${ORG_ID}/locations/${LOC
+             * ATION}/partnerTenants?filter=partnerMetadata.internalTenantId="1234" For more
+             * information, please refer to https://google.aip.dev/160.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -1086,12 +1086,12 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
             /**
              * Optional. A filter specifying constraints of a list operation. All fields in the
              * PartnerTenant message are supported. For example, the following query will return the
-             * PartnerTenants with displayName "test-tenant" organizations/${ORG_ID}/locations/${LOC
-             * ATION}/partnerTenants?filter=displayName="test-tenant" Nested fields are also
-             * supported. The follow query will return PartnerTenants with internal_tenant_id "1234"
-             * organizations/${ORG_ID}/locations/${LOCATION}/partnerTenants?filter=partnerMetadata.i
-             * nternalTenantId="1234" For more information, please refer to
-             * https://google.aip.dev/160.
+             * PartnerTenants with displayName "test-tenant"
+             * organizations/${ORG_ID}/locations/${LOCATION}/partnerTenants?filter=displayName
+             * ="test-tenant" Nested fields are also supported. The follow query will return
+             * PartnerTenants with internal_tenant_id "1234" organizations/${ORG_ID}/locations/${LOC
+             * ATION}/partnerTenants?filter=partnerMetadata.internalTenantId="1234" For more
+             * information, please refer to https://google.aip.dev/160.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

@@ -170,12 +170,11 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
 
   /**
    * Sets the number of items this notification represents. May be displayed as a badge count for
-   * launchers that support badging.See [Notification
-   * Badge](https://developer.android.com/training/notify-user/badges). For example, this might be
-   * useful if you're using just one notification to represent multiple new messages but you want
-   * the count here to represent the number of total new messages. If zero or unspecified, systems
-   * that support badging use the default, which is to increment a number displayed on the long-
-   * press menu each time a new notification arrives.
+   * launchers that support badging.See [Notification Badge](https://developer.android.com/training
+   * /notify-user/badges). For example, this might be useful if you're using just one notification
+   * to represent multiple new messages but you want the count here to represent the number of total
+   * new messages. If zero or unspecified, systems that support badging use the default, which is to
+   * increment a number displayed on the long-press menu each time a new notification arrives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -607,12 +606,11 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
 
   /**
    * Sets the number of items this notification represents. May be displayed as a badge count for
-   * launchers that support badging.See [Notification
-   * Badge](https://developer.android.com/training/notify-user/badges). For example, this might be
-   * useful if you're using just one notification to represent multiple new messages but you want
-   * the count here to represent the number of total new messages. If zero or unspecified, systems
-   * that support badging use the default, which is to increment a number displayed on the long-
-   * press menu each time a new notification arrives.
+   * launchers that support badging.See [Notification Badge](https://developer.android.com/training
+   * /notify-user/badges). For example, this might be useful if you're using just one notification
+   * to represent multiple new messages but you want the count here to represent the number of total
+   * new messages. If zero or unspecified, systems that support badging use the default, which is to
+   * increment a number displayed on the long-press menu each time a new notification arrives.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNotificationCount() {
@@ -621,12 +619,11 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
 
   /**
    * Sets the number of items this notification represents. May be displayed as a badge count for
-   * launchers that support badging.See [Notification
-   * Badge](https://developer.android.com/training/notify-user/badges). For example, this might be
-   * useful if you're using just one notification to represent multiple new messages but you want
-   * the count here to represent the number of total new messages. If zero or unspecified, systems
-   * that support badging use the default, which is to increment a number displayed on the long-
-   * press menu each time a new notification arrives.
+   * launchers that support badging.See [Notification Badge](https://developer.android.com/training
+   * /notify-user/badges). For example, this might be useful if you're using just one notification
+   * to represent multiple new messages but you want the count here to represent the number of total
+   * new messages. If zero or unspecified, systems that support badging use the default, which is to
+   * increment a number displayed on the long-press menu each time a new notification arrives.
    * @param notificationCount notificationCount or {@code null} for none
    */
   public AndroidNotification setNotificationCount(java.lang.Integer notificationCount) {

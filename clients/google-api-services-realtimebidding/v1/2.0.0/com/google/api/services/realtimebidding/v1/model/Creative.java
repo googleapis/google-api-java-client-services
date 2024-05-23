@@ -168,11 +168,11 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private NativeContent native__;
 
   /**
-   * Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-
-   * buyers/rtb/fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-
-   * device auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-
-   * interest-groups"). This should be unique among all creatives for a given `accountId`. This URL
-   * should be the same as the URL returned by
+   * Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-buyers/rtb
+   * /fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-device
+   * auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-
+   * groups"). This should be unique among all creatives for a given `accountId`. This URL should be
+   * the same as the URL returned by
    * [generateBid()](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#32-on-device-bidding).
    * The value may be {@code null}.
    */
@@ -527,11 +527,11 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-
-   * buyers/rtb/fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-
-   * device auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-
-   * interest-groups"). This should be unique among all creatives for a given `accountId`. This URL
-   * should be the same as the URL returned by
+   * Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-buyers/rtb
+   * /fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-device
+   * auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-
+   * groups"). This should be unique among all creatives for a given `accountId`. This URL should be
+   * the same as the URL returned by
    * [generateBid()](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#32-on-device-bidding).
    * @return value or {@code null} for none
    */
@@ -540,11 +540,11 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-
-   * buyers/rtb/fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-
-   * device auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-
-   * interest-groups"). This should be unique among all creatives for a given `accountId`. This URL
-   * should be the same as the URL returned by
+   * Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-buyers/rtb
+   * /fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-device
+   * auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-
+   * groups"). This should be unique among all creatives for a given `accountId`. This URL should be
+   * the same as the URL returned by
    * [generateBid()](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#32-on-device-bidding).
    * @param renderUrl renderUrl or {@code null} for none
    */

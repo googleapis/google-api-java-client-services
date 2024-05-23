@@ -94,15 +94,14 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableHistoryModifications;
 
   /**
-   * Whether this FHIR store has the [updateCreate
-   * capability](https://www.hl7.org/fhir/capabilitystatement-
-   * definitions.html#CapabilityStatement.rest.resource.updateCreate). This determines if the client
-   * can use an Update operation to create a new resource with a client-specified ID. If false, all
-   * IDs are server-assigned through the Create operation and attempts to update a non-existent
-   * resource return errors. It is strongly advised not to include or encode any sensitive data such
-   * as patient identifiers in client-specified resource IDs. Those IDs are part of the FHIR
-   * resource path recorded in Cloud audit logs and Pub/Sub notifications. Those IDs can also be
-   * contained in reference fields within other resources.
+   * Whether this FHIR store has the [updateCreate capability](https://www.hl7.org/fhir
+   * /capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This
+   * determines if the client can use an Update operation to create a new resource with a client-
+   * specified ID. If false, all IDs are server-assigned through the Create operation and attempts
+   * to update a non-existent resource return errors. It is strongly advised not to include or
+   * encode any sensitive data such as patient identifiers in client-specified resource IDs. Those
+   * IDs are part of the FHIR resource path recorded in Cloud audit logs and Pub/Sub notifications.
+   * Those IDs can also be contained in reference fields within other resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -336,15 +335,14 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this FHIR store has the [updateCreate
-   * capability](https://www.hl7.org/fhir/capabilitystatement-
-   * definitions.html#CapabilityStatement.rest.resource.updateCreate). This determines if the client
-   * can use an Update operation to create a new resource with a client-specified ID. If false, all
-   * IDs are server-assigned through the Create operation and attempts to update a non-existent
-   * resource return errors. It is strongly advised not to include or encode any sensitive data such
-   * as patient identifiers in client-specified resource IDs. Those IDs are part of the FHIR
-   * resource path recorded in Cloud audit logs and Pub/Sub notifications. Those IDs can also be
-   * contained in reference fields within other resources.
+   * Whether this FHIR store has the [updateCreate capability](https://www.hl7.org/fhir
+   * /capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This
+   * determines if the client can use an Update operation to create a new resource with a client-
+   * specified ID. If false, all IDs are server-assigned through the Create operation and attempts
+   * to update a non-existent resource return errors. It is strongly advised not to include or
+   * encode any sensitive data such as patient identifiers in client-specified resource IDs. Those
+   * IDs are part of the FHIR resource path recorded in Cloud audit logs and Pub/Sub notifications.
+   * Those IDs can also be contained in reference fields within other resources.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableUpdateCreate() {
@@ -352,15 +350,14 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this FHIR store has the [updateCreate
-   * capability](https://www.hl7.org/fhir/capabilitystatement-
-   * definitions.html#CapabilityStatement.rest.resource.updateCreate). This determines if the client
-   * can use an Update operation to create a new resource with a client-specified ID. If false, all
-   * IDs are server-assigned through the Create operation and attempts to update a non-existent
-   * resource return errors. It is strongly advised not to include or encode any sensitive data such
-   * as patient identifiers in client-specified resource IDs. Those IDs are part of the FHIR
-   * resource path recorded in Cloud audit logs and Pub/Sub notifications. Those IDs can also be
-   * contained in reference fields within other resources.
+   * Whether this FHIR store has the [updateCreate capability](https://www.hl7.org/fhir
+   * /capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This
+   * determines if the client can use an Update operation to create a new resource with a client-
+   * specified ID. If false, all IDs are server-assigned through the Create operation and attempts
+   * to update a non-existent resource return errors. It is strongly advised not to include or
+   * encode any sensitive data such as patient identifiers in client-specified resource IDs. Those
+   * IDs are part of the FHIR resource path recorded in Cloud audit logs and Pub/Sub notifications.
+   * Those IDs can also be contained in reference fields within other resources.
    * @param enableUpdateCreate enableUpdateCreate or {@code null} for none
    */
   public FhirStore setEnableUpdateCreate(java.lang.Boolean enableUpdateCreate) {

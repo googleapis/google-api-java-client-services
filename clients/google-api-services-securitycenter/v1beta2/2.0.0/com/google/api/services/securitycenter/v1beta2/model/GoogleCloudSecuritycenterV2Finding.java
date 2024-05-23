@@ -290,7 +290,7 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private java.util.List<GoogleCloudSecuritycenterV2LogEntry> logEntries;
 
   /**
-   * MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
+   * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -974,7 +974,7 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
+   * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2MitreAttack getMitreAttack() {
@@ -982,7 +982,7 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
+   * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
    * @param mitreAttack mitreAttack or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setMitreAttack(GoogleCloudSecuritycenterV2MitreAttack mitreAttack) {

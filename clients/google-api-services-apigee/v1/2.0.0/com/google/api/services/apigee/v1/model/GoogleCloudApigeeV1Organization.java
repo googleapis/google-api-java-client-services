@@ -39,8 +39,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   /**
    * Required. DEPRECATED: This field will eventually be deprecated and replaced with a differently-
    * named field. Primary Google Cloud region for analytics data storage. For valid values, see
-   * [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-
-   * started/create-org).
+   * [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started
+   * /create-org).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,8 +284,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   /**
    * Required. DEPRECATED: This field will eventually be deprecated and replaced with a differently-
    * named field. Primary Google Cloud region for analytics data storage. For valid values, see
-   * [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-
-   * started/create-org).
+   * [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started
+   * /create-org).
    * @return value or {@code null} for none
    */
   public java.lang.String getAnalyticsRegion() {
@@ -295,8 +295,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   /**
    * Required. DEPRECATED: This field will eventually be deprecated and replaced with a differently-
    * named field. Primary Google Cloud region for analytics data storage. For valid values, see
-   * [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-
-   * started/create-org).
+   * [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started
+   * /create-org).
    * @param analyticsRegion analyticsRegion or {@code null} for none
    */
   public GoogleCloudApigeeV1Organization setAnalyticsRegion(java.lang.String analyticsRegion) {

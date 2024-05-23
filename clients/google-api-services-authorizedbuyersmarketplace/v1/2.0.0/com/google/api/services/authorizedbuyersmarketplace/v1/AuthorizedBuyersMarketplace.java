@@ -620,10 +620,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional query string using the [Cloud API list filtering
-       syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Supported columns
-       for filtering are: * deal.displayName * deal.dealType * deal.createTime * deal.updateTime *
-       deal.flightStartTime * deal.flightEndTime * deal.eligibleSeatIds * dealServingStatus
+        /** Optional query string using the [Cloud API list filtering syntax](https://developers.google.com
+       /authorized-buyers/apis/guides/list-filters) Supported columns for filtering are: *
+       deal.displayName * deal.dealType * deal.createTime * deal.updateTime * deal.flightStartTime *
+       deal.flightEndTime * deal.eligibleSeatIds * dealServingStatus
          */
         public java.lang.String getFilter() {
           return filter;
@@ -4106,10 +4106,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional query string using the [Cloud API list filtering
-       syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Supported columns
-       for filtering are: * deal.displayName * deal.dealType * deal.createTime * deal.updateTime *
-       deal.flightStartTime * deal.flightEndTime * deal.eligibleSeatIds * dealServingStatus
+        /** Optional query string using the [Cloud API list filtering syntax](https://developers.google.com
+       /authorized-buyers/apis/guides/list-filters) Supported columns for filtering are: *
+       deal.displayName * deal.dealType * deal.createTime * deal.updateTime * deal.flightStartTime *
+       deal.flightEndTime * deal.eligibleSeatIds * dealServingStatus
          */
         public java.lang.String getFilter() {
           return filter;
@@ -5355,9 +5355,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional query string using the [Cloud API list filtering
-       syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Supported columns
-       for filtering are: * displayName * dealType * updateTime * state
+        /** Optional query string using the [Cloud API list filtering syntax](https://developers.google.com
+       /authorized-buyers/apis/guides/list-filters) Supported columns for filtering are: * displayName *
+       dealType * updateTime * state
          */
         public java.lang.String getFilter() {
           return filter;
@@ -6759,22 +6759,22 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
 
         /**
-         * Optional query string using the [Cloud API list filtering]
-         * (https://developers.google.com/authorized-buyers/apis/guides/list-filters) syntax.
+         * Optional query string using the [Cloud API list filtering] (https://developers.google.com
+         * /authorized-buyers/apis/guides/list-filters) syntax.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional query string using the [Cloud API list filtering]
-       (https://developers.google.com/authorized-buyers/apis/guides/list-filters) syntax.
+        /** Optional query string using the [Cloud API list filtering] (https://developers.google.com
+       /authorized-buyers/apis/guides/list-filters) syntax.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Optional query string using the [Cloud API list filtering]
-         * (https://developers.google.com/authorized-buyers/apis/guides/list-filters) syntax.
+         * Optional query string using the [Cloud API list filtering] (https://developers.google.com
+         * /authorized-buyers/apis/guides/list-filters) syntax.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

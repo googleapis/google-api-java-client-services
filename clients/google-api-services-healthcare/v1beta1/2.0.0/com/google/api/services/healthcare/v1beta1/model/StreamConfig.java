@@ -79,10 +79,9 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
   private DeidentifiedStoreDestination deidentifiedStoreDestination;
 
   /**
-   * Supply a FHIR resource type (such as "Patient" or "Observation"). See
-   * https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types.
-   * The server treats an empty list as an intent to stream all the supported resource types in this
-   * FHIR store.
+   * Supply a FHIR resource type (such as "Patient" or "Observation"). See https://www.hl7.org/fhir
+   * /valueset-resource-types.html for a list of all FHIR resource types. The server treats an empty
+   * list as an intent to stream all the supported resource types in this FHIR store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,10 +192,9 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Supply a FHIR resource type (such as "Patient" or "Observation"). See
-   * https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types.
-   * The server treats an empty list as an intent to stream all the supported resource types in this
-   * FHIR store.
+   * Supply a FHIR resource type (such as "Patient" or "Observation"). See https://www.hl7.org/fhir
+   * /valueset-resource-types.html for a list of all FHIR resource types. The server treats an empty
+   * list as an intent to stream all the supported resource types in this FHIR store.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceTypes() {
@@ -204,10 +202,9 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Supply a FHIR resource type (such as "Patient" or "Observation"). See
-   * https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types.
-   * The server treats an empty list as an intent to stream all the supported resource types in this
-   * FHIR store.
+   * Supply a FHIR resource type (such as "Patient" or "Observation"). See https://www.hl7.org/fhir
+   * /valueset-resource-types.html for a list of all FHIR resource types. The server treats an empty
+   * list as an intent to stream all the supported resource types in this FHIR store.
    * @param resourceTypes resourceTypes or {@code null} for none
    */
   public StreamConfig setResourceTypes(java.util.List<java.lang.String> resourceTypes) {

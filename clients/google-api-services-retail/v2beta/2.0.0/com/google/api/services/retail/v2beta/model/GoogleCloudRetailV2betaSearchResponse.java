@@ -31,8 +31,8 @@ package com.google.api.services.retail.v2beta.model;
 public final class GoogleCloudRetailV2betaSearchResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fully qualified resource name of applied
-   * [controls](https://cloud.google.com/retail/docs/serving-control-rules).
+   * The fully qualified resource name of applied [controls](https://cloud.google.com/retail/docs
+   * /serving-control-rules).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +128,8 @@ public final class GoogleCloudRetailV2betaSearchResponse extends com.google.api.
   private java.lang.Integer totalSize;
 
   /**
-   * The fully qualified resource name of applied
-   * [controls](https://cloud.google.com/retail/docs/serving-control-rules).
+   * The fully qualified resource name of applied [controls](https://cloud.google.com/retail/docs
+   * /serving-control-rules).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAppliedControls() {
@@ -137,8 +137,8 @@ public final class GoogleCloudRetailV2betaSearchResponse extends com.google.api.
   }
 
   /**
-   * The fully qualified resource name of applied
-   * [controls](https://cloud.google.com/retail/docs/serving-control-rules).
+   * The fully qualified resource name of applied [controls](https://cloud.google.com/retail/docs
+   * /serving-control-rules).
    * @param appliedControls appliedControls or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchResponse setAppliedControls(java.util.List<java.lang.String> appliedControls) {

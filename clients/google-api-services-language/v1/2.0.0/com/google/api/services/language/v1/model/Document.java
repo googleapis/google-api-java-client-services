@@ -40,9 +40,8 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Cloud Storage URI where the file content is located. This URI must be of the form:
-   * gs://bucket_name/object_name. For more details, see
-   * https://cloud.google.com/storage/docs/reference-uris. NOTE: Cloud Storage object versioning is
-   * not supported.
+   * gs://bucket_name/object_name. For more details, see https://cloud.google.com/storage/docs
+   * /reference-uris. NOTE: Cloud Storage object versioning is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,10 +49,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * The language of the document (if not specified, the language is automatically detected). Both
-   * ISO and BCP-47 language codes are accepted. [Language
-   * Support](https://cloud.google.com/natural-language/docs/languages) lists currently supported
-   * languages for each API method. If the language (either specified by the caller or automatically
-   * detected) is not supported by the called API method, an `INVALID_ARGUMENT` error is returned.
+   * ISO and BCP-47 language codes are accepted. [Language Support](https://cloud.google.com
+   * /natural-language/docs/languages) lists currently supported languages for each API method. If
+   * the language (either specified by the caller or automatically detected) is not supported by the
+   * called API method, an `INVALID_ARGUMENT` error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +86,8 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Cloud Storage URI where the file content is located. This URI must be of the form:
-   * gs://bucket_name/object_name. For more details, see
-   * https://cloud.google.com/storage/docs/reference-uris. NOTE: Cloud Storage object versioning is
-   * not supported.
+   * gs://bucket_name/object_name. For more details, see https://cloud.google.com/storage/docs
+   * /reference-uris. NOTE: Cloud Storage object versioning is not supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsContentUri() {
@@ -98,9 +96,8 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Cloud Storage URI where the file content is located. This URI must be of the form:
-   * gs://bucket_name/object_name. For more details, see
-   * https://cloud.google.com/storage/docs/reference-uris. NOTE: Cloud Storage object versioning is
-   * not supported.
+   * gs://bucket_name/object_name. For more details, see https://cloud.google.com/storage/docs
+   * /reference-uris. NOTE: Cloud Storage object versioning is not supported.
    * @param gcsContentUri gcsContentUri or {@code null} for none
    */
   public Document setGcsContentUri(java.lang.String gcsContentUri) {
@@ -110,10 +107,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * The language of the document (if not specified, the language is automatically detected). Both
-   * ISO and BCP-47 language codes are accepted. [Language
-   * Support](https://cloud.google.com/natural-language/docs/languages) lists currently supported
-   * languages for each API method. If the language (either specified by the caller or automatically
-   * detected) is not supported by the called API method, an `INVALID_ARGUMENT` error is returned.
+   * ISO and BCP-47 language codes are accepted. [Language Support](https://cloud.google.com
+   * /natural-language/docs/languages) lists currently supported languages for each API method. If
+   * the language (either specified by the caller or automatically detected) is not supported by the
+   * called API method, an `INVALID_ARGUMENT` error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguage() {
@@ -122,10 +119,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * The language of the document (if not specified, the language is automatically detected). Both
-   * ISO and BCP-47 language codes are accepted. [Language
-   * Support](https://cloud.google.com/natural-language/docs/languages) lists currently supported
-   * languages for each API method. If the language (either specified by the caller or automatically
-   * detected) is not supported by the called API method, an `INVALID_ARGUMENT` error is returned.
+   * ISO and BCP-47 language codes are accepted. [Language Support](https://cloud.google.com
+   * /natural-language/docs/languages) lists currently supported languages for each API method. If
+   * the language (either specified by the caller or automatically detected) is not supported by the
+   * called API method, an `INVALID_ARGUMENT` error is returned.
    * @param language language or {@code null} for none
    */
   public Document setLanguage(java.lang.String language) {

@@ -154,8 +154,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
   public class Projects {
 
     /**
-     * Performs explanation on the data in the request. {% dynamic include "/ai-
-     * platform/includes/___explain-request" %}
+     * Performs explanation on the data in the request. {% dynamic include "/ai-platform/includes
+     * /___explain-request" %}
      *
      * Create a request for the method "projects.explain".
      *
@@ -181,8 +181,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           java.util.regex.Pattern.compile("^projects/.*$");
 
       /**
-       * Performs explanation on the data in the request. {% dynamic include "/ai-
-       * platform/includes/___explain-request" %}
+       * Performs explanation on the data in the request. {% dynamic include "/ai-platform/includes
+       * /___explain-request" %}
        *
        * Create a request for the method "projects.explain".
        *
@@ -439,8 +439,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
       }
     }
     /**
-     * Performs online prediction on the data in the request. {% dynamic include "/ai-
-     * platform/includes/___predict-request" %}
+     * Performs online prediction on the data in the request. {% dynamic include "/ai-platform/includes
+     * /___predict-request" %}
      *
      * Create a request for the method "projects.predict".
      *

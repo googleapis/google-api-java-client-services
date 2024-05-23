@@ -56,8 +56,8 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
 
   /**
    * The name of a Backup and DR template which comprises one or more backup policies. See the
-   * [Backup and DR documentation](https://cloud.google.com/backup-disaster-
-   * recovery/docs/concepts/backup-plan#temp) for more information. For example, `snap-ov`.
+   * [Backup and DR documentation](https://cloud.google.com/backup-disaster-recovery/docs/concepts
+   * /backup-plan#temp) for more information. For example, `snap-ov`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,9 +75,8 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
    * The name of a Backup and DR host, which is managed by the backup and recovery appliance and
    * known to the management console. The host can be of type Generic (for example, Compute Engine,
    * SQL Server, Oracle DB, SMB file system, etc.), vCenter, or an ESX server. See the [Backup and
-   * DR documentation on hosts](https://cloud.google.com/backup-disaster-
-   * recovery/docs/configuration/manage-hosts-and-their-applications) for more information. For
-   * example, `centos7-01`.
+   * DR documentation on hosts](https://cloud.google.com/backup-disaster-recovery/docs/configuration
+   * /manage-hosts-and-their-applications) for more information. For example, `centos7-01`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,8 +179,8 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
 
   /**
    * The name of a Backup and DR template which comprises one or more backup policies. See the
-   * [Backup and DR documentation](https://cloud.google.com/backup-disaster-
-   * recovery/docs/concepts/backup-plan#temp) for more information. For example, `snap-ov`.
+   * [Backup and DR documentation](https://cloud.google.com/backup-disaster-recovery/docs/concepts
+   * /backup-plan#temp) for more information. For example, `snap-ov`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupTemplate() {
@@ -190,8 +189,8 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
 
   /**
    * The name of a Backup and DR template which comprises one or more backup policies. See the
-   * [Backup and DR documentation](https://cloud.google.com/backup-disaster-
-   * recovery/docs/concepts/backup-plan#temp) for more information. For example, `snap-ov`.
+   * [Backup and DR documentation](https://cloud.google.com/backup-disaster-recovery/docs/concepts
+   * /backup-plan#temp) for more information. For example, `snap-ov`.
    * @param backupTemplate backupTemplate or {@code null} for none
    */
   public BackupDisasterRecovery setBackupTemplate(java.lang.String backupTemplate) {
@@ -222,9 +221,8 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
    * The name of a Backup and DR host, which is managed by the backup and recovery appliance and
    * known to the management console. The host can be of type Generic (for example, Compute Engine,
    * SQL Server, Oracle DB, SMB file system, etc.), vCenter, or an ESX server. See the [Backup and
-   * DR documentation on hosts](https://cloud.google.com/backup-disaster-
-   * recovery/docs/configuration/manage-hosts-and-their-applications) for more information. For
-   * example, `centos7-01`.
+   * DR documentation on hosts](https://cloud.google.com/backup-disaster-recovery/docs/configuration
+   * /manage-hosts-and-their-applications) for more information. For example, `centos7-01`.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -235,9 +233,8 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
    * The name of a Backup and DR host, which is managed by the backup and recovery appliance and
    * known to the management console. The host can be of type Generic (for example, Compute Engine,
    * SQL Server, Oracle DB, SMB file system, etc.), vCenter, or an ESX server. See the [Backup and
-   * DR documentation on hosts](https://cloud.google.com/backup-disaster-
-   * recovery/docs/configuration/manage-hosts-and-their-applications) for more information. For
-   * example, `centos7-01`.
+   * DR documentation on hosts](https://cloud.google.com/backup-disaster-recovery/docs/configuration
+   * /manage-hosts-and-their-applications) for more information. For example, `centos7-01`.
    * @param host host or {@code null} for none
    */
   public BackupDisasterRecovery setHost(java.lang.String host) {

@@ -47,8 +47,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Output only. The resource name of the project this instance belongs to. For example:
-   * `projects/{project-number}`.
+   * Output only. The resource name of the project this instance belongs to. For example: `projects
+   * /{project-number}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,8 +106,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The resource name of the project this instance belongs to. For example:
-   * `projects/{project-number}`.
+   * Output only. The resource name of the project this instance belongs to. For example: `projects
+   * /{project-number}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -115,8 +115,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The resource name of the project this instance belongs to. For example:
-   * `projects/{project-number}`.
+   * Output only. The resource name of the project this instance belongs to. For example: `projects
+   * /{project-number}`.
    * @param project project or {@code null} for none
    */
   public DatabaseInstance setProject(java.lang.String project) {

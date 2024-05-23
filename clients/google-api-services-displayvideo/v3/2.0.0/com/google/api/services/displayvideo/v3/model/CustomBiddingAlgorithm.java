@@ -69,8 +69,8 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
 
   /**
    * Output only. The details of custom bidding models for each advertiser who has access. This
-   * field may only include the details of the queried advertiser if the algorithm
-   * [`owner`](/display-
+   * field may only include the details of the queried advertiser if the algorithm [`owner
+   * `](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
    * is a partner and is being retrieved using an advertiser [`accessor`](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).
@@ -95,8 +95,8 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
 
   /**
    * The IDs of the advertisers who have access to this algorithm. If advertiser_id is set, this
-   * field will only consist of that value. This field will not be set if the algorithm
-   * [`owner`](/display-
+   * field will only consist of that value. This field will not be set if the algorithm [`owner
+   * `](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
    * is a partner and is being retrieved using an advertiser [`accessor`](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).
@@ -196,8 +196,8 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
 
   /**
    * Output only. The details of custom bidding models for each advertiser who has access. This
-   * field may only include the details of the queried advertiser if the algorithm
-   * [`owner`](/display-
+   * field may only include the details of the queried advertiser if the algorithm [`owner
+   * `](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
    * is a partner and is being retrieved using an advertiser [`accessor`](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).
@@ -209,8 +209,8 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
 
   /**
    * Output only. The details of custom bidding models for each advertiser who has access. This
-   * field may only include the details of the queried advertiser if the algorithm
-   * [`owner`](/display-
+   * field may only include the details of the queried advertiser if the algorithm [`owner
+   * `](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
    * is a partner and is being retrieved using an advertiser [`accessor`](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).
@@ -257,8 +257,8 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
 
   /**
    * The IDs of the advertisers who have access to this algorithm. If advertiser_id is set, this
-   * field will only consist of that value. This field will not be set if the algorithm
-   * [`owner`](/display-
+   * field will only consist of that value. This field will not be set if the algorithm [`owner
+   * `](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
    * is a partner and is being retrieved using an advertiser [`accessor`](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).
@@ -270,8 +270,8 @@ public final class CustomBiddingAlgorithm extends com.google.api.client.json.Gen
 
   /**
    * The IDs of the advertisers who have access to this algorithm. If advertiser_id is set, this
-   * field will only consist of that value. This field will not be set if the algorithm
-   * [`owner`](/display-
+   * field will only consist of that value. This field will not be set if the algorithm [`owner
+   * `](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms#CustomBiddingAlgorithm.FIELDS.oneof_owner)
    * is a partner and is being retrieved using an advertiser [`accessor`](/display-
    * video/api/reference/rest/v1/customBiddingAlgorithms/list#body.QUERY_PARAMETERS.oneof_accessor).

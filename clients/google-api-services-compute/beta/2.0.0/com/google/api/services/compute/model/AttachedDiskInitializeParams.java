@@ -176,12 +176,12 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    * except for local SSD. To create a disk with one of the public operating system images, specify
    * the image by its family name. For example, specify family/debian-9 to use the latest Debian 9
    * image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific
-   * version of a public operating system image: projects/debian-
-   * cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk with a custom image that you
-   * created, specify the image name in the following format: global/images/my-custom-image You can
-   * also specify a custom image by its image family, which returns the latest version of the image
-   * in that family. Replace the image name with family/family-name: global/images/family/my-image-
-   * family If the source image is deleted later, this field will not be set.
+   * version of a public operating system image: projects/debian-cloud/global/images/debian-9
+   * -stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image
+   * name in the following format: global/images/my-custom-image You can also specify a custom image
+   * by its image family, which returns the latest version of the image in that family. Replace the
+   * image name with family/family-name: global/images/family/my-image-family If the source image is
+   * deleted later, this field will not be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -565,12 +565,12 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    * except for local SSD. To create a disk with one of the public operating system images, specify
    * the image by its family name. For example, specify family/debian-9 to use the latest Debian 9
    * image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific
-   * version of a public operating system image: projects/debian-
-   * cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk with a custom image that you
-   * created, specify the image name in the following format: global/images/my-custom-image You can
-   * also specify a custom image by its image family, which returns the latest version of the image
-   * in that family. Replace the image name with family/family-name: global/images/family/my-image-
-   * family If the source image is deleted later, this field will not be set.
+   * version of a public operating system image: projects/debian-cloud/global/images/debian-9
+   * -stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image
+   * name in the following format: global/images/my-custom-image You can also specify a custom image
+   * by its image family, which returns the latest version of the image in that family. Replace the
+   * image name with family/family-name: global/images/family/my-image-family If the source image is
+   * deleted later, this field will not be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceImage() {
@@ -583,12 +583,12 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    * except for local SSD. To create a disk with one of the public operating system images, specify
    * the image by its family name. For example, specify family/debian-9 to use the latest Debian 9
    * image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific
-   * version of a public operating system image: projects/debian-
-   * cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk with a custom image that you
-   * created, specify the image name in the following format: global/images/my-custom-image You can
-   * also specify a custom image by its image family, which returns the latest version of the image
-   * in that family. Replace the image name with family/family-name: global/images/family/my-image-
-   * family If the source image is deleted later, this field will not be set.
+   * version of a public operating system image: projects/debian-cloud/global/images/debian-9
+   * -stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image
+   * name in the following format: global/images/my-custom-image You can also specify a custom image
+   * by its image family, which returns the latest version of the image in that family. Replace the
+   * image name with family/family-name: global/images/family/my-image-family If the source image is
+   * deleted later, this field will not be set.
    * @param sourceImage sourceImage or {@code null} for none
    */
   public AttachedDiskInitializeParams setSourceImage(java.lang.String sourceImage) {

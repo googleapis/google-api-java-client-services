@@ -414,8 +414,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The name of the project in which to create the schema. Format is
-         * `projects/{project-id}`.
+         * Required. The name of the project in which to create the schema. Format is `projects
+         * /{project-id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
@@ -427,8 +427,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The name of the project in which to create the schema. Format is
-         * `projects/{project-id}`.
+         * Required. The name of the project in which to create the schema. Format is `projects
+         * /{project-id}`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2071,8 +2071,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The name of the project in which to validate schemas. Format is
-         * `projects/{project-id}`.
+         * Required. The name of the project in which to validate schemas. Format is `projects
+         * /{project-id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
@@ -2084,8 +2084,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The name of the project in which to validate schemas. Format is
-         * `projects/{project-id}`.
+         * Required. The name of the project in which to validate schemas. Format is `projects
+         * /{project-id}`.
          */
         public Validate setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2208,8 +2208,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The name of the project in which to validate schemas. Format is
-         * `projects/{project-id}`.
+         * Required. The name of the project in which to validate schemas. Format is `projects
+         * /{project-id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
@@ -2221,8 +2221,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The name of the project in which to validate schemas. Format is
-         * `projects/{project-id}`.
+         * Required. The name of the project in which to validate schemas. Format is `projects
+         * /{project-id}`.
          */
         public ValidateMessage setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2438,13 +2438,13 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Removes an existing snapshot. Snapshots are used in [Seek]
-       * (https://cloud.google.com/pubsub/docs/replay-overview) operations, which allow you to manage
-       * message acknowledgments in bulk. That is, you can set the acknowledgment state of messages in an
-       * existing subscription to the state captured by a snapshot. When the snapshot is deleted, all
-       * messages retained in the snapshot are immediately dropped. After a snapshot is deleted, a new one
-       * may be created with the same name, but the new one has no association with the old snapshot or
-       * its subscription, unless the same subscription is specified.
+       * Removes an existing snapshot. Snapshots are used in [Seek] (https://cloud.google.com/pubsub/docs
+       * /replay-overview) operations, which allow you to manage message acknowledgments in bulk. That is,
+       * you can set the acknowledgment state of messages in an existing subscription to the state
+       * captured by a snapshot. When the snapshot is deleted, all messages retained in the snapshot are
+       * immediately dropped. After a snapshot is deleted, a new one may be created with the same name,
+       * but the new one has no association with the old snapshot or its subscription, unless the same
+       * subscription is specified.
        *
        * Create a request for the method "snapshots.delete".
        *
@@ -2932,10 +2932,10 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Lists the existing snapshots. Snapshots are used in [Seek](
-       * https://cloud.google.com/pubsub/docs/replay-overview) operations, which allow you to manage
-       * message acknowledgments in bulk. That is, you can set the acknowledgment state of messages in an
-       * existing subscription to the state captured by a snapshot.
+       * Lists the existing snapshots. Snapshots are used in [Seek]( https://cloud.google.com/pubsub/docs
+       * /replay-overview) operations, which allow you to manage message acknowledgments in bulk. That is,
+       * you can set the acknowledgment state of messages in an existing subscription to the state
+       * captured by a snapshot.
        *
        * Create a request for the method "snapshots.list".
        *
@@ -3050,8 +3050,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The name of the project in which to list snapshots. Format is
-         * `projects/{project-id}`.
+         * Required. The name of the project in which to list snapshots. Format is `projects
+         * /{project-id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String project;
@@ -3063,8 +3063,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The name of the project in which to list snapshots. Format is
-         * `projects/{project-id}`.
+         * Required. The name of the project in which to list snapshots. Format is `projects
+         * /{project-id}`.
          */
         public List setProject(java.lang.String project) {
           if (!getSuppressPatternChecks()) {
@@ -4624,8 +4624,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The name of the project in which to list subscriptions. Format is
-         * `projects/{project-id}`.
+         * Required. The name of the project in which to list subscriptions. Format is `projects
+         * /{project-id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String project;
@@ -4638,8 +4638,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. The name of the project in which to list subscriptions. Format is
-         * `projects/{project-id}`.
+         * Required. The name of the project in which to list subscriptions. Format is `projects
+         * /{project-id}`.
          */
         public List setProject(java.lang.String project) {
           if (!getSuppressPatternChecks()) {

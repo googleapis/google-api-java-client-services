@@ -40,20 +40,20 @@ package com.google.api.services.documentai.v1.model;
  * [protocolor green]; float blue = [protocolor blue]; FloatValue* alpha_wrapper = [protocolor
  * alpha]; float alpha = 1.0; if (alpha_wrapper != nil) { alpha = [alpha_wrapper value]; } return
  * [UIColor colorWithRed:red green:green blue:blue alpha:alpha]; } static Color* toProto(UIColor*
- * color) { CGFloat red, green, blue, alpha; if (![color getRed:&red green:&green blue:&blue
- * alpha:&alpha]) { return nil; } Color* result = [[Color alloc] init]; [result setRed:red]; [result
- * setGreen:green]; [result setBlue:blue]; if (alpha <= 0.9999) { [result
- * setAlpha:floatWrapperWithValue(alpha)]; } [result autorelease]; return result; } // ... Example
- * (JavaScript): // ... var protoToCssColor = function(rgb_color) { var redFrac = rgb_color.red ||
- * 0.0; var greenFrac = rgb_color.green || 0.0; var blueFrac = rgb_color.blue || 0.0; var red =
- * Math.floor(redFrac * 255); var green = Math.floor(greenFrac * 255); var blue =
- * Math.floor(blueFrac * 255); if (!('alpha' in rgb_color)) { return rgbToCssColor(red, green,
- * blue); } var alphaFrac = rgb_color.alpha.value || 0.0; var rgbParams = [red, green,
- * blue].join(','); return ['rgba(', rgbParams, ',', alphaFrac, ')'].join(''); }; var rgbToCssColor
- * = function(red, green, blue) { var rgbNumber = new Number((red << 16) | (green << 8) | blue); var
- * hexString = rgbNumber.toString(16); var missingZeros = 6 - hexString.length; var resultBuilder =
- * ['#']; for (var i = 0; i < missingZeros; i++) { resultBuilder.push('0'); }
- * resultBuilder.push(hexString); return resultBuilder.join(''); }; // ...
+ * color) { CGFloat red, green, blue, alpha; if (![color getRed: green: blue: alpha:]) { return nil;
+ * } Color* result = [[Color alloc] init]; [result setRed:red]; [result setGreen:green]; [result
+ * setBlue:blue]; if (alpha <= 0.9999) { [result setAlpha:floatWrapperWithValue(alpha)]; } [result
+ * autorelease]; return result; } // ... Example (JavaScript): // ... var protoToCssColor =
+ * function(rgb_color) { var redFrac = rgb_color.red || 0.0; var greenFrac = rgb_color.green || 0.0;
+ * var blueFrac = rgb_color.blue || 0.0; var red = Math.floor(redFrac * 255); var green =
+ * Math.floor(greenFrac * 255); var blue = Math.floor(blueFrac * 255); if (!('alpha' in rgb_color))
+ * { return rgbToCssColor(red, green, blue); } var alphaFrac = rgb_color.alpha.value || 0.0; var
+ * rgbParams = [red, green, blue].join(','); return ['rgba(', rgbParams, ',', alphaFrac,
+ * ')'].join(''); }; var rgbToCssColor = function(red, green, blue) { var rgbNumber = new
+ * Number((red << 16) | (green << 8) | blue); var hexString = rgbNumber.toString(16); var
+ * missingZeros = 6 - hexString.length; var resultBuilder = ['#']; for (var i = 0; i < missingZeros;
+ * i++) { resultBuilder.push('0'); } resultBuilder.push(hexString); return resultBuilder.join('');
+ * }; // ...
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation

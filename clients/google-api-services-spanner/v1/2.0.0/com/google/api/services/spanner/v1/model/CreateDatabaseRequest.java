@@ -71,8 +71,8 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
    * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
    * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
    * --descriptor_set_out=descriptors.data \ moon/shot/app.proto ``` For more details, see
-   * protobuffer [self description](https://developers.google.com/protocol-
-   * buffers/docs/techniques#self-description).
+   * protobuffer [self description](https://developers.google.com/protocol-buffers/docs/techniques
+   * #self-description).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,8 +166,8 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
    * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
    * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
    * --descriptor_set_out=descriptors.data \ moon/shot/app.proto ``` For more details, see
-   * protobuffer [self description](https://developers.google.com/protocol-
-   * buffers/docs/techniques#self-description).
+   * protobuffer [self description](https://developers.google.com/protocol-buffers/docs/techniques
+   * #self-description).
    * @see #decodeProtoDescriptors()
    * @return value or {@code null} for none
    */
@@ -183,8 +183,8 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
    * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
    * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
    * --descriptor_set_out=descriptors.data \ moon/shot/app.proto ``` For more details, see
-   * protobuffer [self description](https://developers.google.com/protocol-
-   * buffers/docs/techniques#self-description).
+   * protobuffer [self description](https://developers.google.com/protocol-buffers/docs/techniques
+   * #self-description).
    * @see #getProtoDescriptors()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -202,8 +202,8 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
    * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
    * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
    * --descriptor_set_out=descriptors.data \ moon/shot/app.proto ``` For more details, see
-   * protobuffer [self description](https://developers.google.com/protocol-
-   * buffers/docs/techniques#self-description).
+   * protobuffer [self description](https://developers.google.com/protocol-buffers/docs/techniques
+   * #self-description).
    * @see #encodeProtoDescriptors()
    * @param protoDescriptors protoDescriptors or {@code null} for none
    */
@@ -220,8 +220,8 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
    * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
    * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
    * --descriptor_set_out=descriptors.data \ moon/shot/app.proto ``` For more details, see
-   * protobuffer [self description](https://developers.google.com/protocol-
-   * buffers/docs/techniques#self-description).
+   * protobuffer [self description](https://developers.google.com/protocol-buffers/docs/techniques
+   * #self-description).
    * @see #setProtoDescriptors()
    *
    * <p>

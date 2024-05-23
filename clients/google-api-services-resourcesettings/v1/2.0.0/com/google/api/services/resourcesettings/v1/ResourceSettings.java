@@ -667,8 +667,8 @@ public class ResourceSettings extends com.google.api.client.googleapis.services.
 
         /** The resource name of the setting. Must be in one of the following forms: *
        `projects/{project_number}/settings/{setting_name}` * `folders/{folder_id}/settings/{setting_name}`
-       * `organizations/{organization_id}/settings/{setting_name}` For example,
-       "/projects/123/settings/gcp-enableMyFeature"
+       * `organizations/{organization_id}/settings/{setting_name}` For example, "/projects/123/settings
+       /gcp-enableMyFeature"
          */
         public java.lang.String getName() {
           return name;
@@ -1234,8 +1234,8 @@ public class ResourceSettings extends com.google.api.client.googleapis.services.
 
         /** The resource name of the setting. Must be in one of the following forms: *
        `projects/{project_number}/settings/{setting_name}` * `folders/{folder_id}/settings/{setting_name}`
-       * `organizations/{organization_id}/settings/{setting_name}` For example,
-       "/projects/123/settings/gcp-enableMyFeature"
+       * `organizations/{organization_id}/settings/{setting_name}` For example, "/projects/123/settings
+       /gcp-enableMyFeature"
          */
         public java.lang.String getName() {
           return name;
@@ -1801,8 +1801,8 @@ public class ResourceSettings extends com.google.api.client.googleapis.services.
 
         /** The resource name of the setting. Must be in one of the following forms: *
        `projects/{project_number}/settings/{setting_name}` * `folders/{folder_id}/settings/{setting_name}`
-       * `organizations/{organization_id}/settings/{setting_name}` For example,
-       "/projects/123/settings/gcp-enableMyFeature"
+       * `organizations/{organization_id}/settings/{setting_name}` For example, "/projects/123/settings
+       /gcp-enableMyFeature"
          */
         public java.lang.String getName() {
           return name;

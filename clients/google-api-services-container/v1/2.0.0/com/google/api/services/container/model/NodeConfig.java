@@ -150,8 +150,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * addition to any default label(s) that Kubernetes may apply to the node. In case of conflict in
    * label keys, the applied set may differ depending on the Kubernetes version -- it's best to
    * assume the behavior is undefined and conflicts should be avoided. For more information,
-   * including usage and the valid values, see:
-   * https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+   * including usage and the valid values, see: https://kubernetes.io/docs/concepts/overview
+   * /working-with-objects/labels/
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,9 +188,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private NodePoolLoggingConfig loggingConfig;
 
   /**
-   * The name of a Google Compute Engine [machine
-   * type](https://cloud.google.com/compute/docs/machine-types) If unspecified, the default machine
-   * type is `e2-medium`.
+   * The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs
+   * /machine-types) If unspecified, the default machine type is `e2-medium`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -238,10 +237,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * service account. The following scopes are recommended, but not required, and by default are not
    * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
    * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
-   * communicating with **gcr.io** (the [Google Container
-   * Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added,
-   * unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will
-   * be added.
+   * communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com
+   * /container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud
+   * Monitoring are enabled, in which case their required scopes will be added.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -625,8 +623,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * addition to any default label(s) that Kubernetes may apply to the node. In case of conflict in
    * label keys, the applied set may differ depending on the Kubernetes version -- it's best to
    * assume the behavior is undefined and conflicts should be avoided. For more information,
-   * including usage and the valid values, see:
-   * https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+   * including usage and the valid values, see: https://kubernetes.io/docs/concepts/overview
+   * /working-with-objects/labels/
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -638,8 +636,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * addition to any default label(s) that Kubernetes may apply to the node. In case of conflict in
    * label keys, the applied set may differ depending on the Kubernetes version -- it's best to
    * assume the behavior is undefined and conflicts should be avoided. For more information,
-   * including usage and the valid values, see:
-   * https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+   * including usage and the valid values, see: https://kubernetes.io/docs/concepts/overview
+   * /working-with-objects/labels/
    * @param labels labels or {@code null} for none
    */
   public NodeConfig setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -720,9 +718,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of a Google Compute Engine [machine
-   * type](https://cloud.google.com/compute/docs/machine-types) If unspecified, the default machine
-   * type is `e2-medium`.
+   * The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs
+   * /machine-types) If unspecified, the default machine type is `e2-medium`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -730,9 +727,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of a Google Compute Engine [machine
-   * type](https://cloud.google.com/compute/docs/machine-types) If unspecified, the default machine
-   * type is `e2-medium`.
+   * The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs
+   * /machine-types) If unspecified, the default machine type is `e2-medium`.
    * @param machineType machineType or {@code null} for none
    */
   public NodeConfig setMachineType(java.lang.String machineType) {
@@ -828,10 +824,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * service account. The following scopes are recommended, but not required, and by default are not
    * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
    * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
-   * communicating with **gcr.io** (the [Google Container
-   * Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added,
-   * unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will
-   * be added.
+   * communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com
+   * /container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud
+   * Monitoring are enabled, in which case their required scopes will be added.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOauthScopes() {
@@ -843,10 +838,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * service account. The following scopes are recommended, but not required, and by default are not
    * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
    * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
-   * communicating with **gcr.io** (the [Google Container
-   * Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added,
-   * unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will
-   * be added.
+   * communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com
+   * /container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud
+   * Monitoring are enabled, in which case their required scopes will be added.
    * @param oauthScopes oauthScopes or {@code null} for none
    */
   public NodeConfig setOauthScopes(java.util.List<java.lang.String> oauthScopes) {

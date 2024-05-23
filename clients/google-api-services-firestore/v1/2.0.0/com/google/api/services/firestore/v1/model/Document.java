@@ -45,12 +45,12 @@ public final class Document extends com.google.api.client.json.GenericJson {
    * cannot be empty. Field paths may be used in other contexts to refer to structured fields
    * defined here. For `map_value`, the field path is represented by a dot-delimited (`.`) string of
    * segments. Each segment is either a simple field name (defined below) or a quoted field name.
-   * For example, the structured field `"foo" : { map_value: { "x&y" : { string_value: "hello" }}}`
-   * would be represented by the field path `` foo.`x&y` ``. A simple field name contains only
+   * For example, the structured field `"foo" : { map_value: { "x" : { string_value: "hello" }}}`
+   * would be represented by the field path `` foo.`x` ``. A simple field name contains only
    * characters `a` to `z`, `A` to `Z`, `0` to `9`, or `_`, and must not start with `0` to `9`. For
    * example, `foo_bar_17`. A quoted field name starts and ends with `` ` `` and may contain any
-   * character. Some characters, including `` ` ``, must be escaped using a `\`. For example, ``
-   * `x&y` `` represents `x&y` and `` `bak\`tik` `` represents `` bak`tik ``.
+   * character. Some characters, including `` ` ``, must be escaped using a `\`. For example, `` `x`
+   * `` represents `x` and `` `bak\`tik` `` represents `` bak`tik ``.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,12 +101,12 @@ public final class Document extends com.google.api.client.json.GenericJson {
    * cannot be empty. Field paths may be used in other contexts to refer to structured fields
    * defined here. For `map_value`, the field path is represented by a dot-delimited (`.`) string of
    * segments. Each segment is either a simple field name (defined below) or a quoted field name.
-   * For example, the structured field `"foo" : { map_value: { "x&y" : { string_value: "hello" }}}`
-   * would be represented by the field path `` foo.`x&y` ``. A simple field name contains only
+   * For example, the structured field `"foo" : { map_value: { "x" : { string_value: "hello" }}}`
+   * would be represented by the field path `` foo.`x` ``. A simple field name contains only
    * characters `a` to `z`, `A` to `Z`, `0` to `9`, or `_`, and must not start with `0` to `9`. For
    * example, `foo_bar_17`. A quoted field name starts and ends with `` ` `` and may contain any
-   * character. Some characters, including `` ` ``, must be escaped using a `\`. For example, ``
-   * `x&y` `` represents `x&y` and `` `bak\`tik` `` represents `` bak`tik ``.
+   * character. Some characters, including `` ` ``, must be escaped using a `\`. For example, `` `x`
+   * `` represents `x` and `` `bak\`tik` `` represents `` bak`tik ``.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Value> getFields() {
@@ -120,12 +120,12 @@ public final class Document extends com.google.api.client.json.GenericJson {
    * cannot be empty. Field paths may be used in other contexts to refer to structured fields
    * defined here. For `map_value`, the field path is represented by a dot-delimited (`.`) string of
    * segments. Each segment is either a simple field name (defined below) or a quoted field name.
-   * For example, the structured field `"foo" : { map_value: { "x&y" : { string_value: "hello" }}}`
-   * would be represented by the field path `` foo.`x&y` ``. A simple field name contains only
+   * For example, the structured field `"foo" : { map_value: { "x" : { string_value: "hello" }}}`
+   * would be represented by the field path `` foo.`x` ``. A simple field name contains only
    * characters `a` to `z`, `A` to `Z`, `0` to `9`, or `_`, and must not start with `0` to `9`. For
    * example, `foo_bar_17`. A quoted field name starts and ends with `` ` `` and may contain any
-   * character. Some characters, including `` ` ``, must be escaped using a `\`. For example, ``
-   * `x&y` `` represents `x&y` and `` `bak\`tik` `` represents `` bak`tik ``.
+   * character. Some characters, including `` ` ``, must be escaped using a `\`. For example, `` `x`
+   * `` represents `x` and `` `bak\`tik` `` represents `` bak`tik ``.
    * @param fields fields or {@code null} for none
    */
   public Document setFields(java.util.Map<String, Value> fields) {

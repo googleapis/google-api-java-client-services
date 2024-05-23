@@ -47,10 +47,10 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettings extends com.go
   /**
    * [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define
    * de-identification configuration for the content. The `DLP De-identify Templates Reader` role is
-   * needed on the Dialogflow service identity service account (has the form `service-
-   * PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty,
-   * Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of
-   * the following formats: `projects//locations//deidentifyTemplates/` OR
+   * needed on the Dialogflow service identity service account (has the form `service-PROJECT_NUMBER
+   * @gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty, Dialogflow
+   * replaces sensitive info with `[redacted]` text. The template name will have one of the
+   * following formats: `projects//locations//deidentifyTemplates/` OR
    * `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in
    * the same region as the `SecuritySettings`.
    * The value may be {@code null}.
@@ -170,10 +170,10 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettings extends com.go
   /**
    * [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define
    * de-identification configuration for the content. The `DLP De-identify Templates Reader` role is
-   * needed on the Dialogflow service identity service account (has the form `service-
-   * PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty,
-   * Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of
-   * the following formats: `projects//locations//deidentifyTemplates/` OR
+   * needed on the Dialogflow service identity service account (has the form `service-PROJECT_NUMBER
+   * @gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty, Dialogflow
+   * replaces sensitive info with `[redacted]` text. The template name will have one of the
+   * following formats: `projects//locations//deidentifyTemplates/` OR
    * `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in
    * the same region as the `SecuritySettings`.
    * @return value or {@code null} for none
@@ -185,10 +185,10 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettings extends com.go
   /**
    * [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define
    * de-identification configuration for the content. The `DLP De-identify Templates Reader` role is
-   * needed on the Dialogflow service identity service account (has the form `service-
-   * PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty,
-   * Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of
-   * the following formats: `projects//locations//deidentifyTemplates/` OR
+   * needed on the Dialogflow service identity service account (has the form `service-PROJECT_NUMBER
+   * @gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty, Dialogflow
+   * replaces sensitive info with `[redacted]` text. The template name will have one of the
+   * following formats: `projects//locations//deidentifyTemplates/` OR
    * `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in
    * the same region as the `SecuritySettings`.
    * @param deidentifyTemplate deidentifyTemplate or {@code null} for none

@@ -39,8 +39,8 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   private Authentication authentication;
 
   /**
-   * The excluded URL patterns as described in https://cloud.google.com/security-command-
-   * center/docs/how-to-use-web-security-scanner#excluding_urls
+   * The excluded URL patterns as described in https://cloud.google.com/security-command-center/docs
+   * /how-to-use-web-security-scanner#excluding_urls
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,8 +163,8 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The excluded URL patterns as described in https://cloud.google.com/security-command-
-   * center/docs/how-to-use-web-security-scanner#excluding_urls
+   * The excluded URL patterns as described in https://cloud.google.com/security-command-center/docs
+   * /how-to-use-web-security-scanner#excluding_urls
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBlacklistPatterns() {
@@ -172,8 +172,8 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The excluded URL patterns as described in https://cloud.google.com/security-command-
-   * center/docs/how-to-use-web-security-scanner#excluding_urls
+   * The excluded URL patterns as described in https://cloud.google.com/security-command-center/docs
+   * /how-to-use-web-security-scanner#excluding_urls
    * @param blacklistPatterns blacklistPatterns or {@code null} for none
    */
   public ScanConfig setBlacklistPatterns(java.util.List<java.lang.String> blacklistPatterns) {

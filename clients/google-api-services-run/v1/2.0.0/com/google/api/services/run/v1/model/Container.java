@@ -137,8 +137,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Path at which the file to which the container's termination message will be written is mounted
    * into the container's filesystem. Message written is intended to be brief final status, such as
    * an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The
-   * total message length across all containers will be limited to 12kb. Defaults to
-   * /dev/termination-log.
+   * total message length across all containers will be limited to 12kb. Defaults to /dev
+   * /termination-log.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -418,8 +418,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Path at which the file to which the container's termination message will be written is mounted
    * into the container's filesystem. Message written is intended to be brief final status, such as
    * an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The
-   * total message length across all containers will be limited to 12kb. Defaults to
-   * /dev/termination-log.
+   * total message length across all containers will be limited to 12kb. Defaults to /dev
+   * /termination-log.
    * @return value or {@code null} for none
    */
   public java.lang.String getTerminationMessagePath() {
@@ -430,8 +430,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Path at which the file to which the container's termination message will be written is mounted
    * into the container's filesystem. Message written is intended to be brief final status, such as
    * an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The
-   * total message length across all containers will be limited to 12kb. Defaults to
-   * /dev/termination-log.
+   * total message length across all containers will be limited to 12kb. Defaults to /dev
+   * /termination-log.
    * @param terminationMessagePath terminationMessagePath or {@code null} for none
    */
   public Container setTerminationMessagePath(java.lang.String terminationMessagePath) {

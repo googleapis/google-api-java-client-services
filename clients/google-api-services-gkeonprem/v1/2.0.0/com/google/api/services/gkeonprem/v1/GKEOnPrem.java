@@ -537,8 +537,8 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
         /**
          * Creates a new bare metal admin cluster in a given project and location. The API needs to be
          * combined with creating a bootstrap cluster to work. See:
-         * https://cloud.google.com/anthos/clusters/docs/bare-metal/latest/installing/creating-
-         * clusters/create-admin-cluster-api#prepare_bootstrap_environment
+         * https://cloud.google.com/anthos/clusters/docs/bare-metal/latest/installing/creating-clusters
+         * /create-admin-cluster-api#prepare_bootstrap_environment
          *
          * Create a request for the method "bareMetalAdminClusters.create".
          *
@@ -566,8 +566,8 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
           /**
            * Creates a new bare metal admin cluster in a given project and location. The API needs to be
            * combined with creating a bootstrap cluster to work. See:
-           * https://cloud.google.com/anthos/clusters/docs/bare-metal/latest/installing/creating-
-           * clusters/create-admin-cluster-api#prepare_bootstrap_environment
+           * https://cloud.google.com/anthos/clusters/docs/bare-metal/latest/installing/creating-clusters
+           * /create-admin-cluster-api#prepare_bootstrap_environment
            *
            * Create a request for the method "bareMetalAdminClusters.create".
            *

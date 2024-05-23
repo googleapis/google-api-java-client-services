@@ -18,8 +18,8 @@ package com.google.api.services.directory.model;
 
 /**
  * Google Chrome devices run on the [Chrome OS](https://support.google.com/chromeos). For more
- * information about common API tasks, see the [Developer's Guide](/admin-
- * sdk/directory/v1/guides/manage-chrome-devices).
+ * information about common API tasks, see the [Developer's Guide](/admin-sdk/directory/v1/guides
+ * /manage-chrome-devices).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Admin SDK API. For a detailed explanation see:

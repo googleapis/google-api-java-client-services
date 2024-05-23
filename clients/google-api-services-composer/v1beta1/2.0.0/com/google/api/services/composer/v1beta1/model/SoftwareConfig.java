@@ -68,10 +68,10 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   /**
    * The version of the software running in the environment. This encapsulates both the version of
    * Cloud Composer functionality and the version of Apache Airflow. It must match the regular
-   * expression `composer-([0-9]+(\.[0-9]+\.[0-9]+(-preview\.[0-9]+)?)?|latest)-airflow-([0-
-   * 9]+(\.[0-9]+(\.[0-9]+)?)?)`. When used as input, the server also checks if the provided version
-   * is supported and denies the request for an unsupported version. The Cloud Composer portion of
-   * the image version is a full [semantic version](https://semver.org), or an alias in the form of
+   * expression `composer-([0-9]+(\.[0-9]+\.[0-9]+(-preview\.[0-9]+)?)?|latest)-airflow-([0-9]+(\.[0
+   * -9]+(\.[0-9]+)?)?)`. When used as input, the server also checks if the provided version is
+   * supported and denies the request for an unsupported version. The Cloud Composer portion of the
+   * image version is a full [semantic version](https://semver.org), or an alias in the form of
    * major version number or `latest`. When an alias is provided, the server replaces it with the
    * current Cloud Composer version that satisfies the alias. The Apache Airflow portion of the
    * image version is a full semantic version that points to one of the supported Apache Airflow
@@ -207,10 +207,10 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   /**
    * The version of the software running in the environment. This encapsulates both the version of
    * Cloud Composer functionality and the version of Apache Airflow. It must match the regular
-   * expression `composer-([0-9]+(\.[0-9]+\.[0-9]+(-preview\.[0-9]+)?)?|latest)-airflow-([0-
-   * 9]+(\.[0-9]+(\.[0-9]+)?)?)`. When used as input, the server also checks if the provided version
-   * is supported and denies the request for an unsupported version. The Cloud Composer portion of
-   * the image version is a full [semantic version](https://semver.org), or an alias in the form of
+   * expression `composer-([0-9]+(\.[0-9]+\.[0-9]+(-preview\.[0-9]+)?)?|latest)-airflow-([0-9]+(\.[0
+   * -9]+(\.[0-9]+)?)?)`. When used as input, the server also checks if the provided version is
+   * supported and denies the request for an unsupported version. The Cloud Composer portion of the
+   * image version is a full [semantic version](https://semver.org), or an alias in the form of
    * major version number or `latest`. When an alias is provided, the server replaces it with the
    * current Cloud Composer version that satisfies the alias. The Apache Airflow portion of the
    * image version is a full semantic version that points to one of the supported Apache Airflow
@@ -229,10 +229,10 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   /**
    * The version of the software running in the environment. This encapsulates both the version of
    * Cloud Composer functionality and the version of Apache Airflow. It must match the regular
-   * expression `composer-([0-9]+(\.[0-9]+\.[0-9]+(-preview\.[0-9]+)?)?|latest)-airflow-([0-
-   * 9]+(\.[0-9]+(\.[0-9]+)?)?)`. When used as input, the server also checks if the provided version
-   * is supported and denies the request for an unsupported version. The Cloud Composer portion of
-   * the image version is a full [semantic version](https://semver.org), or an alias in the form of
+   * expression `composer-([0-9]+(\.[0-9]+\.[0-9]+(-preview\.[0-9]+)?)?|latest)-airflow-([0-9]+(\.[0
+   * -9]+(\.[0-9]+)?)?)`. When used as input, the server also checks if the provided version is
+   * supported and denies the request for an unsupported version. The Cloud Composer portion of the
+   * image version is a full [semantic version](https://semver.org), or an alias in the form of
    * major version number or `latest`. When an alias is provided, the server replaces it with the
    * current Cloud Composer version that satisfies the alias. The Apache Airflow portion of the
    * image version is a full semantic version that points to one of the supported Apache Airflow

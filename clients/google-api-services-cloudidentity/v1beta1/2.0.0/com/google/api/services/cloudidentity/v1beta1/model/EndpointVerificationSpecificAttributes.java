@@ -17,8 +17,8 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * Resource representing the [Endpoint Verification-specific
- * attributes](https://cloud.google.com/endpoint-verification/docs/device-information) of a device.
+ * Resource representing the [Endpoint Verification-specific attributes](https://cloud.google.com
+ * /endpoint-verification/docs/device-information) of a device.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:

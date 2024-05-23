@@ -48,9 +48,9 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean allowQuotedNewlines;
 
   /**
-   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1,
-   * UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the
-   * data after the raw, binary data has been split using the values of the quote and fieldDelimiter
+   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1, UTF-
+   * 16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the data
+   * after the raw, binary data has been split using the values of the quote and fieldDelimiter
    * properties.
    * The value may be {@code null}.
    */
@@ -161,9 +161,9 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1,
-   * UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the
-   * data after the raw, binary data has been split using the values of the quote and fieldDelimiter
+   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1, UTF-
+   * 16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the data
+   * after the raw, binary data has been split using the values of the quote and fieldDelimiter
    * properties.
    * @return value or {@code null} for none
    */
@@ -172,9 +172,9 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1,
-   * UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the
-   * data after the raw, binary data has been split using the values of the quote and fieldDelimiter
+   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1, UTF-
+   * 16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the data
+   * after the raw, binary data has been split using the values of the quote and fieldDelimiter
    * properties.
    * @param encoding encoding or {@code null} for none
    */

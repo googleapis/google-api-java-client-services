@@ -253,8 +253,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    * a hat then bought the same hat and a shirt. The hat is priced $10 and the shirt is priced $20.
    * The cross-sell revenue of this order is $20. This metric is only available if you report
    * conversions with cart data. This metric is a monetary value and returned in the customer's
-   * currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * currency by default. See the metrics_currency parameter at https://developers.google.com
+   * /search-ads/reporting/query/query-structure#parameters_clause
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -450,8 +450,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   /**
    * The sum of your cost-per-click (CPC) and cost-per-thousand impressions (CPM) costs during this
    * period. This metric is a monetary value and returned in the customer's currency by default. See
-   * the metrics_currency parameter at https://developers.google.com/search-
-   * ads/reporting/query/query-structure#parameters_clause
+   * the metrics_currency parameter at https://developers.google.com/search-ads/reporting/query
+   * /query-structure#parameters_clause
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -1386,8 +1386,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    * a hat then bought the same hat and a shirt. The hat is priced $10 and the shirt is priced $20.
    * The cross-sell revenue of this order is $20. This metric is only available if you report
    * conversions with cart data. This metric is a monetary value and returned in the customer's
-   * currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * currency by default. See the metrics_currency parameter at https://developers.google.com
+   * /search-ads/reporting/query/query-structure#parameters_clause
    * @return value or {@code null} for none
    */
   public java.lang.Long getClientAccountCrossSellRevenueMicros() {
@@ -1405,8 +1405,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
    * a hat then bought the same hat and a shirt. The hat is priced $10 and the shirt is priced $20.
    * The cross-sell revenue of this order is $20. This metric is only available if you report
    * conversions with cart data. This metric is a monetary value and returned in the customer's
-   * currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * currency by default. See the metrics_currency parameter at https://developers.google.com
+   * /search-ads/reporting/query/query-structure#parameters_clause
    * @param clientAccountCrossSellRevenueMicros clientAccountCrossSellRevenueMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setClientAccountCrossSellRevenueMicros(java.lang.Long clientAccountCrossSellRevenueMicros) {
@@ -1842,8 +1842,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   /**
    * The sum of your cost-per-click (CPC) and cost-per-thousand impressions (CPM) costs during this
    * period. This metric is a monetary value and returned in the customer's currency by default. See
-   * the metrics_currency parameter at https://developers.google.com/search-
-   * ads/reporting/query/query-structure#parameters_clause
+   * the metrics_currency parameter at https://developers.google.com/search-ads/reporting/query
+   * /query-structure#parameters_clause
    * @return value or {@code null} for none
    */
   public java.lang.Long getCostMicros() {
@@ -1853,8 +1853,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   /**
    * The sum of your cost-per-click (CPC) and cost-per-thousand impressions (CPM) costs during this
    * period. This metric is a monetary value and returned in the customer's currency by default. See
-   * the metrics_currency parameter at https://developers.google.com/search-
-   * ads/reporting/query/query-structure#parameters_clause
+   * the metrics_currency parameter at https://developers.google.com/search-ads/reporting/query
+   * /query-structure#parameters_clause
    * @param costMicros costMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setCostMicros(java.lang.Long costMicros) {

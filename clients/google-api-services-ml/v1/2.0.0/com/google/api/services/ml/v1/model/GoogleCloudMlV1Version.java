@@ -123,8 +123,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Platform will analyze files in the deployment_uri to determine a framework. If you choose
    * `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or
    * greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ai-
-   * platform/prediction/docs/custom-prediction-routines) or if you're using a [custom
-   * container](/ai-platform/prediction/docs/use-custom-container).
+   * platform/prediction/docs/custom-prediction-routines) or if you're using a [custom container
+   * ](/ai-platform/prediction/docs/use-custom-container).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,10 +179,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Optional. The type of machine on which to serve the model. Currently only applies to online
    * prediction service. To learn about valid values for this field, read [Choosing a machine type
    * for online prediction](/ai-platform/prediction/docs/machine-types-online-prediction). If this
-   * field is not specified and you are using a [regional endpoint](/ai-
-   * platform/prediction/docs/regional-endpoints), then the machine type defaults to
-   * `n1-standard-2`. If this field is not specified and you are using the global endpoint
-   * (`ml.googleapis.com`), then the machine type defaults to `mls1-c1-m2`.
+   * field is not specified and you are using a [regional endpoint](/ai-platform/prediction/docs
+   * /regional-endpoints), then the machine type defaults to `n1-standard-2`. If this field is not
+   * specified and you are using the global endpoint (`ml.googleapis.com`), then the machine type
+   * defaults to `mls1-c1-m2`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,8 +208,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. Cloud Storage paths (`gs://…`) of packages for [custom prediction routines](/ml-
-   * engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom
-   * code](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code). For a custom
+   * engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom code
+   * ](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code). For a custom
    * prediction routine, one of these packages must contain your Predictor class (see
    * [`predictionClass`](#Version.FIELDS.prediction_class)). Additionally, include any dependencies
    * used by your Predictor or scikit-learn pipeline uses that are not already included in your
@@ -546,8 +546,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Platform will analyze files in the deployment_uri to determine a framework. If you choose
    * `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or
    * greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ai-
-   * platform/prediction/docs/custom-prediction-routines) or if you're using a [custom
-   * container](/ai-platform/prediction/docs/use-custom-container).
+   * platform/prediction/docs/custom-prediction-routines) or if you're using a [custom container
+   * ](/ai-platform/prediction/docs/use-custom-container).
    * @return value or {@code null} for none
    */
   public java.lang.String getFramework() {
@@ -560,8 +560,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Platform will analyze files in the deployment_uri to determine a framework. If you choose
    * `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or
    * greater. Do **not** specify a framework if you're deploying a [custom prediction routine](/ai-
-   * platform/prediction/docs/custom-prediction-routines) or if you're using a [custom
-   * container](/ai-platform/prediction/docs/use-custom-container).
+   * platform/prediction/docs/custom-prediction-routines) or if you're using a [custom container
+   * ](/ai-platform/prediction/docs/use-custom-container).
    * @param framework framework or {@code null} for none
    */
   public GoogleCloudMlV1Version setFramework(java.lang.String framework) {
@@ -678,10 +678,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Optional. The type of machine on which to serve the model. Currently only applies to online
    * prediction service. To learn about valid values for this field, read [Choosing a machine type
    * for online prediction](/ai-platform/prediction/docs/machine-types-online-prediction). If this
-   * field is not specified and you are using a [regional endpoint](/ai-
-   * platform/prediction/docs/regional-endpoints), then the machine type defaults to
-   * `n1-standard-2`. If this field is not specified and you are using the global endpoint
-   * (`ml.googleapis.com`), then the machine type defaults to `mls1-c1-m2`.
+   * field is not specified and you are using a [regional endpoint](/ai-platform/prediction/docs
+   * /regional-endpoints), then the machine type defaults to `n1-standard-2`. If this field is not
+   * specified and you are using the global endpoint (`ml.googleapis.com`), then the machine type
+   * defaults to `mls1-c1-m2`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -692,10 +692,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    * Optional. The type of machine on which to serve the model. Currently only applies to online
    * prediction service. To learn about valid values for this field, read [Choosing a machine type
    * for online prediction](/ai-platform/prediction/docs/machine-types-online-prediction). If this
-   * field is not specified and you are using a [regional endpoint](/ai-
-   * platform/prediction/docs/regional-endpoints), then the machine type defaults to
-   * `n1-standard-2`. If this field is not specified and you are using the global endpoint
-   * (`ml.googleapis.com`), then the machine type defaults to `mls1-c1-m2`.
+   * field is not specified and you are using a [regional endpoint](/ai-platform/prediction/docs
+   * /regional-endpoints), then the machine type defaults to `n1-standard-2`. If this field is not
+   * specified and you are using the global endpoint (`ml.googleapis.com`), then the machine type
+   * defaults to `mls1-c1-m2`.
    * @param machineType machineType or {@code null} for none
    */
   public GoogleCloudMlV1Version setMachineType(java.lang.String machineType) {
@@ -747,8 +747,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. Cloud Storage paths (`gs://…`) of packages for [custom prediction routines](/ml-
-   * engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom
-   * code](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code). For a custom
+   * engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom code
+   * ](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code). For a custom
    * prediction routine, one of these packages must contain your Predictor class (see
    * [`predictionClass`](#Version.FIELDS.prediction_class)). Additionally, include any dependencies
    * used by your Predictor or scikit-learn pipeline uses that are not already included in your
@@ -763,8 +763,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. Cloud Storage paths (`gs://…`) of packages for [custom prediction routines](/ml-
-   * engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom
-   * code](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code). For a custom
+   * engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom code
+   * ](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code). For a custom
    * prediction routine, one of these packages must contain your Predictor class (see
    * [`predictionClass`](#Version.FIELDS.prediction_class)). Additionally, include any dependencies
    * used by your Predictor or scikit-learn pipeline uses that are not already included in your

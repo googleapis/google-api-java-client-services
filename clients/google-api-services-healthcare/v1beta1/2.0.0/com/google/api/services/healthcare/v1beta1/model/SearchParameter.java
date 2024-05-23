@@ -38,11 +38,10 @@ public final class SearchParameter extends com.google.api.client.json.GenericJso
 
   /**
    * The versioned name of the search parameter resource. The format is projects/{project-
-   * id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-
-   * id}/fhir/SearchParameter/{resource-id}/_history/{version-id} For fhir stores with
-   * disable_resource_versioning=true, the format is projects/{project-
-   * id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-
-   * id}/fhir/SearchParameter/{resource-id}/
+   * id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter
+   * /{resource-id}/_history/{version-id} For fhir stores with disable_resource_versioning=true, the
+   * format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores
+   * /{fhirStore-id}/fhir/SearchParameter/{resource-id}/
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,11 +66,10 @@ public final class SearchParameter extends com.google.api.client.json.GenericJso
 
   /**
    * The versioned name of the search parameter resource. The format is projects/{project-
-   * id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-
-   * id}/fhir/SearchParameter/{resource-id}/_history/{version-id} For fhir stores with
-   * disable_resource_versioning=true, the format is projects/{project-
-   * id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-
-   * id}/fhir/SearchParameter/{resource-id}/
+   * id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter
+   * /{resource-id}/_history/{version-id} For fhir stores with disable_resource_versioning=true, the
+   * format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores
+   * /{fhirStore-id}/fhir/SearchParameter/{resource-id}/
    * @return value or {@code null} for none
    */
   public java.lang.String getParameter() {
@@ -80,11 +78,10 @@ public final class SearchParameter extends com.google.api.client.json.GenericJso
 
   /**
    * The versioned name of the search parameter resource. The format is projects/{project-
-   * id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-
-   * id}/fhir/SearchParameter/{resource-id}/_history/{version-id} For fhir stores with
-   * disable_resource_versioning=true, the format is projects/{project-
-   * id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-
-   * id}/fhir/SearchParameter/{resource-id}/
+   * id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter
+   * /{resource-id}/_history/{version-id} For fhir stores with disable_resource_versioning=true, the
+   * format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores
+   * /{fhirStore-id}/fhir/SearchParameter/{resource-id}/
    * @param parameter parameter or {@code null} for none
    */
   public SearchParameter setParameter(java.lang.String parameter) {

@@ -56,8 +56,8 @@ public final class IsolationExpectations extends com.google.api.client.json.Gene
   private java.lang.String zoneIsolation;
 
   /**
-   * Deprecated: use zs_org_policy, and zs_region_stateinstead for setting Zs expectations as per
-   * go/zicy-publish-physical-location.
+   * Deprecated: use zs_org_policy, and zs_region_stateinstead for setting Zs expectations as per go
+   * /zicy-publish-physical-location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +140,8 @@ public final class IsolationExpectations extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated: use zs_org_policy, and zs_region_stateinstead for setting Zs expectations as per
-   * go/zicy-publish-physical-location.
+   * Deprecated: use zs_org_policy, and zs_region_stateinstead for setting Zs expectations as per go
+   * /zicy-publish-physical-location.
    * @return value or {@code null} for none
    */
   public java.lang.String getZoneSeparation() {
@@ -149,8 +149,8 @@ public final class IsolationExpectations extends com.google.api.client.json.Gene
   }
 
   /**
-   * Deprecated: use zs_org_policy, and zs_region_stateinstead for setting Zs expectations as per
-   * go/zicy-publish-physical-location.
+   * Deprecated: use zs_org_policy, and zs_region_stateinstead for setting Zs expectations as per go
+   * /zicy-publish-physical-location.
    * @param zoneSeparation zoneSeparation or {@code null} for none
    */
   public IsolationExpectations setZoneSeparation(java.lang.String zoneSeparation) {

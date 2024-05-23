@@ -1937,8 +1937,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          version of the queued Item using lexical ordering. Cloud Search Indexing won't delete any queued
          item with a version value that is less than or equal to the version of the currently indexed item.
          The maximum length for this field is 1024 bytes. For information on how item version affects the
-         deletion process, refer to [Handle revisions after manual
-         deletes](https://developers.google.com/cloud-search/docs/guides/operations).
+         deletion process, refer to [Handle revisions after manual deletes](https://developers.google.com
+         /cloud-search/docs/guides/operations).
            */
           public java.lang.String getVersion() {
             return version;
@@ -6426,10 +6426,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Only applies to
-         * [`settings.searchapplications.patch`](https://developers.google.com/cloud-
-         * search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to control
-         * which fields to update. Example field paths: `search_application.name`,
+         * Only applies to [`settings.searchapplications.patch`](https://developers.google.com
+         * /cloud-search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to
+         * control which fields to update. Example field paths: `search_application.name`,
          * `search_application.displayName`. * If `update_mask` is non-empty, then only the fields
          * specified in the `update_mask` are updated. * If you specify a field in the
          * `update_mask`, but don't specify its value in the `search_application`, then that field
@@ -6452,10 +6451,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Only applies to
-         * [`settings.searchapplications.patch`](https://developers.google.com/cloud-
-         * search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to control
-         * which fields to update. Example field paths: `search_application.name`,
+         * Only applies to [`settings.searchapplications.patch`](https://developers.google.com
+         * /cloud-search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to
+         * control which fields to update. Example field paths: `search_application.name`,
          * `search_application.displayName`. * If `update_mask` is non-empty, then only the fields
          * specified in the `update_mask` are updated. * If you specify a field in the
          * `update_mask`, but don't specify its value in the `search_application`, then that field
@@ -6736,10 +6734,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Only applies to
-         * [`settings.searchapplications.patch`](https://developers.google.com/cloud-
-         * search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to control
-         * which fields to update. Example field paths: `search_application.name`,
+         * Only applies to [`settings.searchapplications.patch`](https://developers.google.com
+         * /cloud-search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to
+         * control which fields to update. Example field paths: `search_application.name`,
          * `search_application.displayName`. * If `update_mask` is non-empty, then only the fields
          * specified in the `update_mask` are updated. * If you specify a field in the
          * `update_mask`, but don't specify its value in the `search_application`, then that field
@@ -6762,10 +6759,9 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Only applies to
-         * [`settings.searchapplications.patch`](https://developers.google.com/cloud-
-         * search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to control
-         * which fields to update. Example field paths: `search_application.name`,
+         * Only applies to [`settings.searchapplications.patch`](https://developers.google.com
+         * /cloud-search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to
+         * control which fields to update. Example field paths: `search_application.name`,
          * `search_application.displayName`. * If `update_mask` is non-empty, then only the fields
          * specified in the `update_mask` are updated. * If you specify a field in the
          * `update_mask`, but don't specify its value in the `search_application`, then that field

@@ -400,12 +400,11 @@ public class Digitalassetlinks extends com.google.api.client.googleapis.services
 
       /** Query string for the relation. We identify relations with strings of the format `/`, where `` must
      be one of a set of pre-defined purpose categories, and `` is a free-form lowercase alphanumeric
-     string that describes the specific use case of the statement. Refer to [our API
-     documentation](/digital-asset-links/v1/relation-strings) for the current list of supported
-     relations. For a query to match an asset link, both the query's and the asset link's relation
-     strings must match exactly. Example: A query with relation
-     `delegate_permission/common.handle_all_urls` matches an asset link with relation
-     `delegate_permission/common.handle_all_urls`.
+     string that describes the specific use case of the statement. Refer to [our API documentation
+     ](/digital-asset-links/v1/relation-strings) for the current list of supported relations. For a
+     query to match an asset link, both the query's and the asset link's relation strings must match
+     exactly. Example: A query with relation `delegate_permission/common.handle_all_urls` matches an
+     asset link with relation `delegate_permission/common.handle_all_urls`.
        */
       public java.lang.String getRelation() {
         return relation;

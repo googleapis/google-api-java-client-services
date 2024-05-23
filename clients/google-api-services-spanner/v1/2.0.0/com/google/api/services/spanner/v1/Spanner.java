@@ -10720,9 +10720,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Creates a new session. A session can be used to perform transactions that read and/or modify data
            * in a Cloud Spanner database. Sessions are meant to be reused for many consecutive transactions.
-           * Sessions can only execute one transaction at a time. To execute multiple concurrent read-
-           * write/write-only transactions, create multiple sessions. Note that standalone reads and queries
-           * use a transaction internally, and count toward the one transaction limit. Active sessions use
+           * Sessions can only execute one transaction at a time. To execute multiple concurrent read-write
+           * /write-only transactions, create multiple sessions. Note that standalone reads and queries use a
+           * transaction internally, and count toward the one transaction limit. Active sessions use
            * additional server resources, so it is a good idea to delete idle and unneeded sessions. Aside
            * from explicit deletes, Cloud Spanner may delete sessions for which no operations are sent for
            * more than an hour. If a session is deleted, requests to it return `NOT_FOUND`. Idle sessions can

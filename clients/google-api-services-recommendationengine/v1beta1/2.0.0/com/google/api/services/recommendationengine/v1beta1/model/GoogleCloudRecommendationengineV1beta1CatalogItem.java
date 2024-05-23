@@ -69,8 +69,8 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
 
   /**
    * Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length
-   * limit of 128 bytes. This field must be enabled before it can be used. [Learn
-   * more](/recommendations-ai/docs/catalog#item-group-id).
+   * limit of 128 bytes. This field must be enabled before it can be used. [Learn more
+   * ](/recommendations-ai/docs/catalog#item-group-id).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,8 +196,8 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
 
   /**
    * Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length
-   * limit of 128 bytes. This field must be enabled before it can be used. [Learn
-   * more](/recommendations-ai/docs/catalog#item-group-id).
+   * limit of 128 bytes. This field must be enabled before it can be used. [Learn more
+   * ](/recommendations-ai/docs/catalog#item-group-id).
    * @return value or {@code null} for none
    */
   public java.lang.String getItemGroupId() {
@@ -206,8 +206,8 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItem extends com
 
   /**
    * Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length
-   * limit of 128 bytes. This field must be enabled before it can be used. [Learn
-   * more](/recommendations-ai/docs/catalog#item-group-id).
+   * limit of 128 bytes. This field must be enabled before it can be used. [Learn more
+   * ](/recommendations-ai/docs/catalog#item-group-id).
    * @param itemGroupId itemGroupId or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1CatalogItem setItemGroupId(java.lang.String itemGroupId) {

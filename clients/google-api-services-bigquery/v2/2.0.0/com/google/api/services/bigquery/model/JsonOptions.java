@@ -30,16 +30,16 @@ package com.google.api.services.bigquery.model;
 public final class JsonOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The character encoding of the data. The supported values are UTF-8, UTF-16BE,
-   * UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.
+   * Optional. The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-
+   * 16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String encoding;
 
   /**
-   * Optional. The character encoding of the data. The supported values are UTF-8, UTF-16BE,
-   * UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.
+   * Optional. The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-
+   * 16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncoding() {
@@ -47,8 +47,8 @@ public final class JsonOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The character encoding of the data. The supported values are UTF-8, UTF-16BE,
-   * UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.
+   * Optional. The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-
+   * 16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.
    * @param encoding encoding or {@code null} for none
    */
   public JsonOptions setEncoding(java.lang.String encoding) {

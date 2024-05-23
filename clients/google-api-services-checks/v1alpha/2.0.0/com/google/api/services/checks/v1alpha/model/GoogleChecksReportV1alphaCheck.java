@@ -44,8 +44,8 @@ public final class GoogleChecksReportV1alphaCheck extends com.google.api.client.
   private GoogleChecksReportV1alphaCheckEvidence evidence;
 
   /**
-   * Regions that are impacted by the check. For more info, see
-   * https://google.aip.dev/143#countries-and-regions.
+   * Regions that are impacted by the check. For more info, see https://google.aip.dev/143
+   * #countries-and-regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,8 +114,8 @@ public final class GoogleChecksReportV1alphaCheck extends com.google.api.client.
   }
 
   /**
-   * Regions that are impacted by the check. For more info, see
-   * https://google.aip.dev/143#countries-and-regions.
+   * Regions that are impacted by the check. For more info, see https://google.aip.dev/143
+   * #countries-and-regions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegionCodes() {
@@ -123,8 +123,8 @@ public final class GoogleChecksReportV1alphaCheck extends com.google.api.client.
   }
 
   /**
-   * Regions that are impacted by the check. For more info, see
-   * https://google.aip.dev/143#countries-and-regions.
+   * Regions that are impacted by the check. For more info, see https://google.aip.dev/143
+   * #countries-and-regions.
    * @param regionCodes regionCodes or {@code null} for none
    */
   public GoogleChecksReportV1alphaCheck setRegionCodes(java.util.List<java.lang.String> regionCodes) {

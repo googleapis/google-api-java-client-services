@@ -40,8 +40,8 @@ public final class Track extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier of the track. Form factor tracks have a special prefix as an identifier, for example
-   * `wear:production`, `automotive:production`. [More on track
-   * name](https://developers.google.com/android-publisher/tracks#ff-track-name)
+   * `wear:production`, `automotive:production`. [More on track name](https://developers.google.com
+   * /android-publisher/tracks#ff-track-name)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class Track extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier of the track. Form factor tracks have a special prefix as an identifier, for example
-   * `wear:production`, `automotive:production`. [More on track
-   * name](https://developers.google.com/android-publisher/tracks#ff-track-name)
+   * `wear:production`, `automotive:production`. [More on track name](https://developers.google.com
+   * /android-publisher/tracks#ff-track-name)
    * @return value or {@code null} for none
    */
   public java.lang.String getTrack() {
@@ -78,8 +78,8 @@ public final class Track extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier of the track. Form factor tracks have a special prefix as an identifier, for example
-   * `wear:production`, `automotive:production`. [More on track
-   * name](https://developers.google.com/android-publisher/tracks#ff-track-name)
+   * `wear:production`, `automotive:production`. [More on track name](https://developers.google.com
+   * /android-publisher/tracks#ff-track-name)
    * @param track track or {@code null} for none
    */
   public Track setTrack(java.lang.String track) {

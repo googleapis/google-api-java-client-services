@@ -8802,8 +8802,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link SetMaintenancePolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param projectId Required. The Google Developers Console [project ID or project
-         *        number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
+         * @param projectId Required. The Google Developers Console [project ID or project number](https://cloud.google.com
+         *        /resource-manager/docs/creating-managing-projects).
          * @param zone Required. The name of the Google Compute Engine
          *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
          *        resides.
@@ -8832,8 +8832,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
            * after invoking the constructor. </p>
            *
-           * @param projectId Required. The Google Developers Console [project ID or project
-         *        number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
+           * @param projectId Required. The Google Developers Console [project ID or project number](https://cloud.google.com
+         *        /resource-manager/docs/creating-managing-projects).
            * @param zone Required. The name of the Google Compute Engine
          *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
          *        resides.
@@ -8910,8 +8910,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           @com.google.api.client.util.Key
           private java.lang.String projectId;
 
-          /** Required. The Google Developers Console [project ID or project
-         number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
+          /** Required. The Google Developers Console [project ID or project number](https://cloud.google.com
+         /resource-manager/docs/creating-managing-projects).
            */
           public java.lang.String getProjectId() {
             return projectId;

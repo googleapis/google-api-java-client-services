@@ -19,8 +19,8 @@ package com.google.api.services.directory.model;
 /**
  * Google Workspace Mobile Management includes Android, [Google
  * Sync](https://support.google.com/a/answer/135937), and iOS devices. For more information about
- * common group mobile device API tasks, see the [Developer's Guide](/admin-
- * sdk/directory/v1/guides/manage-mobile-devices.html).
+ * common group mobile device API tasks, see the [Developer's Guide](/admin-sdk/directory/v1/guides
+ * /manage-mobile-devices.html).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Admin SDK API. For a detailed explanation see:
@@ -231,8 +231,8 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   /**
    * The list of the owner's user names. If your application needs the current list of device owner
    * names, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For more
-   * information about retrieving mobile device user information, see the [Developer's
-   * Guide](/admin-sdk/directory/v1/guides/manage-users#get_user).
+   * information about retrieving mobile device user information, see the [Developer's Guide
+   * ](/admin-sdk/directory/v1/guides/manage-users#get_user).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -799,8 +799,8 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   /**
    * The list of the owner's user names. If your application needs the current list of device owner
    * names, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For more
-   * information about retrieving mobile device user information, see the [Developer's
-   * Guide](/admin-sdk/directory/v1/guides/manage-users#get_user).
+   * information about retrieving mobile device user information, see the [Developer's Guide
+   * ](/admin-sdk/directory/v1/guides/manage-users#get_user).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getName() {
@@ -810,8 +810,8 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   /**
    * The list of the owner's user names. If your application needs the current list of device owner
    * names, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For more
-   * information about retrieving mobile device user information, see the [Developer's
-   * Guide](/admin-sdk/directory/v1/guides/manage-users#get_user).
+   * information about retrieving mobile device user information, see the [Developer's Guide
+   * ](/admin-sdk/directory/v1/guides/manage-users#get_user).
    * @param name name or {@code null} for none
    */
   public MobileDevice setName(java.util.List<java.lang.String> name) {

@@ -38,9 +38,8 @@ public final class GoogleIdentityStsV1betaAccessBoundaryRule extends com.google.
    * available. Note that all access boundary rules in an access boundary are evaluated together as
    * a union. As such, another access boundary rule may allow access to the resource, even if this
    * access boundary rule does not allow access. To learn which resources support conditions in
-   * their IAM policies, see the [IAM
-   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies). The maximum
-   * length of the `expression` field is 2048 characters.
+   * their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions
+   * /resource-policies). The maximum length of the `expression` field is 2048 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,9 +72,8 @@ public final class GoogleIdentityStsV1betaAccessBoundaryRule extends com.google.
    * available. Note that all access boundary rules in an access boundary are evaluated together as
    * a union. As such, another access boundary rule may allow access to the resource, even if this
    * access boundary rule does not allow access. To learn which resources support conditions in
-   * their IAM policies, see the [IAM
-   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies). The maximum
-   * length of the `expression` field is 2048 characters.
+   * their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions
+   * /resource-policies). The maximum length of the `expression` field is 2048 characters.
    * @return value or {@code null} for none
    */
   public GoogleTypeExpr getAvailabilityCondition() {
@@ -90,9 +88,8 @@ public final class GoogleIdentityStsV1betaAccessBoundaryRule extends com.google.
    * available. Note that all access boundary rules in an access boundary are evaluated together as
    * a union. As such, another access boundary rule may allow access to the resource, even if this
    * access boundary rule does not allow access. To learn which resources support conditions in
-   * their IAM policies, see the [IAM
-   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies). The maximum
-   * length of the `expression` field is 2048 characters.
+   * their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions
+   * /resource-policies). The maximum length of the `expression` field is 2048 characters.
    * @param availabilityCondition availabilityCondition or {@code null} for none
    */
   public GoogleIdentityStsV1betaAccessBoundaryRule setAvailabilityCondition(GoogleTypeExpr availabilityCondition) {

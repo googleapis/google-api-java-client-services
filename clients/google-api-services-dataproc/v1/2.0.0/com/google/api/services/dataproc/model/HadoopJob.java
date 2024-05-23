@@ -17,10 +17,9 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * A Dataproc job for running Apache Hadoop MapReduce
- * (https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-
- * core/MapReduceTutorial.html) jobs on Apache Hadoop YARN
- * (https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html).
+ * A Dataproc job for running Apache Hadoop MapReduce (https://hadoop.apache.org/docs/current
+ * /hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html) jobs on Apache
+ * Hadoop YARN (https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:

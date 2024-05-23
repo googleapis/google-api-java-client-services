@@ -110,8 +110,8 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private HparamSearchSpaces hparamSearchSpaces;
 
   /**
-   * Output only. Trials of a [hyperparameter tuning](/bigquery-ml/docs/reference/standard-
-   * sql/bigqueryml-syntax-hp-tuning-overview) model sorted by trial_id.
+   * Output only. Trials of a [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql
+   * /bigqueryml-syntax-hp-tuning-overview) model sorted by trial_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -395,8 +395,8 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Trials of a [hyperparameter tuning](/bigquery-ml/docs/reference/standard-
-   * sql/bigqueryml-syntax-hp-tuning-overview) model sorted by trial_id.
+   * Output only. Trials of a [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql
+   * /bigqueryml-syntax-hp-tuning-overview) model sorted by trial_id.
    * @return value or {@code null} for none
    */
   public java.util.List<HparamTuningTrial> getHparamTrials() {
@@ -404,8 +404,8 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Trials of a [hyperparameter tuning](/bigquery-ml/docs/reference/standard-
-   * sql/bigqueryml-syntax-hp-tuning-overview) model sorted by trial_id.
+   * Output only. Trials of a [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql
+   * /bigqueryml-syntax-hp-tuning-overview) model sorted by trial_id.
    * @param hparamTrials hparamTrials or {@code null} for none
    */
   public Model setHparamTrials(java.util.List<HparamTuningTrial> hparamTrials) {

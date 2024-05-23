@@ -17,8 +17,8 @@
 package com.google.api.services.language.v1.model;
 
 /**
- * Represents part of speech information for a token. Parts of speech are as defined in
- * http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf
+ * Represents part of speech information for a token. Parts of speech are as defined in http://www
+ * .lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Natural Language API. For a detailed

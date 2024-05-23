@@ -161,10 +161,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Name of the organization, folder, or project the assets belong to. Format:
-     *        "organizations/[organization-number]" (such as "organizations/123"), "projects/[project-
-     *        id]" (such as "projects/my-project-id"), "projects/[project-number]" (such as
-     *        "projects/12345"), or "folders/[folder-number]" (such as "folders/12345").
+     * @param parent Required. Name of the organization, folder, or project the assets belong to. Format: "organizations
+     *        /[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as
+     *        "projects/my-project-id"), "projects/[project-number]" (such as "projects/12345"), or
+     *        "folders/[folder-number]" (such as "folders/12345").
      * @return the request
      */
     public List list(java.lang.String parent) throws java.io.IOException {
@@ -190,10 +190,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Name of the organization, folder, or project the assets belong to. Format:
-     *        "organizations/[organization-number]" (such as "organizations/123"), "projects/[project-
-     *        id]" (such as "projects/my-project-id"), "projects/[project-number]" (such as
-     *        "projects/12345"), or "folders/[folder-number]" (such as "folders/12345").
+       * @param parent Required. Name of the organization, folder, or project the assets belong to. Format: "organizations
+     *        /[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as
+     *        "projects/my-project-id"), "projects/[project-number]" (such as "projects/12345"), or
+     *        "folders/[folder-number]" (such as "folders/12345").
        * @since 1.13
        */
       protected List(java.lang.String parent) {
@@ -280,10 +280,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Name of the organization, folder, or project the assets belong to. Format:
-     "organizations/[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such
-     as "projects/my-project-id"), "projects/[project-number]" (such as "projects/12345"), or
-     "folders/[folder-number]" (such as "folders/12345").
+      /** Required. Name of the organization, folder, or project the assets belong to. Format: "organizations
+     /[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as "projects
+     /my-project-id"), "projects/[project-number]" (such as "projects/12345"), or "folders/[folder-
+     number]" (such as "folders/12345").
        */
       public java.lang.String getParent() {
         return parent;
@@ -532,8 +532,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *        ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To
      *        know how to get organization ID, visit [here ](https://cloud.google.com/resource-
      *        manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how
-     *        to get folder or project ID, visit [here ](https://cloud.google.com/resource-
-     *        manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+     *        to get folder or project ID, visit [here ](https://cloud.google.com/resource-manager/docs
+     *        /creating-managing-folders#viewing_or_listing_folders_and_projects).
      * @return the request
      */
     public BatchGet batchGet(java.lang.String scope) throws java.io.IOException {
@@ -565,8 +565,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *        ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To
      *        know how to get organization ID, visit [here ](https://cloud.google.com/resource-
      *        manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how
-     *        to get folder or project ID, visit [here ](https://cloud.google.com/resource-
-     *        manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+     *        to get folder or project ID, visit [here ](https://cloud.google.com/resource-manager/docs
+     *        /creating-managing-folders#viewing_or_listing_folders_and_projects).
        * @since 1.13
        */
       protected BatchGet(java.lang.String scope) {
@@ -660,10 +660,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /** Required. Only IAM policies on or below the scope will be returned. This can only be an
      organization number (such as "organizations/123"), a folder number (such as "folders/123"), a
      project ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To
-     know how to get organization ID, visit [here ](https://cloud.google.com/resource-
-     manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get
-     folder or project ID, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
-     managing-folders#viewing_or_listing_folders_and_projects).
+     know how to get organization ID, visit [here ](https://cloud.google.com/resource-manager/docs
+     /creating-managing-organization#retrieving_your_organization_id). To know how to get folder or
+     project ID, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     folders#viewing_or_listing_folders_and_projects).
        */
       public java.lang.String getScope() {
         return scope;
@@ -1316,8 +1316,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       private java.lang.String parent;
 
       /** Required. The parent project/folder/organization whose feeds are to be listed. It can only be using
-     project/folder/organization number (such as "folders/12345")", or a project ID (such as
-     "projects/my-project-id").
+     project/folder/organization number (such as "folders/12345")", or a project ID (such as "projects
+     /my-project-id").
        */
       public java.lang.String getParent() {
         return parent;
@@ -3092,8 +3092,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       private java.lang.String analysisQueryResourceSelectorFullResourceName;
 
       /** Required. The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-
-     format) of a resource of [supported resource types](https://cloud.google.com/asset-
-     inventory/docs/supported-asset-types#analyzable_asset_types).
+     format) of a resource of [supported resource types](https://cloud.google.com/asset-inventory/docs
+     /supported-asset-types#analyzable_asset_types).
        */
       public java.lang.String getAnalysisQueryResourceSelectorFullResourceName() {
         return analysisQueryResourceSelectorFullResourceName;
@@ -4599,8 +4599,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * A list of the full names of the assets. See: https://cloud.google.com/asset-
-       * inventory/docs/resource-name-format Example:
+       * A list of the full names of the assets. See: https://cloud.google.com/asset-inventory/docs
+       * /resource-name-format Example:
        * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. The
        * request becomes a no-op if the asset name list is empty, and the max size of the asset name
        * list is 100 in one request.
@@ -4608,8 +4608,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> assetNames;
 
-      /** A list of the full names of the assets. See: https://cloud.google.com/asset-
-     inventory/docs/resource-name-format Example:
+      /** A list of the full names of the assets. See: https://cloud.google.com/asset-inventory/docs
+     /resource-name-format Example:
      `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. The request
      becomes a no-op if the asset name list is empty, and the max size of the asset name list is 100 in
      one request.
@@ -4619,8 +4619,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * A list of the full names of the assets. See: https://cloud.google.com/asset-
-       * inventory/docs/resource-name-format Example:
+       * A list of the full names of the assets. See: https://cloud.google.com/asset-inventory/docs
+       * /resource-name-format Example:
        * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. The
        * request becomes a no-op if the asset name list is empty, and the max size of the asset name
        * list is 100 in one request.
@@ -4692,9 +4692,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * [asset_names] or if any of the [asset_names]'s types doesn't belong to the source types of
        * the [relationship_types]. * Otherwise: it outputs the supported relationships' history on
        * the [asset_names] or returns an error if any of the [asset_names]'s types has no
-       * relationship support. See [Introduction to Cloud Asset
-       * Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset
-       * types and relationship types.
+       * relationship support. See [Introduction to Cloud Asset Inventory](https://cloud.google.com
+       * /asset-inventory/docs/overview) for all supported asset types and relationship types.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> relationshipTypes;
@@ -4721,9 +4720,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * [asset_names] or if any of the [asset_names]'s types doesn't belong to the source types of
        * the [relationship_types]. * Otherwise: it outputs the supported relationships' history on
        * the [asset_names] or returns an error if any of the [asset_names]'s types has no
-       * relationship support. See [Introduction to Cloud Asset
-       * Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset
-       * types and relationship types.
+       * relationship support. See [Introduction to Cloud Asset Inventory](https://cloud.google.com
+       * /asset-inventory/docs/overview) for all supported asset types and relationship types.
        */
       public BatchGetAssetsHistory setRelationshipTypes(java.util.List<java.lang.String> relationshipTypes) {
         this.relationshipTypes = relationshipTypes;
@@ -4898,9 +4896,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * within timeout and there's no pagination, the full query results will be returned in the
      * `QueryAssetsResponse`. Otherwise, full query results can be obtained by issuing extra requests
      * with the `job_reference` from the a previous `QueryAssets` call. Note, the query result has
-     * approximately 10 GB limitation enforced by
-     * [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output). Queries
-     * return larger results will result in errors.
+     * approximately 10 GB limitation enforced by [BigQuery](https://cloud.google.com/bigquery/docs
+     * /best-practices-performance-output). Queries return larger results will result in errors.
      *
      * Create a request for the method "v1.queryAssets".
      *
@@ -4933,9 +4930,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * within timeout and there's no pagination, the full query results will be returned in the
        * `QueryAssetsResponse`. Otherwise, full query results can be obtained by issuing extra requests
        * with the `job_reference` from the a previous `QueryAssets` call. Note, the query result has
-       * approximately 10 GB limitation enforced by
-       * [BigQuery](https://cloud.google.com/bigquery/docs/best-practices-performance-output). Queries
-       * return larger results will result in errors.
+       * approximately 10 GB limitation enforced by [BigQuery](https://cloud.google.com/bigquery/docs
+       * /best-practices-performance-output). Queries return larger results will result in errors.
        *
        * Create a request for the method "v1.queryAssets".
        *
@@ -5069,11 +5065,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *
      * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the IAM
      *        policies within the `scope`. The caller must be granted the
-     *        [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-
-     *        inventory/docs/access-control#required_permissions) permission on the desired scope. The
-     *        allowed values are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") *
-     *        projects/{PROJECT_NUMBER} (e.g., "projects/12345678") * folders/{FOLDER_NUMBER} (e.g.,
-     *        "folders/1234567") * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+     *        [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs
+     *        /access-control#required_permissions) permission on the desired scope. The allowed values
+     *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+     *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
      * @return the request
      */
     public SearchAllIamPolicies searchAllIamPolicies(java.lang.String scope) throws java.io.IOException {
@@ -5104,11 +5100,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        *
        * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the IAM
      *        policies within the `scope`. The caller must be granted the
-     *        [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-
-     *        inventory/docs/access-control#required_permissions) permission on the desired scope. The
-     *        allowed values are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") *
-     *        projects/{PROJECT_NUMBER} (e.g., "projects/12345678") * folders/{FOLDER_NUMBER} (e.g.,
-     *        "folders/1234567") * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+     *        [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs
+     *        /access-control#required_permissions) permission on the desired scope. The allowed values
+     *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+     *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        * @since 1.13
        */
       protected SearchAllIamPolicies(java.lang.String scope) {
@@ -5189,11 +5185,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. A scope can be a project, a folder, or an organization. The search is limited to
        * the IAM policies within the `scope`. The caller must be granted the
-       * [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-
-       * inventory/docs/access-control#required_permissions) permission on the desired scope. The
-       * allowed values are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") *
-       * projects/{PROJECT_NUMBER} (e.g., "projects/12345678") * folders/{FOLDER_NUMBER} (e.g.,
-       * "folders/1234567") * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       * [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs
+       * /access-control#required_permissions) permission on the desired scope. The allowed values
+       * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+       * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        */
       @com.google.api.client.util.Key
       private java.lang.String scope;
@@ -5213,11 +5209,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. A scope can be a project, a folder, or an organization. The search is limited to
        * the IAM policies within the `scope`. The caller must be granted the
-       * [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-
-       * inventory/docs/access-control#required_permissions) permission on the desired scope. The
-       * allowed values are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") *
-       * projects/{PROJECT_NUMBER} (e.g., "projects/12345678") * folders/{FOLDER_NUMBER} (e.g.,
-       * "folders/1234567") * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       * [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs
+       * /access-control#required_permissions) permission on the desired scope. The allowed values
+       * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+       * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        */
       public SearchAllIamPolicies setScope(java.lang.String scope) {
         if (!getSuppressPatternChecks()) {
@@ -5365,26 +5361,26 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Optional. The query statement. See [how to construct a
-       * query](https://cloud.google.com/asset-inventory/docs/searching-iam-
-       * policies#how_to_construct_a_query) for more information. If not specified or empty, it will
-       * search all the IAM policies within the specified `scope`. Note that the query string is
-       * compared against each IAM policy binding, including its principals, roles, and IAM
-       * conditions. The returned IAM policies will only contain the bindings that match your query.
-       * To learn more about the IAM policy structure, see the [IAM policy
-       * documentation](https://cloud.google.com/iam/help/allow-policies/structure). Examples: *
-       * `policy:amy@gmail.com` to find IAM policy bindings that specify user "amy@gmail.com". *
-       * `policy:roles/compute.admin` to find IAM policy bindings that specify the Compute Admin
-       * role. * `policy:comp*` to find IAM policy bindings that contain "comp" as a prefix of any
-       * word in the binding. * `policy.role.permissions:storage.buckets.update` to find IAM policy
-       * bindings that specify a role containing "storage.buckets.update" permission. Note that if
-       * callers don't have `iam.roles.get` access to a role's included permissions, policy bindings
-       * that specify this role will be dropped from the search results. *
-       * `policy.role.permissions:upd*` to find IAM policy bindings that specify a role containing
-       * "upd" as a prefix of any word in the role permission. Note that if callers don't have
+       * Optional. The query statement. See [how to construct a query](https://cloud.google.com
+       * /asset-inventory/docs/searching-iam-policies#how_to_construct_a_query) for more
+       * information. If not specified or empty, it will search all the IAM policies within the
+       * specified `scope`. Note that the query string is compared against each IAM policy binding,
+       * including its principals, roles, and IAM conditions. The returned IAM policies will only
+       * contain the bindings that match your query. To learn more about the IAM policy structure,
+       * see the [IAM policy documentation](https://cloud.google.com/iam/help/allow-
+       * policies/structure). Examples: * `policy:amy@gmail.com` to find IAM policy bindings that
+       * specify user "amy@gmail.com". * `policy:roles/compute.admin` to find IAM policy bindings
+       * that specify the Compute Admin role. * `policy:comp*` to find IAM policy bindings that
+       * contain "comp" as a prefix of any word in the binding. *
+       * `policy.role.permissions:storage.buckets.update` to find IAM policy bindings that specify a
+       * role containing "storage.buckets.update" permission. Note that if callers don't have
        * `iam.roles.get` access to a role's included permissions, policy bindings that specify this
-       * role will be dropped from the search results. * `resource:organizations/123456` to find IAM
-       * policy bindings that are set on "organizations/123456". *
+       * role will be dropped from the search results. * `policy.role.permissions:upd*` to find IAM
+       * policy bindings that specify a role containing "upd" as a prefix of any word in the role
+       * permission. Note that if callers don't have `iam.roles.get` access to a role's included
+       * permissions, policy bindings that specify this role will be dropped from the search
+       * results. * `resource:organizations/123456` to find IAM policy bindings that are set on
+       * "organizations/123456". *
        * `resource=//cloudresourcemanager.googleapis.com/projects/myproject` to find IAM policy
        * bindings that are set on the project named "myproject". * `Important` to find IAM policy
        * bindings that contain "Important" as a word in any of the searchable fields (except for the
@@ -5428,26 +5424,26 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Optional. The query statement. See [how to construct a
-       * query](https://cloud.google.com/asset-inventory/docs/searching-iam-
-       * policies#how_to_construct_a_query) for more information. If not specified or empty, it will
-       * search all the IAM policies within the specified `scope`. Note that the query string is
-       * compared against each IAM policy binding, including its principals, roles, and IAM
-       * conditions. The returned IAM policies will only contain the bindings that match your query.
-       * To learn more about the IAM policy structure, see the [IAM policy
-       * documentation](https://cloud.google.com/iam/help/allow-policies/structure). Examples: *
-       * `policy:amy@gmail.com` to find IAM policy bindings that specify user "amy@gmail.com". *
-       * `policy:roles/compute.admin` to find IAM policy bindings that specify the Compute Admin
-       * role. * `policy:comp*` to find IAM policy bindings that contain "comp" as a prefix of any
-       * word in the binding. * `policy.role.permissions:storage.buckets.update` to find IAM policy
-       * bindings that specify a role containing "storage.buckets.update" permission. Note that if
-       * callers don't have `iam.roles.get` access to a role's included permissions, policy bindings
-       * that specify this role will be dropped from the search results. *
-       * `policy.role.permissions:upd*` to find IAM policy bindings that specify a role containing
-       * "upd" as a prefix of any word in the role permission. Note that if callers don't have
+       * Optional. The query statement. See [how to construct a query](https://cloud.google.com
+       * /asset-inventory/docs/searching-iam-policies#how_to_construct_a_query) for more
+       * information. If not specified or empty, it will search all the IAM policies within the
+       * specified `scope`. Note that the query string is compared against each IAM policy binding,
+       * including its principals, roles, and IAM conditions. The returned IAM policies will only
+       * contain the bindings that match your query. To learn more about the IAM policy structure,
+       * see the [IAM policy documentation](https://cloud.google.com/iam/help/allow-
+       * policies/structure). Examples: * `policy:amy@gmail.com` to find IAM policy bindings that
+       * specify user "amy@gmail.com". * `policy:roles/compute.admin` to find IAM policy bindings
+       * that specify the Compute Admin role. * `policy:comp*` to find IAM policy bindings that
+       * contain "comp" as a prefix of any word in the binding. *
+       * `policy.role.permissions:storage.buckets.update` to find IAM policy bindings that specify a
+       * role containing "storage.buckets.update" permission. Note that if callers don't have
        * `iam.roles.get` access to a role's included permissions, policy bindings that specify this
-       * role will be dropped from the search results. * `resource:organizations/123456` to find IAM
-       * policy bindings that are set on "organizations/123456". *
+       * role will be dropped from the search results. * `policy.role.permissions:upd*` to find IAM
+       * policy bindings that specify a role containing "upd" as a prefix of any word in the role
+       * permission. Note that if callers don't have `iam.roles.get` access to a role's included
+       * permissions, policy bindings that specify this role will be dropped from the search
+       * results. * `resource:organizations/123456` to find IAM policy bindings that are set on
+       * "organizations/123456". *
        * `resource=//cloudresourcemanager.googleapis.com/projects/myproject` to find IAM policy
        * bindings that are set on the project named "myproject". * `Important` to find IAM policy
        * bindings that contain "Important" as a word in any of the searchable fields (except for the
@@ -5479,11 +5475,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *
      * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the
      *        resources within the `scope`. The caller must be granted the
-     *        [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-
-     *        inventory/docs/access-control#required_permissions) permission on the desired scope. The
-     *        allowed values are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") *
-     *        projects/{PROJECT_NUMBER} (e.g., "projects/12345678") * folders/{FOLDER_NUMBER} (e.g.,
-     *        "folders/1234567") * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+     *        [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs
+     *        /access-control#required_permissions) permission on the desired scope. The allowed values
+     *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+     *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
      * @return the request
      */
     public SearchAllResources searchAllResources(java.lang.String scope) throws java.io.IOException {
@@ -5514,11 +5510,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        *
        * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the
      *        resources within the `scope`. The caller must be granted the
-     *        [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-
-     *        inventory/docs/access-control#required_permissions) permission on the desired scope. The
-     *        allowed values are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") *
-     *        projects/{PROJECT_NUMBER} (e.g., "projects/12345678") * folders/{FOLDER_NUMBER} (e.g.,
-     *        "folders/1234567") * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+     *        [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs
+     *        /access-control#required_permissions) permission on the desired scope. The allowed values
+     *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+     *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        * @since 1.13
        */
       protected SearchAllResources(java.lang.String scope) {
@@ -5599,11 +5595,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. A scope can be a project, a folder, or an organization. The search is limited to
        * the resources within the `scope`. The caller must be granted the
-       * [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-
-       * inventory/docs/access-control#required_permissions) permission on the desired scope. The
-       * allowed values are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") *
-       * projects/{PROJECT_NUMBER} (e.g., "projects/12345678") * folders/{FOLDER_NUMBER} (e.g.,
-       * "folders/1234567") * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       * [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs
+       * /access-control#required_permissions) permission on the desired scope. The allowed values
+       * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+       * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        */
       @com.google.api.client.util.Key
       private java.lang.String scope;
@@ -5623,11 +5619,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. A scope can be a project, a folder, or an organization. The search is limited to
        * the resources within the `scope`. The caller must be granted the
-       * [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-
-       * inventory/docs/access-control#required_permissions) permission on the desired scope. The
-       * allowed values are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") *
-       * projects/{PROJECT_NUMBER} (e.g., "projects/12345678") * folders/{FOLDER_NUMBER} (e.g.,
-       * "folders/1234567") * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       * [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs
+       * /access-control#required_permissions) permission on the desired scope. The allowed values
+       * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+       * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
        */
       public SearchAllResources setScope(java.lang.String scope) {
         if (!getSuppressPatternChecks()) {
@@ -5774,19 +5770,18 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Optional. The query statement. See [how to construct a
-       * query](https://cloud.google.com/asset-inventory/docs/searching-
-       * resources#how_to_construct_a_query) for more information. If not specified or empty, it
-       * will search all the resources within the specified `scope`. Examples: * `name:Important` to
-       * find Google Cloud resources whose name contains `Important` as a word. * `name=Important`
-       * to find the Google Cloud resource whose name is exactly `Important`. * `displayName:Impor*`
-       * to find Google Cloud resources whose display name contains `Impor` as a prefix of any word
-       * in the field. * `location:us-west*` to find Google Cloud resources whose location contains
-       * both `us` and `west` as prefixes. * `labels:prod` to find Google Cloud resources whose
-       * labels contain `prod` as a key or value. * `labels.env:prod` to find Google Cloud resources
-       * that have a label `env` and its value is `prod`. * `labels.env:*` to find Google Cloud
-       * resources that have a label `env`. * `tagKeys:env` to find Google Cloud resources that have
-       * directly attached tags where the
+       * Optional. The query statement. See [how to construct a query](https://cloud.google.com
+       * /asset-inventory/docs/searching-resources#how_to_construct_a_query) for more information.
+       * If not specified or empty, it will search all the resources within the specified `scope`.
+       * Examples: * `name:Important` to find Google Cloud resources whose name contains `Important`
+       * as a word. * `name=Important` to find the Google Cloud resource whose name is exactly
+       * `Important`. * `displayName:Impor*` to find Google Cloud resources whose display name
+       * contains `Impor` as a prefix of any word in the field. * `location:us-west*` to find Google
+       * Cloud resources whose location contains both `us` and `west` as prefixes. * `labels:prod`
+       * to find Google Cloud resources whose labels contain `prod` as a key or value. *
+       * `labels.env:prod` to find Google Cloud resources that have a label `env` and its value is
+       * `prod`. * `labels.env:*` to find Google Cloud resources that have a label `env`. *
+       * `tagKeys:env` to find Google Cloud resources that have directly attached tags where the
        * [`TagKey.namespacedName`](https://cloud.google.com/resource-
        * manager/reference/rest/v3/tagKeys#resource:-tagkey) contains `env`. * `tagValues:prod*` to
        * find Google Cloud resources that have directly attached tags where the
@@ -5868,42 +5863,41 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      encryption keys whose name contains the word `key`. * `relationships:instance-group-1` to find
      Google Cloud resources that have relationships with `instance-group-1` in the related resource
      name. * `relationships:INSTANCE_TO_INSTANCEGROUP` to find Compute Engine instances that have
-     relationships of type `INSTANCE_TO_INSTANCEGROUP`. *
-     `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find Compute Engine instances that
-     have relationships with `instance-group-1` in the Compute Engine instance group resource name, for
-     relationship type `INSTANCE_TO_INSTANCEGROUP`. * `sccSecurityMarks.key=value` to find Cloud
-     resources that are attached with security marks whose key is `key` and value is `value`. *
-     `sccSecurityMarks.key:*` to find Cloud resources that are attached with security marks whose key is
-     `key`. * `state:ACTIVE` to find Google Cloud resources whose state contains `ACTIVE` as a word. *
-     `NOT state:ACTIVE` to find Google Cloud resources whose state doesn't contain `ACTIVE` as a word. *
-     `createTime<1609459200` to find Google Cloud resources that were created before `2021-01-01
-     00:00:00 UTC`. `1609459200` is the epoch timestamp of `2021-01-01 00:00:00 UTC` in seconds. *
-     `updateTime>1609459200` to find Google Cloud resources that were updated after `2021-01-01 00:00:00
-     UTC`. `1609459200` is the epoch timestamp of `2021-01-01 00:00:00 UTC` in seconds. * `Important` to
-     find Google Cloud resources that contain `Important` as a word in any of the searchable fields. *
-     `Impor*` to find Google Cloud resources that contain `Impor` as a prefix of any word in any of the
-     searchable fields. * `Important location:(us-west1 OR global)` to find Google Cloud resources that
-     contain `Important` as a word in any of the searchable fields and are also located in the `us-
-     west1` region or the `global` location.
+     relationships of type `INSTANCE_TO_INSTANCEGROUP`. * `relationships.INSTANCE_TO_INSTANCEGROUP
+     :instance-group-1` to find Compute Engine instances that have relationships with `instance-group-1`
+     in the Compute Engine instance group resource name, for relationship type
+     `INSTANCE_TO_INSTANCEGROUP`. * `sccSecurityMarks.key=value` to find Cloud resources that are
+     attached with security marks whose key is `key` and value is `value`. * `sccSecurityMarks.key:*` to
+     find Cloud resources that are attached with security marks whose key is `key`. * `state:ACTIVE` to
+     find Google Cloud resources whose state contains `ACTIVE` as a word. * `NOT state:ACTIVE` to find
+     Google Cloud resources whose state doesn't contain `ACTIVE` as a word. * `createTime<1609459200` to
+     find Google Cloud resources that were created before `2021-01-01 00:00:00 UTC`. `1609459200` is the
+     epoch timestamp of `2021-01-01 00:00:00 UTC` in seconds. * `updateTime>1609459200` to find Google
+     Cloud resources that were updated after `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch
+     timestamp of `2021-01-01 00:00:00 UTC` in seconds. * `Important` to find Google Cloud resources
+     that contain `Important` as a word in any of the searchable fields. * `Impor*` to find Google Cloud
+     resources that contain `Impor` as a prefix of any word in any of the searchable fields. *
+     `Important location:(us-west1 OR global)` to find Google Cloud resources that contain `Important`
+     as a word in any of the searchable fields and are also located in the `us-west1` region or the
+     `global` location.
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Optional. The query statement. See [how to construct a
-       * query](https://cloud.google.com/asset-inventory/docs/searching-
-       * resources#how_to_construct_a_query) for more information. If not specified or empty, it
-       * will search all the resources within the specified `scope`. Examples: * `name:Important` to
-       * find Google Cloud resources whose name contains `Important` as a word. * `name=Important`
-       * to find the Google Cloud resource whose name is exactly `Important`. * `displayName:Impor*`
-       * to find Google Cloud resources whose display name contains `Impor` as a prefix of any word
-       * in the field. * `location:us-west*` to find Google Cloud resources whose location contains
-       * both `us` and `west` as prefixes. * `labels:prod` to find Google Cloud resources whose
-       * labels contain `prod` as a key or value. * `labels.env:prod` to find Google Cloud resources
-       * that have a label `env` and its value is `prod`. * `labels.env:*` to find Google Cloud
-       * resources that have a label `env`. * `tagKeys:env` to find Google Cloud resources that have
-       * directly attached tags where the
+       * Optional. The query statement. See [how to construct a query](https://cloud.google.com
+       * /asset-inventory/docs/searching-resources#how_to_construct_a_query) for more information.
+       * If not specified or empty, it will search all the resources within the specified `scope`.
+       * Examples: * `name:Important` to find Google Cloud resources whose name contains `Important`
+       * as a word. * `name=Important` to find the Google Cloud resource whose name is exactly
+       * `Important`. * `displayName:Impor*` to find Google Cloud resources whose display name
+       * contains `Impor` as a prefix of any word in the field. * `location:us-west*` to find Google
+       * Cloud resources whose location contains both `us` and `west` as prefixes. * `labels:prod`
+       * to find Google Cloud resources whose labels contain `prod` as a key or value. *
+       * `labels.env:prod` to find Google Cloud resources that have a label `env` and its value is
+       * `prod`. * `labels.env:*` to find Google Cloud resources that have a label `env`. *
+       * `tagKeys:env` to find Google Cloud resources that have directly attached tags where the
        * [`TagKey.namespacedName`](https://cloud.google.com/resource-
        * manager/reference/rest/v3/tagKeys#resource:-tagkey) contains `env`. * `tagValues:prod*` to
        * find Google Cloud resources that have directly attached tags where the

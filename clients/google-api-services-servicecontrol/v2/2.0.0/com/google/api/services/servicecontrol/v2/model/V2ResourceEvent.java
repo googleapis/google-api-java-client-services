@@ -48,8 +48,8 @@ public final class V2ResourceEvent extends com.google.api.client.json.GenericJso
 
   /**
    * The api path the resource event was created in. This should match the source of the `payload`
-   * field. For direct integrations with Chemist, this should generally be the RESPONSE.
-   * go/resource-event-pipeline-type
+   * field. For direct integrations with Chemist, this should generally be the RESPONSE. go
+   * /resource-event-pipeline-type
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,8 @@ public final class V2ResourceEvent extends com.google.api.client.json.GenericJso
 
   /**
    * The api path the resource event was created in. This should match the source of the `payload`
-   * field. For direct integrations with Chemist, this should generally be the RESPONSE.
-   * go/resource-event-pipeline-type
+   * field. For direct integrations with Chemist, this should generally be the RESPONSE. go
+   * /resource-event-pipeline-type
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -126,8 +126,8 @@ public final class V2ResourceEvent extends com.google.api.client.json.GenericJso
 
   /**
    * The api path the resource event was created in. This should match the source of the `payload`
-   * field. For direct integrations with Chemist, this should generally be the RESPONSE.
-   * go/resource-event-pipeline-type
+   * field. For direct integrations with Chemist, this should generally be the RESPONSE. go
+   * /resource-event-pipeline-type
    * @param path path or {@code null} for none
    */
   public V2ResourceEvent setPath(java.lang.String path) {

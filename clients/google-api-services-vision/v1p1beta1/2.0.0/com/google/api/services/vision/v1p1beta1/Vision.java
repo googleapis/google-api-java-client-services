@@ -649,10 +649,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the vision server.  After setting any optional
        * parameters, call the {@link Annotate#execute()} method to invoke the remote operation.
        *
-       * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-       *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-       *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-       *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+       * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
        * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest}
        * @return the request
        */
@@ -683,10 +683,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * Annotate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-       *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-       *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-       *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest}
          * @since 1.13
          */
@@ -764,10 +764,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Optional. Target project and location to make a call. Format: `projects/{project-
-       id}/locations/{location-id}`. If no parent is specified, a region will be chosen automatically.
-       Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-       The European Union. Example: `projects/project-A/locations/eu`.
+        /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+       location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+       European Union. Example: `projects/project-A/locations/eu`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -806,10 +806,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the vision server.  After setting any optional
        * parameters, call the {@link AsyncBatchAnnotate#execute()} method to invoke the remote operation.
        *
-       * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-       *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-       *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-       *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+       * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
        * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateFilesRequest}
        * @return the request
        */
@@ -841,10 +841,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-       *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-       *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-       *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateFilesRequest}
          * @since 1.13
          */
@@ -922,10 +922,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Optional. Target project and location to make a call. Format: `projects/{project-
-       id}/locations/{location-id}`. If no parent is specified, a region will be chosen automatically.
-       Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-       The European Union. Example: `projects/project-A/locations/eu`.
+        /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+       location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+       European Union. Example: `projects/project-A/locations/eu`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -982,10 +982,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the vision server.  After setting any optional
        * parameters, call the {@link Annotate#execute()} method to invoke the remote operation.
        *
-       * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-       *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-       *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-       *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+       * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
        * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1BatchAnnotateImagesRequest}
        * @return the request
        */
@@ -1013,10 +1013,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * Annotate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-       *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-       *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-       *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1BatchAnnotateImagesRequest}
          * @since 1.13
          */
@@ -1094,10 +1094,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Optional. Target project and location to make a call. Format: `projects/{project-
-       id}/locations/{location-id}`. If no parent is specified, a region will be chosen automatically.
-       Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-       The European Union. Example: `projects/project-A/locations/eu`.
+        /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+       location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+       European Union. Example: `projects/project-A/locations/eu`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -1136,10 +1136,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the vision server.  After setting any optional
        * parameters, call the {@link AsyncBatchAnnotate#execute()} method to invoke the remote operation.
        *
-       * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-       *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-       *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-       *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+       * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
        * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest}
        * @return the request
        */
@@ -1172,10 +1172,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-       *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-       *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-       *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest}
          * @since 1.13
          */
@@ -1253,10 +1253,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Optional. Target project and location to make a call. Format: `projects/{project-
-       id}/locations/{location-id}`. If no parent is specified, a region will be chosen automatically.
-       Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-       The European Union. Example: `projects/project-A/locations/eu`.
+        /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+       location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+       European Union. Example: `projects/project-A/locations/eu`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -1336,10 +1336,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Annotate#execute()} method to invoke the remote operation.
          *
-         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-         *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-         *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-         *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest}
          * @return the request
          */
@@ -1370,10 +1370,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Annotate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-         *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-         *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-         *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+           * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
            * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest}
            * @since 1.13
            */
@@ -1452,10 +1452,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Optional. Target project and location to make a call. Format: `projects/{project-
-         id}/locations/{location-id}`. If no parent is specified, a region will be chosen automatically.
-         Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-         The European Union. Example: `projects/project-A/locations/eu`.
+          /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+         location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+         European Union. Example: `projects/project-A/locations/eu`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1495,10 +1495,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link AsyncBatchAnnotate#execute()} method to invoke the remote operation.
          *
-         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-         *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-         *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-         *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateFilesRequest}
          * @return the request
          */
@@ -1530,10 +1530,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-         *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-         *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-         *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+           * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
            * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateFilesRequest}
            * @since 1.13
            */
@@ -1612,10 +1612,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Optional. Target project and location to make a call. Format: `projects/{project-
-         id}/locations/{location-id}`. If no parent is specified, a region will be chosen automatically.
-         Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-         The European Union. Example: `projects/project-A/locations/eu`.
+          /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+         location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+         European Union. Example: `projects/project-A/locations/eu`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1673,10 +1673,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Annotate#execute()} method to invoke the remote operation.
          *
-         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-         *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-         *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-         *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1BatchAnnotateImagesRequest}
          * @return the request
          */
@@ -1704,10 +1704,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Annotate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-         *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-         *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-         *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+           * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
            * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1BatchAnnotateImagesRequest}
            * @since 1.13
            */
@@ -1786,10 +1786,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Optional. Target project and location to make a call. Format: `projects/{project-
-         id}/locations/{location-id}`. If no parent is specified, a region will be chosen automatically.
-         Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-         The European Union. Example: `projects/project-A/locations/eu`.
+          /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+         location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+         European Union. Example: `projects/project-A/locations/eu`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1829,10 +1829,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link AsyncBatchAnnotate#execute()} method to invoke the remote operation.
          *
-         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-         *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-         *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-         *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest}
          * @return the request
          */
@@ -1865,10 +1865,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent Optional. Target project and location to make a call. Format: `projects/{project-
-         *        id}/locations/{location-id}`. If no parent is specified, a region will be chosen
-         *        automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
-         *        like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
+           * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
            * @param content the {@link com.google.api.services.vision.v1p1beta1.model.GoogleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest}
            * @since 1.13
            */
@@ -1947,10 +1947,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Optional. Target project and location to make a call. Format: `projects/{project-
-         id}/locations/{location-id}`. If no parent is specified, a region will be chosen automatically.
-         Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-         The European Union. Example: `projects/project-A/locations/eu`.
+          /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+         location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+         European Union. Example: `projects/project-A/locations/eu`.
            */
           public java.lang.String getParent() {
             return parent;

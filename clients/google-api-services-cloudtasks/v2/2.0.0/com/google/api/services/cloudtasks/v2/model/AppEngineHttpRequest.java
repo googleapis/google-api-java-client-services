@@ -20,9 +20,9 @@ package com.google.api.services.cloudtasks.v2.model;
  * App Engine HTTP request. The message defines the HTTP request that is sent to an App Engine app
  * when the task is dispatched. Using AppEngineHttpRequest requires
  * [`appengine.applications.get`](https://cloud.google.com/appengine/docs/admin-api/access-control)
- * Google IAM permission for the project and the following scope:
- * `https://www.googleapis.com/auth/cloud-platform` The task will be delivered to the App Engine app
- * which belongs to the same project as the queue. For more information, see [How Requests are
+ * Google IAM permission for the project and the following scope: `https://www.googleapis.com/auth
+ * /cloud-platform` The task will be delivered to the App Engine app which belongs to the same
+ * project as the queue. For more information, see [How Requests are
  * Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and how
  * routing is affected by [dispatch
  * files](https://cloud.google.com/appengine/docs/python/config/dispatchref). Traffic is encrypted

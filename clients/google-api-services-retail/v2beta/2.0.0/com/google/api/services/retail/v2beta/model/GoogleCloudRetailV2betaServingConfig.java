@@ -141,9 +141,9 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
 
   /**
    * The id of the model in the same Catalog to use at serving time. Currently only
-   * RecommendationModels are supported: https://cloud.google.com/retail/recommendations-
-   * ai/docs/create-models Can be changed but only to a compatible model (e.g. others-you-may-like
-   * CTR to others-you-may-like CVR). Required when solution_types is SOLUTION_TYPE_RECOMMENDATION.
+   * RecommendationModels are supported: https://cloud.google.com/retail/recommendations-ai/docs
+   * /create-models Can be changed but only to a compatible model (e.g. others-you-may-like CTR to
+   * others-you-may-like CVR). Required when solution_types is SOLUTION_TYPE_RECOMMENDATION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -474,9 +474,9 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
 
   /**
    * The id of the model in the same Catalog to use at serving time. Currently only
-   * RecommendationModels are supported: https://cloud.google.com/retail/recommendations-
-   * ai/docs/create-models Can be changed but only to a compatible model (e.g. others-you-may-like
-   * CTR to others-you-may-like CVR). Required when solution_types is SOLUTION_TYPE_RECOMMENDATION.
+   * RecommendationModels are supported: https://cloud.google.com/retail/recommendations-ai/docs
+   * /create-models Can be changed but only to a compatible model (e.g. others-you-may-like CTR to
+   * others-you-may-like CVR). Required when solution_types is SOLUTION_TYPE_RECOMMENDATION.
    * @return value or {@code null} for none
    */
   public java.lang.String getModelId() {
@@ -485,9 +485,9 @@ public final class GoogleCloudRetailV2betaServingConfig extends com.google.api.c
 
   /**
    * The id of the model in the same Catalog to use at serving time. Currently only
-   * RecommendationModels are supported: https://cloud.google.com/retail/recommendations-
-   * ai/docs/create-models Can be changed but only to a compatible model (e.g. others-you-may-like
-   * CTR to others-you-may-like CVR). Required when solution_types is SOLUTION_TYPE_RECOMMENDATION.
+   * RecommendationModels are supported: https://cloud.google.com/retail/recommendations-ai/docs
+   * /create-models Can be changed but only to a compatible model (e.g. others-you-may-like CTR to
+   * others-you-may-like CVR). Required when solution_types is SOLUTION_TYPE_RECOMMENDATION.
    * @param modelId modelId or {@code null} for none
    */
   public GoogleCloudRetailV2betaServingConfig setModelId(java.lang.String modelId) {

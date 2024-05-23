@@ -54,8 +54,8 @@ public final class SetMaintenancePolicyRequest extends com.google.api.client.jso
   private java.lang.String name;
 
   /**
-   * Required. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
+   * Required. The Google Developers Console [project ID or project number](https://cloud.google.com
+   * /resource-manager/docs/creating-managing-projects).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +125,8 @@ public final class SetMaintenancePolicyRequest extends com.google.api.client.jso
   }
 
   /**
-   * Required. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
+   * Required. The Google Developers Console [project ID or project number](https://cloud.google.com
+   * /resource-manager/docs/creating-managing-projects).
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -134,8 +134,8 @@ public final class SetMaintenancePolicyRequest extends com.google.api.client.jso
   }
 
   /**
-   * Required. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects).
+   * Required. The Google Developers Console [project ID or project number](https://cloud.google.com
+   * /resource-manager/docs/creating-managing-projects).
    * @param projectId projectId or {@code null} for none
    */
   public SetMaintenancePolicyRequest setProjectId(java.lang.String projectId) {

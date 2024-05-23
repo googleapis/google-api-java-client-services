@@ -59,8 +59,8 @@ public final class ApigatewayLocation extends com.google.api.client.json.Generic
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
-   * Resource name for the location, which may vary between implementations. For example:
-   * `"projects/example-project/locations/us-east1"`
+   * Resource name for the location, which may vary between implementations. For example: `"projects
+   * /example-project/locations/us-east1"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,8 +137,8 @@ public final class ApigatewayLocation extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource name for the location, which may vary between implementations. For example:
-   * `"projects/example-project/locations/us-east1"`
+   * Resource name for the location, which may vary between implementations. For example: `"projects
+   * /example-project/locations/us-east1"`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -146,8 +146,8 @@ public final class ApigatewayLocation extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource name for the location, which may vary between implementations. For example:
-   * `"projects/example-project/locations/us-east1"`
+   * Resource name for the location, which may vary between implementations. For example: `"projects
+   * /example-project/locations/us-east1"`
    * @param name name or {@code null} for none
    */
   public ApigatewayLocation setName(java.lang.String name) {

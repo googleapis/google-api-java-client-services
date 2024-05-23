@@ -106,8 +106,8 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
 
   /**
    * Required. Tag values combined with AND to check against. Values in the form "tagValues/123"
-   * Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ]
-   * https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing
+   * Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ] https://cloud.google.com
+   * /resource-manager/docs/tags/tags-creating-and-managing
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -295,8 +295,8 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
 
   /**
    * Required. Tag values combined with AND to check against. Values in the form "tagValues/123"
-   * Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ]
-   * https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing
+   * Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ] https://cloud.google.com
+   * /resource-manager/docs/tags/tags-creating-and-managing
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTagValues() {
@@ -305,8 +305,8 @@ public final class GoogleCloudSecuritycenterV2ResourceValueConfig extends com.go
 
   /**
    * Required. Tag values combined with AND to check against. Values in the form "tagValues/123"
-   * Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ]
-   * https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing
+   * Example: [ "tagValues/123", "tagValues/456", "tagValues/789" ] https://cloud.google.com
+   * /resource-manager/docs/tags/tags-creating-and-managing
    * @param tagValues tagValues or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ResourceValueConfig setTagValues(java.util.List<java.lang.String> tagValues) {

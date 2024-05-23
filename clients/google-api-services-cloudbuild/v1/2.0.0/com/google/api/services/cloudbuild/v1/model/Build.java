@@ -172,8 +172,8 @@ public final class Build extends com.google.api.client.json.GenericJson {
   /**
    * Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended
    * technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure
-   * builds to access secrets from Secret Manager. For instructions, see:
-   * https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
+   * builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com
+   * /cloud-build/docs/securing-builds/use-secrets
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -586,8 +586,8 @@ public final class Build extends com.google.api.client.json.GenericJson {
   /**
    * Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended
    * technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure
-   * builds to access secrets from Secret Manager. For instructions, see:
-   * https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
+   * builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com
+   * /cloud-build/docs/securing-builds/use-secrets
    * @return value or {@code null} for none
    */
   public java.util.List<Secret> getSecrets() {
@@ -597,8 +597,8 @@ public final class Build extends com.google.api.client.json.GenericJson {
   /**
    * Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended
    * technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure
-   * builds to access secrets from Secret Manager. For instructions, see:
-   * https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
+   * builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com
+   * /cloud-build/docs/securing-builds/use-secrets
    * @param secrets secrets or {@code null} for none
    */
   public Build setSecrets(java.util.List<Secret> secrets) {

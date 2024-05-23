@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Contains all the execution details for a workflow instance. Next available id: 26
+ * Contains all the execution details for a workflow instance. Next available id: 24
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -36,13 +36,6 @@ public final class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo extends
    */
   @com.google.api.client.util.Key
   private java.lang.String clientId;
-
-  /**
-   * Cloud Logging details for execution info
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private EnterpriseCrmEventbusProtoCloudLoggingDetails cloudLoggingDetails;
 
   /**
    * Auto-generated.
@@ -114,13 +107,6 @@ public final class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo extends
    */
   @com.google.api.client.util.Key
   private java.lang.String product;
-
-  /**
-   * Replay info for the execution
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoReplayInfo replayInfo;
 
   /**
    * Optional. This is used to de-dup incoming request.
@@ -202,23 +188,6 @@ public final class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo extends
    */
   public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo setClientId(java.lang.String clientId) {
     this.clientId = clientId;
-    return this;
-  }
-
-  /**
-   * Cloud Logging details for execution info
-   * @return value or {@code null} for none
-   */
-  public EnterpriseCrmEventbusProtoCloudLoggingDetails getCloudLoggingDetails() {
-    return cloudLoggingDetails;
-  }
-
-  /**
-   * Cloud Logging details for execution info
-   * @param cloudLoggingDetails cloudLoggingDetails or {@code null} for none
-   */
-  public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo setCloudLoggingDetails(EnterpriseCrmEventbusProtoCloudLoggingDetails cloudLoggingDetails) {
-    this.cloudLoggingDetails = cloudLoggingDetails;
     return this;
   }
 
@@ -376,23 +345,6 @@ public final class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo extends
    */
   public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo setProduct(java.lang.String product) {
     this.product = product;
-    return this;
-  }
-
-  /**
-   * Replay info for the execution
-   * @return value or {@code null} for none
-   */
-  public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoReplayInfo getReplayInfo() {
-    return replayInfo;
-  }
-
-  /**
-   * Replay info for the execution
-   * @param replayInfo replayInfo or {@code null} for none
-   */
-  public EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo setReplayInfo(EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoReplayInfo replayInfo) {
-    this.replayInfo = replayInfo;
     return this;
   }
 

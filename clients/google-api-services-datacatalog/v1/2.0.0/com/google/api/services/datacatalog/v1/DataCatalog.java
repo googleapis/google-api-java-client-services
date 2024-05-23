@@ -160,8 +160,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
      * subsequently call specific get methods. Note: Data Catalog search queries don't guarantee full
      * recall. Results that match your query might not be returned, even in subsequent result pages.
      * Additionally, returned (and not returned) results can vary if you repeat search queries. For more
-     * information, see [Data Catalog search syntax] (https://cloud.google.com/data-catalog/docs/how-
-     * to/search-reference).
+     * information, see [Data Catalog search syntax] (https://cloud.google.com/data-catalog/docs/how-to
+     * /search-reference).
      *
      * Create a request for the method "catalog.search".
      *
@@ -188,8 +188,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
        * subsequently call specific get methods. Note: Data Catalog search queries don't guarantee full
        * recall. Results that match your query might not be returned, even in subsequent result pages.
        * Additionally, returned (and not returned) results can vary if you repeat search queries. For
-       * more information, see [Data Catalog search syntax] (https://cloud.google.com/data-
-       * catalog/docs/how-to/search-reference).
+       * more information, see [Data Catalog search syntax] (https://cloud.google.com/data-catalog/docs
+       * /how-to/search-reference).
        *
        * Create a request for the method "catalog.search".
        *
@@ -7266,8 +7266,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             /**
              * Deletes a field in a tag template and all uses of this field from the tags based on this
              * template. You must enable the Data Catalog API in the project identified by the `name`
-             * parameter. For more information, see [Data Catalog resource
-             * project](https://cloud.google.com/data-catalog/docs/concepts/resource-project).
+             * parameter. For more information, see [Data Catalog resource project](https://cloud.google.com
+             * /data-catalog/docs/concepts/resource-project).
              *
              * Create a request for the method "fields.delete".
              *

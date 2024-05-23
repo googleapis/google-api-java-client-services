@@ -44,9 +44,8 @@ public final class GetReportsRequest extends com.google.api.client.json.GenericJ
    * quotas#analytics_reporting_api_v4), (defaults to `False`). If this field is set to `True` the
    * per view (profile) quotas are governed by the computational cost of the request. Note that
    * using cost based quotas will higher enable sampling rates. (10 Million for `SMALL`, 100M for
-   * `LARGE`. See the [limits and quotas
-   * documentation](/analytics/devguides/reporting/core/v4/limits-quotas#analytics_reporting_api_v4)
-   * for details.
+   * `LARGE`. See the [limits and quotas documentation](/analytics/devguides/reporting/core/v4
+   * /limits-quotas#analytics_reporting_api_v4) for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,9 +77,8 @@ public final class GetReportsRequest extends com.google.api.client.json.GenericJ
    * quotas#analytics_reporting_api_v4), (defaults to `False`). If this field is set to `True` the
    * per view (profile) quotas are governed by the computational cost of the request. Note that
    * using cost based quotas will higher enable sampling rates. (10 Million for `SMALL`, 100M for
-   * `LARGE`. See the [limits and quotas
-   * documentation](/analytics/devguides/reporting/core/v4/limits-quotas#analytics_reporting_api_v4)
-   * for details.
+   * `LARGE`. See the [limits and quotas documentation](/analytics/devguides/reporting/core/v4
+   * /limits-quotas#analytics_reporting_api_v4) for details.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseResourceQuotas() {
@@ -92,9 +90,8 @@ public final class GetReportsRequest extends com.google.api.client.json.GenericJ
    * quotas#analytics_reporting_api_v4), (defaults to `False`). If this field is set to `True` the
    * per view (profile) quotas are governed by the computational cost of the request. Note that
    * using cost based quotas will higher enable sampling rates. (10 Million for `SMALL`, 100M for
-   * `LARGE`. See the [limits and quotas
-   * documentation](/analytics/devguides/reporting/core/v4/limits-quotas#analytics_reporting_api_v4)
-   * for details.
+   * `LARGE`. See the [limits and quotas documentation](/analytics/devguides/reporting/core/v4
+   * /limits-quotas#analytics_reporting_api_v4) for details.
    * @param useResourceQuotas useResourceQuotas or {@code null} for none
    */
   public GetReportsRequest setUseResourceQuotas(java.lang.Boolean useResourceQuotas) {

@@ -1696,12 +1696,12 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          *        The queue name must have the following format:
          *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain
          *        letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more
-         *        information, see [Identifying projects](https://cloud.google.com/resource-
-         *        manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
-         *        canonical ID for the queue's location. The list of available locations can be obtained by
-         *        calling ListLocations. For more information, see
-         *        https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]),
-         *        numbers ([0-9]), or hyphens (-). The maximum length is 100 characters.
+         *        information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
+         *        /creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for
+         *        the queue's location. The list of available locations can be obtained by calling
+         *        ListLocations. For more information, see https://cloud.google.com/about/locations/. *
+         *        `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum
+         *        length is 100 characters.
          * @param content the {@link com.google.api.services.cloudtasks.v2.model.Queue}
          * @return the request
          */
@@ -1738,12 +1738,12 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          *        The queue name must have the following format:
          *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain
          *        letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more
-         *        information, see [Identifying projects](https://cloud.google.com/resource-
-         *        manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
-         *        canonical ID for the queue's location. The list of available locations can be obtained by
-         *        calling ListLocations. For more information, see
-         *        https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]),
-         *        numbers ([0-9]), or hyphens (-). The maximum length is 100 characters.
+         *        information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
+         *        /creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for
+         *        the queue's location. The list of available locations can be obtained by calling
+         *        ListLocations. For more information, see https://cloud.google.com/about/locations/. *
+         *        `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum
+         *        length is 100 characters.
            * @param content the {@link com.google.api.services.cloudtasks.v2.model.Queue}
            * @since 1.13
            */
@@ -1817,12 +1817,12 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * queue name. The queue name must have the following format:
            * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain
            * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more
-           * information, see [Identifying projects](https://cloud.google.com/resource-
-           * manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
-           * canonical ID for the queue's location. The list of available locations can be obtained
-           * by calling ListLocations. For more information, see
-           * https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]),
-           * numbers ([0-9]), or hyphens (-). The maximum length is 100 characters.
+           * information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
+           * /creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID
+           * for the queue's location. The list of available locations can be obtained by calling
+           * ListLocations. For more information, see https://cloud.google.com/about/locations/. *
+           * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum
+           * length is 100 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -1846,12 +1846,12 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * queue name. The queue name must have the following format:
            * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain
            * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more
-           * information, see [Identifying projects](https://cloud.google.com/resource-
-           * manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
-           * canonical ID for the queue's location. The list of available locations can be obtained
-           * by calling ListLocations. For more information, see
-           * https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]),
-           * numbers ([0-9]), or hyphens (-). The maximum length is 100 characters.
+           * information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
+           * /creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID
+           * for the queue's location. The list of available locations can be obtained by calling
+           * ListLocations. For more information, see https://cloud.google.com/about/locations/. *
+           * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum
+           * length is 100 characters.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

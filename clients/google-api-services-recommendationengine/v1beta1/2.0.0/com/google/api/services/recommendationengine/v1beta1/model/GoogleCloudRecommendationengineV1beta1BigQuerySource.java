@@ -32,13 +32,12 @@ public final class GoogleCloudRecommendationengineV1beta1BigQuerySource extends 
 
   /**
    * Optional. The schema to use when parsing the data from the source. Supported values for catalog
-   * imports: 1: "catalog_recommendations_ai" using https://cloud.google.com/recommendations-
-   * ai/docs/upload-catalog#json (Default for catalogItems.import) 2: "catalog_merchant_center"
-   * using https://cloud.google.com/recommendations-ai/docs/upload-catalog#mc Supported values for
-   * user event imports: 1: "user_events_recommendations_ai" using
-   * https://cloud.google.com/recommendations-ai/docs/manage-user-events#import (Default for
-   * userEvents.import) 2. "user_events_ga360" using
-   * https://support.google.com/analytics/answer/3437719?hl=en
+   * imports: 1: "catalog_recommendations_ai" using https://cloud.google.com/recommendations-ai/docs
+   * /upload-catalog#json (Default for catalogItems.import) 2: "catalog_merchant_center" using
+   * https://cloud.google.com/recommendations-ai/docs/upload-catalog#mc Supported values for user
+   * event imports: 1: "user_events_recommendations_ai" using https://cloud.google.com
+   * /recommendations-ai/docs/manage-user-events#import (Default for userEvents.import) 2.
+   * "user_events_ga360" using https://support.google.com/analytics/answer/3437719?hl=en
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,13 +75,12 @@ public final class GoogleCloudRecommendationengineV1beta1BigQuerySource extends 
 
   /**
    * Optional. The schema to use when parsing the data from the source. Supported values for catalog
-   * imports: 1: "catalog_recommendations_ai" using https://cloud.google.com/recommendations-
-   * ai/docs/upload-catalog#json (Default for catalogItems.import) 2: "catalog_merchant_center"
-   * using https://cloud.google.com/recommendations-ai/docs/upload-catalog#mc Supported values for
-   * user event imports: 1: "user_events_recommendations_ai" using
-   * https://cloud.google.com/recommendations-ai/docs/manage-user-events#import (Default for
-   * userEvents.import) 2. "user_events_ga360" using
-   * https://support.google.com/analytics/answer/3437719?hl=en
+   * imports: 1: "catalog_recommendations_ai" using https://cloud.google.com/recommendations-ai/docs
+   * /upload-catalog#json (Default for catalogItems.import) 2: "catalog_merchant_center" using
+   * https://cloud.google.com/recommendations-ai/docs/upload-catalog#mc Supported values for user
+   * event imports: 1: "user_events_recommendations_ai" using https://cloud.google.com
+   * /recommendations-ai/docs/manage-user-events#import (Default for userEvents.import) 2.
+   * "user_events_ga360" using https://support.google.com/analytics/answer/3437719?hl=en
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSchema() {
@@ -91,13 +89,12 @@ public final class GoogleCloudRecommendationengineV1beta1BigQuerySource extends 
 
   /**
    * Optional. The schema to use when parsing the data from the source. Supported values for catalog
-   * imports: 1: "catalog_recommendations_ai" using https://cloud.google.com/recommendations-
-   * ai/docs/upload-catalog#json (Default for catalogItems.import) 2: "catalog_merchant_center"
-   * using https://cloud.google.com/recommendations-ai/docs/upload-catalog#mc Supported values for
-   * user event imports: 1: "user_events_recommendations_ai" using
-   * https://cloud.google.com/recommendations-ai/docs/manage-user-events#import (Default for
-   * userEvents.import) 2. "user_events_ga360" using
-   * https://support.google.com/analytics/answer/3437719?hl=en
+   * imports: 1: "catalog_recommendations_ai" using https://cloud.google.com/recommendations-ai/docs
+   * /upload-catalog#json (Default for catalogItems.import) 2: "catalog_merchant_center" using
+   * https://cloud.google.com/recommendations-ai/docs/upload-catalog#mc Supported values for user
+   * event imports: 1: "user_events_recommendations_ai" using https://cloud.google.com
+   * /recommendations-ai/docs/manage-user-events#import (Default for userEvents.import) 2.
+   * "user_events_ga360" using https://support.google.com/analytics/answer/3437719?hl=en
    * @param dataSchema dataSchema or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1BigQuerySource setDataSchema(java.lang.String dataSchema) {

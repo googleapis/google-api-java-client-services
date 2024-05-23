@@ -205,8 +205,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the firebasedatabase server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent project for which to create a database instance, in the form:
-         *        `projects/{project-number}/locations/{location-id}`.
+         * @param parent Required. The parent project for which to create a database instance, in the form: `projects
+         *        /{project-number}/locations/{location-id}`.
          * @param content the {@link com.google.api.services.firebasedatabase.v1beta.model.DatabaseInstance}
          * @return the request
          */
@@ -238,8 +238,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent project for which to create a database instance, in the form:
-         *        `projects/{project-number}/locations/{location-id}`.
+           * @param parent Required. The parent project for which to create a database instance, in the form: `projects
+         *        /{project-number}/locations/{location-id}`.
            * @param content the {@link com.google.api.services.firebasedatabase.v1beta.model.DatabaseInstance}
            * @since 1.13
            */
@@ -315,8 +315,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent project for which to create a database instance, in the form:
-         `projects/{project-number}/locations/{location-id}`.
+          /** Required. The parent project for which to create a database instance, in the form: `projects
+         /{project-number}/locations/{location-id}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -384,8 +384,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the firebasedatabase server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The fully qualified resource name of the database instance, in the form:
-         *        `projects/{project-number}/locations/{location-id}/instances/{database-id}`
+         * @param name Required. The fully qualified resource name of the database instance, in the form: `projects
+         *        /{project-number}/locations/{location-id}/instances/{database-id}`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -415,8 +415,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The fully qualified resource name of the database instance, in the form:
-         *        `projects/{project-number}/locations/{location-id}/instances/{database-id}`
+           * @param name Required. The fully qualified resource name of the database instance, in the form: `projects
+         *        /{project-number}/locations/{location-id}/instances/{database-id}`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -491,8 +491,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The fully qualified resource name of the database instance, in the form:
-         `projects/{project-number}/locations/{location-id}/instances/{database-id}`
+          /** Required. The fully qualified resource name of the database instance, in the form: `projects
+         /{project-number}/locations/{location-id}/instances/{database-id}`
            */
           public java.lang.String getName() {
             return name;
@@ -527,8 +527,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the firebasedatabase server.  After setting any
          * optional parameters, call the {@link Disable#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The fully qualified resource name of the database instance, in the form:
-         *        `projects/{project-number}/locations/{location-id}/instances/{database-id}`
+         * @param name Required. The fully qualified resource name of the database instance, in the form: `projects
+         *        /{project-number}/locations/{location-id}/instances/{database-id}`
          * @param content the {@link com.google.api.services.firebasedatabase.v1beta.model.DisableDatabaseInstanceRequest}
          * @return the request
          */
@@ -558,8 +558,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
            * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The fully qualified resource name of the database instance, in the form:
-         *        `projects/{project-number}/locations/{location-id}/instances/{database-id}`
+           * @param name Required. The fully qualified resource name of the database instance, in the form: `projects
+         *        /{project-number}/locations/{location-id}/instances/{database-id}`
            * @param content the {@link com.google.api.services.firebasedatabase.v1beta.model.DisableDatabaseInstanceRequest}
            * @since 1.13
            */
@@ -635,8 +635,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The fully qualified resource name of the database instance, in the form:
-         `projects/{project-number}/locations/{location-id}/instances/{database-id}`
+          /** Required. The fully qualified resource name of the database instance, in the form: `projects
+         /{project-number}/locations/{location-id}/instances/{database-id}`
            */
           public java.lang.String getName() {
             return name;
@@ -669,11 +669,11 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the firebasedatabase server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The fully qualified resource name of the database instance, in the form:
-         *        `projects/{project-number}/locations/{location-id}/instances/{database-id}`. `database-id`
-         *        is a globally unique identifier across all parent collections. For convenience, this
-         *        method allows you to supply `-` as a wildcard character in place of specific collections
-         *        under `projects` and `locations`. The resulting wildcarding form of the method is:
+         * @param name Required. The fully qualified resource name of the database instance, in the form: `projects
+         *        /{project-number}/locations/{location-id}/instances/{database-id}`. `database-id` is a
+         *        globally unique identifier across all parent collections. For convenience, this method
+         *        allows you to supply `-` as a wildcard character in place of specific collections under
+         *        `projects` and `locations`. The resulting wildcarding form of the method is:
          *        `projects/-/locations/-/instances/{database-id}`.
          * @return the request
          */
@@ -700,11 +700,11 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The fully qualified resource name of the database instance, in the form:
-         *        `projects/{project-number}/locations/{location-id}/instances/{database-id}`. `database-id`
-         *        is a globally unique identifier across all parent collections. For convenience, this
-         *        method allows you to supply `-` as a wildcard character in place of specific collections
-         *        under `projects` and `locations`. The resulting wildcarding form of the method is:
+           * @param name Required. The fully qualified resource name of the database instance, in the form: `projects
+         *        /{project-number}/locations/{location-id}/instances/{database-id}`. `database-id` is a
+         *        globally unique identifier across all parent collections. For convenience, this method
+         *        allows you to supply `-` as a wildcard character in place of specific collections under
+         *        `projects` and `locations`. The resulting wildcarding form of the method is:
          *        `projects/-/locations/-/instances/{database-id}`.
            * @since 1.13
            */
@@ -794,12 +794,11 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The fully qualified resource name of the database instance, in the form:
-         `projects/{project-number}/locations/{location-id}/instances/{database-id}`. `database-id` is a
-         globally unique identifier across all parent collections. For convenience, this method allows you
-         to supply `-` as a wildcard character in place of specific collections under `projects` and
-         `locations`. The resulting wildcarding form of the method is:
-         `projects/-/locations/-/instances/{database-id}`.
+          /** Required. The fully qualified resource name of the database instance, in the form: `projects
+         /{project-number}/locations/{location-id}/instances/{database-id}`. `database-id` is a globally
+         unique identifier across all parent collections. For convenience, this method allows you to supply
+         `-` as a wildcard character in place of specific collections under `projects` and `locations`. The
+         resulting wildcarding form of the method is: `projects/-/locations/-/instances/{database-id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -961,8 +960,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
           private java.lang.String parent;
 
           /** Required. The parent project for which to list database instances, in the form: `projects/{project-
-         number}/locations/{location-id}` To list across all locations, use a parent in the form:
-         `projects/{project-number}/locations/-`
+         number}/locations/{location-id}` To list across all locations, use a parent in the form: `projects
+         /{project-number}/locations/-`
            */
           public java.lang.String getParent() {
             return parent;
@@ -1062,8 +1061,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the firebasedatabase server.  After setting any
          * optional parameters, call the {@link Reenable#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The fully qualified resource name of the database instance, in the form:
-         *        `projects/{project-number}/locations/{location-id}/instances/{database-id}`
+         * @param name Required. The fully qualified resource name of the database instance, in the form: `projects
+         *        /{project-number}/locations/{location-id}/instances/{database-id}`
          * @param content the {@link com.google.api.services.firebasedatabase.v1beta.model.ReenableDatabaseInstanceRequest}
          * @return the request
          */
@@ -1092,8 +1091,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
            * Reenable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The fully qualified resource name of the database instance, in the form:
-         *        `projects/{project-number}/locations/{location-id}/instances/{database-id}`
+           * @param name Required. The fully qualified resource name of the database instance, in the form: `projects
+         *        /{project-number}/locations/{location-id}/instances/{database-id}`
            * @param content the {@link com.google.api.services.firebasedatabase.v1beta.model.ReenableDatabaseInstanceRequest}
            * @since 1.13
            */
@@ -1169,8 +1168,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The fully qualified resource name of the database instance, in the form:
-         `projects/{project-number}/locations/{location-id}/instances/{database-id}`
+          /** Required. The fully qualified resource name of the database instance, in the form: `projects
+         /{project-number}/locations/{location-id}/instances/{database-id}`
            */
           public java.lang.String getName() {
             return name;
@@ -1207,8 +1206,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the firebasedatabase server.  After setting any
          * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The fully qualified resource name of the database instance, in the form:
-         *        `projects/{project-number}/locations/{location-id}/instances/{database-id}`
+         * @param name Required. The fully qualified resource name of the database instance, in the form: `projects
+         *        /{project-number}/locations/{location-id}/instances/{database-id}`
          * @param content the {@link com.google.api.services.firebasedatabase.v1beta.model.UndeleteDatabaseInstanceRequest}
          * @return the request
          */
@@ -1240,8 +1239,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
            * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The fully qualified resource name of the database instance, in the form:
-         *        `projects/{project-number}/locations/{location-id}/instances/{database-id}`
+           * @param name Required. The fully qualified resource name of the database instance, in the form: `projects
+         *        /{project-number}/locations/{location-id}/instances/{database-id}`
            * @param content the {@link com.google.api.services.firebasedatabase.v1beta.model.UndeleteDatabaseInstanceRequest}
            * @since 1.13
            */
@@ -1317,8 +1316,8 @@ public class FirebaseRealtimeDatabase extends com.google.api.client.googleapis.s
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The fully qualified resource name of the database instance, in the form:
-         `projects/{project-number}/locations/{location-id}/instances/{database-id}`
+          /** Required. The fully qualified resource name of the database instance, in the form: `projects
+         /{project-number}/locations/{location-id}/instances/{database-id}`
            */
           public java.lang.String getName() {
             return name;

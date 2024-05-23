@@ -42,9 +42,8 @@ public final class GoogleAdsSearchads360V0CommonTargetSpend extends com.google.a
   /**
    * The spend target under which to maximize clicks. A TargetSpend bidder will attempt to spend the
    * smaller of this value or the natural throttling spend amount. If not specified, the budget is
-   * used as the spend target. This field is deprecated and should no longer be used. See
-   * https://ads-developers.googleblog.com/2020/05/reminder-about-sunset-creation-of.html for
-   * details.
+   * used as the spend target. This field is deprecated and should no longer be used. See https
+   * ://ads-developers.googleblog.com/2020/05/reminder-about-sunset-creation-of.html for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -72,9 +71,8 @@ public final class GoogleAdsSearchads360V0CommonTargetSpend extends com.google.a
   /**
    * The spend target under which to maximize clicks. A TargetSpend bidder will attempt to spend the
    * smaller of this value or the natural throttling spend amount. If not specified, the budget is
-   * used as the spend target. This field is deprecated and should no longer be used. See
-   * https://ads-developers.googleblog.com/2020/05/reminder-about-sunset-creation-of.html for
-   * details.
+   * used as the spend target. This field is deprecated and should no longer be used. See https
+   * ://ads-developers.googleblog.com/2020/05/reminder-about-sunset-creation-of.html for details.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTargetSpendMicros() {
@@ -84,9 +82,8 @@ public final class GoogleAdsSearchads360V0CommonTargetSpend extends com.google.a
   /**
    * The spend target under which to maximize clicks. A TargetSpend bidder will attempt to spend the
    * smaller of this value or the natural throttling spend amount. If not specified, the budget is
-   * used as the spend target. This field is deprecated and should no longer be used. See
-   * https://ads-developers.googleblog.com/2020/05/reminder-about-sunset-creation-of.html for
-   * details.
+   * used as the spend target. This field is deprecated and should no longer be used. See https
+   * ://ads-developers.googleblog.com/2020/05/reminder-about-sunset-creation-of.html for details.
    * @param targetSpendMicros targetSpendMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonTargetSpend setTargetSpendMicros(java.lang.Long targetSpendMicros) {

@@ -185,8 +185,8 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
 
   /**
    * The query expansion specification that specifies the conditions under which query expansion
-   * occurs. For more information, see [Query
-   * expansion](https://cloud.google.com/retail/docs/result-size#query_expansion).
+   * occurs. For more information, see [Query expansion](https://cloud.google.com/retail/docs
+   * /result-size#query_expansion).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -608,8 +608,8 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
 
   /**
    * The query expansion specification that specifies the conditions under which query expansion
-   * occurs. For more information, see [Query
-   * expansion](https://cloud.google.com/retail/docs/result-size#query_expansion).
+   * occurs. For more information, see [Query expansion](https://cloud.google.com/retail/docs
+   * /result-size#query_expansion).
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2SearchRequestQueryExpansionSpec getQueryExpansionSpec() {
@@ -618,8 +618,8 @@ public final class GoogleCloudRetailV2SearchRequest extends com.google.api.clien
 
   /**
    * The query expansion specification that specifies the conditions under which query expansion
-   * occurs. For more information, see [Query
-   * expansion](https://cloud.google.com/retail/docs/result-size#query_expansion).
+   * occurs. For more information, see [Query expansion](https://cloud.google.com/retail/docs
+   * /result-size#query_expansion).
    * @param queryExpansionSpec queryExpansionSpec or {@code null} for none
    */
   public GoogleCloudRetailV2SearchRequest setQueryExpansionSpec(GoogleCloudRetailV2SearchRequestQueryExpansionSpec queryExpansionSpec) {

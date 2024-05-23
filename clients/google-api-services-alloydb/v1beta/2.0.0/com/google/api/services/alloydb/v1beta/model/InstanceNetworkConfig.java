@@ -43,6 +43,14 @@ public final class InstanceNetworkConfig extends com.google.api.client.json.Gene
   }
 
   /**
+   * Optional. Enabling an outbound public IP address to support a database server sending requests
+   * out into the internet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableOutboundPublicIp;
+
+  /**
    * Optional. Enabling public ip for the instance.
    * The value may be {@code null}.
    */
@@ -63,6 +71,25 @@ public final class InstanceNetworkConfig extends com.google.api.client.json.Gene
    */
   public InstanceNetworkConfig setAuthorizedExternalNetworks(java.util.List<AuthorizedNetwork> authorizedExternalNetworks) {
     this.authorizedExternalNetworks = authorizedExternalNetworks;
+    return this;
+  }
+
+  /**
+   * Optional. Enabling an outbound public IP address to support a database server sending requests
+   * out into the internet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableOutboundPublicIp() {
+    return enableOutboundPublicIp;
+  }
+
+  /**
+   * Optional. Enabling an outbound public IP address to support a database server sending requests
+   * out into the internet.
+   * @param enableOutboundPublicIp enableOutboundPublicIp or {@code null} for none
+   */
+  public InstanceNetworkConfig setEnableOutboundPublicIp(java.lang.Boolean enableOutboundPublicIp) {
+    this.enableOutboundPublicIp = enableOutboundPublicIp;
     return this;
   }
 

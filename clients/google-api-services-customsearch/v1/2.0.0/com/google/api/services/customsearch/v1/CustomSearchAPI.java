@@ -265,10 +265,10 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
       @com.google.api.client.util.Key
       private java.lang.String c2coff;
 
-      /** Enables or disables [Simplified and Traditional Chinese
-     Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch). The
-     default value for this parameter is 0 (zero), meaning that the feature is enabled. Supported values
-     are: * `1`: Disabled * `0`: Enabled (default)
+      /** Enables or disables [Simplified and Traditional Chinese Search](https://developers.google.com
+     /custom-search/docs/json_api_reference#chineseSearch). The default value for this parameter is 0
+     (zero), meaning that the feature is enabled. Supported values are: * `1`: Disabled * `0`: Enabled
+     (default)
        */
       public java.lang.String getC2coff() {
         return c2coff;
@@ -567,10 +567,9 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
       private java.lang.String hl;
 
       /** Sets the user interface language. * Explicitly setting this parameter improves the performance and
-     the quality of your search results. * See the [Interface
-     Languages](https://developers.google.com/custom-
-     search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries and
-     Results Presentation](https://developers.google.com/custom-
+     the quality of your search results. * See the [Interface Languages](https://developers.google.com
+     /custom-search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries
+     and Results Presentation](https://developers.google.com/custom-
      search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported Interface
      Languages](https://developers.google.com/custom-search/docs/json_api_reference#interfaceLanguages)
      for a list of supported languages.
@@ -1053,19 +1052,19 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
 
       /**
        * The index of the first result to return. The default number of results per page is 10, so
-       * `&start=11` would start at the top of the second page of results. **Note**: The JSON API
-       * will never return more than 100 results, even if more than 100 documents match the query,
-       * so setting the sum of `start + num` to a number greater than 100 will produce an error.
-       * Also note that the maximum value for `num` is 10.
+       * `=11` would start at the top of the second page of results. **Note**: The JSON API will
+       * never return more than 100 results, even if more than 100 documents match the query, so
+       * setting the sum of `start + num` to a number greater than 100 will produce an error. Also
+       * note that the maximum value for `num` is 10.
        */
       @com.google.api.client.util.Key
       private java.lang.Long start;
 
-      /** The index of the first result to return. The default number of results per page is 10, so
-     `&start=11` would start at the top of the second page of results. **Note**: The JSON API will never
-     return more than 100 results, even if more than 100 documents match the query, so setting the sum
-     of `start + num` to a number greater than 100 will produce an error. Also note that the maximum
-     value for `num` is 10.
+      /** The index of the first result to return. The default number of results per page is 10, so `=11`
+     would start at the top of the second page of results. **Note**: The JSON API will never return more
+     than 100 results, even if more than 100 documents match the query, so setting the sum of `start +
+     num` to a number greater than 100 will produce an error. Also note that the maximum value for `num`
+     is 10.
        */
       public java.lang.Long getStart() {
         return start;
@@ -1073,10 +1072,10 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
 
       /**
        * The index of the first result to return. The default number of results per page is 10, so
-       * `&start=11` would start at the top of the second page of results. **Note**: The JSON API
-       * will never return more than 100 results, even if more than 100 documents match the query,
-       * so setting the sum of `start + num` to a number greater than 100 will produce an error.
-       * Also note that the maximum value for `num` is 10.
+       * `=11` would start at the top of the second page of results. **Note**: The JSON API will
+       * never return more than 100 results, even if more than 100 documents match the query, so
+       * setting the sum of `start + num` to a number greater than 100 will produce an error. Also
+       * note that the maximum value for `num` is 10.
        */
       public List setStart(java.lang.Long start) {
         this.start = start;
@@ -1222,10 +1221,10 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
         @com.google.api.client.util.Key
         private java.lang.String c2coff;
 
-        /** Enables or disables [Simplified and Traditional Chinese
-       Search](https://developers.google.com/custom-search/docs/json_api_reference#chineseSearch). The
-       default value for this parameter is 0 (zero), meaning that the feature is enabled. Supported values
-       are: * `1`: Disabled * `0`: Enabled (default)
+        /** Enables or disables [Simplified and Traditional Chinese Search](https://developers.google.com
+       /custom-search/docs/json_api_reference#chineseSearch). The default value for this parameter is 0
+       (zero), meaning that the feature is enabled. Supported values are: * `1`: Disabled * `0`: Enabled
+       (default)
          */
         public java.lang.String getC2coff() {
           return c2coff;
@@ -1529,10 +1528,9 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
         private java.lang.String hl;
 
         /** Sets the user interface language. * Explicitly setting this parameter improves the performance and
-       the quality of your search results. * See the [Interface
-       Languages](https://developers.google.com/custom-
-       search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries and
-       Results Presentation](https://developers.google.com/custom-
+       the quality of your search results. * See the [Interface Languages](https://developers.google.com
+       /custom-search/docs/json_api_reference#wsInterfaceLanguages) section of [Internationalizing Queries
+       and Results Presentation](https://developers.google.com/custom-
        search/docs/json_api_reference#wsInternationalizing) for more information, and [Supported Interface
        Languages](https://developers.google.com/custom-search/docs/json_api_reference#interfaceLanguages)
        for a list of supported languages.
@@ -2015,19 +2013,19 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
 
         /**
          * The index of the first result to return. The default number of results per page is 10, so
-         * `&start=11` would start at the top of the second page of results. **Note**: The JSON API
-         * will never return more than 100 results, even if more than 100 documents match the query,
-         * so setting the sum of `start + num` to a number greater than 100 will produce an error.
-         * Also note that the maximum value for `num` is 10.
+         * `=11` would start at the top of the second page of results. **Note**: The JSON API will
+         * never return more than 100 results, even if more than 100 documents match the query, so
+         * setting the sum of `start + num` to a number greater than 100 will produce an error. Also
+         * note that the maximum value for `num` is 10.
          */
         @com.google.api.client.util.Key
         private java.lang.Long start;
 
-        /** The index of the first result to return. The default number of results per page is 10, so
-       `&start=11` would start at the top of the second page of results. **Note**: The JSON API will never
-       return more than 100 results, even if more than 100 documents match the query, so setting the sum
-       of `start + num` to a number greater than 100 will produce an error. Also note that the maximum
-       value for `num` is 10.
+        /** The index of the first result to return. The default number of results per page is 10, so `=11`
+       would start at the top of the second page of results. **Note**: The JSON API will never return more
+       than 100 results, even if more than 100 documents match the query, so setting the sum of `start +
+       num` to a number greater than 100 will produce an error. Also note that the maximum value for `num`
+       is 10.
          */
         public java.lang.Long getStart() {
           return start;
@@ -2035,10 +2033,10 @@ public class CustomSearchAPI extends com.google.api.client.googleapis.services.j
 
         /**
          * The index of the first result to return. The default number of results per page is 10, so
-         * `&start=11` would start at the top of the second page of results. **Note**: The JSON API
-         * will never return more than 100 results, even if more than 100 documents match the query,
-         * so setting the sum of `start + num` to a number greater than 100 will produce an error.
-         * Also note that the maximum value for `num` is 10.
+         * `=11` would start at the top of the second page of results. **Note**: The JSON API will
+         * never return more than 100 results, even if more than 100 documents match the query, so
+         * setting the sum of `start + num` to a number greater than 100 will produce an error. Also
+         * note that the maximum value for `num` is 10.
          */
         public List setStart(java.lang.Long start) {
           this.start = start;

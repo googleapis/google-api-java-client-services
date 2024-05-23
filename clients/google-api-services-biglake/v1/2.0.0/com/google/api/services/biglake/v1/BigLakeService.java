@@ -1647,9 +1647,9 @@ public class BigLakeService extends com.google.api.client.googleapis.services.js
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The list of fields to update. For the `FieldMask` definition, see
-           https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If not set,
-           defaults to all of the fields that are allowed to update.
+            /** The list of fields to update. For the `FieldMask` definition, see https://developers.google.com
+           /protocol-buffers/docs/reference/google.protobuf#fieldmask If not set, defaults to all of the
+           fields that are allowed to update.
              */
             public String getUpdateMask() {
               return updateMask;
@@ -2504,9 +2504,9 @@ public class BigLakeService extends com.google.api.client.googleapis.services.js
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** The list of fields to update. For the `FieldMask` definition, see
-             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If not set,
-             defaults to all of the fields that are allowed to update.
+              /** The list of fields to update. For the `FieldMask` definition, see https://developers.google.com
+             /protocol-buffers/docs/reference/google.protobuf#fieldmask If not set, defaults to all of the
+             fields that are allowed to update.
                */
               public String getUpdateMask() {
                 return updateMask;

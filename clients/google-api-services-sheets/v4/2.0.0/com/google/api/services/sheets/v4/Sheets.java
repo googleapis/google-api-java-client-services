@@ -397,8 +397,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
      * notation](/sheets/api/guides/concepts#cell). You can define a single cell (for example, `A1`) or
      * multiple cells (for example, `A1:D5`). You can also get cells from other sheets within the same
      * spreadsheet (for example, `Sheet2!A1:C4`) or retrieve multiple ranges at once (for example,
-     * `?ranges=A1:D5&ranges=Sheet2!A1:C4`). Limiting the range returns only the portions of the
-     * spreadsheet that intersect the requested ranges.
+     * `?ranges=A1:D5=Sheet2!A1:C4`). Limiting the range returns only the portions of the spreadsheet
+     * that intersect the requested ranges.
      *
      * Create a request for the method "spreadsheets.get".
      *
@@ -429,8 +429,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * specified using [A1 notation](/sheets/api/guides/concepts#cell). You can define a single cell
        * (for example, `A1`) or multiple cells (for example, `A1:D5`). You can also get cells from other
        * sheets within the same spreadsheet (for example, `Sheet2!A1:C4`) or retrieve multiple ranges at
-       * once (for example, `?ranges=A1:D5&ranges=Sheet2!A1:C4`). Limiting the range returns only the
-       * portions of the spreadsheet that intersect the requested ranges.
+       * once (for example, `?ranges=A1:D5=Sheet2!A1:C4`). Limiting the range returns only the portions
+       * of the spreadsheet that intersect the requested ranges.
        *
        * Create a request for the method "spreadsheets.get".
        *

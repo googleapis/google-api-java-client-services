@@ -45,7 +45,7 @@ public final class EventVenue extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The name of the venue, such as "AT&T Park". This is required.
+   * The name of the venue, such as "AT Park". This is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class EventVenue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the venue, such as "AT&T Park". This is required.
+   * The name of the venue, such as "AT Park". This is required.
    * @return value or {@code null} for none
    */
   public LocalizedString getName() {
@@ -96,7 +96,7 @@ public final class EventVenue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the venue, such as "AT&T Park". This is required.
+   * The name of the venue, such as "AT Park". This is required.
    * @param name name or {@code null} for none
    */
   public EventVenue setName(LocalizedString name) {

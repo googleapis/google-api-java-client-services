@@ -1240,11 +1240,11 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param groupName Required. The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Call
-       *        groupStats.list to return a list of groups belonging to this project. Example:
-       *        `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
-       *        unique identifier for a particular error group. The identifier is derived from key parts
-       *        of the error-log content and is treated as Service Data. For information about how Service
-       *        Data is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-
+       *        groupStats.list to return a list of groups belonging to this project. Example: `projects
+       *        /my-project-123/groups/my-group` In the group resource name, the `group_id` is a unique
+       *        identifier for a particular error group. The identifier is derived from key parts of the
+       *        error-log content and is treated as Service Data. For information about how Service Data
+       *        is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-
        *        privacy-notice).
        * @return the request
        */
@@ -1273,11 +1273,11 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param groupName Required. The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Call
-       *        groupStats.list to return a list of groups belonging to this project. Example:
-       *        `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
-       *        unique identifier for a particular error group. The identifier is derived from key parts
-       *        of the error-log content and is treated as Service Data. For information about how Service
-       *        Data is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-
+       *        groupStats.list to return a list of groups belonging to this project. Example: `projects
+       *        /my-project-123/groups/my-group` In the group resource name, the `group_id` is a unique
+       *        identifier for a particular error group. The identifier is derived from key parts of the
+       *        error-log content and is treated as Service Data. For information about how Service Data
+       *        is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-
        *        privacy-notice).
          * @since 1.13
          */
@@ -1362,8 +1362,8 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
          * unique identifier for a particular error group. The identifier is derived from key parts
          * of the error-log content and is treated as Service Data. For information about how
-         * Service Data is handled, see [Google Cloud Privacy
-         * Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+         * Service Data is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms
+         * /cloud-privacy-notice).
          */
         @com.google.api.client.util.Key
         private java.lang.String groupName;
@@ -1385,8 +1385,8 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
          * unique identifier for a particular error group. The identifier is derived from key parts
          * of the error-log content and is treated as Service Data. For information about how
-         * Service Data is handled, see [Google Cloud Privacy
-         * Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+         * Service Data is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms
+         * /cloud-privacy-notice).
          */
         public Get setGroupName(java.lang.String groupName) {
           if (!getSuppressPatternChecks()) {
@@ -1523,17 +1523,17 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
          * unique identifier for a particular error group. The identifier is derived from key parts
          * of the error-log content and is treated as Service Data. For information about how
-         * Service Data is handled, see [Google Cloud Privacy
-         * Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+         * Service Data is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms
+         * /cloud-privacy-notice).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Example:
-       `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a unique
-       identifier for a particular error group. The identifier is derived from key parts of the error-log
-       content and is treated as Service Data. For information about how Service Data is handled, see
-       [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+        /** The group resource name. Written as `projects/{projectID}/groups/{group_id}`. Example: `projects
+       /my-project-123/groups/my-group` In the group resource name, the `group_id` is a unique identifier
+       for a particular error group. The identifier is derived from key parts of the error-log content and
+       is treated as Service Data. For information about how Service Data is handled, see [Google Cloud
+       Privacy Notice](https://cloud.google.com/terms/cloud-privacy-notice).
          */
         public java.lang.String getName() {
           return name;
@@ -1544,8 +1544,8 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * `projects/my-project-123/groups/my-group` In the group resource name, the `group_id` is a
          * unique identifier for a particular error group. The identifier is derived from key parts
          * of the error-log content and is treated as Service Data. For information about how
-         * Service Data is handled, see [Google Cloud Privacy
-         * Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+         * Service Data is handled, see [Google Cloud Privacy Notice](https://cloud.google.com/terms
+         * /cloud-privacy-notice).
          */
         public Update setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

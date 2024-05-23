@@ -18,9 +18,8 @@ package com.google.api.services.gkeonprem.v1.model;
 
 /**
  * Represents an arg name->value pair. Only a subset of customized flags are supported. For the
- * exact format, refer to the [API server
- * documentation](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-
- * apiserver/).
+ * exact format, refer to the [API server documentation](https://kubernetes.io/docs/reference
+ * /command-line-tools-reference/kube-apiserver/).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Anthos On-Prem API. For a detailed explanation see:

@@ -32,8 +32,8 @@ package com.google.api.services.cloudshell.v1.model;
 public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. Full path to the Docker image used to run this environment, e.g.
-   * "gcr.io/dev-con/cloud-devshell:latest".
+   * Required. Immutable. Full path to the Docker image used to run this environment, e.g. "gcr.io
+   * /dev-con/cloud-devshell:latest".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,8 +104,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String webHost;
 
   /**
-   * Required. Immutable. Full path to the Docker image used to run this environment, e.g.
-   * "gcr.io/dev-con/cloud-devshell:latest".
+   * Required. Immutable. Full path to the Docker image used to run this environment, e.g. "gcr.io
+   * /dev-con/cloud-devshell:latest".
    * @return value or {@code null} for none
    */
   public java.lang.String getDockerImage() {
@@ -113,8 +113,8 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. Full path to the Docker image used to run this environment, e.g.
-   * "gcr.io/dev-con/cloud-devshell:latest".
+   * Required. Immutable. Full path to the Docker image used to run this environment, e.g. "gcr.io
+   * /dev-con/cloud-devshell:latest".
    * @param dockerImage dockerImage or {@code null} for none
    */
   public Environment setDockerImage(java.lang.String dockerImage) {

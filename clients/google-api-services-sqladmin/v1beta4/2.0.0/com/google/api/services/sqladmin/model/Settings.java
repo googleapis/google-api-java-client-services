@@ -47,7 +47,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private SqlActiveDirectoryConfig activeDirectoryConfig;
 
   /**
-   * Specifies advance machine configuration for the instance relevant only for SQL Server.
+   * Specifies advanced machine configuration for the instances relevant only for SQL Server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -341,7 +341,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies advance machine configuration for the instance relevant only for SQL Server.
+   * Specifies advanced machine configuration for the instances relevant only for SQL Server.
    * @return value or {@code null} for none
    */
   public AdvancedMachineFeatures getAdvancedMachineFeatures() {
@@ -349,7 +349,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies advance machine configuration for the instance relevant only for SQL Server.
+   * Specifies advanced machine configuration for the instances relevant only for SQL Server.
    * @param advancedMachineFeatures advancedMachineFeatures or {@code null} for none
    */
   public Settings setAdvancedMachineFeatures(AdvancedMachineFeatures advancedMachineFeatures) {

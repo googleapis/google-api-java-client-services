@@ -1,6 +1,5 @@
 #!/bin/bash
-
-# Copyright 2022 Google LLC
+# Copyright 2024 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,20 +13,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-set -ex
 
-service=$1
-variant=$2
+# This script generates all libraries using the 2.0.0 variant of the generator
+# in parallel. For each one of the libraries, a `mvn compile` is run as well to
+# confirm the library works
 
+set -x
+variant=$1
+# root_dir is used by the utility functions
 export root_dir=$(realpath $(dirname "${BASH_SOURCE[0]}")/../../../)
 
 latest_variant=2.0.0
-
-if [[ -z "${service}" ]]
-then
-  echo "Usage: ${0} <service> [variant]"
-  exit 1
-fi
 
 # Default to use the latest variant
 if [[ -z "${variant}" ]]
@@ -42,12 +38,12 @@ python3 -m pip install --require-hashes -r ${root_dir}/google-api-java-client-se
 # load utility functions
 source "${root_dir}/google-api-java-client-services/.github/workflows/utils.sh"
 
-pushd ${root_dir}/discovery-artifact-manager
+export failed_libs="${root_dir}/google-api-java-client-services/failed_libs"
+if [[ -f "${failed_libs}" ]];then
+  rm "${failed_libs}"
+fi
 
-should_compile='false'
-for discovery in `ls discoveries/${service}.*.json`
-do
-  generate_from_discovery "${discovery}" "${variant}"
-done
+parallel -j30 -i bash -xe -c "generate_from_discovery '{}' ${variant} true" -- $(find "${root_dir}/discovery-artifact-manager/discoveries/" -printf '%p ')
 
-popd
+echo 'failed libs are:'
+cat "${failed_libs}

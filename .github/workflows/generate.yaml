@@ -4,11 +4,13 @@ on:
       services:
         required: true
         type: string
+        description: A JSON array of service names. E.g., ["aiplatform"]
   workflow_call:
     inputs:
       services:
         required: true
         type: string
+        description: A JSON array of service names. E.g., ["aiplatform"]
 
 name: generate
 jobs:
@@ -32,10 +34,10 @@ jobs:
           path: discovery-artifact-manager
       - run: |
           sudo apt update
-          sudo apt install python2
-          echo "using $(python2 --version)"
-          curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
-          python2 get-pip.py
+          sudo apt install python3
+          echo "using $(python3 --version)"
+          curl https://bootstrap.pypa.io/pip/3.6/get-pip.py -o get-pip.py
+          python3 get-pip.py
       - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}
       - uses: googleapis/code-suggester@v2 # takes the changes from git directory
         env:

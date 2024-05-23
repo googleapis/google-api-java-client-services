@@ -221,7 +221,7 @@ class JavaLanguageModel(language_model.LanguageModel):
 
   def _Boolean(self, data_value):
     """Convert provided boolean to language specific literal."""
-    return unicode(bool(data_value.value)).lower()
+    return str(bool(data_value.value)).lower()
 
   def _Int(self, data_value):
     """Convert provided int to language specific literal."""
@@ -232,7 +232,7 @@ class JavaLanguageModel(language_model.LanguageModel):
         'java.lang.Long': '%sL',
     }
     try:
-      return code_types[data_value.code_type] % long(data_value.value)
+      return code_types[data_value.code_type] % int(data_value.value)
     except KeyError:
       raise ValueError(
           ('Provided DataValue (%s) does not present an appropriate Java '

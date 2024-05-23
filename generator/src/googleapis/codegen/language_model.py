@@ -167,7 +167,7 @@ class LanguageModel(object):
     Returns:
       (str) String representation of value once cast to an integer.
     """
-    return u'%d' % long(data_value.value)
+    return '%d' % int(data_value.value)
 
   def _Float(self, data_value):
     """Convert provided float to language specific literal.
@@ -187,7 +187,7 @@ class LanguageModel(object):
       raise ValueError('DataValue does not support rendering of provided Type '
                        '(%s)' % value)
 
-    value = unicode(value)
+    value = str(value)
     # Note that unicode(float()) already appends '.0' if is an integral value.
     return value
 
@@ -214,10 +214,10 @@ class LanguageModel(object):
         ('\r', '\\r'),
         ('\f', '\\f'),
         ]
-    value = unicode(data_value.value)
+    value = str(data_value.value)
     for special, replacement in literal_escape:
       value = value.replace(special, replacement)
-    return u'"%s"' % value
+    return '"%s"' % value
 
   @property
   def class_name_delimiter(self):

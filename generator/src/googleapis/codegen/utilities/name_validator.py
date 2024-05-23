@@ -113,15 +113,13 @@ def ValidateAndSanitizeComment(comment_string):
   """
   # Strip anything which is known to be a comment terminator in any
   # supported language.
-  invalid_strings = [u'/*',    # C-style Multi-line start
-                     u'*/',    # C-style Multi-line end
-                     u'\"""',  # Python Multiline string
-                     u'///',   # Escaped comment begin
-                     u'\\*',   # Escaped Multiline begin
+  invalid_strings = ['/*',    # C-style Multi-line start
+                     '*/',    # C-style Multi-line end
+                     '\"""',  # Python Multiline string
+                     '///',   # Escaped comment begin
+                     '\\*',   # Escaped Multiline begin
                     ]
 
-  if isinstance(comment_string, str):
-    comment_string = comment_string.decode('utf-8')
   change_made = True
   while change_made:
     change_made = False

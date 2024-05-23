@@ -51,10 +51,12 @@ git clone --depth 1 https://github.com/googleapis/discovery-artifact-manager
 
 # Preparation commands from .github/workflows/generate.yaml
 apt update
-apt install python2 -y
-echo "using $(python2 --version)"
-curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
-python2 get-pip.py
+apt install python3 -y
+echo "using $(python3 --version)"
+# Kokoro build container gets Python 3.5 for apt install python3
+# Python3.5 does not work with https://bootstrap.pypa.io/pip/3.5 or newer
+curl https://bootstrap.pypa.io/pip/3.6/get-pip.py -o get-pip.py
+python3 get-pip.py
 
 echo
 echo

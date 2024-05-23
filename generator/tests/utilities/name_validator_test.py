@@ -20,11 +20,11 @@
 
 __author__ = 'wclarkso@google.com (Will Clarkson)'
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen.utilities import name_validator
 
 
-class NameValidatorTest(basetest.TestCase):
+class NameValidatorTest(absltest.TestCase):
 
   def testVariableNameValidator(self):
     good_names = ['$ref', '_a', '_private', 'a_var.name', 't1', 'max-results',
@@ -36,7 +36,7 @@ class NameValidatorTest(basetest.TestCase):
     for varname in good_names:
       name_validator.Validate(varname)
     for varname in bad_names:
-      print "'%s'" % varname
+      print("'%s'" % varname)
       self.assertRaises(name_validator.ValidationError,
                         name_validator.Validate, varname)
 
@@ -48,7 +48,7 @@ class NameValidatorTest(basetest.TestCase):
     for varname in good_names:
       name_validator.ValidateApiName(varname)
     for varname in bad_names:
-      print "'%s'" % varname
+      print("'%s'" % varname)
       self.assertRaises(name_validator.ValidationError,
                         name_validator.ValidateApiName, varname)
 
@@ -59,7 +59,7 @@ class NameValidatorTest(basetest.TestCase):
     for varname in good_names:
       name_validator.ValidateApiVersion(varname)
     for varname in bad_names:
-      print "'%s'" % varname
+      print("'%s'" % varname)
       self.assertRaises(name_validator.ValidationError,
                         name_validator.ValidateApiVersion, varname)
 
@@ -90,7 +90,8 @@ class NameValidatorTest(basetest.TestCase):
 
   def testUtf8InComment(self):
     comment = 'Base64-encoded (RFC 4648 §5) data.'
-    unicode_comment = comment.decode('utf-8')
+    # In python3, strings are unicode
+    unicode_comment = comment
     self.assertEqual(unicode_comment,
                      name_validator.ValidateAndSanitizeComment(comment))
     self.assertEqual(
@@ -99,4 +100,4 @@ class NameValidatorTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

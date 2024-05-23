@@ -4620,14 +4620,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent The `parent` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `parent` value format is described below: * [`projects.roles.create()`](ht
-       *        tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `parent` value format is described below: * [projects.roles.create](h
+       *        ttps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
        *        `projects/{PROJECT_ID}`. This method creates project-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.create
-       *        ()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.create]
+       *        (https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
        *        `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*)
@@ -4659,14 +4659,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent The `parent` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `parent` value format is described below: * [`projects.roles.create()`](ht
-       *        tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `parent` value format is described below: * [projects.roles.create](h
+       *        ttps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
        *        `projects/{PROJECT_ID}`. This method creates project-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.create
-       *        ()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.create]
+       *        (https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
        *        `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*)
@@ -4741,15 +4741,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `parent` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `parent` value format is described below: * [`projects.roles.create(
-         * )`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `parent` value format is described below: * [projects.roles.create](
+         * https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
          * `projects/{PROJECT_ID}`. This method creates project-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
-         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.
-         * create()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create
-         * ): `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
+         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.c
+         * reate](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
+         * `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
          * URL: `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard
          * (*) values are invalid; you must specify a complete project ID or organization ID.
@@ -4758,14 +4758,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String parent;
 
         /** The `parent` parameter's value depends on the target resource for the request, namely
-       [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
-       [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       resource type's `parent` value format is described below: * [`projects.roles.create()`](https://clo
-       ud.google.com/iam/docs/reference/rest/v1/projects.roles/create): `projects/{PROJECT_ID}`. This
-       method creates project-level [custom roles](https://cloud.google.com/iam/docs/understanding-custom-
-       roles). Example request URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organi
-       zations.roles.create()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/cr
-       eate): `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
+       [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+       resource type's `parent` value format is described below: *
+       [projects.roles.create](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
+       `projects/{PROJECT_ID}`. This method creates project-level [custom
+       roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
+       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.create](https://
+       cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
+       `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*) values are
        invalid; you must specify a complete project ID or organization ID.
@@ -4776,15 +4777,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `parent` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `parent` value format is described below: * [`projects.roles.create(
-         * )`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `parent` value format is described below: * [projects.roles.create](
+         * https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
          * `projects/{PROJECT_ID}`. This method creates project-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
-         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.
-         * create()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create
-         * ): `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
+         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.c
+         * reate](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
+         * `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
          * URL: `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard
          * (*) values are invalid; you must specify a complete project ID or organization ID.
@@ -4818,16 +4819,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `name` value format is described below: * [`projects.roles.delete()`](http
-       *        s://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `name` value format is described below: * [projects.roles.delete](htt
+       *        ps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.delete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.ro
-       *        les/delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.delete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/
+       *        delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes
        *        only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
        *        have been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -4864,16 +4865,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `name` value format is described below: * [`projects.roles.delete()`](http
-       *        s://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `name` value format is described below: * [projects.roles.delete](htt
+       *        ps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.delete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.ro
-       *        les/delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.delete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/
+       *        delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes
        *        only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
        *        have been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -4948,18 +4949,18 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `name` value format is described below: * [`projects.roles.delete()`
-         * ](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `name` value format is described below: * [projects.roles.delete](ht
+         * tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.delete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.
-         * roles/delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
-         * deletes only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles)
-         * that have been created at the organization level. Example request URL:
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.delete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.role
+         * s/delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes
+         * only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+         * have been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
          * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
          * organization ID.
@@ -4968,15 +4969,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String name;
 
         /** The `name` parameter's value depends on the target resource for the request, namely
-       [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
-       [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       resource type's `name` value format is described below: * [`projects.roles.delete()`](https://cloud
-       .google.com/iam/docs/reference/rest/v1/projects.roles/delete):
+       [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+       resource type's `name` value format is described below: *
+       [projects.roles.delete](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        project level. Example request URL:
-       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizations.role
-       s.delete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/delete):
+       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizations.roles
+       .delete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/delete):
        `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        organization level. Example request URL:
@@ -4989,18 +4990,18 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `name` value format is described below: * [`projects.roles.delete()`
-         * ](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `name` value format is described below: * [projects.roles.delete](ht
+         * tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.delete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.
-         * roles/delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
-         * deletes only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles)
-         * that have been created at the organization level. Example request URL:
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.delete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.role
+         * s/delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes
+         * only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+         * have been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
          * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
          * organization ID.
@@ -5045,21 +5046,21 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`org
-       *        anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
        *        Each resource type's `name` value format is described below: *
-       *        [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
+       *        [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
        *        `roles/{ROLE_NAME}`. This method returns results from all [predefined
        *        roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-       *        Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [`projects.roles.
-       *        get()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+       *        Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [projects.roles.g
+       *        et](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles
-       *        /get): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get
+       *        ): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
        *        [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
        *        been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -5091,21 +5092,21 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`org
-       *        anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
        *        Each resource type's `name` value format is described below: *
-       *        [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
+       *        [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
        *        `roles/{ROLE_NAME}`. This method returns results from all [predefined
        *        roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-       *        Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [`projects.roles.
-       *        get()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+       *        Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [projects.roles.g
+       *        et](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles
-       *        /get): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get
+       *        ): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
        *        [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
        *        been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -5190,23 +5191,23 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`or
-         * ganizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
          * Each resource type's `name` value format is described below: *
-         * [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
+         * [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
          * `roles/{ROLE_NAME}`. This method returns results from all [predefined
          * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-         * Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [`projects.roles
-         * .get()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+         * Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [projects.roles.
+         * get](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.rol
-         * es/get): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns
-         * only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
-         * have been created at the organization level. Example request URL:
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/g
+         * et): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
+         * [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
+         * been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
          * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
          * organization ID.
@@ -5215,20 +5216,20 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String name;
 
         /** The `name` parameter's value depends on the target resource for the request, namely
-       [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
-       [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+       [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
        resource type's `name` value format is described below: *
-       [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
-       `roles/{ROLE_NAME}`. This method returns results from all [predefined
-       roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM. Example
-       request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` *
-       [`projects.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+       [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get): `roles/{ROLE_NAME}`.
+       This method returns results from all [predefined roles](https://cloud.google.com/iam/docs
+       /understanding-roles#predefined_roles) in IAM. Example request URL:
+       `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` *
+       [projects.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        project level. Example request URL:
-       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizations.role
-       s.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get):
+       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizations.roles
+       .get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get):
        `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        organization level. Example request URL:
@@ -5241,23 +5242,23 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`or
-         * ganizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
          * Each resource type's `name` value format is described below: *
-         * [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
+         * [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
          * `roles/{ROLE_NAME}`. This method returns results from all [predefined
          * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-         * Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [`projects.roles
-         * .get()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+         * Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [projects.roles.
+         * get](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.rol
-         * es/get): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns
-         * only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
-         * have been created at the organization level. Example request URL:
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/g
+         * et): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
+         * [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
+         * been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
          * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
          * organization ID.
@@ -5287,19 +5288,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent The `parent` parameter's value depends on the target resource for the request, namely
-       *        [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`org
-       *        anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
        *        Each resource type's `parent` value format is described below: *
-       *        [`roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
+       *        [roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
        *        string. This method doesn't require a resource; it simply returns all [predefined
        *        roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-       *        Example request URL: `https://iam.googleapis.com/v1/roles` * [`projects.roles.list()`](htt
-       *        ps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
+       *        Example request URL: `https://iam.googleapis.com/v1/roles` * [projects.roles.list](https:/
+       *        /cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
        *        `projects/{PROJECT_ID}`. This method lists all project-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.list()
-       *        `](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.list](h
+       *        ttps://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
        *        `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*)
@@ -5331,19 +5332,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent The `parent` parameter's value depends on the target resource for the request, namely
-       *        [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`org
-       *        anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
        *        Each resource type's `parent` value format is described below: *
-       *        [`roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
+       *        [roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
        *        string. This method doesn't require a resource; it simply returns all [predefined
        *        roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-       *        Example request URL: `https://iam.googleapis.com/v1/roles` * [`projects.roles.list()`](htt
-       *        ps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
+       *        Example request URL: `https://iam.googleapis.com/v1/roles` * [projects.roles.list](https:/
+       *        /cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
        *        `projects/{PROJECT_ID}`. This method lists all project-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.list()
-       *        `](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.list](h
+       *        ttps://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
        *        `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*)
@@ -5427,19 +5428,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `parent` parameter's value depends on the target resource for the request, namely
-         * [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`or
-         * ganizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
          * Each resource type's `parent` value format is described below: *
-         * [`roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An
-         * empty string. This method doesn't require a resource; it simply returns all [predefined
+         * [roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
+         * string. This method doesn't require a resource; it simply returns all [predefined
          * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-         * Example request URL: `https://iam.googleapis.com/v1/roles` * [`projects.roles.list()`](ht
-         * tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
+         * Example request URL: `https://iam.googleapis.com/v1/roles` * [projects.roles.list](https:
+         * //cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
          * `projects/{PROJECT_ID}`. This method lists all project-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
-         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.
-         * list()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
+         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.l
+         * ist](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
          * `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
          * URL: `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard
@@ -5449,19 +5450,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String parent;
 
         /** The `parent` parameter's value depends on the target resource for the request, namely
-       [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
-       [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+       [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
        resource type's `parent` value format is described below: *
-       [`roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty string.
-       This method doesn't require a resource; it simply returns all [predefined
+       [roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty string. This
+       method doesn't require a resource; it simply returns all [predefined
        roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM. Example
        request URL: `https://iam.googleapis.com/v1/roles` *
-       [`projects.roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
+       [projects.roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
        `projects/{PROJECT_ID}`. This method lists all project-level [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
-       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.list()`](https:
-       //cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
+       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.list](https://cl
+       oud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
        `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*) values are
@@ -5473,19 +5474,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `parent` parameter's value depends on the target resource for the request, namely
-         * [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`or
-         * ganizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
          * Each resource type's `parent` value format is described below: *
-         * [`roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An
-         * empty string. This method doesn't require a resource; it simply returns all [predefined
+         * [roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
+         * string. This method doesn't require a resource; it simply returns all [predefined
          * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-         * Example request URL: `https://iam.googleapis.com/v1/roles` * [`projects.roles.list()`](ht
-         * tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
+         * Example request URL: `https://iam.googleapis.com/v1/roles` * [projects.roles.list](https:
+         * //cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
          * `projects/{PROJECT_ID}`. This method lists all project-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
-         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.
-         * list()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
+         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.l
+         * ist](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
          * `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
          * URL: `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard
@@ -5598,18 +5599,18 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `name` value format is described below: * [`projects.roles.patch()`](https
-       *        ://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `name` value format is described below: * [projects.roles.patch](http
+       *        s://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.patch()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.rol
-       *        es/patch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates
-       *        only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
-       *        have been created at the organization level. Example request URL:
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.patch](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/p
+       *        atch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only
+       *        [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
+       *        been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
        *        Note: Wildcard (*) values are invalid; you must specify a complete project ID or
        *        organization ID.
@@ -5640,18 +5641,18 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `name` value format is described below: * [`projects.roles.patch()`](https
-       *        ://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `name` value format is described below: * [projects.roles.patch](http
+       *        s://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.patch()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.rol
-       *        es/patch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates
-       *        only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
-       *        have been created at the organization level. Example request URL:
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.patch](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/p
+       *        atch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only
+       *        [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
+       *        been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
        *        Note: Wildcard (*) values are invalid; you must specify a complete project ID or
        *        organization ID.
@@ -5725,18 +5726,18 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `name` value format is described below: * [`projects.roles.patch()`]
-         * (https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `name` value format is described below: * [projects.roles.patch](htt
+         * ps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.patch()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.r
-         * oles/patch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
-         * updates only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles)
-         * that have been created at the organization level. Example request URL:
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.patch](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles
+         * /patch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates
+         * only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+         * have been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
          * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
          * organization ID.
@@ -5745,15 +5746,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String name;
 
         /** The `name` parameter's value depends on the target resource for the request, namely
-       [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
-       [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       resource type's `name` value format is described below: * [`projects.roles.patch()`](https://cloud.
-       google.com/iam/docs/reference/rest/v1/projects.roles/patch):
+       [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+       resource type's `name` value format is described below: *
+       [projects.roles.patch](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        project level. Example request URL:
-       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizations.role
-       s.patch()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/patch):
+       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizations.roles
+       .patch](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/patch):
        `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        organization level. Example request URL:
@@ -5766,18 +5767,18 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `name` value format is described below: * [`projects.roles.patch()`]
-         * (https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `name` value format is described below: * [projects.roles.patch](htt
+         * ps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.patch()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.r
-         * oles/patch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
-         * updates only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles)
-         * that have been created at the organization level. Example request URL:
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.patch](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles
+         * /patch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates
+         * only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+         * have been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
          * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
          * organization ID.
@@ -5822,16 +5823,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
        *
        * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `name` value format is described below: * [`projects.roles.undelete()`](ht
-       *        tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `name` value format is described below: * [projects.roles.undelete](h
+       *        ttps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.undelete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.
-       *        roles/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.undelete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.role
+       *        s/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
        *        undeletes only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-
        *        roles) that have been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -5865,16 +5866,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `name` value format is described below: * [`projects.roles.undelete()`](ht
-       *        tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `name` value format is described below: * [projects.roles.undelete](h
+       *        ttps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.undelete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.
-       *        roles/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.undelete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.role
+       *        s/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
        *        undeletes only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-
        *        roles) that have been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -5950,16 +5951,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `name` value format is described below: * [`projects.roles.undelete(
-         * )`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `name` value format is described below: * [projects.roles.undelete](
+         * https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.undelete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organization
-         * s.roles/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.undelete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.ro
+         * les/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
          * undeletes only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-
          * roles) that have been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -5970,15 +5971,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String name;
 
         /** The `name` parameter's value depends on the target resource for the request, namely
-       [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
-       [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       resource type's `name` value format is described below: * [`projects.roles.undelete()`](https://clo
-       ud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
+       [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+       resource type's `name` value format is described below: * [projects.roles.undelete](https://cloud.g
+       oogle.com/iam/docs/reference/rest/v1/projects.roles/undelete):
        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        project level. Example request URL:
-       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizations.role
-       s.undelete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/undelete):
+       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizations.roles
+       .undelete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/undelete):
        `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        organization level. Example request URL:
@@ -5991,16 +5992,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `name` value format is described below: * [`projects.roles.undelete(
-         * )`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `name` value format is described below: * [projects.roles.undelete](
+         * https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.undelete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organization
-         * s.roles/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.undelete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.ro
+         * les/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
          * undeletes only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-
          * roles) that have been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -6212,16 +6213,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       public class OauthClients {
 
         /**
-         * Creates a new OauthClient. You cannot reuse the name of a deleted oauth client until 30 days
-         * after deletion.
+         * Creates a new OauthClient. You cannot reuse the name of a deleted OauthClient until 30 days after
+         * deletion.
          *
          * Create a request for the method "oauthClients.create".
          *
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource to create the oauth client in. The only supported location is
-         *        `global`.
+         * @param parent Required. The parent resource to create the OauthClient in. The only supported location is `global`.
          * @param content the {@link com.google.api.services.iam.v1.model.OauthClient}
          * @return the request
          */
@@ -6239,7 +6239,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new OauthClient. You cannot reuse the name of a deleted oauth client until 30 days
+           * Creates a new OauthClient. You cannot reuse the name of a deleted OauthClient until 30 days
            * after deletion.
            *
            * Create a request for the method "oauthClients.create".
@@ -6249,8 +6249,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource to create the oauth client in. The only supported location is
-         *        `global`.
+           * @param parent Required. The parent resource to create the OauthClient in. The only supported location is `global`.
            * @param content the {@link com.google.api.services.iam.v1.model.OauthClient}
            * @since 1.13
            */
@@ -6320,13 +6319,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource to create the oauth client in. The only supported
-           * location is `global`.
+           * Required. The parent resource to create the OauthClient in. The only supported location
+           * is `global`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource to create the oauth client in. The only supported location is
+          /** Required. The parent resource to create the OauthClient in. The only supported location is
          `global`.
            */
           public java.lang.String getParent() {
@@ -6334,8 +6333,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource to create the oauth client in. The only supported
-           * location is `global`.
+           * Required. The parent resource to create the OauthClient in. The only supported location
+           * is `global`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -6348,7 +6347,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The ID to use for the oauth client, which becomes the final component of the
+           * Required. The ID to use for the OauthClient, which becomes the final component of the
            * resource name. This value should be a string of 6 to 63 lowercase letters, digits, or
            * hyphens. It must start with a letter, and cannot have a trailing hyphen. The prefix
            * `gcp-` is reserved for use by Google, and may not be specified.
@@ -6356,7 +6355,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           @com.google.api.client.util.Key
           private java.lang.String oauthClientId;
 
-          /** Required. The ID to use for the oauth client, which becomes the final component of the resource
+          /** Required. The ID to use for the OauthClient, which becomes the final component of the resource
          name. This value should be a string of 6 to 63 lowercase letters, digits, or hyphens. It must start
          with a letter, and cannot have a trailing hyphen. The prefix `gcp-` is reserved for use by Google,
          and may not be specified.
@@ -6366,7 +6365,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The ID to use for the oauth client, which becomes the final component of the
+           * Required. The ID to use for the OauthClient, which becomes the final component of the
            * resource name. This value should be a string of 6 to 63 lowercase letters, digits, or
            * hyphens. It must start with a letter, and cannot have a trailing hyphen. The prefix
            * `gcp-` is reserved for use by Google, and may not be specified.
@@ -6382,19 +6381,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Deletes a OauthClient. You cannot use a deleted oauth client. However, deletion does not revoke
-         * access tokens that have already been issued; they continue to grant access. Deletion does revoke
-         * refresh tokens that have already been issued; They cannot be used to renew an access token. If
-         * the oauth client is undeleted, and the refresh tokens are not expired, they are valid for token
-         * exchange again. You can undelete an oauth client for 30 days. After 30 days, deletion is
-         * permanent. You cannot update deleted oauth clients. However, you can view and list them.
+         * Deletes an OauthClient. You cannot use a deleted OauthClient. However, deletion does not revoke
+         * access tokens that have already been issued. They continue to grant access. Deletion does revoke
+         * refresh tokens that have already been issued. They cannot be used to renew an access token. If
+         * the OauthClient is undeleted, and the refresh tokens are not expired, they are valid for token
+         * exchange again. You can undelete an OauthClient for 30 days. After 30 days, deletion is
+         * permanent. You cannot update deleted OauthClients. However, you can view and list them.
          *
          * Create a request for the method "oauthClients.delete".
          *
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the oauth client to delete. Format:
+         * @param name Required. The name of the OauthClient to delete. Format:
          *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
          * @return the request
          */
@@ -6412,12 +6411,12 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
 
           /**
-           * Deletes a OauthClient. You cannot use a deleted oauth client. However, deletion does not revoke
-           * access tokens that have already been issued; they continue to grant access. Deletion does
-           * revoke refresh tokens that have already been issued; They cannot be used to renew an access
-           * token. If the oauth client is undeleted, and the refresh tokens are not expired, they are valid
-           * for token exchange again. You can undelete an oauth client for 30 days. After 30 days, deletion
-           * is permanent. You cannot update deleted oauth clients. However, you can view and list them.
+           * Deletes an OauthClient. You cannot use a deleted OauthClient. However, deletion does not revoke
+           * access tokens that have already been issued. They continue to grant access. Deletion does
+           * revoke refresh tokens that have already been issued. They cannot be used to renew an access
+           * token. If the OauthClient is undeleted, and the refresh tokens are not expired, they are valid
+           * for token exchange again. You can undelete an OauthClient for 30 days. After 30 days, deletion
+           * is permanent. You cannot update deleted OauthClients. However, you can view and list them.
            *
            * Create a request for the method "oauthClients.delete".
            *
@@ -6426,7 +6425,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the oauth client to delete. Format:
+           * @param name Required. The name of the OauthClient to delete. Format:
          *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            * @since 1.13
            */
@@ -6496,13 +6495,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The name of the oauth client to delete. Format:
+           * Required. The name of the OauthClient to delete. Format:
            * `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the oauth client to delete. Format:
+          /** Required. The name of the OauthClient to delete. Format:
          `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           public java.lang.String getName() {
@@ -6510,7 +6509,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The name of the oauth client to delete. Format:
+           * Required. The name of the OauthClient to delete. Format:
            * `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           public Delete setName(java.lang.String name) {
@@ -6536,7 +6535,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the oauth client to retrieve. Format:
+         * @param name Required. The name of the OauthClient to retrieve. Format:
          *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
          * @return the request
          */
@@ -6563,7 +6562,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the oauth client to retrieve. Format:
+           * @param name Required. The name of the OauthClient to retrieve. Format:
          *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            * @since 1.13
            */
@@ -6643,13 +6642,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The name of the oauth client to retrieve. Format:
+           * Required. The name of the OauthClient to retrieve. Format:
            * `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the oauth client to retrieve. Format:
+          /** Required. The name of the OauthClient to retrieve. Format:
          `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           public java.lang.String getName() {
@@ -6657,7 +6656,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The name of the oauth client to retrieve. Format:
+           * Required. The name of the OauthClient to retrieve. Format:
            * `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           public Get setName(java.lang.String name) {
@@ -6676,15 +6675,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Lists all non-deleted OauthClientss in a project. If `show_deleted` is set to `true`, then
-         * deleted oauth clients are also listed.
+         * Lists all non-deleted OauthClients in a project. If `show_deleted` is set to `true`, then deleted
+         * OauthClients are also listed.
          *
          * Create a request for the method "oauthClients.list".
          *
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent to list oauth clients for.
+         * @param parent Required. The parent to list OauthClients for.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -6701,8 +6700,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists all non-deleted OauthClientss in a project. If `show_deleted` is set to `true`, then
-           * deleted oauth clients are also listed.
+           * Lists all non-deleted OauthClients in a project. If `show_deleted` is set to `true`, then
+           * deleted OauthClients are also listed.
            *
            * Create a request for the method "oauthClients.list".
            *
@@ -6711,7 +6710,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent to list oauth clients for.
+           * @param parent Required. The parent to list OauthClients for.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -6789,17 +6788,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent to list oauth clients for. */
+          /** Required. The parent to list OauthClients for. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent to list oauth clients for.
+          /** Required. The parent to list OauthClients for.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent to list oauth clients for. */
+          /** Required. The parent to list OauthClients for. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6811,14 +6810,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional. The maximum number of oauth clients to return. If unspecified, at most 50
-           * oauth clients will be returned. The maximum value is 100; values above 100 are
-           * truncated to 100.
+           * Optional. The maximum number of OauthClients to return. If unspecified, at most 50
+           * OauthClients will be returned. The maximum value is 100; values above 100 are truncated
+           * to 100.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of oauth clients to return. If unspecified, at most 50 oauth clients
+          /** Optional. The maximum number of OauthClients to return. If unspecified, at most 50 OauthClients
          will be returned. The maximum value is 100; values above 100 are truncated to 100.
            */
           public java.lang.Integer getPageSize() {
@@ -6826,9 +6825,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Optional. The maximum number of oauth clients to return. If unspecified, at most 50
-           * oauth clients will be returned. The maximum value is 100; values above 100 are
-           * truncated to 100.
+           * Optional. The maximum number of OauthClients to return. If unspecified, at most 50
+           * OauthClients will be returned. The maximum value is 100; values above 100 are truncated
+           * to 100.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -6858,17 +6857,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
-          /** Optional. Whether to return soft-deleted oauth clients. */
+          /** Optional. Whether to return soft-deleted OauthClients. */
           @com.google.api.client.util.Key
           private java.lang.Boolean showDeleted;
 
-          /** Optional. Whether to return soft-deleted oauth clients.
+          /** Optional. Whether to return soft-deleted OauthClients.
            */
           public java.lang.Boolean getShowDeleted() {
             return showDeleted;
           }
 
-          /** Optional. Whether to return soft-deleted oauth clients. */
+          /** Optional. Whether to return soft-deleted OauthClients. */
           public List setShowDeleted(java.lang.Boolean showDeleted) {
             this.showDeleted = showDeleted;
             return this;
@@ -6887,7 +6886,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The resource name of the oauth client.
+         * @param name Immutable. The resource name of the OauthClient.
          *        Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
          * @param content the {@link com.google.api.services.iam.v1.model.OauthClient}
          * @return the request
@@ -6915,7 +6914,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The resource name of the oauth client.
+           * @param name Immutable. The resource name of the OauthClient.
          *        Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            * @param content the {@link com.google.api.services.iam.v1.model.OauthClient}
            * @since 1.13
@@ -6986,13 +6985,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Immutable. The resource name of the oauth client.
+           * Immutable. The resource name of the OauthClient.
            * Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The resource name of the oauth client.
+          /** Immutable. The resource name of the OauthClient.
          Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           public java.lang.String getName() {
@@ -7000,7 +6999,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Immutable. The resource name of the oauth client.
+           * Immutable. The resource name of the OauthClient.
            * Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           public Patch setName(java.lang.String name) {
@@ -7035,14 +7034,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Undeletes a OauthClient, as long as it was deleted fewer than 30 days ago.
+         * Undeletes an OauthClient, as long as it was deleted fewer than 30 days ago.
          *
          * Create a request for the method "oauthClients.undelete".
          *
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the oauth client to undelete. Format:
+         * @param name Required. The name of the OauthClient to undelete. Format:
          *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
          * @param content the {@link com.google.api.services.iam.v1.model.UndeleteOauthClientRequest}
          * @return the request
@@ -7061,7 +7060,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
 
           /**
-           * Undeletes a OauthClient, as long as it was deleted fewer than 30 days ago.
+           * Undeletes an OauthClient, as long as it was deleted fewer than 30 days ago.
            *
            * Create a request for the method "oauthClients.undelete".
            *
@@ -7071,7 +7070,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the oauth client to undelete. Format:
+           * @param name Required. The name of the OauthClient to undelete. Format:
          *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            * @param content the {@link com.google.api.services.iam.v1.model.UndeleteOauthClientRequest}
            * @since 1.13
@@ -7142,13 +7141,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The name of the oauth client to undelete. Format:
+           * Required. The name of the OauthClient to undelete. Format:
            * `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the oauth client to undelete. Format:
+          /** Required. The name of the OauthClient to undelete. Format:
          `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           public java.lang.String getName() {
@@ -7156,7 +7155,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The name of the oauth client to undelete. Format:
+           * Required. The name of the OauthClient to undelete. Format:
            * `projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
            */
           public Undelete setName(java.lang.String name) {
@@ -7203,7 +7202,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource to create the oauth client Credential in.
+           * @param parent Required. The parent resource to create the OauthClientCredential in.
            * @param content the {@link com.google.api.services.iam.v1.model.OauthClientCredential}
            * @return the request
            */
@@ -7230,7 +7229,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource to create the oauth client Credential in.
+             * @param parent Required. The parent resource to create the OauthClientCredential in.
              * @param content the {@link com.google.api.services.iam.v1.model.OauthClientCredential}
              * @since 1.13
              */
@@ -7299,17 +7298,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The parent resource to create the oauth client Credential in. */
+            /** Required. The parent resource to create the OauthClientCredential in. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource to create the oauth client Credential in.
+            /** Required. The parent resource to create the OauthClientCredential in.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. The parent resource to create the oauth client Credential in. */
+            /** Required. The parent resource to create the OauthClientCredential in. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7321,7 +7320,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The ID to use for the oauth client credential, which becomes the final
+             * Required. The ID to use for the OauthClientCredential, which becomes the final
              * component of the resource name. This value should be 4-32 characters, and may contain
              * the characters [a-z0-9-]. The prefix `gcp-` is reserved for use by Google, and may
              * not be specified.
@@ -7329,7 +7328,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             @com.google.api.client.util.Key
             private java.lang.String oauthClientCredentialId;
 
-            /** Required. The ID to use for the oauth client credential, which becomes the final component of the
+            /** Required. The ID to use for the OauthClientCredential, which becomes the final component of the
            resource name. This value should be 4-32 characters, and may contain the characters [a-z0-9-]. The
            prefix `gcp-` is reserved for use by Google, and may not be specified.
              */
@@ -7338,7 +7337,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The ID to use for the oauth client credential, which becomes the final
+             * Required. The ID to use for the OauthClientCredential, which becomes the final
              * component of the resource name. This value should be 4-32 characters, and may contain
              * the characters [a-z0-9-]. The prefix `gcp-` is reserved for use by Google, and may
              * not be specified.
@@ -7354,7 +7353,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
           }
           /**
-           * Deletes a OauthClientCredential. Before deleting an oauth client credential, it should first be
+           * Deletes an OauthClientCredential. Before deleting an OauthClientCredential, it should first be
            * disabled.
            *
            * Create a request for the method "credentials.delete".
@@ -7362,7 +7361,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the oauth client credential to delete. Format:
+           * @param name Required. The name of the OauthClientCredential to delete. Format:
            *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
            *        al}`.
            * @return the request
@@ -7381,7 +7380,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+/credentials/[^/]+$");
 
             /**
-             * Deletes a OauthClientCredential. Before deleting an oauth client credential, it should first be
+             * Deletes an OauthClientCredential. Before deleting an OauthClientCredential, it should first be
              * disabled.
              *
              * Create a request for the method "credentials.delete".
@@ -7391,7 +7390,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the oauth client credential to delete. Format:
+             * @param name Required. The name of the OauthClientCredential to delete. Format:
            *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
            *        al}`.
              * @since 1.13
@@ -7462,13 +7461,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The name of the oauth client credential to delete. Format: `projects/{proje
-             * ct}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
+             * Required. The name of the OauthClientCredential to delete. Format: `projects/{project
+             * }/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the oauth client credential to delete. Format:
+            /** Required. The name of the OauthClientCredential to delete. Format:
            `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
              */
             public java.lang.String getName() {
@@ -7476,8 +7475,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The name of the oauth client credential to delete. Format: `projects/{proje
-             * ct}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
+             * Required. The name of the OauthClientCredential to delete. Format: `projects/{project
+             * }/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -7502,7 +7501,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the oauth client credential to retrieve. Format:
+           * @param name Required. The name of the OauthClientCredential to retrieve. Format:
            *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
            *        al}`.
            * @return the request
@@ -7530,7 +7529,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the oauth client credential to retrieve. Format:
+             * @param name Required. The name of the OauthClientCredential to retrieve. Format:
            *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
            *        al}`.
              * @since 1.13
@@ -7611,13 +7610,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The name of the oauth client credential to retrieve. Format: `projects/{pro
-             * ject}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
+             * Required. The name of the OauthClientCredential to retrieve. Format: `projects/{proje
+             * ct}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the oauth client credential to retrieve. Format:
+            /** Required. The name of the OauthClientCredential to retrieve. Format:
            `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
              */
             public java.lang.String getName() {
@@ -7625,8 +7624,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Required. The name of the oauth client credential to retrieve. Format: `projects/{pro
-             * ject}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
+             * Required. The name of the OauthClientCredential to retrieve. Format: `projects/{proje
+             * ct}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -7644,14 +7643,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
           }
           /**
-           * Lists all OauthClientCredentialss in a OauthClient.
+           * Lists all OauthClientCredentials in an OauthClient.
            *
            * Create a request for the method "credentials.list".
            *
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent to list oauth client credentials for.
+           * @param parent Required. The parent to list OauthClientCredentials for.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -7668,7 +7667,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/oauthClients/[^/]+$");
 
             /**
-             * Lists all OauthClientCredentialss in a OauthClient.
+             * Lists all OauthClientCredentials in an OauthClient.
              *
              * Create a request for the method "credentials.list".
              *
@@ -7677,7 +7676,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent to list oauth client credentials for.
+             * @param parent Required. The parent to list OauthClientCredentials for.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -7755,17 +7754,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The parent to list oauth client credentials for. */
+            /** Required. The parent to list OauthClientCredentials for. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent to list oauth client credentials for.
+            /** Required. The parent to list OauthClientCredentials for.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. The parent to list oauth client credentials for. */
+            /** Required. The parent to list OauthClientCredentials for. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7789,7 +7788,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. The resource name of the oauth client credential. Format:
+           * @param name Immutable. The resource name of the OauthClientCredential. Format:
            *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
            *        al}`
            * @param content the {@link com.google.api.services.iam.v1.model.OauthClientCredential}
@@ -7818,7 +7817,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. The resource name of the oauth client credential. Format:
+             * @param name Immutable. The resource name of the OauthClientCredential. Format:
            *        `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credenti
            *        al}`
              * @param content the {@link com.google.api.services.iam.v1.model.OauthClientCredential}
@@ -7890,13 +7889,13 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Immutable. The resource name of the oauth client credential. Format: `projects/{proje
-             * ct}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
+             * Immutable. The resource name of the OauthClientCredential. Format: `projects/{project
+             * }/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Immutable. The resource name of the oauth client credential. Format:
+            /** Immutable. The resource name of the OauthClientCredential. Format:
            `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
              */
             public java.lang.String getName() {
@@ -7904,8 +7903,8 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
 
             /**
-             * Immutable. The resource name of the oauth client credential. Format: `projects/{proje
-             * ct}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
+             * Immutable. The resource name of the OauthClientCredential. Format: `projects/{project
+             * }/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -11656,14 +11655,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent The `parent` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `parent` value format is described below: * [`projects.roles.create()`](ht
-       *        tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `parent` value format is described below: * [projects.roles.create](h
+       *        ttps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
        *        `projects/{PROJECT_ID}`. This method creates project-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.create
-       *        ()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.create]
+       *        (https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
        *        `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*)
@@ -11695,14 +11694,14 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent The `parent` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `parent` value format is described below: * [`projects.roles.create()`](ht
-       *        tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `parent` value format is described below: * [projects.roles.create](h
+       *        ttps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
        *        `projects/{PROJECT_ID}`. This method creates project-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.create
-       *        ()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.create]
+       *        (https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
        *        `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*)
@@ -11777,15 +11776,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `parent` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `parent` value format is described below: * [`projects.roles.create(
-         * )`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `parent` value format is described below: * [projects.roles.create](
+         * https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
          * `projects/{PROJECT_ID}`. This method creates project-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
-         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.
-         * create()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create
-         * ): `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
+         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.c
+         * reate](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
+         * `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
          * URL: `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard
          * (*) values are invalid; you must specify a complete project ID or organization ID.
@@ -11794,14 +11793,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String parent;
 
         /** The `parent` parameter's value depends on the target resource for the request, namely
-       [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
-       [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       resource type's `parent` value format is described below: * [`projects.roles.create()`](https://clo
-       ud.google.com/iam/docs/reference/rest/v1/projects.roles/create): `projects/{PROJECT_ID}`. This
-       method creates project-level [custom roles](https://cloud.google.com/iam/docs/understanding-custom-
-       roles). Example request URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organi
-       zations.roles.create()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/cr
-       eate): `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
+       [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+       resource type's `parent` value format is described below: *
+       [projects.roles.create](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
+       `projects/{PROJECT_ID}`. This method creates project-level [custom
+       roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
+       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.create](https://
+       cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
+       `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*) values are
        invalid; you must specify a complete project ID or organization ID.
@@ -11812,15 +11812,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `parent` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `parent` value format is described below: * [`projects.roles.create(
-         * )`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `parent` value format is described below: * [projects.roles.create](
+         * https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/create):
          * `projects/{PROJECT_ID}`. This method creates project-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
-         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.
-         * create()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create
-         * ): `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
+         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.c
+         * reate](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/create):
+         * `organizations/{ORGANIZATION_ID}`. This method creates organization-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
          * URL: `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard
          * (*) values are invalid; you must specify a complete project ID or organization ID.
@@ -11854,16 +11854,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `name` value format is described below: * [`projects.roles.delete()`](http
-       *        s://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `name` value format is described below: * [projects.roles.delete](htt
+       *        ps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.delete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.ro
-       *        les/delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.delete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/
+       *        delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes
        *        only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
        *        have been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -11900,16 +11900,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `name` value format is described below: * [`projects.roles.delete()`](http
-       *        s://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `name` value format is described below: * [projects.roles.delete](htt
+       *        ps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.delete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.ro
-       *        les/delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.delete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/
+       *        delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes
        *        only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
        *        have been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -11984,18 +11984,18 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `name` value format is described below: * [`projects.roles.delete()`
-         * ](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `name` value format is described below: * [projects.roles.delete](ht
+         * tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.delete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.
-         * roles/delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
-         * deletes only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles)
-         * that have been created at the organization level. Example request URL:
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.delete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.role
+         * s/delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes
+         * only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+         * have been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
          * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
          * organization ID.
@@ -12004,15 +12004,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String name;
 
         /** The `name` parameter's value depends on the target resource for the request, namely
-       [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
-       [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       resource type's `name` value format is described below: * [`projects.roles.delete()`](https://cloud
-       .google.com/iam/docs/reference/rest/v1/projects.roles/delete):
+       [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+       resource type's `name` value format is described below: *
+       [projects.roles.delete](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        project level. Example request URL:
-       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizations.role
-       s.delete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/delete):
+       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizations.roles
+       .delete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/delete):
        `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        organization level. Example request URL:
@@ -12025,18 +12025,18 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `name` value format is described below: * [`projects.roles.delete()`
-         * ](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `name` value format is described below: * [projects.roles.delete](ht
+         * tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/delete):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.delete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.
-         * roles/delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
-         * deletes only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles)
-         * that have been created at the organization level. Example request URL:
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.delete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.role
+         * s/delete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes
+         * only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+         * have been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
          * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
          * organization ID.
@@ -12081,21 +12081,21 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`org
-       *        anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
        *        Each resource type's `name` value format is described below: *
-       *        [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
+       *        [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
        *        `roles/{ROLE_NAME}`. This method returns results from all [predefined
        *        roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-       *        Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [`projects.roles.
-       *        get()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+       *        Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [projects.roles.g
+       *        et](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles
-       *        /get): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get
+       *        ): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
        *        [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
        *        been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -12127,21 +12127,21 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`org
-       *        anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
        *        Each resource type's `name` value format is described below: *
-       *        [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
+       *        [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
        *        `roles/{ROLE_NAME}`. This method returns results from all [predefined
        *        roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-       *        Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [`projects.roles.
-       *        get()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+       *        Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [projects.roles.g
+       *        et](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles
-       *        /get): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get
+       *        ): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
        *        [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
        *        been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -12226,23 +12226,23 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`or
-         * ganizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
          * Each resource type's `name` value format is described below: *
-         * [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
+         * [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
          * `roles/{ROLE_NAME}`. This method returns results from all [predefined
          * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-         * Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [`projects.roles
-         * .get()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+         * Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [projects.roles.
+         * get](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.rol
-         * es/get): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns
-         * only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
-         * have been created at the organization level. Example request URL:
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/g
+         * et): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
+         * [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
+         * been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
          * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
          * organization ID.
@@ -12251,20 +12251,20 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String name;
 
         /** The `name` parameter's value depends on the target resource for the request, namely
-       [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
-       [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+       [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
        resource type's `name` value format is described below: *
-       [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
-       `roles/{ROLE_NAME}`. This method returns results from all [predefined
-       roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM. Example
-       request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` *
-       [`projects.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+       [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get): `roles/{ROLE_NAME}`.
+       This method returns results from all [predefined roles](https://cloud.google.com/iam/docs
+       /understanding-roles#predefined_roles) in IAM. Example request URL:
+       `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` *
+       [projects.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        project level. Example request URL:
-       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizations.role
-       s.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get):
+       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizations.roles
+       .get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get):
        `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        organization level. Example request URL:
@@ -12277,23 +12277,23 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`or
-         * ganizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
          * Each resource type's `name` value format is described below: *
-         * [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
+         * [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
          * `roles/{ROLE_NAME}`. This method returns results from all [predefined
          * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-         * Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [`projects.roles
-         * .get()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+         * Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [projects.roles.
+         * get](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.rol
-         * es/get): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns
-         * only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
-         * have been created at the organization level. Example request URL:
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/g
+         * et): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
+         * [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
+         * been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
          * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
          * organization ID.
@@ -12323,19 +12323,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent The `parent` parameter's value depends on the target resource for the request, namely
-       *        [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`org
-       *        anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
        *        Each resource type's `parent` value format is described below: *
-       *        [`roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
+       *        [roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
        *        string. This method doesn't require a resource; it simply returns all [predefined
        *        roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-       *        Example request URL: `https://iam.googleapis.com/v1/roles` * [`projects.roles.list()`](htt
-       *        ps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
+       *        Example request URL: `https://iam.googleapis.com/v1/roles` * [projects.roles.list](https:/
+       *        /cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
        *        `projects/{PROJECT_ID}`. This method lists all project-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.list()
-       *        `](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.list](h
+       *        ttps://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
        *        `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*)
@@ -12367,19 +12367,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent The `parent` parameter's value depends on the target resource for the request, namely
-       *        [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`org
-       *        anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
        *        Each resource type's `parent` value format is described below: *
-       *        [`roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
+       *        [roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
        *        string. This method doesn't require a resource; it simply returns all [predefined
        *        roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-       *        Example request URL: `https://iam.googleapis.com/v1/roles` * [`projects.roles.list()`](htt
-       *        ps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
+       *        Example request URL: `https://iam.googleapis.com/v1/roles` * [projects.roles.list](https:/
+       *        /cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
        *        `projects/{PROJECT_ID}`. This method lists all project-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.list()
-       *        `](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.list](h
+       *        ttps://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
        *        `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*)
@@ -12463,19 +12463,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `parent` parameter's value depends on the target resource for the request, namely
-         * [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`or
-         * ganizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
          * Each resource type's `parent` value format is described below: *
-         * [`roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An
-         * empty string. This method doesn't require a resource; it simply returns all [predefined
+         * [roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
+         * string. This method doesn't require a resource; it simply returns all [predefined
          * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-         * Example request URL: `https://iam.googleapis.com/v1/roles` * [`projects.roles.list()`](ht
-         * tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
+         * Example request URL: `https://iam.googleapis.com/v1/roles` * [projects.roles.list](https:
+         * //cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
          * `projects/{PROJECT_ID}`. This method lists all project-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
-         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.
-         * list()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
+         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.l
+         * ist](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
          * `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
          * URL: `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard
@@ -12485,19 +12485,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String parent;
 
         /** The `parent` parameter's value depends on the target resource for the request, namely
-       [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
-       [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+       [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
        resource type's `parent` value format is described below: *
-       [`roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty string.
-       This method doesn't require a resource; it simply returns all [predefined
+       [roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty string. This
+       method doesn't require a resource; it simply returns all [predefined
        roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM. Example
        request URL: `https://iam.googleapis.com/v1/roles` *
-       [`projects.roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
+       [projects.roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
        `projects/{PROJECT_ID}`. This method lists all project-level [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
-       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.list()`](https:
-       //cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
+       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.list](https://cl
+       oud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
        `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*) values are
@@ -12509,19 +12509,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `parent` parameter's value depends on the target resource for the request, namely
-         * [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`or
-         * ganizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
          * Each resource type's `parent` value format is described below: *
-         * [`roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An
-         * empty string. This method doesn't require a resource; it simply returns all [predefined
+         * [roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
+         * string. This method doesn't require a resource; it simply returns all [predefined
          * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-         * Example request URL: `https://iam.googleapis.com/v1/roles` * [`projects.roles.list()`](ht
-         * tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
+         * Example request URL: `https://iam.googleapis.com/v1/roles` * [projects.roles.list](https:
+         * //cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
          * `projects/{PROJECT_ID}`. This method lists all project-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
-         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.
-         * list()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
+         * URL: `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.l
+         * ist](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
          * `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request
          * URL: `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard
@@ -12634,18 +12634,18 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `name` value format is described below: * [`projects.roles.patch()`](https
-       *        ://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `name` value format is described below: * [projects.roles.patch](http
+       *        s://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.patch()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.rol
-       *        es/patch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates
-       *        only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
-       *        have been created at the organization level. Example request URL:
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.patch](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/p
+       *        atch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only
+       *        [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
+       *        been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
        *        Note: Wildcard (*) values are invalid; you must specify a complete project ID or
        *        organization ID.
@@ -12676,18 +12676,18 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `name` value format is described below: * [`projects.roles.patch()`](https
-       *        ://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `name` value format is described below: * [projects.roles.patch](http
+       *        s://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.patch()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.rol
-       *        es/patch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates
-       *        only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
-       *        have been created at the organization level. Example request URL:
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.patch](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/p
+       *        atch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only
+       *        [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
+       *        been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
        *        Note: Wildcard (*) values are invalid; you must specify a complete project ID or
        *        organization ID.
@@ -12761,18 +12761,18 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `name` value format is described below: * [`projects.roles.patch()`]
-         * (https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `name` value format is described below: * [projects.roles.patch](htt
+         * ps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.patch()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.r
-         * oles/patch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
-         * updates only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles)
-         * that have been created at the organization level. Example request URL:
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.patch](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles
+         * /patch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates
+         * only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+         * have been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
          * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
          * organization ID.
@@ -12781,15 +12781,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String name;
 
         /** The `name` parameter's value depends on the target resource for the request, namely
-       [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
-       [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       resource type's `name` value format is described below: * [`projects.roles.patch()`](https://cloud.
-       google.com/iam/docs/reference/rest/v1/projects.roles/patch):
+       [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+       resource type's `name` value format is described below: *
+       [projects.roles.patch](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        project level. Example request URL:
-       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizations.role
-       s.patch()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/patch):
+       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizations.roles
+       .patch](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/patch):
        `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        organization level. Example request URL:
@@ -12802,18 +12802,18 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `name` value format is described below: * [`projects.roles.patch()`]
-         * (https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `name` value format is described below: * [projects.roles.patch](htt
+         * ps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/patch):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.patch()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.r
-         * oles/patch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
-         * updates only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles)
-         * that have been created at the organization level. Example request URL:
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.patch](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles
+         * /patch): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates
+         * only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+         * have been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
          * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
          * organization ID.
@@ -12858,16 +12858,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
        *
        * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `name` value format is described below: * [`projects.roles.undelete()`](ht
-       *        tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `name` value format is described below: * [projects.roles.undelete](h
+       *        ttps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.undelete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.
-       *        roles/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.undelete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.role
+       *        s/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
        *        undeletes only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-
        *        roles) that have been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -12901,16 +12901,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The `name` parameter's value depends on the target resource for the request, namely
-       *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`orga
-       *        nizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       *        resource type's `name` value format is described below: * [`projects.roles.undelete()`](ht
-       *        tps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
+       *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       *        Each resource type's `name` value format is described below: * [projects.roles.undelete](h
+       *        ttps://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
        *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes only [custom
        *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
        *        created at the project level. Example request URL:
-       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-       *        ions.roles.undelete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.
-       *        roles/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
+       *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+       *        ons.roles.undelete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.role
+       *        s/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
        *        undeletes only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-
        *        roles) that have been created at the organization level. Example request URL:
        *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -12986,16 +12986,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `name` value format is described below: * [`projects.roles.undelete(
-         * )`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `name` value format is described below: * [projects.roles.undelete](
+         * https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.undelete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organization
-         * s.roles/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.undelete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.ro
+         * les/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
          * undeletes only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-
          * roles) that have been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -13006,15 +13006,15 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         private java.lang.String name;
 
         /** The `name` parameter's value depends on the target resource for the request, namely
-       [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
-       [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
-       resource type's `name` value format is described below: * [`projects.roles.undelete()`](https://clo
-       ud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
+       [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+       [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+       resource type's `name` value format is described below: * [projects.roles.undelete](https://cloud.g
+       oogle.com/iam/docs/reference/rest/v1/projects.roles/undelete):
        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        project level. Example request URL:
-       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizations.role
-       s.undelete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/undelete):
+       `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizations.roles
+       .undelete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/undelete):
        `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes only [custom
        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
        organization level. Example request URL:
@@ -13027,16 +13027,16 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The `name` parameter's value depends on the target resource for the request, namely
-         * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or [`org
-         * anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
-         * Each resource type's `name` value format is described below: * [`projects.roles.undelete(
-         * )`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
+         * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles) or
+         * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+         * Each resource type's `name` value format is described below: * [projects.roles.undelete](
+         * https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/undelete):
          * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes only [custom
          * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
          * created at the project level. Example request URL:
-         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organiza
-         * tions.roles.undelete()`](https://cloud.google.com/iam/docs/reference/rest/v1/organization
-         * s.roles/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
+         * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizat
+         * ions.roles.undelete](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.ro
+         * les/undelete): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
          * undeletes only [custom roles](https://cloud.google.com/iam/docs/understanding-custom-
          * roles) that have been created at the organization level. Example request URL:
          * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -13960,7 +13960,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * account has been granted any roles on other resources. To check whether a service account has
        * role grants on a resource, use the `getIamPolicy` method for that resource. For example, to view
        * the role grants for a project, call the Resource Manager API's
-       * [`projects.getIamPolicy`](https://cloud.google.com/resource-
+       * [projects.getIamPolicy](https://cloud.google.com/resource-
        * manager/reference/rest/v1/projects/getIamPolicy) method.
        *
        * Create a request for the method "serviceAccounts.getIamPolicy".
@@ -13992,7 +13992,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * service account has been granted any roles on other resources. To check whether a service
          * account has role grants on a resource, use the `getIamPolicy` method for that resource. For
          * example, to view the role grants for a project, call the Resource Manager API's
-         * [`projects.getIamPolicy`](https://cloud.google.com/resource-
+         * [projects.getIamPolicy](https://cloud.google.com/resource-
          * manager/reference/rest/v1/projects/getIamPolicy) method.
          *
          * Create a request for the method "serviceAccounts.getIamPolicy".
@@ -14686,7 +14686,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * **Note:** This method is deprecated. Use the [`signBlob`](https://cloud.google.com/iam/help/rest-
+       * **Note:** This method is deprecated. Use the [signBlob](https://cloud.google.com/iam/help/rest-
        * credentials/v1/projects.serviceAccounts/signBlob) method in the IAM Service Account Credentials
        * API instead. If you currently use this method, see the [migration
        * guide](https://cloud.google.com/iam/help/credentials/migrate-api) for instructions. Signs a blob
@@ -14725,9 +14725,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+$");
 
         /**
-         * **Note:** This method is deprecated. Use the [`signBlob`](https://cloud.google.com/iam/help
-         * /rest-credentials/v1/projects.serviceAccounts/signBlob) method in the IAM Service Account
-         * Credentials API instead. If you currently use this method, see the [migration
+         * **Note:** This method is deprecated. Use the [signBlob](https://cloud.google.com/iam/help/rest-
+         * credentials/v1/projects.serviceAccounts/signBlob) method in the IAM Service Account Credentials
+         * API instead. If you currently use this method, see the [migration
          * guide](https://cloud.google.com/iam/help/credentials/migrate-api) for instructions. Signs a
          * blob using the system-managed private key for a ServiceAccount.
          *
@@ -14878,7 +14878,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * **Note:** This method is deprecated. Use the [`signJwt`](https://cloud.google.com/iam/help/rest-
+       * **Note:** This method is deprecated. Use the [signJwt](https://cloud.google.com/iam/help/rest-
        * credentials/v1/projects.serviceAccounts/signJwt) method in the IAM Service Account Credentials
        * API instead. If you currently use this method, see the [migration
        * guide](https://cloud.google.com/iam/help/credentials/migrate-api) for instructions. Signs a JSON
@@ -14917,9 +14917,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+$");
 
         /**
-         * **Note:** This method is deprecated. Use the [`signJwt`](https://cloud.google.com/iam/help
-         * /rest-credentials/v1/projects.serviceAccounts/signJwt) method in the IAM Service Account
-         * Credentials API instead. If you currently use this method, see the [migration
+         * **Note:** This method is deprecated. Use the [signJwt](https://cloud.google.com/iam/help/rest-
+         * credentials/v1/projects.serviceAccounts/signJwt) method in the IAM Service Account Credentials
+         * API instead. If you currently use this method, see the [migration
          * guide](https://cloud.google.com/iam/help/credentials/migrate-api) for instructions. Signs a
          * JSON Web Token (JWT) using the system-managed private key for a ServiceAccount.
          *
@@ -17067,21 +17067,21 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param name The `name` parameter's value depends on the target resource for the request, namely
-     *        [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-     *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`org
-     *        anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+     *        [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+     *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+     *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
      *        Each resource type's `name` value format is described below: *
-     *        [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
+     *        [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
      *        `roles/{ROLE_NAME}`. This method returns results from all [predefined
      *        roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-     *        Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [`projects.roles.
-     *        get()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+     *        Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [projects.roles.g
+     *        et](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
      *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
      *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
      *        created at the project level. Example request URL:
-     *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-     *        ions.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles
-     *        /get): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
+     *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+     *        ons.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get
+     *        ): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
      *        [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
      *        been created at the organization level. Example request URL:
      *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -17113,21 +17113,21 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name The `name` parameter's value depends on the target resource for the request, namely
-     *        [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-     *        [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or [`org
-     *        anizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+     *        [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+     *        [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+     *        [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
      *        Each resource type's `name` value format is described below: *
-     *        [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
+     *        [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
      *        `roles/{ROLE_NAME}`. This method returns results from all [predefined
      *        roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-     *        Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [`projects.roles.
-     *        get()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+     *        Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [projects.roles.g
+     *        et](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
      *        `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
      *        roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
      *        created at the project level. Example request URL:
-     *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizat
-     *        ions.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles
-     *        /get): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
+     *        `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizati
+     *        ons.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get
+     *        ): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
      *        [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have
      *        been created at the organization level. Example request URL:
      *        `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
@@ -17212,23 +17212,23 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * The `name` parameter's value depends on the target resource for the request, namely
-       * [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
-       * [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       * [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
        * Each resource type's `name` value format is described below: *
-       * [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
+       * [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
        * `roles/{ROLE_NAME}`. This method returns results from all [predefined
        * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-       * Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [`projects.roles.g
-       * et()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+       * Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [projects.roles.ge
+       * t](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
        * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
        * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created
        * at the project level. Example request URL:
-       * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizati
-       * ons.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/g
-       * et): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
-       * [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
-       * created at the organization level. Example request URL:
+       * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizatio
+       * ns.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get):
+       * `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
+       * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created
+       * at the organization level. Example request URL:
        * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
        * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
        * organization ID.
@@ -17237,20 +17237,20 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       private java.lang.String name;
 
       /** The `name` parameter's value depends on the target resource for the request, namely
-     [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-     [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
-     [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+     [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+     [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+     [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
      resource type's `name` value format is described below: *
-     [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
-     `roles/{ROLE_NAME}`. This method returns results from all [predefined
-     roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM. Example
-     request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` *
-     [`projects.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+     [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get): `roles/{ROLE_NAME}`.
+     This method returns results from all [predefined roles](https://cloud.google.com/iam/docs
+     /understanding-roles#predefined_roles) in IAM. Example request URL:
+     `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` *
+     [projects.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
      `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
      roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
      project level. Example request URL:
-     `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizations.role
-     s.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get):
+     `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizations.roles
+     .get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get):
      `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
      roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created at the
      organization level. Example request URL:
@@ -17263,23 +17263,23 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * The `name` parameter's value depends on the target resource for the request, namely
-       * [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
-       * [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       * [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
        * Each resource type's `name` value format is described below: *
-       * [`roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
+       * [roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/roles/get):
        * `roles/{ROLE_NAME}`. This method returns results from all [predefined
        * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-       * Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [`projects.roles.g
-       * et()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
+       * Example request URL: `https://iam.googleapis.com/v1/roles/{ROLE_NAME}` * [projects.roles.ge
+       * t](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/get):
        * `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
        * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created
        * at the project level. Example request URL:
-       * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [`organizati
-       * ons.roles.get()`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/g
-       * et): `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
-       * [custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been
-       * created at the organization level. Example request URL:
+       * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}` * [organizatio
+       * ns.roles.get](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/get):
+       * `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only [custom
+       * roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that have been created
+       * at the organization level. Example request URL:
        * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
        * Note: Wildcard (*) values are invalid; you must specify a complete project ID or
        * organization ID.
@@ -17443,19 +17443,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * The `parent` parameter's value depends on the target resource for the request, namely
-       * [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
-       * [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       * [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
        * Each resource type's `parent` value format is described below: *
-       * [`roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
+       * [roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
        * string. This method doesn't require a resource; it simply returns all [predefined
        * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-       * Example request URL: `https://iam.googleapis.com/v1/roles` * [`projects.roles.list()`](http
-       * s://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
-       * `projects/{PROJECT_ID}`. This method lists all project-level [custom
-       * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
-       * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.list()`
-       * ](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
+       * Example request URL: `https://iam.googleapis.com/v1/roles` * [projects.roles.list](https://
+       * cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list): `projects/{PROJECT_ID}`.
+       * This method lists all project-level [custom roles](https://cloud.google.com/iam/docs
+       * /understanding-custom-roles). Example request URL:
+       * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.list](ht
+       * tps://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
        * `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
        * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*)
@@ -17465,19 +17465,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       private java.lang.String parent;
 
       /** The `parent` parameter's value depends on the target resource for the request, namely
-     [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-     [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
-     [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
+     [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+     [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+     [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles). Each
      resource type's `parent` value format is described below: *
-     [`roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty string.
-     This method doesn't require a resource; it simply returns all [predefined
+     [roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty string. This
+     method doesn't require a resource; it simply returns all [predefined
      roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM. Example
      request URL: `https://iam.googleapis.com/v1/roles` *
-     [`projects.roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
+     [projects.roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
      `projects/{PROJECT_ID}`. This method lists all project-level [custom
      roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
-     `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.list()`](https:
-     //cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
+     `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.list](https://cl
+     oud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
      `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
      roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
      `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*) values are
@@ -17489,19 +17489,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * The `parent` parameter's value depends on the target resource for the request, namely
-       * [`roles`](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
-       * [`projects`](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
-       * [`organizations`](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
+       * [roles](https://cloud.google.com/iam/docs/reference/rest/v1/roles),
+       * [projects](https://cloud.google.com/iam/docs/reference/rest/v1/projects.roles), or
+       * [organizations](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles).
        * Each resource type's `parent` value format is described below: *
-       * [`roles.list()`](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
+       * [roles.list](https://cloud.google.com/iam/docs/reference/rest/v1/roles/list): An empty
        * string. This method doesn't require a resource; it simply returns all [predefined
        * roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles) in IAM.
-       * Example request URL: `https://iam.googleapis.com/v1/roles` * [`projects.roles.list()`](http
-       * s://cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list):
-       * `projects/{PROJECT_ID}`. This method lists all project-level [custom
-       * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
-       * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [`organizations.roles.list()`
-       * ](https://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
+       * Example request URL: `https://iam.googleapis.com/v1/roles` * [projects.roles.list](https://
+       * cloud.google.com/iam/docs/reference/rest/v1/projects.roles/list): `projects/{PROJECT_ID}`.
+       * This method lists all project-level [custom roles](https://cloud.google.com/iam/docs
+       * /understanding-custom-roles). Example request URL:
+       * `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles` * [organizations.roles.list](ht
+       * tps://cloud.google.com/iam/docs/reference/rest/v1/organizations.roles/list):
        * `organizations/{ORGANIZATION_ID}`. This method lists all organization-level [custom
        * roles](https://cloud.google.com/iam/docs/understanding-custom-roles). Example request URL:
        * `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles` Note: Wildcard (*)

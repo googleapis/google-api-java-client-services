@@ -17,8 +17,8 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * Represents an oauth client. Used to access Google Cloud resources on behave of a user by using
- * OAuth2 Protocol to obtain an access token from Google Cloud Platform.
+ * Represents an OauthClient. Used to access Google Cloud resources on behave of a user by using
+ * OAuth 2.0 Protocol to obtain an access token from Google Cloud Platform.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -32,7 +32,7 @@ package com.google.api.services.iam.v1.model;
 public final class OauthClient extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The list of OAuth grant type is allowed for the oauth client.
+   * Required. The list of OAuth grant types is allowed for the OauthClient.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,54 +47,54 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowedRedirectUris;
 
   /**
-   * Required. The list of scopes that the oauth client is allowed to request during OAuth flows.
-   * The following scopes are supported: * `https://www.googleapis.com/auth/cloud-platform`: See,
-   * edit, configure, and delete your Google Cloud data and see the email address for your Google
-   * Account. * `openid`: Associate you with your personal info on Google Cloud. * `email`: See your
-   * Google Cloud Account email address.
+   * Required. The list of scopes that the OauthClient is allowed to request during OAuth flows. The
+   * following scopes are supported: * `https://www.googleapis.com/auth/cloud-platform`: See, edit,
+   * configure, and delete your Google Cloud data and see the email address for your Google Account.
+   * * `openid`: Associate you with your personal info on Google Cloud. * `email`: See your Google
+   * Cloud Account email address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowedScopes;
 
   /**
-   * Output only. The system-generated oauth client id.
+   * Output only. The system-generated OauthClient id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientId;
 
   /**
-   * Immutable. The type of oauth client. either public or private.
+   * Immutable. The type of OauthClient. Either public or private. For private clients, the client
+   * secret can be managed using the dedicated OauthClientCredential resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientType;
 
   /**
-   * Optional. A user-specified description of the oauth client. Cannot exceed 256 characters.
+   * Optional. A user-specified description of the OauthClient. Cannot exceed 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. Whether the oauth client is disabled. You cannot use a disabled oauth client for
-   * login.
+   * Optional. Whether the OauthClient is disabled. You cannot use a disabled OAuth client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabled;
 
   /**
-   * Optional. A user-specified display name of the oauth client. Cannot exceed 32 characters.
+   * Optional. A user-specified display name of the OauthClient. Cannot exceed 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Output only. Time after which the oauth client will be permanently purged and cannot be
+   * Output only. Time after which the OauthClient will be permanently purged and cannot be
    * recovered.
    * The value may be {@code null}.
    */
@@ -102,7 +102,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   private String expireTime;
 
   /**
-   * Immutable. The resource name of the oauth client.
+   * Immutable. The resource name of the OauthClient.
    * Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
    * The value may be {@code null}.
    */
@@ -110,14 +110,14 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. The state of the oauth client.
+   * Output only. The state of the OauthClient.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Required. The list of OAuth grant type is allowed for the oauth client.
+   * Required. The list of OAuth grant types is allowed for the OauthClient.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedGrantTypes() {
@@ -125,7 +125,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of OAuth grant type is allowed for the oauth client.
+   * Required. The list of OAuth grant types is allowed for the OauthClient.
    * @param allowedGrantTypes allowedGrantTypes or {@code null} for none
    */
   public OauthClient setAllowedGrantTypes(java.util.List<java.lang.String> allowedGrantTypes) {
@@ -153,11 +153,11 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of scopes that the oauth client is allowed to request during OAuth flows.
-   * The following scopes are supported: * `https://www.googleapis.com/auth/cloud-platform`: See,
-   * edit, configure, and delete your Google Cloud data and see the email address for your Google
-   * Account. * `openid`: Associate you with your personal info on Google Cloud. * `email`: See your
-   * Google Cloud Account email address.
+   * Required. The list of scopes that the OauthClient is allowed to request during OAuth flows. The
+   * following scopes are supported: * `https://www.googleapis.com/auth/cloud-platform`: See, edit,
+   * configure, and delete your Google Cloud data and see the email address for your Google Account.
+   * * `openid`: Associate you with your personal info on Google Cloud. * `email`: See your Google
+   * Cloud Account email address.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedScopes() {
@@ -165,11 +165,11 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of scopes that the oauth client is allowed to request during OAuth flows.
-   * The following scopes are supported: * `https://www.googleapis.com/auth/cloud-platform`: See,
-   * edit, configure, and delete your Google Cloud data and see the email address for your Google
-   * Account. * `openid`: Associate you with your personal info on Google Cloud. * `email`: See your
-   * Google Cloud Account email address.
+   * Required. The list of scopes that the OauthClient is allowed to request during OAuth flows. The
+   * following scopes are supported: * `https://www.googleapis.com/auth/cloud-platform`: See, edit,
+   * configure, and delete your Google Cloud data and see the email address for your Google Account.
+   * * `openid`: Associate you with your personal info on Google Cloud. * `email`: See your Google
+   * Cloud Account email address.
    * @param allowedScopes allowedScopes or {@code null} for none
    */
   public OauthClient setAllowedScopes(java.util.List<java.lang.String> allowedScopes) {
@@ -178,7 +178,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The system-generated oauth client id.
+   * Output only. The system-generated OauthClient id.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientId() {
@@ -186,7 +186,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The system-generated oauth client id.
+   * Output only. The system-generated OauthClient id.
    * @param clientId clientId or {@code null} for none
    */
   public OauthClient setClientId(java.lang.String clientId) {
@@ -195,7 +195,8 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The type of oauth client. either public or private.
+   * Immutable. The type of OauthClient. Either public or private. For private clients, the client
+   * secret can be managed using the dedicated OauthClientCredential resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientType() {
@@ -203,7 +204,8 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The type of oauth client. either public or private.
+   * Immutable. The type of OauthClient. Either public or private. For private clients, the client
+   * secret can be managed using the dedicated OauthClientCredential resource.
    * @param clientType clientType or {@code null} for none
    */
   public OauthClient setClientType(java.lang.String clientType) {
@@ -212,7 +214,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A user-specified description of the oauth client. Cannot exceed 256 characters.
+   * Optional. A user-specified description of the OauthClient. Cannot exceed 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -220,7 +222,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A user-specified description of the oauth client. Cannot exceed 256 characters.
+   * Optional. A user-specified description of the OauthClient. Cannot exceed 256 characters.
    * @param description description or {@code null} for none
    */
   public OauthClient setDescription(java.lang.String description) {
@@ -229,8 +231,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Whether the oauth client is disabled. You cannot use a disabled oauth client for
-   * login.
+   * Optional. Whether the OauthClient is disabled. You cannot use a disabled OAuth client.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -238,8 +239,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Whether the oauth client is disabled. You cannot use a disabled oauth client for
-   * login.
+   * Optional. Whether the OauthClient is disabled. You cannot use a disabled OAuth client.
    * @param disabled disabled or {@code null} for none
    */
   public OauthClient setDisabled(java.lang.Boolean disabled) {
@@ -248,7 +248,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A user-specified display name of the oauth client. Cannot exceed 32 characters.
+   * Optional. A user-specified display name of the OauthClient. Cannot exceed 32 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -256,7 +256,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A user-specified display name of the oauth client. Cannot exceed 32 characters.
+   * Optional. A user-specified display name of the OauthClient. Cannot exceed 32 characters.
    * @param displayName displayName or {@code null} for none
    */
   public OauthClient setDisplayName(java.lang.String displayName) {
@@ -265,7 +265,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time after which the oauth client will be permanently purged and cannot be
+   * Output only. Time after which the OauthClient will be permanently purged and cannot be
    * recovered.
    * @return value or {@code null} for none
    */
@@ -274,7 +274,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time after which the oauth client will be permanently purged and cannot be
+   * Output only. Time after which the OauthClient will be permanently purged and cannot be
    * recovered.
    * @param expireTime expireTime or {@code null} for none
    */
@@ -284,7 +284,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name of the oauth client.
+   * Immutable. The resource name of the OauthClient.
    * Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
    * @return value or {@code null} for none
    */
@@ -293,7 +293,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name of the oauth client.
+   * Immutable. The resource name of the OauthClient.
    * Format:`projects/{project}/locations/{location}/oauthClients/{oauth_client}`.
    * @param name name or {@code null} for none
    */
@@ -303,7 +303,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The state of the oauth client.
+   * Output only. The state of the OauthClient.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -311,7 +311,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The state of the oauth client.
+   * Output only. The state of the OauthClient.
    * @param state state or {@code null} for none
    */
   public OauthClient setState(java.lang.String state) {

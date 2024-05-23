@@ -17,8 +17,8 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * Represents an oauth client credential. Used to authenticate an oauth client while accessing
- * Google Cloud resources on behalf of a user by using OAuth2 Protocol.
+ * Represents an OauthClientCredential. Used to authenticate an OauthClient while accessing Google
+ * Cloud resources on behalf of a user by using OAuth 2.0 Protocol.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -32,22 +32,25 @@ package com.google.api.services.iam.v1.model;
 public final class OauthClientCredential extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The system-generated oauth client secret.
+   * Output only. The system-generated OAuth client secret. The client secret must be stored
+   * securely. If the client secret is leaked, you must delete and re-create the client credential.
+   * To learn more, see [OAuth client and credential security risks and
+   * mitigations](https://cloud.google.com/iam/docs/workforce-oauth-app#security)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientSecret;
 
   /**
-   * Optional. Whether the oauth client credential is disabled. You cannot use a disabled oauth
-   * client credential for OAuth.
+   * Optional. Whether the OauthClientCredential is disabled. You cannot use a disabled
+   * OauthClientCredential.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabled;
 
   /**
-   * Optional. A user-specified display name of the oauth client credential Cannot exceed 32
+   * Optional. A user-specified display name of the OauthClientCredential. Cannot exceed 32
    * characters.
    * The value may be {@code null}.
    */
@@ -55,7 +58,7 @@ public final class OauthClientCredential extends com.google.api.client.json.Gene
   private java.lang.String displayName;
 
   /**
-   * Immutable. The resource name of the oauth client credential. Format:
+   * Immutable. The resource name of the OauthClientCredential. Format:
    * `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
    * The value may be {@code null}.
    */
@@ -63,7 +66,10 @@ public final class OauthClientCredential extends com.google.api.client.json.Gene
   private java.lang.String name;
 
   /**
-   * Output only. The system-generated oauth client secret.
+   * Output only. The system-generated OAuth client secret. The client secret must be stored
+   * securely. If the client secret is leaked, you must delete and re-create the client credential.
+   * To learn more, see [OAuth client and credential security risks and
+   * mitigations](https://cloud.google.com/iam/docs/workforce-oauth-app#security)
    * @return value or {@code null} for none
    */
   public java.lang.String getClientSecret() {
@@ -71,7 +77,10 @@ public final class OauthClientCredential extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The system-generated oauth client secret.
+   * Output only. The system-generated OAuth client secret. The client secret must be stored
+   * securely. If the client secret is leaked, you must delete and re-create the client credential.
+   * To learn more, see [OAuth client and credential security risks and
+   * mitigations](https://cloud.google.com/iam/docs/workforce-oauth-app#security)
    * @param clientSecret clientSecret or {@code null} for none
    */
   public OauthClientCredential setClientSecret(java.lang.String clientSecret) {
@@ -80,8 +89,8 @@ public final class OauthClientCredential extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Whether the oauth client credential is disabled. You cannot use a disabled oauth
-   * client credential for OAuth.
+   * Optional. Whether the OauthClientCredential is disabled. You cannot use a disabled
+   * OauthClientCredential.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -89,8 +98,8 @@ public final class OauthClientCredential extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Whether the oauth client credential is disabled. You cannot use a disabled oauth
-   * client credential for OAuth.
+   * Optional. Whether the OauthClientCredential is disabled. You cannot use a disabled
+   * OauthClientCredential.
    * @param disabled disabled or {@code null} for none
    */
   public OauthClientCredential setDisabled(java.lang.Boolean disabled) {
@@ -99,7 +108,7 @@ public final class OauthClientCredential extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. A user-specified display name of the oauth client credential Cannot exceed 32
+   * Optional. A user-specified display name of the OauthClientCredential. Cannot exceed 32
    * characters.
    * @return value or {@code null} for none
    */
@@ -108,7 +117,7 @@ public final class OauthClientCredential extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. A user-specified display name of the oauth client credential Cannot exceed 32
+   * Optional. A user-specified display name of the OauthClientCredential. Cannot exceed 32
    * characters.
    * @param displayName displayName or {@code null} for none
    */
@@ -118,7 +127,7 @@ public final class OauthClientCredential extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. The resource name of the oauth client credential. Format:
+   * Immutable. The resource name of the OauthClientCredential. Format:
    * `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
    * @return value or {@code null} for none
    */
@@ -127,7 +136,7 @@ public final class OauthClientCredential extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. The resource name of the oauth client credential. Format:
+   * Immutable. The resource name of the OauthClientCredential. Format:
    * `projects/{project}/locations/{location}/oauthClients/{oauth_client}/credentials/{credential}`
    * @param name name or {@code null} for none
    */

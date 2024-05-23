@@ -39,7 +39,7 @@ public final class ListOauthClientsResponse extends com.google.api.client.json.G
   private java.lang.String nextPageToken;
 
   /**
-   * A list of oauth clients.
+   * A list of OauthClients.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class ListOauthClientsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A list of oauth clients.
+   * A list of OauthClients.
    * @return value or {@code null} for none
    */
   public java.util.List<OauthClient> getOauthClients() {
@@ -73,7 +73,7 @@ public final class ListOauthClientsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A list of oauth clients.
+   * A list of OauthClients.
    * @param oauthClients oauthClients or {@code null} for none
    */
   public ListOauthClientsResponse setOauthClients(java.util.List<OauthClient> oauthClients) {

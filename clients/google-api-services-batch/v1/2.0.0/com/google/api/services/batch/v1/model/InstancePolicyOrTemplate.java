@@ -32,8 +32,8 @@ package com.google.api.services.batch.v1.model;
 public final class InstancePolicyOrTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Set this field true if users want Batch to help fetch drivers from a third party location and
-   * install them for GPUs specified in policy.accelerators or instance_template on their behalf.
+   * Set this field true if you want Batch to help fetch drivers from a third party location and
+   * install them for GPUs specified in `policy.accelerators` or `instance_template` on your behalf.
    * Default is false. For Container-Optimized Image cases, Batch will install the accelerator
    * driver following milestones of https://cloud.google.com/container-optimized-os/docs/release-
    * notes. For non Container-Optimized Image cases, following
@@ -60,8 +60,8 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
   private InstancePolicy policy;
 
   /**
-   * Set this field true if users want Batch to help fetch drivers from a third party location and
-   * install them for GPUs specified in policy.accelerators or instance_template on their behalf.
+   * Set this field true if you want Batch to help fetch drivers from a third party location and
+   * install them for GPUs specified in `policy.accelerators` or `instance_template` on your behalf.
    * Default is false. For Container-Optimized Image cases, Batch will install the accelerator
    * driver following milestones of https://cloud.google.com/container-optimized-os/docs/release-
    * notes. For non Container-Optimized Image cases, following
@@ -74,8 +74,8 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
   }
 
   /**
-   * Set this field true if users want Batch to help fetch drivers from a third party location and
-   * install them for GPUs specified in policy.accelerators or instance_template on their behalf.
+   * Set this field true if you want Batch to help fetch drivers from a third party location and
+   * install them for GPUs specified in `policy.accelerators` or `instance_template` on your behalf.
    * Default is false. For Container-Optimized Image cases, Batch will install the accelerator
    * driver following milestones of https://cloud.google.com/container-optimized-os/docs/release-
    * notes. For non Container-Optimized Image cases, following

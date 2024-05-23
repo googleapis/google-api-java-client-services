@@ -151,6 +151,15 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. If false, Backup will fail when Backup for GKE detects Kubernetes configuration
+   * that is non-standard or requires additional setup to restore. Inherited from the parent
+   * BackupPlan's permissive_mode value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean permissiveMode;
+
+  /**
    * Output only. The total number of Kubernetes Pods contained in the Backup.
    * The value may be {@code null}.
    */
@@ -521,6 +530,27 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. If false, Backup will fail when Backup for GKE detects Kubernetes configuration
+   * that is non-standard or requires additional setup to restore. Inherited from the parent
+   * BackupPlan's permissive_mode value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPermissiveMode() {
+    return permissiveMode;
+  }
+
+  /**
+   * Output only. If false, Backup will fail when Backup for GKE detects Kubernetes configuration
+   * that is non-standard or requires additional setup to restore. Inherited from the parent
+   * BackupPlan's permissive_mode value.
+   * @param permissiveMode permissiveMode or {@code null} for none
+   */
+  public Backup setPermissiveMode(java.lang.Boolean permissiveMode) {
+    this.permissiveMode = permissiveMode;
     return this;
   }
 

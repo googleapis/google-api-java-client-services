@@ -1284,7 +1284,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * /authenticate-authorize-chat-app) and [user
      * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
      * Lists spaces visible to the caller or authenticated user. Group chats and DMs aren't listed until
-     * the first message is sent.
+     * the first message is sent. To list all named spaces by Google Workspace organization, use the
+     * `spaces.search()` method using Workspace administrator privileges instead.
      *
      * Create a request for the method "spaces.list".
      *
@@ -1311,7 +1312,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
        * and [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
        * chat-user). Lists spaces visible to the caller or authenticated user. Group chats and DMs
-       * aren't listed until the first message is sent.
+       * aren't listed until the first message is sent. To list all named spaces by Google Workspace
+       * organization, use the `spaces.search()` method using Workspace administrator privileges
+       * instead.
        *
        * Create a request for the method "spaces.list".
        *
@@ -2558,13 +2561,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * /developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members#membershiprole
          * )) and type ([`member.type`](https://developers.google.com/workspace/chat/api/reference/r
          * est/v1/User#type)). To filter by role, set `role` to `ROLE_MEMBER` or `ROLE_MANAGER`. To
-         * filter by type, set `member.type` to `HUMAN` or `BOT`. To filter by both role and type,
-         * use the `AND` operator. To filter by either role or type, use the `OR` operator. For
-         * example, the following queries are valid: ``` role = "ROLE_MANAGER" OR role =
-         * "ROLE_MEMBER" member.type = "HUMAN" AND role = "ROLE_MANAGER" ``` The following queries
-         * are invalid: ``` member.type = "HUMAN" AND member.type = "BOT" role = "ROLE_MANAGER" AND
-         * role = "ROLE_MEMBER" ``` Invalid queries are rejected by the server with an
-         * `INVALID_ARGUMENT` error.
+         * filter by type, set `member.type` to `HUMAN` or `BOT`. Developer Preview: You can also
+         * filter for `member.type` using the `!=` operator. To filter by both role and type, use
+         * the `AND` operator. To filter by either role or type, use the `OR` operator. Either
+         * `member.type = "HUMAN"` or `member.type != "BOT"` is required when `use_admin_access` is
+         * set to true. Other member type filters will be rejected. For example, the following
+         * queries are valid: ``` role = "ROLE_MANAGER" OR role = "ROLE_MEMBER" member.type =
+         * "HUMAN" AND role = "ROLE_MANAGER" member.type != "BOT" ``` The following queries are
+         * invalid: ``` member.type = "HUMAN" AND member.type = "BOT" role = "ROLE_MANAGER" AND role
+         * = "ROLE_MEMBER" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+         * error.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -2573,12 +2579,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        s.google.com/workspace/chat/api/reference/rest/v1/spaces.members#membershiprole)) and type
        ([`member.type`](https://developers.google.com/workspace/chat/api/reference/rest/v1/User#type)). To
        filter by role, set `role` to `ROLE_MEMBER` or `ROLE_MANAGER`. To filter by type, set `member.type`
-       to `HUMAN` or `BOT`. To filter by both role and type, use the `AND` operator. To filter by either
-       role or type, use the `OR` operator. For example, the following queries are valid: ``` role =
-       "ROLE_MANAGER" OR role = "ROLE_MEMBER" member.type = "HUMAN" AND role = "ROLE_MANAGER" ``` The
-       following queries are invalid: ``` member.type = "HUMAN" AND member.type = "BOT" role =
-       "ROLE_MANAGER" AND role = "ROLE_MEMBER" ``` Invalid queries are rejected by the server with an
-       `INVALID_ARGUMENT` error.
+       to `HUMAN` or `BOT`. Developer Preview: You can also filter for `member.type` using the `!=`
+       operator. To filter by both role and type, use the `AND` operator. To filter by either role or
+       type, use the `OR` operator. Either `member.type = "HUMAN"` or `member.type != "BOT"` is required
+       when `use_admin_access` is set to true. Other member type filters will be rejected. For example,
+       the following queries are valid: ``` role = "ROLE_MANAGER" OR role = "ROLE_MEMBER" member.type =
+       "HUMAN" AND role = "ROLE_MANAGER" member.type != "BOT" ``` The following queries are invalid: ```
+       member.type = "HUMAN" AND member.type = "BOT" role = "ROLE_MANAGER" AND role = "ROLE_MEMBER" ```
+       Invalid queries are rejected by the server with an `INVALID_ARGUMENT` error.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -2589,13 +2597,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * /developers.google.com/workspace/chat/api/reference/rest/v1/spaces.members#membershiprole
          * )) and type ([`member.type`](https://developers.google.com/workspace/chat/api/reference/r
          * est/v1/User#type)). To filter by role, set `role` to `ROLE_MEMBER` or `ROLE_MANAGER`. To
-         * filter by type, set `member.type` to `HUMAN` or `BOT`. To filter by both role and type,
-         * use the `AND` operator. To filter by either role or type, use the `OR` operator. For
-         * example, the following queries are valid: ``` role = "ROLE_MANAGER" OR role =
-         * "ROLE_MEMBER" member.type = "HUMAN" AND role = "ROLE_MANAGER" ``` The following queries
-         * are invalid: ``` member.type = "HUMAN" AND member.type = "BOT" role = "ROLE_MANAGER" AND
-         * role = "ROLE_MEMBER" ``` Invalid queries are rejected by the server with an
-         * `INVALID_ARGUMENT` error.
+         * filter by type, set `member.type` to `HUMAN` or `BOT`. Developer Preview: You can also
+         * filter for `member.type` using the `!=` operator. To filter by both role and type, use
+         * the `AND` operator. To filter by either role or type, use the `OR` operator. Either
+         * `member.type = "HUMAN"` or `member.type != "BOT"` is required when `use_admin_access` is
+         * set to true. Other member type filters will be rejected. For example, the following
+         * queries are valid: ``` role = "ROLE_MANAGER" OR role = "ROLE_MEMBER" member.type =
+         * "HUMAN" AND role = "ROLE_MANAGER" member.type != "BOT" ``` The following queries are
+         * invalid: ``` member.type = "HUMAN" AND member.type = "BOT" role = "ROLE_MANAGER" AND role
+         * = "ROLE_MEMBER" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT`
+         * error.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

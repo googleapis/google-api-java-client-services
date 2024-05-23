@@ -115,7 +115,10 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The machine type to use for instances that are created from these properties.
+   * The machine type to use for instances that are created from these properties. This field only
+   * accept machine types name. e.g. n2-standard-4 and does not accept machine type full or partial
+   * url. e.g. projects/my-l7ilb-project/zones/us-central1-a/machineTypes/n2-standard-4 will throw
+   * INTERNAL_ERROR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -415,7 +418,10 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * The machine type to use for instances that are created from these properties.
+   * The machine type to use for instances that are created from these properties. This field only
+   * accept machine types name. e.g. n2-standard-4 and does not accept machine type full or partial
+   * url. e.g. projects/my-l7ilb-project/zones/us-central1-a/machineTypes/n2-standard-4 will throw
+   * INTERNAL_ERROR.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -423,7 +429,10 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * The machine type to use for instances that are created from these properties.
+   * The machine type to use for instances that are created from these properties. This field only
+   * accept machine types name. e.g. n2-standard-4 and does not accept machine type full or partial
+   * url. e.g. projects/my-l7ilb-project/zones/us-central1-a/machineTypes/n2-standard-4 will throw
+   * INTERNAL_ERROR.
    * @param machineType machineType or {@code null} for none
    */
   public InstanceProperties setMachineType(java.lang.String machineType) {

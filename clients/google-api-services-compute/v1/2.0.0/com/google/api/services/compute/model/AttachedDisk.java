@@ -73,8 +73,9 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    * you must provide the key when you create a snapshot or an image from the disk or when you
    * attach the disk to a virtual machine instance. If you do not provide an encryption key, then
    * the disk will be encrypted using an automatically generated key and you do not need to provide
-   * a key to use the disk later. Instance templates do not store customer-supplied encryption keys,
-   * so you cannot use your own keys to encrypt disks in a managed instance group.
+   * a key to use the disk later. Note: Instance templates do not store customer-supplied encryption
+   * keys, so you cannot use your own keys to encrypt disks in a managed instance group. You cannot
+   * create VMs that have disks with customer-supplied keys using the bulk insert method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -281,8 +282,9 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    * you must provide the key when you create a snapshot or an image from the disk or when you
    * attach the disk to a virtual machine instance. If you do not provide an encryption key, then
    * the disk will be encrypted using an automatically generated key and you do not need to provide
-   * a key to use the disk later. Instance templates do not store customer-supplied encryption keys,
-   * so you cannot use your own keys to encrypt disks in a managed instance group.
+   * a key to use the disk later. Note: Instance templates do not store customer-supplied encryption
+   * keys, so you cannot use your own keys to encrypt disks in a managed instance group. You cannot
+   * create VMs that have disks with customer-supplied keys using the bulk insert method.
    * @return value or {@code null} for none
    */
   public CustomerEncryptionKey getDiskEncryptionKey() {
@@ -298,8 +300,9 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    * you must provide the key when you create a snapshot or an image from the disk or when you
    * attach the disk to a virtual machine instance. If you do not provide an encryption key, then
    * the disk will be encrypted using an automatically generated key and you do not need to provide
-   * a key to use the disk later. Instance templates do not store customer-supplied encryption keys,
-   * so you cannot use your own keys to encrypt disks in a managed instance group.
+   * a key to use the disk later. Note: Instance templates do not store customer-supplied encryption
+   * keys, so you cannot use your own keys to encrypt disks in a managed instance group. You cannot
+   * create VMs that have disks with customer-supplied keys using the bulk insert method.
    * @param diskEncryptionKey diskEncryptionKey or {@code null} for none
    */
   public AttachedDisk setDiskEncryptionKey(CustomerEncryptionKey diskEncryptionKey) {

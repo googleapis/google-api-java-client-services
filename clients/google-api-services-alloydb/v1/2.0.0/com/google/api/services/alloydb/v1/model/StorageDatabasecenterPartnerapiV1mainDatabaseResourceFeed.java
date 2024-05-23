@@ -49,6 +49,12 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private StorageDatabasecenterPartnerapiV1mainObservabilityMetricData observabilityMetricData;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData recommendationSignalData;
 
   /**
@@ -109,12 +115,27 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
    * More feed data would be added in subsequent CLs
    * @return value or {@code null} for none
    */
+  public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData getObservabilityMetricData() {
+    return observabilityMetricData;
+  }
+
+  /**
+   * More feed data would be added in subsequent CLs
+   * @param observabilityMetricData observabilityMetricData or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setObservabilityMetricData(StorageDatabasecenterPartnerapiV1mainObservabilityMetricData observabilityMetricData) {
+    this.observabilityMetricData = observabilityMetricData;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData getRecommendationSignalData() {
     return recommendationSignalData;
   }
 
   /**
-   * More feed data would be added in subsequent CLs
    * @param recommendationSignalData recommendationSignalData or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setRecommendationSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData recommendationSignalData) {

@@ -1901,24 +1901,16 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * Required. IDs of the Photos. For HTTP GET requests, the URL query parameter should be
-       * `photoIds==&...`.
-       */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> photoIds;
 
-      /** Required. IDs of the Photos. For HTTP GET requests, the URL query parameter should be
-     `photoIds==&...`.
+      /**
+
        */
       public java.util.List<java.lang.String> getPhotoIds() {
         return photoIds;
       }
 
-      /**
-       * Required. IDs of the Photos. For HTTP GET requests, the URL query parameter should be
-       * `photoIds==&...`.
-       */
       public BatchGet setPhotoIds(java.util.List<java.lang.String> photoIds) {
         this.photoIds = photoIds;
         return this;

@@ -161,9 +161,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Name of the organization or project the assets belong to. Format: "organizations
-     *        /[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as
-     *        "projects/my-project-id"), or "projects/[project-number]" (such as "projects/12345").
+     * @param parent Required. Name of the organization or project the assets belong to. Format:
+     *        "organizations/[organization-number]" (such as "organizations/123"), "projects/[project-
+     *        id]" (such as "projects/my-project-id"), or "projects/[project-number]" (such as
+     *        "projects/12345").
      * @return the request
      */
     public List list(java.lang.String parent) throws java.io.IOException {
@@ -189,9 +190,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Name of the organization or project the assets belong to. Format: "organizations
-     *        /[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as
-     *        "projects/my-project-id"), or "projects/[project-number]" (such as "projects/12345").
+       * @param parent Required. Name of the organization or project the assets belong to. Format:
+     *        "organizations/[organization-number]" (such as "organizations/123"), "projects/[project-
+     *        id]" (such as "projects/my-project-id"), or "projects/[project-number]" (such as
+     *        "projects/12345").
        * @since 1.13
        */
       protected List(java.lang.String parent) {
@@ -270,25 +272,27 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Required. Name of the organization or project the assets belong to. Format: "organizations
-       * /[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as
-       * "projects/my-project-id"), or "projects/[project-number]" (such as "projects/12345").
+       * Required. Name of the organization or project the assets belong to. Format:
+       * "organizations/[organization-number]" (such as "organizations/123"), "projects/[project-
+       * id]" (such as "projects/my-project-id"), or "projects/[project-number]" (such as
+       * "projects/12345").
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Name of the organization or project the assets belong to. Format: "organizations
-     /[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as "projects
-     /my-project-id"), or "projects/[project-number]" (such as "projects/12345").
+      /** Required. Name of the organization or project the assets belong to. Format:
+     "organizations/[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such
+     as "projects/my-project-id"), or "projects/[project-number]" (such as "projects/12345").
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Required. Name of the organization or project the assets belong to. Format: "organizations
-       * /[organization-number]" (such as "organizations/123"), "projects/[project-id]" (such as
-       * "projects/my-project-id"), or "projects/[project-number]" (such as "projects/12345").
+       * Required. Name of the organization or project the assets belong to. Format:
+       * "organizations/[organization-number]" (such as "organizations/123"), "projects/[project-
+       * id]" (such as "projects/my-project-id"), or "projects/[project-number]" (such as
+       * "projects/12345").
        */
       public List setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {

@@ -35,10 +35,11 @@ package com.google.api.services.cloudasset.v1p1beta1.model;
 public final class GoogleCloudAssetV1p7beta1RelatedAsset extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ancestors of an asset in Google Cloud [resource hierarchy](https://cloud.google.com
-   * /resource-manager/docs/cloud-platform-resource-hierarchy), represented as a list of relative
-   * resource names. An ancestry path starts with the closest ancestor in the hierarchy and ends at
-   * root. Example: `["projects/123456789", "folders/5432", "organizations/1234"]`
+   * The ancestors of an asset in Google Cloud [resource
+   * hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
+   * represented as a list of relative resource names. An ancestry path starts with the closest
+   * ancestor in the hierarchy and ends at root. Example: `["projects/123456789", "folders/5432",
+   * "organizations/1234"]`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,10 +65,11 @@ public final class GoogleCloudAssetV1p7beta1RelatedAsset extends com.google.api.
   private java.lang.String assetType;
 
   /**
-   * The ancestors of an asset in Google Cloud [resource hierarchy](https://cloud.google.com
-   * /resource-manager/docs/cloud-platform-resource-hierarchy), represented as a list of relative
-   * resource names. An ancestry path starts with the closest ancestor in the hierarchy and ends at
-   * root. Example: `["projects/123456789", "folders/5432", "organizations/1234"]`
+   * The ancestors of an asset in Google Cloud [resource
+   * hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
+   * represented as a list of relative resource names. An ancestry path starts with the closest
+   * ancestor in the hierarchy and ends at root. Example: `["projects/123456789", "folders/5432",
+   * "organizations/1234"]`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAncestors() {
@@ -75,10 +77,11 @@ public final class GoogleCloudAssetV1p7beta1RelatedAsset extends com.google.api.
   }
 
   /**
-   * The ancestors of an asset in Google Cloud [resource hierarchy](https://cloud.google.com
-   * /resource-manager/docs/cloud-platform-resource-hierarchy), represented as a list of relative
-   * resource names. An ancestry path starts with the closest ancestor in the hierarchy and ends at
-   * root. Example: `["projects/123456789", "folders/5432", "organizations/1234"]`
+   * The ancestors of an asset in Google Cloud [resource
+   * hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
+   * represented as a list of relative resource names. An ancestry path starts with the closest
+   * ancestor in the hierarchy and ends at root. Example: `["projects/123456789", "folders/5432",
+   * "organizations/1234"]`
    * @param ancestors ancestors or {@code null} for none
    */
   public GoogleCloudAssetV1p7beta1RelatedAsset setAncestors(java.util.List<java.lang.String> ancestors) {

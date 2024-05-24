@@ -58,10 +58,10 @@ public final class GoogleCloudMlV1AutoScaling extends com.google.api.client.json
    * machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 0, in
    * which case, when traffic to a model stops (and after a cool-down period), nodes will be shut
    * down and no charges will be incurred until traffic to the model resumes. If `min_nodes` is not
-   * specified and AutoScaling is used with a [Compute Engine (N1) machine type](/ml-engine/docs
-   * /machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes` must be at least 1
-   * for use with a Compute Engine machine type. You can set `min_nodes` when creating the model
-   * version, and you can also update `min_nodes` for an existing version: update_body.json: {
+   * specified and AutoScaling is used with a [Compute Engine (N1) machine type](/ml-
+   * engine/docs/machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes` must be at
+   * least 1 for use with a Compute Engine machine type. You can set `min_nodes` when creating the
+   * model version, and you can also update `min_nodes` for an existing version: update_body.json: {
    * 'autoScaling': { 'minNodes': 5 } } HTTP request: PATCH
    * https://ml.googleapis.com/v1/{name=projects/models/versions}?update_mask=autoScaling.minNodes
    * -d @./update_body.json
@@ -119,10 +119,10 @@ public final class GoogleCloudMlV1AutoScaling extends com.google.api.client.json
    * machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 0, in
    * which case, when traffic to a model stops (and after a cool-down period), nodes will be shut
    * down and no charges will be incurred until traffic to the model resumes. If `min_nodes` is not
-   * specified and AutoScaling is used with a [Compute Engine (N1) machine type](/ml-engine/docs
-   * /machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes` must be at least 1
-   * for use with a Compute Engine machine type. You can set `min_nodes` when creating the model
-   * version, and you can also update `min_nodes` for an existing version: update_body.json: {
+   * specified and AutoScaling is used with a [Compute Engine (N1) machine type](/ml-
+   * engine/docs/machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes` must be at
+   * least 1 for use with a Compute Engine machine type. You can set `min_nodes` when creating the
+   * model version, and you can also update `min_nodes` for an existing version: update_body.json: {
    * 'autoScaling': { 'minNodes': 5 } } HTTP request: PATCH
    * https://ml.googleapis.com/v1/{name=projects/models/versions}?update_mask=autoScaling.minNodes
    * -d @./update_body.json
@@ -145,10 +145,10 @@ public final class GoogleCloudMlV1AutoScaling extends com.google.api.client.json
    * machine type](/ml-engine/docs/machine-types-online-prediction), `min_nodes` defaults to 0, in
    * which case, when traffic to a model stops (and after a cool-down period), nodes will be shut
    * down and no charges will be incurred until traffic to the model resumes. If `min_nodes` is not
-   * specified and AutoScaling is used with a [Compute Engine (N1) machine type](/ml-engine/docs
-   * /machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes` must be at least 1
-   * for use with a Compute Engine machine type. You can set `min_nodes` when creating the model
-   * version, and you can also update `min_nodes` for an existing version: update_body.json: {
+   * specified and AutoScaling is used with a [Compute Engine (N1) machine type](/ml-
+   * engine/docs/machine-types-online-prediction), `min_nodes` defaults to 1. `min_nodes` must be at
+   * least 1 for use with a Compute Engine machine type. You can set `min_nodes` when creating the
+   * model version, and you can also update `min_nodes` for an existing version: update_body.json: {
    * 'autoScaling': { 'minNodes': 5 } } HTTP request: PATCH
    * https://ml.googleapis.com/v1/{name=projects/models/versions}?update_mask=autoScaling.minNodes
    * -d @./update_body.json

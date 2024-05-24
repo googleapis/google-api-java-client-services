@@ -536,8 +536,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Creates a new Membership. **This is currently only supported for GKE clusters on Google Cloud**.
-         * To register other clusters, follow the instructions at https://cloud.google.com/anthos
-         * /multicluster-management/connect/registering-a-cluster.
+         * To register other clusters, follow the instructions at
+         * https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
          *
          * Create a request for the method "memberships.create".
          *
@@ -564,8 +564,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Creates a new Membership. **This is currently only supported for GKE clusters on Google
-           * Cloud**. To register other clusters, follow the instructions at https://cloud.google.com/anthos
-           * /multicluster-management/connect/registering-a-cluster.
+           * Cloud**. To register other clusters, follow the instructions at
+           * https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
            *
            * Create a request for the method "memberships.create".
            *
@@ -753,8 +753,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
         }
         /**
          * Removes a Membership. **This is currently only supported for GKE clusters on Google Cloud**. To
-         * unregister other clusters, follow the instructions at https://cloud.google.com/anthos
-         * /multicluster-management/connect/unregistering-a-cluster.
+         * unregister other clusters, follow the instructions at
+         * https://cloud.google.com/anthos/multicluster-management/connect/unregistering-a-cluster.
          *
          * Create a request for the method "memberships.delete".
          *
@@ -779,8 +779,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Removes a Membership. **This is currently only supported for GKE clusters on Google Cloud**. To
-           * unregister other clusters, follow the instructions at https://cloud.google.com/anthos
-           * /multicluster-management/connect/unregistering-a-cluster.
+           * unregister other clusters, follow the instructions at
+           * https://cloud.google.com/anthos/multicluster-management/connect/unregistering-a-cluster.
            *
            * Create a request for the method "memberships.delete".
            *

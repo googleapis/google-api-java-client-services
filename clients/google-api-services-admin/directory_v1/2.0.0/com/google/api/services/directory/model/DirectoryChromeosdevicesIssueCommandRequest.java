@@ -55,8 +55,8 @@ public final class DirectoryChromeosdevicesIssueCommandRequest extends com.googl
    * (Connection Manager) Logs (14), Policies (15), ChromeOS System State and Logs (16), ChromeOS
    * System Logs (17), ChromeOS Chrome User Logs (18), ChromeOS Bluetooth (19), ChromeOS Connected
    * Input Devices (20), ChromeOS Traffic Counters (21), ChromeOS Virtual Keyboard (22), ChromeOS
-   * Network Health (23). See more details in [help article](https://support.google.com/chrome/a?p
-   * =remote-log).
+   * Network Health (23). See more details in [help
+   * article](https://support.google.com/chrome/a?p=remote-log).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +98,8 @@ public final class DirectoryChromeosdevicesIssueCommandRequest extends com.googl
    * (Connection Manager) Logs (14), Policies (15), ChromeOS System State and Logs (16), ChromeOS
    * System Logs (17), ChromeOS Chrome User Logs (18), ChromeOS Bluetooth (19), ChromeOS Connected
    * Input Devices (20), ChromeOS Traffic Counters (21), ChromeOS Virtual Keyboard (22), ChromeOS
-   * Network Health (23). See more details in [help article](https://support.google.com/chrome/a?p
-   * =remote-log).
+   * Network Health (23). See more details in [help
+   * article](https://support.google.com/chrome/a?p=remote-log).
    * @return value or {@code null} for none
    */
   public java.lang.String getPayload() {
@@ -125,8 +125,8 @@ public final class DirectoryChromeosdevicesIssueCommandRequest extends com.googl
    * (Connection Manager) Logs (14), Policies (15), ChromeOS System State and Logs (16), ChromeOS
    * System Logs (17), ChromeOS Chrome User Logs (18), ChromeOS Bluetooth (19), ChromeOS Connected
    * Input Devices (20), ChromeOS Traffic Counters (21), ChromeOS Virtual Keyboard (22), ChromeOS
-   * Network Health (23). See more details in [help article](https://support.google.com/chrome/a?p
-   * =remote-log).
+   * Network Health (23). See more details in [help
+   * article](https://support.google.com/chrome/a?p=remote-log).
    * @param payload payload or {@code null} for none
    */
   public DirectoryChromeosdevicesIssueCommandRequest setPayload(java.lang.String payload) {

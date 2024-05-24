@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2DiscoveryCloudSqlGenerationCadence extends 
   /**
    * Data changes (non-schema changes) in Cloud SQL tables can't trigger reprofiling. If you set
    * this field, profiles are refreshed at this frequency regardless of whether the underlying
-   * tables have changes. Defaults to never.
+   * tables have changed. Defaults to never.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2DiscoveryCloudSqlGenerationCadence extends 
   /**
    * Data changes (non-schema changes) in Cloud SQL tables can't trigger reprofiling. If you set
    * this field, profiles are refreshed at this frequency regardless of whether the underlying
-   * tables have changes. Defaults to never.
+   * tables have changed. Defaults to never.
    * @return value or {@code null} for none
    */
   public java.lang.String getRefreshFrequency() {
@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2DiscoveryCloudSqlGenerationCadence extends 
   /**
    * Data changes (non-schema changes) in Cloud SQL tables can't trigger reprofiling. If you set
    * this field, profiles are refreshed at this frequency regardless of whether the underlying
-   * tables have changes. Defaults to never.
+   * tables have changed. Defaults to never.
    * @param refreshFrequency refreshFrequency or {@code null} for none
    */
   public GooglePrivacyDlpV2DiscoveryCloudSqlGenerationCadence setRefreshFrequency(java.lang.String refreshFrequency) {

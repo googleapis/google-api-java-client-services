@@ -109,6 +109,13 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   private java.lang.String location;
 
   /**
+   * Machine configuration for this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageDatabasecenterPartnerapiV1mainMachineConfiguration machineConfiguration;
+
+  /**
    * Identifier for this resource's immediate parent/primary resource if the current resource is a
    * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
    * immediate parent exists when first time resource is getting ingested, otherwise optional.
@@ -352,6 +359,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Machine configuration for this resource.
+   * @return value or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainMachineConfiguration getMachineConfiguration() {
+    return machineConfiguration;
+  }
+
+  /**
+   * Machine configuration for this resource.
+   * @param machineConfiguration machineConfiguration or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setMachineConfiguration(StorageDatabasecenterPartnerapiV1mainMachineConfiguration machineConfiguration) {
+    this.machineConfiguration = machineConfiguration;
     return this;
   }
 

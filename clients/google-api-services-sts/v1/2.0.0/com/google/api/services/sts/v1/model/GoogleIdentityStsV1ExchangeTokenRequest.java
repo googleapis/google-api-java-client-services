@@ -59,8 +59,8 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   private java.lang.String options;
 
   /**
-   * Required. An identifier for the type of requested security token. Can be `urn:ietf:params:oauth
-   * :token-type:access_token` or `urn:ietf:params:oauth:token-
+   * Required. An identifier for the type of requested security token. Can be
+   * `urn:ietf:params:oauth:token-type:access_token` or `urn:ietf:params:oauth:token-
    * type:access_boundary_intermediate_token`.
    * The value may be {@code null}.
    */
@@ -85,18 +85,19 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * identifier of the signing key securing the JWT. - `alg`: The cryptographic algorithm securing
    * the JWT. Must be `RS256` or `ES256`. The following payload fields are required. For more
    * information, see [RFC 7523, Section 3](https://tools.ietf.org/html/rfc7523#section-3): - `iss`:
-   * The issuer of the token. The issuer must provide a discovery document at the URL `/.well-known
-   * /openid-configuration`, where `` is the value of this field. The document must be formatted
-   * according to section 4.2 of the [OIDC 1.0 Discovery specification](https://openid.net/specs
-   * /openid-connect-discovery-1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in
-   * seconds, since the Unix epoch. Must be in the past. - `exp`: The expiration time, in seconds,
-   * since the Unix epoch. Must be less than 48 hours after `iat`. Shorter expiration times are more
-   * secure. If possible, we recommend setting an expiration time less than 6 hours. - `sub`: The
-   * identity asserted in the JWT. - `aud`: For workload identity pools, this must be a value
-   * specified in the allowed audiences for the workload identity pool provider, or one of the
-   * audiences allowed by default if no audiences were specified. See https://cloud.google.com/iam/d
-   * ocs/reference/rest/v1/projects.locations.workloadIdentityPools.providers#oidc. For workforce
-   * pools, this must match the client ID specified in the provider configuration. See
+   * The issuer of the token. The issuer must provide a discovery document at the URL `/.well-
+   * known/openid-configuration`, where `` is the value of this field. The document must be
+   * formatted according to section 4.2 of the [OIDC 1.0 Discovery
+   * specification](https://openid.net/specs/openid-connect-
+   * discovery-1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in seconds, since
+   * the Unix epoch. Must be in the past. - `exp`: The expiration time, in seconds, since the Unix
+   * epoch. Must be less than 48 hours after `iat`. Shorter expiration times are more secure. If
+   * possible, we recommend setting an expiration time less than 6 hours. - `sub`: The identity
+   * asserted in the JWT. - `aud`: For workload identity pools, this must be a value specified in
+   * the allowed audiences for the workload identity pool provider, or one of the audiences allowed
+   * by default if no audiences were specified. See https://cloud.google.com/iam/docs/reference/rest
+   * /v1/projects.locations.workloadIdentityPools.providers#oidc. For workforce pools, this must
+   * match the client ID specified in the provider configuration. See
    * https://cloud.google.com/iam/docs/reference/rest/v1/locations.workforcePools.providers#oidc.
    * Example header: ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss":
    * "https://accounts.google.com", "iat": 1517963104, "exp": 1517966704, "aud":
@@ -110,28 +111,29 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * the request information. Use Signature Version 4. Format the request as URL-encoded JSON, and
    * set the `subject_token_type` parameter to `urn:ietf:params:aws:token-type:aws4_request`. The
    * following parameters are required: - `url`: The URL of the AWS STS endpoint for
-   * `GetCallerIdentity()`, such as `https://sts.amazonaws.com?Action=GetCallerIdentity=2011-06-15`.
-   * Regional endpoints are also supported. - `method`: The HTTP request method: `POST`. -
-   * `headers`: The HTTP request headers, which must include: - `Authorization`: The request
-   * signature. - `x-amz-date`: The time you will send the request, formatted as an [ISO8601
+   * `GetCallerIdentity()`, such as
+   * `https://sts.amazonaws.com?Action=GetCallerIdentity&Version=2011-06-15`. Regional endpoints are
+   * also supported. - `method`: The HTTP request method: `POST`. - `headers`: The HTTP request
+   * headers, which must include: - `Authorization`: The request signature. - `x-amz-date`: The time
+   * you will send the request, formatted as an [ISO8601
    * Basic](https://docs.aws.amazon.com/general/latest/gr/sigv4_elements.html#sigv4_elements_date)
    * string. This value is typically set to the current time and is used to help prevent replay
-   * attacks. - `host`: The hostname of the `url` field; for example, `sts.amazonaws.com`. - `x
-   * -goog-cloud-target-resource`: The full, canonical resource name of the workload identity pool
+   * attacks. - `host`: The hostname of the `url` field; for example, `sts.amazonaws.com`. -
+   * `x-goog-cloud-target-resource`: The full, canonical resource name of the workload identity pool
    * provider, with or without an `https:` prefix. To help ensure data integrity, we recommend
    * including this header in the `SignedHeaders` field of the signed request. For example:
    * //iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/
    * https://iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/ If you
-   * are using temporary security credentials provided by AWS, you must also include the header `x
-   * -amz-security-token`, with the value set to the session token. The following example shows a
+   * are using temporary security credentials provided by AWS, you must also include the header
+   * `x-amz-security-token`, with the value set to the session token. The following example shows a
    * `GetCallerIdentity` token: ``` { "headers": [ {"key": "x-amz-date", "value":
    * "20200815T015049Z"}, {"key": "Authorization", "value": "AWS4-HMAC-
    * SHA256+Credential=$credential,+SignedHeaders=host;x-amz-date;x-goog-cloud-target-
    * resource,+Signature=$signature"}, {"key": "x-goog-cloud-target-resource", "value":
    * "//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/"}, {"key":
    * "host", "value": "sts.amazonaws.com"} . ], "method": "POST", "url":
-   * "https://sts.amazonaws.com?Action=GetCallerIdentity=2011-06-15" } ``` If the token is a SAML
-   * 2.0 assertion, it must use the format defined in [the SAML 2.0 spec](https://docs.oasis-
+   * "https://sts.amazonaws.com?Action=GetCallerIdentity&Version=2011-06-15" } ``` If the token is a
+   * SAML 2.0 assertion, it must use the format defined in [the SAML 2.0 spec](https://docs.oasis-
    * open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.pdf), and the
    * `subject_token_type` must be `urn:ietf:params:oauth:token-type:saml2`. See [Verification of
    * external credentials](https://cloud.google.com/iam/docs/using-workload-identity-
@@ -148,9 +150,9 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * Required. An identifier that indicates the type of the security token in the `subject_token`
-   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:oauth
-   * :token-type:id_token`, `urn:ietf:params:aws:token-type:aws4_request`, `urn:ietf:params:oauth
-   * :token-type:access_token`, and `urn:ietf:params:oauth:token-type:saml2`.
+   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`,
+   * `urn:ietf:params:oauth:token-type:id_token`, `urn:ietf:params:aws:token-type:aws4_request`,
+   * `urn:ietf:params:oauth:token-type:access_token`, and `urn:ietf:params:oauth:token-type:saml2`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,8 +224,8 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   }
 
   /**
-   * Required. An identifier for the type of requested security token. Can be `urn:ietf:params:oauth
-   * :token-type:access_token` or `urn:ietf:params:oauth:token-
+   * Required. An identifier for the type of requested security token. Can be
+   * `urn:ietf:params:oauth:token-type:access_token` or `urn:ietf:params:oauth:token-
    * type:access_boundary_intermediate_token`.
    * @return value or {@code null} for none
    */
@@ -232,8 +234,8 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   }
 
   /**
-   * Required. An identifier for the type of requested security token. Can be `urn:ietf:params:oauth
-   * :token-type:access_token` or `urn:ietf:params:oauth:token-
+   * Required. An identifier for the type of requested security token. Can be
+   * `urn:ietf:params:oauth:token-type:access_token` or `urn:ietf:params:oauth:token-
    * type:access_boundary_intermediate_token`.
    * @param requestedTokenType requestedTokenType or {@code null} for none
    */
@@ -272,18 +274,19 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * identifier of the signing key securing the JWT. - `alg`: The cryptographic algorithm securing
    * the JWT. Must be `RS256` or `ES256`. The following payload fields are required. For more
    * information, see [RFC 7523, Section 3](https://tools.ietf.org/html/rfc7523#section-3): - `iss`:
-   * The issuer of the token. The issuer must provide a discovery document at the URL `/.well-known
-   * /openid-configuration`, where `` is the value of this field. The document must be formatted
-   * according to section 4.2 of the [OIDC 1.0 Discovery specification](https://openid.net/specs
-   * /openid-connect-discovery-1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in
-   * seconds, since the Unix epoch. Must be in the past. - `exp`: The expiration time, in seconds,
-   * since the Unix epoch. Must be less than 48 hours after `iat`. Shorter expiration times are more
-   * secure. If possible, we recommend setting an expiration time less than 6 hours. - `sub`: The
-   * identity asserted in the JWT. - `aud`: For workload identity pools, this must be a value
-   * specified in the allowed audiences for the workload identity pool provider, or one of the
-   * audiences allowed by default if no audiences were specified. See https://cloud.google.com/iam/d
-   * ocs/reference/rest/v1/projects.locations.workloadIdentityPools.providers#oidc. For workforce
-   * pools, this must match the client ID specified in the provider configuration. See
+   * The issuer of the token. The issuer must provide a discovery document at the URL `/.well-
+   * known/openid-configuration`, where `` is the value of this field. The document must be
+   * formatted according to section 4.2 of the [OIDC 1.0 Discovery
+   * specification](https://openid.net/specs/openid-connect-
+   * discovery-1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in seconds, since
+   * the Unix epoch. Must be in the past. - `exp`: The expiration time, in seconds, since the Unix
+   * epoch. Must be less than 48 hours after `iat`. Shorter expiration times are more secure. If
+   * possible, we recommend setting an expiration time less than 6 hours. - `sub`: The identity
+   * asserted in the JWT. - `aud`: For workload identity pools, this must be a value specified in
+   * the allowed audiences for the workload identity pool provider, or one of the audiences allowed
+   * by default if no audiences were specified. See https://cloud.google.com/iam/docs/reference/rest
+   * /v1/projects.locations.workloadIdentityPools.providers#oidc. For workforce pools, this must
+   * match the client ID specified in the provider configuration. See
    * https://cloud.google.com/iam/docs/reference/rest/v1/locations.workforcePools.providers#oidc.
    * Example header: ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss":
    * "https://accounts.google.com", "iat": 1517963104, "exp": 1517966704, "aud":
@@ -297,28 +300,29 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * the request information. Use Signature Version 4. Format the request as URL-encoded JSON, and
    * set the `subject_token_type` parameter to `urn:ietf:params:aws:token-type:aws4_request`. The
    * following parameters are required: - `url`: The URL of the AWS STS endpoint for
-   * `GetCallerIdentity()`, such as `https://sts.amazonaws.com?Action=GetCallerIdentity=2011-06-15`.
-   * Regional endpoints are also supported. - `method`: The HTTP request method: `POST`. -
-   * `headers`: The HTTP request headers, which must include: - `Authorization`: The request
-   * signature. - `x-amz-date`: The time you will send the request, formatted as an [ISO8601
+   * `GetCallerIdentity()`, such as
+   * `https://sts.amazonaws.com?Action=GetCallerIdentity&Version=2011-06-15`. Regional endpoints are
+   * also supported. - `method`: The HTTP request method: `POST`. - `headers`: The HTTP request
+   * headers, which must include: - `Authorization`: The request signature. - `x-amz-date`: The time
+   * you will send the request, formatted as an [ISO8601
    * Basic](https://docs.aws.amazon.com/general/latest/gr/sigv4_elements.html#sigv4_elements_date)
    * string. This value is typically set to the current time and is used to help prevent replay
-   * attacks. - `host`: The hostname of the `url` field; for example, `sts.amazonaws.com`. - `x
-   * -goog-cloud-target-resource`: The full, canonical resource name of the workload identity pool
+   * attacks. - `host`: The hostname of the `url` field; for example, `sts.amazonaws.com`. -
+   * `x-goog-cloud-target-resource`: The full, canonical resource name of the workload identity pool
    * provider, with or without an `https:` prefix. To help ensure data integrity, we recommend
    * including this header in the `SignedHeaders` field of the signed request. For example:
    * //iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/
    * https://iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/ If you
-   * are using temporary security credentials provided by AWS, you must also include the header `x
-   * -amz-security-token`, with the value set to the session token. The following example shows a
+   * are using temporary security credentials provided by AWS, you must also include the header
+   * `x-amz-security-token`, with the value set to the session token. The following example shows a
    * `GetCallerIdentity` token: ``` { "headers": [ {"key": "x-amz-date", "value":
    * "20200815T015049Z"}, {"key": "Authorization", "value": "AWS4-HMAC-
    * SHA256+Credential=$credential,+SignedHeaders=host;x-amz-date;x-goog-cloud-target-
    * resource,+Signature=$signature"}, {"key": "x-goog-cloud-target-resource", "value":
    * "//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/"}, {"key":
    * "host", "value": "sts.amazonaws.com"} . ], "method": "POST", "url":
-   * "https://sts.amazonaws.com?Action=GetCallerIdentity=2011-06-15" } ``` If the token is a SAML
-   * 2.0 assertion, it must use the format defined in [the SAML 2.0 spec](https://docs.oasis-
+   * "https://sts.amazonaws.com?Action=GetCallerIdentity&Version=2011-06-15" } ``` If the token is a
+   * SAML 2.0 assertion, it must use the format defined in [the SAML 2.0 spec](https://docs.oasis-
    * open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.pdf), and the
    * `subject_token_type` must be `urn:ietf:params:oauth:token-type:saml2`. See [Verification of
    * external credentials](https://cloud.google.com/iam/docs/using-workload-identity-
@@ -343,18 +347,19 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * identifier of the signing key securing the JWT. - `alg`: The cryptographic algorithm securing
    * the JWT. Must be `RS256` or `ES256`. The following payload fields are required. For more
    * information, see [RFC 7523, Section 3](https://tools.ietf.org/html/rfc7523#section-3): - `iss`:
-   * The issuer of the token. The issuer must provide a discovery document at the URL `/.well-known
-   * /openid-configuration`, where `` is the value of this field. The document must be formatted
-   * according to section 4.2 of the [OIDC 1.0 Discovery specification](https://openid.net/specs
-   * /openid-connect-discovery-1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in
-   * seconds, since the Unix epoch. Must be in the past. - `exp`: The expiration time, in seconds,
-   * since the Unix epoch. Must be less than 48 hours after `iat`. Shorter expiration times are more
-   * secure. If possible, we recommend setting an expiration time less than 6 hours. - `sub`: The
-   * identity asserted in the JWT. - `aud`: For workload identity pools, this must be a value
-   * specified in the allowed audiences for the workload identity pool provider, or one of the
-   * audiences allowed by default if no audiences were specified. See https://cloud.google.com/iam/d
-   * ocs/reference/rest/v1/projects.locations.workloadIdentityPools.providers#oidc. For workforce
-   * pools, this must match the client ID specified in the provider configuration. See
+   * The issuer of the token. The issuer must provide a discovery document at the URL `/.well-
+   * known/openid-configuration`, where `` is the value of this field. The document must be
+   * formatted according to section 4.2 of the [OIDC 1.0 Discovery
+   * specification](https://openid.net/specs/openid-connect-
+   * discovery-1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in seconds, since
+   * the Unix epoch. Must be in the past. - `exp`: The expiration time, in seconds, since the Unix
+   * epoch. Must be less than 48 hours after `iat`. Shorter expiration times are more secure. If
+   * possible, we recommend setting an expiration time less than 6 hours. - `sub`: The identity
+   * asserted in the JWT. - `aud`: For workload identity pools, this must be a value specified in
+   * the allowed audiences for the workload identity pool provider, or one of the audiences allowed
+   * by default if no audiences were specified. See https://cloud.google.com/iam/docs/reference/rest
+   * /v1/projects.locations.workloadIdentityPools.providers#oidc. For workforce pools, this must
+   * match the client ID specified in the provider configuration. See
    * https://cloud.google.com/iam/docs/reference/rest/v1/locations.workforcePools.providers#oidc.
    * Example header: ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss":
    * "https://accounts.google.com", "iat": 1517963104, "exp": 1517966704, "aud":
@@ -368,28 +373,29 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    * the request information. Use Signature Version 4. Format the request as URL-encoded JSON, and
    * set the `subject_token_type` parameter to `urn:ietf:params:aws:token-type:aws4_request`. The
    * following parameters are required: - `url`: The URL of the AWS STS endpoint for
-   * `GetCallerIdentity()`, such as `https://sts.amazonaws.com?Action=GetCallerIdentity=2011-06-15`.
-   * Regional endpoints are also supported. - `method`: The HTTP request method: `POST`. -
-   * `headers`: The HTTP request headers, which must include: - `Authorization`: The request
-   * signature. - `x-amz-date`: The time you will send the request, formatted as an [ISO8601
+   * `GetCallerIdentity()`, such as
+   * `https://sts.amazonaws.com?Action=GetCallerIdentity&Version=2011-06-15`. Regional endpoints are
+   * also supported. - `method`: The HTTP request method: `POST`. - `headers`: The HTTP request
+   * headers, which must include: - `Authorization`: The request signature. - `x-amz-date`: The time
+   * you will send the request, formatted as an [ISO8601
    * Basic](https://docs.aws.amazon.com/general/latest/gr/sigv4_elements.html#sigv4_elements_date)
    * string. This value is typically set to the current time and is used to help prevent replay
-   * attacks. - `host`: The hostname of the `url` field; for example, `sts.amazonaws.com`. - `x
-   * -goog-cloud-target-resource`: The full, canonical resource name of the workload identity pool
+   * attacks. - `host`: The hostname of the `url` field; for example, `sts.amazonaws.com`. -
+   * `x-goog-cloud-target-resource`: The full, canonical resource name of the workload identity pool
    * provider, with or without an `https:` prefix. To help ensure data integrity, we recommend
    * including this header in the `SignedHeaders` field of the signed request. For example:
    * //iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/
    * https://iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/ If you
-   * are using temporary security credentials provided by AWS, you must also include the header `x
-   * -amz-security-token`, with the value set to the session token. The following example shows a
+   * are using temporary security credentials provided by AWS, you must also include the header
+   * `x-amz-security-token`, with the value set to the session token. The following example shows a
    * `GetCallerIdentity` token: ``` { "headers": [ {"key": "x-amz-date", "value":
    * "20200815T015049Z"}, {"key": "Authorization", "value": "AWS4-HMAC-
    * SHA256+Credential=$credential,+SignedHeaders=host;x-amz-date;x-goog-cloud-target-
    * resource,+Signature=$signature"}, {"key": "x-goog-cloud-target-resource", "value":
    * "//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/"}, {"key":
    * "host", "value": "sts.amazonaws.com"} . ], "method": "POST", "url":
-   * "https://sts.amazonaws.com?Action=GetCallerIdentity=2011-06-15" } ``` If the token is a SAML
-   * 2.0 assertion, it must use the format defined in [the SAML 2.0 spec](https://docs.oasis-
+   * "https://sts.amazonaws.com?Action=GetCallerIdentity&Version=2011-06-15" } ``` If the token is a
+   * SAML 2.0 assertion, it must use the format defined in [the SAML 2.0 spec](https://docs.oasis-
    * open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.pdf), and the
    * `subject_token_type` must be `urn:ietf:params:oauth:token-type:saml2`. See [Verification of
    * external credentials](https://cloud.google.com/iam/docs/using-workload-identity-
@@ -408,9 +414,9 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * Required. An identifier that indicates the type of the security token in the `subject_token`
-   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:oauth
-   * :token-type:id_token`, `urn:ietf:params:aws:token-type:aws4_request`, `urn:ietf:params:oauth
-   * :token-type:access_token`, and `urn:ietf:params:oauth:token-type:saml2`.
+   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`,
+   * `urn:ietf:params:oauth:token-type:id_token`, `urn:ietf:params:aws:token-type:aws4_request`,
+   * `urn:ietf:params:oauth:token-type:access_token`, and `urn:ietf:params:oauth:token-type:saml2`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubjectTokenType() {
@@ -419,9 +425,9 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * Required. An identifier that indicates the type of the security token in the `subject_token`
-   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:oauth
-   * :token-type:id_token`, `urn:ietf:params:aws:token-type:aws4_request`, `urn:ietf:params:oauth
-   * :token-type:access_token`, and `urn:ietf:params:oauth:token-type:saml2`.
+   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`,
+   * `urn:ietf:params:oauth:token-type:id_token`, `urn:ietf:params:aws:token-type:aws4_request`,
+   * `urn:ietf:params:oauth:token-type:access_token`, and `urn:ietf:params:oauth:token-type:saml2`.
    * @param subjectTokenType subjectTokenType or {@code null} for none
    */
   public GoogleIdentityStsV1ExchangeTokenRequest setSubjectTokenType(java.lang.String subjectTokenType) {

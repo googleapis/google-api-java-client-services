@@ -17,8 +17,8 @@
 package com.google.api.services.discoveryengine.v1.model;
 
 /**
- * Extractive segment. [Guide](https://cloud.google.com/generative-ai-app-builder/docs/snippets
- * #extractive-segments)
+ * Extractive segment. [Guide](https://cloud.google.com/generative-ai-app-
+ * builder/docs/snippets#extractive-segments)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:

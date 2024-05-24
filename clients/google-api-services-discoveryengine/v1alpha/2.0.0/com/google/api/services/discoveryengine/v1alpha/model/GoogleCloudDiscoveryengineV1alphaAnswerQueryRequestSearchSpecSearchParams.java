@@ -82,8 +82,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
    * Specifies the search result mode. If unspecified, the search result mode is based on
    * DataStore.DocumentProcessingConfig.chunking_config: * If
    * DataStore.DocumentProcessingConfig.chunking_config is specified, it defaults to `CHUNKS`. *
-   * Otherwise, it defaults to `DOCUMENTS`. See [parse and chunk documents](https://cloud.google.com
-   * /generative-ai-app-builder/docs/parse-chunk-documents)
+   * Otherwise, it defaults to `DOCUMENTS`. See [parse and chunk
+   * documents](https://cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,8 +206,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
    * Specifies the search result mode. If unspecified, the search result mode is based on
    * DataStore.DocumentProcessingConfig.chunking_config: * If
    * DataStore.DocumentProcessingConfig.chunking_config is specified, it defaults to `CHUNKS`. *
-   * Otherwise, it defaults to `DOCUMENTS`. See [parse and chunk documents](https://cloud.google.com
-   * /generative-ai-app-builder/docs/parse-chunk-documents)
+   * Otherwise, it defaults to `DOCUMENTS`. See [parse and chunk
+   * documents](https://cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents)
    * @return value or {@code null} for none
    */
   public java.lang.String getSearchResultMode() {
@@ -218,8 +218,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
    * Specifies the search result mode. If unspecified, the search result mode is based on
    * DataStore.DocumentProcessingConfig.chunking_config: * If
    * DataStore.DocumentProcessingConfig.chunking_config is specified, it defaults to `CHUNKS`. *
-   * Otherwise, it defaults to `DOCUMENTS`. See [parse and chunk documents](https://cloud.google.com
-   * /generative-ai-app-builder/docs/parse-chunk-documents)
+   * Otherwise, it defaults to `DOCUMENTS`. See [parse and chunk
+   * documents](https://cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents)
    * @param searchResultMode searchResultMode or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchParams setSearchResultMode(java.lang.String searchResultMode) {

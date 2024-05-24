@@ -56,8 +56,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * only supports the following `container` subfields: `imageUri`, `commands[]`, `entrypoint`, and
    * `volumes[]`; any other `container` subfields are ignored. For more information about the
    * requirements and limitations for using Image streaming with Batch, see the [`image-streaming`
-   * sample on GitHub](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples
-   * /image-streaming).
+   * sample on GitHub](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-
+   * samples/image-streaming).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,8 +107,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Caution: If you specify the username using plain text, you risk the username being exposed to
    * any users who can view the job or its logs. To avoid this risk, specify a secret that contains
    * the username instead. Learn more about [Secret Manager](https://cloud.google.com/secret-
-   * manager/docs/) and [using Secret Manager with Batch](https://cloud.google.com/batch/docs
-   * /create-run-job-secret-manager).
+   * manager/docs/) and [using Secret Manager with
+   * Batch](https://cloud.google.com/batch/docs/create-run-job-secret-manager).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,8 +179,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * only supports the following `container` subfields: `imageUri`, `commands[]`, `entrypoint`, and
    * `volumes[]`; any other `container` subfields are ignored. For more information about the
    * requirements and limitations for using Image streaming with Batch, see the [`image-streaming`
-   * sample on GitHub](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples
-   * /image-streaming).
+   * sample on GitHub](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-
+   * samples/image-streaming).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableImageStreaming() {
@@ -196,8 +196,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * only supports the following `container` subfields: `imageUri`, `commands[]`, `entrypoint`, and
    * `volumes[]`; any other `container` subfields are ignored. For more information about the
    * requirements and limitations for using Image streaming with Batch, see the [`image-streaming`
-   * sample on GitHub](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-samples
-   * /image-streaming).
+   * sample on GitHub](https://github.com/GoogleCloudPlatform/batch-samples/tree/main/api-
+   * samples/image-streaming).
    * @param enableImageStreaming enableImageStreaming or {@code null} for none
    */
   public Container setEnableImageStreaming(java.lang.Boolean enableImageStreaming) {
@@ -297,8 +297,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Caution: If you specify the username using plain text, you risk the username being exposed to
    * any users who can view the job or its logs. To avoid this risk, specify a secret that contains
    * the username instead. Learn more about [Secret Manager](https://cloud.google.com/secret-
-   * manager/docs/) and [using Secret Manager with Batch](https://cloud.google.com/batch/docs
-   * /create-run-job-secret-manager).
+   * manager/docs/) and [using Secret Manager with
+   * Batch](https://cloud.google.com/batch/docs/create-run-job-secret-manager).
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -313,8 +313,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * Caution: If you specify the username using plain text, you risk the username being exposed to
    * any users who can view the job or its logs. To avoid this risk, specify a secret that contains
    * the username instead. Learn more about [Secret Manager](https://cloud.google.com/secret-
-   * manager/docs/) and [using Secret Manager with Batch](https://cloud.google.com/batch/docs
-   * /create-run-job-secret-manager).
+   * manager/docs/) and [using Secret Manager with
+   * Batch](https://cloud.google.com/batch/docs/create-run-job-secret-manager).
    * @param username username or {@code null} for none
    */
   public Container setUsername(java.lang.String username) {

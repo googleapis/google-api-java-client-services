@@ -179,6 +179,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private ObservabilityInstanceConfig observabilityConfig;
 
   /**
+   * Output only. All outbound public IP addresses configured for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> outboundPublicIpAddresses;
+
+  /**
    * Optional. The configuration for Private Service Connect (PSC) for the instance.
    * The value may be {@code null}.
    */
@@ -616,6 +623,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setObservabilityConfig(ObservabilityInstanceConfig observabilityConfig) {
     this.observabilityConfig = observabilityConfig;
+    return this;
+  }
+
+  /**
+   * Output only. All outbound public IP addresses configured for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOutboundPublicIpAddresses() {
+    return outboundPublicIpAddresses;
+  }
+
+  /**
+   * Output only. All outbound public IP addresses configured for the instance.
+   * @param outboundPublicIpAddresses outboundPublicIpAddresses or {@code null} for none
+   */
+  public Instance setOutboundPublicIpAddresses(java.util.List<java.lang.String> outboundPublicIpAddresses) {
+    this.outboundPublicIpAddresses = outboundPublicIpAddresses;
     return this;
   }
 

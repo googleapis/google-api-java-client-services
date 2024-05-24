@@ -40,8 +40,9 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Cloud Storage URI where the file content is located. This URI must be of the form:
-   * gs://bucket_name/object_name. For more details, see https://cloud.google.com/storage/docs
-   * /reference-uris. NOTE: Cloud Storage object versioning is not supported.
+   * gs://bucket_name/object_name. For more details, see
+   * https://cloud.google.com/storage/docs/reference-uris. NOTE: Cloud Storage object versioning is
+   * not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,8 +87,9 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Cloud Storage URI where the file content is located. This URI must be of the form:
-   * gs://bucket_name/object_name. For more details, see https://cloud.google.com/storage/docs
-   * /reference-uris. NOTE: Cloud Storage object versioning is not supported.
+   * gs://bucket_name/object_name. For more details, see
+   * https://cloud.google.com/storage/docs/reference-uris. NOTE: Cloud Storage object versioning is
+   * not supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsContentUri() {
@@ -96,8 +98,9 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Cloud Storage URI where the file content is located. This URI must be of the form:
-   * gs://bucket_name/object_name. For more details, see https://cloud.google.com/storage/docs
-   * /reference-uris. NOTE: Cloud Storage object versioning is not supported.
+   * gs://bucket_name/object_name. For more details, see
+   * https://cloud.google.com/storage/docs/reference-uris. NOTE: Cloud Storage object versioning is
+   * not supported.
    * @param gcsContentUri gcsContentUri or {@code null} for none
    */
   public Document setGcsContentUri(java.lang.String gcsContentUri) {

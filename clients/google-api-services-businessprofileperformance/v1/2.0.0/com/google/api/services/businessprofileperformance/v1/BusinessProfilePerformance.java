@@ -154,12 +154,6 @@ public class BusinessProfilePerformance extends com.google.api.client.googleapis
   public class Locations {
 
     /**
-     * Returns the values for each date from a given time range and optionally the sub entity type,
-     * where applicable, that are associated with the specific daily metrics. Example request: `GET http
-     * s://businessprofileperformance.googleapis.com/v1/locations/12345:fetchMultiDailyMetricsTimeSeries
-     * ?dailyMetrics=WEBSITE_CLICKS=CALL_CLICKS_range.start_date.year=2022_range.start_date.month=1_rang
-     * e.start_date.day=1_range.end_date.year=2022_range.end_date.month=3_range.end_date.day=31`
-     *
      * Create a request for the method "locations.fetchMultiDailyMetricsTimeSeries".
      *
      * This request holds the parameters needed by the businessprofileperformance server.  After setting
@@ -184,12 +178,6 @@ public class BusinessProfilePerformance extends com.google.api.client.googleapis
           java.util.regex.Pattern.compile("^locations/[^/]+$");
 
       /**
-       * Returns the values for each date from a given time range and optionally the sub entity type,
-       * where applicable, that are associated with the specific daily metrics. Example request: `GET ht
-       * tps://businessprofileperformance.googleapis.com/v1/locations/12345:fetchMultiDailyMetricsTimeSe
-       * ries?dailyMetrics=WEBSITE_CLICKS=CALL_CLICKS_range.start_date.year=2022_range.start_date.month=
-       * 1_range.start_date.day=1_range.end_date.year=2022_range.end_date.month=3_range.end_date.day=31`
-       *
        * Create a request for the method "locations.fetchMultiDailyMetricsTimeSeries".
        *
        * This request holds the parameters needed by the the businessprofileperformance server.  After
@@ -437,12 +425,6 @@ public class BusinessProfilePerformance extends com.google.api.client.googleapis
       }
     }
     /**
-     * Returns the values for each date from a given time range that are associated with the specific
-     * daily metric. Example request: `GET https://businessprofileperformance.googleapis.com/v1/location
-     * s/12345:getDailyMetricsTimeSeries?dailyMetric=WEBSITE_CLICKS_range.start_date.year=2022_range.sta
-     * rt_date.month=1_range.start_date.day=1_range.end_date.year=2022_range.end_date.month=3_range.end_
-     * date.day=31`
-     *
      * Create a request for the method "locations.getDailyMetricsTimeSeries".
      *
      * This request holds the parameters needed by the businessprofileperformance server.  After setting
@@ -467,12 +449,6 @@ public class BusinessProfilePerformance extends com.google.api.client.googleapis
           java.util.regex.Pattern.compile("^locations/[^/]+$");
 
       /**
-       * Returns the values for each date from a given time range that are associated with the specific
-       * daily metric. Example request: `GET https://businessprofileperformance.googleapis.com/v1/locati
-       * ons/12345:getDailyMetricsTimeSeries?dailyMetric=WEBSITE_CLICKS_range.start_date.year=2022_range
-       * .start_date.month=1_range.start_date.day=1_range.end_date.year=2022_range.end_date.month=3_rang
-       * e.end_date.day=31`
-       *
        * Create a request for the method "locations.getDailyMetricsTimeSeries".
        *
        * This request holds the parameters needed by the the businessprofileperformance server.  After
@@ -875,12 +851,6 @@ public class BusinessProfilePerformance extends com.google.api.client.googleapis
         public class Monthly {
 
           /**
-           * Returns the search keywords used to find a business in search or maps. Each search keyword is
-           * accompanied by impressions which are aggregated on a monthly basis. Example request: `GET https:/
-           * /businessprofileperformance.googleapis.com/v1/locations/12345/searchkeywords/impressions/monthly?
-           * monthly_range.start_month.year=2022_range.start_month.month=1_range.end_month.year=2022_range.end
-           * _month.month=3`
-           *
            * Create a request for the method "monthly.list".
            *
            * This request holds the parameters needed by the businessprofileperformance server.  After setting
@@ -904,12 +874,6 @@ public class BusinessProfilePerformance extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^locations/[^/]+$");
 
             /**
-             * Returns the search keywords used to find a business in search or maps. Each search keyword is
-             * accompanied by impressions which are aggregated on a monthly basis. Example request: `GET https
-             * ://businessprofileperformance.googleapis.com/v1/locations/12345/searchkeywords/impressions/mont
-             * hly?monthly_range.start_month.year=2022_range.start_month.month=1_range.end_month.year=2022_ran
-             * ge.end_month.month=3`
-             *
              * Create a request for the method "monthly.list".
              *
              * This request holds the parameters needed by the the businessprofileperformance server.  After

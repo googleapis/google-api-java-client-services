@@ -56,8 +56,6 @@ public final class MediaRequestInfo extends com.google.api.client.json.GenericJs
   private java.lang.String diffObjectVersion;
 
   /**
-   * The existence of the final_status field indicates that this is the last call to the agent for
-   * this request_id. http://google3/uploader/agent/scotty_agent.proto?l=737=347601929
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,8 +158,6 @@ public final class MediaRequestInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The existence of the final_status field indicates that this is the last call to the agent for
-   * this request_id. http://google3/uploader/agent/scotty_agent.proto?l=737=347601929
    * @return value or {@code null} for none
    */
   public java.lang.Integer getFinalStatus() {
@@ -169,8 +165,6 @@ public final class MediaRequestInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The existence of the final_status field indicates that this is the last call to the agent for
-   * this request_id. http://google3/uploader/agent/scotty_agent.proto?l=737=347601929
    * @param finalStatus finalStatus or {@code null} for none
    */
   public MediaRequestInfo setFinalStatus(java.lang.Integer finalStatus) {

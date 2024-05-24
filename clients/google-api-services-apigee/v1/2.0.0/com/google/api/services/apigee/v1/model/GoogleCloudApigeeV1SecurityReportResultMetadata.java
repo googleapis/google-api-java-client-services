@@ -38,10 +38,9 @@ public final class GoogleCloudApigeeV1SecurityReportResultMetadata extends com.g
   private java.lang.String expires;
 
   /**
-   * Self link of the query results. Example:
-   * `/organizations/myorg/environments/myenv/securityReports/9cfc0d85-0f30-46d6-ae6f-
-   * 318d0cb961bd/result` or following format if query is running at host level:
-   * `/organizations/myorg/hostSecurityReports/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`
+   * Self link of the query results. Example: `/organizations/myorg/environments/myenv/securityRepor
+   * ts/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result` or following format if query is running at host
+   * level: `/organizations/myorg/hostSecurityReports/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,10 +66,9 @@ public final class GoogleCloudApigeeV1SecurityReportResultMetadata extends com.g
   }
 
   /**
-   * Self link of the query results. Example:
-   * `/organizations/myorg/environments/myenv/securityReports/9cfc0d85-0f30-46d6-ae6f-
-   * 318d0cb961bd/result` or following format if query is running at host level:
-   * `/organizations/myorg/hostSecurityReports/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`
+   * Self link of the query results. Example: `/organizations/myorg/environments/myenv/securityRepor
+   * ts/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result` or following format if query is running at host
+   * level: `/organizations/myorg/hostSecurityReports/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`
    * @return value or {@code null} for none
    */
   public java.lang.String getSelf() {
@@ -78,10 +76,9 @@ public final class GoogleCloudApigeeV1SecurityReportResultMetadata extends com.g
   }
 
   /**
-   * Self link of the query results. Example:
-   * `/organizations/myorg/environments/myenv/securityReports/9cfc0d85-0f30-46d6-ae6f-
-   * 318d0cb961bd/result` or following format if query is running at host level:
-   * `/organizations/myorg/hostSecurityReports/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`
+   * Self link of the query results. Example: `/organizations/myorg/environments/myenv/securityRepor
+   * ts/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result` or following format if query is running at host
+   * level: `/organizations/myorg/hostSecurityReports/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd/result`
    * @param self self or {@code null} for none
    */
   public GoogleCloudApigeeV1SecurityReportResultMetadata setSelf(java.lang.String self) {

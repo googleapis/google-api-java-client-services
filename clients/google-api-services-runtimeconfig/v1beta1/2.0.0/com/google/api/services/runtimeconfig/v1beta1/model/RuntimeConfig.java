@@ -41,11 +41,11 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   /**
    * The resource name of a runtime config. The name must have the format:
    * projects/[PROJECT_ID]/configs/[CONFIG_NAME] The `[PROJECT_ID]` must be a valid project ID, and
-   * `[CONFIG_NAME]` is an arbitrary name that matches the `[0-9A-
-   * Za-z](?:[_.A-Za-z0-9-]{0,62}[_.A-Za-z0-9])?` regular expression. The length of `[CONFIG_NAME]`
-   * must be less than 64 characters. You pick the RuntimeConfig resource name, but the server will
-   * validate that the name adheres to this format. After you create the resource, you cannot change
-   * the resource's name.
+   * `[CONFIG_NAME]` is an arbitrary name that matches the
+   * `[0-9A-Za-z](?:[_.A-Za-z0-9-]{0,62}[_.A-Za-z0-9])?` regular expression. The length of
+   * `[CONFIG_NAME]` must be less than 64 characters. You pick the RuntimeConfig resource name, but
+   * the server will validate that the name adheres to this format. After you create the resource,
+   * you cannot change the resource's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,11 +71,11 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   /**
    * The resource name of a runtime config. The name must have the format:
    * projects/[PROJECT_ID]/configs/[CONFIG_NAME] The `[PROJECT_ID]` must be a valid project ID, and
-   * `[CONFIG_NAME]` is an arbitrary name that matches the `[0-9A-
-   * Za-z](?:[_.A-Za-z0-9-]{0,62}[_.A-Za-z0-9])?` regular expression. The length of `[CONFIG_NAME]`
-   * must be less than 64 characters. You pick the RuntimeConfig resource name, but the server will
-   * validate that the name adheres to this format. After you create the resource, you cannot change
-   * the resource's name.
+   * `[CONFIG_NAME]` is an arbitrary name that matches the
+   * `[0-9A-Za-z](?:[_.A-Za-z0-9-]{0,62}[_.A-Za-z0-9])?` regular expression. The length of
+   * `[CONFIG_NAME]` must be less than 64 characters. You pick the RuntimeConfig resource name, but
+   * the server will validate that the name adheres to this format. After you create the resource,
+   * you cannot change the resource's name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -85,11 +85,11 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   /**
    * The resource name of a runtime config. The name must have the format:
    * projects/[PROJECT_ID]/configs/[CONFIG_NAME] The `[PROJECT_ID]` must be a valid project ID, and
-   * `[CONFIG_NAME]` is an arbitrary name that matches the `[0-9A-
-   * Za-z](?:[_.A-Za-z0-9-]{0,62}[_.A-Za-z0-9])?` regular expression. The length of `[CONFIG_NAME]`
-   * must be less than 64 characters. You pick the RuntimeConfig resource name, but the server will
-   * validate that the name adheres to this format. After you create the resource, you cannot change
-   * the resource's name.
+   * `[CONFIG_NAME]` is an arbitrary name that matches the
+   * `[0-9A-Za-z](?:[_.A-Za-z0-9-]{0,62}[_.A-Za-z0-9])?` regular expression. The length of
+   * `[CONFIG_NAME]` must be less than 64 characters. You pick the RuntimeConfig resource name, but
+   * the server will validate that the name adheres to this format. After you create the resource,
+   * you cannot change the resource's name.
    * @param name name or {@code null} for none
    */
   public RuntimeConfig setName(java.lang.String name) {

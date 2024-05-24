@@ -46,9 +46,9 @@ public final class AdvertiserAndBrand extends com.google.api.client.json.Generic
   private java.lang.String advertiserName;
 
   /**
-   * Detected brand ID or zero if no brand has been detected. See https://storage.googleapis.com
-   * /adx-rtb-dictionaries/brands.txt for the list of possible values. Can be used to filter the
-   * response of the creatives.list method.
+   * Detected brand ID or zero if no brand has been detected. See
+   * https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt for the list of possible values.
+   * Can be used to filter the response of the creatives.list method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -98,9 +98,9 @@ public final class AdvertiserAndBrand extends com.google.api.client.json.Generic
   }
 
   /**
-   * Detected brand ID or zero if no brand has been detected. See https://storage.googleapis.com
-   * /adx-rtb-dictionaries/brands.txt for the list of possible values. Can be used to filter the
-   * response of the creatives.list method.
+   * Detected brand ID or zero if no brand has been detected. See
+   * https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt for the list of possible values.
+   * Can be used to filter the response of the creatives.list method.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBrandId() {
@@ -108,9 +108,9 @@ public final class AdvertiserAndBrand extends com.google.api.client.json.Generic
   }
 
   /**
-   * Detected brand ID or zero if no brand has been detected. See https://storage.googleapis.com
-   * /adx-rtb-dictionaries/brands.txt for the list of possible values. Can be used to filter the
-   * response of the creatives.list method.
+   * Detected brand ID or zero if no brand has been detected. See
+   * https://storage.googleapis.com/adx-rtb-dictionaries/brands.txt for the list of possible values.
+   * Can be used to filter the response of the creatives.list method.
    * @param brandId brandId or {@code null} for none
    */
   public AdvertiserAndBrand setBrandId(java.lang.Long brandId) {

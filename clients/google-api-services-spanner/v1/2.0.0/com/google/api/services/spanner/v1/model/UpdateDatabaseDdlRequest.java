@@ -55,12 +55,13 @@ public final class UpdateDatabaseDdlRequest extends com.google.api.client.json.G
   /**
    * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements. Contains a protobuf-
    * serialized [google.protobuf.FileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob
-   * /main/src/google/protobuf/descriptor.proto). To generate it, [install](https://grpc.io/docs
-   * /protoc-installation/) and run `protoc` with --include_imports and --descriptor_set_out. For
-   * example, to generate for moon/shot/app.proto, run ``` $protoc --proto_path=/app_path
-   * --proto_path=/lib_path \ --include_imports \ --descriptor_set_out=descriptors.data \
-   * moon/shot/app.proto ``` For more details, see protobuffer [self
-   * description](https://developers.google.com/protocol-buffers/docs/techniques#self-description).
+   * /main/src/google/protobuf/descriptor.proto). To generate it,
+   * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
+   * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
+   * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
+   * --descriptor_set_out=descriptors.data \ moon/shot/app.proto ``` For more details, see
+   * protobuffer [self description](https://developers.google.com/protocol-
+   * buffers/docs/techniques#self-description).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,12 +110,13 @@ public final class UpdateDatabaseDdlRequest extends com.google.api.client.json.G
   /**
    * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements. Contains a protobuf-
    * serialized [google.protobuf.FileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob
-   * /main/src/google/protobuf/descriptor.proto). To generate it, [install](https://grpc.io/docs
-   * /protoc-installation/) and run `protoc` with --include_imports and --descriptor_set_out. For
-   * example, to generate for moon/shot/app.proto, run ``` $protoc --proto_path=/app_path
-   * --proto_path=/lib_path \ --include_imports \ --descriptor_set_out=descriptors.data \
-   * moon/shot/app.proto ``` For more details, see protobuffer [self
-   * description](https://developers.google.com/protocol-buffers/docs/techniques#self-description).
+   * /main/src/google/protobuf/descriptor.proto). To generate it,
+   * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
+   * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
+   * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
+   * --descriptor_set_out=descriptors.data \ moon/shot/app.proto ``` For more details, see
+   * protobuffer [self description](https://developers.google.com/protocol-
+   * buffers/docs/techniques#self-description).
    * @see #decodeProtoDescriptors()
    * @return value or {@code null} for none
    */
@@ -125,12 +127,13 @@ public final class UpdateDatabaseDdlRequest extends com.google.api.client.json.G
   /**
    * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements. Contains a protobuf-
    * serialized [google.protobuf.FileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob
-   * /main/src/google/protobuf/descriptor.proto). To generate it, [install](https://grpc.io/docs
-   * /protoc-installation/) and run `protoc` with --include_imports and --descriptor_set_out. For
-   * example, to generate for moon/shot/app.proto, run ``` $protoc --proto_path=/app_path
-   * --proto_path=/lib_path \ --include_imports \ --descriptor_set_out=descriptors.data \
-   * moon/shot/app.proto ``` For more details, see protobuffer [self
-   * description](https://developers.google.com/protocol-buffers/docs/techniques#self-description).
+   * /main/src/google/protobuf/descriptor.proto). To generate it,
+   * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
+   * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
+   * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
+   * --descriptor_set_out=descriptors.data \ moon/shot/app.proto ``` For more details, see
+   * protobuffer [self description](https://developers.google.com/protocol-
+   * buffers/docs/techniques#self-description).
    * @see #getProtoDescriptors()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -143,12 +146,13 @@ public final class UpdateDatabaseDdlRequest extends com.google.api.client.json.G
   /**
    * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements. Contains a protobuf-
    * serialized [google.protobuf.FileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob
-   * /main/src/google/protobuf/descriptor.proto). To generate it, [install](https://grpc.io/docs
-   * /protoc-installation/) and run `protoc` with --include_imports and --descriptor_set_out. For
-   * example, to generate for moon/shot/app.proto, run ``` $protoc --proto_path=/app_path
-   * --proto_path=/lib_path \ --include_imports \ --descriptor_set_out=descriptors.data \
-   * moon/shot/app.proto ``` For more details, see protobuffer [self
-   * description](https://developers.google.com/protocol-buffers/docs/techniques#self-description).
+   * /main/src/google/protobuf/descriptor.proto). To generate it,
+   * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
+   * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
+   * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
+   * --descriptor_set_out=descriptors.data \ moon/shot/app.proto ``` For more details, see
+   * protobuffer [self description](https://developers.google.com/protocol-
+   * buffers/docs/techniques#self-description).
    * @see #encodeProtoDescriptors()
    * @param protoDescriptors protoDescriptors or {@code null} for none
    */
@@ -160,12 +164,13 @@ public final class UpdateDatabaseDdlRequest extends com.google.api.client.json.G
   /**
    * Optional. Proto descriptors used by CREATE/ALTER PROTO BUNDLE statements. Contains a protobuf-
    * serialized [google.protobuf.FileDescriptorSet](https://github.com/protocolbuffers/protobuf/blob
-   * /main/src/google/protobuf/descriptor.proto). To generate it, [install](https://grpc.io/docs
-   * /protoc-installation/) and run `protoc` with --include_imports and --descriptor_set_out. For
-   * example, to generate for moon/shot/app.proto, run ``` $protoc --proto_path=/app_path
-   * --proto_path=/lib_path \ --include_imports \ --descriptor_set_out=descriptors.data \
-   * moon/shot/app.proto ``` For more details, see protobuffer [self
-   * description](https://developers.google.com/protocol-buffers/docs/techniques#self-description).
+   * /main/src/google/protobuf/descriptor.proto). To generate it,
+   * [install](https://grpc.io/docs/protoc-installation/) and run `protoc` with --include_imports
+   * and --descriptor_set_out. For example, to generate for moon/shot/app.proto, run ``` $protoc
+   * --proto_path=/app_path --proto_path=/lib_path \ --include_imports \
+   * --descriptor_set_out=descriptors.data \ moon/shot/app.proto ``` For more details, see
+   * protobuffer [self description](https://developers.google.com/protocol-
+   * buffers/docs/techniques#self-description).
    * @see #setProtoDescriptors()
    *
    * <p>

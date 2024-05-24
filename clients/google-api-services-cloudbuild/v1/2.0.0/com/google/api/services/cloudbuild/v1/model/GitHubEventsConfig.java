@@ -55,8 +55,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform
-   * /cloud-builders is "googlecloudplatform".
+   * Owner of the repository. For example: The owner for
+   * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +134,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform
-   * /cloud-builders is "googlecloudplatform".
+   * Owner of the repository. For example: The owner for
+   * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
    * @return value or {@code null} for none
    */
   public java.lang.String getOwner() {
@@ -143,8 +143,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform
-   * /cloud-builders is "googlecloudplatform".
+   * Owner of the repository. For example: The owner for
+   * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
    * @param owner owner or {@code null} for none
    */
   public GitHubEventsConfig setOwner(java.lang.String owner) {

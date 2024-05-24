@@ -91,9 +91,9 @@ public final class GoogleCloudDialogflowV2QueryParameters extends com.google.api
   private java.util.List<GoogleCloudDialogflowV2SessionEntityType> sessionEntityTypes;
 
   /**
-   * The time zone of this conversational query from the [time zone database](https://www.iana.org
-   * /time-zones), e.g., America/New_York, Europe/Paris. If not provided, the time zone specified in
-   * agent settings is used.
+   * The time zone of this conversational query from the [time zone
+   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. If not
+   * provided, the time zone specified in agent settings is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -243,9 +243,9 @@ public final class GoogleCloudDialogflowV2QueryParameters extends com.google.api
   }
 
   /**
-   * The time zone of this conversational query from the [time zone database](https://www.iana.org
-   * /time-zones), e.g., America/New_York, Europe/Paris. If not provided, the time zone specified in
-   * agent settings is used.
+   * The time zone of this conversational query from the [time zone
+   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. If not
+   * provided, the time zone specified in agent settings is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -253,9 +253,9 @@ public final class GoogleCloudDialogflowV2QueryParameters extends com.google.api
   }
 
   /**
-   * The time zone of this conversational query from the [time zone database](https://www.iana.org
-   * /time-zones), e.g., America/New_York, Europe/Paris. If not provided, the time zone specified in
-   * agent settings is used.
+   * The time zone of this conversational query from the [time zone
+   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. If not
+   * provided, the time zone specified in agent settings is used.
    * @param timeZone timeZone or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryParameters setTimeZone(java.lang.String timeZone) {

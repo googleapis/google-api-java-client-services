@@ -120,8 +120,9 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   private GoogleCloudDialogflowV2beta1SpeechToTextConfig sttConfig;
 
   /**
-   * The time zone of this conversational profile from the [time zone database](https://www.iana.org
-   * /time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.
+   * The time zone of this conversational profile from the [time zone
+   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to
+   * America/New_York.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -360,8 +361,9 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * The time zone of this conversational profile from the [time zone database](https://www.iana.org
-   * /time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.
+   * The time zone of this conversational profile from the [time zone
+   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to
+   * America/New_York.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -369,8 +371,9 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * The time zone of this conversational profile from the [time zone database](https://www.iana.org
-   * /time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.
+   * The time zone of this conversational profile from the [time zone
+   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to
+   * America/New_York.
    * @param timeZone timeZone or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setTimeZone(java.lang.String timeZone) {

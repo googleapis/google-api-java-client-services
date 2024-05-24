@@ -102,8 +102,9 @@ public final class GoogleCloudAiplatformV1beta1CustomJobSpec extends com.google.
    * [Format](/compute/docs/reference/rest/v1/networks/insert) is of the form
    * `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in
    * `12345`, and {network} is a network name. To specify this field, you must have already
-   * [configured VPC Network Peering for Vertex AI](https://cloud.google.com/vertex-ai/docs/general
-   * /vpc-peering). If this field is left unspecified, the job is not peered with any network.
+   * [configured VPC Network Peering for Vertex AI](https://cloud.google.com/vertex-
+   * ai/docs/general/vpc-peering). If this field is left unspecified, the job is not peered with any
+   * network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -327,8 +328,9 @@ public final class GoogleCloudAiplatformV1beta1CustomJobSpec extends com.google.
    * [Format](/compute/docs/reference/rest/v1/networks/insert) is of the form
    * `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in
    * `12345`, and {network} is a network name. To specify this field, you must have already
-   * [configured VPC Network Peering for Vertex AI](https://cloud.google.com/vertex-ai/docs/general
-   * /vpc-peering). If this field is left unspecified, the job is not peered with any network.
+   * [configured VPC Network Peering for Vertex AI](https://cloud.google.com/vertex-
+   * ai/docs/general/vpc-peering). If this field is left unspecified, the job is not peered with any
+   * network.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -342,8 +344,9 @@ public final class GoogleCloudAiplatformV1beta1CustomJobSpec extends com.google.
    * [Format](/compute/docs/reference/rest/v1/networks/insert) is of the form
    * `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in
    * `12345`, and {network} is a network name. To specify this field, you must have already
-   * [configured VPC Network Peering for Vertex AI](https://cloud.google.com/vertex-ai/docs/general
-   * /vpc-peering). If this field is left unspecified, the job is not peered with any network.
+   * [configured VPC Network Peering for Vertex AI](https://cloud.google.com/vertex-
+   * ai/docs/general/vpc-peering). If this field is left unspecified, the job is not peered with any
+   * network.
    * @param network network or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1CustomJobSpec setNetwork(java.lang.String network) {

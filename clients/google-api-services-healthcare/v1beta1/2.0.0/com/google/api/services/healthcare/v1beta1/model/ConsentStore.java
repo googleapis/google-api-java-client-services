@@ -51,8 +51,8 @@ public final class ConsentStore extends com.google.api.client.json.GenericJson {
    * to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}. Label values must be between 1
    * and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the
    * following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}. No more than 64 labels can be
-   * associated with a given store. For more information: https://cloud.google.com/healthcare/docs
-   * /how-tos/labeling-resources
+   * associated with a given store. For more information:
+   * https://cloud.google.com/healthcare/docs/how-tos/labeling-resources
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +110,8 @@ public final class ConsentStore extends com.google.api.client.json.GenericJson {
    * to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}. Label values must be between 1
    * and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the
    * following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}. No more than 64 labels can be
-   * associated with a given store. For more information: https://cloud.google.com/healthcare/docs
-   * /how-tos/labeling-resources
+   * associated with a given store. For more information:
+   * https://cloud.google.com/healthcare/docs/how-tos/labeling-resources
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -124,8 +124,8 @@ public final class ConsentStore extends com.google.api.client.json.GenericJson {
    * to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}. Label values must be between 1
    * and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the
    * following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}. No more than 64 labels can be
-   * associated with a given store. For more information: https://cloud.google.com/healthcare/docs
-   * /how-tos/labeling-resources
+   * associated with a given store. For more information:
+   * https://cloud.google.com/healthcare/docs/how-tos/labeling-resources
    * @param labels labels or {@code null} for none
    */
   public ConsentStore setLabels(java.util.Map<String, java.lang.String> labels) {

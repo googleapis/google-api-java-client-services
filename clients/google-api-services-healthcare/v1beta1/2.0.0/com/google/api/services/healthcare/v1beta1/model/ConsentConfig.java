@@ -48,8 +48,8 @@ public final class ConsentConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean accessEnforced;
 
   /**
-   * Optional. Different options to configure the behaviour of the server when handling the `X
-   * -Consent-Scope` header.
+   * Optional. Different options to configure the behaviour of the server when handling the
+   * `X-Consent-Scope` header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,8 @@ public final class ConsentConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Different options to configure the behaviour of the server when handling the `X
-   * -Consent-Scope` header.
+   * Optional. Different options to configure the behaviour of the server when handling the
+   * `X-Consent-Scope` header.
    * @return value or {@code null} for none
    */
   public ConsentHeaderHandling getConsentHeaderHandling() {
@@ -125,8 +125,8 @@ public final class ConsentConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Different options to configure the behaviour of the server when handling the `X
-   * -Consent-Scope` header.
+   * Optional. Different options to configure the behaviour of the server when handling the
+   * `X-Consent-Scope` header.
    * @param consentHeaderHandling consentHeaderHandling or {@code null} for none
    */
   public ConsentConfig setConsentHeaderHandling(ConsentHeaderHandling consentHeaderHandling) {

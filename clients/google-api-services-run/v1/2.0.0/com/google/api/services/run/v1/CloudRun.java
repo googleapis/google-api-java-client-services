@@ -7556,8 +7556,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see kubernetes.io/docs/concepts/architecture
-           * /garbage-collection/ for more information.
+           * and deletes in the background. Please see
+           * kubernetes.io/docs/concepts/architecture/garbage-collection/ for more information.
            */
           @com.google.api.client.util.Key
           private java.lang.String propagationPolicy;
@@ -7572,8 +7572,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see kubernetes.io/docs/concepts/architecture
-           * /garbage-collection/ for more information.
+           * and deletes in the background. Please see
+           * kubernetes.io/docs/concepts/architecture/garbage-collection/ for more information.
            */
           public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
             this.propagationPolicy = propagationPolicy;

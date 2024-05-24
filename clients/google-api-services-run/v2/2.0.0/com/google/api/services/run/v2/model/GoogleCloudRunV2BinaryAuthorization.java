@@ -31,8 +31,8 @@ public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.cl
 
   /**
    * Optional. If present, indicates to use Breakglass using this justification. If use_default is
-   * False, then it must be empty. For more information on breakglass, see https://cloud.google.com
-   * /binary-authorization/docs/using-breakglass
+   * False, then it must be empty. For more information on breakglass, see
+   * https://cloud.google.com/binary-authorization/docs/using-breakglass
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +56,8 @@ public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.cl
 
   /**
    * Optional. If present, indicates to use Breakglass using this justification. If use_default is
-   * False, then it must be empty. For more information on breakglass, see https://cloud.google.com
-   * /binary-authorization/docs/using-breakglass
+   * False, then it must be empty. For more information on breakglass, see
+   * https://cloud.google.com/binary-authorization/docs/using-breakglass
    * @return value or {@code null} for none
    */
   public java.lang.String getBreakglassJustification() {
@@ -66,8 +66,8 @@ public final class GoogleCloudRunV2BinaryAuthorization extends com.google.api.cl
 
   /**
    * Optional. If present, indicates to use Breakglass using this justification. If use_default is
-   * False, then it must be empty. For more information on breakglass, see https://cloud.google.com
-   * /binary-authorization/docs/using-breakglass
+   * False, then it must be empty. For more information on breakglass, see
+   * https://cloud.google.com/binary-authorization/docs/using-breakglass
    * @param breakglassJustification breakglassJustification or {@code null} for none
    */
   public GoogleCloudRunV2BinaryAuthorization setBreakglassJustification(java.lang.String breakglassJustification) {

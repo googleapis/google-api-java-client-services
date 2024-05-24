@@ -17,7 +17,7 @@
 package com.google.api.services.iap.v1.model;
 
 /**
- * Configuration for OAuth login flow behavior as well as for OAuth Credentials.
+ * Configuration for OAuth login&consent flow behavior as well as for OAuth Credentials.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity-Aware Proxy API. For a detailed
@@ -32,9 +32,10 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
 
   /**
    * Domain hint to send as hd=? parameter in OAuth request flow. Enables redirect to primary IDP by
-   * skipping Google's login screen. https://developers.google.com/identity/protocols/OpenIDConnect
-   * #hd-param Note: IAP does not verify that the id token's hd claim matches this value since
-   * access behavior is managed by IAM policies.
+   * skipping Google's login screen.
+   * https://developers.google.com/identity/protocols/OpenIDConnect#hd-param Note: IAP does not
+   * verify that the id token's hd claim matches this value since access behavior is managed by IAM
+   * policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +50,10 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
 
   /**
    * Domain hint to send as hd=? parameter in OAuth request flow. Enables redirect to primary IDP by
-   * skipping Google's login screen. https://developers.google.com/identity/protocols/OpenIDConnect
-   * #hd-param Note: IAP does not verify that the id token's hd claim matches this value since
-   * access behavior is managed by IAM policies.
+   * skipping Google's login screen.
+   * https://developers.google.com/identity/protocols/OpenIDConnect#hd-param Note: IAP does not
+   * verify that the id token's hd claim matches this value since access behavior is managed by IAM
+   * policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoginHint() {
@@ -60,9 +62,10 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
 
   /**
    * Domain hint to send as hd=? parameter in OAuth request flow. Enables redirect to primary IDP by
-   * skipping Google's login screen. https://developers.google.com/identity/protocols/OpenIDConnect
-   * #hd-param Note: IAP does not verify that the id token's hd claim matches this value since
-   * access behavior is managed by IAM policies.
+   * skipping Google's login screen.
+   * https://developers.google.com/identity/protocols/OpenIDConnect#hd-param Note: IAP does not
+   * verify that the id token's hd claim matches this value since access behavior is managed by IAM
+   * policies.
    * @param loginHint loginHint or {@code null} for none
    */
   public OAuthSettings setLoginHint(java.lang.String loginHint) {

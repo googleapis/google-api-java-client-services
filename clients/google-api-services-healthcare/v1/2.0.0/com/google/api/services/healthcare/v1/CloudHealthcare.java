@@ -3334,11 +3334,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * the number of User data mappings processed. If the request is successful, a detailed response
              * is returned of type QueryAccessibleDataResponse, contained in the response field when the
              * operation finishes. The metadata field type is OperationMetadata. Errors are logged to Cloud
-             * Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs
-             * /how-tos/logging)). For example, the following sample log entry shows a `failed to evaluate
-             * consent policy` error that occurred during a QueryAccessibleData call to consent store `project
-             * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
-             * ```json jsonPayload: { @type:
+             * Logging (see [Viewing error logs in Cloud
+             * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). For example, the following
+             * sample log entry shows a `failed to evaluate consent policy` error that occurred during a
+             * QueryAccessibleData call to consent store `projects/{project_id}/locations/{location_id}/datase
+             * ts/{dataset_id}/consentStores/{consent_store_id}`. ```json jsonPayload: { @type:
              * "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: {
              * code: 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/loc
              * ations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_i
@@ -14393,8 +14393,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * the implementation of RetrieveRenderedInstance, see [Rendered
                  * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
                  * Healthcare API conformance statement. For samples that show how to call RetrieveRenderedInstance,
-                 * see [Retrieve consumer image formats](https://cloud.google.com/healthcare/docs/how-tos/dicomweb
-                 * #retrieve-consumer).
+                 * see [Retrieve consumer image formats](https://cloud.google.com/healthcare/docs/how-
+                 * tos/dicomweb#retrieve-consumer).
                  *
                  * Create a request for the method "instances.retrieveRendered".
                  *
@@ -14830,8 +14830,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * the implementation of RetrieveRenderedFrames, see [Rendered
                    * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
                    * Healthcare API conformance statement. For samples that show how to call RetrieveRenderedFrames,
-                   * see [Retrieve consumer image formats](https://cloud.google.com/healthcare/docs/how-tos/dicomweb
-                   * #retrieve-consumer).
+                   * see [Retrieve consumer image formats](https://cloud.google.com/healthcare/docs/how-
+                   * tos/dicomweb#retrieve-consumer).
                    *
                    * Create a request for the method "frames.retrieveRendered".
                    *
@@ -14869,8 +14869,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * the implementation of RetrieveRenderedFrames, see [Rendered
                      * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
                      * Healthcare API conformance statement. For samples that show how to call RetrieveRenderedFrames,
-                     * see [Retrieve consumer image formats](https://cloud.google.com/healthcare/docs/how-tos/dicomweb
-                     * #retrieve-consumer).
+                     * see [Retrieve consumer image formats](https://cloud.google.com/healthcare/docs/how-
+                     * tos/dicomweb#retrieve-consumer).
                      *
                      * Create a request for the method "frames.retrieveRendered".
                      *
@@ -16233,10 +16233,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * of `searchset` bundles produced by a FHIR search or Patient-everything operation. This method
              * returns an Operation that can be used to track the status of the import by calling
              * GetOperation. Immediate fatal errors appear in the error field, errors are also logged to Cloud
-             * Logging (see [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs
-             * /how-tos/logging)). Otherwise, when the operation finishes, a detailed response of type
-             * ImportResourcesResponse is returned in the response field. The metadata field type for this
-             * operation is OperationMetadata.
+             * Logging (see [Viewing error logs in Cloud
+             * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). Otherwise, when the
+             * operation finishes, a detailed response of type ImportResourcesResponse is returned in the
+             * response field. The metadata field type for this operation is OperationMetadata.
              *
              * Create a request for the method "fhirStores.import".
              *
@@ -17288,18 +17288,19 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Retrieves a Patient resource and resources related to that patient. Implements the FHIR
-               * extended operation Patient-everything ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2
-               * /patient-operations.html#everything), [STU3](http://hl7.org/implement/standards/fhir/STU3
-               * /patient-operations.html#everything), [R4](http://hl7.org/implement/standards/fhir/R4/patient-
-               * operations.html#everything)). On success, the response body contains a JSON-encoded
-               * representation of a `Bundle` resource of type `searchset`, containing the results of the
-               * operation. Errors generated by the FHIR store contain a JSON-encoded `OperationOutcome`
-               * resource describing the reason for the error. If the request cannot be mapped to a valid API
-               * method on a FHIR store, a generic GCP error might be returned instead. The resources in scope
-               * for the response are: * The patient resource itself. * All the resources directly referenced by
-               * the patient resource. * Resources directly referencing the patient resource that meet the
-               * inclusion criteria. The inclusion criteria are based on the membership rules in the patient
-               * compartment definition ([DSTU2](http://hl7.org/fhir/DSTU2/compartment-patient.html),
+               * extended operation Patient-everything
+               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/patient-operations.html#everything),
+               * [STU3](http://hl7.org/implement/standards/fhir/STU3/patient-operations.html#everything),
+               * [R4](http://hl7.org/implement/standards/fhir/R4/patient-operations.html#everything)). On
+               * success, the response body contains a JSON-encoded representation of a `Bundle` resource of
+               * type `searchset`, containing the results of the operation. Errors generated by the FHIR store
+               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
+               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+               * returned instead. The resources in scope for the response are: * The patient resource itself. *
+               * All the resources directly referenced by the patient resource. * Resources directly referencing
+               * the patient resource that meet the inclusion criteria. The inclusion criteria are based on the
+               * membership rules in the patient compartment definition
+               * ([DSTU2](http://hl7.org/fhir/DSTU2/compartment-patient.html),
                * [STU3](http://www.hl7.org/fhir/stu3/compartmentdefinition-patient.html),
                * [R4](http://hl7.org/fhir/R4/compartmentdefinition-patient.html)), which details the eligible
                * resource types and referencing search parameters. For samples that show how to call `Patient-
@@ -17940,9 +17941,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Required. The canonical URL of a profile that this resource should be validated
                * against. For example, to validate a Patient resource against the US Core Patient
-               * profile this parameter would be `http://hl7.org/fhir/us/core/StructureDefinition
-               * /us-core-patient`. A StructureDefinition with this canonical URL must exist in the
-               * FHIR store.
+               * profile this parameter would be
+               * `http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient`. A
+               * StructureDefinition with this canonical URL must exist in the FHIR store.
                */
               @com.google.api.client.util.Key
               private java.lang.String profile;
@@ -17959,9 +17960,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Required. The canonical URL of a profile that this resource should be validated
                * against. For example, to validate a Patient resource against the US Core Patient
-               * profile this parameter would be `http://hl7.org/fhir/us/core/StructureDefinition
-               * /us-core-patient`. A StructureDefinition with this canonical URL must exist in the
-               * FHIR store.
+               * profile this parameter would be
+               * `http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient`. A
+               * StructureDefinition with this canonical URL must exist in the FHIR store.
                */
               public ResourceValidate setProfile(java.lang.String profile) {
                 this.profile = profile;
@@ -19027,8 +19028,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * versioning is disabled by setting the disable_resource_versioning flag on the FHIR store, the
              * deleted resources will be moved to a history repository that can still be retrieved through vread
              * and related methods, unless they are removed by the purge method. For samples that show how to
-             * call `delete`, see [Deleting a FHIR resource](https://cloud.google.com/healthcare/docs/how-tos
-             * /fhir-resources#deleting_a_fhir_resource).
+             * call `delete`, see [Deleting a FHIR resource](https://cloud.google.com/healthcare/docs/how-
+             * tos/fhir-resources#deleting_a_fhir_resource).
              *
              * Create a request for the method "fhir.delete".
              *
@@ -19059,8 +19060,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * versioning is disabled by setting the disable_resource_versioning flag on the FHIR store, the
                * deleted resources will be moved to a history repository that can still be retrieved through
                * vread and related methods, unless they are removed by the purge method. For samples that show
-               * how to call `delete`, see [Deleting a FHIR resource](https://cloud.google.com/healthcare/docs
-               * /how-tos/fhir-resources#deleting_a_fhir_resource).
+               * how to call `delete`, see [Deleting a FHIR
+               * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+               * resources#deleting_a_fhir_resource).
                *
                * Create a request for the method "fhir.delete".
                *
@@ -19629,13 +19631,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch),
              * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)). DSTU2 doesn't define a patch
              * method, but the server supports it in the same way it supports STU3. The request body must
-             * contain a JSON Patch document, and the request headers must contain `Content-Type: application
-             * /json-patch+json`. On success, the response body contains a JSON-encoded representation of the
-             * updated resource, including the server-assigned version ID. Errors generated by the FHIR store
-             * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
-             * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-             * returned instead. For samples that show how to call `patch`, see [Patching a FHIR
-             * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+             * contain a JSON Patch document, and the request headers must contain `Content-Type:
+             * application/json-patch+json`. On success, the response body contains a JSON-encoded
+             * representation of the updated resource, including the server-assigned version ID. Errors
+             * generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the
+             * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
+             * generic GCP error might be returned instead. For samples that show how to call `patch`, see
+             * [Patching a FHIR resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
              * resources#patching_a_fhir_resource).
              *
              * Create a request for the method "fhir.patch".
@@ -19666,13 +19668,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch),
                * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)). DSTU2 doesn't define a patch
                * method, but the server supports it in the same way it supports STU3. The request body must
-               * contain a JSON Patch document, and the request headers must contain `Content-Type: application
-               * /json-patch+json`. On success, the response body contains a JSON-encoded representation of the
-               * updated resource, including the server-assigned version ID. Errors generated by the FHIR store
-               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
-               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-               * returned instead. For samples that show how to call `patch`, see [Patching a FHIR
-               * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+               * contain a JSON Patch document, and the request headers must contain `Content-Type:
+               * application/json-patch+json`. On success, the response body contains a JSON-encoded
+               * representation of the updated resource, including the server-assigned version ID. Errors
+               * generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the
+               * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
+               * generic GCP error might be returned instead. For samples that show how to call `patch`, see
+               * [Patching a FHIR resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
                * resources#patching_a_fhir_resource).
                *
                * Create a request for the method "fhir.patch".

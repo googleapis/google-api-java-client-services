@@ -1339,8 +1339,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Search string in the format given at https://developers.google.com/admin-sdk/directory/v1
-       * /list-query-operators
+       * Search string in the format given at https://developers.google.com/admin-
+       * sdk/directory/v1/list-query-operators
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
@@ -1353,8 +1353,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Search string in the format given at https://developers.google.com/admin-sdk/directory/v1
-       * /list-query-operators
+       * Search string in the format given at https://developers.google.com/admin-
+       * sdk/directory/v1/list-query-operators
        */
       public List setQuery(java.lang.String query) {
         this.query = query;
@@ -3701,8 +3701,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           private java.lang.String filter;
 
           /** Search query in [Common Expression Language syntax](https://github.com/google/cel-spec). Supported
-         filters are `display_name`, `description`, and `uri`. Example: `printServer.displayName
-         =='marketing-queue'`.
+         filters are `display_name`, `description`, and `uri`. Example:
+         `printServer.displayName=='marketing-queue'`.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -5263,8 +5263,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The resource name of the Printer object, in the format customers/{customer-id}/printers
-           * /{printer-id} (During printer creation leave empty)
+           * The resource name of the Printer object, in the format customers/{customer-
+           * id}/printers/{printer-id} (During printer creation leave empty)
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -5277,8 +5277,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The resource name of the Printer object, in the format customers/{customer-id}/printers
-           * /{printer-id} (During printer creation leave empty)
+           * The resource name of the Printer object, in the format customers/{customer-
+           * id}/printers/{printer-id} (During printer creation leave empty)
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9754,8 +9754,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Search string in the format given at https://developers.google.com/admin-sdk/directory/v1
-       * /search-operators
+       * Search string in the format given at https://developers.google.com/admin-
+       * sdk/directory/v1/search-operators
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
@@ -9768,8 +9768,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Search string in the format given at https://developers.google.com/admin-sdk/directory/v1
-       * /search-operators
+       * Search string in the format given at https://developers.google.com/admin-
+       * sdk/directory/v1/search-operators
        */
       public List setQuery(java.lang.String query) {
         this.query = query;
@@ -17366,8 +17366,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Whether to fetch the administrator-only or domain-wide public view of the user. For more
-       * information, see [Retrieve a user as a non-administrator](/admin-sdk/directory/v1/guides
-       * /manage-users#retrieve_users_non_admin).
+       * information, see [Retrieve a user as a non-administrator](/admin-
+       * sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
        */
       @com.google.api.client.util.Key
       private java.lang.String viewType;
@@ -17382,8 +17382,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Whether to fetch the administrator-only or domain-wide public view of the user. For more
-       * information, see [Retrieve a user as a non-administrator](/admin-sdk/directory/v1/guides
-       * /manage-users#retrieve_users_non_admin).
+       * information, see [Retrieve a user as a non-administrator](/admin-
+       * sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
        */
       public Get setViewType(java.lang.String viewType) {
         this.viewType = viewType;
@@ -17845,8 +17845,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Whether to fetch the administrator-only or domain-wide public view of the user. For more
-       * information, see [Retrieve a user as a non-administrator](/admin-sdk/directory/v1/guides
-       * /manage-users#retrieve_users_non_admin).
+       * information, see [Retrieve a user as a non-administrator](/admin-
+       * sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
        */
       @com.google.api.client.util.Key
       private java.lang.String viewType;
@@ -17861,8 +17861,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Whether to fetch the administrator-only or domain-wide public view of the user. For more
-       * information, see [Retrieve a user as a non-administrator](/admin-sdk/directory/v1/guides
-       * /manage-users#retrieve_users_non_admin).
+       * information, see [Retrieve a user as a non-administrator](/admin-
+       * sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
        */
       public List setViewType(java.lang.String viewType) {
         this.viewType = viewType;
@@ -18415,8 +18415,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * fields you wish to update. Fields that are not present in the request will be preserved, and
        * fields set to `null` will be cleared. For repeating fields that contain arrays, individual
        * items in the array can't be patched piecemeal; they must be supplied in the request body with
-       * the desired values for all items. See the [user accounts guide](https://developers.google.com
-       * /admin-sdk/directory/v1/guides/manage-users#update_user) for more information.
+       * the desired values for all items. See the [user accounts
+       * guide](https://developers.google.com/admin-sdk/directory/v1/guides/manage-users#update_user)
+       * for more information.
        *
        * Create a request for the method "users.update".
        *
@@ -18817,8 +18818,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Whether to fetch the administrator-only or domain-wide public view of the user. For more
-       * information, see [Retrieve a user as a non-administrator](/admin-sdk/directory/v1/guides
-       * /manage-users#retrieve_users_non_admin).
+       * information, see [Retrieve a user as a non-administrator](/admin-
+       * sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
        */
       @com.google.api.client.util.Key
       private java.lang.String viewType;
@@ -18833,8 +18834,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Whether to fetch the administrator-only or domain-wide public view of the user. For more
-       * information, see [Retrieve a user as a non-administrator](/admin-sdk/directory/v1/guides
-       * /manage-users#retrieve_users_non_admin).
+       * information, see [Retrieve a user as a non-administrator](/admin-
+       * sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
        */
       public Watch setViewType(java.lang.String viewType) {
         this.viewType = viewType;

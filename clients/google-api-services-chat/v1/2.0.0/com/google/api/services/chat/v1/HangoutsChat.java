@@ -313,8 +313,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * attachment](https://developers.google.com/workspace/chat/upload-media-attachments). Requires user
      * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
      * You can upload attachments up to 200 MB. Certain file types aren't supported. For details, see
-     * [File types blocked by Google Chat](https://support.google.com/chat/answer/7651457?=GENIE.Platfor
-     * m%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
+     * [File types blocked by Google Chat](https://support.google.com/chat/answer/7651457?&co=GENIE.Plat
+     * form%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
      *
      * Create a request for the method "media.upload".
      *
@@ -337,8 +337,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * attachment](https://developers.google.com/workspace/chat/upload-media-attachments). Requires user
      * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
      * You can upload attachments up to 200 MB. Certain file types aren't supported. For details, see
-     * [File types blocked by Google Chat](https://support.google.com/chat/answer/7651457?=GENIE.Platfor
-     * m%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
+     * [File types blocked by Google Chat](https://support.google.com/chat/answer/7651457?&co=GENIE.Plat
+     * form%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
      *
      * Create a request for the method "media.upload".
      *
@@ -375,7 +375,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * user [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
        * user). You can upload attachments up to 200 MB. Certain file types aren't supported. For
        * details, see [File types blocked by Google Chat](https://support.google.com/chat/answer/7651457
-       * ?=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
+       * ?&co=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
        *
        * Create a request for the method "media.upload".
        *
@@ -405,7 +405,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * user [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
        * user). You can upload attachments up to 200 MB. Certain file types aren't supported. For
        * details, see [File types blocked by Google Chat](https://support.google.com/chat/answer/7651457
-       * ?=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
+       * ?&co=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
        *
        * Create a request for the method "media.upload".
        *
@@ -989,8 +989,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
        * app), returns the direct message space between the specified user and the calling Chat app.
        * Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-
-       * authorize-chat-user) or [app authentication](https://developers.google.com/workspace/chat
-       * /authenticate-authorize-chat-app).
+       * authorize-chat-user) or [app
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
        *
        * Create a request for the method "spaces.findDirectMessage".
        *
@@ -1280,12 +1280,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * Lists spaces the caller is a member of. Group chats and DMs aren't listed until the first message
      * is sent. For an example, see [List spaces](https://developers.google.com/workspace/chat/list-
      * spaces). Requires [authentication](https://developers.google.com/workspace/chat/authenticate-
-     * authorize). Supports [app authentication](https://developers.google.com/workspace/chat
-     * /authenticate-authorize-chat-app) and [user
-     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
-     * Lists spaces visible to the caller or authenticated user. Group chats and DMs aren't listed until
-     * the first message is sent. To list all named spaces by Google Workspace organization, use the
-     * `spaces.search()` method using Workspace administrator privileges instead.
+     * authorize). Supports [app
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and
+     * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+     * user). Lists spaces visible to the caller or authenticated user. Group chats and DMs aren't
+     * listed until the first message is sent. To list all named spaces by Google Workspace
+     * organization, use the `spaces.search()` method using Workspace administrator privileges instead.
      *
      * Create a request for the method "spaces.list".
      *
@@ -1306,13 +1306,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * Lists spaces the caller is a member of. Group chats and DMs aren't listed until the first
-       * message is sent. For an example, see [List spaces](https://developers.google.com/workspace/chat
-       * /list-spaces). Requires [authentication](https://developers.google.com/workspace/chat
-       * /authenticate-authorize). Supports [app
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-       * and [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
-       * chat-user). Lists spaces visible to the caller or authenticated user. Group chats and DMs
-       * aren't listed until the first message is sent. To list all named spaces by Google Workspace
+       * message is sent. For an example, see [List
+       * spaces](https://developers.google.com/workspace/chat/list-spaces). Requires
+       * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize). Supports
+       * [app authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+       * app) and [user authentication](https://developers.google.com/workspace/chat/authenticate-
+       * authorize-chat-user). Lists spaces visible to the caller or authenticated user. Group chats and
+       * DMs aren't listed until the first message is sent. To list all named spaces by Google Workspace
        * organization, use the `spaces.search()` method using Workspace administrator privileges
        * instead.
        *
@@ -1525,8 +1525,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * space](https://developers.google.com/workspace/chat/update-spaces). If you're updating the
        * `displayName` field and receive the error message `ALREADY_EXISTS`, try a different display
        * name.. An existing space within the Google Workspace organization might already use this
-       * display name. Requires [user authentication](https://developers.google.com/workspace/chat
-       * /authenticate-authorize-chat-user).
+       * display name. Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
        *
        * Create a request for the method "spaces.patch".
        *
@@ -2920,10 +2920,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * Creates a message in a Google Chat space. The maximum message size, including text and cards, is
-       * 32,000 bytes. For an example, see [Send a message](https://developers.google.com/workspace/chat
-       * /create-messages). Calling this method requires
-       * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize) and
-       * supports the following authentication types: - For text messages, user authentication or app
+       * 32,000 bytes. For an example, see [Send a
+       * message](https://developers.google.com/workspace/chat/create-messages). Calling this method
+       * requires [authentication](https://developers.google.com/workspace/chat/authenticate-authorize)
+       * and supports the following authentication types: - For text messages, user authentication or app
        * authentication are supported. - For card messages, only app authentication is supported. (Only
        * Chat apps can create card messages.)
        *
@@ -3316,8 +3316,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /** Required. Resource name of the message. Format: `spaces/{space}/messages/{message}` If you've set a
        custom ID for your message, you can use the value from the `clientAssignedMessageId` field for
-       `{message}`. For details, see [Name a message] (https://developers.google.com/workspace/chat
-       /create-messages#name_a_created_message).
+       `{message}`. For details, see [Name a message]
+       (https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
          */
         public java.lang.String getName() {
           return name;
@@ -3515,8 +3515,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /** Required. Resource name of the message. Format: `spaces/{space}/messages/{message}` If you've set a
        custom ID for your message, you can use the value from the `clientAssignedMessageId` field for
-       `{message}`. For details, see [Name a message] (https://developers.google.com/workspace/chat
-       /create-messages#name_a_created_message).
+       `{message}`. For details, see [Name a message]
+       (https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
          */
         public java.lang.String getName() {
           return name;
@@ -4001,8 +4001,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * If you set a custom ID when you create a message, you can use this ID to specify the
          * message in a request by replacing `{message}` with the value from the
          * `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages/client-custom-
-         * name`. For details, see [Name a message](https://developers.google.com/workspace/chat
-         * /create-messages#name_a_created_message).
+         * name`. For details, see [Name a
+         * message](https://developers.google.com/workspace/chat/create-
+         * messages#name_a_created_message).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -4011,8 +4012,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        of the space where the message is posted and `{message}` is a system-assigned ID for the message.
        For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
        create a message, you can use this ID to specify the message in a request by replacing `{message}`
-       with the value from the `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages
-       /client-custom-name`. For details, see [Name a
+       with the value from the `clientAssignedMessageId` field. For example,
+       `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
        message](https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
          */
         public java.lang.String getName() {
@@ -4026,8 +4027,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * If you set a custom ID when you create a message, you can use this ID to specify the
          * message in a request by replacing `{message}` with the value from the
          * `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages/client-custom-
-         * name`. For details, see [Name a message](https://developers.google.com/workspace/chat
-         * /create-messages#name_a_created_message).
+         * name`. For details, see [Name a
+         * message](https://developers.google.com/workspace/chat/create-
+         * messages#name_a_created_message).
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4248,8 +4250,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * If you set a custom ID when you create a message, you can use this ID to specify the
          * message in a request by replacing `{message}` with the value from the
          * `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages/client-custom-
-         * name`. For details, see [Name a message](https://developers.google.com/workspace/chat
-         * /create-messages#name_a_created_message).
+         * name`. For details, see [Name a
+         * message](https://developers.google.com/workspace/chat/create-
+         * messages#name_a_created_message).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -4258,8 +4261,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        of the space where the message is posted and `{message}` is a system-assigned ID for the message.
        For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`. If you set a custom ID when you
        create a message, you can use this ID to specify the message in a request by replacing `{message}`
-       with the value from the `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages
-       /client-custom-name`. For details, see [Name a
+       with the value from the `clientAssignedMessageId` field. For example,
+       `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a
        message](https://developers.google.com/workspace/chat/create-messages#name_a_created_message).
          */
         public java.lang.String getName() {
@@ -4273,8 +4276,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * If you set a custom ID when you create a message, you can use this ID to specify the
          * message in a request by replacing `{message}` with the value from the
          * `clientAssignedMessageId` field. For example, `spaces/AAAAAAAAAAA/messages/client-custom-
-         * name`. For details, see [Name a message](https://developers.google.com/workspace/chat
-         * /create-messages#name_a_created_message).
+         * name`. For details, see [Name a
+         * message](https://developers.google.com/workspace/chat/create-
+         * messages#name_a_created_message).
          */
         public Update setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4583,8 +4587,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           /**
            * Creates a reaction and adds it to a message. Only unicode emojis are supported. For an example,
            * see [Add a reaction to a message](https://developers.google.com/workspace/chat/create-
-           * reactions). Requires [user authentication](https://developers.google.com/workspace/chat
-           * /authenticate-authorize-chat-user).
+           * reactions). Requires [user
+           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
            *
            * Create a request for the method "reactions.create".
            *
@@ -5137,9 +5141,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * space/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload) contains the
        * most recent version of the resource that changed. For example, if you request an event about a
        * new message but the message was later updated, the server returns the updated `Message` resource
-       * in the event payload. Requires [user authentication](https://developers.google.com/workspace/chat
-       * /authenticate-authorize-chat-user). To get an event, the authenticated user must be a member of
-       * the space. For an example, see [Get details about an event from a Google Chat
+       * in the event payload. Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+       * To get an event, the authenticated user must be a member of the space. For an example, see [Get
+       * details about an event from a Google Chat
        * space](https://developers.google.com/workspace/chat/get-space-event).
        *
        * Create a request for the method "spaceEvents.get".
@@ -5171,8 +5176,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * resource in the event payload. Requires [user
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
          * To get an event, the authenticated user must be a member of the space. For an example, see [Get
-         * details about an event from a Google Chat space](https://developers.google.com/workspace/chat
-         * /get-space-event).
+         * details about an event from a Google Chat
+         * space](https://developers.google.com/workspace/chat/get-space-event).
          *
          * Create a request for the method "spaceEvents.get".
          *
@@ -5819,8 +5824,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
       /**
        * Updates a user's read state within a space, used to identify read and unread messages. For an
-       * example, see [Update a user's space read state](https://developers.google.com/workspace/chat
-       * /update-space-read-state). Requires [user
+       * example, see [Update a user's space read
+       * state](https://developers.google.com/workspace/chat/update-space-read-state). Requires [user
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
        *
        * Create a request for the method "spaces.updateSpaceReadState".
@@ -5848,8 +5853,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Updates a user's read state within a space, used to identify read and unread messages. For an
-         * example, see [Update a user's space read state](https://developers.google.com/workspace/chat
-         * /update-space-read-state). Requires [user
+         * example, see [Update a user's space read
+         * state](https://developers.google.com/workspace/chat/update-space-read-state). Requires [user
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
          *
          * Create a request for the method "spaces.updateSpaceReadState".

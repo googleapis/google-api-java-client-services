@@ -21,8 +21,8 @@ package com.google.api.services.storagetransfer.v1.model;
  * AzureBlobStorageData resource represents one Azure container. The storage account determines the
  * [Azure endpoint](https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-
  * account#storage-account-endpoints). In an AzureBlobStorageData resource, a blobs's name is the
- * [Azure Blob Storage blob's key name](https://docs.microsoft.com/en-us/rest/api/storageservices
- * /naming-and-referencing-containers--blobs--and-metadata#blob-names).
+ * [Azure Blob Storage blob's key name](https://docs.microsoft.com/en-
+ * us/rest/api/storageservices/naming-and-referencing-containers--blobs--and-metadata#blob-names).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:

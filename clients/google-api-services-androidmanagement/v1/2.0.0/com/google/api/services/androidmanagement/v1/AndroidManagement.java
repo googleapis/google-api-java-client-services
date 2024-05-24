@@ -285,9 +285,9 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
       /**
        * The enterprise token appended to the callback URL. Set this when creating a customer-
-       * managed enterprise (https://developers.google.com/android/management/create-enterprise
-       * #customer-managed_enterprises) and not when creating a deprecated EMM-managed enterprise
-       * (https://developers.google.com/android/management/create-enterprise#emm-
+       * managed enterprise (https://developers.google.com/android/management/create-
+       * enterprise#customer-managed_enterprises) and not when creating a deprecated EMM-managed
+       * enterprise (https://developers.google.com/android/management/create-enterprise#emm-
        * managed_enterprises).
        */
       @com.google.api.client.util.Key
@@ -304,9 +304,9 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
       /**
        * The enterprise token appended to the callback URL. Set this when creating a customer-
-       * managed enterprise (https://developers.google.com/android/management/create-enterprise
-       * #customer-managed_enterprises) and not when creating a deprecated EMM-managed enterprise
-       * (https://developers.google.com/android/management/create-enterprise#emm-
+       * managed enterprise (https://developers.google.com/android/management/create-
+       * enterprise#customer-managed_enterprises) and not when creating a deprecated EMM-managed
+       * enterprise (https://developers.google.com/android/management/create-enterprise#emm-
        * managed_enterprises).
        */
       public Create setEnterpriseToken(java.lang.String enterpriseToken) {

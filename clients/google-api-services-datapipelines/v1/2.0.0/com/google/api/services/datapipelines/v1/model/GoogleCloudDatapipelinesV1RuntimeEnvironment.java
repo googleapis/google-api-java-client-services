@@ -38,9 +38,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironment extends com.goog
 
   /**
    * Additional user labels to be specified for the job. Keys and values should follow the
-   * restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs
-   * /labeling-resources#restrictions) page. An object containing a list of key/value pairs.
-   * Example: { "name": "wrench", "mass": "1kg", "count": "3" }.
+   * restrictions specified in the [labeling
+   * restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page. An
+   * object containing a list of key/value pairs. Example: { "name": "wrench", "mass": "1kg",
+   * "count": "3" }.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,9 +153,9 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironment extends com.goog
   private java.lang.String workerZone;
 
   /**
-   * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones
-   * /regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone
-   * will take precedence.
+   * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-
+   * zones/regions-zones) for launching worker instances to run your pipeline. In the future,
+   * worker_zone will take precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,9 +180,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironment extends com.goog
 
   /**
    * Additional user labels to be specified for the job. Keys and values should follow the
-   * restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs
-   * /labeling-resources#restrictions) page. An object containing a list of key/value pairs.
-   * Example: { "name": "wrench", "mass": "1kg", "count": "3" }.
+   * restrictions specified in the [labeling
+   * restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page. An
+   * object containing a list of key/value pairs. Example: { "name": "wrench", "mass": "1kg",
+   * "count": "3" }.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAdditionalUserLabels() {
@@ -190,9 +192,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironment extends com.goog
 
   /**
    * Additional user labels to be specified for the job. Keys and values should follow the
-   * restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs
-   * /labeling-resources#restrictions) page. An object containing a list of key/value pairs.
-   * Example: { "name": "wrench", "mass": "1kg", "count": "3" }.
+   * restrictions specified in the [labeling
+   * restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page. An
+   * object containing a list of key/value pairs. Example: { "name": "wrench", "mass": "1kg",
+   * "count": "3" }.
    * @param additionalUserLabels additionalUserLabels or {@code null} for none
    */
   public GoogleCloudDatapipelinesV1RuntimeEnvironment setAdditionalUserLabels(java.util.Map<String, java.lang.String> additionalUserLabels) {
@@ -450,9 +453,9 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironment extends com.goog
   }
 
   /**
-   * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones
-   * /regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone
-   * will take precedence.
+   * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-
+   * zones/regions-zones) for launching worker instances to run your pipeline. In the future,
+   * worker_zone will take precedence.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -460,9 +463,9 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironment extends com.goog
   }
 
   /**
-   * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones
-   * /regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone
-   * will take precedence.
+   * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-
+   * zones/regions-zones) for launching worker instances to run your pipeline. In the future,
+   * worker_zone will take precedence.
    * @param zone zone or {@code null} for none
    */
   public GoogleCloudDatapipelinesV1RuntimeEnvironment setZone(java.lang.String zone) {

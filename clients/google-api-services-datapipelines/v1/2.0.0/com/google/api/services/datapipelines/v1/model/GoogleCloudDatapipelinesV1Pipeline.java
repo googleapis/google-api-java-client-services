@@ -64,9 +64,9 @@ public final class GoogleCloudDatapipelinesV1Pipeline extends com.google.api.cli
    * The pipeline name. For example:
    * `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain
    * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more
-   * information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
-   * /creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the
-   * pipeline's location. The list of available locations can be obtained by calling
+   * information, see [Identifying projects](https://cloud.google.com/resource-
+   * manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical
+   * ID for the pipeline's location. The list of available locations can be obtained by calling
    * `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not
    * available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's
    * only available in [App Engine regions](https://cloud.google.com/about/locations#region). *
@@ -202,9 +202,9 @@ public final class GoogleCloudDatapipelinesV1Pipeline extends com.google.api.cli
    * The pipeline name. For example:
    * `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain
    * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more
-   * information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
-   * /creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the
-   * pipeline's location. The list of available locations can be obtained by calling
+   * information, see [Identifying projects](https://cloud.google.com/resource-
+   * manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical
+   * ID for the pipeline's location. The list of available locations can be obtained by calling
    * `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not
    * available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's
    * only available in [App Engine regions](https://cloud.google.com/about/locations#region). *
@@ -219,9 +219,9 @@ public final class GoogleCloudDatapipelinesV1Pipeline extends com.google.api.cli
    * The pipeline name. For example:
    * `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain
    * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more
-   * information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
-   * /creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the
-   * pipeline's location. The list of available locations can be obtained by calling
+   * information, see [Identifying projects](https://cloud.google.com/resource-
+   * manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical
+   * ID for the pipeline's location. The list of available locations can be obtained by calling
    * `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not
    * available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's
    * only available in [App Engine regions](https://cloud.google.com/about/locations#region). *

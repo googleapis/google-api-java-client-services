@@ -78,16 +78,16 @@ public final class Request extends com.google.api.client.json.GenericJson {
 
   /**
    * The network protocol used with the request, such as "http/1.1", "spdy/3", "h2", "h2c",
-   * "webrtc", "tcp", "udp", "quic". See https://www.iana.org/assignments/tls-extensiontype-values
-   * /tls-extensiontype-values.xhtml#alpn-protocol-ids for details.
+   * "webrtc", "tcp", "udp", "quic". See https://www.iana.org/assignments/tls-extensiontype-
+   * values/tls-extensiontype-values.xhtml#alpn-protocol-ids for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String protocol;
 
   /**
-   * The HTTP URL query in the format of `name1=value1=value2`, as it appears in the first line of
-   * the HTTP request. No decoding is performed.
+   * The HTTP URL query in the format of `name1=value1&name2=value2`, as it appears in the first
+   * line of the HTTP request. No decoding is performed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -234,8 +234,8 @@ public final class Request extends com.google.api.client.json.GenericJson {
 
   /**
    * The network protocol used with the request, such as "http/1.1", "spdy/3", "h2", "h2c",
-   * "webrtc", "tcp", "udp", "quic". See https://www.iana.org/assignments/tls-extensiontype-values
-   * /tls-extensiontype-values.xhtml#alpn-protocol-ids for details.
+   * "webrtc", "tcp", "udp", "quic". See https://www.iana.org/assignments/tls-extensiontype-
+   * values/tls-extensiontype-values.xhtml#alpn-protocol-ids for details.
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocol() {
@@ -244,8 +244,8 @@ public final class Request extends com.google.api.client.json.GenericJson {
 
   /**
    * The network protocol used with the request, such as "http/1.1", "spdy/3", "h2", "h2c",
-   * "webrtc", "tcp", "udp", "quic". See https://www.iana.org/assignments/tls-extensiontype-values
-   * /tls-extensiontype-values.xhtml#alpn-protocol-ids for details.
+   * "webrtc", "tcp", "udp", "quic". See https://www.iana.org/assignments/tls-extensiontype-
+   * values/tls-extensiontype-values.xhtml#alpn-protocol-ids for details.
    * @param protocol protocol or {@code null} for none
    */
   public Request setProtocol(java.lang.String protocol) {
@@ -254,8 +254,8 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HTTP URL query in the format of `name1=value1=value2`, as it appears in the first line of
-   * the HTTP request. No decoding is performed.
+   * The HTTP URL query in the format of `name1=value1&name2=value2`, as it appears in the first
+   * line of the HTTP request. No decoding is performed.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -263,8 +263,8 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HTTP URL query in the format of `name1=value1=value2`, as it appears in the first line of
-   * the HTTP request. No decoding is performed.
+   * The HTTP URL query in the format of `name1=value1&name2=value2`, as it appears in the first
+   * line of the HTTP request. No decoding is performed.
    * @param query query or {@code null} for none
    */
   public Request setQuery(java.lang.String query) {

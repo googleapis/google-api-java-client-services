@@ -64,16 +64,17 @@ public final class DefaultResources extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. **DEPRECATED.** _Instead, find the default Firebase Realtime Database instance
-   * name using the [list endpoint](https://firebase.google.com/docs/reference/rest/database
-   * /database-management/rest/v1beta/projects.locations.instances/list) within the Firebase
-   * Realtime Database REST API. Note that the default instance for the Project might not yet be
-   * provisioned, so the return might not contain a default instance._ The default Firebase Realtime
-   * Database instance name, in the format: PROJECT_ID Though rare, your `projectId` might already
-   * be used as the name for an existing Realtime Database instance in another project (learn more
-   * about [database sharding](https://firebase.google.com/docs/database/usage/sharding)). In these
-   * cases, your `projectId` is appended with a hyphen then five alphanumeric characters to create
-   * your default Realtime Database instance name. For example, if your `projectId` is
-   * `myproject123`, your default database instance name might be: `myproject123-a5c16`
+   * name using the [list
+   * endpoint](https://firebase.google.com/docs/reference/rest/database/database-
+   * management/rest/v1beta/projects.locations.instances/list) within the Firebase Realtime Database
+   * REST API. Note that the default instance for the Project might not yet be provisioned, so the
+   * return might not contain a default instance._ The default Firebase Realtime Database instance
+   * name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as the name
+   * for an existing Realtime Database instance in another project (learn more about [database
+   * sharding](https://firebase.google.com/docs/database/usage/sharding)). In these cases, your
+   * `projectId` is appended with a hyphen then five alphanumeric characters to create your default
+   * Realtime Database instance name. For example, if your `projectId` is `myproject123`, your
+   * default database instance name might be: `myproject123-a5c16`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,16 +158,17 @@ public final class DefaultResources extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. **DEPRECATED.** _Instead, find the default Firebase Realtime Database instance
-   * name using the [list endpoint](https://firebase.google.com/docs/reference/rest/database
-   * /database-management/rest/v1beta/projects.locations.instances/list) within the Firebase
-   * Realtime Database REST API. Note that the default instance for the Project might not yet be
-   * provisioned, so the return might not contain a default instance._ The default Firebase Realtime
-   * Database instance name, in the format: PROJECT_ID Though rare, your `projectId` might already
-   * be used as the name for an existing Realtime Database instance in another project (learn more
-   * about [database sharding](https://firebase.google.com/docs/database/usage/sharding)). In these
-   * cases, your `projectId` is appended with a hyphen then five alphanumeric characters to create
-   * your default Realtime Database instance name. For example, if your `projectId` is
-   * `myproject123`, your default database instance name might be: `myproject123-a5c16`
+   * name using the [list
+   * endpoint](https://firebase.google.com/docs/reference/rest/database/database-
+   * management/rest/v1beta/projects.locations.instances/list) within the Firebase Realtime Database
+   * REST API. Note that the default instance for the Project might not yet be provisioned, so the
+   * return might not contain a default instance._ The default Firebase Realtime Database instance
+   * name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as the name
+   * for an existing Realtime Database instance in another project (learn more about [database
+   * sharding](https://firebase.google.com/docs/database/usage/sharding)). In these cases, your
+   * `projectId` is appended with a hyphen then five alphanumeric characters to create your default
+   * Realtime Database instance name. For example, if your `projectId` is `myproject123`, your
+   * default database instance name might be: `myproject123-a5c16`
    * @return value or {@code null} for none
    */
   public java.lang.String getRealtimeDatabaseInstance() {
@@ -175,16 +177,17 @@ public final class DefaultResources extends com.google.api.client.json.GenericJs
 
   /**
    * Output only. **DEPRECATED.** _Instead, find the default Firebase Realtime Database instance
-   * name using the [list endpoint](https://firebase.google.com/docs/reference/rest/database
-   * /database-management/rest/v1beta/projects.locations.instances/list) within the Firebase
-   * Realtime Database REST API. Note that the default instance for the Project might not yet be
-   * provisioned, so the return might not contain a default instance._ The default Firebase Realtime
-   * Database instance name, in the format: PROJECT_ID Though rare, your `projectId` might already
-   * be used as the name for an existing Realtime Database instance in another project (learn more
-   * about [database sharding](https://firebase.google.com/docs/database/usage/sharding)). In these
-   * cases, your `projectId` is appended with a hyphen then five alphanumeric characters to create
-   * your default Realtime Database instance name. For example, if your `projectId` is
-   * `myproject123`, your default database instance name might be: `myproject123-a5c16`
+   * name using the [list
+   * endpoint](https://firebase.google.com/docs/reference/rest/database/database-
+   * management/rest/v1beta/projects.locations.instances/list) within the Firebase Realtime Database
+   * REST API. Note that the default instance for the Project might not yet be provisioned, so the
+   * return might not contain a default instance._ The default Firebase Realtime Database instance
+   * name, in the format: PROJECT_ID Though rare, your `projectId` might already be used as the name
+   * for an existing Realtime Database instance in another project (learn more about [database
+   * sharding](https://firebase.google.com/docs/database/usage/sharding)). In these cases, your
+   * `projectId` is appended with a hyphen then five alphanumeric characters to create your default
+   * Realtime Database instance name. For example, if your `projectId` is `myproject123`, your
+   * default database instance name might be: `myproject123-a5c16`
    * @param realtimeDatabaseInstance realtimeDatabaseInstance or {@code null} for none
    */
   public DefaultResources setRealtimeDatabaseInstance(java.lang.String realtimeDatabaseInstance) {

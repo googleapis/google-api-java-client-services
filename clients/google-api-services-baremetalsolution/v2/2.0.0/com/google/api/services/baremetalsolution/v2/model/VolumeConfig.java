@@ -31,8 +31,8 @@ package com.google.api.services.baremetalsolution.v2.model;
 public final class VolumeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The GCP service of the storage volume. Available gcp_service are in https://cloud.google.com
-   * /bare-metal/docs/bms-planning.
+   * The GCP service of the storage volume. Available gcp_service are in
+   * https://cloud.google.com/bare-metal/docs/bms-planning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,8 +129,8 @@ public final class VolumeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String userNote;
 
   /**
-   * The GCP service of the storage volume. Available gcp_service are in https://cloud.google.com
-   * /bare-metal/docs/bms-planning.
+   * The GCP service of the storage volume. Available gcp_service are in
+   * https://cloud.google.com/bare-metal/docs/bms-planning.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpService() {
@@ -138,8 +138,8 @@ public final class VolumeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The GCP service of the storage volume. Available gcp_service are in https://cloud.google.com
-   * /bare-metal/docs/bms-planning.
+   * The GCP service of the storage volume. Available gcp_service are in
+   * https://cloud.google.com/bare-metal/docs/bms-planning.
    * @param gcpService gcpService or {@code null} for none
    */
   public VolumeConfig setGcpService(java.lang.String gcpService) {

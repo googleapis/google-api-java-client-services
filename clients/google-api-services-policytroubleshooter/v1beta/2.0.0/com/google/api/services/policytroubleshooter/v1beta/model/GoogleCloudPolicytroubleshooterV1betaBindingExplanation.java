@@ -53,10 +53,10 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
    * Indicates whether each member in the binding includes the member specified in the request,
    * either directly or indirectly. Each key identifies a member in the binding, and each value
    * indicates whether the member in the binding includes the member in the request. For example,
-   * suppose that a binding includes the following members: * `user:alice@example.com` * `group
-   * :product-eng@example.com` You want to troubleshoot access for `user:bob@example.com`. This user
-   * is a member of the group `group:product-eng@example.com`. For the first member in the binding,
-   * the key is `user:alice@example.com`, and the `membership` field in the value is set to
+   * suppose that a binding includes the following members: * `user:alice@example.com` *
+   * `group:product-eng@example.com` You want to troubleshoot access for `user:bob@example.com`.
+   * This user is a member of the group `group:product-eng@example.com`. For the first member in the
+   * binding, the key is `user:alice@example.com`, and the `membership` field in the value is set to
    * `MEMBERSHIP_NOT_INCLUDED`. For the second member in the binding, the key is `group:product-
    * eng@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
    * The value may be {@code null}.
@@ -143,10 +143,10 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
    * Indicates whether each member in the binding includes the member specified in the request,
    * either directly or indirectly. Each key identifies a member in the binding, and each value
    * indicates whether the member in the binding includes the member in the request. For example,
-   * suppose that a binding includes the following members: * `user:alice@example.com` * `group
-   * :product-eng@example.com` You want to troubleshoot access for `user:bob@example.com`. This user
-   * is a member of the group `group:product-eng@example.com`. For the first member in the binding,
-   * the key is `user:alice@example.com`, and the `membership` field in the value is set to
+   * suppose that a binding includes the following members: * `user:alice@example.com` *
+   * `group:product-eng@example.com` You want to troubleshoot access for `user:bob@example.com`.
+   * This user is a member of the group `group:product-eng@example.com`. For the first member in the
+   * binding, the key is `user:alice@example.com`, and the `membership` field in the value is set to
    * `MEMBERSHIP_NOT_INCLUDED`. For the second member in the binding, the key is `group:product-
    * eng@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
    * @return value or {@code null} for none
@@ -159,10 +159,10 @@ public final class GoogleCloudPolicytroubleshooterV1betaBindingExplanation exten
    * Indicates whether each member in the binding includes the member specified in the request,
    * either directly or indirectly. Each key identifies a member in the binding, and each value
    * indicates whether the member in the binding includes the member in the request. For example,
-   * suppose that a binding includes the following members: * `user:alice@example.com` * `group
-   * :product-eng@example.com` You want to troubleshoot access for `user:bob@example.com`. This user
-   * is a member of the group `group:product-eng@example.com`. For the first member in the binding,
-   * the key is `user:alice@example.com`, and the `membership` field in the value is set to
+   * suppose that a binding includes the following members: * `user:alice@example.com` *
+   * `group:product-eng@example.com` You want to troubleshoot access for `user:bob@example.com`.
+   * This user is a member of the group `group:product-eng@example.com`. For the first member in the
+   * binding, the key is `user:alice@example.com`, and the `membership` field in the value is set to
    * `MEMBERSHIP_NOT_INCLUDED`. For the second member in the binding, the key is `group:product-
    * eng@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
    * @param memberships memberships or {@code null} for none

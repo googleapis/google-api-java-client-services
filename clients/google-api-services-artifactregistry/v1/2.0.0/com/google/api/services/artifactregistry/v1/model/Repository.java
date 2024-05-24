@@ -67,9 +67,8 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Optional. If this is true, aunspecified repo type will be treated as error. Is used for new
-   * repo types that don't have any specific fields. Right now is used by AOSS team when creating
-   * repos for customers.
+   * Optional. If this is true, an unspecified repo type will be treated as error rather than
+   * defaulting to standard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -247,9 +246,8 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If this is true, aunspecified repo type will be treated as error. Is used for new
-   * repo types that don't have any specific fields. Right now is used by AOSS team when creating
-   * repos for customers.
+   * Optional. If this is true, an unspecified repo type will be treated as error rather than
+   * defaulting to standard.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisallowUnspecifiedMode() {
@@ -257,9 +255,8 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If this is true, aunspecified repo type will be treated as error. Is used for new
-   * repo types that don't have any specific fields. Right now is used by AOSS team when creating
-   * repos for customers.
+   * Optional. If this is true, an unspecified repo type will be treated as error rather than
+   * defaulting to standard.
    * @param disallowUnspecifiedMode disallowUnspecifiedMode or {@code null} for none
    */
   public Repository setDisallowUnspecifiedMode(java.lang.Boolean disallowUnspecifiedMode) {

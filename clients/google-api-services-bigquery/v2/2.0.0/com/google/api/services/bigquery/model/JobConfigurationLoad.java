@@ -156,15 +156,15 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private DestinationTableProperties destinationTableProperties;
 
   /**
-   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1, UTF-
-   * 16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the data
-   * after the raw, binary data has been split using the values of the `quote` and `fieldDelimiter`
-   * properties. If you don't specify an encoding, or if you specify a UTF-8 encoding when the CSV
-   * file is not UTF-8 encoded, BigQuery attempts to convert the data to UTF-8. Generally, your data
-   * loads successfully, but it may not match byte-for-byte what you expect. To avoid this, specify
-   * the correct encoding by using the `--encoding` flag. If BigQuery can't convert a character
-   * other than the ASCII `0` character, BigQuery converts the character to the standard Unicode
-   * replacement character: �.
+   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1,
+   * UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the
+   * data after the raw, binary data has been split using the values of the `quote` and
+   * `fieldDelimiter` properties. If you don't specify an encoding, or if you specify a UTF-8
+   * encoding when the CSV file is not UTF-8 encoded, BigQuery attempts to convert the data to
+   * UTF-8. Generally, your data loads successfully, but it may not match byte-for-byte what you
+   * expect. To avoid this, specify the correct encoding by using the `--encoding` flag. If BigQuery
+   * can't convert a character other than the ASCII `0` character, BigQuery converts the character
+   * to the standard Unicode replacement character: �.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -682,15 +682,15 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1, UTF-
-   * 16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the data
-   * after the raw, binary data has been split using the values of the `quote` and `fieldDelimiter`
-   * properties. If you don't specify an encoding, or if you specify a UTF-8 encoding when the CSV
-   * file is not UTF-8 encoded, BigQuery attempts to convert the data to UTF-8. Generally, your data
-   * loads successfully, but it may not match byte-for-byte what you expect. To avoid this, specify
-   * the correct encoding by using the `--encoding` flag. If BigQuery can't convert a character
-   * other than the ASCII `0` character, BigQuery converts the character to the standard Unicode
-   * replacement character: �.
+   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1,
+   * UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the
+   * data after the raw, binary data has been split using the values of the `quote` and
+   * `fieldDelimiter` properties. If you don't specify an encoding, or if you specify a UTF-8
+   * encoding when the CSV file is not UTF-8 encoded, BigQuery attempts to convert the data to
+   * UTF-8. Generally, your data loads successfully, but it may not match byte-for-byte what you
+   * expect. To avoid this, specify the correct encoding by using the `--encoding` flag. If BigQuery
+   * can't convert a character other than the ASCII `0` character, BigQuery converts the character
+   * to the standard Unicode replacement character: �.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncoding() {
@@ -698,15 +698,15 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1, UTF-
-   * 16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the data
-   * after the raw, binary data has been split using the values of the `quote` and `fieldDelimiter`
-   * properties. If you don't specify an encoding, or if you specify a UTF-8 encoding when the CSV
-   * file is not UTF-8 encoded, BigQuery attempts to convert the data to UTF-8. Generally, your data
-   * loads successfully, but it may not match byte-for-byte what you expect. To avoid this, specify
-   * the correct encoding by using the `--encoding` flag. If BigQuery can't convert a character
-   * other than the ASCII `0` character, BigQuery converts the character to the standard Unicode
-   * replacement character: �.
+   * Optional. The character encoding of the data. The supported values are UTF-8, ISO-8859-1,
+   * UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. BigQuery decodes the
+   * data after the raw, binary data has been split using the values of the `quote` and
+   * `fieldDelimiter` properties. If you don't specify an encoding, or if you specify a UTF-8
+   * encoding when the CSV file is not UTF-8 encoded, BigQuery attempts to convert the data to
+   * UTF-8. Generally, your data loads successfully, but it may not match byte-for-byte what you
+   * expect. To avoid this, specify the correct encoding by using the `--encoding` flag. If BigQuery
+   * can't convert a character other than the ASCII `0` character, BigQuery converts the character
+   * to the standard Unicode replacement character: �.
    * @param encoding encoding or {@code null} for none
    */
   public JobConfigurationLoad setEncoding(java.lang.String encoding) {

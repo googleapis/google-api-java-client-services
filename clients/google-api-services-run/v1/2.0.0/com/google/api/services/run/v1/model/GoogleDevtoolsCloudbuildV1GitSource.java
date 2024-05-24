@@ -43,8 +43,8 @@ public final class GoogleDevtoolsCloudbuildV1GitSource extends com.google.api.cl
    * ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository; therefore make
    * sure that the string you provide for `revision` is parsable by the command. For information on
    * string values accepted by `git fetch`, see https://git-
-   * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see https
-   * ://git-scm.com/docs/git-fetch.
+   * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see
+   * https://git-scm.com/docs/git-fetch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +84,8 @@ public final class GoogleDevtoolsCloudbuildV1GitSource extends com.google.api.cl
    * ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository; therefore make
    * sure that the string you provide for `revision` is parsable by the command. For information on
    * string values accepted by `git fetch`, see https://git-
-   * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see https
-   * ://git-scm.com/docs/git-fetch.
+   * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see
+   * https://git-scm.com/docs/git-fetch.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevision() {
@@ -97,8 +97,8 @@ public final class GoogleDevtoolsCloudbuildV1GitSource extends com.google.api.cl
    * ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository; therefore make
    * sure that the string you provide for `revision` is parsable by the command. For information on
    * string values accepted by `git fetch`, see https://git-
-   * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see https
-   * ://git-scm.com/docs/git-fetch.
+   * scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see
+   * https://git-scm.com/docs/git-fetch.
    * @param revision revision or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV1GitSource setRevision(java.lang.String revision) {

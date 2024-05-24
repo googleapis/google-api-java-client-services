@@ -10391,8 +10391,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Name of the object. Required when the object metadata is not otherwise provided. Overrides
        * the object metadata's name value, if any. For information about how to URL encode object
-       * names to be path safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs
-       * /request-endpoints#encoding).
+       * names to be path safe, see [Encoding URI Path
+       * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -10409,8 +10409,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Name of the object. Required when the object metadata is not otherwise provided. Overrides
        * the object metadata's name value, if any. For information about how to URL encode object
-       * names to be path safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs
-       * /request-endpoints#encoding).
+       * names to be path safe, see [Encoding URI Path
+       * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
        */
       public Insert setName(java.lang.String name) {
         this.name = name;
@@ -11511,8 +11511,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *        value, if any.
      * @param destinationObject Name of the new object. Required when the object metadata is not otherwise provided. Overrides the
      *        object metadata's name value, if any. For information about how to URL encode object names
-     *        to be path safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs
-     *        /request-endpoints#encoding).
+     *        to be path safe, see [Encoding URI Path
+     *        Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
      * @param content the {@link com.google.api.services.storage.model.StorageObject}
      * @return the request
      */
@@ -11545,8 +11545,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *        value, if any.
        * @param destinationObject Name of the new object. Required when the object metadata is not otherwise provided. Overrides the
      *        object metadata's name value, if any. For information about how to URL encode object names
-     *        to be path safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs
-     *        /request-endpoints#encoding).
+     *        to be path safe, see [Encoding URI Path
+     *        Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
        * @param content the {@link com.google.api.services.storage.model.StorageObject}
        * @since 1.13
        */

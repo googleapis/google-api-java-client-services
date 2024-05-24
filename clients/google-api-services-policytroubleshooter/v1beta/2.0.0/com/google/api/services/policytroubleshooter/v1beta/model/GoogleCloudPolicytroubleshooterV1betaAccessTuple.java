@@ -52,9 +52,9 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
 
   /**
    * Required. The member, or principal, whose access you want to check, in the form of the email
-   * address that represents that member. For example, `alice@example.com` or `my-service-account
-   * @my-project.iam.gserviceaccount.com`. The member must be a Google Account or a service account.
-   * Other types of members are not supported.
+   * address that represents that member. For example, `alice@example.com` or `my-service-
+   * account@my-project.iam.gserviceaccount.com`. The member must be a Google Account or a service
+   * account. Other types of members are not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,9 +108,9 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
 
   /**
    * Required. The member, or principal, whose access you want to check, in the form of the email
-   * address that represents that member. For example, `alice@example.com` or `my-service-account
-   * @my-project.iam.gserviceaccount.com`. The member must be a Google Account or a service account.
-   * Other types of members are not supported.
+   * address that represents that member. For example, `alice@example.com` or `my-service-
+   * account@my-project.iam.gserviceaccount.com`. The member must be a Google Account or a service
+   * account. Other types of members are not supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -119,9 +119,9 @@ public final class GoogleCloudPolicytroubleshooterV1betaAccessTuple extends com.
 
   /**
    * Required. The member, or principal, whose access you want to check, in the form of the email
-   * address that represents that member. For example, `alice@example.com` or `my-service-account
-   * @my-project.iam.gserviceaccount.com`. The member must be a Google Account or a service account.
-   * Other types of members are not supported.
+   * address that represents that member. For example, `alice@example.com` or `my-service-
+   * account@my-project.iam.gserviceaccount.com`. The member must be a Google Account or a service
+   * account. Other types of members are not supported.
    * @param principal principal or {@code null} for none
    */
   public GoogleCloudPolicytroubleshooterV1betaAccessTuple setPrincipal(java.lang.String principal) {

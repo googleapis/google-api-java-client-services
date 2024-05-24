@@ -34,10 +34,10 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySource extends com.goog
    * Required. BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a
    * table that does not exist, Data Labeling Service creates a table at the URI with the correct
    * schema when you create your EvaluationJob. If you specify the URI of a table that already
-   * exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job
-   * #table-schema). Provide the table URI in the following format: "bq://{your_project_id}/
-   * {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-evaluation
-   * /create-job#table-schema).
+   * exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-
+   * job#table-schema). Provide the table URI in the following format: "bq://{your_project_id}/
+   * {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-
+   * evaluation/create-job#table-schema).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,10 +47,10 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySource extends com.goog
    * Required. BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a
    * table that does not exist, Data Labeling Service creates a table at the URI with the correct
    * schema when you create your EvaluationJob. If you specify the URI of a table that already
-   * exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job
-   * #table-schema). Provide the table URI in the following format: "bq://{your_project_id}/
-   * {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-evaluation
-   * /create-job#table-schema).
+   * exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-
+   * job#table-schema). Provide the table URI in the following format: "bq://{your_project_id}/
+   * {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-
+   * evaluation/create-job#table-schema).
    * @return value or {@code null} for none
    */
   public java.lang.String getInputUri() {
@@ -61,10 +61,10 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySource extends com.goog
    * Required. BigQuery URI to a table, up to 2,000 characters long. If you specify the URI of a
    * table that does not exist, Data Labeling Service creates a table at the URI with the correct
    * schema when you create your EvaluationJob. If you specify the URI of a table that already
-   * exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-job
-   * #table-schema). Provide the table URI in the following format: "bq://{your_project_id}/
-   * {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-evaluation
-   * /create-job#table-schema).
+   * exists, it must have the [correct schema](/ml-engine/docs/continuous-evaluation/create-
+   * job#table-schema). Provide the table URI in the following format: "bq://{your_project_id}/
+   * {your_dataset_name}/{your_table_name}" [Learn more](/ml-engine/docs/continuous-
+   * evaluation/create-job#table-schema).
    * @param inputUri inputUri or {@code null} for none
    */
   public GoogleCloudDatalabelingV1beta1BigQuerySource setInputUri(java.lang.String inputUri) {

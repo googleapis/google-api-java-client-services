@@ -18,8 +18,8 @@ package com.google.api.services.gkehub.v1.model;
 
 /**
  * Authority encodes how Google will recognize identities from this Membership. See the workload
- * identity documentation for more details: https://cloud.google.com/kubernetes-engine/docs/how-to
- * /workload-identity
+ * identity documentation for more details: https://cloud.google.com/kubernetes-engine/docs/how-
+ * to/workload-identity
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:

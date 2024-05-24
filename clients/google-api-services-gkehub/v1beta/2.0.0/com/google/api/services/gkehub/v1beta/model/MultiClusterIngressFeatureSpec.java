@@ -37,8 +37,8 @@ public final class MultiClusterIngressFeatureSpec extends com.google.api.client.
   private java.lang.String billing;
 
   /**
-   * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects
-   * /foo-proj/locations/global/memberships/bar`
+   * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example:
+   * `projects/foo-proj/locations/global/memberships/bar`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class MultiClusterIngressFeatureSpec extends com.google.api.client.
   }
 
   /**
-   * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects
-   * /foo-proj/locations/global/memberships/bar`
+   * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example:
+   * `projects/foo-proj/locations/global/memberships/bar`
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigMembership() {
@@ -71,8 +71,8 @@ public final class MultiClusterIngressFeatureSpec extends com.google.api.client.
   }
 
   /**
-   * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects
-   * /foo-proj/locations/global/memberships/bar`
+   * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example:
+   * `projects/foo-proj/locations/global/memberships/bar`
    * @param configMembership configMembership or {@code null} for none
    */
   public MultiClusterIngressFeatureSpec setConfigMembership(java.lang.String configMembership) {

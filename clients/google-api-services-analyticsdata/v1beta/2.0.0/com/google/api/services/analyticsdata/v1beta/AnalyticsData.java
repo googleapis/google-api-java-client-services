@@ -478,9 +478,10 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
      * parameters, call the {@link CheckCompatibility#execute()} method to invoke the remote operation.
      *
      * @param property A Google Analytics GA4 property identifier whose events are tracked. To learn more, see [where to
-     *        find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1
-     *        /property-id). `property` should be the same value as in your `runReport` request.
-     *        Example: properties/1234
+     *        find your Property
+     *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
+     *        `property` should be the same value as in your `runReport` request. Example:
+     *        properties/1234
      * @param content the {@link com.google.api.services.analyticsdata.v1beta.model.CheckCompatibilityRequest}
      * @return the request
      */
@@ -514,9 +515,10 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
        * invoking the constructor. </p>
        *
        * @param property A Google Analytics GA4 property identifier whose events are tracked. To learn more, see [where to
-     *        find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1
-     *        /property-id). `property` should be the same value as in your `runReport` request.
-     *        Example: properties/1234
+     *        find your Property
+     *        ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
+     *        `property` should be the same value as in your `runReport` request. Example:
+     *        properties/1234
        * @param content the {@link com.google.api.services.analyticsdata.v1beta.model.CheckCompatibilityRequest}
        * @since 1.13
        */
@@ -596,9 +598,9 @@ public class AnalyticsData extends com.google.api.client.googleapis.services.jso
       private java.lang.String property;
 
       /** A Google Analytics GA4 property identifier whose events are tracked. To learn more, see [where to
-     find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1
-     /property-id). `property` should be the same value as in your `runReport` request. Example:
-     properties/1234
+     find your Property
+     ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). `property`
+     should be the same value as in your `runReport` request. Example: properties/1234
        */
       public java.lang.String getProperty() {
         return property;

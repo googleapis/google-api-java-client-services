@@ -7013,8 +7013,9 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables
-         *        /_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `STATS_VIEW`, `FULL`
+         * @param name The unique name of the table. Values are of the form
+         *        `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`,
+         *        `SCHEMA_VIEW`, `REPLICATION_VIEW`, `STATS_VIEW`, `FULL`
          * @param content the {@link com.google.api.services.bigtableadmin.v2.model.Table}
          * @return the request
          */
@@ -7042,8 +7043,9 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables
-         *        /_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `STATS_VIEW`, `FULL`
+           * @param name The unique name of the table. Values are of the form
+         *        `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`,
+         *        `SCHEMA_VIEW`, `REPLICATION_VIEW`, `STATS_VIEW`, `FULL`
            * @param content the {@link com.google.api.services.bigtableadmin.v2.model.Table}
            * @since 1.13
            */

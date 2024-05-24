@@ -49,8 +49,8 @@ public final class HcxActivationKey extends com.google.api.client.json.GenericJs
   /**
    * Output only. The resource name of this HcxActivationKey. Resource names are schemeless URIs
    * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-   * example: `projects/my-project/locations/us-central1/privateClouds/my-cloud/hcxActivationKeys
-   * /my-key`
+   * example: `projects/my-project/locations/us-central1/privateClouds/my-
+   * cloud/hcxActivationKeys/my-key`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,8 +107,8 @@ public final class HcxActivationKey extends com.google.api.client.json.GenericJs
   /**
    * Output only. The resource name of this HcxActivationKey. Resource names are schemeless URIs
    * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-   * example: `projects/my-project/locations/us-central1/privateClouds/my-cloud/hcxActivationKeys
-   * /my-key`
+   * example: `projects/my-project/locations/us-central1/privateClouds/my-
+   * cloud/hcxActivationKeys/my-key`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -118,8 +118,8 @@ public final class HcxActivationKey extends com.google.api.client.json.GenericJs
   /**
    * Output only. The resource name of this HcxActivationKey. Resource names are schemeless URIs
    * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
-   * example: `projects/my-project/locations/us-central1/privateClouds/my-cloud/hcxActivationKeys
-   * /my-key`
+   * example: `projects/my-project/locations/us-central1/privateClouds/my-
+   * cloud/hcxActivationKeys/my-key`
    * @param name name or {@code null} for none
    */
   public HcxActivationKey setName(java.lang.String name) {

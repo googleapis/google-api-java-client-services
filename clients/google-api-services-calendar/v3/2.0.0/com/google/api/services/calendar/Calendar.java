@@ -4997,7 +4997,8 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Moves an event to another calendar, i.e. changes an event's organizer. Note that only default
-     * events can be moved; outOfOffice, focusTime and workingLocation events cannot be moved.
+     * events can be moved; outOfOffice, focusTime, workingLocation and fromGmail events cannot be
+     * moved.
      *
      * Create a request for the method "events.move".
      *
@@ -5021,7 +5022,8 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Moves an event to another calendar, i.e. changes an event's organizer. Note that only default
-       * events can be moved; outOfOffice, focusTime and workingLocation events cannot be moved.
+       * events can be moved; outOfOffice, focusTime, workingLocation and fromGmail events cannot be
+       * moved.
        *
        * Create a request for the method "events.move".
        *

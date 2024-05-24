@@ -128,7 +128,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
    * Specific type of the event. This cannot be modified after the event is created. Possible values
    * are: - "default" - A regular event or not further specified.  - "outOfOffice" - An out-of-
    * office event.  - "focusTime" - A focus-time event.  - "workingLocation" - A working location
-   * event.
+   * event.  - "fromGmail" - An event from Gmail. This type of event cannot be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -711,7 +711,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
    * Specific type of the event. This cannot be modified after the event is created. Possible values
    * are: - "default" - A regular event or not further specified.  - "outOfOffice" - An out-of-
    * office event.  - "focusTime" - A focus-time event.  - "workingLocation" - A working location
-   * event.
+   * event.  - "fromGmail" - An event from Gmail. This type of event cannot be created.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -722,7 +722,7 @@ public final class Event extends com.google.api.client.json.GenericJson {
    * Specific type of the event. This cannot be modified after the event is created. Possible values
    * are: - "default" - A regular event or not further specified.  - "outOfOffice" - An out-of-
    * office event.  - "focusTime" - A focus-time event.  - "workingLocation" - A working location
-   * event.
+   * event.  - "fromGmail" - An event from Gmail. This type of event cannot be created.
    * @param eventType eventType or {@code null} for none
    */
   public Event setEventType(java.lang.String eventType) {

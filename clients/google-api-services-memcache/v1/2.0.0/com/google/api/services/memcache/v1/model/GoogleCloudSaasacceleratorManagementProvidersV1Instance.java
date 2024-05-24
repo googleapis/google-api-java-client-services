@@ -18,8 +18,8 @@ package com.google.api.services.memcache.v1.model;
 
 /**
  * Instance represents the interface for SLM services to actuate the state of control plane
- * resources. Example Instance in JSON, where consumer-project-number=123456, producer-project-id
- * =cloud-sql: ```json Instance: { "name": "projects/123456/locations/us-east1/instances/prod-
+ * resources. Example Instance in JSON, where consumer-project-number=123456, producer-project-
+ * id=cloud-sql: ```json Instance: { "name": "projects/123456/locations/us-east1/instances/prod-
  * instance", "create_time": { "seconds": 1526406431, }, "labels": { "env": "prod", "foo": "bar" },
  * "state": READY, "software_versions": { "software_update": "cloud-sql-09-28-2018", },
  * "maintenance_policy_names": { "UpdatePolicy": "projects/123456/locations/us-

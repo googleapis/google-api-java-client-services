@@ -56,8 +56,8 @@ public final class GoogleCloudAiplatformV1beta1FindNeighborsRequestQuery extends
 
   /**
    * The number of nearest neighbors to be retrieved from database for each query. If not set, will
-   * use the default from the service configuration (https://cloud.google.com/vertex-ai/docs
-   * /matching-engine/configuring-indexes#nearest-neighbor-search-config).
+   * use the default from the service configuration (https://cloud.google.com/vertex-
+   * ai/docs/matching-engine/configuring-indexes#nearest-neighbor-search-config).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,8 +141,8 @@ public final class GoogleCloudAiplatformV1beta1FindNeighborsRequestQuery extends
 
   /**
    * The number of nearest neighbors to be retrieved from database for each query. If not set, will
-   * use the default from the service configuration (https://cloud.google.com/vertex-ai/docs
-   * /matching-engine/configuring-indexes#nearest-neighbor-search-config).
+   * use the default from the service configuration (https://cloud.google.com/vertex-
+   * ai/docs/matching-engine/configuring-indexes#nearest-neighbor-search-config).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNeighborCount() {
@@ -151,8 +151,8 @@ public final class GoogleCloudAiplatformV1beta1FindNeighborsRequestQuery extends
 
   /**
    * The number of nearest neighbors to be retrieved from database for each query. If not set, will
-   * use the default from the service configuration (https://cloud.google.com/vertex-ai/docs
-   * /matching-engine/configuring-indexes#nearest-neighbor-search-config).
+   * use the default from the service configuration (https://cloud.google.com/vertex-
+   * ai/docs/matching-engine/configuring-indexes#nearest-neighbor-search-config).
    * @param neighborCount neighborCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FindNeighborsRequestQuery setNeighborCount(java.lang.Integer neighborCount) {

@@ -55,11 +55,11 @@ public final class GoogleCloudAiplatformV1beta1UploadModelRequest extends com.go
 
   /**
    * Optional. The user-provided custom service account to use to do the model upload. If empty,
-   * [Vertex AI Service Agent](https://cloud.google.com/vertex-ai/docs/general/access-control
-   * #service-agents) will be used to access resources needed to upload the model. This account must
-   * belong to the target project where the model is uploaded to, i.e., the project specified in the
-   * `parent` field of this request and have necessary read permissions (to Google Cloud Storage,
-   * Artifact Registry, etc.).
+   * [Vertex AI Service Agent](https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) will be used to access resources needed to upload the model. This
+   * account must belong to the target project where the model is uploaded to, i.e., the project
+   * specified in the `parent` field of this request and have necessary read permissions (to Google
+   * Cloud Storage, Artifact Registry, etc.).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,11 +124,11 @@ public final class GoogleCloudAiplatformV1beta1UploadModelRequest extends com.go
 
   /**
    * Optional. The user-provided custom service account to use to do the model upload. If empty,
-   * [Vertex AI Service Agent](https://cloud.google.com/vertex-ai/docs/general/access-control
-   * #service-agents) will be used to access resources needed to upload the model. This account must
-   * belong to the target project where the model is uploaded to, i.e., the project specified in the
-   * `parent` field of this request and have necessary read permissions (to Google Cloud Storage,
-   * Artifact Registry, etc.).
+   * [Vertex AI Service Agent](https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) will be used to access resources needed to upload the model. This
+   * account must belong to the target project where the model is uploaded to, i.e., the project
+   * specified in the `parent` field of this request and have necessary read permissions (to Google
+   * Cloud Storage, Artifact Registry, etc.).
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -137,11 +137,11 @@ public final class GoogleCloudAiplatformV1beta1UploadModelRequest extends com.go
 
   /**
    * Optional. The user-provided custom service account to use to do the model upload. If empty,
-   * [Vertex AI Service Agent](https://cloud.google.com/vertex-ai/docs/general/access-control
-   * #service-agents) will be used to access resources needed to upload the model. This account must
-   * belong to the target project where the model is uploaded to, i.e., the project specified in the
-   * `parent` field of this request and have necessary read permissions (to Google Cloud Storage,
-   * Artifact Registry, etc.).
+   * [Vertex AI Service Agent](https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) will be used to access resources needed to upload the model. This
+   * account must belong to the target project where the model is uploaded to, i.e., the project
+   * specified in the `parent` field of this request and have necessary read permissions (to Google
+   * Cloud Storage, Artifact Registry, etc.).
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1UploadModelRequest setServiceAccount(java.lang.String serviceAccount) {

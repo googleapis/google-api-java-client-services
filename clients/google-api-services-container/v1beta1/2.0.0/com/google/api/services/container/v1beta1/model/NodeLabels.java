@@ -17,8 +17,8 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Collection of node-level [Kubernetes labels](https://kubernetes.io/docs/concepts/overview
- * /working-with-objects/labels).
+ * Collection of node-level [Kubernetes
+ * labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

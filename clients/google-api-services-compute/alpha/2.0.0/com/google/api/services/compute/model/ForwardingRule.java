@@ -63,8 +63,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP,
    * UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different
-   * load balancing products as described in [Load balancing features](https://cloud.google.com
-   * /load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).
+   * load balancing products as described in [Load balancing
+   * features](https://cloud.google.com/load-
+   * balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("IPProtocol")
@@ -512,8 +513,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP,
    * UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different
-   * load balancing products as described in [Load balancing features](https://cloud.google.com
-   * /load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).
+   * load balancing products as described in [Load balancing
+   * features](https://cloud.google.com/load-
+   * balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).
    * @return value or {@code null} for none
    */
   public java.lang.String getIPProtocol() {
@@ -523,8 +525,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP,
    * UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different
-   * load balancing products as described in [Load balancing features](https://cloud.google.com
-   * /load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).
+   * load balancing products as described in [Load balancing
+   * features](https://cloud.google.com/load-
+   * balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).
    * @param iPProtocol iPProtocol or {@code null} for none
    */
   public ForwardingRule setIPProtocol(java.lang.String iPProtocol) {

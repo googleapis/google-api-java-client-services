@@ -66,8 +66,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String deleteProtectionState;
 
   /**
-   * Output only. The timestamp at which this database was soft deleted. Only set if the database
-   * has been soft deleted.
+   * Output only. The timestamp at which this database was deleted. Only set if the database has
+   * been deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -253,8 +253,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * Output only. The timestamp at which this database was soft deleted. Only set if the database
-   * has been soft deleted.
+   * Output only. The timestamp at which this database was deleted. Only set if the database has
+   * been deleted.
    * @return value or {@code null} for none
    */
   public String getDeleteTime() {
@@ -262,8 +262,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * Output only. The timestamp at which this database was soft deleted. Only set if the database
-   * has been soft deleted.
+   * Output only. The timestamp at which this database was deleted. Only set if the database has
+   * been deleted.
    * @param deleteTime deleteTime or {@code null} for none
    */
   public GoogleFirestoreAdminV1Database setDeleteTime(String deleteTime) {

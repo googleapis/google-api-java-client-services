@@ -217,13 +217,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Full or partial URL of the machine type resource to use for this instance, in the format:
    * zones/zone/machineTypes/machine-type. This is provided by the client when the instance is
-   * created. For example, the following is a valid partial url to a predefined machine type: zones
-   * /us-central1-f/machineTypes/n1-standard-1 To create a custom machine type, provide a URL to a
-   * machine type in the following format, where CPUS is 1 or an even number up to 32 (2, 4, 6, ...
-   * 24, etc), and MEMORY is the total memory for this instance. Memory must be a multiple of 256 MB
-   * and must be supplied in MB (e.g. 5 GB of memory is 5120 MB): zones/zone/machineTypes/custom-
-   * CPUS-MEMORY For example: zones/us-central1-f/machineTypes/custom-4-5120 For a full list of
-   * restrictions, read the Specifications for custom machine types.
+   * created. For example, the following is a valid partial url to a predefined machine type:
+   * zones/us-central1-f/machineTypes/n1-standard-1 To create a custom machine type, provide a URL
+   * to a machine type in the following format, where CPUS is 1 or an even number up to 32 (2, 4, 6,
+   * ... 24, etc), and MEMORY is the total memory for this instance. Memory must be a multiple of
+   * 256 MB and must be supplied in MB (e.g. 5 GB of memory is 5120 MB):
+   * zones/zone/machineTypes/custom-CPUS-MEMORY For example: zones/us-
+   * central1-f/machineTypes/custom-4-5120 For a full list of restrictions, read the Specifications
+   * for custom machine types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -929,13 +930,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Full or partial URL of the machine type resource to use for this instance, in the format:
    * zones/zone/machineTypes/machine-type. This is provided by the client when the instance is
-   * created. For example, the following is a valid partial url to a predefined machine type: zones
-   * /us-central1-f/machineTypes/n1-standard-1 To create a custom machine type, provide a URL to a
-   * machine type in the following format, where CPUS is 1 or an even number up to 32 (2, 4, 6, ...
-   * 24, etc), and MEMORY is the total memory for this instance. Memory must be a multiple of 256 MB
-   * and must be supplied in MB (e.g. 5 GB of memory is 5120 MB): zones/zone/machineTypes/custom-
-   * CPUS-MEMORY For example: zones/us-central1-f/machineTypes/custom-4-5120 For a full list of
-   * restrictions, read the Specifications for custom machine types.
+   * created. For example, the following is a valid partial url to a predefined machine type:
+   * zones/us-central1-f/machineTypes/n1-standard-1 To create a custom machine type, provide a URL
+   * to a machine type in the following format, where CPUS is 1 or an even number up to 32 (2, 4, 6,
+   * ... 24, etc), and MEMORY is the total memory for this instance. Memory must be a multiple of
+   * 256 MB and must be supplied in MB (e.g. 5 GB of memory is 5120 MB):
+   * zones/zone/machineTypes/custom-CPUS-MEMORY For example: zones/us-
+   * central1-f/machineTypes/custom-4-5120 For a full list of restrictions, read the Specifications
+   * for custom machine types.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -945,13 +947,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Full or partial URL of the machine type resource to use for this instance, in the format:
    * zones/zone/machineTypes/machine-type. This is provided by the client when the instance is
-   * created. For example, the following is a valid partial url to a predefined machine type: zones
-   * /us-central1-f/machineTypes/n1-standard-1 To create a custom machine type, provide a URL to a
-   * machine type in the following format, where CPUS is 1 or an even number up to 32 (2, 4, 6, ...
-   * 24, etc), and MEMORY is the total memory for this instance. Memory must be a multiple of 256 MB
-   * and must be supplied in MB (e.g. 5 GB of memory is 5120 MB): zones/zone/machineTypes/custom-
-   * CPUS-MEMORY For example: zones/us-central1-f/machineTypes/custom-4-5120 For a full list of
-   * restrictions, read the Specifications for custom machine types.
+   * created. For example, the following is a valid partial url to a predefined machine type:
+   * zones/us-central1-f/machineTypes/n1-standard-1 To create a custom machine type, provide a URL
+   * to a machine type in the following format, where CPUS is 1 or an even number up to 32 (2, 4, 6,
+   * ... 24, etc), and MEMORY is the total memory for this instance. Memory must be a multiple of
+   * 256 MB and must be supplied in MB (e.g. 5 GB of memory is 5120 MB):
+   * zones/zone/machineTypes/custom-CPUS-MEMORY For example: zones/us-
+   * central1-f/machineTypes/custom-4-5120 For a full list of restrictions, read the Specifications
+   * for custom machine types.
    * @param machineType machineType or {@code null} for none
    */
   public Instance setMachineType(java.lang.String machineType) {

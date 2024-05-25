@@ -19,8 +19,8 @@ package com.google.api.services.compute.model;
 /**
  * A concurrency control configuration. Defines a group config that, when attached to an instance,
  * recognizes that instance as part of a group of instances where only up the concurrency_limit of
- * instances in that group can undergo simultaneous maintenance. For more information: go
- * /concurrency-control-design-doc
+ * instances in that group can undergo simultaneous maintenance. For more information:
+ * go/concurrency-control-design-doc
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

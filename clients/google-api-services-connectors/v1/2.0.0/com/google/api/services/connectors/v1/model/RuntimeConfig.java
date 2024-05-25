@@ -56,8 +56,8 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String controlPlaneSubscription;
 
   /**
-   * Output only. Pub/Sub topic for control plne to send message. communication. E.g. projects
-   * /{project-id}/topics/{topic-id}
+   * Output only. Pub/Sub topic for control plne to send message. communication. E.g.
+   * projects/{project-id}/topics/{topic-id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,8 +164,8 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Pub/Sub topic for control plne to send message. communication. E.g. projects
-   * /{project-id}/topics/{topic-id}
+   * Output only. Pub/Sub topic for control plne to send message. communication. E.g.
+   * projects/{project-id}/topics/{topic-id}
    * @return value or {@code null} for none
    */
   public java.lang.String getControlPlaneTopic() {
@@ -173,8 +173,8 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Pub/Sub topic for control plne to send message. communication. E.g. projects
-   * /{project-id}/topics/{topic-id}
+   * Output only. Pub/Sub topic for control plne to send message. communication. E.g.
+   * projects/{project-id}/topics/{topic-id}
    * @param controlPlaneTopic controlPlaneTopic or {@code null} for none
    */
   public RuntimeConfig setControlPlaneTopic(java.lang.String controlPlaneTopic) {

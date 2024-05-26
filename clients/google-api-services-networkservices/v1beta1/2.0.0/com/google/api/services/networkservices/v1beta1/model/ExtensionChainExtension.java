@@ -83,8 +83,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. A set of events during request or response processing for which this extension is
-   * called. This field is required for the `LbTrafficExtension` resource. It's not relevant for the
-   * `LbRouteExtension` resource.
+   * called. This field is required for the `LbTrafficExtension` resource. It must not be set for
+   * the `LbRouteExtension` resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,8 +219,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. A set of events during request or response processing for which this extension is
-   * called. This field is required for the `LbTrafficExtension` resource. It's not relevant for the
-   * `LbRouteExtension` resource.
+   * called. This field is required for the `LbTrafficExtension` resource. It must not be set for
+   * the `LbRouteExtension` resource.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedEvents() {
@@ -229,8 +229,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. A set of events during request or response processing for which this extension is
-   * called. This field is required for the `LbTrafficExtension` resource. It's not relevant for the
-   * `LbRouteExtension` resource.
+   * called. This field is required for the `LbTrafficExtension` resource. It must not be set for
+   * the `LbRouteExtension` resource.
    * @param supportedEvents supportedEvents or {@code null} for none
    */
   public ExtensionChainExtension setSupportedEvents(java.util.List<java.lang.String> supportedEvents) {

@@ -81,12 +81,23 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
    * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-balancing/docs
-   * /backend-service).
+   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-
+   * balancing/docs/backend-service).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String loadBalancingScheme;
+
+  /**
+   * Optional. The metadata provided here will be included as part of the `metadata_context` (of
+   * type `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server.
+   * The metadata will be available under the namespace `com.google.lb_route_extension.`. The
+   * following variables are supported in the metadata Struct: `{forwarding_rule_id}` - substituted
+   * with the forwarding rule's fully qualified resource name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> metadata;
 
   /**
    * Required. Identifier. Name of the `LbRouteExtension` resource in the following format:
@@ -205,8 +216,8 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
    * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-balancing/docs
-   * /backend-service).
+   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-
+   * balancing/docs/backend-service).
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -216,12 +227,37 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
    * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-balancing/docs
-   * /backend-service).
+   * information, refer to [Choosing a load balancer](https://cloud.google.com/load-
+   * balancing/docs/backend-service).
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
   public LbRouteExtension setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
     this.loadBalancingScheme = loadBalancingScheme;
+    return this;
+  }
+
+  /**
+   * Optional. The metadata provided here will be included as part of the `metadata_context` (of
+   * type `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server.
+   * The metadata will be available under the namespace `com.google.lb_route_extension.`. The
+   * following variables are supported in the metadata Struct: `{forwarding_rule_id}` - substituted
+   * with the forwarding rule's fully qualified resource name.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Optional. The metadata provided here will be included as part of the `metadata_context` (of
+   * type `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server.
+   * The metadata will be available under the namespace `com.google.lb_route_extension.`. The
+   * following variables are supported in the metadata Struct: `{forwarding_rule_id}` - substituted
+   * with the forwarding rule's fully qualified resource name.
+   * @param metadata metadata or {@code null} for none
+   */
+  public LbRouteExtension setMetadata(java.util.Map<String, java.lang.Object> metadata) {
+    this.metadata = metadata;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
 
 /**
- * Message describing ContactCenter object Next ID: 22
+ * Message describing ContactCenter object Next ID: 23
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Platform API. For a detailed
@@ -51,6 +51,13 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Optional. Critical release channel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Critical critical;
 
   /**
    * Required. Immutable. At least 2 and max 16 char long, must conform to [RFC
@@ -108,6 +115,13 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private Normal normal;
+
+  /**
+   * Optional. VPC-SC related networking configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateAccess privateAccess;
 
   /**
    * Output only. A list of UJET components that should be privately accessed. This field is set by
@@ -205,6 +219,23 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   public ContactCenter setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Critical release channel.
+   * @return value or {@code null} for none
+   */
+  public Critical getCritical() {
+    return critical;
+  }
+
+  /**
+   * Optional. Critical release channel.
+   * @param critical critical or {@code null} for none
+   */
+  public ContactCenter setCritical(Critical critical) {
+    this.critical = critical;
     return this;
   }
 
@@ -343,6 +374,23 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   public ContactCenter setNormal(Normal normal) {
     this.normal = normal;
+    return this;
+  }
+
+  /**
+   * Optional. VPC-SC related networking configuration.
+   * @return value or {@code null} for none
+   */
+  public PrivateAccess getPrivateAccess() {
+    return privateAccess;
+  }
+
+  /**
+   * Optional. VPC-SC related networking configuration.
+   * @param privateAccess privateAccess or {@code null} for none
+   */
+  public ContactCenter setPrivateAccess(PrivateAccess privateAccess) {
+    this.privateAccess = privateAccess;
     return this;
   }
 

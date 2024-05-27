@@ -17,7 +17,8 @@
 package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
 
 /**
- * LINT.IfChange First Channel to receive the updates. Meant to dev/test instances
+ * Instances in this Channel will receive updates after all instances in `Critical` were updated + 2
+ * days. They also will only be updated outside of their peak hours.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Platform API. For a detailed
@@ -28,16 +29,40 @@ package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Early extends com.google.api.client.json.GenericJson {
+public final class Critical extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public Early set(String fieldName, Object value) {
-    return (Early) super.set(fieldName, value);
+  /**
+   * Required. Hours during which the instance should not be updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<WeeklySchedule> peakHours;
+
+  /**
+   * Required. Hours during which the instance should not be updated.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<WeeklySchedule> getPeakHours() {
+    return peakHours;
+  }
+
+  /**
+   * Required. Hours during which the instance should not be updated.
+   * @param peakHours peakHours or {@code null} for none
+   */
+  public Critical setPeakHours(java.util.List<WeeklySchedule> peakHours) {
+    this.peakHours = peakHours;
+    return this;
   }
 
   @Override
-  public Early clone() {
-    return (Early) super.clone();
+  public Critical set(String fieldName, Object value) {
+    return (Critical) super.set(fieldName, value);
+  }
+
+  @Override
+  public Critical clone() {
+    return (Critical) super.clone();
   }
 
 }

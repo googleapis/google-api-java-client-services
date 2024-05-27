@@ -110,6 +110,13 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
   private java.lang.String location;
 
   /**
+   * Machine configuration for this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MachineConfiguration machineConfiguration;
+
+  /**
    * Identifier for this resource's immediate parent/primary resource if the current resource is a
    * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
    * immediate parent exists when first time resource is getting ingested, otherwise optional.
@@ -157,13 +164,6 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private UserLabels userLabelSet;
-
-  /**
-   * User-provided labels, represented as a dictionary where each label is a single key value pair.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> userLabels;
 
   /**
    * Availability configuration for this instance
@@ -357,6 +357,23 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
   }
 
   /**
+   * Machine configuration for this resource.
+   * @return value or {@code null} for none
+   */
+  public MachineConfiguration getMachineConfiguration() {
+    return machineConfiguration;
+  }
+
+  /**
+   * Machine configuration for this resource.
+   * @param machineConfiguration machineConfiguration or {@code null} for none
+   */
+  public DatabaseResourceMetadata setMachineConfiguration(MachineConfiguration machineConfiguration) {
+    this.machineConfiguration = machineConfiguration;
+    return this;
+  }
+
+  /**
    * Identifier for this resource's immediate parent/primary resource if the current resource is a
    * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
    * immediate parent exists when first time resource is getting ingested, otherwise optional.
@@ -469,23 +486,6 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   public DatabaseResourceMetadata setUserLabelSet(UserLabels userLabelSet) {
     this.userLabelSet = userLabelSet;
-    return this;
-  }
-
-  /**
-   * User-provided labels, represented as a dictionary where each label is a single key value pair.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.String> getUserLabels() {
-    return userLabels;
-  }
-
-  /**
-   * User-provided labels, represented as a dictionary where each label is a single key value pair.
-   * @param userLabels userLabels or {@code null} for none
-   */
-  public DatabaseResourceMetadata setUserLabels(java.util.Map<String, java.lang.String> userLabels) {
-    this.userLabels = userLabels;
     return this;
   }
 

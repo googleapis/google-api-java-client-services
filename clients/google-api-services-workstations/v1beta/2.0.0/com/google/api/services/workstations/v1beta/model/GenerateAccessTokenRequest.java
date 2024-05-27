@@ -40,6 +40,16 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
   private String expireTime;
 
   /**
+   * Optional. Port for which the access token should be generated. If specified, the generated
+   * access token will grant access only to the specified port of the workstation. If specified,
+   * values must be within the range [1 - 65535]. If not specified, the generated access token will
+   * grant access to all ports of the workstation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer port;
+
+  /**
    * Desired lifetime duration of the access token. This value must be at most 24 hours. If a value
    * is not specified, the token's lifetime will be set to a default value of 1 hour.
    * The value may be {@code null}.
@@ -65,6 +75,29 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
    */
   public GenerateAccessTokenRequest setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Optional. Port for which the access token should be generated. If specified, the generated
+   * access token will grant access only to the specified port of the workstation. If specified,
+   * values must be within the range [1 - 65535]. If not specified, the generated access token will
+   * grant access to all ports of the workstation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPort() {
+    return port;
+  }
+
+  /**
+   * Optional. Port for which the access token should be generated. If specified, the generated
+   * access token will grant access only to the specified port of the workstation. If specified,
+   * values must be within the range [1 - 65535]. If not specified, the generated access token will
+   * grant access to all ports of the workstation.
+   * @param port port or {@code null} for none
+   */
+  public GenerateAccessTokenRequest setPort(java.lang.Integer port) {
+    this.port = port;
     return this;
   }
 

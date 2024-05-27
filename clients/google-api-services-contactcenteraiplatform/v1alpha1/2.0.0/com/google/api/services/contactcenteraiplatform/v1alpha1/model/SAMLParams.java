@@ -31,6 +31,13 @@ package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
 public final class SAMLParams extends com.google.api.client.json.GenericJson {
 
   /**
+   * Additional contexts used for authentication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> authenticationContexts;
+
+  /**
    * SAML certificate
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class SAMLParams extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String userEmail;
+
+  /**
+   * Additional contexts used for authentication.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAuthenticationContexts() {
+    return authenticationContexts;
+  }
+
+  /**
+   * Additional contexts used for authentication.
+   * @param authenticationContexts authenticationContexts or {@code null} for none
+   */
+  public SAMLParams setAuthenticationContexts(java.util.List<java.lang.String> authenticationContexts) {
+    this.authenticationContexts = authenticationContexts;
+    return this;
+  }
 
   /**
    * SAML certificate

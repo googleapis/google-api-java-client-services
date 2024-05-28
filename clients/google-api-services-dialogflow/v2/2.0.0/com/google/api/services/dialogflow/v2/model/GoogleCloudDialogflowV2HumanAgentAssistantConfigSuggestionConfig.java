@@ -37,6 +37,13 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   private java.util.List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig> featureConfigs;
 
   /**
+   * Optional. List of various generator resource names used in the conversation profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> generators;
+
+  /**
    * If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event
    * based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers
    * as soon as we get new suggestion. Different type of suggestions based on the same context will
@@ -63,6 +70,23 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setFeatureConfigs(java.util.List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig> featureConfigs) {
     this.featureConfigs = featureConfigs;
+    return this;
+  }
+
+  /**
+   * Optional. List of various generator resource names used in the conversation profile.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGenerators() {
+    return generators;
+  }
+
+  /**
+   * Optional. List of various generator resource names used in the conversation profile.
+   * @param generators generators or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setGenerators(java.util.List<java.lang.String> generators) {
+    this.generators = generators;
     return this;
   }
 

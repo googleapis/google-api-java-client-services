@@ -32,7 +32,7 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Uses LivePerson (https://www.liveperson.com).
+   * Uses [LivePerson](https://www.liveperson.com).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfig extends c
   private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfig salesforceLiveAgentConfig;
 
   /**
-   * Uses LivePerson (https://www.liveperson.com).
+   * Uses [LivePerson](https://www.liveperson.com).
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfig getLivePersonConfig() {
@@ -54,7 +54,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfig extends c
   }
 
   /**
-   * Uses LivePerson (https://www.liveperson.com).
+   * Uses [LivePerson](https://www.liveperson.com).
    * @param livePersonConfig livePersonConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfig setLivePersonConfig(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfig livePersonConfig) {

@@ -44,6 +44,13 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
   private GoogleCloudDialogflowV2beta1BargeInConfig bargeInConfig;
 
   /**
+   * If set, use this no-speech timeout when the agent does not provide a no-speech timeout itself.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String defaultNoSpeechTimeout;
+
+  /**
    * Only used in Participants.AnalyzeContent and Participants.StreamingAnalyzeContent. If `false`
    * and recognition doesn't return any result, trigger `NO_SPEECH_RECOGNIZED` event to Dialogflow
    * agent.
@@ -175,6 +182,23 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    */
   public GoogleCloudDialogflowV2beta1InputAudioConfig setBargeInConfig(GoogleCloudDialogflowV2beta1BargeInConfig bargeInConfig) {
     this.bargeInConfig = bargeInConfig;
+    return this;
+  }
+
+  /**
+   * If set, use this no-speech timeout when the agent does not provide a no-speech timeout itself.
+   * @return value or {@code null} for none
+   */
+  public String getDefaultNoSpeechTimeout() {
+    return defaultNoSpeechTimeout;
+  }
+
+  /**
+   * If set, use this no-speech timeout when the agent does not provide a no-speech timeout itself.
+   * @param defaultNoSpeechTimeout defaultNoSpeechTimeout or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1InputAudioConfig setDefaultNoSpeechTimeout(String defaultNoSpeechTimeout) {
+    this.defaultNoSpeechTimeout = defaultNoSpeechTimeout;
     return this;
   }
 

@@ -30,7 +30,7 @@ package com.google.api.services.run.v1.model;
 public final class GoogleDevtoolsCloudbuildV1ConnectedRepository extends com.google.api.client.json.GenericJson {
 
   /**
-   * Directory, relative to the source root, in which to run the build.
+   * Optional. Directory, relative to the source root, in which to run the build.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,15 +45,15 @@ public final class GoogleDevtoolsCloudbuildV1ConnectedRepository extends com.goo
   private java.lang.String repository;
 
   /**
-   * The revision to fetch from the Git repository such as a branch, a tag, a commit SHA, or any Git
-   * ref.
+   * Required. The revision to fetch from the Git repository such as a branch, a tag, a commit SHA,
+   * or any Git ref.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String revision;
 
   /**
-   * Directory, relative to the source root, in which to run the build.
+   * Optional. Directory, relative to the source root, in which to run the build.
    * @return value or {@code null} for none
    */
   public java.lang.String getDir() {
@@ -61,7 +61,7 @@ public final class GoogleDevtoolsCloudbuildV1ConnectedRepository extends com.goo
   }
 
   /**
-   * Directory, relative to the source root, in which to run the build.
+   * Optional. Directory, relative to the source root, in which to run the build.
    * @param dir dir or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV1ConnectedRepository setDir(java.lang.String dir) {
@@ -89,8 +89,8 @@ public final class GoogleDevtoolsCloudbuildV1ConnectedRepository extends com.goo
   }
 
   /**
-   * The revision to fetch from the Git repository such as a branch, a tag, a commit SHA, or any Git
-   * ref.
+   * Required. The revision to fetch from the Git repository such as a branch, a tag, a commit SHA,
+   * or any Git ref.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevision() {
@@ -98,8 +98,8 @@ public final class GoogleDevtoolsCloudbuildV1ConnectedRepository extends com.goo
   }
 
   /**
-   * The revision to fetch from the Git repository such as a branch, a tag, a commit SHA, or any Git
-   * ref.
+   * Required. The revision to fetch from the Git repository such as a branch, a tag, a commit SHA,
+   * or any Git ref.
    * @param revision revision or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV1ConnectedRepository setRevision(java.lang.String revision) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Configuration specific to [LivePerson](https://www.liveperson.com).
+ * Suggestion generated using a Generator.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.dialogflow.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDialogflowV2GeneratorSuggestion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Account number of the LivePerson account to connect. This is the account number you
-   * input at the login page.
+   * Optional. Suggested summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String accountNumber;
+  private GoogleCloudDialogflowV2SummarySuggestion summarySuggestion;
 
   /**
-   * Required. Account number of the LivePerson account to connect. This is the account number you
-   * input at the login page.
+   * Optional. Suggested summary.
    * @return value or {@code null} for none
    */
-  public java.lang.String getAccountNumber() {
-    return accountNumber;
+  public GoogleCloudDialogflowV2SummarySuggestion getSummarySuggestion() {
+    return summarySuggestion;
   }
 
   /**
-   * Required. Account number of the LivePerson account to connect. This is the account number you
-   * input at the login page.
-   * @param accountNumber accountNumber or {@code null} for none
+   * Optional. Suggested summary.
+   * @param summarySuggestion summarySuggestion or {@code null} for none
    */
-  public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig setAccountNumber(java.lang.String accountNumber) {
-    this.accountNumber = accountNumber;
+  public GoogleCloudDialogflowV2GeneratorSuggestion setSummarySuggestion(GoogleCloudDialogflowV2SummarySuggestion summarySuggestion) {
+    this.summarySuggestion = summarySuggestion;
     return this;
   }
 
   @Override
-  public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig set(String fieldName, Object value) {
-    return (GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig) super.set(fieldName, value);
+  public GoogleCloudDialogflowV2GeneratorSuggestion set(String fieldName, Object value) {
+    return (GoogleCloudDialogflowV2GeneratorSuggestion) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig clone() {
-    return (GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig) super.clone();
+  public GoogleCloudDialogflowV2GeneratorSuggestion clone() {
+    return (GoogleCloudDialogflowV2GeneratorSuggestion) super.clone();
   }
 
 }

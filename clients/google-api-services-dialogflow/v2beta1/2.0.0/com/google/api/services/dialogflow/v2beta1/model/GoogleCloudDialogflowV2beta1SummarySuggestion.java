@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Configuration specific to [LivePerson](https://www.liveperson.com).
+ * Suggested summary of the conversation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.dialogflow.v2beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDialogflowV2beta1SummarySuggestion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Account number of the LivePerson account to connect. This is the account number you
-   * input at the login page.
+   * Required. All the parts of generated summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String accountNumber;
+  private java.util.List<GoogleCloudDialogflowV2beta1SummarySuggestionSummarySection> summarySections;
 
   /**
-   * Required. Account number of the LivePerson account to connect. This is the account number you
-   * input at the login page.
+   * Required. All the parts of generated summary.
    * @return value or {@code null} for none
    */
-  public java.lang.String getAccountNumber() {
-    return accountNumber;
+  public java.util.List<GoogleCloudDialogflowV2beta1SummarySuggestionSummarySection> getSummarySections() {
+    return summarySections;
   }
 
   /**
-   * Required. Account number of the LivePerson account to connect. This is the account number you
-   * input at the login page.
-   * @param accountNumber accountNumber or {@code null} for none
+   * Required. All the parts of generated summary.
+   * @param summarySections summarySections or {@code null} for none
    */
-  public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfig setAccountNumber(java.lang.String accountNumber) {
-    this.accountNumber = accountNumber;
+  public GoogleCloudDialogflowV2beta1SummarySuggestion setSummarySections(java.util.List<GoogleCloudDialogflowV2beta1SummarySuggestionSummarySection> summarySections) {
+    this.summarySections = summarySections;
     return this;
   }
 
   @Override
-  public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfig set(String fieldName, Object value) {
-    return (GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfig) super.set(fieldName, value);
+  public GoogleCloudDialogflowV2beta1SummarySuggestion set(String fieldName, Object value) {
+    return (GoogleCloudDialogflowV2beta1SummarySuggestion) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfig clone() {
-    return (GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfig) super.clone();
+  public GoogleCloudDialogflowV2beta1SummarySuggestion clone() {
+    return (GoogleCloudDialogflowV2beta1SummarySuggestion) super.clone();
   }
 
 }

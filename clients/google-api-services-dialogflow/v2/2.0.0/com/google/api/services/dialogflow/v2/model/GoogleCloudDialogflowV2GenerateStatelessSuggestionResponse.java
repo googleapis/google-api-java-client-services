@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Configuration specific to [LivePerson](https://www.liveperson.com).
+ * The response message for Conversations.GenerateStatelessSuggestion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.dialogflow.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Account number of the LivePerson account to connect. This is the account number you
-   * input at the login page.
+   * Required. Generated suggestion for a conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String accountNumber;
+  private GoogleCloudDialogflowV2GeneratorSuggestion generatorSuggestion;
 
   /**
-   * Required. Account number of the LivePerson account to connect. This is the account number you
-   * input at the login page.
+   * Required. Generated suggestion for a conversation.
    * @return value or {@code null} for none
    */
-  public java.lang.String getAccountNumber() {
-    return accountNumber;
+  public GoogleCloudDialogflowV2GeneratorSuggestion getGeneratorSuggestion() {
+    return generatorSuggestion;
   }
 
   /**
-   * Required. Account number of the LivePerson account to connect. This is the account number you
-   * input at the login page.
-   * @param accountNumber accountNumber or {@code null} for none
+   * Required. Generated suggestion for a conversation.
+   * @param generatorSuggestion generatorSuggestion or {@code null} for none
    */
-  public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig setAccountNumber(java.lang.String accountNumber) {
-    this.accountNumber = accountNumber;
+  public GoogleCloudDialogflowV2GenerateStatelessSuggestionResponse setGeneratorSuggestion(GoogleCloudDialogflowV2GeneratorSuggestion generatorSuggestion) {
+    this.generatorSuggestion = generatorSuggestion;
     return this;
   }
 
   @Override
-  public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig set(String fieldName, Object value) {
-    return (GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig) super.set(fieldName, value);
+  public GoogleCloudDialogflowV2GenerateStatelessSuggestionResponse set(String fieldName, Object value) {
+    return (GoogleCloudDialogflowV2GenerateStatelessSuggestionResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig clone() {
-    return (GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig) super.clone();
+  public GoogleCloudDialogflowV2GenerateStatelessSuggestionResponse clone() {
+    return (GoogleCloudDialogflowV2GenerateStatelessSuggestionResponse) super.clone();
   }
 
 }

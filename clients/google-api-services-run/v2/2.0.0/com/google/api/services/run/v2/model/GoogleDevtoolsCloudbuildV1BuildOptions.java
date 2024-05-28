@@ -47,7 +47,7 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
    * Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some
    * of the space will be used by the operating system and build utilities. Also note that this is
    * the minimum disk size that will be allocated for the build -- the build may run with a larger
-   * disk than requested. At present, the maximum disk size is 2000GB; builds that request more than
+   * disk than requested. At present, the maximum disk size is 4000GB; builds that request more than
    * the maximum are rejected with an error.
    * The value may be {@code null}.
    */
@@ -191,7 +191,7 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
    * Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some
    * of the space will be used by the operating system and build utilities. Also note that this is
    * the minimum disk size that will be allocated for the build -- the build may run with a larger
-   * disk than requested. At present, the maximum disk size is 2000GB; builds that request more than
+   * disk than requested. At present, the maximum disk size is 4000GB; builds that request more than
    * the maximum are rejected with an error.
    * @return value or {@code null} for none
    */
@@ -203,7 +203,7 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
    * Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some
    * of the space will be used by the operating system and build utilities. Also note that this is
    * the minimum disk size that will be allocated for the build -- the build may run with a larger
-   * disk than requested. At present, the maximum disk size is 2000GB; builds that request more than
+   * disk than requested. At present, the maximum disk size is 4000GB; builds that request more than
    * the maximum are rejected with an error.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */

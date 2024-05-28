@@ -30,6 +30,13 @@ package com.google.api.services.datastream.v1.model;
 public final class SqlServerSourceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * CDC reader reads from change tables.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerChangeTables changeTables;
+
+  /**
    * SQLServer objects to exclude from the stream.
    * The value may be {@code null}.
    */
@@ -56,6 +63,30 @@ public final class SqlServerSourceConfig extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxConcurrentCdcTasks;
+
+  /**
+   * CDC reader reads from transaction logs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerTransactionLogs transactionLogs;
+
+  /**
+   * CDC reader reads from change tables.
+   * @return value or {@code null} for none
+   */
+  public SqlServerChangeTables getChangeTables() {
+    return changeTables;
+  }
+
+  /**
+   * CDC reader reads from change tables.
+   * @param changeTables changeTables or {@code null} for none
+   */
+  public SqlServerSourceConfig setChangeTables(SqlServerChangeTables changeTables) {
+    this.changeTables = changeTables;
+    return this;
+  }
 
   /**
    * SQLServer objects to exclude from the stream.
@@ -122,6 +153,23 @@ public final class SqlServerSourceConfig extends com.google.api.client.json.Gene
    */
   public SqlServerSourceConfig setMaxConcurrentCdcTasks(java.lang.Integer maxConcurrentCdcTasks) {
     this.maxConcurrentCdcTasks = maxConcurrentCdcTasks;
+    return this;
+  }
+
+  /**
+   * CDC reader reads from transaction logs.
+   * @return value or {@code null} for none
+   */
+  public SqlServerTransactionLogs getTransactionLogs() {
+    return transactionLogs;
+  }
+
+  /**
+   * CDC reader reads from transaction logs.
+   * @param transactionLogs transactionLogs or {@code null} for none
+   */
+  public SqlServerSourceConfig setTransactionLogs(SqlServerTransactionLogs transactionLogs) {
+    this.transactionLogs = transactionLogs;
     return this;
   }
 

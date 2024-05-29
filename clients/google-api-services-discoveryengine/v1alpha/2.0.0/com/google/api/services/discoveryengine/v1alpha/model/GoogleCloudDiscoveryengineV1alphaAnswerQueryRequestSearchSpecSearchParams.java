@@ -46,6 +46,15 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
   private GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec customFineTuningSpec;
 
   /**
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> dataStoreSpecs;
+
+  /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the documents being filtered. Filter expression is case-sensitive. This will be
    * used to filter search results which may affect the Answer response. If this field is
@@ -82,8 +91,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
    * Specifies the search result mode. If unspecified, the search result mode is based on
    * DataStore.DocumentProcessingConfig.chunking_config: * If
    * DataStore.DocumentProcessingConfig.chunking_config is specified, it defaults to `CHUNKS`. *
-   * Otherwise, it defaults to `DOCUMENTS`. See [parse and chunk documents](https://cloud.google.com
-   * /generative-ai-app-builder/docs/parse-chunk-documents)
+   * Otherwise, it defaults to `DOCUMENTS`. See [parse and chunk
+   * documents](https://cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,6 +133,27 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchParams setCustomFineTuningSpec(GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec customFineTuningSpec) {
     this.customFineTuningSpec = customFineTuningSpec;
+    return this;
+  }
+
+  /**
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> getDataStoreSpecs() {
+    return dataStoreSpecs;
+  }
+
+  /**
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
+   * @param dataStoreSpecs dataStoreSpecs or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchParams setDataStoreSpecs(java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> dataStoreSpecs) {
+    this.dataStoreSpecs = dataStoreSpecs;
     return this;
   }
 
@@ -206,8 +236,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
    * Specifies the search result mode. If unspecified, the search result mode is based on
    * DataStore.DocumentProcessingConfig.chunking_config: * If
    * DataStore.DocumentProcessingConfig.chunking_config is specified, it defaults to `CHUNKS`. *
-   * Otherwise, it defaults to `DOCUMENTS`. See [parse and chunk documents](https://cloud.google.com
-   * /generative-ai-app-builder/docs/parse-chunk-documents)
+   * Otherwise, it defaults to `DOCUMENTS`. See [parse and chunk
+   * documents](https://cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents)
    * @return value or {@code null} for none
    */
   public java.lang.String getSearchResultMode() {
@@ -218,8 +248,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
    * Specifies the search result mode. If unspecified, the search result mode is based on
    * DataStore.DocumentProcessingConfig.chunking_config: * If
    * DataStore.DocumentProcessingConfig.chunking_config is specified, it defaults to `CHUNKS`. *
-   * Otherwise, it defaults to `DOCUMENTS`. See [parse and chunk documents](https://cloud.google.com
-   * /generative-ai-app-builder/docs/parse-chunk-documents)
+   * Otherwise, it defaults to `DOCUMENTS`. See [parse and chunk
+   * documents](https://cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents)
    * @param searchResultMode searchResultMode or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchParams setSearchResultMode(java.lang.String searchResultMode) {

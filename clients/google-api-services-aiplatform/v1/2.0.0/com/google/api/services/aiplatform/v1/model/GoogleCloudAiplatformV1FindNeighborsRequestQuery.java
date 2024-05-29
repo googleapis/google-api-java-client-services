@@ -56,8 +56,8 @@ public final class GoogleCloudAiplatformV1FindNeighborsRequestQuery extends com.
 
   /**
    * The number of nearest neighbors to be retrieved from database for each query. If not set, will
-   * use the default from the service configuration (https://cloud.google.com/vertex-ai/docs
-   * /matching-engine/configuring-indexes#nearest-neighbor-search-config).
+   * use the default from the service configuration (https://cloud.google.com/vertex-
+   * ai/docs/matching-engine/configuring-indexes#nearest-neighbor-search-config).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,6 +72,13 @@ public final class GoogleCloudAiplatformV1FindNeighborsRequestQuery extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer perCrowdingAttributeNeighborCount;
+
+  /**
+   * Optional. Represents RRF algorithm that combines search results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1FindNeighborsRequestQueryRRF rrf;
 
   /**
    * The number of neighbors to find via approximate search before exact reordering is performed. If
@@ -134,8 +141,8 @@ public final class GoogleCloudAiplatformV1FindNeighborsRequestQuery extends com.
 
   /**
    * The number of nearest neighbors to be retrieved from database for each query. If not set, will
-   * use the default from the service configuration (https://cloud.google.com/vertex-ai/docs
-   * /matching-engine/configuring-indexes#nearest-neighbor-search-config).
+   * use the default from the service configuration (https://cloud.google.com/vertex-
+   * ai/docs/matching-engine/configuring-indexes#nearest-neighbor-search-config).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNeighborCount() {
@@ -144,8 +151,8 @@ public final class GoogleCloudAiplatformV1FindNeighborsRequestQuery extends com.
 
   /**
    * The number of nearest neighbors to be retrieved from database for each query. If not set, will
-   * use the default from the service configuration (https://cloud.google.com/vertex-ai/docs
-   * /matching-engine/configuring-indexes#nearest-neighbor-search-config).
+   * use the default from the service configuration (https://cloud.google.com/vertex-
+   * ai/docs/matching-engine/configuring-indexes#nearest-neighbor-search-config).
    * @param neighborCount neighborCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1FindNeighborsRequestQuery setNeighborCount(java.lang.Integer neighborCount) {
@@ -173,6 +180,23 @@ public final class GoogleCloudAiplatformV1FindNeighborsRequestQuery extends com.
    */
   public GoogleCloudAiplatformV1FindNeighborsRequestQuery setPerCrowdingAttributeNeighborCount(java.lang.Integer perCrowdingAttributeNeighborCount) {
     this.perCrowdingAttributeNeighborCount = perCrowdingAttributeNeighborCount;
+    return this;
+  }
+
+  /**
+   * Optional. Represents RRF algorithm that combines search results.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FindNeighborsRequestQueryRRF getRrf() {
+    return rrf;
+  }
+
+  /**
+   * Optional. Represents RRF algorithm that combines search results.
+   * @param rrf rrf or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FindNeighborsRequestQuery setRrf(GoogleCloudAiplatformV1FindNeighborsRequestQueryRRF rrf) {
+    this.rrf = rrf;
     return this;
   }
 

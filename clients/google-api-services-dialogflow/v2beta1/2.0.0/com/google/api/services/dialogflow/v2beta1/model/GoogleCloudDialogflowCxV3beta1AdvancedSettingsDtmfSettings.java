@@ -40,11 +40,25 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsDtmfSettings ex
   private java.lang.Boolean enabled;
 
   /**
+   * Endpoint timeout setting for matching dtmf input to regex.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endpointingTimeoutDuration;
+
+  /**
    * The digit that terminates a DTMF digit sequence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String finishDigit;
+
+  /**
+   * Interdigit timeout setting for matching dtmf input to regex.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String interdigitTimeoutDuration;
 
   /**
    * Max length of DTMF digits.
@@ -77,6 +91,23 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsDtmfSettings ex
   }
 
   /**
+   * Endpoint timeout setting for matching dtmf input to regex.
+   * @return value or {@code null} for none
+   */
+  public String getEndpointingTimeoutDuration() {
+    return endpointingTimeoutDuration;
+  }
+
+  /**
+   * Endpoint timeout setting for matching dtmf input to regex.
+   * @param endpointingTimeoutDuration endpointingTimeoutDuration or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1AdvancedSettingsDtmfSettings setEndpointingTimeoutDuration(String endpointingTimeoutDuration) {
+    this.endpointingTimeoutDuration = endpointingTimeoutDuration;
+    return this;
+  }
+
+  /**
    * The digit that terminates a DTMF digit sequence.
    * @return value or {@code null} for none
    */
@@ -90,6 +121,23 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsDtmfSettings ex
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettingsDtmfSettings setFinishDigit(java.lang.String finishDigit) {
     this.finishDigit = finishDigit;
+    return this;
+  }
+
+  /**
+   * Interdigit timeout setting for matching dtmf input to regex.
+   * @return value or {@code null} for none
+   */
+  public String getInterdigitTimeoutDuration() {
+    return interdigitTimeoutDuration;
+  }
+
+  /**
+   * Interdigit timeout setting for matching dtmf input to regex.
+   * @param interdigitTimeoutDuration interdigitTimeoutDuration or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1AdvancedSettingsDtmfSettings setInterdigitTimeoutDuration(String interdigitTimeoutDuration) {
+    this.interdigitTimeoutDuration = interdigitTimeoutDuration;
     return this;
   }
 

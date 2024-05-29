@@ -39,7 +39,7 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
 
   /**
    * Additional context around canceled subscriptions. Only present if the subscription currently
-   * has subscription_state SUBSCRIPTION_STATE_CANCELED.
+   * has subscription_state SUBSCRIPTION_STATE_CANCELED or SUBSCRIPTION_STATE_EXPIRED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +157,7 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
 
   /**
    * Additional context around canceled subscriptions. Only present if the subscription currently
-   * has subscription_state SUBSCRIPTION_STATE_CANCELED.
+   * has subscription_state SUBSCRIPTION_STATE_CANCELED or SUBSCRIPTION_STATE_EXPIRED.
    * @return value or {@code null} for none
    */
   public CanceledStateContext getCanceledStateContext() {
@@ -166,7 +166,7 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
 
   /**
    * Additional context around canceled subscriptions. Only present if the subscription currently
-   * has subscription_state SUBSCRIPTION_STATE_CANCELED.
+   * has subscription_state SUBSCRIPTION_STATE_CANCELED or SUBSCRIPTION_STATE_EXPIRED.
    * @param canceledStateContext canceledStateContext or {@code null} for none
    */
   public SubscriptionPurchaseV2 setCanceledStateContext(CanceledStateContext canceledStateContext) {

@@ -38,6 +38,14 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   private java.lang.Boolean autoRenewEnabled;
 
   /**
+   * Optional. Name of the billing account in the format. e.g. billingAccounts/123456-123456-123456
+   * Required if Subscription is of Paid type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String billingAccount;
+
+  /**
    * Output only. Create time of the subscription.
    * The value may be {@code null}.
    */
@@ -108,6 +116,25 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
    */
   public GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription setAutoRenewEnabled(java.lang.Boolean autoRenewEnabled) {
     this.autoRenewEnabled = autoRenewEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Name of the billing account in the format. e.g. billingAccounts/123456-123456-123456
+   * Required if Subscription is of Paid type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBillingAccount() {
+    return billingAccount;
+  }
+
+  /**
+   * Optional. Name of the billing account in the format. e.g. billingAccounts/123456-123456-123456
+   * Required if Subscription is of Paid type.
+   * @param billingAccount billingAccount or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription setBillingAccount(java.lang.String billingAccount) {
+    this.billingAccount = billingAccount;
     return this;
   }
 

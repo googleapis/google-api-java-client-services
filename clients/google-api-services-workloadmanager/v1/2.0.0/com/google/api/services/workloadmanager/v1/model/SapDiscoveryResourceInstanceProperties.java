@@ -30,6 +30,13 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapDiscoveryResourceInstanceProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. App server instances on the host
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SapDiscoveryResourceInstancePropertiesAppInstance> appInstances;
+
+  /**
    * Optional. A list of instance URIs that are part of a cluster with this one.
    * The value may be {@code null}.
    */
@@ -44,11 +51,35 @@ public final class SapDiscoveryResourceInstanceProperties extends com.google.api
   private java.lang.Long instanceNumber;
 
   /**
+   * Optional. Bitmask of instance role, a resource may have multiple roles at once.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceRole;
+
+  /**
    * Optional. A virtual hostname of the instance if it has one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String virtualHostname;
+
+  /**
+   * Optional. App server instances on the host
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SapDiscoveryResourceInstancePropertiesAppInstance> getAppInstances() {
+    return appInstances;
+  }
+
+  /**
+   * Optional. App server instances on the host
+   * @param appInstances appInstances or {@code null} for none
+   */
+  public SapDiscoveryResourceInstanceProperties setAppInstances(java.util.List<SapDiscoveryResourceInstancePropertiesAppInstance> appInstances) {
+    this.appInstances = appInstances;
+    return this;
+  }
 
   /**
    * Optional. A list of instance URIs that are part of a cluster with this one.
@@ -81,6 +112,23 @@ public final class SapDiscoveryResourceInstanceProperties extends com.google.api
    */
   public SapDiscoveryResourceInstanceProperties setInstanceNumber(java.lang.Long instanceNumber) {
     this.instanceNumber = instanceNumber;
+    return this;
+  }
+
+  /**
+   * Optional. Bitmask of instance role, a resource may have multiple roles at once.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceRole() {
+    return instanceRole;
+  }
+
+  /**
+   * Optional. Bitmask of instance role, a resource may have multiple roles at once.
+   * @param instanceRole instanceRole or {@code null} for none
+   */
+  public SapDiscoveryResourceInstanceProperties setInstanceRole(java.lang.String instanceRole) {
+    this.instanceRole = instanceRole;
     return this;
   }
 

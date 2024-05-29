@@ -32,6 +32,15 @@ package com.google.api.services.config.v1.model;
 public final class Preview extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Arbitrary key-value metadata storage e.g. to help client tools identifiy preview
+   * during automation. See https://google.aip.dev/148#annotations for details on format and size
+   * limitations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
+
+  /**
    * Optional. User-defined location of Cloud Build logs, artifacts, and in Google Cloud Storage.
    * Format: `gs://{bucket}/{folder}` A default bucket will be bootstrapped if the field is not set
    * or empty Default Bucket Format: `gs://--blueprint-config` Constraints: - The bucket needs to be
@@ -156,6 +165,21 @@ public final class Preview extends com.google.api.client.json.GenericJson {
   private java.util.List<TerraformError> tfErrors;
 
   /**
+   * Output only. The current Terraform version set on the preview. It is in the format of
+   * "Major.Minor.Patch", for example, "1.3.10".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tfVersion;
+
+  /**
+   * Optional. The user-specified Terraform version constraint. Example: "=1.3.10".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tfVersionConstraint;
+
+  /**
    * Optional. The user-specified Worker Pool resource in which the Cloud Build job will execute.
    * Format projects/{project}/locations/{location}/workerPools/{workerPoolId} If this field is
    * unspecified, the default Cloud Build worker pool will be used. If omitted and deployment
@@ -164,6 +188,27 @@ public final class Preview extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String workerPool;
+
+  /**
+   * Optional. Arbitrary key-value metadata storage e.g. to help client tools identifiy preview
+   * during automation. See https://google.aip.dev/148#annotations for details on format and size
+   * limitations.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Optional. Arbitrary key-value metadata storage e.g. to help client tools identifiy preview
+   * during automation. See https://google.aip.dev/148#annotations for details on format and size
+   * limitations.
+   * @param annotations annotations or {@code null} for none
+   */
+  public Preview setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * Optional. User-defined location of Cloud Build logs, artifacts, and in Google Cloud Storage.
@@ -458,6 +503,42 @@ public final class Preview extends com.google.api.client.json.GenericJson {
    */
   public Preview setTfErrors(java.util.List<TerraformError> tfErrors) {
     this.tfErrors = tfErrors;
+    return this;
+  }
+
+  /**
+   * Output only. The current Terraform version set on the preview. It is in the format of
+   * "Major.Minor.Patch", for example, "1.3.10".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTfVersion() {
+    return tfVersion;
+  }
+
+  /**
+   * Output only. The current Terraform version set on the preview. It is in the format of
+   * "Major.Minor.Patch", for example, "1.3.10".
+   * @param tfVersion tfVersion or {@code null} for none
+   */
+  public Preview setTfVersion(java.lang.String tfVersion) {
+    this.tfVersion = tfVersion;
+    return this;
+  }
+
+  /**
+   * Optional. The user-specified Terraform version constraint. Example: "=1.3.10".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTfVersionConstraint() {
+    return tfVersionConstraint;
+  }
+
+  /**
+   * Optional. The user-specified Terraform version constraint. Example: "=1.3.10".
+   * @param tfVersionConstraint tfVersionConstraint or {@code null} for none
+   */
+  public Preview setTfVersionConstraint(java.lang.String tfVersionConstraint) {
+    this.tfVersionConstraint = tfVersionConstraint;
     return this;
   }
 

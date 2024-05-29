@@ -106,7 +106,9 @@ public final class About extends com.google.api.client.json.GenericJson {
   private java.lang.Long maxUploadSize;
 
   /**
-   * The user's storage quota limits and usage. All fields are measured in bytes.
+   * The user's storage quota limits and usage. For users that are part of an organization with
+   * pooled storage, information about the limit and usage across all services is for the
+   * organization, rather than the individual user. All fields are measured in bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -303,7 +305,9 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's storage quota limits and usage. All fields are measured in bytes.
+   * The user's storage quota limits and usage. For users that are part of an organization with
+   * pooled storage, information about the limit and usage across all services is for the
+   * organization, rather than the individual user. All fields are measured in bytes.
    * @return value or {@code null} for none
    */
   public StorageQuota getStorageQuota() {
@@ -311,7 +315,9 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's storage quota limits and usage. All fields are measured in bytes.
+   * The user's storage quota limits and usage. For users that are part of an organization with
+   * pooled storage, information about the limit and usage across all services is for the
+   * organization, rather than the individual user. All fields are measured in bytes.
    * @param storageQuota storageQuota or {@code null} for none
    */
   public About setStorageQuota(StorageQuota storageQuota) {
@@ -453,19 +459,25 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user's storage quota limits and usage. All fields are measured in bytes.
+   * The user's storage quota limits and usage. For users that are part of an organization with pooled
+   * storage, information about the limit and usage across all services is for the organization,
+   * rather than the individual user. All fields are measured in bytes.
    */
   public static final class StorageQuota extends com.google.api.client.json.GenericJson {
 
     /**
-     * The usage limit, if applicable. This will not be present if the user has unlimited storage.
+     * The usage limit, if applicable. This will not be present if the user has unlimited storage. For
+     * users that are part of an organization with pooled storage, this is the limit for the
+     * organization, rather than the individual user.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
     private java.lang.Long limit;
 
     /**
-     * The total usage across all services.
+     * The total usage across all services. For users that are part of an organization with pooled
+     * storage, this is the usage across all services for the organization, rather than the individual
+     * user.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -486,7 +498,9 @@ public final class About extends com.google.api.client.json.GenericJson {
     private java.lang.Long usageInDriveTrash;
 
     /**
-     * The usage limit, if applicable. This will not be present if the user has unlimited storage.
+     * The usage limit, if applicable. This will not be present if the user has unlimited storage. For
+     * users that are part of an organization with pooled storage, this is the limit for the
+     * organization, rather than the individual user.
      * @return value or {@code null} for none
      */
     public java.lang.Long getLimit() {
@@ -494,7 +508,9 @@ public final class About extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The usage limit, if applicable. This will not be present if the user has unlimited storage.
+     * The usage limit, if applicable. This will not be present if the user has unlimited storage. For
+     * users that are part of an organization with pooled storage, this is the limit for the
+     * organization, rather than the individual user.
      * @param limit limit or {@code null} for none
      */
     public StorageQuota setLimit(java.lang.Long limit) {
@@ -503,7 +519,9 @@ public final class About extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The total usage across all services.
+     * The total usage across all services. For users that are part of an organization with pooled
+     * storage, this is the usage across all services for the organization, rather than the individual
+     * user.
      * @return value or {@code null} for none
      */
     public java.lang.Long getUsage() {
@@ -511,7 +529,9 @@ public final class About extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The total usage across all services.
+     * The total usage across all services. For users that are part of an organization with pooled
+     * storage, this is the usage across all services for the organization, rather than the individual
+     * user.
      * @param usage usage or {@code null} for none
      */
     public StorageQuota setUsage(java.lang.Long usage) {

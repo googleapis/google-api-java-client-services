@@ -39,14 +39,6 @@ public final class Options extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean includeOnlyTargetedUserLists;
 
   /**
-   * Options that contain Path Filters and Custom Channel Groupings. This field is deprecated and
-   * will sunset on **May 1, 2024**. After sunset, requests using this field will return an error.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PathQueryOptions pathQueryOptions;
-
-  /**
    * Set to true and filter your report by `FILTER_INSERTION_ORDER` or `FILTER_LINE_ITEM` to include
    * data for audience lists specifically targeted by those items.
    * @return value or {@code null} for none
@@ -62,25 +54,6 @@ public final class Options extends com.google.api.client.json.GenericJson {
    */
   public Options setIncludeOnlyTargetedUserLists(java.lang.Boolean includeOnlyTargetedUserLists) {
     this.includeOnlyTargetedUserLists = includeOnlyTargetedUserLists;
-    return this;
-  }
-
-  /**
-   * Options that contain Path Filters and Custom Channel Groupings. This field is deprecated and
-   * will sunset on **May 1, 2024**. After sunset, requests using this field will return an error.
-   * @return value or {@code null} for none
-   */
-  public PathQueryOptions getPathQueryOptions() {
-    return pathQueryOptions;
-  }
-
-  /**
-   * Options that contain Path Filters and Custom Channel Groupings. This field is deprecated and
-   * will sunset on **May 1, 2024**. After sunset, requests using this field will return an error.
-   * @param pathQueryOptions pathQueryOptions or {@code null} for none
-   */
-  public Options setPathQueryOptions(PathQueryOptions pathQueryOptions) {
-    this.pathQueryOptions = pathQueryOptions;
     return this;
   }
 

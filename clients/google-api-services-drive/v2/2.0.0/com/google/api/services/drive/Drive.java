@@ -10107,8 +10107,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * an upload* URI and accepts uploaded media with the following characteristics: - *Maximum file
      * size:* 5,120 GB - *Accepted Media MIME types:*`*` Note: Specify a valid MIME type, rather than
      * the literal `*` value. The literal `*` is only used to indicate that any valid MIME type can be
-     * uploaded. For more information on uploading files, see [Upload file data](/drive/api/guides
-     * /manage-uploads).
+     * uploaded. For more information on uploading files, see [Upload file
+     * data](/drive/api/guides/manage-uploads).
      *
      * Create a request for the method "files.update".
      *
@@ -10132,8 +10132,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * an upload* URI and accepts uploaded media with the following characteristics: - *Maximum file
      * size:* 5,120 GB - *Accepted Media MIME types:*`*` Note: Specify a valid MIME type, rather than
      * the literal `*` value. The literal `*` is only used to indicate that any valid MIME type can be
-     * uploaded. For more information on uploading files, see [Upload file data](/drive/api/guides
-     * /manage-uploads).
+     * uploaded. For more information on uploading files, see [Upload file
+     * data](/drive/api/guides/manage-uploads).
      *
      * Create a request for the method "files.update".
      *

@@ -38,8 +38,8 @@ public final class SslCertificateManagedSslCertificate extends com.google.api.cl
 
   /**
    * The domains for which a managed SSL certificate will be generated. Each Google-managed SSL
-   * certificate supports up to the [maximum number of domains per Google-managed SSL certificate
-   * ](/load-balancing/docs/quotas#ssl_certificates).
+   * certificate supports up to the [maximum number of domains per Google-managed SSL
+   * certificate](/load-balancing/docs/quotas#ssl_certificates).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class SslCertificateManagedSslCertificate extends com.google.api.cl
 
   /**
    * The domains for which a managed SSL certificate will be generated. Each Google-managed SSL
-   * certificate supports up to the [maximum number of domains per Google-managed SSL certificate
-   * ](/load-balancing/docs/quotas#ssl_certificates).
+   * certificate supports up to the [maximum number of domains per Google-managed SSL
+   * certificate](/load-balancing/docs/quotas#ssl_certificates).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDomains() {
@@ -81,8 +81,8 @@ public final class SslCertificateManagedSslCertificate extends com.google.api.cl
 
   /**
    * The domains for which a managed SSL certificate will be generated. Each Google-managed SSL
-   * certificate supports up to the [maximum number of domains per Google-managed SSL certificate
-   * ](/load-balancing/docs/quotas#ssl_certificates).
+   * certificate supports up to the [maximum number of domains per Google-managed SSL
+   * certificate](/load-balancing/docs/quotas#ssl_certificates).
    * @param domains domains or {@code null} for none
    */
   public SslCertificateManagedSslCertificate setDomains(java.util.List<java.lang.String> domains) {

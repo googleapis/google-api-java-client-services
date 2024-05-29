@@ -76,14 +76,14 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Type of the resource. This is always "tasks#task".
+   * Output only. Type of the resource. This is always "tasks#task".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Collection of links. This collection is read-only.
+   * Output only. Collection of links. This collection is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,26 +103,27 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.String notes;
 
   /**
-   * Parent task identifier. This field is omitted if it is a top-level task. This field is read-
-   * only. Use the "move" method to move the task under a different parent or to the top level.
+   * Output only. Parent task identifier. This field is omitted if it is a top-level task. This
+   * field is read-only. Use the "move" method to move the task under a different parent or to the
+   * top level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * String indicating the position of the task among its sibling tasks under the same parent task
-   * or at the top level. If this string is greater than another task's corresponding position
-   * string according to lexicographical ordering, the task is positioned after the other task under
-   * the same parent task (or at the top level). This field is read-only. Use the "move" method to
-   * move the task to another position.
+   * Output only. String indicating the position of the task among its sibling tasks under the same
+   * parent task or at the top level. If this string is greater than another task's corresponding
+   * position string according to lexicographical ordering, the task is positioned after the other
+   * task under the same parent task (or at the top level). Use the "move" method to move the task
+   * to another position.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String position;
 
   /**
-   * URL pointing to this task. Used to retrieve, update, or delete this task.
+   * Output only. URL pointing to this task. Used to retrieve, update, or delete this task.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,14 +144,14 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * Last modification time of the task (as a RFC 3339 timestamp).
+   * Output only. Last modification time of the task (as a RFC 3339 timestamp).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String updated;
 
   /**
-   * An absolute link to the task in the Google Tasks Web UI. This field is read-only.
+   * Output only. An absolute link to the task in the Google Tasks Web UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,7 +268,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the resource. This is always "tasks#task".
+   * Output only. Type of the resource. This is always "tasks#task".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -275,7 +276,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the resource. This is always "tasks#task".
+   * Output only. Type of the resource. This is always "tasks#task".
    * @param kind kind or {@code null} for none
    */
   public Task setKind(java.lang.String kind) {
@@ -284,7 +285,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Collection of links. This collection is read-only.
+   * Output only. Collection of links. This collection is read-only.
    * @return value or {@code null} for none
    */
   public java.util.List<Links> getLinks() {
@@ -292,7 +293,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Collection of links. This collection is read-only.
+   * Output only. Collection of links. This collection is read-only.
    * @param links links or {@code null} for none
    */
   public Task setLinks(java.util.List<Links> links) {
@@ -318,8 +319,9 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Parent task identifier. This field is omitted if it is a top-level task. This field is read-
-   * only. Use the "move" method to move the task under a different parent or to the top level.
+   * Output only. Parent task identifier. This field is omitted if it is a top-level task. This
+   * field is read-only. Use the "move" method to move the task under a different parent or to the
+   * top level.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -327,8 +329,9 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Parent task identifier. This field is omitted if it is a top-level task. This field is read-
-   * only. Use the "move" method to move the task under a different parent or to the top level.
+   * Output only. Parent task identifier. This field is omitted if it is a top-level task. This
+   * field is read-only. Use the "move" method to move the task under a different parent or to the
+   * top level.
    * @param parent parent or {@code null} for none
    */
   public Task setParent(java.lang.String parent) {
@@ -337,11 +340,11 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String indicating the position of the task among its sibling tasks under the same parent task
-   * or at the top level. If this string is greater than another task's corresponding position
-   * string according to lexicographical ordering, the task is positioned after the other task under
-   * the same parent task (or at the top level). This field is read-only. Use the "move" method to
-   * move the task to another position.
+   * Output only. String indicating the position of the task among its sibling tasks under the same
+   * parent task or at the top level. If this string is greater than another task's corresponding
+   * position string according to lexicographical ordering, the task is positioned after the other
+   * task under the same parent task (or at the top level). Use the "move" method to move the task
+   * to another position.
    * @return value or {@code null} for none
    */
   public java.lang.String getPosition() {
@@ -349,11 +352,11 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String indicating the position of the task among its sibling tasks under the same parent task
-   * or at the top level. If this string is greater than another task's corresponding position
-   * string according to lexicographical ordering, the task is positioned after the other task under
-   * the same parent task (or at the top level). This field is read-only. Use the "move" method to
-   * move the task to another position.
+   * Output only. String indicating the position of the task among its sibling tasks under the same
+   * parent task or at the top level. If this string is greater than another task's corresponding
+   * position string according to lexicographical ordering, the task is positioned after the other
+   * task under the same parent task (or at the top level). Use the "move" method to move the task
+   * to another position.
    * @param position position or {@code null} for none
    */
   public Task setPosition(java.lang.String position) {
@@ -362,7 +365,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL pointing to this task. Used to retrieve, update, or delete this task.
+   * Output only. URL pointing to this task. Used to retrieve, update, or delete this task.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -370,7 +373,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL pointing to this task. Used to retrieve, update, or delete this task.
+   * Output only. URL pointing to this task. Used to retrieve, update, or delete this task.
    * @param selfLink selfLink or {@code null} for none
    */
   public Task setSelfLink(java.lang.String selfLink) {
@@ -413,7 +416,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Last modification time of the task (as a RFC 3339 timestamp).
+   * Output only. Last modification time of the task (as a RFC 3339 timestamp).
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdated() {
@@ -421,7 +424,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Last modification time of the task (as a RFC 3339 timestamp).
+   * Output only. Last modification time of the task (as a RFC 3339 timestamp).
    * @param updated updated or {@code null} for none
    */
   public Task setUpdated(java.lang.String updated) {
@@ -430,7 +433,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An absolute link to the task in the Google Tasks Web UI. This field is read-only.
+   * Output only. An absolute link to the task in the Google Tasks Web UI.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebViewLink() {
@@ -438,7 +441,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An absolute link to the task in the Google Tasks Web UI. This field is read-only.
+   * Output only. An absolute link to the task in the Google Tasks Web UI.
    * @param webViewLink webViewLink or {@code null} for none
    */
   public Task setWebViewLink(java.lang.String webViewLink) {

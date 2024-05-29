@@ -40,10 +40,10 @@ public final class GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest extends c
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
-   * /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
-   * location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
-   * European Union. Example: `projects/project-A/locations/eu`.
+   * Optional. Target project and location to make a call. Format: `projects/{project-
+   * id}/locations/{location-id}`. If no parent is specified, a region will be chosen automatically.
+   * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan,
+   * `eu`: The European Union. Example: `projects/project-A/locations/eu`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,10 +87,10 @@ public final class GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest extends c
   }
 
   /**
-   * Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
-   * /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
-   * location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
-   * European Union. Example: `projects/project-A/locations/eu`.
+   * Optional. Target project and location to make a call. Format: `projects/{project-
+   * id}/locations/{location-id}`. If no parent is specified, a region will be chosen automatically.
+   * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan,
+   * `eu`: The European Union. Example: `projects/project-A/locations/eu`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -98,10 +98,10 @@ public final class GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest extends c
   }
 
   /**
-   * Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
-   * /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
-   * location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
-   * European Union. Example: `projects/project-A/locations/eu`.
+   * Optional. Target project and location to make a call. Format: `projects/{project-
+   * id}/locations/{location-id}`. If no parent is specified, a region will be chosen automatically.
+   * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan,
+   * `eu`: The European Union. Example: `projects/project-A/locations/eu`.
    * @param parent parent or {@code null} for none
    */
   public GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest setParent(java.lang.String parent) {

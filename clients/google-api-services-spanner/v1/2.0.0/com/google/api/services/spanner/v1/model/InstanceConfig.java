@@ -119,6 +119,13 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.util.List<ReplicaInfo> optionalReplicas;
 
   /**
+   * Output only. The `QuorumType` of the instance configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String quorumType;
+
+  /**
    * Output only. If true, the instance config is being created or updated. If false, there are no
    * ongoing operations for the instance config.
    * The value may be {@code null}.
@@ -348,6 +355,23 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
    */
   public InstanceConfig setOptionalReplicas(java.util.List<ReplicaInfo> optionalReplicas) {
     this.optionalReplicas = optionalReplicas;
+    return this;
+  }
+
+  /**
+   * Output only. The `QuorumType` of the instance configuration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQuorumType() {
+    return quorumType;
+  }
+
+  /**
+   * Output only. The `QuorumType` of the instance configuration.
+   * @param quorumType quorumType or {@code null} for none
+   */
+  public InstanceConfig setQuorumType(java.lang.String quorumType) {
+    this.quorumType = quorumType;
     return this;
   }
 

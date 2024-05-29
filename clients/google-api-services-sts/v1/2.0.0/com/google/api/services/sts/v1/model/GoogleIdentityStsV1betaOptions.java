@@ -42,16 +42,6 @@ public final class GoogleIdentityStsV1betaOptions extends com.google.api.client.
   private GoogleIdentityStsV1betaAccessBoundary accessBoundary;
 
   /**
-   * The intended audience(s) of the credential. The audience value(s) should be the name(s) of
-   * services intended to receive the credential. Example: `["https://pubsub.googleapis.com/",
-   * "https://storage.googleapis.com/"]`. A maximum of 5 audiences can be included. For each
-   * provided audience, the maximum length is 262 characters.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> audiences;
-
-  /**
    * A Google project used for quota and billing purposes when the credential is used to access
    * Google APIs. The provided project overrides the project bound to the credential. The value must
    * be a project number or a project ID. Example: `my-sample-project-191923`. The maximum length is
@@ -79,29 +69,6 @@ public final class GoogleIdentityStsV1betaOptions extends com.google.api.client.
    */
   public GoogleIdentityStsV1betaOptions setAccessBoundary(GoogleIdentityStsV1betaAccessBoundary accessBoundary) {
     this.accessBoundary = accessBoundary;
-    return this;
-  }
-
-  /**
-   * The intended audience(s) of the credential. The audience value(s) should be the name(s) of
-   * services intended to receive the credential. Example: `["https://pubsub.googleapis.com/",
-   * "https://storage.googleapis.com/"]`. A maximum of 5 audiences can be included. For each
-   * provided audience, the maximum length is 262 characters.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getAudiences() {
-    return audiences;
-  }
-
-  /**
-   * The intended audience(s) of the credential. The audience value(s) should be the name(s) of
-   * services intended to receive the credential. Example: `["https://pubsub.googleapis.com/",
-   * "https://storage.googleapis.com/"]`. A maximum of 5 audiences can be included. For each
-   * provided audience, the maximum length is 262 characters.
-   * @param audiences audiences or {@code null} for none
-   */
-  public GoogleIdentityStsV1betaOptions setAudiences(java.util.List<java.lang.String> audiences) {
-    this.audiences = audiences;
     return this;
   }
 

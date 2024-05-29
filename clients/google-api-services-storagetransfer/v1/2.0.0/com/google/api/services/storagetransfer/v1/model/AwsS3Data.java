@@ -63,14 +63,22 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
    * Optional. The Resource name of a secret in Secret Manager. AWS credentials must be stored in
    * Secret Manager in JSON format: { "access_key_id": "ACCESS_KEY_ID", "secret_access_key":
    * "SECRET_ACCESS_KEY" } GoogleServiceAccount must be granted `roles/secretmanager.secretAccessor`
-   * for the resource. See [Configure access to a source: Amazon S3] (https://cloud.google.com
-   * /storage-transfer/docs/source-amazon-s3#secret_manager) for more information. If
-   * `credentials_secret` is specified, do not specify role_arn or aws_access_key. Format:
-   * `projects/{project_number}/secrets/{secret_name}`
+   * for the resource. See [Configure access to a source: Amazon S3]
+   * (https://cloud.google.com/storage-transfer/docs/source-amazon-s3#secret_manager) for more
+   * information. If `credentials_secret` is specified, do not specify role_arn or aws_access_key.
+   * Format: `projects/{project_number}/secrets/{secret_name}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String credentialsSecret;
+
+  /**
+   * Egress bytes over a Google-managed private network. This network is shared between other users
+   * of Storage Transfer Service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean managedPrivateNetwork;
 
   /**
    * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'.
@@ -163,10 +171,10 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
    * Optional. The Resource name of a secret in Secret Manager. AWS credentials must be stored in
    * Secret Manager in JSON format: { "access_key_id": "ACCESS_KEY_ID", "secret_access_key":
    * "SECRET_ACCESS_KEY" } GoogleServiceAccount must be granted `roles/secretmanager.secretAccessor`
-   * for the resource. See [Configure access to a source: Amazon S3] (https://cloud.google.com
-   * /storage-transfer/docs/source-amazon-s3#secret_manager) for more information. If
-   * `credentials_secret` is specified, do not specify role_arn or aws_access_key. Format:
-   * `projects/{project_number}/secrets/{secret_name}`
+   * for the resource. See [Configure access to a source: Amazon S3]
+   * (https://cloud.google.com/storage-transfer/docs/source-amazon-s3#secret_manager) for more
+   * information. If `credentials_secret` is specified, do not specify role_arn or aws_access_key.
+   * Format: `projects/{project_number}/secrets/{secret_name}`
    * @return value or {@code null} for none
    */
   public java.lang.String getCredentialsSecret() {
@@ -177,14 +185,33 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
    * Optional. The Resource name of a secret in Secret Manager. AWS credentials must be stored in
    * Secret Manager in JSON format: { "access_key_id": "ACCESS_KEY_ID", "secret_access_key":
    * "SECRET_ACCESS_KEY" } GoogleServiceAccount must be granted `roles/secretmanager.secretAccessor`
-   * for the resource. See [Configure access to a source: Amazon S3] (https://cloud.google.com
-   * /storage-transfer/docs/source-amazon-s3#secret_manager) for more information. If
-   * `credentials_secret` is specified, do not specify role_arn or aws_access_key. Format:
-   * `projects/{project_number}/secrets/{secret_name}`
+   * for the resource. See [Configure access to a source: Amazon S3]
+   * (https://cloud.google.com/storage-transfer/docs/source-amazon-s3#secret_manager) for more
+   * information. If `credentials_secret` is specified, do not specify role_arn or aws_access_key.
+   * Format: `projects/{project_number}/secrets/{secret_name}`
    * @param credentialsSecret credentialsSecret or {@code null} for none
    */
   public AwsS3Data setCredentialsSecret(java.lang.String credentialsSecret) {
     this.credentialsSecret = credentialsSecret;
+    return this;
+  }
+
+  /**
+   * Egress bytes over a Google-managed private network. This network is shared between other users
+   * of Storage Transfer Service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getManagedPrivateNetwork() {
+    return managedPrivateNetwork;
+  }
+
+  /**
+   * Egress bytes over a Google-managed private network. This network is shared between other users
+   * of Storage Transfer Service.
+   * @param managedPrivateNetwork managedPrivateNetwork or {@code null} for none
+   */
+  public AwsS3Data setManagedPrivateNetwork(java.lang.Boolean managedPrivateNetwork) {
+    this.managedPrivateNetwork = managedPrivateNetwork;
     return this;
   }
 

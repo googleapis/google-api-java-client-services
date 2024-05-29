@@ -72,9 +72,13 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   private GoogleMapsPlacesV1SearchTextRequestLocationRestriction locationRestriction;
 
   /**
-   * Maximum number of results to return. It must be between 1 and 20, inclusively. The default is
-   * 20. If the number is unset, it falls back to the upper limit. If the number is set to negative
-   * or exceeds the upper limit, an INVALID_ARGUMENT error is returned.
+   * Deprecated: Use `page_size` instead. The maximum number of results per page that can be
+   * returned. If the number of available results is larger than `max_result_count`, a
+   * `next_page_token` is returned which can be passed to `page_token` to get the next page of
+   * results in subsequent requests. If 0 or no value is provided, a default of 20 is used. The
+   * maximum value is 20; values above 20 will be coerced to 20. Negative values will return an
+   * INVALID_ARGUMENT error. If both `max_result_count` and `page_size` are specified,
+   * `max_result_count` will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,6 +100,28 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean openNow;
+
+  /**
+   * Optional. The maximum number of results per page that can be returned. If the number of
+   * available results is larger than `page_size`, a `next_page_token` is returned which can be
+   * passed to `page_token` to get the next page of results in subsequent requests. If 0 or no value
+   * is provided, a default of 20 is used. The maximum value is 20; values above 20 will be set to
+   * 20. Negative values will return an INVALID_ARGUMENT error. If both `max_result_count` and
+   * `page_size` are specified, `max_result_count` will be ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer pageSize;
+
+  /**
+   * Optional. A page token, received from a previous TextSearch call. Provide this to retrieve the
+   * subsequent page. When paginating, all parameters other than `page_token`, `page_size`, and
+   * `max_result_count` provided to TextSearch must match the initial call that provided the page
+   * token. Otherwise an INVALID_ARGUMENT error is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pageToken;
 
   /**
    * Used to restrict the search to places that are marked as certain price levels. Users can choose
@@ -238,9 +264,13 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   }
 
   /**
-   * Maximum number of results to return. It must be between 1 and 20, inclusively. The default is
-   * 20. If the number is unset, it falls back to the upper limit. If the number is set to negative
-   * or exceeds the upper limit, an INVALID_ARGUMENT error is returned.
+   * Deprecated: Use `page_size` instead. The maximum number of results per page that can be
+   * returned. If the number of available results is larger than `max_result_count`, a
+   * `next_page_token` is returned which can be passed to `page_token` to get the next page of
+   * results in subsequent requests. If 0 or no value is provided, a default of 20 is used. The
+   * maximum value is 20; values above 20 will be coerced to 20. Negative values will return an
+   * INVALID_ARGUMENT error. If both `max_result_count` and `page_size` are specified,
+   * `max_result_count` will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxResultCount() {
@@ -248,9 +278,13 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   }
 
   /**
-   * Maximum number of results to return. It must be between 1 and 20, inclusively. The default is
-   * 20. If the number is unset, it falls back to the upper limit. If the number is set to negative
-   * or exceeds the upper limit, an INVALID_ARGUMENT error is returned.
+   * Deprecated: Use `page_size` instead. The maximum number of results per page that can be
+   * returned. If the number of available results is larger than `max_result_count`, a
+   * `next_page_token` is returned which can be passed to `page_token` to get the next page of
+   * results in subsequent requests. If 0 or no value is provided, a default of 20 is used. The
+   * maximum value is 20; values above 20 will be coerced to 20. Negative values will return an
+   * INVALID_ARGUMENT error. If both `max_result_count` and `page_size` are specified,
+   * `max_result_count` will be ignored.
    * @param maxResultCount maxResultCount or {@code null} for none
    */
   public GoogleMapsPlacesV1SearchTextRequest setMaxResultCount(java.lang.Integer maxResultCount) {
@@ -295,6 +329,56 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
    */
   public GoogleMapsPlacesV1SearchTextRequest setOpenNow(java.lang.Boolean openNow) {
     this.openNow = openNow;
+    return this;
+  }
+
+  /**
+   * Optional. The maximum number of results per page that can be returned. If the number of
+   * available results is larger than `page_size`, a `next_page_token` is returned which can be
+   * passed to `page_token` to get the next page of results in subsequent requests. If 0 or no value
+   * is provided, a default of 20 is used. The maximum value is 20; values above 20 will be set to
+   * 20. Negative values will return an INVALID_ARGUMENT error. If both `max_result_count` and
+   * `page_size` are specified, `max_result_count` will be ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPageSize() {
+    return pageSize;
+  }
+
+  /**
+   * Optional. The maximum number of results per page that can be returned. If the number of
+   * available results is larger than `page_size`, a `next_page_token` is returned which can be
+   * passed to `page_token` to get the next page of results in subsequent requests. If 0 or no value
+   * is provided, a default of 20 is used. The maximum value is 20; values above 20 will be set to
+   * 20. Negative values will return an INVALID_ARGUMENT error. If both `max_result_count` and
+   * `page_size` are specified, `max_result_count` will be ignored.
+   * @param pageSize pageSize or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchTextRequest setPageSize(java.lang.Integer pageSize) {
+    this.pageSize = pageSize;
+    return this;
+  }
+
+  /**
+   * Optional. A page token, received from a previous TextSearch call. Provide this to retrieve the
+   * subsequent page. When paginating, all parameters other than `page_token`, `page_size`, and
+   * `max_result_count` provided to TextSearch must match the initial call that provided the page
+   * token. Otherwise an INVALID_ARGUMENT error is returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPageToken() {
+    return pageToken;
+  }
+
+  /**
+   * Optional. A page token, received from a previous TextSearch call. Provide this to retrieve the
+   * subsequent page. When paginating, all parameters other than `page_token`, `page_size`, and
+   * `max_result_count` provided to TextSearch must match the initial call that provided the page
+   * token. Otherwise an INVALID_ARGUMENT error is returned.
+   * @param pageToken pageToken or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchTextRequest setPageToken(java.lang.String pageToken) {
+    this.pageToken = pageToken;
     return this;
   }
 

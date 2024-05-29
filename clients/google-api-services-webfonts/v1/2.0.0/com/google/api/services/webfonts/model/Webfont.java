@@ -51,6 +51,13 @@ public final class Webfont extends com.google.api.client.json.GenericJson {
   private java.lang.String category;
 
   /**
+   * The color format(s) available for this family.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> colorCapabilities;
+
+  /**
    * The name of the font.
    * The value may be {@code null}.
    */
@@ -138,6 +145,23 @@ public final class Webfont extends com.google.api.client.json.GenericJson {
    */
   public Webfont setCategory(java.lang.String category) {
     this.category = category;
+    return this;
+  }
+
+  /**
+   * The color format(s) available for this family.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getColorCapabilities() {
+    return colorCapabilities;
+  }
+
+  /**
+   * The color format(s) available for this family.
+   * @param colorCapabilities colorCapabilities or {@code null} for none
+   */
+  public Webfont setColorCapabilities(java.util.List<java.lang.String> colorCapabilities) {
+    this.colorCapabilities = colorCapabilities;
     return this;
   }
 

@@ -33,12 +33,13 @@ public final class RevisionTemplate extends com.google.api.client.json.GenericJs
    * Optional metadata for this Revision, including labels and annotations. Name will be generated
    * by the Configuration. The following annotation keys set properties of the created revision: *
    * `autoscaling.knative.dev/minScale` sets the minimum number of instances. *
-   * `autoscaling.knative.dev/maxScale` sets the maximum number of instances. * `run.googleapis.com
-   * /cloudsql-instances` sets Cloud SQL connections. Multiple values should be comma separated. *
-   * `run.googleapis.com/vpc-access-connector` sets a Serverless VPC Access connector. *
-   * `run.googleapis.com/vpc-access-egress` sets VPC egress. Supported values are `all-traffic`,
-   * `all` (deprecated), and `private-ranges-only`. `all-traffic` and `all` provide the same
-   * functionality. `all` is deprecated but will continue to be supported. Prefer `all-traffic`.
+   * `autoscaling.knative.dev/maxScale` sets the maximum number of instances. *
+   * `run.googleapis.com/cloudsql-instances` sets Cloud SQL connections. Multiple values should be
+   * comma separated. * `run.googleapis.com/vpc-access-connector` sets a Serverless VPC Access
+   * connector. * `run.googleapis.com/vpc-access-egress` sets VPC egress. Supported values are `all-
+   * traffic`, `all` (deprecated), and `private-ranges-only`. `all-traffic` and `all` provide the
+   * same functionality. `all` is deprecated but will continue to be supported. Prefer `all-
+   * traffic`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,12 +56,13 @@ public final class RevisionTemplate extends com.google.api.client.json.GenericJs
    * Optional metadata for this Revision, including labels and annotations. Name will be generated
    * by the Configuration. The following annotation keys set properties of the created revision: *
    * `autoscaling.knative.dev/minScale` sets the minimum number of instances. *
-   * `autoscaling.knative.dev/maxScale` sets the maximum number of instances. * `run.googleapis.com
-   * /cloudsql-instances` sets Cloud SQL connections. Multiple values should be comma separated. *
-   * `run.googleapis.com/vpc-access-connector` sets a Serverless VPC Access connector. *
-   * `run.googleapis.com/vpc-access-egress` sets VPC egress. Supported values are `all-traffic`,
-   * `all` (deprecated), and `private-ranges-only`. `all-traffic` and `all` provide the same
-   * functionality. `all` is deprecated but will continue to be supported. Prefer `all-traffic`.
+   * `autoscaling.knative.dev/maxScale` sets the maximum number of instances. *
+   * `run.googleapis.com/cloudsql-instances` sets Cloud SQL connections. Multiple values should be
+   * comma separated. * `run.googleapis.com/vpc-access-connector` sets a Serverless VPC Access
+   * connector. * `run.googleapis.com/vpc-access-egress` sets VPC egress. Supported values are `all-
+   * traffic`, `all` (deprecated), and `private-ranges-only`. `all-traffic` and `all` provide the
+   * same functionality. `all` is deprecated but will continue to be supported. Prefer `all-
+   * traffic`.
    * @return value or {@code null} for none
    */
   public ObjectMeta getMetadata() {
@@ -71,12 +73,13 @@ public final class RevisionTemplate extends com.google.api.client.json.GenericJs
    * Optional metadata for this Revision, including labels and annotations. Name will be generated
    * by the Configuration. The following annotation keys set properties of the created revision: *
    * `autoscaling.knative.dev/minScale` sets the minimum number of instances. *
-   * `autoscaling.knative.dev/maxScale` sets the maximum number of instances. * `run.googleapis.com
-   * /cloudsql-instances` sets Cloud SQL connections. Multiple values should be comma separated. *
-   * `run.googleapis.com/vpc-access-connector` sets a Serverless VPC Access connector. *
-   * `run.googleapis.com/vpc-access-egress` sets VPC egress. Supported values are `all-traffic`,
-   * `all` (deprecated), and `private-ranges-only`. `all-traffic` and `all` provide the same
-   * functionality. `all` is deprecated but will continue to be supported. Prefer `all-traffic`.
+   * `autoscaling.knative.dev/maxScale` sets the maximum number of instances. *
+   * `run.googleapis.com/cloudsql-instances` sets Cloud SQL connections. Multiple values should be
+   * comma separated. * `run.googleapis.com/vpc-access-connector` sets a Serverless VPC Access
+   * connector. * `run.googleapis.com/vpc-access-egress` sets VPC egress. Supported values are `all-
+   * traffic`, `all` (deprecated), and `private-ranges-only`. `all-traffic` and `all` provide the
+   * same functionality. `all` is deprecated but will continue to be supported. Prefer `all-
+   * traffic`.
    * @param metadata metadata or {@code null} for none
    */
   public RevisionTemplate setMetadata(ObjectMeta metadata) {

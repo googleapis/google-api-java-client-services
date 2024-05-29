@@ -31,6 +31,19 @@ package com.google.api.services.analyticsdata.v1beta.model;
 public final class Metadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * The comparison descriptions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ComparisonMetadata> comparisons;
+
+  static {
+    // hack to force ProGuard to consider ComparisonMetadata used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ComparisonMetadata.class);
+  }
+
+  /**
    * The dimension descriptions.
    * The value may be {@code null}.
    */
@@ -56,6 +69,23 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The comparison descriptions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ComparisonMetadata> getComparisons() {
+    return comparisons;
+  }
+
+  /**
+   * The comparison descriptions.
+   * @param comparisons comparisons or {@code null} for none
+   */
+  public Metadata setComparisons(java.util.List<ComparisonMetadata> comparisons) {
+    this.comparisons = comparisons;
+    return this;
+  }
 
   /**
    * The dimension descriptions.

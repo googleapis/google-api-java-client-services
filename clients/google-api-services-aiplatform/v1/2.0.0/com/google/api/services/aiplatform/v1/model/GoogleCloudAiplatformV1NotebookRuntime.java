@@ -70,6 +70,13 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
   private java.lang.String healthState;
 
   /**
+   * Output only. The idle shutdown configuration of the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1NotebookIdleShutdownConfig idleShutdownConfig;
+
+  /**
    * Output only. Whether NotebookRuntime is upgradable.
    * The value may be {@code null}.
    */
@@ -130,13 +137,6 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
   private java.lang.String proxyUri;
 
   /**
-   * Output only. Reservation Affinity of the notebook runtime.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1NotebookReservationAffinity reservationAffinity;
-
-  /**
    * Output only. The runtime (instance) state of the NotebookRuntime.
    * The value may be {@code null}.
    */
@@ -149,6 +149,20 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.String runtimeUser;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
 
   /**
    * Output only. The service account that the NotebookRuntime workload runs as.
@@ -261,6 +275,23 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
    */
   public GoogleCloudAiplatformV1NotebookRuntime setHealthState(java.lang.String healthState) {
     this.healthState = healthState;
+    return this;
+  }
+
+  /**
+   * Output only. The idle shutdown configuration of the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookIdleShutdownConfig getIdleShutdownConfig() {
+    return idleShutdownConfig;
+  }
+
+  /**
+   * Output only. The idle shutdown configuration of the notebook runtime.
+   * @param idleShutdownConfig idleShutdownConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookRuntime setIdleShutdownConfig(GoogleCloudAiplatformV1NotebookIdleShutdownConfig idleShutdownConfig) {
+    this.idleShutdownConfig = idleShutdownConfig;
     return this;
   }
 
@@ -406,23 +437,6 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
   }
 
   /**
-   * Output only. Reservation Affinity of the notebook runtime.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1NotebookReservationAffinity getReservationAffinity() {
-    return reservationAffinity;
-  }
-
-  /**
-   * Output only. Reservation Affinity of the notebook runtime.
-   * @param reservationAffinity reservationAffinity or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1NotebookRuntime setReservationAffinity(GoogleCloudAiplatformV1NotebookReservationAffinity reservationAffinity) {
-    this.reservationAffinity = reservationAffinity;
-    return this;
-  }
-
-  /**
    * Output only. The runtime (instance) state of the NotebookRuntime.
    * @return value or {@code null} for none
    */
@@ -453,6 +467,40 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
    */
   public GoogleCloudAiplatformV1NotebookRuntime setRuntimeUser(java.lang.String runtimeUser) {
     this.runtimeUser = runtimeUser;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookRuntime setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookRuntime setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

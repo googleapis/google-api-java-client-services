@@ -19,8 +19,8 @@ __author__ = 'aiuto@google.com (Tony Aiuto)'
 import json
 import os
 
-from google.apputils import app
-import gflags as flags
+from absl import app
+from absl import flags
 from googleapis.codegen import generator
 from googleapis.codegen import generator_lookup
 from googleapis.codegen import language_model

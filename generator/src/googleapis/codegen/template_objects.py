@@ -238,7 +238,7 @@ class CodeObject(UseableInTemplates):
       return self.parent.module
     if self.api:
       return self.api.module
-    raise ValueError('Asked for module of CodeObject without any: %s, %s' %
+    raise AttributeError('Asked for module of CodeObject without any: %s, %s' %
                      (self.values.get('wireName', '<unnamed>'), self))
 
   @property

@@ -1491,7 +1491,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the artifactregistry server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+         * @param name The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`. For
+         *        each location in a project, repository names must be unique.
          * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.Repository}
          * @return the request
          */
@@ -1519,7 +1520,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+           * @param name The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`. For
+         *        each location in a project, repository names must be unique.
            * @param content the {@link com.google.api.services.artifactregistry.v1beta1.model.Repository}
            * @since 1.13
            */
@@ -1590,12 +1592,14 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
           /**
            * The name of the repository, for example: `projects/p1/locations/us-
-           * central1/repositories/repo1`.
+           * central1/repositories/repo1`. For each location in a project, repository names must be
+           * unique.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name of the repository, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+         For each location in a project, repository names must be unique.
            */
           public java.lang.String getName() {
             return name;
@@ -1603,7 +1607,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
           /**
            * The name of the repository, for example: `projects/p1/locations/us-
-           * central1/repositories/repo1`.
+           * central1/repositories/repo1`. For each location in a project, repository names must be
+           * unique.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2102,8 +2107,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The name of the repository whose files will be listed. For example: "projects/p1/locations
-           *        /us-central1/repositories/repo1
+           * @param parent Required. The name of the repository whose files will be listed. For example:
+           *        "projects/p1/locations/us-central1/repositories/repo1
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2129,8 +2134,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The name of the repository whose files will be listed. For example: "projects/p1/locations
-           *        /us-central1/repositories/repo1
+             * @param parent Required. The name of the repository whose files will be listed. For example:
+           *        "projects/p1/locations/us-central1/repositories/repo1
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2273,17 +2278,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** The maximum number of files to return. */
+            /** The maximum number of files to return. Maximum page size is 1,000. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of files to return.
+            /** The maximum number of files to return. Maximum page size is 1,000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** The maximum number of files to return. */
+            /** The maximum number of files to return. Maximum page size is 1,000. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
@@ -3379,17 +3384,17 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
                 return this;
               }
 
-              /** The maximum number of tags to return. Maximum page size is 10,000. */
+              /** The maximum number of tags to return. Maximum page size is 1,000. */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of tags to return. Maximum page size is 10,000.
+              /** The maximum number of tags to return. Maximum page size is 1,000.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /** The maximum number of tags to return. Maximum page size is 10,000. */
+              /** The maximum number of tags to return. Maximum page size is 1,000. */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;

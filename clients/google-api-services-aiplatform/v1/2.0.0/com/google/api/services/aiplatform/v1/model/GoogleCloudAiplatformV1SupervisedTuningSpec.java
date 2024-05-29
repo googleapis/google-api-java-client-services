@@ -37,14 +37,16 @@ public final class GoogleCloudAiplatformV1SupervisedTuningSpec extends com.googl
   private GoogleCloudAiplatformV1SupervisedHyperParameters hyperParameters;
 
   /**
-   * Required. Cloud Storage path to file containing training dataset for tuning.
+   * Required. Cloud Storage path to file containing training dataset for tuning. The dataset must
+   * be formatted as a JSONL file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trainingDatasetUri;
 
   /**
-   * Optional. Cloud Storage path to file containing validation dataset for tuning.
+   * Optional. Cloud Storage path to file containing validation dataset for tuning. The dataset must
+   * be formatted as a JSONL file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +70,8 @@ public final class GoogleCloudAiplatformV1SupervisedTuningSpec extends com.googl
   }
 
   /**
-   * Required. Cloud Storage path to file containing training dataset for tuning.
+   * Required. Cloud Storage path to file containing training dataset for tuning. The dataset must
+   * be formatted as a JSONL file.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrainingDatasetUri() {
@@ -76,7 +79,8 @@ public final class GoogleCloudAiplatformV1SupervisedTuningSpec extends com.googl
   }
 
   /**
-   * Required. Cloud Storage path to file containing training dataset for tuning.
+   * Required. Cloud Storage path to file containing training dataset for tuning. The dataset must
+   * be formatted as a JSONL file.
    * @param trainingDatasetUri trainingDatasetUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1SupervisedTuningSpec setTrainingDatasetUri(java.lang.String trainingDatasetUri) {
@@ -85,7 +89,8 @@ public final class GoogleCloudAiplatformV1SupervisedTuningSpec extends com.googl
   }
 
   /**
-   * Optional. Cloud Storage path to file containing validation dataset for tuning.
+   * Optional. Cloud Storage path to file containing validation dataset for tuning. The dataset must
+   * be formatted as a JSONL file.
    * @return value or {@code null} for none
    */
   public java.lang.String getValidationDatasetUri() {
@@ -93,7 +98,8 @@ public final class GoogleCloudAiplatformV1SupervisedTuningSpec extends com.googl
   }
 
   /**
-   * Optional. Cloud Storage path to file containing validation dataset for tuning.
+   * Optional. Cloud Storage path to file containing validation dataset for tuning. The dataset must
+   * be formatted as a JSONL file.
    * @param validationDatasetUri validationDatasetUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1SupervisedTuningSpec setValidationDatasetUri(java.lang.String validationDatasetUri) {

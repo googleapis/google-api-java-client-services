@@ -29,6 +29,54 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 @SuppressWarnings("javadoc")
 public final class PostgreSqlDatabaseDeployment extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. List of PostgreSql properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PostgreSqlProperty> properties;
+
+  /**
+   * Optional. List of PostgreSql settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PostgreSqlSetting> settings;
+
+  /**
+   * Optional. List of PostgreSql properties.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PostgreSqlProperty> getProperties() {
+    return properties;
+  }
+
+  /**
+   * Optional. List of PostgreSql properties.
+   * @param properties properties or {@code null} for none
+   */
+  public PostgreSqlDatabaseDeployment setProperties(java.util.List<PostgreSqlProperty> properties) {
+    this.properties = properties;
+    return this;
+  }
+
+  /**
+   * Optional. List of PostgreSql settings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PostgreSqlSetting> getSettings() {
+    return settings;
+  }
+
+  /**
+   * Optional. List of PostgreSql settings.
+   * @param settings settings or {@code null} for none
+   */
+  public PostgreSqlDatabaseDeployment setSettings(java.util.List<PostgreSqlSetting> settings) {
+    this.settings = settings;
+    return this;
+  }
+
   @Override
   public PostgreSqlDatabaseDeployment set(String fieldName, Object value) {
     return (PostgreSqlDatabaseDeployment) super.set(fieldName, value);

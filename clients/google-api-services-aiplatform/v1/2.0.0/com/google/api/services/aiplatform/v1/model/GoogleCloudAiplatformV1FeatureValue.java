@@ -100,6 +100,13 @@ public final class GoogleCloudAiplatformV1FeatureValue extends com.google.api.cl
   private java.lang.String stringValue;
 
   /**
+   * A struct type feature value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1StructValue structValue;
+
+  /**
    * A list of bool type feature value.
    * @return value or {@code null} for none
    */
@@ -294,6 +301,23 @@ public final class GoogleCloudAiplatformV1FeatureValue extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1FeatureValue setStringValue(java.lang.String stringValue) {
     this.stringValue = stringValue;
+    return this;
+  }
+
+  /**
+   * A struct type feature value.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1StructValue getStructValue() {
+    return structValue;
+  }
+
+  /**
+   * A struct type feature value.
+   * @param structValue structValue or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureValue setStructValue(GoogleCloudAiplatformV1StructValue structValue) {
+    this.structValue = structValue;
     return this;
   }
 

@@ -17,7 +17,8 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Information specific to a subscription in canceled state.
+ * Information specific to a subscription in the SUBSCRIPTION_STATE_CANCELED or
+ * SUBSCRIPTION_STATE_EXPIRED state.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed

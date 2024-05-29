@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Gemini configuration.
+ * Gemini instance configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -30,49 +30,49 @@ package com.google.api.services.sqladmin.model;
 public final class GeminiInstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Whether active query is enabled.
+   * Output only. Whether the active query is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean activeQueryEnabled;
 
   /**
-   * Output only. Whether gemini is enabled.
+   * Output only. Whether Gemini is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean entitled;
 
   /**
-   * Output only. Whether flag recommender is enabled.
+   * Output only. Whether the flag recommender is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean flagRecommenderEnabled;
 
   /**
-   * Output only. Whether vacuum management is enabled.
+   * Output only. Whether the vacuum management is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean googleVacuumMgmtEnabled;
 
   /**
-   * Output only. Whether index advisor is enabled.
+   * Output only. Whether the index advisor is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean indexAdvisorEnabled;
 
   /**
-   * Output only. Whether oom session cancel is enabled.
+   * Output only. Whether canceling the out-of-memory (OOM) session is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean oomSessionCancelEnabled;
 
   /**
-   * Output only. Whether active query is enabled.
+   * Output only. Whether the active query is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getActiveQueryEnabled() {
@@ -80,7 +80,7 @@ public final class GeminiInstanceConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Whether active query is enabled.
+   * Output only. Whether the active query is enabled.
    * @param activeQueryEnabled activeQueryEnabled or {@code null} for none
    */
   public GeminiInstanceConfig setActiveQueryEnabled(java.lang.Boolean activeQueryEnabled) {
@@ -89,7 +89,7 @@ public final class GeminiInstanceConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Whether gemini is enabled.
+   * Output only. Whether Gemini is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEntitled() {
@@ -97,7 +97,7 @@ public final class GeminiInstanceConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Whether gemini is enabled.
+   * Output only. Whether Gemini is enabled.
    * @param entitled entitled or {@code null} for none
    */
   public GeminiInstanceConfig setEntitled(java.lang.Boolean entitled) {
@@ -106,7 +106,7 @@ public final class GeminiInstanceConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Whether flag recommender is enabled.
+   * Output only. Whether the flag recommender is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFlagRecommenderEnabled() {
@@ -114,7 +114,7 @@ public final class GeminiInstanceConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Whether flag recommender is enabled.
+   * Output only. Whether the flag recommender is enabled.
    * @param flagRecommenderEnabled flagRecommenderEnabled or {@code null} for none
    */
   public GeminiInstanceConfig setFlagRecommenderEnabled(java.lang.Boolean flagRecommenderEnabled) {
@@ -123,7 +123,7 @@ public final class GeminiInstanceConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Whether vacuum management is enabled.
+   * Output only. Whether the vacuum management is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGoogleVacuumMgmtEnabled() {
@@ -131,7 +131,7 @@ public final class GeminiInstanceConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Whether vacuum management is enabled.
+   * Output only. Whether the vacuum management is enabled.
    * @param googleVacuumMgmtEnabled googleVacuumMgmtEnabled or {@code null} for none
    */
   public GeminiInstanceConfig setGoogleVacuumMgmtEnabled(java.lang.Boolean googleVacuumMgmtEnabled) {
@@ -140,7 +140,7 @@ public final class GeminiInstanceConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Whether index advisor is enabled.
+   * Output only. Whether the index advisor is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIndexAdvisorEnabled() {
@@ -148,7 +148,7 @@ public final class GeminiInstanceConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Whether index advisor is enabled.
+   * Output only. Whether the index advisor is enabled.
    * @param indexAdvisorEnabled indexAdvisorEnabled or {@code null} for none
    */
   public GeminiInstanceConfig setIndexAdvisorEnabled(java.lang.Boolean indexAdvisorEnabled) {
@@ -157,7 +157,7 @@ public final class GeminiInstanceConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Whether oom session cancel is enabled.
+   * Output only. Whether canceling the out-of-memory (OOM) session is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOomSessionCancelEnabled() {
@@ -165,7 +165,7 @@ public final class GeminiInstanceConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Whether oom session cancel is enabled.
+   * Output only. Whether canceling the out-of-memory (OOM) session is enabled.
    * @param oomSessionCancelEnabled oomSessionCancelEnabled or {@code null} for none
    */
   public GeminiInstanceConfig setOomSessionCancelEnabled(java.lang.Boolean oomSessionCancelEnabled) {

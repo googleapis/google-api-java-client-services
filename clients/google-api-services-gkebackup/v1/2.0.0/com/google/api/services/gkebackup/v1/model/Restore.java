@@ -82,6 +82,18 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Optional. Immutable. Filters resources for `Restore`. If not specified, the scope of the
+   * restore will remain the same as defined in the `RestorePlan`. If this is specified, and no
+   * resources are matched by the `inclusion_filters` or everyting is excluded by the
+   * `exclusion_filters`, nothing will be restored. This filter can only be specified if the value
+   * of namespaced_resource_restore_mode is set to `MERGE_SKIP_ON_CONFLICT`,
+   * `MERGE_REPLACE_VOLUME_ON_CONFLICT` or `MERGE_REPLACE_ON_CONFLICT`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Filter filter;
+
+  /**
    * A set of custom labels supplied by user.
    * The value may be {@code null}.
    */
@@ -152,6 +164,14 @@ public final class Restore extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Immutable. Overrides the volume data restore policies selected in the Restore Config
+   * for override-scoped resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<VolumeDataRestorePolicyOverride> volumeDataRestorePolicyOverrides;
 
   /**
    * Output only. Number of volumes restored during the restore execution.
@@ -277,6 +297,33 @@ public final class Restore extends com.google.api.client.json.GenericJson {
    */
   public Restore setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Filters resources for `Restore`. If not specified, the scope of the
+   * restore will remain the same as defined in the `RestorePlan`. If this is specified, and no
+   * resources are matched by the `inclusion_filters` or everyting is excluded by the
+   * `exclusion_filters`, nothing will be restored. This filter can only be specified if the value
+   * of namespaced_resource_restore_mode is set to `MERGE_SKIP_ON_CONFLICT`,
+   * `MERGE_REPLACE_VOLUME_ON_CONFLICT` or `MERGE_REPLACE_ON_CONFLICT`.
+   * @return value or {@code null} for none
+   */
+  public Filter getFilter() {
+    return filter;
+  }
+
+  /**
+   * Optional. Immutable. Filters resources for `Restore`. If not specified, the scope of the
+   * restore will remain the same as defined in the `RestorePlan`. If this is specified, and no
+   * resources are matched by the `inclusion_filters` or everyting is excluded by the
+   * `exclusion_filters`, nothing will be restored. This filter can only be specified if the value
+   * of namespaced_resource_restore_mode is set to `MERGE_SKIP_ON_CONFLICT`,
+   * `MERGE_REPLACE_VOLUME_ON_CONFLICT` or `MERGE_REPLACE_ON_CONFLICT`.
+   * @param filter filter or {@code null} for none
+   */
+  public Restore setFilter(Filter filter) {
+    this.filter = filter;
     return this;
   }
 
@@ -451,6 +498,25 @@ public final class Restore extends com.google.api.client.json.GenericJson {
    */
   public Restore setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Overrides the volume data restore policies selected in the Restore Config
+   * for override-scoped resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<VolumeDataRestorePolicyOverride> getVolumeDataRestorePolicyOverrides() {
+    return volumeDataRestorePolicyOverrides;
+  }
+
+  /**
+   * Optional. Immutable. Overrides the volume data restore policies selected in the Restore Config
+   * for override-scoped resources.
+   * @param volumeDataRestorePolicyOverrides volumeDataRestorePolicyOverrides or {@code null} for none
+   */
+  public Restore setVolumeDataRestorePolicyOverrides(java.util.List<VolumeDataRestorePolicyOverride> volumeDataRestorePolicyOverrides) {
+    this.volumeDataRestorePolicyOverrides = volumeDataRestorePolicyOverrides;
     return this;
   }
 

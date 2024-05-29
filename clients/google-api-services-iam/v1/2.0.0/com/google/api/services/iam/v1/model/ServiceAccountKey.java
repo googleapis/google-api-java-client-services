@@ -65,7 +65,8 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   private java.lang.String description;
 
   /**
-   * optional. If the key is disabled, it may have a DisableReason describing why it was disabled.
+   * Output only. optional. If the key is disabled, it may have a DisableReason describing why it
+   * was disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,9 +80,9 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   private java.lang.Boolean disabled;
 
   /**
-   * Extended Status provides permanent information about a service account key. For example, if
-   * this key was detected as exposed or compromised, that information will remain for the lifetime
-   * of the key in the extended_status.
+   * Output only. Extended Status provides permanent information about a service account key. For
+   * example, if this key was detected as exposed or compromised, that information will remain for
+   * the lifetime of the key in the extended_status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,7 +221,8 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * optional. If the key is disabled, it may have a DisableReason describing why it was disabled.
+   * Output only. optional. If the key is disabled, it may have a DisableReason describing why it
+   * was disabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisableReason() {
@@ -228,7 +230,8 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * optional. If the key is disabled, it may have a DisableReason describing why it was disabled.
+   * Output only. optional. If the key is disabled, it may have a DisableReason describing why it
+   * was disabled.
    * @param disableReason disableReason or {@code null} for none
    */
   public ServiceAccountKey setDisableReason(java.lang.String disableReason) {
@@ -254,9 +257,9 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Extended Status provides permanent information about a service account key. For example, if
-   * this key was detected as exposed or compromised, that information will remain for the lifetime
-   * of the key in the extended_status.
+   * Output only. Extended Status provides permanent information about a service account key. For
+   * example, if this key was detected as exposed or compromised, that information will remain for
+   * the lifetime of the key in the extended_status.
    * @return value or {@code null} for none
    */
   public java.util.List<ExtendedStatus> getExtendedStatus() {
@@ -264,9 +267,9 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Extended Status provides permanent information about a service account key. For example, if
-   * this key was detected as exposed or compromised, that information will remain for the lifetime
-   * of the key in the extended_status.
+   * Output only. Extended Status provides permanent information about a service account key. For
+   * example, if this key was detected as exposed or compromised, that information will remain for
+   * the lifetime of the key in the extended_status.
    * @param extendedStatus extendedStatus or {@code null} for none
    */
   public ServiceAccountKey setExtendedStatus(java.util.List<ExtendedStatus> extendedStatus) {

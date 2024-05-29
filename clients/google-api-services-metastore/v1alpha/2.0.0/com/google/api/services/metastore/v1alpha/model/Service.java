@@ -53,6 +53,13 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String databaseType;
 
   /**
+   * Optional. Indicates if the dataproc metastore should be protected against accidental deletions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deletionProtection;
+
+  /**
    * Immutable. Information used to configure the Dataproc Metastore service to encrypt customer
    * data at rest. Cannot be updated.
    * The value may be {@code null}.
@@ -250,6 +257,23 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setDatabaseType(java.lang.String databaseType) {
     this.databaseType = databaseType;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if the dataproc metastore should be protected against accidental deletions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeletionProtection() {
+    return deletionProtection;
+  }
+
+  /**
+   * Optional. Indicates if the dataproc metastore should be protected against accidental deletions.
+   * @param deletionProtection deletionProtection or {@code null} for none
+   */
+  public Service setDeletionProtection(java.lang.Boolean deletionProtection) {
+    this.deletionProtection = deletionProtection;
     return this;
   }
 

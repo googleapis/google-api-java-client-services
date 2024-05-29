@@ -36,8 +36,8 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
    * target_language_codes in the BatchTranslateTextRequest). Output files (tsv) generated are
    * compliant with RFC 4180 except that record delimiters are '\n' instead of '\r\n'. We don't
    * provide any way to change record delimiters. While the input files are being processed, we
-   * write/update an index file 'index.csv' under 'output_uri_prefix' (for example, gs
-   * ://translation-test/index.csv) The index file is generated/updated as new files are being
+   * write/update an index file 'index.csv' under 'output_uri_prefix' (for example,
+   * gs://translation-test/index.csv) The index file is generated/updated as new files are being
    * translated. The format is: input_file,target_language_code,translations_file,errors_file,
    * glossary_translations_file,glossary_errors_file input_file is one file we matched using
    * gcs_source.input_uri. target_language_code is provided in the request. translations_file
@@ -80,8 +80,8 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
    * target_language_codes in the BatchTranslateTextRequest). Output files (tsv) generated are
    * compliant with RFC 4180 except that record delimiters are '\n' instead of '\r\n'. We don't
    * provide any way to change record delimiters. While the input files are being processed, we
-   * write/update an index file 'index.csv' under 'output_uri_prefix' (for example, gs
-   * ://translation-test/index.csv) The index file is generated/updated as new files are being
+   * write/update an index file 'index.csv' under 'output_uri_prefix' (for example,
+   * gs://translation-test/index.csv) The index file is generated/updated as new files are being
    * translated. The format is: input_file,target_language_code,translations_file,errors_file,
    * glossary_translations_file,glossary_errors_file input_file is one file we matched using
    * gcs_source.input_uri. target_language_code is provided in the request. translations_file
@@ -125,8 +125,8 @@ public final class OutputConfig extends com.google.api.client.json.GenericJson {
    * target_language_codes in the BatchTranslateTextRequest). Output files (tsv) generated are
    * compliant with RFC 4180 except that record delimiters are '\n' instead of '\r\n'. We don't
    * provide any way to change record delimiters. While the input files are being processed, we
-   * write/update an index file 'index.csv' under 'output_uri_prefix' (for example, gs
-   * ://translation-test/index.csv) The index file is generated/updated as new files are being
+   * write/update an index file 'index.csv' under 'output_uri_prefix' (for example,
+   * gs://translation-test/index.csv) The index file is generated/updated as new files are being
    * translated. The format is: input_file,target_language_code,translations_file,errors_file,
    * glossary_translations_file,glossary_errors_file input_file is one file we matched using
    * gcs_source.input_uri. target_language_code is provided in the request. translations_file

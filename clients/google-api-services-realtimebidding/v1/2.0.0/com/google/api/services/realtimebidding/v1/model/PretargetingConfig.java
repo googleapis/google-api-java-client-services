@@ -80,8 +80,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   private java.util.List<java.lang.Long> excludedContentLabelIds;
 
   /**
-   * The geos included or excluded in this configuration defined in https://storage.googleapis.com
-   * /adx-rtb-dictionaries/geo-table.csv
+   * The geos included or excluded in this configuration defined in
+   * https://storage.googleapis.com/adx-rtb-dictionaries/geo-table.csv
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -359,8 +359,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The geos included or excluded in this configuration defined in https://storage.googleapis.com
-   * /adx-rtb-dictionaries/geo-table.csv
+   * The geos included or excluded in this configuration defined in
+   * https://storage.googleapis.com/adx-rtb-dictionaries/geo-table.csv
    * @return value or {@code null} for none
    */
   public NumericTargetingDimension getGeoTargeting() {
@@ -368,8 +368,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The geos included or excluded in this configuration defined in https://storage.googleapis.com
-   * /adx-rtb-dictionaries/geo-table.csv
+   * The geos included or excluded in this configuration defined in
+   * https://storage.googleapis.com/adx-rtb-dictionaries/geo-table.csv
    * @param geoTargeting geoTargeting or {@code null} for none
    */
   public PretargetingConfig setGeoTargeting(NumericTargetingDimension geoTargeting) {

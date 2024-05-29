@@ -58,7 +58,8 @@ public final class ManagementSettings extends com.google.api.client.json.Generic
   private java.lang.String renewalMethod;
 
   /**
-   * Controls whether the domain can be transferred to another registrar.
+   * This is the desired transfer lock state for this `Registration`. A transfer lock controls
+   * whether the domain can be transferred to another registrar.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +128,8 @@ public final class ManagementSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Controls whether the domain can be transferred to another registrar.
+   * This is the desired transfer lock state for this `Registration`. A transfer lock controls
+   * whether the domain can be transferred to another registrar.
    * @return value or {@code null} for none
    */
   public java.lang.String getTransferLockState() {
@@ -135,7 +137,8 @@ public final class ManagementSettings extends com.google.api.client.json.Generic
   }
 
   /**
-   * Controls whether the domain can be transferred to another registrar.
+   * This is the desired transfer lock state for this `Registration`. A transfer lock controls
+   * whether the domain can be transferred to another registrar.
    * @param transferLockState transferLockState or {@code null} for none
    */
   public ManagementSettings setTransferLockState(java.lang.String transferLockState) {

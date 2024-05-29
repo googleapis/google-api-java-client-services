@@ -67,6 +67,14 @@ public final class GoogleCloudAiplatformV1beta1DatasetVersion extends com.google
   private java.lang.Object metadata;
 
   /**
+   * Output only. Reference to the public base model last used by the dataset version. Only set for
+   * prompt dataset versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelReference;
+
+  /**
    * Output only. The resource name of the DatasetVersion.
    * The value may be {@code null}.
    */
@@ -166,6 +174,25 @@ public final class GoogleCloudAiplatformV1beta1DatasetVersion extends com.google
    */
   public GoogleCloudAiplatformV1beta1DatasetVersion setMetadata(java.lang.Object metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * Output only. Reference to the public base model last used by the dataset version. Only set for
+   * prompt dataset versions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelReference() {
+    return modelReference;
+  }
+
+  /**
+   * Output only. Reference to the public base model last used by the dataset version. Only set for
+   * prompt dataset versions.
+   * @param modelReference modelReference or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DatasetVersion setModelReference(java.lang.String modelReference) {
+    this.modelReference = modelReference;
     return this;
   }
 

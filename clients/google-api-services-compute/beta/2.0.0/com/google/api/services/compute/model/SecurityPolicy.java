@@ -194,6 +194,19 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String selfLinkWithId;
 
   /**
+   * User-provided name of the organization security policy. The name should be unique in the
+   * organization in which the security policy is created. This should only be used when
+   * SecurityPolicyType is CLOUD_ARMOR. The name must be 1-63 characters long, and comply with
+   * https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and
+   * match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must
+   * be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
+   * except the last character, which cannot be a dash.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shortName;
+
+  /**
    * The type indicates the intended use of the security policy. - CLOUD_ARMOR: Cloud Armor backend
    * security policies can be configured to filter incoming HTTP requests targeting backend
    * services. They filter requests before they hit the origin servers. - CLOUD_ARMOR_EDGE: Cloud
@@ -678,6 +691,35 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   public SecurityPolicy setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * User-provided name of the organization security policy. The name should be unique in the
+   * organization in which the security policy is created. This should only be used when
+   * SecurityPolicyType is CLOUD_ARMOR. The name must be 1-63 characters long, and comply with
+   * https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and
+   * match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must
+   * be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
+   * except the last character, which cannot be a dash.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShortName() {
+    return shortName;
+  }
+
+  /**
+   * User-provided name of the organization security policy. The name should be unique in the
+   * organization in which the security policy is created. This should only be used when
+   * SecurityPolicyType is CLOUD_ARMOR. The name must be 1-63 characters long, and comply with
+   * https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and
+   * match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must
+   * be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit,
+   * except the last character, which cannot be a dash.
+   * @param shortName shortName or {@code null} for none
+   */
+  public SecurityPolicy setShortName(java.lang.String shortName) {
+    this.shortName = shortName;
     return this;
   }
 

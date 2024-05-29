@@ -43,6 +43,13 @@ public final class IdentityServiceMembershipSpec extends com.google.api.client.j
   }
 
   /**
+   * Optional. non-protocol-related configuration options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IdentityServiceIdentityServiceOptions identityServiceOptions;
+
+  /**
    * A member may support multiple auth methods.
    * @return value or {@code null} for none
    */
@@ -56,6 +63,23 @@ public final class IdentityServiceMembershipSpec extends com.google.api.client.j
    */
   public IdentityServiceMembershipSpec setAuthMethods(java.util.List<IdentityServiceAuthMethod> authMethods) {
     this.authMethods = authMethods;
+    return this;
+  }
+
+  /**
+   * Optional. non-protocol-related configuration options.
+   * @return value or {@code null} for none
+   */
+  public IdentityServiceIdentityServiceOptions getIdentityServiceOptions() {
+    return identityServiceOptions;
+  }
+
+  /**
+   * Optional. non-protocol-related configuration options.
+   * @param identityServiceOptions identityServiceOptions or {@code null} for none
+   */
+  public IdentityServiceMembershipSpec setIdentityServiceOptions(IdentityServiceIdentityServiceOptions identityServiceOptions) {
+    this.identityServiceOptions = identityServiceOptions;
     return this;
   }
 

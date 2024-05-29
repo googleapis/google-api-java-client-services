@@ -115,8 +115,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<Lun> luns;
 
   /**
-   * Immutable. The server type. [Available server types](https://cloud.google.com/bare-metal/docs
-   * /bms-planning#server_configurations)
+   * Immutable. The server type. [Available server types](https://cloud.google.com/bare-
+   * metal/docs/bms-planning#server_configurations)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -384,8 +384,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The server type. [Available server types](https://cloud.google.com/bare-metal/docs
-   * /bms-planning#server_configurations)
+   * Immutable. The server type. [Available server types](https://cloud.google.com/bare-
+   * metal/docs/bms-planning#server_configurations)
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -393,8 +393,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The server type. [Available server types](https://cloud.google.com/bare-metal/docs
-   * /bms-planning#server_configurations)
+   * Immutable. The server type. [Available server types](https://cloud.google.com/bare-
+   * metal/docs/bms-planning#server_configurations)
    * @param machineType machineType or {@code null} for none
    */
   public Instance setMachineType(java.lang.String machineType) {

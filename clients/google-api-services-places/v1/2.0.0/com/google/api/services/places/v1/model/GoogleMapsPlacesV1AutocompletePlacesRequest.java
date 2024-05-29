@@ -38,10 +38,11 @@ public final class GoogleMapsPlacesV1AutocompletePlacesRequest extends com.googl
   private java.lang.Boolean includeQueryPredictions;
 
   /**
-   * Optional. Included primary Place type (for example, "restaurant" or "gas_station") from
-   * https://developers.google.com/maps/documentation/places/web-service/place-types. A Place is
-   * only returned if its primary type is included in this list. Up to 5 values can be specified. If
-   * no types are specified, all Place types are returned.
+   * Optional. Included primary Place type (for example, "restaurant" or "gas_station") in Place
+   * Types (https://developers.google.com/maps/documentation/places/web-service/place-types), or
+   * only `(regions)`, or only `(cities)`. A Place is only returned if its primary type is included
+   * in this list. Up to 5 values can be specified. If no types are specified, all Place types are
+   * returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,10 +163,11 @@ public final class GoogleMapsPlacesV1AutocompletePlacesRequest extends com.googl
   }
 
   /**
-   * Optional. Included primary Place type (for example, "restaurant" or "gas_station") from
-   * https://developers.google.com/maps/documentation/places/web-service/place-types. A Place is
-   * only returned if its primary type is included in this list. Up to 5 values can be specified. If
-   * no types are specified, all Place types are returned.
+   * Optional. Included primary Place type (for example, "restaurant" or "gas_station") in Place
+   * Types (https://developers.google.com/maps/documentation/places/web-service/place-types), or
+   * only `(regions)`, or only `(cities)`. A Place is only returned if its primary type is included
+   * in this list. Up to 5 values can be specified. If no types are specified, all Place types are
+   * returned.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludedPrimaryTypes() {
@@ -173,10 +175,11 @@ public final class GoogleMapsPlacesV1AutocompletePlacesRequest extends com.googl
   }
 
   /**
-   * Optional. Included primary Place type (for example, "restaurant" or "gas_station") from
-   * https://developers.google.com/maps/documentation/places/web-service/place-types. A Place is
-   * only returned if its primary type is included in this list. Up to 5 values can be specified. If
-   * no types are specified, all Place types are returned.
+   * Optional. Included primary Place type (for example, "restaurant" or "gas_station") in Place
+   * Types (https://developers.google.com/maps/documentation/places/web-service/place-types), or
+   * only `(regions)`, or only `(cities)`. A Place is only returned if its primary type is included
+   * in this list. Up to 5 values can be specified. If no types are specified, all Place types are
+   * returned.
    * @param includedPrimaryTypes includedPrimaryTypes or {@code null} for none
    */
   public GoogleMapsPlacesV1AutocompletePlacesRequest setIncludedPrimaryTypes(java.util.List<java.lang.String> includedPrimaryTypes) {

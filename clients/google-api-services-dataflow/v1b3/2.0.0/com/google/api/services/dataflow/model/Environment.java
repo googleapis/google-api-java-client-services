@@ -102,7 +102,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceKmsKeyName;
 
   /**
-   * The list of service options to enable. This field should be used for service related
+   * Optional. The list of service options to enable. This field should be used for service related
    * experiments only. These experiments, when graduating to GA, should be replaced by dedicated
    * fields or become default (i.e. always on).
    * The value may be {@code null}.
@@ -361,7 +361,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of service options to enable. This field should be used for service related
+   * Optional. The list of service options to enable. This field should be used for service related
    * experiments only. These experiments, when graduating to GA, should be replaced by dedicated
    * fields or become default (i.e. always on).
    * @return value or {@code null} for none
@@ -371,7 +371,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of service options to enable. This field should be used for service related
+   * Optional. The list of service options to enable. This field should be used for service related
    * experiments only. These experiments, when graduating to GA, should be replaced by dedicated
    * fields or become default (i.e. always on).
    * @param serviceOptions serviceOptions or {@code null} for none

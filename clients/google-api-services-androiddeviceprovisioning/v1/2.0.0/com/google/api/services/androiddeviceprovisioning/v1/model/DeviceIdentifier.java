@@ -71,8 +71,8 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
   private java.lang.String meid;
 
   /**
-   * The device model's name. Allowed values are listed in [Android models](/zero-touch/resources
-   * /manufacturer-names#model-names) and [Chrome OS
+   * The device model's name. Allowed values are listed in [Android models](/zero-
+   * touch/resources/manufacturer-names#model-names) and [Chrome OS
    * models](https://support.google.com/chrome/a/answer/10130175#identify_compatible).
    * The value may be {@code null}.
    */
@@ -179,8 +179,8 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The device model's name. Allowed values are listed in [Android models](/zero-touch/resources
-   * /manufacturer-names#model-names) and [Chrome OS
+   * The device model's name. Allowed values are listed in [Android models](/zero-
+   * touch/resources/manufacturer-names#model-names) and [Chrome OS
    * models](https://support.google.com/chrome/a/answer/10130175#identify_compatible).
    * @return value or {@code null} for none
    */
@@ -189,8 +189,8 @@ public final class DeviceIdentifier extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The device model's name. Allowed values are listed in [Android models](/zero-touch/resources
-   * /manufacturer-names#model-names) and [Chrome OS
+   * The device model's name. Allowed values are listed in [Android models](/zero-
+   * touch/resources/manufacturer-names#model-names) and [Chrome OS
    * models](https://support.google.com/chrome/a/answer/10130175#identify_compatible).
    * @param model model or {@code null} for none
    */

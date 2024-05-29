@@ -88,6 +88,10 @@ public class {{ method.className }} extends {{ api.className }}Request<{{ method
 
   private static final String REST_PATH = "{{ method.restPath }}";
 
+  {% if method.apiVersion %}
+  private static final String API_VERSION = "{{ method.apiVersion }}";
+  {% endif %}
+
   {% for param in method.parameters %}
     {% if param.pattern %}
   private final java.util.regex.Pattern {{ param.constantName }}_PATTERN =
@@ -135,6 +139,13 @@ public class {{ method.className }} extends {{ api.className }}Request<{{ method
   {% call_template _alt_def method=method %}
   {% if method.supportsMediaDownload %}
     initializeMediaDownload();
+  {% endif %}
+  {% if method.apiVersion %}
+    // Does not override the API_VERSION if already configured
+    com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+    if (headers.get(API_VERSION_HEADER) == null) {
+      headers.set(API_VERSION_HEADER, API_VERSION);
+    }
   {% endif %}
   }
 {% endfilter %}
@@ -184,6 +195,13 @@ public class {{ method.className }} extends {{ api.className }}Request<{{ method
     com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
     initializeMediaUpload(mediaContent);
   {% call_template _alt_def method=method %}
+  {% if method.apiVersion %}
+    // Does not override the API_VERSION if already configured
+    com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+    if (headers.get(API_VERSION_HEADER) == null) {
+      headers.set(API_VERSION_HEADER, API_VERSION);
+    }
+  {% endif %}
   }
 {% endif %}
 {% endfilter %}

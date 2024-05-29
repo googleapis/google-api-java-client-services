@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2Connection extends com.google.api.client.js
 
   /**
    * Output only. Name of the connection:
-   * projects/{project}/locations/{location}/connections/{name}.
+   * `projects/{project}/locations/{location}/connections/{name}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class GooglePrivacyDlpV2Connection extends com.google.api.client.js
 
   /**
    * Output only. Name of the connection:
-   * projects/{project}/locations/{location}/connections/{name}.
+   * `projects/{project}/locations/{location}/connections/{name}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,7 +108,7 @@ public final class GooglePrivacyDlpV2Connection extends com.google.api.client.js
 
   /**
    * Output only. Name of the connection:
-   * projects/{project}/locations/{location}/connections/{name}.
+   * `projects/{project}/locations/{location}/connections/{name}`.
    * @param name name or {@code null} for none
    */
   public GooglePrivacyDlpV2Connection setName(java.lang.String name) {

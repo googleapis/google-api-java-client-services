@@ -285,9 +285,9 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
       /**
        * The enterprise token appended to the callback URL. Set this when creating a customer-
-       * managed enterprise (https://developers.google.com/android/management/create-enterprise
-       * #customer-managed_enterprises) and not when creating a deprecated EMM-managed enterprise
-       * (https://developers.google.com/android/management/create-enterprise#emm-
+       * managed enterprise (https://developers.google.com/android/management/create-
+       * enterprise#customer-managed_enterprises) and not when creating a deprecated EMM-managed
+       * enterprise (https://developers.google.com/android/management/create-enterprise#emm-
        * managed_enterprises).
        */
       @com.google.api.client.util.Key
@@ -304,9 +304,9 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
       /**
        * The enterprise token appended to the callback URL. Set this when creating a customer-
-       * managed enterprise (https://developers.google.com/android/management/create-enterprise
-       * #customer-managed_enterprises) and not when creating a deprecated EMM-managed enterprise
-       * (https://developers.google.com/android/management/create-enterprise#emm-
+       * managed enterprise (https://developers.google.com/android/management/create-
+       * enterprise#customer-managed_enterprises) and not when creating a deprecated EMM-managed
+       * enterprise (https://developers.google.com/android/management/create-enterprise#emm-
        * managed_enterprises).
        */
       public Create setEnterpriseToken(java.lang.String enterpriseToken) {
@@ -5402,6 +5402,29 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       @Override
       public Create setUploadProtocol(java.lang.String uploadProtocol) {
         return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. Email address used to prefill the admin field of the enterprise signup form. This
+       * value is a hint only and can be altered by the user.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String adminEmail;
+
+      /** Optional. Email address used to prefill the admin field of the enterprise signup form. This value
+     is a hint only and can be altered by the user.
+       */
+      public java.lang.String getAdminEmail() {
+        return adminEmail;
+      }
+
+      /**
+       * Optional. Email address used to prefill the admin field of the enterprise signup form. This
+       * value is a hint only and can be altered by the user.
+       */
+      public Create setAdminEmail(java.lang.String adminEmail) {
+        this.adminEmail = adminEmail;
+        return this;
       }
 
       /**

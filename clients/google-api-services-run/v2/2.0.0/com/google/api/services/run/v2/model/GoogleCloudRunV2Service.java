@@ -97,8 +97,8 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   /**
    * One or more custom audiences that you want this service to support. Specify each custom
    * audience as the full URL in a string. The custom audiences are encoded in the token and used to
-   * authenticate requests. For more information, see https://cloud.google.com/run/docs/configuring
-   * /custom-audiences.
+   * authenticate requests. For more information, see
+   * https://cloud.google.com/run/docs/configuring/custom-audiences.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -450,8 +450,8 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   /**
    * One or more custom audiences that you want this service to support. Specify each custom
    * audience as the full URL in a string. The custom audiences are encoded in the token and used to
-   * authenticate requests. For more information, see https://cloud.google.com/run/docs/configuring
-   * /custom-audiences.
+   * authenticate requests. For more information, see
+   * https://cloud.google.com/run/docs/configuring/custom-audiences.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCustomAudiences() {
@@ -461,8 +461,8 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   /**
    * One or more custom audiences that you want this service to support. Specify each custom
    * audience as the full URL in a string. The custom audiences are encoded in the token and used to
-   * authenticate requests. For more information, see https://cloud.google.com/run/docs/configuring
-   * /custom-audiences.
+   * authenticate requests. For more information, see
+   * https://cloud.google.com/run/docs/configuring/custom-audiences.
    * @param customAudiences customAudiences or {@code null} for none
    */
   public GoogleCloudRunV2Service setCustomAudiences(java.util.List<java.lang.String> customAudiences) {

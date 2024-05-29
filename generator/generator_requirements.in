@@ -1,6 +1,6 @@
 django==1.8.16
 httplib2==0.20.4
-google-apputils==0.4.2
+absl-py==2.1.0
 python-gflags==3.1.2
 google-api-python-client==1.7.7
 cachetools==3.1.1

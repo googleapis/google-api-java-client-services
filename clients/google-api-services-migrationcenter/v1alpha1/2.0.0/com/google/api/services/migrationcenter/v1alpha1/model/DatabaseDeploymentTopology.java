@@ -30,14 +30,14 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class DatabaseDeploymentTopology extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Number of total cores.
+   * Optional. Number of total logical cores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer coreCount;
 
   /**
-   * Optional. Number of total cores limited by db deployment.
+   * Optional. Number of total logical cores limited by db deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class DatabaseDeploymentTopology extends com.google.api.client.json
   private java.lang.Long memoryLimitBytes;
 
   /**
-   * Optional. Number of total cores.
+   * Optional. Number of total logical cores.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCoreCount() {
@@ -87,7 +87,7 @@ public final class DatabaseDeploymentTopology extends com.google.api.client.json
   }
 
   /**
-   * Optional. Number of total cores.
+   * Optional. Number of total logical cores.
    * @param coreCount coreCount or {@code null} for none
    */
   public DatabaseDeploymentTopology setCoreCount(java.lang.Integer coreCount) {
@@ -96,7 +96,7 @@ public final class DatabaseDeploymentTopology extends com.google.api.client.json
   }
 
   /**
-   * Optional. Number of total cores limited by db deployment.
+   * Optional. Number of total logical cores limited by db deployment.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCoreLimit() {
@@ -104,7 +104,7 @@ public final class DatabaseDeploymentTopology extends com.google.api.client.json
   }
 
   /**
-   * Optional. Number of total cores limited by db deployment.
+   * Optional. Number of total logical cores limited by db deployment.
    * @param coreLimit coreLimit or {@code null} for none
    */
   public DatabaseDeploymentTopology setCoreLimit(java.lang.Integer coreLimit) {

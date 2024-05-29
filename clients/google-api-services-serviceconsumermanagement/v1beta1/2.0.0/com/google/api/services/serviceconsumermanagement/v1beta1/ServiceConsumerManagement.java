@@ -1218,16 +1218,13 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             /**
              * Whether to force the creation of the quota override. Setting the force parameter to
              * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
-             * lists all such validations. If force is set to true, it is recommended to include a
-             * case id in "X-Goog-Request-Reason" header when sending the request.
+             * lists all such validations.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
             /** Whether to force the creation of the quota override. Setting the force parameter to 'true' ignores
            all quota safety checks that would fail the request. QuotaSafetyCheck lists all such validations.
-           If force is set to true, it is recommended to include a case id in "X-Goog-Request-Reason" header
-           when sending the request.
              */
             public java.lang.Boolean getForce() {
               return force;
@@ -1236,8 +1233,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             /**
              * Whether to force the creation of the quota override. Setting the force parameter to
              * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
-             * lists all such validations. If force is set to true, it is recommended to include a
-             * case id in "X-Goog-Request-Reason" header when sending the request.
+             * lists all such validations.
              */
             public Create setForce(java.lang.Boolean force) {
               this.force = force;
@@ -1245,20 +1241,40 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             }
 
             /**
+             * If force option is set to true, force_justification is suggested to be set to log the
+             * reason in audit logs.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String forceJustification;
+
+            /** If force option is set to true, force_justification is suggested to be set to log the reason in
+           audit logs.
+             */
+            public java.lang.String getForceJustification() {
+              return forceJustification;
+            }
+
+            /**
+             * If force option is set to true, force_justification is suggested to be set to log the
+             * reason in audit logs.
+             */
+            public Create setForceJustification(java.lang.String forceJustification) {
+              this.forceJustification = forceJustification;
+              return this;
+            }
+
+            /**
              * The list of quota safety checks to ignore before the override mutation. Unlike
              * 'force' field that ignores all the quota safety checks, the 'force_only' field
              * ignores only the specified checks; other checks are still enforced. The 'force' and
-             * 'force_only' fields cannot both be set. If force_only is specified, it is recommended
-             * to include a case id in "X-Goog-Request-Reason" header when sending the request.
+             * 'force_only' fields cannot both be set.
              */
             @com.google.api.client.util.Key
             private java.util.List<java.lang.String> forceOnly;
 
             /** The list of quota safety checks to ignore before the override mutation. Unlike 'force' field that
            ignores all the quota safety checks, the 'force_only' field ignores only the specified checks;
-           other checks are still enforced. The 'force' and 'force_only' fields cannot both be set. If
-           force_only is specified, it is recommended to include a case id in "X-Goog-Request-Reason" header
-           when sending the request.
+           other checks are still enforced. The 'force' and 'force_only' fields cannot both be set.
              */
             public java.util.List<java.lang.String> getForceOnly() {
               return forceOnly;
@@ -1268,8 +1284,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
              * The list of quota safety checks to ignore before the override mutation. Unlike
              * 'force' field that ignores all the quota safety checks, the 'force_only' field
              * ignores only the specified checks; other checks are still enforced. The 'force' and
-             * 'force_only' fields cannot both be set. If force_only is specified, it is recommended
-             * to include a case id in "X-Goog-Request-Reason" header when sending the request.
+             * 'force_only' fields cannot both be set.
              */
             public Create setForceOnly(java.util.List<java.lang.String> forceOnly) {
               this.forceOnly = forceOnly;
@@ -1422,16 +1437,13 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             /**
              * Whether to force the deletion of the quota override. Setting the force parameter to
              * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
-             * lists all such validations. If force is set to true, it is recommended to include a
-             * case id in "X-Goog-Request-Reason" header when sending the request.
+             * lists all such validations.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
             /** Whether to force the deletion of the quota override. Setting the force parameter to 'true' ignores
            all quota safety checks that would fail the request. QuotaSafetyCheck lists all such validations.
-           If force is set to true, it is recommended to include a case id in "X-Goog-Request-Reason" header
-           when sending the request.
              */
             public java.lang.Boolean getForce() {
               return force;
@@ -1440,8 +1452,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             /**
              * Whether to force the deletion of the quota override. Setting the force parameter to
              * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
-             * lists all such validations. If force is set to true, it is recommended to include a
-             * case id in "X-Goog-Request-Reason" header when sending the request.
+             * lists all such validations.
              */
             public Delete setForce(java.lang.Boolean force) {
               this.force = force;
@@ -1449,20 +1460,40 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             }
 
             /**
+             * If force option is set to true, force_justification is suggested to be set to log the
+             * reason in audit logs.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String forceJustification;
+
+            /** If force option is set to true, force_justification is suggested to be set to log the reason in
+           audit logs.
+             */
+            public java.lang.String getForceJustification() {
+              return forceJustification;
+            }
+
+            /**
+             * If force option is set to true, force_justification is suggested to be set to log the
+             * reason in audit logs.
+             */
+            public Delete setForceJustification(java.lang.String forceJustification) {
+              this.forceJustification = forceJustification;
+              return this;
+            }
+
+            /**
              * The list of quota safety checks to ignore before the override mutation. Unlike
              * 'force' field that ignores all the quota safety checks, the 'force_only' field
              * ignores only the specified checks; other checks are still enforced. The 'force' and
-             * 'force_only' fields cannot both be set. If force_only is specified, it is recommended
-             * to include a case id in "X-Goog-Request-Reason" header when sending the request.
+             * 'force_only' fields cannot both be set.
              */
             @com.google.api.client.util.Key
             private java.util.List<java.lang.String> forceOnly;
 
             /** The list of quota safety checks to ignore before the override mutation. Unlike 'force' field that
            ignores all the quota safety checks, the 'force_only' field ignores only the specified checks;
-           other checks are still enforced. The 'force' and 'force_only' fields cannot both be set. If
-           force_only is specified, it is recommended to include a case id in "X-Goog-Request-Reason" header
-           when sending the request.
+           other checks are still enforced. The 'force' and 'force_only' fields cannot both be set.
              */
             public java.util.List<java.lang.String> getForceOnly() {
               return forceOnly;
@@ -1472,8 +1503,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
              * The list of quota safety checks to ignore before the override mutation. Unlike
              * 'force' field that ignores all the quota safety checks, the 'force_only' field
              * ignores only the specified checks; other checks are still enforced. The 'force' and
-             * 'force_only' fields cannot both be set. If force_only is specified, it is recommended
-             * to include a case id in "X-Goog-Request-Reason" header when sending the request.
+             * 'force_only' fields cannot both be set.
              */
             public Delete setForceOnly(java.util.List<java.lang.String> forceOnly) {
               this.forceOnly = forceOnly;
@@ -1815,16 +1845,13 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             /**
              * Whether to force the update of the quota override. Setting the force parameter to
              * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
-             * lists all such validations. If force is set to true, it is recommended to include a
-             * case id in "X-Goog-Request-Reason" header when sending the request.
+             * lists all such validations.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
             /** Whether to force the update of the quota override. Setting the force parameter to 'true' ignores
            all quota safety checks that would fail the request. QuotaSafetyCheck lists all such validations.
-           If force is set to true, it is recommended to include a case id in "X-Goog-Request-Reason" header
-           when sending the request.
              */
             public java.lang.Boolean getForce() {
               return force;
@@ -1833,8 +1860,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             /**
              * Whether to force the update of the quota override. Setting the force parameter to
              * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
-             * lists all such validations. If force is set to true, it is recommended to include a
-             * case id in "X-Goog-Request-Reason" header when sending the request.
+             * lists all such validations.
              */
             public Patch setForce(java.lang.Boolean force) {
               this.force = force;
@@ -1842,20 +1868,40 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             }
 
             /**
+             * If force option is set to true, force_justification is suggested to be set to log the
+             * reason in audit logs.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String forceJustification;
+
+            /** If force option is set to true, force_justification is suggested to be set to log the reason in
+           audit logs.
+             */
+            public java.lang.String getForceJustification() {
+              return forceJustification;
+            }
+
+            /**
+             * If force option is set to true, force_justification is suggested to be set to log the
+             * reason in audit logs.
+             */
+            public Patch setForceJustification(java.lang.String forceJustification) {
+              this.forceJustification = forceJustification;
+              return this;
+            }
+
+            /**
              * The list of quota safety checks to ignore before the override mutation. Unlike
              * 'force' field that ignores all the quota safety checks, the 'force_only' field
              * ignores only the specified checks; other checks are still enforced. The 'force' and
-             * 'force_only' fields cannot both be set. If force_only is specified, it is recommended
-             * to include a case id in "X-Goog-Request-Reason" header when sending the request.
+             * 'force_only' fields cannot both be set.
              */
             @com.google.api.client.util.Key
             private java.util.List<java.lang.String> forceOnly;
 
             /** The list of quota safety checks to ignore before the override mutation. Unlike 'force' field that
            ignores all the quota safety checks, the 'force_only' field ignores only the specified checks;
-           other checks are still enforced. The 'force' and 'force_only' fields cannot both be set. If
-           force_only is specified, it is recommended to include a case id in "X-Goog-Request-Reason" header
-           when sending the request.
+           other checks are still enforced. The 'force' and 'force_only' fields cannot both be set.
              */
             public java.util.List<java.lang.String> getForceOnly() {
               return forceOnly;
@@ -1865,8 +1911,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
              * The list of quota safety checks to ignore before the override mutation. Unlike
              * 'force' field that ignores all the quota safety checks, the 'force_only' field
              * ignores only the specified checks; other checks are still enforced. The 'force' and
-             * 'force_only' fields cannot both be set. If force_only is specified, it is recommended
-             * to include a case id in "X-Goog-Request-Reason" header when sending the request.
+             * 'force_only' fields cannot both be set.
              */
             public Patch setForceOnly(java.util.List<java.lang.String> forceOnly) {
               this.forceOnly = forceOnly;

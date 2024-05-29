@@ -38,9 +38,9 @@ public final class GoogleFirebaseAppcheckV1betaUpdateServiceRequest extends com.
    * are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
    * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
-   * Platform) For Firebase Authentication to work with App Check, you must first upgrade to
-   * [Firebase Authentication with Identity Platform](https://firebase.google.com/docs/auth
-   * #identity-platform).
+   * Platform) * `oauth2.googleapis.com` (Google Identity for iOS) For Firebase Authentication to
+   * work with App Check, you must first upgrade to [Firebase Authentication with Identity
+   * Platform](https://firebase.google.com/docs/auth#identity-platform).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,9 +61,9 @@ public final class GoogleFirebaseAppcheckV1betaUpdateServiceRequest extends com.
    * are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
    * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
-   * Platform) For Firebase Authentication to work with App Check, you must first upgrade to
-   * [Firebase Authentication with Identity Platform](https://firebase.google.com/docs/auth
-   * #identity-platform).
+   * Platform) * `oauth2.googleapis.com` (Google Identity for iOS) For Firebase Authentication to
+   * work with App Check, you must first upgrade to [Firebase Authentication with Identity
+   * Platform](https://firebase.google.com/docs/auth#identity-platform).
    * @return value or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaService getService() {
@@ -77,9 +77,9 @@ public final class GoogleFirebaseAppcheckV1betaUpdateServiceRequest extends com.
    * are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
    * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
    * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
-   * Platform) For Firebase Authentication to work with App Check, you must first upgrade to
-   * [Firebase Authentication with Identity Platform](https://firebase.google.com/docs/auth
-   * #identity-platform).
+   * Platform) * `oauth2.googleapis.com` (Google Identity for iOS) For Firebase Authentication to
+   * work with App Check, you must first upgrade to [Firebase Authentication with Identity
+   * Platform](https://firebase.google.com/docs/auth#identity-platform).
    * @param service service or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaUpdateServiceRequest setService(GoogleFirebaseAppcheckV1betaService service) {

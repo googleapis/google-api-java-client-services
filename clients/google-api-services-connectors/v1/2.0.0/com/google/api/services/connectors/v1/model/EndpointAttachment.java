@@ -44,6 +44,14 @@ public final class EndpointAttachment extends com.google.api.client.json.Generic
   private java.lang.String description;
 
   /**
+   * Optional. The Private Service Connect Connection Endpoint Global Access.
+   * https://cloud.google.com/vpc/docs/about-accessing-vpc-hosted-services-endpoints#global-access
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean endpointGlobalAccess;
+
+  /**
    * Output only. The Private Service Connect connection endpoint ip
    * The value may be {@code null}.
    */
@@ -111,6 +119,25 @@ public final class EndpointAttachment extends com.google.api.client.json.Generic
    */
   public EndpointAttachment setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. The Private Service Connect Connection Endpoint Global Access.
+   * https://cloud.google.com/vpc/docs/about-accessing-vpc-hosted-services-endpoints#global-access
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEndpointGlobalAccess() {
+    return endpointGlobalAccess;
+  }
+
+  /**
+   * Optional. The Private Service Connect Connection Endpoint Global Access.
+   * https://cloud.google.com/vpc/docs/about-accessing-vpc-hosted-services-endpoints#global-access
+   * @param endpointGlobalAccess endpointGlobalAccess or {@code null} for none
+   */
+  public EndpointAttachment setEndpointGlobalAccess(java.lang.Boolean endpointGlobalAccess) {
+    this.endpointGlobalAccess = endpointGlobalAccess;
     return this;
   }
 

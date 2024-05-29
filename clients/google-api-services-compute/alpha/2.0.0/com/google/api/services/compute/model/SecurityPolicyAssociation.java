@@ -44,6 +44,20 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
   private java.lang.String displayName;
 
   /**
+   * A list of folders to exclude from the security policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludedFolders;
+
+  /**
+   * A list of projects to exclude from the security policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludedProjects;
+
+  /**
    * The name for an association.
    * The value may be {@code null}.
    */
@@ -56,6 +70,13 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String securityPolicyId;
+
+  /**
+   * [Output Only] The short name of the security policy of the association.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shortName;
 
   /**
    * The resource that the security policy is attached to.
@@ -92,6 +113,40 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
   }
 
   /**
+   * A list of folders to exclude from the security policy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludedFolders() {
+    return excludedFolders;
+  }
+
+  /**
+   * A list of folders to exclude from the security policy.
+   * @param excludedFolders excludedFolders or {@code null} for none
+   */
+  public SecurityPolicyAssociation setExcludedFolders(java.util.List<java.lang.String> excludedFolders) {
+    this.excludedFolders = excludedFolders;
+    return this;
+  }
+
+  /**
+   * A list of projects to exclude from the security policy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludedProjects() {
+    return excludedProjects;
+  }
+
+  /**
+   * A list of projects to exclude from the security policy.
+   * @param excludedProjects excludedProjects or {@code null} for none
+   */
+  public SecurityPolicyAssociation setExcludedProjects(java.util.List<java.lang.String> excludedProjects) {
+    this.excludedProjects = excludedProjects;
+    return this;
+  }
+
+  /**
    * The name for an association.
    * @return value or {@code null} for none
    */
@@ -122,6 +177,23 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
    */
   public SecurityPolicyAssociation setSecurityPolicyId(java.lang.String securityPolicyId) {
     this.securityPolicyId = securityPolicyId;
+    return this;
+  }
+
+  /**
+   * [Output Only] The short name of the security policy of the association.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShortName() {
+    return shortName;
+  }
+
+  /**
+   * [Output Only] The short name of the security policy of the association.
+   * @param shortName shortName or {@code null} for none
+   */
+  public SecurityPolicyAssociation setShortName(java.lang.String shortName) {
+    this.shortName = shortName;
     return this;
   }
 

@@ -78,8 +78,9 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfig extends com.go
 
   /**
    * Optional. A list of strings containing words and phrases that the speech recognizer should
-   * recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com
-   * /speech-to-text/docs/basics#phrase-hints) for more details.
+   * recognize with higher likelihood. See [the Cloud Speech
+   * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more
+   * details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,8 +219,9 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfig extends com.go
 
   /**
    * Optional. A list of strings containing words and phrases that the speech recognizer should
-   * recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com
-   * /speech-to-text/docs/basics#phrase-hints) for more details.
+   * recognize with higher likelihood. See [the Cloud Speech
+   * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more
+   * details.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPhraseHints() {
@@ -228,8 +230,9 @@ public final class GoogleCloudDialogflowCxV3beta1InputAudioConfig extends com.go
 
   /**
    * Optional. A list of strings containing words and phrases that the speech recognizer should
-   * recognize with higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com
-   * /speech-to-text/docs/basics#phrase-hints) for more details.
+   * recognize with higher likelihood. See [the Cloud Speech
+   * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more
+   * details.
    * @param phraseHints phraseHints or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1InputAudioConfig setPhraseHints(java.util.List<java.lang.String> phraseHints) {

@@ -73,6 +73,20 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The Node Selector configuration. Map of selector key to a value which matches a node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> nodeSelector;
+
+  /**
+   * Runtime. Leave unset for default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeClassName;
+
+  /**
    * Email address of the IAM service account associated with the revision of the service. The
    * service account represents the identity of the running revision, and determines what
    * permissions the revision has. If not provided, the revision will use the project's default
@@ -167,6 +181,40 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
    */
   public RevisionSpec setImagePullSecrets(java.util.List<LocalObjectReference> imagePullSecrets) {
     this.imagePullSecrets = imagePullSecrets;
+    return this;
+  }
+
+  /**
+   * Optional. The Node Selector configuration. Map of selector key to a value which matches a node.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getNodeSelector() {
+    return nodeSelector;
+  }
+
+  /**
+   * Optional. The Node Selector configuration. Map of selector key to a value which matches a node.
+   * @param nodeSelector nodeSelector or {@code null} for none
+   */
+  public RevisionSpec setNodeSelector(java.util.Map<String, java.lang.String> nodeSelector) {
+    this.nodeSelector = nodeSelector;
+    return this;
+  }
+
+  /**
+   * Runtime. Leave unset for default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeClassName() {
+    return runtimeClassName;
+  }
+
+  /**
+   * Runtime. Leave unset for default.
+   * @param runtimeClassName runtimeClassName or {@code null} for none
+   */
+  public RevisionSpec setRuntimeClassName(java.lang.String runtimeClassName) {
+    this.runtimeClassName = runtimeClassName;
     return this;
   }
 

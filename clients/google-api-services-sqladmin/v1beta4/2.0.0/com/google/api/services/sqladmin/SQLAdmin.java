@@ -3228,9 +3228,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
     /**
      * Initiates a manual failover of a high availability (HA) primary instance to a standby instance,
      * which becomes the primary instance. Users are then rerouted to the new primary. For more
-     * information, see the [Overview of high availability](https://cloud.google.com/sql/docs/mysql
-     * /high-availability) page in the Cloud SQL documentation. If using Legacy HA (MySQL only), this
-     * causes the instance to failover to its failover replica instance.
+     * information, see the [Overview of high
+     * availability](https://cloud.google.com/sql/docs/mysql/high-availability) page in the Cloud SQL
+     * documentation. If using Legacy HA (MySQL only), this causes the instance to failover to its
+     * failover replica instance.
      *
      * Create a request for the method "instances.failover".
      *
@@ -3255,9 +3256,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Initiates a manual failover of a high availability (HA) primary instance to a standby instance,
        * which becomes the primary instance. Users are then rerouted to the new primary. For more
-       * information, see the [Overview of high availability](https://cloud.google.com/sql/docs/mysql
-       * /high-availability) page in the Cloud SQL documentation. If using Legacy HA (MySQL only), this
-       * causes the instance to failover to its failover replica instance.
+       * information, see the [Overview of high
+       * availability](https://cloud.google.com/sql/docs/mysql/high-availability) page in the Cloud SQL
+       * documentation. If using Legacy HA (MySQL only), this causes the instance to failover to its
+       * failover replica instance.
        *
        * Create a request for the method "instances.failover".
        *
@@ -4269,8 +4271,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Promotes the read replica instance to be a stand-alone Cloud SQL instance. Using this operation
-     * might cause your instance to restart.
+     * Promotes the read replica instance to be an independent Cloud SQL primary instance. Using this
+     * operation might cause your instance to restart.
      *
      * Create a request for the method "instances.promoteReplica".
      *
@@ -4292,8 +4294,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/promoteReplica";
 
       /**
-       * Promotes the read replica instance to be a stand-alone Cloud SQL instance. Using this operation
-       * might cause your instance to restart.
+       * Promotes the read replica instance to be an independent Cloud SQL primary instance. Using this
+       * operation might cause your instance to restart.
        *
        * Create a request for the method "instances.promoteReplica".
        *
@@ -4401,25 +4403,31 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Set to true if the promote operation should attempt to re-add the original primary as a
-       * replica when it comes back online. Otherwise, if this value is false or not set, the
-       * original primary will be a standalone instance.
+       * Set to true to invoke a replica failover to the designated DR replica. As part of replica
+       * failover, the promote operation attempts to add the original primary instance as a replica
+       * of the promoted DR replica when the original primary instance comes back online. If set to
+       * false or not specified, then the original primary instance becomes an independent Cloud SQL
+       * primary instance. Only applicable to MySQL.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean failover;
 
-      /** Set to true if the promote operation should attempt to re-add the original primary as a replica
-     when it comes back online. Otherwise, if this value is false or not set, the original primary will
-     be a standalone instance.
+      /** Set to true to invoke a replica failover to the designated DR replica. As part of replica failover,
+     the promote operation attempts to add the original primary instance as a replica of the promoted DR
+     replica when the original primary instance comes back online. If set to false or not specified,
+     then the original primary instance becomes an independent Cloud SQL primary instance. Only
+     applicable to MySQL.
        */
       public java.lang.Boolean getFailover() {
         return failover;
       }
 
       /**
-       * Set to true if the promote operation should attempt to re-add the original primary as a
-       * replica when it comes back online. Otherwise, if this value is false or not set, the
-       * original primary will be a standalone instance.
+       * Set to true to invoke a replica failover to the designated DR replica. As part of replica
+       * failover, the promote operation attempts to add the original primary instance as a replica
+       * of the promoted DR replica when the original primary instance comes back online. If set to
+       * false or not specified, then the original primary instance becomes an independent Cloud SQL
+       * primary instance. Only applicable to MySQL.
        */
       public PromoteReplica setFailover(java.lang.Boolean failover) {
         this.failover = failover;
@@ -5536,7 +5544,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Switches over from the primary instance to a replica instance.
+     * Switches over from the primary instance to the designated DR replica instance.
      *
      * Create a request for the method "instances.switchover".
      *
@@ -5558,7 +5566,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/switchover";
 
       /**
-       * Switches over from the primary instance to a replica instance.
+       * Switches over from the primary instance to the designated DR replica instance.
        *
        * Create a request for the method "instances.switchover".
        *

@@ -30,11 +30,35 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GroundingMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Google search entry for the following-up web searches.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1SearchEntryPoint searchEntryPoint;
+
+  /**
    * Optional. Web search queries for the following-up web search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> webSearchQueries;
+
+  /**
+   * Optional. Google search entry for the following-up web searches.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SearchEntryPoint getSearchEntryPoint() {
+    return searchEntryPoint;
+  }
+
+  /**
+   * Optional. Google search entry for the following-up web searches.
+   * @param searchEntryPoint searchEntryPoint or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GroundingMetadata setSearchEntryPoint(GoogleCloudAiplatformV1SearchEntryPoint searchEntryPoint) {
+    this.searchEntryPoint = searchEntryPoint;
+    return this;
+  }
 
   /**
    * Optional. Web search queries for the following-up web search.

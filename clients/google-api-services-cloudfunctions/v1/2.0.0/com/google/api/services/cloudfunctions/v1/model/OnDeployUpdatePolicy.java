@@ -30,14 +30,14 @@ package com.google.api.services.cloudfunctions.v1.model;
 public final class OnDeployUpdatePolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. contains the runtime version which was used during latest function deployment.
+   * Output only. Contains the runtime version which was used during latest function deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String runtimeVersion;
 
   /**
-   * Output only. contains the runtime version which was used during latest function deployment.
+   * Output only. Contains the runtime version which was used during latest function deployment.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeVersion() {
@@ -45,7 +45,7 @@ public final class OnDeployUpdatePolicy extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. contains the runtime version which was used during latest function deployment.
+   * Output only. Contains the runtime version which was used during latest function deployment.
    * @param runtimeVersion runtimeVersion or {@code null} for none
    */
   public OnDeployUpdatePolicy setRuntimeVersion(java.lang.String runtimeVersion) {

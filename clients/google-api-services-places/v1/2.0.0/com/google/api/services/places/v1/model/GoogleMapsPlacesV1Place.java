@@ -67,6 +67,15 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.Boolean allowsDogs;
 
   /**
+   * Experimental: See https://developers.google.com/maps/documentation/places/web-
+   * service/experimental/places-generative for more details. AI-generated summary of the area that
+   * the place is in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1PlaceAreaSummary areaSummary;
+
+  /**
    * A set of data provider that must be shown with this result.
    * The value may be {@code null}.
    */
@@ -160,6 +169,14 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private GoogleMapsPlacesV1FuelOptions fuelOptions;
+
+  /**
+   * Experimental: See https://developers.google.com/maps/documentation/places/web-
+   * service/experimental/places-generative for more details. AI-generated summary of the place.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1PlaceGenerativeSummary generativeSummary;
 
   /**
    * Place is good for children.
@@ -587,6 +604,27 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
+   * Experimental: See https://developers.google.com/maps/documentation/places/web-
+   * service/experimental/places-generative for more details. AI-generated summary of the area that
+   * the place is in.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceAreaSummary getAreaSummary() {
+    return areaSummary;
+  }
+
+  /**
+   * Experimental: See https://developers.google.com/maps/documentation/places/web-
+   * service/experimental/places-generative for more details. AI-generated summary of the area that
+   * the place is in.
+   * @param areaSummary areaSummary or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setAreaSummary(GoogleMapsPlacesV1PlaceAreaSummary areaSummary) {
+    this.areaSummary = areaSummary;
+    return this;
+  }
+
+  /**
    * A set of data provider that must be shown with this result.
    * @return value or {@code null} for none
    */
@@ -809,6 +847,25 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setFuelOptions(GoogleMapsPlacesV1FuelOptions fuelOptions) {
     this.fuelOptions = fuelOptions;
+    return this;
+  }
+
+  /**
+   * Experimental: See https://developers.google.com/maps/documentation/places/web-
+   * service/experimental/places-generative for more details. AI-generated summary of the place.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceGenerativeSummary getGenerativeSummary() {
+    return generativeSummary;
+  }
+
+  /**
+   * Experimental: See https://developers.google.com/maps/documentation/places/web-
+   * service/experimental/places-generative for more details. AI-generated summary of the place.
+   * @param generativeSummary generativeSummary or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setGenerativeSummary(GoogleMapsPlacesV1PlaceGenerativeSummary generativeSummary) {
+    this.generativeSummary = generativeSummary;
     return this;
   }
 

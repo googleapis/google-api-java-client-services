@@ -1619,11 +1619,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * To search only cases updated after a certain date, use `update_time` restricted with that
        * particular date, time, and timezone in ISO datetime format. For example,
        * `update_time>"2020-01-01T00:00:00-05:00"`. `update_time` only supports the greater than
-       * operator (`>`). Examples: - `organization="organizations/123456789"` - `project="projects
-       * /my-project-id"` - `project="projects/123456789"` - `organization="organizations/123456789"
-       * AND state=CLOSED` - `project="projects/my-project-id" AND
-       * creator.email="tester@example.com"` - `project="projects/my-project-id" AND (priority=P0 OR
-       * priority=P1)`
+       * operator (`>`). Examples: - `organization="organizations/123456789"` -
+       * `project="projects/my-project-id"` - `project="projects/123456789"` -
+       * `organization="organizations/123456789" AND state=CLOSED` - `project="projects/my-project-
+       * id" AND creator.email="tester@example.com"` - `project="projects/my-project-id" AND
+       * (priority=P0 OR priority=P1)`
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
@@ -1659,11 +1659,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * To search only cases updated after a certain date, use `update_time` restricted with that
        * particular date, time, and timezone in ISO datetime format. For example,
        * `update_time>"2020-01-01T00:00:00-05:00"`. `update_time` only supports the greater than
-       * operator (`>`). Examples: - `organization="organizations/123456789"` - `project="projects
-       * /my-project-id"` - `project="projects/123456789"` - `organization="organizations/123456789"
-       * AND state=CLOSED` - `project="projects/my-project-id" AND
-       * creator.email="tester@example.com"` - `project="projects/my-project-id" AND (priority=P0 OR
-       * priority=P1)`
+       * operator (`>`). Examples: - `organization="organizations/123456789"` -
+       * `project="projects/my-project-id"` - `project="projects/123456789"` -
+       * `organization="organizations/123456789" AND state=CLOSED` - `project="projects/my-project-
+       * id" AND creator.email="tester@example.com"` - `project="projects/my-project-id" AND
+       * (priority=P0 OR priority=P1)`
        */
       public Search setQuery(java.lang.String query) {
         this.query = query;
@@ -1673,6 +1673,212 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       @Override
       public Search set(String parameterName, Object value) {
         return (Search) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Show items in the feed of this case, including case emails, attachments, and comments.
+     *
+     * Create a request for the method "cases.showFeed".
+     *
+     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+     * parameters, call the {@link ShowFeed#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The resource name of the case for which feed items should be listed.
+     * @return the request
+     */
+    public ShowFeed showFeed(java.lang.String parent) throws java.io.IOException {
+      ShowFeed result = new ShowFeed(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class ShowFeed extends CloudSupportRequest<com.google.api.services.cloudsupport.v2beta.model.ShowFeedResponse> {
+
+      private static final String REST_PATH = "v2beta/{+parent}:showFeed";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+$");
+
+      /**
+       * Show items in the feed of this case, including case emails, attachments, and comments.
+       *
+       * Create a request for the method "cases.showFeed".
+       *
+       * This request holds the parameters needed by the the cloudsupport server.  After setting any
+       * optional parameters, call the {@link ShowFeed#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * ShowFeed#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The resource name of the case for which feed items should be listed.
+       * @since 1.13
+       */
+      protected ShowFeed(java.lang.String parent) {
+        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2beta.model.ShowFeedResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+/cases/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ShowFeed set$Xgafv(java.lang.String $Xgafv) {
+        return (ShowFeed) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ShowFeed setAccessToken(java.lang.String accessToken) {
+        return (ShowFeed) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ShowFeed setAlt(java.lang.String alt) {
+        return (ShowFeed) super.setAlt(alt);
+      }
+
+      @Override
+      public ShowFeed setCallback(java.lang.String callback) {
+        return (ShowFeed) super.setCallback(callback);
+      }
+
+      @Override
+      public ShowFeed setFields(java.lang.String fields) {
+        return (ShowFeed) super.setFields(fields);
+      }
+
+      @Override
+      public ShowFeed setKey(java.lang.String key) {
+        return (ShowFeed) super.setKey(key);
+      }
+
+      @Override
+      public ShowFeed setOauthToken(java.lang.String oauthToken) {
+        return (ShowFeed) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ShowFeed setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ShowFeed) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ShowFeed setQuotaUser(java.lang.String quotaUser) {
+        return (ShowFeed) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ShowFeed setUploadType(java.lang.String uploadType) {
+        return (ShowFeed) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ShowFeed setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ShowFeed) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The resource name of the case for which feed items should be listed. */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The resource name of the case for which feed items should be listed.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /** Required. The resource name of the case for which feed items should be listed. */
+      public ShowFeed setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+/cases/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Optional. Field to order feed items by, followed by `asc` or `desc` postfix. The only valid
+       * field is `creation_time`. This list is case-insensitive, default sorting order is
+       * ascending, and the redundant space characters are insignificant. Example: `creation_time
+       * desc`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Optional. Field to order feed items by, followed by `asc` or `desc` postfix. The only valid field
+     is `creation_time`. This list is case-insensitive, default sorting order is ascending, and the
+     redundant space characters are insignificant. Example: `creation_time desc`
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Optional. Field to order feed items by, followed by `asc` or `desc` postfix. The only valid
+       * field is `creation_time`. This list is case-insensitive, default sorting order is
+       * ascending, and the redundant space characters are insignificant. Example: `creation_time
+       * desc`
+       */
+      public ShowFeed setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /** Optional. The maximum number of feed items fetched with each request. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of feed items fetched with each request.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** Optional. The maximum number of feed items fetched with each request. */
+      public ShowFeed setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A token identifying the page of results to return. If unspecified, it retrieves
+       * the first page.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A token identifying the page of results to return. If unspecified, it retrieves the first
+     page.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A token identifying the page of results to return. If unspecified, it retrieves
+       * the first page.
+       */
+      public ShowFeed setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public ShowFeed set(String parameterName, Object value) {
+        return (ShowFeed) super.set(parameterName, value);
       }
     }
 
@@ -1697,11 +1903,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
     public class Attachments {
 
       /**
-       * List all the attachments associated with a support case. EXAMPLES: cURL: ```shell case="projects
-       * /some-project/cases/23598314" curl \ --header "Authorization: Bearer $(gcloud auth print-access-
-       * token)" \ "https://cloudsupport.googleapis.com/v2/$case/attachments" ``` Python: ```python import
-       * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
-       * serviceName="cloudsupport", version=api_version,
+       * List all the attachments associated with a support case. EXAMPLES: cURL: ```shell
+       * case="projects/some-project/cases/23598314" curl \ --header "Authorization: Bearer $(gcloud auth
+       * print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$case/attachments" ``` Python:
+       * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
        * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
        * ) request = ( supportApiService.cases() .attachments() .list(parent="projects/some-
        * project/cases/43595344") ) print(request.execute()) ```

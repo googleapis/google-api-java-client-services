@@ -927,7 +927,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Creates a conversation.
+         * Creates a conversation. DEPRECATED: Use UploadConversation instead. CreateConversation does not
+         * support audio transcription or DLP redaction.
          *
          * Create a request for the method "conversations.create".
          *
@@ -952,7 +953,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a conversation.
+           * Creates a conversation. DEPRECATED: Use UploadConversation instead. CreateConversation does not
+           * support audio transcription or DLP redaction.
            *
            * Create a request for the method "conversations.create".
            *
@@ -1924,17 +1926,32 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /** The list of fields to be updated. */
+          /**
+           * The list of fields to be updated. All possible fields can be updated by passing `*`, or
+           * a subset of the following updateable fields can be provided: * `agent_id` *
+           * `language_code` * `labels` * `metadata` * `quality_metadata` * `call_metadata` *
+           * `start_time` * `expire_time` or `ttl` * `data_source.gcs_source.audio_uri` or
+           * `data_source.dialogflow_source.audio_uri`
+           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated.
+          /** The list of fields to be updated. All possible fields can be updated by passing `*`, or a subset of
+         the following updateable fields can be provided: * `agent_id` * `language_code` * `labels` *
+         `metadata` * `quality_metadata` * `call_metadata` * `start_time` * `expire_time` or `ttl` *
+         `data_source.gcs_source.audio_uri` or `data_source.dialogflow_source.audio_uri`
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to be updated. */
+          /**
+           * The list of fields to be updated. All possible fields can be updated by passing `*`, or
+           * a subset of the following updateable fields can be provided: * `agent_id` *
+           * `language_code` * `labels` * `metadata` * `quality_metadata` * `call_metadata` *
+           * `start_time` * `expire_time` or `ttl` * `data_source.gcs_source.audio_uri` or
+           * `data_source.dialogflow_source.audio_uri`
+           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;

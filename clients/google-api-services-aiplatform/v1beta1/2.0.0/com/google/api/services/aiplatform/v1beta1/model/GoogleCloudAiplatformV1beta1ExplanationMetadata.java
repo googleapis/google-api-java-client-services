@@ -31,11 +31,11 @@ public final class GoogleCloudAiplatformV1beta1ExplanationMetadata extends com.g
 
   /**
    * Points to a YAML file stored on Google Cloud Storage describing the format of the feature
-   * attributions. The schema is defined as an OpenAPI 3.0.2 [Schema Object](https://github.com/OAI
-   * /OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject). AutoML tabular Models always
-   * have this field populated by Vertex AI. Note: The URI given on output may be different,
-   * including the URI scheme, than the one given on input. The output URI will point to a location
-   * where the user only has a read access.
+   * attributions. The schema is defined as an OpenAPI 3.0.2 [Schema
+   * Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
+   * AutoML tabular Models always have this field populated by Vertex AI. Note: The URI given on
+   * output may be different, including the URI scheme, than the one given on input. The output URI
+   * will point to a location where the user only has a read access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,11 +73,11 @@ public final class GoogleCloudAiplatformV1beta1ExplanationMetadata extends com.g
 
   /**
    * Points to a YAML file stored on Google Cloud Storage describing the format of the feature
-   * attributions. The schema is defined as an OpenAPI 3.0.2 [Schema Object](https://github.com/OAI
-   * /OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject). AutoML tabular Models always
-   * have this field populated by Vertex AI. Note: The URI given on output may be different,
-   * including the URI scheme, than the one given on input. The output URI will point to a location
-   * where the user only has a read access.
+   * attributions. The schema is defined as an OpenAPI 3.0.2 [Schema
+   * Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
+   * AutoML tabular Models always have this field populated by Vertex AI. Note: The URI given on
+   * output may be different, including the URI scheme, than the one given on input. The output URI
+   * will point to a location where the user only has a read access.
    * @return value or {@code null} for none
    */
   public java.lang.String getFeatureAttributionsSchemaUri() {
@@ -86,11 +86,11 @@ public final class GoogleCloudAiplatformV1beta1ExplanationMetadata extends com.g
 
   /**
    * Points to a YAML file stored on Google Cloud Storage describing the format of the feature
-   * attributions. The schema is defined as an OpenAPI 3.0.2 [Schema Object](https://github.com/OAI
-   * /OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject). AutoML tabular Models always
-   * have this field populated by Vertex AI. Note: The URI given on output may be different,
-   * including the URI scheme, than the one given on input. The output URI will point to a location
-   * where the user only has a read access.
+   * attributions. The schema is defined as an OpenAPI 3.0.2 [Schema
+   * Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
+   * AutoML tabular Models always have this field populated by Vertex AI. Note: The URI given on
+   * output may be different, including the URI scheme, than the one given on input. The output URI
+   * will point to a location where the user only has a read access.
    * @param featureAttributionsSchemaUri featureAttributionsSchemaUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ExplanationMetadata setFeatureAttributionsSchemaUri(java.lang.String featureAttributionsSchemaUri) {

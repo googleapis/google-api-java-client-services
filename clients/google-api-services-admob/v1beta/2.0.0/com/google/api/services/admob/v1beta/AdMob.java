@@ -1714,12 +1714,12 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
           }
 
           /**
-           * The filter string that uses [EBNF grammar syntax](https://google.aip.dev/assets/misc
-           * /ebnf-filtering.txt). Possible field to filter by is: - "DISPLAY_NAME" Possible filter
-           * function is: - `IN`: Used to filter fields that represent a singleton including
-           * "DISPLAY_NAME". The filter functions can be added together using `AND`. `OR`
-           * functionality is not supported. Example: filter: IN(DISPLAY_NAME, "Test Ad Unit Mapping
-           * 1", "Test Ad Unit Mapping 2")
+           * The filter string that uses [EBNF grammar
+           * syntax](https://google.aip.dev/assets/misc/ebnf-filtering.txt). Possible field to
+           * filter by is: - "DISPLAY_NAME" Possible filter function is: - `IN`: Used to filter
+           * fields that represent a singleton including "DISPLAY_NAME". The filter functions can be
+           * added together using `AND`. `OR` functionality is not supported. Example: filter:
+           * IN(DISPLAY_NAME, "Test Ad Unit Mapping 1", "Test Ad Unit Mapping 2")
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -1735,12 +1735,12 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
           }
 
           /**
-           * The filter string that uses [EBNF grammar syntax](https://google.aip.dev/assets/misc
-           * /ebnf-filtering.txt). Possible field to filter by is: - "DISPLAY_NAME" Possible filter
-           * function is: - `IN`: Used to filter fields that represent a singleton including
-           * "DISPLAY_NAME". The filter functions can be added together using `AND`. `OR`
-           * functionality is not supported. Example: filter: IN(DISPLAY_NAME, "Test Ad Unit Mapping
-           * 1", "Test Ad Unit Mapping 2")
+           * The filter string that uses [EBNF grammar
+           * syntax](https://google.aip.dev/assets/misc/ebnf-filtering.txt). Possible field to
+           * filter by is: - "DISPLAY_NAME" Possible filter function is: - `IN`: Used to filter
+           * fields that represent a singleton including "DISPLAY_NAME". The filter functions can be
+           * added together using `AND`. `OR` functionality is not supported. Example: filter:
+           * IN(DISPLAY_NAME, "Test Ad Unit Mapping 1", "Test Ad Unit Mapping 2")
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -2613,17 +2613,17 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The filter string that uses [EBNF grammar syntax](https://google.aip.dev/assets/misc
-         * /ebnf-filtering.txt). Possible fields to filter by are: - "AD_SOURCE_IDS" - "AD_UNIT_IDS"
-         * - "APP_IDS" - "DISPLAY_NAME" - "FORMAT" - "MEDIATION_GROUP_ID" - "PLATFORM" - "STATE" -
-         * "TARGETED_REGION_CODES" Possible filter functions are: - `IN`: Used to filter fields that
-         * represent a singleton including "MEDIATION_GROUP_ID", "DISPLAY_NAME", "STATE",
-         * "PLATFORM", and "FORMAT". - `CONTAINS_ANY`: Used to filter fields that represent a
-         * collection including "AD_SOURCE_IDS", "AD_UNIT_IDS", "APP_IDS", and
-         * "TARGETED_REGION_CODES". The filter functions can be added together using `AND`. `OR`
-         * functionality is not supported. Example: filter: IN(DISPLAY_NAME, "Test Group 1", "Test
-         * Group 2") AND IN(PLATFORM, "ANDROID") AND CONTAINS_ANY(AD_SOURCE_IDS,
-         * "5450213213286189855")
+         * The filter string that uses [EBNF grammar
+         * syntax](https://google.aip.dev/assets/misc/ebnf-filtering.txt). Possible fields to filter
+         * by are: - "AD_SOURCE_IDS" - "AD_UNIT_IDS" - "APP_IDS" - "DISPLAY_NAME" - "FORMAT" -
+         * "MEDIATION_GROUP_ID" - "PLATFORM" - "STATE" - "TARGETED_REGION_CODES" Possible filter
+         * functions are: - `IN`: Used to filter fields that represent a singleton including
+         * "MEDIATION_GROUP_ID", "DISPLAY_NAME", "STATE", "PLATFORM", and "FORMAT". -
+         * `CONTAINS_ANY`: Used to filter fields that represent a collection including
+         * "AD_SOURCE_IDS", "AD_UNIT_IDS", "APP_IDS", and "TARGETED_REGION_CODES". The filter
+         * functions can be added together using `AND`. `OR` functionality is not supported.
+         * Example: filter: IN(DISPLAY_NAME, "Test Group 1", "Test Group 2") AND IN(PLATFORM,
+         * "ANDROID") AND CONTAINS_ANY(AD_SOURCE_IDS, "5450213213286189855")
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -2643,17 +2643,17 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The filter string that uses [EBNF grammar syntax](https://google.aip.dev/assets/misc
-         * /ebnf-filtering.txt). Possible fields to filter by are: - "AD_SOURCE_IDS" - "AD_UNIT_IDS"
-         * - "APP_IDS" - "DISPLAY_NAME" - "FORMAT" - "MEDIATION_GROUP_ID" - "PLATFORM" - "STATE" -
-         * "TARGETED_REGION_CODES" Possible filter functions are: - `IN`: Used to filter fields that
-         * represent a singleton including "MEDIATION_GROUP_ID", "DISPLAY_NAME", "STATE",
-         * "PLATFORM", and "FORMAT". - `CONTAINS_ANY`: Used to filter fields that represent a
-         * collection including "AD_SOURCE_IDS", "AD_UNIT_IDS", "APP_IDS", and
-         * "TARGETED_REGION_CODES". The filter functions can be added together using `AND`. `OR`
-         * functionality is not supported. Example: filter: IN(DISPLAY_NAME, "Test Group 1", "Test
-         * Group 2") AND IN(PLATFORM, "ANDROID") AND CONTAINS_ANY(AD_SOURCE_IDS,
-         * "5450213213286189855")
+         * The filter string that uses [EBNF grammar
+         * syntax](https://google.aip.dev/assets/misc/ebnf-filtering.txt). Possible fields to filter
+         * by are: - "AD_SOURCE_IDS" - "AD_UNIT_IDS" - "APP_IDS" - "DISPLAY_NAME" - "FORMAT" -
+         * "MEDIATION_GROUP_ID" - "PLATFORM" - "STATE" - "TARGETED_REGION_CODES" Possible filter
+         * functions are: - `IN`: Used to filter fields that represent a singleton including
+         * "MEDIATION_GROUP_ID", "DISPLAY_NAME", "STATE", "PLATFORM", and "FORMAT". -
+         * `CONTAINS_ANY`: Used to filter fields that represent a collection including
+         * "AD_SOURCE_IDS", "AD_UNIT_IDS", "APP_IDS", and "TARGETED_REGION_CODES". The filter
+         * functions can be added together using `AND`. `OR` functionality is not supported.
+         * Example: filter: IN(DISPLAY_NAME, "Test Group 1", "Test Group 2") AND IN(PLATFORM,
+         * "ANDROID") AND CONTAINS_ANY(AD_SOURCE_IDS, "5450213213286189855")
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -3248,7 +3248,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
     public class MediationReport {
 
       /**
-       * Generates an AdMob mediation report based on the provided report specification. Returns result of
+       * Generates an AdMob Mediation report based on the provided report specification. Returns result of
        * a server-side streaming RPC. The result is returned in a sequence of responses.
        *
        * Create a request for the method "mediationReport.generate".
@@ -3274,7 +3274,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Generates an AdMob mediation report based on the provided report specification. Returns result
+         * Generates an AdMob Mediation report based on the provided report specification. Returns result
          * of a server-side streaming RPC. The result is returned in a sequence of responses.
          *
          * Create a request for the method "mediationReport.generate".

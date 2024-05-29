@@ -998,8 +998,9 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
     /**
      * Updates a billing account's fields. Currently the only field that can be edited is
      * `display_name`. The current authenticated user must have the `billing.accounts.update` IAM
-     * permission, which is typically given to the [administrator](https://cloud.google.com/billing/docs
-     * /how-to/billing-access) of the billing account.
+     * permission, which is typically given to the
+     * [administrator](https://cloud.google.com/billing/docs/how-to/billing-access) of the billing
+     * account.
      *
      * Create a request for the method "billingAccounts.patch".
      *
@@ -2894,8 +2895,8 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
      * Console might be billed to the new billing account, even if the charge occurred before the new
      * billing account was assigned to the project. The current authenticated user must have ownership
      * privileges for both the [project](https://cloud.google.com/docs/permissions-
-     * overview#h.bgs0oxofvnoo ) and the [billing account](https://cloud.google.com/billing/docs/how-to
-     * /billing-access). You can disable billing on the project by setting the `billing_account_name`
+     * overview#h.bgs0oxofvnoo ) and the [billing account](https://cloud.google.com/billing/docs/how-
+     * to/billing-access). You can disable billing on the project by setting the `billing_account_name`
      * field to empty. This action disassociates the current billing account from the project. Any
      * billable activity of your in-use services will stop, and your application could stop functioning
      * as expected. Any unbilled charges to date will be billed to the previously associated account.
@@ -3259,7 +3260,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the cloudbilling server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the service. Example: "services/DA34-426B-A397"
+       * @param parent Required. The name of the service. Example: "services/6F81-5844-456A"
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3285,7 +3286,7 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the service. Example: "services/DA34-426B-A397"
+         * @param parent Required. The name of the service. Example: "services/6F81-5844-456A"
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3363,17 +3364,17 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The name of the service. Example: "services/DA34-426B-A397" */
+        /** Required. The name of the service. Example: "services/6F81-5844-456A" */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the service. Example: "services/DA34-426B-A397"
+        /** Required. The name of the service. Example: "services/6F81-5844-456A"
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The name of the service. Example: "services/DA34-426B-A397" */
+        /** Required. The name of the service. Example: "services/6F81-5844-456A" */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

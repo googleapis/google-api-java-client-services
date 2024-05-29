@@ -55,8 +55,9 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The trading location that bid requests should be sent from. See https://developers.google.com
-   * /authorized-buyers/rtb/peer-guide#trading-locations for further information.
+   * The trading location that bid requests should be sent from. See
+   * https://developers.google.com/authorized-buyers/rtb/peer-guide#trading-locations for further
+   * information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,8 +128,9 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The trading location that bid requests should be sent from. See https://developers.google.com
-   * /authorized-buyers/rtb/peer-guide#trading-locations for further information.
+   * The trading location that bid requests should be sent from. See
+   * https://developers.google.com/authorized-buyers/rtb/peer-guide#trading-locations for further
+   * information.
    * @return value or {@code null} for none
    */
   public java.lang.String getTradingLocation() {
@@ -136,8 +138,9 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The trading location that bid requests should be sent from. See https://developers.google.com
-   * /authorized-buyers/rtb/peer-guide#trading-locations for further information.
+   * The trading location that bid requests should be sent from. See
+   * https://developers.google.com/authorized-buyers/rtb/peer-guide#trading-locations for further
+   * information.
    * @param tradingLocation tradingLocation or {@code null} for none
    */
   public Endpoint setTradingLocation(java.lang.String tradingLocation) {

@@ -48,8 +48,8 @@ public final class GoogleCloudDatalabelingV1p2alpha1HumanAnnotationConfig extend
   /**
    * Optional. If you want your own labeling contributors to manage and work on this labeling
    * request, you can set these contributors here. We will give them access to the question types in
-   * crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https
-   * ://crowd-compute.appspot.com/
+   * crowdcompute. Note that these emails must be registered in crowdcompute worker UI:
+   * https://crowd-compute.appspot.com/
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,8 +145,8 @@ public final class GoogleCloudDatalabelingV1p2alpha1HumanAnnotationConfig extend
   /**
    * Optional. If you want your own labeling contributors to manage and work on this labeling
    * request, you can set these contributors here. We will give them access to the question types in
-   * crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https
-   * ://crowd-compute.appspot.com/
+   * crowdcompute. Note that these emails must be registered in crowdcompute worker UI:
+   * https://crowd-compute.appspot.com/
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getContributorEmails() {
@@ -156,8 +156,8 @@ public final class GoogleCloudDatalabelingV1p2alpha1HumanAnnotationConfig extend
   /**
    * Optional. If you want your own labeling contributors to manage and work on this labeling
    * request, you can set these contributors here. We will give them access to the question types in
-   * crowdcompute. Note that these emails must be registered in crowdcompute worker UI: https
-   * ://crowd-compute.appspot.com/
+   * crowdcompute. Note that these emails must be registered in crowdcompute worker UI:
+   * https://crowd-compute.appspot.com/
    * @param contributorEmails contributorEmails or {@code null} for none
    */
   public GoogleCloudDatalabelingV1p2alpha1HumanAnnotationConfig setContributorEmails(java.util.List<java.lang.String> contributorEmails) {

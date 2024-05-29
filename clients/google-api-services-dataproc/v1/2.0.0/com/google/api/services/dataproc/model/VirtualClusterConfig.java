@@ -18,8 +18,8 @@ package com.google.api.services.dataproc.model;
 
 /**
  * The Dataproc cluster config for a cluster that does not directly control the underlying compute
- * resources, such as a Dataproc-on-GKE cluster (https://cloud.google.com/dataproc/docs/guides/dpgke
- * /dataproc-gke-overview).
+ * resources, such as a Dataproc-on-GKE cluster
+ * (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:

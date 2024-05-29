@@ -194,6 +194,148 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
       public class Environments {
 
         /**
+         * Check if an upgrade operation on the environment will succeed. In case of problems detailed info
+         * can be found in the returned Operation.
+         *
+         * Create a request for the method "environments.checkUpgrade".
+         *
+         * This request holds the parameters needed by the composer server.  After setting any optional
+         * parameters, call the {@link CheckUpgrade#execute()} method to invoke the remote operation.
+         *
+         * @param environment Required. The resource name of the environment to check upgrade for, in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+         * @param content the {@link com.google.api.services.composer.v1.model.CheckUpgradeRequest}
+         * @return the request
+         */
+        public CheckUpgrade checkUpgrade(java.lang.String environment, com.google.api.services.composer.v1.model.CheckUpgradeRequest content) throws java.io.IOException {
+          CheckUpgrade result = new CheckUpgrade(environment, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CheckUpgrade extends CloudComposerRequest<com.google.api.services.composer.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+environment}:checkUpgrade";
+
+          private final java.util.regex.Pattern ENVIRONMENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Check if an upgrade operation on the environment will succeed. In case of problems detailed
+           * info can be found in the returned Operation.
+           *
+           * Create a request for the method "environments.checkUpgrade".
+           *
+           * This request holds the parameters needed by the the composer server.  After setting any
+           * optional parameters, call the {@link CheckUpgrade#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * CheckUpgrade#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param environment Required. The resource name of the environment to check upgrade for, in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @param content the {@link com.google.api.services.composer.v1.model.CheckUpgradeRequest}
+           * @since 1.13
+           */
+          protected CheckUpgrade(java.lang.String environment, com.google.api.services.composer.v1.model.CheckUpgradeRequest content) {
+            super(CloudComposer.this, "POST", REST_PATH, content, com.google.api.services.composer.v1.model.Operation.class);
+            this.environment = com.google.api.client.util.Preconditions.checkNotNull(environment, "Required parameter environment must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public CheckUpgrade set$Xgafv(java.lang.String $Xgafv) {
+            return (CheckUpgrade) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CheckUpgrade setAccessToken(java.lang.String accessToken) {
+            return (CheckUpgrade) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CheckUpgrade setAlt(java.lang.String alt) {
+            return (CheckUpgrade) super.setAlt(alt);
+          }
+
+          @Override
+          public CheckUpgrade setCallback(java.lang.String callback) {
+            return (CheckUpgrade) super.setCallback(callback);
+          }
+
+          @Override
+          public CheckUpgrade setFields(java.lang.String fields) {
+            return (CheckUpgrade) super.setFields(fields);
+          }
+
+          @Override
+          public CheckUpgrade setKey(java.lang.String key) {
+            return (CheckUpgrade) super.setKey(key);
+          }
+
+          @Override
+          public CheckUpgrade setOauthToken(java.lang.String oauthToken) {
+            return (CheckUpgrade) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CheckUpgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CheckUpgrade) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CheckUpgrade setQuotaUser(java.lang.String quotaUser) {
+            return (CheckUpgrade) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CheckUpgrade setUploadType(java.lang.String uploadType) {
+            return (CheckUpgrade) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CheckUpgrade setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CheckUpgrade) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the environment to check upgrade for, in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String environment;
+
+          /** Required. The resource name of the environment to check upgrade for, in the form:
+         "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public java.lang.String getEnvironment() {
+            return environment;
+          }
+
+          /**
+           * Required. The resource name of the environment to check upgrade for, in the form:
+           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public CheckUpgrade setEnvironment(java.lang.String environment) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                  "Parameter environment must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+            this.environment = environment;
+            return this;
+          }
+
+          @Override
+          public CheckUpgrade set(String parameterName, Object value) {
+            return (CheckUpgrade) super.set(parameterName, value);
+          }
+        }
+        /**
          * Create a new environment.
          *
          * Create a request for the method "environments.create".
@@ -1496,19 +1638,20 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * Required. A comma-separated list of paths, relative to `Environment`, of fields to
            * update. For example, to set the version of scikit-learn to install in the environment
            * to 0.19.0 and to remove an existing installation of numpy, the `updateMask` parameter
-           * would include the following two `paths` values: "config.softwareConfig.pypiPackages
-           * .scikit-learn" and "config.softwareConfig.pypiPackages.numpy". The included patch
-           * environment would specify the scikit-learn version as follows: { "config":{
-           * "softwareConfig":{ "pypiPackages":{ "scikit-learn":"==0.19.0" } } } } Note that in the
-           * above example, any existing PyPI packages other than scikit-learn and numpy will be
-           * unaffected. Only one update type may be included in a single request's `updateMask`.
-           * For example, one cannot update both the PyPI packages and labels in the same request.
-           * However, it is possible to update multiple members of a map field simultaneously in the
-           * same request. For example, to set the labels "label1" and "label2" while clearing
-           * "label3" (assuming it already exists), one can provide the paths "labels.label1",
-           * "labels.label2", and "labels.label3" and populate the patch environment as follows: {
-           * "labels":{ "label1":"new-label1-value" "label2":"new-label2-value" } } Note that in the
-           * above example, any existing labels that are not included in the `updateMask` will be
+           * would include the following two `paths` values:
+           * "config.softwareConfig.pypiPackages.scikit-learn" and
+           * "config.softwareConfig.pypiPackages.numpy". The included patch environment would
+           * specify the scikit-learn version as follows: { "config":{ "softwareConfig":{
+           * "pypiPackages":{ "scikit-learn":"==0.19.0" } } } } Note that in the above example, any
+           * existing PyPI packages other than scikit-learn and numpy will be unaffected. Only one
+           * update type may be included in a single request's `updateMask`. For example, one cannot
+           * update both the PyPI packages and labels in the same request. However, it is possible
+           * to update multiple members of a map field simultaneously in the same request. For
+           * example, to set the labels "label1" and "label2" while clearing "label3" (assuming it
+           * already exists), one can provide the paths "labels.label1", "labels.label2", and
+           * "labels.label3" and populate the patch environment as follows: { "labels":{
+           * "label1":"new-label1-value" "label2":"new-label2-value" } } Note that in the above
+           * example, any existing labels that are not included in the `updateMask` will be
            * unaffected. It is also possible to replace an entire map field by providing the map
            * field's path in the `updateMask`. The new value of the field will be that which is
            * provided in the patch environment. For example, to delete all pre-existing user-
@@ -1626,19 +1769,20 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * Required. A comma-separated list of paths, relative to `Environment`, of fields to
            * update. For example, to set the version of scikit-learn to install in the environment
            * to 0.19.0 and to remove an existing installation of numpy, the `updateMask` parameter
-           * would include the following two `paths` values: "config.softwareConfig.pypiPackages
-           * .scikit-learn" and "config.softwareConfig.pypiPackages.numpy". The included patch
-           * environment would specify the scikit-learn version as follows: { "config":{
-           * "softwareConfig":{ "pypiPackages":{ "scikit-learn":"==0.19.0" } } } } Note that in the
-           * above example, any existing PyPI packages other than scikit-learn and numpy will be
-           * unaffected. Only one update type may be included in a single request's `updateMask`.
-           * For example, one cannot update both the PyPI packages and labels in the same request.
-           * However, it is possible to update multiple members of a map field simultaneously in the
-           * same request. For example, to set the labels "label1" and "label2" while clearing
-           * "label3" (assuming it already exists), one can provide the paths "labels.label1",
-           * "labels.label2", and "labels.label3" and populate the patch environment as follows: {
-           * "labels":{ "label1":"new-label1-value" "label2":"new-label2-value" } } Note that in the
-           * above example, any existing labels that are not included in the `updateMask` will be
+           * would include the following two `paths` values:
+           * "config.softwareConfig.pypiPackages.scikit-learn" and
+           * "config.softwareConfig.pypiPackages.numpy". The included patch environment would
+           * specify the scikit-learn version as follows: { "config":{ "softwareConfig":{
+           * "pypiPackages":{ "scikit-learn":"==0.19.0" } } } } Note that in the above example, any
+           * existing PyPI packages other than scikit-learn and numpy will be unaffected. Only one
+           * update type may be included in a single request's `updateMask`. For example, one cannot
+           * update both the PyPI packages and labels in the same request. However, it is possible
+           * to update multiple members of a map field simultaneously in the same request. For
+           * example, to set the labels "label1" and "label2" while clearing "label3" (assuming it
+           * already exists), one can provide the paths "labels.label1", "labels.label2", and
+           * "labels.label3" and populate the patch environment as follows: { "labels":{
+           * "label1":"new-label1-value" "label2":"new-label2-value" } } Note that in the above
+           * example, any existing labels that are not included in the `updateMask` will be
            * unaffected. It is also possible to replace an entire map field by providing the map
            * field's path in the `updateMask`. The new value of the field will be that which is
            * provided in the patch environment. For example, to delete all pre-existing user-

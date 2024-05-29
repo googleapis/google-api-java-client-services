@@ -49,6 +49,15 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. Whether Private Service Connect transitivity is enabled for the hub. If true, Private
+   * Service Connect endpoints in VPC spokes attached to the hub are made accessible to other VPC
+   * spokes attached to the hub. The default value is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean exportPsc;
+
+  /**
    * Optional labels in key-value pair format. For more information about labels, see [Requirements
    * for labels](https://cloud.google.com/resource-manager/docs/creating-managing-
    * labels#requirements).
@@ -64,6 +73,24 @@ public final class Hub extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. The policy mode of this hub. This field can be either PRESET or CUSTOM. If
+   * unspecified, the policy_mode defaults to PRESET.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String policyMode;
+
+  /**
+   * Optional. The topology implemented in this hub. Currently, this field is only used when
+   * policy_mode = PRESET. The available preset topologies are MESH and STAR. If preset_topology is
+   * unspecified and policy_mode = PRESET, the preset_topology defaults to MESH. When policy_mode =
+   * CUSTOM, the preset_topology is set to PRESET_TOPOLOGY_UNSPECIFIED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String presetTopology;
 
   /**
    * Output only. The route tables that belong to this hub. They use the following form:
@@ -150,6 +177,27 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Whether Private Service Connect transitivity is enabled for the hub. If true, Private
+   * Service Connect endpoints in VPC spokes attached to the hub are made accessible to other VPC
+   * spokes attached to the hub. The default value is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExportPsc() {
+    return exportPsc;
+  }
+
+  /**
+   * Optional. Whether Private Service Connect transitivity is enabled for the hub. If true, Private
+   * Service Connect endpoints in VPC spokes attached to the hub are made accessible to other VPC
+   * spokes attached to the hub. The default value is false.
+   * @param exportPsc exportPsc or {@code null} for none
+   */
+  public Hub setExportPsc(java.lang.Boolean exportPsc) {
+    this.exportPsc = exportPsc;
+    return this;
+  }
+
+  /**
    * Optional labels in key-value pair format. For more information about labels, see [Requirements
    * for labels](https://cloud.google.com/resource-manager/docs/creating-managing-
    * labels#requirements).
@@ -186,6 +234,48 @@ public final class Hub extends com.google.api.client.json.GenericJson {
    */
   public Hub setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The policy mode of this hub. This field can be either PRESET or CUSTOM. If
+   * unspecified, the policy_mode defaults to PRESET.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPolicyMode() {
+    return policyMode;
+  }
+
+  /**
+   * Optional. The policy mode of this hub. This field can be either PRESET or CUSTOM. If
+   * unspecified, the policy_mode defaults to PRESET.
+   * @param policyMode policyMode or {@code null} for none
+   */
+  public Hub setPolicyMode(java.lang.String policyMode) {
+    this.policyMode = policyMode;
+    return this;
+  }
+
+  /**
+   * Optional. The topology implemented in this hub. Currently, this field is only used when
+   * policy_mode = PRESET. The available preset topologies are MESH and STAR. If preset_topology is
+   * unspecified and policy_mode = PRESET, the preset_topology defaults to MESH. When policy_mode =
+   * CUSTOM, the preset_topology is set to PRESET_TOPOLOGY_UNSPECIFIED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPresetTopology() {
+    return presetTopology;
+  }
+
+  /**
+   * Optional. The topology implemented in this hub. Currently, this field is only used when
+   * policy_mode = PRESET. The available preset topologies are MESH and STAR. If preset_topology is
+   * unspecified and policy_mode = PRESET, the preset_topology defaults to MESH. When policy_mode =
+   * CUSTOM, the preset_topology is set to PRESET_TOPOLOGY_UNSPECIFIED.
+   * @param presetTopology presetTopology or {@code null} for none
+   */
+  public Hub setPresetTopology(java.lang.String presetTopology) {
+    this.presetTopology = presetTopology;
     return this;
   }
 

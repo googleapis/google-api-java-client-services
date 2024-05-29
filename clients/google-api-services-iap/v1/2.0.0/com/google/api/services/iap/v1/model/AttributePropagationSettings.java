@@ -31,17 +31,17 @@ package com.google.api.services.iap.v1.model;
 public final class AttributePropagationSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the provided attribute propagation settings should be evaluated on user requests. If
-   * set to true, attributes returned from the expression will be propagated in the set output
-   * credentials.
+   * Optional. Whether the provided attribute propagation settings should be evaluated on user
+   * requests. If set to true, attributes returned from the expression will be propagated in the set
+   * output credentials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enable;
 
   /**
-   * Raw string CEL expression. Must return a list of attributes. A maximum of 45 attributes can be
-   * selected. Expressions can select different attribute types from `attributes`:
+   * Optional. Raw string CEL expression. Must return a list of attributes. A maximum of 45
+   * attributes can be selected. Expressions can select different attribute types from `attributes`:
    * `attributes.saml_attributes`, `attributes.iap_attributes`. The following functions are
    * supported: - filter `.filter(, )`: Returns a subset of `` where `` is true for every item. - in
    * ` in `: Returns true if `` contains ``. - selectByName `.selectByName()`: Returns the attribute
@@ -58,17 +58,17 @@ public final class AttributePropagationSettings extends com.google.api.client.js
   private java.lang.String expression;
 
   /**
-   * Which output credentials attributes selected by the CEL expression should be propagated in. All
-   * attributes will be fully duplicated in each selected output credential.
+   * Optional. Which output credentials attributes selected by the CEL expression should be
+   * propagated in. All attributes will be fully duplicated in each selected output credential.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> outputCredentials;
 
   /**
-   * Whether the provided attribute propagation settings should be evaluated on user requests. If
-   * set to true, attributes returned from the expression will be propagated in the set output
-   * credentials.
+   * Optional. Whether the provided attribute propagation settings should be evaluated on user
+   * requests. If set to true, attributes returned from the expression will be propagated in the set
+   * output credentials.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnable() {
@@ -76,9 +76,9 @@ public final class AttributePropagationSettings extends com.google.api.client.js
   }
 
   /**
-   * Whether the provided attribute propagation settings should be evaluated on user requests. If
-   * set to true, attributes returned from the expression will be propagated in the set output
-   * credentials.
+   * Optional. Whether the provided attribute propagation settings should be evaluated on user
+   * requests. If set to true, attributes returned from the expression will be propagated in the set
+   * output credentials.
    * @param enable enable or {@code null} for none
    */
   public AttributePropagationSettings setEnable(java.lang.Boolean enable) {
@@ -87,8 +87,8 @@ public final class AttributePropagationSettings extends com.google.api.client.js
   }
 
   /**
-   * Raw string CEL expression. Must return a list of attributes. A maximum of 45 attributes can be
-   * selected. Expressions can select different attribute types from `attributes`:
+   * Optional. Raw string CEL expression. Must return a list of attributes. A maximum of 45
+   * attributes can be selected. Expressions can select different attribute types from `attributes`:
    * `attributes.saml_attributes`, `attributes.iap_attributes`. The following functions are
    * supported: - filter `.filter(, )`: Returns a subset of `` where `` is true for every item. - in
    * ` in `: Returns true if `` contains ``. - selectByName `.selectByName()`: Returns the attribute
@@ -106,8 +106,8 @@ public final class AttributePropagationSettings extends com.google.api.client.js
   }
 
   /**
-   * Raw string CEL expression. Must return a list of attributes. A maximum of 45 attributes can be
-   * selected. Expressions can select different attribute types from `attributes`:
+   * Optional. Raw string CEL expression. Must return a list of attributes. A maximum of 45
+   * attributes can be selected. Expressions can select different attribute types from `attributes`:
    * `attributes.saml_attributes`, `attributes.iap_attributes`. The following functions are
    * supported: - filter `.filter(, )`: Returns a subset of `` where `` is true for every item. - in
    * ` in `: Returns true if `` contains ``. - selectByName `.selectByName()`: Returns the attribute
@@ -126,8 +126,8 @@ public final class AttributePropagationSettings extends com.google.api.client.js
   }
 
   /**
-   * Which output credentials attributes selected by the CEL expression should be propagated in. All
-   * attributes will be fully duplicated in each selected output credential.
+   * Optional. Which output credentials attributes selected by the CEL expression should be
+   * propagated in. All attributes will be fully duplicated in each selected output credential.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOutputCredentials() {
@@ -135,8 +135,8 @@ public final class AttributePropagationSettings extends com.google.api.client.js
   }
 
   /**
-   * Which output credentials attributes selected by the CEL expression should be propagated in. All
-   * attributes will be fully duplicated in each selected output credential.
+   * Optional. Which output credentials attributes selected by the CEL expression should be
+   * propagated in. All attributes will be fully duplicated in each selected output credential.
    * @param outputCredentials outputCredentials or {@code null} for none
    */
   public AttributePropagationSettings setOutputCredentials(java.util.List<java.lang.String> outputCredentials) {

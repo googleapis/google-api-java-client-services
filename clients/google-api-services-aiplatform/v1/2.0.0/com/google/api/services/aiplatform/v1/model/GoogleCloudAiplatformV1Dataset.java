@@ -115,6 +115,14 @@ public final class GoogleCloudAiplatformV1Dataset extends com.google.api.client.
   private java.lang.String metadataSchemaUri;
 
   /**
+   * Optional. Reference to the public base model last used by the dataset. Only set for prompt
+   * datasets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelReference;
+
+  /**
    * Output only. The resource name of the Dataset.
    * The value may be {@code null}.
    */
@@ -336,6 +344,25 @@ public final class GoogleCloudAiplatformV1Dataset extends com.google.api.client.
    */
   public GoogleCloudAiplatformV1Dataset setMetadataSchemaUri(java.lang.String metadataSchemaUri) {
     this.metadataSchemaUri = metadataSchemaUri;
+    return this;
+  }
+
+  /**
+   * Optional. Reference to the public base model last used by the dataset. Only set for prompt
+   * datasets.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelReference() {
+    return modelReference;
+  }
+
+  /**
+   * Optional. Reference to the public base model last used by the dataset. Only set for prompt
+   * datasets.
+   * @param modelReference modelReference or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Dataset setModelReference(java.lang.String modelReference) {
+    this.modelReference = modelReference;
     return this;
   }
 

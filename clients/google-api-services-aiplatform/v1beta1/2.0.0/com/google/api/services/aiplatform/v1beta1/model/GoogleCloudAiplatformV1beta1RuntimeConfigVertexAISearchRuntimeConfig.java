@@ -30,16 +30,46 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1RuntimeConfigVertexAISearchRuntimeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Vertext AI Search serving config name. Format: `projects/{project}/locations/{locatio
-   * n}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config}`
+   * Optional. Vertex AI Search engine ID. This is used to construct the search request. By setting
+   * this engine_id, API will construct the serving config using the default value to call search
+   * API for the user. The engine_id and serving_config_name cannot both be empty at the same time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String engineId;
+
+  /**
+   * Optional. Vertex AI Search serving config name. Format: `projects/{project}/locations/{location
+   * }/collections/{collection}/engines/{engine}/servingConfigs/{serving_config}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String servingConfigName;
 
   /**
-   * Required. Vertext AI Search serving config name. Format: `projects/{project}/locations/{locatio
-   * n}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config}`
+   * Optional. Vertex AI Search engine ID. This is used to construct the search request. By setting
+   * this engine_id, API will construct the serving config using the default value to call search
+   * API for the user. The engine_id and serving_config_name cannot both be empty at the same time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEngineId() {
+    return engineId;
+  }
+
+  /**
+   * Optional. Vertex AI Search engine ID. This is used to construct the search request. By setting
+   * this engine_id, API will construct the serving config using the default value to call search
+   * API for the user. The engine_id and serving_config_name cannot both be empty at the same time.
+   * @param engineId engineId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RuntimeConfigVertexAISearchRuntimeConfig setEngineId(java.lang.String engineId) {
+    this.engineId = engineId;
+    return this;
+  }
+
+  /**
+   * Optional. Vertex AI Search serving config name. Format: `projects/{project}/locations/{location
+   * }/collections/{collection}/engines/{engine}/servingConfigs/{serving_config}`
    * @return value or {@code null} for none
    */
   public java.lang.String getServingConfigName() {
@@ -47,8 +77,8 @@ public final class GoogleCloudAiplatformV1beta1RuntimeConfigVertexAISearchRuntim
   }
 
   /**
-   * Required. Vertext AI Search serving config name. Format: `projects/{project}/locations/{locatio
-   * n}/collections/{collection}/engines/{engine}/servingConfigs/{serving_config}`
+   * Optional. Vertex AI Search serving config name. Format: `projects/{project}/locations/{location
+   * }/collections/{collection}/engines/{engine}/servingConfigs/{serving_config}`
    * @param servingConfigName servingConfigName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RuntimeConfigVertexAISearchRuntimeConfig setServingConfigName(java.lang.String servingConfigName) {

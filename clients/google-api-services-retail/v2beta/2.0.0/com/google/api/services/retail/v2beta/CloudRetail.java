@@ -408,6 +408,29 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
+           * If true, attribute suggestions are enabled and provided in response. This field is only
+           * available for "cloud-retail" dataset.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean enableAttributeSuggestions;
+
+          /** If true, attribute suggestions are enabled and provided in response. This field is only available
+         for "cloud-retail" dataset.
+           */
+          public java.lang.Boolean getEnableAttributeSuggestions() {
+            return enableAttributeSuggestions;
+          }
+
+          /**
+           * If true, attribute suggestions are enabled and provided in response. This field is only
+           * available for "cloud-retail" dataset.
+           */
+          public CompleteQuery setEnableAttributeSuggestions(java.lang.Boolean enableAttributeSuggestions) {
+            this.enableAttributeSuggestions = enableAttributeSuggestions;
+            return this;
+          }
+
+          /**
            * The entity for customers who run multiple entities, domains, sites, or regions, for
            * example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this
            * is set, it must be an exact match with UserEvent.entity to get per-entity autocomplete

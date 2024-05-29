@@ -32,8 +32,9 @@ public final class OrgPolicyResult extends com.google.api.client.json.GenericJso
   /**
    * The consolidated organization policy for the analyzed resource. The consolidated organization
    * policy is computed by merging and evaluating AnalyzeOrgPoliciesResponse.policy_bundle. The
-   * evaluation will respect the organization policy [hierarchy rules](https://cloud.google.com
-   * /resource-manager/docs/organization-policy/understanding-hierarchy).
+   * evaluation will respect the organization policy [hierarchy
+   * rules](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-
+   * hierarchy).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +86,9 @@ public final class OrgPolicyResult extends com.google.api.client.json.GenericJso
   /**
    * The consolidated organization policy for the analyzed resource. The consolidated organization
    * policy is computed by merging and evaluating AnalyzeOrgPoliciesResponse.policy_bundle. The
-   * evaluation will respect the organization policy [hierarchy rules](https://cloud.google.com
-   * /resource-manager/docs/organization-policy/understanding-hierarchy).
+   * evaluation will respect the organization policy [hierarchy
+   * rules](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-
+   * hierarchy).
    * @return value or {@code null} for none
    */
   public AnalyzerOrgPolicy getConsolidatedPolicy() {
@@ -96,8 +98,9 @@ public final class OrgPolicyResult extends com.google.api.client.json.GenericJso
   /**
    * The consolidated organization policy for the analyzed resource. The consolidated organization
    * policy is computed by merging and evaluating AnalyzeOrgPoliciesResponse.policy_bundle. The
-   * evaluation will respect the organization policy [hierarchy rules](https://cloud.google.com
-   * /resource-manager/docs/organization-policy/understanding-hierarchy).
+   * evaluation will respect the organization policy [hierarchy
+   * rules](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-
+   * hierarchy).
    * @param consolidatedPolicy consolidatedPolicy or {@code null} for none
    */
   public OrgPolicyResult setConsolidatedPolicy(AnalyzerOrgPolicy consolidatedPolicy) {

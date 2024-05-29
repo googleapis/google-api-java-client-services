@@ -1106,8 +1106,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
      * counted. Use of the App Check token elsewhere will not mark the token as being already consumed.
      * The caller must have the [`firebaseappcheck.appCheckTokens.verify`](https://firebase.google.com/d
      * ocs/projects/iam/permissions#app-check) permission to call this method. This permission is part
-     * of the [Firebase App Check Token Verifier role](https://firebase.google.com/docs/projects/iam
-     * /roles-predefined-product#app-check).
+     * of the [Firebase App Check Token Verifier
+     * role](https://firebase.google.com/docs/projects/iam/roles-predefined-product#app-check).
      *
      * Create a request for the method "projects.verifyAppCheckToken".
      *
@@ -1429,8 +1429,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
-         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the
+         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
+         * started#project-setup) for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String app;
@@ -1459,8 +1460,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
-         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the
+         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
+         * started#project-setup) for more information.
          */
         public ExchangeAppAttestAssertion setApp(java.lang.String app) {
           if (!getSuppressPatternChecks()) {
@@ -1616,8 +1618,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
-         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the
+         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
+         * started#project-setup) for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String app;
@@ -1646,8 +1649,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
-         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the
+         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
+         * started#project-setup) for more information.
          */
         public ExchangeAppAttestAttestation setApp(java.lang.String app) {
           if (!getSuppressPatternChecks()) {
@@ -1954,8 +1958,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
-         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the
+         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
+         * started#project-setup) for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String app;
@@ -1984,8 +1989,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
-         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the
+         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
+         * started#project-setup) for more information.
          */
         public ExchangeDebugToken setApp(java.lang.String app) {
           if (!getSuppressPatternChecks()) {
@@ -2773,8 +2779,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Validates a [SafetyNet token](https://developer.android.com/training/safetynet/attestation
-       * #request-attestation-step). If valid, returns an AppCheckToken.
+       * Validates a [SafetyNet
+       * token](https://developer.android.com/training/safetynet/attestation#request-attestation-step). If
+       * valid, returns an AppCheckToken.
        *
        * Create a request for the method "apps.exchangeSafetyNetToken".
        *
@@ -2803,8 +2810,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
             java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
 
         /**
-         * Validates a [SafetyNet token](https://developer.android.com/training/safetynet/attestation
-         * #request-attestation-step). If valid, returns an AppCheckToken.
+         * Validates a [SafetyNet
+         * token](https://developer.android.com/training/safetynet/attestation#request-attestation-step).
+         * If valid, returns an AppCheckToken.
          *
          * Create a request for the method "apps.exchangeSafetyNetToken".
          *
@@ -3062,8 +3070,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
-         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the
+         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
+         * started#project-setup) for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String app;
@@ -3092,8 +3101,9 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * this field can also be in the format: ``` oauthClients/{oauth_client_id} ``` You can view
          * the OAuth client ID for your OAuth clients in the Google Cloud console. Note that only
          * iOS OAuth clients are supported at this time, and they must be linked to corresponding
-         * iOS Firebase apps. Please see [the documentation](https://developers.google.com/identity
-         * /sign-in/ios/appcheck/get-started#project-setup) for more information.
+         * iOS Firebase apps. Please see [the
+         * documentation](https://developers.google.com/identity/sign-in/ios/appcheck/get-
+         * started#project-setup) for more information.
          */
         public GenerateAppAttestChallenge setApp(java.lang.String app) {
           if (!getSuppressPatternChecks()) {
@@ -7895,7 +7905,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
        *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
        *        `firestore.googleapis.com` (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase
-       *        Authentication with Identity Platform)
+       *        Authentication with Identity Platform) * `oauth2.googleapis.com` (Google Identity for iOS)
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -7927,7 +7937,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
        *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
        *        `firestore.googleapis.com` (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase
-       *        Authentication with Identity Platform)
+       *        Authentication with Identity Platform) * `oauth2.googleapis.com` (Google Identity for iOS)
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -8012,7 +8022,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
          * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
          * `firestore.googleapis.com` (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase
-         * Authentication with Identity Platform)
+         * Authentication with Identity Platform) * `oauth2.googleapis.com` (Google Identity for
+         * iOS)
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -8022,7 +8033,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        supported service ID. Currently, the following service IDs are supported: *
        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebasedatabase.googleapis.com`
        (Firebase Realtime Database) * `firestore.googleapis.com` (Cloud Firestore) *
-       `identitytoolkit.googleapis.com` (Firebase Authentication with Identity Platform)
+       `identitytoolkit.googleapis.com` (Firebase Authentication with Identity Platform) *
+       `oauth2.googleapis.com` (Google Identity for iOS)
          */
         public java.lang.String getName() {
           return name;
@@ -8035,7 +8047,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
          * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
          * `firestore.googleapis.com` (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase
-         * Authentication with Identity Platform)
+         * Authentication with Identity Platform) * `oauth2.googleapis.com` (Google Identity for
+         * iOS)
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -8199,15 +8212,15 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         /**
          * The maximum number of Services to return in the response. Only explicitly configured
          * services are returned. The server may return fewer than this at its own discretion. If no
-         * value is specified or set to zero (or too large a value is specified), the server will
-         * impose its own limit.
+         * value is specified (or too large a value is specified), the server will impose its own
+         * limit.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** The maximum number of Services to return in the response. Only explicitly configured services are
-       returned. The server may return fewer than this at its own discretion. If no value is specified or
-       set to zero (or too large a value is specified), the server will impose its own limit.
+       returned. The server may return fewer than this at its own discretion. If no value is specified (or
+       too large a value is specified), the server will impose its own limit.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -8216,8 +8229,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         /**
          * The maximum number of Services to return in the response. Only explicitly configured
          * services are returned. The server may return fewer than this at its own discretion. If no
-         * value is specified or set to zero (or too large a value is specified), the server will
-         * impose its own limit.
+         * value is specified (or too large a value is specified), the server will impose its own
+         * limit.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -9365,7 +9378,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the firebaseappcheck server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The relative name of the resource policy object, in the format: ```
+         * @param name Required. Identifier. The relative name of the resource policy object, in the format: ```
          *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
@@ -9397,7 +9410,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The relative name of the resource policy object, in the format: ```
+           * @param name Required. Identifier. The relative name of the resource policy object, in the format: ```
          *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
          *        Note that the `service_id` element must be a supported service ID. Currently, the
          *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
@@ -9471,7 +9484,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The relative name of the resource policy object, in the format: ```
+           * Required. Identifier. The relative name of the resource policy object, in the format:
+           * ```
            * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
            * ``` Note that the `service_id` element must be a supported service ID. Currently, the
            * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
@@ -9480,7 +9494,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The relative name of the resource policy object, in the format: ```
+          /** Required. Identifier. The relative name of the resource policy object, in the format: ```
          projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note that
          the `service_id` element must be a supported service ID. Currently, the following service IDs are
          supported: * `oauth2.googleapis.com` (Google Identity for iOS) `resource_policy_id` is a system-
@@ -9491,7 +9505,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The relative name of the resource policy object, in the format: ```
+           * Required. Identifier. The relative name of the resource policy object, in the format:
+           * ```
            * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
            * ``` Note that the `service_id` element must be a supported service ID. Currently, the
            * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for

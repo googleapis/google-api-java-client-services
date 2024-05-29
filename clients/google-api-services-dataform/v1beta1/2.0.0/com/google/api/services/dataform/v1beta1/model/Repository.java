@@ -37,6 +37,14 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. A data encryption state of a Git repository if this Repository is protected by a
+   * KMS key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataEncryptionState dataEncryptionState;
+
+  /**
    * Optional. The repository's user-friendly name.
    * The value may be {@code null}.
    */
@@ -49,6 +57,16 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private GitRemoteSettings gitRemoteSettings;
+
+  /**
+   * Optional. The reference to a KMS encryption key. If provided, it will be used to encrypt user
+   * data in the repository and all child resources. It is not possible to add or update the
+   * encryption key after the repository is created. Example:
+   * `projects/[kms_project_id]/locations/[region]/keyRings/[key_region]/cryptoKeys/[key]`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyName;
 
   /**
    * Optional. Repository user labels.
@@ -117,6 +135,25 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. A data encryption state of a Git repository if this Repository is protected by a
+   * KMS key.
+   * @return value or {@code null} for none
+   */
+  public DataEncryptionState getDataEncryptionState() {
+    return dataEncryptionState;
+  }
+
+  /**
+   * Output only. A data encryption state of a Git repository if this Repository is protected by a
+   * KMS key.
+   * @param dataEncryptionState dataEncryptionState or {@code null} for none
+   */
+  public Repository setDataEncryptionState(DataEncryptionState dataEncryptionState) {
+    this.dataEncryptionState = dataEncryptionState;
+    return this;
+  }
+
+  /**
    * Optional. The repository's user-friendly name.
    * @return value or {@code null} for none
    */
@@ -147,6 +184,29 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setGitRemoteSettings(GitRemoteSettings gitRemoteSettings) {
     this.gitRemoteSettings = gitRemoteSettings;
+    return this;
+  }
+
+  /**
+   * Optional. The reference to a KMS encryption key. If provided, it will be used to encrypt user
+   * data in the repository and all child resources. It is not possible to add or update the
+   * encryption key after the repository is created. Example:
+   * `projects/[kms_project_id]/locations/[region]/keyRings/[key_region]/cryptoKeys/[key]`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
+  }
+
+  /**
+   * Optional. The reference to a KMS encryption key. If provided, it will be used to encrypt user
+   * data in the repository and all child resources. It is not possible to add or update the
+   * encryption key after the repository is created. Example:
+   * `projects/[kms_project_id]/locations/[region]/keyRings/[key_region]/cryptoKeys/[key]`
+   * @param kmsKeyName kmsKeyName or {@code null} for none
+   */
+  public Repository setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
     return this;
   }
 

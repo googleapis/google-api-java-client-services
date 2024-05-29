@@ -17,7 +17,7 @@
 package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
 
 /**
- * First Channel to receive the updates. Meant to dev/test instances
+ * LINT.IfChange First Channel to receive the updates. Meant to dev/test instances
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Platform API. For a detailed

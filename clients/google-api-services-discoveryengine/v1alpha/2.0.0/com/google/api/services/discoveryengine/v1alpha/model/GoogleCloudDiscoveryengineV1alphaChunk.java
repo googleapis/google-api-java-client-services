@@ -83,6 +83,15 @@ public final class GoogleCloudDiscoveryengineV1alphaChunk extends com.google.api
   private GoogleCloudDiscoveryengineV1alphaChunkPageSpan pageSpan;
 
   /**
+   * Output only. Represents the relevance score based on similarity. Higher score indicates higher
+   * chunk relevance. The score is in range [-1.0, 1.0]. Only populated on
+   * SearchService.SearchResponse.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double relevanceScore;
+
+  /**
    * Output only. Metadata of the current chunk.
    * @return value or {@code null} for none
    */
@@ -204,6 +213,27 @@ public final class GoogleCloudDiscoveryengineV1alphaChunk extends com.google.api
    */
   public GoogleCloudDiscoveryengineV1alphaChunk setPageSpan(GoogleCloudDiscoveryengineV1alphaChunkPageSpan pageSpan) {
     this.pageSpan = pageSpan;
+    return this;
+  }
+
+  /**
+   * Output only. Represents the relevance score based on similarity. Higher score indicates higher
+   * chunk relevance. The score is in range [-1.0, 1.0]. Only populated on
+   * SearchService.SearchResponse.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getRelevanceScore() {
+    return relevanceScore;
+  }
+
+  /**
+   * Output only. Represents the relevance score based on similarity. Higher score indicates higher
+   * chunk relevance. The score is in range [-1.0, 1.0]. Only populated on
+   * SearchService.SearchResponse.
+   * @param relevanceScore relevanceScore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaChunk setRelevanceScore(java.lang.Double relevanceScore) {
+    this.relevanceScore = relevanceScore;
     return this;
   }
 

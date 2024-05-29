@@ -17,7 +17,7 @@
 package com.google.api.services.eventarc.v1.model;
 
 /**
- * Represents a network config to be used for destination resolution and connectivity.
+ * Network Configuration that can be inherited by other protos.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Eventarc API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.eventarc.v1.model;
 public final class NetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Name of the NetworkAttachment that allows access to the destination VPC. Format:
+   * Required. Name of the NetworkAttachment that allows access to the customer's VPC. Format:
    * `projects/{PROJECT_ID}/regions/{REGION}/networkAttachments/{NETWORK_ATTACHMENT_NAME}`
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String networkAttachment;
 
   /**
-   * Required. Name of the NetworkAttachment that allows access to the destination VPC. Format:
+   * Required. Name of the NetworkAttachment that allows access to the customer's VPC. Format:
    * `projects/{PROJECT_ID}/regions/{REGION}/networkAttachments/{NETWORK_ATTACHMENT_NAME}`
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Name of the NetworkAttachment that allows access to the destination VPC. Format:
+   * Required. Name of the NetworkAttachment that allows access to the customer's VPC. Format:
    * `projects/{PROJECT_ID}/regions/{REGION}/networkAttachments/{NETWORK_ATTACHMENT_NAME}`
    * @param networkAttachment networkAttachment or {@code null} for none
    */

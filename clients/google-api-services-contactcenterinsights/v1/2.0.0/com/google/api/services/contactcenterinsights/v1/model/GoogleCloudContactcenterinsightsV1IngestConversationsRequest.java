@@ -61,6 +61,15 @@ public final class GoogleCloudContactcenterinsightsV1IngestConversationsRequest 
   private GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig;
 
   /**
+   * Optional. If set, this fields indicates the number of objects to ingest from the Cloud Storage
+   * bucket. If empty, the entire bucket will be ingested. Note that conversations produced via
+   * sampling will not be ingested by subsequent ingest requests unless they are first deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer sampleSize;
+
+  /**
    * Optional. Default Speech-to-Text configuration. Optional, will default to the config specified
    * in Settings.
    * The value may be {@code null}.
@@ -144,6 +153,27 @@ public final class GoogleCloudContactcenterinsightsV1IngestConversationsRequest 
    */
   public GoogleCloudContactcenterinsightsV1IngestConversationsRequest setRedactionConfig(GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig) {
     this.redactionConfig = redactionConfig;
+    return this;
+  }
+
+  /**
+   * Optional. If set, this fields indicates the number of objects to ingest from the Cloud Storage
+   * bucket. If empty, the entire bucket will be ingested. Note that conversations produced via
+   * sampling will not be ingested by subsequent ingest requests unless they are first deleted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSampleSize() {
+    return sampleSize;
+  }
+
+  /**
+   * Optional. If set, this fields indicates the number of objects to ingest from the Cloud Storage
+   * bucket. If empty, the entire bucket will be ingested. Note that conversations produced via
+   * sampling will not be ingested by subsequent ingest requests unless they are first deleted.
+   * @param sampleSize sampleSize or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1IngestConversationsRequest setSampleSize(java.lang.Integer sampleSize) {
+    this.sampleSize = sampleSize;
     return this;
   }
 

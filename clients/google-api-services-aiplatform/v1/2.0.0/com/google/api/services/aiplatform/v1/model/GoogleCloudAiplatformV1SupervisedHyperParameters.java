@@ -37,14 +37,15 @@ public final class GoogleCloudAiplatformV1SupervisedHyperParameters extends com.
   private java.lang.String adapterSize;
 
   /**
-   * Optional. Number of training epoches for this tuning job.
+   * Optional. Number of complete passes the model makes over the entire training dataset during
+   * training.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long epochCount;
 
   /**
-   * Optional. Learning rate multiplier for tuning.
+   * Optional. Multiplier for adjusting the default learning rate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class GoogleCloudAiplatformV1SupervisedHyperParameters extends com.
   }
 
   /**
-   * Optional. Number of training epoches for this tuning job.
+   * Optional. Number of complete passes the model makes over the entire training dataset during
+   * training.
    * @return value or {@code null} for none
    */
   public java.lang.Long getEpochCount() {
@@ -76,7 +78,8 @@ public final class GoogleCloudAiplatformV1SupervisedHyperParameters extends com.
   }
 
   /**
-   * Optional. Number of training epoches for this tuning job.
+   * Optional. Number of complete passes the model makes over the entire training dataset during
+   * training.
    * @param epochCount epochCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1SupervisedHyperParameters setEpochCount(java.lang.Long epochCount) {
@@ -85,7 +88,7 @@ public final class GoogleCloudAiplatformV1SupervisedHyperParameters extends com.
   }
 
   /**
-   * Optional. Learning rate multiplier for tuning.
+   * Optional. Multiplier for adjusting the default learning rate.
    * @return value or {@code null} for none
    */
   public java.lang.Double getLearningRateMultiplier() {
@@ -93,7 +96,7 @@ public final class GoogleCloudAiplatformV1SupervisedHyperParameters extends com.
   }
 
   /**
-   * Optional. Learning rate multiplier for tuning.
+   * Optional. Multiplier for adjusting the default learning rate.
    * @param learningRateMultiplier learningRateMultiplier or {@code null} for none
    */
   public GoogleCloudAiplatformV1SupervisedHyperParameters setLearningRateMultiplier(java.lang.Double learningRateMultiplier) {

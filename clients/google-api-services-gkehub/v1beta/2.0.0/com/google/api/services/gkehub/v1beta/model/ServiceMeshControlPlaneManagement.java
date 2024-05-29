@@ -37,6 +37,13 @@ public final class ServiceMeshControlPlaneManagement extends com.google.api.clie
   private java.util.List<ServiceMeshStatusDetails> details;
 
   /**
+   * Output only. Implementation of managed control plane.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String implementation;
+
+  /**
    * LifecycleState of control plane management.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class ServiceMeshControlPlaneManagement extends com.google.api.clie
    */
   public ServiceMeshControlPlaneManagement setDetails(java.util.List<ServiceMeshStatusDetails> details) {
     this.details = details;
+    return this;
+  }
+
+  /**
+   * Output only. Implementation of managed control plane.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImplementation() {
+    return implementation;
+  }
+
+  /**
+   * Output only. Implementation of managed control plane.
+   * @param implementation implementation or {@code null} for none
+   */
+  public ServiceMeshControlPlaneManagement setImplementation(java.lang.String implementation) {
+    this.implementation = implementation;
     return this;
   }
 

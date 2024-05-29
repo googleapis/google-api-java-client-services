@@ -23,7 +23,7 @@ __author__ = 'aiuto@google.com (Tony Aiuto)'
 import datetime
 import os
 import re
-import StringIO
+import io
 import time
 import zipfile
 
@@ -131,7 +131,7 @@ class TemplateGenerator(object):
 
     def WriteFileInPackage(path, content):
       """Writes content to a path in our current package writer."""
-      if isinstance(content, unicode):
+      if isinstance(content, str):
         content = content.encode('utf-8', errors='ignore')
       out = package.StartFile(os.path.join(output_dir, path))
       out.write(content)
@@ -189,7 +189,7 @@ class TemplateGenerator(object):
       """
       full_path = os.path.join(self._template_dir, path)
       zip_slurp = files.GetFileContents(full_path)
-      archive = zipfile.ZipFile(StringIO.StringIO(zip_slurp), 'r')
+      archive = zipfile.ZipFile(io.StringIO(zip_slurp), 'r')
       for info in archive.infolist():
         package.WriteDataAsFile(
             archive.read(info.filename),
@@ -205,13 +205,13 @@ class TemplateGenerator(object):
       relative_path = root[len(top_of_tree) + 1:]
 
       # Perform the replacements on the path and file name
-      for path_item, replacement in path_replacements.iteritems():
+      for path_item, replacement in list(path_replacements.items()):
         relative_path = relative_path.replace(path_item, replacement)
-      for path_item, replacement in path_replacements.iteritems():
+      for path_item, replacement in list(path_replacements.items()):
         file_name = file_name.replace(path_item, replacement)
       full_template_path = os.path.join(relative_path, template_path)
 
-      for path_item, call_info in list_replacements.iteritems():
+      for path_item, call_info in list(list_replacements.items()):
         if file_name.find(path_item) >= 0:
           self.GenerateListOfFiles(path_item, call_info, path, relative_path,
                                    file_name, variables, package,

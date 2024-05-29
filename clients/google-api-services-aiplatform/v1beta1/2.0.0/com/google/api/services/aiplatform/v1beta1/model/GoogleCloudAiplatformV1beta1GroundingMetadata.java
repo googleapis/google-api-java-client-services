@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   private java.util.List<java.lang.String> retrievalQueries;
 
   /**
+   * Optional. Google search entry for the following-up web searches.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SearchEntryPoint searchEntryPoint;
+
+  /**
    * Optional. Web search queries for the following-up web search.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadata setRetrievalQueries(java.util.List<java.lang.String> retrievalQueries) {
     this.retrievalQueries = retrievalQueries;
+    return this;
+  }
+
+  /**
+   * Optional. Google search entry for the following-up web searches.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SearchEntryPoint getSearchEntryPoint() {
+    return searchEntryPoint;
+  }
+
+  /**
+   * Optional. Google search entry for the following-up web searches.
+   * @param searchEntryPoint searchEntryPoint or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingMetadata setSearchEntryPoint(GoogleCloudAiplatformV1beta1SearchEntryPoint searchEntryPoint) {
+    this.searchEntryPoint = searchEntryPoint;
     return this;
   }
 

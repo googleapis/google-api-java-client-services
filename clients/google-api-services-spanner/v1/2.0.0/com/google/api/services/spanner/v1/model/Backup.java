@@ -61,6 +61,17 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private EncryptionInfo encryptionInfo;
 
   /**
+   * Output only. The encryption information for the backup, whether it is protected by one or more
+   * KMS keys. The information includes all Cloud KMS key versions used to encrypt the backup. The
+   * `encryption_status' field inside of each `EncryptionInfo` is not populated. At least one of the
+   * key versions must be available for the backup to be restored. If a key version is revoked in
+   * the middle of a restore, the restore behavior is undefined.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EncryptionInfo> encryptionInformation;
+
+  /**
    * Required for the CreateBackup operation. The expiration time of the backup, with microseconds
    * granularity that must be at least 6 hours and at most 366 days from the time the CreateBackup
    * request is processed. Once the `expire_time` has passed, the backup is eligible to be
@@ -208,6 +219,31 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setEncryptionInfo(EncryptionInfo encryptionInfo) {
     this.encryptionInfo = encryptionInfo;
+    return this;
+  }
+
+  /**
+   * Output only. The encryption information for the backup, whether it is protected by one or more
+   * KMS keys. The information includes all Cloud KMS key versions used to encrypt the backup. The
+   * `encryption_status' field inside of each `EncryptionInfo` is not populated. At least one of the
+   * key versions must be available for the backup to be restored. If a key version is revoked in
+   * the middle of a restore, the restore behavior is undefined.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EncryptionInfo> getEncryptionInformation() {
+    return encryptionInformation;
+  }
+
+  /**
+   * Output only. The encryption information for the backup, whether it is protected by one or more
+   * KMS keys. The information includes all Cloud KMS key versions used to encrypt the backup. The
+   * `encryption_status' field inside of each `EncryptionInfo` is not populated. At least one of the
+   * key versions must be available for the backup to be restored. If a key version is revoked in
+   * the middle of a restore, the restore behavior is undefined.
+   * @param encryptionInformation encryptionInformation or {@code null} for none
+   */
+  public Backup setEncryptionInformation(java.util.List<EncryptionInfo> encryptionInformation) {
+    this.encryptionInformation = encryptionInformation;
     return this;
   }
 

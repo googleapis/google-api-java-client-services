@@ -52,6 +52,14 @@ public final class NodeConfigDefaults extends com.google.api.client.json.Generic
   private NodePoolLoggingConfig loggingConfig;
 
   /**
+   * NodeKubeletConfig controls the defaults for new node-pools. Currently only
+   * `insecure_kubelet_readonly_port_enabled` can be set here.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeKubeletConfig nodeKubeletConfig;
+
+  /**
    * Parameters for containerd customization.
    * @return value or {@code null} for none
    */
@@ -99,6 +107,25 @@ public final class NodeConfigDefaults extends com.google.api.client.json.Generic
    */
   public NodeConfigDefaults setLoggingConfig(NodePoolLoggingConfig loggingConfig) {
     this.loggingConfig = loggingConfig;
+    return this;
+  }
+
+  /**
+   * NodeKubeletConfig controls the defaults for new node-pools. Currently only
+   * `insecure_kubelet_readonly_port_enabled` can be set here.
+   * @return value or {@code null} for none
+   */
+  public NodeKubeletConfig getNodeKubeletConfig() {
+    return nodeKubeletConfig;
+  }
+
+  /**
+   * NodeKubeletConfig controls the defaults for new node-pools. Currently only
+   * `insecure_kubelet_readonly_port_enabled` can be set here.
+   * @param nodeKubeletConfig nodeKubeletConfig or {@code null} for none
+   */
+  public NodeConfigDefaults setNodeKubeletConfig(NodeKubeletConfig nodeKubeletConfig) {
+    this.nodeKubeletConfig = nodeKubeletConfig;
     return this;
   }
 

@@ -66,6 +66,13 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
   private java.lang.String ascsUri;
 
   /**
+   * Optional. Instance number of the ERS instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ersInstanceNumber;
+
+  /**
    * Optional. Kernel version for Netweaver running in the system.
    * The value may be {@code null}.
    */
@@ -164,6 +171,23 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
    */
   public SapDiscoveryComponentApplicationProperties setAscsUri(java.lang.String ascsUri) {
     this.ascsUri = ascsUri;
+    return this;
+  }
+
+  /**
+   * Optional. Instance number of the ERS instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getErsInstanceNumber() {
+    return ersInstanceNumber;
+  }
+
+  /**
+   * Optional. Instance number of the ERS instance.
+   * @param ersInstanceNumber ersInstanceNumber or {@code null} for none
+   */
+  public SapDiscoveryComponentApplicationProperties setErsInstanceNumber(java.lang.String ersInstanceNumber) {
+    this.ersInstanceNumber = ersInstanceNumber;
     return this;
   }
 

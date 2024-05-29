@@ -1597,11 +1597,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * To search only cases updated after a certain date, use `update_time` restricted with that
        * particular date, time, and timezone in ISO datetime format. For example,
        * `update_time>"2020-01-01T00:00:00-05:00"`. `update_time` only supports the greater than
-       * operator (`>`). Examples: - `organization="organizations/123456789"` - `project="projects
-       * /my-project-id"` - `project="projects/123456789"` - `organization="organizations/123456789"
-       * AND state=CLOSED` - `project="projects/my-project-id" AND
-       * creator.email="tester@example.com"` - `project="projects/my-project-id" AND (priority=P0 OR
-       * priority=P1)`
+       * operator (`>`). Examples: - `organization="organizations/123456789"` -
+       * `project="projects/my-project-id"` - `project="projects/123456789"` -
+       * `organization="organizations/123456789" AND state=CLOSED` - `project="projects/my-project-
+       * id" AND creator.email="tester@example.com"` - `project="projects/my-project-id" AND
+       * (priority=P0 OR priority=P1)`
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
@@ -1637,11 +1637,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * To search only cases updated after a certain date, use `update_time` restricted with that
        * particular date, time, and timezone in ISO datetime format. For example,
        * `update_time>"2020-01-01T00:00:00-05:00"`. `update_time` only supports the greater than
-       * operator (`>`). Examples: - `organization="organizations/123456789"` - `project="projects
-       * /my-project-id"` - `project="projects/123456789"` - `organization="organizations/123456789"
-       * AND state=CLOSED` - `project="projects/my-project-id" AND
-       * creator.email="tester@example.com"` - `project="projects/my-project-id" AND (priority=P0 OR
-       * priority=P1)`
+       * operator (`>`). Examples: - `organization="organizations/123456789"` -
+       * `project="projects/my-project-id"` - `project="projects/123456789"` -
+       * `organization="organizations/123456789" AND state=CLOSED` - `project="projects/my-project-
+       * id" AND creator.email="tester@example.com"` - `project="projects/my-project-id" AND
+       * (priority=P0 OR priority=P1)`
        */
       public Search setQuery(java.lang.String query) {
         this.query = query;
@@ -1675,11 +1675,11 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
     public class Attachments {
 
       /**
-       * List all the attachments associated with a support case. EXAMPLES: cURL: ```shell case="projects
-       * /some-project/cases/23598314" curl \ --header "Authorization: Bearer $(gcloud auth print-access-
-       * token)" \ "https://cloudsupport.googleapis.com/v2/$case/attachments" ``` Python: ```python import
-       * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
-       * serviceName="cloudsupport", version=api_version,
+       * List all the attachments associated with a support case. EXAMPLES: cURL: ```shell
+       * case="projects/some-project/cases/23598314" curl \ --header "Authorization: Bearer $(gcloud auth
+       * print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$case/attachments" ``` Python:
+       * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
        * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
        * ) request = ( supportApiService.cases() .attachments() .list(parent="projects/some-
        * project/cases/43595344") ) print(request.execute()) ```

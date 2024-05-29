@@ -46,7 +46,8 @@ public final class TableReplicationInfo extends com.google.api.client.json.Gener
   private ErrorProto replicationError;
 
   /**
-   * Required. Specifies the interval at which the source table is polled for updates.
+   * Optional. Specifies the interval at which the source table is polled for updates. It's
+   * Optional. If not specified, default replication interval would be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -103,7 +104,8 @@ public final class TableReplicationInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Specifies the interval at which the source table is polled for updates.
+   * Optional. Specifies the interval at which the source table is polled for updates. It's
+   * Optional. If not specified, default replication interval would be applied.
    * @return value or {@code null} for none
    */
   public java.lang.Long getReplicationIntervalMs() {
@@ -111,7 +113,8 @@ public final class TableReplicationInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Specifies the interval at which the source table is polled for updates.
+   * Optional. Specifies the interval at which the source table is polled for updates. It's
+   * Optional. If not specified, default replication interval would be applied.
    * @param replicationIntervalMs replicationIntervalMs or {@code null} for none
    */
   public TableReplicationInfo setReplicationIntervalMs(java.lang.Long replicationIntervalMs) {

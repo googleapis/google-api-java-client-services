@@ -93,6 +93,13 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private AddSlicerResponse addSlicer;
 
   /**
+   * A reply from cancelling data source object refreshes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CancelDataSourceRefreshResponse cancelDataSourceRefresh;
+
+  /**
    * A reply from creating a developer metadata entry.
    * The value may be {@code null}.
    */
@@ -340,6 +347,23 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   public Response setAddSlicer(AddSlicerResponse addSlicer) {
     this.addSlicer = addSlicer;
+    return this;
+  }
+
+  /**
+   * A reply from cancelling data source object refreshes.
+   * @return value or {@code null} for none
+   */
+  public CancelDataSourceRefreshResponse getCancelDataSourceRefresh() {
+    return cancelDataSourceRefresh;
+  }
+
+  /**
+   * A reply from cancelling data source object refreshes.
+   * @param cancelDataSourceRefresh cancelDataSourceRefresh or {@code null} for none
+   */
+  public Response setCancelDataSourceRefresh(CancelDataSourceRefreshResponse cancelDataSourceRefresh) {
+    this.cancelDataSourceRefresh = cancelDataSourceRefresh;
     return this;
   }
 

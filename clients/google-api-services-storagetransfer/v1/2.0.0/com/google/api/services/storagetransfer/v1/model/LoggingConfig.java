@@ -17,12 +17,9 @@
 package com.google.api.services.storagetransfer.v1.model;
 
 /**
- * Specifies the logging behavior for transfer operations. For cloud-to-cloud transfers, logs are
- * sent to Cloud Logging. See [Read transfer logs](https://cloud.google.com/storage-transfer/docs
- * /read-transfer-logs) for details. For transfers to or from a POSIX file system, logs are stored
- * in the Cloud Storage bucket that is the source or sink of the transfer. See [Managing Transfer
- * for on-premises jobs] (https://cloud.google.com/storage-transfer/docs/managing-on-prem-jobs
- * #viewing-logs) for details.
+ * Specifies the logging behavior for transfer operations. Logs can be sent to Cloud Logging for all
+ * transfer types. See [Read transfer logs](https://cloud.google.com/storage-transfer/docs/read-
+ * transfer-logs) for details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:
@@ -35,32 +32,34 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class LoggingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer
-   * logs for this transfer.
+   * For PosixFilesystem transfers, enables [file system transfer
+   * logs](https://cloud.google.com/storage-transfer/docs/on-prem-transfer-log-format) instead of,
+   * or in addition to, Cloud Logging. This option ignores [LoggableAction] and
+   * [LoggableActionState]. If these are set, Cloud Logging will also be enabled for this transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableOnpremGcsTransferLogs;
 
   /**
-   * States in which `log_actions` are logged. If empty, no logs are generated. Not supported for
-   * transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+   * States in which `log_actions` are logged. If empty, no logs are generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> logActionStates;
 
   /**
-   * Specifies the actions to be logged. If empty, no logs are generated. Not supported for
-   * transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+   * Specifies the actions to be logged. If empty, no logs are generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> logActions;
 
   /**
-   * For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer
-   * logs for this transfer.
+   * For PosixFilesystem transfers, enables [file system transfer
+   * logs](https://cloud.google.com/storage-transfer/docs/on-prem-transfer-log-format) instead of,
+   * or in addition to, Cloud Logging. This option ignores [LoggableAction] and
+   * [LoggableActionState]. If these are set, Cloud Logging will also be enabled for this transfer.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableOnpremGcsTransferLogs() {
@@ -68,8 +67,10 @@ public final class LoggingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer
-   * logs for this transfer.
+   * For PosixFilesystem transfers, enables [file system transfer
+   * logs](https://cloud.google.com/storage-transfer/docs/on-prem-transfer-log-format) instead of,
+   * or in addition to, Cloud Logging. This option ignores [LoggableAction] and
+   * [LoggableActionState]. If these are set, Cloud Logging will also be enabled for this transfer.
    * @param enableOnpremGcsTransferLogs enableOnpremGcsTransferLogs or {@code null} for none
    */
   public LoggingConfig setEnableOnpremGcsTransferLogs(java.lang.Boolean enableOnpremGcsTransferLogs) {
@@ -78,8 +79,7 @@ public final class LoggingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * States in which `log_actions` are logged. If empty, no logs are generated. Not supported for
-   * transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+   * States in which `log_actions` are logged. If empty, no logs are generated.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLogActionStates() {
@@ -87,8 +87,7 @@ public final class LoggingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * States in which `log_actions` are logged. If empty, no logs are generated. Not supported for
-   * transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+   * States in which `log_actions` are logged. If empty, no logs are generated.
    * @param logActionStates logActionStates or {@code null} for none
    */
   public LoggingConfig setLogActionStates(java.util.List<java.lang.String> logActionStates) {
@@ -97,8 +96,7 @@ public final class LoggingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specifies the actions to be logged. If empty, no logs are generated. Not supported for
-   * transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+   * Specifies the actions to be logged. If empty, no logs are generated.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLogActions() {
@@ -106,8 +104,7 @@ public final class LoggingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specifies the actions to be logged. If empty, no logs are generated. Not supported for
-   * transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+   * Specifies the actions to be logged. If empty, no logs are generated.
    * @param logActions logActions or {@code null} for none
    */
   public LoggingConfig setLogActions(java.util.List<java.lang.String> logActions) {

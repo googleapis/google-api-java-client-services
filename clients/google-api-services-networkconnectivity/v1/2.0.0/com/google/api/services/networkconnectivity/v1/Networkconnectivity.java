@@ -3075,6 +3075,223 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               }
             }
             /**
+             * Updates the parameters of a Network Connectivity Center group.
+             *
+             * Create a request for the method "groups.patch".
+             *
+             * This request holds the parameters needed by the networkconnectivity server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Immutable. The name of the group. Group names must be unique. They use the following form:
+             *        `projects/{project_number}/locations/global/hubs/{hub}/groups/{group_id}`
+             * @param content the {@link com.google.api.services.networkconnectivity.v1.model.Group}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.Group content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+/groups/[^/]+$");
+
+              /**
+               * Updates the parameters of a Network Connectivity Center group.
+               *
+               * Create a request for the method "groups.patch".
+               *
+               * This request holds the parameters needed by the the networkconnectivity server.  After setting
+               * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Immutable. The name of the group. Group names must be unique. They use the following form:
+             *        `projects/{project_number}/locations/global/hubs/{hub}/groups/{group_id}`
+               * @param content the {@link com.google.api.services.networkconnectivity.v1.model.Group}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.Group content) {
+                super(Networkconnectivity.this, "PATCH", REST_PATH, content, com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/global/hubs/[^/]+/groups/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Immutable. The name of the group. Group names must be unique. They use the
+               * following form:
+               * `projects/{project_number}/locations/global/hubs/{hub}/groups/{group_id}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Immutable. The name of the group. Group names must be unique. They use the following form:
+             `projects/{project_number}/locations/global/hubs/{hub}/groups/{group_id}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Immutable. The name of the group. Group names must be unique. They use the
+               * following form:
+               * `projects/{project_number}/locations/global/hubs/{hub}/groups/{group_id}`
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/global/hubs/[^/]+/groups/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. A request ID to identify requests. Specify a unique request ID so that if
+               * you must retry your request, the server knows to ignore the request if it has
+               * already been completed. The server guarantees that a request doesn't result in
+               * creation of duplicate commitments for at least 60 minutes. For example, consider a
+               * situation where you make an initial request and the request times out. If you make
+               * the request again with the same request ID, the server can check to see whether the
+               * original operation was received. If it was, the server ignores the second request.
+               * This behavior prevents clients from mistakenly creating duplicate commitments. The
+               * request ID must be a valid UUID, with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String requestId;
+
+              /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+             your request, the server knows to ignore the request if it has already been completed. The server
+             guarantees that a request doesn't result in creation of duplicate commitments for at least 60
+             minutes. For example, consider a situation where you make an initial request and the request times
+             out. If you make the request again with the same request ID, the server can check to see whether
+             the original operation was received. If it was, the server ignores the second request. This
+             behavior prevents clients from mistakenly creating duplicate commitments. The request ID must be a
+             valid UUID, with the exception that zero UUID is not supported
+             (00000000-0000-0000-0000-000000000000).
+               */
+              public java.lang.String getRequestId() {
+                return requestId;
+              }
+
+              /**
+               * Optional. A request ID to identify requests. Specify a unique request ID so that if
+               * you must retry your request, the server knows to ignore the request if it has
+               * already been completed. The server guarantees that a request doesn't result in
+               * creation of duplicate commitments for at least 60 minutes. For example, consider a
+               * situation where you make an initial request and the request times out. If you make
+               * the request again with the same request ID, the server can check to see whether the
+               * original operation was received. If it was, the server ignores the second request.
+               * This behavior prevents clients from mistakenly creating duplicate commitments. The
+               * request ID must be a valid UUID, with the exception that zero UUID is not supported
+               * (00000000-0000-0000-0000-000000000000).
+               */
+              public Patch setRequestId(java.lang.String requestId) {
+                this.requestId = requestId;
+                return this;
+              }
+
+              /**
+               * Optional. In the case of an update to an existing group, field mask is used to
+               * specify the fields to be overwritten. The fields specified in the update_mask are
+               * relative to the resource, not the full request. A field is overwritten if it is in
+               * the mask. If the user does not provide a mask, then all fields are overwritten.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Optional. In the case of an update to an existing group, field mask is used to specify the fields
+             to be overwritten. The fields specified in the update_mask are relative to the resource, not the
+             full request. A field is overwritten if it is in the mask. If the user does not provide a mask,
+             then all fields are overwritten.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * Optional. In the case of an update to an existing group, field mask is used to
+               * specify the fields to be overwritten. The fields specified in the update_mask are
+               * relative to the resource, not the full request. A field is overwritten if it is in
+               * the mask. If the user does not provide a mask, then all fields are overwritten.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+            /**
              * Sets the access control policy on the specified resource. Replaces any existing policy. Can
              * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *

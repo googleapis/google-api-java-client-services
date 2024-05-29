@@ -71,6 +71,26 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Optional parameters passed to the StepAction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Param> params;
+
+  static {
+    // hack to force ProGuard to consider Param used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Param.class);
+  }
+
+  /**
+   * Optional. Optional reference to a remote StepAction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StepRef ref;
+
+  /**
    * The contents of an executable file to execute.
    * The value may be {@code null}.
    */
@@ -189,6 +209,40 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Optional parameters passed to the StepAction.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Param> getParams() {
+    return params;
+  }
+
+  /**
+   * Optional. Optional parameters passed to the StepAction.
+   * @param params params or {@code null} for none
+   */
+  public Step setParams(java.util.List<Param> params) {
+    this.params = params;
+    return this;
+  }
+
+  /**
+   * Optional. Optional reference to a remote StepAction.
+   * @return value or {@code null} for none
+   */
+  public StepRef getRef() {
+    return ref;
+  }
+
+  /**
+   * Optional. Optional reference to a remote StepAction.
+   * @param ref ref or {@code null} for none
+   */
+  public Step setRef(StepRef ref) {
+    this.ref = ref;
     return this;
   }
 

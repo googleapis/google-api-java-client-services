@@ -61,8 +61,8 @@ public final class GoogleCloudSecuritycenterV2CloudArmor extends com.google.api.
   private GoogleCloudSecuritycenterV2Requests requests;
 
   /**
-   * Information about the [Google Cloud Armor security policy](https://cloud.google.com/armor/docs
-   * /security-policy-overview) relevant to the finding.
+   * Information about the [Google Cloud Armor security
+   * policy](https://cloud.google.com/armor/docs/security-policy-overview) relevant to the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,8 +149,8 @@ public final class GoogleCloudSecuritycenterV2CloudArmor extends com.google.api.
   }
 
   /**
-   * Information about the [Google Cloud Armor security policy](https://cloud.google.com/armor/docs
-   * /security-policy-overview) relevant to the finding.
+   * Information about the [Google Cloud Armor security
+   * policy](https://cloud.google.com/armor/docs/security-policy-overview) relevant to the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SecurityPolicy getSecurityPolicy() {
@@ -158,8 +158,8 @@ public final class GoogleCloudSecuritycenterV2CloudArmor extends com.google.api.
   }
 
   /**
-   * Information about the [Google Cloud Armor security policy](https://cloud.google.com/armor/docs
-   * /security-policy-overview) relevant to the finding.
+   * Information about the [Google Cloud Armor security
+   * policy](https://cloud.google.com/armor/docs/security-policy-overview) relevant to the finding.
    * @param securityPolicy securityPolicy or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2CloudArmor setSecurityPolicy(GoogleCloudSecuritycenterV2SecurityPolicy securityPolicy) {

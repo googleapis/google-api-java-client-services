@@ -64,6 +64,15 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   private java.lang.String wifiDirectSettings;
 
   /**
+   * Restrictions on which Wi-Fi SSIDs the device can connect to. Note that this does not affect
+   * which networks can be configured on the device. Supported on company-owned devices running
+   * Android 13 and above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WifiSsidPolicy wifiSsidPolicy;
+
+  /**
    * Controls Wi-Fi configuring privileges. Based on the option set, user will have either full or
    * limited or no control in configuring Wi-Fi networks.
    * @return value or {@code null} for none
@@ -136,6 +145,27 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
    */
   public DeviceConnectivityManagement setWifiDirectSettings(java.lang.String wifiDirectSettings) {
     this.wifiDirectSettings = wifiDirectSettings;
+    return this;
+  }
+
+  /**
+   * Restrictions on which Wi-Fi SSIDs the device can connect to. Note that this does not affect
+   * which networks can be configured on the device. Supported on company-owned devices running
+   * Android 13 and above.
+   * @return value or {@code null} for none
+   */
+  public WifiSsidPolicy getWifiSsidPolicy() {
+    return wifiSsidPolicy;
+  }
+
+  /**
+   * Restrictions on which Wi-Fi SSIDs the device can connect to. Note that this does not affect
+   * which networks can be configured on the device. Supported on company-owned devices running
+   * Android 13 and above.
+   * @param wifiSsidPolicy wifiSsidPolicy or {@code null} for none
+   */
+  public DeviceConnectivityManagement setWifiSsidPolicy(WifiSsidPolicy wifiSsidPolicy) {
+    this.wifiSsidPolicy = wifiSsidPolicy;
     return this;
   }
 

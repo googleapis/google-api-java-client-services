@@ -17,7 +17,7 @@
 package com.google.api.services.admob.v1beta.model;
 
 /**
- * The streaming response for the AdMob mediation report where the first response contains the
+ * The streaming response for the AdMob Mediation report where the first response contains the
  * report header, then a stream of row responses, and finally a footer as the last response message.
  * For example: [{ "header": { "date_range": { "start_date": {"year": 2018, "month": 9, "day": 1},
  * "end_date": {"year": 2018, "month": 9, "day": 1} }, "localization_settings": { "currency_code":

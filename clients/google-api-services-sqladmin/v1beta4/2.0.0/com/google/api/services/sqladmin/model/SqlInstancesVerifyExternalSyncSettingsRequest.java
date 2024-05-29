@@ -30,8 +30,9 @@ package com.google.api.services.sqladmin.model;
 public final class SqlInstancesVerifyExternalSyncSettingsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. MigrationType field decides if the migration is a physical file based migration or
-   * logical migration
+   * Optional. MigrationType configures the migration to use physical files or logical dump files.
+   * If not set, then the logical dump file configuration is used. Valid values are `LOGICAL` or
+   * `PHYSICAL`. Only applicable to MySQL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,7 @@ public final class SqlInstancesVerifyExternalSyncSettingsRequest extends com.goo
   private java.lang.String syncMode;
 
   /**
-   * Optional. Parallel level for initial data sync. Currently only applicable for PostgreSQL.
+   * Optional. Parallel level for initial data sync. Only applicable for PostgreSQL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +74,9 @@ public final class SqlInstancesVerifyExternalSyncSettingsRequest extends com.goo
   private java.lang.Boolean verifyReplicationOnly;
 
   /**
-   * Optional. MigrationType field decides if the migration is a physical file based migration or
-   * logical migration
+   * Optional. MigrationType configures the migration to use physical files or logical dump files.
+   * If not set, then the logical dump file configuration is used. Valid values are `LOGICAL` or
+   * `PHYSICAL`. Only applicable to MySQL.
    * @return value or {@code null} for none
    */
   public java.lang.String getMigrationType() {
@@ -82,8 +84,9 @@ public final class SqlInstancesVerifyExternalSyncSettingsRequest extends com.goo
   }
 
   /**
-   * Optional. MigrationType field decides if the migration is a physical file based migration or
-   * logical migration
+   * Optional. MigrationType configures the migration to use physical files or logical dump files.
+   * If not set, then the logical dump file configuration is used. Valid values are `LOGICAL` or
+   * `PHYSICAL`. Only applicable to MySQL.
    * @param migrationType migrationType or {@code null} for none
    */
   public SqlInstancesVerifyExternalSyncSettingsRequest setMigrationType(java.lang.String migrationType) {
@@ -126,7 +129,7 @@ public final class SqlInstancesVerifyExternalSyncSettingsRequest extends com.goo
   }
 
   /**
-   * Optional. Parallel level for initial data sync. Currently only applicable for PostgreSQL.
+   * Optional. Parallel level for initial data sync. Only applicable for PostgreSQL.
    * @return value or {@code null} for none
    */
   public java.lang.String getSyncParallelLevel() {
@@ -134,7 +137,7 @@ public final class SqlInstancesVerifyExternalSyncSettingsRequest extends com.goo
   }
 
   /**
-   * Optional. Parallel level for initial data sync. Currently only applicable for PostgreSQL.
+   * Optional. Parallel level for initial data sync. Only applicable for PostgreSQL.
    * @param syncParallelLevel syncParallelLevel or {@code null} for none
    */
   public SqlInstancesVerifyExternalSyncSettingsRequest setSyncParallelLevel(java.lang.String syncParallelLevel) {

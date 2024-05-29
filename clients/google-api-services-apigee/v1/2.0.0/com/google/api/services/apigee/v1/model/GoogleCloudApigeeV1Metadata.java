@@ -38,8 +38,8 @@ public final class GoogleCloudApigeeV1Metadata extends com.google.api.client.jso
 
   /**
    * List of additional information such as data source, if result was truncated. For example: ```
-   * "notices": [ "Source:Postgres", "PG Host:uappg0rw.e2e.apigeeks.net", "query served by:4b64601e-
-   * 40de-4eb1-bfb9-eeee7ac929ed", "Table used: edge.api.uapgroup2.agg_api" ]```
+   * "notices": [ "Source:Postgres", "PG Host:uappg0rw.e2e.apigeeks.net", "query served
+   * by:4b64601e-40de-4eb1-bfb9-eeee7ac929ed", "Table used: edge.api.uapgroup2.agg_api" ]```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +64,8 @@ public final class GoogleCloudApigeeV1Metadata extends com.google.api.client.jso
 
   /**
    * List of additional information such as data source, if result was truncated. For example: ```
-   * "notices": [ "Source:Postgres", "PG Host:uappg0rw.e2e.apigeeks.net", "query served by:4b64601e-
-   * 40de-4eb1-bfb9-eeee7ac929ed", "Table used: edge.api.uapgroup2.agg_api" ]```
+   * "notices": [ "Source:Postgres", "PG Host:uappg0rw.e2e.apigeeks.net", "query served
+   * by:4b64601e-40de-4eb1-bfb9-eeee7ac929ed", "Table used: edge.api.uapgroup2.agg_api" ]```
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNotices() {
@@ -74,8 +74,8 @@ public final class GoogleCloudApigeeV1Metadata extends com.google.api.client.jso
 
   /**
    * List of additional information such as data source, if result was truncated. For example: ```
-   * "notices": [ "Source:Postgres", "PG Host:uappg0rw.e2e.apigeeks.net", "query served by:4b64601e-
-   * 40de-4eb1-bfb9-eeee7ac929ed", "Table used: edge.api.uapgroup2.agg_api" ]```
+   * "notices": [ "Source:Postgres", "PG Host:uappg0rw.e2e.apigeeks.net", "query served
+   * by:4b64601e-40de-4eb1-bfb9-eeee7ac929ed", "Table used: edge.api.uapgroup2.agg_api" ]```
    * @param notices notices or {@code null} for none
    */
   public GoogleCloudApigeeV1Metadata setNotices(java.util.List<java.lang.String> notices) {

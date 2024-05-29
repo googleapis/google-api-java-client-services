@@ -41,6 +41,14 @@ public final class GooglePrivacyDlpV2DiscoveryBigQueryFilter extends com.google.
   private GooglePrivacyDlpV2AllOtherBigQueryTables otherTables;
 
   /**
+   * The table to scan. Discovery configurations including this can only include one DiscoveryTarget
+   * (the DiscoveryTarget with this TableReference).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2TableReference tableReference;
+
+  /**
    * A specific set of tables for this filter to apply to. A table collection must be specified in
    * only one filter per config. If a table id or dataset is empty, Cloud DLP assumes all tables in
    * that collection must be profiled. Must specify a project ID.
@@ -67,6 +75,25 @@ public final class GooglePrivacyDlpV2DiscoveryBigQueryFilter extends com.google.
    */
   public GooglePrivacyDlpV2DiscoveryBigQueryFilter setOtherTables(GooglePrivacyDlpV2AllOtherBigQueryTables otherTables) {
     this.otherTables = otherTables;
+    return this;
+  }
+
+  /**
+   * The table to scan. Discovery configurations including this can only include one DiscoveryTarget
+   * (the DiscoveryTarget with this TableReference).
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2TableReference getTableReference() {
+    return tableReference;
+  }
+
+  /**
+   * The table to scan. Discovery configurations including this can only include one DiscoveryTarget
+   * (the DiscoveryTarget with this TableReference).
+   * @param tableReference tableReference or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DiscoveryBigQueryFilter setTableReference(GooglePrivacyDlpV2TableReference tableReference) {
+    this.tableReference = tableReference;
     return this;
   }
 

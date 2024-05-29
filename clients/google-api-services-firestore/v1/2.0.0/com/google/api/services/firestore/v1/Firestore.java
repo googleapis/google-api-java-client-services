@@ -1056,6 +1056,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
+        /** If true, also returns deleted resources. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showDeleted;
+
+        /** If true, also returns deleted resources.
+         */
+        public java.lang.Boolean getShowDeleted() {
+          return showDeleted;
+        }
+
+        /** If true, also returns deleted resources. */
+        public List setShowDeleted(java.lang.Boolean showDeleted) {
+          this.showDeleted = showDeleted;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
@@ -4607,8 +4623,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * @param parent Required. The parent resource name. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents` or
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-         *        /my-database/documents/chatrooms/my-chatroom`
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-
+         *        project/databases/my-database/documents/chatrooms/my-chatroom`
          * @param collectionId Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
          *        This is optional, and when not provided, Firestore will list documents from all
          *        collections under the provided `parent`.
@@ -4640,8 +4656,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * @param parent Required. The parent resource name. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents` or
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-         *        /my-database/documents/chatrooms/my-chatroom`
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-
+         *        project/databases/my-database/documents/chatrooms/my-chatroom`
            * @param collectionId Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
          *        This is optional, and when not provided, Firestore will list documents from all
          *        collections under the provided `parent`.
@@ -4727,16 +4743,16 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Required. The parent resource name. In the format:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-           * /my-database/documents/chatrooms/my-chatroom`
+           * `projects/my-project/databases/my-database/documents` or `projects/my-
+           * project/databases/my-database/documents/chatrooms/my-chatroom`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource name. In the format:
          `projects/{project_id}/databases/{database_id}/documents` or
-         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example: `projects
-         /my-project/databases/my-database/documents` or `projects/my-project/databases/my-
+         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         `projects/my-project/databases/my-database/documents` or `projects/my-project/databases/my-
          database/documents/chatrooms/my-chatroom`
            */
           public java.lang.String getParent() {
@@ -4747,8 +4763,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Required. The parent resource name. In the format:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-           * /my-database/documents/chatrooms/my-chatroom`
+           * `projects/my-project/databases/my-database/documents` or `projects/my-
+           * project/databases/my-database/documents/chatrooms/my-chatroom`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5079,8 +5095,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           private java.lang.String parent;
 
           /** Required. The parent document. In the format:
-         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example: `projects
-         /my-project/databases/my-database/documents/chatrooms/my-chatroom`
+         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
            */
           public java.lang.String getParent() {
             return parent;
@@ -5117,8 +5133,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * @param parent Required. The parent resource name. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents` or
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-         *        /my-database/documents/chatrooms/my-chatroom`
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-
+         *        project/databases/my-database/documents/chatrooms/my-chatroom`
          * @param collectionId Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
          *        This is optional, and when not provided, Firestore will list documents from all
          *        collections under the provided `parent`.
@@ -5151,8 +5167,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * @param parent Required. The parent resource name. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents` or
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-         *        /my-database/documents/chatrooms/my-chatroom`
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-
+         *        project/databases/my-database/documents/chatrooms/my-chatroom`
            * @param collectionId Optional. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
          *        This is optional, and when not provided, Firestore will list documents from all
          *        collections under the provided `parent`.
@@ -5238,16 +5254,16 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Required. The parent resource name. In the format:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-           * /my-database/documents/chatrooms/my-chatroom`
+           * `projects/my-project/databases/my-database/documents` or `projects/my-
+           * project/databases/my-database/documents/chatrooms/my-chatroom`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource name. In the format:
          `projects/{project_id}/databases/{database_id}/documents` or
-         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example: `projects
-         /my-project/databases/my-database/documents` or `projects/my-project/databases/my-
+         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         `projects/my-project/databases/my-database/documents` or `projects/my-project/databases/my-
          database/documents/chatrooms/my-chatroom`
            */
           public java.lang.String getParent() {
@@ -5258,8 +5274,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Required. The parent resource name. In the format:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-           * /my-database/documents/chatrooms/my-chatroom`
+           * `projects/my-project/databases/my-database/documents` or `projects/my-
+           * project/databases/my-database/documents/chatrooms/my-chatroom`
            */
           public ListDocuments setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -6139,8 +6155,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * @param parent Required. The parent resource name. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents` or
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-         *        /my-database/documents/chatrooms/my-chatroom`
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-
+         *        project/databases/my-database/documents/chatrooms/my-chatroom`
          * @param content the {@link com.google.api.services.firestore.v1.model.RunAggregationQueryRequest}
          * @return the request
          */
@@ -6174,8 +6190,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * @param parent Required. The parent resource name. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents` or
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-         *        /my-database/documents/chatrooms/my-chatroom`
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-
+         *        project/databases/my-database/documents/chatrooms/my-chatroom`
            * @param content the {@link com.google.api.services.firestore.v1.model.RunAggregationQueryRequest}
            * @since 1.13
            */
@@ -6248,16 +6264,16 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Required. The parent resource name. In the format:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-           * /my-database/documents/chatrooms/my-chatroom`
+           * `projects/my-project/databases/my-database/documents` or `projects/my-
+           * project/databases/my-database/documents/chatrooms/my-chatroom`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource name. In the format:
          `projects/{project_id}/databases/{database_id}/documents` or
-         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example: `projects
-         /my-project/databases/my-database/documents` or `projects/my-project/databases/my-
+         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         `projects/my-project/databases/my-database/documents` or `projects/my-project/databases/my-
          database/documents/chatrooms/my-chatroom`
            */
           public java.lang.String getParent() {
@@ -6268,8 +6284,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Required. The parent resource name. In the format:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-           * /my-database/documents/chatrooms/my-chatroom`
+           * `projects/my-project/databases/my-database/documents` or `projects/my-
+           * project/databases/my-database/documents/chatrooms/my-chatroom`
            */
           public RunAggregationQuery setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -6297,8 +6313,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * @param parent Required. The parent resource name. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents` or
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-         *        /my-database/documents/chatrooms/my-chatroom`
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-
+         *        project/databases/my-database/documents/chatrooms/my-chatroom`
          * @param content the {@link com.google.api.services.firestore.v1.model.RunQueryRequest}
          * @return the request
          */
@@ -6329,8 +6345,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * @param parent Required. The parent resource name. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents` or
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-         *        /my-database/documents/chatrooms/my-chatroom`
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-
+         *        project/databases/my-database/documents/chatrooms/my-chatroom`
            * @param content the {@link com.google.api.services.firestore.v1.model.RunQueryRequest}
            * @since 1.13
            */
@@ -6403,16 +6419,16 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Required. The parent resource name. In the format:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-           * /my-database/documents/chatrooms/my-chatroom`
+           * `projects/my-project/databases/my-database/documents` or `projects/my-
+           * project/databases/my-database/documents/chatrooms/my-chatroom`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource name. In the format:
          `projects/{project_id}/databases/{database_id}/documents` or
-         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example: `projects
-         /my-project/databases/my-database/documents` or `projects/my-project/databases/my-
+         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         `projects/my-project/databases/my-database/documents` or `projects/my-project/databases/my-
          database/documents/chatrooms/my-chatroom`
            */
           public java.lang.String getParent() {
@@ -6423,8 +6439,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Required. The parent resource name. In the format:
            * `projects/{project_id}/databases/{database_id}/documents` or
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
-           * /my-database/documents/chatrooms/my-chatroom`
+           * `projects/my-project/databases/my-database/documents` or `projects/my-
+           * project/databases/my-database/documents/chatrooms/my-chatroom`
            */
           public RunQuery setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

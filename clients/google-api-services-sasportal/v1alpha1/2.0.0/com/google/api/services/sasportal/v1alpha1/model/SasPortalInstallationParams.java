@@ -58,12 +58,12 @@ public final class SasPortalInstallationParams extends com.google.api.client.jso
   private java.lang.Integer antennaDowntilt;
 
   /**
-   * Peak antenna gain in dBi. This parameter is an integer with a value between -127 and +128 (dBi)
-   * inclusive.
+   * Peak antenna gain in dBi. This parameter is a double with a value between -127 and +128 (dBi)
+   * inclusive. Part of Release 2 to support floating-point value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer antennaGain;
+  private java.lang.Double antennaGain;
 
   /**
    * If an external antenna is used, the antenna model is optionally provided in this field. The
@@ -214,20 +214,20 @@ public final class SasPortalInstallationParams extends com.google.api.client.jso
   }
 
   /**
-   * Peak antenna gain in dBi. This parameter is an integer with a value between -127 and +128 (dBi)
-   * inclusive.
+   * Peak antenna gain in dBi. This parameter is a double with a value between -127 and +128 (dBi)
+   * inclusive. Part of Release 2 to support floating-point value
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getAntennaGain() {
+  public java.lang.Double getAntennaGain() {
     return antennaGain;
   }
 
   /**
-   * Peak antenna gain in dBi. This parameter is an integer with a value between -127 and +128 (dBi)
-   * inclusive.
+   * Peak antenna gain in dBi. This parameter is a double with a value between -127 and +128 (dBi)
+   * inclusive. Part of Release 2 to support floating-point value
    * @param antennaGain antennaGain or {@code null} for none
    */
-  public SasPortalInstallationParams setAntennaGain(java.lang.Integer antennaGain) {
+  public SasPortalInstallationParams setAntennaGain(java.lang.Double antennaGain) {
     this.antennaGain = antennaGain;
     return this;
   }

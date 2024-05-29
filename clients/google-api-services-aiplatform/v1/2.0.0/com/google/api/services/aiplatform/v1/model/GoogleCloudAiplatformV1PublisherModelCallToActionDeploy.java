@@ -62,6 +62,13 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy exten
   private GoogleCloudAiplatformV1DedicatedResources dedicatedResources;
 
   /**
+   * Optional. The name of the deploy task (e.g., "text to image generation").
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deployTaskName;
+
+  /**
    * Optional. Large model reference. When this is set, model_artifact_spec is not needed.
    * The value may be {@code null}.
    */
@@ -170,6 +177,23 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy exten
    */
   public GoogleCloudAiplatformV1PublisherModelCallToActionDeploy setDedicatedResources(GoogleCloudAiplatformV1DedicatedResources dedicatedResources) {
     this.dedicatedResources = dedicatedResources;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the deploy task (e.g., "text to image generation").
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeployTaskName() {
+    return deployTaskName;
+  }
+
+  /**
+   * Optional. The name of the deploy task (e.g., "text to image generation").
+   * @param deployTaskName deployTaskName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PublisherModelCallToActionDeploy setDeployTaskName(java.lang.String deployTaskName) {
+    this.deployTaskName = deployTaskName;
     return this;
   }
 

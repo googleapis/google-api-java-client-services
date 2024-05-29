@@ -38,10 +38,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpecFacetK
   private java.lang.Boolean caseInsensitive;
 
   /**
-   * Only get facet values that contains the given strings. For example, suppose "category" has
-   * three values "Action > 2022", "Action > 2021" and "Sci-Fi > 2022". If set "contains" to "2022",
-   * the "category" facet only contains "Action > 2022" and "Sci-Fi > 2022". Only supported on
-   * textual fields. Maximum is 10.
+   * Only get facet values that contain the given strings. For example, suppose "category" has three
+   * values "Action > 2022", "Action > 2021" and "Sci-Fi > 2022". If set "contains" to "2022", the
+   * "category" facet only contains "Action > 2022" and "Sci-Fi > 2022". Only supported on textual
+   * fields. Maximum is 10.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,10 +120,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpecFacetK
   }
 
   /**
-   * Only get facet values that contains the given strings. For example, suppose "category" has
-   * three values "Action > 2022", "Action > 2021" and "Sci-Fi > 2022". If set "contains" to "2022",
-   * the "category" facet only contains "Action > 2022" and "Sci-Fi > 2022". Only supported on
-   * textual fields. Maximum is 10.
+   * Only get facet values that contain the given strings. For example, suppose "category" has three
+   * values "Action > 2022", "Action > 2021" and "Sci-Fi > 2022". If set "contains" to "2022", the
+   * "category" facet only contains "Action > 2022" and "Sci-Fi > 2022". Only supported on textual
+   * fields. Maximum is 10.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getContains() {
@@ -131,10 +131,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpecFacetK
   }
 
   /**
-   * Only get facet values that contains the given strings. For example, suppose "category" has
-   * three values "Action > 2022", "Action > 2021" and "Sci-Fi > 2022". If set "contains" to "2022",
-   * the "category" facet only contains "Action > 2022" and "Sci-Fi > 2022". Only supported on
-   * textual fields. Maximum is 10.
+   * Only get facet values that contain the given strings. For example, suppose "category" has three
+   * values "Action > 2022", "Action > 2021" and "Sci-Fi > 2022". If set "contains" to "2022", the
+   * "category" facet only contains "Action > 2022" and "Sci-Fi > 2022". Only supported on textual
+   * fields. Maximum is 10.
    * @param contains contains or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpecFacetKey setContains(java.util.List<java.lang.String> contains) {

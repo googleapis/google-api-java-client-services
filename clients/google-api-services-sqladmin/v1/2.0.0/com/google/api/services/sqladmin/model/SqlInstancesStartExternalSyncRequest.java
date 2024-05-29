@@ -30,8 +30,9 @@ package com.google.api.services.sqladmin.model;
 public final class SqlInstancesStartExternalSyncRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. MigrationType decides if the migration is a physical file based migration or logical
-   * migration.
+   * Optional. MigrationType configures the migration to use physical files or logical dump files.
+   * If not set, then the logical dump file configuration is used. Valid values are `LOGICAL` or
+   * `PHYSICAL`. Only applicable to MySQL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +67,9 @@ public final class SqlInstancesStartExternalSyncRequest extends com.google.api.c
   private java.lang.String syncParallelLevel;
 
   /**
-   * Optional. MigrationType decides if the migration is a physical file based migration or logical
-   * migration.
+   * Optional. MigrationType configures the migration to use physical files or logical dump files.
+   * If not set, then the logical dump file configuration is used. Valid values are `LOGICAL` or
+   * `PHYSICAL`. Only applicable to MySQL.
    * @return value or {@code null} for none
    */
   public java.lang.String getMigrationType() {
@@ -75,8 +77,9 @@ public final class SqlInstancesStartExternalSyncRequest extends com.google.api.c
   }
 
   /**
-   * Optional. MigrationType decides if the migration is a physical file based migration or logical
-   * migration.
+   * Optional. MigrationType configures the migration to use physical files or logical dump files.
+   * If not set, then the logical dump file configuration is used. Valid values are `LOGICAL` or
+   * `PHYSICAL`. Only applicable to MySQL.
    * @param migrationType migrationType or {@code null} for none
    */
   public SqlInstancesStartExternalSyncRequest setMigrationType(java.lang.String migrationType) {

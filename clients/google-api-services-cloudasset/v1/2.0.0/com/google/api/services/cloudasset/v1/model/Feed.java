@@ -36,8 +36,8 @@ public final class Feed extends com.google.api.client.json.GenericJson {
    * asset_names and asset_types. Only asset updates matching specified asset_names or asset_types
    * are exported to the feed. Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. For a list
-   * of the full names for supported asset types, see [Resource name format](/asset-inventory/docs
-   * /resource-name-format).
+   * of the full names for supported asset types, see [Resource name format](/asset-
+   * inventory/docs/resource-name-format).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,8 +111,8 @@ public final class Feed extends com.google.api.client.json.GenericJson {
    * asset_names and asset_types. Only asset updates matching specified asset_names or asset_types
    * are exported to the feed. Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. For a list
-   * of the full names for supported asset types, see [Resource name format](/asset-inventory/docs
-   * /resource-name-format).
+   * of the full names for supported asset types, see [Resource name format](/asset-
+   * inventory/docs/resource-name-format).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAssetNames() {
@@ -124,8 +124,8 @@ public final class Feed extends com.google.api.client.json.GenericJson {
    * asset_names and asset_types. Only asset updates matching specified asset_names or asset_types
    * are exported to the feed. Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. For a list
-   * of the full names for supported asset types, see [Resource name format](/asset-inventory/docs
-   * /resource-name-format).
+   * of the full names for supported asset types, see [Resource name format](/asset-
+   * inventory/docs/resource-name-format).
    * @param assetNames assetNames or {@code null} for none
    */
   public Feed setAssetNames(java.util.List<java.lang.String> assetNames) {

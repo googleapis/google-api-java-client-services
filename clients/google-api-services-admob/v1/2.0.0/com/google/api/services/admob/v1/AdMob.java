@@ -895,7 +895,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
     public class MediationReport {
 
       /**
-       * Generates an AdMob mediation report based on the provided report specification. Returns result of
+       * Generates an AdMob Mediation report based on the provided report specification. Returns result of
        * a server-side streaming RPC. The result is returned in a sequence of responses.
        *
        * Create a request for the method "mediationReport.generate".
@@ -921,7 +921,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Generates an AdMob mediation report based on the provided report specification. Returns result
+         * Generates an AdMob Mediation report based on the provided report specification. Returns result
          * of a server-side streaming RPC. The result is returned in a sequence of responses.
          *
          * Create a request for the method "mediationReport.generate".

@@ -51,8 +51,8 @@ public final class ListInstancePartitionsResponse extends com.google.api.client.
   private java.lang.String nextPageToken;
 
   /**
-   * The list of unreachable instance partitions. It includes the names of instance partitions whose
-   * metadata could not be retrieved within instance_partition_deadline.
+   * The list of unreachable instances or instance partitions. It includes the names of instances or
+   * instance partitions whose metadata could not be retrieved within instance_partition_deadline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +95,8 @@ public final class ListInstancePartitionsResponse extends com.google.api.client.
   }
 
   /**
-   * The list of unreachable instance partitions. It includes the names of instance partitions whose
-   * metadata could not be retrieved within instance_partition_deadline.
+   * The list of unreachable instances or instance partitions. It includes the names of instances or
+   * instance partitions whose metadata could not be retrieved within instance_partition_deadline.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -104,8 +104,8 @@ public final class ListInstancePartitionsResponse extends com.google.api.client.
   }
 
   /**
-   * The list of unreachable instance partitions. It includes the names of instance partitions whose
-   * metadata could not be retrieved within instance_partition_deadline.
+   * The list of unreachable instances or instance partitions. It includes the names of instances or
+   * instance partitions whose metadata could not be retrieved within instance_partition_deadline.
    * @param unreachable unreachable or {@code null} for none
    */
   public ListInstancePartitionsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

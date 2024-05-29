@@ -30,6 +30,13 @@ package com.google.api.services.monitoring.v1.model;
 public final class DashboardFilter extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether to apply this filter to new widgets by default
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean applyToNewWidgets;
+
+  /**
    * The specified filter type
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class DashboardFilter extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String templateVariable;
+
+  /**
+   * Whether to apply this filter to new widgets by default
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getApplyToNewWidgets() {
+    return applyToNewWidgets;
+  }
+
+  /**
+   * Whether to apply this filter to new widgets by default
+   * @param applyToNewWidgets applyToNewWidgets or {@code null} for none
+   */
+  public DashboardFilter setApplyToNewWidgets(java.lang.Boolean applyToNewWidgets) {
+    this.applyToNewWidgets = applyToNewWidgets;
+    return this;
+  }
 
   /**
    * The specified filter type

@@ -88,7 +88,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   /**
    * The DNS domain name for the public PTR record. You can set this field only if the
    * `setPublicPtr` field is enabled in accessConfig. If this field is unspecified in
-   * ipv6AccessConfig, a default PTR record will be createc for first IP in associated external IPv6
+   * ipv6AccessConfig, a default PTR record will be created for first IP in associated external IPv6
    * range.
    * The value may be {@code null}.
    */
@@ -250,7 +250,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   /**
    * The DNS domain name for the public PTR record. You can set this field only if the
    * `setPublicPtr` field is enabled in accessConfig. If this field is unspecified in
-   * ipv6AccessConfig, a default PTR record will be createc for first IP in associated external IPv6
+   * ipv6AccessConfig, a default PTR record will be created for first IP in associated external IPv6
    * range.
    * @return value or {@code null} for none
    */
@@ -261,7 +261,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   /**
    * The DNS domain name for the public PTR record. You can set this field only if the
    * `setPublicPtr` field is enabled in accessConfig. If this field is unspecified in
-   * ipv6AccessConfig, a default PTR record will be createc for first IP in associated external IPv6
+   * ipv6AccessConfig, a default PTR record will be created for first IP in associated external IPv6
    * range.
    * @param publicPtrDomainName publicPtrDomainName or {@code null} for none
    */

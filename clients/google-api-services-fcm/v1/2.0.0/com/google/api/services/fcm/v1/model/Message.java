@@ -54,9 +54,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Input only. Arbitrary key/value payload, which must be UTF-8 encoded. The key should not be a
-   * reserved word ("from", "message_type", or any word starting with "google" or "gcm"). When
-   * sending payloads containing only data fields to iOS devices, only normal priority (`"apns-
-   * priority": "5"`) is allowed in
+   * reserved word ("from", "message_type", or any word starting with "google." or
+   * "gcm.notification."). When sending payloads containing only data fields to iOS devices, only
+   * normal priority (`"apns-priority": "5"`) is allowed in
    * [`ApnsConfig`](/docs/reference/fcm/rest/v1/projects.messages#apnsconfig).
    * The value may be {@code null}.
    */
@@ -162,9 +162,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Input only. Arbitrary key/value payload, which must be UTF-8 encoded. The key should not be a
-   * reserved word ("from", "message_type", or any word starting with "google" or "gcm"). When
-   * sending payloads containing only data fields to iOS devices, only normal priority (`"apns-
-   * priority": "5"`) is allowed in
+   * reserved word ("from", "message_type", or any word starting with "google." or
+   * "gcm.notification."). When sending payloads containing only data fields to iOS devices, only
+   * normal priority (`"apns-priority": "5"`) is allowed in
    * [`ApnsConfig`](/docs/reference/fcm/rest/v1/projects.messages#apnsconfig).
    * @return value or {@code null} for none
    */
@@ -174,9 +174,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
    * Input only. Arbitrary key/value payload, which must be UTF-8 encoded. The key should not be a
-   * reserved word ("from", "message_type", or any word starting with "google" or "gcm"). When
-   * sending payloads containing only data fields to iOS devices, only normal priority (`"apns-
-   * priority": "5"`) is allowed in
+   * reserved word ("from", "message_type", or any word starting with "google." or
+   * "gcm.notification."). When sending payloads containing only data fields to iOS devices, only
+   * normal priority (`"apns-priority": "5"`) is allowed in
    * [`ApnsConfig`](/docs/reference/fcm/rest/v1/projects.messages#apnsconfig).
    * @param data data or {@code null} for none
    */

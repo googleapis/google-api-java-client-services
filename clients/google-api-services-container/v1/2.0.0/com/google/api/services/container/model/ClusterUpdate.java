@@ -289,6 +289,21 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ClusterNetworkPerformanceConfig desiredNetworkPerformanceConfig;
 
   /**
+   * The desired node kubelet config for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeKubeletConfig desiredNodeKubeletConfig;
+
+  /**
+   * The desired node kubelet config for all auto-provisioned node pools in autopilot clusters and
+   * node auto-provisioning enabled clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeKubeletConfig desiredNodePoolAutoConfigKubeletConfig;
+
+  /**
    * The desired network tags that apply to all auto-provisioned node pools in autopilot clusters
    * and node auto-provisioning enabled clusters.
    * The value may be {@code null}.
@@ -1065,6 +1080,42 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredNetworkPerformanceConfig(ClusterNetworkPerformanceConfig desiredNetworkPerformanceConfig) {
     this.desiredNetworkPerformanceConfig = desiredNetworkPerformanceConfig;
+    return this;
+  }
+
+  /**
+   * The desired node kubelet config for the cluster.
+   * @return value or {@code null} for none
+   */
+  public NodeKubeletConfig getDesiredNodeKubeletConfig() {
+    return desiredNodeKubeletConfig;
+  }
+
+  /**
+   * The desired node kubelet config for the cluster.
+   * @param desiredNodeKubeletConfig desiredNodeKubeletConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredNodeKubeletConfig(NodeKubeletConfig desiredNodeKubeletConfig) {
+    this.desiredNodeKubeletConfig = desiredNodeKubeletConfig;
+    return this;
+  }
+
+  /**
+   * The desired node kubelet config for all auto-provisioned node pools in autopilot clusters and
+   * node auto-provisioning enabled clusters.
+   * @return value or {@code null} for none
+   */
+  public NodeKubeletConfig getDesiredNodePoolAutoConfigKubeletConfig() {
+    return desiredNodePoolAutoConfigKubeletConfig;
+  }
+
+  /**
+   * The desired node kubelet config for all auto-provisioned node pools in autopilot clusters and
+   * node auto-provisioning enabled clusters.
+   * @param desiredNodePoolAutoConfigKubeletConfig desiredNodePoolAutoConfigKubeletConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredNodePoolAutoConfigKubeletConfig(NodeKubeletConfig desiredNodePoolAutoConfigKubeletConfig) {
+    this.desiredNodePoolAutoConfigKubeletConfig = desiredNodePoolAutoConfigKubeletConfig;
     return this;
   }
 

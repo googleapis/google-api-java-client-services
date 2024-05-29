@@ -17,8 +17,8 @@
 package com.google.api.services.containeranalysis.v1alpha1.model;
 
 /**
- * PackageInfoOccurrence represents an SPDX Package Information section: https://spdx.github.io
- * /spdx-spec/3-package-information/
+ * PackageInfoOccurrence represents an SPDX Package Information section:
+ * https://spdx.github.io/spdx-spec/3-package-information/
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation

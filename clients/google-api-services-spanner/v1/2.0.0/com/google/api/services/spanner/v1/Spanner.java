@@ -4890,6 +4890,52 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             return this;
           }
 
+          /**
+           * Optional. Specifies the KMS configuration for the one or more keys used to protect the
+           * backup. Values are of the form `projects//locations//keyRings//cryptoKeys/`. The keys
+           * referenced by kms_key_names must fully cover all regions of the backup's instance
+           * configuration. Some examples: * For single region instance configs, specify a single
+           * regional location KMS key. * For multi-regional instance configs of type
+           * GOOGLE_MANAGED, either specify a multi-regional location KMS key or multiple regional
+           * location KMS keys that cover all regions in the instance config. * For an instance
+           * config of type USER_MANAGED, please specify only regional location KMS keys to cover
+           * each region in the instance config. Multi-regional location KMS keys are not supported
+           * for USER_MANAGED instance configs.
+           */
+          @com.google.api.client.util.Key("encryptionConfig.kmsKeyNames")
+          private java.util.List<java.lang.String> encryptionConfigKmsKeyNames;
+
+          /** Optional. Specifies the KMS configuration for the one or more keys used to protect the backup.
+         Values are of the form `projects//locations//keyRings//cryptoKeys/`. The keys referenced by
+         kms_key_names must fully cover all regions of the backup's instance configuration. Some examples: *
+         For single region instance configs, specify a single regional location KMS key. * For multi-
+         regional instance configs of type GOOGLE_MANAGED, either specify a multi-regional location KMS key
+         or multiple regional location KMS keys that cover all regions in the instance config. * For an
+         instance config of type USER_MANAGED, please specify only regional location KMS keys to cover each
+         region in the instance config. Multi-regional location KMS keys are not supported for USER_MANAGED
+         instance configs.
+           */
+          public java.util.List<java.lang.String> getEncryptionConfigKmsKeyNames() {
+            return encryptionConfigKmsKeyNames;
+          }
+
+          /**
+           * Optional. Specifies the KMS configuration for the one or more keys used to protect the
+           * backup. Values are of the form `projects//locations//keyRings//cryptoKeys/`. The keys
+           * referenced by kms_key_names must fully cover all regions of the backup's instance
+           * configuration. Some examples: * For single region instance configs, specify a single
+           * regional location KMS key. * For multi-regional instance configs of type
+           * GOOGLE_MANAGED, either specify a multi-regional location KMS key or multiple regional
+           * location KMS keys that cover all regions in the instance config. * For an instance
+           * config of type USER_MANAGED, please specify only regional location KMS keys to cover
+           * each region in the instance config. Multi-regional location KMS keys are not supported
+           * for USER_MANAGED instance configs.
+           */
+          public Create setEncryptionConfigKmsKeyNames(java.util.List<java.lang.String> encryptionConfigKmsKeyNames) {
+            this.encryptionConfigKmsKeyNames = encryptionConfigKmsKeyNames;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -7021,6 +7067,156 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        */
       public class Databases {
 
+        /**
+         * ChangeQuorum is strictly restricted to databases that use dual region instance configurations.
+         * Initiates a background operation to change quorum a database from dual-region mode to single-
+         * region mode and vice versa. The returned long-running operation will have a name of the format
+         * `projects//instances//databases//operations/` and can be used to track execution of the
+         * ChangeQuorum. The metadata field type is ChangeQuorumMetadata. Authorization requires
+         * `spanner.databases.changequorum` permission on the resource database.
+         *
+         * Create a request for the method "databases.changequorum".
+         *
+         * This request holds the parameters needed by the spanner server.  After setting any optional
+         * parameters, call the {@link Changequorum#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the database in which to apply the ChangeQuorum. Values are of the form
+         *        `projects//instances//databases/`.
+         * @param content the {@link com.google.api.services.spanner.v1.model.ChangeQuorumRequest}
+         * @return the request
+         */
+        public Changequorum changequorum(java.lang.String name, com.google.api.services.spanner.v1.model.ChangeQuorumRequest content) throws java.io.IOException {
+          Changequorum result = new Changequorum(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Changequorum extends SpannerRequest<com.google.api.services.spanner.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:changequorum";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+
+          /**
+           * ChangeQuorum is strictly restricted to databases that use dual region instance configurations.
+           * Initiates a background operation to change quorum a database from dual-region mode to single-
+           * region mode and vice versa. The returned long-running operation will have a name of the format
+           * `projects//instances//databases//operations/` and can be used to track execution of the
+           * ChangeQuorum. The metadata field type is ChangeQuorumMetadata. Authorization requires
+           * `spanner.databases.changequorum` permission on the resource database.
+           *
+           * Create a request for the method "databases.changequorum".
+           *
+           * This request holds the parameters needed by the the spanner server.  After setting any optional
+           * parameters, call the {@link Changequorum#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Changequorum#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the database in which to apply the ChangeQuorum. Values are of the form
+         *        `projects//instances//databases/`.
+           * @param content the {@link com.google.api.services.spanner.v1.model.ChangeQuorumRequest}
+           * @since 1.13
+           */
+          protected Changequorum(java.lang.String name, com.google.api.services.spanner.v1.model.ChangeQuorumRequest content) {
+            super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Changequorum set$Xgafv(java.lang.String $Xgafv) {
+            return (Changequorum) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Changequorum setAccessToken(java.lang.String accessToken) {
+            return (Changequorum) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Changequorum setAlt(java.lang.String alt) {
+            return (Changequorum) super.setAlt(alt);
+          }
+
+          @Override
+          public Changequorum setCallback(java.lang.String callback) {
+            return (Changequorum) super.setCallback(callback);
+          }
+
+          @Override
+          public Changequorum setFields(java.lang.String fields) {
+            return (Changequorum) super.setFields(fields);
+          }
+
+          @Override
+          public Changequorum setKey(java.lang.String key) {
+            return (Changequorum) super.setKey(key);
+          }
+
+          @Override
+          public Changequorum setOauthToken(java.lang.String oauthToken) {
+            return (Changequorum) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Changequorum setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Changequorum) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Changequorum setQuotaUser(java.lang.String quotaUser) {
+            return (Changequorum) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Changequorum setUploadType(java.lang.String uploadType) {
+            return (Changequorum) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Changequorum setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Changequorum) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the database in which to apply the ChangeQuorum. Values are of the
+           * form `projects//instances//databases/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the database in which to apply the ChangeQuorum. Values are of the form
+         `projects//instances//databases/`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the database in which to apply the ChangeQuorum. Values are of the
+           * form `projects//instances//databases/`.
+           */
+          public Changequorum setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Changequorum set(String parameterName, Object value) {
+            return (Changequorum) super.set(parameterName, value);
+          }
+        }
         /**
          * Creates a new Cloud Spanner database and starts to prepare it for serving. The returned long-
          * running operation will have a name of the format `/operations/` and can be used to track
@@ -10524,9 +10720,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Creates a new session. A session can be used to perform transactions that read and/or modify data
            * in a Cloud Spanner database. Sessions are meant to be reused for many consecutive transactions.
-           * Sessions can only execute one transaction at a time. To execute multiple concurrent read-write
-           * /write-only transactions, create multiple sessions. Note that standalone reads and queries use a
-           * transaction internally, and count toward the one transaction limit. Active sessions use
+           * Sessions can only execute one transaction at a time. To execute multiple concurrent read-
+           * write/write-only transactions, create multiple sessions. Note that standalone reads and queries
+           * use a transaction internally, and count toward the one transaction limit. Active sessions use
            * additional server resources, so it is a good idea to delete idle and unneeded sessions. Aside
            * from explicit deletes, Cloud Spanner may delete sessions for which no operations are sent for
            * more than an hour. If a session is deleted, requests to it return `NOT_FOUND`. Idle sessions can
@@ -13128,7 +13324,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The instance whose instance partitions should be listed. Values are of the form
-         *        `projects//instances/`.
+         *        `projects//instances/`. Use `{instance} = '-'` to list instance partitions for all
+         *        Instances in a project, e.g., `projects/myproject/instances/-`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -13155,7 +13352,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The instance whose instance partitions should be listed. Values are of the form
-         *        `projects//instances/`.
+         *        `projects//instances/`. Use `{instance} = '-'` to list instance partitions for all
+         *        Instances in a project, e.g., `projects/myproject/instances/-`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -13235,13 +13433,15 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The instance whose instance partitions should be listed. Values are of the
-           * form `projects//instances/`.
+           * form `projects//instances/`. Use `{instance} = '-'` to list instance partitions for all
+           * Instances in a project, e.g., `projects/myproject/instances/-`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The instance whose instance partitions should be listed. Values are of the form
-         `projects//instances/`.
+         `projects//instances/`. Use `{instance} = '-'` to list instance partitions for all Instances in a
+         project, e.g., `projects/myproject/instances/-`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -13249,7 +13449,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The instance whose instance partitions should be listed. Values are of the
-           * form `projects//instances/`.
+           * form `projects//instances/`. Use `{instance} = '-'` to list instance partitions for all
+           * Instances in a project, e.g., `projects/myproject/instances/-`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

@@ -28,8 +28,8 @@ import json
 import logging
 import httplib2
 
-from google.apputils import app
-import gflags as flags
+from absl import app
+from absl import flags
 from googleapis.codegen import generator_lookup
 from googleapis.codegen.filesys import package_writer_foundry
 from googleapis.codegen.targets import Targets
@@ -109,19 +109,19 @@ flags.DEFINE_string(
 flags.DEFINE_bool('version_package', False, 'Put API version in package paths')
 flags.DEFINE_bool('verbose', False, 'Enable verbose logging')
 
-flags.DECLARE_key_flag('api_name')
-flags.DECLARE_key_flag('api_version')
-flags.DECLARE_key_flag('include_timestamp')
-flags.DECLARE_key_flag('input')
-flags.DECLARE_key_flag('language')
-flags.DECLARE_key_flag('language_variant')
-flags.DECLARE_key_flag('monolithic_source_name')
-flags.DECLARE_key_flag('output_dir')
-flags.DECLARE_key_flag('output_file')
-flags.DECLARE_key_flag('output_format')
-flags.DECLARE_key_flag('output_type')
-flags.DECLARE_key_flag('package_path')
-flags.DECLARE_key_flag('version_package')
+flags.declare_key_flag('api_name')
+flags.declare_key_flag('api_version')
+flags.declare_key_flag('include_timestamp')
+flags.declare_key_flag('input')
+flags.declare_key_flag('language')
+flags.declare_key_flag('language_variant')
+flags.declare_key_flag('monolithic_source_name')
+flags.declare_key_flag('output_dir')
+flags.declare_key_flag('output_file')
+flags.declare_key_flag('output_format')
+flags.declare_key_flag('output_type')
+flags.declare_key_flag('package_path')
+flags.declare_key_flag('version_package')
 
 
 def main(unused_argv):
@@ -243,4 +243,4 @@ def GetApiDiscovery(api_name, api_version):
   return content
 
 if __name__ == '__main__':
-  app.run()
+  app.run(main)

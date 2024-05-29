@@ -94,8 +94,8 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   private java.lang.Integer transactionLogRetentionDays;
 
   /**
-   * Output only. This value contains the storage location of transactional logs for the database
-   * for point-in-time recovery.
+   * Output only. This value contains the storage location of transactional logs used to perform
+   * point-in-time recovery (PITR) for the database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -257,8 +257,8 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. This value contains the storage location of transactional logs for the database
-   * for point-in-time recovery.
+   * Output only. This value contains the storage location of transactional logs used to perform
+   * point-in-time recovery (PITR) for the database.
    * @return value or {@code null} for none
    */
   public java.lang.String getTransactionalLogStorageState() {
@@ -266,8 +266,8 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. This value contains the storage location of transactional logs for the database
-   * for point-in-time recovery.
+   * Output only. This value contains the storage location of transactional logs used to perform
+   * point-in-time recovery (PITR) for the database.
    * @param transactionalLogStorageState transactionalLogStorageState or {@code null} for none
    */
   public BackupConfiguration setTransactionalLogStorageState(java.lang.String transactionalLogStorageState) {

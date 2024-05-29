@@ -40,13 +40,13 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
   /**
    * Full URL, partial URI, or short name of the accelerator type resource to expose to this
    * instance. See Compute Engine AcceleratorTypes
-   * (https://cloud.google.com/compute/docs/reference/v1/acceleratorTypes).Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]/acceleratorTypes
-   * /nvidia-tesla-k80 projects/[project_id]/zones/[zone]/acceleratorTypes/nvidia-tesla-k80 nvidia-
-   * tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement
+   * (https://cloud.google.com/compute/docs/reference/v1/acceleratorTypes).Examples: https://www.goo
+   * gleapis.com/compute/v1/projects/[project_id]/zones/[zone]/acceleratorTypes/nvidia-tesla-t4
+   * projects/[project_id]/zones/[zone]/acceleratorTypes/nvidia-tesla-t4 nvidia-tesla-t4Auto Zone
+   * Exception: If you are using the Dataproc Auto Zone Placement
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-
    * zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type
-   * resource, for example, nvidia-tesla-k80.
+   * resource, for example, nvidia-tesla-t4.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,13 +72,13 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
   /**
    * Full URL, partial URI, or short name of the accelerator type resource to expose to this
    * instance. See Compute Engine AcceleratorTypes
-   * (https://cloud.google.com/compute/docs/reference/v1/acceleratorTypes).Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]/acceleratorTypes
-   * /nvidia-tesla-k80 projects/[project_id]/zones/[zone]/acceleratorTypes/nvidia-tesla-k80 nvidia-
-   * tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement
+   * (https://cloud.google.com/compute/docs/reference/v1/acceleratorTypes).Examples: https://www.goo
+   * gleapis.com/compute/v1/projects/[project_id]/zones/[zone]/acceleratorTypes/nvidia-tesla-t4
+   * projects/[project_id]/zones/[zone]/acceleratorTypes/nvidia-tesla-t4 nvidia-tesla-t4Auto Zone
+   * Exception: If you are using the Dataproc Auto Zone Placement
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-
    * zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type
-   * resource, for example, nvidia-tesla-k80.
+   * resource, for example, nvidia-tesla-t4.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorTypeUri() {
@@ -88,13 +88,13 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
   /**
    * Full URL, partial URI, or short name of the accelerator type resource to expose to this
    * instance. See Compute Engine AcceleratorTypes
-   * (https://cloud.google.com/compute/docs/reference/v1/acceleratorTypes).Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]/acceleratorTypes
-   * /nvidia-tesla-k80 projects/[project_id]/zones/[zone]/acceleratorTypes/nvidia-tesla-k80 nvidia-
-   * tesla-k80Auto Zone Exception: If you are using the Dataproc Auto Zone Placement
+   * (https://cloud.google.com/compute/docs/reference/v1/acceleratorTypes).Examples: https://www.goo
+   * gleapis.com/compute/v1/projects/[project_id]/zones/[zone]/acceleratorTypes/nvidia-tesla-t4
+   * projects/[project_id]/zones/[zone]/acceleratorTypes/nvidia-tesla-t4 nvidia-tesla-t4Auto Zone
+   * Exception: If you are using the Dataproc Auto Zone Placement
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-
    * zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type
-   * resource, for example, nvidia-tesla-k80.
+   * resource, for example, nvidia-tesla-t4.
    * @param acceleratorTypeUri acceleratorTypeUri or {@code null} for none
    */
   public AcceleratorConfig setAcceleratorTypeUri(java.lang.String acceleratorTypeUri) {

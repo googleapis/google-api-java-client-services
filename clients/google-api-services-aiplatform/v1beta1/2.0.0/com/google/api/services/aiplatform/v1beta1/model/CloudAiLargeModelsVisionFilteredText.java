@@ -30,14 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class CloudAiLargeModelsVisionFilteredText extends com.google.api.client.json.GenericJson {
 
   /**
-   * Confidence level
+   * Filtered category
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String category;
 
   /**
-   * Filtered category
+   * Confidence score
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class CloudAiLargeModelsVisionFilteredText extends com.google.api.c
   private java.lang.Double score;
 
   /**
-   * Confidence level
+   * Filtered category
    * @return value or {@code null} for none
    */
   public java.lang.String getCategory() {
@@ -66,7 +66,7 @@ public final class CloudAiLargeModelsVisionFilteredText extends com.google.api.c
   }
 
   /**
-   * Confidence level
+   * Filtered category
    * @param category category or {@code null} for none
    */
   public CloudAiLargeModelsVisionFilteredText setCategory(java.lang.String category) {
@@ -75,7 +75,7 @@ public final class CloudAiLargeModelsVisionFilteredText extends com.google.api.c
   }
 
   /**
-   * Filtered category
+   * Confidence score
    * @return value or {@code null} for none
    */
   public java.lang.String getConfidence() {
@@ -83,7 +83,7 @@ public final class CloudAiLargeModelsVisionFilteredText extends com.google.api.c
   }
 
   /**
-   * Filtered category
+   * Confidence score
    * @param confidence confidence or {@code null} for none
    */
   public CloudAiLargeModelsVisionFilteredText setConfidence(java.lang.String confidence) {

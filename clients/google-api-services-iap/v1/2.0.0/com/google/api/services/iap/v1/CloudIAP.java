@@ -2135,8 +2135,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the iap server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project and
-           *        contain only lower case letters (a-z) and dashes (-).
+           * @param name Identifier. Identifier for the TunnelDestGroup. Must be unique within the project and contain only
+           *        lower case letters (a-z) and dashes (-).
            * @param content the {@link com.google.api.services.iap.v1.model.TunnelDestGroup}
            * @return the request
            */
@@ -2163,8 +2163,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project and
-           *        contain only lower case letters (a-z) and dashes (-).
+             * @param name Identifier. Identifier for the TunnelDestGroup. Must be unique within the project and contain only
+           *        lower case letters (a-z) and dashes (-).
              * @param content the {@link com.google.api.services.iap.v1.model.TunnelDestGroup}
              * @since 1.13
              */
@@ -2234,22 +2234,22 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the
-             * project and contain only lower case letters (a-z) and dashes (-).
+             * Identifier. Identifier for the TunnelDestGroup. Must be unique within the project and
+             * contain only lower case letters (a-z) and dashes (-).
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the project and
-           contain only lower case letters (a-z) and dashes (-).
+            /** Identifier. Identifier for the TunnelDestGroup. Must be unique within the project and contain only
+           lower case letters (a-z) and dashes (-).
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Immutable. Identifier for the TunnelDestGroup. Must be unique within the
-             * project and contain only lower case letters (a-z) and dashes (-).
+             * Identifier. Identifier for the TunnelDestGroup. Must be unique within the project and
+             * contain only lower case letters (a-z) and dashes (-).
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2766,8 +2766,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Returns permissions that a caller has on the Identity-Aware Proxy protected resource. More
-     * information about managing access via IAP can be found at: https://cloud.google.com/iap/docs
-     * /managing-access#managing_access_via_the_api
+     * information about managing access via IAP can be found at:
+     * https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
      *
      * Create a request for the method "v1.testIamPermissions".
      *
@@ -2795,8 +2795,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Returns permissions that a caller has on the Identity-Aware Proxy protected resource. More
-       * information about managing access via IAP can be found at: https://cloud.google.com/iap/docs
-       * /managing-access#managing_access_via_the_api
+       * information about managing access via IAP can be found at:
+       * https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
        *
        * Create a request for the method "v1.testIamPermissions".
        *

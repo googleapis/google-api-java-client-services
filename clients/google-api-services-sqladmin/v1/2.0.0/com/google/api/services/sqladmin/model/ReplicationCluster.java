@@ -17,7 +17,9 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Primary-DR replica pair
+ * A primary instance and disaster recovery (DR) replica pair. A DR replica is a cross-region
+ * replica that you designate for failover in the event that the primary instance experiences
+ * regional failure. Only applicable to MySQL.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -30,8 +32,8 @@ package com.google.api.services.sqladmin.model;
 public final class ReplicationCluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. read-only field that indicates if the replica is a dr_replica; not set for a
-   * primary.
+   * Output only. Read-only field that indicates whether the replica is a DR replica. This field is
+   * not set if the instance is a primary instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,16 +42,29 @@ public final class ReplicationCluster extends com.google.api.client.json.Generic
   /**
    * Optional. If the instance is a primary instance, then this field identifies the disaster
    * recovery (DR) replica. A DR replica is an optional configuration for Enterprise Plus edition
-   * instances. If the instance is a read replica, then the field is not set. Users can set this
-   * field to set a designated DR replica for a primary. Removing this field removes the DR replica.
+   * instances. If the instance is a read replica, then the field is not set. Set this field to a
+   * replica name to designate a DR replica for a primary instance. Remove the replica name to
+   * remove the DR replica designation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String failoverDrReplicaName;
 
   /**
-   * Output only. read-only field that indicates if the replica is a dr_replica; not set for a
-   * primary.
+   * Output only. If set, it indicates this instance has a private service access (PSA) dns endpoint
+   * that is pointing to the primary instance of the cluster. If this instance is the primary, the
+   * dns should be pointing to this instance. After Switchover or Replica failover, this DNS
+   * endpoint points to the promoted instance. This is a read-only field, returned to the user as
+   * information. This field can exist even if a standalone instance does not yet have a replica, or
+   * had a DR replica that was deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String psaWriteEndpoint;
+
+  /**
+   * Output only. Read-only field that indicates whether the replica is a DR replica. This field is
+   * not set if the instance is a primary instance.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDrReplica() {
@@ -57,8 +72,8 @@ public final class ReplicationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. read-only field that indicates if the replica is a dr_replica; not set for a
-   * primary.
+   * Output only. Read-only field that indicates whether the replica is a DR replica. This field is
+   * not set if the instance is a primary instance.
    * @param drReplica drReplica or {@code null} for none
    */
   public ReplicationCluster setDrReplica(java.lang.Boolean drReplica) {
@@ -69,8 +84,9 @@ public final class ReplicationCluster extends com.google.api.client.json.Generic
   /**
    * Optional. If the instance is a primary instance, then this field identifies the disaster
    * recovery (DR) replica. A DR replica is an optional configuration for Enterprise Plus edition
-   * instances. If the instance is a read replica, then the field is not set. Users can set this
-   * field to set a designated DR replica for a primary. Removing this field removes the DR replica.
+   * instances. If the instance is a read replica, then the field is not set. Set this field to a
+   * replica name to designate a DR replica for a primary instance. Remove the replica name to
+   * remove the DR replica designation.
    * @return value or {@code null} for none
    */
   public java.lang.String getFailoverDrReplicaName() {
@@ -80,12 +96,40 @@ public final class ReplicationCluster extends com.google.api.client.json.Generic
   /**
    * Optional. If the instance is a primary instance, then this field identifies the disaster
    * recovery (DR) replica. A DR replica is an optional configuration for Enterprise Plus edition
-   * instances. If the instance is a read replica, then the field is not set. Users can set this
-   * field to set a designated DR replica for a primary. Removing this field removes the DR replica.
+   * instances. If the instance is a read replica, then the field is not set. Set this field to a
+   * replica name to designate a DR replica for a primary instance. Remove the replica name to
+   * remove the DR replica designation.
    * @param failoverDrReplicaName failoverDrReplicaName or {@code null} for none
    */
   public ReplicationCluster setFailoverDrReplicaName(java.lang.String failoverDrReplicaName) {
     this.failoverDrReplicaName = failoverDrReplicaName;
+    return this;
+  }
+
+  /**
+   * Output only. If set, it indicates this instance has a private service access (PSA) dns endpoint
+   * that is pointing to the primary instance of the cluster. If this instance is the primary, the
+   * dns should be pointing to this instance. After Switchover or Replica failover, this DNS
+   * endpoint points to the promoted instance. This is a read-only field, returned to the user as
+   * information. This field can exist even if a standalone instance does not yet have a replica, or
+   * had a DR replica that was deleted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPsaWriteEndpoint() {
+    return psaWriteEndpoint;
+  }
+
+  /**
+   * Output only. If set, it indicates this instance has a private service access (PSA) dns endpoint
+   * that is pointing to the primary instance of the cluster. If this instance is the primary, the
+   * dns should be pointing to this instance. After Switchover or Replica failover, this DNS
+   * endpoint points to the promoted instance. This is a read-only field, returned to the user as
+   * information. This field can exist even if a standalone instance does not yet have a replica, or
+   * had a DR replica that was deleted.
+   * @param psaWriteEndpoint psaWriteEndpoint or {@code null} for none
+   */
+  public ReplicationCluster setPsaWriteEndpoint(java.lang.String psaWriteEndpoint) {
+    this.psaWriteEndpoint = psaWriteEndpoint;
     return this;
   }
 

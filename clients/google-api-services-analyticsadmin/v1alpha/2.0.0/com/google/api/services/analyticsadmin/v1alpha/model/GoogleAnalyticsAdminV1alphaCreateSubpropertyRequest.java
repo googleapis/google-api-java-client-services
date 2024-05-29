@@ -31,14 +31,6 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The ordinary property for which to create a subproperty. Format:
-   * properties/property_id Example: properties/123
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String parent;
-
-  /**
    * Required. The subproperty to create.
    * The value may be {@code null}.
    */
@@ -51,25 +43,6 @@ public final class GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest extends c
    */
   @com.google.api.client.util.Key
   private GoogleAnalyticsAdminV1alphaSubpropertyEventFilter subpropertyEventFilter;
-
-  /**
-   * Required. The ordinary property for which to create a subproperty. Format:
-   * properties/property_id Example: properties/123
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getParent() {
-    return parent;
-  }
-
-  /**
-   * Required. The ordinary property for which to create a subproperty. Format:
-   * properties/property_id Example: properties/123
-   * @param parent parent or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaCreateSubpropertyRequest setParent(java.lang.String parent) {
-    this.parent = parent;
-    return this;
-  }
 
   /**
    * Required. The subproperty to create.

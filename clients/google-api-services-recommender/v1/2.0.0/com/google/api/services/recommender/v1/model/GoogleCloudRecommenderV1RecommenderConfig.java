@@ -55,7 +55,7 @@ public final class GoogleCloudRecommenderV1RecommenderConfig extends com.google.
   private java.lang.String etag;
 
   /**
-   * Name of recommender config. Eg,
+   * Identifier. Name of recommender config. Eg,
    * projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
    * The value may be {@code null}.
    */
@@ -145,7 +145,7 @@ public final class GoogleCloudRecommenderV1RecommenderConfig extends com.google.
   }
 
   /**
-   * Name of recommender config. Eg,
+   * Identifier. Name of recommender config. Eg,
    * projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
    * @return value or {@code null} for none
    */
@@ -154,7 +154,7 @@ public final class GoogleCloudRecommenderV1RecommenderConfig extends com.google.
   }
 
   /**
-   * Name of recommender config. Eg,
+   * Identifier. Name of recommender config. Eg,
    * projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
    * @param name name or {@code null} for none
    */

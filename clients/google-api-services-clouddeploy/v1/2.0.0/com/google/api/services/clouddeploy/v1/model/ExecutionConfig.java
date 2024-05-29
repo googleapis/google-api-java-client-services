@@ -76,6 +76,14 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> usages;
 
   /**
+   * Optional. If true, additional logging will be enabled when running builds in this execution
+   * environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean verbose;
+
+  /**
    * Optional. The resource name of the `WorkerPool`, with the format
    * `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is
    * unspecified, the default Cloud Build pool will be used.
@@ -191,6 +199,25 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
    */
   public ExecutionConfig setUsages(java.util.List<java.lang.String> usages) {
     this.usages = usages;
+    return this;
+  }
+
+  /**
+   * Optional. If true, additional logging will be enabled when running builds in this execution
+   * environment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVerbose() {
+    return verbose;
+  }
+
+  /**
+   * Optional. If true, additional logging will be enabled when running builds in this execution
+   * environment.
+   * @param verbose verbose or {@code null} for none
+   */
+  public ExecutionConfig setVerbose(java.lang.Boolean verbose) {
+    this.verbose = verbose;
     return this;
   }
 

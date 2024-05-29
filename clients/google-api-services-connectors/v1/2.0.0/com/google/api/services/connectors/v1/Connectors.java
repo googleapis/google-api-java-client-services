@@ -5562,6 +5562,146 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.set(parameterName, value);
             }
           }
+          /**
+           * Deprecates a single CustomConnectorVersion.
+           *
+           * Create a request for the method "customConnectorVersions.deprecate".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link Deprecate#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name of the form: `projects/{project}/locations/{location}/customConnectors/{cust
+           *        om_connector}/customConnectorVersions/{custom_connector_version}`
+           * @param content the {@link com.google.api.services.connectors.v1.model.DeprecateCustomConnectorVersionRequest}
+           * @return the request
+           */
+          public Deprecate deprecate(java.lang.String name, com.google.api.services.connectors.v1.model.DeprecateCustomConnectorVersionRequest content) throws java.io.IOException {
+            Deprecate result = new Deprecate(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Deprecate extends ConnectorsRequest<com.google.api.services.connectors.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:deprecate";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
+
+            /**
+             * Deprecates a single CustomConnectorVersion.
+             *
+             * Create a request for the method "customConnectorVersions.deprecate".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link Deprecate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Deprecate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name of the form: `projects/{project}/locations/{location}/customConnectors/{cust
+           *        om_connector}/customConnectorVersions/{custom_connector_version}`
+             * @param content the {@link com.google.api.services.connectors.v1.model.DeprecateCustomConnectorVersionRequest}
+             * @since 1.13
+             */
+            protected Deprecate(java.lang.String name, com.google.api.services.connectors.v1.model.DeprecateCustomConnectorVersionRequest content) {
+              super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Deprecate set$Xgafv(java.lang.String $Xgafv) {
+              return (Deprecate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Deprecate setAccessToken(java.lang.String accessToken) {
+              return (Deprecate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Deprecate setAlt(java.lang.String alt) {
+              return (Deprecate) super.setAlt(alt);
+            }
+
+            @Override
+            public Deprecate setCallback(java.lang.String callback) {
+              return (Deprecate) super.setCallback(callback);
+            }
+
+            @Override
+            public Deprecate setFields(java.lang.String fields) {
+              return (Deprecate) super.setFields(fields);
+            }
+
+            @Override
+            public Deprecate setKey(java.lang.String key) {
+              return (Deprecate) super.setKey(key);
+            }
+
+            @Override
+            public Deprecate setOauthToken(java.lang.String oauthToken) {
+              return (Deprecate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Deprecate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Deprecate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Deprecate setQuotaUser(java.lang.String quotaUser) {
+              return (Deprecate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Deprecate setUploadType(java.lang.String uploadType) {
+              return (Deprecate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Deprecate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Deprecate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the form: `projects/{project}/locations/{location}/customC
+             * onnectors/{custom_connector}/customConnectorVersions/{custom_connector_version}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the form: `projects/{project}/locations/{location}/customConnectors/{cus
+           tom_connector}/customConnectorVersions/{custom_connector_version}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name of the form: `projects/{project}/locations/{location}/customC
+             * onnectors/{custom_connector}/customConnectorVersions/{custom_connector_version}`
+             */
+            public Deprecate setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/customConnectors/[^/]+/customConnectorVersions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Deprecate set(String parameterName, Object value) {
+              return (Deprecate) super.set(parameterName, value);
+            }
+          }
 
         }
       }

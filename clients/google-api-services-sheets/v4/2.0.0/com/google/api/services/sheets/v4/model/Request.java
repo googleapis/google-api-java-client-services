@@ -129,6 +129,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private AutoResizeDimensionsRequest autoResizeDimensions;
 
   /**
+   * Cancels refreshes of one or multiple data sources and associated dbobjects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CancelDataSourceRefreshRequest cancelDataSourceRefresh;
+
+  /**
    * Clears the basic filter on a sheet.
    * The value may be {@code null}.
    */
@@ -722,6 +729,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setAutoResizeDimensions(AutoResizeDimensionsRequest autoResizeDimensions) {
     this.autoResizeDimensions = autoResizeDimensions;
+    return this;
+  }
+
+  /**
+   * Cancels refreshes of one or multiple data sources and associated dbobjects.
+   * @return value or {@code null} for none
+   */
+  public CancelDataSourceRefreshRequest getCancelDataSourceRefresh() {
+    return cancelDataSourceRefresh;
+  }
+
+  /**
+   * Cancels refreshes of one or multiple data sources and associated dbobjects.
+   * @param cancelDataSourceRefresh cancelDataSourceRefresh or {@code null} for none
+   */
+  public Request setCancelDataSourceRefresh(CancelDataSourceRefreshRequest cancelDataSourceRefresh) {
+    this.cancelDataSourceRefresh = cancelDataSourceRefresh;
     return this;
   }
 

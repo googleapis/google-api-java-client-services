@@ -103,11 +103,11 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    * `ssl_mode=ENCRYPTED_ONLY` and `require_ssl=false` *
    * `ssl_mode=TRUSTED_CLIENT_CERTIFICATE_REQUIRED` and `require_ssl=true` For SQL Server: *
    * `ssl_mode=ALLOW_UNENCRYPTED_AND_ENCRYPTED` and `require_ssl=false` * `ssl_mode=ENCRYPTED_ONLY`
-   * and `require_ssl=true` The value of `ssl_mode` gets priority over the value of `require_ssl`.
-   * For example, for the pair `ssl_mode=ENCRYPTED_ONLY` and `require_ssl=false`, the
-   * `ssl_mode=ENCRYPTED_ONLY` means only accept SSL connections, while the `require_ssl=false`
-   * means accept both non-SSL and SSL connections. MySQL and PostgreSQL databases respect
-   * `ssl_mode` in this case and accept only SSL connections.
+   * and `require_ssl=true` The value of `ssl_mode` has priority over the value of `require_ssl`.
+   * For example, for the pair `ssl_mode=ENCRYPTED_ONLY` and `require_ssl=false`,
+   * `ssl_mode=ENCRYPTED_ONLY` means accept only SSL connections, while `require_ssl=false` means
+   * accept both non-SSL and SSL connections. In this case, MySQL and PostgreSQL databases respect
+   * `ssl_mode` and accepts only SSL connections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -263,11 +263,11 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    * `ssl_mode=ENCRYPTED_ONLY` and `require_ssl=false` *
    * `ssl_mode=TRUSTED_CLIENT_CERTIFICATE_REQUIRED` and `require_ssl=true` For SQL Server: *
    * `ssl_mode=ALLOW_UNENCRYPTED_AND_ENCRYPTED` and `require_ssl=false` * `ssl_mode=ENCRYPTED_ONLY`
-   * and `require_ssl=true` The value of `ssl_mode` gets priority over the value of `require_ssl`.
-   * For example, for the pair `ssl_mode=ENCRYPTED_ONLY` and `require_ssl=false`, the
-   * `ssl_mode=ENCRYPTED_ONLY` means only accept SSL connections, while the `require_ssl=false`
-   * means accept both non-SSL and SSL connections. MySQL and PostgreSQL databases respect
-   * `ssl_mode` in this case and accept only SSL connections.
+   * and `require_ssl=true` The value of `ssl_mode` has priority over the value of `require_ssl`.
+   * For example, for the pair `ssl_mode=ENCRYPTED_ONLY` and `require_ssl=false`,
+   * `ssl_mode=ENCRYPTED_ONLY` means accept only SSL connections, while `require_ssl=false` means
+   * accept both non-SSL and SSL connections. In this case, MySQL and PostgreSQL databases respect
+   * `ssl_mode` and accepts only SSL connections.
    * @return value or {@code null} for none
    */
   public java.lang.String getSslMode() {
@@ -281,11 +281,11 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
    * `ssl_mode=ENCRYPTED_ONLY` and `require_ssl=false` *
    * `ssl_mode=TRUSTED_CLIENT_CERTIFICATE_REQUIRED` and `require_ssl=true` For SQL Server: *
    * `ssl_mode=ALLOW_UNENCRYPTED_AND_ENCRYPTED` and `require_ssl=false` * `ssl_mode=ENCRYPTED_ONLY`
-   * and `require_ssl=true` The value of `ssl_mode` gets priority over the value of `require_ssl`.
-   * For example, for the pair `ssl_mode=ENCRYPTED_ONLY` and `require_ssl=false`, the
-   * `ssl_mode=ENCRYPTED_ONLY` means only accept SSL connections, while the `require_ssl=false`
-   * means accept both non-SSL and SSL connections. MySQL and PostgreSQL databases respect
-   * `ssl_mode` in this case and accept only SSL connections.
+   * and `require_ssl=true` The value of `ssl_mode` has priority over the value of `require_ssl`.
+   * For example, for the pair `ssl_mode=ENCRYPTED_ONLY` and `require_ssl=false`,
+   * `ssl_mode=ENCRYPTED_ONLY` means accept only SSL connections, while `require_ssl=false` means
+   * accept both non-SSL and SSL connections. In this case, MySQL and PostgreSQL databases respect
+   * `ssl_mode` and accepts only SSL connections.
    * @param sslMode sslMode or {@code null} for none
    */
   public IpConfiguration setSslMode(java.lang.String sslMode) {

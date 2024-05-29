@@ -34,31 +34,7 @@ public final class LogConfigCloudAuditOptions extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AuthorizationLoggingOptions authorizationLoggingOptions;
-
-  /**
-   * This is deprecated and has no effect. Do not use.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private java.lang.String logName;
-
-  /**
-   * This is deprecated and has no effect. Do not use.
-   * @return value or {@code null} for none
-   */
-  public AuthorizationLoggingOptions getAuthorizationLoggingOptions() {
-    return authorizationLoggingOptions;
-  }
-
-  /**
-   * This is deprecated and has no effect. Do not use.
-   * @param authorizationLoggingOptions authorizationLoggingOptions or {@code null} for none
-   */
-  public LogConfigCloudAuditOptions setAuthorizationLoggingOptions(AuthorizationLoggingOptions authorizationLoggingOptions) {
-    this.authorizationLoggingOptions = authorizationLoggingOptions;
-    return this;
-  }
 
   /**
    * This is deprecated and has no effect. Do not use.

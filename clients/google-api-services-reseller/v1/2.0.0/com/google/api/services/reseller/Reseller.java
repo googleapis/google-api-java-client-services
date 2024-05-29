@@ -1516,8 +1516,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Updates a user license's renewal settings. This is applicable for accounts with annual
-       * commitment plans only. For more information, see the description in [manage subscriptions
-       * ](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#update_renewal).
+       * commitment plans only. For more information, see the description in [manage
+       * subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#update_renewal).
        *
        * Create a request for the method "subscriptions.changeRenewalSettings".
        *
@@ -2240,8 +2240,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * the customer insert method, use the customer's `customerAuthToken` when creating a subscription
      * for that customer. If transferring a G Suite subscription with an associated Google Drive or
      * Google Vault subscription, use the [batch operation](/admin-sdk/reseller/v1/how-tos/batch.html)
-     * to transfer all of these subscriptions. For more information, see how to [transfer subscriptions
-     * ](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#transfer_a_subscription).
+     * to transfer all of these subscriptions. For more information, see how to [transfer
+     * subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#transfer_a_subscription).
      *
      * Create a request for the method "subscriptions.insert".
      *
@@ -2269,13 +2269,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Creates or transfer a subscription. Create a subscription for a customer's account that you
        * ordered using the [Order a new customer account](/admin-
        * sdk/reseller/v1/reference/customers/insert.html) method. For more information about creating a
-       * subscription for different payment plans, see [manage subscriptions](/admin-sdk/reseller/v1
-       * /how-tos/manage_subscriptions#create_subscription).\ If you did not order the customer's
-       * account using the customer insert method, use the customer's `customerAuthToken` when creating
-       * a subscription for that customer. If transferring a G Suite subscription with an associated
-       * Google Drive or Google Vault subscription, use the [batch operation](/admin-sdk/reseller/v1
-       * /how-tos/batch.html) to transfer all of these subscriptions. For more information, see how to
-       * [transfer subscriptions](/admin-sdk/reseller/v1/how-
+       * subscription for different payment plans, see [manage subscriptions](/admin-
+       * sdk/reseller/v1/how-tos/manage_subscriptions#create_subscription).\ If you did not order the
+       * customer's account using the customer insert method, use the customer's `customerAuthToken`
+       * when creating a subscription for that customer. If transferring a G Suite subscription with an
+       * associated Google Drive or Google Vault subscription, use the [batch operation](/admin-
+       * sdk/reseller/v1/how-tos/batch.html) to transfer all of these subscriptions. For more
+       * information, see how to [transfer subscriptions](/admin-sdk/reseller/v1/how-
        * tos/manage_subscriptions#transfer_a_subscription).
        *
        * Create a request for the method "subscriptions.insert".

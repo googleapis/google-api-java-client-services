@@ -130,7 +130,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Name of the `Release`. Format is `projects/{project}/locations/{location}/deliveryPip
-   * elines/{deliveryPipeline}/releases/a-z{0,62}`.
+   * elines/{deliveryPipeline}/releases/{release}`. The `release` component must match
+   * `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -415,7 +416,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Name of the `Release`. Format is `projects/{project}/locations/{location}/deliveryPip
-   * elines/{deliveryPipeline}/releases/a-z{0,62}`.
+   * elines/{deliveryPipeline}/releases/{release}`. The `release` component must match
+   * `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -424,7 +426,8 @@ public final class Release extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Name of the `Release`. Format is `projects/{project}/locations/{location}/deliveryPip
-   * elines/{deliveryPipeline}/releases/a-z{0,62}`.
+   * elines/{deliveryPipeline}/releases/{release}`. The `release` component must match
+   * `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`
    * @param name name or {@code null} for none
    */
   public Release setName(java.lang.String name) {

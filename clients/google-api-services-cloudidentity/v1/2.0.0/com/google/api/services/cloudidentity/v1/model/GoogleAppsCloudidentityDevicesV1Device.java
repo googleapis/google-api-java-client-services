@@ -246,6 +246,13 @@ public final class GoogleAppsCloudidentityDevicesV1Device extends com.google.api
   private java.lang.String serialNumber;
 
   /**
+   * Output only. Unified device id of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String unifiedDeviceId;
+
+  /**
    * WiFi MAC addresses of device.
    * The value may be {@code null}.
    */
@@ -769,6 +776,23 @@ public final class GoogleAppsCloudidentityDevicesV1Device extends com.google.api
    */
   public GoogleAppsCloudidentityDevicesV1Device setSerialNumber(java.lang.String serialNumber) {
     this.serialNumber = serialNumber;
+    return this;
+  }
+
+  /**
+   * Output only. Unified device id of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUnifiedDeviceId() {
+    return unifiedDeviceId;
+  }
+
+  /**
+   * Output only. Unified device id of the device.
+   * @param unifiedDeviceId unifiedDeviceId or {@code null} for none
+   */
+  public GoogleAppsCloudidentityDevicesV1Device setUnifiedDeviceId(java.lang.String unifiedDeviceId) {
+    this.unifiedDeviceId = unifiedDeviceId;
     return this;
   }
 

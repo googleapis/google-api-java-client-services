@@ -62,7 +62,7 @@ public final class GoogleCloudRecommenderV1beta1InsightTypeConfig extends com.go
   private GoogleCloudRecommenderV1beta1InsightTypeGenerationConfig insightTypeGenerationConfig;
 
   /**
-   * Name of insight type config. Eg,
+   * Identifier. Name of insight type config. Eg,
    * projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
    * The value may be {@code null}.
    */
@@ -161,7 +161,7 @@ public final class GoogleCloudRecommenderV1beta1InsightTypeConfig extends com.go
   }
 
   /**
-   * Name of insight type config. Eg,
+   * Identifier. Name of insight type config. Eg,
    * projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
    * @return value or {@code null} for none
    */
@@ -170,7 +170,7 @@ public final class GoogleCloudRecommenderV1beta1InsightTypeConfig extends com.go
   }
 
   /**
-   * Name of insight type config. Eg,
+   * Identifier. Name of insight type config. Eg,
    * projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
    * @param name name or {@code null} for none
    */

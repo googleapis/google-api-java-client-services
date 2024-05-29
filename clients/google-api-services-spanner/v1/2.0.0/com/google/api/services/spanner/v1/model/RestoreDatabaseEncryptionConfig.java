@@ -46,6 +46,22 @@ public final class RestoreDatabaseEncryptionConfig extends com.google.api.client
   private java.lang.String kmsKeyName;
 
   /**
+   * Optional. Specifies the KMS configuration for the one or more keys used to encrypt the
+   * database. Values are of the form `projects//locations//keyRings//cryptoKeys/`. The keys
+   * referenced by kms_key_names must fully cover all regions of the database instance
+   * configuration. Some examples: * For single region database instance configs, specify a single
+   * regional location KMS key. * For multi-regional database instance configs of type
+   * GOOGLE_MANAGED, either specify a multi-regional location KMS key or multiple regional location
+   * KMS keys that cover all regions in the instance config. * For a database instance config of
+   * type USER_MANAGED, please specify only regional location KMS keys to cover each region in the
+   * instance config. Multi-regional location KMS keys are not supported for USER_MANAGED instance
+   * configs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> kmsKeyNames;
+
+  /**
    * Required. The encryption type of the restored database.
    * @return value or {@code null} for none
    */
@@ -80,6 +96,41 @@ public final class RestoreDatabaseEncryptionConfig extends com.google.api.client
    */
   public RestoreDatabaseEncryptionConfig setKmsKeyName(java.lang.String kmsKeyName) {
     this.kmsKeyName = kmsKeyName;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the KMS configuration for the one or more keys used to encrypt the
+   * database. Values are of the form `projects//locations//keyRings//cryptoKeys/`. The keys
+   * referenced by kms_key_names must fully cover all regions of the database instance
+   * configuration. Some examples: * For single region database instance configs, specify a single
+   * regional location KMS key. * For multi-regional database instance configs of type
+   * GOOGLE_MANAGED, either specify a multi-regional location KMS key or multiple regional location
+   * KMS keys that cover all regions in the instance config. * For a database instance config of
+   * type USER_MANAGED, please specify only regional location KMS keys to cover each region in the
+   * instance config. Multi-regional location KMS keys are not supported for USER_MANAGED instance
+   * configs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getKmsKeyNames() {
+    return kmsKeyNames;
+  }
+
+  /**
+   * Optional. Specifies the KMS configuration for the one or more keys used to encrypt the
+   * database. Values are of the form `projects//locations//keyRings//cryptoKeys/`. The keys
+   * referenced by kms_key_names must fully cover all regions of the database instance
+   * configuration. Some examples: * For single region database instance configs, specify a single
+   * regional location KMS key. * For multi-regional database instance configs of type
+   * GOOGLE_MANAGED, either specify a multi-regional location KMS key or multiple regional location
+   * KMS keys that cover all regions in the instance config. * For a database instance config of
+   * type USER_MANAGED, please specify only regional location KMS keys to cover each region in the
+   * instance config. Multi-regional location KMS keys are not supported for USER_MANAGED instance
+   * configs.
+   * @param kmsKeyNames kmsKeyNames or {@code null} for none
+   */
+  public RestoreDatabaseEncryptionConfig setKmsKeyNames(java.util.List<java.lang.String> kmsKeyNames) {
+    this.kmsKeyNames = kmsKeyNames;
     return this;
   }
 

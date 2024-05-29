@@ -31,6 +31,13 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class Group extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The auto-accept setting for this group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoAccept autoAccept;
+
+  /**
    * Output only. The time the group was created.
    * The value may be {@code null}.
    */
@@ -62,6 +69,14 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The name of the route table that corresponds to this group. They use the following
+   * form: `projects/{project_number}/locations/global/hubs/{hub_id}/routeTables/{route_table_id}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String routeTable;
+
+  /**
    * Output only. The current lifecycle state of this group.
    * The value may be {@code null}.
    */
@@ -83,6 +98,23 @@ public final class Group extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. The auto-accept setting for this group.
+   * @return value or {@code null} for none
+   */
+  public AutoAccept getAutoAccept() {
+    return autoAccept;
+  }
+
+  /**
+   * Optional. The auto-accept setting for this group.
+   * @param autoAccept autoAccept or {@code null} for none
+   */
+  public Group setAutoAccept(AutoAccept autoAccept) {
+    this.autoAccept = autoAccept;
+    return this;
+  }
 
   /**
    * Output only. The time the group was created.
@@ -155,6 +187,25 @@ public final class Group extends com.google.api.client.json.GenericJson {
    */
   public Group setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the route table that corresponds to this group. They use the following
+   * form: `projects/{project_number}/locations/global/hubs/{hub_id}/routeTables/{route_table_id}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRouteTable() {
+    return routeTable;
+  }
+
+  /**
+   * Output only. The name of the route table that corresponds to this group. They use the following
+   * form: `projects/{project_number}/locations/global/hubs/{hub_id}/routeTables/{route_table_id}`
+   * @param routeTable routeTable or {@code null} for none
+   */
+  public Group setRouteTable(java.lang.String routeTable) {
+    this.routeTable = routeTable;
     return this;
   }
 

@@ -59,6 +59,13 @@ public final class GoogleFirebaseAppcheckV1DebugToken extends com.google.api.cli
   private java.lang.String token;
 
   /**
+   * Output only. Timestamp when this debug token was most recently updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * Required. A human readable display name used to identify this debug token.
    * @return value or {@code null} for none
    */
@@ -116,6 +123,23 @@ public final class GoogleFirebaseAppcheckV1DebugToken extends com.google.api.cli
    */
   public GoogleFirebaseAppcheckV1DebugToken setToken(java.lang.String token) {
     this.token = token;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp when this debug token was most recently updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Timestamp when this debug token was most recently updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1DebugToken setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

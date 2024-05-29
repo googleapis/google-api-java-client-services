@@ -360,6 +360,37 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
 
         /**
+         * Optional. An optional query string to sort auction packages using the [Cloud API sorting
+         * syntax](https://cloud.google.com/apis/design/design_patterns#sorting_order). If no sort
+         * order is specified, results will be returned in an arbitrary order. Only supported when
+         * parent is bidder. Supported columns for sorting are: * displayName * createTime *
+         * updateTime
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. An optional query string to sort auction packages using the [Cloud API sorting
+       syntax](https://cloud.google.com/apis/design/design_patterns#sorting_order). If no sort order is
+       specified, results will be returned in an arbitrary order. Only supported when parent is bidder.
+       Supported columns for sorting are: * displayName * createTime * updateTime
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. An optional query string to sort auction packages using the [Cloud API sorting
+         * syntax](https://cloud.google.com/apis/design/design_patterns#sorting_order). If no sort
+         * order is specified, results will be returned in an arbitrary order. Only supported when
+         * parent is bidder. Supported columns for sorting are: * displayName * createTime *
+         * updateTime
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
          * Requested page size. The server may return fewer results than requested. Max allowed page
          * size is 500.
          */
@@ -589,10 +620,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional query string using the [Cloud API list filtering syntax](https://developers.google.com
-       /authorized-buyers/apis/guides/list-filters) Supported columns for filtering are: *
-       deal.displayName * deal.dealType * deal.createTime * deal.updateTime * deal.flightStartTime *
-       deal.flightEndTime * deal.eligibleSeatIds * dealServingStatus
+        /** Optional query string using the [Cloud API list filtering
+       syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Supported columns
+       for filtering are: * deal.displayName * deal.dealType * deal.createTime * deal.updateTime *
+       deal.flightStartTime * deal.flightEndTime * deal.eligibleSeatIds * dealServingStatus
          */
         public java.lang.String getFilter() {
           return filter;
@@ -617,8 +648,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * sorting are: * deal.displayName * deal.createTime * deal.updateTime *
          * deal.flightStartTime * deal.flightEndTime * rtbMetrics.bidRequests7Days *
          * rtbMetrics.bids7Days * rtbMetrics.adImpressions7Days * rtbMetrics.bidRate7Days *
-         * rtbMetrics.filteredBidRate7Days * rtbMetrics.mustBidRateCurrentMonth Example:
-         * 'deal.displayName, deal.updateTime desc'
+         * rtbMetrics.filteredBidRate7Days * rtbMetrics.mustBidRateCurrentMonth
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
@@ -629,7 +659,6 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        deal.displayName * deal.createTime * deal.updateTime * deal.flightStartTime * deal.flightEndTime *
        rtbMetrics.bidRequests7Days * rtbMetrics.bids7Days * rtbMetrics.adImpressions7Days *
        rtbMetrics.bidRate7Days * rtbMetrics.filteredBidRate7Days * rtbMetrics.mustBidRateCurrentMonth
-       Example: 'deal.displayName, deal.updateTime desc'
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -642,8 +671,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * sorting are: * deal.displayName * deal.createTime * deal.updateTime *
          * deal.flightStartTime * deal.flightEndTime * rtbMetrics.bidRequests7Days *
          * rtbMetrics.bids7Days * rtbMetrics.adImpressions7Days * rtbMetrics.bidRate7Days *
-         * rtbMetrics.filteredBidRate7Days * rtbMetrics.mustBidRateCurrentMonth Example:
-         * 'deal.displayName, deal.updateTime desc'
+         * rtbMetrics.filteredBidRate7Days * rtbMetrics.mustBidRateCurrentMonth
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -1073,6 +1101,37 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. An optional query string to sort auction packages using the [Cloud API sorting
+         * syntax](https://cloud.google.com/apis/design/design_patterns#sorting_order). If no sort
+         * order is specified, results will be returned in an arbitrary order. Only supported when
+         * parent is bidder. Supported columns for sorting are: * displayName * createTime *
+         * updateTime
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. An optional query string to sort auction packages using the [Cloud API sorting
+       syntax](https://cloud.google.com/apis/design/design_patterns#sorting_order). If no sort order is
+       specified, results will be returned in an arbitrary order. Only supported when parent is bidder.
+       Supported columns for sorting are: * displayName * createTime * updateTime
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. An optional query string to sort auction packages using the [Cloud API sorting
+         * syntax](https://cloud.google.com/apis/design/design_patterns#sorting_order). If no sort
+         * order is specified, results will be returned in an arbitrary order. Only supported when
+         * parent is bidder. Supported columns for sorting are: * displayName * createTime *
+         * updateTime
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
           return this;
         }
 
@@ -4047,10 +4106,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional query string using the [Cloud API list filtering syntax](https://developers.google.com
-       /authorized-buyers/apis/guides/list-filters) Supported columns for filtering are: *
-       deal.displayName * deal.dealType * deal.createTime * deal.updateTime * deal.flightStartTime *
-       deal.flightEndTime * deal.eligibleSeatIds * dealServingStatus
+        /** Optional query string using the [Cloud API list filtering
+       syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Supported columns
+       for filtering are: * deal.displayName * deal.dealType * deal.createTime * deal.updateTime *
+       deal.flightStartTime * deal.flightEndTime * deal.eligibleSeatIds * dealServingStatus
          */
         public java.lang.String getFilter() {
           return filter;
@@ -4075,8 +4134,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * sorting are: * deal.displayName * deal.createTime * deal.updateTime *
          * deal.flightStartTime * deal.flightEndTime * rtbMetrics.bidRequests7Days *
          * rtbMetrics.bids7Days * rtbMetrics.adImpressions7Days * rtbMetrics.bidRate7Days *
-         * rtbMetrics.filteredBidRate7Days * rtbMetrics.mustBidRateCurrentMonth Example:
-         * 'deal.displayName, deal.updateTime desc'
+         * rtbMetrics.filteredBidRate7Days * rtbMetrics.mustBidRateCurrentMonth
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
@@ -4087,7 +4145,6 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        deal.displayName * deal.createTime * deal.updateTime * deal.flightStartTime * deal.flightEndTime *
        rtbMetrics.bidRequests7Days * rtbMetrics.bids7Days * rtbMetrics.adImpressions7Days *
        rtbMetrics.bidRate7Days * rtbMetrics.filteredBidRate7Days * rtbMetrics.mustBidRateCurrentMonth
-       Example: 'deal.displayName, deal.updateTime desc'
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -4100,8 +4157,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * sorting are: * deal.displayName * deal.createTime * deal.updateTime *
          * deal.flightStartTime * deal.flightEndTime * rtbMetrics.bidRequests7Days *
          * rtbMetrics.bids7Days * rtbMetrics.adImpressions7Days * rtbMetrics.bidRate7Days *
-         * rtbMetrics.filteredBidRate7Days * rtbMetrics.mustBidRateCurrentMonth Example:
-         * 'deal.displayName, deal.updateTime desc'
+         * rtbMetrics.filteredBidRate7Days * rtbMetrics.mustBidRateCurrentMonth
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -5299,9 +5355,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional query string using the [Cloud API list filtering syntax](https://developers.google.com
-       /authorized-buyers/apis/guides/list-filters) Supported columns for filtering are: * displayName *
-       dealType * updateTime * state
+        /** Optional query string using the [Cloud API list filtering
+       syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Supported columns
+       for filtering are: * displayName * dealType * updateTime * state
          */
         public java.lang.String getFilter() {
           return filter;
@@ -6703,22 +6759,22 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
 
         /**
-         * Optional query string using the [Cloud API list filtering] (https://developers.google.com
-         * /authorized-buyers/apis/guides/list-filters) syntax.
+         * Optional query string using the [Cloud API list filtering]
+         * (https://developers.google.com/authorized-buyers/apis/guides/list-filters) syntax.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional query string using the [Cloud API list filtering] (https://developers.google.com
-       /authorized-buyers/apis/guides/list-filters) syntax.
+        /** Optional query string using the [Cloud API list filtering]
+       (https://developers.google.com/authorized-buyers/apis/guides/list-filters) syntax.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Optional query string using the [Cloud API list filtering] (https://developers.google.com
-         * /authorized-buyers/apis/guides/list-filters) syntax.
+         * Optional query string using the [Cloud API list filtering]
+         * (https://developers.google.com/authorized-buyers/apis/guides/list-filters) syntax.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

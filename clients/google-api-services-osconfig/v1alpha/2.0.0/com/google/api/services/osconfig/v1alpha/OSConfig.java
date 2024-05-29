@@ -1238,9 +1238,9 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
              *        include OSPolicyAssignmentReports for all OSPolicyAssignments in the project/location.
              *        Either {instance} or {assignment} must be `-`. For example: `projects/{project}/locations/
              *        {location}/instances/{instance}/osPolicyAssignments/-/reports` returns all reports for the
-             *        instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments
-             *        /{assignment-id}/reports` returns all the reports for the given assignment across all
-             *        instances.
+             *        instance
+             *        `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-
+             *        id}/reports` returns all the reports for the given assignment across all instances.
              *        `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
              *        returns all the reports for all assignments across all instances.
              * @return the request
@@ -1277,9 +1277,9 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
              *        include OSPolicyAssignmentReports for all OSPolicyAssignments in the project/location.
              *        Either {instance} or {assignment} must be `-`. For example: `projects/{project}/locations/
              *        {location}/instances/{instance}/osPolicyAssignments/-/reports` returns all reports for the
-             *        instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments
-             *        /{assignment-id}/reports` returns all the reports for the given assignment across all
-             *        instances.
+             *        instance
+             *        `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-
+             *        id}/reports` returns all the reports for the given assignment across all instances.
              *        `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
              *        returns all the reports for all assignments across all instances.
                * @since 1.13
@@ -1370,9 +1370,9 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
                * for all OSPolicyAssignments in the project/location. Either {instance} or
                * {assignment} must be `-`. For example: `projects/{project}/locations/{location}/ins
                * tances/{instance}/osPolicyAssignments/-/reports` returns all reports for the
-               * instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments
-               * /{assignment-id}/reports` returns all the reports for the given assignment across
-               * all instances.
+               * instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{
+               * assignment-id}/reports` returns all the reports for the given assignment across all
+               * instances.
                * `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
                * returns all the reports for all assignments across all instances.
                */
@@ -1409,9 +1409,9 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
                * for all OSPolicyAssignments in the project/location. Either {instance} or
                * {assignment} must be `-`. For example: `projects/{project}/locations/{location}/ins
                * tances/{instance}/osPolicyAssignments/-/reports` returns all reports for the
-               * instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments
-               * /{assignment-id}/reports` returns all the reports for the given assignment across
-               * all instances.
+               * instance `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{
+               * assignment-id}/reports` returns all the reports for the given assignment across all
+               * instances.
                * `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
                * returns all the reports for all assignments across all instances.
                */
@@ -1837,13 +1837,13 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             private java.lang.String filter;
 
             /** This field supports filtering by the severity level for the vulnerability. For a list of severity
-           levels, see [Severity levels for vulnerabilities](https://cloud.google.com/container-analysis/docs
-           /container-scanning-overview#severity_levels_for_vulnerabilities). The filter field follows the
-           rules described in the [AIP-160](https://google.aip.dev/160) guidelines as follows: + **Filter for
-           a specific severity type**: you can list reports that contain vulnerabilities that are classified
-           as medium by specifying `vulnerabilities.details.severity:MEDIUM`. + **Filter for a range of
-           severities** : you can list reports that have vulnerabilities that are classified as critical or
-           high by specifying `vulnerabilities.details.severity:HIGH OR
+           levels, see [Severity levels for vulnerabilities](https://cloud.google.com/container-
+           analysis/docs/container-scanning-overview#severity_levels_for_vulnerabilities). The filter field
+           follows the rules described in the [AIP-160](https://google.aip.dev/160) guidelines as follows: +
+           **Filter for a specific severity type**: you can list reports that contain vulnerabilities that are
+           classified as medium by specifying `vulnerabilities.details.severity:MEDIUM`. + **Filter for a
+           range of severities** : you can list reports that have vulnerabilities that are classified as
+           critical or high by specifying `vulnerabilities.details.severity:HIGH OR
            vulnerabilities.details.severity:CRITICAL`
              */
             public java.lang.String getFilter() {
@@ -2102,6 +2102,31 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /**
+           * Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A
+           * random UUID is recommended. This request is only idempotent if a `request_id` is
+           * provided.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A random UUID is
+         recommended. This request is only idempotent if a `request_id` is provided.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A
+           * random UUID is recommended. This request is only idempotent if a `request_id` is
+           * provided.
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -2239,6 +2264,31 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
                   "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A
+           * random UUID is recommended. This request is only idempotent if a `request_id` is
+           * provided.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A random UUID is
+         recommended. This request is only idempotent if a `request_id` is provided.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A
+           * random UUID is recommended. This request is only idempotent if a `request_id` is
+           * provided.
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
             return this;
           }
 
@@ -2902,6 +2952,54 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
                   "^projects/[^/]+/locations/[^/]+/osPolicyAssignments/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the OS policy assignment is not found, a new OS policy
+           * assignment will be created. In this situation, `update_mask` is ignored.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the OS policy assignment is not found, a new OS policy assignment
+         will be created. In this situation, `update_mask` is ignored.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the OS policy assignment is not found, a new OS policy
+           * assignment will be created. In this situation, `update_mask` is ignored.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A
+           * random UUID is recommended. This request is only idempotent if a `request_id` is
+           * provided.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A random UUID is
+         recommended. This request is only idempotent if a `request_id` is provided.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A unique identifier for this request. Restricted to 36 ASCII characters. A
+           * random UUID is recommended. This request is only idempotent if a `request_id` is
+           * provided.
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
             return this;
           }
 

@@ -53,6 +53,13 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   private java.lang.String displayName;
 
   /**
+   * Output only. Customer-managed encryption key spec for the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec;
+
+  /**
    * Output only. Timestamp when this NotebookRuntime will be expired: 1. System Predefined
    * NotebookRuntime: 24 hours after creation. After expiration, system predifined runtime will be
    * deleted. 2. User created NotebookRuntime: 6 months after last upgrade. After expiration, user
@@ -68,6 +75,13 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String healthState;
+
+  /**
+   * Output only. The idle shutdown configuration of the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1NotebookIdleShutdownConfig idleShutdownConfig;
 
   /**
    * Output only. Whether NotebookRuntime is upgradable.
@@ -151,6 +165,20 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   private java.lang.String runtimeUser;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. The service account that the NotebookRuntime workload runs as.
    * The value may be {@code null}.
    */
@@ -225,6 +253,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   }
 
   /**
+   * Output only. Customer-managed encryption key spec for the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Output only. Customer-managed encryption key spec for the notebook runtime.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setEncryptionSpec(GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
+    return this;
+  }
+
+  /**
    * Output only. Timestamp when this NotebookRuntime will be expired: 1. System Predefined
    * NotebookRuntime: 24 hours after creation. After expiration, system predifined runtime will be
    * deleted. 2. User created NotebookRuntime: 6 months after last upgrade. After expiration, user
@@ -261,6 +306,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntime setHealthState(java.lang.String healthState) {
     this.healthState = healthState;
+    return this;
+  }
+
+  /**
+   * Output only. The idle shutdown configuration of the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookIdleShutdownConfig getIdleShutdownConfig() {
+    return idleShutdownConfig;
+  }
+
+  /**
+   * Output only. The idle shutdown configuration of the notebook runtime.
+   * @param idleShutdownConfig idleShutdownConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setIdleShutdownConfig(GoogleCloudAiplatformV1beta1NotebookIdleShutdownConfig idleShutdownConfig) {
+    this.idleShutdownConfig = idleShutdownConfig;
     return this;
   }
 
@@ -453,6 +515,40 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntime setRuntimeUser(java.lang.String runtimeUser) {
     this.runtimeUser = runtimeUser;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

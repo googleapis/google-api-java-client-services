@@ -30,32 +30,28 @@ package com.google.api.services.walletobjects.model;
 public final class AppLinkData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional information about the partner app link. If included, the app link link module will be
-   * rendered on the valuable details on the android client.
+   * Optional information about the partner app link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AppLinkDataAppLinkInfo androidAppLinkInfo;
 
   /**
-   * Optional information about the partner app link. If included, the app link link module will be
-   * rendered on the valuable details on the ios client.
+   * Deprecated. Links to open iOS apps are not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AppLinkDataAppLinkInfo iosAppLinkInfo;
 
   /**
-   * Optional information about the partner app link. If included, the app link link module will be
-   * rendered on the valuable details on the web client.
+   * Optional information about the partner web link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AppLinkDataAppLinkInfo webAppLinkInfo;
 
   /**
-   * Optional information about the partner app link. If included, the app link link module will be
-   * rendered on the valuable details on the android client.
+   * Optional information about the partner app link.
    * @return value or {@code null} for none
    */
   public AppLinkDataAppLinkInfo getAndroidAppLinkInfo() {
@@ -63,8 +59,7 @@ public final class AppLinkData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional information about the partner app link. If included, the app link link module will be
-   * rendered on the valuable details on the android client.
+   * Optional information about the partner app link.
    * @param androidAppLinkInfo androidAppLinkInfo or {@code null} for none
    */
   public AppLinkData setAndroidAppLinkInfo(AppLinkDataAppLinkInfo androidAppLinkInfo) {
@@ -73,8 +68,7 @@ public final class AppLinkData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional information about the partner app link. If included, the app link link module will be
-   * rendered on the valuable details on the ios client.
+   * Deprecated. Links to open iOS apps are not supported.
    * @return value or {@code null} for none
    */
   public AppLinkDataAppLinkInfo getIosAppLinkInfo() {
@@ -82,8 +76,7 @@ public final class AppLinkData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional information about the partner app link. If included, the app link link module will be
-   * rendered on the valuable details on the ios client.
+   * Deprecated. Links to open iOS apps are not supported.
    * @param iosAppLinkInfo iosAppLinkInfo or {@code null} for none
    */
   public AppLinkData setIosAppLinkInfo(AppLinkDataAppLinkInfo iosAppLinkInfo) {
@@ -92,8 +85,7 @@ public final class AppLinkData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional information about the partner app link. If included, the app link link module will be
-   * rendered on the valuable details on the web client.
+   * Optional information about the partner web link.
    * @return value or {@code null} for none
    */
   public AppLinkDataAppLinkInfo getWebAppLinkInfo() {
@@ -101,8 +93,7 @@ public final class AppLinkData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional information about the partner app link. If included, the app link link module will be
-   * rendered on the valuable details on the web client.
+   * Optional information about the partner web link.
    * @param webAppLinkInfo webAppLinkInfo or {@code null} for none
    */
   public AppLinkData setWebAppLinkInfo(AppLinkDataAppLinkInfo webAppLinkInfo) {

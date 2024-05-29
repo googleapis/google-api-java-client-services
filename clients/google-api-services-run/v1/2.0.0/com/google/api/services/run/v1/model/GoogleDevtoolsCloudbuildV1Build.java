@@ -91,6 +91,13 @@ public final class GoogleDevtoolsCloudbuildV1Build extends com.google.api.client
   private String finishTime;
 
   /**
+   * Optional. Configuration for git operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleDevtoolsCloudbuildV1GitConfig gitConfig;
+
+  /**
    * Output only. Unique identifier of the build.
    * The value may be {@code null}.
    */
@@ -165,8 +172,8 @@ public final class GoogleDevtoolsCloudbuildV1Build extends com.google.api.client
   /**
    * Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended
    * technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure
-   * builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com
-   * /cloud-build/docs/securing-builds/use-secrets
+   * builds to access secrets from Secret Manager. For instructions, see:
+   * https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +189,7 @@ public final class GoogleDevtoolsCloudbuildV1Build extends com.google.api.client
   private java.lang.String serviceAccount;
 
   /**
-   * The location of the source files to build.
+   * Optional. The location of the source files to build.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -389,6 +396,23 @@ public final class GoogleDevtoolsCloudbuildV1Build extends com.google.api.client
   }
 
   /**
+   * Optional. Configuration for git operations.
+   * @return value or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1GitConfig getGitConfig() {
+    return gitConfig;
+  }
+
+  /**
+   * Optional. Configuration for git operations.
+   * @param gitConfig gitConfig or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1Build setGitConfig(GoogleDevtoolsCloudbuildV1GitConfig gitConfig) {
+    this.gitConfig = gitConfig;
+    return this;
+  }
+
+  /**
    * Output only. Unique identifier of the build.
    * @return value or {@code null} for none
    */
@@ -562,8 +586,8 @@ public final class GoogleDevtoolsCloudbuildV1Build extends com.google.api.client
   /**
    * Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended
    * technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure
-   * builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com
-   * /cloud-build/docs/securing-builds/use-secrets
+   * builds to access secrets from Secret Manager. For instructions, see:
+   * https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleDevtoolsCloudbuildV1Secret> getSecrets() {
@@ -573,8 +597,8 @@ public final class GoogleDevtoolsCloudbuildV1Build extends com.google.api.client
   /**
    * Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended
    * technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure
-   * builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com
-   * /cloud-build/docs/securing-builds/use-secrets
+   * builds to access secrets from Secret Manager. For instructions, see:
+   * https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
    * @param secrets secrets or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV1Build setSecrets(java.util.List<GoogleDevtoolsCloudbuildV1Secret> secrets) {
@@ -604,7 +628,7 @@ public final class GoogleDevtoolsCloudbuildV1Build extends com.google.api.client
   }
 
   /**
-   * The location of the source files to build.
+   * Optional. The location of the source files to build.
    * @return value or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV1Source getSource() {
@@ -612,7 +636,7 @@ public final class GoogleDevtoolsCloudbuildV1Build extends com.google.api.client
   }
 
   /**
-   * The location of the source files to build.
+   * Optional. The location of the source files to build.
    * @param source source or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV1Build setSource(GoogleDevtoolsCloudbuildV1Source source) {

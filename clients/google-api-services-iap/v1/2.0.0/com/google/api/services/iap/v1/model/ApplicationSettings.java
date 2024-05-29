@@ -31,14 +31,14 @@ package com.google.api.services.iap.v1.model;
 public final class ApplicationSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Customization for Access Denied page.
+   * Optional. Customization for Access Denied page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AccessDeniedPageSettings accessDeniedPageSettings;
 
   /**
-   * Settings to configure attribute propagation.
+   * Optional. Settings to configure attribute propagation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,14 +53,14 @@ public final class ApplicationSettings extends com.google.api.client.json.Generi
   private java.lang.String cookieDomain;
 
   /**
-   * Settings to configure IAP's behavior for a service mesh.
+   * Optional. Settings to configure IAP's behavior for a service mesh.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CsmSettings csmSettings;
 
   /**
-   * Customization for Access Denied page.
+   * Optional. Customization for Access Denied page.
    * @return value or {@code null} for none
    */
   public AccessDeniedPageSettings getAccessDeniedPageSettings() {
@@ -68,7 +68,7 @@ public final class ApplicationSettings extends com.google.api.client.json.Generi
   }
 
   /**
-   * Customization for Access Denied page.
+   * Optional. Customization for Access Denied page.
    * @param accessDeniedPageSettings accessDeniedPageSettings or {@code null} for none
    */
   public ApplicationSettings setAccessDeniedPageSettings(AccessDeniedPageSettings accessDeniedPageSettings) {
@@ -77,7 +77,7 @@ public final class ApplicationSettings extends com.google.api.client.json.Generi
   }
 
   /**
-   * Settings to configure attribute propagation.
+   * Optional. Settings to configure attribute propagation.
    * @return value or {@code null} for none
    */
   public AttributePropagationSettings getAttributePropagationSettings() {
@@ -85,7 +85,7 @@ public final class ApplicationSettings extends com.google.api.client.json.Generi
   }
 
   /**
-   * Settings to configure attribute propagation.
+   * Optional. Settings to configure attribute propagation.
    * @param attributePropagationSettings attributePropagationSettings or {@code null} for none
    */
   public ApplicationSettings setAttributePropagationSettings(AttributePropagationSettings attributePropagationSettings) {
@@ -113,7 +113,7 @@ public final class ApplicationSettings extends com.google.api.client.json.Generi
   }
 
   /**
-   * Settings to configure IAP's behavior for a service mesh.
+   * Optional. Settings to configure IAP's behavior for a service mesh.
    * @return value or {@code null} for none
    */
   public CsmSettings getCsmSettings() {
@@ -121,7 +121,7 @@ public final class ApplicationSettings extends com.google.api.client.json.Generi
   }
 
   /**
-   * Settings to configure IAP's behavior for a service mesh.
+   * Optional. Settings to configure IAP's behavior for a service mesh.
    * @param csmSettings csmSettings or {@code null} for none
    */
   public ApplicationSettings setCsmSettings(CsmSettings csmSettings) {

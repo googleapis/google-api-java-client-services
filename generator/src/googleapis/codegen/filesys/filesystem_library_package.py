@@ -57,7 +57,7 @@ class FilesystemLibraryPackage(LibraryPackage):
     self.EndFile()
     full_path = os.path.join(self._root_path, self._file_path_prefix, name)
     self._MakePath(os.path.dirname(full_path))
-    self._current_file_stream = open(full_path, 'w')
+    self._current_file_stream = open(full_path, 'wb')
     return self._current_file_stream
 
   def EndFile(self):
@@ -79,4 +79,4 @@ class FilesystemLibraryPackage(LibraryPackage):
     if not os.access(path, os.W_OK):
       if os.access(path, os.F_OK):
         raise ValueError('%s exists, but is not writable' % path)
-      os.makedirs(path, 0755)
+      os.makedirs(path, 0o755)

@@ -4228,7 +4228,8 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Lists all the policy issues for the specified account.
+       * Lists all the policy issues where the specified account is involved, both directly and through
+       * any AFP child accounts.
        *
        * Create a request for the method "policyIssues.list".
        *
@@ -4252,7 +4253,8 @@ public class Adsense extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Lists all the policy issues for the specified account.
+         * Lists all the policy issues where the specified account is involved, both directly and through
+         * any AFP child accounts.
          *
          * Create a request for the method "policyIssues.list".
          *

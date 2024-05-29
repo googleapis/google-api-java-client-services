@@ -31,7 +31,7 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class BatchUsageLogEvents extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the device in the form ‘enterprises/{enterpriseId}/devices/{deviceId}’
+   * If present, the name of the device in the form ‘enterprises/{enterpriseId}/devices/{deviceId}’
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class BatchUsageLogEvents extends com.google.api.client.json.Generi
   private java.util.List<UsageLogEvent> usageLogEvents;
 
   /**
-   * The resource name of the user that owns this device in the form
+   * If present, the resource name of the user that owns this device in the form
    * ‘enterprises/{enterpriseId}/users/{userId}’.
    * The value may be {@code null}.
    */
@@ -61,7 +61,7 @@ public final class BatchUsageLogEvents extends com.google.api.client.json.Generi
   private java.lang.String user;
 
   /**
-   * The name of the device in the form ‘enterprises/{enterpriseId}/devices/{deviceId}’
+   * If present, the name of the device in the form ‘enterprises/{enterpriseId}/devices/{deviceId}’
    * @return value or {@code null} for none
    */
   public java.lang.String getDevice() {
@@ -69,7 +69,7 @@ public final class BatchUsageLogEvents extends com.google.api.client.json.Generi
   }
 
   /**
-   * The name of the device in the form ‘enterprises/{enterpriseId}/devices/{deviceId}’
+   * If present, the name of the device in the form ‘enterprises/{enterpriseId}/devices/{deviceId}’
    * @param device device or {@code null} for none
    */
   public BatchUsageLogEvents setDevice(java.lang.String device) {
@@ -114,7 +114,7 @@ public final class BatchUsageLogEvents extends com.google.api.client.json.Generi
   }
 
   /**
-   * The resource name of the user that owns this device in the form
+   * If present, the resource name of the user that owns this device in the form
    * ‘enterprises/{enterpriseId}/users/{userId}’.
    * @return value or {@code null} for none
    */
@@ -123,7 +123,7 @@ public final class BatchUsageLogEvents extends com.google.api.client.json.Generi
   }
 
   /**
-   * The resource name of the user that owns this device in the form
+   * If present, the resource name of the user that owns this device in the form
    * ‘enterprises/{enterpriseId}/users/{userId}’.
    * @param user user or {@code null} for none
    */

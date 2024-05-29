@@ -30,11 +30,38 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class Workspace extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A data encryption state of a Git repository if this Workspace is protected by a
+   * KMS key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataEncryptionState dataEncryptionState;
+
+  /**
    * Identifier. The workspace's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. A data encryption state of a Git repository if this Workspace is protected by a
+   * KMS key.
+   * @return value or {@code null} for none
+   */
+  public DataEncryptionState getDataEncryptionState() {
+    return dataEncryptionState;
+  }
+
+  /**
+   * Output only. A data encryption state of a Git repository if this Workspace is protected by a
+   * KMS key.
+   * @param dataEncryptionState dataEncryptionState or {@code null} for none
+   */
+  public Workspace setDataEncryptionState(DataEncryptionState dataEncryptionState) {
+    this.dataEncryptionState = dataEncryptionState;
+    return this;
+  }
 
   /**
    * Identifier. The workspace's name.

@@ -122,12 +122,19 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
    * following characters: A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-
    * slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of
    * the name.This field is the [METRIC_ID] part of a metric resource name in the format
-   * "projects/PROJECT_ID/metrics/METRIC_ID". Example: If the resource name of a metric is "projects
-   * /my-project/metrics/nginx%2Frequests", this field's value is "nginx/requests".
+   * "projects/PROJECT_ID/metrics/METRIC_ID". Example: If the resource name of a metric is
+   * "projects/my-project/metrics/nginx%2Frequests", this field's value is "nginx/requests".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. The resource name of the metric: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceName;
 
   /**
    * Output only. The last update timestamp of the metric.This field may not be present for older
@@ -358,8 +365,8 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
    * following characters: A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-
    * slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of
    * the name.This field is the [METRIC_ID] part of a metric resource name in the format
-   * "projects/PROJECT_ID/metrics/METRIC_ID". Example: If the resource name of a metric is "projects
-   * /my-project/metrics/nginx%2Frequests", this field's value is "nginx/requests".
+   * "projects/PROJECT_ID/metrics/METRIC_ID". Example: If the resource name of a metric is
+   * "projects/my-project/metrics/nginx%2Frequests", this field's value is "nginx/requests".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -372,12 +379,29 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
    * following characters: A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-
    * slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of
    * the name.This field is the [METRIC_ID] part of a metric resource name in the format
-   * "projects/PROJECT_ID/metrics/METRIC_ID". Example: If the resource name of a metric is "projects
-   * /my-project/metrics/nginx%2Frequests", this field's value is "nginx/requests".
+   * "projects/PROJECT_ID/metrics/METRIC_ID". Example: If the resource name of a metric is
+   * "projects/my-project/metrics/nginx%2Frequests", this field's value is "nginx/requests".
    * @param name name or {@code null} for none
    */
   public LogMetric setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the metric: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceName() {
+    return resourceName;
+  }
+
+  /**
+   * Output only. The resource name of the metric: "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+   * @param resourceName resourceName or {@code null} for none
+   */
+  public LogMetric setResourceName(java.lang.String resourceName) {
+    this.resourceName = resourceName;
     return this;
   }
 

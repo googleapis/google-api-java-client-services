@@ -17,7 +17,7 @@
 package com.google.api.services.walletobjects.model;
 
 /**
- * Generic Object Next ID: 121
+ * Generic Object
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Wallet API. For a detailed explanation see:
@@ -30,7 +30,8 @@ package com.google.api.services.walletobjects.model;
 public final class GenericObject extends com.google.api.client.json.GenericJson {
 
   /**
-   * Information about the partner app link. The maximum number of these fields displayed is 10.
+   * Optional app or website link that will be displayed as a button on the front of the pass. If
+   * AppLinkData is provided for the corresponding class only object AppLinkData will be displayed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,7 +215,8 @@ public final class GenericObject extends com.google.api.client.json.GenericJson 
   private Image wideLogo;
 
   /**
-   * Information about the partner app link. The maximum number of these fields displayed is 10.
+   * Optional app or website link that will be displayed as a button on the front of the pass. If
+   * AppLinkData is provided for the corresponding class only object AppLinkData will be displayed.
    * @return value or {@code null} for none
    */
   public AppLinkData getAppLinkData() {
@@ -222,7 +224,8 @@ public final class GenericObject extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Information about the partner app link. The maximum number of these fields displayed is 10.
+   * Optional app or website link that will be displayed as a button on the front of the pass. If
+   * AppLinkData is provided for the corresponding class only object AppLinkData will be displayed.
    * @param appLinkData appLinkData or {@code null} for none
    */
   public GenericObject setAppLinkData(AppLinkData appLinkData) {

@@ -281,7 +281,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.util.List<LogEntry> logEntries;
 
   /**
-   * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
+   * MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -304,9 +304,9 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String mute;
 
   /**
-   * Records additional information about the mute operation, for example, the [mute configuration
-   * ](/security-command-center/docs/how-to-mute-findings) that muted the finding and the user who
-   * muted the finding.
+   * Records additional information about the mute operation, for example, the [mute
+   * configuration](/security-command-center/docs/how-to-mute-findings) that muted the finding and
+   * the user who muted the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -952,7 +952,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
+   * MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
    * @return value or {@code null} for none
    */
   public MitreAttack getMitreAttack() {
@@ -960,7 +960,7 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * MITRE ATT tactics and techniques related to this finding. See: https://attack.mitre.org
+   * MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
    * @param mitreAttack mitreAttack or {@code null} for none
    */
   public Finding setMitreAttack(MitreAttack mitreAttack) {
@@ -1007,9 +1007,9 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Records additional information about the mute operation, for example, the [mute configuration
-   * ](/security-command-center/docs/how-to-mute-findings) that muted the finding and the user who
-   * muted the finding.
+   * Records additional information about the mute operation, for example, the [mute
+   * configuration](/security-command-center/docs/how-to-mute-findings) that muted the finding and
+   * the user who muted the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getMuteInitiator() {
@@ -1017,9 +1017,9 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Records additional information about the mute operation, for example, the [mute configuration
-   * ](/security-command-center/docs/how-to-mute-findings) that muted the finding and the user who
-   * muted the finding.
+   * Records additional information about the mute operation, for example, the [mute
+   * configuration](/security-command-center/docs/how-to-mute-findings) that muted the finding and
+   * the user who muted the finding.
    * @param muteInitiator muteInitiator or {@code null} for none
    */
   public Finding setMuteInitiator(java.lang.String muteInitiator) {

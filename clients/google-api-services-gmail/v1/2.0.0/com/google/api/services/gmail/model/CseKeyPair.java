@@ -57,8 +57,8 @@ public final class CseKeyPair extends com.google.api.client.json.GenericJson {
   private java.lang.String keyPairId;
 
   /**
-   * Output only. The public key and its certificate chain, in [PEM](https://en.wikipedia.org/wiki
-   * /Privacy-Enhanced_Mail) format.
+   * Output only. The public key and its certificate chain, in
+   * [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,8 +142,8 @@ public final class CseKeyPair extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The public key and its certificate chain, in [PEM](https://en.wikipedia.org/wiki
-   * /Privacy-Enhanced_Mail) format.
+   * Output only. The public key and its certificate chain, in
+   * [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) format.
    * @return value or {@code null} for none
    */
   public java.lang.String getPem() {
@@ -151,8 +151,8 @@ public final class CseKeyPair extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The public key and its certificate chain, in [PEM](https://en.wikipedia.org/wiki
-   * /Privacy-Enhanced_Mail) format.
+   * Output only. The public key and its certificate chain, in
+   * [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) format.
    * @param pem pem or {@code null} for none
    */
   public CseKeyPair setPem(java.lang.String pem) {

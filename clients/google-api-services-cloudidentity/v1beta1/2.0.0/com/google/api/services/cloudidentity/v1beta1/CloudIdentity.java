@@ -9687,9 +9687,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
     /**
      * Updates an InboundSsoAssignment. The body of this request is the `inbound_sso_assignment` field
      * and the `update_mask` is relative to that. For example: a PATCH to
-     * `/v1beta1/inboundSsoAssignments/0abcdefg1234567_mask=rank` with a body of `{ "rank": 1 }` moves
-     * that (presumably group-targeted) SSO assignment to the highest priority and shifts any other
-     * group-targeted assignments down in priority.
+     * `/v1beta1/inboundSsoAssignments/0abcdefg1234567&update_mask=rank` with a body of `{ "rank": 1 }`
+     * moves that (presumably group-targeted) SSO assignment to the highest priority and shifts any
+     * other group-targeted assignments down in priority.
      *
      * Create a request for the method "inboundSsoAssignments.patch".
      *
@@ -9717,9 +9717,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * Updates an InboundSsoAssignment. The body of this request is the `inbound_sso_assignment` field
        * and the `update_mask` is relative to that. For example: a PATCH to
-       * `/v1beta1/inboundSsoAssignments/0abcdefg1234567_mask=rank` with a body of `{ "rank": 1 }` moves
-       * that (presumably group-targeted) SSO assignment to the highest priority and shifts any other
-       * group-targeted assignments down in priority.
+       * `/v1beta1/inboundSsoAssignments/0abcdefg1234567&update_mask=rank` with a body of `{ "rank": 1
+       * }` moves that (presumably group-targeted) SSO assignment to the highest priority and shifts any
+       * other group-targeted assignments down in priority.
        *
        * Create a request for the method "inboundSsoAssignments.patch".
        *
@@ -10171,11 +10171,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        *
        * @param name Required. Immutable. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
        *        OrgMembership. Format: orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is
-       *        the `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com
-       *        /admin-sdk/directory/reference/rest/v1/orgunits). To manage a Membership without
-       *        specifying source `orgUnitId`, this API also supports the wildcard character '-' for
-       *        `$orgUnitId` per https://google.aip.dev/159. The `$membership` shall be of the form
-       *        `{$entityType};{$memberId}`, where `$entityType` is the enum value of
+       *        the `orgUnitId` from the [Admin SDK `OrgUnit`
+       *        resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits).
+       *        To manage a Membership without specifying source `orgUnitId`, this API also supports the
+       *        wildcard character '-' for `$orgUnitId` per https://google.aip.dev/159. The `$membership`
+       *        shall be of the form `{$entityType};{$memberId}`, where `$entityType` is the enum value of
        *        OrgMembership.EntityType, and `memberId` is the `id` from [Drive API (V3) `Drive`
        *        resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for
        *        OrgMembership.EntityType.SHARED_DRIVE.
@@ -10209,11 +10209,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          *
          * @param name Required. Immutable. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
        *        OrgMembership. Format: orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is
-       *        the `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com
-       *        /admin-sdk/directory/reference/rest/v1/orgunits). To manage a Membership without
-       *        specifying source `orgUnitId`, this API also supports the wildcard character '-' for
-       *        `$orgUnitId` per https://google.aip.dev/159. The `$membership` shall be of the form
-       *        `{$entityType};{$memberId}`, where `$entityType` is the enum value of
+       *        the `orgUnitId` from the [Admin SDK `OrgUnit`
+       *        resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits).
+       *        To manage a Membership without specifying source `orgUnitId`, this API also supports the
+       *        wildcard character '-' for `$orgUnitId` per https://google.aip.dev/159. The `$membership`
+       *        shall be of the form `{$entityType};{$memberId}`, where `$entityType` is the enum value of
        *        OrgMembership.EntityType, and `memberId` is the `id` from [Drive API (V3) `Drive`
        *        resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for
        *        OrgMembership.EntityType.SHARED_DRIVE.

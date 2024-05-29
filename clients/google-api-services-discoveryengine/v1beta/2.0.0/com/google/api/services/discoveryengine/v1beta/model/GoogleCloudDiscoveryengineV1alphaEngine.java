@@ -80,7 +80,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   /**
    * The industry vertical that the engine registers. The restriction of the Engine industry
    * vertical is based on DataStore: If unspecified, default to `GENERIC`. Vertical on Engine has to
-   * match vertical of the DataStore liniked to the engine.
+   * match vertical of the DataStore linked to the engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,7 +258,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   /**
    * The industry vertical that the engine registers. The restriction of the Engine industry
    * vertical is based on DataStore: If unspecified, default to `GENERIC`. Vertical on Engine has to
-   * match vertical of the DataStore liniked to the engine.
+   * match vertical of the DataStore linked to the engine.
    * @return value or {@code null} for none
    */
   public java.lang.String getIndustryVertical() {
@@ -268,7 +268,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   /**
    * The industry vertical that the engine registers. The restriction of the Engine industry
    * vertical is based on DataStore: If unspecified, default to `GENERIC`. Vertical on Engine has to
-   * match vertical of the DataStore liniked to the engine.
+   * match vertical of the DataStore linked to the engine.
    * @param industryVertical industryVertical or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setIndustryVertical(java.lang.String industryVertical) {

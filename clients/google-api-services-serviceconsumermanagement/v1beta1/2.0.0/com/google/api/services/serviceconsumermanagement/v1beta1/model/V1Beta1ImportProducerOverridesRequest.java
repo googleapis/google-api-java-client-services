@@ -33,19 +33,25 @@ public final class V1Beta1ImportProducerOverridesRequest extends com.google.api.
   /**
    * Whether to force the creation of the quota overrides. Setting the force parameter to 'true'
    * ignores all quota safety checks that would fail the request. QuotaSafetyCheck lists all such
-   * validations. If force is set to true, it is recommended to include a case id in "X-Goog-
-   * Request-Reason" header when sending the request.
+   * validations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean force;
 
   /**
+   * If force option is set to true, force_justification is suggested to be set to log the reason in
+   * audit logs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String forceJustification;
+
+  /**
    * The list of quota safety checks to ignore before the override mutation. Unlike 'force' field
    * that ignores all the quota safety checks, the 'force_only' field ignores only the specified
    * checks; other checks are still enforced. The 'force' and 'force_only' fields cannot both be
-   * set. If force_only is specified, it is recommended to include a case id in "X-Goog-Request-
-   * Reason" header when sending the request.
+   * set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +67,7 @@ public final class V1Beta1ImportProducerOverridesRequest extends com.google.api.
   /**
    * Whether to force the creation of the quota overrides. Setting the force parameter to 'true'
    * ignores all quota safety checks that would fail the request. QuotaSafetyCheck lists all such
-   * validations. If force is set to true, it is recommended to include a case id in "X-Goog-
-   * Request-Reason" header when sending the request.
+   * validations.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForce() {
@@ -72,8 +77,7 @@ public final class V1Beta1ImportProducerOverridesRequest extends com.google.api.
   /**
    * Whether to force the creation of the quota overrides. Setting the force parameter to 'true'
    * ignores all quota safety checks that would fail the request. QuotaSafetyCheck lists all such
-   * validations. If force is set to true, it is recommended to include a case id in "X-Goog-
-   * Request-Reason" header when sending the request.
+   * validations.
    * @param force force or {@code null} for none
    */
   public V1Beta1ImportProducerOverridesRequest setForce(java.lang.Boolean force) {
@@ -82,11 +86,29 @@ public final class V1Beta1ImportProducerOverridesRequest extends com.google.api.
   }
 
   /**
+   * If force option is set to true, force_justification is suggested to be set to log the reason in
+   * audit logs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getForceJustification() {
+    return forceJustification;
+  }
+
+  /**
+   * If force option is set to true, force_justification is suggested to be set to log the reason in
+   * audit logs.
+   * @param forceJustification forceJustification or {@code null} for none
+   */
+  public V1Beta1ImportProducerOverridesRequest setForceJustification(java.lang.String forceJustification) {
+    this.forceJustification = forceJustification;
+    return this;
+  }
+
+  /**
    * The list of quota safety checks to ignore before the override mutation. Unlike 'force' field
    * that ignores all the quota safety checks, the 'force_only' field ignores only the specified
    * checks; other checks are still enforced. The 'force' and 'force_only' fields cannot both be
-   * set. If force_only is specified, it is recommended to include a case id in "X-Goog-Request-
-   * Reason" header when sending the request.
+   * set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getForceOnly() {
@@ -97,8 +119,7 @@ public final class V1Beta1ImportProducerOverridesRequest extends com.google.api.
    * The list of quota safety checks to ignore before the override mutation. Unlike 'force' field
    * that ignores all the quota safety checks, the 'force_only' field ignores only the specified
    * checks; other checks are still enforced. The 'force' and 'force_only' fields cannot both be
-   * set. If force_only is specified, it is recommended to include a case id in "X-Goog-Request-
-   * Reason" header when sending the request.
+   * set.
    * @param forceOnly forceOnly or {@code null} for none
    */
   public V1Beta1ImportProducerOverridesRequest setForceOnly(java.util.List<java.lang.String> forceOnly) {

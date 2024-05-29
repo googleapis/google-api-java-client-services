@@ -33,7 +33,7 @@ __author__ = 'aiuto@google.com (Tony Aiuto)'
 import json
 import logging
 import operator
-import urlparse
+import urllib.parse
 
 from googleapis.codegen import data_types
 from googleapis.codegen import template_objects
@@ -166,7 +166,7 @@ class Api(template_objects.CodeObject):
         self.values['auth'].get('oauth2') and
         self.values['auth']['oauth2'].get('scopes')):
       for value, auth_dict in sorted(
-          self.values['auth']['oauth2']['scopes'].iteritems()):
+          self.values['auth']['oauth2']['scopes'].items()):
         self._authscopes.append(AuthScope(self, value, auth_dict))
       self.SetTemplateValue('authscopes', self._authscopes)
 
@@ -222,13 +222,13 @@ class Api(template_objects.CodeObject):
       for name in sorted(schemas):
         def_dict = schemas[name]
         # Upgrade the string format schema to a dict.
-        if isinstance(def_dict, unicode):
+        if isinstance(def_dict, str):
           def_dict = json.loads(def_dict)
         self._schemas[name] = self.DataTypeFromJson(def_dict, name)
 
       # Late bind info for variant types, and mark the discriminant
       # field and value.
-      for name, info in self._variant_info.iteritems():
+      for name, info in list(self._variant_info.items()):
         if name not in self._schemas:
           # The error will be reported elsewhere
           continue
@@ -259,7 +259,7 @@ class Api(template_objects.CodeObject):
     if not owner_domain:
       root_url = self.get('rootUrl')
       if root_url:
-        owner_domain = urlparse.urlparse(root_url).hostname
+        owner_domain = urllib.parse.urlparse(root_url).hostname
         # Normalize google domains.
         if any(owner_domain.endswith(d) for d in _RECOGNIZED_GOOGLE_DOMAINS):
           owner_domain = 'google.com'
@@ -320,7 +320,7 @@ class Api(template_objects.CodeObject):
     if best_path.find('..') >= 0:
       raise ValueError('api path must not contain ".." (%s)' % best_path)
     # And let urlparse to the grunt work of normalizing and parsing.
-    url_parts = urlparse.urlparse(best_path)
+    url_parts = urllib.parse.urlparse(best_path)
 
     scheme = url_parts.scheme or 'https'
     service_host = url_parts.netloc or _DEFAULT_SERVICE_HOST
@@ -343,7 +343,7 @@ class Api(template_objects.CodeObject):
   def ModelClasses(self):
     """Return all the model classes."""
     ret = set(
-        s for s in self._schemas.itervalues()
+        s for s in list(self._schemas.values())
         if isinstance(s, Schema) or isinstance(s, data_types.MapDataType))
     return sorted(ret, key=operator.attrgetter('class_name'))
 
@@ -447,7 +447,7 @@ class Api(template_objects.CodeObject):
     for parameter in self.values['parameters']:
       func(parameter)
       func(parameter.data_type)
-    for schema in self._schemas.values():
+    for schema in list(self._schemas.values()):
       self._VisitSchema(schema, func)
     for scope in self.GetTemplateValue('authscopes') or []:
       func(scope)
@@ -685,6 +685,10 @@ class Method(template_objects.CodeObject):
     # TODO(user): if rest_path is not set, raise a good error and fail fast.
     self.SetTemplateValue('restPath', rest_path)
 
+    # Check that ApiVersion field exists and is not empty string ("")
+    if 'apiVersion' in def_dict and def_dict.get('apiVersion'):
+      self.SetTemplateValue('apiVersion', def_dict.get('apiVersion'))
+
     # Figure out the input and output types and schemas for this method.
     expected_request = self.values.get('request')
     if expected_request:
@@ -720,7 +724,7 @@ class Method(template_objects.CodeObject):
     order = self.values.get('parameterOrder', [])
     req_parameters = []
     opt_parameters = []
-    for name, def_dict in self.values.get('parameters', {}).iteritems():
+    for name, def_dict in list(self.values.get('parameters', {}).items()):
       param = Parameter(api, name, def_dict, self)
       if name == 'alt':
         # Treat the alt parameter differently
@@ -736,11 +740,9 @@ class Method(template_objects.CodeObject):
         # optional parameters are appended in the order they're declared.
         opt_parameters.append(param)
     # pylint: disable=g-long-lambda
-    req_parameters.sort(lambda x, y: cmp(order.index(x.values['wireName']),
-                                         order.index(y.values['wireName'])))
+    req_parameters.sort(key=lambda x: order.index(x.values['wireName']))
     # sort optional parameters by name to avoid code churn
-    opt_parameters.sort(
-      lambda x, y: cmp(x.values['wireName'], y.values['wireName']))
+    opt_parameters.sort(key=lambda x: x.values['wireName'])
     req_parameters.extend(opt_parameters)
     self.SetTemplateValue('parameters', req_parameters)
 

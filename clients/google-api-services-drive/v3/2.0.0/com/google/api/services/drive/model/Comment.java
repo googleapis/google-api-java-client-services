@@ -32,8 +32,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
 
   /**
    * A region of the document represented as a JSON string. For details on defining anchor
-   * properties, refer to [Manage comments and replies](https://developers.google.com/drive/api/v3
-   * /manage-comments).
+   * properties, refer to [Manage comments and
+   * replies](https://developers.google.com/drive/api/v3/manage-comments).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,8 +122,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
 
   /**
    * A region of the document represented as a JSON string. For details on defining anchor
-   * properties, refer to [Manage comments and replies](https://developers.google.com/drive/api/v3
-   * /manage-comments).
+   * properties, refer to [Manage comments and
+   * replies](https://developers.google.com/drive/api/v3/manage-comments).
    * @return value or {@code null} for none
    */
   public java.lang.String getAnchor() {
@@ -132,8 +132,8 @@ public final class Comment extends com.google.api.client.json.GenericJson {
 
   /**
    * A region of the document represented as a JSON string. For details on defining anchor
-   * properties, refer to [Manage comments and replies](https://developers.google.com/drive/api/v3
-   * /manage-comments).
+   * properties, refer to [Manage comments and
+   * replies](https://developers.google.com/drive/api/v3/manage-comments).
    * @param anchor anchor or {@code null} for none
    */
   public Comment setAnchor(java.lang.String anchor) {

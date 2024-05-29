@@ -30,16 +30,18 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class AnthosCluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * Membership of the GKE Hub-registered cluster to which to apply the Skaffold configuration.
-   * Format is `projects/{project}/locations/{location}/memberships/{membership_name}`.
+   * Optional. Membership of the GKE Hub-registered cluster to which to apply the Skaffold
+   * configuration. Format is
+   * `projects/{project}/locations/{location}/memberships/{membership_name}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String membership;
 
   /**
-   * Membership of the GKE Hub-registered cluster to which to apply the Skaffold configuration.
-   * Format is `projects/{project}/locations/{location}/memberships/{membership_name}`.
+   * Optional. Membership of the GKE Hub-registered cluster to which to apply the Skaffold
+   * configuration. Format is
+   * `projects/{project}/locations/{location}/memberships/{membership_name}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMembership() {
@@ -47,8 +49,9 @@ public final class AnthosCluster extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Membership of the GKE Hub-registered cluster to which to apply the Skaffold configuration.
-   * Format is `projects/{project}/locations/{location}/memberships/{membership_name}`.
+   * Optional. Membership of the GKE Hub-registered cluster to which to apply the Skaffold
+   * configuration. Format is
+   * `projects/{project}/locations/{location}/memberships/{membership_name}`.
    * @param membership membership or {@code null} for none
    */
   public AnthosCluster setMembership(java.lang.String membership) {

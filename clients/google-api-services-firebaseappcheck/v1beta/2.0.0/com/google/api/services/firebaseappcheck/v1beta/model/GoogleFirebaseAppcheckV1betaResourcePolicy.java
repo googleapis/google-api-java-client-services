@@ -49,7 +49,7 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
   private java.lang.String etag;
 
   /**
-   * Required. The relative name of the resource policy object, in the format: ```
+   * Required. Identifier. The relative name of the resource policy object, in the format: ```
    * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note
    * that the `service_id` element must be a supported service ID. Currently, the following service
    * IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS) `resource_policy_id` is
@@ -120,7 +120,7 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
   }
 
   /**
-   * Required. The relative name of the resource policy object, in the format: ```
+   * Required. Identifier. The relative name of the resource policy object, in the format: ```
    * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note
    * that the `service_id` element must be a supported service ID. Currently, the following service
    * IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS) `resource_policy_id` is
@@ -132,7 +132,7 @@ public final class GoogleFirebaseAppcheckV1betaResourcePolicy extends com.google
   }
 
   /**
-   * Required. The relative name of the resource policy object, in the format: ```
+   * Required. Identifier. The relative name of the resource policy object, in the format: ```
    * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note
    * that the `service_id` element must be a supported service ID. Currently, the following service
    * IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS) `resource_policy_id` is

@@ -30,14 +30,20 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1VertexRagStore extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Vertex RAG Store corpus resource name:
-   * `projects/{project}/locations/{location}/ragCorpora/{ragCorpus}` Currently only one corpus is
-   * allowed. In the future we may open up multiple corpora support. However, they should be from
-   * the same project and location.
+   * Optional. Deprecated. Please use rag_resources instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ragCorpora;
+
+  /**
+   * Optional. The representation of the rag source. It can be used to specify corpus only or
+   * ragfiles. Currently only support one corpus or multiple files from one corpus. In the future we
+   * may open up multiple corpora support.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1VertexRagStoreRagResource> ragResources;
 
   /**
    * Optional. Number of top k results to return from the selected corpora.
@@ -54,10 +60,7 @@ public final class GoogleCloudAiplatformV1beta1VertexRagStore extends com.google
   private java.lang.Double vectorDistanceThreshold;
 
   /**
-   * Required. Vertex RAG Store corpus resource name:
-   * `projects/{project}/locations/{location}/ragCorpora/{ragCorpus}` Currently only one corpus is
-   * allowed. In the future we may open up multiple corpora support. However, they should be from
-   * the same project and location.
+   * Optional. Deprecated. Please use rag_resources instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRagCorpora() {
@@ -65,14 +68,32 @@ public final class GoogleCloudAiplatformV1beta1VertexRagStore extends com.google
   }
 
   /**
-   * Required. Vertex RAG Store corpus resource name:
-   * `projects/{project}/locations/{location}/ragCorpora/{ragCorpus}` Currently only one corpus is
-   * allowed. In the future we may open up multiple corpora support. However, they should be from
-   * the same project and location.
+   * Optional. Deprecated. Please use rag_resources instead.
    * @param ragCorpora ragCorpora or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1VertexRagStore setRagCorpora(java.util.List<java.lang.String> ragCorpora) {
     this.ragCorpora = ragCorpora;
+    return this;
+  }
+
+  /**
+   * Optional. The representation of the rag source. It can be used to specify corpus only or
+   * ragfiles. Currently only support one corpus or multiple files from one corpus. In the future we
+   * may open up multiple corpora support.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1VertexRagStoreRagResource> getRagResources() {
+    return ragResources;
+  }
+
+  /**
+   * Optional. The representation of the rag source. It can be used to specify corpus only or
+   * ragfiles. Currently only support one corpus or multiple files from one corpus. In the future we
+   * may open up multiple corpora support.
+   * @param ragResources ragResources or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VertexRagStore setRagResources(java.util.List<GoogleCloudAiplatformV1beta1VertexRagStoreRagResource> ragResources) {
+    this.ragResources = ragResources;
     return this;
   }
 

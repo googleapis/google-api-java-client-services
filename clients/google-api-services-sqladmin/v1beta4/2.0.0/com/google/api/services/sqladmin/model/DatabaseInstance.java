@@ -258,9 +258,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> replicaNames;
 
   /**
-   * The pair of a primary instance and disaster recovery (DR) replica. A DR replica is a cross-
-   * region replica that you designate for failover in the event that the primary instance has
-   * regional failure.
+   * A primary instance and disaster recovery (DR) replica pair. A DR replica is a cross-region
+   * replica that you designate for failover in the event that the primary instance experiences
+   * regional failure. Only applicable to MySQL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,7 +275,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String rootPassword;
 
   /**
-   * The status indicating if instance satisfiesPzs. Reserved for future use.
+   * This status indicates whether the instance satisfies PZS. The status is reserved for future
+   * use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -345,6 +346,19 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> suspensionReason;
+
+  /**
+   * Output only. All database versions that are available for upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AvailableDatabaseVersion> upgradableDatabaseVersions;
+
+  static {
+    // hack to force ProGuard to consider AvailableDatabaseVersion used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AvailableDatabaseVersion.class);
+  }
 
   /**
    * Output only. The dns name of the primary instance in a replication group.
@@ -900,9 +914,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The pair of a primary instance and disaster recovery (DR) replica. A DR replica is a cross-
-   * region replica that you designate for failover in the event that the primary instance has
-   * regional failure.
+   * A primary instance and disaster recovery (DR) replica pair. A DR replica is a cross-region
+   * replica that you designate for failover in the event that the primary instance experiences
+   * regional failure. Only applicable to MySQL.
    * @return value or {@code null} for none
    */
   public ReplicationCluster getReplicationCluster() {
@@ -910,9 +924,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The pair of a primary instance and disaster recovery (DR) replica. A DR replica is a cross-
-   * region replica that you designate for failover in the event that the primary instance has
-   * regional failure.
+   * A primary instance and disaster recovery (DR) replica pair. A DR replica is a cross-region
+   * replica that you designate for failover in the event that the primary instance experiences
+   * regional failure. Only applicable to MySQL.
    * @param replicationCluster replicationCluster or {@code null} for none
    */
   public DatabaseInstance setReplicationCluster(ReplicationCluster replicationCluster) {
@@ -940,7 +954,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The status indicating if instance satisfiesPzs. Reserved for future use.
+   * This status indicates whether the instance satisfies PZS. The status is reserved for future
+   * use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -948,7 +963,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The status indicating if instance satisfiesPzs. Reserved for future use.
+   * This status indicates whether the instance satisfies PZS. The status is reserved for future
+   * use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public DatabaseInstance setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -1110,6 +1126,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setSuspensionReason(java.util.List<java.lang.String> suspensionReason) {
     this.suspensionReason = suspensionReason;
+    return this;
+  }
+
+  /**
+   * Output only. All database versions that are available for upgrade.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AvailableDatabaseVersion> getUpgradableDatabaseVersions() {
+    return upgradableDatabaseVersions;
+  }
+
+  /**
+   * Output only. All database versions that are available for upgrade.
+   * @param upgradableDatabaseVersions upgradableDatabaseVersions or {@code null} for none
+   */
+  public DatabaseInstance setUpgradableDatabaseVersions(java.util.List<AvailableDatabaseVersion> upgradableDatabaseVersions) {
+    this.upgradableDatabaseVersions = upgradableDatabaseVersions;
     return this;
   }
 

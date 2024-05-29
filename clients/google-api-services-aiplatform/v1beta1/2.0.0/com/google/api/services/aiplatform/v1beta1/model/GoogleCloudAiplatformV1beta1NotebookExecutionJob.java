@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
   private GoogleCloudAiplatformV1beta1NotebookExecutionJobDataformRepositorySource dataformRepositorySource;
 
   /**
+   * The contents of an input notebook file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1NotebookExecutionJobDirectNotebookSource directNotebookSource;
+
+  /**
    * The display name of the NotebookExecutionJob. The name can be up to 128 characters long and can
    * consist of any UTF-8 characters.
    * The value may be {@code null}.
@@ -66,14 +73,14 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
   private java.lang.String executionUser;
 
   /**
-   * The GCS url pointing to the ipynb file. Format: `gs://bucket/notebook_file.ipynb`
+   * The Cloud Storage url pointing to the ipynb file. Format: `gs://bucket/notebook_file.ipynb`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1NotebookExecutionJobGcsNotebookSource gcsNotebookSource;
 
   /**
-   * The GCS location to upload the result to. Format: `gs://bucket-name`
+   * The Cloud Storage location to upload the result to. Format: `gs://bucket-name`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,6 +92,17 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String jobState;
+
+  /**
+   * The labels with user-defined metadata to organize NotebookExecutionJobs. Label keys and values
+   * can be no longer than 64 characters (Unicode codepoints), can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are allowed. See
+   * https://goo.gl/xmQnxf for more information and examples of labels. System reserved label keys
+   * are prefixed with "aiplatform.googleapis.com/" and are immutable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
 
   /**
    * Output only. The resource name of this NotebookExecutionJob. Format:
@@ -166,6 +184,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
   }
 
   /**
+   * The contents of an input notebook file.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookExecutionJobDirectNotebookSource getDirectNotebookSource() {
+    return directNotebookSource;
+  }
+
+  /**
+   * The contents of an input notebook file.
+   * @param directNotebookSource directNotebookSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookExecutionJob setDirectNotebookSource(GoogleCloudAiplatformV1beta1NotebookExecutionJobDirectNotebookSource directNotebookSource) {
+    this.directNotebookSource = directNotebookSource;
+    return this;
+  }
+
+  /**
    * The display name of the NotebookExecutionJob. The name can be up to 128 characters long and can
    * consist of any UTF-8 characters.
    * @return value or {@code null} for none
@@ -219,7 +254,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
   }
 
   /**
-   * The GCS url pointing to the ipynb file. Format: `gs://bucket/notebook_file.ipynb`
+   * The Cloud Storage url pointing to the ipynb file. Format: `gs://bucket/notebook_file.ipynb`
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1NotebookExecutionJobGcsNotebookSource getGcsNotebookSource() {
@@ -227,7 +262,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
   }
 
   /**
-   * The GCS url pointing to the ipynb file. Format: `gs://bucket/notebook_file.ipynb`
+   * The Cloud Storage url pointing to the ipynb file. Format: `gs://bucket/notebook_file.ipynb`
    * @param gcsNotebookSource gcsNotebookSource or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1NotebookExecutionJob setGcsNotebookSource(GoogleCloudAiplatformV1beta1NotebookExecutionJobGcsNotebookSource gcsNotebookSource) {
@@ -236,7 +271,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
   }
 
   /**
-   * The GCS location to upload the result to. Format: `gs://bucket-name`
+   * The Cloud Storage location to upload the result to. Format: `gs://bucket-name`
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsOutputUri() {
@@ -244,7 +279,7 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
   }
 
   /**
-   * The GCS location to upload the result to. Format: `gs://bucket-name`
+   * The Cloud Storage location to upload the result to. Format: `gs://bucket-name`
    * @param gcsOutputUri gcsOutputUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1NotebookExecutionJob setGcsOutputUri(java.lang.String gcsOutputUri) {
@@ -266,6 +301,31 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
    */
   public GoogleCloudAiplatformV1beta1NotebookExecutionJob setJobState(java.lang.String jobState) {
     this.jobState = jobState;
+    return this;
+  }
+
+  /**
+   * The labels with user-defined metadata to organize NotebookExecutionJobs. Label keys and values
+   * can be no longer than 64 characters (Unicode codepoints), can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are allowed. See
+   * https://goo.gl/xmQnxf for more information and examples of labels. System reserved label keys
+   * are prefixed with "aiplatform.googleapis.com/" and are immutable.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * The labels with user-defined metadata to organize NotebookExecutionJobs. Label keys and values
+   * can be no longer than 64 characters (Unicode codepoints), can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are allowed. See
+   * https://goo.gl/xmQnxf for more information and examples of labels. System reserved label keys
+   * are prefixed with "aiplatform.googleapis.com/" and are immutable.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookExecutionJob setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

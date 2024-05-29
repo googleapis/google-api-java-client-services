@@ -60,6 +60,13 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
   private java.lang.String displayName;
 
   /**
+   * Customer-managed encryption key spec for the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec;
+
+  /**
    * Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update
    * happens.
    * The value may be {@code null}.
@@ -234,6 +241,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Customer-managed encryption key spec for the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Customer-managed encryption key spec for the notebook runtime.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setEncryptionSpec(GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 

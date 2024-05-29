@@ -51,6 +51,13 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private java.lang.String description;
 
   /**
+   * Tuning Spec for Distillation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1DistillationSpec distillationSpec;
+
+  /**
    * Customer-managed encryption key options for a TuningJob. If this is set, then all resources
    * created by the TuningJob will be encrypted with the provided encryption key.
    * The value may be {@code null}.
@@ -98,6 +105,14 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. The resource name of the PipelineJob associated with the TuningJob. Format:
+   * `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pipelineJob;
 
   /**
    * Output only. Time when the TuningJob for the first time entered the `JOB_STATE_RUNNING` state.
@@ -197,6 +212,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Tuning Spec for Distillation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DistillationSpec getDistillationSpec() {
+    return distillationSpec;
+  }
+
+  /**
+   * Tuning Spec for Distillation.
+   * @param distillationSpec distillationSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setDistillationSpec(GoogleCloudAiplatformV1beta1DistillationSpec distillationSpec) {
+    this.distillationSpec = distillationSpec;
     return this;
   }
 
@@ -313,6 +345,25 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the PipelineJob associated with the TuningJob. Format:
+   * `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPipelineJob() {
+    return pipelineJob;
+  }
+
+  /**
+   * Output only. The resource name of the PipelineJob associated with the TuningJob. Format:
+   * `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`.
+   * @param pipelineJob pipelineJob or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setPipelineJob(java.lang.String pipelineJob) {
+    this.pipelineJob = pipelineJob;
     return this;
   }
 

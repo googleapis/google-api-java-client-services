@@ -70,6 +70,13 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
   private java.lang.String healthState;
 
   /**
+   * Output only. The idle shutdown configuration of the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1NotebookIdleShutdownConfig idleShutdownConfig;
+
+  /**
    * Output only. Whether NotebookRuntime is upgradable.
    * The value may be {@code null}.
    */
@@ -128,13 +135,6 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.String proxyUri;
-
-  /**
-   * Output only. Reservation Affinity of the notebook runtime.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1NotebookReservationAffinity reservationAffinity;
 
   /**
    * Output only. The runtime (instance) state of the NotebookRuntime.
@@ -279,6 +279,23 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
   }
 
   /**
+   * Output only. The idle shutdown configuration of the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookIdleShutdownConfig getIdleShutdownConfig() {
+    return idleShutdownConfig;
+  }
+
+  /**
+   * Output only. The idle shutdown configuration of the notebook runtime.
+   * @param idleShutdownConfig idleShutdownConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookRuntime setIdleShutdownConfig(GoogleCloudAiplatformV1NotebookIdleShutdownConfig idleShutdownConfig) {
+    this.idleShutdownConfig = idleShutdownConfig;
+    return this;
+  }
+
+  /**
    * Output only. Whether NotebookRuntime is upgradable.
    * @return value or {@code null} for none
    */
@@ -416,23 +433,6 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
    */
   public GoogleCloudAiplatformV1NotebookRuntime setProxyUri(java.lang.String proxyUri) {
     this.proxyUri = proxyUri;
-    return this;
-  }
-
-  /**
-   * Output only. Reservation Affinity of the notebook runtime.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1NotebookReservationAffinity getReservationAffinity() {
-    return reservationAffinity;
-  }
-
-  /**
-   * Output only. Reservation Affinity of the notebook runtime.
-   * @param reservationAffinity reservationAffinity or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1NotebookRuntime setReservationAffinity(GoogleCloudAiplatformV1NotebookReservationAffinity reservationAffinity) {
-    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

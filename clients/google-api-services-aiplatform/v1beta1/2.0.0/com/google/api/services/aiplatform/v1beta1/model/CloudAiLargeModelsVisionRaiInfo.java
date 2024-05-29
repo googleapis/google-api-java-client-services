@@ -30,6 +30,12 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class CloudAiLargeModelsVisionRaiInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabels> detectedLabels;
+
+  /**
    * List of rai categories' information to return
    * The value may be {@code null}.
    */
@@ -42,6 +48,21 @@ public final class CloudAiLargeModelsVisionRaiInfo extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Float> scores;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabels> getDetectedLabels() {
+    return detectedLabels;
+  }
+
+  /**
+   * @param detectedLabels detectedLabels or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionRaiInfo setDetectedLabels(java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabels> detectedLabels) {
+    this.detectedLabels = detectedLabels;
+    return this;
+  }
 
   /**
    * List of rai categories' information to return

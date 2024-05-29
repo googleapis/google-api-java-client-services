@@ -30,7 +30,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ModelMonitoringStatsDataPointTypedValueDistributionDataValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * tensorflow.metadata.v0.DatasetFeatureStatistics format.
+   * Predictive monitoring drift distribution in `tensorflow.metadata.v0.DatasetFeatureStatistics`
+   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +48,8 @@ public final class GoogleCloudAiplatformV1beta1ModelMonitoringStatsDataPointType
   private java.lang.Double distributionDeviation;
 
   /**
-   * tensorflow.metadata.v0.DatasetFeatureStatistics format.
+   * Predictive monitoring drift distribution in `tensorflow.metadata.v0.DatasetFeatureStatistics`
+   * format.
    * @return value or {@code null} for none
    */
   public java.lang.Object getDistribution() {
@@ -55,7 +57,8 @@ public final class GoogleCloudAiplatformV1beta1ModelMonitoringStatsDataPointType
   }
 
   /**
-   * tensorflow.metadata.v0.DatasetFeatureStatistics format.
+   * Predictive monitoring drift distribution in `tensorflow.metadata.v0.DatasetFeatureStatistics`
+   * format.
    * @param distribution distribution or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelMonitoringStatsDataPointTypedValueDistributionDataValue setDistribution(java.lang.Object distribution) {

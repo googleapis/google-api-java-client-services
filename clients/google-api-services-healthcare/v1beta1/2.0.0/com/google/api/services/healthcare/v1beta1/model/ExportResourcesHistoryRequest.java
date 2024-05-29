@@ -47,16 +47,6 @@ public final class ExportResourcesHistoryRequest extends com.google.api.client.j
   private java.lang.String type;
 
   /**
-   * The BigQuery output destination. The Cloud Healthcare Service Agent requires two IAM roles on
-   * the BigQuery location: `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`. The output is
-   * one BigQuery table per resource type. Unlike when setting `BigQueryDestination` for
-   * `StreamConfig`, `ExportResources` does not create BigQuery views.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudHealthcareV1beta1FhirBigQueryDestination bigqueryDestination;
-
-  /**
    * The Cloud Storage output destination. The Healthcare Service Agent account requires the
    * `roles/storage.objectAdmin` role on the Cloud Storage location. The exported outputs are
    * organized by FHIR resource types. The server creates one or more objects per resource type
@@ -117,29 +107,6 @@ public final class ExportResourcesHistoryRequest extends com.google.api.client.j
    */
   public ExportResourcesHistoryRequest setType(java.lang.String type) {
     this.type = type;
-    return this;
-  }
-
-  /**
-   * The BigQuery output destination. The Cloud Healthcare Service Agent requires two IAM roles on
-   * the BigQuery location: `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`. The output is
-   * one BigQuery table per resource type. Unlike when setting `BigQueryDestination` for
-   * `StreamConfig`, `ExportResources` does not create BigQuery views.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudHealthcareV1beta1FhirBigQueryDestination getBigqueryDestination() {
-    return bigqueryDestination;
-  }
-
-  /**
-   * The BigQuery output destination. The Cloud Healthcare Service Agent requires two IAM roles on
-   * the BigQuery location: `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`. The output is
-   * one BigQuery table per resource type. Unlike when setting `BigQueryDestination` for
-   * `StreamConfig`, `ExportResources` does not create BigQuery views.
-   * @param bigqueryDestination bigqueryDestination or {@code null} for none
-   */
-  public ExportResourcesHistoryRequest setBigqueryDestination(GoogleCloudHealthcareV1beta1FhirBigQueryDestination bigqueryDestination) {
-    this.bigqueryDestination = bigqueryDestination;
     return this;
   }
 

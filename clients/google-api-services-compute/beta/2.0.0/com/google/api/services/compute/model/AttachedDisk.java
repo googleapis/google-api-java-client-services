@@ -184,11 +184,10 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a
-   * new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or
-   * disks.source is required except for local SSD. If desired, you can also attach existing non-
-   * root persistent disks using this property. This field is only applicable for persistent disks.
-   * Note that for InstanceTemplate, specify the disk name for zonal disk, and the URL for regional
-   * disk.
+   * new instance boot disk, one of initializeParams.sourceImage or initializeParams.sourceSnapshot
+   * or disks.source is required. If desired, you can also attach existing non-root persistent disks
+   * using this property. This field is only applicable for persistent disks. Note that for
+   * InstanceTemplate, specify the disk name for zonal disk, and the URL for regional disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -570,11 +569,10 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a
-   * new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or
-   * disks.source is required except for local SSD. If desired, you can also attach existing non-
-   * root persistent disks using this property. This field is only applicable for persistent disks.
-   * Note that for InstanceTemplate, specify the disk name for zonal disk, and the URL for regional
-   * disk.
+   * new instance boot disk, one of initializeParams.sourceImage or initializeParams.sourceSnapshot
+   * or disks.source is required. If desired, you can also attach existing non-root persistent disks
+   * using this property. This field is only applicable for persistent disks. Note that for
+   * InstanceTemplate, specify the disk name for zonal disk, and the URL for regional disk.
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -583,11 +581,10 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a
-   * new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or
-   * disks.source is required except for local SSD. If desired, you can also attach existing non-
-   * root persistent disks using this property. This field is only applicable for persistent disks.
-   * Note that for InstanceTemplate, specify the disk name for zonal disk, and the URL for regional
-   * disk.
+   * new instance boot disk, one of initializeParams.sourceImage or initializeParams.sourceSnapshot
+   * or disks.source is required. If desired, you can also attach existing non-root persistent disks
+   * using this property. This field is only applicable for persistent disks. Note that for
+   * InstanceTemplate, specify the disk name for zonal disk, and the URL for regional disk.
    * @param source source or {@code null} for none
    */
   public AttachedDisk setSource(java.lang.String source) {

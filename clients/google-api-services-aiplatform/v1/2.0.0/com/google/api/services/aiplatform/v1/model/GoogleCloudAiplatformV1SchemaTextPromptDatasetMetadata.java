@@ -51,6 +51,13 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
   private GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig groundingConfig;
 
   /**
+   * Whether the prompt dataset has prompt variable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasPromptVariable;
+
+  /**
    * Value of the maximum number of tokens generated set when the dataset was saved.
    * The value may be {@code null}.
    */
@@ -164,6 +171,23 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
    */
   public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setGroundingConfig(GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig groundingConfig) {
     this.groundingConfig = groundingConfig;
+    return this;
+  }
+
+  /**
+   * Whether the prompt dataset has prompt variable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasPromptVariable() {
+    return hasPromptVariable;
+  }
+
+  /**
+   * Whether the prompt dataset has prompt variable.
+   * @param hasPromptVariable hasPromptVariable or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setHasPromptVariable(java.lang.Boolean hasPromptVariable) {
+    this.hasPromptVariable = hasPromptVariable;
     return this;
   }
 

@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1MetadataStore extends com.google.
   private String createTime;
 
   /**
+   * Optional. Dataplex integration settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1MetadataStoreDataplexConfig dataplexConfig;
+
+  /**
    * Description of the MetadataStore.
    * The value may be {@code null}.
    */
@@ -86,6 +93,23 @@ public final class GoogleCloudAiplatformV1beta1MetadataStore extends com.google.
    */
   public GoogleCloudAiplatformV1beta1MetadataStore setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Dataplex integration settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1MetadataStoreDataplexConfig getDataplexConfig() {
+    return dataplexConfig;
+  }
+
+  /**
+   * Optional. Dataplex integration settings.
+   * @param dataplexConfig dataplexConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1MetadataStore setDataplexConfig(GoogleCloudAiplatformV1beta1MetadataStoreDataplexConfig dataplexConfig) {
+    this.dataplexConfig = dataplexConfig;
     return this;
   }
 

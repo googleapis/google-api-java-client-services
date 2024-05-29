@@ -39,6 +39,15 @@ public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearc
   private GoogleCloudDiscoveryengineV1SearchRequestBoostSpec boostSpec;
 
   /**
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec> dataStoreSpecs;
+
+  /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
    * more fields of the documents being filtered. Filter expression is case-sensitive. This will be
    * used to filter search results which may affect the Answer response. If this field is
@@ -89,6 +98,27 @@ public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearc
    */
   public GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchParams setBoostSpec(GoogleCloudDiscoveryengineV1SearchRequestBoostSpec boostSpec) {
     this.boostSpec = boostSpec;
+    return this;
+  }
+
+  /**
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec> getDataStoreSpecs() {
+    return dataStoreSpecs;
+  }
+
+  /**
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
+   * @param dataStoreSpecs dataStoreSpecs or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchParams setDataStoreSpecs(java.util.List<GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec> dataStoreSpecs) {
+    this.dataStoreSpecs = dataStoreSpecs;
     return this;
   }
 

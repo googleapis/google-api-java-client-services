@@ -82,6 +82,16 @@ public final class GoogleCloudDiscoveryengineV1betaUserEvent extends com.google.
   private GoogleCloudDiscoveryengineV1betaCompletionInfo completionInfo;
 
   /**
+   * The DataStore resource full name, of the form `projects/{project}/locations/{location}/collecti
+   * ons/{collection_id}/dataStores/{data_store_id}`. Optional. Only required for user events whose
+   * data store can't by determined by UserEvent.engine or UserEvent.documents. If data store is set
+   * in the parent of write/import/collect user event requests, this field can be omitted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataStore;
+
+  /**
    * Should set to true if the request is made directly from the end user, in which case the
    * UserEvent.user_info.user_agent can be populated from the HTTP request. This flag should be set
    * only if the API request is made directly from the end user such as a mobile app (and not if a
@@ -109,6 +119,16 @@ public final class GoogleCloudDiscoveryengineV1betaUserEvent extends com.google.
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1betaDocumentInfo.class);
   }
+
+  /**
+   * The Engine resource name, in the form of
+   * `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
+   * Optional. Only required for Engine produced user events. For example, user events from blended
+   * search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String engine;
 
   /**
    * Only required for UserEventService.ImportUserEvents method. Timestamp of when the user event
@@ -329,6 +349,29 @@ public final class GoogleCloudDiscoveryengineV1betaUserEvent extends com.google.
   }
 
   /**
+   * The DataStore resource full name, of the form `projects/{project}/locations/{location}/collecti
+   * ons/{collection_id}/dataStores/{data_store_id}`. Optional. Only required for user events whose
+   * data store can't by determined by UserEvent.engine or UserEvent.documents. If data store is set
+   * in the parent of write/import/collect user event requests, this field can be omitted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataStore() {
+    return dataStore;
+  }
+
+  /**
+   * The DataStore resource full name, of the form `projects/{project}/locations/{location}/collecti
+   * ons/{collection_id}/dataStores/{data_store_id}`. Optional. Only required for user events whose
+   * data store can't by determined by UserEvent.engine or UserEvent.documents. If data store is set
+   * in the parent of write/import/collect user event requests, this field can be omitted.
+   * @param dataStore dataStore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaUserEvent setDataStore(java.lang.String dataStore) {
+    this.dataStore = dataStore;
+    return this;
+  }
+
+  /**
    * Should set to true if the request is made directly from the end user, in which case the
    * UserEvent.user_info.user_agent can be populated from the HTTP request. This flag should be set
    * only if the API request is made directly from the end user such as a mobile app (and not if a
@@ -377,6 +420,29 @@ public final class GoogleCloudDiscoveryengineV1betaUserEvent extends com.google.
    */
   public GoogleCloudDiscoveryengineV1betaUserEvent setDocuments(java.util.List<GoogleCloudDiscoveryengineV1betaDocumentInfo> documents) {
     this.documents = documents;
+    return this;
+  }
+
+  /**
+   * The Engine resource name, in the form of
+   * `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
+   * Optional. Only required for Engine produced user events. For example, user events from blended
+   * search.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEngine() {
+    return engine;
+  }
+
+  /**
+   * The Engine resource name, in the form of
+   * `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
+   * Optional. Only required for Engine produced user events. For example, user events from blended
+   * search.
+   * @param engine engine or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaUserEvent setEngine(java.lang.String engine) {
+    this.engine = engine;
     return this;
   }
 

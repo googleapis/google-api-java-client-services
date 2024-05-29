@@ -50,6 +50,15 @@ public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGeneratio
   private java.lang.Boolean ignoreAdversarialQuery;
 
   /**
+   * Specifies whether to filter out queries that have low relevance. If this field is set to
+   * `false`, all search results are used regardless of relevance to generate answers. If set to
+   * `true` or unset, the behavior will be determined automatically by the service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreLowRelevantContent;
+
+  /**
    * Specifies whether to filter out queries that are not answer-seeking. The default value is
    * `false`. Google employs search-query classification to detect answer-seeking queries. No answer
    * is returned if the search query is classified as a non-answer seeking query. If this field is
@@ -124,6 +133,27 @@ public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGeneratio
    */
   public GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGenerationSpec setIgnoreAdversarialQuery(java.lang.Boolean ignoreAdversarialQuery) {
     this.ignoreAdversarialQuery = ignoreAdversarialQuery;
+    return this;
+  }
+
+  /**
+   * Specifies whether to filter out queries that have low relevance. If this field is set to
+   * `false`, all search results are used regardless of relevance to generate answers. If set to
+   * `true` or unset, the behavior will be determined automatically by the service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreLowRelevantContent() {
+    return ignoreLowRelevantContent;
+  }
+
+  /**
+   * Specifies whether to filter out queries that have low relevance. If this field is set to
+   * `false`, all search results are used regardless of relevance to generate answers. If set to
+   * `true` or unset, the behavior will be determined automatically by the service.
+   * @param ignoreLowRelevantContent ignoreLowRelevantContent or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGenerationSpec setIgnoreLowRelevantContent(java.lang.Boolean ignoreLowRelevantContent) {
+    this.ignoreLowRelevantContent = ignoreLowRelevantContent;
     return this;
   }
 

@@ -40,8 +40,9 @@ public final class GoogleFirebaseAppcheckV1betaBatchUpdateServicesRequest extend
 
   /**
    * Optional. A comma-separated list of names of fields in the Services to update. Example:
-   * `display_name`. If this field is present, the `update_mask` field in the UpdateServiceRequest
-   * messages must all match this field, or the entire batch fails and no updates will be committed.
+   * `display_name`. If the `update_mask` field is set in both this request and any of the
+   * UpdateServiceRequest messages, they must match or the entire batch fails and no updates will be
+   * committed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +69,9 @@ public final class GoogleFirebaseAppcheckV1betaBatchUpdateServicesRequest extend
 
   /**
    * Optional. A comma-separated list of names of fields in the Services to update. Example:
-   * `display_name`. If this field is present, the `update_mask` field in the UpdateServiceRequest
-   * messages must all match this field, or the entire batch fails and no updates will be committed.
+   * `display_name`. If the `update_mask` field is set in both this request and any of the
+   * UpdateServiceRequest messages, they must match or the entire batch fails and no updates will be
+   * committed.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -78,8 +80,9 @@ public final class GoogleFirebaseAppcheckV1betaBatchUpdateServicesRequest extend
 
   /**
    * Optional. A comma-separated list of names of fields in the Services to update. Example:
-   * `display_name`. If this field is present, the `update_mask` field in the UpdateServiceRequest
-   * messages must all match this field, or the entire batch fails and no updates will be committed.
+   * `display_name`. If the `update_mask` field is set in both this request and any of the
+   * UpdateServiceRequest messages, they must match or the entire batch fails and no updates will be
+   * committed.
    * @param updateMask updateMask or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaBatchUpdateServicesRequest setUpdateMask(String updateMask) {

@@ -39,6 +39,7 @@ fi
 python3 -m pip install --no-deps -e ${root_dir}/google-api-java-client-services/generator --user -q
 python3 -m pip install --require-hashes -r ${root_dir}/google-api-java-client-services/generator/generator_requirements.txt --user
 
+
 # load utility functions
 source "${root_dir}/google-api-java-client-services/.github/workflows/utils.sh"
 
@@ -51,4 +52,3 @@ do
 done
 
 popd
-

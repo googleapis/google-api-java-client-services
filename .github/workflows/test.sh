@@ -43,7 +43,7 @@ if [[ -f "${failed_libs}" ]];then
   rm "${failed_libs}"
 fi
 
-parallel -j30 -i bash -xe -c "generate_from_discovery '{}' ${variant} true" -- $(find "${root_dir}/discovery-artifact-manager/discoveries/" -printf '%p ') 
+parallel -j30 -i bash -xe -c "generate_from_discovery '{}' ${variant} true" -- $(find "${root_dir}/discovery-artifact-manager/discoveries/" -printf '%p ')
 
 echo 'failed libs are:'
 cat "${failed_libs}

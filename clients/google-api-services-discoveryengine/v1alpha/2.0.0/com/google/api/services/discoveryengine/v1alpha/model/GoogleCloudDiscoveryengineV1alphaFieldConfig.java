@@ -128,6 +128,18 @@ public final class GoogleCloudDiscoveryengineV1alphaFieldConfig extends com.goog
   private java.lang.String retrievableOption;
 
   /**
+   * Field paths for indexing custom attribute from schema.org data. More details of schema.org and
+   * its defined types can be found at [schema.org](https://schema.org). It is only used on advanced
+   * site search schema. Currently only support full path from root. The full path to a field is
+   * constructed by concatenating field names, starting from `_root`, with a period `.` as the
+   * delimiter. Examples: * Publish date of the root: _root.datePublished * Publish date of the
+   * reviews: _root.review.datePublished
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> schemaOrgPaths;
+
+  /**
    * If searchable_option is SEARCHABLE_ENABLED, field values are searchable by text queries in
    * SearchService.Search. If SEARCHABLE_ENABLED but field type is numerical, field values will not
    * be searchable by text queries in SearchService.Search, as there are no text values associated
@@ -359,6 +371,33 @@ public final class GoogleCloudDiscoveryengineV1alphaFieldConfig extends com.goog
    */
   public GoogleCloudDiscoveryengineV1alphaFieldConfig setRetrievableOption(java.lang.String retrievableOption) {
     this.retrievableOption = retrievableOption;
+    return this;
+  }
+
+  /**
+   * Field paths for indexing custom attribute from schema.org data. More details of schema.org and
+   * its defined types can be found at [schema.org](https://schema.org). It is only used on advanced
+   * site search schema. Currently only support full path from root. The full path to a field is
+   * constructed by concatenating field names, starting from `_root`, with a period `.` as the
+   * delimiter. Examples: * Publish date of the root: _root.datePublished * Publish date of the
+   * reviews: _root.review.datePublished
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSchemaOrgPaths() {
+    return schemaOrgPaths;
+  }
+
+  /**
+   * Field paths for indexing custom attribute from schema.org data. More details of schema.org and
+   * its defined types can be found at [schema.org](https://schema.org). It is only used on advanced
+   * site search schema. Currently only support full path from root. The full path to a field is
+   * constructed by concatenating field names, starting from `_root`, with a period `.` as the
+   * delimiter. Examples: * Publish date of the root: _root.datePublished * Publish date of the
+   * reviews: _root.review.datePublished
+   * @param schemaOrgPaths schemaOrgPaths or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaFieldConfig setSchemaOrgPaths(java.util.List<java.lang.String> schemaOrgPaths) {
+    this.schemaOrgPaths = schemaOrgPaths;
     return this;
   }
 

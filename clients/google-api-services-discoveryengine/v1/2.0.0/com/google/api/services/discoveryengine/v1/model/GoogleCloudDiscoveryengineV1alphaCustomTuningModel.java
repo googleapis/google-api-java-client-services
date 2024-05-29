@@ -51,6 +51,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCustomTuningModel extends co
   private java.lang.String modelState;
 
   /**
+   * The version of the model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -124,6 +125,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCustomTuningModel extends co
   }
 
   /**
+   * The version of the model.
    * @return value or {@code null} for none
    */
   public java.lang.Long getModelVersion() {
@@ -131,6 +133,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCustomTuningModel extends co
   }
 
   /**
+   * The version of the model.
    * @param modelVersion modelVersion or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCustomTuningModel setModelVersion(java.lang.Long modelVersion) {

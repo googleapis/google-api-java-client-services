@@ -60,6 +60,13 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String availableMemory;
 
   /**
+   * Optional. The binary authorization policy to be checked when deploying the Cloud Run service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String binaryAuthorizationPolicy;
+
+  /**
    * Environment variables that shall be available during function execution.
    * The value may be {@code null}.
    */
@@ -258,6 +265,23 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
    */
   public ServiceConfig setAvailableMemory(java.lang.String availableMemory) {
     this.availableMemory = availableMemory;
+    return this;
+  }
+
+  /**
+   * Optional. The binary authorization policy to be checked when deploying the Cloud Run service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBinaryAuthorizationPolicy() {
+    return binaryAuthorizationPolicy;
+  }
+
+  /**
+   * Optional. The binary authorization policy to be checked when deploying the Cloud Run service.
+   * @param binaryAuthorizationPolicy binaryAuthorizationPolicy or {@code null} for none
+   */
+  public ServiceConfig setBinaryAuthorizationPolicy(java.lang.String binaryAuthorizationPolicy) {
+    this.binaryAuthorizationPolicy = binaryAuthorizationPolicy;
     return this;
   }
 

@@ -54,6 +54,14 @@ public final class StorageSource extends com.google.api.client.json.GenericJson 
   private java.lang.String object__;
 
   /**
+   * When the specified storage bucket is a 1st gen function uploard url bucket, this field should
+   * be set as the generated upload url for 1st gen deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceUploadUrl;
+
+  /**
    * Google Cloud Storage bucket containing the source (see [Bucket Name
    * Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
    * @return value or {@code null} for none
@@ -107,6 +115,25 @@ public final class StorageSource extends com.google.api.client.json.GenericJson 
    */
   public StorageSource setObject(java.lang.String object__) {
     this.object__ = object__;
+    return this;
+  }
+
+  /**
+   * When the specified storage bucket is a 1st gen function uploard url bucket, this field should
+   * be set as the generated upload url for 1st gen deployment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceUploadUrl() {
+    return sourceUploadUrl;
+  }
+
+  /**
+   * When the specified storage bucket is a 1st gen function uploard url bucket, this field should
+   * be set as the generated upload url for 1st gen deployment.
+   * @param sourceUploadUrl sourceUploadUrl or {@code null} for none
+   */
+  public StorageSource setSourceUploadUrl(java.lang.String sourceUploadUrl) {
+    this.sourceUploadUrl = sourceUploadUrl;
     return this;
   }
 

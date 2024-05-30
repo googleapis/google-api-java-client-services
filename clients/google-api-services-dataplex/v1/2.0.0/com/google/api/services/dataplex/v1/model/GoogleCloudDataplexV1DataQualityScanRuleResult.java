@@ -31,8 +31,8 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityScanRuleResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of rows returned by the sql statement in the SqlAssertion rule. This field is only
-   * valid for SqlAssertion rules.
+   * The number of rows returned by the SQL statement in a SQL assertion rule. This field is only
+   * valid for SQL assertion rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -125,8 +125,8 @@ public final class GoogleCloudDataplexV1DataQualityScanRuleResult extends com.go
   private java.lang.Double thresholdPercent;
 
   /**
-   * The number of rows returned by the sql statement in the SqlAssertion rule. This field is only
-   * valid for SqlAssertion rules.
+   * The number of rows returned by the SQL statement in a SQL assertion rule. This field is only
+   * valid for SQL assertion rules.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAssertionRowCount() {
@@ -134,8 +134,8 @@ public final class GoogleCloudDataplexV1DataQualityScanRuleResult extends com.go
   }
 
   /**
-   * The number of rows returned by the sql statement in the SqlAssertion rule. This field is only
-   * valid for SqlAssertion rules.
+   * The number of rows returned by the SQL statement in a SQL assertion rule. This field is only
+   * valid for SQL assertion rules.
    * @param assertionRowCount assertionRowCount or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityScanRuleResult setAssertionRowCount(java.lang.Long assertionRowCount) {

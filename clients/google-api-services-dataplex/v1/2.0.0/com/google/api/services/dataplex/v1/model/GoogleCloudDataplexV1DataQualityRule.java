@@ -106,7 +106,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   private GoogleCloudDataplexV1DataQualityRuleSetExpectation setExpectation;
 
   /**
-   * Aggregate rule which evaluates the number of rows returned for the provided statement.
+   * Aggregate rule which evaluates the number of rows returned for the provided statement. If any
+   * rows are returned, this rule fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -326,7 +327,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * Aggregate rule which evaluates the number of rows returned for the provided statement.
+   * Aggregate rule which evaluates the number of rows returned for the provided statement. If any
+   * rows are returned, this rule fails.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleSqlAssertion getSqlAssertion() {
@@ -334,7 +336,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * Aggregate rule which evaluates the number of rows returned for the provided statement.
+   * Aggregate rule which evaluates the number of rows returned for the provided statement. If any
+   * rows are returned, this rule fails.
    * @param sqlAssertion sqlAssertion or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setSqlAssertion(GoogleCloudDataplexV1DataQualityRuleSqlAssertion sqlAssertion) {

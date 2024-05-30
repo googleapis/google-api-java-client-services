@@ -30,7 +30,6 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1SearchEntriesResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Entry format of the result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +50,6 @@ public final class GoogleCloudDataplexV1SearchEntriesResult extends com.google.a
   private GoogleCloudDataplexV1SearchEntriesResultSnippets snippets;
 
   /**
-   * Entry format of the result.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1Entry getDataplexEntry() {
@@ -59,7 +57,6 @@ public final class GoogleCloudDataplexV1SearchEntriesResult extends com.google.a
   }
 
   /**
-   * Entry format of the result.
    * @param dataplexEntry dataplexEntry or {@code null} for none
    */
   public GoogleCloudDataplexV1SearchEntriesResult setDataplexEntry(GoogleCloudDataplexV1Entry dataplexEntry) {

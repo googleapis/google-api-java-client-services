@@ -37,7 +37,7 @@ public final class BitbucketDataCenterConfig extends com.google.api.client.json.
   private UserCredential authorizerCredential;
 
   /**
-   * Optional. The URI of the Bitbucket Data Center instance or cluster this connection is for.
+   * Required. The URI of the Bitbucket Data Center instance or cluster this connection is for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class BitbucketDataCenterConfig extends com.google.api.client.json.
   }
 
   /**
-   * Optional. The URI of the Bitbucket Data Center instance or cluster this connection is for.
+   * Required. The URI of the Bitbucket Data Center instance or cluster this connection is for.
    * @return value or {@code null} for none
    */
   public java.lang.String getHostUri() {
@@ -108,7 +108,7 @@ public final class BitbucketDataCenterConfig extends com.google.api.client.json.
   }
 
   /**
-   * Optional. The URI of the Bitbucket Data Center instance or cluster this connection is for.
+   * Required. The URI of the Bitbucket Data Center instance or cluster this connection is for.
    * @param hostUri hostUri or {@code null} for none
    */
   public BitbucketDataCenterConfig setHostUri(java.lang.String hostUri) {

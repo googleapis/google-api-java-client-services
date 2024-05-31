@@ -6153,6 +6153,159 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
+       * An accessor for creating requests from the EventEditRules collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code GoogleAnalyticsAdmin analyticsadmin = new GoogleAnalyticsAdmin(...);}
+       *   {@code GoogleAnalyticsAdmin.EventEditRules.List request = analyticsadmin.eventEditRules().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public EventEditRules eventEditRules() {
+        return new EventEditRules();
+      }
+
+      /**
+       * The "eventEditRules" collection of methods.
+       */
+      public class EventEditRules {
+
+        /**
+         * Changes the processing order of event edit rules on the specified stream.
+         *
+         * Create a request for the method "eventEditRules.reorder".
+         *
+         * This request holds the parameters needed by the analyticsadmin server.  After setting any
+         * optional parameters, call the {@link Reorder#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Example format: properties/123/dataStreams/456
+         * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaReorderEventEditRulesRequest}
+         * @return the request
+         */
+        public Reorder reorder(java.lang.String parent, com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaReorderEventEditRulesRequest content) throws java.io.IOException {
+          Reorder result = new Reorder(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Reorder extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1beta.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/eventEditRules:reorder";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^properties/[^/]+/dataStreams/[^/]+$");
+
+          /**
+           * Changes the processing order of event edit rules on the specified stream.
+           *
+           * Create a request for the method "eventEditRules.reorder".
+           *
+           * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+           * optional parameters, call the {@link Reorder#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Reorder#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Example format: properties/123/dataStreams/456
+           * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaReorderEventEditRulesRequest}
+           * @since 1.13
+           */
+          protected Reorder(java.lang.String parent, com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaReorderEventEditRulesRequest content) {
+            super(GoogleAnalyticsAdmin.this, "POST", REST_PATH, content, com.google.api.services.analyticsadmin.v1beta.model.GoogleProtobufEmpty.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^properties/[^/]+/dataStreams/[^/]+$");
+            }
+          }
+
+          @Override
+          public Reorder set$Xgafv(java.lang.String $Xgafv) {
+            return (Reorder) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Reorder setAccessToken(java.lang.String accessToken) {
+            return (Reorder) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Reorder setAlt(java.lang.String alt) {
+            return (Reorder) super.setAlt(alt);
+          }
+
+          @Override
+          public Reorder setCallback(java.lang.String callback) {
+            return (Reorder) super.setCallback(callback);
+          }
+
+          @Override
+          public Reorder setFields(java.lang.String fields) {
+            return (Reorder) super.setFields(fields);
+          }
+
+          @Override
+          public Reorder setKey(java.lang.String key) {
+            return (Reorder) super.setKey(key);
+          }
+
+          @Override
+          public Reorder setOauthToken(java.lang.String oauthToken) {
+            return (Reorder) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Reorder setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Reorder) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Reorder setQuotaUser(java.lang.String quotaUser) {
+            return (Reorder) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Reorder setUploadType(java.lang.String uploadType) {
+            return (Reorder) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Reorder setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Reorder) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Example format: properties/123/dataStreams/456 */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Example format: properties/123/dataStreams/456
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Example format: properties/123/dataStreams/456 */
+          public Reorder setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^properties/[^/]+/dataStreams/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Reorder set(String parameterName, Object value) {
+            return (Reorder) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the MeasurementProtocolSecrets collection.
        *
        * <p>The typical use is:</p>

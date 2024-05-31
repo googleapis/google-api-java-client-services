@@ -62,6 +62,14 @@ public final class ConsumerPscConfig extends com.google.api.client.json.GenericJ
   private java.lang.String project;
 
   /**
+   * Output only. A map to store mapping between customer vip and target service attachment. Only
+   * service attachment with producer specified ip addresses are stored here.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> serviceAttachmentIpAddressMap;
+
+  /**
    * Output only. Overall state of PSC Connections management for this consumer psc config.
    * The value may be {@code null}.
    */
@@ -139,6 +147,25 @@ public final class ConsumerPscConfig extends com.google.api.client.json.GenericJ
    */
   public ConsumerPscConfig setProject(java.lang.String project) {
     this.project = project;
+    return this;
+  }
+
+  /**
+   * Output only. A map to store mapping between customer vip and target service attachment. Only
+   * service attachment with producer specified ip addresses are stored here.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getServiceAttachmentIpAddressMap() {
+    return serviceAttachmentIpAddressMap;
+  }
+
+  /**
+   * Output only. A map to store mapping between customer vip and target service attachment. Only
+   * service attachment with producer specified ip addresses are stored here.
+   * @param serviceAttachmentIpAddressMap serviceAttachmentIpAddressMap or {@code null} for none
+   */
+  public ConsumerPscConfig setServiceAttachmentIpAddressMap(java.util.Map<String, java.lang.String> serviceAttachmentIpAddressMap) {
+    this.serviceAttachmentIpAddressMap = serviceAttachmentIpAddressMap;
     return this;
   }
 

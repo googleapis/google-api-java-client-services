@@ -17,7 +17,7 @@
 package com.google.api.services.networkconnectivity.v1.model;
 
 /**
- * VM instances to which this policy-based route applies to.
+ * VM instances that this policy-based route applies to.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -31,16 +31,16 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class VirtualMachine extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A list of VM instance tags the this policy-based route applies to. VM instances that
-   * have ANY of tags specified here will install this PBR.
+   * Optional. A list of VM instance tags that this policy-based route applies to. VM instances that
+   * have ANY of tags specified here installs this PBR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tags;
 
   /**
-   * Optional. A list of VM instance tags the this policy-based route applies to. VM instances that
-   * have ANY of tags specified here will install this PBR.
+   * Optional. A list of VM instance tags that this policy-based route applies to. VM instances that
+   * have ANY of tags specified here installs this PBR.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -48,8 +48,8 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A list of VM instance tags the this policy-based route applies to. VM instances that
-   * have ANY of tags specified here will install this PBR.
+   * Optional. A list of VM instance tags that this policy-based route applies to. VM instances that
+   * have ANY of tags specified here installs this PBR.
    * @param tags tags or {@code null} for none
    */
   public VirtualMachine setTags(java.util.List<java.lang.String> tags) {

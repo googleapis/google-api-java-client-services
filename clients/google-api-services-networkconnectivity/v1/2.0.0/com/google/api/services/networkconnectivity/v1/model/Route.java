@@ -79,11 +79,41 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Immutable. The next-hop VLAN attachment for packets on this route.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NextHopInterconnectAttachment nextHopInterconnectAttachment;
+
+  /**
+   * Immutable. The next-hop Router appliance instance for packets on this route.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NextHopRouterApplianceInstance nextHopRouterApplianceInstance;
+
+  /**
    * Immutable. The destination VPC network for packets on this route.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NextHopVpcNetwork nextHopVpcNetwork;
+
+  /**
+   * Immutable. The next-hop VPN tunnel for packets on this route.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NextHopVPNTunnel nextHopVpnTunnel;
+
+  /**
+   * Output only. The priority of this route. Priority is used to break ties in cases where a
+   * destination matches more than one route. In these cases the route with the lowest-numbered
+   * priority value wins.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long priority;
 
   /**
    * Immutable. The spoke that this route leads to. Example:
@@ -237,6 +267,40 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Immutable. The next-hop VLAN attachment for packets on this route.
+   * @return value or {@code null} for none
+   */
+  public NextHopInterconnectAttachment getNextHopInterconnectAttachment() {
+    return nextHopInterconnectAttachment;
+  }
+
+  /**
+   * Immutable. The next-hop VLAN attachment for packets on this route.
+   * @param nextHopInterconnectAttachment nextHopInterconnectAttachment or {@code null} for none
+   */
+  public Route setNextHopInterconnectAttachment(NextHopInterconnectAttachment nextHopInterconnectAttachment) {
+    this.nextHopInterconnectAttachment = nextHopInterconnectAttachment;
+    return this;
+  }
+
+  /**
+   * Immutable. The next-hop Router appliance instance for packets on this route.
+   * @return value or {@code null} for none
+   */
+  public NextHopRouterApplianceInstance getNextHopRouterApplianceInstance() {
+    return nextHopRouterApplianceInstance;
+  }
+
+  /**
+   * Immutable. The next-hop Router appliance instance for packets on this route.
+   * @param nextHopRouterApplianceInstance nextHopRouterApplianceInstance or {@code null} for none
+   */
+  public Route setNextHopRouterApplianceInstance(NextHopRouterApplianceInstance nextHopRouterApplianceInstance) {
+    this.nextHopRouterApplianceInstance = nextHopRouterApplianceInstance;
+    return this;
+  }
+
+  /**
    * Immutable. The destination VPC network for packets on this route.
    * @return value or {@code null} for none
    */
@@ -250,6 +314,44 @@ public final class Route extends com.google.api.client.json.GenericJson {
    */
   public Route setNextHopVpcNetwork(NextHopVpcNetwork nextHopVpcNetwork) {
     this.nextHopVpcNetwork = nextHopVpcNetwork;
+    return this;
+  }
+
+  /**
+   * Immutable. The next-hop VPN tunnel for packets on this route.
+   * @return value or {@code null} for none
+   */
+  public NextHopVPNTunnel getNextHopVpnTunnel() {
+    return nextHopVpnTunnel;
+  }
+
+  /**
+   * Immutable. The next-hop VPN tunnel for packets on this route.
+   * @param nextHopVpnTunnel nextHopVpnTunnel or {@code null} for none
+   */
+  public Route setNextHopVpnTunnel(NextHopVPNTunnel nextHopVpnTunnel) {
+    this.nextHopVpnTunnel = nextHopVpnTunnel;
+    return this;
+  }
+
+  /**
+   * Output only. The priority of this route. Priority is used to break ties in cases where a
+   * destination matches more than one route. In these cases the route with the lowest-numbered
+   * priority value wins.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPriority() {
+    return priority;
+  }
+
+  /**
+   * Output only. The priority of this route. Priority is used to break ties in cases where a
+   * destination matches more than one route. In these cases the route with the lowest-numbered
+   * priority value wins.
+   * @param priority priority or {@code null} for none
+   */
+  public Route setPriority(java.lang.Long priority) {
+    this.priority = priority;
     return this;
   }
 

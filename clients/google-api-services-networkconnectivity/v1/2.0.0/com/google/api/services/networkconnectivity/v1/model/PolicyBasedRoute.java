@@ -19,7 +19,7 @@ package com.google.api.services.networkconnectivity.v1.model;
 /**
  * Policy-based routes route L4 network traffic based on not just destination IP address, but also
  * source IP address, protocol, and more. If a policy-based route conflicts with other types of
- * routes, the policy-based route always take precedence.
+ * routes, the policy-based route always takes precedence.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Connectivity API. For a detailed explanation
@@ -132,7 +132,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   private String updateTime;
 
   /**
-   * Optional. VM instances to which this policy-based route applies to.
+   * Optional. VM instances that this policy-based route applies to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -384,7 +384,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. VM instances to which this policy-based route applies to.
+   * Optional. VM instances that this policy-based route applies to.
    * @return value or {@code null} for none
    */
   public VirtualMachine getVirtualMachine() {
@@ -392,7 +392,7 @@ public final class PolicyBasedRoute extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. VM instances to which this policy-based route applies to.
+   * Optional. VM instances that this policy-based route applies to.
    * @param virtualMachine virtualMachine or {@code null} for none
    */
   public PolicyBasedRoute setVirtualMachine(VirtualMachine virtualMachine) {

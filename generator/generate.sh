@@ -49,3 +49,4 @@ python3 -m googleapis.codegen \
     --package_path=api/services
 
 echo "Wrote client to ${OUTPUT_DIR}"
+

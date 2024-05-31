@@ -66,7 +66,10 @@ public final class ReviewStatusInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Publisher review statuses for the creative.
+   * Publisher review statuses for the creative. **Warning:** This field will be deprecated on June
+   * 26th, 2024. After this date, this field will be empty. Read our [feature deprecation
+   * announcement](/display-video/api/deprecations#features.creative_publisher_review_statuses) for
+   * more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +152,10 @@ public final class ReviewStatusInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Publisher review statuses for the creative.
+   * Publisher review statuses for the creative. **Warning:** This field will be deprecated on June
+   * 26th, 2024. After this date, this field will be empty. Read our [feature deprecation
+   * announcement](/display-video/api/deprecations#features.creative_publisher_review_statuses) for
+   * more information.
    * @return value or {@code null} for none
    */
   public java.util.List<PublisherReviewStatus> getPublisherReviewStatuses() {
@@ -157,7 +163,10 @@ public final class ReviewStatusInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Publisher review statuses for the creative.
+   * Publisher review statuses for the creative. **Warning:** This field will be deprecated on June
+   * 26th, 2024. After this date, this field will be empty. Read our [feature deprecation
+   * announcement](/display-video/api/deprecations#features.creative_publisher_review_statuses) for
+   * more information.
    * @param publisherReviewStatuses publisherReviewStatuses or {@code null} for none
    */
   public ReviewStatusInfo setPublisherReviewStatuses(java.util.List<PublisherReviewStatus> publisherReviewStatuses) {

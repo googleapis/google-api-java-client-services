@@ -36,7 +36,7 @@ package com.google.api.services.workstations.v1beta.model;
 public final class WorkstationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Single or Range of ports externally accessible in the workstation. If not specified
+   * Optional. A Single or Range of ports externally accessible in the workstation. If not specified
    * defaults to ports 22, 80 and ports 1024-65535.
    * The value may be {@code null}.
    */
@@ -276,7 +276,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private String updateTime;
 
   /**
-   * Optional. Single or Range of ports externally accessible in the workstation. If not specified
+   * Optional. A Single or Range of ports externally accessible in the workstation. If not specified
    * defaults to ports 22, 80 and ports 1024-65535.
    * @return value or {@code null} for none
    */
@@ -285,7 +285,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Single or Range of ports externally accessible in the workstation. If not specified
+   * Optional. A Single or Range of ports externally accessible in the workstation. If not specified
    * defaults to ports 22, 80 and ports 1024-65535.
    * @param allowedPorts allowedPorts or {@code null} for none
    */

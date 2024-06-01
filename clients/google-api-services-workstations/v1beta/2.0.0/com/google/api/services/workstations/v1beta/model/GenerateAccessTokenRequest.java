@@ -41,9 +41,9 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
 
   /**
    * Optional. Port for which the access token should be generated. If specified, the generated
-   * access token will grant access only to the specified port of the workstation. If specified,
-   * values must be within the range [1 - 65535]. If not specified, the generated access token will
-   * grant access to all ports of the workstation.
+   * access token grants access only to the specified port of the workstation. If specified, values
+   * must be within the range [1 - 65535]. If not specified, the generated access token grants
+   * access to all ports of the workstation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,9 +80,9 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
 
   /**
    * Optional. Port for which the access token should be generated. If specified, the generated
-   * access token will grant access only to the specified port of the workstation. If specified,
-   * values must be within the range [1 - 65535]. If not specified, the generated access token will
-   * grant access to all ports of the workstation.
+   * access token grants access only to the specified port of the workstation. If specified, values
+   * must be within the range [1 - 65535]. If not specified, the generated access token grants
+   * access to all ports of the workstation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -91,9 +91,9 @@ public final class GenerateAccessTokenRequest extends com.google.api.client.json
 
   /**
    * Optional. Port for which the access token should be generated. If specified, the generated
-   * access token will grant access only to the specified port of the workstation. If specified,
-   * values must be within the range [1 - 65535]. If not specified, the generated access token will
-   * grant access to all ports of the workstation.
+   * access token grants access only to the specified port of the workstation. If specified, values
+   * must be within the range [1 - 65535]. If not specified, the generated access token grants
+   * access to all ports of the workstation.
    * @param port port or {@code null} for none
    */
   public GenerateAccessTokenRequest setPort(java.lang.Integer port) {

@@ -18,7 +18,7 @@ package com.google.api.services.workstations.v1beta.model;
 
 /**
  * A PortsConfig defines a range of ports. Both first and last are inclusive. To specify a single
- * port, both first and last should be same.
+ * port, both first and last should be the same.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation

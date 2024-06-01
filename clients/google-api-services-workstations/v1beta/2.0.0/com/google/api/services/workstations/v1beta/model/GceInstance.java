@@ -106,7 +106,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
    * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
    * Type**: nested virtualization can only be enabled on workstation configurations that specify a
    * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
-   * enabled on workstation configurations with accelerators. * **Operating System**: Because
+   * enabled on workstation configurations with accelerators. * **Operating System**: because
    * [Container-Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
    * optimized_os_cos) does not support nested virtualization, when nested virtualization is
    * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
@@ -322,7 +322,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
    * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
    * Type**: nested virtualization can only be enabled on workstation configurations that specify a
    * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
-   * enabled on workstation configurations with accelerators. * **Operating System**: Because
+   * enabled on workstation configurations with accelerators. * **Operating System**: because
    * [Container-Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
    * optimized_os_cos) does not support nested virtualization, when nested virtualization is
    * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
@@ -349,7 +349,7 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
    * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
    * Type**: nested virtualization can only be enabled on workstation configurations that specify a
    * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
-   * enabled on workstation configurations with accelerators. * **Operating System**: Because
+   * enabled on workstation configurations with accelerators. * **Operating System**: because
    * [Container-Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
    * optimized_os_cos) does not support nested virtualization, when nested virtualization is
    * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu

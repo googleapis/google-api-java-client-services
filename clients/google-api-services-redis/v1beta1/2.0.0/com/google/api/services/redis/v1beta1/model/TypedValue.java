@@ -32,30 +32,35 @@ package com.google.api.services.redis.v1beta1.model;
 public final class TypedValue extends com.google.api.client.json.GenericJson {
 
   /**
+   * For boolean value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean boolValue;
 
   /**
+   * For double value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double doubleValue;
 
   /**
+   * For integer value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long int64Value;
 
   /**
+   * For string value
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stringValue;
 
   /**
+   * For boolean value
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBoolValue() {
@@ -63,6 +68,7 @@ public final class TypedValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * For boolean value
    * @param boolValue boolValue or {@code null} for none
    */
   public TypedValue setBoolValue(java.lang.Boolean boolValue) {
@@ -71,6 +77,7 @@ public final class TypedValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * For double value
    * @return value or {@code null} for none
    */
   public java.lang.Double getDoubleValue() {
@@ -78,6 +85,7 @@ public final class TypedValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * For double value
    * @param doubleValue doubleValue or {@code null} for none
    */
   public TypedValue setDoubleValue(java.lang.Double doubleValue) {
@@ -86,6 +94,7 @@ public final class TypedValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * For integer value
    * @return value or {@code null} for none
    */
   public java.lang.Long getInt64Value() {
@@ -93,6 +102,7 @@ public final class TypedValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * For integer value
    * @param int64Value int64Value or {@code null} for none
    */
   public TypedValue setInt64Value(java.lang.Long int64Value) {
@@ -101,6 +111,7 @@ public final class TypedValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * For string value
    * @return value or {@code null} for none
    */
   public java.lang.String getStringValue() {
@@ -108,6 +119,7 @@ public final class TypedValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * For string value
    * @param stringValue stringValue or {@code null} for none
    */
   public TypedValue setStringValue(java.lang.String stringValue) {

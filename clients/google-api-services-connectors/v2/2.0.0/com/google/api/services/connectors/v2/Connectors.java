@@ -2957,6 +2957,278 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
             }
 
           }
+          /**
+           * An accessor for creating requests from the Entitieswithacls collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Connectors connectors = new Connectors(...);}
+           *   {@code Connectors.Entitieswithacls.List request = connectors.entitieswithacls().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Entitieswithacls entitieswithacls() {
+            return new Entitieswithacls();
+          }
+
+          /**
+           * The "entitieswithacls" collection of methods.
+           */
+          public class Entitieswithacls {
+
+            /**
+             * Lists entity rows with ACLs of a particular entity type contained in the request. Note: 1.
+             * Currently, only max of one 'sort_by' column is supported. 2. If no 'sort_by' column is provided,
+             * the primary key of the table is used. If zero or more than one primary key is available, we
+             * default to the unpaginated list entities logic which only returns the first page. 3. The values
+             * of the 'sort_by' columns must uniquely identify an entity row, otherwise undefined behaviors may
+             * be observed during pagination. 4. Since transactions are not supported, any updates, inserts or
+             * deletes during pagination can lead to stale data being returned or other unexpected behaviors.
+             *
+             * Create a request for the method "entitieswithacls.list".
+             *
+             * This request holds the parameters needed by the connectors server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Resource name of the Entity Type. Format:
+             *        projects/{project}/locations/{location}/connections/{connection}/entityTypes/{type}
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ConnectorsRequest<com.google.api.services.connectors.v2.model.ListEntitiesWithACLsResponse> {
+
+              private static final String REST_PATH = "v2/{+parent}/entitieswithacls";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/entityTypes/[^/]+$");
+
+              /**
+               * Lists entity rows with ACLs of a particular entity type contained in the request. Note: 1.
+               * Currently, only max of one 'sort_by' column is supported. 2. If no 'sort_by' column is
+               * provided, the primary key of the table is used. If zero or more than one primary key is
+               * available, we default to the unpaginated list entities logic which only returns the first page.
+               * 3. The values of the 'sort_by' columns must uniquely identify an entity row, otherwise
+               * undefined behaviors may be observed during pagination. 4. Since transactions are not supported,
+               * any updates, inserts or deletes during pagination can lead to stale data being returned or
+               * other unexpected behaviors.
+               *
+               * Create a request for the method "entitieswithacls.list".
+               *
+               * This request holds the parameters needed by the the connectors server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Resource name of the Entity Type. Format:
+             *        projects/{project}/locations/{location}/connections/{connection}/entityTypes/{type}
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v2.model.ListEntitiesWithACLsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/connections/[^/]+/entityTypes/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Resource name of the Entity Type. Format:
+               * projects/{project}/locations/{location}/connections/{connection}/entityTypes/{type}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Resource name of the Entity Type. Format:
+             projects/{project}/locations/{location}/connections/{connection}/entityTypes/{type}
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. Resource name of the Entity Type. Format:
+               * projects/{project}/locations/{location}/connections/{connection}/entityTypes/{type}
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/connections/[^/]+/entityTypes/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Conditions to be used when listing entities. From a proto standpoint, There are no
+               * restrictions on what can be passed using this field. The connector documentation
+               * should have information about what format of filters/conditions are supported.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String conditions;
+
+              /** Conditions to be used when listing entities. From a proto standpoint, There are no restrictions on
+             what can be passed using this field. The connector documentation should have information about what
+             format of filters/conditions are supported.
+               */
+              public java.lang.String getConditions() {
+                return conditions;
+              }
+
+              /**
+               * Conditions to be used when listing entities. From a proto standpoint, There are no
+               * restrictions on what can be passed using this field. The connector documentation
+               * should have information about what format of filters/conditions are supported.
+               */
+              public List setConditions(java.lang.String conditions) {
+                this.conditions = conditions;
+                return this;
+              }
+
+              /** Format: gs://object_path */
+              @com.google.api.client.util.Key
+              private java.lang.String gsutilUri;
+
+              /** Format: gs://object_path
+               */
+              public java.lang.String getGsutilUri() {
+                return gsutilUri;
+              }
+
+              /** Format: gs://object_path */
+              public List setGsutilUri(java.lang.String gsutilUri) {
+                this.gsutilUri = gsutilUri;
+                return this;
+              }
+
+              /** Number of entity rows to return. Defaults page size = 25. Max page size = 200. */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Number of entity rows to return. Defaults page size = 25. Max page size = 200.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /** Number of entity rows to return. Defaults page size = 25. Max page size = 200. */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** Page token value if available from a previous request. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Page token value if available from a previous request.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** Page token value if available from a previous request. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /** List of 'sort_by' columns to use when returning the results. */
+              @com.google.api.client.util.Key
+              private java.util.List<java.lang.String> sortBy;
+
+              /** List of 'sort_by' columns to use when returning the results.
+               */
+              public java.util.List<java.lang.String> getSortBy() {
+                return sortBy;
+              }
+
+              /** List of 'sort_by' columns to use when returning the results. */
+              public List setSortBy(java.util.List<java.lang.String> sortBy) {
+                this.sortBy = sortBy;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
     }

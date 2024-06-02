@@ -30,6 +30,13 @@ package com.google.api.services.connectors.v1.model;
 public final class Connector extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Category of the connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String category;
+
+  /**
    * Output only. Created time.
    * The value may be {@code null}.
    */
@@ -96,6 +103,13 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Tags of the connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> tags;
+
+  /**
    * Output only. Updated time.
    * The value may be {@code null}.
    */
@@ -108,6 +122,23 @@ public final class Connector extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String webAssetsLocation;
+
+  /**
+   * Output only. Category of the connector.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategory() {
+    return category;
+  }
+
+  /**
+   * Output only. Category of the connector.
+   * @param category category or {@code null} for none
+   */
+  public Connector setCategory(java.lang.String category) {
+    this.category = category;
+    return this;
+  }
 
   /**
    * Output only. Created time.
@@ -265,6 +296,23 @@ public final class Connector extends com.google.api.client.json.GenericJson {
    */
   public Connector setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Tags of the connector.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Output only. Tags of the connector.
+   * @param tags tags or {@code null} for none
+   */
+  public Connector setTags(java.util.List<java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

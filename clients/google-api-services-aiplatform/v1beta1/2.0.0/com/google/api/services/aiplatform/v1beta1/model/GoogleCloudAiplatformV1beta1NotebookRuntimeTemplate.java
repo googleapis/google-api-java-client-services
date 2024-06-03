@@ -143,13 +143,6 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
   private java.lang.String notebookRuntimeType;
 
   /**
-   * Optional. Reservation Affinity of the notebook runtime template.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1NotebookReservationAffinity reservationAffinity;
-
-  /**
    * The service account that the runtime workload runs as. You can use any service account within
    * the same project, but you must have the service account user permission to use the instance. If
    * not specified, the [Compute Engine default service
@@ -440,23 +433,6 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setNotebookRuntimeType(java.lang.String notebookRuntimeType) {
     this.notebookRuntimeType = notebookRuntimeType;
-    return this;
-  }
-
-  /**
-   * Optional. Reservation Affinity of the notebook runtime template.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1NotebookReservationAffinity getReservationAffinity() {
-    return reservationAffinity;
-  }
-
-  /**
-   * Optional. Reservation Affinity of the notebook runtime template.
-   * @param reservationAffinity reservationAffinity or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setReservationAffinity(GoogleCloudAiplatformV1beta1NotebookReservationAffinity reservationAffinity) {
-    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

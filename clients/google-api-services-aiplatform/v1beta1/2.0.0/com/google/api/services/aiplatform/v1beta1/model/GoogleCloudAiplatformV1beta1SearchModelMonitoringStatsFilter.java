@@ -30,11 +30,35 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1SearchModelMonitoringStatsFilter extends com.google.api.client.json.GenericJson {
 
   /**
+   * GenAi statistics filter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SearchModelMonitoringStatsFilterGenAiStatsFilter genAiStatsFilter;
+
+  /**
    * Tabular statistics filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1SearchModelMonitoringStatsFilterTabularStatsFilter tabularStatsFilter;
+
+  /**
+   * GenAi statistics filter.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SearchModelMonitoringStatsFilterGenAiStatsFilter getGenAiStatsFilter() {
+    return genAiStatsFilter;
+  }
+
+  /**
+   * GenAi statistics filter.
+   * @param genAiStatsFilter genAiStatsFilter or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SearchModelMonitoringStatsFilter setGenAiStatsFilter(GoogleCloudAiplatformV1beta1SearchModelMonitoringStatsFilterGenAiStatsFilter genAiStatsFilter) {
+    this.genAiStatsFilter = genAiStatsFilter;
+    return this;
+  }
 
   /**
    * Tabular statistics filter.

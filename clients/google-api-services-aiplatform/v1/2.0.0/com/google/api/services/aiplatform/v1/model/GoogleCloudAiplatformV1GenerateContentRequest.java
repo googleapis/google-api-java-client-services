@@ -68,6 +68,13 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
   private GoogleCloudAiplatformV1Content systemInstruction;
 
   /**
+   * Optional. Tool config. This config is shared for all tools provided in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ToolConfig toolConfig;
+
+  /**
    * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
    * piece of code that enables the system to interact with external systems to perform an action,
    * or set of actions, outside of knowledge and scope of the model.
@@ -149,6 +156,23 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
    */
   public GoogleCloudAiplatformV1GenerateContentRequest setSystemInstruction(GoogleCloudAiplatformV1Content systemInstruction) {
     this.systemInstruction = systemInstruction;
+    return this;
+  }
+
+  /**
+   * Optional. Tool config. This config is shared for all tools provided in the request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ToolConfig getToolConfig() {
+    return toolConfig;
+  }
+
+  /**
+   * Optional. Tool config. This config is shared for all tools provided in the request.
+   * @param toolConfig toolConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentRequest setToolConfig(GoogleCloudAiplatformV1ToolConfig toolConfig) {
+    this.toolConfig = toolConfig;
     return this;
   }
 

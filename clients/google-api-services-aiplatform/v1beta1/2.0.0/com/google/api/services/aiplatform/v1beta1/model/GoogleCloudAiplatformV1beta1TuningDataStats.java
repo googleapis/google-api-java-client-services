@@ -30,11 +30,59 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1TuningDataStats extends com.google.api.client.json.GenericJson {
 
   /**
+   * Statistics for distillation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1DistillationDataStats distillationDataStats;
+
+  /**
+   * Statistics for reinforcement learning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReinforcementLearningDataStats reinforcementLearningDataStats;
+
+  /**
    * The SFT Tuning data stats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1SupervisedTuningDataStats supervisedTuningDataStats;
+
+  /**
+   * Statistics for distillation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DistillationDataStats getDistillationDataStats() {
+    return distillationDataStats;
+  }
+
+  /**
+   * Statistics for distillation.
+   * @param distillationDataStats distillationDataStats or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningDataStats setDistillationDataStats(GoogleCloudAiplatformV1beta1DistillationDataStats distillationDataStats) {
+    this.distillationDataStats = distillationDataStats;
+    return this;
+  }
+
+  /**
+   * Statistics for reinforcement learning.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReinforcementLearningDataStats getReinforcementLearningDataStats() {
+    return reinforcementLearningDataStats;
+  }
+
+  /**
+   * Statistics for reinforcement learning.
+   * @param reinforcementLearningDataStats reinforcementLearningDataStats or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningDataStats setReinforcementLearningDataStats(GoogleCloudAiplatformV1beta1ReinforcementLearningDataStats reinforcementLearningDataStats) {
+    this.reinforcementLearningDataStats = reinforcementLearningDataStats;
+    return this;
+  }
 
   /**
    * The SFT Tuning data stats.

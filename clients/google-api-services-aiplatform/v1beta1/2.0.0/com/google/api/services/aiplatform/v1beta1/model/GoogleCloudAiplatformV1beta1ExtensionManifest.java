@@ -45,7 +45,8 @@ public final class GoogleCloudAiplatformV1beta1ExtensionManifest extends com.goo
 
   /**
    * Required. The natural language description shown to the LLM. It should describe the usage of
-   * the extension, and is essential for the LLM to perform reasoning.
+   * the extension, and is essential for the LLM to perform reasoning. e.g., if the extension is a
+   * data store, you can let the LLM know what data it contains.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +95,8 @@ public final class GoogleCloudAiplatformV1beta1ExtensionManifest extends com.goo
 
   /**
    * Required. The natural language description shown to the LLM. It should describe the usage of
-   * the extension, and is essential for the LLM to perform reasoning.
+   * the extension, and is essential for the LLM to perform reasoning. e.g., if the extension is a
+   * data store, you can let the LLM know what data it contains.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -103,7 +105,8 @@ public final class GoogleCloudAiplatformV1beta1ExtensionManifest extends com.goo
 
   /**
    * Required. The natural language description shown to the LLM. It should describe the usage of
-   * the extension, and is essential for the LLM to perform reasoning.
+   * the extension, and is essential for the LLM to perform reasoning. e.g., if the extension is a
+   * data store, you can let the LLM know what data it contains.
    * @param description description or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ExtensionManifest setDescription(java.lang.String description) {

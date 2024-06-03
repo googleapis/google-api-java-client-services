@@ -53,6 +53,13 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
   private java.lang.String displayName;
 
   /**
+   * Output only. Customer-managed encryption key spec for the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1EncryptionSpec encryptionSpec;
+
+  /**
    * Output only. Timestamp when this NotebookRuntime will be expired: 1. System Predefined
    * NotebookRuntime: 24 hours after creation. After expiration, system predifined runtime will be
    * deleted. 2. User created NotebookRuntime: 6 months after last upgrade. After expiration, user
@@ -235,6 +242,23 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
    */
   public GoogleCloudAiplatformV1NotebookRuntime setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. Customer-managed encryption key spec for the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Output only. Customer-managed encryption key spec for the notebook runtime.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookRuntime setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 

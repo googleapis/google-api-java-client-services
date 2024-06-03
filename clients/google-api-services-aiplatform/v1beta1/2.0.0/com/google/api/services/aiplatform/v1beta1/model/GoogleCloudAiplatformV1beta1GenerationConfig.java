@@ -68,6 +68,17 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private java.lang.String responseMimeType;
 
   /**
+   * Optional. The `Schema` object allows the definition of input and output data types. These types
+   * can be objects, but also primitives and arrays. Represents a select subset of an [OpenAPI 3.0
+   * schema object](https://spec.openapis.org/oas/v3.0.3#schema). If set, a compatible
+   * response_mime_type must also be set. Compatible mimetypes: `application/json`: Schema for JSON
+   * response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1Schema responseSchema;
+
+  /**
    * Optional. Stop sequences.
    * The value may be {@code null}.
    */
@@ -183,6 +194,31 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setResponseMimeType(java.lang.String responseMimeType) {
     this.responseMimeType = responseMimeType;
+    return this;
+  }
+
+  /**
+   * Optional. The `Schema` object allows the definition of input and output data types. These types
+   * can be objects, but also primitives and arrays. Represents a select subset of an [OpenAPI 3.0
+   * schema object](https://spec.openapis.org/oas/v3.0.3#schema). If set, a compatible
+   * response_mime_type must also be set. Compatible mimetypes: `application/json`: Schema for JSON
+   * response.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema getResponseSchema() {
+    return responseSchema;
+  }
+
+  /**
+   * Optional. The `Schema` object allows the definition of input and output data types. These types
+   * can be objects, but also primitives and arrays. Represents a select subset of an [OpenAPI 3.0
+   * schema object](https://spec.openapis.org/oas/v3.0.3#schema). If set, a compatible
+   * response_mime_type must also be set. Compatible mimetypes: `application/json`: Schema for JSON
+   * response.
+   * @param responseSchema responseSchema or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setResponseSchema(GoogleCloudAiplatformV1beta1Schema responseSchema) {
+    this.responseSchema = responseSchema;
     return this;
   }
 

@@ -115,6 +115,13 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private java.lang.String pipelineJob;
 
   /**
+   * Tuning Spec for Reinforcement Learning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReinforcementLearningSpec reinforcementLearningSpec;
+
+  /**
    * Output only. Time when the TuningJob for the first time entered the `JOB_STATE_RUNNING` state.
    * The value may be {@code null}.
    */
@@ -364,6 +371,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setPipelineJob(java.lang.String pipelineJob) {
     this.pipelineJob = pipelineJob;
+    return this;
+  }
+
+  /**
+   * Tuning Spec for Reinforcement Learning.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReinforcementLearningSpec getReinforcementLearningSpec() {
+    return reinforcementLearningSpec;
+  }
+
+  /**
+   * Tuning Spec for Reinforcement Learning.
+   * @param reinforcementLearningSpec reinforcementLearningSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setReinforcementLearningSpec(GoogleCloudAiplatformV1beta1ReinforcementLearningSpec reinforcementLearningSpec) {
+    this.reinforcementLearningSpec = reinforcementLearningSpec;
     return this;
   }
 

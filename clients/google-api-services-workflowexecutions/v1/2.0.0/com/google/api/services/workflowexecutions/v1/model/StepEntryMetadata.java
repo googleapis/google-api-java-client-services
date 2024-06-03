@@ -31,6 +31,13 @@ package com.google.api.services.workflowexecutions.v1.model;
 public final class StepEntryMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Expected iteration represents the expected number of iterations in the step's progress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long expectedIteration;
+
+  /**
    * Progress number represents the current state of the current progress. eg: A step entry
    * represents the 4th iteration in a progress of PROGRESS_TYPE_FOR.
    * The value may be {@code null}.
@@ -51,6 +58,23 @@ public final class StepEntryMetadata extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String threadId;
+
+  /**
+   * Expected iteration represents the expected number of iterations in the step's progress.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getExpectedIteration() {
+    return expectedIteration;
+  }
+
+  /**
+   * Expected iteration represents the expected number of iterations in the step's progress.
+   * @param expectedIteration expectedIteration or {@code null} for none
+   */
+  public StepEntryMetadata setExpectedIteration(java.lang.Long expectedIteration) {
+    this.expectedIteration = expectedIteration;
+    return this;
+  }
 
   /**
    * Progress number represents the current state of the current progress. eg: A step entry

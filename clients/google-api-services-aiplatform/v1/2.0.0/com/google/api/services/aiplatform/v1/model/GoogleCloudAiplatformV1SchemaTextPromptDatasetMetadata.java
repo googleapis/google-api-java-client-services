@@ -86,6 +86,13 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
   private java.util.List<java.lang.String> stopSequences;
 
   /**
+   * The content of the prompt dataset system instruction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String systemInstruction;
+
+  /**
    * The Google Cloud Storage URI that stores the system instruction, starting with gs://.
    * The value may be {@code null}.
    */
@@ -256,6 +263,23 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
    */
   public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setStopSequences(java.util.List<java.lang.String> stopSequences) {
     this.stopSequences = stopSequences;
+    return this;
+  }
+
+  /**
+   * The content of the prompt dataset system instruction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSystemInstruction() {
+    return systemInstruction;
+  }
+
+  /**
+   * The content of the prompt dataset system instruction.
+   * @param systemInstruction systemInstruction or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setSystemInstruction(java.lang.String systemInstruction) {
+    this.systemInstruction = systemInstruction;
     return this;
   }
 

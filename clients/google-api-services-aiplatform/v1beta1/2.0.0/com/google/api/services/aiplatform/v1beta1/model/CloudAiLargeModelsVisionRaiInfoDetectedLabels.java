@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Filters which return labels with confidence scores.
+ * Filters returning list of deteceted labels, scores, and bounding boxes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,11 +30,11 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class CloudAiLargeModelsVisionRaiInfoDetectedLabels extends com.google.api.client.json.GenericJson {
 
   /**
-   * Descriptions of the detected labels.
+   * The list of detected entities for the rai signal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> descriptions;
+  private java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity> entities;
 
   /**
    * The RAI category for the deteceted labels.
@@ -44,26 +44,19 @@ public final class CloudAiLargeModelsVisionRaiInfoDetectedLabels extends com.goo
   private java.lang.String raiCategory;
 
   /**
-   * Confidence scores mapping to the labels.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.Float> scores;
-
-  /**
-   * Descriptions of the detected labels.
+   * The list of detected entities for the rai signal.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getDescriptions() {
-    return descriptions;
+  public java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity> getEntities() {
+    return entities;
   }
 
   /**
-   * Descriptions of the detected labels.
-   * @param descriptions descriptions or {@code null} for none
+   * The list of detected entities for the rai signal.
+   * @param entities entities or {@code null} for none
    */
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels setDescriptions(java.util.List<java.lang.String> descriptions) {
-    this.descriptions = descriptions;
+  public CloudAiLargeModelsVisionRaiInfoDetectedLabels setEntities(java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity> entities) {
+    this.entities = entities;
     return this;
   }
 
@@ -81,23 +74,6 @@ public final class CloudAiLargeModelsVisionRaiInfoDetectedLabels extends com.goo
    */
   public CloudAiLargeModelsVisionRaiInfoDetectedLabels setRaiCategory(java.lang.String raiCategory) {
     this.raiCategory = raiCategory;
-    return this;
-  }
-
-  /**
-   * Confidence scores mapping to the labels.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.Float> getScores() {
-    return scores;
-  }
-
-  /**
-   * Confidence scores mapping to the labels.
-   * @param scores scores or {@code null} for none
-   */
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels setScores(java.util.List<java.lang.Float> scores) {
-    this.scores = scores;
     return this;
   }
 

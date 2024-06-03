@@ -37,13 +37,6 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
   private java.util.List<CloudAiLargeModelsVisionMedia> generatedSamples;
 
   /**
-   * Returns rai error message for filtered videos.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String raiErrorMessage;
-
-  /**
    * Returns if any videos were filtered due to RAI policies.
    * The value may be {@code null}.
    */
@@ -56,13 +49,6 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> raiMediaFilteredReasons;
-
-  /**
-   * Returns filtered text rai info.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private CloudAiLargeModelsVisionFilteredText raiTextFilteredReason;
 
   /**
    * The generates samples.
@@ -78,23 +64,6 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
    */
   public CloudAiLargeModelsVisionGenerateVideoResponse setGeneratedSamples(java.util.List<CloudAiLargeModelsVisionMedia> generatedSamples) {
     this.generatedSamples = generatedSamples;
-    return this;
-  }
-
-  /**
-   * Returns rai error message for filtered videos.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRaiErrorMessage() {
-    return raiErrorMessage;
-  }
-
-  /**
-   * Returns rai error message for filtered videos.
-   * @param raiErrorMessage raiErrorMessage or {@code null} for none
-   */
-  public CloudAiLargeModelsVisionGenerateVideoResponse setRaiErrorMessage(java.lang.String raiErrorMessage) {
-    this.raiErrorMessage = raiErrorMessage;
     return this;
   }
 
@@ -129,23 +98,6 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
    */
   public CloudAiLargeModelsVisionGenerateVideoResponse setRaiMediaFilteredReasons(java.util.List<java.lang.String> raiMediaFilteredReasons) {
     this.raiMediaFilteredReasons = raiMediaFilteredReasons;
-    return this;
-  }
-
-  /**
-   * Returns filtered text rai info.
-   * @return value or {@code null} for none
-   */
-  public CloudAiLargeModelsVisionFilteredText getRaiTextFilteredReason() {
-    return raiTextFilteredReason;
-  }
-
-  /**
-   * Returns filtered text rai info.
-   * @param raiTextFilteredReason raiTextFilteredReason or {@code null} for none
-   */
-  public CloudAiLargeModelsVisionGenerateVideoResponse setRaiTextFilteredReason(CloudAiLargeModelsVisionFilteredText raiTextFilteredReason) {
-    this.raiTextFilteredReason = raiTextFilteredReason;
     return this;
   }
 

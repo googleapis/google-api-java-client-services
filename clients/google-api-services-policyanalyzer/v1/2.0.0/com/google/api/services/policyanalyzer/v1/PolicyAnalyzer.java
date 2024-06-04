@@ -134,6 +134,672 @@ public class PolicyAnalyzer extends com.google.api.client.googleapis.services.js
   }
 
   /**
+   * An accessor for creating requests from the Folders collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code PolicyAnalyzer policyanalyzer = new PolicyAnalyzer(...);}
+   *   {@code PolicyAnalyzer.Folders.List request = policyanalyzer.folders().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Folders folders() {
+    return new Folders();
+  }
+
+  /**
+   * The "folders" collection of methods.
+   */
+  public class Folders {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code PolicyAnalyzer policyanalyzer = new PolicyAnalyzer(...);}
+     *   {@code PolicyAnalyzer.Locations.List request = policyanalyzer.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the ActivityTypes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code PolicyAnalyzer policyanalyzer = new PolicyAnalyzer(...);}
+       *   {@code PolicyAnalyzer.ActivityTypes.List request = policyanalyzer.activityTypes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ActivityTypes activityTypes() {
+        return new ActivityTypes();
+      }
+
+      /**
+       * The "activityTypes" collection of methods.
+       */
+      public class ActivityTypes {
+
+        /**
+         * An accessor for creating requests from the Activities collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code PolicyAnalyzer policyanalyzer = new PolicyAnalyzer(...);}
+         *   {@code PolicyAnalyzer.Activities.List request = policyanalyzer.activities().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Activities activities() {
+          return new Activities();
+        }
+
+        /**
+         * The "activities" collection of methods.
+         */
+        public class Activities {
+
+          /**
+           * Queries policy activities on Google Cloud resources.
+           *
+           * Create a request for the method "activities.query".
+           *
+           * This request holds the parameters needed by the policyanalyzer server.  After setting any
+           * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The container resource on which to execute the request. Acceptable formats:
+           *        `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TYPE]`
+           *        LOCATION here refers to Google Cloud Locations: https://cloud.google.com/about/locations/
+           * @return the request
+           */
+          public Query query(java.lang.String parent) throws java.io.IOException {
+            Query result = new Query(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class Query extends PolicyAnalyzerRequest<com.google.api.services.policyanalyzer.v1.model.GoogleCloudPolicyanalyzerV1QueryActivityResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/activities:query";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/activityTypes/[^/]+$");
+
+            /**
+             * Queries policy activities on Google Cloud resources.
+             *
+             * Create a request for the method "activities.query".
+             *
+             * This request holds the parameters needed by the the policyanalyzer server.  After setting any
+             * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The container resource on which to execute the request. Acceptable formats:
+           *        `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TYPE]`
+           *        LOCATION here refers to Google Cloud Locations: https://cloud.google.com/about/locations/
+             * @since 1.13
+             */
+            protected Query(java.lang.String parent) {
+              super(PolicyAnalyzer.this, "GET", REST_PATH, null, com.google.api.services.policyanalyzer.v1.model.GoogleCloudPolicyanalyzerV1QueryActivityResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^folders/[^/]+/locations/[^/]+/activityTypes/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Query set$Xgafv(java.lang.String $Xgafv) {
+              return (Query) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Query setAccessToken(java.lang.String accessToken) {
+              return (Query) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Query setAlt(java.lang.String alt) {
+              return (Query) super.setAlt(alt);
+            }
+
+            @Override
+            public Query setCallback(java.lang.String callback) {
+              return (Query) super.setCallback(callback);
+            }
+
+            @Override
+            public Query setFields(java.lang.String fields) {
+              return (Query) super.setFields(fields);
+            }
+
+            @Override
+            public Query setKey(java.lang.String key) {
+              return (Query) super.setKey(key);
+            }
+
+            @Override
+            public Query setOauthToken(java.lang.String oauthToken) {
+              return (Query) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Query) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Query setQuotaUser(java.lang.String quotaUser) {
+              return (Query) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Query setUploadType(java.lang.String uploadType) {
+              return (Query) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Query setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Query) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The container resource on which to execute the request. Acceptable formats:
+             * `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TY
+             * PE]` LOCATION here refers to Google Cloud Locations:
+             * https://cloud.google.com/about/locations/
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The container resource on which to execute the request. Acceptable formats:
+           `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TYPE]` LOCATION
+           here refers to Google Cloud Locations: https://cloud.google.com/about/locations/
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The container resource on which to execute the request. Acceptable formats:
+             * `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TY
+             * PE]` LOCATION here refers to Google Cloud Locations:
+             * https://cloud.google.com/about/locations/
+             */
+            public Query setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^folders/[^/]+/locations/[^/]+/activityTypes/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter expression to restrict the activities returned. For
+             * serviceAccountLastAuthentication activities, supported filters are: -
+             * `activities.full_resource_name {=} [STRING]` - `activities.fullResourceName {=}
+             * [STRING]` where `[STRING]` is the full resource name of the service account. For
+             * serviceAccountKeyLastAuthentication activities, supported filters are: -
+             * `activities.full_resource_name {=} [STRING]` - `activities.fullResourceName {=}
+             * [STRING]` where `[STRING]` is the full resource name of the service account key.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter expression to restrict the activities returned. For
+           serviceAccountLastAuthentication activities, supported filters are: -
+           `activities.full_resource_name {=} [STRING]` - `activities.fullResourceName {=} [STRING]` where
+           `[STRING]` is the full resource name of the service account. For
+           serviceAccountKeyLastAuthentication activities, supported filters are: -
+           `activities.full_resource_name {=} [STRING]` - `activities.fullResourceName {=} [STRING]` where
+           `[STRING]` is the full resource name of the service account key.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter expression to restrict the activities returned. For
+             * serviceAccountLastAuthentication activities, supported filters are: -
+             * `activities.full_resource_name {=} [STRING]` - `activities.fullResourceName {=}
+             * [STRING]` where `[STRING]` is the full resource name of the service account. For
+             * serviceAccountKeyLastAuthentication activities, supported filters are: -
+             * `activities.full_resource_name {=} [STRING]` - `activities.fullResourceName {=}
+             * [STRING]` where `[STRING]` is the full resource name of the service account key.
+             */
+            public Query setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of results to return from this request. Max limit is
+             * 1000. Non-positive values are ignored. The presence of `nextPageToken` in the
+             * response indicates that more results might be available.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of results to return from this request. Max limit is 1000. Non-
+           positive values are ignored. The presence of `nextPageToken` in the response indicates that more
+           results might be available.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of results to return from this request. Max limit is
+             * 1000. Non-positive values are ignored. The presence of `nextPageToken` in the
+             * response indicates that more results might be available.
+             */
+            public Query setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. If present, then retrieve the next batch of results from the preceding call
+             * to this method. `pageToken` must be the value of `nextPageToken` from the previous
+             * response. The values of other method parameters should be identical to those in the
+             * previous call.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+           method. `pageToken` must be the value of `nextPageToken` from the previous response. The values of
+           other method parameters should be identical to those in the previous call.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. If present, then retrieve the next batch of results from the preceding call
+             * to this method. `pageToken` must be the value of `nextPageToken` from the previous
+             * response. The values of other method parameters should be identical to those in the
+             * previous call.
+             */
+            public Query setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public Query set(String parameterName, Object value) {
+              return (Query) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Organizations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code PolicyAnalyzer policyanalyzer = new PolicyAnalyzer(...);}
+   *   {@code PolicyAnalyzer.Organizations.List request = policyanalyzer.organizations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Organizations organizations() {
+    return new Organizations();
+  }
+
+  /**
+   * The "organizations" collection of methods.
+   */
+  public class Organizations {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code PolicyAnalyzer policyanalyzer = new PolicyAnalyzer(...);}
+     *   {@code PolicyAnalyzer.Locations.List request = policyanalyzer.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the ActivityTypes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code PolicyAnalyzer policyanalyzer = new PolicyAnalyzer(...);}
+       *   {@code PolicyAnalyzer.ActivityTypes.List request = policyanalyzer.activityTypes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ActivityTypes activityTypes() {
+        return new ActivityTypes();
+      }
+
+      /**
+       * The "activityTypes" collection of methods.
+       */
+      public class ActivityTypes {
+
+        /**
+         * An accessor for creating requests from the Activities collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code PolicyAnalyzer policyanalyzer = new PolicyAnalyzer(...);}
+         *   {@code PolicyAnalyzer.Activities.List request = policyanalyzer.activities().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Activities activities() {
+          return new Activities();
+        }
+
+        /**
+         * The "activities" collection of methods.
+         */
+        public class Activities {
+
+          /**
+           * Queries policy activities on Google Cloud resources.
+           *
+           * Create a request for the method "activities.query".
+           *
+           * This request holds the parameters needed by the policyanalyzer server.  After setting any
+           * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The container resource on which to execute the request. Acceptable formats:
+           *        `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TYPE]`
+           *        LOCATION here refers to Google Cloud Locations: https://cloud.google.com/about/locations/
+           * @return the request
+           */
+          public Query query(java.lang.String parent) throws java.io.IOException {
+            Query result = new Query(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class Query extends PolicyAnalyzerRequest<com.google.api.services.policyanalyzer.v1.model.GoogleCloudPolicyanalyzerV1QueryActivityResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/activities:query";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/activityTypes/[^/]+$");
+
+            /**
+             * Queries policy activities on Google Cloud resources.
+             *
+             * Create a request for the method "activities.query".
+             *
+             * This request holds the parameters needed by the the policyanalyzer server.  After setting any
+             * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The container resource on which to execute the request. Acceptable formats:
+           *        `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TYPE]`
+           *        LOCATION here refers to Google Cloud Locations: https://cloud.google.com/about/locations/
+             * @since 1.13
+             */
+            protected Query(java.lang.String parent) {
+              super(PolicyAnalyzer.this, "GET", REST_PATH, null, com.google.api.services.policyanalyzer.v1.model.GoogleCloudPolicyanalyzerV1QueryActivityResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/activityTypes/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Query set$Xgafv(java.lang.String $Xgafv) {
+              return (Query) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Query setAccessToken(java.lang.String accessToken) {
+              return (Query) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Query setAlt(java.lang.String alt) {
+              return (Query) super.setAlt(alt);
+            }
+
+            @Override
+            public Query setCallback(java.lang.String callback) {
+              return (Query) super.setCallback(callback);
+            }
+
+            @Override
+            public Query setFields(java.lang.String fields) {
+              return (Query) super.setFields(fields);
+            }
+
+            @Override
+            public Query setKey(java.lang.String key) {
+              return (Query) super.setKey(key);
+            }
+
+            @Override
+            public Query setOauthToken(java.lang.String oauthToken) {
+              return (Query) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Query) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Query setQuotaUser(java.lang.String quotaUser) {
+              return (Query) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Query setUploadType(java.lang.String uploadType) {
+              return (Query) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Query setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Query) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The container resource on which to execute the request. Acceptable formats:
+             * `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TY
+             * PE]` LOCATION here refers to Google Cloud Locations:
+             * https://cloud.google.com/about/locations/
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The container resource on which to execute the request. Acceptable formats:
+           `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TYPE]` LOCATION
+           here refers to Google Cloud Locations: https://cloud.google.com/about/locations/
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The container resource on which to execute the request. Acceptable formats:
+             * `projects/[PROJECT_ID|PROJECT_NUMBER]/locations/[LOCATION]/activityTypes/[ACTIVITY_TY
+             * PE]` LOCATION here refers to Google Cloud Locations:
+             * https://cloud.google.com/about/locations/
+             */
+            public Query setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/activityTypes/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter expression to restrict the activities returned. For
+             * serviceAccountLastAuthentication activities, supported filters are: -
+             * `activities.full_resource_name {=} [STRING]` - `activities.fullResourceName {=}
+             * [STRING]` where `[STRING]` is the full resource name of the service account. For
+             * serviceAccountKeyLastAuthentication activities, supported filters are: -
+             * `activities.full_resource_name {=} [STRING]` - `activities.fullResourceName {=}
+             * [STRING]` where `[STRING]` is the full resource name of the service account key.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter expression to restrict the activities returned. For
+           serviceAccountLastAuthentication activities, supported filters are: -
+           `activities.full_resource_name {=} [STRING]` - `activities.fullResourceName {=} [STRING]` where
+           `[STRING]` is the full resource name of the service account. For
+           serviceAccountKeyLastAuthentication activities, supported filters are: -
+           `activities.full_resource_name {=} [STRING]` - `activities.fullResourceName {=} [STRING]` where
+           `[STRING]` is the full resource name of the service account key.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter expression to restrict the activities returned. For
+             * serviceAccountLastAuthentication activities, supported filters are: -
+             * `activities.full_resource_name {=} [STRING]` - `activities.fullResourceName {=}
+             * [STRING]` where `[STRING]` is the full resource name of the service account. For
+             * serviceAccountKeyLastAuthentication activities, supported filters are: -
+             * `activities.full_resource_name {=} [STRING]` - `activities.fullResourceName {=}
+             * [STRING]` where `[STRING]` is the full resource name of the service account key.
+             */
+            public Query setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of results to return from this request. Max limit is
+             * 1000. Non-positive values are ignored. The presence of `nextPageToken` in the
+             * response indicates that more results might be available.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of results to return from this request. Max limit is 1000. Non-
+           positive values are ignored. The presence of `nextPageToken` in the response indicates that more
+           results might be available.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of results to return from this request. Max limit is
+             * 1000. Non-positive values are ignored. The presence of `nextPageToken` in the
+             * response indicates that more results might be available.
+             */
+            public Query setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. If present, then retrieve the next batch of results from the preceding call
+             * to this method. `pageToken` must be the value of `nextPageToken` from the previous
+             * response. The values of other method parameters should be identical to those in the
+             * previous call.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+           method. `pageToken` must be the value of `nextPageToken` from the previous response. The values of
+           other method parameters should be identical to those in the previous call.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. If present, then retrieve the next batch of results from the preceding call
+             * to this method. `pageToken` must be the value of `nextPageToken` from the previous
+             * response. The values of other method parameters should be identical to those in the
+             * previous call.
+             */
+            public Query setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public Query set(String parameterName, Object value) {
+              return (Query) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>

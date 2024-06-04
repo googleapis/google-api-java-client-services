@@ -190,6 +190,14 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   private java.util.List<PermissionGrant> permissionGrants;
 
   /**
+   * Optional. Specifies whether user control is permitted for the app. User control includes user
+   * actions like force-stopping and clearing app data. Supported on Android 11 and above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userControlSettings;
+
+  /**
    * Specifies whether the app installed in the work profile is allowed to add widgets to the home
    * screen.
    * The value may be {@code null}.
@@ -562,6 +570,25 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    */
   public ApplicationPolicy setPermissionGrants(java.util.List<PermissionGrant> permissionGrants) {
     this.permissionGrants = permissionGrants;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies whether user control is permitted for the app. User control includes user
+   * actions like force-stopping and clearing app data. Supported on Android 11 and above.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserControlSettings() {
+    return userControlSettings;
+  }
+
+  /**
+   * Optional. Specifies whether user control is permitted for the app. User control includes user
+   * actions like force-stopping and clearing app data. Supported on Android 11 and above.
+   * @param userControlSettings userControlSettings or {@code null} for none
+   */
+  public ApplicationPolicy setUserControlSettings(java.lang.String userControlSettings) {
+    this.userControlSettings = userControlSettings;
     return this;
   }
 

@@ -83,6 +83,20 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
   private java.util.List<GoogleCloudDocumentaiV1beta3ProcessorVersionAlias> processorVersionAliases;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. The state of the processor.
    * The value may be {@code null}.
    */
@@ -217,6 +231,40 @@ public final class GoogleCloudDocumentaiV1beta3Processor extends com.google.api.
    */
   public GoogleCloudDocumentaiV1beta3Processor setProcessorVersionAliases(java.util.List<GoogleCloudDocumentaiV1beta3ProcessorVersionAlias> processorVersionAliases) {
     this.processorVersionAliases = processorVersionAliases;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3Processor setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3Processor setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

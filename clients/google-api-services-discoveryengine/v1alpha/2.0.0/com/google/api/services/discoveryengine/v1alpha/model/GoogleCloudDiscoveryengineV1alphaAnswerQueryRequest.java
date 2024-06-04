@@ -91,6 +91,22 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest extends c
   private java.lang.String session;
 
   /**
+   * The user labels applied to a resource must meet the following requirements: * Each resource can
+   * have multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have
+   * a minimum length of 1 character and a maximum length of 63 characters and cannot be empty.
+   * Values can be empty and have a maximum length of 63 characters. * Keys and values can contain
+   * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
+   * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
+   * unique. However, you can use the same key with multiple resources. * Keys must start with a
+   * lowercase letter or international character. See [Google Cloud
+   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   * for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> userLabels;
+
+  /**
    * A unique identifier for tracking visitors. For example, this could be implemented with an HTTP
    * cookie, which should be able to uniquely identify a visitor on a single device. This unique
    * identifier should not change if the visitor logs in or out of the website. This field should
@@ -244,6 +260,41 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest extends c
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest setSession(java.lang.String session) {
     this.session = session;
+    return this;
+  }
+
+  /**
+   * The user labels applied to a resource must meet the following requirements: * Each resource can
+   * have multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have
+   * a minimum length of 1 character and a maximum length of 63 characters and cannot be empty.
+   * Values can be empty and have a maximum length of 63 characters. * Keys and values can contain
+   * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
+   * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
+   * unique. However, you can use the same key with multiple resources. * Keys must start with a
+   * lowercase letter or international character. See [Google Cloud
+   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   * for more details.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getUserLabels() {
+    return userLabels;
+  }
+
+  /**
+   * The user labels applied to a resource must meet the following requirements: * Each resource can
+   * have multiple labels, up to a maximum of 64. * Each label must be a key-value pair. * Keys have
+   * a minimum length of 1 character and a maximum length of 63 characters and cannot be empty.
+   * Values can be empty and have a maximum length of 63 characters. * Keys and values can contain
+   * only lowercase letters, numeric characters, underscores, and dashes. All characters must use
+   * UTF-8 encoding, and international characters are allowed. * The key portion of a label must be
+   * unique. However, you can use the same key with multiple resources. * Keys must start with a
+   * lowercase letter or international character. See [Google Cloud
+   * Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+   * for more details.
+   * @param userLabels userLabels or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest setUserLabels(java.util.Map<String, java.lang.String> userLabels) {
+    this.userLabels = userLabels;
     return this;
   }
 

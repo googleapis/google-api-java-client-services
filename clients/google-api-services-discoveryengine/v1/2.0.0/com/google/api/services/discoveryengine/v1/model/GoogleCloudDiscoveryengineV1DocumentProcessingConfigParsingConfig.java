@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingCo
   private GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigDigitalParsingConfig digitalParsingConfig;
 
   /**
+   * Configurations applied to layout parser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig layoutParsingConfig;
+
+  /**
    * Configurations applied to OCR parser. Currently it only applies to PDFs.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingCo
    */
   public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig setDigitalParsingConfig(GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigDigitalParsingConfig digitalParsingConfig) {
     this.digitalParsingConfig = digitalParsingConfig;
+    return this;
+  }
+
+  /**
+   * Configurations applied to layout parser.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig getLayoutParsingConfig() {
+    return layoutParsingConfig;
+  }
+
+  /**
+   * Configurations applied to layout parser.
+   * @param layoutParsingConfig layoutParsingConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig setLayoutParsingConfig(GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig layoutParsingConfig) {
+    this.layoutParsingConfig = layoutParsingConfig;
     return this;
   }
 

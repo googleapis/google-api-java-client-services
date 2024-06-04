@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaImportDocumentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * AlloyDB input source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaAlloyDbSource alloyDbSource;
+
+  /**
    * Whether to automatically generate IDs for the documents if absent. If set to `true`,
    * Document.ids are automatically generated based on the hash of the payload, where IDs may not be
    * consistent during multiple imports. In which case ReconciliationMode.FULL is highly recommended
@@ -141,6 +148,23 @@ public final class GoogleCloudDiscoveryengineV1alphaImportDocumentsRequest exten
    */
   @com.google.api.client.util.Key
   private String updateMask;
+
+  /**
+   * AlloyDB input source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAlloyDbSource getAlloyDbSource() {
+    return alloyDbSource;
+  }
+
+  /**
+   * AlloyDB input source.
+   * @param alloyDbSource alloyDbSource or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaImportDocumentsRequest setAlloyDbSource(GoogleCloudDiscoveryengineV1alphaAlloyDbSource alloyDbSource) {
+    this.alloyDbSource = alloyDbSource;
+    return this;
+  }
 
   /**
    * Whether to automatically generate IDs for the documents if absent. If set to `true`,

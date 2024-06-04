@@ -46,8 +46,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
   private GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecExtractiveContentSpec extractiveContentSpec;
 
   /**
-   * Specifies the search result mode. If unspecified, the search result mode defaults to
-   * `DOCUMENTS`.
+   * Specifies the search result mode. If unspecified, the search result mode is based on
+   * DataStore.DocumentProcessingConfig.chunking_config: * If
+   * DataStore.DocumentProcessingConfig.chunking_config is specified, it defaults to `CHUNKS`. *
+   * Otherwise, it defaults to `DOCUMENTS`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,8 +108,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
   }
 
   /**
-   * Specifies the search result mode. If unspecified, the search result mode defaults to
-   * `DOCUMENTS`.
+   * Specifies the search result mode. If unspecified, the search result mode is based on
+   * DataStore.DocumentProcessingConfig.chunking_config: * If
+   * DataStore.DocumentProcessingConfig.chunking_config is specified, it defaults to `CHUNKS`. *
+   * Otherwise, it defaults to `DOCUMENTS`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSearchResultMode() {
@@ -115,8 +119,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSp
   }
 
   /**
-   * Specifies the search result mode. If unspecified, the search result mode defaults to
-   * `DOCUMENTS`.
+   * Specifies the search result mode. If unspecified, the search result mode is based on
+   * DataStore.DocumentProcessingConfig.chunking_config: * If
+   * DataStore.DocumentProcessingConfig.chunking_config is specified, it defaults to `CHUNKS`. *
+   * Otherwise, it defaults to `DOCUMENTS`.
    * @param searchResultMode searchResultMode or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpec setSearchResultMode(java.lang.String searchResultMode) {

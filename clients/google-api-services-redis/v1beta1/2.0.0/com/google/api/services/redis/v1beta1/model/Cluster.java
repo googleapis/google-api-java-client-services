@@ -165,6 +165,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String uid;
 
   /**
+   * Optional. This config will be used to determine how the customer wants us to distribute cluster
+   * resources within the region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ZoneDistributionConfig zoneDistributionConfig;
+
+  /**
    * Optional. The authorization mode of the Redis cluster. If not provided, auth feature is
    * disabled for the cluster.
    * @return value or {@code null} for none
@@ -483,6 +491,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setUid(java.lang.String uid) {
     this.uid = uid;
+    return this;
+  }
+
+  /**
+   * Optional. This config will be used to determine how the customer wants us to distribute cluster
+   * resources within the region.
+   * @return value or {@code null} for none
+   */
+  public ZoneDistributionConfig getZoneDistributionConfig() {
+    return zoneDistributionConfig;
+  }
+
+  /**
+   * Optional. This config will be used to determine how the customer wants us to distribute cluster
+   * resources within the region.
+   * @param zoneDistributionConfig zoneDistributionConfig or {@code null} for none
+   */
+  public Cluster setZoneDistributionConfig(ZoneDistributionConfig zoneDistributionConfig) {
+    this.zoneDistributionConfig = zoneDistributionConfig;
     return this;
   }
 

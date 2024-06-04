@@ -3912,6 +3912,113 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
   public class Query {
 
     /**
+     * Returns Debug information for Cloud Search Query API provides the search method. **Note:** This
+     * API requires a standard end user account to execute. A service account can't perform Query API
+     * requests directly; to use a service account to perform queries, set up [Google Workspace domain-
+     * wide delegation of authority](https://developers.google.com/cloud-
+     * search/docs/guides/delegation/).
+     *
+     * Create a request for the method "query.debugSearch".
+     *
+     * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+     * parameters, call the {@link DebugSearch#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchRequest}
+     * @return the request
+     */
+    public DebugSearch debugSearch(com.google.api.services.cloudsearch.v1.model.SearchRequest content) throws java.io.IOException {
+      DebugSearch result = new DebugSearch(content);
+      initialize(result);
+      return result;
+    }
+
+    public class DebugSearch extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.DebugResponse> {
+
+      private static final String REST_PATH = "v1/query:debugSearch";
+
+      /**
+       * Returns Debug information for Cloud Search Query API provides the search method. **Note:** This
+       * API requires a standard end user account to execute. A service account can't perform Query API
+       * requests directly; to use a service account to perform queries, set up [Google Workspace
+       * domain-wide delegation of authority](https://developers.google.com/cloud-
+       * search/docs/guides/delegation/).
+       *
+       * Create a request for the method "query.debugSearch".
+       *
+       * This request holds the parameters needed by the the cloudsearch server.  After setting any
+       * optional parameters, call the {@link DebugSearch#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * DebugSearch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchRequest}
+       * @since 1.13
+       */
+      protected DebugSearch(com.google.api.services.cloudsearch.v1.model.SearchRequest content) {
+        super(CloudSearch.this, "POST", REST_PATH, content, com.google.api.services.cloudsearch.v1.model.DebugResponse.class);
+      }
+
+      @Override
+      public DebugSearch set$Xgafv(java.lang.String $Xgafv) {
+        return (DebugSearch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DebugSearch setAccessToken(java.lang.String accessToken) {
+        return (DebugSearch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public DebugSearch setAlt(java.lang.String alt) {
+        return (DebugSearch) super.setAlt(alt);
+      }
+
+      @Override
+      public DebugSearch setCallback(java.lang.String callback) {
+        return (DebugSearch) super.setCallback(callback);
+      }
+
+      @Override
+      public DebugSearch setFields(java.lang.String fields) {
+        return (DebugSearch) super.setFields(fields);
+      }
+
+      @Override
+      public DebugSearch setKey(java.lang.String key) {
+        return (DebugSearch) super.setKey(key);
+      }
+
+      @Override
+      public DebugSearch setOauthToken(java.lang.String oauthToken) {
+        return (DebugSearch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DebugSearch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DebugSearch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DebugSearch setQuotaUser(java.lang.String quotaUser) {
+        return (DebugSearch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DebugSearch setUploadType(java.lang.String uploadType) {
+        return (DebugSearch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DebugSearch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DebugSearch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public DebugSearch set(String parameterName, Object value) {
+        return (DebugSearch) super.set(parameterName, value);
+      }
+    }
+    /**
      * Provides functionality to remove logged activity for a user. Currently to be used only for Chat
      * 1p clients **Note:** This API requires a standard end user account to execute. A service account
      * can't perform Remove Activity requests directly; to use a service account to perform queries, set

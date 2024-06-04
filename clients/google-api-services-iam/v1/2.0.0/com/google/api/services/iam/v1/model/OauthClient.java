@@ -17,8 +17,8 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * Represents an OauthClient. Used to access Google Cloud resources on behave of a user by using
- * OAuth 2.0 Protocol to obtain an access token from Google Cloud Platform.
+ * Represents an OauthClient. Used to access Google Cloud resources on behalf of a Workforce
+ * Identity Federation user by using OAuth 2.0 Protocol to obtain an access token from Google Cloud.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -50,8 +50,6 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
    * Required. The list of scopes that the OauthClient is allowed to request during OAuth flows. The
    * following scopes are supported: * `https://www.googleapis.com/auth/cloud-platform`: See, edit,
    * configure, and delete your Google Cloud data and see the email address for your Google Account.
-   * * `openid`: Associate you with your personal info on Google Cloud. * `email`: See your Google
-   * Cloud Account email address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,8 +154,6 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
    * Required. The list of scopes that the OauthClient is allowed to request during OAuth flows. The
    * following scopes are supported: * `https://www.googleapis.com/auth/cloud-platform`: See, edit,
    * configure, and delete your Google Cloud data and see the email address for your Google Account.
-   * * `openid`: Associate you with your personal info on Google Cloud. * `email`: See your Google
-   * Cloud Account email address.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedScopes() {
@@ -168,8 +164,6 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
    * Required. The list of scopes that the OauthClient is allowed to request during OAuth flows. The
    * following scopes are supported: * `https://www.googleapis.com/auth/cloud-platform`: See, edit,
    * configure, and delete your Google Cloud data and see the email address for your Google Account.
-   * * `openid`: Associate you with your personal info on Google Cloud. * `email`: See your Google
-   * Cloud Account email address.
    * @param allowedScopes allowedScopes or {@code null} for none
    */
   public OauthClient setAllowedScopes(java.util.List<java.lang.String> allowedScopes) {

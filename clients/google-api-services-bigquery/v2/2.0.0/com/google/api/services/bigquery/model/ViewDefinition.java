@@ -30,6 +30,19 @@ package com.google.api.services.bigquery.model;
 public final class ViewDefinition extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Foreign view representations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ForeignViewDefinition> foreignDefinitions;
+
+  static {
+    // hack to force ProGuard to consider ForeignViewDefinition used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ForeignViewDefinition.class);
+  }
+
+  /**
    * Optional. Specifices the privacy policy for the view.
    * The value may be {@code null}.
    */
@@ -72,6 +85,23 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
     // hack to force ProGuard to consider UserDefinedFunctionResource used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(UserDefinedFunctionResource.class);
+  }
+
+  /**
+   * Optional. Foreign view representations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ForeignViewDefinition> getForeignDefinitions() {
+    return foreignDefinitions;
+  }
+
+  /**
+   * Optional. Foreign view representations.
+   * @param foreignDefinitions foreignDefinitions or {@code null} for none
+   */
+  public ViewDefinition setForeignDefinitions(java.util.List<ForeignViewDefinition> foreignDefinitions) {
+    this.foreignDefinitions = foreignDefinitions;
+    return this;
   }
 
   /**

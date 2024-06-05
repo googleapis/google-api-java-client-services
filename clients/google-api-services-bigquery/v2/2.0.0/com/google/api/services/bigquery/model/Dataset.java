@@ -74,9 +74,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultCollation;
 
   /**
-   * The default encryption key for all tables in the dataset. Once this property is set, all newly-
-   * created partitioned tables in the dataset will have encryption key set to this value, unless
-   * table creation request (or query) overrides the key.
+   * The default encryption key for all tables in the dataset. After this property is set, the
+   * encryption key of all newly-created tables in the dataset is set to this value unless the table
+   * creation request or query explicitly overrides the key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -234,6 +234,18 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.Long maxTimeTravelHours;
 
   /**
+   * Optional. The [tags](/bigquery/docs/tags) attached to this dataset. Tag keys are globally
+   * unique. Tag key is expected to be in the namespaced format, for example
+   * "123456789012/environment" where 123456789012 is the ID of the parent organization or project
+   * resource for this tag key. Tag value is expected to be the short name, for example
+   * "Production". See [Tag definitions](/iam/docs/tags-access-control#definitions) for more
+   * details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> resourceTags;
+
+  /**
    * Optional. Output only. Restriction config for all tables and dataset. If set, restrict certain
    * accesses on the dataset and all its tables based on the config. See [Data
    * egress](/bigquery/docs/analytics-hub-introduction#data_egress) for more details.
@@ -382,9 +394,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The default encryption key for all tables in the dataset. Once this property is set, all newly-
-   * created partitioned tables in the dataset will have encryption key set to this value, unless
-   * table creation request (or query) overrides the key.
+   * The default encryption key for all tables in the dataset. After this property is set, the
+   * encryption key of all newly-created tables in the dataset is set to this value unless the table
+   * creation request or query explicitly overrides the key.
    * @return value or {@code null} for none
    */
   public EncryptionConfiguration getDefaultEncryptionConfiguration() {
@@ -392,9 +404,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The default encryption key for all tables in the dataset. Once this property is set, all newly-
-   * created partitioned tables in the dataset will have encryption key set to this value, unless
-   * table creation request (or query) overrides the key.
+   * The default encryption key for all tables in the dataset. After this property is set, the
+   * encryption key of all newly-created tables in the dataset is set to this value unless the table
+   * creation request or query explicitly overrides the key.
    * @param defaultEncryptionConfiguration defaultEncryptionConfiguration or {@code null} for none
    */
   public Dataset setDefaultEncryptionConfiguration(EncryptionConfiguration defaultEncryptionConfiguration) {
@@ -752,6 +764,33 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setMaxTimeTravelHours(java.lang.Long maxTimeTravelHours) {
     this.maxTimeTravelHours = maxTimeTravelHours;
+    return this;
+  }
+
+  /**
+   * Optional. The [tags](/bigquery/docs/tags) attached to this dataset. Tag keys are globally
+   * unique. Tag key is expected to be in the namespaced format, for example
+   * "123456789012/environment" where 123456789012 is the ID of the parent organization or project
+   * resource for this tag key. Tag value is expected to be the short name, for example
+   * "Production". See [Tag definitions](/iam/docs/tags-access-control#definitions) for more
+   * details.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getResourceTags() {
+    return resourceTags;
+  }
+
+  /**
+   * Optional. The [tags](/bigquery/docs/tags) attached to this dataset. Tag keys are globally
+   * unique. Tag key is expected to be in the namespaced format, for example
+   * "123456789012/environment" where 123456789012 is the ID of the parent organization or project
+   * resource for this tag key. Tag value is expected to be the short name, for example
+   * "Production". See [Tag definitions](/iam/docs/tags-access-control#definitions) for more
+   * details.
+   * @param resourceTags resourceTags or {@code null} for none
+   */
+  public Dataset setResourceTags(java.util.Map<String, java.lang.String> resourceTags) {
+    this.resourceTags = resourceTags;
     return this;
   }
 

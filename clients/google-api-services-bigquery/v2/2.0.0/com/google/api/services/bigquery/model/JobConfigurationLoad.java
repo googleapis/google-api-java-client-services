@@ -64,6 +64,15 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private Clustering clustering;
 
   /**
+   * Optional. Character map supported for column names in CSV/Parquet loads. Defaults to STRICT and
+   * can be overridden by Project Config Service. Using this option with unsupporting load formats
+   * will result in an error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String columnNameCharacterMap;
+
+  /**
    * Optional. Connection properties which can modify the load job behavior. Currently, only the
    * 'session_id' connection property is supported, and is used to resolve _SESSION appearing as the
    * dataset id.
@@ -482,6 +491,27 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setClustering(Clustering clustering) {
     this.clustering = clustering;
+    return this;
+  }
+
+  /**
+   * Optional. Character map supported for column names in CSV/Parquet loads. Defaults to STRICT and
+   * can be overridden by Project Config Service. Using this option with unsupporting load formats
+   * will result in an error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getColumnNameCharacterMap() {
+    return columnNameCharacterMap;
+  }
+
+  /**
+   * Optional. Character map supported for column names in CSV/Parquet loads. Defaults to STRICT and
+   * can be overridden by Project Config Service. Using this option with unsupporting load formats
+   * will result in an error.
+   * @param columnNameCharacterMap columnNameCharacterMap or {@code null} for none
+   */
+  public JobConfigurationLoad setColumnNameCharacterMap(java.lang.String columnNameCharacterMap) {
+    this.columnNameCharacterMap = columnNameCharacterMap;
     return this;
   }
 

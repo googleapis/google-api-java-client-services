@@ -227,6 +227,14 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Long numBytes;
 
   /**
+   * Output only. Number of physical bytes used by current live data storage. This data is not kept
+   * in real time, and might be delayed by a few seconds to a few minutes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numCurrentPhysicalBytes;
+
+  /**
    * Output only. The number of logical bytes in the table that are considered "long-term storage".
    * The value may be {@code null}.
    */
@@ -891,6 +899,25 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setNumBytes(java.lang.Long numBytes) {
     this.numBytes = numBytes;
+    return this;
+  }
+
+  /**
+   * Output only. Number of physical bytes used by current live data storage. This data is not kept
+   * in real time, and might be delayed by a few seconds to a few minutes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumCurrentPhysicalBytes() {
+    return numCurrentPhysicalBytes;
+  }
+
+  /**
+   * Output only. Number of physical bytes used by current live data storage. This data is not kept
+   * in real time, and might be delayed by a few seconds to a few minutes.
+   * @param numCurrentPhysicalBytes numCurrentPhysicalBytes or {@code null} for none
+   */
+  public Table setNumCurrentPhysicalBytes(java.lang.Long numCurrentPhysicalBytes) {
+    this.numCurrentPhysicalBytes = numCurrentPhysicalBytes;
     return this;
   }
 

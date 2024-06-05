@@ -3478,9 +3478,171 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
   public class Recall {
 
     /**
+     * Retrieve the Recall tokens from all requested games that is associated with the PGS Player
+     * encoded in the provided recall session id. The API is only available for users that have an
+     * active PGS Player profile.
+     *
+     * Create a request for the method "recall.gamesPlayerTokens".
+     *
+     * This request holds the parameters needed by the games server.  After setting any optional
+     * parameters, call the {@link GamesPlayerTokens#execute()} method to invoke the remote operation.
+     *
+     * @param sessionId Required. Opaque server-generated string that encodes all the necessary information to identify the
+     *        PGS player / Google user and application.
+     * @return the request
+     */
+    public GamesPlayerTokens gamesPlayerTokens(java.lang.String sessionId) throws java.io.IOException {
+      GamesPlayerTokens result = new GamesPlayerTokens(sessionId);
+      initialize(result);
+      return result;
+    }
+
+    public class GamesPlayerTokens extends GamesRequest<com.google.api.services.games.model.RetrieveGamesPlayerTokensResponse> {
+
+      private static final String REST_PATH = "games/v1/recall/gamesPlayerTokens/{sessionId}";
+
+      /**
+       * Retrieve the Recall tokens from all requested games that is associated with the PGS Player
+       * encoded in the provided recall session id. The API is only available for users that have an
+       * active PGS Player profile.
+       *
+       * Create a request for the method "recall.gamesPlayerTokens".
+       *
+       * This request holds the parameters needed by the the games server.  After setting any optional
+       * parameters, call the {@link GamesPlayerTokens#execute()} method to invoke the remote operation.
+       * <p> {@link GamesPlayerTokens#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+       * eClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param sessionId Required. Opaque server-generated string that encodes all the necessary information to identify the
+     *        PGS player / Google user and application.
+       * @since 1.13
+       */
+      protected GamesPlayerTokens(java.lang.String sessionId) {
+        super(Games.this, "GET", REST_PATH, null, com.google.api.services.games.model.RetrieveGamesPlayerTokensResponse.class);
+        this.sessionId = com.google.api.client.util.Preconditions.checkNotNull(sessionId, "Required parameter sessionId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GamesPlayerTokens set$Xgafv(java.lang.String $Xgafv) {
+        return (GamesPlayerTokens) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GamesPlayerTokens setAccessToken(java.lang.String accessToken) {
+        return (GamesPlayerTokens) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GamesPlayerTokens setAlt(java.lang.String alt) {
+        return (GamesPlayerTokens) super.setAlt(alt);
+      }
+
+      @Override
+      public GamesPlayerTokens setCallback(java.lang.String callback) {
+        return (GamesPlayerTokens) super.setCallback(callback);
+      }
+
+      @Override
+      public GamesPlayerTokens setFields(java.lang.String fields) {
+        return (GamesPlayerTokens) super.setFields(fields);
+      }
+
+      @Override
+      public GamesPlayerTokens setKey(java.lang.String key) {
+        return (GamesPlayerTokens) super.setKey(key);
+      }
+
+      @Override
+      public GamesPlayerTokens setOauthToken(java.lang.String oauthToken) {
+        return (GamesPlayerTokens) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GamesPlayerTokens setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GamesPlayerTokens) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GamesPlayerTokens setQuotaUser(java.lang.String quotaUser) {
+        return (GamesPlayerTokens) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GamesPlayerTokens setUploadType(java.lang.String uploadType) {
+        return (GamesPlayerTokens) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GamesPlayerTokens setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GamesPlayerTokens) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Opaque server-generated string that encodes all the necessary information to
+       * identify the PGS player / Google user and application.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String sessionId;
+
+      /** Required. Opaque server-generated string that encodes all the necessary information to identify the
+     PGS player / Google user and application.
+       */
+      public java.lang.String getSessionId() {
+        return sessionId;
+      }
+
+      /**
+       * Required. Opaque server-generated string that encodes all the necessary information to
+       * identify the PGS player / Google user and application.
+       */
+      public GamesPlayerTokens setSessionId(java.lang.String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+      }
+
+      /**
+       * Required. The application IDs from the Google Play developer console for the games to
+       * return scoped ids for.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> applicationIds;
+
+      /** Required. The application IDs from the Google Play developer console for the games to return scoped
+     ids for.
+       */
+      public java.util.List<java.lang.String> getApplicationIds() {
+        return applicationIds;
+      }
+
+      /**
+       * Required. The application IDs from the Google Play developer console for the games to
+       * return scoped ids for.
+       */
+      public GamesPlayerTokens setApplicationIds(java.util.List<java.lang.String> applicationIds) {
+        this.applicationIds = applicationIds;
+        return this;
+      }
+
+      @Override
+      public GamesPlayerTokens set(String parameterName, Object value) {
+        return (GamesPlayerTokens) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieve the last Recall token from all developer games that is associated with the PGS Player
-     * principal encoded in the provided recall session id. The API is only available for users that
-     * have active PGS Player profile.
+     * encoded in the provided recall session id. The API is only available for users that have active
+     * PGS Player profile.
      *
      * Create a request for the method "recall.lastTokenFromAllDeveloperGames".
      *
@@ -3504,8 +3666,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Retrieve the last Recall token from all developer games that is associated with the PGS Player
-       * principal encoded in the provided recall session id. The API is only available for users that
-       * have active PGS Player profile.
+       * encoded in the provided recall session id. The API is only available for users that have active
+       * PGS Player profile.
        *
        * Create a request for the method "recall.lastTokenFromAllDeveloperGames".
        *
@@ -3818,8 +3980,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Retrieve all Recall tokens associated with the PGS Player principal encoded in the provided
-     * recall session id. The API is only available for users that have active PGS Player profile.
+     * Retrieve all Recall tokens associated with the PGS Player encoded in the provided recall session
+     * id. The API is only available for users that have active PGS Player profile.
      *
      * Create a request for the method "recall.retrieveTokens".
      *
@@ -3841,8 +4003,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "games/v1/recall/tokens/{sessionId}";
 
       /**
-       * Retrieve all Recall tokens associated with the PGS Player principal encoded in the provided
-       * recall session id. The API is only available for users that have active PGS Player profile.
+       * Retrieve all Recall tokens associated with the PGS Player encoded in the provided recall
+       * session id. The API is only available for users that have active PGS Player profile.
        *
        * Create a request for the method "recall.retrieveTokens".
        *

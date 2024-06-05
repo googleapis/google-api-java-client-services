@@ -31,7 +31,7 @@ public final class UndeleteDatasetRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. The exact time when the dataset was deleted. If not specified, the most recently
-   * deleted version is undeleted.
+   * deleted version is undeleted. Undeleting a dataset using deletion time is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class UndeleteDatasetRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. The exact time when the dataset was deleted. If not specified, the most recently
-   * deleted version is undeleted.
+   * deleted version is undeleted. Undeleting a dataset using deletion time is not supported.
    * @return value or {@code null} for none
    */
   public String getDeletionTime() {
@@ -48,7 +48,7 @@ public final class UndeleteDatasetRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. The exact time when the dataset was deleted. If not specified, the most recently
-   * deleted version is undeleted.
+   * deleted version is undeleted. Undeleting a dataset using deletion time is not supported.
    * @param deletionTime deletionTime or {@code null} for none
    */
   public UndeleteDatasetRequest setDeletionTime(String deletionTime) {

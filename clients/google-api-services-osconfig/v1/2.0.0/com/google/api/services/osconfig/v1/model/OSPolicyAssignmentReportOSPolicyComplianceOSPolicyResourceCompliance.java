@@ -43,7 +43,9 @@ public final class OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceCom
    * resource and the compliance state couldn't be determined. * `execution-skipped-by-agent`:
    * Resource execution was skipped by the agent because errors were encountered while executing
    * prior resources in the OS policy. * `os-policy-execution-attempt-failed`: The execution of the
-   * OS policy containing this resource failed and the compliance state couldn't be determined.
+   * OS policy containing this resource failed and the compliance state couldn't be determined. *
+   * `os-policy-execution-pending`: OS policy that owns this resource was assigned to the given VM,
+   * but was not executed yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +96,9 @@ public final class OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceCom
    * resource and the compliance state couldn't be determined. * `execution-skipped-by-agent`:
    * Resource execution was skipped by the agent because errors were encountered while executing
    * prior resources in the OS policy. * `os-policy-execution-attempt-failed`: The execution of the
-   * OS policy containing this resource failed and the compliance state couldn't be determined.
+   * OS policy containing this resource failed and the compliance state couldn't be determined. *
+   * `os-policy-execution-pending`: OS policy that owns this resource was assigned to the given VM,
+   * but was not executed yet.
    * @return value or {@code null} for none
    */
   public java.lang.String getComplianceStateReason() {
@@ -108,7 +112,9 @@ public final class OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceCom
    * resource and the compliance state couldn't be determined. * `execution-skipped-by-agent`:
    * Resource execution was skipped by the agent because errors were encountered while executing
    * prior resources in the OS policy. * `os-policy-execution-attempt-failed`: The execution of the
-   * OS policy containing this resource failed and the compliance state couldn't be determined.
+   * OS policy containing this resource failed and the compliance state couldn't be determined. *
+   * `os-policy-execution-pending`: OS policy that owns this resource was assigned to the given VM,
+   * but was not executed yet.
    * @param complianceStateReason complianceStateReason or {@code null} for none
    */
   public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceCompliance setComplianceStateReason(java.lang.String complianceStateReason) {

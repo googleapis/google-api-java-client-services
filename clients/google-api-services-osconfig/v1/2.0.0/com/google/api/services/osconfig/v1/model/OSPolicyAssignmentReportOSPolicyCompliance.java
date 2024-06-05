@@ -48,7 +48,9 @@ public final class OSPolicyAssignmentReportOSPolicyCompliance extends com.google
    * agent did not report the final status of the task that attempted to apply the policy. Instead,
    * the agent unexpectedly started working on a different task. This mostly happens when the agent
    * or VM unexpectedly restarts while applying OS policies. * `internal-service-errors`: Internal
-   * service errors were encountered while attempting to apply the policy.
+   * service errors were encountered while attempting to apply the policy. * `os-policy-execution-
+   * pending`: OS policy was assigned to the given VM, but was not executed yet. Typically this is a
+   * transient condition that will go away after the next policy execution cycle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +99,9 @@ public final class OSPolicyAssignmentReportOSPolicyCompliance extends com.google
    * agent did not report the final status of the task that attempted to apply the policy. Instead,
    * the agent unexpectedly started working on a different task. This mostly happens when the agent
    * or VM unexpectedly restarts while applying OS policies. * `internal-service-errors`: Internal
-   * service errors were encountered while attempting to apply the policy.
+   * service errors were encountered while attempting to apply the policy. * `os-policy-execution-
+   * pending`: OS policy was assigned to the given VM, but was not executed yet. Typically this is a
+   * transient condition that will go away after the next policy execution cycle.
    * @return value or {@code null} for none
    */
   public java.lang.String getComplianceStateReason() {
@@ -116,7 +120,9 @@ public final class OSPolicyAssignmentReportOSPolicyCompliance extends com.google
    * agent did not report the final status of the task that attempted to apply the policy. Instead,
    * the agent unexpectedly started working on a different task. This mostly happens when the agent
    * or VM unexpectedly restarts while applying OS policies. * `internal-service-errors`: Internal
-   * service errors were encountered while attempting to apply the policy.
+   * service errors were encountered while attempting to apply the policy. * `os-policy-execution-
+   * pending`: OS policy was assigned to the given VM, but was not executed yet. Typically this is a
+   * transient condition that will go away after the next policy execution cycle.
    * @param complianceStateReason complianceStateReason or {@code null} for none
    */
   public OSPolicyAssignmentReportOSPolicyCompliance setComplianceStateReason(java.lang.String complianceStateReason) {

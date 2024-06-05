@@ -32,7 +32,7 @@ package com.google.api.services.vmmigration.v1.model;
 public final class MigrationWarning extends com.google.api.client.json.GenericJson {
 
   /**
-   * Suggested action for solving the warning.
+   * Output only. Suggested action for solving the warning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class MigrationWarning extends com.google.api.client.json.GenericJs
   private java.lang.String code;
 
   /**
-   * URL(s) pointing to additional information on handling the current warning.
+   * Output only. URL(s) pointing to additional information on handling the current warning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class MigrationWarning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The localized warning message.
+   * Output only. The localized warning message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class MigrationWarning extends com.google.api.client.json.GenericJs
   private String warningTime;
 
   /**
-   * Suggested action for solving the warning.
+   * Output only. Suggested action for solving the warning.
    * @return value or {@code null} for none
    */
   public LocalizedMessage getActionItem() {
@@ -81,7 +81,7 @@ public final class MigrationWarning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Suggested action for solving the warning.
+   * Output only. Suggested action for solving the warning.
    * @param actionItem actionItem or {@code null} for none
    */
   public MigrationWarning setActionItem(LocalizedMessage actionItem) {
@@ -107,7 +107,7 @@ public final class MigrationWarning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * URL(s) pointing to additional information on handling the current warning.
+   * Output only. URL(s) pointing to additional information on handling the current warning.
    * @return value or {@code null} for none
    */
   public java.util.List<Link> getHelpLinks() {
@@ -115,7 +115,7 @@ public final class MigrationWarning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * URL(s) pointing to additional information on handling the current warning.
+   * Output only. URL(s) pointing to additional information on handling the current warning.
    * @param helpLinks helpLinks or {@code null} for none
    */
   public MigrationWarning setHelpLinks(java.util.List<Link> helpLinks) {
@@ -124,7 +124,7 @@ public final class MigrationWarning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The localized warning message.
+   * Output only. The localized warning message.
    * @return value or {@code null} for none
    */
   public LocalizedMessage getWarningMessage() {
@@ -132,7 +132,7 @@ public final class MigrationWarning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The localized warning message.
+   * Output only. The localized warning message.
    * @param warningMessage warningMessage or {@code null} for none
    */
   public MigrationWarning setWarningMessage(LocalizedMessage warningMessage) {

@@ -44,7 +44,7 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   private String endTime;
 
   /**
-   * Provides details on the state of the cycle in case of an error.
+   * Output only. Provides details on the state of the cycle in case of an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +154,7 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Provides details on the state of the cycle in case of an error.
+   * Output only. Provides details on the state of the cycle in case of an error.
    * @return value or {@code null} for none
    */
   public Status getError() {
@@ -162,7 +162,7 @@ public final class ReplicationCycle extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Provides details on the state of the cycle in case of an error.
+   * Output only. Provides details on the state of the cycle in case of an error.
    * @param error error or {@code null} for none
    */
   public ReplicationCycle setError(Status error) {

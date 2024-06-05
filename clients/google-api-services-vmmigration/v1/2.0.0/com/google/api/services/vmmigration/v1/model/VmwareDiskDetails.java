@@ -30,28 +30,28 @@ package com.google.api.services.vmmigration.v1.model;
 public final class VmwareDiskDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ordinal number of the disk.
+   * Output only. The ordinal number of the disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer diskNumber;
 
   /**
-   * The disk label.
+   * Output only. The disk label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String label;
 
   /**
-   * Size in GB.
+   * Output only. Size in GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long sizeGb;
 
   /**
-   * The ordinal number of the disk.
+   * Output only. The ordinal number of the disk.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDiskNumber() {
@@ -59,7 +59,7 @@ public final class VmwareDiskDetails extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The ordinal number of the disk.
+   * Output only. The ordinal number of the disk.
    * @param diskNumber diskNumber or {@code null} for none
    */
   public VmwareDiskDetails setDiskNumber(java.lang.Integer diskNumber) {
@@ -68,7 +68,7 @@ public final class VmwareDiskDetails extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The disk label.
+   * Output only. The disk label.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabel() {
@@ -76,7 +76,7 @@ public final class VmwareDiskDetails extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The disk label.
+   * Output only. The disk label.
    * @param label label or {@code null} for none
    */
   public VmwareDiskDetails setLabel(java.lang.String label) {
@@ -85,7 +85,7 @@ public final class VmwareDiskDetails extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Size in GB.
+   * Output only. Size in GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSizeGb() {
@@ -93,7 +93,7 @@ public final class VmwareDiskDetails extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Size in GB.
+   * Output only. Size in GB.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public VmwareDiskDetails setSizeGb(java.lang.Long sizeGb) {

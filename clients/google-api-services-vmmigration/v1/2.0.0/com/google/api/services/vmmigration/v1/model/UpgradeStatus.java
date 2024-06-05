@@ -30,7 +30,7 @@ package com.google.api.services.vmmigration.v1.model;
 public final class UpgradeStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Provides details on the state of the upgrade operation in case of an error.
+   * Output only. Provides details on the state of the upgrade operation in case of an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class UpgradeStatus extends com.google.api.client.json.GenericJson 
   private java.lang.String version;
 
   /**
-   * Provides details on the state of the upgrade operation in case of an error.
+   * Output only. Provides details on the state of the upgrade operation in case of an error.
    * @return value or {@code null} for none
    */
   public Status getError() {
@@ -73,7 +73,7 @@ public final class UpgradeStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Provides details on the state of the upgrade operation in case of an error.
+   * Output only. Provides details on the state of the upgrade operation in case of an error.
    * @param error error or {@code null} for none
    */
   public UpgradeStatus setError(Status error) {

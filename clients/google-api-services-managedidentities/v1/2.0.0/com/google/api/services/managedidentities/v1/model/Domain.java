@@ -82,8 +82,10 @@ public final class Domain extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4
-   * Service supports up to 4 locations at once. Each location will use a /26 block.
+   * Required. Locations where domain needs to be provisioned. The locations can be specified
+   * according to https://cloud.google.com/compute/docs/regions-zones, such as `us-west1` or `us-
+   * east4`. Each domain supports up to 4 locations, separated by commas. Each location will use a
+   * /26 block.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,8 +253,10 @@ public final class Domain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4
-   * Service supports up to 4 locations at once. Each location will use a /26 block.
+   * Required. Locations where domain needs to be provisioned. The locations can be specified
+   * according to https://cloud.google.com/compute/docs/regions-zones, such as `us-west1` or `us-
+   * east4`. Each domain supports up to 4 locations, separated by commas. Each location will use a
+   * /26 block.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocations() {
@@ -260,8 +264,10 @@ public final class Domain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Locations where domain needs to be provisioned. regions e.g. us-west1 or us-east4
-   * Service supports up to 4 locations at once. Each location will use a /26 block.
+   * Required. Locations where domain needs to be provisioned. The locations can be specified
+   * according to https://cloud.google.com/compute/docs/regions-zones, such as `us-west1` or `us-
+   * east4`. Each domain supports up to 4 locations, separated by commas. Each location will use a
+   * /26 block.
    * @param locations locations or {@code null} for none
    */
   public Domain setLocations(java.util.List<java.lang.String> locations) {

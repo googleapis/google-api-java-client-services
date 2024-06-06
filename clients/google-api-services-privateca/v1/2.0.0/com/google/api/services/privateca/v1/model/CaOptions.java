@@ -17,7 +17,8 @@
 package com.google.api.services.privateca.v1.model;
 
 /**
- * Describes values that are relevant in a CA certificate.
+ * Describes the X.509 basic constraints extension, per [RFC 5280 section
+ * 4.2.1.9](https://tools.ietf.org/html/rfc5280#section-4.2.1.9)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Certificate Authority API. For a detailed explanation
@@ -31,26 +32,26 @@ package com.google.api.services.privateca.v1.model;
 public final class CaOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is
-   * missing, the extension will be omitted from the CA certificate.
+   * Optional. Refers to the "CA" boolean field in the X.509 extension. When this value is missing,
+   * the basic constraints extension will be omitted from the certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isCa;
 
   /**
-   * Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this
-   * value describes the depth of subordinate CA certificates that are allowed. If this value is
-   * less than 0, the request will fail. If this value is missing, the max path length will be
-   * omitted from the CA certificate.
+   * Optional. Refers to the path length constraint field in the X.509 extension. For a CA
+   * certificate, this value describes the depth of subordinate CA certificates that are allowed. If
+   * this value is less than 0, the request will fail. If this value is missing, the max path length
+   * will be omitted from the certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxIssuerPathLength;
 
   /**
-   * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is
-   * missing, the extension will be omitted from the CA certificate.
+   * Optional. Refers to the "CA" boolean field in the X.509 extension. When this value is missing,
+   * the basic constraints extension will be omitted from the certificate.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsCa() {
@@ -58,8 +59,8 @@ public final class CaOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is
-   * missing, the extension will be omitted from the CA certificate.
+   * Optional. Refers to the "CA" boolean field in the X.509 extension. When this value is missing,
+   * the basic constraints extension will be omitted from the certificate.
    * @param isCa isCa or {@code null} for none
    */
   public CaOptions setIsCa(java.lang.Boolean isCa) {
@@ -68,10 +69,10 @@ public final class CaOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this
-   * value describes the depth of subordinate CA certificates that are allowed. If this value is
-   * less than 0, the request will fail. If this value is missing, the max path length will be
-   * omitted from the CA certificate.
+   * Optional. Refers to the path length constraint field in the X.509 extension. For a CA
+   * certificate, this value describes the depth of subordinate CA certificates that are allowed. If
+   * this value is less than 0, the request will fail. If this value is missing, the max path length
+   * will be omitted from the certificate.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxIssuerPathLength() {
@@ -79,10 +80,10 @@ public final class CaOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this
-   * value describes the depth of subordinate CA certificates that are allowed. If this value is
-   * less than 0, the request will fail. If this value is missing, the max path length will be
-   * omitted from the CA certificate.
+   * Optional. Refers to the path length constraint field in the X.509 extension. For a CA
+   * certificate, this value describes the depth of subordinate CA certificates that are allowed. If
+   * this value is less than 0, the request will fail. If this value is missing, the max path length
+   * will be omitted from the certificate.
    * @param maxIssuerPathLength maxIssuerPathLength or {@code null} for none
    */
   public CaOptions setMaxIssuerPathLength(java.lang.Integer maxIssuerPathLength) {

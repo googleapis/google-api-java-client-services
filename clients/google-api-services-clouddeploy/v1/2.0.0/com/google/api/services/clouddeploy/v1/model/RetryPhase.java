@@ -50,20 +50,6 @@ public final class RetryPhase extends com.google.api.client.json.GenericJson {
   private java.lang.String backoffMode;
 
   /**
-   * Output only. The job ID for the Job to retry.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String jobId;
-
-  /**
-   * Output only. The phase ID of the phase that includes the job being retried.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String phaseId;
-
-  /**
    * Output only. The number of attempts that have been made.
    * The value may be {@code null}.
    */
@@ -101,40 +87,6 @@ public final class RetryPhase extends com.google.api.client.json.GenericJson {
    */
   public RetryPhase setBackoffMode(java.lang.String backoffMode) {
     this.backoffMode = backoffMode;
-    return this;
-  }
-
-  /**
-   * Output only. The job ID for the Job to retry.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getJobId() {
-    return jobId;
-  }
-
-  /**
-   * Output only. The job ID for the Job to retry.
-   * @param jobId jobId or {@code null} for none
-   */
-  public RetryPhase setJobId(java.lang.String jobId) {
-    this.jobId = jobId;
-    return this;
-  }
-
-  /**
-   * Output only. The phase ID of the phase that includes the job being retried.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPhaseId() {
-    return phaseId;
-  }
-
-  /**
-   * Output only. The phase ID of the phase that includes the job being retried.
-   * @param phaseId phaseId or {@code null} for none
-   */
-  public RetryPhase setPhaseId(java.lang.String phaseId) {
-    this.phaseId = phaseId;
     return this;
   }
 

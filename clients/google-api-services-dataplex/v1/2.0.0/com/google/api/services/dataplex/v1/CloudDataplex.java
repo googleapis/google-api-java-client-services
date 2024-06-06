@@ -4203,7 +4203,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Generates recommended DataQualityRule from a data profiling DataScan.
+         * Generates recommended data quality rules based on the results of a data profiling scan.Use the
+         * recommendations to build rules for a data quality scan.
          *
          * Create a request for the method "dataScans.generateDataQualityRules".
          *
@@ -4211,8 +4212,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link GenerateDataQualityRules#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. The name should be either * the name of a datascan with at least one successful completed
-         *        data profiling job, or * the name of a successful completed data profiling datascan job.
+         * @param name Required. The name must be one of the following: The name of a data scan with at least one
+         *        successful, completed data profiling job The name of a successful, completed data
+         *        profiling job (a data scan job where the job type is data profiling)
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesRequest}
          * @return the request
          */
@@ -4230,7 +4232,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+$");
 
           /**
-           * Generates recommended DataQualityRule from a data profiling DataScan.
+           * Generates recommended data quality rules based on the results of a data profiling scan.Use the
+           * recommendations to build rules for a data quality scan.
            *
            * Create a request for the method "dataScans.generateDataQualityRules".
            *
@@ -4240,8 +4243,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
            * immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name should be either * the name of a datascan with at least one successful completed
-         *        data profiling job, or * the name of a successful completed data profiling datascan job.
+           * @param name Required. The name must be one of the following: The name of a data scan with at least one
+         *        successful, completed data profiling job The name of a successful, completed data
+         *        profiling job (a data scan job where the job type is data profiling)
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesRequest}
            * @since 1.13
            */
@@ -4311,24 +4315,25 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The name should be either * the name of a datascan with at least one
-           * successful completed data profiling job, or * the name of a successful completed data
-           * profiling datascan job.
+           * Required. The name must be one of the following: The name of a data scan with at least
+           * one successful, completed data profiling job The name of a successful, completed data
+           * profiling job (a data scan job where the job type is data profiling)
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name should be either * the name of a datascan with at least one successful completed
-         data profiling job, or * the name of a successful completed data profiling datascan job.
+          /** Required. The name must be one of the following: The name of a data scan with at least one
+         successful, completed data profiling job The name of a successful, completed data profiling job (a
+         data scan job where the job type is data profiling)
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name should be either * the name of a datascan with at least one
-           * successful completed data profiling job, or * the name of a successful completed data
-           * profiling datascan job.
+           * Required. The name must be one of the following: The name of a data scan with at least
+           * one successful, completed data profiling job The name of a successful, completed data
+           * profiling job (a data scan job where the job type is data profiling)
            */
           public GenerateDataQualityRules setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5600,7 +5605,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         public class Jobs {
 
           /**
-           * Generates recommended DataQualityRule from a data profiling DataScan.
+           * Generates recommended data quality rules based on the results of a data profiling scan.Use the
+           * recommendations to build rules for a data quality scan.
            *
            * Create a request for the method "jobs.generateDataQualityRules".
            *
@@ -5608,8 +5614,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link GenerateDataQualityRules#execute()} method to invoke the remote
            * operation.
            *
-           * @param name Required. The name should be either * the name of a datascan with at least one successful completed
-           *        data profiling job, or * the name of a successful completed data profiling datascan job.
+           * @param name Required. The name must be one of the following: The name of a data scan with at least one
+           *        successful, completed data profiling job The name of a successful, completed data
+           *        profiling job (a data scan job where the job type is data profiling)
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesRequest}
            * @return the request
            */
@@ -5627,7 +5634,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+/jobs/[^/]+$");
 
             /**
-             * Generates recommended DataQualityRule from a data profiling DataScan.
+             * Generates recommended data quality rules based on the results of a data profiling scan.Use the
+             * recommendations to build rules for a data quality scan.
              *
              * Create a request for the method "jobs.generateDataQualityRules".
              *
@@ -5637,8 +5645,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
              * immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name should be either * the name of a datascan with at least one successful completed
-           *        data profiling job, or * the name of a successful completed data profiling datascan job.
+             * @param name Required. The name must be one of the following: The name of a data scan with at least one
+           *        successful, completed data profiling job The name of a successful, completed data
+           *        profiling job (a data scan job where the job type is data profiling)
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GenerateDataQualityRulesRequest}
              * @since 1.13
              */
@@ -5708,24 +5717,25 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The name should be either * the name of a datascan with at least one
-             * successful completed data profiling job, or * the name of a successful completed data
-             * profiling datascan job.
+             * Required. The name must be one of the following: The name of a data scan with at
+             * least one successful, completed data profiling job The name of a successful,
+             * completed data profiling job (a data scan job where the job type is data profiling)
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name should be either * the name of a datascan with at least one successful completed
-           data profiling job, or * the name of a successful completed data profiling datascan job.
+            /** Required. The name must be one of the following: The name of a data scan with at least one
+           successful, completed data profiling job The name of a successful, completed data profiling job (a
+           data scan job where the job type is data profiling)
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name should be either * the name of a datascan with at least one
-             * successful completed data profiling job, or * the name of a successful completed data
-             * profiling datascan job.
+             * Required. The name must be one of the following: The name of a data scan with at
+             * least one successful, completed data profiling job The name of a successful,
+             * completed data profiling job (a data scan job where the job type is data profiling)
              */
             public GenerateDataQualityRules setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

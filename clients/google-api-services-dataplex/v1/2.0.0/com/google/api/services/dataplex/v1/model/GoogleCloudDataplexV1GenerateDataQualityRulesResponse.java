@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Generate recommended DataQualityRules response.
+ * Response details for data quality rule recommendations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1GenerateDataQualityRulesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Generated recommended {@link DataQualityRule}s.
+   * The data quality rules that Dataplex generates based on the results of a data profiling scan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class GoogleCloudDataplexV1GenerateDataQualityRulesResponse extends
   }
 
   /**
-   * Generated recommended {@link DataQualityRule}s.
+   * The data quality rules that Dataplex generates based on the results of a data profiling scan.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1DataQualityRule> getRule() {
@@ -51,7 +51,7 @@ public final class GoogleCloudDataplexV1GenerateDataQualityRulesResponse extends
   }
 
   /**
-   * Generated recommended {@link DataQualityRule}s.
+   * The data quality rules that Dataplex generates based on the results of a data profiling scan.
    * @param rule rule or {@code null} for none
    */
   public GoogleCloudDataplexV1GenerateDataQualityRulesResponse setRule(java.util.List<GoogleCloudDataplexV1DataQualityRule> rule) {

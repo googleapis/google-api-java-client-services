@@ -65,6 +65,15 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. Location of the resource in the source system. Entry will be searchable by this
+   * location. By default, this should match the location of the EntryGroup containing this entry. A
+   * different value allows capturing source location for data external to GCP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * The platform containing the source system. The maximum size of the field is 64 characters.
    * The value may be {@code null}.
    */
@@ -175,6 +184,27 @@ public final class GoogleCloudDataplexV1EntrySource extends com.google.api.clien
    */
   public GoogleCloudDataplexV1EntrySource setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. Location of the resource in the source system. Entry will be searchable by this
+   * location. By default, this should match the location of the EntryGroup containing this entry. A
+   * different value allows capturing source location for data external to GCP.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Output only. Location of the resource in the source system. Entry will be searchable by this
+   * location. By default, this should match the location of the EntryGroup containing this entry. A
+   * different value allows capturing source location for data external to GCP.
+   * @param location location or {@code null} for none
+   */
+  public GoogleCloudDataplexV1EntrySource setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

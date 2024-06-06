@@ -58,6 +58,13 @@ public final class GoogleCloudDialogflowV2beta1AgentAssistantFeedback extends co
   private java.lang.String documentEfficiency;
 
   /**
+   * Optional. Feedback for knowledge assist.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1AgentAssistantFeedbackKnowledgeAssistFeedback knowledgeAssistFeedback;
+
+  /**
    * Optional. Feedback for knowledge search.
    * The value may be {@code null}.
    */
@@ -133,6 +140,23 @@ public final class GoogleCloudDialogflowV2beta1AgentAssistantFeedback extends co
    */
   public GoogleCloudDialogflowV2beta1AgentAssistantFeedback setDocumentEfficiency(java.lang.String documentEfficiency) {
     this.documentEfficiency = documentEfficiency;
+    return this;
+  }
+
+  /**
+   * Optional. Feedback for knowledge assist.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AgentAssistantFeedbackKnowledgeAssistFeedback getKnowledgeAssistFeedback() {
+    return knowledgeAssistFeedback;
+  }
+
+  /**
+   * Optional. Feedback for knowledge assist.
+   * @param knowledgeAssistFeedback knowledgeAssistFeedback or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AgentAssistantFeedback setKnowledgeAssistFeedback(GoogleCloudDialogflowV2beta1AgentAssistantFeedbackKnowledgeAssistFeedback knowledgeAssistFeedback) {
+    this.knowledgeAssistFeedback = knowledgeAssistFeedback;
     return this;
   }
 

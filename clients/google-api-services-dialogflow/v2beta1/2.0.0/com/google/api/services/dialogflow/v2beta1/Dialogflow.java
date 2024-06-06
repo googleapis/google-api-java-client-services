@@ -17697,6 +17697,147 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
+           * Gets knowledge assist suggestions based on historical messages.
+           *
+           * Create a request for the method "suggestions.suggestKnowledgeAssist".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link SuggestKnowledgeAssist#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param parent Required. The name of the participant to fetch suggestions for. Format:
+           *        `projects//locations//conversations//participants/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest}
+           * @return the request
+           */
+          public SuggestKnowledgeAssist suggestKnowledgeAssist(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest content) throws java.io.IOException {
+            SuggestKnowledgeAssist result = new SuggestKnowledgeAssist(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SuggestKnowledgeAssist extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistResponse> {
+
+            private static final String REST_PATH = "v2beta1/{+parent}/suggestions:suggestKnowledgeAssist";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+
+            /**
+             * Gets knowledge assist suggestions based on historical messages.
+             *
+             * Create a request for the method "suggestions.suggestKnowledgeAssist".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link SuggestKnowledgeAssist#execute()} method to invoke the
+             * remote operation. <p> {@link SuggestKnowledgeAssist#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the participant to fetch suggestions for. Format:
+           *        `projects//locations//conversations//participants/`.
+             * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest}
+             * @since 1.13
+             */
+            protected SuggestKnowledgeAssist(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+              }
+            }
+
+            @Override
+            public SuggestKnowledgeAssist set$Xgafv(java.lang.String $Xgafv) {
+              return (SuggestKnowledgeAssist) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SuggestKnowledgeAssist setAccessToken(java.lang.String accessToken) {
+              return (SuggestKnowledgeAssist) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SuggestKnowledgeAssist setAlt(java.lang.String alt) {
+              return (SuggestKnowledgeAssist) super.setAlt(alt);
+            }
+
+            @Override
+            public SuggestKnowledgeAssist setCallback(java.lang.String callback) {
+              return (SuggestKnowledgeAssist) super.setCallback(callback);
+            }
+
+            @Override
+            public SuggestKnowledgeAssist setFields(java.lang.String fields) {
+              return (SuggestKnowledgeAssist) super.setFields(fields);
+            }
+
+            @Override
+            public SuggestKnowledgeAssist setKey(java.lang.String key) {
+              return (SuggestKnowledgeAssist) super.setKey(key);
+            }
+
+            @Override
+            public SuggestKnowledgeAssist setOauthToken(java.lang.String oauthToken) {
+              return (SuggestKnowledgeAssist) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SuggestKnowledgeAssist setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SuggestKnowledgeAssist) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SuggestKnowledgeAssist setQuotaUser(java.lang.String quotaUser) {
+              return (SuggestKnowledgeAssist) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SuggestKnowledgeAssist setUploadType(java.lang.String uploadType) {
+              return (SuggestKnowledgeAssist) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SuggestKnowledgeAssist setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SuggestKnowledgeAssist) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the participant to fetch suggestions for. Format:
+             * `projects//locations//conversations//participants/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the participant to fetch suggestions for. Format:
+           `projects//locations//conversations//participants/`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the participant to fetch suggestions for. Format:
+             * `projects//locations//conversations//participants/`.
+             */
+            public SuggestKnowledgeAssist setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SuggestKnowledgeAssist set(String parameterName, Object value) {
+              return (SuggestKnowledgeAssist) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets smart replies for a participant based on specific historical messages.
            *
            * Create a request for the method "suggestions.suggestSmartReplies".
@@ -36183,6 +36324,147 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               @Override
               public SuggestFaqAnswers set(String parameterName, Object value) {
                 return (SuggestFaqAnswers) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets knowledge assist suggestions based on historical messages.
+             *
+             * Create a request for the method "suggestions.suggestKnowledgeAssist".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link SuggestKnowledgeAssist#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param parent Required. The name of the participant to fetch suggestions for. Format:
+             *        `projects//locations//conversations//participants/`.
+             * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest}
+             * @return the request
+             */
+            public SuggestKnowledgeAssist suggestKnowledgeAssist(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest content) throws java.io.IOException {
+              SuggestKnowledgeAssist result = new SuggestKnowledgeAssist(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class SuggestKnowledgeAssist extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistResponse> {
+
+              private static final String REST_PATH = "v2beta1/{+parent}/suggestions:suggestKnowledgeAssist";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversations/[^/]+/participants/[^/]+$");
+
+              /**
+               * Gets knowledge assist suggestions based on historical messages.
+               *
+               * Create a request for the method "suggestions.suggestKnowledgeAssist".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link SuggestKnowledgeAssist#execute()} method to invoke the
+               * remote operation. <p> {@link SuggestKnowledgeAssist#initialize(com.google.api.client.googleapis
+               * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+               * after invoking the constructor. </p>
+               *
+               * @param parent Required. The name of the participant to fetch suggestions for. Format:
+             *        `projects//locations//conversations//participants/`.
+               * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest}
+               * @since 1.13
+               */
+              protected SuggestKnowledgeAssist(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest content) {
+                super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/conversations/[^/]+/participants/[^/]+$");
+                }
+              }
+
+              @Override
+              public SuggestKnowledgeAssist set$Xgafv(java.lang.String $Xgafv) {
+                return (SuggestKnowledgeAssist) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public SuggestKnowledgeAssist setAccessToken(java.lang.String accessToken) {
+                return (SuggestKnowledgeAssist) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public SuggestKnowledgeAssist setAlt(java.lang.String alt) {
+                return (SuggestKnowledgeAssist) super.setAlt(alt);
+              }
+
+              @Override
+              public SuggestKnowledgeAssist setCallback(java.lang.String callback) {
+                return (SuggestKnowledgeAssist) super.setCallback(callback);
+              }
+
+              @Override
+              public SuggestKnowledgeAssist setFields(java.lang.String fields) {
+                return (SuggestKnowledgeAssist) super.setFields(fields);
+              }
+
+              @Override
+              public SuggestKnowledgeAssist setKey(java.lang.String key) {
+                return (SuggestKnowledgeAssist) super.setKey(key);
+              }
+
+              @Override
+              public SuggestKnowledgeAssist setOauthToken(java.lang.String oauthToken) {
+                return (SuggestKnowledgeAssist) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public SuggestKnowledgeAssist setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (SuggestKnowledgeAssist) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public SuggestKnowledgeAssist setQuotaUser(java.lang.String quotaUser) {
+                return (SuggestKnowledgeAssist) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public SuggestKnowledgeAssist setUploadType(java.lang.String uploadType) {
+                return (SuggestKnowledgeAssist) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public SuggestKnowledgeAssist setUploadProtocol(java.lang.String uploadProtocol) {
+                return (SuggestKnowledgeAssist) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the participant to fetch suggestions for. Format:
+               * `projects//locations//conversations//participants/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The name of the participant to fetch suggestions for. Format:
+             `projects//locations//conversations//participants/`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The name of the participant to fetch suggestions for. Format:
+               * `projects//locations//conversations//participants/`.
+               */
+              public SuggestKnowledgeAssist setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/conversations/[^/]+/participants/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public SuggestKnowledgeAssist set(String parameterName, Object value) {
+                return (SuggestKnowledgeAssist) super.set(parameterName, value);
               }
             }
             /**

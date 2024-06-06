@@ -30,12 +30,6 @@ package com.google.api.services.dns.model;
 public final class ResourceRecordSetsListResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ResponseHeader header;
-
-  /**
    * Type of resource.
    * The value may be {@code null}.
    */
@@ -43,12 +37,12 @@ public final class ResourceRecordSetsListResponse extends com.google.api.client.
   private java.lang.String kind;
 
   /**
-   * The presence of this field indicates that there exist more results following your last page of
-   * results in pagination order. To fetch them, make another list request using this value as your
-   * pagination token. This lets you retrieve the complete contents of even larger collections, one
-   * page at a time. However, if the collection changes between paginated list requests, the set of
-   * elements returned is an inconsistent view of the collection. You cannot retrieve a consistent
-   * snapshot of a collection larger than the maximum page size.
+   * This field indicates that more results are available beyond the last page displayed. To fetch
+   * the results, make another list request and use this value as your page token. This lets you
+   * retrieve the complete contents of a very large collection one page at a time. However, if the
+   * contents of the collection change between the first and last paginated list request, the set of
+   * all elements returned are an inconsistent view of the collection. You can't retrieve a
+   * consistent snapshot of a collection larger than the maximum page size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,21 +59,6 @@ public final class ResourceRecordSetsListResponse extends com.google.api.client.
     // hack to force ProGuard to consider ResourceRecordSet used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ResourceRecordSet.class);
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public ResponseHeader getHeader() {
-    return header;
-  }
-
-  /**
-   * @param header header or {@code null} for none
-   */
-  public ResourceRecordSetsListResponse setHeader(ResponseHeader header) {
-    this.header = header;
-    return this;
   }
 
   /**
@@ -100,12 +79,12 @@ public final class ResourceRecordSetsListResponse extends com.google.api.client.
   }
 
   /**
-   * The presence of this field indicates that there exist more results following your last page of
-   * results in pagination order. To fetch them, make another list request using this value as your
-   * pagination token. This lets you retrieve the complete contents of even larger collections, one
-   * page at a time. However, if the collection changes between paginated list requests, the set of
-   * elements returned is an inconsistent view of the collection. You cannot retrieve a consistent
-   * snapshot of a collection larger than the maximum page size.
+   * This field indicates that more results are available beyond the last page displayed. To fetch
+   * the results, make another list request and use this value as your page token. This lets you
+   * retrieve the complete contents of a very large collection one page at a time. However, if the
+   * contents of the collection change between the first and last paginated list request, the set of
+   * all elements returned are an inconsistent view of the collection. You can't retrieve a
+   * consistent snapshot of a collection larger than the maximum page size.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -113,12 +92,12 @@ public final class ResourceRecordSetsListResponse extends com.google.api.client.
   }
 
   /**
-   * The presence of this field indicates that there exist more results following your last page of
-   * results in pagination order. To fetch them, make another list request using this value as your
-   * pagination token. This lets you retrieve the complete contents of even larger collections, one
-   * page at a time. However, if the collection changes between paginated list requests, the set of
-   * elements returned is an inconsistent view of the collection. You cannot retrieve a consistent
-   * snapshot of a collection larger than the maximum page size.
+   * This field indicates that more results are available beyond the last page displayed. To fetch
+   * the results, make another list request and use this value as your page token. This lets you
+   * retrieve the complete contents of a very large collection one page at a time. However, if the
+   * contents of the collection change between the first and last paginated list request, the set of
+   * all elements returned are an inconsistent view of the collection. You can't retrieve a
+   * consistent snapshot of a collection larger than the maximum page size.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ResourceRecordSetsListResponse setNextPageToken(java.lang.String nextPageToken) {

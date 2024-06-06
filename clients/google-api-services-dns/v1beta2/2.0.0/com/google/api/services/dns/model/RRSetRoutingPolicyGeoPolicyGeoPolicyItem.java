@@ -31,7 +31,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
 
   /**
    * For A and AAAA types only. Endpoints to return in the query result only if they are healthy.
-   * These can be specified along with rrdata within this item.
+   * These can be specified along with `rrdata` within this item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +58,8 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
   private java.util.List<java.lang.String> rrdatas;
 
   /**
-   * DNSSEC generated signatures for all the rrdata within this item. If health checked targets are
-   * provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
+   * DNSSEC generated signatures for all the `rrdata` within this item. If health checked targets
+   * are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
 
   /**
    * For A and AAAA types only. Endpoints to return in the query result only if they are healthy.
-   * These can be specified along with rrdata within this item.
+   * These can be specified along with `rrdata` within this item.
    * @return value or {@code null} for none
    */
   public RRSetRoutingPolicyHealthCheckTargets getHealthCheckedTargets() {
@@ -76,7 +76,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
 
   /**
    * For A and AAAA types only. Endpoints to return in the query result only if they are healthy.
-   * These can be specified along with rrdata within this item.
+   * These can be specified along with `rrdata` within this item.
    * @param healthCheckedTargets healthCheckedTargets or {@code null} for none
    */
   public RRSetRoutingPolicyGeoPolicyGeoPolicyItem setHealthCheckedTargets(RRSetRoutingPolicyHealthCheckTargets healthCheckedTargets) {
@@ -134,8 +134,8 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
   }
 
   /**
-   * DNSSEC generated signatures for all the rrdata within this item. If health checked targets are
-   * provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
+   * DNSSEC generated signatures for all the `rrdata` within this item. If health checked targets
+   * are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSignatureRrdatas() {
@@ -143,8 +143,8 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
   }
 
   /**
-   * DNSSEC generated signatures for all the rrdata within this item. If health checked targets are
-   * provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
+   * DNSSEC generated signatures for all the `rrdata` within this item. If health checked targets
+   * are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
    * @param signatureRrdatas signatureRrdatas or {@code null} for none
    */
   public RRSetRoutingPolicyGeoPolicyGeoPolicyItem setSignatureRrdatas(java.util.List<java.lang.String> signatureRrdatas) {

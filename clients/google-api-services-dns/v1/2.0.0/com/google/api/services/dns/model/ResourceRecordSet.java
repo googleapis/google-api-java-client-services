@@ -44,8 +44,8 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
 
   /**
    * Configures dynamic query responses based on either the geo location of the querying user or a
-   * weighted round robin based routing policy. A valid ResourceRecordSet contains only rrdata (for
-   * static resolution) or a routing_policy (for dynamic resolution).
+   * weighted round robin based routing policy. A valid `ResourceRecordSet` contains only `rrdata`
+   * (for static resolution) or a `routing_policy` (for dynamic resolution).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> signatureRrdatas;
 
   /**
-   * Number of seconds that this ResourceRecordSet can be cached by resolvers.
+   * Number of seconds that this `ResourceRecordSet` can be cached by resolvers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,8 +113,8 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
 
   /**
    * Configures dynamic query responses based on either the geo location of the querying user or a
-   * weighted round robin based routing policy. A valid ResourceRecordSet contains only rrdata (for
-   * static resolution) or a routing_policy (for dynamic resolution).
+   * weighted round robin based routing policy. A valid `ResourceRecordSet` contains only `rrdata`
+   * (for static resolution) or a `routing_policy` (for dynamic resolution).
    * @return value or {@code null} for none
    */
   public RRSetRoutingPolicy getRoutingPolicy() {
@@ -123,8 +123,8 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
 
   /**
    * Configures dynamic query responses based on either the geo location of the querying user or a
-   * weighted round robin based routing policy. A valid ResourceRecordSet contains only rrdata (for
-   * static resolution) or a routing_policy (for dynamic resolution).
+   * weighted round robin based routing policy. A valid `ResourceRecordSet` contains only `rrdata`
+   * (for static resolution) or a `routing_policy` (for dynamic resolution).
    * @param routingPolicy routingPolicy or {@code null} for none
    */
   public ResourceRecordSet setRoutingPolicy(RRSetRoutingPolicy routingPolicy) {
@@ -167,7 +167,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of seconds that this ResourceRecordSet can be cached by resolvers.
+   * Number of seconds that this `ResourceRecordSet` can be cached by resolvers.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTtl() {
@@ -175,7 +175,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Number of seconds that this ResourceRecordSet can be cached by resolvers.
+   * Number of seconds that this `ResourceRecordSet` can be cached by resolvers.
    * @param ttl ttl or {@code null} for none
    */
   public ResourceRecordSet setTtl(java.lang.Integer ttl) {

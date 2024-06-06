@@ -18,7 +18,7 @@ package com.google.api.services.dns.model;
 
 /**
  * A project resource. The project is a top level container for resources including Cloud DNS
- * ManagedZones. Projects can be created only in the APIs console. Next tag: 7.
+ * ManagedZones. Projects can be created only in the APIs console.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:

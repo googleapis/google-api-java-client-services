@@ -37,7 +37,7 @@ public final class ResponsePolicyNetwork extends com.google.api.client.json.Gene
 
   /**
    * The fully qualified URL of the VPC network to bind to. This should be formatted like
-   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+   * `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class ResponsePolicyNetwork extends com.google.api.client.json.Gene
 
   /**
    * The fully qualified URL of the VPC network to bind to. This should be formatted like
-   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+   * `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUrl() {
@@ -69,7 +69,7 @@ public final class ResponsePolicyNetwork extends com.google.api.client.json.Gene
 
   /**
    * The fully qualified URL of the VPC network to bind to. This should be formatted like
-   * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+   * `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
    * @param networkUrl networkUrl or {@code null} for none
    */
   public ResponsePolicyNetwork setNetworkUrl(java.lang.String networkUrl) {

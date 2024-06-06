@@ -54,7 +54,9 @@ public final class X509Parameters extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> aiaOcspServers;
 
   /**
-   * Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+   * Optional. Describes options in this X509Parameters that are relevant in a CA certificate. If
+   * not specified, a default basic constraints extension with `is_ca=false` will be added for leaf
+   * certificates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +127,9 @@ public final class X509Parameters extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+   * Optional. Describes options in this X509Parameters that are relevant in a CA certificate. If
+   * not specified, a default basic constraints extension with `is_ca=false` will be added for leaf
+   * certificates.
    * @return value or {@code null} for none
    */
   public CaOptions getCaOptions() {
@@ -133,7 +137,9 @@ public final class X509Parameters extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+   * Optional. Describes options in this X509Parameters that are relevant in a CA certificate. If
+   * not specified, a default basic constraints extension with `is_ca=false` will be added for leaf
+   * certificates.
    * @param caOptions caOptions or {@code null} for none
    */
   public X509Parameters setCaOptions(CaOptions caOptions) {

@@ -31,14 +31,6 @@ package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
 public final class ServiceAttachment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of project ids that are allowed to send traffic to the service attachment. This field
-   * should be filled only for the ingress service attachments.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> allowedProjectIds;
-
-  /**
    * The service attachment name that will be used for sending private traffic to the CCAIP tenant
    * project. Example: "projects/${TENANT_PROJECT_ID}/regions/${REGION}/serviceAttachments/ingress-
    * default".
@@ -46,25 +38,6 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * The list of project ids that are allowed to send traffic to the service attachment. This field
-   * should be filled only for the ingress service attachments.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getAllowedProjectIds() {
-    return allowedProjectIds;
-  }
-
-  /**
-   * The list of project ids that are allowed to send traffic to the service attachment. This field
-   * should be filled only for the ingress service attachments.
-   * @param allowedProjectIds allowedProjectIds or {@code null} for none
-   */
-  public ServiceAttachment setAllowedProjectIds(java.util.List<java.lang.String> allowedProjectIds) {
-    this.allowedProjectIds = allowedProjectIds;
-    return this;
-  }
 
   /**
    * The service attachment name that will be used for sending private traffic to the CCAIP tenant

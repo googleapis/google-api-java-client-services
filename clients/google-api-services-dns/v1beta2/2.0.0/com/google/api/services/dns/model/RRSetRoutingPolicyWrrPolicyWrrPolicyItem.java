@@ -33,7 +33,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
    * Endpoints that are health checked before making the routing decision. The unhealthy endpoints
    * are omitted from the result. If all endpoints within a bucket are unhealthy, we choose a
    * different bucket (sampled with respect to its weight) for responding. If DNSSEC is enabled for
-   * this zone, only one of rrdata or health_checked_targets can be set.
+   * this zone, only one of `rrdata` or `health_checked_targets` can be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
   private java.util.List<java.lang.String> rrdatas;
 
   /**
-   * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked
+   * DNSSEC generated signatures for all the `rrdata` within this item. Note that if health checked
    * targets are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
    * The value may be {@code null}.
    */
@@ -60,9 +60,9 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
   private java.util.List<java.lang.String> signatureRrdatas;
 
   /**
-   * The weight corresponding to this WrrPolicyItem object. When multiple WrrPolicyItem objects are
-   * configured, the probability of returning an WrrPolicyItem object's data is proportional to its
-   * weight relative to the sum of weights configured for all items. This weight must be non-
+   * The weight corresponding to this `WrrPolicyItem` object. When multiple `WrrPolicyItem` objects
+   * are configured, the probability of returning an `WrrPolicyItem` object's data is proportional
+   * to its weight relative to the sum of weights configured for all items. This weight must be non-
    * negative.
    * The value may be {@code null}.
    */
@@ -73,7 +73,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
    * Endpoints that are health checked before making the routing decision. The unhealthy endpoints
    * are omitted from the result. If all endpoints within a bucket are unhealthy, we choose a
    * different bucket (sampled with respect to its weight) for responding. If DNSSEC is enabled for
-   * this zone, only one of rrdata or health_checked_targets can be set.
+   * this zone, only one of `rrdata` or `health_checked_targets` can be set.
    * @return value or {@code null} for none
    */
   public RRSetRoutingPolicyHealthCheckTargets getHealthCheckedTargets() {
@@ -84,7 +84,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
    * Endpoints that are health checked before making the routing decision. The unhealthy endpoints
    * are omitted from the result. If all endpoints within a bucket are unhealthy, we choose a
    * different bucket (sampled with respect to its weight) for responding. If DNSSEC is enabled for
-   * this zone, only one of rrdata or health_checked_targets can be set.
+   * this zone, only one of `rrdata` or `health_checked_targets` can be set.
    * @param healthCheckedTargets healthCheckedTargets or {@code null} for none
    */
   public RRSetRoutingPolicyWrrPolicyWrrPolicyItem setHealthCheckedTargets(RRSetRoutingPolicyHealthCheckTargets healthCheckedTargets) {
@@ -123,7 +123,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
   }
 
   /**
-   * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked
+   * DNSSEC generated signatures for all the `rrdata` within this item. Note that if health checked
    * targets are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
    * @return value or {@code null} for none
    */
@@ -132,7 +132,7 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
   }
 
   /**
-   * DNSSEC generated signatures for all the rrdata within this item. Note that if health checked
+   * DNSSEC generated signatures for all the `rrdata` within this item. Note that if health checked
    * targets are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
    * @param signatureRrdatas signatureRrdatas or {@code null} for none
    */
@@ -142,9 +142,9 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
   }
 
   /**
-   * The weight corresponding to this WrrPolicyItem object. When multiple WrrPolicyItem objects are
-   * configured, the probability of returning an WrrPolicyItem object's data is proportional to its
-   * weight relative to the sum of weights configured for all items. This weight must be non-
+   * The weight corresponding to this `WrrPolicyItem` object. When multiple `WrrPolicyItem` objects
+   * are configured, the probability of returning an `WrrPolicyItem` object's data is proportional
+   * to its weight relative to the sum of weights configured for all items. This weight must be non-
    * negative.
    * @return value or {@code null} for none
    */
@@ -153,9 +153,9 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItem extends com.google.a
   }
 
   /**
-   * The weight corresponding to this WrrPolicyItem object. When multiple WrrPolicyItem objects are
-   * configured, the probability of returning an WrrPolicyItem object's data is proportional to its
-   * weight relative to the sum of weights configured for all items. This weight must be non-
+   * The weight corresponding to this `WrrPolicyItem` object. When multiple `WrrPolicyItem` objects
+   * are configured, the probability of returning an `WrrPolicyItem` object's data is proportional
+   * to its weight relative to the sum of weights configured for all items. This weight must be non-
    * negative.
    * @param weight weight or {@code null} for none
    */

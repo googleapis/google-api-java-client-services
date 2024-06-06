@@ -33,28 +33,7 @@ public final class ResponsePolicyRulesUpdateResponse extends com.google.api.clie
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ResponseHeader header;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private ResponsePolicyRule responsePolicyRule;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public ResponseHeader getHeader() {
-    return header;
-  }
-
-  /**
-   * @param header header or {@code null} for none
-   */
-  public ResponsePolicyRulesUpdateResponse setHeader(ResponseHeader header) {
-    this.header = header;
-    return this;
-  }
 
   /**
    * @return value or {@code null} for none

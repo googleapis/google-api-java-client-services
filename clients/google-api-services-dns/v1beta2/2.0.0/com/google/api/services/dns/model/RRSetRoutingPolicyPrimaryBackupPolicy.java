@@ -32,7 +32,7 @@ public final class RRSetRoutingPolicyPrimaryBackupPolicy extends com.google.api.
 
   /**
    * Backup targets provide a regional failover policy for the otherwise global primary targets. If
-   * serving state is set to BACKUP, this policy essentially becomes a geo routing policy.
+   * serving state is set to `BACKUP`, this policy essentially becomes a geo routing policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,15 +47,15 @@ public final class RRSetRoutingPolicyPrimaryBackupPolicy extends com.google.api.
   /**
    * Endpoints that are health checked before making the routing decision. Unhealthy endpoints are
    * omitted from the results. If all endpoints are unhealthy, we serve a response based on the
-   * backup_geo_targets.
+   * `backup_geo_targets`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RRSetRoutingPolicyHealthCheckTargets primaryTargets;
 
   /**
-   * When serving state is PRIMARY, this field provides the option of sending a small percentage of
-   * the traffic to the backup targets.
+   * When serving state is `PRIMARY`, this field provides the option of sending a small percentage
+   * of the traffic to the backup targets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class RRSetRoutingPolicyPrimaryBackupPolicy extends com.google.api.
 
   /**
    * Backup targets provide a regional failover policy for the otherwise global primary targets. If
-   * serving state is set to BACKUP, this policy essentially becomes a geo routing policy.
+   * serving state is set to `BACKUP`, this policy essentially becomes a geo routing policy.
    * @return value or {@code null} for none
    */
   public RRSetRoutingPolicyGeoPolicy getBackupGeoTargets() {
@@ -72,7 +72,7 @@ public final class RRSetRoutingPolicyPrimaryBackupPolicy extends com.google.api.
 
   /**
    * Backup targets provide a regional failover policy for the otherwise global primary targets. If
-   * serving state is set to BACKUP, this policy essentially becomes a geo routing policy.
+   * serving state is set to `BACKUP`, this policy essentially becomes a geo routing policy.
    * @param backupGeoTargets backupGeoTargets or {@code null} for none
    */
   public RRSetRoutingPolicyPrimaryBackupPolicy setBackupGeoTargets(RRSetRoutingPolicyGeoPolicy backupGeoTargets) {
@@ -98,7 +98,7 @@ public final class RRSetRoutingPolicyPrimaryBackupPolicy extends com.google.api.
   /**
    * Endpoints that are health checked before making the routing decision. Unhealthy endpoints are
    * omitted from the results. If all endpoints are unhealthy, we serve a response based on the
-   * backup_geo_targets.
+   * `backup_geo_targets`.
    * @return value or {@code null} for none
    */
   public RRSetRoutingPolicyHealthCheckTargets getPrimaryTargets() {
@@ -108,7 +108,7 @@ public final class RRSetRoutingPolicyPrimaryBackupPolicy extends com.google.api.
   /**
    * Endpoints that are health checked before making the routing decision. Unhealthy endpoints are
    * omitted from the results. If all endpoints are unhealthy, we serve a response based on the
-   * backup_geo_targets.
+   * `backup_geo_targets`.
    * @param primaryTargets primaryTargets or {@code null} for none
    */
   public RRSetRoutingPolicyPrimaryBackupPolicy setPrimaryTargets(RRSetRoutingPolicyHealthCheckTargets primaryTargets) {
@@ -117,8 +117,8 @@ public final class RRSetRoutingPolicyPrimaryBackupPolicy extends com.google.api.
   }
 
   /**
-   * When serving state is PRIMARY, this field provides the option of sending a small percentage of
-   * the traffic to the backup targets.
+   * When serving state is `PRIMARY`, this field provides the option of sending a small percentage
+   * of the traffic to the backup targets.
    * @return value or {@code null} for none
    */
   public java.lang.Double getTrickleTraffic() {
@@ -126,8 +126,8 @@ public final class RRSetRoutingPolicyPrimaryBackupPolicy extends com.google.api.
   }
 
   /**
-   * When serving state is PRIMARY, this field provides the option of sending a small percentage of
-   * the traffic to the backup targets.
+   * When serving state is `PRIMARY`, this field provides the option of sending a small percentage
+   * of the traffic to the backup targets.
    * @param trickleTraffic trickleTraffic or {@code null} for none
    */
   public RRSetRoutingPolicyPrimaryBackupPolicy setTrickleTraffic(java.lang.Double trickleTraffic) {

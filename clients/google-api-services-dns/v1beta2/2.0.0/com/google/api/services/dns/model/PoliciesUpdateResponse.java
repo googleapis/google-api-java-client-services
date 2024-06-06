@@ -33,28 +33,7 @@ public final class PoliciesUpdateResponse extends com.google.api.client.json.Gen
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ResponseHeader header;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private Policy policy;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public ResponseHeader getHeader() {
-    return header;
-  }
-
-  /**
-   * @param header header or {@code null} for none
-   */
-  public PoliciesUpdateResponse setHeader(ResponseHeader header) {
-    this.header = header;
-    return this;
-  }
 
   /**
    * @return value or {@code null} for none

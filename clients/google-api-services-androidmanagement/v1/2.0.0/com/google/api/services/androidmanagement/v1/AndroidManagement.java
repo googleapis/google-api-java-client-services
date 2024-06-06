@@ -2735,10 +2735,11 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         }
       }
       /**
-       * Gets an active, unexpired enrollment token. Only a partial view of EnrollmentToken is returned:
-       * all the fields but name and expiration_timestamp are empty. This method is meant to help manage
-       * active enrollment tokens lifecycle. For security reasons, it's recommended to delete active
-       * enrollment tokens as soon as they're not intended to be used anymore.
+       * Gets an active, unexpired enrollment token. A partial view of the enrollment token is returned.
+       * Only the following fields are populated: name, expirationTimestamp, allowPersonalUsage, value,
+       * qrCode. This method is meant to help manage active enrollment tokens lifecycle. For security
+       * reasons, it's recommended to delete active enrollment tokens as soon as they're not intended to
+       * be used anymore.
        *
        * Create a request for the method "enrollmentTokens.get".
        *
@@ -2763,10 +2764,11 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
             java.util.regex.Pattern.compile("^enterprises/[^/]+/enrollmentTokens/[^/]+$");
 
         /**
-         * Gets an active, unexpired enrollment token. Only a partial view of EnrollmentToken is returned:
-         * all the fields but name and expiration_timestamp are empty. This method is meant to help manage
-         * active enrollment tokens lifecycle. For security reasons, it's recommended to delete active
-         * enrollment tokens as soon as they're not intended to be used anymore.
+         * Gets an active, unexpired enrollment token. A partial view of the enrollment token is returned.
+         * Only the following fields are populated: name, expirationTimestamp, allowPersonalUsage, value,
+         * qrCode. This method is meant to help manage active enrollment tokens lifecycle. For security
+         * reasons, it's recommended to delete active enrollment tokens as soon as they're not intended to
+         * be used anymore.
          *
          * Create a request for the method "enrollmentTokens.get".
          *
@@ -2890,10 +2892,10 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       }
       /**
        * Lists active, unexpired enrollment tokens for a given enterprise. The list items contain only a
-       * partial view of EnrollmentToken: all the fields but name and expiration_timestamp are empty. This
-       * method is meant to help manage active enrollment tokens lifecycle. For security reasons, it's
-       * recommended to delete active enrollment tokens as soon as they're not intended to be used
-       * anymore.
+       * partial view of EnrollmentToken object. Only the following fields are populated: name,
+       * expirationTimestamp, allowPersonalUsage, value, qrCode. This method is meant to help manage
+       * active enrollment tokens lifecycle. For security reasons, it's recommended to delete active
+       * enrollment tokens as soon as they're not intended to be used anymore.
        *
        * Create a request for the method "enrollmentTokens.list".
        *
@@ -2918,10 +2920,10 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
         /**
          * Lists active, unexpired enrollment tokens for a given enterprise. The list items contain only a
-         * partial view of EnrollmentToken: all the fields but name and expiration_timestamp are empty.
-         * This method is meant to help manage active enrollment tokens lifecycle. For security reasons,
-         * it's recommended to delete active enrollment tokens as soon as they're not intended to be used
-         * anymore.
+         * partial view of EnrollmentToken object. Only the following fields are populated: name,
+         * expirationTimestamp, allowPersonalUsage, value, qrCode. This method is meant to help manage
+         * active enrollment tokens lifecycle. For security reasons, it's recommended to delete active
+         * enrollment tokens as soon as they're not intended to be used anymore.
          *
          * Create a request for the method "enrollmentTokens.list".
          *

@@ -32,6 +32,14 @@ package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
 public final class Component extends com.google.api.client.json.GenericJson {
 
   /**
+   * The list of project ids that are allowed to send traffic to the service attachment. This field
+   * should be filled only for the ingress components.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allowedProjectIds;
+
+  /**
    * Name of the component.
    * The value may be {@code null}.
    */
@@ -44,6 +52,25 @@ public final class Component extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<ServiceAttachment> serviceAttachments;
+
+  /**
+   * The list of project ids that are allowed to send traffic to the service attachment. This field
+   * should be filled only for the ingress components.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllowedProjectIds() {
+    return allowedProjectIds;
+  }
+
+  /**
+   * The list of project ids that are allowed to send traffic to the service attachment. This field
+   * should be filled only for the ingress components.
+   * @param allowedProjectIds allowedProjectIds or {@code null} for none
+   */
+  public Component setAllowedProjectIds(java.util.List<java.lang.String> allowedProjectIds) {
+    this.allowedProjectIds = allowedProjectIds;
+    return this;
+  }
 
   /**
    * Name of the component.

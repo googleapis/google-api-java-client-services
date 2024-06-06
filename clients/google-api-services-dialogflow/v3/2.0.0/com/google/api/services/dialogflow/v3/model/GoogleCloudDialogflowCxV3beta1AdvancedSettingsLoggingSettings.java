@@ -30,21 +30,21 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * If true, DF Interaction logging is currently enabled.
+   * Enables DF Interaction logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableInteractionLogging;
 
   /**
-   * If true, StackDriver logging is currently enabled.
+   * Enables StackDriver logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableStackdriverLogging;
 
   /**
-   * If true, DF Interaction logging is currently enabled.
+   * Enables DF Interaction logging.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableInteractionLogging() {
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
   }
 
   /**
-   * If true, DF Interaction logging is currently enabled.
+   * Enables DF Interaction logging.
    * @param enableInteractionLogging enableInteractionLogging or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings setEnableInteractionLogging(java.lang.Boolean enableInteractionLogging) {
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
   }
 
   /**
-   * If true, StackDriver logging is currently enabled.
+   * Enables StackDriver logging.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableStackdriverLogging() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
   }
 
   /**
-   * If true, StackDriver logging is currently enabled.
+   * Enables StackDriver logging.
    * @param enableStackdriverLogging enableStackdriverLogging or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings setEnableStackdriverLogging(java.lang.Boolean enableStackdriverLogging) {

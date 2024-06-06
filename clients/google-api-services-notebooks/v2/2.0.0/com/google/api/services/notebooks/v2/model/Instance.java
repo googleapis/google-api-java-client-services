@@ -113,6 +113,20 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String proxyUri;
 
   /**
+   * Output only. Reserved for future use for Zone Isolation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use for Zone Separation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. The state of this instance.
    * The value may be {@code null}.
    */
@@ -336,6 +350,40 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setProxyUri(java.lang.String proxyUri) {
     this.proxyUri = proxyUri;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use for Zone Isolation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use for Zone Isolation.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public Instance setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use for Zone Separation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use for Zone Separation.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Instance setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

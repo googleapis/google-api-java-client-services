@@ -30,6 +30,21 @@ package com.google.api.services.notebooks.v2.model;
 public final class NetworkInterface extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. An array of configurations for this interface. Currently, only one access config,
+   * ONE_TO_ONE_NAT, is supported. If no accessConfigs specified, the instance will have an external
+   * internet access through an ephemeral external IP address.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AccessConfig> accessConfigs;
+
+  static {
+    // hack to force ProGuard to consider AccessConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AccessConfig.class);
+  }
+
+  /**
    * Optional. The name of the VPC that this VM instance is in. Format:
    * `projects/{project_id}/global/networks/{network_id}`
    * The value may be {@code null}.
@@ -51,6 +66,27 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String subnet;
+
+  /**
+   * Optional. An array of configurations for this interface. Currently, only one access config,
+   * ONE_TO_ONE_NAT, is supported. If no accessConfigs specified, the instance will have an external
+   * internet access through an ephemeral external IP address.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AccessConfig> getAccessConfigs() {
+    return accessConfigs;
+  }
+
+  /**
+   * Optional. An array of configurations for this interface. Currently, only one access config,
+   * ONE_TO_ONE_NAT, is supported. If no accessConfigs specified, the instance will have an external
+   * internet access through an ephemeral external IP address.
+   * @param accessConfigs accessConfigs or {@code null} for none
+   */
+  public NetworkInterface setAccessConfigs(java.util.List<AccessConfig> accessConfigs) {
+    this.accessConfigs = accessConfigs;
+    return this;
+  }
 
   /**
    * Optional. The name of the VPC that this VM instance is in. Format:

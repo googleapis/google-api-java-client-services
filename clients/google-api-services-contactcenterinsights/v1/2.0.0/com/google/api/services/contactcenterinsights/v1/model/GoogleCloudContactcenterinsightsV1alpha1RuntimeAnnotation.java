@@ -88,27 +88,6 @@ public final class GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation ext
   private GoogleCloudContactcenterinsightsV1alpha1FaqAnswerData faqAnswer;
 
   /**
-   * The generator suggestion result.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudContactcenterinsightsV1alpha1GetGeneratorSuggestionResponse generatorSuggestionResult;
-
-  /**
-   * The Knowledge Assist result.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudContactcenterinsightsV1alpha1GetKnowledgeAssistResponse knowledgeAssistResult;
-
-  /**
-   * The Knowledge Search result.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudContactcenterinsightsV1alpha1SearchKnowledgeAnswer knowledgeSearchResult;
-
-  /**
    * Agent Assist Smart Compose suggestion data.
    * The value may be {@code null}.
    */
@@ -128,6 +107,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation ext
    */
   @com.google.api.client.util.Key
   private GoogleCloudContactcenterinsightsV1alpha1AnnotationBoundary startBoundary;
+
+  /**
+   * Explicit input used for generating the answer
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotationUserInput userInput;
 
   /**
    * The unique identifier of the annotation. Format: projects/{project}/locations/{location}/conver
@@ -268,57 +254,6 @@ public final class GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation ext
   }
 
   /**
-   * The generator suggestion result.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudContactcenterinsightsV1alpha1GetGeneratorSuggestionResponse getGeneratorSuggestionResult() {
-    return generatorSuggestionResult;
-  }
-
-  /**
-   * The generator suggestion result.
-   * @param generatorSuggestionResult generatorSuggestionResult or {@code null} for none
-   */
-  public GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation setGeneratorSuggestionResult(GoogleCloudContactcenterinsightsV1alpha1GetGeneratorSuggestionResponse generatorSuggestionResult) {
-    this.generatorSuggestionResult = generatorSuggestionResult;
-    return this;
-  }
-
-  /**
-   * The Knowledge Assist result.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudContactcenterinsightsV1alpha1GetKnowledgeAssistResponse getKnowledgeAssistResult() {
-    return knowledgeAssistResult;
-  }
-
-  /**
-   * The Knowledge Assist result.
-   * @param knowledgeAssistResult knowledgeAssistResult or {@code null} for none
-   */
-  public GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation setKnowledgeAssistResult(GoogleCloudContactcenterinsightsV1alpha1GetKnowledgeAssistResponse knowledgeAssistResult) {
-    this.knowledgeAssistResult = knowledgeAssistResult;
-    return this;
-  }
-
-  /**
-   * The Knowledge Search result.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudContactcenterinsightsV1alpha1SearchKnowledgeAnswer getKnowledgeSearchResult() {
-    return knowledgeSearchResult;
-  }
-
-  /**
-   * The Knowledge Search result.
-   * @param knowledgeSearchResult knowledgeSearchResult or {@code null} for none
-   */
-  public GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation setKnowledgeSearchResult(GoogleCloudContactcenterinsightsV1alpha1SearchKnowledgeAnswer knowledgeSearchResult) {
-    this.knowledgeSearchResult = knowledgeSearchResult;
-    return this;
-  }
-
-  /**
    * Agent Assist Smart Compose suggestion data.
    * @return value or {@code null} for none
    */
@@ -366,6 +301,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation ext
    */
   public GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation setStartBoundary(GoogleCloudContactcenterinsightsV1alpha1AnnotationBoundary startBoundary) {
     this.startBoundary = startBoundary;
+    return this;
+  }
+
+  /**
+   * Explicit input used for generating the answer
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotationUserInput getUserInput() {
+    return userInput;
+  }
+
+  /**
+   * Explicit input used for generating the answer
+   * @param userInput userInput or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation setUserInput(GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotationUserInput userInput) {
+    this.userInput = userInput;
     return this;
   }
 

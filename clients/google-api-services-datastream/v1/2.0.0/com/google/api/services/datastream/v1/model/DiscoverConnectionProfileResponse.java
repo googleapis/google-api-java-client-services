@@ -51,6 +51,13 @@ public final class DiscoverConnectionProfileResponse extends com.google.api.clie
   private PostgresqlRdbms postgresqlRdbms;
 
   /**
+   * Enriched SQLServer RDBMS object.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerRdbms sqlServerRdbms;
+
+  /**
    * Enriched MySQL RDBMS object.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class DiscoverConnectionProfileResponse extends com.google.api.clie
    */
   public DiscoverConnectionProfileResponse setPostgresqlRdbms(PostgresqlRdbms postgresqlRdbms) {
     this.postgresqlRdbms = postgresqlRdbms;
+    return this;
+  }
+
+  /**
+   * Enriched SQLServer RDBMS object.
+   * @return value or {@code null} for none
+   */
+  public SqlServerRdbms getSqlServerRdbms() {
+    return sqlServerRdbms;
+  }
+
+  /**
+   * Enriched SQLServer RDBMS object.
+   * @param sqlServerRdbms sqlServerRdbms or {@code null} for none
+   */
+  public DiscoverConnectionProfileResponse setSqlServerRdbms(SqlServerRdbms sqlServerRdbms) {
+    this.sqlServerRdbms = sqlServerRdbms;
     return this;
   }
 

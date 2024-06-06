@@ -80,6 +80,13 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   private PostgresqlRdbms postgresqlRdbms;
 
   /**
+   * SQLServer RDBMS to enrich with child data objects and metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerRdbms sqlServerRdbms;
+
+  /**
    * An ad-hoc connection profile configuration.
    * @return value or {@code null} for none
    */
@@ -197,6 +204,23 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
    */
   public DiscoverConnectionProfileRequest setPostgresqlRdbms(PostgresqlRdbms postgresqlRdbms) {
     this.postgresqlRdbms = postgresqlRdbms;
+    return this;
+  }
+
+  /**
+   * SQLServer RDBMS to enrich with child data objects and metadata.
+   * @return value or {@code null} for none
+   */
+  public SqlServerRdbms getSqlServerRdbms() {
+    return sqlServerRdbms;
+  }
+
+  /**
+   * SQLServer RDBMS to enrich with child data objects and metadata.
+   * @param sqlServerRdbms sqlServerRdbms or {@code null} for none
+   */
+  public DiscoverConnectionProfileRequest setSqlServerRdbms(SqlServerRdbms sqlServerRdbms) {
+    this.sqlServerRdbms = sqlServerRdbms;
     return this;
   }
 

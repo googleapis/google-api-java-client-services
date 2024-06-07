@@ -17,7 +17,8 @@
 package com.google.api.services.fcmdata.v1beta1.model;
 
 /**
- * Additional information about proxy notification delivery. All percentages are calculated with
+ * Additional information about [proxy notification](https://firebase.google.com/docs/cloud-
+ * messaging/android/message-priority#proxy) delivery. All percentages are calculated with
  * countNotificationsAccepted as the denominator.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

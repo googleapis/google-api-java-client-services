@@ -78,6 +78,13 @@ public final class Registration extends com.google.api.client.json.GenericJson {
   private java.lang.String domainName;
 
   /**
+   * Output only. Special properties of the domain.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> domainProperties;
+
+  /**
    * Output only. The expiration timestamp of the `Registration`.
    * The value may be {@code null}.
    */
@@ -240,6 +247,23 @@ public final class Registration extends com.google.api.client.json.GenericJson {
    */
   public Registration setDomainName(java.lang.String domainName) {
     this.domainName = domainName;
+    return this;
+  }
+
+  /**
+   * Output only. Special properties of the domain.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDomainProperties() {
+    return domainProperties;
+  }
+
+  /**
+   * Output only. Special properties of the domain.
+   * @param domainProperties domainProperties or {@code null} for none
+   */
+  public Registration setDomainProperties(java.util.List<java.lang.String> domainProperties) {
+    this.domainProperties = domainProperties;
     return this;
   }
 

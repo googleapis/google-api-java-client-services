@@ -30,6 +30,13 @@ package com.google.api.services.domains.v1alpha2.model;
 public final class ManagementSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The actual transfer lock state for this `Registration`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveTransferLockState;
+
+  /**
    * Optional. The desired renewal method for this `Registration`. The actual `renewal_method` is
    * automatically updated to reflect this choice. If unset or equal to
    * `RENEWAL_METHOD_UNSPECIFIED`, the actual `renewalMethod` is treated as if it were set to
@@ -59,11 +66,32 @@ public final class ManagementSettings extends com.google.api.client.json.Generic
 
   /**
    * This is the desired transfer lock state for this `Registration`. A transfer lock controls
-   * whether the domain can be transferred to another registrar.
+   * whether the domain can be transferred to another registrar. The transfer lock state of the
+   * domain is returned in the `effective_transfer_lock_state` property. The transfer lock state
+   * values might be different for the following reasons: * `transfer_lock_state` was updated only a
+   * short time ago. * Domains with the `TRANSFER_LOCK_UNSUPPORTED_BY_REGISTRY` state are in the
+   * list of `domain_properties`. These domains are always in the `UNLOCKED` state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String transferLockState;
+
+  /**
+   * Output only. The actual transfer lock state for this `Registration`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveTransferLockState() {
+    return effectiveTransferLockState;
+  }
+
+  /**
+   * Output only. The actual transfer lock state for this `Registration`.
+   * @param effectiveTransferLockState effectiveTransferLockState or {@code null} for none
+   */
+  public ManagementSettings setEffectiveTransferLockState(java.lang.String effectiveTransferLockState) {
+    this.effectiveTransferLockState = effectiveTransferLockState;
+    return this;
+  }
 
   /**
    * Optional. The desired renewal method for this `Registration`. The actual `renewal_method` is
@@ -129,7 +157,11 @@ public final class ManagementSettings extends com.google.api.client.json.Generic
 
   /**
    * This is the desired transfer lock state for this `Registration`. A transfer lock controls
-   * whether the domain can be transferred to another registrar.
+   * whether the domain can be transferred to another registrar. The transfer lock state of the
+   * domain is returned in the `effective_transfer_lock_state` property. The transfer lock state
+   * values might be different for the following reasons: * `transfer_lock_state` was updated only a
+   * short time ago. * Domains with the `TRANSFER_LOCK_UNSUPPORTED_BY_REGISTRY` state are in the
+   * list of `domain_properties`. These domains are always in the `UNLOCKED` state.
    * @return value or {@code null} for none
    */
   public java.lang.String getTransferLockState() {
@@ -138,7 +170,11 @@ public final class ManagementSettings extends com.google.api.client.json.Generic
 
   /**
    * This is the desired transfer lock state for this `Registration`. A transfer lock controls
-   * whether the domain can be transferred to another registrar.
+   * whether the domain can be transferred to another registrar. The transfer lock state of the
+   * domain is returned in the `effective_transfer_lock_state` property. The transfer lock state
+   * values might be different for the following reasons: * `transfer_lock_state` was updated only a
+   * short time ago. * Domains with the `TRANSFER_LOCK_UNSUPPORTED_BY_REGISTRY` state are in the
+   * list of `domain_properties`. These domains are always in the `UNLOCKED` state.
    * @param transferLockState transferLockState or {@code null} for none
    */
   public ManagementSettings setTransferLockState(java.lang.String transferLockState) {

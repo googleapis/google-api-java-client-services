@@ -23,6 +23,21 @@ package com.google.api.services.chat.v1;
  */
 public class HangoutsChatScopes {
 
+  /** Delete conversations and spaces owned by your organization and remove access to associated files in Google Chat. */
+  public static final String CHAT_ADMIN_DELETE = "https://www.googleapis.com/auth/chat.admin.delete";
+
+  /** View, add, update and remove members and managers in conversations owned by your organization. */
+  public static final String CHAT_ADMIN_MEMBERSHIPS = "https://www.googleapis.com/auth/chat.admin.memberships";
+
+  /** View members and managers in conversations owned by your organization. */
+  public static final String CHAT_ADMIN_MEMBERSHIPS_READONLY = "https://www.googleapis.com/auth/chat.admin.memberships.readonly";
+
+  /** View or edit display name, description, and other metadata for all Google Chat conversations owned by your organization. */
+  public static final String CHAT_ADMIN_SPACES = "https://www.googleapis.com/auth/chat.admin.spaces";
+
+  /** View display name, description, and other metadata for all Google Chat conversations owned by your organization. */
+  public static final String CHAT_ADMIN_SPACES_READONLY = "https://www.googleapis.com/auth/chat.admin.spaces.readonly";
+
   /** Private Service: https://www.googleapis.com/auth/chat.bot. */
   public static final String CHAT_BOT = "https://www.googleapis.com/auth/chat.bot";
 
@@ -81,6 +96,11 @@ public class HangoutsChatScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CHAT_ADMIN_DELETE);
+    set.add(CHAT_ADMIN_MEMBERSHIPS);
+    set.add(CHAT_ADMIN_MEMBERSHIPS_READONLY);
+    set.add(CHAT_ADMIN_SPACES);
+    set.add(CHAT_ADMIN_SPACES_READONLY);
     set.add(CHAT_BOT);
     set.add(CHAT_DELETE);
     set.add(CHAT_IMPORT);

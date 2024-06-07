@@ -1285,7 +1285,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
      * user). Lists spaces visible to the caller or authenticated user. Group chats and DMs aren't
      * listed until the first message is sent. To list all named spaces by Google Workspace
-     * organization, use the `spaces.search()` method using Workspace administrator privileges instead.
+     * organization, use the [`spaces.search()`](https://developers.google.com/workspace/chat/api/refere
+     * nce/rest/v1/spaces/search) method using Workspace administrator privileges instead.
      *
      * Create a request for the method "spaces.list".
      *
@@ -1313,8 +1314,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * app) and [user authentication](https://developers.google.com/workspace/chat/authenticate-
        * authorize-chat-user). Lists spaces visible to the caller or authenticated user. Group chats and
        * DMs aren't listed until the first message is sent. To list all named spaces by Google Workspace
-       * organization, use the `spaces.search()` method using Workspace administrator privileges
-       * instead.
+       * organization, use the [`spaces.search()`](https://developers.google.com/workspace/chat/api/refe
+       * rence/rest/v1/spaces/search) method using Workspace administrator privileges instead.
        *
        * Create a request for the method "spaces.list".
        *

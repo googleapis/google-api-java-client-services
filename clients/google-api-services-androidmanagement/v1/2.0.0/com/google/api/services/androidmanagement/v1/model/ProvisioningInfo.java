@@ -38,6 +38,14 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
   private java.lang.Integer apiLevel;
 
   /**
+   * The email address of the authenticated user (only present for Google Account provisioning
+   * method).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String authenticatedUserEmail;
+
+  /**
    * The brand of the device. For example, Google.
    * The value may be {@code null}.
    */
@@ -114,6 +122,25 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
    */
   public ProvisioningInfo setApiLevel(java.lang.Integer apiLevel) {
     this.apiLevel = apiLevel;
+    return this;
+  }
+
+  /**
+   * The email address of the authenticated user (only present for Google Account provisioning
+   * method).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuthenticatedUserEmail() {
+    return authenticatedUserEmail;
+  }
+
+  /**
+   * The email address of the authenticated user (only present for Google Account provisioning
+   * method).
+   * @param authenticatedUserEmail authenticatedUserEmail or {@code null} for none
+   */
+  public ProvisioningInfo setAuthenticatedUserEmail(java.lang.String authenticatedUserEmail) {
+    this.authenticatedUserEmail = authenticatedUserEmail;
     return this;
   }
 

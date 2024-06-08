@@ -30,11 +30,11 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The timestamp of the metric value.
+   * Required. Type of aggregation performed on the metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String metricTimestamp;
+  private java.lang.String aggregationType;
 
   /**
    * Required. Type of metric like CPU, Memory, etc.
@@ -42,6 +42,13 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
    */
   @com.google.api.client.util.Key
   private java.lang.String metricType;
+
+  /**
+   * Required. The time the metric value was observed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String observationTime;
 
   /**
    * Required. Database resource name associated with the signal. Resource name to follow CAIS
@@ -56,22 +63,22 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Double value;
+  private StorageDatabasecenterProtoCommonTypedValue value;
 
   /**
-   * Required. The timestamp of the metric value.
+   * Required. Type of aggregation performed on the metric.
    * @return value or {@code null} for none
    */
-  public String getMetricTimestamp() {
-    return metricTimestamp;
+  public java.lang.String getAggregationType() {
+    return aggregationType;
   }
 
   /**
-   * Required. The timestamp of the metric value.
-   * @param metricTimestamp metricTimestamp or {@code null} for none
+   * Required. Type of aggregation performed on the metric.
+   * @param aggregationType aggregationType or {@code null} for none
    */
-  public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData setMetricTimestamp(String metricTimestamp) {
-    this.metricTimestamp = metricTimestamp;
+  public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData setAggregationType(java.lang.String aggregationType) {
+    this.aggregationType = aggregationType;
     return this;
   }
 
@@ -89,6 +96,23 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
    */
   public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData setMetricType(java.lang.String metricType) {
     this.metricType = metricType;
+    return this;
+  }
+
+  /**
+   * Required. The time the metric value was observed.
+   * @return value or {@code null} for none
+   */
+  public String getObservationTime() {
+    return observationTime;
+  }
+
+  /**
+   * Required. The time the metric value was observed.
+   * @param observationTime observationTime or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData setObservationTime(String observationTime) {
+    this.observationTime = observationTime;
     return this;
   }
 
@@ -115,7 +139,7 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
    * Required. Value of the metric type.
    * @return value or {@code null} for none
    */
-  public java.lang.Double getValue() {
+  public StorageDatabasecenterProtoCommonTypedValue getValue() {
     return value;
   }
 
@@ -123,7 +147,7 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
    * Required. Value of the metric type.
    * @param value value or {@code null} for none
    */
-  public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData setValue(java.lang.Double value) {
+  public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData setValue(StorageDatabasecenterProtoCommonTypedValue value) {
     this.value = value;
     return this;
   }

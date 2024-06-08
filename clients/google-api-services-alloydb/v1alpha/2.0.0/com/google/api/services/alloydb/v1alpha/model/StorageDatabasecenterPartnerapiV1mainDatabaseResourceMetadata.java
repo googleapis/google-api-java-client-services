@@ -165,13 +165,6 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   private StorageDatabasecenterPartnerapiV1mainUserLabels userLabelSet;
 
   /**
-   * User-provided labels, represented as a dictionary where each label is a single key value pair.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> userLabels;
-
-  /**
    * Availability configuration for this instance
    * @return value or {@code null} for none
    */
@@ -492,23 +485,6 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setUserLabelSet(StorageDatabasecenterPartnerapiV1mainUserLabels userLabelSet) {
     this.userLabelSet = userLabelSet;
-    return this;
-  }
-
-  /**
-   * User-provided labels, represented as a dictionary where each label is a single key value pair.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.String> getUserLabels() {
-    return userLabels;
-  }
-
-  /**
-   * User-provided labels, represented as a dictionary where each label is a single key value pair.
-   * @param userLabels userLabels or {@code null} for none
-   */
-  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setUserLabels(java.util.Map<String, java.lang.String> userLabels) {
-    this.userLabels = userLabels;
     return this;
   }
 

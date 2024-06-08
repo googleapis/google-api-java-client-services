@@ -33914,6 +33914,169 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
       }
       /**
+       * An accessor for creating requests from the Requirements collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+       *   {@code DiscoveryEngine.Requirements.List request = discoveryengine.requirements().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Requirements requirements() {
+        return new Requirements();
+      }
+
+      /**
+       * The "requirements" collection of methods.
+       */
+      public class Requirements {
+
+        /**
+         * Check a particular requirement.
+         *
+         * Create a request for the method "requirements.checkRequirement".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link CheckRequirement#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param location Required. Full resource name of the location. Format
+         *        `projects/{project_number_or_id}/locations/{location}`
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest}
+         * @return the request
+         */
+        public CheckRequirement checkRequirement(java.lang.String location, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest content) throws java.io.IOException {
+          CheckRequirement result = new CheckRequirement(location, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CheckRequirement extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckRequirementResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+location}/requirements:checkRequirement";
+
+          private final java.util.regex.Pattern LOCATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Check a particular requirement.
+           *
+           * Create a request for the method "requirements.checkRequirement".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link CheckRequirement#execute()} method to invoke the remote
+           * operation. <p> {@link CheckRequirement#initialize(com.google.api.client.googleapis.services.Abs
+           * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param location Required. Full resource name of the location. Format
+         *        `projects/{project_number_or_id}/locations/{location}`
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest}
+           * @since 1.13
+           */
+          protected CheckRequirement(java.lang.String location, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest content) {
+            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckRequirementResponse.class);
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public CheckRequirement set$Xgafv(java.lang.String $Xgafv) {
+            return (CheckRequirement) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CheckRequirement setAccessToken(java.lang.String accessToken) {
+            return (CheckRequirement) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CheckRequirement setAlt(java.lang.String alt) {
+            return (CheckRequirement) super.setAlt(alt);
+          }
+
+          @Override
+          public CheckRequirement setCallback(java.lang.String callback) {
+            return (CheckRequirement) super.setCallback(callback);
+          }
+
+          @Override
+          public CheckRequirement setFields(java.lang.String fields) {
+            return (CheckRequirement) super.setFields(fields);
+          }
+
+          @Override
+          public CheckRequirement setKey(java.lang.String key) {
+            return (CheckRequirement) super.setKey(key);
+          }
+
+          @Override
+          public CheckRequirement setOauthToken(java.lang.String oauthToken) {
+            return (CheckRequirement) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CheckRequirement setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CheckRequirement) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CheckRequirement setQuotaUser(java.lang.String quotaUser) {
+            return (CheckRequirement) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CheckRequirement setUploadType(java.lang.String uploadType) {
+            return (CheckRequirement) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CheckRequirement setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CheckRequirement) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full resource name of the location. Format
+           * `projects/{project_number_or_id}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** Required. Full resource name of the location. Format
+         `projects/{project_number_or_id}/locations/{location}`
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /**
+           * Required. Full resource name of the location. Format
+           * `projects/{project_number_or_id}/locations/{location}`
+           */
+          public CheckRequirement setLocation(java.lang.String location) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.location = location;
+            return this;
+          }
+
+          @Override
+          public CheckRequirement set(String parameterName, Object value) {
+            return (CheckRequirement) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the SampleQuerySets collection.
        *
        * <p>The typical use is:</p>
@@ -34116,6 +34279,225 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
        */
       public class UserEvents {
 
+        /**
+         * Writes a single user event from the browser. This uses a GET request to due to browser
+         * restriction of POST-ing to a third-party domain. This method is used only by the Discovery Engine
+         * API JavaScript pixel and Google Tag Manager. Users should not call this method directly.
+         *
+         * Create a request for the method "userEvents.collect".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Collect#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent DataStore resource name, such as
+         *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+         *        .
+         * @return the request
+         */
+        public Collect collect(java.lang.String parent) throws java.io.IOException {
+          Collect result = new Collect(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Collect extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleApiHttpBody> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/userEvents:collect";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Writes a single user event from the browser. This uses a GET request to due to browser
+           * restriction of POST-ing to a third-party domain. This method is used only by the Discovery
+           * Engine API JavaScript pixel and Google Tag Manager. Users should not call this method directly.
+           *
+           * Create a request for the method "userEvents.collect".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Collect#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Collect#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent DataStore resource name, such as
+         *        `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
+         *        .
+           * @since 1.13
+           */
+          protected Collect(java.lang.String parent) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleApiHttpBody.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Collect set$Xgafv(java.lang.String $Xgafv) {
+            return (Collect) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Collect setAccessToken(java.lang.String accessToken) {
+            return (Collect) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Collect setAlt(java.lang.String alt) {
+            return (Collect) super.setAlt(alt);
+          }
+
+          @Override
+          public Collect setCallback(java.lang.String callback) {
+            return (Collect) super.setCallback(callback);
+          }
+
+          @Override
+          public Collect setFields(java.lang.String fields) {
+            return (Collect) super.setFields(fields);
+          }
+
+          @Override
+          public Collect setKey(java.lang.String key) {
+            return (Collect) super.setKey(key);
+          }
+
+          @Override
+          public Collect setOauthToken(java.lang.String oauthToken) {
+            return (Collect) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Collect setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Collect) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Collect setQuotaUser(java.lang.String quotaUser) {
+            return (Collect) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Collect setUploadType(java.lang.String uploadType) {
+            return (Collect) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Collect setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Collect) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent DataStore resource name, such as `projects/{project}/locations/{lo
+           * cation}/collections/{collection}/dataStores/{data_store}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent DataStore resource name, such as
+         `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent DataStore resource name, such as `projects/{project}/locations/{lo
+           * cation}/collections/{collection}/dataStores/{data_store}`.
+           */
+          public Collect setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The event timestamp in milliseconds. This prevents browser caching of otherwise
+           * identical get requests. The name is abbreviated to reduce the payload bytes.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Long ets;
+
+          /** The event timestamp in milliseconds. This prevents browser caching of otherwise identical get
+         requests. The name is abbreviated to reduce the payload bytes.
+           */
+          public java.lang.Long getEts() {
+            return ets;
+          }
+
+          /**
+           * The event timestamp in milliseconds. This prevents browser caching of otherwise
+           * identical get requests. The name is abbreviated to reduce the payload bytes.
+           */
+          public Collect setEts(java.lang.Long ets) {
+            this.ets = ets;
+            return this;
+          }
+
+          /**
+           * The URL including cgi-parameters but excluding the hash fragment with a length limit of
+           * 5,000 characters. This is often more useful than the referer URL, because many browsers
+           * only send the domain for third-party requests.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String uri;
+
+          /** The URL including cgi-parameters but excluding the hash fragment with a length limit of 5,000
+         characters. This is often more useful than the referer URL, because many browsers only send the
+         domain for third-party requests.
+           */
+          public java.lang.String getUri() {
+            return uri;
+          }
+
+          /**
+           * The URL including cgi-parameters but excluding the hash fragment with a length limit of
+           * 5,000 characters. This is often more useful than the referer URL, because many browsers
+           * only send the domain for third-party requests.
+           */
+          public Collect setUri(java.lang.String uri) {
+            this.uri = uri;
+            return this;
+          }
+
+          /** Required. URL encoded UserEvent proto with a length limit of 2,000,000 characters. */
+          @com.google.api.client.util.Key
+          private java.lang.String userEvent;
+
+          /** Required. URL encoded UserEvent proto with a length limit of 2,000,000 characters.
+           */
+          public java.lang.String getUserEvent() {
+            return userEvent;
+          }
+
+          /** Required. URL encoded UserEvent proto with a length limit of 2,000,000 characters. */
+          public Collect setUserEvent(java.lang.String userEvent) {
+            this.userEvent = userEvent;
+            return this;
+          }
+
+          @Override
+          public Collect set(String parameterName, Object value) {
+            return (Collect) super.set(parameterName, value);
+          }
+        }
         /**
          * Writes a single user event.
          *

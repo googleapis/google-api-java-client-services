@@ -30,12 +30,30 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies the chunk spec to be returned from the search response. Only available if the
+   * SearchRequest.ContentSearchSpec.search_result_mode is set to CHUNKS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecChunkSpec chunkSpec;
+
+  /**
    * If there is no extractive_content_spec provided, there will be no extractive answer in the
    * search response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecExtractiveContentSpec extractiveContentSpec;
+
+  /**
+   * Specifies the search result mode. If unspecified, the search result mode is based on
+   * DataStore.DocumentProcessingConfig.chunking_config: * If
+   * DataStore.DocumentProcessingConfig.chunking_config is specified, it defaults to `CHUNKS`. *
+   * Otherwise, it defaults to `DOCUMENTS`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String searchResultMode;
 
   /**
    * If `snippetSpec` is not specified, snippets are not included in the search response.
@@ -50,6 +68,25 @@ public final class GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec ex
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecSummarySpec summarySpec;
+
+  /**
+   * Specifies the chunk spec to be returned from the search response. Only available if the
+   * SearchRequest.ContentSearchSpec.search_result_mode is set to CHUNKS
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecChunkSpec getChunkSpec() {
+    return chunkSpec;
+  }
+
+  /**
+   * Specifies the chunk spec to be returned from the search response. Only available if the
+   * SearchRequest.ContentSearchSpec.search_result_mode is set to CHUNKS
+   * @param chunkSpec chunkSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec setChunkSpec(GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecChunkSpec chunkSpec) {
+    this.chunkSpec = chunkSpec;
+    return this;
+  }
 
   /**
    * If there is no extractive_content_spec provided, there will be no extractive answer in the
@@ -67,6 +104,29 @@ public final class GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec ex
    */
   public GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec setExtractiveContentSpec(GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecExtractiveContentSpec extractiveContentSpec) {
     this.extractiveContentSpec = extractiveContentSpec;
+    return this;
+  }
+
+  /**
+   * Specifies the search result mode. If unspecified, the search result mode is based on
+   * DataStore.DocumentProcessingConfig.chunking_config: * If
+   * DataStore.DocumentProcessingConfig.chunking_config is specified, it defaults to `CHUNKS`. *
+   * Otherwise, it defaults to `DOCUMENTS`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSearchResultMode() {
+    return searchResultMode;
+  }
+
+  /**
+   * Specifies the search result mode. If unspecified, the search result mode is based on
+   * DataStore.DocumentProcessingConfig.chunking_config: * If
+   * DataStore.DocumentProcessingConfig.chunking_config is specified, it defaults to `CHUNKS`. *
+   * Otherwise, it defaults to `DOCUMENTS`.
+   * @param searchResultMode searchResultMode or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec setSearchResultMode(java.lang.String searchResultMode) {
+    this.searchResultMode = searchResultMode;
     return this;
   }
 

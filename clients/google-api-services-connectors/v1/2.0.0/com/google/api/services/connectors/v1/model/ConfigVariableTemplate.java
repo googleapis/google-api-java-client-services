@@ -86,6 +86,13 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
   private java.lang.String locationType;
 
   /**
+   * Optional. MultipleSelectConfig represents the multiple options for a config variable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultipleSelectConfig multipleSelectConfig;
+
+  /**
    * Flag represents that this `ConfigVariable` must be provided for a connection.
    * The value may be {@code null}.
    */
@@ -262,6 +269,23 @@ public final class ConfigVariableTemplate extends com.google.api.client.json.Gen
    */
   public ConfigVariableTemplate setLocationType(java.lang.String locationType) {
     this.locationType = locationType;
+    return this;
+  }
+
+  /**
+   * Optional. MultipleSelectConfig represents the multiple options for a config variable.
+   * @return value or {@code null} for none
+   */
+  public MultipleSelectConfig getMultipleSelectConfig() {
+    return multipleSelectConfig;
+  }
+
+  /**
+   * Optional. MultipleSelectConfig represents the multiple options for a config variable.
+   * @param multipleSelectConfig multipleSelectConfig or {@code null} for none
+   */
+  public ConfigVariableTemplate setMultipleSelectConfig(MultipleSelectConfig multipleSelectConfig) {
+    this.multipleSelectConfig = multipleSelectConfig;
     return this;
   }
 

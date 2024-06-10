@@ -59,6 +59,13 @@ public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.
   private java.lang.String name;
 
   /**
+   * Optional. Immutable. The embedding model config of the RagCorpus.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig ragEmbeddingModelConfig;
+
+  /**
    * Output only. Timestamp when this RagCorpus was last updated.
    * The value may be {@code null}.
    */
@@ -132,6 +139,23 @@ public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1RagCorpus setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The embedding model config of the RagCorpus.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig getRagEmbeddingModelConfig() {
+    return ragEmbeddingModelConfig;
+  }
+
+  /**
+   * Optional. Immutable. The embedding model config of the RagCorpus.
+   * @param ragEmbeddingModelConfig ragEmbeddingModelConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagCorpus setRagEmbeddingModelConfig(GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig ragEmbeddingModelConfig) {
+    this.ragEmbeddingModelConfig = ragEmbeddingModelConfig;
     return this;
   }
 

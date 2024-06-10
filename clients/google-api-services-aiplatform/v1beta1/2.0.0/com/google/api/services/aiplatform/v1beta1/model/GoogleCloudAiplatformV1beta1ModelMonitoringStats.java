@@ -30,35 +30,11 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ModelMonitoringStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * Generated gen ai statistics.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1ModelMonitoringGenAiStats genAiStats;
-
-  /**
    * Generated tabular statistics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1ModelMonitoringTabularStats tabularStats;
-
-  /**
-   * Generated gen ai statistics.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1ModelMonitoringGenAiStats getGenAiStats() {
-    return genAiStats;
-  }
-
-  /**
-   * Generated gen ai statistics.
-   * @param genAiStats genAiStats or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1ModelMonitoringStats setGenAiStats(GoogleCloudAiplatformV1beta1ModelMonitoringGenAiStats genAiStats) {
-    this.genAiStats = genAiStats;
-    return this;
-  }
 
   /**
    * Generated tabular statistics.

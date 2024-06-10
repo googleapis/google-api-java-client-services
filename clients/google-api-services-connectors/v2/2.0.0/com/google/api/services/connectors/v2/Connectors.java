@@ -3001,7 +3001,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               return result;
             }
 
-            public class List extends ConnectorsRequest<com.google.api.services.connectors.v2.model.ListEntitiesWithACLsResponse> {
+            public class List extends ConnectorsRequest<com.google.api.services.connectors.v2.model.Operation> {
 
               private static final String REST_PATH = "v2/{+parent}/entitieswithacls";
 
@@ -3030,7 +3030,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                * @since 1.13
                */
               protected List(java.lang.String parent) {
-                super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v2.model.ListEntitiesWithACLsResponse.class);
+                super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v2.model.Operation.class);
                 this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3171,54 +3171,6 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               /** Format: gs://object_path */
               public List setGsutilUri(java.lang.String gsutilUri) {
                 this.gsutilUri = gsutilUri;
-                return this;
-              }
-
-              /** Number of entity rows to return. Defaults page size = 25. Max page size = 200. */
-              @com.google.api.client.util.Key
-              private java.lang.Integer pageSize;
-
-              /** Number of entity rows to return. Defaults page size = 25. Max page size = 200.
-               */
-              public java.lang.Integer getPageSize() {
-                return pageSize;
-              }
-
-              /** Number of entity rows to return. Defaults page size = 25. Max page size = 200. */
-              public List setPageSize(java.lang.Integer pageSize) {
-                this.pageSize = pageSize;
-                return this;
-              }
-
-              /** Page token value if available from a previous request. */
-              @com.google.api.client.util.Key
-              private java.lang.String pageToken;
-
-              /** Page token value if available from a previous request.
-               */
-              public java.lang.String getPageToken() {
-                return pageToken;
-              }
-
-              /** Page token value if available from a previous request. */
-              public List setPageToken(java.lang.String pageToken) {
-                this.pageToken = pageToken;
-                return this;
-              }
-
-              /** List of 'sort_by' columns to use when returning the results. */
-              @com.google.api.client.util.Key
-              private java.util.List<java.lang.String> sortBy;
-
-              /** List of 'sort_by' columns to use when returning the results.
-               */
-              public java.util.List<java.lang.String> getSortBy() {
-                return sortBy;
-              }
-
-              /** List of 'sort_by' columns to use when returning the results. */
-              public List setSortBy(java.util.List<java.lang.String> sortBy) {
-                this.sortBy = sortBy;
                 return this;
               }
 

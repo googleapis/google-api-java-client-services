@@ -57,7 +57,9 @@ public final class WeightedBackendService extends com.google.api.client.json.Gen
    * weightedBackendService weights in routeAction) . The selection of a backend service is
    * determined only for new traffic. Once a user's request has been directed to a backend service,
    * subsequent requests are sent to the same backend service as determined by the backend service's
-   * session affinity policy. The value must be from 0 to 1000.
+   * session affinity policy. Don't configure session affinity if you're using weighted traffic
+   * splitting. If you do, the weighted traffic splitting configuration takes precedence. The value
+   * must be from 0 to 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +116,9 @@ public final class WeightedBackendService extends com.google.api.client.json.Gen
    * weightedBackendService weights in routeAction) . The selection of a backend service is
    * determined only for new traffic. Once a user's request has been directed to a backend service,
    * subsequent requests are sent to the same backend service as determined by the backend service's
-   * session affinity policy. The value must be from 0 to 1000.
+   * session affinity policy. Don't configure session affinity if you're using weighted traffic
+   * splitting. If you do, the weighted traffic splitting configuration takes precedence. The value
+   * must be from 0 to 1000.
    * @return value or {@code null} for none
    */
   public java.lang.Long getWeight() {
@@ -126,7 +130,9 @@ public final class WeightedBackendService extends com.google.api.client.json.Gen
    * weightedBackendService weights in routeAction) . The selection of a backend service is
    * determined only for new traffic. Once a user's request has been directed to a backend service,
    * subsequent requests are sent to the same backend service as determined by the backend service's
-   * session affinity policy. The value must be from 0 to 1000.
+   * session affinity policy. Don't configure session affinity if you're using weighted traffic
+   * splitting. If you do, the weighted traffic splitting configuration takes precedence. The value
+   * must be from 0 to 1000.
    * @param weight weight or {@code null} for none
    */
   public WeightedBackendService setWeight(java.lang.Long weight) {

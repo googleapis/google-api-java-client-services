@@ -59,6 +59,13 @@ public final class PrivateAccess extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Private service connect settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PscSetting pscSetting;
+
+  /**
    * List of egress components that should not be accessed via the Internet. For more information
    * see go/ccaip-private-path-v2.
    * @return value or {@code null} for none
@@ -93,6 +100,23 @@ public final class PrivateAccess extends com.google.api.client.json.GenericJson 
    */
   public PrivateAccess setIngressSettings(java.util.List<Component> ingressSettings) {
     this.ingressSettings = ingressSettings;
+    return this;
+  }
+
+  /**
+   * Private service connect settings.
+   * @return value or {@code null} for none
+   */
+  public PscSetting getPscSetting() {
+    return pscSetting;
+  }
+
+  /**
+   * Private service connect settings.
+   * @param pscSetting pscSetting or {@code null} for none
+   */
+  public PrivateAccess setPscSetting(PscSetting pscSetting) {
+    this.pscSetting = pscSetting;
     return this;
   }
 

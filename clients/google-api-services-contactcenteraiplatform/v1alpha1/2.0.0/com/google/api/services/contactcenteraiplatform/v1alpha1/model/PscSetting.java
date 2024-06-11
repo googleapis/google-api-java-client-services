@@ -17,7 +17,7 @@
 package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
 
 /**
- * Container for the VPC-SC networking configurations.
+ * Private service connect settings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Platform API. For a detailed
@@ -28,46 +28,43 @@ package com.google.api.services.contactcenteraiplatform.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ServiceAttachment extends com.google.api.client.json.GenericJson {
+public final class PscSetting extends com.google.api.client.json.GenericJson {
 
   /**
-   * The service attachment name that will be used for sending private traffic to the CCAIP tenant
-   * project. Example: "projects/${TENANT_PROJECT_ID}/regions/${REGION}/serviceAttachments/ingress-
-   * default".
+   * The list of project ids that are allowed to send traffic to the service attachment. This field
+   * should be filled only for the ingress components.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private java.util.List<java.lang.String> allowedConsumerProjectIds;
 
   /**
-   * The service attachment name that will be used for sending private traffic to the CCAIP tenant
-   * project. Example: "projects/${TENANT_PROJECT_ID}/regions/${REGION}/serviceAttachments/ingress-
-   * default".
+   * The list of project ids that are allowed to send traffic to the service attachment. This field
+   * should be filled only for the ingress components.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public java.util.List<java.lang.String> getAllowedConsumerProjectIds() {
+    return allowedConsumerProjectIds;
   }
 
   /**
-   * The service attachment name that will be used for sending private traffic to the CCAIP tenant
-   * project. Example: "projects/${TENANT_PROJECT_ID}/regions/${REGION}/serviceAttachments/ingress-
-   * default".
-   * @param name name or {@code null} for none
+   * The list of project ids that are allowed to send traffic to the service attachment. This field
+   * should be filled only for the ingress components.
+   * @param allowedConsumerProjectIds allowedConsumerProjectIds or {@code null} for none
    */
-  public ServiceAttachment setName(java.lang.String name) {
-    this.name = name;
+  public PscSetting setAllowedConsumerProjectIds(java.util.List<java.lang.String> allowedConsumerProjectIds) {
+    this.allowedConsumerProjectIds = allowedConsumerProjectIds;
     return this;
   }
 
   @Override
-  public ServiceAttachment set(String fieldName, Object value) {
-    return (ServiceAttachment) super.set(fieldName, value);
+  public PscSetting set(String fieldName, Object value) {
+    return (PscSetting) super.set(fieldName, value);
   }
 
   @Override
-  public ServiceAttachment clone() {
-    return (ServiceAttachment) super.clone();
+  public PscSetting clone() {
+    return (PscSetting) super.clone();
   }
 
 }

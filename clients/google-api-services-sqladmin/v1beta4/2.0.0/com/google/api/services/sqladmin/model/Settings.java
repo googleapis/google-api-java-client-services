@@ -176,6 +176,15 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String edition;
 
   /**
+   * Optional. By default, Cloud SQL instances have schema extraction disabled for Dataplex. When
+   * this parameter is set to true, schema extraction for Dataplex on Cloud SQL instances is
+   * activated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableDataplexIntegration;
+
+  /**
    * Optional. When this parameter is set to true, Cloud SQL instances can connect to Vertex AI to
    * pass requests for real-time predictions and insights to the AI. The default value is false.
    * This applies only to Cloud SQL for PostgreSQL instances.
@@ -616,6 +625,27 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setEdition(java.lang.String edition) {
     this.edition = edition;
+    return this;
+  }
+
+  /**
+   * Optional. By default, Cloud SQL instances have schema extraction disabled for Dataplex. When
+   * this parameter is set to true, schema extraction for Dataplex on Cloud SQL instances is
+   * activated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableDataplexIntegration() {
+    return enableDataplexIntegration;
+  }
+
+  /**
+   * Optional. By default, Cloud SQL instances have schema extraction disabled for Dataplex. When
+   * this parameter is set to true, schema extraction for Dataplex on Cloud SQL instances is
+   * activated.
+   * @param enableDataplexIntegration enableDataplexIntegration or {@code null} for none
+   */
+  public Settings setEnableDataplexIntegration(java.lang.Boolean enableDataplexIntegration) {
+    this.enableDataplexIntegration = enableDataplexIntegration;
     return this;
   }
 

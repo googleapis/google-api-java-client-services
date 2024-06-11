@@ -54,7 +54,7 @@ public final class PubsubConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String subscription;
 
   /**
-   * The name of the topic from which this subscription is receiving messages. Format is
+   * Optional. The name of the topic from which this subscription is receiving messages. Format is
    * `projects/{project}/topics/{topic}`.
    * The value may be {@code null}.
    */
@@ -117,7 +117,7 @@ public final class PubsubConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the topic from which this subscription is receiving messages. Format is
+   * Optional. The name of the topic from which this subscription is receiving messages. Format is
    * `projects/{project}/topics/{topic}`.
    * @return value or {@code null} for none
    */
@@ -126,7 +126,7 @@ public final class PubsubConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the topic from which this subscription is receiving messages. Format is
+   * Optional. The name of the topic from which this subscription is receiving messages. Format is
    * `projects/{project}/topics/{topic}`.
    * @param topic topic or {@code null} for none
    */

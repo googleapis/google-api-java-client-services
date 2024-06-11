@@ -126,6 +126,13 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   private java.lang.Integer preferredRequestExpirationDays;
 
   /**
+   * Optional. A setting to indicate the maximum width of an Access Approval request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestScopeMaxWidthPreference;
+
+  /**
    * Optional. A setting to require approval request justifications to be customer visible.
    * The value may be {@code null}.
    */
@@ -351,6 +358,23 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    */
   public AccessApprovalSettings setPreferredRequestExpirationDays(java.lang.Integer preferredRequestExpirationDays) {
     this.preferredRequestExpirationDays = preferredRequestExpirationDays;
+    return this;
+  }
+
+  /**
+   * Optional. A setting to indicate the maximum width of an Access Approval request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestScopeMaxWidthPreference() {
+    return requestScopeMaxWidthPreference;
+  }
+
+  /**
+   * Optional. A setting to indicate the maximum width of an Access Approval request.
+   * @param requestScopeMaxWidthPreference requestScopeMaxWidthPreference or {@code null} for none
+   */
+  public AccessApprovalSettings setRequestScopeMaxWidthPreference(java.lang.String requestScopeMaxWidthPreference) {
+    this.requestScopeMaxWidthPreference = requestScopeMaxWidthPreference;
     return this;
   }
 

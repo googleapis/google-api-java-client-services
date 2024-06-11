@@ -39,7 +39,7 @@ public final class WorkerConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Long diskSizeGb;
 
   /**
-   * Machine type of a worker, such as `e2-medium`. See [Worker pool config
+   * Optional. Machine type of a worker, such as `e2-medium`. See [Worker pool config
    * file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema). If
    * left blank, Cloud Build will use a sensible default.
    * The value may be {@code null}.
@@ -69,7 +69,7 @@ public final class WorkerConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Machine type of a worker, such as `e2-medium`. See [Worker pool config
+   * Optional. Machine type of a worker, such as `e2-medium`. See [Worker pool config
    * file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema). If
    * left blank, Cloud Build will use a sensible default.
    * @return value or {@code null} for none
@@ -79,7 +79,7 @@ public final class WorkerConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Machine type of a worker, such as `e2-medium`. See [Worker pool config
+   * Optional. Machine type of a worker, such as `e2-medium`. See [Worker pool config
    * file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema). If
    * left blank, Cloud Build will use a sensible default.
    * @param machineType machineType or {@code null} for none

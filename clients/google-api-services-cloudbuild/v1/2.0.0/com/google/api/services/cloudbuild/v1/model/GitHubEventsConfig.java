@@ -31,8 +31,8 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class GitHubEventsConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The resource name of the github enterprise config that should be applied to this
-   * installation. For example:
+   * The resource name of the github enterprise config that should be applied to this installation.
+   * For example:
    * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * The value may be {@code null}.
    */
@@ -77,8 +77,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   private PushFilter push;
 
   /**
-   * Optional. The resource name of the github enterprise config that should be applied to this
-   * installation. For example:
+   * The resource name of the github enterprise config that should be applied to this installation.
+   * For example:
    * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * @return value or {@code null} for none
    */
@@ -87,8 +87,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The resource name of the github enterprise config that should be applied to this
-   * installation. For example:
+   * The resource name of the github enterprise config that should be applied to this installation.
+   * For example:
    * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * @param enterpriseConfigResourceName enterpriseConfigResourceName or {@code null} for none
    */

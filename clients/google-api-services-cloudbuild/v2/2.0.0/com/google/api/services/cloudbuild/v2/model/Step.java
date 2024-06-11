@@ -71,6 +71,14 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. OnError defines the exiting behavior on error can be set to [ continue | stopAndFail
+   * ]
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String onError;
+
+  /**
    * Optional. Optional parameters passed to the StepAction.
    * The value may be {@code null}.
    */
@@ -209,6 +217,25 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. OnError defines the exiting behavior on error can be set to [ continue | stopAndFail
+   * ]
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOnError() {
+    return onError;
+  }
+
+  /**
+   * Optional. OnError defines the exiting behavior on error can be set to [ continue | stopAndFail
+   * ]
+   * @param onError onError or {@code null} for none
+   */
+  public Step setOnError(java.lang.String onError) {
+    this.onError = onError;
     return this;
   }
 

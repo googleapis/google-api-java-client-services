@@ -31,6 +31,14 @@ package com.google.api.services.pubsub.model;
 public final class AvroConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. When true, the output Cloud Storage file will be serialized using the topic schema,
+   * if it exists.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useTopicSchema;
+
+  /**
    * Optional. When true, write the subscription name, message_id, publish_time, attributes, and
    * ordering_key as additional fields in the output. The subscription name, message_id, and
    * publish_time fields are put in their own fields while all other message properties other than
@@ -39,6 +47,25 @@ public final class AvroConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean writeMetadata;
+
+  /**
+   * Optional. When true, the output Cloud Storage file will be serialized using the topic schema,
+   * if it exists.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseTopicSchema() {
+    return useTopicSchema;
+  }
+
+  /**
+   * Optional. When true, the output Cloud Storage file will be serialized using the topic schema,
+   * if it exists.
+   * @param useTopicSchema useTopicSchema or {@code null} for none
+   */
+  public AvroConfig setUseTopicSchema(java.lang.Boolean useTopicSchema) {
+    this.useTopicSchema = useTopicSchema;
+    return this;
+  }
 
   /**
    * Optional. When true, write the subscription name, message_id, publish_time, attributes, and

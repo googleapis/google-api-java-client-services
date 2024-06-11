@@ -140,6 +140,14 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private ManagedInstancePropertiesFromFlexibilityPolicy propertiesFromFlexibilityPolicy;
 
   /**
+   * [Output only] The size of the VM represented by this Managed Instance. This is how much this
+   * Managed Instance contributes to the size of the group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float sizeInUnit;
+
+  /**
    * [Output Only] Tag describing the version.
    * The value may be {@code null}.
    */
@@ -417,6 +425,25 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
    */
   public ManagedInstance setPropertiesFromFlexibilityPolicy(ManagedInstancePropertiesFromFlexibilityPolicy propertiesFromFlexibilityPolicy) {
     this.propertiesFromFlexibilityPolicy = propertiesFromFlexibilityPolicy;
+    return this;
+  }
+
+  /**
+   * [Output only] The size of the VM represented by this Managed Instance. This is how much this
+   * Managed Instance contributes to the size of the group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getSizeInUnit() {
+    return sizeInUnit;
+  }
+
+  /**
+   * [Output only] The size of the VM represented by this Managed Instance. This is how much this
+   * Managed Instance contributes to the size of the group.
+   * @param sizeInUnit sizeInUnit or {@code null} for none
+   */
+  public ManagedInstance setSizeInUnit(java.lang.Float sizeInUnit) {
+    this.sizeInUnit = sizeInUnit;
     return this;
   }
 

@@ -4214,7 +4214,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
       /**
        * Pauses serving of the given finalized deal. This call only pauses the serving status, and does
        * not affect other fields of the finalized deal. Calling this method for an already paused deal has
-       * no effect. This method only applies to programmatic guaranteed deals.
+       * no effect. This method only applies to programmatic guaranteed deals and preferred deals.
        *
        * Create a request for the method "finalizedDeals.pause".
        *
@@ -4242,7 +4242,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         /**
          * Pauses serving of the given finalized deal. This call only pauses the serving status, and does
          * not affect other fields of the finalized deal. Calling this method for an already paused deal
-         * has no effect. This method only applies to programmatic guaranteed deals.
+         * has no effect. This method only applies to programmatic guaranteed deals and preferred deals.
          *
          * Create a request for the method "finalizedDeals.pause".
          *
@@ -4351,7 +4351,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        * Resumes serving of the given finalized deal. Calling this method for an running deal has no
        * effect. If a deal is initially paused by the seller, calling this method will not resume serving
        * of the deal until the seller also resumes the deal. This method only applies to programmatic
-       * guaranteed deals.
+       * guaranteed deals and preferred deals.
        *
        * Create a request for the method "finalizedDeals.resume".
        *
@@ -4380,7 +4380,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * Resumes serving of the given finalized deal. Calling this method for an running deal has no
          * effect. If a deal is initially paused by the seller, calling this method will not resume
          * serving of the deal until the seller also resumes the deal. This method only applies to
-         * programmatic guaranteed deals.
+         * programmatic guaranteed deals and preferred deals.
          *
          * Create a request for the method "finalizedDeals.resume".
          *

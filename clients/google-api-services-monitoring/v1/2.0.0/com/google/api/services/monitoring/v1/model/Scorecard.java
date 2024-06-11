@@ -39,11 +39,39 @@ public final class Scorecard extends com.google.api.client.json.GenericJson {
   private Empty blankView;
 
   /**
+   * Optional. A dimension is a structured label, class, or category for a set of measurements in
+   * your data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Dimension> dimensions;
+
+  static {
+    // hack to force ProGuard to consider Dimension used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Dimension.class);
+  }
+
+  /**
    * Will cause the scorecard to show a gauge chart.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GaugeView gaugeView;
+
+  /**
+   * Optional. A measure is a measured value of a property in your data. For example, rainfall in
+   * inches, number of units sold, revenue gained, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Measure> measures;
+
+  static {
+    // hack to force ProGuard to consider Measure used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Measure.class);
+  }
 
   /**
    * Will cause the scorecard to show a spark chart.
@@ -97,6 +125,25 @@ public final class Scorecard extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. A dimension is a structured label, class, or category for a set of measurements in
+   * your data.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Dimension> getDimensions() {
+    return dimensions;
+  }
+
+  /**
+   * Optional. A dimension is a structured label, class, or category for a set of measurements in
+   * your data.
+   * @param dimensions dimensions or {@code null} for none
+   */
+  public Scorecard setDimensions(java.util.List<Dimension> dimensions) {
+    this.dimensions = dimensions;
+    return this;
+  }
+
+  /**
    * Will cause the scorecard to show a gauge chart.
    * @return value or {@code null} for none
    */
@@ -110,6 +157,25 @@ public final class Scorecard extends com.google.api.client.json.GenericJson {
    */
   public Scorecard setGaugeView(GaugeView gaugeView) {
     this.gaugeView = gaugeView;
+    return this;
+  }
+
+  /**
+   * Optional. A measure is a measured value of a property in your data. For example, rainfall in
+   * inches, number of units sold, revenue gained, etc.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Measure> getMeasures() {
+    return measures;
+  }
+
+  /**
+   * Optional. A measure is a measured value of a property in your data. For example, rainfall in
+   * inches, number of units sold, revenue gained, etc.
+   * @param measures measures or {@code null} for none
+   */
+  public Scorecard setMeasures(java.util.List<Measure> measures) {
+    this.measures = measures;
     return this;
   }
 

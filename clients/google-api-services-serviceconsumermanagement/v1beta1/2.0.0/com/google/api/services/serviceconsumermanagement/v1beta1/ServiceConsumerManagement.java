@@ -650,6 +650,149 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
       }
       /**
+       * Create or update multiple producer quota policies atomically, all on the same ancestor, but on
+       * many different metrics or limits. The name field in the quota policy message should not be set.
+       *
+       * Create a request for the method "consumerQuotaMetrics.importProducerQuotaPolicies".
+       *
+       * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
+       * any optional parameters, call the {@link ImportProducerQuotaPolicies#execute()} method to invoke
+       * the remote operation.
+       *
+       * @param parent The resource name of the consumer. An example name would be:
+       *        `services/compute.googleapis.com/organizations/123`
+       * @param content the {@link com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ImportProducerQuotaPoliciesRequest}
+       * @return the request
+       */
+      public ImportProducerQuotaPolicies importProducerQuotaPolicies(java.lang.String parent, com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ImportProducerQuotaPoliciesRequest content) throws java.io.IOException {
+        ImportProducerQuotaPolicies result = new ImportProducerQuotaPolicies(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ImportProducerQuotaPolicies extends ServiceConsumerManagementRequest<com.google.api.services.serviceconsumermanagement.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/consumerQuotaMetrics:importProducerQuotaPolicies";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+$");
+
+        /**
+         * Create or update multiple producer quota policies atomically, all on the same ancestor, but on
+         * many different metrics or limits. The name field in the quota policy message should not be set.
+         *
+         * Create a request for the method "consumerQuotaMetrics.importProducerQuotaPolicies".
+         *
+         * This request holds the parameters needed by the the serviceconsumermanagement server.  After
+         * setting any optional parameters, call the {@link ImportProducerQuotaPolicies#execute()} method
+         * to invoke the remote operation. <p> {@link ImportProducerQuotaPolicies#initialize(com.google.ap
+         * i.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+         * instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The resource name of the consumer. An example name would be:
+       *        `services/compute.googleapis.com/organizations/123`
+         * @param content the {@link com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ImportProducerQuotaPoliciesRequest}
+         * @since 1.13
+         */
+        protected ImportProducerQuotaPolicies(java.lang.String parent, com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ImportProducerQuotaPoliciesRequest content) {
+          super(ServiceConsumerManagement.this, "POST", REST_PATH, content, com.google.api.services.serviceconsumermanagement.v1beta1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+/[^/]+/[^/]+$");
+          }
+        }
+
+        @Override
+        public ImportProducerQuotaPolicies set$Xgafv(java.lang.String $Xgafv) {
+          return (ImportProducerQuotaPolicies) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ImportProducerQuotaPolicies setAccessToken(java.lang.String accessToken) {
+          return (ImportProducerQuotaPolicies) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ImportProducerQuotaPolicies setAlt(java.lang.String alt) {
+          return (ImportProducerQuotaPolicies) super.setAlt(alt);
+        }
+
+        @Override
+        public ImportProducerQuotaPolicies setCallback(java.lang.String callback) {
+          return (ImportProducerQuotaPolicies) super.setCallback(callback);
+        }
+
+        @Override
+        public ImportProducerQuotaPolicies setFields(java.lang.String fields) {
+          return (ImportProducerQuotaPolicies) super.setFields(fields);
+        }
+
+        @Override
+        public ImportProducerQuotaPolicies setKey(java.lang.String key) {
+          return (ImportProducerQuotaPolicies) super.setKey(key);
+        }
+
+        @Override
+        public ImportProducerQuotaPolicies setOauthToken(java.lang.String oauthToken) {
+          return (ImportProducerQuotaPolicies) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ImportProducerQuotaPolicies setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ImportProducerQuotaPolicies) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ImportProducerQuotaPolicies setQuotaUser(java.lang.String quotaUser) {
+          return (ImportProducerQuotaPolicies) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ImportProducerQuotaPolicies setUploadType(java.lang.String uploadType) {
+          return (ImportProducerQuotaPolicies) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ImportProducerQuotaPolicies setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ImportProducerQuotaPolicies) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The resource name of the consumer. An example name would be:
+         * `services/compute.googleapis.com/organizations/123`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The resource name of the consumer. An example name would be:
+       `services/compute.googleapis.com/organizations/123`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The resource name of the consumer. An example name would be:
+         * `services/compute.googleapis.com/organizations/123`
+         */
+        public ImportProducerQuotaPolicies setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+/[^/]+/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public ImportProducerQuotaPolicies set(String parameterName, Object value) {
+          return (ImportProducerQuotaPolicies) super.set(parameterName, value);
+        }
+      }
+      /**
        * Retrieves a summary of all quota information about this consumer that is visible to the service
        * producer, for each quota metric defined by the service. Each metric includes information about
        * all of its defined limits. Each limit includes the limit configuration (quota unit, preciseness,
@@ -1935,6 +2078,880 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the ProducerQuotaPolicies collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ServiceConsumerManagement serviceconsumermanagement = new ServiceConsumerManagement(...);}
+         *   {@code ServiceConsumerManagement.ProducerQuotaPolicies.List request = serviceconsumermanagement.producerQuotaPolicies().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ProducerQuotaPolicies producerQuotaPolicies() {
+          return new ProducerQuotaPolicies();
+        }
+
+        /**
+         * The "producerQuotaPolicies" collection of methods.
+         */
+        public class ProducerQuotaPolicies {
+
+          /**
+           * Creates a producer quota policy. A producer quota policy is applied by the owner or administrator
+           * of a service at an org or folder node to set the default quota limit for all consumers under the
+           * node where the policy is created. To create multiple policies at once, use
+           * ImportProducerQuotaPolicies instead. If a policy with the specified dimensions already exists,
+           * this call will fail. To overwrite an existing policy if one is already present ("upsert"
+           * semantics), use ImportProducerQuotaPolicies instead.
+           *
+           * Create a request for the method "producerQuotaPolicies.create".
+           *
+           * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
+           * any optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the parent quota limit. An example name would be: `services/compute.g
+           *        oogleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/
+           *        %2Fproject%2Fregion`
+           * @param content the {@link com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ProducerQuotaPolicy}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ProducerQuotaPolicy content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends ServiceConsumerManagementRequest<com.google.api.services.serviceconsumermanagement.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/producerQuotaPolicies";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+
+            /**
+             * Creates a producer quota policy. A producer quota policy is applied by the owner or
+             * administrator of a service at an org or folder node to set the default quota limit for all
+             * consumers under the node where the policy is created. To create multiple policies at once, use
+             * ImportProducerQuotaPolicies instead. If a policy with the specified dimensions already exists,
+             * this call will fail. To overwrite an existing policy if one is already present ("upsert"
+             * semantics), use ImportProducerQuotaPolicies instead.
+             *
+             * Create a request for the method "producerQuotaPolicies.create".
+             *
+             * This request holds the parameters needed by the the serviceconsumermanagement server.  After
+             * setting any optional parameters, call the {@link Create#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the parent quota limit. An example name would be: `services/compute.g
+           *        oogleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/
+           *        %2Fproject%2Fregion`
+             * @param content the {@link com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ProducerQuotaPolicy}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ProducerQuotaPolicy content) {
+              super(ServiceConsumerManagement.this, "POST", REST_PATH, content, com.google.api.services.serviceconsumermanagement.v1beta1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^services/[^/]+/[^/]+/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the parent quota limit. An example name would be: `ser
+             * vices/compute.googleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapi
+             * s.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the parent quota limit. An example name would be: `services/compute.
+           googleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+           ct%2Fregion`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the parent quota limit. An example name would be: `ser
+             * vices/compute.googleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapi
+             * s.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^services/[^/]+/[^/]+/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Whether to force the creation of the quota policy. If the policy creation would
+             * decrease the default limit of any consumer tier by more than 10 percent, the call is
+             * rejected, as a safety measure to avoid accidentally decreasing quota too quickly.
+             * Setting the force parameter to true ignores this restriction.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean force;
+
+            /** Whether to force the creation of the quota policy. If the policy creation would decrease the
+           default limit of any consumer tier by more than 10 percent, the call is rejected, as a safety
+           measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to true
+           ignores this restriction.
+             */
+            public java.lang.Boolean getForce() {
+              return force;
+            }
+
+            /**
+             * Whether to force the creation of the quota policy. If the policy creation would
+             * decrease the default limit of any consumer tier by more than 10 percent, the call is
+             * rejected, as a safety measure to avoid accidentally decreasing quota too quickly.
+             * Setting the force parameter to true ignores this restriction.
+             */
+            public Create setForce(java.lang.Boolean force) {
+              this.force = force;
+              return this;
+            }
+
+            /**
+             * If force option is set to true, force_justification is suggested to be set to log the
+             * reason in audit logs.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String forceJustification;
+
+            /** If force option is set to true, force_justification is suggested to be set to log the reason in
+           audit logs.
+             */
+            public java.lang.String getForceJustification() {
+              return forceJustification;
+            }
+
+            /**
+             * If force option is set to true, force_justification is suggested to be set to log the
+             * reason in audit logs.
+             */
+            public Create setForceJustification(java.lang.String forceJustification) {
+              this.forceJustification = forceJustification;
+              return this;
+            }
+
+            /** If set to true, validate the request, but do not actually update. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean validateOnly;
+
+            /** If set to true, validate the request, but do not actually update.
+             */
+            public java.lang.Boolean getValidateOnly() {
+              return validateOnly;
+            }
+
+            /** If set to true, validate the request, but do not actually update. */
+            public Create setValidateOnly(java.lang.Boolean validateOnly) {
+              this.validateOnly = validateOnly;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a producer quota policy.
+           *
+           * Create a request for the method "producerQuotaPolicies.delete".
+           *
+           * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
+           * any optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the policy to delete. An example name would be: `services/compute.goo
+           *        gleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2
+           *        Fproject%2Fregion/producerQuotaPolicies/4a3f2c1d`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends ServiceConsumerManagementRequest<com.google.api.services.serviceconsumermanagement.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/producerQuotaPolicies/[^/]+$");
+
+            /**
+             * Deletes a producer quota policy.
+             *
+             * Create a request for the method "producerQuotaPolicies.delete".
+             *
+             * This request holds the parameters needed by the the serviceconsumermanagement server.  After
+             * setting any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the policy to delete. An example name would be: `services/compute.goo
+           *        gleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2
+           *        Fproject%2Fregion/producerQuotaPolicies/4a3f2c1d`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(ServiceConsumerManagement.this, "DELETE", REST_PATH, null, com.google.api.services.serviceconsumermanagement.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^services/[^/]+/[^/]+/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/producerQuotaPolicies/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the policy to delete. An example name would be: `servi
+             * ces/compute.googleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapis.
+             * com%2Fcpus/limits/%2Fproject%2Fregion/producerQuotaPolicies/4a3f2c1d`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the policy to delete. An example name would be: `services/compute.go
+           ogleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject
+           %2Fregion/producerQuotaPolicies/4a3f2c1d`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the policy to delete. An example name would be: `servi
+             * ces/compute.googleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapis.
+             * com%2Fcpus/limits/%2Fproject%2Fregion/producerQuotaPolicies/4a3f2c1d`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^services/[^/]+/[^/]+/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/producerQuotaPolicies/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Whether to force the deletion of the quota policy. If the policy deletion would
+             * decrease the default limit of any consumer tier by more than 10 percent, the call is
+             * rejected, as a safety measure to avoid accidentally decreasing quota too quickly.
+             * Setting the force parameter to true ignores this restriction.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean force;
+
+            /** Whether to force the deletion of the quota policy. If the policy deletion would decrease the
+           default limit of any consumer tier by more than 10 percent, the call is rejected, as a safety
+           measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to true
+           ignores this restriction.
+             */
+            public java.lang.Boolean getForce() {
+              return force;
+            }
+
+            /**
+             * Whether to force the deletion of the quota policy. If the policy deletion would
+             * decrease the default limit of any consumer tier by more than 10 percent, the call is
+             * rejected, as a safety measure to avoid accidentally decreasing quota too quickly.
+             * Setting the force parameter to true ignores this restriction.
+             */
+            public Delete setForce(java.lang.Boolean force) {
+              this.force = force;
+              return this;
+            }
+
+            /**
+             * If force option is set to true, force_justification is suggested to be set to log the
+             * reason in audit logs.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String forceJustification;
+
+            /** If force option is set to true, force_justification is suggested to be set to log the reason in
+           audit logs.
+             */
+            public java.lang.String getForceJustification() {
+              return forceJustification;
+            }
+
+            /**
+             * If force option is set to true, force_justification is suggested to be set to log the
+             * reason in audit logs.
+             */
+            public Delete setForceJustification(java.lang.String forceJustification) {
+              this.forceJustification = forceJustification;
+              return this;
+            }
+
+            /** If set to true, validate the request, but do not actually update. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean validateOnly;
+
+            /** If set to true, validate the request, but do not actually update.
+             */
+            public java.lang.Boolean getValidateOnly() {
+              return validateOnly;
+            }
+
+            /** If set to true, validate the request, but do not actually update. */
+            public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+              this.validateOnly = validateOnly;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all producer policies created at current consumer node for a limit.
+           *
+           * Create a request for the method "producerQuotaPolicies.list".
+           *
+           * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the parent quota limit. An example name would be: `services/compute.g
+           *        oogleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/
+           *        %2Fproject%2Fregion`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ServiceConsumerManagementRequest<com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ListProducerQuotaPoliciesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/producerQuotaPolicies";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+
+            /**
+             * Lists all producer policies created at current consumer node for a limit.
+             *
+             * Create a request for the method "producerQuotaPolicies.list".
+             *
+             * This request holds the parameters needed by the the serviceconsumermanagement server.  After
+             * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the parent quota limit. An example name would be: `services/compute.g
+           *        oogleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/
+           *        %2Fproject%2Fregion`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(ServiceConsumerManagement.this, "GET", REST_PATH, null, com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ListProducerQuotaPoliciesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^services/[^/]+/[^/]+/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the parent quota limit. An example name would be: `ser
+             * vices/compute.googleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapi
+             * s.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the parent quota limit. An example name would be: `services/compute.
+           googleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+           ct%2Fregion`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the parent quota limit. An example name would be: `ser
+             * vices/compute.googleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapi
+             * s.com%2Fcpus/limits/%2Fproject%2Fregion`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^services/[^/]+/[^/]+/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Requested size of the next page of data. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested size of the next page of data.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Requested size of the next page of data. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Token identifying which result to start with; returned by a previous list call. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Token identifying which result to start with; returned by a previous list call.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Token identifying which result to start with; returned by a previous list call. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a producer quota policy.
+           *
+           * Create a request for the method "producerQuotaPolicies.patch".
+           *
+           * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
+           * any optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name of the producer policy. An example name would be: `services/compute.googleapis.com
+           *        /organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2F
+           *        region/producerQuotaPolicies/4a3f2c1d`
+           * @param content the {@link com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ProducerQuotaPolicy}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ProducerQuotaPolicy content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends ServiceConsumerManagementRequest<com.google.api.services.serviceconsumermanagement.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/producerQuotaPolicies/[^/]+$");
+
+            /**
+             * Updates a producer quota policy.
+             *
+             * Create a request for the method "producerQuotaPolicies.patch".
+             *
+             * This request holds the parameters needed by the the serviceconsumermanagement server.  After
+             * setting any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The resource name of the producer policy. An example name would be: `services/compute.googleapis.com
+           *        /organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2F
+           *        region/producerQuotaPolicies/4a3f2c1d`
+             * @param content the {@link com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ProducerQuotaPolicy}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ProducerQuotaPolicy content) {
+              super(ServiceConsumerManagement.this, "PATCH", REST_PATH, content, com.google.api.services.serviceconsumermanagement.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^services/[^/]+/[^/]+/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/producerQuotaPolicies/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the producer policy. An example name would be: `services/compute
+             * .googleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/
+             * limits/%2Fproject%2Fregion/producerQuotaPolicies/4a3f2c1d`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the producer policy. An example name would be: `services/compute.googleapis.co
+           m/organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/p
+           roducerQuotaPolicies/4a3f2c1d`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The resource name of the producer policy. An example name would be: `services/compute
+             * .googleapis.com/organizations/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/
+             * limits/%2Fproject%2Fregion/producerQuotaPolicies/4a3f2c1d`
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^services/[^/]+/[^/]+/[^/]+/consumerQuotaMetrics/[^/]+/limits/[^/]+/producerQuotaPolicies/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Whether to force the update of the quota policy. If the policy update would decrease
+             * the default limit of any consumer tier by more than 10 percent, the call is rejected,
+             * as a safety measure to avoid accidentally decreasing quota too quickly. Setting the
+             * force parameter to true ignores this restriction.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean force;
+
+            /** Whether to force the update of the quota policy. If the policy update would decrease the default
+           limit of any consumer tier by more than 10 percent, the call is rejected, as a safety measure to
+           avoid accidentally decreasing quota too quickly. Setting the force parameter to true ignores this
+           restriction.
+             */
+            public java.lang.Boolean getForce() {
+              return force;
+            }
+
+            /**
+             * Whether to force the update of the quota policy. If the policy update would decrease
+             * the default limit of any consumer tier by more than 10 percent, the call is rejected,
+             * as a safety measure to avoid accidentally decreasing quota too quickly. Setting the
+             * force parameter to true ignores this restriction.
+             */
+            public Patch setForce(java.lang.Boolean force) {
+              this.force = force;
+              return this;
+            }
+
+            /**
+             * If force option is set to true, force_justification is suggested to be set to log the
+             * reason in audit logs.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String forceJustification;
+
+            /** If force option is set to true, force_justification is suggested to be set to log the reason in
+           audit logs.
+             */
+            public java.lang.String getForceJustification() {
+              return forceJustification;
+            }
+
+            /**
+             * If force option is set to true, force_justification is suggested to be set to log the
+             * reason in audit logs.
+             */
+            public Patch setForceJustification(java.lang.String forceJustification) {
+              this.forceJustification = forceJustification;
+              return this;
+            }
+
+            /**
+             * Update only the specified fields. If unset, all modifiable fields will be updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Update only the specified fields. If unset, all modifiable fields will be updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Update only the specified fields. If unset, all modifiable fields will be updated.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            /** If set to true, validate the request, but do not actually update. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean validateOnly;
+
+            /** If set to true, validate the request, but do not actually update.
+             */
+            public java.lang.Boolean getValidateOnly() {
+              return validateOnly;
+            }
+
+            /** If set to true, validate the request, but do not actually update. */
+            public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+              this.validateOnly = validateOnly;
               return this;
             }
 

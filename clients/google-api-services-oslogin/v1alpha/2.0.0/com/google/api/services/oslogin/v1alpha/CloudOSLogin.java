@@ -754,9 +754,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the oslogin server.  After setting any optional
          * parameters, call the {@link SignSshPublicKey#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent project and zone for the signing request. This is needed to properly ensure per-
-         *        organization ISS processing and potentially to provide for the possibility of zone-
-         *        specific certificates used in the signing process.
+         * @param parent The parent project and region for the signing request.
          * @param content the {@link com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyRequest}
          * @return the request
          */
@@ -785,9 +783,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
            * ClientRequest)} must be called to initialize this instance immediately after invoking the
            * constructor. </p>
            *
-           * @param parent The parent project and zone for the signing request. This is needed to properly ensure per-
-         *        organization ISS processing and potentially to provide for the possibility of zone-
-         *        specific certificates used in the signing process.
+           * @param parent The parent project and region for the signing request.
            * @param content the {@link com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyRequest}
            * @since 1.13
            */
@@ -856,27 +852,17 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
             return (SignSshPublicKey) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The parent project and zone for the signing request. This is needed to properly ensure
-           * per-organization ISS processing and potentially to provide for the possibility of zone-
-           * specific certificates used in the signing process.
-           */
+          /** The parent project and region for the signing request. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent project and zone for the signing request. This is needed to properly ensure per-
-         organization ISS processing and potentially to provide for the possibility of zone-specific
-         certificates used in the signing process.
+          /** The parent project and region for the signing request.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * The parent project and zone for the signing request. This is needed to properly ensure
-           * per-organization ISS processing and potentially to provide for the possibility of zone-
-           * specific certificates used in the signing process.
-           */
+          /** The parent project and region for the signing request. */
           public SignSshPublicKey setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -922,9 +908,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the oslogin server.  After setting any optional
          * parameters, call the {@link SignSshPublicKey#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent project and zone for the signing request. This is needed to properly ensure per-
-         *        organization ISS processing and potentially to provide for the possibility of zone-
-         *        specific certificates used in the signing process.
+         * @param parent The parent project and region for the signing request.
          * @param content the {@link com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyRequest}
          * @return the request
          */
@@ -953,9 +937,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
            * ClientRequest)} must be called to initialize this instance immediately after invoking the
            * constructor. </p>
            *
-           * @param parent The parent project and zone for the signing request. This is needed to properly ensure per-
-         *        organization ISS processing and potentially to provide for the possibility of zone-
-         *        specific certificates used in the signing process.
+           * @param parent The parent project and region for the signing request.
            * @param content the {@link com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyRequest}
            * @since 1.13
            */
@@ -1024,27 +1006,17 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
             return (SignSshPublicKey) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The parent project and zone for the signing request. This is needed to properly ensure
-           * per-organization ISS processing and potentially to provide for the possibility of zone-
-           * specific certificates used in the signing process.
-           */
+          /** The parent project and region for the signing request. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent project and zone for the signing request. This is needed to properly ensure per-
-         organization ISS processing and potentially to provide for the possibility of zone-specific
-         certificates used in the signing process.
+          /** The parent project and region for the signing request.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * The parent project and zone for the signing request. This is needed to properly ensure
-           * per-organization ISS processing and potentially to provide for the possibility of zone-
-           * specific certificates used in the signing process.
-           */
+          /** The parent project and region for the signing request. */
           public SignSshPublicKey setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

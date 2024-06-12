@@ -47,6 +47,13 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
   private java.lang.Boolean enableUefiNetworking;
 
   /**
+   * Type of Performance Monitoring Unit requested on instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String performanceMonitoringUnit;
+
+  /**
    * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this
    * to 1. If unset, the maximum number of threads supported per core by the underlying processor is
    * assumed.
@@ -96,6 +103,23 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
    */
   public AdvancedMachineFeatures setEnableUefiNetworking(java.lang.Boolean enableUefiNetworking) {
     this.enableUefiNetworking = enableUefiNetworking;
+    return this;
+  }
+
+  /**
+   * Type of Performance Monitoring Unit requested on instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPerformanceMonitoringUnit() {
+    return performanceMonitoringUnit;
+  }
+
+  /**
+   * Type of Performance Monitoring Unit requested on instance.
+   * @param performanceMonitoringUnit performanceMonitoringUnit or {@code null} for none
+   */
+  public AdvancedMachineFeatures setPerformanceMonitoringUnit(java.lang.String performanceMonitoringUnit) {
+    this.performanceMonitoringUnit = performanceMonitoringUnit;
     return this;
   }
 

@@ -34,7 +34,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
 
   /**
    * Output only. An opaque identifier for the current version of the `AccessPolicy`. This will
-   * always be a strongly validated etag, meaning that two Access Polices will be identical if and
+   * always be a strongly validated etag, meaning that two Access Policies will be identical if and
    * only if their etags are identical. Clients should not expect this to be in any specific format.
    * The value may be {@code null}.
    */
@@ -42,7 +42,8 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
   private java.lang.String etag;
 
   /**
-   * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`
+   * Output only. Identifier. Resource name of the `AccessPolicy`. Format:
+   * `accessPolicies/{access_policy}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +81,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
 
   /**
    * Output only. An opaque identifier for the current version of the `AccessPolicy`. This will
-   * always be a strongly validated etag, meaning that two Access Polices will be identical if and
+   * always be a strongly validated etag, meaning that two Access Policies will be identical if and
    * only if their etags are identical. Clients should not expect this to be in any specific format.
    * @return value or {@code null} for none
    */
@@ -90,7 +91,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
 
   /**
    * Output only. An opaque identifier for the current version of the `AccessPolicy`. This will
-   * always be a strongly validated etag, meaning that two Access Polices will be identical if and
+   * always be a strongly validated etag, meaning that two Access Policies will be identical if and
    * only if their etags are identical. Clients should not expect this to be in any specific format.
    * @param etag etag or {@code null} for none
    */
@@ -100,7 +101,8 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
   }
 
   /**
-   * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`
+   * Output only. Identifier. Resource name of the `AccessPolicy`. Format:
+   * `accessPolicies/{access_policy}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,7 +110,8 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
   }
 
   /**
-   * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`
+   * Output only. Identifier. Resource name of the `AccessPolicy`. Format:
+   * `accessPolicies/{access_policy}`
    * @param name name or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1AccessPolicy setName(java.lang.String name) {

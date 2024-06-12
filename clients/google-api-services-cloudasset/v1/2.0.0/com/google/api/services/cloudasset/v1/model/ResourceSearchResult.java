@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1.model;
 
 /**
- * A result of Resource Search, containing information of a cloud resource. Next ID: 34
+ * A result of Resource Search, containing information of a cloud resource. Next ID: 36
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -158,7 +158,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> kmsKeys;
 
   /**
-   * Labels associated with this resource. See [Labelling and grouping Google Cloud
+   * User labels associated with this resource. See [Labelling and grouping Google Cloud
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * Protobuf contains it. To search against the `labels`: * Use a field query: - query on any
@@ -614,7 +614,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Labels associated with this resource. See [Labelling and grouping Google Cloud
+   * User labels associated with this resource. See [Labelling and grouping Google Cloud
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * Protobuf contains it. To search against the `labels`: * Use a field query: - query on any
@@ -628,7 +628,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Labels associated with this resource. See [Labelling and grouping Google Cloud
+   * User labels associated with this resource. See [Labelling and grouping Google Cloud
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * Protobuf contains it. To search against the `labels`: * Use a field query: - query on any

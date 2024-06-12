@@ -44,7 +44,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   private java.lang.String description;
 
   /**
-   * Resource name for the `ServicePerimeter`. Format:
+   * Identifier. Resource name for the `ServicePerimeter`. Format:
    * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The `service_perimeter`
    * component must begin with a letter, followed by alphanumeric characters or `_`. After you
    * create a `ServicePerimeter`, you cannot change its `name`.
@@ -119,7 +119,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Resource name for the `ServicePerimeter`. Format:
+   * Identifier. Resource name for the `ServicePerimeter`. Format:
    * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The `service_perimeter`
    * component must begin with a letter, followed by alphanumeric characters or `_`. After you
    * create a `ServicePerimeter`, you cannot change its `name`.
@@ -130,7 +130,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Resource name for the `ServicePerimeter`. Format:
+   * Identifier. Resource name for the `ServicePerimeter`. Format:
    * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The `service_perimeter`
    * component must begin with a letter, followed by alphanumeric characters or `_`. After you
    * create a `ServicePerimeter`, you cannot change its `name`.

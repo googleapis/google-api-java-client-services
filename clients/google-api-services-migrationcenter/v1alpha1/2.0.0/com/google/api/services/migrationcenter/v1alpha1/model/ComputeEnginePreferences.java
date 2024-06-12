@@ -46,6 +46,13 @@ public final class ComputeEnginePreferences extends com.google.api.client.json.G
   private MachinePreferences machinePreferences;
 
   /**
+   * Optional. Pricing options for OS images.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OperatingSystemPricingPreferences osPricingPreferences;
+
+  /**
    * Persistent disk type to use. If unspecified (default), all types are considered, based on
    * available usage data.
    * The value may be {@code null}.
@@ -88,6 +95,23 @@ public final class ComputeEnginePreferences extends com.google.api.client.json.G
    */
   public ComputeEnginePreferences setMachinePreferences(MachinePreferences machinePreferences) {
     this.machinePreferences = machinePreferences;
+    return this;
+  }
+
+  /**
+   * Optional. Pricing options for OS images.
+   * @return value or {@code null} for none
+   */
+  public OperatingSystemPricingPreferences getOsPricingPreferences() {
+    return osPricingPreferences;
+  }
+
+  /**
+   * Optional. Pricing options for OS images.
+   * @param osPricingPreferences osPricingPreferences or {@code null} for none
+   */
+  public ComputeEnginePreferences setOsPricingPreferences(OperatingSystemPricingPreferences osPricingPreferences) {
+    this.osPricingPreferences = osPricingPreferences;
     return this;
   }
 

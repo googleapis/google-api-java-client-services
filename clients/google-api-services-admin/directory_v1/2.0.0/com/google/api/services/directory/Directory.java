@@ -17652,7 +17652,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
-       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * account, to fetch all users for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
        * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
        * You must provide either the `customer` or the `domain` parameter.
@@ -17661,7 +17661,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private java.lang.String customer;
 
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
-     fetch all groups for a customer, use this field instead of `domain`. You can also use the
+     fetch all users for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
      part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
      `customer` or the `domain` parameter.
@@ -17672,7 +17672,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
-       * account, to fetch all groups for a customer, use this field instead of `domain`. You can
+       * account, to fetch all users for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
        * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
        * You must provide either the `customer` or the `domain` parameter.
@@ -17683,14 +17683,14 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The domain name. Use this field to get groups from only one domain. To return all domains
+       * The domain name. Use this field to get users from only one domain. To return all domains
        * for a customer account, use the `customer` query parameter instead. Either the `customer`
        * or the `domain` parameter must be provided.
        */
       @com.google.api.client.util.Key
       private java.lang.String domain;
 
-      /** The domain name. Use this field to get groups from only one domain. To return all domains for a
+      /** The domain name. Use this field to get users from only one domain. To return all domains for a
      customer account, use the `customer` query parameter instead. Either the `customer` or the `domain`
      parameter must be provided.
        */
@@ -17699,7 +17699,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The domain name. Use this field to get groups from only one domain. To return all domains
+       * The domain name. Use this field to get users from only one domain. To return all domains
        * for a customer account, use the `customer` query parameter instead. Either the `customer`
        * or the `domain` parameter must be provided.
        */

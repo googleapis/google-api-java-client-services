@@ -1160,15 +1160,14 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
       /**
        * Indicates which fields in the provided LoggingConfig to update. The following are the only
        * supported fields: * LoggingConfig.default_log_generation_rule *
-       * LoggingConfig.per_service_log_generation_rules If not set, all supported fields are
-       * updated.
+       * LoggingConfig.service_log_generation_rules If not set, all supported fields are updated.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
       /** Indicates which fields in the provided LoggingConfig to update. The following are the only
      supported fields: * LoggingConfig.default_log_generation_rule *
-     LoggingConfig.per_service_log_generation_rules If not set, all supported fields are updated.
+     LoggingConfig.service_log_generation_rules If not set, all supported fields are updated.
        */
       public String getUpdateMask() {
         return updateMask;
@@ -1177,8 +1176,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
       /**
        * Indicates which fields in the provided LoggingConfig to update. The following are the only
        * supported fields: * LoggingConfig.default_log_generation_rule *
-       * LoggingConfig.per_service_log_generation_rules If not set, all supported fields are
-       * updated.
+       * LoggingConfig.service_log_generation_rules If not set, all supported fields are updated.
        */
       public UpdateLoggingConfig setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -1446,22 +1444,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * If true, attribute suggestions are enabled and provided in response. This field is only
-           * available for "cloud-retail" dataset.
+           * If true, attribute suggestions are enabled and provided in the response. This field is
+           * only available for the "cloud-retail" dataset.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean enableAttributeSuggestions;
 
-          /** If true, attribute suggestions are enabled and provided in response. This field is only available
-         for "cloud-retail" dataset.
+          /** If true, attribute suggestions are enabled and provided in the response. This field is only
+         available for the "cloud-retail" dataset.
            */
           public java.lang.Boolean getEnableAttributeSuggestions() {
             return enableAttributeSuggestions;
           }
 
           /**
-           * If true, attribute suggestions are enabled and provided in response. This field is only
-           * available for "cloud-retail" dataset.
+           * If true, attribute suggestions are enabled and provided in the response. This field is
+           * only available for the "cloud-retail" dataset.
            */
           public CompleteQuery setEnableAttributeSuggestions(java.lang.Boolean enableAttributeSuggestions) {
             this.enableAttributeSuggestions = enableAttributeSuggestions;
@@ -3867,7 +3865,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * Lists all Branchs under the specified parent Catalog.
+           * Lists all instances of Branch under the specified parent Catalog.
            *
            * Create a request for the method "branches.list".
            *
@@ -3891,7 +3889,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
 
             /**
-             * Lists all Branchs under the specified parent Catalog.
+             * Lists all instances of Branch under the specified parent Catalog.
              *
              * Create a request for the method "branches.list".
              *

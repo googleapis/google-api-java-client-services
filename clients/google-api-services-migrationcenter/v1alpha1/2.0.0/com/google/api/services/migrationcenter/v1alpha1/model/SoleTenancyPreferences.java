@@ -61,6 +61,13 @@ public final class SoleTenancyPreferences extends com.google.api.client.json.Gen
   private java.util.List<SoleTenantNodeType> nodeTypes;
 
   /**
+   * Optional. Pricing options for OS images.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OperatingSystemPricingPreferences osPricingPreferences;
+
+  /**
    * Commitment plan to consider when calculating costs for virtual machine insights and
    * recommendations. If you are unsure which value to set, a 3 year commitment plan is often a good
    * value to start with.
@@ -131,6 +138,23 @@ public final class SoleTenancyPreferences extends com.google.api.client.json.Gen
    */
   public SoleTenancyPreferences setNodeTypes(java.util.List<SoleTenantNodeType> nodeTypes) {
     this.nodeTypes = nodeTypes;
+    return this;
+  }
+
+  /**
+   * Optional. Pricing options for OS images.
+   * @return value or {@code null} for none
+   */
+  public OperatingSystemPricingPreferences getOsPricingPreferences() {
+    return osPricingPreferences;
+  }
+
+  /**
+   * Optional. Pricing options for OS images.
+   * @param osPricingPreferences osPricingPreferences or {@code null} for none
+   */
+  public SoleTenancyPreferences setOsPricingPreferences(OperatingSystemPricingPreferences osPricingPreferences) {
+    this.osPricingPreferences = osPricingPreferences;
     return this;
   }
 

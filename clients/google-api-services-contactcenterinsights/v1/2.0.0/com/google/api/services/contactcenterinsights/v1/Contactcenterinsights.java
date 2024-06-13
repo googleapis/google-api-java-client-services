@@ -927,8 +927,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Creates a conversation. DEPRECATED: Use UploadConversation instead. CreateConversation does not
-         * support audio transcription or DLP redaction.
+         * Creates a conversation. Does not support audio transcription or DLP redaction. Use
+         * `conversations.upload` instead.
          *
          * Create a request for the method "conversations.create".
          *
@@ -953,8 +953,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a conversation. DEPRECATED: Use UploadConversation instead. CreateConversation does not
-           * support audio transcription or DLP redaction.
+           * Creates a conversation. Does not support audio transcription or DLP redaction. Use
+           * `conversations.upload` instead.
            *
            * Create a request for the method "conversations.create".
            *
@@ -1687,8 +1687,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
            * conversations will be ordered by descending creation time. Supported values are one of
            * the following: * create_time * customer_satisfaction_rating * duration *
            * latest_analysis * start_time * turn_count The default sort order is ascending. To
-           * specify order, append `asc` or `desc`, i.e. `create_time desc`. See
-           * https://google.aip.dev/132#ordering for more details.
+           * specify order, append `asc` or `desc` (`create_time desc`). For more details, see
+           * [Google AIPs Ordering](https://google.aip.dev/132#ordering).
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
@@ -1696,8 +1696,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           /** Optional. The attribute by which to order conversations in the response. If empty, conversations
          will be ordered by descending creation time. Supported values are one of the following: *
          create_time * customer_satisfaction_rating * duration * latest_analysis * start_time * turn_count
-         The default sort order is ascending. To specify order, append `asc` or `desc`, i.e. `create_time
-         desc`. See https://google.aip.dev/132#ordering for more details.
+         The default sort order is ascending. To specify order, append `asc` or `desc` (`create_time desc`).
+         For more details, see [Google AIPs Ordering](https://google.aip.dev/132#ordering).
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -1708,8 +1708,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
            * conversations will be ordered by descending creation time. Supported values are one of
            * the following: * create_time * customer_satisfaction_rating * duration *
            * latest_analysis * start_time * turn_count The default sort order is ascending. To
-           * specify order, append `asc` or `desc`, i.e. `create_time desc`. See
-           * https://google.aip.dev/132#ordering for more details.
+           * specify order, append `asc` or `desc` (`create_time desc`). For more details, see
+           * [Google AIPs Ordering](https://google.aip.dev/132#ordering).
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -1963,8 +1963,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Create a longrunning conversation upload operation. This method differs from CreateConversation
-         * by allowing audio transcription and optional DLP redaction.
+         * Create a long-running conversation upload operation. This method differs from
+         * `CreateConversation` by allowing audio transcription and optional DLP redaction.
          *
          * Create a request for the method "conversations.upload".
          *
@@ -1989,8 +1989,8 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Create a longrunning conversation upload operation. This method differs from CreateConversation
-           * by allowing audio transcription and optional DLP redaction.
+           * Create a long-running conversation upload operation. This method differs from
+           * `CreateConversation` by allowing audio transcription and optional DLP redaction.
            *
            * Create a request for the method "conversations.upload".
            *
@@ -3445,7 +3445,7 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
          * This request holds the parameters needed by the contactcenterinsights server.  After setting any
          * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The issue model to export
+         * @param name Required. The issue model to export.
          * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ExportIssueModelRequest}
          * @return the request
          */
@@ -3473,7 +3473,7 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
            * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The issue model to export
+           * @param name Required. The issue model to export.
            * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ExportIssueModelRequest}
            * @since 1.13
            */
@@ -3542,17 +3542,17 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
             return (Export) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The issue model to export */
+          /** Required. The issue model to export. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The issue model to export
+          /** Required. The issue model to export.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The issue model to export */
+          /** Required. The issue model to export. */
           public Export setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

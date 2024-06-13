@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class VertexRagStore extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1VertexRagStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Deprecated. Please use rag_resources instead.
@@ -43,13 +43,7 @@ public final class VertexRagStore extends com.google.api.client.json.GenericJson
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<RagResource> ragResources;
-
-  static {
-    // hack to force ProGuard to consider RagResource used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(RagResource.class);
-  }
+  private java.util.List<GoogleCloudAiplatformV1beta1VertexRagStoreRagResource> ragResources;
 
   /**
    * Optional. Number of top k results to return from the selected corpora.
@@ -77,7 +71,7 @@ public final class VertexRagStore extends com.google.api.client.json.GenericJson
    * Optional. Deprecated. Please use rag_resources instead.
    * @param ragCorpora ragCorpora or {@code null} for none
    */
-  public VertexRagStore setRagCorpora(java.util.List<java.lang.String> ragCorpora) {
+  public GoogleCloudAiplatformV1beta1VertexRagStore setRagCorpora(java.util.List<java.lang.String> ragCorpora) {
     this.ragCorpora = ragCorpora;
     return this;
   }
@@ -88,7 +82,7 @@ public final class VertexRagStore extends com.google.api.client.json.GenericJson
    * may open up multiple corpora support.
    * @return value or {@code null} for none
    */
-  public java.util.List<RagResource> getRagResources() {
+  public java.util.List<GoogleCloudAiplatformV1beta1VertexRagStoreRagResource> getRagResources() {
     return ragResources;
   }
 
@@ -98,7 +92,7 @@ public final class VertexRagStore extends com.google.api.client.json.GenericJson
    * may open up multiple corpora support.
    * @param ragResources ragResources or {@code null} for none
    */
-  public VertexRagStore setRagResources(java.util.List<RagResource> ragResources) {
+  public GoogleCloudAiplatformV1beta1VertexRagStore setRagResources(java.util.List<GoogleCloudAiplatformV1beta1VertexRagStoreRagResource> ragResources) {
     this.ragResources = ragResources;
     return this;
   }
@@ -115,7 +109,7 @@ public final class VertexRagStore extends com.google.api.client.json.GenericJson
    * Optional. Number of top k results to return from the selected corpora.
    * @param similarityTopK similarityTopK or {@code null} for none
    */
-  public VertexRagStore setSimilarityTopK(java.lang.Integer similarityTopK) {
+  public GoogleCloudAiplatformV1beta1VertexRagStore setSimilarityTopK(java.lang.Integer similarityTopK) {
     this.similarityTopK = similarityTopK;
     return this;
   }
@@ -132,19 +126,19 @@ public final class VertexRagStore extends com.google.api.client.json.GenericJson
    * Optional. Only return results with vector distance smaller than the threshold.
    * @param vectorDistanceThreshold vectorDistanceThreshold or {@code null} for none
    */
-  public VertexRagStore setVectorDistanceThreshold(java.lang.Double vectorDistanceThreshold) {
+  public GoogleCloudAiplatformV1beta1VertexRagStore setVectorDistanceThreshold(java.lang.Double vectorDistanceThreshold) {
     this.vectorDistanceThreshold = vectorDistanceThreshold;
     return this;
   }
 
   @Override
-  public VertexRagStore set(String fieldName, Object value) {
-    return (VertexRagStore) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1VertexRagStore set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1VertexRagStore) super.set(fieldName, value);
   }
 
   @Override
-  public VertexRagStore clone() {
-    return (VertexRagStore) super.clone();
+  public GoogleCloudAiplatformV1beta1VertexRagStore clone() {
+    return (GoogleCloudAiplatformV1beta1VertexRagStore) super.clone();
   }
 
 }

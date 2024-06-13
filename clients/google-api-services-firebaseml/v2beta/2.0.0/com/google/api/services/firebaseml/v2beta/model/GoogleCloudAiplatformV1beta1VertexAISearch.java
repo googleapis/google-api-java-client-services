@@ -17,7 +17,8 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * URI based data.
+ * Retrieve from Vertex AI Search datastore for grounding. See https://cloud.google.com/vertex-ai-
+ * search-and-conversation
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -27,64 +28,43 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FileData extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1VertexAISearch extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. URI.
+   * Required. Fully-qualified Vertex AI Search's datastore resource ID. Format:
+   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String fileUri;
+  private java.lang.String datastore;
 
   /**
-   * Required. The IANA standard MIME type of the source data.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String mimeType;
-
-  /**
-   * Required. URI.
+   * Required. Fully-qualified Vertex AI Search's datastore resource ID. Format:
+   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
    * @return value or {@code null} for none
    */
-  public java.lang.String getFileUri() {
-    return fileUri;
+  public java.lang.String getDatastore() {
+    return datastore;
   }
 
   /**
-   * Required. URI.
-   * @param fileUri fileUri or {@code null} for none
+   * Required. Fully-qualified Vertex AI Search's datastore resource ID. Format:
+   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
+   * @param datastore datastore or {@code null} for none
    */
-  public FileData setFileUri(java.lang.String fileUri) {
-    this.fileUri = fileUri;
-    return this;
-  }
-
-  /**
-   * Required. The IANA standard MIME type of the source data.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMimeType() {
-    return mimeType;
-  }
-
-  /**
-   * Required. The IANA standard MIME type of the source data.
-   * @param mimeType mimeType or {@code null} for none
-   */
-  public FileData setMimeType(java.lang.String mimeType) {
-    this.mimeType = mimeType;
+  public GoogleCloudAiplatformV1beta1VertexAISearch setDatastore(java.lang.String datastore) {
+    this.datastore = datastore;
     return this;
   }
 
   @Override
-  public FileData set(String fieldName, Object value) {
-    return (FileData) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1VertexAISearch set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1VertexAISearch) super.set(fieldName, value);
   }
 
   @Override
-  public FileData clone() {
-    return (FileData) super.clone();
+  public GoogleCloudAiplatformV1beta1VertexAISearch clone() {
+    return (GoogleCloudAiplatformV1beta1VertexAISearch) super.clone();
   }
 
 }

@@ -27,26 +27,26 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CitationMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1CitationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. List of citations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Citation> citations;
+  private java.util.List<GoogleCloudAiplatformV1beta1Citation> citations;
 
   static {
-    // hack to force ProGuard to consider Citation used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1Citation used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Citation.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1Citation.class);
   }
 
   /**
    * Output only. List of citations.
    * @return value or {@code null} for none
    */
-  public java.util.List<Citation> getCitations() {
+  public java.util.List<GoogleCloudAiplatformV1beta1Citation> getCitations() {
     return citations;
   }
 
@@ -54,19 +54,19 @@ public final class CitationMetadata extends com.google.api.client.json.GenericJs
    * Output only. List of citations.
    * @param citations citations or {@code null} for none
    */
-  public CitationMetadata setCitations(java.util.List<Citation> citations) {
+  public GoogleCloudAiplatformV1beta1CitationMetadata setCitations(java.util.List<GoogleCloudAiplatformV1beta1Citation> citations) {
     this.citations = citations;
     return this;
   }
 
   @Override
-  public CitationMetadata set(String fieldName, Object value) {
-    return (CitationMetadata) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1CitationMetadata set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1CitationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public CitationMetadata clone() {
-    return (CitationMetadata) super.clone();
+  public GoogleCloudAiplatformV1beta1CitationMetadata clone() {
+    return (GoogleCloudAiplatformV1beta1CitationMetadata) super.clone();
   }
 
 }

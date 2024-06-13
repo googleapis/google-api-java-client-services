@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CountTokensResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1CountTokensResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * The total number of billable characters counted across all instances from the request.
@@ -55,7 +55,7 @@ public final class CountTokensResponse extends com.google.api.client.json.Generi
    * The total number of billable characters counted across all instances from the request.
    * @param totalBillableCharacters totalBillableCharacters or {@code null} for none
    */
-  public CountTokensResponse setTotalBillableCharacters(java.lang.Integer totalBillableCharacters) {
+  public GoogleCloudAiplatformV1beta1CountTokensResponse setTotalBillableCharacters(java.lang.Integer totalBillableCharacters) {
     this.totalBillableCharacters = totalBillableCharacters;
     return this;
   }
@@ -72,19 +72,19 @@ public final class CountTokensResponse extends com.google.api.client.json.Generi
    * The total number of tokens counted across all instances from the request.
    * @param totalTokens totalTokens or {@code null} for none
    */
-  public CountTokensResponse setTotalTokens(java.lang.Integer totalTokens) {
+  public GoogleCloudAiplatformV1beta1CountTokensResponse setTotalTokens(java.lang.Integer totalTokens) {
     this.totalTokens = totalTokens;
     return this;
   }
 
   @Override
-  public CountTokensResponse set(String fieldName, Object value) {
-    return (CountTokensResponse) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1CountTokensResponse set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1CountTokensResponse) super.set(fieldName, value);
   }
 
   @Override
-  public CountTokensResponse clone() {
-    return (CountTokensResponse) super.clone();
+  public GoogleCloudAiplatformV1beta1CountTokensResponse clone() {
+    return (GoogleCloudAiplatformV1beta1CountTokensResponse) super.clone();
   }
 
 }

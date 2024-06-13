@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PromptFeedback extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Blocked reason.
@@ -48,7 +48,7 @@ public final class PromptFeedback extends com.google.api.client.json.GenericJson
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SafetyRating> safetyRatings;
+  private java.util.List<GoogleCloudAiplatformV1beta1SafetyRating> safetyRatings;
 
   /**
    * Output only. Blocked reason.
@@ -62,7 +62,7 @@ public final class PromptFeedback extends com.google.api.client.json.GenericJson
    * Output only. Blocked reason.
    * @param blockReason blockReason or {@code null} for none
    */
-  public PromptFeedback setBlockReason(java.lang.String blockReason) {
+  public GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback setBlockReason(java.lang.String blockReason) {
     this.blockReason = blockReason;
     return this;
   }
@@ -79,7 +79,7 @@ public final class PromptFeedback extends com.google.api.client.json.GenericJson
    * Output only. A readable block reason message.
    * @param blockReasonMessage blockReasonMessage or {@code null} for none
    */
-  public PromptFeedback setBlockReasonMessage(java.lang.String blockReasonMessage) {
+  public GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback setBlockReasonMessage(java.lang.String blockReasonMessage) {
     this.blockReasonMessage = blockReasonMessage;
     return this;
   }
@@ -88,7 +88,7 @@ public final class PromptFeedback extends com.google.api.client.json.GenericJson
    * Output only. Safety ratings.
    * @return value or {@code null} for none
    */
-  public java.util.List<SafetyRating> getSafetyRatings() {
+  public java.util.List<GoogleCloudAiplatformV1beta1SafetyRating> getSafetyRatings() {
     return safetyRatings;
   }
 
@@ -96,19 +96,19 @@ public final class PromptFeedback extends com.google.api.client.json.GenericJson
    * Output only. Safety ratings.
    * @param safetyRatings safetyRatings or {@code null} for none
    */
-  public PromptFeedback setSafetyRatings(java.util.List<SafetyRating> safetyRatings) {
+  public GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback setSafetyRatings(java.util.List<GoogleCloudAiplatformV1beta1SafetyRating> safetyRatings) {
     this.safetyRatings = safetyRatings;
     return this;
   }
 
   @Override
-  public PromptFeedback set(String fieldName, Object value) {
-    return (PromptFeedback) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback) super.set(fieldName, value);
   }
 
   @Override
-  public PromptFeedback clone() {
-    return (PromptFeedback) super.clone();
+  public GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback clone() {
+    return (GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback) super.clone();
   }
 
 }

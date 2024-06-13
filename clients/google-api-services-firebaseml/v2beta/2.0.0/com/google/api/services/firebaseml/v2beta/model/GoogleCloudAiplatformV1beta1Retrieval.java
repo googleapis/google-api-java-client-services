@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Retrieval extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1Retrieval extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Disable using the result from this tool in detecting grounding attribution. This does
@@ -42,7 +42,7 @@ public final class Retrieval extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private VertexAISearch vertexAiSearch;
+  private GoogleCloudAiplatformV1beta1VertexAISearch vertexAiSearch;
 
   /**
    * Set to use data source powered by Vertex RAG store. User data is uploaded via the
@@ -50,7 +50,7 @@ public final class Retrieval extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private VertexRagStore vertexRagStore;
+  private GoogleCloudAiplatformV1beta1VertexRagStore vertexRagStore;
 
   /**
    * Optional. Disable using the result from this tool in detecting grounding attribution. This does
@@ -66,7 +66,7 @@ public final class Retrieval extends com.google.api.client.json.GenericJson {
    * not affect how the result is given to the model for generation.
    * @param disableAttribution disableAttribution or {@code null} for none
    */
-  public Retrieval setDisableAttribution(java.lang.Boolean disableAttribution) {
+  public GoogleCloudAiplatformV1beta1Retrieval setDisableAttribution(java.lang.Boolean disableAttribution) {
     this.disableAttribution = disableAttribution;
     return this;
   }
@@ -75,7 +75,7 @@ public final class Retrieval extends com.google.api.client.json.GenericJson {
    * Set to use data source powered by Vertex AI Search.
    * @return value or {@code null} for none
    */
-  public VertexAISearch getVertexAiSearch() {
+  public GoogleCloudAiplatformV1beta1VertexAISearch getVertexAiSearch() {
     return vertexAiSearch;
   }
 
@@ -83,7 +83,7 @@ public final class Retrieval extends com.google.api.client.json.GenericJson {
    * Set to use data source powered by Vertex AI Search.
    * @param vertexAiSearch vertexAiSearch or {@code null} for none
    */
-  public Retrieval setVertexAiSearch(VertexAISearch vertexAiSearch) {
+  public GoogleCloudAiplatformV1beta1Retrieval setVertexAiSearch(GoogleCloudAiplatformV1beta1VertexAISearch vertexAiSearch) {
     this.vertexAiSearch = vertexAiSearch;
     return this;
   }
@@ -93,7 +93,7 @@ public final class Retrieval extends com.google.api.client.json.GenericJson {
    * VertexRagDataService.
    * @return value or {@code null} for none
    */
-  public VertexRagStore getVertexRagStore() {
+  public GoogleCloudAiplatformV1beta1VertexRagStore getVertexRagStore() {
     return vertexRagStore;
   }
 
@@ -102,19 +102,19 @@ public final class Retrieval extends com.google.api.client.json.GenericJson {
    * VertexRagDataService.
    * @param vertexRagStore vertexRagStore or {@code null} for none
    */
-  public Retrieval setVertexRagStore(VertexRagStore vertexRagStore) {
+  public GoogleCloudAiplatformV1beta1Retrieval setVertexRagStore(GoogleCloudAiplatformV1beta1VertexRagStore vertexRagStore) {
     this.vertexRagStore = vertexRagStore;
     return this;
   }
 
   @Override
-  public Retrieval set(String fieldName, Object value) {
-    return (Retrieval) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1Retrieval set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1Retrieval) super.set(fieldName, value);
   }
 
   @Override
-  public Retrieval clone() {
-    return (Retrieval) super.clone();
+  public GoogleCloudAiplatformV1beta1Retrieval clone() {
+    return (GoogleCloudAiplatformV1beta1Retrieval) super.clone();
   }
 
 }

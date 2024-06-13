@@ -29,7 +29,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FunctionCall extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Required. The function parameters and values in JSON object format. See
@@ -60,7 +60,7 @@ public final class FunctionCall extends com.google.api.client.json.GenericJson {
    * [FunctionDeclaration.parameters] for parameter details.
    * @param args args or {@code null} for none
    */
-  public FunctionCall setArgs(java.util.Map<String, java.lang.Object> args) {
+  public GoogleCloudAiplatformV1beta1FunctionCall setArgs(java.util.Map<String, java.lang.Object> args) {
     this.args = args;
     return this;
   }
@@ -77,19 +77,19 @@ public final class FunctionCall extends com.google.api.client.json.GenericJson {
    * Required. The name of the function to call. Matches [FunctionDeclaration.name].
    * @param name name or {@code null} for none
    */
-  public FunctionCall setName(java.lang.String name) {
+  public GoogleCloudAiplatformV1beta1FunctionCall setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
   @Override
-  public FunctionCall set(String fieldName, Object value) {
-    return (FunctionCall) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1FunctionCall set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1FunctionCall) super.set(fieldName, value);
   }
 
   @Override
-  public FunctionCall clone() {
-    return (FunctionCall) super.clone();
+  public GoogleCloudAiplatformV1beta1FunctionCall clone() {
+    return (GoogleCloudAiplatformV1beta1FunctionCall) super.clone();
   }
 
 }

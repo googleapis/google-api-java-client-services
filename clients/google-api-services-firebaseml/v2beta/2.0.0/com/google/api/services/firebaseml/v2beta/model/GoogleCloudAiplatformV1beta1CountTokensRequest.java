@@ -27,19 +27,19 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CountTokensRequest extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1CountTokensRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Input content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Content> contents;
+  private java.util.List<GoogleCloudAiplatformV1beta1Content> contents;
 
   static {
-    // hack to force ProGuard to consider Content used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1Content used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Content.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1Content.class);
   }
 
   /**
@@ -62,7 +62,7 @@ public final class CountTokensRequest extends com.google.api.client.json.Generic
    * Required. Input content.
    * @return value or {@code null} for none
    */
-  public java.util.List<Content> getContents() {
+  public java.util.List<GoogleCloudAiplatformV1beta1Content> getContents() {
     return contents;
   }
 
@@ -70,7 +70,7 @@ public final class CountTokensRequest extends com.google.api.client.json.Generic
    * Required. Input content.
    * @param contents contents or {@code null} for none
    */
-  public CountTokensRequest setContents(java.util.List<Content> contents) {
+  public GoogleCloudAiplatformV1beta1CountTokensRequest setContents(java.util.List<GoogleCloudAiplatformV1beta1Content> contents) {
     this.contents = contents;
     return this;
   }
@@ -89,7 +89,7 @@ public final class CountTokensRequest extends com.google.api.client.json.Generic
    * prediction schema of the underlying model.
    * @param instances instances or {@code null} for none
    */
-  public CountTokensRequest setInstances(java.util.List<java.lang.Object> instances) {
+  public GoogleCloudAiplatformV1beta1CountTokensRequest setInstances(java.util.List<java.lang.Object> instances) {
     this.instances = instances;
     return this;
   }
@@ -108,19 +108,19 @@ public final class CountTokensRequest extends com.google.api.client.json.Generic
    * `projects/{project}/locations/{location}/publishers/models`
    * @param model model or {@code null} for none
    */
-  public CountTokensRequest setModel(java.lang.String model) {
+  public GoogleCloudAiplatformV1beta1CountTokensRequest setModel(java.lang.String model) {
     this.model = model;
     return this;
   }
 
   @Override
-  public CountTokensRequest set(String fieldName, Object value) {
-    return (CountTokensRequest) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1CountTokensRequest set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1CountTokensRequest) super.set(fieldName, value);
   }
 
   @Override
-  public CountTokensRequest clone() {
-    return (CountTokensRequest) super.clone();
+  public GoogleCloudAiplatformV1beta1CountTokensRequest clone() {
+    return (GoogleCloudAiplatformV1beta1CountTokensRequest) super.clone();
   }
 
 }

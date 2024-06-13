@@ -30,14 +30,14 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Part extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. URI based data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private FileData fileData;
+  private GoogleCloudAiplatformV1beta1FileData fileData;
 
   /**
    * Optional. A predicted [FunctionCall] returned from the model that contains a string
@@ -45,7 +45,7 @@ public final class Part extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private FunctionCall functionCall;
+  private GoogleCloudAiplatformV1beta1FunctionCall functionCall;
 
   /**
    * Optional. The result output of a [FunctionCall] that contains a string representing the
@@ -54,14 +54,14 @@ public final class Part extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private FunctionResponse functionResponse;
+  private GoogleCloudAiplatformV1beta1FunctionResponse functionResponse;
 
   /**
    * Optional. Inlined bytes data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Blob inlineData;
+  private GoogleCloudAiplatformV1beta1Blob inlineData;
 
   /**
    * Optional. Text part (can be code).
@@ -76,13 +76,13 @@ public final class Part extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private VideoMetadata videoMetadata;
+  private GoogleCloudAiplatformV1beta1VideoMetadata videoMetadata;
 
   /**
    * Optional. URI based data.
    * @return value or {@code null} for none
    */
-  public FileData getFileData() {
+  public GoogleCloudAiplatformV1beta1FileData getFileData() {
     return fileData;
   }
 
@@ -90,7 +90,7 @@ public final class Part extends com.google.api.client.json.GenericJson {
    * Optional. URI based data.
    * @param fileData fileData or {@code null} for none
    */
-  public Part setFileData(FileData fileData) {
+  public GoogleCloudAiplatformV1beta1Part setFileData(GoogleCloudAiplatformV1beta1FileData fileData) {
     this.fileData = fileData;
     return this;
   }
@@ -100,7 +100,7 @@ public final class Part extends com.google.api.client.json.GenericJson {
    * representing the [FunctionDeclaration.name] with the parameters and their values.
    * @return value or {@code null} for none
    */
-  public FunctionCall getFunctionCall() {
+  public GoogleCloudAiplatformV1beta1FunctionCall getFunctionCall() {
     return functionCall;
   }
 
@@ -109,7 +109,7 @@ public final class Part extends com.google.api.client.json.GenericJson {
    * representing the [FunctionDeclaration.name] with the parameters and their values.
    * @param functionCall functionCall or {@code null} for none
    */
-  public Part setFunctionCall(FunctionCall functionCall) {
+  public GoogleCloudAiplatformV1beta1Part setFunctionCall(GoogleCloudAiplatformV1beta1FunctionCall functionCall) {
     this.functionCall = functionCall;
     return this;
   }
@@ -120,7 +120,7 @@ public final class Part extends com.google.api.client.json.GenericJson {
    * call. It is used as context to the model.
    * @return value or {@code null} for none
    */
-  public FunctionResponse getFunctionResponse() {
+  public GoogleCloudAiplatformV1beta1FunctionResponse getFunctionResponse() {
     return functionResponse;
   }
 
@@ -130,7 +130,7 @@ public final class Part extends com.google.api.client.json.GenericJson {
    * call. It is used as context to the model.
    * @param functionResponse functionResponse or {@code null} for none
    */
-  public Part setFunctionResponse(FunctionResponse functionResponse) {
+  public GoogleCloudAiplatformV1beta1Part setFunctionResponse(GoogleCloudAiplatformV1beta1FunctionResponse functionResponse) {
     this.functionResponse = functionResponse;
     return this;
   }
@@ -139,7 +139,7 @@ public final class Part extends com.google.api.client.json.GenericJson {
    * Optional. Inlined bytes data.
    * @return value or {@code null} for none
    */
-  public Blob getInlineData() {
+  public GoogleCloudAiplatformV1beta1Blob getInlineData() {
     return inlineData;
   }
 
@@ -147,7 +147,7 @@ public final class Part extends com.google.api.client.json.GenericJson {
    * Optional. Inlined bytes data.
    * @param inlineData inlineData or {@code null} for none
    */
-  public Part setInlineData(Blob inlineData) {
+  public GoogleCloudAiplatformV1beta1Part setInlineData(GoogleCloudAiplatformV1beta1Blob inlineData) {
     this.inlineData = inlineData;
     return this;
   }
@@ -164,7 +164,7 @@ public final class Part extends com.google.api.client.json.GenericJson {
    * Optional. Text part (can be code).
    * @param text text or {@code null} for none
    */
-  public Part setText(java.lang.String text) {
+  public GoogleCloudAiplatformV1beta1Part setText(java.lang.String text) {
     this.text = text;
     return this;
   }
@@ -174,7 +174,7 @@ public final class Part extends com.google.api.client.json.GenericJson {
    * presented in inline_data or file_data.
    * @return value or {@code null} for none
    */
-  public VideoMetadata getVideoMetadata() {
+  public GoogleCloudAiplatformV1beta1VideoMetadata getVideoMetadata() {
     return videoMetadata;
   }
 
@@ -183,19 +183,19 @@ public final class Part extends com.google.api.client.json.GenericJson {
    * presented in inline_data or file_data.
    * @param videoMetadata videoMetadata or {@code null} for none
    */
-  public Part setVideoMetadata(VideoMetadata videoMetadata) {
+  public GoogleCloudAiplatformV1beta1Part setVideoMetadata(GoogleCloudAiplatformV1beta1VideoMetadata videoMetadata) {
     this.videoMetadata = videoMetadata;
     return this;
   }
 
   @Override
-  public Part set(String fieldName, Object value) {
-    return (Part) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1Part set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1Part) super.set(fieldName, value);
   }
 
   @Override
-  public Part clone() {
-    return (Part) super.clone();
+  public GoogleCloudAiplatformV1beta1Part clone() {
+    return (GoogleCloudAiplatformV1beta1Part) super.clone();
   }
 
 }

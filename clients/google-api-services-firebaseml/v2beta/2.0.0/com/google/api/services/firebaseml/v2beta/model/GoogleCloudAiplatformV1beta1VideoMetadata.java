@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class VideoMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1VideoMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The end offset of the video.
@@ -55,7 +55,7 @@ public final class VideoMetadata extends com.google.api.client.json.GenericJson 
    * Optional. The end offset of the video.
    * @param endOffset endOffset or {@code null} for none
    */
-  public VideoMetadata setEndOffset(String endOffset) {
+  public GoogleCloudAiplatformV1beta1VideoMetadata setEndOffset(String endOffset) {
     this.endOffset = endOffset;
     return this;
   }
@@ -72,19 +72,19 @@ public final class VideoMetadata extends com.google.api.client.json.GenericJson 
    * Optional. The start offset of the video.
    * @param startOffset startOffset or {@code null} for none
    */
-  public VideoMetadata setStartOffset(String startOffset) {
+  public GoogleCloudAiplatformV1beta1VideoMetadata setStartOffset(String startOffset) {
     this.startOffset = startOffset;
     return this;
   }
 
   @Override
-  public VideoMetadata set(String fieldName, Object value) {
-    return (VideoMetadata) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1VideoMetadata set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1VideoMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public VideoMetadata clone() {
-    return (VideoMetadata) super.clone();
+  public GoogleCloudAiplatformV1beta1VideoMetadata clone() {
+    return (GoogleCloudAiplatformV1beta1VideoMetadata) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * The definition of the Rag resource.
+ * URI based data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -27,67 +27,64 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RagResource extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1FileData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. RagCorpora resource name. Format:
-   * `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
+   * Required. URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String ragCorpus;
+  private java.lang.String fileUri;
 
   /**
-   * Optional. rag_file_id. The files should be in the same rag_corpus set in rag_corpus field.
+   * Required. The IANA standard MIME type of the source data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> ragFileIds;
+  private java.lang.String mimeType;
 
   /**
-   * Optional. RagCorpora resource name. Format:
-   * `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
+   * Required. URI.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRagCorpus() {
-    return ragCorpus;
+  public java.lang.String getFileUri() {
+    return fileUri;
   }
 
   /**
-   * Optional. RagCorpora resource name. Format:
-   * `projects/{project}/locations/{location}/ragCorpora/{rag_corpus}`
-   * @param ragCorpus ragCorpus or {@code null} for none
+   * Required. URI.
+   * @param fileUri fileUri or {@code null} for none
    */
-  public RagResource setRagCorpus(java.lang.String ragCorpus) {
-    this.ragCorpus = ragCorpus;
+  public GoogleCloudAiplatformV1beta1FileData setFileUri(java.lang.String fileUri) {
+    this.fileUri = fileUri;
     return this;
   }
 
   /**
-   * Optional. rag_file_id. The files should be in the same rag_corpus set in rag_corpus field.
+   * Required. The IANA standard MIME type of the source data.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getRagFileIds() {
-    return ragFileIds;
+  public java.lang.String getMimeType() {
+    return mimeType;
   }
 
   /**
-   * Optional. rag_file_id. The files should be in the same rag_corpus set in rag_corpus field.
-   * @param ragFileIds ragFileIds or {@code null} for none
+   * Required. The IANA standard MIME type of the source data.
+   * @param mimeType mimeType or {@code null} for none
    */
-  public RagResource setRagFileIds(java.util.List<java.lang.String> ragFileIds) {
-    this.ragFileIds = ragFileIds;
+  public GoogleCloudAiplatformV1beta1FileData setMimeType(java.lang.String mimeType) {
+    this.mimeType = mimeType;
     return this;
   }
 
   @Override
-  public RagResource set(String fieldName, Object value) {
-    return (RagResource) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1FileData set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1FileData) super.set(fieldName, value);
   }
 
   @Override
-  public RagResource clone() {
-    return (RagResource) super.clone();
+  public GoogleCloudAiplatformV1beta1FileData clone() {
+    return (GoogleCloudAiplatformV1beta1FileData) super.clone();
   }
 
 }

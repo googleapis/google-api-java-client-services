@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FunctionCallingConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1FunctionCallingConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Function names to call. Only set when the Mode is ANY. Function names should match
@@ -61,7 +61,7 @@ public final class FunctionCallingConfig extends com.google.api.client.json.Gene
    * set of function names provided.
    * @param allowedFunctionNames allowedFunctionNames or {@code null} for none
    */
-  public FunctionCallingConfig setAllowedFunctionNames(java.util.List<java.lang.String> allowedFunctionNames) {
+  public GoogleCloudAiplatformV1beta1FunctionCallingConfig setAllowedFunctionNames(java.util.List<java.lang.String> allowedFunctionNames) {
     this.allowedFunctionNames = allowedFunctionNames;
     return this;
   }
@@ -78,19 +78,19 @@ public final class FunctionCallingConfig extends com.google.api.client.json.Gene
    * Optional. Function calling mode.
    * @param mode mode or {@code null} for none
    */
-  public FunctionCallingConfig setMode(java.lang.String mode) {
+  public GoogleCloudAiplatformV1beta1FunctionCallingConfig setMode(java.lang.String mode) {
     this.mode = mode;
     return this;
   }
 
   @Override
-  public FunctionCallingConfig set(String fieldName, Object value) {
-    return (FunctionCallingConfig) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1FunctionCallingConfig set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1FunctionCallingConfig) super.set(fieldName, value);
   }
 
   @Override
-  public FunctionCallingConfig clone() {
-    return (FunctionCallingConfig) super.clone();
+  public GoogleCloudAiplatformV1beta1FunctionCallingConfig clone() {
+    return (GoogleCloudAiplatformV1beta1FunctionCallingConfig) super.clone();
   }
 
 }

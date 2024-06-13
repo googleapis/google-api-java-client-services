@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SafetyRating extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Indicates whether the content was filtered out because of this rating.
@@ -83,7 +83,7 @@ public final class SafetyRating extends com.google.api.client.json.GenericJson {
    * Output only. Indicates whether the content was filtered out because of this rating.
    * @param blocked blocked or {@code null} for none
    */
-  public SafetyRating setBlocked(java.lang.Boolean blocked) {
+  public GoogleCloudAiplatformV1beta1SafetyRating setBlocked(java.lang.Boolean blocked) {
     this.blocked = blocked;
     return this;
   }
@@ -100,7 +100,7 @@ public final class SafetyRating extends com.google.api.client.json.GenericJson {
    * Output only. Harm category.
    * @param category category or {@code null} for none
    */
-  public SafetyRating setCategory(java.lang.String category) {
+  public GoogleCloudAiplatformV1beta1SafetyRating setCategory(java.lang.String category) {
     this.category = category;
     return this;
   }
@@ -117,7 +117,7 @@ public final class SafetyRating extends com.google.api.client.json.GenericJson {
    * Output only. Harm probability levels in the content.
    * @param probability probability or {@code null} for none
    */
-  public SafetyRating setProbability(java.lang.String probability) {
+  public GoogleCloudAiplatformV1beta1SafetyRating setProbability(java.lang.String probability) {
     this.probability = probability;
     return this;
   }
@@ -134,7 +134,7 @@ public final class SafetyRating extends com.google.api.client.json.GenericJson {
    * Output only. Harm probability score.
    * @param probabilityScore probabilityScore or {@code null} for none
    */
-  public SafetyRating setProbabilityScore(java.lang.Float probabilityScore) {
+  public GoogleCloudAiplatformV1beta1SafetyRating setProbabilityScore(java.lang.Float probabilityScore) {
     this.probabilityScore = probabilityScore;
     return this;
   }
@@ -151,7 +151,7 @@ public final class SafetyRating extends com.google.api.client.json.GenericJson {
    * Output only. Harm severity levels in the content.
    * @param severity severity or {@code null} for none
    */
-  public SafetyRating setSeverity(java.lang.String severity) {
+  public GoogleCloudAiplatformV1beta1SafetyRating setSeverity(java.lang.String severity) {
     this.severity = severity;
     return this;
   }
@@ -168,19 +168,19 @@ public final class SafetyRating extends com.google.api.client.json.GenericJson {
    * Output only. Harm severity score.
    * @param severityScore severityScore or {@code null} for none
    */
-  public SafetyRating setSeverityScore(java.lang.Float severityScore) {
+  public GoogleCloudAiplatformV1beta1SafetyRating setSeverityScore(java.lang.Float severityScore) {
     this.severityScore = severityScore;
     return this;
   }
 
   @Override
-  public SafetyRating set(String fieldName, Object value) {
-    return (SafetyRating) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1SafetyRating set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1SafetyRating) super.set(fieldName, value);
   }
 
   @Override
-  public SafetyRating clone() {
-    return (SafetyRating) super.clone();
+  public GoogleCloudAiplatformV1beta1SafetyRating clone() {
+    return (GoogleCloudAiplatformV1beta1SafetyRating) super.clone();
   }
 
 }

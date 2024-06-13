@@ -30,7 +30,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Tool extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Function tool type. One or more function declarations to be passed to the model along
@@ -41,12 +41,12 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<FunctionDeclaration> functionDeclarations;
+  private java.util.List<GoogleCloudAiplatformV1beta1FunctionDeclaration> functionDeclarations;
 
   static {
-    // hack to force ProGuard to consider FunctionDeclaration used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1FunctionDeclaration used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(FunctionDeclaration.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1FunctionDeclaration.class);
   }
 
   /**
@@ -55,7 +55,7 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleSearchRetrieval googleSearchRetrieval;
+  private GoogleCloudAiplatformV1beta1GoogleSearchRetrieval googleSearchRetrieval;
 
   /**
    * Optional. Retrieval tool type. System will always execute the provided retrieval tool(s) to get
@@ -64,7 +64,7 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Retrieval retrieval;
+  private GoogleCloudAiplatformV1beta1Retrieval retrieval;
 
   /**
    * Optional. Function tool type. One or more function declarations to be passed to the model along
@@ -74,7 +74,7 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    * the user. Maximum 64 function declarations can be provided.
    * @return value or {@code null} for none
    */
-  public java.util.List<FunctionDeclaration> getFunctionDeclarations() {
+  public java.util.List<GoogleCloudAiplatformV1beta1FunctionDeclaration> getFunctionDeclarations() {
     return functionDeclarations;
   }
 
@@ -86,7 +86,7 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    * the user. Maximum 64 function declarations can be provided.
    * @param functionDeclarations functionDeclarations or {@code null} for none
    */
-  public Tool setFunctionDeclarations(java.util.List<FunctionDeclaration> functionDeclarations) {
+  public GoogleCloudAiplatformV1beta1Tool setFunctionDeclarations(java.util.List<GoogleCloudAiplatformV1beta1FunctionDeclaration> functionDeclarations) {
     this.functionDeclarations = functionDeclarations;
     return this;
   }
@@ -96,7 +96,7 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    * search.
    * @return value or {@code null} for none
    */
-  public GoogleSearchRetrieval getGoogleSearchRetrieval() {
+  public GoogleCloudAiplatformV1beta1GoogleSearchRetrieval getGoogleSearchRetrieval() {
     return googleSearchRetrieval;
   }
 
@@ -105,7 +105,7 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    * search.
    * @param googleSearchRetrieval googleSearchRetrieval or {@code null} for none
    */
-  public Tool setGoogleSearchRetrieval(GoogleSearchRetrieval googleSearchRetrieval) {
+  public GoogleCloudAiplatformV1beta1Tool setGoogleSearchRetrieval(GoogleCloudAiplatformV1beta1GoogleSearchRetrieval googleSearchRetrieval) {
     this.googleSearchRetrieval = googleSearchRetrieval;
     return this;
   }
@@ -116,7 +116,7 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    * generation.
    * @return value or {@code null} for none
    */
-  public Retrieval getRetrieval() {
+  public GoogleCloudAiplatformV1beta1Retrieval getRetrieval() {
     return retrieval;
   }
 
@@ -126,19 +126,19 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    * generation.
    * @param retrieval retrieval or {@code null} for none
    */
-  public Tool setRetrieval(Retrieval retrieval) {
+  public GoogleCloudAiplatformV1beta1Tool setRetrieval(GoogleCloudAiplatformV1beta1Retrieval retrieval) {
     this.retrieval = retrieval;
     return this;
   }
 
   @Override
-  public Tool set(String fieldName, Object value) {
-    return (Tool) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1Tool set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1Tool) super.set(fieldName, value);
   }
 
   @Override
-  public Tool clone() {
-    return (Tool) super.clone();
+  public GoogleCloudAiplatformV1beta1Tool clone() {
+    return (GoogleCloudAiplatformV1beta1Tool) super.clone();
   }
 
 }

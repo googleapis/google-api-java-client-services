@@ -29,7 +29,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Content extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1Content extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Ordered `Parts` that constitute a single message. Parts may have different IANA MIME
@@ -37,7 +37,7 @@ public final class Content extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Part> parts;
+  private java.util.List<GoogleCloudAiplatformV1beta1Part> parts;
 
   /**
    * Optional. The producer of the content. Must be either 'user' or 'model'. Useful to set for
@@ -52,7 +52,7 @@ public final class Content extends com.google.api.client.json.GenericJson {
    * types.
    * @return value or {@code null} for none
    */
-  public java.util.List<Part> getParts() {
+  public java.util.List<GoogleCloudAiplatformV1beta1Part> getParts() {
     return parts;
   }
 
@@ -61,7 +61,7 @@ public final class Content extends com.google.api.client.json.GenericJson {
    * types.
    * @param parts parts or {@code null} for none
    */
-  public Content setParts(java.util.List<Part> parts) {
+  public GoogleCloudAiplatformV1beta1Content setParts(java.util.List<GoogleCloudAiplatformV1beta1Part> parts) {
     this.parts = parts;
     return this;
   }
@@ -80,19 +80,19 @@ public final class Content extends com.google.api.client.json.GenericJson {
    * multi-turn conversations, otherwise can be left blank or unset.
    * @param role role or {@code null} for none
    */
-  public Content setRole(java.lang.String role) {
+  public GoogleCloudAiplatformV1beta1Content setRole(java.lang.String role) {
     this.role = role;
     return this;
   }
 
   @Override
-  public Content set(String fieldName, Object value) {
-    return (Content) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1Content set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1Content) super.set(fieldName, value);
   }
 
   @Override
-  public Content clone() {
-    return (Content) super.clone();
+  public GoogleCloudAiplatformV1beta1Content clone() {
+    return (GoogleCloudAiplatformV1beta1Content) super.clone();
   }
 
 }

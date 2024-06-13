@@ -7992,7 +7992,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
   public class InboundSamlSsoProfiles {
 
     /**
-     * Creates an InboundSamlSsoProfile for a customer.
+     * Creates an InboundSamlSsoProfile for a customer. When the target customer has enabled [Multi-
+     * party approval for sensitive actions](https://support.google.com/a/answer/13790448), the
+     * `Operation` in the response will have `"done": false`, it will not have a response, and the
+     * metadata will have `"state": "awaiting-multi-party-approval"`.
      *
      * Create a request for the method "inboundSamlSsoProfiles.create".
      *
@@ -8013,7 +8016,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/inboundSamlSsoProfiles";
 
       /**
-       * Creates an InboundSamlSsoProfile for a customer.
+       * Creates an InboundSamlSsoProfile for a customer. When the target customer has enabled [Multi-
+       * party approval for sensitive actions](https://support.google.com/a/answer/13790448), the
+       * `Operation` in the response will have `"done": false`, it will not have a response, and the
+       * metadata will have `"state": "awaiting-multi-party-approval"`.
        *
        * Create a request for the method "inboundSamlSsoProfiles.create".
        *
@@ -8569,7 +8575,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Updates an InboundSamlSsoProfile.
+     * Updates an InboundSamlSsoProfile. When the target customer has enabled [Multi-party approval for
+     * sensitive actions](https://support.google.com/a/answer/13790448), the `Operation` in the response
+     * will have `"done": false`, it will not have a response, and the metadata will have `"state":
+     * "awaiting-multi-party-approval"`.
      *
      * Create a request for the method "inboundSamlSsoProfiles.patch".
      *
@@ -8595,7 +8604,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^inboundSamlSsoProfiles/[^/]+$");
 
       /**
-       * Updates an InboundSamlSsoProfile.
+       * Updates an InboundSamlSsoProfile. When the target customer has enabled [Multi-party approval
+       * for sensitive actions](https://support.google.com/a/answer/13790448), the `Operation` in the
+       * response will have `"done": false`, it will not have a response, and the metadata will have
+       * `"state": "awaiting-multi-party-approval"`.
        *
        * Create a request for the method "inboundSamlSsoProfiles.patch".
        *
@@ -8746,7 +8758,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
     public class IdpCredentials {
 
       /**
-       * Adds an IdpCredential. Up to 2 credentials are allowed.
+       * Adds an IdpCredential. Up to 2 credentials are allowed. When the target customer has enabled
+       * [Multi-party approval for sensitive actions](https://support.google.com/a/answer/13790448), the
+       * `Operation` in the response will have `"done": false`, it will not have a response, and the
+       * metadata will have `"state": "awaiting-multi-party-approval"`.
        *
        * Create a request for the method "idpCredentials.add".
        *
@@ -8772,7 +8787,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^inboundSamlSsoProfiles/[^/]+$");
 
         /**
-         * Adds an IdpCredential. Up to 2 credentials are allowed.
+         * Adds an IdpCredential. Up to 2 credentials are allowed. When the target customer has enabled
+         * [Multi-party approval for sensitive actions](https://support.google.com/a/answer/13790448), the
+         * `Operation` in the response will have `"done": false`, it will not have a response, and the
+         * metadata will have `"state": "awaiting-multi-party-approval"`.
          *
          * Create a request for the method "idpCredentials.add".
          *

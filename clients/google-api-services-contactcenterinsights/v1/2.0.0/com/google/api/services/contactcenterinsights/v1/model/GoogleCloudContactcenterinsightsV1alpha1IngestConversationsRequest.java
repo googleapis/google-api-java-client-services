@@ -62,8 +62,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
 
   /**
    * Optional. If set, this fields indicates the number of objects to ingest from the Cloud Storage
-   * bucket. If empty, the entire bucket will be ingested. Note that conversations produced via
-   * sampling will not be ingested by subsequent ingest requests unless they are first deleted.
+   * bucket. If empty, the entire bucket will be ingested. Unless they are first deleted,
+   * conversations produced through sampling won't be ingested by subsequent ingest requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,8 +158,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
 
   /**
    * Optional. If set, this fields indicates the number of objects to ingest from the Cloud Storage
-   * bucket. If empty, the entire bucket will be ingested. Note that conversations produced via
-   * sampling will not be ingested by subsequent ingest requests unless they are first deleted.
+   * bucket. If empty, the entire bucket will be ingested. Unless they are first deleted,
+   * conversations produced through sampling won't be ingested by subsequent ingest requests.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSampleSize() {
@@ -168,8 +168,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
 
   /**
    * Optional. If set, this fields indicates the number of objects to ingest from the Cloud Storage
-   * bucket. If empty, the entire bucket will be ingested. Note that conversations produced via
-   * sampling will not be ingested by subsequent ingest requests unless they are first deleted.
+   * bucket. If empty, the entire bucket will be ingested. Unless they are first deleted,
+   * conversations produced through sampling won't be ingested by subsequent ingest requests.
    * @param sampleSize sampleSize or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequest setSampleSize(java.lang.Integer sampleSize) {

@@ -31,7 +31,7 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1ImportIssueModelRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If set to true, will create a new issue model from the imported file with randomly
+   * Optional. If set to true, will create an issue model from the imported file with randomly
    * generated IDs for the issue model and corresponding issues. Otherwise, replaces an existing
    * model with the same ID as the file.
    * The value may be {@code null}.
@@ -54,7 +54,7 @@ public final class GoogleCloudContactcenterinsightsV1ImportIssueModelRequest ext
   private java.lang.String parent;
 
   /**
-   * Optional. If set to true, will create a new issue model from the imported file with randomly
+   * Optional. If set to true, will create an issue model from the imported file with randomly
    * generated IDs for the issue model and corresponding issues. Otherwise, replaces an existing
    * model with the same ID as the file.
    * @return value or {@code null} for none
@@ -64,7 +64,7 @@ public final class GoogleCloudContactcenterinsightsV1ImportIssueModelRequest ext
   }
 
   /**
-   * Optional. If set to true, will create a new issue model from the imported file with randomly
+   * Optional. If set to true, will create an issue model from the imported file with randomly
    * generated IDs for the issue model and corresponding issues. Otherwise, replaces an existing
    * model with the same ID as the file.
    * @param createNewModel createNewModel or {@code null} for none

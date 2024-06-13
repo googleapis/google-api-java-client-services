@@ -17,7 +17,11 @@
 package com.google.api.services.contactcenterinsights.v1.model;
 
 /**
- * The settings resource.
+ * The CCAI Insights project wide settings. Use these settings to configure the behavior of
+ * Insights. View these settings with [`getsettings`](https://cloud.google.com/contact-
+ * center/insights/docs/reference/rest/v1/projects.locations/getSettings) and change the settings
+ * with [`updateSettings`](https://cloud.google.com/contact-
+ * center/insights/docs/reference/rest/v1/projects.locations/updateSettings).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Insights API. For a detailed
@@ -76,9 +80,9 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
    * Supported keys are: * "all-triggers": Notify each time any of the supported triggers occurs. *
    * "create-analysis": Notify each time an analysis is created. * "create-conversation": Notify
    * each time a conversation is created. * "export-insights-data": Notify each time an export is
-   * complete. * "ingest-conversations": Notify each time an IngestConversations LRO completes. *
+   * complete. * "ingest-conversations": Notify each time an IngestConversations LRO is complete. *
    * "update-conversation": Notify each time a conversation is updated via UpdateConversation. *
-   * "upload-conversation": Notify when an UploadConversation LRO completes. Values are Pub/Sub
+   * "upload-conversation": Notify when an UploadConversation LRO is complete. Values are Pub/Sub
    * topics. The format of each Pub/Sub topic is: projects/{project}/topics/{topic}
    * The value may be {@code null}.
    */
@@ -87,18 +91,18 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
 
   /**
    * Default DLP redaction resources to be applied while ingesting conversations. This applies to
-   * conversations ingested from the UploadConversation and IngestConversations endpoints, including
-   * conversations coming from CCAI Platform.
+   * conversations ingested from the `UploadConversation` and `IngestConversations` endpoints,
+   * including conversations coming from CCAI Platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig;
 
   /**
-   * Optional. Default Speech-to-Text resources to be used while ingesting audio files. Optional,
-   * CCAI Insights will create a default if not provided. This applies to conversations ingested
-   * from the UploadConversation and IngestConversations endpoints, including conversations coming
-   * from CCAI Platform.
+   * Optional. Default Speech-to-Text resources to use while ingesting audio files. Optional, CCAI
+   * Insights will create a default if not provided. This applies to conversations ingested from the
+   * `UploadConversation` and `IngestConversations` endpoints, including conversations coming from
+   * CCAI Platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,9 +216,9 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
    * Supported keys are: * "all-triggers": Notify each time any of the supported triggers occurs. *
    * "create-analysis": Notify each time an analysis is created. * "create-conversation": Notify
    * each time a conversation is created. * "export-insights-data": Notify each time an export is
-   * complete. * "ingest-conversations": Notify each time an IngestConversations LRO completes. *
+   * complete. * "ingest-conversations": Notify each time an IngestConversations LRO is complete. *
    * "update-conversation": Notify each time a conversation is updated via UpdateConversation. *
-   * "upload-conversation": Notify when an UploadConversation LRO completes. Values are Pub/Sub
+   * "upload-conversation": Notify when an UploadConversation LRO is complete. Values are Pub/Sub
    * topics. The format of each Pub/Sub topic is: projects/{project}/topics/{topic}
    * @return value or {@code null} for none
    */
@@ -228,9 +232,9 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
    * Supported keys are: * "all-triggers": Notify each time any of the supported triggers occurs. *
    * "create-analysis": Notify each time an analysis is created. * "create-conversation": Notify
    * each time a conversation is created. * "export-insights-data": Notify each time an export is
-   * complete. * "ingest-conversations": Notify each time an IngestConversations LRO completes. *
+   * complete. * "ingest-conversations": Notify each time an IngestConversations LRO is complete. *
    * "update-conversation": Notify each time a conversation is updated via UpdateConversation. *
-   * "upload-conversation": Notify when an UploadConversation LRO completes. Values are Pub/Sub
+   * "upload-conversation": Notify when an UploadConversation LRO is complete. Values are Pub/Sub
    * topics. The format of each Pub/Sub topic is: projects/{project}/topics/{topic}
    * @param pubsubNotificationSettings pubsubNotificationSettings or {@code null} for none
    */
@@ -241,8 +245,8 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
 
   /**
    * Default DLP redaction resources to be applied while ingesting conversations. This applies to
-   * conversations ingested from the UploadConversation and IngestConversations endpoints, including
-   * conversations coming from CCAI Platform.
+   * conversations ingested from the `UploadConversation` and `IngestConversations` endpoints,
+   * including conversations coming from CCAI Platform.
    * @return value or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1RedactionConfig getRedactionConfig() {
@@ -251,8 +255,8 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
 
   /**
    * Default DLP redaction resources to be applied while ingesting conversations. This applies to
-   * conversations ingested from the UploadConversation and IngestConversations endpoints, including
-   * conversations coming from CCAI Platform.
+   * conversations ingested from the `UploadConversation` and `IngestConversations` endpoints,
+   * including conversations coming from CCAI Platform.
    * @param redactionConfig redactionConfig or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1Settings setRedactionConfig(GoogleCloudContactcenterinsightsV1RedactionConfig redactionConfig) {
@@ -261,10 +265,10 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
   }
 
   /**
-   * Optional. Default Speech-to-Text resources to be used while ingesting audio files. Optional,
-   * CCAI Insights will create a default if not provided. This applies to conversations ingested
-   * from the UploadConversation and IngestConversations endpoints, including conversations coming
-   * from CCAI Platform.
+   * Optional. Default Speech-to-Text resources to use while ingesting audio files. Optional, CCAI
+   * Insights will create a default if not provided. This applies to conversations ingested from the
+   * `UploadConversation` and `IngestConversations` endpoints, including conversations coming from
+   * CCAI Platform.
    * @return value or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1SpeechConfig getSpeechConfig() {
@@ -272,10 +276,10 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
   }
 
   /**
-   * Optional. Default Speech-to-Text resources to be used while ingesting audio files. Optional,
-   * CCAI Insights will create a default if not provided. This applies to conversations ingested
-   * from the UploadConversation and IngestConversations endpoints, including conversations coming
-   * from CCAI Platform.
+   * Optional. Default Speech-to-Text resources to use while ingesting audio files. Optional, CCAI
+   * Insights will create a default if not provided. This applies to conversations ingested from the
+   * `UploadConversation` and `IngestConversations` endpoints, including conversations coming from
+   * CCAI Platform.
    * @param speechConfig speechConfig or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1Settings setSpeechConfig(GoogleCloudContactcenterinsightsV1SpeechConfig speechConfig) {

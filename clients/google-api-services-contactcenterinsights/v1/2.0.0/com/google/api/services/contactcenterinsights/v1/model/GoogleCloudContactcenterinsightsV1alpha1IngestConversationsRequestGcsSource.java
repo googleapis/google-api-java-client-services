@@ -54,9 +54,11 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   private java.util.List<java.lang.String> customMetadataKeys;
 
   /**
-   * Optional. The Cloud Storage path to the source object metadata. Note that: [1] metadata files
-   * are expected to be in JSON format [2] metadata and source objects must be in separate buckets
-   * [3] a source object's metadata object must share the same name to be properly ingested
+   * Optional. The Cloud Storage path to the conversation metadata. Note that: [1] Metadata files
+   * are expected to be in JSON format. [2] Metadata and source files (transcripts or audio) must be
+   * in separate buckets. [3] A source file and its corresponding metadata file must share the same
+   * name to be properly ingested, E.g. `gs://bucket/audio/conversation1.mp3` and
+   * `gs://bucket/metadata/conversation1.json`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,9 +120,11 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   }
 
   /**
-   * Optional. The Cloud Storage path to the source object metadata. Note that: [1] metadata files
-   * are expected to be in JSON format [2] metadata and source objects must be in separate buckets
-   * [3] a source object's metadata object must share the same name to be properly ingested
+   * Optional. The Cloud Storage path to the conversation metadata. Note that: [1] Metadata files
+   * are expected to be in JSON format. [2] Metadata and source files (transcripts or audio) must be
+   * in separate buckets. [3] A source file and its corresponding metadata file must share the same
+   * name to be properly ingested, E.g. `gs://bucket/audio/conversation1.mp3` and
+   * `gs://bucket/metadata/conversation1.json`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetadataBucketUri() {
@@ -128,9 +132,11 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   }
 
   /**
-   * Optional. The Cloud Storage path to the source object metadata. Note that: [1] metadata files
-   * are expected to be in JSON format [2] metadata and source objects must be in separate buckets
-   * [3] a source object's metadata object must share the same name to be properly ingested
+   * Optional. The Cloud Storage path to the conversation metadata. Note that: [1] Metadata files
+   * are expected to be in JSON format. [2] Metadata and source files (transcripts or audio) must be
+   * in separate buckets. [3] A source file and its corresponding metadata file must share the same
+   * name to be properly ingested, E.g. `gs://bucket/audio/conversation1.mp3` and
+   * `gs://bucket/metadata/conversation1.json`.
    * @param metadataBucketUri metadataBucketUri or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestGcsSource setMetadataBucketUri(java.lang.String metadataBucketUri) {

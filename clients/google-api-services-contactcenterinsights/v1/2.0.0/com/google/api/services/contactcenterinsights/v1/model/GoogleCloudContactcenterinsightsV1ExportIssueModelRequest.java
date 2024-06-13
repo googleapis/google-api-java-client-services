@@ -31,21 +31,21 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1ExportIssueModelRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Google Cloud Storage URI to export the Issue Model to.
+   * Google Cloud Storage URI to export the issue model to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudContactcenterinsightsV1ExportIssueModelRequestGcsDestination gcsDestination;
 
   /**
-   * Required. The issue model to export
+   * Required. The issue model to export.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Google Cloud Storage URI to export the Issue Model to.
+   * Google Cloud Storage URI to export the issue model to.
    * @return value or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1ExportIssueModelRequestGcsDestination getGcsDestination() {
@@ -53,7 +53,7 @@ public final class GoogleCloudContactcenterinsightsV1ExportIssueModelRequest ext
   }
 
   /**
-   * Google Cloud Storage URI to export the Issue Model to.
+   * Google Cloud Storage URI to export the issue model to.
    * @param gcsDestination gcsDestination or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1ExportIssueModelRequest setGcsDestination(GoogleCloudContactcenterinsightsV1ExportIssueModelRequestGcsDestination gcsDestination) {
@@ -62,7 +62,7 @@ public final class GoogleCloudContactcenterinsightsV1ExportIssueModelRequest ext
   }
 
   /**
-   * Required. The issue model to export
+   * Required. The issue model to export.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -70,7 +70,7 @@ public final class GoogleCloudContactcenterinsightsV1ExportIssueModelRequest ext
   }
 
   /**
-   * Required. The issue model to export
+   * Required. The issue model to export.
    * @param name name or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1ExportIssueModelRequest setName(java.lang.String name) {

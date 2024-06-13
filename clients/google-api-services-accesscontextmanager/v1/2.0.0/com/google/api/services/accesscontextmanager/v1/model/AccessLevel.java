@@ -53,7 +53,7 @@ public final class AccessLevel extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Resource name for the `AccessLevel`. Format:
+   * Identifier. Resource name for the `AccessLevel`. Format:
    * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level` component must
    * begin with a letter, followed by alphanumeric characters or `_`. Its maximum length is 50
    * characters. After you create an `AccessLevel`, you cannot change its `name`.
@@ -121,7 +121,7 @@ public final class AccessLevel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name for the `AccessLevel`. Format:
+   * Identifier. Resource name for the `AccessLevel`. Format:
    * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level` component must
    * begin with a letter, followed by alphanumeric characters or `_`. Its maximum length is 50
    * characters. After you create an `AccessLevel`, you cannot change its `name`.
@@ -132,7 +132,7 @@ public final class AccessLevel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name for the `AccessLevel`. Format:
+   * Identifier. Resource name for the `AccessLevel`. Format:
    * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level` component must
    * begin with a letter, followed by alphanumeric characters or `_`. Its maximum length is 50
    * characters. After you create an `AccessLevel`, you cannot change its `name`.

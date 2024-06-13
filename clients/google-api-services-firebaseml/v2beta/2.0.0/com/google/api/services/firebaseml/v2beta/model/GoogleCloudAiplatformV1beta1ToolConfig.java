@@ -27,20 +27,20 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ToolConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1ToolConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Function calling config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private FunctionCallingConfig functionCallingConfig;
+  private GoogleCloudAiplatformV1beta1FunctionCallingConfig functionCallingConfig;
 
   /**
    * Optional. Function calling config.
    * @return value or {@code null} for none
    */
-  public FunctionCallingConfig getFunctionCallingConfig() {
+  public GoogleCloudAiplatformV1beta1FunctionCallingConfig getFunctionCallingConfig() {
     return functionCallingConfig;
   }
 
@@ -48,19 +48,19 @@ public final class ToolConfig extends com.google.api.client.json.GenericJson {
    * Optional. Function calling config.
    * @param functionCallingConfig functionCallingConfig or {@code null} for none
    */
-  public ToolConfig setFunctionCallingConfig(FunctionCallingConfig functionCallingConfig) {
+  public GoogleCloudAiplatformV1beta1ToolConfig setFunctionCallingConfig(GoogleCloudAiplatformV1beta1FunctionCallingConfig functionCallingConfig) {
     this.functionCallingConfig = functionCallingConfig;
     return this;
   }
 
   @Override
-  public ToolConfig set(String fieldName, Object value) {
-    return (ToolConfig) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1ToolConfig set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1ToolConfig) super.set(fieldName, value);
   }
 
   @Override
-  public ToolConfig clone() {
-    return (ToolConfig) super.clone();
+  public GoogleCloudAiplatformV1beta1ToolConfig clone() {
+    return (GoogleCloudAiplatformV1beta1ToolConfig) super.clone();
   }
 
 }

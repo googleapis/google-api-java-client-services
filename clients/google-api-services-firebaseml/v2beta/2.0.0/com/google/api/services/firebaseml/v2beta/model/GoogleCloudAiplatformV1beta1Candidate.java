@@ -27,21 +27,21 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Candidate extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Source attribution of the generated content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CitationMetadata citationMetadata;
+  private GoogleCloudAiplatformV1beta1CitationMetadata citationMetadata;
 
   /**
    * Output only. Content parts of the candidate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Content content;
+  private GoogleCloudAiplatformV1beta1Content content;
 
   /**
    * Output only. Describes the reason the mode stopped generating tokens in more detail. This is
@@ -64,7 +64,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GroundingMetadata groundingMetadata;
+  private GoogleCloudAiplatformV1beta1GroundingMetadata groundingMetadata;
 
   /**
    * Output only. Index of the candidate.
@@ -79,13 +79,13 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SafetyRating> safetyRatings;
+  private java.util.List<GoogleCloudAiplatformV1beta1SafetyRating> safetyRatings;
 
   /**
    * Output only. Source attribution of the generated content.
    * @return value or {@code null} for none
    */
-  public CitationMetadata getCitationMetadata() {
+  public GoogleCloudAiplatformV1beta1CitationMetadata getCitationMetadata() {
     return citationMetadata;
   }
 
@@ -93,7 +93,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * Output only. Source attribution of the generated content.
    * @param citationMetadata citationMetadata or {@code null} for none
    */
-  public Candidate setCitationMetadata(CitationMetadata citationMetadata) {
+  public GoogleCloudAiplatformV1beta1Candidate setCitationMetadata(GoogleCloudAiplatformV1beta1CitationMetadata citationMetadata) {
     this.citationMetadata = citationMetadata;
     return this;
   }
@@ -102,7 +102,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * Output only. Content parts of the candidate.
    * @return value or {@code null} for none
    */
-  public Content getContent() {
+  public GoogleCloudAiplatformV1beta1Content getContent() {
     return content;
   }
 
@@ -110,7 +110,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * Output only. Content parts of the candidate.
    * @param content content or {@code null} for none
    */
-  public Candidate setContent(Content content) {
+  public GoogleCloudAiplatformV1beta1Candidate setContent(GoogleCloudAiplatformV1beta1Content content) {
     this.content = content;
     return this;
   }
@@ -129,7 +129,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * only filled when `finish_reason` is set.
    * @param finishMessage finishMessage or {@code null} for none
    */
-  public Candidate setFinishMessage(java.lang.String finishMessage) {
+  public GoogleCloudAiplatformV1beta1Candidate setFinishMessage(java.lang.String finishMessage) {
     this.finishMessage = finishMessage;
     return this;
   }
@@ -148,7 +148,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * stopped generating the tokens.
    * @param finishReason finishReason or {@code null} for none
    */
-  public Candidate setFinishReason(java.lang.String finishReason) {
+  public GoogleCloudAiplatformV1beta1Candidate setFinishReason(java.lang.String finishReason) {
     this.finishReason = finishReason;
     return this;
   }
@@ -157,7 +157,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * Output only. Metadata specifies sources used to ground generated content.
    * @return value or {@code null} for none
    */
-  public GroundingMetadata getGroundingMetadata() {
+  public GoogleCloudAiplatformV1beta1GroundingMetadata getGroundingMetadata() {
     return groundingMetadata;
   }
 
@@ -165,7 +165,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * Output only. Metadata specifies sources used to ground generated content.
    * @param groundingMetadata groundingMetadata or {@code null} for none
    */
-  public Candidate setGroundingMetadata(GroundingMetadata groundingMetadata) {
+  public GoogleCloudAiplatformV1beta1Candidate setGroundingMetadata(GoogleCloudAiplatformV1beta1GroundingMetadata groundingMetadata) {
     this.groundingMetadata = groundingMetadata;
     return this;
   }
@@ -182,7 +182,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * Output only. Index of the candidate.
    * @param index index or {@code null} for none
    */
-  public Candidate setIndex(java.lang.Integer index) {
+  public GoogleCloudAiplatformV1beta1Candidate setIndex(java.lang.Integer index) {
     this.index = index;
     return this;
   }
@@ -192,7 +192,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * rating per category.
    * @return value or {@code null} for none
    */
-  public java.util.List<SafetyRating> getSafetyRatings() {
+  public java.util.List<GoogleCloudAiplatformV1beta1SafetyRating> getSafetyRatings() {
     return safetyRatings;
   }
 
@@ -201,19 +201,19 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * rating per category.
    * @param safetyRatings safetyRatings or {@code null} for none
    */
-  public Candidate setSafetyRatings(java.util.List<SafetyRating> safetyRatings) {
+  public GoogleCloudAiplatformV1beta1Candidate setSafetyRatings(java.util.List<GoogleCloudAiplatformV1beta1SafetyRating> safetyRatings) {
     this.safetyRatings = safetyRatings;
     return this;
   }
 
   @Override
-  public Candidate set(String fieldName, Object value) {
-    return (Candidate) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1Candidate set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1Candidate) super.set(fieldName, value);
   }
 
   @Override
-  public Candidate clone() {
-    return (Candidate) super.clone();
+  public GoogleCloudAiplatformV1beta1Candidate clone() {
+    return (GoogleCloudAiplatformV1beta1Candidate) super.clone();
   }
 
 }

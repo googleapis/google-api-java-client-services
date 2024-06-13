@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SearchEntryPoint extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1SearchEntryPoint extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Web content snippet that can be embedded in a web page or an app webview.
@@ -55,7 +55,7 @@ public final class SearchEntryPoint extends com.google.api.client.json.GenericJs
    * Optional. Web content snippet that can be embedded in a web page or an app webview.
    * @param renderedContent renderedContent or {@code null} for none
    */
-  public SearchEntryPoint setRenderedContent(java.lang.String renderedContent) {
+  public GoogleCloudAiplatformV1beta1SearchEntryPoint setRenderedContent(java.lang.String renderedContent) {
     this.renderedContent = renderedContent;
     return this;
   }
@@ -85,7 +85,7 @@ public final class SearchEntryPoint extends com.google.api.client.json.GenericJs
    * @see #encodeSdkBlob()
    * @param sdkBlob sdkBlob or {@code null} for none
    */
-  public SearchEntryPoint setSdkBlob(java.lang.String sdkBlob) {
+  public GoogleCloudAiplatformV1beta1SearchEntryPoint setSdkBlob(java.lang.String sdkBlob) {
     this.sdkBlob = sdkBlob;
     return this;
   }
@@ -100,19 +100,19 @@ public final class SearchEntryPoint extends com.google.api.client.json.GenericJs
    *
    * @since 1.14
    */
-  public SearchEntryPoint encodeSdkBlob(byte[] sdkBlob) {
+  public GoogleCloudAiplatformV1beta1SearchEntryPoint encodeSdkBlob(byte[] sdkBlob) {
     this.sdkBlob = com.google.api.client.util.Base64.encodeBase64URLSafeString(sdkBlob);
     return this;
   }
 
   @Override
-  public SearchEntryPoint set(String fieldName, Object value) {
-    return (SearchEntryPoint) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1SearchEntryPoint set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1SearchEntryPoint) super.set(fieldName, value);
   }
 
   @Override
-  public SearchEntryPoint clone() {
-    return (SearchEntryPoint) super.clone();
+  public GoogleCloudAiplatformV1beta1SearchEntryPoint clone() {
+    return (GoogleCloudAiplatformV1beta1SearchEntryPoint) super.clone();
   }
 
 }

@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SafetySetting extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1SafetySetting extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Harm category.
@@ -63,7 +63,7 @@ public final class SafetySetting extends com.google.api.client.json.GenericJson 
    * Required. Harm category.
    * @param category category or {@code null} for none
    */
-  public SafetySetting setCategory(java.lang.String category) {
+  public GoogleCloudAiplatformV1beta1SafetySetting setCategory(java.lang.String category) {
     this.category = category;
     return this;
   }
@@ -82,7 +82,7 @@ public final class SafetySetting extends com.google.api.client.json.GenericJson 
    * the threshold is used for probability score.
    * @param method method or {@code null} for none
    */
-  public SafetySetting setMethod(java.lang.String method) {
+  public GoogleCloudAiplatformV1beta1SafetySetting setMethod(java.lang.String method) {
     this.method = method;
     return this;
   }
@@ -99,19 +99,19 @@ public final class SafetySetting extends com.google.api.client.json.GenericJson 
    * Required. The harm block threshold.
    * @param threshold threshold or {@code null} for none
    */
-  public SafetySetting setThreshold(java.lang.String threshold) {
+  public GoogleCloudAiplatformV1beta1SafetySetting setThreshold(java.lang.String threshold) {
     this.threshold = threshold;
     return this;
   }
 
   @Override
-  public SafetySetting set(String fieldName, Object value) {
-    return (SafetySetting) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1SafetySetting set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1SafetySetting) super.set(fieldName, value);
   }
 
   @Override
-  public SafetySetting clone() {
-    return (SafetySetting) super.clone();
+  public GoogleCloudAiplatformV1beta1SafetySetting clone() {
+    return (GoogleCloudAiplatformV1beta1SafetySetting) super.clone();
   }
 
 }

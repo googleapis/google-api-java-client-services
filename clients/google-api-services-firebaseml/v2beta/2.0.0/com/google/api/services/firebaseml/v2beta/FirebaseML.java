@@ -223,16 +223,16 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
            *
            * @param endpoint Required. The name of the Endpoint requested to perform token counting. Format:
            *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
-           * @param content the {@link com.google.api.services.firebaseml.v2beta.model.CountTokensRequest}
+           * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1CountTokensRequest}
            * @return the request
            */
-          public CountTokens countTokens(java.lang.String endpoint, com.google.api.services.firebaseml.v2beta.model.CountTokensRequest content) throws java.io.IOException {
+          public CountTokens countTokens(java.lang.String endpoint, com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1CountTokensRequest content) throws java.io.IOException {
             CountTokens result = new CountTokens(endpoint, content);
             initialize(result);
             return result;
           }
 
-          public class CountTokens extends FirebaseMLRequest<com.google.api.services.firebaseml.v2beta.model.CountTokensResponse> {
+          public class CountTokens extends FirebaseMLRequest<com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1CountTokensResponse> {
 
             private static final String REST_PATH = "v2beta/{+endpoint}:countTokens";
 
@@ -252,11 +252,11 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
              *
              * @param endpoint Required. The name of the Endpoint requested to perform token counting. Format:
            *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
-             * @param content the {@link com.google.api.services.firebaseml.v2beta.model.CountTokensRequest}
+             * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1CountTokensRequest}
              * @since 1.13
              */
-            protected CountTokens(java.lang.String endpoint, com.google.api.services.firebaseml.v2beta.model.CountTokensRequest content) {
-              super(FirebaseML.this, "POST", REST_PATH, content, com.google.api.services.firebaseml.v2beta.model.CountTokensResponse.class);
+            protected CountTokens(java.lang.String endpoint, com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1CountTokensRequest content) {
+              super(FirebaseML.this, "POST", REST_PATH, content, com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1CountTokensResponse.class);
               this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
@@ -363,16 +363,16 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
            *
            * @param model Required. The name of the publisher model requested to serve the prediction. Format:
            *        `projects/{project}/locations/{location}/publishers/models`
-           * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GenerateContentRequest}
+           * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentRequest}
            * @return the request
            */
-          public GenerateContent generateContent(java.lang.String model, com.google.api.services.firebaseml.v2beta.model.GenerateContentRequest content) throws java.io.IOException {
+          public GenerateContent generateContent(java.lang.String model, com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentRequest content) throws java.io.IOException {
             GenerateContent result = new GenerateContent(model, content);
             initialize(result);
             return result;
           }
 
-          public class GenerateContent extends FirebaseMLRequest<com.google.api.services.firebaseml.v2beta.model.GenerateContentResponse> {
+          public class GenerateContent extends FirebaseMLRequest<com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentResponse> {
 
             private static final String REST_PATH = "v2beta/{+model}:generateContent";
 
@@ -392,11 +392,11 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
              *
              * @param model Required. The name of the publisher model requested to serve the prediction. Format:
            *        `projects/{project}/locations/{location}/publishers/models`
-             * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GenerateContentRequest}
+             * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentRequest}
              * @since 1.13
              */
-            protected GenerateContent(java.lang.String model, com.google.api.services.firebaseml.v2beta.model.GenerateContentRequest content) {
-              super(FirebaseML.this, "POST", REST_PATH, content, com.google.api.services.firebaseml.v2beta.model.GenerateContentResponse.class);
+            protected GenerateContent(java.lang.String model, com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentRequest content) {
+              super(FirebaseML.this, "POST", REST_PATH, content, com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentResponse.class);
               this.model = com.google.api.client.util.Preconditions.checkNotNull(model, "Required parameter model must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(MODEL_PATTERN.matcher(model).matches(),
@@ -504,16 +504,16 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
            *
            * @param model Required. The name of the publisher model requested to serve the prediction. Format:
            *        `projects/{project}/locations/{location}/publishers/models`
-           * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GenerateContentRequest}
+           * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentRequest}
            * @return the request
            */
-          public StreamGenerateContent streamGenerateContent(java.lang.String model, com.google.api.services.firebaseml.v2beta.model.GenerateContentRequest content) throws java.io.IOException {
+          public StreamGenerateContent streamGenerateContent(java.lang.String model, com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentRequest content) throws java.io.IOException {
             StreamGenerateContent result = new StreamGenerateContent(model, content);
             initialize(result);
             return result;
           }
 
-          public class StreamGenerateContent extends FirebaseMLRequest<com.google.api.services.firebaseml.v2beta.model.GenerateContentResponse> {
+          public class StreamGenerateContent extends FirebaseMLRequest<com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentResponse> {
 
             private static final String REST_PATH = "v2beta/{+model}:streamGenerateContent";
 
@@ -533,11 +533,11 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
              *
              * @param model Required. The name of the publisher model requested to serve the prediction. Format:
            *        `projects/{project}/locations/{location}/publishers/models`
-             * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GenerateContentRequest}
+             * @param content the {@link com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentRequest}
              * @since 1.13
              */
-            protected StreamGenerateContent(java.lang.String model, com.google.api.services.firebaseml.v2beta.model.GenerateContentRequest content) {
-              super(FirebaseML.this, "POST", REST_PATH, content, com.google.api.services.firebaseml.v2beta.model.GenerateContentResponse.class);
+            protected StreamGenerateContent(java.lang.String model, com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentRequest content) {
+              super(FirebaseML.this, "POST", REST_PATH, content, com.google.api.services.firebaseml.v2beta.model.GoogleCloudAiplatformV1beta1GenerateContentResponse.class);
               this.model = com.google.api.client.util.Preconditions.checkNotNull(model, "Required parameter model must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(MODEL_PATTERN.matcher(model).matches(),

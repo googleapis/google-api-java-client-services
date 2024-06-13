@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GenerationConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Number of candidates to generate.
@@ -76,7 +76,7 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Schema responseSchema;
+  private GoogleCloudAiplatformV1beta1Schema responseSchema;
 
   /**
    * Optional. Stop sequences.
@@ -118,7 +118,7 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
    * Optional. Number of candidates to generate.
    * @param candidateCount candidateCount or {@code null} for none
    */
-  public GenerationConfig setCandidateCount(java.lang.Integer candidateCount) {
+  public GoogleCloudAiplatformV1beta1GenerationConfig setCandidateCount(java.lang.Integer candidateCount) {
     this.candidateCount = candidateCount;
     return this;
   }
@@ -135,7 +135,7 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
    * Optional. Frequency penalties.
    * @param frequencyPenalty frequencyPenalty or {@code null} for none
    */
-  public GenerationConfig setFrequencyPenalty(java.lang.Float frequencyPenalty) {
+  public GoogleCloudAiplatformV1beta1GenerationConfig setFrequencyPenalty(java.lang.Float frequencyPenalty) {
     this.frequencyPenalty = frequencyPenalty;
     return this;
   }
@@ -152,7 +152,7 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
    * Optional. The maximum number of output tokens to generate per message.
    * @param maxOutputTokens maxOutputTokens or {@code null} for none
    */
-  public GenerationConfig setMaxOutputTokens(java.lang.Integer maxOutputTokens) {
+  public GoogleCloudAiplatformV1beta1GenerationConfig setMaxOutputTokens(java.lang.Integer maxOutputTokens) {
     this.maxOutputTokens = maxOutputTokens;
     return this;
   }
@@ -169,7 +169,7 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
    * Optional. Positive penalties.
    * @param presencePenalty presencePenalty or {@code null} for none
    */
-  public GenerationConfig setPresencePenalty(java.lang.Float presencePenalty) {
+  public GoogleCloudAiplatformV1beta1GenerationConfig setPresencePenalty(java.lang.Float presencePenalty) {
     this.presencePenalty = presencePenalty;
     return this;
   }
@@ -192,7 +192,7 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
    * undefined. This is a preview feature.
    * @param responseMimeType responseMimeType or {@code null} for none
    */
-  public GenerationConfig setResponseMimeType(java.lang.String responseMimeType) {
+  public GoogleCloudAiplatformV1beta1GenerationConfig setResponseMimeType(java.lang.String responseMimeType) {
     this.responseMimeType = responseMimeType;
     return this;
   }
@@ -205,7 +205,7 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
    * response.
    * @return value or {@code null} for none
    */
-  public Schema getResponseSchema() {
+  public GoogleCloudAiplatformV1beta1Schema getResponseSchema() {
     return responseSchema;
   }
 
@@ -217,7 +217,7 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
    * response.
    * @param responseSchema responseSchema or {@code null} for none
    */
-  public GenerationConfig setResponseSchema(Schema responseSchema) {
+  public GoogleCloudAiplatformV1beta1GenerationConfig setResponseSchema(GoogleCloudAiplatformV1beta1Schema responseSchema) {
     this.responseSchema = responseSchema;
     return this;
   }
@@ -234,7 +234,7 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
    * Optional. Stop sequences.
    * @param stopSequences stopSequences or {@code null} for none
    */
-  public GenerationConfig setStopSequences(java.util.List<java.lang.String> stopSequences) {
+  public GoogleCloudAiplatformV1beta1GenerationConfig setStopSequences(java.util.List<java.lang.String> stopSequences) {
     this.stopSequences = stopSequences;
     return this;
   }
@@ -251,7 +251,7 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
    * Optional. Controls the randomness of predictions.
    * @param temperature temperature or {@code null} for none
    */
-  public GenerationConfig setTemperature(java.lang.Float temperature) {
+  public GoogleCloudAiplatformV1beta1GenerationConfig setTemperature(java.lang.Float temperature) {
     this.temperature = temperature;
     return this;
   }
@@ -268,7 +268,7 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
    * Optional. If specified, top-k sampling will be used.
    * @param topK topK or {@code null} for none
    */
-  public GenerationConfig setTopK(java.lang.Float topK) {
+  public GoogleCloudAiplatformV1beta1GenerationConfig setTopK(java.lang.Float topK) {
     this.topK = topK;
     return this;
   }
@@ -285,19 +285,19 @@ public final class GenerationConfig extends com.google.api.client.json.GenericJs
    * Optional. If specified, nucleus sampling will be used.
    * @param topP topP or {@code null} for none
    */
-  public GenerationConfig setTopP(java.lang.Float topP) {
+  public GoogleCloudAiplatformV1beta1GenerationConfig setTopP(java.lang.Float topP) {
     this.topP = topP;
     return this;
   }
 
   @Override
-  public GenerationConfig set(String fieldName, Object value) {
-    return (GenerationConfig) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1GenerationConfig set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1GenerationConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GenerationConfig clone() {
-    return (GenerationConfig) super.clone();
+  public GoogleCloudAiplatformV1beta1GenerationConfig clone() {
+    return (GoogleCloudAiplatformV1beta1GenerationConfig) super.clone();
   }
 
 }

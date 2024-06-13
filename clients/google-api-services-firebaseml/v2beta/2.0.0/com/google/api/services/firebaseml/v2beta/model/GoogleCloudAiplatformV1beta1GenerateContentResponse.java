@@ -27,19 +27,19 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GenerateContentResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1GenerateContentResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Generated candidates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Candidate> candidates;
+  private java.util.List<GoogleCloudAiplatformV1beta1Candidate> candidates;
 
   static {
-    // hack to force ProGuard to consider Candidate used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1Candidate used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Candidate.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1Candidate.class);
   }
 
   /**
@@ -48,20 +48,20 @@ public final class GenerateContentResponse extends com.google.api.client.json.Ge
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PromptFeedback promptFeedback;
+  private GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback promptFeedback;
 
   /**
    * Usage metadata about the response(s).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private UsageMetadata usageMetadata;
+  private GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata usageMetadata;
 
   /**
    * Output only. Generated candidates.
    * @return value or {@code null} for none
    */
-  public java.util.List<Candidate> getCandidates() {
+  public java.util.List<GoogleCloudAiplatformV1beta1Candidate> getCandidates() {
     return candidates;
   }
 
@@ -69,7 +69,7 @@ public final class GenerateContentResponse extends com.google.api.client.json.Ge
    * Output only. Generated candidates.
    * @param candidates candidates or {@code null} for none
    */
-  public GenerateContentResponse setCandidates(java.util.List<Candidate> candidates) {
+  public GoogleCloudAiplatformV1beta1GenerateContentResponse setCandidates(java.util.List<GoogleCloudAiplatformV1beta1Candidate> candidates) {
     this.candidates = candidates;
     return this;
   }
@@ -79,7 +79,7 @@ public final class GenerateContentResponse extends com.google.api.client.json.Ge
    * first stream chunk. Only happens when no candidates were generated due to content violations.
    * @return value or {@code null} for none
    */
-  public PromptFeedback getPromptFeedback() {
+  public GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback getPromptFeedback() {
     return promptFeedback;
   }
 
@@ -88,7 +88,7 @@ public final class GenerateContentResponse extends com.google.api.client.json.Ge
    * first stream chunk. Only happens when no candidates were generated due to content violations.
    * @param promptFeedback promptFeedback or {@code null} for none
    */
-  public GenerateContentResponse setPromptFeedback(PromptFeedback promptFeedback) {
+  public GoogleCloudAiplatformV1beta1GenerateContentResponse setPromptFeedback(GoogleCloudAiplatformV1beta1GenerateContentResponsePromptFeedback promptFeedback) {
     this.promptFeedback = promptFeedback;
     return this;
   }
@@ -97,7 +97,7 @@ public final class GenerateContentResponse extends com.google.api.client.json.Ge
    * Usage metadata about the response(s).
    * @return value or {@code null} for none
    */
-  public UsageMetadata getUsageMetadata() {
+  public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata getUsageMetadata() {
     return usageMetadata;
   }
 
@@ -105,19 +105,19 @@ public final class GenerateContentResponse extends com.google.api.client.json.Ge
    * Usage metadata about the response(s).
    * @param usageMetadata usageMetadata or {@code null} for none
    */
-  public GenerateContentResponse setUsageMetadata(UsageMetadata usageMetadata) {
+  public GoogleCloudAiplatformV1beta1GenerateContentResponse setUsageMetadata(GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata usageMetadata) {
     this.usageMetadata = usageMetadata;
     return this;
   }
 
   @Override
-  public GenerateContentResponse set(String fieldName, Object value) {
-    return (GenerateContentResponse) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1GenerateContentResponse set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1GenerateContentResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GenerateContentResponse clone() {
-    return (GenerateContentResponse) super.clone();
+  public GoogleCloudAiplatformV1beta1GenerateContentResponse clone() {
+    return (GoogleCloudAiplatformV1beta1GenerateContentResponse) super.clone();
   }
 
 }

@@ -27,16 +27,16 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleSearchRetrieval extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1GoogleSearchRetrieval extends com.google.api.client.json.GenericJson {
 
   @Override
-  public GoogleSearchRetrieval set(String fieldName, Object value) {
-    return (GoogleSearchRetrieval) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1GoogleSearchRetrieval set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1GoogleSearchRetrieval) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleSearchRetrieval clone() {
-    return (GoogleSearchRetrieval) super.clone();
+  public GoogleCloudAiplatformV1beta1GoogleSearchRetrieval clone() {
+    return (GoogleCloudAiplatformV1beta1GoogleSearchRetrieval) super.clone();
   }
 
 }

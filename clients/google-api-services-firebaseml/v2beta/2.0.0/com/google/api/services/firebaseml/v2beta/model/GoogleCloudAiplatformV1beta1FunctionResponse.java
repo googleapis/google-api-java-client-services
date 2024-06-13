@@ -30,7 +30,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FunctionResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1FunctionResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The name of the function to call. Matches [FunctionDeclaration.name] and
@@ -61,7 +61,7 @@ public final class FunctionResponse extends com.google.api.client.json.GenericJs
    * [FunctionCall.name].
    * @param name name or {@code null} for none
    */
-  public FunctionResponse setName(java.lang.String name) {
+  public GoogleCloudAiplatformV1beta1FunctionResponse setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -78,19 +78,19 @@ public final class FunctionResponse extends com.google.api.client.json.GenericJs
    * Required. The function response in JSON object format.
    * @param response response or {@code null} for none
    */
-  public FunctionResponse setResponse(java.util.Map<String, java.lang.Object> response) {
+  public GoogleCloudAiplatformV1beta1FunctionResponse setResponse(java.util.Map<String, java.lang.Object> response) {
     this.response = response;
     return this;
   }
 
   @Override
-  public FunctionResponse set(String fieldName, Object value) {
-    return (FunctionResponse) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1FunctionResponse set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1FunctionResponse) super.set(fieldName, value);
   }
 
   @Override
-  public FunctionResponse clone() {
-    return (FunctionResponse) super.clone();
+  public GoogleCloudAiplatformV1beta1FunctionResponse clone() {
+    return (GoogleCloudAiplatformV1beta1FunctionResponse) super.clone();
   }
 
 }

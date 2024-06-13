@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Blob extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1Blob extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Raw bytes.
@@ -68,7 +68,7 @@ public final class Blob extends com.google.api.client.json.GenericJson {
    * @see #encodeData()
    * @param data data or {@code null} for none
    */
-  public Blob setData(java.lang.String data) {
+  public GoogleCloudAiplatformV1beta1Blob setData(java.lang.String data) {
     this.data = data;
     return this;
   }
@@ -83,7 +83,7 @@ public final class Blob extends com.google.api.client.json.GenericJson {
    *
    * @since 1.14
    */
-  public Blob encodeData(byte[] data) {
+  public GoogleCloudAiplatformV1beta1Blob encodeData(byte[] data) {
     this.data = com.google.api.client.util.Base64.encodeBase64URLSafeString(data);
     return this;
   }
@@ -100,19 +100,19 @@ public final class Blob extends com.google.api.client.json.GenericJson {
    * Required. The IANA standard MIME type of the source data.
    * @param mimeType mimeType or {@code null} for none
    */
-  public Blob setMimeType(java.lang.String mimeType) {
+  public GoogleCloudAiplatformV1beta1Blob setMimeType(java.lang.String mimeType) {
     this.mimeType = mimeType;
     return this;
   }
 
   @Override
-  public Blob set(String fieldName, Object value) {
-    return (Blob) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1Blob set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1Blob) super.set(fieldName, value);
   }
 
   @Override
-  public Blob clone() {
-    return (Blob) super.clone();
+  public GoogleCloudAiplatformV1beta1Blob clone() {
+    return (GoogleCloudAiplatformV1beta1Blob) super.clone();
   }
 
 }

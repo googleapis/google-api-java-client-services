@@ -29,7 +29,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Schema extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Default value of the data.
@@ -74,7 +74,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Schema items;
+  private GoogleCloudAiplatformV1beta1Schema items;
 
   /**
    * Optional. Maximum number of the elements for Type.ARRAY.
@@ -152,7 +152,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, Schema> properties;
+  private java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> properties;
 
   /**
    * Optional. Required properties of Type.OBJECT.
@@ -187,7 +187,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. Default value of the data.
    * @param default__ default__ or {@code null} for none
    */
-  public Schema setDefault(java.lang.Object default__) {
+  public GoogleCloudAiplatformV1beta1Schema setDefault(java.lang.Object default__) {
     this.default__ = default__;
     return this;
   }
@@ -204,7 +204,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. The description of the data.
    * @param description description or {@code null} for none
    */
-  public Schema setDescription(java.lang.String description) {
+  public GoogleCloudAiplatformV1beta1Schema setDescription(java.lang.String description) {
     this.description = description;
     return this;
   }
@@ -225,7 +225,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * "WEST"]}
    * @param enum__ enum__ or {@code null} for none
    */
-  public Schema setEnum(java.util.List<java.lang.String> enum__) {
+  public GoogleCloudAiplatformV1beta1Schema setEnum(java.util.List<java.lang.String> enum__) {
     this.enum__ = enum__;
     return this;
   }
@@ -242,7 +242,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. Example of the object. Will only populated when the object is the root.
    * @param example example or {@code null} for none
    */
-  public Schema setExample(java.lang.Object example) {
+  public GoogleCloudAiplatformV1beta1Schema setExample(java.lang.Object example) {
     this.example = example;
     return this;
   }
@@ -261,7 +261,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * INTEGER type: "int32", "int64" for STRING type: "email", "byte", etc
    * @param format format or {@code null} for none
    */
-  public Schema setFormat(java.lang.String format) {
+  public GoogleCloudAiplatformV1beta1Schema setFormat(java.lang.String format) {
     this.format = format;
     return this;
   }
@@ -270,7 +270,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. SCHEMA FIELDS FOR TYPE ARRAY Schema of the elements of Type.ARRAY.
    * @return value or {@code null} for none
    */
-  public Schema getItems() {
+  public GoogleCloudAiplatformV1beta1Schema getItems() {
     return items;
   }
 
@@ -278,7 +278,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. SCHEMA FIELDS FOR TYPE ARRAY Schema of the elements of Type.ARRAY.
    * @param items items or {@code null} for none
    */
-  public Schema setItems(Schema items) {
+  public GoogleCloudAiplatformV1beta1Schema setItems(GoogleCloudAiplatformV1beta1Schema items) {
     this.items = items;
     return this;
   }
@@ -295,7 +295,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. Maximum number of the elements for Type.ARRAY.
    * @param maxItems maxItems or {@code null} for none
    */
-  public Schema setMaxItems(java.lang.Long maxItems) {
+  public GoogleCloudAiplatformV1beta1Schema setMaxItems(java.lang.Long maxItems) {
     this.maxItems = maxItems;
     return this;
   }
@@ -312,7 +312,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. Maximum length of the Type.STRING
    * @param maxLength maxLength or {@code null} for none
    */
-  public Schema setMaxLength(java.lang.Long maxLength) {
+  public GoogleCloudAiplatformV1beta1Schema setMaxLength(java.lang.Long maxLength) {
     this.maxLength = maxLength;
     return this;
   }
@@ -329,7 +329,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. Maximum number of the properties for Type.OBJECT.
    * @param maxProperties maxProperties or {@code null} for none
    */
-  public Schema setMaxProperties(java.lang.Long maxProperties) {
+  public GoogleCloudAiplatformV1beta1Schema setMaxProperties(java.lang.Long maxProperties) {
     this.maxProperties = maxProperties;
     return this;
   }
@@ -346,7 +346,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. Maximum value of the Type.INTEGER and Type.NUMBER
    * @param maximum maximum or {@code null} for none
    */
-  public Schema setMaximum(java.lang.Double maximum) {
+  public GoogleCloudAiplatformV1beta1Schema setMaximum(java.lang.Double maximum) {
     this.maximum = maximum;
     return this;
   }
@@ -363,7 +363,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. Minimum number of the elements for Type.ARRAY.
    * @param minItems minItems or {@code null} for none
    */
-  public Schema setMinItems(java.lang.Long minItems) {
+  public GoogleCloudAiplatformV1beta1Schema setMinItems(java.lang.Long minItems) {
     this.minItems = minItems;
     return this;
   }
@@ -380,7 +380,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. SCHEMA FIELDS FOR TYPE STRING Minimum length of the Type.STRING
    * @param minLength minLength or {@code null} for none
    */
-  public Schema setMinLength(java.lang.Long minLength) {
+  public GoogleCloudAiplatformV1beta1Schema setMinLength(java.lang.Long minLength) {
     this.minLength = minLength;
     return this;
   }
@@ -397,7 +397,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. Minimum number of the properties for Type.OBJECT.
    * @param minProperties minProperties or {@code null} for none
    */
-  public Schema setMinProperties(java.lang.Long minProperties) {
+  public GoogleCloudAiplatformV1beta1Schema setMinProperties(java.lang.Long minProperties) {
     this.minProperties = minProperties;
     return this;
   }
@@ -416,7 +416,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Type.NUMBER
    * @param minimum minimum or {@code null} for none
    */
-  public Schema setMinimum(java.lang.Double minimum) {
+  public GoogleCloudAiplatformV1beta1Schema setMinimum(java.lang.Double minimum) {
     this.minimum = minimum;
     return this;
   }
@@ -433,7 +433,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. Indicates if the value may be null.
    * @param nullable nullable or {@code null} for none
    */
-  public Schema setNullable(java.lang.Boolean nullable) {
+  public GoogleCloudAiplatformV1beta1Schema setNullable(java.lang.Boolean nullable) {
     this.nullable = nullable;
     return this;
   }
@@ -450,7 +450,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. Pattern of the Type.STRING to restrict a string to a regular expression.
    * @param pattern pattern or {@code null} for none
    */
-  public Schema setPattern(java.lang.String pattern) {
+  public GoogleCloudAiplatformV1beta1Schema setPattern(java.lang.String pattern) {
     this.pattern = pattern;
     return this;
   }
@@ -459,7 +459,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. SCHEMA FIELDS FOR TYPE OBJECT Properties of Type.OBJECT.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, Schema> getProperties() {
+  public java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> getProperties() {
     return properties;
   }
 
@@ -467,7 +467,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. SCHEMA FIELDS FOR TYPE OBJECT Properties of Type.OBJECT.
    * @param properties properties or {@code null} for none
    */
-  public Schema setProperties(java.util.Map<String, Schema> properties) {
+  public GoogleCloudAiplatformV1beta1Schema setProperties(java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> properties) {
     this.properties = properties;
     return this;
   }
@@ -484,7 +484,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. Required properties of Type.OBJECT.
    * @param required required or {@code null} for none
    */
-  public Schema setRequired(java.util.List<java.lang.String> required) {
+  public GoogleCloudAiplatformV1beta1Schema setRequired(java.util.List<java.lang.String> required) {
     this.required = required;
     return this;
   }
@@ -501,7 +501,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. The title of the Schema.
    * @param title title or {@code null} for none
    */
-  public Schema setTitle(java.lang.String title) {
+  public GoogleCloudAiplatformV1beta1Schema setTitle(java.lang.String title) {
     this.title = title;
     return this;
   }
@@ -518,19 +518,19 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    * Optional. The type of the data.
    * @param type type or {@code null} for none
    */
-  public Schema setType(java.lang.String type) {
+  public GoogleCloudAiplatformV1beta1Schema setType(java.lang.String type) {
     this.type = type;
     return this;
   }
 
   @Override
-  public Schema set(String fieldName, Object value) {
-    return (Schema) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1Schema set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1Schema) super.set(fieldName, value);
   }
 
   @Override
-  public Schema clone() {
-    return (Schema) super.clone();
+  public GoogleCloudAiplatformV1beta1Schema clone() {
+    return (GoogleCloudAiplatformV1beta1Schema) super.clone();
   }
 
 }

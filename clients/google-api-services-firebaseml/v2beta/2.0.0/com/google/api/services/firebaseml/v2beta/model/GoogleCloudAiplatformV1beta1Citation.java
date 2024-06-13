@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Citation extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1Citation extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. End index into the content.
@@ -83,7 +83,7 @@ public final class Citation extends com.google.api.client.json.GenericJson {
    * Output only. End index into the content.
    * @param endIndex endIndex or {@code null} for none
    */
-  public Citation setEndIndex(java.lang.Integer endIndex) {
+  public GoogleCloudAiplatformV1beta1Citation setEndIndex(java.lang.Integer endIndex) {
     this.endIndex = endIndex;
     return this;
   }
@@ -100,7 +100,7 @@ public final class Citation extends com.google.api.client.json.GenericJson {
    * Output only. License of the attribution.
    * @param license license or {@code null} for none
    */
-  public Citation setLicense(java.lang.String license) {
+  public GoogleCloudAiplatformV1beta1Citation setLicense(java.lang.String license) {
     this.license = license;
     return this;
   }
@@ -117,7 +117,7 @@ public final class Citation extends com.google.api.client.json.GenericJson {
    * Output only. Publication date of the attribution.
    * @param publicationDate publicationDate or {@code null} for none
    */
-  public Citation setPublicationDate(Date publicationDate) {
+  public GoogleCloudAiplatformV1beta1Citation setPublicationDate(Date publicationDate) {
     this.publicationDate = publicationDate;
     return this;
   }
@@ -134,7 +134,7 @@ public final class Citation extends com.google.api.client.json.GenericJson {
    * Output only. Start index into the content.
    * @param startIndex startIndex or {@code null} for none
    */
-  public Citation setStartIndex(java.lang.Integer startIndex) {
+  public GoogleCloudAiplatformV1beta1Citation setStartIndex(java.lang.Integer startIndex) {
     this.startIndex = startIndex;
     return this;
   }
@@ -151,7 +151,7 @@ public final class Citation extends com.google.api.client.json.GenericJson {
    * Output only. Title of the attribution.
    * @param title title or {@code null} for none
    */
-  public Citation setTitle(java.lang.String title) {
+  public GoogleCloudAiplatformV1beta1Citation setTitle(java.lang.String title) {
     this.title = title;
     return this;
   }
@@ -168,19 +168,19 @@ public final class Citation extends com.google.api.client.json.GenericJson {
    * Output only. Url reference of the attribution.
    * @param uri uri or {@code null} for none
    */
-  public Citation setUri(java.lang.String uri) {
+  public GoogleCloudAiplatformV1beta1Citation setUri(java.lang.String uri) {
     this.uri = uri;
     return this;
   }
 
   @Override
-  public Citation set(String fieldName, Object value) {
-    return (Citation) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1Citation set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1Citation) super.set(fieldName, value);
   }
 
   @Override
-  public Citation clone() {
-    return (Citation) super.clone();
+  public GoogleCloudAiplatformV1beta1Citation clone() {
+    return (GoogleCloudAiplatformV1beta1Citation) super.clone();
   }
 
 }

@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GroundingMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Queries executed by the retrieval tools.
@@ -41,7 +41,7 @@ public final class GroundingMetadata extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SearchEntryPoint searchEntryPoint;
+  private GoogleCloudAiplatformV1beta1SearchEntryPoint searchEntryPoint;
 
   /**
    * Optional. Web search queries for the following-up web search.
@@ -62,7 +62,7 @@ public final class GroundingMetadata extends com.google.api.client.json.GenericJ
    * Optional. Queries executed by the retrieval tools.
    * @param retrievalQueries retrievalQueries or {@code null} for none
    */
-  public GroundingMetadata setRetrievalQueries(java.util.List<java.lang.String> retrievalQueries) {
+  public GoogleCloudAiplatformV1beta1GroundingMetadata setRetrievalQueries(java.util.List<java.lang.String> retrievalQueries) {
     this.retrievalQueries = retrievalQueries;
     return this;
   }
@@ -71,7 +71,7 @@ public final class GroundingMetadata extends com.google.api.client.json.GenericJ
    * Optional. Google search entry for the following-up web searches.
    * @return value or {@code null} for none
    */
-  public SearchEntryPoint getSearchEntryPoint() {
+  public GoogleCloudAiplatformV1beta1SearchEntryPoint getSearchEntryPoint() {
     return searchEntryPoint;
   }
 
@@ -79,7 +79,7 @@ public final class GroundingMetadata extends com.google.api.client.json.GenericJ
    * Optional. Google search entry for the following-up web searches.
    * @param searchEntryPoint searchEntryPoint or {@code null} for none
    */
-  public GroundingMetadata setSearchEntryPoint(SearchEntryPoint searchEntryPoint) {
+  public GoogleCloudAiplatformV1beta1GroundingMetadata setSearchEntryPoint(GoogleCloudAiplatformV1beta1SearchEntryPoint searchEntryPoint) {
     this.searchEntryPoint = searchEntryPoint;
     return this;
   }
@@ -96,19 +96,19 @@ public final class GroundingMetadata extends com.google.api.client.json.GenericJ
    * Optional. Web search queries for the following-up web search.
    * @param webSearchQueries webSearchQueries or {@code null} for none
    */
-  public GroundingMetadata setWebSearchQueries(java.util.List<java.lang.String> webSearchQueries) {
+  public GoogleCloudAiplatformV1beta1GroundingMetadata setWebSearchQueries(java.util.List<java.lang.String> webSearchQueries) {
     this.webSearchQueries = webSearchQueries;
     return this;
   }
 
   @Override
-  public GroundingMetadata set(String fieldName, Object value) {
-    return (GroundingMetadata) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1GroundingMetadata set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1GroundingMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GroundingMetadata clone() {
-    return (GroundingMetadata) super.clone();
+  public GoogleCloudAiplatformV1beta1GroundingMetadata clone() {
+    return (GoogleCloudAiplatformV1beta1GroundingMetadata) super.clone();
   }
 
 }

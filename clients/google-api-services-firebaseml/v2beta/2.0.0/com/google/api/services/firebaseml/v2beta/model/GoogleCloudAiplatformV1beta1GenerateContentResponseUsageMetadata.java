@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class UsageMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * Number of tokens in the response(s).
@@ -61,7 +61,7 @@ public final class UsageMetadata extends com.google.api.client.json.GenericJson 
    * Number of tokens in the response(s).
    * @param candidatesTokenCount candidatesTokenCount or {@code null} for none
    */
-  public UsageMetadata setCandidatesTokenCount(java.lang.Integer candidatesTokenCount) {
+  public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata setCandidatesTokenCount(java.lang.Integer candidatesTokenCount) {
     this.candidatesTokenCount = candidatesTokenCount;
     return this;
   }
@@ -78,7 +78,7 @@ public final class UsageMetadata extends com.google.api.client.json.GenericJson 
    * Number of tokens in the request.
    * @param promptTokenCount promptTokenCount or {@code null} for none
    */
-  public UsageMetadata setPromptTokenCount(java.lang.Integer promptTokenCount) {
+  public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata setPromptTokenCount(java.lang.Integer promptTokenCount) {
     this.promptTokenCount = promptTokenCount;
     return this;
   }
@@ -93,19 +93,19 @@ public final class UsageMetadata extends com.google.api.client.json.GenericJson 
   /**
    * @param totalTokenCount totalTokenCount or {@code null} for none
    */
-  public UsageMetadata setTotalTokenCount(java.lang.Integer totalTokenCount) {
+  public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata setTotalTokenCount(java.lang.Integer totalTokenCount) {
     this.totalTokenCount = totalTokenCount;
     return this;
   }
 
   @Override
-  public UsageMetadata set(String fieldName, Object value) {
-    return (UsageMetadata) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public UsageMetadata clone() {
-    return (UsageMetadata) super.clone();
+  public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata clone() {
+    return (GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata) super.clone();
   }
 
 }

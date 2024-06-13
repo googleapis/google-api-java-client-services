@@ -27,7 +27,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GenerateContentRequest extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The name of the cached content used as context to serve the prediction. Note: only
@@ -46,12 +46,12 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Content> contents;
+  private java.util.List<GoogleCloudAiplatformV1beta1Content> contents;
 
   static {
-    // hack to force ProGuard to consider Content used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1Content used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Content.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1Content.class);
   }
 
   /**
@@ -59,7 +59,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenerationConfig generationConfig;
+  private GoogleCloudAiplatformV1beta1GenerationConfig generationConfig;
 
   /**
    * Optional. Per request settings for blocking unsafe content. Enforced on
@@ -67,7 +67,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SafetySetting> safetySettings;
+  private java.util.List<GoogleCloudAiplatformV1beta1SafetySetting> safetySettings;
 
   /**
    * Optional. The user provided system instructions for the model. Note: only text should be used
@@ -75,14 +75,14 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Content systemInstruction;
+  private GoogleCloudAiplatformV1beta1Content systemInstruction;
 
   /**
    * Optional. Tool config. This config is shared for all tools provided in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ToolConfig toolConfig;
+  private GoogleCloudAiplatformV1beta1ToolConfig toolConfig;
 
   /**
    * Optional. A list of `Tools` the model may use to generate the next response. A `Tool` is a
@@ -91,7 +91,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Tool> tools;
+  private java.util.List<GoogleCloudAiplatformV1beta1Tool> tools;
 
   /**
    * Optional. The name of the cached content used as context to serve the prediction. Note: only
@@ -111,7 +111,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * `projects/{project}/locations/{location}/cachedContents/{cachedContent}`
    * @param cachedContent cachedContent or {@code null} for none
    */
-  public GenerateContentRequest setCachedContent(java.lang.String cachedContent) {
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest setCachedContent(java.lang.String cachedContent) {
     this.cachedContent = cachedContent;
     return this;
   }
@@ -122,7 +122,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * conversation history + latest request.
    * @return value or {@code null} for none
    */
-  public java.util.List<Content> getContents() {
+  public java.util.List<GoogleCloudAiplatformV1beta1Content> getContents() {
     return contents;
   }
 
@@ -132,7 +132,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * conversation history + latest request.
    * @param contents contents or {@code null} for none
    */
-  public GenerateContentRequest setContents(java.util.List<Content> contents) {
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest setContents(java.util.List<GoogleCloudAiplatformV1beta1Content> contents) {
     this.contents = contents;
     return this;
   }
@@ -141,7 +141,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * Optional. Generation config.
    * @return value or {@code null} for none
    */
-  public GenerationConfig getGenerationConfig() {
+  public GoogleCloudAiplatformV1beta1GenerationConfig getGenerationConfig() {
     return generationConfig;
   }
 
@@ -149,7 +149,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * Optional. Generation config.
    * @param generationConfig generationConfig or {@code null} for none
    */
-  public GenerateContentRequest setGenerationConfig(GenerationConfig generationConfig) {
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest setGenerationConfig(GoogleCloudAiplatformV1beta1GenerationConfig generationConfig) {
     this.generationConfig = generationConfig;
     return this;
   }
@@ -159,7 +159,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * GenerateContentResponse.candidates.
    * @return value or {@code null} for none
    */
-  public java.util.List<SafetySetting> getSafetySettings() {
+  public java.util.List<GoogleCloudAiplatformV1beta1SafetySetting> getSafetySettings() {
     return safetySettings;
   }
 
@@ -168,7 +168,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * GenerateContentResponse.candidates.
    * @param safetySettings safetySettings or {@code null} for none
    */
-  public GenerateContentRequest setSafetySettings(java.util.List<SafetySetting> safetySettings) {
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest setSafetySettings(java.util.List<GoogleCloudAiplatformV1beta1SafetySetting> safetySettings) {
     this.safetySettings = safetySettings;
     return this;
   }
@@ -178,7 +178,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * in parts and content in each part will be in a separate paragraph.
    * @return value or {@code null} for none
    */
-  public Content getSystemInstruction() {
+  public GoogleCloudAiplatformV1beta1Content getSystemInstruction() {
     return systemInstruction;
   }
 
@@ -187,7 +187,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * in parts and content in each part will be in a separate paragraph.
    * @param systemInstruction systemInstruction or {@code null} for none
    */
-  public GenerateContentRequest setSystemInstruction(Content systemInstruction) {
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest setSystemInstruction(GoogleCloudAiplatformV1beta1Content systemInstruction) {
     this.systemInstruction = systemInstruction;
     return this;
   }
@@ -196,7 +196,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * Optional. Tool config. This config is shared for all tools provided in the request.
    * @return value or {@code null} for none
    */
-  public ToolConfig getToolConfig() {
+  public GoogleCloudAiplatformV1beta1ToolConfig getToolConfig() {
     return toolConfig;
   }
 
@@ -204,7 +204,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * Optional. Tool config. This config is shared for all tools provided in the request.
    * @param toolConfig toolConfig or {@code null} for none
    */
-  public GenerateContentRequest setToolConfig(ToolConfig toolConfig) {
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest setToolConfig(GoogleCloudAiplatformV1beta1ToolConfig toolConfig) {
     this.toolConfig = toolConfig;
     return this;
   }
@@ -215,7 +215,7 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * or set of actions, outside of knowledge and scope of the model.
    * @return value or {@code null} for none
    */
-  public java.util.List<Tool> getTools() {
+  public java.util.List<GoogleCloudAiplatformV1beta1Tool> getTools() {
     return tools;
   }
 
@@ -225,19 +225,19 @@ public final class GenerateContentRequest extends com.google.api.client.json.Gen
    * or set of actions, outside of knowledge and scope of the model.
    * @param tools tools or {@code null} for none
    */
-  public GenerateContentRequest setTools(java.util.List<Tool> tools) {
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest setTools(java.util.List<GoogleCloudAiplatformV1beta1Tool> tools) {
     this.tools = tools;
     return this;
   }
 
   @Override
-  public GenerateContentRequest set(String fieldName, Object value) {
-    return (GenerateContentRequest) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1GenerateContentRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GenerateContentRequest clone() {
-    return (GenerateContentRequest) super.clone();
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest clone() {
+    return (GoogleCloudAiplatformV1beta1GenerateContentRequest) super.clone();
   }
 
 }

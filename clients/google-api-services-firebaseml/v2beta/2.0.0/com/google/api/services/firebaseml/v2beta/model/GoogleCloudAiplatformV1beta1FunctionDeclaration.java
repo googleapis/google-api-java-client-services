@@ -30,7 +30,7 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FunctionDeclaration extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1FunctionDeclaration extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Description and purpose of the function. Model uses it to decide how and whether to
@@ -59,7 +59,7 @@ public final class FunctionDeclaration extends com.google.api.client.json.Generi
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Schema parameters;
+  private GoogleCloudAiplatformV1beta1Schema parameters;
 
   /**
    * Optional. Describes the output from this function in JSON Schema format. Reflects the Open API
@@ -67,7 +67,7 @@ public final class FunctionDeclaration extends com.google.api.client.json.Generi
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Schema response;
+  private GoogleCloudAiplatformV1beta1Schema response;
 
   /**
    * Optional. Description and purpose of the function. Model uses it to decide how and whether to
@@ -83,7 +83,7 @@ public final class FunctionDeclaration extends com.google.api.client.json.Generi
    * call the function.
    * @param description description or {@code null} for none
    */
-  public FunctionDeclaration setDescription(java.lang.String description) {
+  public GoogleCloudAiplatformV1beta1FunctionDeclaration setDescription(java.lang.String description) {
     this.description = description;
     return this;
   }
@@ -102,7 +102,7 @@ public final class FunctionDeclaration extends com.google.api.client.json.Generi
    * a-z, A-Z, 0-9, or contain underscores, dots and dashes, with a maximum length of 64.
    * @param name name or {@code null} for none
    */
-  public FunctionDeclaration setName(java.lang.String name) {
+  public GoogleCloudAiplatformV1beta1FunctionDeclaration setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -117,7 +117,7 @@ public final class FunctionDeclaration extends com.google.api.client.json.Generi
    * STRING param2: type: INTEGER required: - param1
    * @return value or {@code null} for none
    */
-  public Schema getParameters() {
+  public GoogleCloudAiplatformV1beta1Schema getParameters() {
     return parameters;
   }
 
@@ -131,7 +131,7 @@ public final class FunctionDeclaration extends com.google.api.client.json.Generi
    * STRING param2: type: INTEGER required: - param1
    * @param parameters parameters or {@code null} for none
    */
-  public FunctionDeclaration setParameters(Schema parameters) {
+  public GoogleCloudAiplatformV1beta1FunctionDeclaration setParameters(GoogleCloudAiplatformV1beta1Schema parameters) {
     this.parameters = parameters;
     return this;
   }
@@ -141,7 +141,7 @@ public final class FunctionDeclaration extends com.google.api.client.json.Generi
    * 3.03 Response Object. The Schema defines the type used for the response value of the function.
    * @return value or {@code null} for none
    */
-  public Schema getResponse() {
+  public GoogleCloudAiplatformV1beta1Schema getResponse() {
     return response;
   }
 
@@ -150,19 +150,19 @@ public final class FunctionDeclaration extends com.google.api.client.json.Generi
    * 3.03 Response Object. The Schema defines the type used for the response value of the function.
    * @param response response or {@code null} for none
    */
-  public FunctionDeclaration setResponse(Schema response) {
+  public GoogleCloudAiplatformV1beta1FunctionDeclaration setResponse(GoogleCloudAiplatformV1beta1Schema response) {
     this.response = response;
     return this;
   }
 
   @Override
-  public FunctionDeclaration set(String fieldName, Object value) {
-    return (FunctionDeclaration) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1FunctionDeclaration set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1FunctionDeclaration) super.set(fieldName, value);
   }
 
   @Override
-  public FunctionDeclaration clone() {
-    return (FunctionDeclaration) super.clone();
+  public GoogleCloudAiplatformV1beta1FunctionDeclaration clone() {
+    return (GoogleCloudAiplatformV1beta1FunctionDeclaration) super.clone();
   }
 
 }

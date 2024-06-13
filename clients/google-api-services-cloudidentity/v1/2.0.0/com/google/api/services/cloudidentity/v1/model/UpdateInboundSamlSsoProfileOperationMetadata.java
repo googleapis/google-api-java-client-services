@@ -29,6 +29,36 @@ package com.google.api.services.cloudidentity.v1.model;
 @SuppressWarnings("javadoc")
 public final class UpdateInboundSamlSsoProfileOperationMetadata extends com.google.api.client.json.GenericJson {
 
+  /**
+   * State of this Operation Will be "awaiting-multi-party-approval" when the operation is deferred
+   * due to the target customer having enabled [Multi-party approval for sensitive
+   * actions](https://support.google.com/a/answer/13790448).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
+   * State of this Operation Will be "awaiting-multi-party-approval" when the operation is deferred
+   * due to the target customer having enabled [Multi-party approval for sensitive
+   * actions](https://support.google.com/a/answer/13790448).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * State of this Operation Will be "awaiting-multi-party-approval" when the operation is deferred
+   * due to the target customer having enabled [Multi-party approval for sensitive
+   * actions](https://support.google.com/a/answer/13790448).
+   * @param state state or {@code null} for none
+   */
+  public UpdateInboundSamlSsoProfileOperationMetadata setState(java.lang.String state) {
+    this.state = state;
+    return this;
+  }
+
   @Override
   public UpdateInboundSamlSsoProfileOperationMetadata set(String fieldName, Object value) {
     return (UpdateInboundSamlSsoProfileOperationMetadata) super.set(fieldName, value);

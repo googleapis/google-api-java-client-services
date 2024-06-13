@@ -45,7 +45,7 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
   private java.lang.String description;
 
   /**
-   * Resource name for the `ServicePerimeter`. Format:
+   * Identifier. Resource name for the `ServicePerimeter`. Format:
    * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The `service_perimeter`
    * component must begin with a letter, followed by alphanumeric characters or `_`. After you
    * create a `ServicePerimeter`, you cannot change its `name`.
@@ -120,7 +120,7 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Resource name for the `ServicePerimeter`. Format:
+   * Identifier. Resource name for the `ServicePerimeter`. Format:
    * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The `service_perimeter`
    * component must begin with a letter, followed by alphanumeric characters or `_`. After you
    * create a `ServicePerimeter`, you cannot change its `name`.
@@ -131,7 +131,7 @@ public final class ServicePerimeter extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Resource name for the `ServicePerimeter`. Format:
+   * Identifier. Resource name for the `ServicePerimeter`. Format:
    * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The `service_perimeter`
    * component must begin with a letter, followed by alphanumeric characters or `_`. After you
    * create a `ServicePerimeter`, you cannot change its `name`.

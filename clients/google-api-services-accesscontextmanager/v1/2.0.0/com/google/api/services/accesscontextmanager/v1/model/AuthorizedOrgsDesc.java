@@ -62,7 +62,7 @@ public final class AuthorizedOrgsDesc extends com.google.api.client.json.Generic
   private java.lang.String authorizationType;
 
   /**
-   * Resource name for the `AuthorizedOrgsDesc`. Format:
+   * Identifier. Resource name for the `AuthorizedOrgsDesc`. Format:
    * `accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}`. The
    * `authorized_orgs_desc` component must begin with a letter, followed by alphanumeric characters
    * or `_`. After you create an `AuthorizedOrgsDesc`, you cannot change its `name`.
@@ -151,7 +151,7 @@ public final class AuthorizedOrgsDesc extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource name for the `AuthorizedOrgsDesc`. Format:
+   * Identifier. Resource name for the `AuthorizedOrgsDesc`. Format:
    * `accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}`. The
    * `authorized_orgs_desc` component must begin with a letter, followed by alphanumeric characters
    * or `_`. After you create an `AuthorizedOrgsDesc`, you cannot change its `name`.
@@ -162,7 +162,7 @@ public final class AuthorizedOrgsDesc extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource name for the `AuthorizedOrgsDesc`. Format:
+   * Identifier. Resource name for the `AuthorizedOrgsDesc`. Format:
    * `accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}`. The
    * `authorized_orgs_desc` component must begin with a letter, followed by alphanumeric characters
    * or `_`. After you create an `AuthorizedOrgsDesc`, you cannot change its `name`.

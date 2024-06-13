@@ -861,7 +861,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the accesscontextmanager server.  After setting any
      * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`
+     * @param name Output only. Identifier. Resource name of the `AccessPolicy`. Format:
+     *        `accessPolicies/{access_policy}`
      * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.AccessPolicy}
      * @return the request
      */
@@ -890,7 +891,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`
+       * @param name Output only. Identifier. Resource name of the `AccessPolicy`. Format:
+     *        `accessPolicies/{access_policy}`
        * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.AccessPolicy}
        * @since 1.13
        */
@@ -960,19 +962,22 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`
+       * Output only. Identifier. Resource name of the `AccessPolicy`. Format:
+       * `accessPolicies/{access_policy}`
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`
+      /** Output only. Identifier. Resource name of the `AccessPolicy`. Format:
+     `accessPolicies/{access_policy}`
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{access_policy}`
+       * Output only. Identifier. Resource name of the `AccessPolicy`. Format:
+       * `accessPolicies/{access_policy}`
        */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -2011,7 +2016,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name for the `AccessLevel`. Format:
+       * @param name Identifier. Resource name for the `AccessLevel`. Format:
        *        `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level` component
        *        must begin with a letter, followed by alphanumeric characters or `_`. Its maximum length
        *        is 50 characters. After you create an `AccessLevel`, you cannot change its `name`.
@@ -2044,7 +2049,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name for the `AccessLevel`. Format:
+         * @param name Identifier. Resource name for the `AccessLevel`. Format:
        *        `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level` component
        *        must begin with a letter, followed by alphanumeric characters or `_`. Its maximum length
        *        is 50 characters. After you create an `AccessLevel`, you cannot change its `name`.
@@ -2117,7 +2122,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Resource name for the `AccessLevel`. Format:
+         * Identifier. Resource name for the `AccessLevel`. Format:
          * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level`
          * component must begin with a letter, followed by alphanumeric characters or `_`. Its
          * maximum length is 50 characters. After you create an `AccessLevel`, you cannot change its
@@ -2126,7 +2131,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name for the `AccessLevel`. Format:
+        /** Identifier. Resource name for the `AccessLevel`. Format:
        `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level` component must
        begin with a letter, followed by alphanumeric characters or `_`. Its maximum length is 50
        characters. After you create an `AccessLevel`, you cannot change its `name`.
@@ -2136,7 +2141,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Resource name for the `AccessLevel`. Format:
+         * Identifier. Resource name for the `AccessLevel`. Format:
          * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The `access_level`
          * component must begin with a letter, followed by alphanumeric characters or `_`. Its
          * maximum length is 50 characters. After you create an `AccessLevel`, you cannot change its
@@ -3131,7 +3136,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name for the `AuthorizedOrgsDesc`. Format:
+       * @param name Identifier. Resource name for the `AuthorizedOrgsDesc`. Format:
        *        `accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}`. The
        *        `authorized_orgs_desc` component must begin with a letter, followed by alphanumeric
        *        characters or `_`. After you create an `AuthorizedOrgsDesc`, you cannot change its `name`.
@@ -3166,7 +3171,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name for the `AuthorizedOrgsDesc`. Format:
+         * @param name Identifier. Resource name for the `AuthorizedOrgsDesc`. Format:
        *        `accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}`. The
        *        `authorized_orgs_desc` component must begin with a letter, followed by alphanumeric
        *        characters or `_`. After you create an `AuthorizedOrgsDesc`, you cannot change its `name`.
@@ -3239,7 +3244,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Resource name for the `AuthorizedOrgsDesc`. Format:
+         * Identifier. Resource name for the `AuthorizedOrgsDesc`. Format:
          * `accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}`. The
          * `authorized_orgs_desc` component must begin with a letter, followed by alphanumeric
          * characters or `_`. After you create an `AuthorizedOrgsDesc`, you cannot change its
@@ -3248,7 +3253,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name for the `AuthorizedOrgsDesc`. Format:
+        /** Identifier. Resource name for the `AuthorizedOrgsDesc`. Format:
        `accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}`. The
        `authorized_orgs_desc` component must begin with a letter, followed by alphanumeric characters or
        `_`. After you create an `AuthorizedOrgsDesc`, you cannot change its `name`.
@@ -3258,7 +3263,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Resource name for the `AuthorizedOrgsDesc`. Format:
+         * Identifier. Resource name for the `AuthorizedOrgsDesc`. Format:
          * `accessPolicies/{access_policy}/authorizedOrgsDescs/{authorized_orgs_desc}`. The
          * `authorized_orgs_desc` component must begin with a letter, followed by alphanumeric
          * characters or `_`. After you create an `AuthorizedOrgsDesc`, you cannot change its
@@ -4102,7 +4107,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name for the `ServicePerimeter`. Format:
+       * @param name Identifier. Resource name for the `ServicePerimeter`. Format:
        *        `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The
        *        `service_perimeter` component must begin with a letter, followed by alphanumeric
        *        characters or `_`. After you create a `ServicePerimeter`, you cannot change its `name`.
@@ -4135,7 +4140,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name for the `ServicePerimeter`. Format:
+         * @param name Identifier. Resource name for the `ServicePerimeter`. Format:
        *        `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The
        *        `service_perimeter` component must begin with a letter, followed by alphanumeric
        *        characters or `_`. After you create a `ServicePerimeter`, you cannot change its `name`.
@@ -4208,7 +4213,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Resource name for the `ServicePerimeter`. Format:
+         * Identifier. Resource name for the `ServicePerimeter`. Format:
          * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The
          * `service_perimeter` component must begin with a letter, followed by alphanumeric
          * characters or `_`. After you create a `ServicePerimeter`, you cannot change its `name`.
@@ -4216,7 +4221,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name for the `ServicePerimeter`. Format:
+        /** Identifier. Resource name for the `ServicePerimeter`. Format:
        `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The `service_perimeter`
        component must begin with a letter, followed by alphanumeric characters or `_`. After you create a
        `ServicePerimeter`, you cannot change its `name`.
@@ -4226,7 +4231,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Resource name for the `ServicePerimeter`. Format:
+         * Identifier. Resource name for the `ServicePerimeter`. Format:
          * `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`. The
          * `service_perimeter` component must begin with a letter, followed by alphanumeric
          * characters or `_`. After you create a `ServicePerimeter`, you cannot change its `name`.

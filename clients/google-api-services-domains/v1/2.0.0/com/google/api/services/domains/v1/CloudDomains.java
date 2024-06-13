@@ -3272,6 +3272,196 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Lists the DNS records from the Google Domains DNS zone for domains that use the deprecated
+         * `google_domains_dns` in the `Registration`'s `dns_settings`.
+         *
+         * Create a request for the method "registrations.retrieveGoogleDomainsDnsRecords".
+         *
+         * This request holds the parameters needed by the domains server.  After setting any optional
+         * parameters, call the {@link RetrieveGoogleDomainsDnsRecords#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param registration Required. The name of the `Registration` whose Google Domains DNS records details you are
+         *        retrieving, in the format `projects/locations/registrations`.
+         * @return the request
+         */
+        public RetrieveGoogleDomainsDnsRecords retrieveGoogleDomainsDnsRecords(java.lang.String registration) throws java.io.IOException {
+          RetrieveGoogleDomainsDnsRecords result = new RetrieveGoogleDomainsDnsRecords(registration);
+          initialize(result);
+          return result;
+        }
+
+        public class RetrieveGoogleDomainsDnsRecords extends CloudDomainsRequest<com.google.api.services.domains.v1.model.RetrieveGoogleDomainsDnsRecordsResponse> {
+
+          private static final String REST_PATH = "v1/{+registration}:retrieveGoogleDomainsDnsRecords";
+
+          private final java.util.regex.Pattern REGISTRATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+
+          /**
+           * Lists the DNS records from the Google Domains DNS zone for domains that use the deprecated
+           * `google_domains_dns` in the `Registration`'s `dns_settings`.
+           *
+           * Create a request for the method "registrations.retrieveGoogleDomainsDnsRecords".
+           *
+           * This request holds the parameters needed by the the domains server.  After setting any optional
+           * parameters, call the {@link RetrieveGoogleDomainsDnsRecords#execute()} method to invoke the
+           * remote operation. <p> {@link RetrieveGoogleDomainsDnsRecords#initialize(com.google.api.client.g
+           * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param registration Required. The name of the `Registration` whose Google Domains DNS records details you are
+         *        retrieving, in the format `projects/locations/registrations`.
+           * @since 1.13
+           */
+          protected RetrieveGoogleDomainsDnsRecords(java.lang.String registration) {
+            super(CloudDomains.this, "GET", REST_PATH, null, com.google.api.services.domains.v1.model.RetrieveGoogleDomainsDnsRecordsResponse.class);
+            this.registration = com.google.api.client.util.Preconditions.checkNotNull(registration, "Required parameter registration must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGISTRATION_PATTERN.matcher(registration).matches(),
+                  "Parameter registration must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords set$Xgafv(java.lang.String $Xgafv) {
+            return (RetrieveGoogleDomainsDnsRecords) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setAccessToken(java.lang.String accessToken) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setAlt(java.lang.String alt) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setAlt(alt);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setCallback(java.lang.String callback) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setCallback(callback);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setFields(java.lang.String fields) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setFields(fields);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setKey(java.lang.String key) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setKey(key);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setOauthToken(java.lang.String oauthToken) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setQuotaUser(java.lang.String quotaUser) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setUploadType(java.lang.String uploadType) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the `Registration` whose Google Domains DNS records details you
+           * are retrieving, in the format `projects/locations/registrations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String registration;
+
+          /** Required. The name of the `Registration` whose Google Domains DNS records details you are
+         retrieving, in the format `projects/locations/registrations`.
+           */
+          public java.lang.String getRegistration() {
+            return registration;
+          }
+
+          /**
+           * Required. The name of the `Registration` whose Google Domains DNS records details you
+           * are retrieving, in the format `projects/locations/registrations`.
+           */
+          public RetrieveGoogleDomainsDnsRecords setRegistration(java.lang.String registration) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGISTRATION_PATTERN.matcher(registration).matches(),
+                  "Parameter registration must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+            }
+            this.registration = registration;
+            return this;
+          }
+
+          /** Optional. Maximum number of results to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of results to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Maximum number of results to return. */
+          public RetrieveGoogleDomainsDnsRecords setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. When set to the `next_page_token` from a prior response, provides the next
+           * page of results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. When set to the `next_page_token` from a prior response, provides the next page of
+         results.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. When set to the `next_page_token` from a prior response, provides the next
+           * page of results.
+           */
+          public RetrieveGoogleDomainsDnsRecords setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords set(String parameterName, Object value) {
+            return (RetrieveGoogleDomainsDnsRecords) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists the deprecated domain and email forwarding configurations you set up in the deprecated
          * Google Domains UI. The configuration is present only for domains with the
          * `google_domains_redirects_data_available` set to `true` in the `Registration`'s `dns_settings`. A

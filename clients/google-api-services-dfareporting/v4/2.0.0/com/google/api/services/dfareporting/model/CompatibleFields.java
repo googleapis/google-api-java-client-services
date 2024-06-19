@@ -52,20 +52,6 @@ public final class CompatibleFields extends com.google.api.client.json.GenericJs
   private java.lang.String kind;
 
   /**
-   * Contains items that are compatible to be selected for a report of type "PATH_ATTRIBUTION".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PathReportCompatibleFields pathAttributionReportCompatibleFields;
-
-  /**
-   * Contains items that are compatible to be selected for a report of type "PATH".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PathReportCompatibleFields pathReportCompatibleFields;
-
-  /**
    * Contains items that are compatible to be selected for a report of type "PATH_TO_CONVERSION".
    * The value may be {@code null}.
    */
@@ -134,40 +120,6 @@ public final class CompatibleFields extends com.google.api.client.json.GenericJs
    */
   public CompatibleFields setKind(java.lang.String kind) {
     this.kind = kind;
-    return this;
-  }
-
-  /**
-   * Contains items that are compatible to be selected for a report of type "PATH_ATTRIBUTION".
-   * @return value or {@code null} for none
-   */
-  public PathReportCompatibleFields getPathAttributionReportCompatibleFields() {
-    return pathAttributionReportCompatibleFields;
-  }
-
-  /**
-   * Contains items that are compatible to be selected for a report of type "PATH_ATTRIBUTION".
-   * @param pathAttributionReportCompatibleFields pathAttributionReportCompatibleFields or {@code null} for none
-   */
-  public CompatibleFields setPathAttributionReportCompatibleFields(PathReportCompatibleFields pathAttributionReportCompatibleFields) {
-    this.pathAttributionReportCompatibleFields = pathAttributionReportCompatibleFields;
-    return this;
-  }
-
-  /**
-   * Contains items that are compatible to be selected for a report of type "PATH".
-   * @return value or {@code null} for none
-   */
-  public PathReportCompatibleFields getPathReportCompatibleFields() {
-    return pathReportCompatibleFields;
-  }
-
-  /**
-   * Contains items that are compatible to be selected for a report of type "PATH".
-   * @param pathReportCompatibleFields pathReportCompatibleFields or {@code null} for none
-   */
-  public CompatibleFields setPathReportCompatibleFields(PathReportCompatibleFields pathReportCompatibleFields) {
-    this.pathReportCompatibleFields = pathReportCompatibleFields;
     return this;
   }
 

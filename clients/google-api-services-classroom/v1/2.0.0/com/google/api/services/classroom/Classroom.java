@@ -2053,6 +2053,246 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
+       * Gets metadata for Classroom add-ons in the context of a specific post. To maintain the integrity
+       * of its own data and permissions model, an add-on should call this to validate query parameters
+       * and the requesting user's role whenever the add-on is opened in an
+       * [iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/iframes-overview).
+       * This method returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+       * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified resources
+       * does not exist.
+       *
+       * Create a request for the method "announcements.getAddOnContext".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link GetAddOnContext#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Required. Identifier of the course.
+       * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+       *        attached. This field is required, but is not marked as such while we are migrating from
+       *        post_id.
+       * @return the request
+       */
+      public GetAddOnContext getAddOnContext(java.lang.String courseId, java.lang.String itemId) throws java.io.IOException {
+        GetAddOnContext result = new GetAddOnContext(courseId, itemId);
+        initialize(result);
+        return result;
+      }
+
+      public class GetAddOnContext extends ClassroomRequest<com.google.api.services.classroom.model.AddOnContext> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/announcements/{itemId}/addOnContext";
+
+        /**
+         * Gets metadata for Classroom add-ons in the context of a specific post. To maintain the
+         * integrity of its own data and permissions model, an add-on should call this to validate query
+         * parameters and the requesting user's role whenever the add-on is opened in an
+         * [iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/iframes-overview).
+         * This method returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+         * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+         * resources does not exist.
+         *
+         * Create a request for the method "announcements.getAddOnContext".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link GetAddOnContext#execute()} method to invoke the remote
+         * operation. <p> {@link GetAddOnContext#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+       *        attached. This field is required, but is not marked as such while we are migrating from
+       *        post_id.
+         * @since 1.13
+         */
+        protected GetAddOnContext(java.lang.String courseId, java.lang.String itemId) {
+          super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.AddOnContext.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+          this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetAddOnContext set$Xgafv(java.lang.String $Xgafv) {
+          return (GetAddOnContext) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetAddOnContext setAccessToken(java.lang.String accessToken) {
+          return (GetAddOnContext) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetAddOnContext setAlt(java.lang.String alt) {
+          return (GetAddOnContext) super.setAlt(alt);
+        }
+
+        @Override
+        public GetAddOnContext setCallback(java.lang.String callback) {
+          return (GetAddOnContext) super.setCallback(callback);
+        }
+
+        @Override
+        public GetAddOnContext setFields(java.lang.String fields) {
+          return (GetAddOnContext) super.setFields(fields);
+        }
+
+        @Override
+        public GetAddOnContext setKey(java.lang.String key) {
+          return (GetAddOnContext) super.setKey(key);
+        }
+
+        @Override
+        public GetAddOnContext setOauthToken(java.lang.String oauthToken) {
+          return (GetAddOnContext) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetAddOnContext setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetAddOnContext) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetAddOnContext setQuotaUser(java.lang.String quotaUser) {
+          return (GetAddOnContext) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetAddOnContext setUploadType(java.lang.String uploadType) {
+          return (GetAddOnContext) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetAddOnContext setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetAddOnContext) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Identifier of the course. */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Required. Identifier of the course.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /** Required. Identifier of the course. */
+        public GetAddOnContext setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /**
+         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * attachment is attached. This field is required, but is not marked as such while we are
+         * migrating from post_id.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String itemId;
+
+        /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+       attached. This field is required, but is not marked as such while we are migrating from post_id.
+         */
+        public java.lang.String getItemId() {
+          return itemId;
+        }
+
+        /**
+         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * attachment is attached. This field is required, but is not marked as such while we are
+         * migrating from post_id.
+         */
+        public GetAddOnContext setItemId(java.lang.String itemId) {
+          this.itemId = itemId;
+          return this;
+        }
+
+        /**
+         * Optional. Token that authorizes the request. The token is passed as a query parameter
+         * when the user is redirected from Classroom to the add-on's URL. The authorization token
+         * is required when neither of the following is true: * The add-on has attachments on the
+         * post. * The developer project issuing the request is the same project that created the
+         * post.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String addOnToken;
+
+        /** Optional. Token that authorizes the request. The token is passed as a query parameter when the user
+       is redirected from Classroom to the add-on's URL. The authorization token is required when neither
+       of the following is true: * The add-on has attachments on the post. * The developer project issuing
+       the request is the same project that created the post.
+         */
+        public java.lang.String getAddOnToken() {
+          return addOnToken;
+        }
+
+        /**
+         * Optional. Token that authorizes the request. The token is passed as a query parameter
+         * when the user is redirected from Classroom to the add-on's URL. The authorization token
+         * is required when neither of the following is true: * The add-on has attachments on the
+         * post. * The developer project issuing the request is the same project that created the
+         * post.
+         */
+        public GetAddOnContext setAddOnToken(java.lang.String addOnToken) {
+          this.addOnToken = addOnToken;
+          return this;
+        }
+
+        /**
+         * Optional. The identifier of the attachment. This field is required for student users and
+         * optional for teacher users. If not provided in the student case, an error is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String attachmentId;
+
+        /** Optional. The identifier of the attachment. This field is required for student users and optional
+       for teacher users. If not provided in the student case, an error is returned.
+         */
+        public java.lang.String getAttachmentId() {
+          return attachmentId;
+        }
+
+        /**
+         * Optional. The identifier of the attachment. This field is required for student users and
+         * optional for teacher users. If not provided in the student case, an error is returned.
+         */
+        public GetAddOnContext setAttachmentId(java.lang.String attachmentId) {
+          this.attachmentId = attachmentId;
+          return this;
+        }
+
+        /** Optional. Deprecated, use item_id instead. */
+        @com.google.api.client.util.Key
+        private java.lang.String postId;
+
+        /** Optional. Deprecated, use item_id instead.
+         */
+        public java.lang.String getPostId() {
+          return postId;
+        }
+
+        /** Optional. Deprecated, use item_id instead. */
+        public GetAddOnContext setPostId(java.lang.String postId) {
+          this.postId = postId;
+          return this;
+        }
+
+        @Override
+        public GetAddOnContext set(String parameterName, Object value) {
+          return (GetAddOnContext) super.set(parameterName, value);
+        }
+      }
+      /**
        * Returns a list of announcements that the requester is permitted to view. Course students may only
        * view `PUBLISHED` announcements. Course teachers and domain administrators may view all
        * announcements. This method returns the following error codes: * `PERMISSION_DENIED` if the
@@ -2643,6 +2883,1076 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
 
+      /**
+       * An accessor for creating requests from the AddOnAttachments collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Classroom classroom = new Classroom(...);}
+       *   {@code Classroom.AddOnAttachments.List request = classroom.addOnAttachments().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AddOnAttachments addOnAttachments() {
+        return new AddOnAttachments();
+      }
+
+      /**
+       * The "addOnAttachments" collection of methods.
+       */
+      public class AddOnAttachments {
+
+        /**
+         * Creates an add-on attachment under a post. Requires the add-on to have permission to create new
+         * attachments on the post. This method returns the following error codes: * `PERMISSION_DENIED` for
+         * access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+         * identified resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.create".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+         *        attachment. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+         * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+         * @return the request
+         */
+        public Create create(java.lang.String courseId, java.lang.String itemId, com.google.api.services.classroom.model.AddOnAttachment content) throws java.io.IOException {
+          Create result = new Create(courseId, itemId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachment> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/announcements/{itemId}/addOnAttachments";
+
+          /**
+           * Creates an add-on attachment under a post. Requires the add-on to have permission to create new
+           * attachments on the post. This method returns the following error codes: * `PERMISSION_DENIED`
+           * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of
+           * the identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.create".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+         *        attachment. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+           * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+           * @since 1.13
+           */
+          protected Create(java.lang.String courseId, java.lang.String itemId, com.google.api.services.classroom.model.AddOnAttachment content) {
+            super(Classroom.this, "POST", REST_PATH, content, com.google.api.services.classroom.model.AddOnAttachment.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Create setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
+           * the attachment. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+         attachment. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
+           * the attachment. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public Create setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /**
+           * Optional. Token that authorizes the request. The token is passed as a query parameter
+           * when the user is redirected from Classroom to the add-on's URL. This authorization
+           * token is required for in-Classroom attachment creation but optional for partner-first
+           * attachment creation. Returns an error if not provided for partner-first attachment
+           * creation and the developer projects that created the attachment and its parent stream
+           * item do not match.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addOnToken;
+
+          /** Optional. Token that authorizes the request. The token is passed as a query parameter when the user
+         is redirected from Classroom to the add-on's URL. This authorization token is required for in-
+         Classroom attachment creation but optional for partner-first attachment creation. Returns an error
+         if not provided for partner-first attachment creation and the developer projects that created the
+         attachment and its parent stream item do not match.
+           */
+          public java.lang.String getAddOnToken() {
+            return addOnToken;
+          }
+
+          /**
+           * Optional. Token that authorizes the request. The token is passed as a query parameter
+           * when the user is redirected from Classroom to the add-on's URL. This authorization
+           * token is required for in-Classroom attachment creation but optional for partner-first
+           * attachment creation. Returns an error if not provided for partner-first attachment
+           * creation and the developer projects that created the attachment and its parent stream
+           * item do not match.
+           */
+          public Create setAddOnToken(java.lang.String addOnToken) {
+            this.addOnToken = addOnToken;
+            return this;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Deprecated, use item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          public Create setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an add-on attachment. Requires the add-on to have been the original creator of the
+         * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+         * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+         * resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.delete".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         *        attached. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+         * @param attachmentId Required. Identifier of the attachment.
+         * @return the request
+         */
+        public Delete delete(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) throws java.io.IOException {
+          Delete result = new Delete(courseId, itemId, attachmentId);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ClassroomRequest<com.google.api.services.classroom.model.Empty> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/announcements/{itemId}/addOnAttachments/{attachmentId}";
+
+          /**
+           * Deletes an add-on attachment. Requires the add-on to have been the original creator of the
+           * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+           * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+           * identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.delete".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         *        attached. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) {
+            super(Classroom.this, "DELETE", REST_PATH, null, com.google.api.services.classroom.model.Empty.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+            this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Delete setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         attached. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public Delete setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /** Required. Identifier of the attachment. */
+          @com.google.api.client.util.Key
+          private java.lang.String attachmentId;
+
+          /** Required. Identifier of the attachment.
+           */
+          public java.lang.String getAttachmentId() {
+            return attachmentId;
+          }
+
+          /** Required. Identifier of the attachment. */
+          public Delete setAttachmentId(java.lang.String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Deprecated, use item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          public Delete setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns an add-on attachment. Requires the add-on requesting the attachment to be the original
+         * creator of the attachment. This method returns the following error codes: * `PERMISSION_DENIED`
+         * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+         * identified resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.get".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         *        attached. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+         * @param attachmentId Required. Identifier of the attachment.
+         * @return the request
+         */
+        public Get get(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) throws java.io.IOException {
+          Get result = new Get(courseId, itemId, attachmentId);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachment> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/announcements/{itemId}/addOnAttachments/{attachmentId}";
+
+          /**
+           * Returns an add-on attachment. Requires the add-on requesting the attachment to be the original
+           * creator of the attachment. This method returns the following error codes: * `PERMISSION_DENIED`
+           * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of
+           * the identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.get".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         *        attached. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @since 1.13
+           */
+          protected Get(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) {
+            super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.AddOnAttachment.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+            this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Get setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         attached. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public Get setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /** Required. Identifier of the attachment. */
+          @com.google.api.client.util.Key
+          private java.lang.String attachmentId;
+
+          /** Required. Identifier of the attachment.
+           */
+          public java.lang.String getAttachmentId() {
+            return attachmentId;
+          }
+
+          /** Required. Identifier of the attachment. */
+          public Get setAttachmentId(java.lang.String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Deprecated, use item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          public Get setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns all attachments created by an add-on under the post. Requires the add-on to have active
+         * attachments on the post or have permission to create new attachments on the post. This method
+         * returns the following error codes: * `PERMISSION_DENIED` for access errors. * `INVALID_ARGUMENT`
+         * if the request is malformed. * `NOT_FOUND` if one of the identified resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.list".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+         *        enumerated. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+         * @return the request
+         */
+        public List list(java.lang.String courseId, java.lang.String itemId) throws java.io.IOException {
+          List result = new List(courseId, itemId);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ClassroomRequest<com.google.api.services.classroom.model.ListAddOnAttachmentsResponse> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/announcements/{itemId}/addOnAttachments";
+
+          /**
+           * Returns all attachments created by an add-on under the post. Requires the add-on to have active
+           * attachments on the post or have permission to create new attachments on the post. This method
+           * returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+           * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+           * resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.list".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+         *        enumerated. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+           * @since 1.13
+           */
+          protected List(java.lang.String courseId, java.lang.String itemId) {
+            super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.ListAddOnAttachmentsResponse.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public List setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
+           * should be enumerated. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+         enumerated. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
+           * should be enumerated. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public List setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /**
+           * The maximum number of attachments to return. The service may return fewer than this
+           * value. If unspecified, at most 20 attachments will be returned. The maximum value is
+           * 20; values above 20 will be coerced to 20.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of attachments to return. The service may return fewer than this value. If
+         unspecified, at most 20 attachments will be returned. The maximum value is 20; values above 20 will
+         be coerced to 20.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of attachments to return. The service may return fewer than this
+           * value. If unspecified, at most 20 attachments will be returned. The maximum value is
+           * 20; values above 20 will be coerced to 20.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListAddOnAttachments` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListAddOnAttachments` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListAddOnAttachments` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListAddOnAttachments` must
+         match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListAddOnAttachments` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListAddOnAttachments` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. Identifier of the post under the course whose attachments to enumerate.
+           * Deprecated, use item_id instead.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Identifier of the post under the course whose attachments to enumerate. Deprecated, use
+         item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /**
+           * Optional. Identifier of the post under the course whose attachments to enumerate.
+           * Deprecated, use item_id instead.
+           */
+          public List setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an add-on attachment. Requires the add-on to have been the original creator of the
+         * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+         * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+         * resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.patch".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the post under which the attachment is attached.
+         * @param attachmentId Required. Identifier of the attachment.
+         * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+         * @return the request
+         */
+        public Patch patch(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId, com.google.api.services.classroom.model.AddOnAttachment content) throws java.io.IOException {
+          Patch result = new Patch(courseId, itemId, attachmentId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachment> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/announcements/{itemId}/addOnAttachments/{attachmentId}";
+
+          /**
+           * Updates an add-on attachment. Requires the add-on to have been the original creator of the
+           * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+           * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+           * identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.patch".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the post under which the attachment is attached.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId, com.google.api.services.classroom.model.AddOnAttachment content) {
+            super(Classroom.this, "PATCH", REST_PATH, content, com.google.api.services.classroom.model.AddOnAttachment.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+            this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Patch setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Identifier of the post under which the attachment is attached. */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the post under which the attachment is attached.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /** Identifier of the post under which the attachment is attached. */
+          public Patch setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /** Required. Identifier of the attachment. */
+          @com.google.api.client.util.Key
+          private java.lang.String attachmentId;
+
+          /** Required. Identifier of the attachment.
+           */
+          public java.lang.String getAttachmentId() {
+            return attachmentId;
+          }
+
+          /** Required. Identifier of the attachment. */
+          public Patch setAttachmentId(java.lang.String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+          }
+
+          /** Required. Identifier of the post under which the attachment is attached. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Required. Identifier of the post under which the attachment is attached.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Required. Identifier of the post under which the attachment is attached. */
+          public Patch setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          /**
+           * Required. Mask that identifies which fields on the attachment to update. The update
+           * fails if invalid fields are specified. If a field supports empty values, it can be
+           * cleared by specifying it in the update mask and not in the `AddOnAttachment` object. If
+           * a field that does not support empty values is included in the update mask and not set
+           * in the `AddOnAttachment` object, an `INVALID_ARGUMENT` error is returned. The following
+           * fields may be specified by teachers: * `title` * `teacher_view_uri` *
+           * `student_view_uri` * `student_work_review_uri` * `due_date` * `due_time` * `max_points`
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Mask that identifies which fields on the attachment to update. The update fails if
+         invalid fields are specified. If a field supports empty values, it can be cleared by specifying it
+         in the update mask and not in the `AddOnAttachment` object. If a field that does not support empty
+         values is included in the update mask and not set in the `AddOnAttachment` object, an
+         `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers: * `title`
+         * `teacher_view_uri` * `student_view_uri` * `student_work_review_uri` * `due_date` * `due_time` *
+         `max_points`
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Mask that identifies which fields on the attachment to update. The update
+           * fails if invalid fields are specified. If a field supports empty values, it can be
+           * cleared by specifying it in the update mask and not in the `AddOnAttachment` object. If
+           * a field that does not support empty values is included in the update mask and not set
+           * in the `AddOnAttachment` object, an `INVALID_ARGUMENT` error is returned. The following
+           * fields may be specified by teachers: * `title` * `teacher_view_uri` *
+           * `student_view_uri` * `student_work_review_uri` * `due_date` * `due_time` * `max_points`
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the CourseWork collection.
@@ -3126,6 +4436,246 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets metadata for Classroom add-ons in the context of a specific post. To maintain the integrity
+       * of its own data and permissions model, an add-on should call this to validate query parameters
+       * and the requesting user's role whenever the add-on is opened in an
+       * [iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/iframes-overview).
+       * This method returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+       * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified resources
+       * does not exist.
+       *
+       * Create a request for the method "courseWork.getAddOnContext".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link GetAddOnContext#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Required. Identifier of the course.
+       * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+       *        attached. This field is required, but is not marked as such while we are migrating from
+       *        post_id.
+       * @return the request
+       */
+      public GetAddOnContext getAddOnContext(java.lang.String courseId, java.lang.String itemId) throws java.io.IOException {
+        GetAddOnContext result = new GetAddOnContext(courseId, itemId);
+        initialize(result);
+        return result;
+      }
+
+      public class GetAddOnContext extends ClassroomRequest<com.google.api.services.classroom.model.AddOnContext> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{itemId}/addOnContext";
+
+        /**
+         * Gets metadata for Classroom add-ons in the context of a specific post. To maintain the
+         * integrity of its own data and permissions model, an add-on should call this to validate query
+         * parameters and the requesting user's role whenever the add-on is opened in an
+         * [iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/iframes-overview).
+         * This method returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+         * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+         * resources does not exist.
+         *
+         * Create a request for the method "courseWork.getAddOnContext".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link GetAddOnContext#execute()} method to invoke the remote
+         * operation. <p> {@link GetAddOnContext#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+       *        attached. This field is required, but is not marked as such while we are migrating from
+       *        post_id.
+         * @since 1.13
+         */
+        protected GetAddOnContext(java.lang.String courseId, java.lang.String itemId) {
+          super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.AddOnContext.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+          this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetAddOnContext set$Xgafv(java.lang.String $Xgafv) {
+          return (GetAddOnContext) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetAddOnContext setAccessToken(java.lang.String accessToken) {
+          return (GetAddOnContext) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetAddOnContext setAlt(java.lang.String alt) {
+          return (GetAddOnContext) super.setAlt(alt);
+        }
+
+        @Override
+        public GetAddOnContext setCallback(java.lang.String callback) {
+          return (GetAddOnContext) super.setCallback(callback);
+        }
+
+        @Override
+        public GetAddOnContext setFields(java.lang.String fields) {
+          return (GetAddOnContext) super.setFields(fields);
+        }
+
+        @Override
+        public GetAddOnContext setKey(java.lang.String key) {
+          return (GetAddOnContext) super.setKey(key);
+        }
+
+        @Override
+        public GetAddOnContext setOauthToken(java.lang.String oauthToken) {
+          return (GetAddOnContext) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetAddOnContext setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetAddOnContext) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetAddOnContext setQuotaUser(java.lang.String quotaUser) {
+          return (GetAddOnContext) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetAddOnContext setUploadType(java.lang.String uploadType) {
+          return (GetAddOnContext) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetAddOnContext setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetAddOnContext) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Identifier of the course. */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Required. Identifier of the course.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /** Required. Identifier of the course. */
+        public GetAddOnContext setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /**
+         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * attachment is attached. This field is required, but is not marked as such while we are
+         * migrating from post_id.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String itemId;
+
+        /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+       attached. This field is required, but is not marked as such while we are migrating from post_id.
+         */
+        public java.lang.String getItemId() {
+          return itemId;
+        }
+
+        /**
+         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * attachment is attached. This field is required, but is not marked as such while we are
+         * migrating from post_id.
+         */
+        public GetAddOnContext setItemId(java.lang.String itemId) {
+          this.itemId = itemId;
+          return this;
+        }
+
+        /**
+         * Optional. Token that authorizes the request. The token is passed as a query parameter
+         * when the user is redirected from Classroom to the add-on's URL. The authorization token
+         * is required when neither of the following is true: * The add-on has attachments on the
+         * post. * The developer project issuing the request is the same project that created the
+         * post.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String addOnToken;
+
+        /** Optional. Token that authorizes the request. The token is passed as a query parameter when the user
+       is redirected from Classroom to the add-on's URL. The authorization token is required when neither
+       of the following is true: * The add-on has attachments on the post. * The developer project issuing
+       the request is the same project that created the post.
+         */
+        public java.lang.String getAddOnToken() {
+          return addOnToken;
+        }
+
+        /**
+         * Optional. Token that authorizes the request. The token is passed as a query parameter
+         * when the user is redirected from Classroom to the add-on's URL. The authorization token
+         * is required when neither of the following is true: * The add-on has attachments on the
+         * post. * The developer project issuing the request is the same project that created the
+         * post.
+         */
+        public GetAddOnContext setAddOnToken(java.lang.String addOnToken) {
+          this.addOnToken = addOnToken;
+          return this;
+        }
+
+        /**
+         * Optional. The identifier of the attachment. This field is required for student users and
+         * optional for teacher users. If not provided in the student case, an error is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String attachmentId;
+
+        /** Optional. The identifier of the attachment. This field is required for student users and optional
+       for teacher users. If not provided in the student case, an error is returned.
+         */
+        public java.lang.String getAttachmentId() {
+          return attachmentId;
+        }
+
+        /**
+         * Optional. The identifier of the attachment. This field is required for student users and
+         * optional for teacher users. If not provided in the student case, an error is returned.
+         */
+        public GetAddOnContext setAttachmentId(java.lang.String attachmentId) {
+          this.attachmentId = attachmentId;
+          return this;
+        }
+
+        /** Optional. Deprecated, use item_id instead. */
+        @com.google.api.client.util.Key
+        private java.lang.String postId;
+
+        /** Optional. Deprecated, use item_id instead.
+         */
+        public java.lang.String getPostId() {
+          return postId;
+        }
+
+        /** Optional. Deprecated, use item_id instead. */
+        public GetAddOnContext setPostId(java.lang.String postId) {
+          this.postId = postId;
+          return this;
+        }
+
+        @Override
+        public GetAddOnContext set(String parameterName, Object value) {
+          return (GetAddOnContext) super.set(parameterName, value);
         }
       }
       /**
@@ -3728,6 +5278,1556 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
 
+      /**
+       * An accessor for creating requests from the AddOnAttachments collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Classroom classroom = new Classroom(...);}
+       *   {@code Classroom.AddOnAttachments.List request = classroom.addOnAttachments().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AddOnAttachments addOnAttachments() {
+        return new AddOnAttachments();
+      }
+
+      /**
+       * The "addOnAttachments" collection of methods.
+       */
+      public class AddOnAttachments {
+
+        /**
+         * Creates an add-on attachment under a post. Requires the add-on to have permission to create new
+         * attachments on the post. This method returns the following error codes: * `PERMISSION_DENIED` for
+         * access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+         * identified resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.create".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+         *        attachment. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+         * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+         * @return the request
+         */
+        public Create create(java.lang.String courseId, java.lang.String itemId, com.google.api.services.classroom.model.AddOnAttachment content) throws java.io.IOException {
+          Create result = new Create(courseId, itemId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachment> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{itemId}/addOnAttachments";
+
+          /**
+           * Creates an add-on attachment under a post. Requires the add-on to have permission to create new
+           * attachments on the post. This method returns the following error codes: * `PERMISSION_DENIED`
+           * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of
+           * the identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.create".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+         *        attachment. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+           * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+           * @since 1.13
+           */
+          protected Create(java.lang.String courseId, java.lang.String itemId, com.google.api.services.classroom.model.AddOnAttachment content) {
+            super(Classroom.this, "POST", REST_PATH, content, com.google.api.services.classroom.model.AddOnAttachment.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Create setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
+           * the attachment. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+         attachment. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
+           * the attachment. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public Create setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /**
+           * Optional. Token that authorizes the request. The token is passed as a query parameter
+           * when the user is redirected from Classroom to the add-on's URL. This authorization
+           * token is required for in-Classroom attachment creation but optional for partner-first
+           * attachment creation. Returns an error if not provided for partner-first attachment
+           * creation and the developer projects that created the attachment and its parent stream
+           * item do not match.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addOnToken;
+
+          /** Optional. Token that authorizes the request. The token is passed as a query parameter when the user
+         is redirected from Classroom to the add-on's URL. This authorization token is required for in-
+         Classroom attachment creation but optional for partner-first attachment creation. Returns an error
+         if not provided for partner-first attachment creation and the developer projects that created the
+         attachment and its parent stream item do not match.
+           */
+          public java.lang.String getAddOnToken() {
+            return addOnToken;
+          }
+
+          /**
+           * Optional. Token that authorizes the request. The token is passed as a query parameter
+           * when the user is redirected from Classroom to the add-on's URL. This authorization
+           * token is required for in-Classroom attachment creation but optional for partner-first
+           * attachment creation. Returns an error if not provided for partner-first attachment
+           * creation and the developer projects that created the attachment and its parent stream
+           * item do not match.
+           */
+          public Create setAddOnToken(java.lang.String addOnToken) {
+            this.addOnToken = addOnToken;
+            return this;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Deprecated, use item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          public Create setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an add-on attachment. Requires the add-on to have been the original creator of the
+         * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+         * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+         * resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.delete".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         *        attached. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+         * @param attachmentId Required. Identifier of the attachment.
+         * @return the request
+         */
+        public Delete delete(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) throws java.io.IOException {
+          Delete result = new Delete(courseId, itemId, attachmentId);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ClassroomRequest<com.google.api.services.classroom.model.Empty> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{itemId}/addOnAttachments/{attachmentId}";
+
+          /**
+           * Deletes an add-on attachment. Requires the add-on to have been the original creator of the
+           * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+           * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+           * identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.delete".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         *        attached. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) {
+            super(Classroom.this, "DELETE", REST_PATH, null, com.google.api.services.classroom.model.Empty.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+            this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Delete setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         attached. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public Delete setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /** Required. Identifier of the attachment. */
+          @com.google.api.client.util.Key
+          private java.lang.String attachmentId;
+
+          /** Required. Identifier of the attachment.
+           */
+          public java.lang.String getAttachmentId() {
+            return attachmentId;
+          }
+
+          /** Required. Identifier of the attachment. */
+          public Delete setAttachmentId(java.lang.String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Deprecated, use item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          public Delete setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns an add-on attachment. Requires the add-on requesting the attachment to be the original
+         * creator of the attachment. This method returns the following error codes: * `PERMISSION_DENIED`
+         * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+         * identified resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.get".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         *        attached. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+         * @param attachmentId Required. Identifier of the attachment.
+         * @return the request
+         */
+        public Get get(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) throws java.io.IOException {
+          Get result = new Get(courseId, itemId, attachmentId);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachment> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{itemId}/addOnAttachments/{attachmentId}";
+
+          /**
+           * Returns an add-on attachment. Requires the add-on requesting the attachment to be the original
+           * creator of the attachment. This method returns the following error codes: * `PERMISSION_DENIED`
+           * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of
+           * the identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.get".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         *        attached. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @since 1.13
+           */
+          protected Get(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) {
+            super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.AddOnAttachment.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+            this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Get setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         attached. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public Get setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /** Required. Identifier of the attachment. */
+          @com.google.api.client.util.Key
+          private java.lang.String attachmentId;
+
+          /** Required. Identifier of the attachment.
+           */
+          public java.lang.String getAttachmentId() {
+            return attachmentId;
+          }
+
+          /** Required. Identifier of the attachment. */
+          public Get setAttachmentId(java.lang.String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Deprecated, use item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          public Get setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns all attachments created by an add-on under the post. Requires the add-on to have active
+         * attachments on the post or have permission to create new attachments on the post. This method
+         * returns the following error codes: * `PERMISSION_DENIED` for access errors. * `INVALID_ARGUMENT`
+         * if the request is malformed. * `NOT_FOUND` if one of the identified resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.list".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+         *        enumerated. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+         * @return the request
+         */
+        public List list(java.lang.String courseId, java.lang.String itemId) throws java.io.IOException {
+          List result = new List(courseId, itemId);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ClassroomRequest<com.google.api.services.classroom.model.ListAddOnAttachmentsResponse> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{itemId}/addOnAttachments";
+
+          /**
+           * Returns all attachments created by an add-on under the post. Requires the add-on to have active
+           * attachments on the post or have permission to create new attachments on the post. This method
+           * returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+           * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+           * resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.list".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+         *        enumerated. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+           * @since 1.13
+           */
+          protected List(java.lang.String courseId, java.lang.String itemId) {
+            super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.ListAddOnAttachmentsResponse.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public List setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
+           * should be enumerated. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+         enumerated. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
+           * should be enumerated. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public List setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /**
+           * The maximum number of attachments to return. The service may return fewer than this
+           * value. If unspecified, at most 20 attachments will be returned. The maximum value is
+           * 20; values above 20 will be coerced to 20.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of attachments to return. The service may return fewer than this value. If
+         unspecified, at most 20 attachments will be returned. The maximum value is 20; values above 20 will
+         be coerced to 20.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of attachments to return. The service may return fewer than this
+           * value. If unspecified, at most 20 attachments will be returned. The maximum value is
+           * 20; values above 20 will be coerced to 20.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListAddOnAttachments` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListAddOnAttachments` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListAddOnAttachments` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListAddOnAttachments` must
+         match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListAddOnAttachments` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListAddOnAttachments` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. Identifier of the post under the course whose attachments to enumerate.
+           * Deprecated, use item_id instead.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Identifier of the post under the course whose attachments to enumerate. Deprecated, use
+         item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /**
+           * Optional. Identifier of the post under the course whose attachments to enumerate.
+           * Deprecated, use item_id instead.
+           */
+          public List setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an add-on attachment. Requires the add-on to have been the original creator of the
+         * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+         * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+         * resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.patch".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the post under which the attachment is attached.
+         * @param attachmentId Required. Identifier of the attachment.
+         * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+         * @return the request
+         */
+        public Patch patch(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId, com.google.api.services.classroom.model.AddOnAttachment content) throws java.io.IOException {
+          Patch result = new Patch(courseId, itemId, attachmentId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachment> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{itemId}/addOnAttachments/{attachmentId}";
+
+          /**
+           * Updates an add-on attachment. Requires the add-on to have been the original creator of the
+           * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+           * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+           * identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.patch".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the post under which the attachment is attached.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId, com.google.api.services.classroom.model.AddOnAttachment content) {
+            super(Classroom.this, "PATCH", REST_PATH, content, com.google.api.services.classroom.model.AddOnAttachment.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+            this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Patch setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Identifier of the post under which the attachment is attached. */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the post under which the attachment is attached.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /** Identifier of the post under which the attachment is attached. */
+          public Patch setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /** Required. Identifier of the attachment. */
+          @com.google.api.client.util.Key
+          private java.lang.String attachmentId;
+
+          /** Required. Identifier of the attachment.
+           */
+          public java.lang.String getAttachmentId() {
+            return attachmentId;
+          }
+
+          /** Required. Identifier of the attachment. */
+          public Patch setAttachmentId(java.lang.String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+          }
+
+          /** Required. Identifier of the post under which the attachment is attached. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Required. Identifier of the post under which the attachment is attached.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Required. Identifier of the post under which the attachment is attached. */
+          public Patch setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          /**
+           * Required. Mask that identifies which fields on the attachment to update. The update
+           * fails if invalid fields are specified. If a field supports empty values, it can be
+           * cleared by specifying it in the update mask and not in the `AddOnAttachment` object. If
+           * a field that does not support empty values is included in the update mask and not set
+           * in the `AddOnAttachment` object, an `INVALID_ARGUMENT` error is returned. The following
+           * fields may be specified by teachers: * `title` * `teacher_view_uri` *
+           * `student_view_uri` * `student_work_review_uri` * `due_date` * `due_time` * `max_points`
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Mask that identifies which fields on the attachment to update. The update fails if
+         invalid fields are specified. If a field supports empty values, it can be cleared by specifying it
+         in the update mask and not in the `AddOnAttachment` object. If a field that does not support empty
+         values is included in the update mask and not set in the `AddOnAttachment` object, an
+         `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers: * `title`
+         * `teacher_view_uri` * `student_view_uri` * `student_work_review_uri` * `due_date` * `due_time` *
+         `max_points`
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Mask that identifies which fields on the attachment to update. The update
+           * fails if invalid fields are specified. If a field supports empty values, it can be
+           * cleared by specifying it in the update mask and not in the `AddOnAttachment` object. If
+           * a field that does not support empty values is included in the update mask and not set
+           * in the `AddOnAttachment` object, an `INVALID_ARGUMENT` error is returned. The following
+           * fields may be specified by teachers: * `title` * `teacher_view_uri` *
+           * `student_view_uri` * `student_work_review_uri` * `due_date` * `due_time` * `max_points`
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the StudentSubmissions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Classroom classroom = new Classroom(...);}
+         *   {@code Classroom.StudentSubmissions.List request = classroom.studentSubmissions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public StudentSubmissions studentSubmissions() {
+          return new StudentSubmissions();
+        }
+
+        /**
+         * The "studentSubmissions" collection of methods.
+         */
+        public class StudentSubmissions {
+
+          /**
+           * Returns a student submission for an add-on attachment. This method returns the following error
+           * codes: * `PERMISSION_DENIED` for access errors. * `INVALID_ARGUMENT` if the request is malformed.
+           * * `NOT_FOUND` if one of the identified resources does not exist.
+           *
+           * Create a request for the method "studentSubmissions.get".
+           *
+           * This request holds the parameters needed by the classroom server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+           *        attached. This field is required, but is not marked as such while we are migrating from
+           *        post_id.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @param submissionId Required. Identifier of the student’s submission.
+           * @return the request
+           */
+          public Get get(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId, java.lang.String submissionId) throws java.io.IOException {
+            Get result = new Get(courseId, itemId, attachmentId, submissionId);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission> {
+
+            private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{itemId}/addOnAttachments/{attachmentId}/studentSubmissions/{submissionId}";
+
+            /**
+             * Returns a student submission for an add-on attachment. This method returns the following error
+             * codes: * `PERMISSION_DENIED` for access errors. * `INVALID_ARGUMENT` if the request is
+             * malformed. * `NOT_FOUND` if one of the identified resources does not exist.
+             *
+             * Create a request for the method "studentSubmissions.get".
+             *
+             * This request holds the parameters needed by the the classroom server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param courseId Required. Identifier of the course.
+             * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+           *        attached. This field is required, but is not marked as such while we are migrating from
+           *        post_id.
+             * @param attachmentId Required. Identifier of the attachment.
+             * @param submissionId Required. Identifier of the student’s submission.
+             * @since 1.13
+             */
+            protected Get(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId, java.lang.String submissionId) {
+              super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission.class);
+              this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+              this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+              this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+              this.submissionId = com.google.api.client.util.Preconditions.checkNotNull(submissionId, "Required parameter submissionId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Identifier of the course. */
+            @com.google.api.client.util.Key
+            private java.lang.String courseId;
+
+            /** Required. Identifier of the course.
+             */
+            public java.lang.String getCourseId() {
+              return courseId;
+            }
+
+            /** Required. Identifier of the course. */
+            public Get setCourseId(java.lang.String courseId) {
+              this.courseId = courseId;
+              return this;
+            }
+
+            /**
+             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+             * attachment is attached. This field is required, but is not marked as such while we
+             * are migrating from post_id.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String itemId;
+
+            /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+           attached. This field is required, but is not marked as such while we are migrating from post_id.
+             */
+            public java.lang.String getItemId() {
+              return itemId;
+            }
+
+            /**
+             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+             * attachment is attached. This field is required, but is not marked as such while we
+             * are migrating from post_id.
+             */
+            public Get setItemId(java.lang.String itemId) {
+              this.itemId = itemId;
+              return this;
+            }
+
+            /** Required. Identifier of the attachment. */
+            @com.google.api.client.util.Key
+            private java.lang.String attachmentId;
+
+            /** Required. Identifier of the attachment.
+             */
+            public java.lang.String getAttachmentId() {
+              return attachmentId;
+            }
+
+            /** Required. Identifier of the attachment. */
+            public Get setAttachmentId(java.lang.String attachmentId) {
+              this.attachmentId = attachmentId;
+              return this;
+            }
+
+            /** Required. Identifier of the student’s submission. */
+            @com.google.api.client.util.Key
+            private java.lang.String submissionId;
+
+            /** Required. Identifier of the student’s submission.
+             */
+            public java.lang.String getSubmissionId() {
+              return submissionId;
+            }
+
+            /** Required. Identifier of the student’s submission. */
+            public Get setSubmissionId(java.lang.String submissionId) {
+              this.submissionId = submissionId;
+              return this;
+            }
+
+            /** Optional. Deprecated, use item_id instead. */
+            @com.google.api.client.util.Key
+            private java.lang.String postId;
+
+            /** Optional. Deprecated, use item_id instead.
+             */
+            public java.lang.String getPostId() {
+              return postId;
+            }
+
+            /** Optional. Deprecated, use item_id instead. */
+            public Get setPostId(java.lang.String postId) {
+              this.postId = postId;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates data associated with an add-on attachment submission. Requires the add-on to have been
+           * the original creator of the attachment and the attachment to have a positive `max_points` value
+           * set. This method returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+           * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified resources
+           * does not exist.
+           *
+           * Create a request for the method "studentSubmissions.patch".
+           *
+           * This request holds the parameters needed by the classroom server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+           *        attached. This field is required, but is not marked as such while we are migrating from
+           *        post_id.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @param submissionId Required. Identifier of the student's submission.
+           * @param content the {@link com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission}
+           * @return the request
+           */
+          public Patch patch(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId, java.lang.String submissionId, com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission content) throws java.io.IOException {
+            Patch result = new Patch(courseId, itemId, attachmentId, submissionId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission> {
+
+            private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{itemId}/addOnAttachments/{attachmentId}/studentSubmissions/{submissionId}";
+
+            /**
+             * Updates data associated with an add-on attachment submission. Requires the add-on to have been
+             * the original creator of the attachment and the attachment to have a positive `max_points` value
+             * set. This method returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+             * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+             * resources does not exist.
+             *
+             * Create a request for the method "studentSubmissions.patch".
+             *
+             * This request holds the parameters needed by the the classroom server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param courseId Required. Identifier of the course.
+             * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+           *        attached. This field is required, but is not marked as such while we are migrating from
+           *        post_id.
+             * @param attachmentId Required. Identifier of the attachment.
+             * @param submissionId Required. Identifier of the student's submission.
+             * @param content the {@link com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId, java.lang.String submissionId, com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission content) {
+              super(Classroom.this, "PATCH", REST_PATH, content, com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission.class);
+              this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+              this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+              this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+              this.submissionId = com.google.api.client.util.Preconditions.checkNotNull(submissionId, "Required parameter submissionId must be specified.");
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Identifier of the course. */
+            @com.google.api.client.util.Key
+            private java.lang.String courseId;
+
+            /** Required. Identifier of the course.
+             */
+            public java.lang.String getCourseId() {
+              return courseId;
+            }
+
+            /** Required. Identifier of the course. */
+            public Patch setCourseId(java.lang.String courseId) {
+              this.courseId = courseId;
+              return this;
+            }
+
+            /**
+             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+             * attachment is attached. This field is required, but is not marked as such while we
+             * are migrating from post_id.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String itemId;
+
+            /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+           attached. This field is required, but is not marked as such while we are migrating from post_id.
+             */
+            public java.lang.String getItemId() {
+              return itemId;
+            }
+
+            /**
+             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+             * attachment is attached. This field is required, but is not marked as such while we
+             * are migrating from post_id.
+             */
+            public Patch setItemId(java.lang.String itemId) {
+              this.itemId = itemId;
+              return this;
+            }
+
+            /** Required. Identifier of the attachment. */
+            @com.google.api.client.util.Key
+            private java.lang.String attachmentId;
+
+            /** Required. Identifier of the attachment.
+             */
+            public java.lang.String getAttachmentId() {
+              return attachmentId;
+            }
+
+            /** Required. Identifier of the attachment. */
+            public Patch setAttachmentId(java.lang.String attachmentId) {
+              this.attachmentId = attachmentId;
+              return this;
+            }
+
+            /** Required. Identifier of the student's submission. */
+            @com.google.api.client.util.Key
+            private java.lang.String submissionId;
+
+            /** Required. Identifier of the student's submission.
+             */
+            public java.lang.String getSubmissionId() {
+              return submissionId;
+            }
+
+            /** Required. Identifier of the student's submission. */
+            public Patch setSubmissionId(java.lang.String submissionId) {
+              this.submissionId = submissionId;
+              return this;
+            }
+
+            /** Optional. Deprecated, use item_id instead. */
+            @com.google.api.client.util.Key
+            private java.lang.String postId;
+
+            /** Optional. Deprecated, use item_id instead.
+             */
+            public java.lang.String getPostId() {
+              return postId;
+            }
+
+            /** Optional. Deprecated, use item_id instead. */
+            public Patch setPostId(java.lang.String postId) {
+              this.postId = postId;
+              return this;
+            }
+
+            /**
+             * Required. Mask that identifies which fields on the attachment to update. The update
+             * fails if invalid fields are specified. If a field supports empty values, it can be
+             * cleared by specifying it in the update mask and not in the
+             * `AddOnAttachmentStudentSubmission` object. The following fields may be specified by
+             * teachers: * `points_earned`
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. Mask that identifies which fields on the attachment to update. The update fails if
+           invalid fields are specified. If a field supports empty values, it can be cleared by specifying it
+           in the update mask and not in the `AddOnAttachmentStudentSubmission` object. The following fields
+           may be specified by teachers: * `points_earned`
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Required. Mask that identifies which fields on the attachment to update. The update
+             * fails if invalid fields are specified. If a field supports empty values, it can be
+             * cleared by specifying it in the update mask and not in the
+             * `AddOnAttachmentStudentSubmission` object. The following fields may be specified by
+             * teachers: * `points_earned`
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
       /**
        * An accessor for creating requests from the StudentSubmissions collection.
        *
@@ -5649,6 +8749,246 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
+       * Gets metadata for Classroom add-ons in the context of a specific post. To maintain the integrity
+       * of its own data and permissions model, an add-on should call this to validate query parameters
+       * and the requesting user's role whenever the add-on is opened in an
+       * [iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/iframes-overview).
+       * This method returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+       * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified resources
+       * does not exist.
+       *
+       * Create a request for the method "courseWorkMaterials.getAddOnContext".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link GetAddOnContext#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Required. Identifier of the course.
+       * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+       *        attached. This field is required, but is not marked as such while we are migrating from
+       *        post_id.
+       * @return the request
+       */
+      public GetAddOnContext getAddOnContext(java.lang.String courseId, java.lang.String itemId) throws java.io.IOException {
+        GetAddOnContext result = new GetAddOnContext(courseId, itemId);
+        initialize(result);
+        return result;
+      }
+
+      public class GetAddOnContext extends ClassroomRequest<com.google.api.services.classroom.model.AddOnContext> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials/{itemId}/addOnContext";
+
+        /**
+         * Gets metadata for Classroom add-ons in the context of a specific post. To maintain the
+         * integrity of its own data and permissions model, an add-on should call this to validate query
+         * parameters and the requesting user's role whenever the add-on is opened in an
+         * [iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/iframes-overview).
+         * This method returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+         * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+         * resources does not exist.
+         *
+         * Create a request for the method "courseWorkMaterials.getAddOnContext".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link GetAddOnContext#execute()} method to invoke the remote
+         * operation. <p> {@link GetAddOnContext#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+       *        attached. This field is required, but is not marked as such while we are migrating from
+       *        post_id.
+         * @since 1.13
+         */
+        protected GetAddOnContext(java.lang.String courseId, java.lang.String itemId) {
+          super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.AddOnContext.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+          this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetAddOnContext set$Xgafv(java.lang.String $Xgafv) {
+          return (GetAddOnContext) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetAddOnContext setAccessToken(java.lang.String accessToken) {
+          return (GetAddOnContext) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetAddOnContext setAlt(java.lang.String alt) {
+          return (GetAddOnContext) super.setAlt(alt);
+        }
+
+        @Override
+        public GetAddOnContext setCallback(java.lang.String callback) {
+          return (GetAddOnContext) super.setCallback(callback);
+        }
+
+        @Override
+        public GetAddOnContext setFields(java.lang.String fields) {
+          return (GetAddOnContext) super.setFields(fields);
+        }
+
+        @Override
+        public GetAddOnContext setKey(java.lang.String key) {
+          return (GetAddOnContext) super.setKey(key);
+        }
+
+        @Override
+        public GetAddOnContext setOauthToken(java.lang.String oauthToken) {
+          return (GetAddOnContext) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetAddOnContext setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetAddOnContext) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetAddOnContext setQuotaUser(java.lang.String quotaUser) {
+          return (GetAddOnContext) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetAddOnContext setUploadType(java.lang.String uploadType) {
+          return (GetAddOnContext) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetAddOnContext setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetAddOnContext) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Identifier of the course. */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Required. Identifier of the course.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /** Required. Identifier of the course. */
+        public GetAddOnContext setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /**
+         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * attachment is attached. This field is required, but is not marked as such while we are
+         * migrating from post_id.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String itemId;
+
+        /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+       attached. This field is required, but is not marked as such while we are migrating from post_id.
+         */
+        public java.lang.String getItemId() {
+          return itemId;
+        }
+
+        /**
+         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * attachment is attached. This field is required, but is not marked as such while we are
+         * migrating from post_id.
+         */
+        public GetAddOnContext setItemId(java.lang.String itemId) {
+          this.itemId = itemId;
+          return this;
+        }
+
+        /**
+         * Optional. Token that authorizes the request. The token is passed as a query parameter
+         * when the user is redirected from Classroom to the add-on's URL. The authorization token
+         * is required when neither of the following is true: * The add-on has attachments on the
+         * post. * The developer project issuing the request is the same project that created the
+         * post.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String addOnToken;
+
+        /** Optional. Token that authorizes the request. The token is passed as a query parameter when the user
+       is redirected from Classroom to the add-on's URL. The authorization token is required when neither
+       of the following is true: * The add-on has attachments on the post. * The developer project issuing
+       the request is the same project that created the post.
+         */
+        public java.lang.String getAddOnToken() {
+          return addOnToken;
+        }
+
+        /**
+         * Optional. Token that authorizes the request. The token is passed as a query parameter
+         * when the user is redirected from Classroom to the add-on's URL. The authorization token
+         * is required when neither of the following is true: * The add-on has attachments on the
+         * post. * The developer project issuing the request is the same project that created the
+         * post.
+         */
+        public GetAddOnContext setAddOnToken(java.lang.String addOnToken) {
+          this.addOnToken = addOnToken;
+          return this;
+        }
+
+        /**
+         * Optional. The identifier of the attachment. This field is required for student users and
+         * optional for teacher users. If not provided in the student case, an error is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String attachmentId;
+
+        /** Optional. The identifier of the attachment. This field is required for student users and optional
+       for teacher users. If not provided in the student case, an error is returned.
+         */
+        public java.lang.String getAttachmentId() {
+          return attachmentId;
+        }
+
+        /**
+         * Optional. The identifier of the attachment. This field is required for student users and
+         * optional for teacher users. If not provided in the student case, an error is returned.
+         */
+        public GetAddOnContext setAttachmentId(java.lang.String attachmentId) {
+          this.attachmentId = attachmentId;
+          return this;
+        }
+
+        /** Optional. Deprecated, use item_id instead. */
+        @com.google.api.client.util.Key
+        private java.lang.String postId;
+
+        /** Optional. Deprecated, use item_id instead.
+         */
+        public java.lang.String getPostId() {
+          return postId;
+        }
+
+        /** Optional. Deprecated, use item_id instead. */
+        public GetAddOnContext setPostId(java.lang.String postId) {
+          this.postId = postId;
+          return this;
+        }
+
+        @Override
+        public GetAddOnContext set(String parameterName, Object value) {
+          return (GetAddOnContext) super.set(parameterName, value);
+        }
+      }
+      /**
        * Returns a list of course work material that the requester is permitted to view. Course students
        * may only view `PUBLISHED` course work material. Course teachers and domain administrators may
        * view all course work material. This method returns the following error codes: *
@@ -6134,6 +9474,2862 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
 
+      /**
+       * An accessor for creating requests from the AddOnAttachments collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Classroom classroom = new Classroom(...);}
+       *   {@code Classroom.AddOnAttachments.List request = classroom.addOnAttachments().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AddOnAttachments addOnAttachments() {
+        return new AddOnAttachments();
+      }
+
+      /**
+       * The "addOnAttachments" collection of methods.
+       */
+      public class AddOnAttachments {
+
+        /**
+         * Creates an add-on attachment under a post. Requires the add-on to have permission to create new
+         * attachments on the post. This method returns the following error codes: * `PERMISSION_DENIED` for
+         * access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+         * identified resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.create".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+         *        attachment. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+         * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+         * @return the request
+         */
+        public Create create(java.lang.String courseId, java.lang.String itemId, com.google.api.services.classroom.model.AddOnAttachment content) throws java.io.IOException {
+          Create result = new Create(courseId, itemId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachment> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials/{itemId}/addOnAttachments";
+
+          /**
+           * Creates an add-on attachment under a post. Requires the add-on to have permission to create new
+           * attachments on the post. This method returns the following error codes: * `PERMISSION_DENIED`
+           * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of
+           * the identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.create".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+         *        attachment. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+           * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+           * @since 1.13
+           */
+          protected Create(java.lang.String courseId, java.lang.String itemId, com.google.api.services.classroom.model.AddOnAttachment content) {
+            super(Classroom.this, "POST", REST_PATH, content, com.google.api.services.classroom.model.AddOnAttachment.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Create setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
+           * the attachment. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+         attachment. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
+           * the attachment. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public Create setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /**
+           * Optional. Token that authorizes the request. The token is passed as a query parameter
+           * when the user is redirected from Classroom to the add-on's URL. This authorization
+           * token is required for in-Classroom attachment creation but optional for partner-first
+           * attachment creation. Returns an error if not provided for partner-first attachment
+           * creation and the developer projects that created the attachment and its parent stream
+           * item do not match.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addOnToken;
+
+          /** Optional. Token that authorizes the request. The token is passed as a query parameter when the user
+         is redirected from Classroom to the add-on's URL. This authorization token is required for in-
+         Classroom attachment creation but optional for partner-first attachment creation. Returns an error
+         if not provided for partner-first attachment creation and the developer projects that created the
+         attachment and its parent stream item do not match.
+           */
+          public java.lang.String getAddOnToken() {
+            return addOnToken;
+          }
+
+          /**
+           * Optional. Token that authorizes the request. The token is passed as a query parameter
+           * when the user is redirected from Classroom to the add-on's URL. This authorization
+           * token is required for in-Classroom attachment creation but optional for partner-first
+           * attachment creation. Returns an error if not provided for partner-first attachment
+           * creation and the developer projects that created the attachment and its parent stream
+           * item do not match.
+           */
+          public Create setAddOnToken(java.lang.String addOnToken) {
+            this.addOnToken = addOnToken;
+            return this;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Deprecated, use item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          public Create setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an add-on attachment. Requires the add-on to have been the original creator of the
+         * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+         * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+         * resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.delete".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         *        attached. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+         * @param attachmentId Required. Identifier of the attachment.
+         * @return the request
+         */
+        public Delete delete(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) throws java.io.IOException {
+          Delete result = new Delete(courseId, itemId, attachmentId);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ClassroomRequest<com.google.api.services.classroom.model.Empty> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials/{itemId}/addOnAttachments/{attachmentId}";
+
+          /**
+           * Deletes an add-on attachment. Requires the add-on to have been the original creator of the
+           * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+           * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+           * identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.delete".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         *        attached. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) {
+            super(Classroom.this, "DELETE", REST_PATH, null, com.google.api.services.classroom.model.Empty.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+            this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Delete setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         attached. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public Delete setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /** Required. Identifier of the attachment. */
+          @com.google.api.client.util.Key
+          private java.lang.String attachmentId;
+
+          /** Required. Identifier of the attachment.
+           */
+          public java.lang.String getAttachmentId() {
+            return attachmentId;
+          }
+
+          /** Required. Identifier of the attachment. */
+          public Delete setAttachmentId(java.lang.String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Deprecated, use item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          public Delete setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns an add-on attachment. Requires the add-on requesting the attachment to be the original
+         * creator of the attachment. This method returns the following error codes: * `PERMISSION_DENIED`
+         * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+         * identified resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.get".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         *        attached. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+         * @param attachmentId Required. Identifier of the attachment.
+         * @return the request
+         */
+        public Get get(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) throws java.io.IOException {
+          Get result = new Get(courseId, itemId, attachmentId);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachment> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials/{itemId}/addOnAttachments/{attachmentId}";
+
+          /**
+           * Returns an add-on attachment. Requires the add-on requesting the attachment to be the original
+           * creator of the attachment. This method returns the following error codes: * `PERMISSION_DENIED`
+           * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of
+           * the identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.get".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         *        attached. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @since 1.13
+           */
+          protected Get(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) {
+            super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.AddOnAttachment.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+            this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Get setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         attached. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public Get setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /** Required. Identifier of the attachment. */
+          @com.google.api.client.util.Key
+          private java.lang.String attachmentId;
+
+          /** Required. Identifier of the attachment.
+           */
+          public java.lang.String getAttachmentId() {
+            return attachmentId;
+          }
+
+          /** Required. Identifier of the attachment. */
+          public Get setAttachmentId(java.lang.String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Deprecated, use item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          public Get setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns all attachments created by an add-on under the post. Requires the add-on to have active
+         * attachments on the post or have permission to create new attachments on the post. This method
+         * returns the following error codes: * `PERMISSION_DENIED` for access errors. * `INVALID_ARGUMENT`
+         * if the request is malformed. * `NOT_FOUND` if one of the identified resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.list".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+         *        enumerated. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+         * @return the request
+         */
+        public List list(java.lang.String courseId, java.lang.String itemId) throws java.io.IOException {
+          List result = new List(courseId, itemId);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ClassroomRequest<com.google.api.services.classroom.model.ListAddOnAttachmentsResponse> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials/{itemId}/addOnAttachments";
+
+          /**
+           * Returns all attachments created by an add-on under the post. Requires the add-on to have active
+           * attachments on the post or have permission to create new attachments on the post. This method
+           * returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+           * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+           * resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.list".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+         *        enumerated. This field is required, but is not marked as such while we are migrating from
+         *        post_id.
+           * @since 1.13
+           */
+          protected List(java.lang.String courseId, java.lang.String itemId) {
+            super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.ListAddOnAttachmentsResponse.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public List setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
+           * should be enumerated. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+         enumerated. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
+           * should be enumerated. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public List setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /**
+           * The maximum number of attachments to return. The service may return fewer than this
+           * value. If unspecified, at most 20 attachments will be returned. The maximum value is
+           * 20; values above 20 will be coerced to 20.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of attachments to return. The service may return fewer than this value. If
+         unspecified, at most 20 attachments will be returned. The maximum value is 20; values above 20 will
+         be coerced to 20.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of attachments to return. The service may return fewer than this
+           * value. If unspecified, at most 20 attachments will be returned. The maximum value is
+           * 20; values above 20 will be coerced to 20.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListAddOnAttachments` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListAddOnAttachments` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListAddOnAttachments` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListAddOnAttachments` must
+         match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListAddOnAttachments` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListAddOnAttachments` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. Identifier of the post under the course whose attachments to enumerate.
+           * Deprecated, use item_id instead.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Identifier of the post under the course whose attachments to enumerate. Deprecated, use
+         item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /**
+           * Optional. Identifier of the post under the course whose attachments to enumerate.
+           * Deprecated, use item_id instead.
+           */
+          public List setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an add-on attachment. Requires the add-on to have been the original creator of the
+         * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+         * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+         * resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.patch".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param itemId Identifier of the post under which the attachment is attached.
+         * @param attachmentId Required. Identifier of the attachment.
+         * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+         * @return the request
+         */
+        public Patch patch(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId, com.google.api.services.classroom.model.AddOnAttachment content) throws java.io.IOException {
+          Patch result = new Patch(courseId, itemId, attachmentId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachment> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials/{itemId}/addOnAttachments/{attachmentId}";
+
+          /**
+           * Updates an add-on attachment. Requires the add-on to have been the original creator of the
+           * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+           * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+           * identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.patch".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Identifier of the post under which the attachment is attached.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId, com.google.api.services.classroom.model.AddOnAttachment content) {
+            super(Classroom.this, "PATCH", REST_PATH, content, com.google.api.services.classroom.model.AddOnAttachment.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+            this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Patch setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Identifier of the post under which the attachment is attached. */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the post under which the attachment is attached.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /** Identifier of the post under which the attachment is attached. */
+          public Patch setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /** Required. Identifier of the attachment. */
+          @com.google.api.client.util.Key
+          private java.lang.String attachmentId;
+
+          /** Required. Identifier of the attachment.
+           */
+          public java.lang.String getAttachmentId() {
+            return attachmentId;
+          }
+
+          /** Required. Identifier of the attachment. */
+          public Patch setAttachmentId(java.lang.String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+          }
+
+          /** Required. Identifier of the post under which the attachment is attached. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Required. Identifier of the post under which the attachment is attached.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Required. Identifier of the post under which the attachment is attached. */
+          public Patch setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          /**
+           * Required. Mask that identifies which fields on the attachment to update. The update
+           * fails if invalid fields are specified. If a field supports empty values, it can be
+           * cleared by specifying it in the update mask and not in the `AddOnAttachment` object. If
+           * a field that does not support empty values is included in the update mask and not set
+           * in the `AddOnAttachment` object, an `INVALID_ARGUMENT` error is returned. The following
+           * fields may be specified by teachers: * `title` * `teacher_view_uri` *
+           * `student_view_uri` * `student_work_review_uri` * `due_date` * `due_time` * `max_points`
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Mask that identifies which fields on the attachment to update. The update fails if
+         invalid fields are specified. If a field supports empty values, it can be cleared by specifying it
+         in the update mask and not in the `AddOnAttachment` object. If a field that does not support empty
+         values is included in the update mask and not set in the `AddOnAttachment` object, an
+         `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers: * `title`
+         * `teacher_view_uri` * `student_view_uri` * `student_work_review_uri` * `due_date` * `due_time` *
+         `max_points`
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Mask that identifies which fields on the attachment to update. The update
+           * fails if invalid fields are specified. If a field supports empty values, it can be
+           * cleared by specifying it in the update mask and not in the `AddOnAttachment` object. If
+           * a field that does not support empty values is included in the update mask and not set
+           * in the `AddOnAttachment` object, an `INVALID_ARGUMENT` error is returned. The following
+           * fields may be specified by teachers: * `title` * `teacher_view_uri` *
+           * `student_view_uri` * `student_work_review_uri` * `due_date` * `due_time` * `max_points`
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
+     * An accessor for creating requests from the Posts collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Classroom classroom = new Classroom(...);}
+     *   {@code Classroom.Posts.List request = classroom.posts().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Posts posts() {
+      return new Posts();
+    }
+
+    /**
+     * The "posts" collection of methods.
+     */
+    public class Posts {
+
+      /**
+       * Gets metadata for Classroom add-ons in the context of a specific post. To maintain the integrity
+       * of its own data and permissions model, an add-on should call this to validate query parameters
+       * and the requesting user's role whenever the add-on is opened in an
+       * [iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/iframes-overview).
+       * This method returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+       * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified resources
+       * does not exist.
+       *
+       * Create a request for the method "posts.getAddOnContext".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link GetAddOnContext#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Required. Identifier of the course.
+       * @param postId Optional. Deprecated, use item_id instead.
+       * @return the request
+       */
+      public GetAddOnContext getAddOnContext(java.lang.String courseId, java.lang.String postId) throws java.io.IOException {
+        GetAddOnContext result = new GetAddOnContext(courseId, postId);
+        initialize(result);
+        return result;
+      }
+
+      public class GetAddOnContext extends ClassroomRequest<com.google.api.services.classroom.model.AddOnContext> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/posts/{postId}/addOnContext";
+
+        /**
+         * Gets metadata for Classroom add-ons in the context of a specific post. To maintain the
+         * integrity of its own data and permissions model, an add-on should call this to validate query
+         * parameters and the requesting user's role whenever the add-on is opened in an
+         * [iframe](https://developers.google.com/classroom/add-ons/get-started/iframes/iframes-overview).
+         * This method returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+         * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+         * resources does not exist.
+         *
+         * Create a request for the method "posts.getAddOnContext".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link GetAddOnContext#execute()} method to invoke the remote
+         * operation. <p> {@link GetAddOnContext#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param postId Optional. Deprecated, use item_id instead.
+         * @since 1.13
+         */
+        protected GetAddOnContext(java.lang.String courseId, java.lang.String postId) {
+          super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.AddOnContext.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+          this.postId = com.google.api.client.util.Preconditions.checkNotNull(postId, "Required parameter postId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetAddOnContext set$Xgafv(java.lang.String $Xgafv) {
+          return (GetAddOnContext) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetAddOnContext setAccessToken(java.lang.String accessToken) {
+          return (GetAddOnContext) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetAddOnContext setAlt(java.lang.String alt) {
+          return (GetAddOnContext) super.setAlt(alt);
+        }
+
+        @Override
+        public GetAddOnContext setCallback(java.lang.String callback) {
+          return (GetAddOnContext) super.setCallback(callback);
+        }
+
+        @Override
+        public GetAddOnContext setFields(java.lang.String fields) {
+          return (GetAddOnContext) super.setFields(fields);
+        }
+
+        @Override
+        public GetAddOnContext setKey(java.lang.String key) {
+          return (GetAddOnContext) super.setKey(key);
+        }
+
+        @Override
+        public GetAddOnContext setOauthToken(java.lang.String oauthToken) {
+          return (GetAddOnContext) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetAddOnContext setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetAddOnContext) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetAddOnContext setQuotaUser(java.lang.String quotaUser) {
+          return (GetAddOnContext) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetAddOnContext setUploadType(java.lang.String uploadType) {
+          return (GetAddOnContext) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetAddOnContext setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetAddOnContext) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Identifier of the course. */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Required. Identifier of the course.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /** Required. Identifier of the course. */
+        public GetAddOnContext setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /** Optional. Deprecated, use item_id instead. */
+        @com.google.api.client.util.Key
+        private java.lang.String postId;
+
+        /** Optional. Deprecated, use item_id instead.
+         */
+        public java.lang.String getPostId() {
+          return postId;
+        }
+
+        /** Optional. Deprecated, use item_id instead. */
+        public GetAddOnContext setPostId(java.lang.String postId) {
+          this.postId = postId;
+          return this;
+        }
+
+        /**
+         * Optional. Token that authorizes the request. The token is passed as a query parameter
+         * when the user is redirected from Classroom to the add-on's URL. The authorization token
+         * is required when neither of the following is true: * The add-on has attachments on the
+         * post. * The developer project issuing the request is the same project that created the
+         * post.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String addOnToken;
+
+        /** Optional. Token that authorizes the request. The token is passed as a query parameter when the user
+       is redirected from Classroom to the add-on's URL. The authorization token is required when neither
+       of the following is true: * The add-on has attachments on the post. * The developer project issuing
+       the request is the same project that created the post.
+         */
+        public java.lang.String getAddOnToken() {
+          return addOnToken;
+        }
+
+        /**
+         * Optional. Token that authorizes the request. The token is passed as a query parameter
+         * when the user is redirected from Classroom to the add-on's URL. The authorization token
+         * is required when neither of the following is true: * The add-on has attachments on the
+         * post. * The developer project issuing the request is the same project that created the
+         * post.
+         */
+        public GetAddOnContext setAddOnToken(java.lang.String addOnToken) {
+          this.addOnToken = addOnToken;
+          return this;
+        }
+
+        /**
+         * Optional. The identifier of the attachment. This field is required for student users and
+         * optional for teacher users. If not provided in the student case, an error is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String attachmentId;
+
+        /** Optional. The identifier of the attachment. This field is required for student users and optional
+       for teacher users. If not provided in the student case, an error is returned.
+         */
+        public java.lang.String getAttachmentId() {
+          return attachmentId;
+        }
+
+        /**
+         * Optional. The identifier of the attachment. This field is required for student users and
+         * optional for teacher users. If not provided in the student case, an error is returned.
+         */
+        public GetAddOnContext setAttachmentId(java.lang.String attachmentId) {
+          this.attachmentId = attachmentId;
+          return this;
+        }
+
+        /**
+         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * attachment is attached. This field is required, but is not marked as such while we are
+         * migrating from post_id.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String itemId;
+
+        /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+       attached. This field is required, but is not marked as such while we are migrating from post_id.
+         */
+        public java.lang.String getItemId() {
+          return itemId;
+        }
+
+        /**
+         * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+         * attachment is attached. This field is required, but is not marked as such while we are
+         * migrating from post_id.
+         */
+        public GetAddOnContext setItemId(java.lang.String itemId) {
+          this.itemId = itemId;
+          return this;
+        }
+
+        @Override
+        public GetAddOnContext set(String parameterName, Object value) {
+          return (GetAddOnContext) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the AddOnAttachments collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Classroom classroom = new Classroom(...);}
+       *   {@code Classroom.AddOnAttachments.List request = classroom.addOnAttachments().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AddOnAttachments addOnAttachments() {
+        return new AddOnAttachments();
+      }
+
+      /**
+       * The "addOnAttachments" collection of methods.
+       */
+      public class AddOnAttachments {
+
+        /**
+         * Creates an add-on attachment under a post. Requires the add-on to have permission to create new
+         * attachments on the post. This method returns the following error codes: * `PERMISSION_DENIED` for
+         * access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+         * identified resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.create".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param postId Optional. Deprecated, use item_id instead.
+         * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+         * @return the request
+         */
+        public Create create(java.lang.String courseId, java.lang.String postId, com.google.api.services.classroom.model.AddOnAttachment content) throws java.io.IOException {
+          Create result = new Create(courseId, postId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachment> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/posts/{postId}/addOnAttachments";
+
+          /**
+           * Creates an add-on attachment under a post. Requires the add-on to have permission to create new
+           * attachments on the post. This method returns the following error codes: * `PERMISSION_DENIED`
+           * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of
+           * the identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.create".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param postId Optional. Deprecated, use item_id instead.
+           * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+           * @since 1.13
+           */
+          protected Create(java.lang.String courseId, java.lang.String postId, com.google.api.services.classroom.model.AddOnAttachment content) {
+            super(Classroom.this, "POST", REST_PATH, content, com.google.api.services.classroom.model.AddOnAttachment.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.postId = com.google.api.client.util.Preconditions.checkNotNull(postId, "Required parameter postId must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Create setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Deprecated, use item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          public Create setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          /**
+           * Optional. Token that authorizes the request. The token is passed as a query parameter
+           * when the user is redirected from Classroom to the add-on's URL. This authorization
+           * token is required for in-Classroom attachment creation but optional for partner-first
+           * attachment creation. Returns an error if not provided for partner-first attachment
+           * creation and the developer projects that created the attachment and its parent stream
+           * item do not match.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String addOnToken;
+
+          /** Optional. Token that authorizes the request. The token is passed as a query parameter when the user
+         is redirected from Classroom to the add-on's URL. This authorization token is required for in-
+         Classroom attachment creation but optional for partner-first attachment creation. Returns an error
+         if not provided for partner-first attachment creation and the developer projects that created the
+         attachment and its parent stream item do not match.
+           */
+          public java.lang.String getAddOnToken() {
+            return addOnToken;
+          }
+
+          /**
+           * Optional. Token that authorizes the request. The token is passed as a query parameter
+           * when the user is redirected from Classroom to the add-on's URL. This authorization
+           * token is required for in-Classroom attachment creation but optional for partner-first
+           * attachment creation. Returns an error if not provided for partner-first attachment
+           * creation and the developer projects that created the attachment and its parent stream
+           * item do not match.
+           */
+          public Create setAddOnToken(java.lang.String addOnToken) {
+            this.addOnToken = addOnToken;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
+           * the attachment. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which to create the
+         attachment. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which to create
+           * the attachment. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public Create setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an add-on attachment. Requires the add-on to have been the original creator of the
+         * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+         * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+         * resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.delete".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param postId Optional. Deprecated, use item_id instead.
+         * @param attachmentId Required. Identifier of the attachment.
+         * @return the request
+         */
+        public Delete delete(java.lang.String courseId, java.lang.String postId, java.lang.String attachmentId) throws java.io.IOException {
+          Delete result = new Delete(courseId, postId, attachmentId);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ClassroomRequest<com.google.api.services.classroom.model.Empty> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/posts/{postId}/addOnAttachments/{attachmentId}";
+
+          /**
+           * Deletes an add-on attachment. Requires the add-on to have been the original creator of the
+           * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+           * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+           * identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.delete".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param postId Optional. Deprecated, use item_id instead.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String courseId, java.lang.String postId, java.lang.String attachmentId) {
+            super(Classroom.this, "DELETE", REST_PATH, null, com.google.api.services.classroom.model.Empty.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.postId = com.google.api.client.util.Preconditions.checkNotNull(postId, "Required parameter postId must be specified.");
+            this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Delete setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Deprecated, use item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          public Delete setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          /** Required. Identifier of the attachment. */
+          @com.google.api.client.util.Key
+          private java.lang.String attachmentId;
+
+          /** Required. Identifier of the attachment.
+           */
+          public java.lang.String getAttachmentId() {
+            return attachmentId;
+          }
+
+          /** Required. Identifier of the attachment. */
+          public Delete setAttachmentId(java.lang.String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         attached. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public Delete setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns an add-on attachment. Requires the add-on requesting the attachment to be the original
+         * creator of the attachment. This method returns the following error codes: * `PERMISSION_DENIED`
+         * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+         * identified resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.get".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param postId Optional. Deprecated, use item_id instead.
+         * @param attachmentId Required. Identifier of the attachment.
+         * @return the request
+         */
+        public Get get(java.lang.String courseId, java.lang.String postId, java.lang.String attachmentId) throws java.io.IOException {
+          Get result = new Get(courseId, postId, attachmentId);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachment> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/posts/{postId}/addOnAttachments/{attachmentId}";
+
+          /**
+           * Returns an add-on attachment. Requires the add-on requesting the attachment to be the original
+           * creator of the attachment. This method returns the following error codes: * `PERMISSION_DENIED`
+           * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of
+           * the identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.get".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param postId Optional. Deprecated, use item_id instead.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @since 1.13
+           */
+          protected Get(java.lang.String courseId, java.lang.String postId, java.lang.String attachmentId) {
+            super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.AddOnAttachment.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.postId = com.google.api.client.util.Preconditions.checkNotNull(postId, "Required parameter postId must be specified.");
+            this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Get setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Deprecated, use item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Optional. Deprecated, use item_id instead. */
+          public Get setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          /** Required. Identifier of the attachment. */
+          @com.google.api.client.util.Key
+          private java.lang.String attachmentId;
+
+          /** Required. Identifier of the attachment.
+           */
+          public java.lang.String getAttachmentId() {
+            return attachmentId;
+          }
+
+          /** Required. Identifier of the attachment. */
+          public Get setAttachmentId(java.lang.String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+         attached. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+           * attachment is attached. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public Get setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns all attachments created by an add-on under the post. Requires the add-on to have active
+         * attachments on the post or have permission to create new attachments on the post. This method
+         * returns the following error codes: * `PERMISSION_DENIED` for access errors. * `INVALID_ARGUMENT`
+         * if the request is malformed. * `NOT_FOUND` if one of the identified resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.list".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param postId Optional. Identifier of the post under the course whose attachments to enumerate. Deprecated, use
+         *        item_id instead.
+         * @return the request
+         */
+        public List list(java.lang.String courseId, java.lang.String postId) throws java.io.IOException {
+          List result = new List(courseId, postId);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ClassroomRequest<com.google.api.services.classroom.model.ListAddOnAttachmentsResponse> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/posts/{postId}/addOnAttachments";
+
+          /**
+           * Returns all attachments created by an add-on under the post. Requires the add-on to have active
+           * attachments on the post or have permission to create new attachments on the post. This method
+           * returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+           * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+           * resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.list".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param postId Optional. Identifier of the post under the course whose attachments to enumerate. Deprecated, use
+         *        item_id instead.
+           * @since 1.13
+           */
+          protected List(java.lang.String courseId, java.lang.String postId) {
+            super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.ListAddOnAttachmentsResponse.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.postId = com.google.api.client.util.Preconditions.checkNotNull(postId, "Required parameter postId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public List setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /**
+           * Optional. Identifier of the post under the course whose attachments to enumerate.
+           * Deprecated, use item_id instead.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Optional. Identifier of the post under the course whose attachments to enumerate. Deprecated, use
+         item_id instead.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /**
+           * Optional. Identifier of the post under the course whose attachments to enumerate.
+           * Deprecated, use item_id instead.
+           */
+          public List setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
+           * should be enumerated. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments should be
+         enumerated. This field is required, but is not marked as such while we are migrating from post_id.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /**
+           * Identifier of the announcement, courseWork, or courseWorkMaterial whose attachments
+           * should be enumerated. This field is required, but is not marked as such while we are
+           * migrating from post_id.
+           */
+          public List setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /**
+           * The maximum number of attachments to return. The service may return fewer than this
+           * value. If unspecified, at most 20 attachments will be returned. The maximum value is
+           * 20; values above 20 will be coerced to 20.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of attachments to return. The service may return fewer than this value. If
+         unspecified, at most 20 attachments will be returned. The maximum value is 20; values above 20 will
+         be coerced to 20.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of attachments to return. The service may return fewer than this
+           * value. If unspecified, at most 20 attachments will be returned. The maximum value is
+           * 20; values above 20 will be coerced to 20.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListAddOnAttachments` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListAddOnAttachments` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListAddOnAttachments` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListAddOnAttachments` must
+         match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListAddOnAttachments` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListAddOnAttachments` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an add-on attachment. Requires the add-on to have been the original creator of the
+         * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+         * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+         * resources does not exist.
+         *
+         * Create a request for the method "addOnAttachments.patch".
+         *
+         * This request holds the parameters needed by the classroom server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param courseId Required. Identifier of the course.
+         * @param postId Required. Identifier of the post under which the attachment is attached.
+         * @param attachmentId Required. Identifier of the attachment.
+         * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+         * @return the request
+         */
+        public Patch patch(java.lang.String courseId, java.lang.String postId, java.lang.String attachmentId, com.google.api.services.classroom.model.AddOnAttachment content) throws java.io.IOException {
+          Patch result = new Patch(courseId, postId, attachmentId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachment> {
+
+          private static final String REST_PATH = "v1/courses/{courseId}/posts/{postId}/addOnAttachments/{attachmentId}";
+
+          /**
+           * Updates an add-on attachment. Requires the add-on to have been the original creator of the
+           * attachment. This method returns the following error codes: * `PERMISSION_DENIED` for access
+           * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the
+           * identified resources does not exist.
+           *
+           * Create a request for the method "addOnAttachments.patch".
+           *
+           * This request holds the parameters needed by the the classroom server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param postId Required. Identifier of the post under which the attachment is attached.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @param content the {@link com.google.api.services.classroom.model.AddOnAttachment}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String courseId, java.lang.String postId, java.lang.String attachmentId, com.google.api.services.classroom.model.AddOnAttachment content) {
+            super(Classroom.this, "PATCH", REST_PATH, content, com.google.api.services.classroom.model.AddOnAttachment.class);
+            this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+            this.postId = com.google.api.client.util.Preconditions.checkNotNull(postId, "Required parameter postId must be specified.");
+            this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Identifier of the course. */
+          @com.google.api.client.util.Key
+          private java.lang.String courseId;
+
+          /** Required. Identifier of the course.
+           */
+          public java.lang.String getCourseId() {
+            return courseId;
+          }
+
+          /** Required. Identifier of the course. */
+          public Patch setCourseId(java.lang.String courseId) {
+            this.courseId = courseId;
+            return this;
+          }
+
+          /** Required. Identifier of the post under which the attachment is attached. */
+          @com.google.api.client.util.Key
+          private java.lang.String postId;
+
+          /** Required. Identifier of the post under which the attachment is attached.
+           */
+          public java.lang.String getPostId() {
+            return postId;
+          }
+
+          /** Required. Identifier of the post under which the attachment is attached. */
+          public Patch setPostId(java.lang.String postId) {
+            this.postId = postId;
+            return this;
+          }
+
+          /** Required. Identifier of the attachment. */
+          @com.google.api.client.util.Key
+          private java.lang.String attachmentId;
+
+          /** Required. Identifier of the attachment.
+           */
+          public java.lang.String getAttachmentId() {
+            return attachmentId;
+          }
+
+          /** Required. Identifier of the attachment. */
+          public Patch setAttachmentId(java.lang.String attachmentId) {
+            this.attachmentId = attachmentId;
+            return this;
+          }
+
+          /** Identifier of the post under which the attachment is attached. */
+          @com.google.api.client.util.Key
+          private java.lang.String itemId;
+
+          /** Identifier of the post under which the attachment is attached.
+           */
+          public java.lang.String getItemId() {
+            return itemId;
+          }
+
+          /** Identifier of the post under which the attachment is attached. */
+          public Patch setItemId(java.lang.String itemId) {
+            this.itemId = itemId;
+            return this;
+          }
+
+          /**
+           * Required. Mask that identifies which fields on the attachment to update. The update
+           * fails if invalid fields are specified. If a field supports empty values, it can be
+           * cleared by specifying it in the update mask and not in the `AddOnAttachment` object. If
+           * a field that does not support empty values is included in the update mask and not set
+           * in the `AddOnAttachment` object, an `INVALID_ARGUMENT` error is returned. The following
+           * fields may be specified by teachers: * `title` * `teacher_view_uri` *
+           * `student_view_uri` * `student_work_review_uri` * `due_date` * `due_time` * `max_points`
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Mask that identifies which fields on the attachment to update. The update fails if
+         invalid fields are specified. If a field supports empty values, it can be cleared by specifying it
+         in the update mask and not in the `AddOnAttachment` object. If a field that does not support empty
+         values is included in the update mask and not set in the `AddOnAttachment` object, an
+         `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers: * `title`
+         * `teacher_view_uri` * `student_view_uri` * `student_work_review_uri` * `due_date` * `due_time` *
+         `max_points`
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Mask that identifies which fields on the attachment to update. The update
+           * fails if invalid fields are specified. If a field supports empty values, it can be
+           * cleared by specifying it in the update mask and not in the `AddOnAttachment` object. If
+           * a field that does not support empty values is included in the update mask and not set
+           * in the `AddOnAttachment` object, an `INVALID_ARGUMENT` error is returned. The following
+           * fields may be specified by teachers: * `title` * `teacher_view_uri` *
+           * `student_view_uri` * `student_work_review_uri` * `due_date` * `due_time` * `max_points`
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the StudentSubmissions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Classroom classroom = new Classroom(...);}
+         *   {@code Classroom.StudentSubmissions.List request = classroom.studentSubmissions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public StudentSubmissions studentSubmissions() {
+          return new StudentSubmissions();
+        }
+
+        /**
+         * The "studentSubmissions" collection of methods.
+         */
+        public class StudentSubmissions {
+
+          /**
+           * Returns a student submission for an add-on attachment. This method returns the following error
+           * codes: * `PERMISSION_DENIED` for access errors. * `INVALID_ARGUMENT` if the request is malformed.
+           * * `NOT_FOUND` if one of the identified resources does not exist.
+           *
+           * Create a request for the method "studentSubmissions.get".
+           *
+           * This request holds the parameters needed by the classroom server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param postId Optional. Deprecated, use item_id instead.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @param submissionId Required. Identifier of the student’s submission.
+           * @return the request
+           */
+          public Get get(java.lang.String courseId, java.lang.String postId, java.lang.String attachmentId, java.lang.String submissionId) throws java.io.IOException {
+            Get result = new Get(courseId, postId, attachmentId, submissionId);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission> {
+
+            private static final String REST_PATH = "v1/courses/{courseId}/posts/{postId}/addOnAttachments/{attachmentId}/studentSubmissions/{submissionId}";
+
+            /**
+             * Returns a student submission for an add-on attachment. This method returns the following error
+             * codes: * `PERMISSION_DENIED` for access errors. * `INVALID_ARGUMENT` if the request is
+             * malformed. * `NOT_FOUND` if one of the identified resources does not exist.
+             *
+             * Create a request for the method "studentSubmissions.get".
+             *
+             * This request holds the parameters needed by the the classroom server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param courseId Required. Identifier of the course.
+             * @param postId Optional. Deprecated, use item_id instead.
+             * @param attachmentId Required. Identifier of the attachment.
+             * @param submissionId Required. Identifier of the student’s submission.
+             * @since 1.13
+             */
+            protected Get(java.lang.String courseId, java.lang.String postId, java.lang.String attachmentId, java.lang.String submissionId) {
+              super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission.class);
+              this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+              this.postId = com.google.api.client.util.Preconditions.checkNotNull(postId, "Required parameter postId must be specified.");
+              this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+              this.submissionId = com.google.api.client.util.Preconditions.checkNotNull(submissionId, "Required parameter submissionId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Identifier of the course. */
+            @com.google.api.client.util.Key
+            private java.lang.String courseId;
+
+            /** Required. Identifier of the course.
+             */
+            public java.lang.String getCourseId() {
+              return courseId;
+            }
+
+            /** Required. Identifier of the course. */
+            public Get setCourseId(java.lang.String courseId) {
+              this.courseId = courseId;
+              return this;
+            }
+
+            /** Optional. Deprecated, use item_id instead. */
+            @com.google.api.client.util.Key
+            private java.lang.String postId;
+
+            /** Optional. Deprecated, use item_id instead.
+             */
+            public java.lang.String getPostId() {
+              return postId;
+            }
+
+            /** Optional. Deprecated, use item_id instead. */
+            public Get setPostId(java.lang.String postId) {
+              this.postId = postId;
+              return this;
+            }
+
+            /** Required. Identifier of the attachment. */
+            @com.google.api.client.util.Key
+            private java.lang.String attachmentId;
+
+            /** Required. Identifier of the attachment.
+             */
+            public java.lang.String getAttachmentId() {
+              return attachmentId;
+            }
+
+            /** Required. Identifier of the attachment. */
+            public Get setAttachmentId(java.lang.String attachmentId) {
+              this.attachmentId = attachmentId;
+              return this;
+            }
+
+            /** Required. Identifier of the student’s submission. */
+            @com.google.api.client.util.Key
+            private java.lang.String submissionId;
+
+            /** Required. Identifier of the student’s submission.
+             */
+            public java.lang.String getSubmissionId() {
+              return submissionId;
+            }
+
+            /** Required. Identifier of the student’s submission. */
+            public Get setSubmissionId(java.lang.String submissionId) {
+              this.submissionId = submissionId;
+              return this;
+            }
+
+            /**
+             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+             * attachment is attached. This field is required, but is not marked as such while we
+             * are migrating from post_id.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String itemId;
+
+            /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+           attached. This field is required, but is not marked as such while we are migrating from post_id.
+             */
+            public java.lang.String getItemId() {
+              return itemId;
+            }
+
+            /**
+             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+             * attachment is attached. This field is required, but is not marked as such while we
+             * are migrating from post_id.
+             */
+            public Get setItemId(java.lang.String itemId) {
+              this.itemId = itemId;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates data associated with an add-on attachment submission. Requires the add-on to have been
+           * the original creator of the attachment and the attachment to have a positive `max_points` value
+           * set. This method returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+           * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified resources
+           * does not exist.
+           *
+           * Create a request for the method "studentSubmissions.patch".
+           *
+           * This request holds the parameters needed by the classroom server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param postId Optional. Deprecated, use item_id instead.
+           * @param attachmentId Required. Identifier of the attachment.
+           * @param submissionId Required. Identifier of the student's submission.
+           * @param content the {@link com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission}
+           * @return the request
+           */
+          public Patch patch(java.lang.String courseId, java.lang.String postId, java.lang.String attachmentId, java.lang.String submissionId, com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission content) throws java.io.IOException {
+            Patch result = new Patch(courseId, postId, attachmentId, submissionId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends ClassroomRequest<com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission> {
+
+            private static final String REST_PATH = "v1/courses/{courseId}/posts/{postId}/addOnAttachments/{attachmentId}/studentSubmissions/{submissionId}";
+
+            /**
+             * Updates data associated with an add-on attachment submission. Requires the add-on to have been
+             * the original creator of the attachment and the attachment to have a positive `max_points` value
+             * set. This method returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+             * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+             * resources does not exist.
+             *
+             * Create a request for the method "studentSubmissions.patch".
+             *
+             * This request holds the parameters needed by the the classroom server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param courseId Required. Identifier of the course.
+             * @param postId Optional. Deprecated, use item_id instead.
+             * @param attachmentId Required. Identifier of the attachment.
+             * @param submissionId Required. Identifier of the student's submission.
+             * @param content the {@link com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String courseId, java.lang.String postId, java.lang.String attachmentId, java.lang.String submissionId, com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission content) {
+              super(Classroom.this, "PATCH", REST_PATH, content, com.google.api.services.classroom.model.AddOnAttachmentStudentSubmission.class);
+              this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+              this.postId = com.google.api.client.util.Preconditions.checkNotNull(postId, "Required parameter postId must be specified.");
+              this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+              this.submissionId = com.google.api.client.util.Preconditions.checkNotNull(submissionId, "Required parameter submissionId must be specified.");
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Identifier of the course. */
+            @com.google.api.client.util.Key
+            private java.lang.String courseId;
+
+            /** Required. Identifier of the course.
+             */
+            public java.lang.String getCourseId() {
+              return courseId;
+            }
+
+            /** Required. Identifier of the course. */
+            public Patch setCourseId(java.lang.String courseId) {
+              this.courseId = courseId;
+              return this;
+            }
+
+            /** Optional. Deprecated, use item_id instead. */
+            @com.google.api.client.util.Key
+            private java.lang.String postId;
+
+            /** Optional. Deprecated, use item_id instead.
+             */
+            public java.lang.String getPostId() {
+              return postId;
+            }
+
+            /** Optional. Deprecated, use item_id instead. */
+            public Patch setPostId(java.lang.String postId) {
+              this.postId = postId;
+              return this;
+            }
+
+            /** Required. Identifier of the attachment. */
+            @com.google.api.client.util.Key
+            private java.lang.String attachmentId;
+
+            /** Required. Identifier of the attachment.
+             */
+            public java.lang.String getAttachmentId() {
+              return attachmentId;
+            }
+
+            /** Required. Identifier of the attachment. */
+            public Patch setAttachmentId(java.lang.String attachmentId) {
+              this.attachmentId = attachmentId;
+              return this;
+            }
+
+            /** Required. Identifier of the student's submission. */
+            @com.google.api.client.util.Key
+            private java.lang.String submissionId;
+
+            /** Required. Identifier of the student's submission.
+             */
+            public java.lang.String getSubmissionId() {
+              return submissionId;
+            }
+
+            /** Required. Identifier of the student's submission. */
+            public Patch setSubmissionId(java.lang.String submissionId) {
+              this.submissionId = submissionId;
+              return this;
+            }
+
+            /**
+             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+             * attachment is attached. This field is required, but is not marked as such while we
+             * are migrating from post_id.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String itemId;
+
+            /** Identifier of the announcement, courseWork, or courseWorkMaterial under which the attachment is
+           attached. This field is required, but is not marked as such while we are migrating from post_id.
+             */
+            public java.lang.String getItemId() {
+              return itemId;
+            }
+
+            /**
+             * Identifier of the announcement, courseWork, or courseWorkMaterial under which the
+             * attachment is attached. This field is required, but is not marked as such while we
+             * are migrating from post_id.
+             */
+            public Patch setItemId(java.lang.String itemId) {
+              this.itemId = itemId;
+              return this;
+            }
+
+            /**
+             * Required. Mask that identifies which fields on the attachment to update. The update
+             * fails if invalid fields are specified. If a field supports empty values, it can be
+             * cleared by specifying it in the update mask and not in the
+             * `AddOnAttachmentStudentSubmission` object. The following fields may be specified by
+             * teachers: * `points_earned`
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. Mask that identifies which fields on the attachment to update. The update fails if
+           invalid fields are specified. If a field supports empty values, it can be cleared by specifying it
+           in the update mask and not in the `AddOnAttachmentStudentSubmission` object. The following fields
+           may be specified by teachers: * `points_earned`
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Required. Mask that identifies which fields on the attachment to update. The update
+             * fails if invalid fields are specified. If a field supports empty values, it can be
+             * cleared by specifying it in the update mask and not in the
+             * `AddOnAttachmentStudentSubmission` object. The following fields may be specified by
+             * teachers: * `points_earned`
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
     }
     /**
      * An accessor for creating requests from the Students collection.

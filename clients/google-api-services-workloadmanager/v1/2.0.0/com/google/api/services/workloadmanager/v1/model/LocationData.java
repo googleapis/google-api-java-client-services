@@ -57,6 +57,12 @@ public final class LocationData extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private PlacerLocation placerLocation;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private SpannerLocation spannerLocation;
 
   /**
@@ -116,6 +122,21 @@ public final class LocationData extends com.google.api.client.json.GenericJson {
    */
   public LocationData setGcpProjectProxy(TenantProjectProxy gcpProjectProxy) {
     this.gcpProjectProxy = gcpProjectProxy;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public PlacerLocation getPlacerLocation() {
+    return placerLocation;
+  }
+
+  /**
+   * @param placerLocation placerLocation or {@code null} for none
+   */
+  public LocationData setPlacerLocation(PlacerLocation placerLocation) {
+    this.placerLocation = placerLocation;
     return this;
   }
 

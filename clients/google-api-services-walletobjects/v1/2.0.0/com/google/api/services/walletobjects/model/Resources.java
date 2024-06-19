@@ -30,6 +30,7 @@ package com.google.api.services.walletobjects.model;
 public final class Resources extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of event ticket classes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,6 +43,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of event ticket objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,6 +56,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of flight classes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,6 +69,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of flight objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,6 +82,33 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of generic classes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GenericClass> genericClasses;
+
+  static {
+    // hack to force ProGuard to consider GenericClass used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GenericClass.class);
+  }
+
+  /**
+   * A list of generic objects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GenericObject> genericObjects;
+
+  static {
+    // hack to force ProGuard to consider GenericObject used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GenericObject.class);
+  }
+
+  /**
+   * A list of gift card classes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,6 +121,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of gift card objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,6 +134,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of loyalty classes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,6 +147,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of loyalty objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,6 +160,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of offer classes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,6 +173,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of offer objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,18 +186,21 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of transit classes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TransitClass> transitClasses;
 
   /**
+   * A list of transit objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TransitObject> transitObjects;
 
   /**
+   * A list of event ticket classes.
    * @return value or {@code null} for none
    */
   public java.util.List<EventTicketClass> getEventTicketClasses() {
@@ -169,6 +208,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of event ticket classes.
    * @param eventTicketClasses eventTicketClasses or {@code null} for none
    */
   public Resources setEventTicketClasses(java.util.List<EventTicketClass> eventTicketClasses) {
@@ -177,6 +217,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of event ticket objects.
    * @return value or {@code null} for none
    */
   public java.util.List<EventTicketObject> getEventTicketObjects() {
@@ -184,6 +225,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of event ticket objects.
    * @param eventTicketObjects eventTicketObjects or {@code null} for none
    */
   public Resources setEventTicketObjects(java.util.List<EventTicketObject> eventTicketObjects) {
@@ -192,6 +234,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of flight classes.
    * @return value or {@code null} for none
    */
   public java.util.List<FlightClass> getFlightClasses() {
@@ -199,6 +242,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of flight classes.
    * @param flightClasses flightClasses or {@code null} for none
    */
   public Resources setFlightClasses(java.util.List<FlightClass> flightClasses) {
@@ -207,6 +251,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of flight objects.
    * @return value or {@code null} for none
    */
   public java.util.List<FlightObject> getFlightObjects() {
@@ -214,6 +259,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of flight objects.
    * @param flightObjects flightObjects or {@code null} for none
    */
   public Resources setFlightObjects(java.util.List<FlightObject> flightObjects) {
@@ -222,6 +268,41 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of generic classes.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GenericClass> getGenericClasses() {
+    return genericClasses;
+  }
+
+  /**
+   * A list of generic classes.
+   * @param genericClasses genericClasses or {@code null} for none
+   */
+  public Resources setGenericClasses(java.util.List<GenericClass> genericClasses) {
+    this.genericClasses = genericClasses;
+    return this;
+  }
+
+  /**
+   * A list of generic objects.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GenericObject> getGenericObjects() {
+    return genericObjects;
+  }
+
+  /**
+   * A list of generic objects.
+   * @param genericObjects genericObjects or {@code null} for none
+   */
+  public Resources setGenericObjects(java.util.List<GenericObject> genericObjects) {
+    this.genericObjects = genericObjects;
+    return this;
+  }
+
+  /**
+   * A list of gift card classes.
    * @return value or {@code null} for none
    */
   public java.util.List<GiftCardClass> getGiftCardClasses() {
@@ -229,6 +310,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of gift card classes.
    * @param giftCardClasses giftCardClasses or {@code null} for none
    */
   public Resources setGiftCardClasses(java.util.List<GiftCardClass> giftCardClasses) {
@@ -237,6 +319,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of gift card objects.
    * @return value or {@code null} for none
    */
   public java.util.List<GiftCardObject> getGiftCardObjects() {
@@ -244,6 +327,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of gift card objects.
    * @param giftCardObjects giftCardObjects or {@code null} for none
    */
   public Resources setGiftCardObjects(java.util.List<GiftCardObject> giftCardObjects) {
@@ -252,6 +336,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of loyalty classes.
    * @return value or {@code null} for none
    */
   public java.util.List<LoyaltyClass> getLoyaltyClasses() {
@@ -259,6 +344,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of loyalty classes.
    * @param loyaltyClasses loyaltyClasses or {@code null} for none
    */
   public Resources setLoyaltyClasses(java.util.List<LoyaltyClass> loyaltyClasses) {
@@ -267,6 +353,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of loyalty objects.
    * @return value or {@code null} for none
    */
   public java.util.List<LoyaltyObject> getLoyaltyObjects() {
@@ -274,6 +361,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of loyalty objects.
    * @param loyaltyObjects loyaltyObjects or {@code null} for none
    */
   public Resources setLoyaltyObjects(java.util.List<LoyaltyObject> loyaltyObjects) {
@@ -282,6 +370,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of offer classes.
    * @return value or {@code null} for none
    */
   public java.util.List<OfferClass> getOfferClasses() {
@@ -289,6 +378,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of offer classes.
    * @param offerClasses offerClasses or {@code null} for none
    */
   public Resources setOfferClasses(java.util.List<OfferClass> offerClasses) {
@@ -297,6 +387,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of offer objects.
    * @return value or {@code null} for none
    */
   public java.util.List<OfferObject> getOfferObjects() {
@@ -304,6 +395,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of offer objects.
    * @param offerObjects offerObjects or {@code null} for none
    */
   public Resources setOfferObjects(java.util.List<OfferObject> offerObjects) {
@@ -312,6 +404,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of transit classes.
    * @return value or {@code null} for none
    */
   public java.util.List<TransitClass> getTransitClasses() {
@@ -319,6 +412,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of transit classes.
    * @param transitClasses transitClasses or {@code null} for none
    */
   public Resources setTransitClasses(java.util.List<TransitClass> transitClasses) {
@@ -327,6 +421,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of transit objects.
    * @return value or {@code null} for none
    */
   public java.util.List<TransitObject> getTransitObjects() {
@@ -334,6 +429,7 @@ public final class Resources extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of transit objects.
    * @param transitObjects transitObjects or {@code null} for none
    */
   public Resources setTransitObjects(java.util.List<TransitObject> transitObjects) {

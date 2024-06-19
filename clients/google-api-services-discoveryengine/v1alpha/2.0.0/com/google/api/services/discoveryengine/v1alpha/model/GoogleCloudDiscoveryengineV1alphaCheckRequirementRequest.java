@@ -30,14 +30,25 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A Requirement.type specifying the requirement to check.
+   * The type specifying the requirement to check. The supported types are: *
+   * `discoveryengine.googleapis.com/media_recs/general/all/warning` *
+   * `discoveryengine.googleapis.com/media_recs/oyml/cvr/warning` *
+   * `discoveryengine.googleapis.com/media_recs/rfy/cvr/warning` *
+   * `discoveryengine.googleapis.com/media_recs/mlt/cvr/warning` *
+   * `discoveryengine.googleapis.com/media_recs/mp/cvr/warning` *
+   * `discoveryengine.googleapis.com/media_recs/oyml/wdps/warning` *
+   * `discoveryengine.googleapis.com/media_recs/rfy/wdps/warning` *
+   * `discoveryengine.googleapis.com/media_recs/mlt/wdps/warning`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requirementType;
 
   /**
-   * The resources to be checked for this requirement.
+   * The type needed for the monitored resources: * `discoveryengine.googleapis.com/Branch`. * The
+   * labels needed for this resource: * `project_number` * `location_id` * `collection_id` *
+   * `datastore_id` * `branch_id` * `discoveryengine.googleapis.com/DataStore` * The labels needed
+   * for this resource: * `project_number` * `location_id` * `collection_id` * `datastore_id`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +61,15 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest exte
   }
 
   /**
-   * A Requirement.type specifying the requirement to check.
+   * The type specifying the requirement to check. The supported types are: *
+   * `discoveryengine.googleapis.com/media_recs/general/all/warning` *
+   * `discoveryengine.googleapis.com/media_recs/oyml/cvr/warning` *
+   * `discoveryengine.googleapis.com/media_recs/rfy/cvr/warning` *
+   * `discoveryengine.googleapis.com/media_recs/mlt/cvr/warning` *
+   * `discoveryengine.googleapis.com/media_recs/mp/cvr/warning` *
+   * `discoveryengine.googleapis.com/media_recs/oyml/wdps/warning` *
+   * `discoveryengine.googleapis.com/media_recs/rfy/wdps/warning` *
+   * `discoveryengine.googleapis.com/media_recs/mlt/wdps/warning`
    * @return value or {@code null} for none
    */
   public java.lang.String getRequirementType() {
@@ -58,7 +77,15 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest exte
   }
 
   /**
-   * A Requirement.type specifying the requirement to check.
+   * The type specifying the requirement to check. The supported types are: *
+   * `discoveryengine.googleapis.com/media_recs/general/all/warning` *
+   * `discoveryengine.googleapis.com/media_recs/oyml/cvr/warning` *
+   * `discoveryengine.googleapis.com/media_recs/rfy/cvr/warning` *
+   * `discoveryengine.googleapis.com/media_recs/mlt/cvr/warning` *
+   * `discoveryengine.googleapis.com/media_recs/mp/cvr/warning` *
+   * `discoveryengine.googleapis.com/media_recs/oyml/wdps/warning` *
+   * `discoveryengine.googleapis.com/media_recs/rfy/wdps/warning` *
+   * `discoveryengine.googleapis.com/media_recs/mlt/wdps/warning`
    * @param requirementType requirementType or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest setRequirementType(java.lang.String requirementType) {
@@ -67,7 +94,10 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest exte
   }
 
   /**
-   * The resources to be checked for this requirement.
+   * The type needed for the monitored resources: * `discoveryengine.googleapis.com/Branch`. * The
+   * labels needed for this resource: * `project_number` * `location_id` * `collection_id` *
+   * `datastore_id` * `branch_id` * `discoveryengine.googleapis.com/DataStore` * The labels needed
+   * for this resource: * `project_number` * `location_id` * `collection_id` * `datastore_id`
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleApiMonitoredResource> getResources() {
@@ -75,7 +105,10 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest exte
   }
 
   /**
-   * The resources to be checked for this requirement.
+   * The type needed for the monitored resources: * `discoveryengine.googleapis.com/Branch`. * The
+   * labels needed for this resource: * `project_number` * `location_id` * `collection_id` *
+   * `datastore_id` * `branch_id` * `discoveryengine.googleapis.com/DataStore` * The labels needed
+   * for this resource: * `project_number` * `location_id` * `collection_id` * `datastore_id`
    * @param resources resources or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest setResources(java.util.List<GoogleApiMonitoredResource> resources) {

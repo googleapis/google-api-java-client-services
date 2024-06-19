@@ -69,7 +69,7 @@ public final class GoogleCloudDiscoveryengineV1alphaRequirement extends com.goog
 
   /**
    * The requirement type, used as an identifier. Must be unique. The type should prefix with
-   * service name to avoid possible collision. It's encoraged to use natural hierarchical grouping
+   * service name to avoid possible collision. It's encouraged to use natural hierarchical grouping
    * for similar requirements. Examples: * `library.googleapis.com/books/min_available_books` *
    * `discoveryengine.googleapis.com/media_rec/recommended_for_you/conversion_rate`
    * The value may be {@code null}.
@@ -177,7 +177,7 @@ public final class GoogleCloudDiscoveryengineV1alphaRequirement extends com.goog
 
   /**
    * The requirement type, used as an identifier. Must be unique. The type should prefix with
-   * service name to avoid possible collision. It's encoraged to use natural hierarchical grouping
+   * service name to avoid possible collision. It's encouraged to use natural hierarchical grouping
    * for similar requirements. Examples: * `library.googleapis.com/books/min_available_books` *
    * `discoveryengine.googleapis.com/media_rec/recommended_for_you/conversion_rate`
    * @return value or {@code null} for none
@@ -188,7 +188,7 @@ public final class GoogleCloudDiscoveryengineV1alphaRequirement extends com.goog
 
   /**
    * The requirement type, used as an identifier. Must be unique. The type should prefix with
-   * service name to avoid possible collision. It's encoraged to use natural hierarchical grouping
+   * service name to avoid possible collision. It's encouraged to use natural hierarchical grouping
    * for similar requirements. Examples: * `library.googleapis.com/books/min_available_books` *
    * `discoveryengine.googleapis.com/media_rec/recommended_for_you/conversion_rate`
    * @param type type or {@code null} for none

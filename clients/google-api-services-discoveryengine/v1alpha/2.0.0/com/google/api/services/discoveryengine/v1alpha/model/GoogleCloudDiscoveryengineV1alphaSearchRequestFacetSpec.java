@@ -77,7 +77,9 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpec exten
 
   /**
    * Maximum facet values that are returned for this facet. If unspecified, defaults to 20. The
-   * maximum allowed value is 300. Values above 300 are coerced to 300. If this field is negative,
+   * maximum allowed value is 300. Values above 300 are coerced to 300. For aggregation in
+   * healthcare search, when the [FacetKey.key] is "healthcare_aggregation_key", the limit will be
+   * overridden to 10,000 internally, regardless of the value set here. If this field is negative,
    * an `INVALID_ARGUMENT` is returned.
    * The value may be {@code null}.
    */
@@ -187,7 +189,9 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpec exten
 
   /**
    * Maximum facet values that are returned for this facet. If unspecified, defaults to 20. The
-   * maximum allowed value is 300. Values above 300 are coerced to 300. If this field is negative,
+   * maximum allowed value is 300. Values above 300 are coerced to 300. For aggregation in
+   * healthcare search, when the [FacetKey.key] is "healthcare_aggregation_key", the limit will be
+   * overridden to 10,000 internally, regardless of the value set here. If this field is negative,
    * an `INVALID_ARGUMENT` is returned.
    * @return value or {@code null} for none
    */
@@ -197,7 +201,9 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpec exten
 
   /**
    * Maximum facet values that are returned for this facet. If unspecified, defaults to 20. The
-   * maximum allowed value is 300. Values above 300 are coerced to 300. If this field is negative,
+   * maximum allowed value is 300. Values above 300 are coerced to 300. For aggregation in
+   * healthcare search, when the [FacetKey.key] is "healthcare_aggregation_key", the limit will be
+   * overridden to 10,000 internally, regardless of the value set here. If this field is negative,
    * an `INVALID_ARGUMENT` is returned.
    * @param limit limit or {@code null} for none
    */

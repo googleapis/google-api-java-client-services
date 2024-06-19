@@ -92,6 +92,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   private java.lang.String industryVertical;
 
   /**
+   * Language info for DataStore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaLanguageInfo languageInfo;
+
+  /**
    * Immutable. The full resource name of the data store. Format: `projects/{project}/locations/{loc
    * ation}/collections/{collection_id}/dataStores/{data_store_id}`. This field must be a UTF-8
    * encoded string with a length limit of 1024 characters.
@@ -266,6 +273,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaDataStore setIndustryVertical(java.lang.String industryVertical) {
     this.industryVertical = industryVertical;
+    return this;
+  }
+
+  /**
+   * Language info for DataStore.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaLanguageInfo getLanguageInfo() {
+    return languageInfo;
+  }
+
+  /**
+   * Language info for DataStore.
+   * @param languageInfo languageInfo or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStore setLanguageInfo(GoogleCloudDiscoveryengineV1alphaLanguageInfo languageInfo) {
+    this.languageInfo = languageInfo;
     return this;
   }
 

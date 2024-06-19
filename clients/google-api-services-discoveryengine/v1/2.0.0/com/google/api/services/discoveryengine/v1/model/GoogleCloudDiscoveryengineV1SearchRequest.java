@@ -106,6 +106,16 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   private GoogleCloudDiscoveryengineV1SearchRequestImageQuery imageQuery;
 
   /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Standard
+   * fields](https://cloud.google.com/apis/design/standard_fields). This field helps to better
+   * interpret the query. If a value isn't specified, the query language code is automatically
+   * detected, which may not be accurate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
+
+  /**
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Documents deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an `INVALID_ARGUMENT` is
@@ -400,6 +410,29 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
    */
   public GoogleCloudDiscoveryengineV1SearchRequest setImageQuery(GoogleCloudDiscoveryengineV1SearchRequestImageQuery imageQuery) {
     this.imageQuery = imageQuery;
+    return this;
+  }
+
+  /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Standard
+   * fields](https://cloud.google.com/apis/design/standard_fields). This field helps to better
+   * interpret the query. If a value isn't specified, the query language code is automatically
+   * detected, which may not be accurate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Standard
+   * fields](https://cloud.google.com/apis/design/standard_fields). This field helps to better
+   * interpret the query. If a value isn't specified, the query language code is automatically
+   * detected, which may not be accurate.
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequest setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
     return this;
   }
 

@@ -30,23 +30,23 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SuggestConversationSummaryRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Parameters for a human assist query. Only used for POC/demo purpose.
+   * Optional. Parameters for a human assist query. Only used for POC/demo purpose.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams;
 
   /**
-   * Max number of messages prior to and including [latest_message] to use as context when compiling
-   * the suggestion. By default 500 and at most 1000.
+   * Optional. Max number of messages prior to and including [latest_message] to use as context when
+   * compiling the suggestion. By default 500 and at most 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer contextSize;
 
   /**
-   * The name of the latest conversation message used as context for compiling suggestion. If empty,
-   * the latest message of the conversation will be used. Format:
+   * Optional. The name of the latest conversation message used as context for compiling suggestion.
+   * If empty, the latest message of the conversation will be used. Format:
    * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class GoogleCloudDialogflowV2SuggestConversationSummaryRequest exte
   private java.lang.String latestMessage;
 
   /**
-   * Parameters for a human assist query. Only used for POC/demo purpose.
+   * Optional. Parameters for a human assist query. Only used for POC/demo purpose.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AssistQueryParameters getAssistQueryParams() {
@@ -62,7 +62,7 @@ public final class GoogleCloudDialogflowV2SuggestConversationSummaryRequest exte
   }
 
   /**
-   * Parameters for a human assist query. Only used for POC/demo purpose.
+   * Optional. Parameters for a human assist query. Only used for POC/demo purpose.
    * @param assistQueryParams assistQueryParams or {@code null} for none
    */
   public GoogleCloudDialogflowV2SuggestConversationSummaryRequest setAssistQueryParams(GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams) {
@@ -71,8 +71,8 @@ public final class GoogleCloudDialogflowV2SuggestConversationSummaryRequest exte
   }
 
   /**
-   * Max number of messages prior to and including [latest_message] to use as context when compiling
-   * the suggestion. By default 500 and at most 1000.
+   * Optional. Max number of messages prior to and including [latest_message] to use as context when
+   * compiling the suggestion. By default 500 and at most 1000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContextSize() {
@@ -80,8 +80,8 @@ public final class GoogleCloudDialogflowV2SuggestConversationSummaryRequest exte
   }
 
   /**
-   * Max number of messages prior to and including [latest_message] to use as context when compiling
-   * the suggestion. By default 500 and at most 1000.
+   * Optional. Max number of messages prior to and including [latest_message] to use as context when
+   * compiling the suggestion. By default 500 and at most 1000.
    * @param contextSize contextSize or {@code null} for none
    */
   public GoogleCloudDialogflowV2SuggestConversationSummaryRequest setContextSize(java.lang.Integer contextSize) {
@@ -90,8 +90,8 @@ public final class GoogleCloudDialogflowV2SuggestConversationSummaryRequest exte
   }
 
   /**
-   * The name of the latest conversation message used as context for compiling suggestion. If empty,
-   * the latest message of the conversation will be used. Format:
+   * Optional. The name of the latest conversation message used as context for compiling suggestion.
+   * If empty, the latest message of the conversation will be used. Format:
    * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
@@ -100,8 +100,8 @@ public final class GoogleCloudDialogflowV2SuggestConversationSummaryRequest exte
   }
 
   /**
-   * The name of the latest conversation message used as context for compiling suggestion. If empty,
-   * the latest message of the conversation will be used. Format:
+   * Optional. The name of the latest conversation message used as context for compiling suggestion.
+   * If empty, the latest message of the conversation will be used. Format:
    * `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */

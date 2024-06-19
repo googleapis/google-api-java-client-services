@@ -40,8 +40,8 @@ public final class GoogleCloudDialogflowV2beta1Conversation extends com.google.a
   private java.lang.String conversationProfile;
 
   /**
-   * The stage of a conversation. It indicates whether the virtual agent or a human agent is
-   * handling the conversation. If the conversation is created with the conversation profile that
+   * Optional. The stage of a conversation. It indicates whether the virtual agent or a human agent
+   * is handling the conversation. If the conversation is created with the conversation profile that
    * has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise,
    * defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the
    * conversation profile that has Dialogflow config set but explicitly sets conversation_stage to
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowV2beta1Conversation extends com.google.a
   private java.lang.String lifecycleState;
 
   /**
-   * Output only. The unique identifier of this conversation. Format:
+   * Output only. Identifier. The unique identifier of this conversation. Format:
    * `projects//locations//conversations/`.
    * The value may be {@code null}.
    */
@@ -108,8 +108,8 @@ public final class GoogleCloudDialogflowV2beta1Conversation extends com.google.a
   }
 
   /**
-   * The stage of a conversation. It indicates whether the virtual agent or a human agent is
-   * handling the conversation. If the conversation is created with the conversation profile that
+   * Optional. The stage of a conversation. It indicates whether the virtual agent or a human agent
+   * is handling the conversation. If the conversation is created with the conversation profile that
    * has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise,
    * defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the
    * conversation profile that has Dialogflow config set but explicitly sets conversation_stage to
@@ -122,8 +122,8 @@ public final class GoogleCloudDialogflowV2beta1Conversation extends com.google.a
   }
 
   /**
-   * The stage of a conversation. It indicates whether the virtual agent or a human agent is
-   * handling the conversation. If the conversation is created with the conversation profile that
+   * Optional. The stage of a conversation. It indicates whether the virtual agent or a human agent
+   * is handling the conversation. If the conversation is created with the conversation profile that
    * has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise,
    * defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the
    * conversation profile that has Dialogflow config set but explicitly sets conversation_stage to
@@ -171,7 +171,7 @@ public final class GoogleCloudDialogflowV2beta1Conversation extends com.google.a
   }
 
   /**
-   * Output only. The unique identifier of this conversation. Format:
+   * Output only. Identifier. The unique identifier of this conversation. Format:
    * `projects//locations//conversations/`.
    * @return value or {@code null} for none
    */
@@ -180,7 +180,7 @@ public final class GoogleCloudDialogflowV2beta1Conversation extends com.google.a
   }
 
   /**
-   * Output only. The unique identifier of this conversation. Format:
+   * Output only. Identifier. The unique identifier of this conversation. Format:
    * `projects//locations//conversations/`.
    * @param name name or {@code null} for none
    */

@@ -16846,24 +16846,15 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * A filter expression that filters conversations listed in the response. In general, the
-         * expression must specify the field name, a comparison operator, and the value to use for
-         * filtering: - The value must be a string, a number, or a boolean. - The comparison
-         * operator must be either `=`,`!=`, `>`, or `<`. - To filter on multiple expressions,
-         * separate the expressions with `AND` or `OR` (omitting both implies `AND`). - For clarity,
-         * expressions can be enclosed in parentheses. Only `lifecycle_state` can be filtered on in
-         * this way. For example, the following expression only returns `COMPLETED` conversations:
-         * `lifecycle_state = "COMPLETED"` For more information about filtering, see [API
-         * Filtering](https://aip.dev/160).
+         * Optional. A filter expression that filters conversations listed in the response. Only
+         * `lifecycle_state` can be filtered on in this way. For example, the following expression
+         * only returns `COMPLETED` conversations: `lifecycle_state = "COMPLETED"` For more
+         * information about filtering, see [API Filtering](https://aip.dev/160).
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** A filter expression that filters conversations listed in the response. In general, the expression
-       must specify the field name, a comparison operator, and the value to use for filtering: - The value
-       must be a string, a number, or a boolean. - The comparison operator must be either `=`,`!=`, `>`,
-       or `<`. - To filter on multiple expressions, separate the expressions with `AND` or `OR` (omitting
-       both implies `AND`). - For clarity, expressions can be enclosed in parentheses. Only
+        /** Optional. A filter expression that filters conversations listed in the response. Only
        `lifecycle_state` can be filtered on in this way. For example, the following expression only
        returns `COMPLETED` conversations: `lifecycle_state = "COMPLETED"` For more information about
        filtering, see [API Filtering](https://aip.dev/160).
@@ -16873,15 +16864,10 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * A filter expression that filters conversations listed in the response. In general, the
-         * expression must specify the field name, a comparison operator, and the value to use for
-         * filtering: - The value must be a string, a number, or a boolean. - The comparison
-         * operator must be either `=`,`!=`, `>`, or `<`. - To filter on multiple expressions,
-         * separate the expressions with `AND` or `OR` (omitting both implies `AND`). - For clarity,
-         * expressions can be enclosed in parentheses. Only `lifecycle_state` can be filtered on in
-         * this way. For example, the following expression only returns `COMPLETED` conversations:
-         * `lifecycle_state = "COMPLETED"` For more information about filtering, see [API
-         * Filtering](https://aip.dev/160).
+         * Optional. A filter expression that filters conversations listed in the response. Only
+         * `lifecycle_state` can be filtered on in this way. For example, the following expression
+         * only returns `COMPLETED` conversations: `lifecycle_state = "COMPLETED"` For more
+         * information about filtering, see [API Filtering](https://aip.dev/160).
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -18581,8 +18567,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link SearchKnowledge#execute()} method to invoke the remote operation.
          *
-         * @param conversation The conversation (between human agent and end user) where the search request is triggered. Format:
-         *        `projects//locations//conversations/`.
+         * @param conversation Optional. The conversation (between human agent and end user) where the search request is triggered.
+         *        Format: `projects//locations//conversations/`.
          * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SearchKnowledgeRequest}
          * @return the request
          */
@@ -18610,8 +18596,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param conversation The conversation (between human agent and end user) where the search request is triggered. Format:
-         *        `projects//locations//conversations/`.
+           * @param conversation Optional. The conversation (between human agent and end user) where the search request is triggered.
+         *        Format: `projects//locations//conversations/`.
            * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SearchKnowledgeRequest}
            * @since 1.13
            */
@@ -18681,22 +18667,22 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The conversation (between human agent and end user) where the search request is
-           * triggered. Format: `projects//locations//conversations/`.
+           * Optional. The conversation (between human agent and end user) where the search request
+           * is triggered. Format: `projects//locations//conversations/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String conversation;
 
-          /** The conversation (between human agent and end user) where the search request is triggered. Format:
-         `projects//locations//conversations/`.
+          /** Optional. The conversation (between human agent and end user) where the search request is
+         triggered. Format: `projects//locations//conversations/`.
            */
           public java.lang.String getConversation() {
             return conversation;
           }
 
           /**
-           * The conversation (between human agent and end user) where the search request is
-           * triggered. Format: `projects//locations//conversations/`.
+           * Optional. The conversation (between human agent and end user) where the search request
+           * is triggered. Format: `projects//locations//conversations/`.
            */
           public SearchKnowledge setConversation(java.lang.String conversation) {
             if (!getSuppressPatternChecks()) {
@@ -37022,24 +37008,15 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * A filter expression that filters conversations listed in the response. In general, the
-           * expression must specify the field name, a comparison operator, and the value to use for
-           * filtering: - The value must be a string, a number, or a boolean. - The comparison
-           * operator must be either `=`,`!=`, `>`, or `<`. - To filter on multiple expressions,
-           * separate the expressions with `AND` or `OR` (omitting both implies `AND`). - For
-           * clarity, expressions can be enclosed in parentheses. Only `lifecycle_state` can be
-           * filtered on in this way. For example, the following expression only returns `COMPLETED`
-           * conversations: `lifecycle_state = "COMPLETED"` For more information about filtering,
-           * see [API Filtering](https://aip.dev/160).
+           * Optional. A filter expression that filters conversations listed in the response. Only
+           * `lifecycle_state` can be filtered on in this way. For example, the following expression
+           * only returns `COMPLETED` conversations: `lifecycle_state = "COMPLETED"` For more
+           * information about filtering, see [API Filtering](https://aip.dev/160).
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** A filter expression that filters conversations listed in the response. In general, the expression
-         must specify the field name, a comparison operator, and the value to use for filtering: - The value
-         must be a string, a number, or a boolean. - The comparison operator must be either `=`,`!=`, `>`,
-         or `<`. - To filter on multiple expressions, separate the expressions with `AND` or `OR` (omitting
-         both implies `AND`). - For clarity, expressions can be enclosed in parentheses. Only
+          /** Optional. A filter expression that filters conversations listed in the response. Only
          `lifecycle_state` can be filtered on in this way. For example, the following expression only
          returns `COMPLETED` conversations: `lifecycle_state = "COMPLETED"` For more information about
          filtering, see [API Filtering](https://aip.dev/160).
@@ -37049,15 +37026,10 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * A filter expression that filters conversations listed in the response. In general, the
-           * expression must specify the field name, a comparison operator, and the value to use for
-           * filtering: - The value must be a string, a number, or a boolean. - The comparison
-           * operator must be either `=`,`!=`, `>`, or `<`. - To filter on multiple expressions,
-           * separate the expressions with `AND` or `OR` (omitting both implies `AND`). - For
-           * clarity, expressions can be enclosed in parentheses. Only `lifecycle_state` can be
-           * filtered on in this way. For example, the following expression only returns `COMPLETED`
-           * conversations: `lifecycle_state = "COMPLETED"` For more information about filtering,
-           * see [API Filtering](https://aip.dev/160).
+           * Optional. A filter expression that filters conversations listed in the response. Only
+           * `lifecycle_state` can be filtered on in this way. For example, the following expression
+           * only returns `COMPLETED` conversations: `lifecycle_state = "COMPLETED"` For more
+           * information about filtering, see [API Filtering](https://aip.dev/160).
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -38757,8 +38729,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link SearchKnowledge#execute()} method to invoke the remote operation.
            *
-           * @param conversation The conversation (between human agent and end user) where the search request is triggered. Format:
-           *        `projects//locations//conversations/`.
+           * @param conversation Optional. The conversation (between human agent and end user) where the search request is triggered.
+           *        Format: `projects//locations//conversations/`.
            * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SearchKnowledgeRequest}
            * @return the request
            */
@@ -38786,8 +38758,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param conversation The conversation (between human agent and end user) where the search request is triggered. Format:
-           *        `projects//locations//conversations/`.
+             * @param conversation Optional. The conversation (between human agent and end user) where the search request is triggered.
+           *        Format: `projects//locations//conversations/`.
              * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SearchKnowledgeRequest}
              * @since 1.13
              */
@@ -38857,22 +38829,22 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * The conversation (between human agent and end user) where the search request is
-             * triggered. Format: `projects//locations//conversations/`.
+             * Optional. The conversation (between human agent and end user) where the search
+             * request is triggered. Format: `projects//locations//conversations/`.
              */
             @com.google.api.client.util.Key
             private java.lang.String conversation;
 
-            /** The conversation (between human agent and end user) where the search request is triggered. Format:
-           `projects//locations//conversations/`.
+            /** Optional. The conversation (between human agent and end user) where the search request is
+           triggered. Format: `projects//locations//conversations/`.
              */
             public java.lang.String getConversation() {
               return conversation;
             }
 
             /**
-             * The conversation (between human agent and end user) where the search request is
-             * triggered. Format: `projects//locations//conversations/`.
+             * Optional. The conversation (between human agent and end user) where the search
+             * request is triggered. Format: `projects//locations//conversations/`.
              */
             public SearchKnowledge setConversation(java.lang.String conversation) {
               if (!getSuppressPatternChecks()) {
@@ -42817,7 +42789,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link SearchKnowledge#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource contains the conversation profile Format: 'projects/' or `projects//locations/`.
+         * @param parent Required. The parent resource contains the conversation profile Format: 'projects/' or
+         *        `projects//locations/`.
          * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SearchKnowledgeRequest}
          * @return the request
          */
@@ -42845,7 +42818,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param parent The parent resource contains the conversation profile Format: 'projects/' or `projects//locations/`.
+           * @param parent Required. The parent resource contains the conversation profile Format: 'projects/' or
+         *        `projects//locations/`.
            * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SearchKnowledgeRequest}
            * @since 1.13
            */
@@ -42915,13 +42889,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The parent resource contains the conversation profile Format: 'projects/' or
+           * Required. The parent resource contains the conversation profile Format: 'projects/' or
            * `projects//locations/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource contains the conversation profile Format: 'projects/' or
+          /** Required. The parent resource contains the conversation profile Format: 'projects/' or
          `projects//locations/`.
            */
           public java.lang.String getParent() {
@@ -42929,7 +42903,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The parent resource contains the conversation profile Format: 'projects/' or
+           * Required. The parent resource contains the conversation profile Format: 'projects/' or
            * `projects//locations/`.
            */
           public SearchKnowledge setParent(java.lang.String parent) {
@@ -43611,7 +43585,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the dialogflow server.  After setting any optional
        * parameters, call the {@link SearchKnowledge#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent resource contains the conversation profile Format: 'projects/' or `projects//locations/`.
+       * @param parent Required. The parent resource contains the conversation profile Format: 'projects/' or
+       *        `projects//locations/`.
        * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SearchKnowledgeRequest}
        * @return the request
        */
@@ -43639,7 +43614,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param parent The parent resource contains the conversation profile Format: 'projects/' or `projects//locations/`.
+         * @param parent Required. The parent resource contains the conversation profile Format: 'projects/' or
+       *        `projects//locations/`.
          * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2SearchKnowledgeRequest}
          * @since 1.13
          */
@@ -43709,13 +43685,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The parent resource contains the conversation profile Format: 'projects/' or
+         * Required. The parent resource contains the conversation profile Format: 'projects/' or
          * `projects//locations/`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent resource contains the conversation profile Format: 'projects/' or
+        /** Required. The parent resource contains the conversation profile Format: 'projects/' or
        `projects//locations/`.
          */
         public java.lang.String getParent() {
@@ -43723,7 +43699,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The parent resource contains the conversation profile Format: 'projects/' or
+         * Required. The parent resource contains the conversation profile Format: 'projects/' or
          * `projects//locations/`.
          */
         public SearchKnowledge setParent(java.lang.String parent) {

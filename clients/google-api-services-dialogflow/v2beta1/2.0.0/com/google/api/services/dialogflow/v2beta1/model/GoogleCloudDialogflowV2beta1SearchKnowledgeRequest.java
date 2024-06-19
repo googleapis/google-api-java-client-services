@@ -30,8 +30,8 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The conversation (between human agent and end user) where the search request is triggered.
-   * Format: `projects//locations//conversations/`.
+   * Optional. The conversation (between human agent and end user) where the search request is
+   * triggered. Format: `projects//locations//conversations/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   private java.lang.String conversationProfile;
 
   /**
-   * The name of the latest conversation message when the request is triggered. Format:
+   * Optional. The name of the latest conversation message when the request is triggered. Format:
    * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   private java.lang.String latestMessage;
 
   /**
-   * The parent resource contains the conversation profile Format: 'projects/' or
+   * Required. The parent resource contains the conversation profile Format: 'projects/' or
    * `projects//locations/`.
    * The value may be {@code null}.
    */
@@ -69,8 +69,8 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   private GoogleCloudDialogflowV2beta1TextInput query;
 
   /**
-   * The ID of the search session. The session_id can be combined with Dialogflow V3 Agent ID
-   * retrieved from conversation profile or on its own to identify a search session. The search
+   * Optional. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
+   * ID retrieved from conversation profile or on its own to identify a search session. The search
    * history of the same session will impact the search result. It's up to the API caller to choose
    * an appropriate `Session ID`. It can be a random number or some type of session identifiers
    * (preferably hashed). The length must not exceed 36 characters.
@@ -80,8 +80,8 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   private java.lang.String sessionId;
 
   /**
-   * The conversation (between human agent and end user) where the search request is triggered.
-   * Format: `projects//locations//conversations/`.
+   * Optional. The conversation (between human agent and end user) where the search request is
+   * triggered. Format: `projects//locations//conversations/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getConversation() {
@@ -89,8 +89,8 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   }
 
   /**
-   * The conversation (between human agent and end user) where the search request is triggered.
-   * Format: `projects//locations//conversations/`.
+   * Optional. The conversation (between human agent and end user) where the search request is
+   * triggered. Format: `projects//locations//conversations/`.
    * @param conversation conversation or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequest setConversation(java.lang.String conversation) {
@@ -118,7 +118,7 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   }
 
   /**
-   * The name of the latest conversation message when the request is triggered. Format:
+   * Optional. The name of the latest conversation message when the request is triggered. Format:
    * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
@@ -127,7 +127,7 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   }
 
   /**
-   * The name of the latest conversation message when the request is triggered. Format:
+   * Optional. The name of the latest conversation message when the request is triggered. Format:
    * `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */
@@ -137,7 +137,7 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   }
 
   /**
-   * The parent resource contains the conversation profile Format: 'projects/' or
+   * Required. The parent resource contains the conversation profile Format: 'projects/' or
    * `projects//locations/`.
    * @return value or {@code null} for none
    */
@@ -146,7 +146,7 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   }
 
   /**
-   * The parent resource contains the conversation profile Format: 'projects/' or
+   * Required. The parent resource contains the conversation profile Format: 'projects/' or
    * `projects//locations/`.
    * @param parent parent or {@code null} for none
    */
@@ -173,8 +173,8 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   }
 
   /**
-   * The ID of the search session. The session_id can be combined with Dialogflow V3 Agent ID
-   * retrieved from conversation profile or on its own to identify a search session. The search
+   * Optional. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
+   * ID retrieved from conversation profile or on its own to identify a search session. The search
    * history of the same session will impact the search result. It's up to the API caller to choose
    * an appropriate `Session ID`. It can be a random number or some type of session identifiers
    * (preferably hashed). The length must not exceed 36 characters.
@@ -185,8 +185,8 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   }
 
   /**
-   * The ID of the search session. The session_id can be combined with Dialogflow V3 Agent ID
-   * retrieved from conversation profile or on its own to identify a search session. The search
+   * Optional. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
+   * ID retrieved from conversation profile or on its own to identify a search session. The search
    * history of the same session will impact the search result. It's up to the API caller to choose
    * an appropriate `Session ID`. It can be a random number or some type of session identifiers
    * (preferably hashed). The length must not exceed 36 characters.

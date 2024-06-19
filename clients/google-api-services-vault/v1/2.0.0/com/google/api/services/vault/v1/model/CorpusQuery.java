@@ -30,6 +30,13 @@ package com.google.api.services.vault.v1.model;
 public final class CorpusQuery extends com.google.api.client.json.GenericJson {
 
   /**
+   * Service-specific options for Calendar holds. If set, **CorpusType** must be **CALENDAR**.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HeldCalendarQuery calendarQuery;
+
+  /**
    * Service-specific options for Drive holds. If set, **CorpusType** must be **DRIVE**.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private HeldVoiceQuery voiceQuery;
+
+  /**
+   * Service-specific options for Calendar holds. If set, **CorpusType** must be **CALENDAR**.
+   * @return value or {@code null} for none
+   */
+  public HeldCalendarQuery getCalendarQuery() {
+    return calendarQuery;
+  }
+
+  /**
+   * Service-specific options for Calendar holds. If set, **CorpusType** must be **CALENDAR**.
+   * @param calendarQuery calendarQuery or {@code null} for none
+   */
+  public CorpusQuery setCalendarQuery(HeldCalendarQuery calendarQuery) {
+    this.calendarQuery = calendarQuery;
+    return this;
+  }
 
   /**
    * Service-specific options for Drive holds. If set, **CorpusType** must be **DRIVE**.

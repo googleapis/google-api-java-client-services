@@ -45,6 +45,14 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
   private java.lang.Boolean installGpuDrivers;
 
   /**
+   * Optional. Set this field true if you want Batch to install Ops Agent on your behalf. Default is
+   * false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean installOpsAgent;
+
+  /**
    * Name of an instance template used to create VMs. Named the field as 'instance_template' instead
    * of 'template' to avoid c++ keyword conflict.
    * The value may be {@code null}.
@@ -85,6 +93,25 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
    */
   public InstancePolicyOrTemplate setInstallGpuDrivers(java.lang.Boolean installGpuDrivers) {
     this.installGpuDrivers = installGpuDrivers;
+    return this;
+  }
+
+  /**
+   * Optional. Set this field true if you want Batch to install Ops Agent on your behalf. Default is
+   * false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInstallOpsAgent() {
+    return installOpsAgent;
+  }
+
+  /**
+   * Optional. Set this field true if you want Batch to install Ops Agent on your behalf. Default is
+   * false.
+   * @param installOpsAgent installOpsAgent or {@code null} for none
+   */
+  public InstancePolicyOrTemplate setInstallOpsAgent(java.lang.Boolean installOpsAgent) {
+    this.installOpsAgent = installOpsAgent;
     return this;
   }
 

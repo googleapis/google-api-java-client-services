@@ -81,7 +81,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * Disk type as shown in `gcloud compute disk-types list`. For example, local SSD uses type
    * "local-ssd". Persistent disks and boot disks use "pd-balanced", "pd-extreme", "pd-ssd" or "pd-
-   * standard".
+   * standard". If not specified, "pd-standard" will be used as the default type for non-boot disks,
+   * "pd-balanced" will be used as the default type for boot disks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,7 +197,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * Disk type as shown in `gcloud compute disk-types list`. For example, local SSD uses type
    * "local-ssd". Persistent disks and boot disks use "pd-balanced", "pd-extreme", "pd-ssd" or "pd-
-   * standard".
+   * standard". If not specified, "pd-standard" will be used as the default type for non-boot disks,
+   * "pd-balanced" will be used as the default type for boot disks.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -206,7 +208,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * Disk type as shown in `gcloud compute disk-types list`. For example, local SSD uses type
    * "local-ssd". Persistent disks and boot disks use "pd-balanced", "pd-extreme", "pd-ssd" or "pd-
-   * standard".
+   * standard". If not specified, "pd-standard" will be used as the default type for non-boot disks,
+   * "pd-balanced" will be used as the default type for boot disks.
    * @param type type or {@code null} for none
    */
   public Disk setType(java.lang.String type) {

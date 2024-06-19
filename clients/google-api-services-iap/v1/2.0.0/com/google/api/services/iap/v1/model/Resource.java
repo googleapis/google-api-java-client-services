@@ -75,6 +75,18 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Used for calculating the next state of tags on the resource being passed for Custom Org Policy
+   * enforcement. NOTE: Only one of the tags representations (i.e. numeric or namespaced) should be
+   * populated. The input tags will be converted to the same representation before the calculation.
+   * This behavior intentionally may differ from other tags related fields in CheckPolicy request,
+   * which may require both formats to be passed in. IMPORTANT: If tags are unchanged, this field
+   * should not be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NextStateOfTags nextStateOfTags;
+
+  /**
    * The name of the service this resource belongs to. It is configured using the
    * official_service_name of the Service as defined in service configurations under
    * //configs/cloud/resourcetypes. For example, the official_service_name of cloud resource manager
@@ -198,6 +210,33 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    */
   public Resource setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Used for calculating the next state of tags on the resource being passed for Custom Org Policy
+   * enforcement. NOTE: Only one of the tags representations (i.e. numeric or namespaced) should be
+   * populated. The input tags will be converted to the same representation before the calculation.
+   * This behavior intentionally may differ from other tags related fields in CheckPolicy request,
+   * which may require both formats to be passed in. IMPORTANT: If tags are unchanged, this field
+   * should not be set.
+   * @return value or {@code null} for none
+   */
+  public NextStateOfTags getNextStateOfTags() {
+    return nextStateOfTags;
+  }
+
+  /**
+   * Used for calculating the next state of tags on the resource being passed for Custom Org Policy
+   * enforcement. NOTE: Only one of the tags representations (i.e. numeric or namespaced) should be
+   * populated. The input tags will be converted to the same representation before the calculation.
+   * This behavior intentionally may differ from other tags related fields in CheckPolicy request,
+   * which may require both formats to be passed in. IMPORTANT: If tags are unchanged, this field
+   * should not be set.
+   * @param nextStateOfTags nextStateOfTags or {@code null} for none
+   */
+  public Resource setNextStateOfTags(NextStateOfTags nextStateOfTags) {
+    this.nextStateOfTags = nextStateOfTags;
     return this;
   }
 

@@ -104,7 +104,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * A unique identifier for the instance configuration. Values are of the form
-   * `projects//instanceConfigs/a-z*`.
+   * `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +135,9 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * The geographic placement of nodes in this instance configuration and their replication
-   * properties.
+   * properties. To create user managed configurations, input `replicas` must include all replicas
+   * in `replicas` of the `base_config` and include one or more replicas in the `optional_replicas`
+   * of the `base_config`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -322,7 +324,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * A unique identifier for the instance configuration. Values are of the form
-   * `projects//instanceConfigs/a-z*`.
+   * `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -331,7 +333,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * A unique identifier for the instance configuration. Values are of the form
-   * `projects//instanceConfigs/a-z*`.
+   * `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
    * @param name name or {@code null} for none
    */
   public InstanceConfig setName(java.lang.String name) {
@@ -396,7 +398,9 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * The geographic placement of nodes in this instance configuration and their replication
-   * properties.
+   * properties. To create user managed configurations, input `replicas` must include all replicas
+   * in `replicas` of the `base_config` and include one or more replicas in the `optional_replicas`
+   * of the `base_config`.
    * @return value or {@code null} for none
    */
   public java.util.List<ReplicaInfo> getReplicas() {
@@ -405,7 +409,9 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
 
   /**
    * The geographic placement of nodes in this instance configuration and their replication
-   * properties.
+   * properties. To create user managed configurations, input `replicas` must include all replicas
+   * in `replicas` of the `base_config` and include one or more replicas in the `optional_replicas`
+   * of the `base_config`.
    * @param replicas replicas or {@code null} for none
    */
   public InstanceConfig setReplicas(java.util.List<ReplicaInfo> replicas) {

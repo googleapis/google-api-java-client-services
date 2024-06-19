@@ -985,7 +985,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Lists the supported instance configurations for a given project.
+       * Lists the supported instance configurations for a given project. Returns both Google managed
+       * configs and user managed configs.
        *
        * Create a request for the method "instanceConfigs.list".
        *
@@ -1010,7 +1011,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists the supported instance configurations for a given project.
+         * Lists the supported instance configurations for a given project. Returns both Google managed
+         * configs and user managed configs.
          *
          * Create a request for the method "instanceConfigs.list".
          *
@@ -1199,7 +1201,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name A unique identifier for the instance configuration. Values are of the form
-       *        `projects//instanceConfigs/a-z*`.
+       *        `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
        * @param content the {@link com.google.api.services.spanner.v1.model.UpdateInstanceConfigRequest}
        * @return the request
        */
@@ -1241,7 +1243,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name A unique identifier for the instance configuration. Values are of the form
-       *        `projects//instanceConfigs/a-z*`.
+       *        `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
          * @param content the {@link com.google.api.services.spanner.v1.model.UpdateInstanceConfigRequest}
          * @since 1.13
          */
@@ -1312,13 +1314,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * A unique identifier for the instance configuration. Values are of the form
-         * `projects//instanceConfigs/a-z*`.
+         * `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** A unique identifier for the instance configuration. Values are of the form
-       `projects//instanceConfigs/a-z*`.
+       `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
          */
         public java.lang.String getName() {
           return name;
@@ -1326,7 +1328,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * A unique identifier for the instance configuration. Values are of the form
-         * `projects//instanceConfigs/a-z*`.
+         * `projects//instanceConfigs/a-z*`. User instance config must start with `custom-`.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

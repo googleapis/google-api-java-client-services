@@ -82,6 +82,24 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Long limit;
 
   /**
+   * Optional. Lock Hint for the request, it can only be used with read-write transactions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lockHint;
+
+  /**
+   * Optional. Order for the returned rows. By default, Spanner will return result rows in primary
+   * key order except for PartitionRead requests. For applications that do not require rows to be
+   * returned in primary key (`ORDER_BY_PRIMARY_KEY`) order, setting `ORDER_BY_NO_ORDER` option
+   * allows Spanner to optimize row retrieval, resulting in lower latencies in certain cases (e.g.
+   * bulk point lookups).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String orderBy;
+
+  /**
    * If present, results will be restricted to the specified partition previously created using
    * PartitionRead(). There must be an exact match for the values of fields common to this message
    * and the PartitionReadRequest message used to create this partition_token.
@@ -241,6 +259,48 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
    */
   public ReadRequest setLimit(java.lang.Long limit) {
     this.limit = limit;
+    return this;
+  }
+
+  /**
+   * Optional. Lock Hint for the request, it can only be used with read-write transactions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLockHint() {
+    return lockHint;
+  }
+
+  /**
+   * Optional. Lock Hint for the request, it can only be used with read-write transactions.
+   * @param lockHint lockHint or {@code null} for none
+   */
+  public ReadRequest setLockHint(java.lang.String lockHint) {
+    this.lockHint = lockHint;
+    return this;
+  }
+
+  /**
+   * Optional. Order for the returned rows. By default, Spanner will return result rows in primary
+   * key order except for PartitionRead requests. For applications that do not require rows to be
+   * returned in primary key (`ORDER_BY_PRIMARY_KEY`) order, setting `ORDER_BY_NO_ORDER` option
+   * allows Spanner to optimize row retrieval, resulting in lower latencies in certain cases (e.g.
+   * bulk point lookups).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrderBy() {
+    return orderBy;
+  }
+
+  /**
+   * Optional. Order for the returned rows. By default, Spanner will return result rows in primary
+   * key order except for PartitionRead requests. For applications that do not require rows to be
+   * returned in primary key (`ORDER_BY_PRIMARY_KEY`) order, setting `ORDER_BY_NO_ORDER` option
+   * allows Spanner to optimize row retrieval, resulting in lower latencies in certain cases (e.g.
+   * bulk point lookups).
+   * @param orderBy orderBy or {@code null} for none
+   */
+  public ReadRequest setOrderBy(java.lang.String orderBy) {
+    this.orderBy = orderBy;
     return this;
   }
 

@@ -263,6 +263,20 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Optional. Subscription type of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subscriptionType;
+
+  /**
+   * Output only. Metadata for free trial clusters
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TrialMetadata trialMetadata;
+
+  /**
    * Output only. The system-generated UID of the resource. The UID is assigned when the resource is
    * created, and it is retained until it is deleted.
    * The value may be {@code null}.
@@ -826,6 +840,40 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional. Subscription type of the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubscriptionType() {
+    return subscriptionType;
+  }
+
+  /**
+   * Optional. Subscription type of the cluster.
+   * @param subscriptionType subscriptionType or {@code null} for none
+   */
+  public Cluster setSubscriptionType(java.lang.String subscriptionType) {
+    this.subscriptionType = subscriptionType;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata for free trial clusters
+   * @return value or {@code null} for none
+   */
+  public TrialMetadata getTrialMetadata() {
+    return trialMetadata;
+  }
+
+  /**
+   * Output only. Metadata for free trial clusters
+   * @param trialMetadata trialMetadata or {@code null} for none
+   */
+  public Cluster setTrialMetadata(TrialMetadata trialMetadata) {
+    this.trialMetadata = trialMetadata;
     return this;
   }
 

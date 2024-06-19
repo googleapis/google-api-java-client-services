@@ -4794,7 +4794,8 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
       }
       /**
-       * Creates a note for this proposal and sends to the seller.
+       * Creates a note for this proposal and sends to the seller. This method is not supported for
+       * proposals with DealType set to 'PRIVATE_AUCTION'.
        *
        * Create a request for the method "proposals.addNote".
        *
@@ -4820,7 +4821,8 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
             java.util.regex.Pattern.compile("^buyers/[^/]+/proposals/[^/]+$");
 
         /**
-         * Creates a note for this proposal and sends to the seller.
+         * Creates a note for this proposal and sends to the seller. This method is not supported for
+         * proposals with DealType set to 'PRIVATE_AUCTION'.
          *
          * Create a request for the method "proposals.addNote".
          *

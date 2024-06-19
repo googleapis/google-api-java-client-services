@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1CachedContent extends com.google.
   private String createTime;
 
   /**
+   * Optional. Immutable. The user-generated meaningful display name of the cached content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Timestamp of when this resource is considered expired. This is *always* provided on output,
    * regardless of what was sent on input.
    * The value may be {@code null}.
@@ -60,7 +67,7 @@ public final class GoogleCloudAiplatformV1beta1CachedContent extends com.google.
   private java.lang.String model;
 
   /**
-   * Immutable. Identifier. The resource name of the cached content Format:
+   * Immutable. Identifier. The server-generated resource name of the cached content Format:
    * projects/{project}/locations/{location}/cachedContents/{cached_content}
    * The value may be {@code null}.
    */
@@ -138,6 +145,23 @@ public final class GoogleCloudAiplatformV1beta1CachedContent extends com.google.
   }
 
   /**
+   * Optional. Immutable. The user-generated meaningful display name of the cached content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Optional. Immutable. The user-generated meaningful display name of the cached content.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CachedContent setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
+
+  /**
    * Timestamp of when this resource is considered expired. This is *always* provided on output,
    * regardless of what was sent on input.
    * @return value or {@code null} for none
@@ -176,7 +200,7 @@ public final class GoogleCloudAiplatformV1beta1CachedContent extends com.google.
   }
 
   /**
-   * Immutable. Identifier. The resource name of the cached content Format:
+   * Immutable. Identifier. The server-generated resource name of the cached content Format:
    * projects/{project}/locations/{location}/cachedContents/{cached_content}
    * @return value or {@code null} for none
    */
@@ -185,7 +209,7 @@ public final class GoogleCloudAiplatformV1beta1CachedContent extends com.google.
   }
 
   /**
-   * Immutable. Identifier. The resource name of the cached content Format:
+   * Immutable. Identifier. The server-generated resource name of the cached content Format:
    * projects/{project}/locations/{location}/cachedContents/{cached_content}
    * @param name name or {@code null} for none
    */

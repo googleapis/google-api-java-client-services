@@ -124,6 +124,16 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private GoogleCloudDiscoveryengineV1alphaSearchRequestImageQuery imageQuery;
 
   /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Standard
+   * fields](https://cloud.google.com/apis/design/standard_fields). This field helps to better
+   * interpret the query. If a value isn't specified, the query language code is automatically
+   * detected, which may not be accurate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
+
+  /**
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Documents deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an `INVALID_ARGUMENT` is
@@ -209,11 +219,36 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private java.lang.String rankingExpression;
 
   /**
+   * The Unicode country/region code (CLDR) of a location, such as "US" and "419". For more
+   * information, see [Standard fields](https://cloud.google.com/apis/design/standard_fields). If
+   * set, then results will be boosted based on the region_code provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String regionCode;
+
+  /**
+   * The relevance threshold of the search results. Default to Google defined threshold, leveraging
+   * a balance of precision and recall to deliver both highly accurate results and comprehensive
+   * coverage of relevant information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String relevanceThreshold;
+
+  /**
    * Whether to turn on safe search. This is only supported for website search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean safeSearch;
+
+  /**
+   * Search as you type configuration. Only supported for the IndustryVertical.MEDIA vertical.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec searchAsYouTypeSpec;
 
   /**
    * The spell correction specification that specifies the mode under which spell correction takes
@@ -479,6 +514,29 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Standard
+   * fields](https://cloud.google.com/apis/design/standard_fields). This field helps to better
+   * interpret the query. If a value isn't specified, the query language code is automatically
+   * detected, which may not be accurate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Standard
+   * fields](https://cloud.google.com/apis/design/standard_fields). This field helps to better
+   * interpret the query. If a value isn't specified, the query language code is automatically
+   * detected, which may not be accurate.
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Documents deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an `INVALID_ARGUMENT` is
@@ -673,6 +731,48 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
+   * The Unicode country/region code (CLDR) of a location, such as "US" and "419". For more
+   * information, see [Standard fields](https://cloud.google.com/apis/design/standard_fields). If
+   * set, then results will be boosted based on the region_code provided.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegionCode() {
+    return regionCode;
+  }
+
+  /**
+   * The Unicode country/region code (CLDR) of a location, such as "US" and "419". For more
+   * information, see [Standard fields](https://cloud.google.com/apis/design/standard_fields). If
+   * set, then results will be boosted based on the region_code provided.
+   * @param regionCode regionCode or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setRegionCode(java.lang.String regionCode) {
+    this.regionCode = regionCode;
+    return this;
+  }
+
+  /**
+   * The relevance threshold of the search results. Default to Google defined threshold, leveraging
+   * a balance of precision and recall to deliver both highly accurate results and comprehensive
+   * coverage of relevant information.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRelevanceThreshold() {
+    return relevanceThreshold;
+  }
+
+  /**
+   * The relevance threshold of the search results. Default to Google defined threshold, leveraging
+   * a balance of precision and recall to deliver both highly accurate results and comprehensive
+   * coverage of relevant information.
+   * @param relevanceThreshold relevanceThreshold or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setRelevanceThreshold(java.lang.String relevanceThreshold) {
+    this.relevanceThreshold = relevanceThreshold;
+    return this;
+  }
+
+  /**
    * Whether to turn on safe search. This is only supported for website search.
    * @return value or {@code null} for none
    */
@@ -686,6 +786,23 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setSafeSearch(java.lang.Boolean safeSearch) {
     this.safeSearch = safeSearch;
+    return this;
+  }
+
+  /**
+   * Search as you type configuration. Only supported for the IndustryVertical.MEDIA vertical.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec getSearchAsYouTypeSpec() {
+    return searchAsYouTypeSpec;
+  }
+
+  /**
+   * Search as you type configuration. Only supported for the IndustryVertical.MEDIA vertical.
+   * @param searchAsYouTypeSpec searchAsYouTypeSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setSearchAsYouTypeSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec searchAsYouTypeSpec) {
+    this.searchAsYouTypeSpec = searchAsYouTypeSpec;
     return this;
   }
 

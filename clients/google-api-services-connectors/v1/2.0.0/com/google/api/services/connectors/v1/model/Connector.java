@@ -37,6 +37,13 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   private java.lang.String category;
 
   /**
+   * Output only. The type of the connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectorType;
+
+  /**
    * Output only. Created time.
    * The value may be {@code null}.
    */
@@ -137,6 +144,23 @@ public final class Connector extends com.google.api.client.json.GenericJson {
    */
   public Connector setCategory(java.lang.String category) {
     this.category = category;
+    return this;
+  }
+
+  /**
+   * Output only. The type of the connector.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectorType() {
+    return connectorType;
+  }
+
+  /**
+   * Output only. The type of the connector.
+   * @param connectorType connectorType or {@code null} for none
+   */
+  public Connector setConnectorType(java.lang.String connectorType) {
+    this.connectorType = connectorType;
     return this;
   }
 

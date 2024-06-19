@@ -30,6 +30,39 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. List of grounding attributions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1GroundingAttribution> groundingAttributions;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1GroundingAttribution used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1GroundingAttribution.class);
+  }
+
+  /**
+   * List of supporting references retrieved from specified grounding source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1GroundingChunk> groundingChunks;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1GroundingChunk used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1GroundingChunk.class);
+  }
+
+  /**
+   * Optional. List of grounding support.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1GroundingSupport> groundingSupports;
+
+  /**
    * Optional. Queries executed by the retrieval tools.
    * The value may be {@code null}.
    */
@@ -49,6 +82,57 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> webSearchQueries;
+
+  /**
+   * Optional. List of grounding attributions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1GroundingAttribution> getGroundingAttributions() {
+    return groundingAttributions;
+  }
+
+  /**
+   * Optional. List of grounding attributions.
+   * @param groundingAttributions groundingAttributions or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingMetadata setGroundingAttributions(java.util.List<GoogleCloudAiplatformV1beta1GroundingAttribution> groundingAttributions) {
+    this.groundingAttributions = groundingAttributions;
+    return this;
+  }
+
+  /**
+   * List of supporting references retrieved from specified grounding source.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1GroundingChunk> getGroundingChunks() {
+    return groundingChunks;
+  }
+
+  /**
+   * List of supporting references retrieved from specified grounding source.
+   * @param groundingChunks groundingChunks or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingMetadata setGroundingChunks(java.util.List<GoogleCloudAiplatformV1beta1GroundingChunk> groundingChunks) {
+    this.groundingChunks = groundingChunks;
+    return this;
+  }
+
+  /**
+   * Optional. List of grounding support.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1GroundingSupport> getGroundingSupports() {
+    return groundingSupports;
+  }
+
+  /**
+   * Optional. List of grounding support.
+   * @param groundingSupports groundingSupports or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingMetadata setGroundingSupports(java.util.List<GoogleCloudAiplatformV1beta1GroundingSupport> groundingSupports) {
+    this.groundingSupports = groundingSupports;
+    return this;
+  }
 
   /**
    * Optional. Queries executed by the retrieval tools.

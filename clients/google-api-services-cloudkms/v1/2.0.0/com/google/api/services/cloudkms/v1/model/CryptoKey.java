@@ -67,6 +67,18 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean importOnly;
 
   /**
+   * Optional. The policy used for Key Access Justifications Policy Enforcement. If this field is
+   * present and this key is enrolled in Key Access Justifications Policy Enforcement, the policy
+   * will be evaluated in Encrypt, Decrypt, and Sign operations, and the operation will fail if
+   * rejected by the policy. The policy is defined by specifying zero or more allowed justification
+   * codes. https://cloud.google.com/assured-workloads/key-access-justifications/docs/justification-
+   * codes By default, this field is absent, and all justification codes are allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KeyAccessJustificationsPolicy keyAccessJustificationsPolicy;
+
+  /**
    * Labels with user-defined metadata. For more information, see [Labeling
    * Keys](https://cloud.google.com/kms/docs/labeling-keys).
    * The value may be {@code null}.
@@ -206,6 +218,33 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
    */
   public CryptoKey setImportOnly(java.lang.Boolean importOnly) {
     this.importOnly = importOnly;
+    return this;
+  }
+
+  /**
+   * Optional. The policy used for Key Access Justifications Policy Enforcement. If this field is
+   * present and this key is enrolled in Key Access Justifications Policy Enforcement, the policy
+   * will be evaluated in Encrypt, Decrypt, and Sign operations, and the operation will fail if
+   * rejected by the policy. The policy is defined by specifying zero or more allowed justification
+   * codes. https://cloud.google.com/assured-workloads/key-access-justifications/docs/justification-
+   * codes By default, this field is absent, and all justification codes are allowed.
+   * @return value or {@code null} for none
+   */
+  public KeyAccessJustificationsPolicy getKeyAccessJustificationsPolicy() {
+    return keyAccessJustificationsPolicy;
+  }
+
+  /**
+   * Optional. The policy used for Key Access Justifications Policy Enforcement. If this field is
+   * present and this key is enrolled in Key Access Justifications Policy Enforcement, the policy
+   * will be evaluated in Encrypt, Decrypt, and Sign operations, and the operation will fail if
+   * rejected by the policy. The policy is defined by specifying zero or more allowed justification
+   * codes. https://cloud.google.com/assured-workloads/key-access-justifications/docs/justification-
+   * codes By default, this field is absent, and all justification codes are allowed.
+   * @param keyAccessJustificationsPolicy keyAccessJustificationsPolicy or {@code null} for none
+   */
+  public CryptoKey setKeyAccessJustificationsPolicy(KeyAccessJustificationsPolicy keyAccessJustificationsPolicy) {
+    this.keyAccessJustificationsPolicy = keyAccessJustificationsPolicy;
     return this;
   }
 

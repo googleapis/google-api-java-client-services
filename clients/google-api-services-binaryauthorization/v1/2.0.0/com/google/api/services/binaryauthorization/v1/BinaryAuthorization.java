@@ -2368,6 +2368,29 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
             return this;
           }
 
+          /**
+           * Optional. Used to prevent deleting the policy when another request has updated it since
+           * it was retrieved.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. Used to prevent deleting the policy when another request has updated it since it was
+         retrieved.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. Used to prevent deleting the policy when another request has updated it since
+           * it was retrieved.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);

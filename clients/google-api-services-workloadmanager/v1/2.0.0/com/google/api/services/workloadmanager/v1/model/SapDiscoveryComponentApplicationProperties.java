@@ -30,8 +30,7 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapDiscoveryComponentApplicationProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Indicates whether this is a Java or ABAP Netweaver instance. true means it is ABAP,
-   * false means it is Java.
+   * Optional. Deprecated: ApplicationType now tells you whether this is ABAP or Java.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +87,7 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
   private java.lang.String nfsUri;
 
   /**
-   * Optional. Indicates whether this is a Java or ABAP Netweaver instance. true means it is ABAP,
-   * false means it is Java.
+   * Optional. Deprecated: ApplicationType now tells you whether this is ABAP or Java.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAbap() {
@@ -97,8 +95,7 @@ public final class SapDiscoveryComponentApplicationProperties extends com.google
   }
 
   /**
-   * Optional. Indicates whether this is a Java or ABAP Netweaver instance. true means it is ABAP,
-   * false means it is Java.
+   * Optional. Deprecated: ApplicationType now tells you whether this is ABAP or Java.
    * @param abap abap or {@code null} for none
    */
   public SapDiscoveryComponentApplicationProperties setAbap(java.lang.Boolean abap) {

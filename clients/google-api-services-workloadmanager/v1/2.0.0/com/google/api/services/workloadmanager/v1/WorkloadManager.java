@@ -1192,17 +1192,17 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Filtering results */
+          /** Filter to be applied when listing the evaluation results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filtering results
+          /** Filter to be applied when listing the evaluation results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filtering results */
+          /** Filter to be applied when listing the evaluation results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -1978,7 +1978,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
           public class Results {
 
             /**
-             * List the running result of a single Execution.
+             * Lists the result of a single evaluation.
              *
              * Create a request for the method "results.list".
              *
@@ -2002,7 +2002,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluations/[^/]+/executions/[^/]+$");
 
               /**
-               * List the running result of a single Execution.
+               * Lists the result of a single evaluation.
                *
                * Create a request for the method "results.list".
                *

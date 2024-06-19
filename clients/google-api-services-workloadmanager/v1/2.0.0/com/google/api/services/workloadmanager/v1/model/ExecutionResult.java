@@ -30,49 +30,49 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ExecutionResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * the document url of the rule
+   * The URL for the documentation of the rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String documentationUrl;
 
   /**
-   * the violate resource
+   * The resource that violates the rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Resource resource;
 
   /**
-   * the rule which violate in execution
+   * The rule that is violated in an evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rule;
 
   /**
-   * severity of violation
+   * The severity of violation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
 
   /**
-   * the details of violation in result
+   * The details of violation in an evaluation result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ViolationDetails violationDetails;
 
   /**
-   * the violation message of an execution
+   * The violation message of an execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String violationMessage;
 
   /**
-   * the document url of the rule
+   * The URL for the documentation of the rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentationUrl() {
@@ -80,7 +80,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * the document url of the rule
+   * The URL for the documentation of the rule.
    * @param documentationUrl documentationUrl or {@code null} for none
    */
   public ExecutionResult setDocumentationUrl(java.lang.String documentationUrl) {
@@ -89,7 +89,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * the violate resource
+   * The resource that violates the rule.
    * @return value or {@code null} for none
    */
   public Resource getResource() {
@@ -97,7 +97,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * the violate resource
+   * The resource that violates the rule.
    * @param resource resource or {@code null} for none
    */
   public ExecutionResult setResource(Resource resource) {
@@ -106,7 +106,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * the rule which violate in execution
+   * The rule that is violated in an evaluation.
    * @return value or {@code null} for none
    */
   public java.lang.String getRule() {
@@ -114,7 +114,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * the rule which violate in execution
+   * The rule that is violated in an evaluation.
    * @param rule rule or {@code null} for none
    */
   public ExecutionResult setRule(java.lang.String rule) {
@@ -123,7 +123,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * severity of violation
+   * The severity of violation.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -131,7 +131,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * severity of violation
+   * The severity of violation.
    * @param severity severity or {@code null} for none
    */
   public ExecutionResult setSeverity(java.lang.String severity) {
@@ -140,7 +140,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * the details of violation in result
+   * The details of violation in an evaluation result.
    * @return value or {@code null} for none
    */
   public ViolationDetails getViolationDetails() {
@@ -148,7 +148,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * the details of violation in result
+   * The details of violation in an evaluation result.
    * @param violationDetails violationDetails or {@code null} for none
    */
   public ExecutionResult setViolationDetails(ViolationDetails violationDetails) {
@@ -157,7 +157,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * the violation message of an execution
+   * The violation message of an execution.
    * @return value or {@code null} for none
    */
   public java.lang.String getViolationMessage() {
@@ -165,7 +165,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * the violation message of an execution
+   * The violation message of an execution.
    * @param violationMessage violationMessage or {@code null} for none
    */
   public ExecutionResult setViolationMessage(java.lang.String violationMessage) {

@@ -30,28 +30,28 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
-   * the name of the resource
+   * The name of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * the service account accosiate with resource
+   * The service account associated with the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
 
   /**
-   * the type of reresource
+   * The type of resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * the name of the resource
+   * The name of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -59,7 +59,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the name of the resource
+   * The name of the resource.
    * @param name name or {@code null} for none
    */
   public Resource setName(java.lang.String name) {
@@ -68,7 +68,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the service account accosiate with resource
+   * The service account associated with the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -76,7 +76,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the service account accosiate with resource
+   * The service account associated with the resource.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public Resource setServiceAccount(java.lang.String serviceAccount) {
@@ -85,7 +85,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the type of reresource
+   * The type of resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -93,7 +93,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the type of reresource
+   * The type of resource.
    * @param type type or {@code null} for none
    */
   public Resource setType(java.lang.String type) {

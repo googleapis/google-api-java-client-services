@@ -112,7 +112,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.Boolean defaultUriDisabled;
 
   /**
-   * Output only. The deletion time.
+   * Output only. The deletion time. It is only populated as a response to a Delete request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -488,7 +488,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The deletion time.
+   * Output only. The deletion time. It is only populated as a response to a Delete request.
    * @return value or {@code null} for none
    */
   public String getDeleteTime() {
@@ -496,7 +496,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The deletion time.
+   * Output only. The deletion time. It is only populated as a response to a Delete request.
    * @param deleteTime deleteTime or {@code null} for none
    */
   public GoogleCloudRunV2Service setDeleteTime(String deleteTime) {

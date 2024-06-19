@@ -93,7 +93,7 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   private java.lang.String creator;
 
   /**
-   * Output only. The deletion time.
+   * Output only. The deletion time. It is only populated as a response to a Delete request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -393,7 +393,7 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The deletion time.
+   * Output only. The deletion time. It is only populated as a response to a Delete request.
    * @return value or {@code null} for none
    */
   public String getDeleteTime() {
@@ -401,7 +401,7 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The deletion time.
+   * Output only. The deletion time. It is only populated as a response to a Delete request.
    * @param deleteTime deleteTime or {@code null} for none
    */
   public GoogleCloudRunV2Job setDeleteTime(String deleteTime) {

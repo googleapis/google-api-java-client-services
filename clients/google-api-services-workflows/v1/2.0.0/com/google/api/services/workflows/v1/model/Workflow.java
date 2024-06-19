@@ -30,7 +30,7 @@ package com.google.api.services.workflows.v1.model;
 public final class Workflow extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A list of all KMS crypto keys used to encrypt or decrpt the data associated with
+   * Output only. A list of all KMS crypto keys used to encrypt or decrypt the data associated with
    * the workflow.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allKmsKeys;
 
   /**
-   * Output only. A list of all KMS crypto keys versions used to encrypt or decrpt the data
+   * Output only. A list of all KMS crypto key versions used to encrypt or decrypt the data
    * associated with the workflow.
    * The value may be {@code null}.
    */
@@ -179,7 +179,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> userEnvVars;
 
   /**
-   * Output only. A list of all KMS crypto keys used to encrypt or decrpt the data associated with
+   * Output only. A list of all KMS crypto keys used to encrypt or decrypt the data associated with
    * the workflow.
    * @return value or {@code null} for none
    */
@@ -188,7 +188,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A list of all KMS crypto keys used to encrypt or decrpt the data associated with
+   * Output only. A list of all KMS crypto keys used to encrypt or decrypt the data associated with
    * the workflow.
    * @param allKmsKeys allKmsKeys or {@code null} for none
    */
@@ -198,7 +198,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A list of all KMS crypto keys versions used to encrypt or decrpt the data
+   * Output only. A list of all KMS crypto key versions used to encrypt or decrypt the data
    * associated with the workflow.
    * @return value or {@code null} for none
    */
@@ -207,7 +207,7 @@ public final class Workflow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A list of all KMS crypto keys versions used to encrypt or decrpt the data
+   * Output only. A list of all KMS crypto key versions used to encrypt or decrypt the data
    * associated with the workflow.
    * @param allKmsKeysVersions allKmsKeysVersions or {@code null} for none
    */

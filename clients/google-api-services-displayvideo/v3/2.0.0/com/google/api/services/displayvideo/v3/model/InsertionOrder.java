@@ -123,6 +123,15 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * Optional. The optimization objective of the insertion order. **This field is only available to
+   * allowlisted customers.** If a customer is not allowlisted, this field will be null and attempts
+   * to set it will return an error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String optimizationObjective;
+
+  /**
    * Required. The budget spending speed setting of the insertion order.
    * The value may be {@code null}.
    */
@@ -369,6 +378,27 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
    */
   public InsertionOrder setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The optimization objective of the insertion order. **This field is only available to
+   * allowlisted customers.** If a customer is not allowlisted, this field will be null and attempts
+   * to set it will return an error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOptimizationObjective() {
+    return optimizationObjective;
+  }
+
+  /**
+   * Optional. The optimization objective of the insertion order. **This field is only available to
+   * allowlisted customers.** If a customer is not allowlisted, this field will be null and attempts
+   * to set it will return an error.
+   * @param optimizationObjective optimizationObjective or {@code null} for none
+   */
+  public InsertionOrder setOptimizationObjective(java.lang.String optimizationObjective) {
+    this.optimizationObjective = optimizationObjective;
     return this;
   }
 

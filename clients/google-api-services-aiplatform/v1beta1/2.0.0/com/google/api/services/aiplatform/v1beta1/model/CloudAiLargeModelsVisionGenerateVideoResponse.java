@@ -51,6 +51,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
   private java.util.List<java.lang.String> raiMediaFilteredReasons;
 
   /**
+   * Billable prediction metrics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IntelligenceCloudAutomlXpsReportingMetrics reportingMetrics;
+
+  /**
    * The generates samples.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
    */
   public CloudAiLargeModelsVisionGenerateVideoResponse setRaiMediaFilteredReasons(java.util.List<java.lang.String> raiMediaFilteredReasons) {
     this.raiMediaFilteredReasons = raiMediaFilteredReasons;
+    return this;
+  }
+
+  /**
+   * Billable prediction metrics.
+   * @return value or {@code null} for none
+   */
+  public IntelligenceCloudAutomlXpsReportingMetrics getReportingMetrics() {
+    return reportingMetrics;
+  }
+
+  /**
+   * Billable prediction metrics.
+   * @param reportingMetrics reportingMetrics or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoResponse setReportingMetrics(IntelligenceCloudAutomlXpsReportingMetrics reportingMetrics) {
+    this.reportingMetrics = reportingMetrics;
     return this;
   }
 

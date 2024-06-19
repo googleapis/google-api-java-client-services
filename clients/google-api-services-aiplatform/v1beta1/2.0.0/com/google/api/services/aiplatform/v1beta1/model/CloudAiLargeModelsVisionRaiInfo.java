@@ -37,6 +37,15 @@ public final class CloudAiLargeModelsVisionRaiInfo extends com.google.api.client
   private java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabels> detectedLabels;
 
   /**
+   * The model name used to indexing into the RaiFilterConfig map. Would either be one of
+   * imagegeneration@002-006, imagen-3.0-... api endpoint names, or internal names used for mapping
+   * to different filter configs (genselfie, ai_watermark) than its api endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelName;
+
+  /**
    * List of rai categories' information to return
    * The value may be {@code null}.
    */
@@ -64,6 +73,27 @@ public final class CloudAiLargeModelsVisionRaiInfo extends com.google.api.client
    */
   public CloudAiLargeModelsVisionRaiInfo setDetectedLabels(java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabels> detectedLabels) {
     this.detectedLabels = detectedLabels;
+    return this;
+  }
+
+  /**
+   * The model name used to indexing into the RaiFilterConfig map. Would either be one of
+   * imagegeneration@002-006, imagen-3.0-... api endpoint names, or internal names used for mapping
+   * to different filter configs (genselfie, ai_watermark) than its api endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelName() {
+    return modelName;
+  }
+
+  /**
+   * The model name used to indexing into the RaiFilterConfig map. Would either be one of
+   * imagegeneration@002-006, imagen-3.0-... api endpoint names, or internal names used for mapping
+   * to different filter configs (genselfie, ai_watermark) than its api endpoint.
+   * @param modelName modelName or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionRaiInfo setModelName(java.lang.String modelName) {
+    this.modelName = modelName;
     return this;
   }
 

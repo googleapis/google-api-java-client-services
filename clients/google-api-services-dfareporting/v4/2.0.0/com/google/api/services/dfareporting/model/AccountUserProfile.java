@@ -68,7 +68,7 @@ public final class AccountUserProfile extends com.google.api.client.json.Generic
   private java.lang.String comments;
 
   /**
-   * Email of the user profile. The email addresss must be linked to a Google Account. This field is
+   * Email of the user profile. The email address must be linked to a Google Account. This field is
    * required on insertion and is read-only after insertion.
    * The value may be {@code null}.
    */
@@ -240,7 +240,7 @@ public final class AccountUserProfile extends com.google.api.client.json.Generic
   }
 
   /**
-   * Email of the user profile. The email addresss must be linked to a Google Account. This field is
+   * Email of the user profile. The email address must be linked to a Google Account. This field is
    * required on insertion and is read-only after insertion.
    * @return value or {@code null} for none
    */
@@ -249,7 +249,7 @@ public final class AccountUserProfile extends com.google.api.client.json.Generic
   }
 
   /**
-   * Email of the user profile. The email addresss must be linked to a Google Account. This field is
+   * Email of the user profile. The email address must be linked to a Google Account. This field is
    * required on insertion and is read-only after insertion.
    * @param email email or {@code null} for none
    */

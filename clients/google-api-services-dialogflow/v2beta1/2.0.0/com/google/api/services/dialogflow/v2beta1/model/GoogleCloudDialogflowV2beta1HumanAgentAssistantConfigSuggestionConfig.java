@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    * API, we will not deliver the responses from high latency features in the API response. The
    * human_agent_assistant_config.notification_config must be configured and
    * enable_event_based_suggestion must be set to true to receive the responses from high latency
-   * features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST.
+   * features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    * API, we will not deliver the responses from high latency features in the API response. The
    * human_agent_assistant_config.notification_config must be configured and
    * enable_event_based_suggestion must be set to true to receive the responses from high latency
-   * features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST.
+   * features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableHighLatencyFeaturesSyncDelivery() {
@@ -84,7 +84,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    * API, we will not deliver the responses from high latency features in the API response. The
    * human_agent_assistant_config.notification_config must be configured and
    * enable_event_based_suggestion must be set to true to receive the responses from high latency
-   * features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST.
+   * features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST
    * @param disableHighLatencyFeaturesSyncDelivery disableHighLatencyFeaturesSyncDelivery or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfig setDisableHighLatencyFeaturesSyncDelivery(java.lang.Boolean disableHighLatencyFeaturesSyncDelivery) {

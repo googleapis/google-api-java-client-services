@@ -30,6 +30,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataScanExecutionStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The time when the DataScanJob execution was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String latestJobCreateTime;
+
+  /**
    * The time when the latest DataScanJob ended.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudDataplexV1DataScanExecutionStatus extends com.goog
    */
   @com.google.api.client.util.Key
   private String latestJobStartTime;
+
+  /**
+   * Optional. The time when the DataScanJob execution was created.
+   * @return value or {@code null} for none
+   */
+  public String getLatestJobCreateTime() {
+    return latestJobCreateTime;
+  }
+
+  /**
+   * Optional. The time when the DataScanJob execution was created.
+   * @param latestJobCreateTime latestJobCreateTime or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanExecutionStatus setLatestJobCreateTime(String latestJobCreateTime) {
+    this.latestJobCreateTime = latestJobCreateTime;
+    return this;
+  }
 
   /**
    * The time when the latest DataScanJob ended.

@@ -66,6 +66,18 @@ public final class GoogleCloudKmsV1CryptoKey extends com.google.api.client.json.
   private java.lang.Boolean importOnly;
 
   /**
+   * Optional. The policy used for Key Access Justifications Policy Enforcement. If this field is
+   * present and this key is enrolled in Key Access Justifications Policy Enforcement, the policy
+   * will be evaluated in encrypt, decrypt, and sign operations, and the operation will fail if
+   * rejected by the policy. The policy is defined by specifying zero or more allowed justification
+   * codes. https://cloud.google.com/assured-workloads/key-access-justifications/docs/justification-
+   * codes By default, this field is absent, and all justification codes are allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudKmsV1KeyAccessJustificationsPolicy keyAccessJustificationsPolicy;
+
+  /**
    * Labels with user-defined metadata. For more information, see [Labeling
    * Keys](https://cloud.google.com/kms/docs/labeling-keys).
    * The value may be {@code null}.
@@ -205,6 +217,33 @@ public final class GoogleCloudKmsV1CryptoKey extends com.google.api.client.json.
    */
   public GoogleCloudKmsV1CryptoKey setImportOnly(java.lang.Boolean importOnly) {
     this.importOnly = importOnly;
+    return this;
+  }
+
+  /**
+   * Optional. The policy used for Key Access Justifications Policy Enforcement. If this field is
+   * present and this key is enrolled in Key Access Justifications Policy Enforcement, the policy
+   * will be evaluated in encrypt, decrypt, and sign operations, and the operation will fail if
+   * rejected by the policy. The policy is defined by specifying zero or more allowed justification
+   * codes. https://cloud.google.com/assured-workloads/key-access-justifications/docs/justification-
+   * codes By default, this field is absent, and all justification codes are allowed.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudKmsV1KeyAccessJustificationsPolicy getKeyAccessJustificationsPolicy() {
+    return keyAccessJustificationsPolicy;
+  }
+
+  /**
+   * Optional. The policy used for Key Access Justifications Policy Enforcement. If this field is
+   * present and this key is enrolled in Key Access Justifications Policy Enforcement, the policy
+   * will be evaluated in encrypt, decrypt, and sign operations, and the operation will fail if
+   * rejected by the policy. The policy is defined by specifying zero or more allowed justification
+   * codes. https://cloud.google.com/assured-workloads/key-access-justifications/docs/justification-
+   * codes By default, this field is absent, and all justification codes are allowed.
+   * @param keyAccessJustificationsPolicy keyAccessJustificationsPolicy or {@code null} for none
+   */
+  public GoogleCloudKmsV1CryptoKey setKeyAccessJustificationsPolicy(GoogleCloudKmsV1KeyAccessJustificationsPolicy keyAccessJustificationsPolicy) {
+    this.keyAccessJustificationsPolicy = keyAccessJustificationsPolicy;
     return this;
   }
 

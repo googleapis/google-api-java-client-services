@@ -89,11 +89,11 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   private java.lang.String loadBalancingScheme;
 
   /**
-   * Optional. The metadata provided here will be included as part of the `metadata_context` (of
-   * type `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server.
-   * The metadata will be available under the namespace `com.google.lb_route_extension.`. The
-   * following variables are supported in the metadata Struct: `{forwarding_rule_id}` - substituted
-   * with the forwarding rule's fully qualified resource name.
+   * Optional. The metadata provided here is included as part of the `metadata_context` (of type
+   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
+   * metadata is available under the namespace `com.google.lb_route_extension.`. The following
+   * variables are supported in the metadata Struct: `{forwarding_rule_id}` - substituted with the
+   * forwarding rule's fully qualified resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,11 +237,11 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The metadata provided here will be included as part of the `metadata_context` (of
-   * type `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server.
-   * The metadata will be available under the namespace `com.google.lb_route_extension.`. The
-   * following variables are supported in the metadata Struct: `{forwarding_rule_id}` - substituted
-   * with the forwarding rule's fully qualified resource name.
+   * Optional. The metadata provided here is included as part of the `metadata_context` (of type
+   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
+   * metadata is available under the namespace `com.google.lb_route_extension.`. The following
+   * variables are supported in the metadata Struct: `{forwarding_rule_id}` - substituted with the
+   * forwarding rule's fully qualified resource name.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -249,11 +249,11 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The metadata provided here will be included as part of the `metadata_context` (of
-   * type `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server.
-   * The metadata will be available under the namespace `com.google.lb_route_extension.`. The
-   * following variables are supported in the metadata Struct: `{forwarding_rule_id}` - substituted
-   * with the forwarding rule's fully qualified resource name.
+   * Optional. The metadata provided here is included as part of the `metadata_context` (of type
+   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
+   * metadata is available under the namespace `com.google.lb_route_extension.`. The following
+   * variables are supported in the metadata Struct: `{forwarding_rule_id}` - substituted with the
+   * forwarding rule's fully qualified resource name.
    * @param metadata metadata or {@code null} for none
    */
   public LbRouteExtension setMetadata(java.util.Map<String, java.lang.Object> metadata) {

@@ -30,7 +30,15 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The document data snippet in the search response. Only fields that are marked as retrievable
+   * The chunk data in the search response if the SearchRequest.ContentSearchSpec.search_result_mode
+   * is set to CHUNKS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaChunk chunk;
+
+  /**
+   * The document data snippet in the search response. Only fields that are marked as `retrievable`
    * are populated.
    * The value may be {@code null}.
    */
@@ -58,7 +66,26 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult ex
   }
 
   /**
-   * The document data snippet in the search response. Only fields that are marked as retrievable
+   * The chunk data in the search response if the SearchRequest.ContentSearchSpec.search_result_mode
+   * is set to CHUNKS.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaChunk getChunk() {
+    return chunk;
+  }
+
+  /**
+   * The chunk data in the search response if the SearchRequest.ContentSearchSpec.search_result_mode
+   * is set to CHUNKS.
+   * @param chunk chunk or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult setChunk(GoogleCloudDiscoveryengineV1betaChunk chunk) {
+    this.chunk = chunk;
+    return this;
+  }
+
+  /**
+   * The document data snippet in the search response. Only fields that are marked as `retrievable`
    * are populated.
    * @return value or {@code null} for none
    */
@@ -67,7 +94,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult ex
   }
 
   /**
-   * The document data snippet in the search response. Only fields that are marked as retrievable
+   * The document data snippet in the search response. Only fields that are marked as `retrievable`
    * are populated.
    * @param document document or {@code null} for none
    */

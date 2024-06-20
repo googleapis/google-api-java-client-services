@@ -30,15 +30,15 @@ package com.google.api.services.vmmigration.v1.model;
 public final class NetworkInterface extends com.google.api.client.json.GenericJson {
 
   /**
-   * The external IP to define in the NIC.
+   * Optional. The external IP to define in the NIC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalIp;
 
   /**
-   * The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a
-   * named address resource full path.
+   * Optional. The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4
+   * address \ a named address resource full path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String subnetwork;
 
   /**
-   * The external IP to define in the NIC.
+   * Optional. The external IP to define in the NIC.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalIp() {
@@ -67,7 +67,7 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The external IP to define in the NIC.
+   * Optional. The external IP to define in the NIC.
    * @param externalIp externalIp or {@code null} for none
    */
   public NetworkInterface setExternalIp(java.lang.String externalIp) {
@@ -76,8 +76,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a
-   * named address resource full path.
+   * Optional. The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4
+   * address \ a named address resource full path.
    * @return value or {@code null} for none
    */
   public java.lang.String getInternalIp() {
@@ -85,8 +85,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a
-   * named address resource full path.
+   * Optional. The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4
+   * address \ a named address resource full path.
    * @param internalIp internalIp or {@code null} for none
    */
   public NetworkInterface setInternalIp(java.lang.String internalIp) {

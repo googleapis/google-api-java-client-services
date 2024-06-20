@@ -104,7 +104,8 @@ def SanitizeDomain(s):
   if s is None:
     return None
   s = s.lower().replace('-', '_')
-  return ''.join([c for c in s if c.isalnum() or c in ['.', '_']])
+  allowed_chars = set("abcdefghijklmnopqrstuvwxyz0123456789._")
+  return ''.join(c for c in s if c in allowed_chars)
 
 
 def ReversedDomainComponents(s):

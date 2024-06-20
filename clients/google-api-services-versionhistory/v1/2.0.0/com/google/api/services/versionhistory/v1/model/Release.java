@@ -59,6 +59,13 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Whether or not the release was available for version pinning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pinnable;
+
+  /**
    * Timestamp interval of when the release was live. If end_time is unspecified, the release is
    * currently live.
    * The value may be {@code null}.
@@ -129,6 +136,23 @@ public final class Release extends com.google.api.client.json.GenericJson {
    */
   public Release setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Whether or not the release was available for version pinning.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPinnable() {
+    return pinnable;
+  }
+
+  /**
+   * Whether or not the release was available for version pinning.
+   * @param pinnable pinnable or {@code null} for none
+   */
+  public Release setPinnable(java.lang.Boolean pinnable) {
+    this.pinnable = pinnable;
     return this;
   }
 

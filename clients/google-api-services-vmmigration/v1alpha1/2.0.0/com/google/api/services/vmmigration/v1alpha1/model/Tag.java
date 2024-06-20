@@ -30,21 +30,21 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
-   * Key of tag.
+   * Required. Key of tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Value of tag.
+   * Required. Value of tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Key of tag.
+   * Required. Key of tag.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -52,7 +52,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Key of tag.
+   * Required. Key of tag.
    * @param key key or {@code null} for none
    */
   public Tag setKey(java.lang.String key) {
@@ -61,7 +61,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Value of tag.
+   * Required. Value of tag.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -69,7 +69,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Value of tag.
+   * Required. Value of tag.
    * @param value value or {@code null} for none
    */
   public Tag setValue(java.lang.String value) {

@@ -200,10 +200,11 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be
    * automatically chosen with the default size. This field is only applicable when `use_ip_aliases`
    * is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to
-   * have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki
-   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private
-   * networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to
-   * use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
+   * have a range chosen with a specific netmask. Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
+   * `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use
+   * cluster.tpu_config.ipv4_cidr_block instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -617,10 +618,11 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be
    * automatically chosen with the default size. This field is only applicable when `use_ip_aliases`
    * is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to
-   * have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki
-   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private
-   * networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to
-   * use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
+   * have a range chosen with a specific netmask. Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
+   * `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use
+   * cluster.tpu_config.ipv4_cidr_block instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getTpuIpv4CidrBlock() {
@@ -631,10 +633,11 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be
    * automatically chosen with the default size. This field is only applicable when `use_ip_aliases`
    * is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to
-   * have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki
-   * /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private
-   * networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to
-   * use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
+   * have a range chosen with a specific netmask. Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`,
+   * `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use
+   * cluster.tpu_config.ipv4_cidr_block instead.
    * @param tpuIpv4CidrBlock tpuIpv4CidrBlock or {@code null} for none
    */
   public IPAllocationPolicy setTpuIpv4CidrBlock(java.lang.String tpuIpv4CidrBlock) {

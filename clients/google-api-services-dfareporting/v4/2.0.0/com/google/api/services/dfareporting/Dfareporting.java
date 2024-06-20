@@ -1487,7 +1487,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing user role. This method supports patch semantics.
+     * Updates an existing account user profile. This method supports patch semantics.
      *
      * Create a request for the method "accountUserProfiles.patch".
      *
@@ -1513,7 +1513,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing user role. This method supports patch semantics.
+       * Updates an existing account user profile. This method supports patch semantics.
        *
        * Create a request for the method "accountUserProfiles.patch".
        *
@@ -3273,7 +3273,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing event tag. This method supports patch semantics.
+     * Updates an existing ad. This method supports patch semantics.
      *
      * Create a request for the method "ads.patch".
      *
@@ -3299,7 +3299,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing event tag. This method supports patch semantics.
+       * Updates an existing ad. This method supports patch semantics.
        *
        * Create a request for the method "ads.patch".
        *
@@ -5303,7 +5303,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing advertiser. This method supports patch semantics.
+     * Updates an existing landing page. This method supports patch semantics.
      *
      * Create a request for the method "advertiserLandingPages.patch".
      *
@@ -5329,7 +5329,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing advertiser. This method supports patch semantics.
+       * Updates an existing landing page. This method supports patch semantics.
        *
        * Create a request for the method "advertiserLandingPages.patch".
        *
@@ -8736,7 +8736,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing creative. This method supports patch semantics.
+     * Updates an existing campaign. This method supports patch semantics.
      *
      * Create a request for the method "campaigns.patch".
      *
@@ -8762,7 +8762,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing creative. This method supports patch semantics.
+       * Updates an existing campaign. This method supports patch semantics.
        *
        * Create a request for the method "campaigns.patch".
        *
@@ -19251,7 +19251,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing event tag. This method supports patch semantics.
+     * Updates an existing floodlight activity. This method supports patch semantics.
      *
      * Create a request for the method "floodlightActivities.patch".
      *
@@ -19277,7 +19277,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing event tag. This method supports patch semantics.
+       * Updates an existing floodlight activity. This method supports patch semantics.
        *
        * Create a request for the method "floodlightActivities.patch".
        *
@@ -20125,7 +20125,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing event tag. This method supports patch semantics.
+     * Updates an existing floodlight activity group. This method supports patch semantics.
      *
      * Create a request for the method "floodlightActivityGroups.patch".
      *
@@ -20151,7 +20151,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing event tag. This method supports patch semantics.
+       * Updates an existing floodlight activity group. This method supports patch semantics.
        *
        * Create a request for the method "floodlightActivityGroups.patch".
        *
@@ -20710,7 +20710,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing event tag. This method supports patch semantics.
+     * Updates an existing floodlight configuration. This method supports patch semantics.
      *
      * Create a request for the method "floodlightConfigurations.patch".
      *
@@ -20736,7 +20736,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing event tag. This method supports patch semantics.
+       * Updates an existing floodlight configuration. This method supports patch semantics.
        *
        * Create a request for the method "floodlightConfigurations.patch".
        *
@@ -28154,7 +28154,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing RemarketingListShare. This method supports patch semantics.
+     * Updates an existing remarketing list share. This method supports patch semantics.
      *
      * Create a request for the method "remarketingListShares.patch".
      *
@@ -28180,7 +28180,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing RemarketingListShare. This method supports patch semantics.
+       * Updates an existing remarketing list share. This method supports patch semantics.
        *
        * Create a request for the method "remarketingListShares.patch".
        *
@@ -28987,7 +28987,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates an existing RemarketingList. This method supports patch semantics.
+     * Updates an existing remarketing list. This method supports patch semantics.
      *
      * Create a request for the method "remarketingLists.patch".
      *
@@ -29013,7 +29013,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Updates an existing RemarketingList. This method supports patch semantics.
+       * Updates an existing remarketing list. This method supports patch semantics.
        *
        * Create a request for the method "remarketingLists.patch".
        *

@@ -285,9 +285,9 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
       /**
        * The enterprise token appended to the callback URL. Set this when creating a customer-
-       * managed enterprise (https://developers.google.com/android/management/create-enterprise
-       * #customer-managed_enterprises) and not when creating a deprecated EMM-managed enterprise
-       * (https://developers.google.com/android/management/create-enterprise#emm-
+       * managed enterprise (https://developers.google.com/android/management/create-
+       * enterprise#customer-managed_enterprises) and not when creating a deprecated EMM-managed
+       * enterprise (https://developers.google.com/android/management/create-enterprise#emm-
        * managed_enterprises).
        */
       @com.google.api.client.util.Key
@@ -304,9 +304,9 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
       /**
        * The enterprise token appended to the callback URL. Set this when creating a customer-
-       * managed enterprise (https://developers.google.com/android/management/create-enterprise
-       * #customer-managed_enterprises) and not when creating a deprecated EMM-managed enterprise
-       * (https://developers.google.com/android/management/create-enterprise#emm-
+       * managed enterprise (https://developers.google.com/android/management/create-
+       * enterprise#customer-managed_enterprises) and not when creating a deprecated EMM-managed
+       * enterprise (https://developers.google.com/android/management/create-enterprise#emm-
        * managed_enterprises).
        */
       public Create setEnterpriseToken(java.lang.String enterpriseToken) {
@@ -2735,10 +2735,11 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         }
       }
       /**
-       * Gets an active, unexpired enrollment token. Only a partial view of EnrollmentToken is returned:
-       * all the fields but name and expiration_timestamp are empty. This method is meant to help manage
-       * active enrollment tokens lifecycle. For security reasons, it's recommended to delete active
-       * enrollment tokens as soon as they're not intended to be used anymore.
+       * Gets an active, unexpired enrollment token. A partial view of the enrollment token is returned.
+       * Only the following fields are populated: name, expirationTimestamp, allowPersonalUsage, value,
+       * qrCode. This method is meant to help manage active enrollment tokens lifecycle. For security
+       * reasons, it's recommended to delete active enrollment tokens as soon as they're not intended to
+       * be used anymore.
        *
        * Create a request for the method "enrollmentTokens.get".
        *
@@ -2763,10 +2764,11 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
             java.util.regex.Pattern.compile("^enterprises/[^/]+/enrollmentTokens/[^/]+$");
 
         /**
-         * Gets an active, unexpired enrollment token. Only a partial view of EnrollmentToken is returned:
-         * all the fields but name and expiration_timestamp are empty. This method is meant to help manage
-         * active enrollment tokens lifecycle. For security reasons, it's recommended to delete active
-         * enrollment tokens as soon as they're not intended to be used anymore.
+         * Gets an active, unexpired enrollment token. A partial view of the enrollment token is returned.
+         * Only the following fields are populated: name, expirationTimestamp, allowPersonalUsage, value,
+         * qrCode. This method is meant to help manage active enrollment tokens lifecycle. For security
+         * reasons, it's recommended to delete active enrollment tokens as soon as they're not intended to
+         * be used anymore.
          *
          * Create a request for the method "enrollmentTokens.get".
          *
@@ -2890,10 +2892,10 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       }
       /**
        * Lists active, unexpired enrollment tokens for a given enterprise. The list items contain only a
-       * partial view of EnrollmentToken: all the fields but name and expiration_timestamp are empty. This
-       * method is meant to help manage active enrollment tokens lifecycle. For security reasons, it's
-       * recommended to delete active enrollment tokens as soon as they're not intended to be used
-       * anymore.
+       * partial view of EnrollmentToken object. Only the following fields are populated: name,
+       * expirationTimestamp, allowPersonalUsage, value, qrCode. This method is meant to help manage
+       * active enrollment tokens lifecycle. For security reasons, it's recommended to delete active
+       * enrollment tokens as soon as they're not intended to be used anymore.
        *
        * Create a request for the method "enrollmentTokens.list".
        *
@@ -2918,10 +2920,10 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
         /**
          * Lists active, unexpired enrollment tokens for a given enterprise. The list items contain only a
-         * partial view of EnrollmentToken: all the fields but name and expiration_timestamp are empty.
-         * This method is meant to help manage active enrollment tokens lifecycle. For security reasons,
-         * it's recommended to delete active enrollment tokens as soon as they're not intended to be used
-         * anymore.
+         * partial view of EnrollmentToken object. Only the following fields are populated: name,
+         * expirationTimestamp, allowPersonalUsage, value, qrCode. This method is meant to help manage
+         * active enrollment tokens lifecycle. For security reasons, it's recommended to delete active
+         * enrollment tokens as soon as they're not intended to be used anymore.
          *
          * Create a request for the method "enrollmentTokens.list".
          *
@@ -5402,6 +5404,29 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       @Override
       public Create setUploadProtocol(java.lang.String uploadProtocol) {
         return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. Email address used to prefill the admin field of the enterprise signup form. This
+       * value is a hint only and can be altered by the user.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String adminEmail;
+
+      /** Optional. Email address used to prefill the admin field of the enterprise signup form. This value
+     is a hint only and can be altered by the user.
+       */
+      public java.lang.String getAdminEmail() {
+        return adminEmail;
+      }
+
+      /**
+       * Optional. Email address used to prefill the admin field of the enterprise signup form. This
+       * value is a hint only and can be altered by the user.
+       */
+      public Create setAdminEmail(java.lang.String adminEmail) {
+        this.adminEmail = adminEmail;
+        return this;
       }
 
       /**

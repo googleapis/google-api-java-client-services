@@ -54,6 +54,13 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   private java.util.List<java.lang.String> destIpRanges;
 
   /**
+   * Network scope of the traffic destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destNetworkScope;
+
+  /**
    * Region codes whose IP addresses will be used to match for destination of traffic. Should be
    * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
    * Maximum number of dest region codes allowed is 5000.
@@ -99,6 +106,20 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> srcIpRanges;
+
+  /**
+   * Network scope of the traffic source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String srcNetworkScope;
+
+  /**
+   * Networks of the traffic source. It can be either a full or partial url.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> srcNetworks;
 
   /**
    * Region codes whose IP addresses will be used to match for source of traffic. Should be
@@ -178,6 +199,23 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setDestIpRanges(java.util.List<java.lang.String> destIpRanges) {
     this.destIpRanges = destIpRanges;
+    return this;
+  }
+
+  /**
+   * Network scope of the traffic destination.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestNetworkScope() {
+    return destNetworkScope;
+  }
+
+  /**
+   * Network scope of the traffic destination.
+   * @param destNetworkScope destNetworkScope or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setDestNetworkScope(java.lang.String destNetworkScope) {
+    this.destNetworkScope = destNetworkScope;
     return this;
   }
 
@@ -290,6 +328,40 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setSrcIpRanges(java.util.List<java.lang.String> srcIpRanges) {
     this.srcIpRanges = srcIpRanges;
+    return this;
+  }
+
+  /**
+   * Network scope of the traffic source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSrcNetworkScope() {
+    return srcNetworkScope;
+  }
+
+  /**
+   * Network scope of the traffic source.
+   * @param srcNetworkScope srcNetworkScope or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setSrcNetworkScope(java.lang.String srcNetworkScope) {
+    this.srcNetworkScope = srcNetworkScope;
+    return this;
+  }
+
+  /**
+   * Networks of the traffic source. It can be either a full or partial url.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSrcNetworks() {
+    return srcNetworks;
+  }
+
+  /**
+   * Networks of the traffic source. It can be either a full or partial url.
+   * @param srcNetworks srcNetworks or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setSrcNetworks(java.util.List<java.lang.String> srcNetworks) {
+    this.srcNetworks = srcNetworks;
     return this;
   }
 

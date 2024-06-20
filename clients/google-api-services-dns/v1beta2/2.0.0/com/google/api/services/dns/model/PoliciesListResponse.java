@@ -30,12 +30,6 @@ package com.google.api.services.dns.model;
 public final class PoliciesListResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ResponseHeader header;
-
-  /**
    * Type of resource.
    * The value may be {@code null}.
    */
@@ -43,12 +37,12 @@ public final class PoliciesListResponse extends com.google.api.client.json.Gener
   private java.lang.String kind;
 
   /**
-   * The presence of this field indicates that there exist more results following your last page of
-   * results in pagination order. To fetch them, make another list request using this value as your
-   * page token. This lets you the complete contents of even very large collections one page at a
-   * time. However, if the contents of the collection change between the first and last paginated
-   * list request, the set of all elements returned are an inconsistent view of the collection. You
-   * cannot retrieve a consistent snapshot of a collection larger than the maximum page size.
+   * This field indicates that more results are available beyond the last page displayed. To fetch
+   * the results, make another list request and use this value as your page token. This lets you
+   * retrieve the complete contents of a very large collection one page at a time. However, if the
+   * contents of the collection change between the first and last paginated list request, the set of
+   * all elements returned are an inconsistent view of the collection. You can't retrieve a
+   * consistent snapshot of a collection larger than the maximum page size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,21 +54,6 @@ public final class PoliciesListResponse extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.List<Policy> policies;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public ResponseHeader getHeader() {
-    return header;
-  }
-
-  /**
-   * @param header header or {@code null} for none
-   */
-  public PoliciesListResponse setHeader(ResponseHeader header) {
-    this.header = header;
-    return this;
-  }
 
   /**
    * Type of resource.
@@ -94,12 +73,12 @@ public final class PoliciesListResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The presence of this field indicates that there exist more results following your last page of
-   * results in pagination order. To fetch them, make another list request using this value as your
-   * page token. This lets you the complete contents of even very large collections one page at a
-   * time. However, if the contents of the collection change between the first and last paginated
-   * list request, the set of all elements returned are an inconsistent view of the collection. You
-   * cannot retrieve a consistent snapshot of a collection larger than the maximum page size.
+   * This field indicates that more results are available beyond the last page displayed. To fetch
+   * the results, make another list request and use this value as your page token. This lets you
+   * retrieve the complete contents of a very large collection one page at a time. However, if the
+   * contents of the collection change between the first and last paginated list request, the set of
+   * all elements returned are an inconsistent view of the collection. You can't retrieve a
+   * consistent snapshot of a collection larger than the maximum page size.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -107,12 +86,12 @@ public final class PoliciesListResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The presence of this field indicates that there exist more results following your last page of
-   * results in pagination order. To fetch them, make another list request using this value as your
-   * page token. This lets you the complete contents of even very large collections one page at a
-   * time. However, if the contents of the collection change between the first and last paginated
-   * list request, the set of all elements returned are an inconsistent view of the collection. You
-   * cannot retrieve a consistent snapshot of a collection larger than the maximum page size.
+   * This field indicates that more results are available beyond the last page displayed. To fetch
+   * the results, make another list request and use this value as your page token. This lets you
+   * retrieve the complete contents of a very large collection one page at a time. However, if the
+   * contents of the collection change between the first and last paginated list request, the set of
+   * all elements returned are an inconsistent view of the collection. You can't retrieve a
+   * consistent snapshot of a collection larger than the maximum page size.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public PoliciesListResponse setNextPageToken(java.lang.String nextPageToken) {

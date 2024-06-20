@@ -58,6 +58,13 @@ public final class SqlServerHomogeneousMigrationJobConfig extends com.google.api
   }
 
   /**
+   * Optional. Enable differential backups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useDiffBackup;
+
+  /**
    * Required. Pattern that describes the default backup naming strategy. The specified pattern
    * should ensure lexicographical order of backups. The pattern must define one of the following
    * capture group sets: Capture group set #1 yy/yyyy - year, 2 or 4 digits mm - month number, 1-12
@@ -102,6 +109,23 @@ public final class SqlServerHomogeneousMigrationJobConfig extends com.google.api
    */
   public SqlServerHomogeneousMigrationJobConfig setDatabaseBackups(java.util.List<SqlServerDatabaseBackup> databaseBackups) {
     this.databaseBackups = databaseBackups;
+    return this;
+  }
+
+  /**
+   * Optional. Enable differential backups.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseDiffBackup() {
+    return useDiffBackup;
+  }
+
+  /**
+   * Optional. Enable differential backups.
+   * @param useDiffBackup useDiffBackup or {@code null} for none
+   */
+  public SqlServerHomogeneousMigrationJobConfig setUseDiffBackup(java.lang.Boolean useDiffBackup) {
+    this.useDiffBackup = useDiffBackup;
     return this;
   }
 

@@ -59,6 +59,13 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
   private java.lang.String hostProject;
 
   /**
+   * Optional. A list of replication sites used in Disaster Recovery (DR) configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SapDiscoveryComponent> replicationSites;
+
+  /**
    * Optional. The resources in a component.
    * The value may be {@code null}.
    */
@@ -147,6 +154,23 @@ public final class SapDiscoveryComponent extends com.google.api.client.json.Gene
    */
   public SapDiscoveryComponent setHostProject(java.lang.String hostProject) {
     this.hostProject = hostProject;
+    return this;
+  }
+
+  /**
+   * Optional. A list of replication sites used in Disaster Recovery (DR) configurations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SapDiscoveryComponent> getReplicationSites() {
+    return replicationSites;
+  }
+
+  /**
+   * Optional. A list of replication sites used in Disaster Recovery (DR) configurations.
+   * @param replicationSites replicationSites or {@code null} for none
+   */
+  public SapDiscoveryComponent setReplicationSites(java.util.List<SapDiscoveryComponent> replicationSites) {
+    this.replicationSites = replicationSites;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * Configuration options for a custom domain.
+ * Configuration options for private workstation clusters.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -31,14 +31,14 @@ package com.google.api.services.workstations.v1beta.model;
 public final class DomainConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. Domain used by Workstations for HTTP ingress.
+   * Immutable. Whether Workstations endpoint is private.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String domain;
 
   /**
-   * Immutable. Domain used by Workstations for HTTP ingress.
+   * Immutable. Whether Workstations endpoint is private.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -46,7 +46,7 @@ public final class DomainConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Domain used by Workstations for HTTP ingress.
+   * Immutable. Whether Workstations endpoint is private.
    * @param domain domain or {@code null} for none
    */
   public DomainConfig setDomain(java.lang.String domain) {

@@ -7698,7 +7698,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
   public class InboundSamlSsoProfiles {
 
     /**
-     * Creates an InboundSamlSsoProfile for a customer.
+     * Creates an InboundSamlSsoProfile for a customer. When the target customer has enabled [Multi-
+     * party approval for sensitive actions](https://support.google.com/a/answer/13790448), the
+     * `Operation` in the response will have `"done": false`, it will not have a response, and the
+     * metadata will have `"state": "awaiting-multi-party-approval"`.
      *
      * Create a request for the method "inboundSamlSsoProfiles.create".
      *
@@ -7719,7 +7722,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1beta1/inboundSamlSsoProfiles";
 
       /**
-       * Creates an InboundSamlSsoProfile for a customer.
+       * Creates an InboundSamlSsoProfile for a customer. When the target customer has enabled [Multi-
+       * party approval for sensitive actions](https://support.google.com/a/answer/13790448), the
+       * `Operation` in the response will have `"done": false`, it will not have a response, and the
+       * metadata will have `"state": "awaiting-multi-party-approval"`.
        *
        * Create a request for the method "inboundSamlSsoProfiles.create".
        *
@@ -8275,7 +8281,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Updates an InboundSamlSsoProfile.
+     * Updates an InboundSamlSsoProfile. When the target customer has enabled [Multi-party approval for
+     * sensitive actions](https://support.google.com/a/answer/13790448), the `Operation` in the response
+     * will have `"done": false`, it will not have a response, and the metadata will have `"state":
+     * "awaiting-multi-party-approval"`.
      *
      * Create a request for the method "inboundSamlSsoProfiles.patch".
      *
@@ -8301,7 +8310,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^inboundSamlSsoProfiles/[^/]+$");
 
       /**
-       * Updates an InboundSamlSsoProfile.
+       * Updates an InboundSamlSsoProfile. When the target customer has enabled [Multi-party approval
+       * for sensitive actions](https://support.google.com/a/answer/13790448), the `Operation` in the
+       * response will have `"done": false`, it will not have a response, and the metadata will have
+       * `"state": "awaiting-multi-party-approval"`.
        *
        * Create a request for the method "inboundSamlSsoProfiles.patch".
        *
@@ -8452,7 +8464,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
     public class IdpCredentials {
 
       /**
-       * Adds an IdpCredential. Up to 2 credentials are allowed.
+       * Adds an IdpCredential. Up to 2 credentials are allowed. When the target customer has enabled
+       * [Multi-party approval for sensitive actions](https://support.google.com/a/answer/13790448), the
+       * `Operation` in the response will have `"done": false`, it will not have a response, and the
+       * metadata will have `"state": "awaiting-multi-party-approval"`.
        *
        * Create a request for the method "idpCredentials.add".
        *
@@ -8478,7 +8493,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^inboundSamlSsoProfiles/[^/]+$");
 
         /**
-         * Adds an IdpCredential. Up to 2 credentials are allowed.
+         * Adds an IdpCredential. Up to 2 credentials are allowed. When the target customer has enabled
+         * [Multi-party approval for sensitive actions](https://support.google.com/a/answer/13790448), the
+         * `Operation` in the response will have `"done": false`, it will not have a response, and the
+         * metadata will have `"state": "awaiting-multi-party-approval"`.
          *
          * Create a request for the method "idpCredentials.add".
          *
@@ -9687,9 +9705,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
     /**
      * Updates an InboundSsoAssignment. The body of this request is the `inbound_sso_assignment` field
      * and the `update_mask` is relative to that. For example: a PATCH to
-     * `/v1beta1/inboundSsoAssignments/0abcdefg1234567_mask=rank` with a body of `{ "rank": 1 }` moves
-     * that (presumably group-targeted) SSO assignment to the highest priority and shifts any other
-     * group-targeted assignments down in priority.
+     * `/v1beta1/inboundSsoAssignments/0abcdefg1234567&update_mask=rank` with a body of `{ "rank": 1 }`
+     * moves that (presumably group-targeted) SSO assignment to the highest priority and shifts any
+     * other group-targeted assignments down in priority.
      *
      * Create a request for the method "inboundSsoAssignments.patch".
      *
@@ -9717,9 +9735,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       /**
        * Updates an InboundSsoAssignment. The body of this request is the `inbound_sso_assignment` field
        * and the `update_mask` is relative to that. For example: a PATCH to
-       * `/v1beta1/inboundSsoAssignments/0abcdefg1234567_mask=rank` with a body of `{ "rank": 1 }` moves
-       * that (presumably group-targeted) SSO assignment to the highest priority and shifts any other
-       * group-targeted assignments down in priority.
+       * `/v1beta1/inboundSsoAssignments/0abcdefg1234567&update_mask=rank` with a body of `{ "rank": 1
+       * }` moves that (presumably group-targeted) SSO assignment to the highest priority and shifts any
+       * other group-targeted assignments down in priority.
        *
        * Create a request for the method "inboundSsoAssignments.patch".
        *
@@ -10171,11 +10189,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        *
        * @param name Required. Immutable. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
        *        OrgMembership. Format: orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is
-       *        the `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com
-       *        /admin-sdk/directory/reference/rest/v1/orgunits). To manage a Membership without
-       *        specifying source `orgUnitId`, this API also supports the wildcard character '-' for
-       *        `$orgUnitId` per https://google.aip.dev/159. The `$membership` shall be of the form
-       *        `{$entityType};{$memberId}`, where `$entityType` is the enum value of
+       *        the `orgUnitId` from the [Admin SDK `OrgUnit`
+       *        resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits).
+       *        To manage a Membership without specifying source `orgUnitId`, this API also supports the
+       *        wildcard character '-' for `$orgUnitId` per https://google.aip.dev/159. The `$membership`
+       *        shall be of the form `{$entityType};{$memberId}`, where `$entityType` is the enum value of
        *        OrgMembership.EntityType, and `memberId` is the `id` from [Drive API (V3) `Drive`
        *        resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for
        *        OrgMembership.EntityType.SHARED_DRIVE.
@@ -10209,11 +10227,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          *
          * @param name Required. Immutable. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
        *        OrgMembership. Format: orgUnits/{$orgUnitId}/memberships/{$membership} The `$orgUnitId` is
-       *        the `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com
-       *        /admin-sdk/directory/reference/rest/v1/orgunits). To manage a Membership without
-       *        specifying source `orgUnitId`, this API also supports the wildcard character '-' for
-       *        `$orgUnitId` per https://google.aip.dev/159. The `$membership` shall be of the form
-       *        `{$entityType};{$memberId}`, where `$entityType` is the enum value of
+       *        the `orgUnitId` from the [Admin SDK `OrgUnit`
+       *        resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits).
+       *        To manage a Membership without specifying source `orgUnitId`, this API also supports the
+       *        wildcard character '-' for `$orgUnitId` per https://google.aip.dev/159. The `$membership`
+       *        shall be of the form `{$entityType};{$memberId}`, where `$entityType` is the enum value of
        *        OrgMembership.EntityType, and `memberId` is the `id` from [Drive API (V3) `Drive`
        *        resource](https://developers.google.com/drive/api/v3/reference/drives#resource) for
        *        OrgMembership.EntityType.SHARED_DRIVE.

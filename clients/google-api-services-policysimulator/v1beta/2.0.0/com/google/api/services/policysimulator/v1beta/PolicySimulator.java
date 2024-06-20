@@ -531,8 +531,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
          * @param name Required. The name of the Replay to retrieve, in the following format:
          *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
          *        where `{resource-id}` is the ID of the project, folder, or organization that owns the
-         *        `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-         *        4d7d-8e03-479ce1833c36`
+         *        `Replay`. Example: `projects/my-example-
+         *        project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -561,8 +561,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * @param name Required. The name of the Replay to retrieve, in the following format:
          *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
          *        where `{resource-id}` is the ID of the project, folder, or organization that owns the
-         *        `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-         *        4d7d-8e03-479ce1833c36`
+         *        `Replay`. Example: `projects/my-example-
+         *        project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -644,8 +644,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * Required. The name of the Replay to retrieve, in the following format:
            * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
            * where `{resource-id}` is the ID of the project, folder, or organization that owns the
-           * `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-           * 4d7d-8e03-479ce1833c36`
+           * `Replay`. Example: `projects/my-example-
+           * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -663,8 +663,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * Required. The name of the Replay to retrieve, in the following format:
            * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
            * where `{resource-id}` is the ID of the project, folder, or organization that owns the
-           * `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-           * 4d7d-8e03-479ce1833c36`
+           * `Replay`. Example: `projects/my-example-
+           * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -816,12 +816,12 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource, in the following format: `{projects|folders|organizations
-         }/{resource-id}/locations/global`, where `{resource-id}` is the ID of the project, folder, or
-         organization that owns the Replay. Example: `projects/my-example-project/locations/global` Only
-         `Replay` objects that are direct children of the provided parent are listed. In other words,
-         `Replay` objects that are children of a project will not be included when the parent is a folder of
-         that project.
+          /** Required. The parent resource, in the following format:
+         `{projects|folders|organizations}/{resource-id}/locations/global`, where `{resource-id}` is the ID
+         of the project, folder, or organization that owns the Replay. Example: `projects/my-example-
+         project/locations/global` Only `Replay` objects that are direct children of the provided parent are
+         listed. In other words, `Replay` objects that are children of a project will not be included when
+         the parent is a folder of that project.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1280,8 +1280,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            *
            * @param parent Required. The Replay whose results are listed, in the following format:
            *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
-           *        Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
-           *        8e03-479ce1833c36`
+           *        Example: `projects/my-
+           *        project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -1309,8 +1309,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              *
              * @param parent Required. The Replay whose results are listed, in the following format:
            *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
-           *        Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
-           *        8e03-479ce1833c36`
+           *        Example: `projects/my-
+           *        project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -1391,8 +1391,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             /**
              * Required. The Replay whose results are listed, in the following format:
              * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
-             * Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
-             * 8e03-479ce1833c36`
+             * Example: `projects/my-
+             * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
@@ -1408,8 +1408,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             /**
              * Required. The Replay whose results are listed, in the following format:
              * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
-             * Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
-             * 8e03-479ce1833c36`
+             * Example: `projects/my-
+             * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3117,8 +3117,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
          * @param name Required. The name of the Replay to retrieve, in the following format:
          *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
          *        where `{resource-id}` is the ID of the project, folder, or organization that owns the
-         *        `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-         *        4d7d-8e03-479ce1833c36`
+         *        `Replay`. Example: `projects/my-example-
+         *        project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3147,8 +3147,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * @param name Required. The name of the Replay to retrieve, in the following format:
          *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
          *        where `{resource-id}` is the ID of the project, folder, or organization that owns the
-         *        `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-         *        4d7d-8e03-479ce1833c36`
+         *        `Replay`. Example: `projects/my-example-
+         *        project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -3230,8 +3230,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * Required. The name of the Replay to retrieve, in the following format:
            * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
            * where `{resource-id}` is the ID of the project, folder, or organization that owns the
-           * `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-           * 4d7d-8e03-479ce1833c36`
+           * `Replay`. Example: `projects/my-example-
+           * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -3249,8 +3249,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * Required. The name of the Replay to retrieve, in the following format:
            * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
            * where `{resource-id}` is the ID of the project, folder, or organization that owns the
-           * `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-           * 4d7d-8e03-479ce1833c36`
+           * `Replay`. Example: `projects/my-example-
+           * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3402,12 +3402,12 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource, in the following format: `{projects|folders|organizations
-         }/{resource-id}/locations/global`, where `{resource-id}` is the ID of the project, folder, or
-         organization that owns the Replay. Example: `projects/my-example-project/locations/global` Only
-         `Replay` objects that are direct children of the provided parent are listed. In other words,
-         `Replay` objects that are children of a project will not be included when the parent is a folder of
-         that project.
+          /** Required. The parent resource, in the following format:
+         `{projects|folders|organizations}/{resource-id}/locations/global`, where `{resource-id}` is the ID
+         of the project, folder, or organization that owns the Replay. Example: `projects/my-example-
+         project/locations/global` Only `Replay` objects that are direct children of the provided parent are
+         listed. In other words, `Replay` objects that are children of a project will not be included when
+         the parent is a folder of that project.
            */
           public java.lang.String getParent() {
             return parent;
@@ -3866,8 +3866,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            *
            * @param parent Required. The Replay whose results are listed, in the following format:
            *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
-           *        Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
-           *        8e03-479ce1833c36`
+           *        Example: `projects/my-
+           *        project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3895,8 +3895,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              *
              * @param parent Required. The Replay whose results are listed, in the following format:
            *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
-           *        Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
-           *        8e03-479ce1833c36`
+           *        Example: `projects/my-
+           *        project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3977,8 +3977,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             /**
              * Required. The Replay whose results are listed, in the following format:
              * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
-             * Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
-             * 8e03-479ce1833c36`
+             * Example: `projects/my-
+             * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
@@ -3994,8 +3994,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             /**
              * Required. The Replay whose results are listed, in the following format:
              * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
-             * Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
-             * 8e03-479ce1833c36`
+             * Example: `projects/my-
+             * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -4467,8 +4467,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
          * @param name Required. The name of the Replay to retrieve, in the following format:
          *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
          *        where `{resource-id}` is the ID of the project, folder, or organization that owns the
-         *        `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-         *        4d7d-8e03-479ce1833c36`
+         *        `Replay`. Example: `projects/my-example-
+         *        project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -4497,8 +4497,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * @param name Required. The name of the Replay to retrieve, in the following format:
          *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
          *        where `{resource-id}` is the ID of the project, folder, or organization that owns the
-         *        `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-         *        4d7d-8e03-479ce1833c36`
+         *        `Replay`. Example: `projects/my-example-
+         *        project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -4580,8 +4580,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * Required. The name of the Replay to retrieve, in the following format:
            * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
            * where `{resource-id}` is the ID of the project, folder, or organization that owns the
-           * `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-           * 4d7d-8e03-479ce1833c36`
+           * `Replay`. Example: `projects/my-example-
+           * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -4599,8 +4599,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * Required. The name of the Replay to retrieve, in the following format:
            * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
            * where `{resource-id}` is the ID of the project, folder, or organization that owns the
-           * `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-           * 4d7d-8e03-479ce1833c36`
+           * `Replay`. Example: `projects/my-example-
+           * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4752,12 +4752,12 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource, in the following format: `{projects|folders|organizations
-         }/{resource-id}/locations/global`, where `{resource-id}` is the ID of the project, folder, or
-         organization that owns the Replay. Example: `projects/my-example-project/locations/global` Only
-         `Replay` objects that are direct children of the provided parent are listed. In other words,
-         `Replay` objects that are children of a project will not be included when the parent is a folder of
-         that project.
+          /** Required. The parent resource, in the following format:
+         `{projects|folders|organizations}/{resource-id}/locations/global`, where `{resource-id}` is the ID
+         of the project, folder, or organization that owns the Replay. Example: `projects/my-example-
+         project/locations/global` Only `Replay` objects that are direct children of the provided parent are
+         listed. In other words, `Replay` objects that are children of a project will not be included when
+         the parent is a folder of that project.
            */
           public java.lang.String getParent() {
             return parent;
@@ -5216,8 +5216,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            *
            * @param parent Required. The Replay whose results are listed, in the following format:
            *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
-           *        Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
-           *        8e03-479ce1833c36`
+           *        Example: `projects/my-
+           *        project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -5245,8 +5245,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              *
              * @param parent Required. The Replay whose results are listed, in the following format:
            *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
-           *        Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
-           *        8e03-479ce1833c36`
+           *        Example: `projects/my-
+           *        project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -5327,8 +5327,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             /**
              * Required. The Replay whose results are listed, in the following format:
              * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
-             * Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
-             * 8e03-479ce1833c36`
+             * Example: `projects/my-
+             * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
@@ -5344,8 +5344,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             /**
              * Required. The Replay whose results are listed, in the following format:
              * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
-             * Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
-             * 8e03-479ce1833c36`
+             * Example: `projects/my-
+             * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {

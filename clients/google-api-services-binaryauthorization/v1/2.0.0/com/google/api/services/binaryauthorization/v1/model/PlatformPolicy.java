@@ -38,6 +38,14 @@ public final class PlatformPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * Optional. Used to prevent updating the policy when another request has updated it since it was
+   * retrieved.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Optional. GKE platform-specific policy.
    * The value may be {@code null}.
    */
@@ -73,6 +81,25 @@ public final class PlatformPolicy extends com.google.api.client.json.GenericJson
    */
   public PlatformPolicy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Used to prevent updating the policy when another request has updated it since it was
+   * retrieved.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Optional. Used to prevent updating the policy when another request has updated it since it was
+   * retrieved.
+   * @param etag etag or {@code null} for none
+   */
+  public PlatformPolicy setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

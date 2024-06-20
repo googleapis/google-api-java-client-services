@@ -50,8 +50,8 @@ public final class PolicyName extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
-   * Resource type. Types are defined in IAM's .service files. Valid values for type might be 'gce',
-   * 'gcs', 'project', 'account' etc.
+   * Resource type. Types are defined in IAM's .service files. Valid values for type might be
+   * 'storage_buckets', 'compute_instances', 'resourcemanager_customers', 'billing_accounts', etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +98,8 @@ public final class PolicyName extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource type. Types are defined in IAM's .service files. Valid values for type might be 'gce',
-   * 'gcs', 'project', 'account' etc.
+   * Resource type. Types are defined in IAM's .service files. Valid values for type might be
+   * 'storage_buckets', 'compute_instances', 'resourcemanager_customers', 'billing_accounts', etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -107,8 +107,8 @@ public final class PolicyName extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource type. Types are defined in IAM's .service files. Valid values for type might be 'gce',
-   * 'gcs', 'project', 'account' etc.
+   * Resource type. Types are defined in IAM's .service files. Valid values for type might be
+   * 'storage_buckets', 'compute_instances', 'resourcemanager_customers', 'billing_accounts', etc.
    * @param type type or {@code null} for none
    */
   public PolicyName setType(java.lang.String type) {

@@ -157,8 +157,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
-     * /managed-encryption) for more information.
+     * organization.See Enabling CMEK for Log Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "billingAccounts.getCmekSettings".
      *
@@ -191,8 +191,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
-       * /managed-encryption) for more information.
+       * organization.See Enabling CMEK for Log Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "billingAccounts.getCmekSettings".
        *
@@ -2122,8 +2122,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2155,8 +2155,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -2229,8 +2229,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -2251,8 +2251,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2281,8 +2281,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2312,8 +2312,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2396,8 +2396,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -2418,8 +2418,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2675,8 +2675,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
          * @return the request
          */
@@ -2709,8 +2709,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
            * @since 1.13
            */
@@ -2784,8 +2784,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -2806,8 +2806,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2871,8 +2871,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.UndeleteBucketRequest}
          * @return the request
          */
@@ -2905,8 +2905,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @param content the {@link com.google.api.services.logging.v2.model.UndeleteBucketRequest}
            * @since 1.13
            */
@@ -2980,8 +2980,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -3002,8 +3002,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Undelete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3034,8 +3034,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
          * @return the request
          */
@@ -3069,8 +3069,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
            * @since 1.13
            */
@@ -3144,8 +3144,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -3166,8 +3166,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public UpdateAsync setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5609,9 +5609,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-         *        /us-central1Note: The location portion of the resource must be specified, but supplying
-         *        the character - in place of LOCATION_ID will return all recent queries.
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+         *        project/locations/us-central1Note: The location portion of the resource must be specified,
+         *        but supplying the character - in place of LOCATION_ID will return all recent queries.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5641,9 +5641,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-         *        /us-central1Note: The location portion of the resource must be specified, but supplying
-         *        the character - in place of LOCATION_ID will return all recent queries.
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+         *        project/locations/us-central1Note: The location portion of the resource must be specified,
+         *        but supplying the character - in place of LOCATION_ID will return all recent queries.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5726,9 +5726,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-           * /us-central1Note: The location portion of the resource must be specified, but supplying
-           * the character - in place of LOCATION_ID will return all recent queries.
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+           * project/locations/us-central1Note: The location portion of the resource must be
+           * specified, but supplying the character - in place of LOCATION_ID will return all recent
+           * queries.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -5750,9 +5751,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-           * /us-central1Note: The location portion of the resource must be specified, but supplying
-           * the character - in place of LOCATION_ID will return all recent queries.
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+           * project/locations/us-central1Note: The location portion of the resource must be
+           * specified, but supplying the character - in place of LOCATION_ID will return all recent
+           * queries.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -6205,10 +6207,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
-         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
-         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
-         *        "projects/my-project/locations/-"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/us-central1" Note: The locations portion of the resource must be
+         *        specified. To get a list of all saved queries, a wildcard character - can be used for
+         *        LOCATION_ID, for example: "projects/my-project/locations/-"
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -6238,10 +6240,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
-         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
-         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
-         *        "projects/my-project/locations/-"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/us-central1" Note: The locations portion of the resource must be
+         *        specified. To get a list of all saved queries, a wildcard character - can be used for
+         *        LOCATION_ID, for example: "projects/my-project/locations/-"
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7842,9 +7844,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
-       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
-       true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent
+       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
+       is an error if the old value is true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -7871,8 +7873,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         @com.google.api.client.util.Key
@@ -7896,8 +7899,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         public Patch setUpdateMask(String updateMask) {
@@ -8109,9 +8113,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
-       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
-       true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent
+       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
+       is an error if the old value is true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -8138,8 +8142,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         @com.google.api.client.util.Key
@@ -8163,8 +8168,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         public Update setUpdateMask(String updateMask) {
@@ -8893,8 +8899,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
        * "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
-       * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-project/exclusions
-       * /my-exclusion"
+       * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-
+       * project/exclusions/my-exclusion"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -8915,8 +8921,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
        * "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
-       * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-project/exclusions
-       * /my-exclusion"
+       * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-
+       * project/exclusions/my-exclusion"
        */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -9060,8 +9066,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
        * "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
-       * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-project/exclusions
-       * /my-exclusion"
+       * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-
+       * project/exclusions/my-exclusion"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -9082,8 +9088,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
        * "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
-       * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-project/exclusions
-       * /my-exclusion"
+       * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-
+       * project/exclusions/my-exclusion"
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -9422,8 +9428,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
        * "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
-       * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-project/exclusions
-       * /my-exclusion"
+       * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-
+       * project/exclusions/my-exclusion"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -9444,8 +9450,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * "projects/[PROJECT_ID]/exclusions/[EXCLUSION_ID]"
        * "organizations/[ORGANIZATION_ID]/exclusions/[EXCLUSION_ID]"
        * "billingAccounts/[BILLING_ACCOUNT_ID]/exclusions/[EXCLUSION_ID]"
-       * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-project/exclusions
-       * /my-exclusion"
+       * "folders/[FOLDER_ID]/exclusions/[EXCLUSION_ID]" For example:"projects/my-
+       * project/exclusions/my-exclusion"
        */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -9520,8 +9526,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
-     * /managed-encryption) for more information.
+     * organization.See Enabling CMEK for Log Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "folders.getCmekSettings".
      *
@@ -9554,8 +9560,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
-       * /managed-encryption) for more information.
+       * organization.See Enabling CMEK for Log Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "folders.getCmekSettings".
        *
@@ -11665,8 +11671,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -11698,8 +11704,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -11772,8 +11778,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -11794,8 +11800,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -11824,8 +11830,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -11855,8 +11861,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -11939,8 +11945,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -11961,8 +11967,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -12218,8 +12224,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
          * @return the request
          */
@@ -12252,8 +12258,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
            * @since 1.13
            */
@@ -12327,8 +12333,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -12349,8 +12355,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -12414,8 +12420,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.UndeleteBucketRequest}
          * @return the request
          */
@@ -12448,8 +12454,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @param content the {@link com.google.api.services.logging.v2.model.UndeleteBucketRequest}
            * @since 1.13
            */
@@ -12523,8 +12529,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -12545,8 +12551,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Undelete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -12577,8 +12583,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
          * @return the request
          */
@@ -12612,8 +12618,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
            * @since 1.13
            */
@@ -12687,8 +12693,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -12709,8 +12715,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public UpdateAsync setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -15594,9 +15600,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-         *        /us-central1Note: The location portion of the resource must be specified, but supplying
-         *        the character - in place of LOCATION_ID will return all recent queries.
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+         *        project/locations/us-central1Note: The location portion of the resource must be specified,
+         *        but supplying the character - in place of LOCATION_ID will return all recent queries.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -15626,9 +15632,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-         *        /us-central1Note: The location portion of the resource must be specified, but supplying
-         *        the character - in place of LOCATION_ID will return all recent queries.
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+         *        project/locations/us-central1Note: The location portion of the resource must be specified,
+         *        but supplying the character - in place of LOCATION_ID will return all recent queries.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -15711,9 +15717,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-           * /us-central1Note: The location portion of the resource must be specified, but supplying
-           * the character - in place of LOCATION_ID will return all recent queries.
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+           * project/locations/us-central1Note: The location portion of the resource must be
+           * specified, but supplying the character - in place of LOCATION_ID will return all recent
+           * queries.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -15735,9 +15742,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-           * /us-central1Note: The location portion of the resource must be specified, but supplying
-           * the character - in place of LOCATION_ID will return all recent queries.
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+           * project/locations/us-central1Note: The location portion of the resource must be
+           * specified, but supplying the character - in place of LOCATION_ID will return all recent
+           * queries.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -16190,10 +16198,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
-         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
-         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
-         *        "projects/my-project/locations/-"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/us-central1" Note: The locations portion of the resource must be
+         *        specified. To get a list of all saved queries, a wildcard character - can be used for
+         *        LOCATION_ID, for example: "projects/my-project/locations/-"
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -16223,10 +16231,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
-         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
-         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
-         *        "projects/my-project/locations/-"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/us-central1" Note: The locations portion of the resource must be
+         *        specified. To get a list of all saved queries, a wildcard character - can be used for
+         *        LOCATION_ID, for example: "projects/my-project/locations/-"
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -17827,9 +17835,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
-       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
-       true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent
+       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
+       is an error if the old value is true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -17856,8 +17864,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         @com.google.api.client.util.Key
@@ -17881,8 +17890,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         public Patch setUpdateMask(String updateMask) {
@@ -18094,9 +18104,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
-       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
-       true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent
+       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
+       is an error if the old value is true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -18123,8 +18133,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         @com.google.api.client.util.Key
@@ -18148,8 +18159,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         public Update setUpdateMask(String updateMask) {
@@ -18903,8 +18915,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-       *        /my-project/locations/global/buckets/my-bucket"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+       *        example:"projects/my-project/locations/global/buckets/my-bucket"
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -18936,8 +18948,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-       *        /my-project/locations/global/buckets/my-bucket"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+       *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -19010,8 +19022,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         * /my-project/locations/global/buckets/my-bucket"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         * example:"projects/my-project/locations/global/buckets/my-bucket"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -19032,8 +19044,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         * /my-project/locations/global/buckets/my-bucket"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         * example:"projects/my-project/locations/global/buckets/my-bucket"
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -19062,8 +19074,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-       *        /my-project/locations/global/buckets/my-bucket"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+       *        example:"projects/my-project/locations/global/buckets/my-bucket"
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -19093,8 +19105,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-       *        /my-project/locations/global/buckets/my-bucket"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+       *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -19177,8 +19189,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         * /my-project/locations/global/buckets/my-bucket"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         * example:"projects/my-project/locations/global/buckets/my-bucket"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -19199,8 +19211,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         * /my-project/locations/global/buckets/my-bucket"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         * example:"projects/my-project/locations/global/buckets/my-bucket"
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -19454,8 +19466,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-       *        /my-project/locations/global/buckets/my-bucket"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+       *        example:"projects/my-project/locations/global/buckets/my-bucket"
        * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
        * @return the request
        */
@@ -19488,8 +19500,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-       *        /my-project/locations/global/buckets/my-bucket"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+       *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
          * @since 1.13
          */
@@ -19563,8 +19575,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         * /my-project/locations/global/buckets/my-bucket"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         * example:"projects/my-project/locations/global/buckets/my-bucket"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -19585,8 +19597,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         * /my-project/locations/global/buckets/my-bucket"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         * example:"projects/my-project/locations/global/buckets/my-bucket"
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -19650,8 +19662,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-       *        /my-project/locations/global/buckets/my-bucket"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+       *        example:"projects/my-project/locations/global/buckets/my-bucket"
        * @param content the {@link com.google.api.services.logging.v2.model.UndeleteBucketRequest}
        * @return the request
        */
@@ -19684,8 +19696,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-       *        /my-project/locations/global/buckets/my-bucket"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+       *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.UndeleteBucketRequest}
          * @since 1.13
          */
@@ -19759,8 +19771,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         * /my-project/locations/global/buckets/my-bucket"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         * example:"projects/my-project/locations/global/buckets/my-bucket"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -19781,8 +19793,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         * /my-project/locations/global/buckets/my-bucket"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         * example:"projects/my-project/locations/global/buckets/my-bucket"
          */
         public Undelete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -19813,8 +19825,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-       *        /my-project/locations/global/buckets/my-bucket"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+       *        example:"projects/my-project/locations/global/buckets/my-bucket"
        * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
        * @return the request
        */
@@ -19848,8 +19860,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
        *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-       *        /my-project/locations/global/buckets/my-bucket"
+       *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+       *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
          * @since 1.13
          */
@@ -19923,8 +19935,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         * /my-project/locations/global/buckets/my-bucket"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         * example:"projects/my-project/locations/global/buckets/my-bucket"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -19945,8 +19957,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         * /my-project/locations/global/buckets/my-bucket"
+         * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         * example:"projects/my-project/locations/global/buckets/my-bucket"
          */
         public UpdateAsync setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -23160,8 +23172,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
-     * /managed-encryption) for more information.
+     * organization.See Enabling CMEK for Log Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "organizations.getCmekSettings".
      *
@@ -23194,8 +23206,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
-       * /managed-encryption) for more information.
+       * organization.See Enabling CMEK for Log Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "organizations.getCmekSettings".
        *
@@ -25502,8 +25514,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -25535,8 +25547,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -25609,8 +25621,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -25631,8 +25643,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -25661,8 +25673,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -25692,8 +25704,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -25776,8 +25788,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -25798,8 +25810,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -26055,8 +26067,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
          * @return the request
          */
@@ -26089,8 +26101,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
            * @since 1.13
            */
@@ -26164,8 +26176,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -26186,8 +26198,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -26251,8 +26263,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.UndeleteBucketRequest}
          * @return the request
          */
@@ -26285,8 +26297,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @param content the {@link com.google.api.services.logging.v2.model.UndeleteBucketRequest}
            * @since 1.13
            */
@@ -26360,8 +26372,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -26382,8 +26394,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Undelete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -26414,8 +26426,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
          * @return the request
          */
@@ -26449,8 +26461,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
            * @since 1.13
            */
@@ -26524,8 +26536,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -26546,8 +26558,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public UpdateAsync setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -29431,9 +29443,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-         *        /us-central1Note: The location portion of the resource must be specified, but supplying
-         *        the character - in place of LOCATION_ID will return all recent queries.
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+         *        project/locations/us-central1Note: The location portion of the resource must be specified,
+         *        but supplying the character - in place of LOCATION_ID will return all recent queries.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -29463,9 +29475,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-         *        /us-central1Note: The location portion of the resource must be specified, but supplying
-         *        the character - in place of LOCATION_ID will return all recent queries.
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+         *        project/locations/us-central1Note: The location portion of the resource must be specified,
+         *        but supplying the character - in place of LOCATION_ID will return all recent queries.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -29548,9 +29560,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-           * /us-central1Note: The location portion of the resource must be specified, but supplying
-           * the character - in place of LOCATION_ID will return all recent queries.
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+           * project/locations/us-central1Note: The location portion of the resource must be
+           * specified, but supplying the character - in place of LOCATION_ID will return all recent
+           * queries.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -29572,9 +29585,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-           * /us-central1Note: The location portion of the resource must be specified, but supplying
-           * the character - in place of LOCATION_ID will return all recent queries.
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+           * project/locations/us-central1Note: The location portion of the resource must be
+           * specified, but supplying the character - in place of LOCATION_ID will return all recent
+           * queries.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -30027,10 +30041,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
-         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
-         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
-         *        "projects/my-project/locations/-"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/us-central1" Note: The locations portion of the resource must be
+         *        specified. To get a list of all saved queries, a wildcard character - can be used for
+         *        LOCATION_ID, for example: "projects/my-project/locations/-"
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -30060,10 +30074,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
-         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
-         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
-         *        "projects/my-project/locations/-"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/us-central1" Note: The locations portion of the resource must be
+         *        specified. To get a list of all saved queries, a wildcard character - can be used for
+         *        LOCATION_ID, for example: "projects/my-project/locations/-"
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -31664,9 +31678,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
-       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
-       true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent
+       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
+       is an error if the old value is true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -31693,8 +31707,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         @com.google.api.client.util.Key
@@ -31718,8 +31733,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         public Patch setUpdateMask(String updateMask) {
@@ -31931,9 +31947,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
-       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
-       true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent
+       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
+       is an error if the old value is true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -31960,8 +31976,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         @com.google.api.client.util.Key
@@ -31985,8 +32002,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         public Update setUpdateMask(String updateMask) {
@@ -32027,8 +32045,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
-     * /managed-encryption) for more information.
+     * organization.See Enabling CMEK for Log Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "projects.getCmekSettings".
      *
@@ -32061,8 +32079,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
-       * /managed-encryption) for more information.
+       * organization.See Enabling CMEK for Log Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "projects.getCmekSettings".
        *
@@ -33992,8 +34010,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -34025,8 +34043,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -34099,8 +34117,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -34121,8 +34139,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -34151,8 +34169,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -34182,8 +34200,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -34266,8 +34284,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -34288,8 +34306,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -34545,8 +34563,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
          * @return the request
          */
@@ -34579,8 +34597,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
            * @since 1.13
            */
@@ -34654,8 +34672,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -34676,8 +34694,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -34741,8 +34759,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.UndeleteBucketRequest}
          * @return the request
          */
@@ -34775,8 +34793,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @param content the {@link com.google.api.services.logging.v2.model.UndeleteBucketRequest}
            * @since 1.13
            */
@@ -34850,8 +34868,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -34872,8 +34890,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public Undelete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -34904,8 +34922,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
          * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
          * @return the request
          */
@@ -34939,8 +34957,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-         *        /my-project/locations/global/buckets/my-bucket"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+         *        example:"projects/my-project/locations/global/buckets/my-bucket"
            * @param content the {@link com.google.api.services.logging.v2.model.LogBucket}
            * @since 1.13
            */
@@ -35014,8 +35032,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -35036,8 +35054,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For example:"projects
-           * /my-project/locations/global/buckets/my-bucket"
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+           * example:"projects/my-project/locations/global/buckets/my-bucket"
            */
           public UpdateAsync setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -37921,9 +37939,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-         *        /us-central1Note: The location portion of the resource must be specified, but supplying
-         *        the character - in place of LOCATION_ID will return all recent queries.
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+         *        project/locations/us-central1Note: The location portion of the resource must be specified,
+         *        but supplying the character - in place of LOCATION_ID will return all recent queries.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -37953,9 +37971,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-         *        /us-central1Note: The location portion of the resource must be specified, but supplying
-         *        the character - in place of LOCATION_ID will return all recent queries.
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+         *        project/locations/us-central1Note: The location portion of the resource must be specified,
+         *        but supplying the character - in place of LOCATION_ID will return all recent queries.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -38038,9 +38056,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-           * /us-central1Note: The location portion of the resource must be specified, but supplying
-           * the character - in place of LOCATION_ID will return all recent queries.
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+           * project/locations/us-central1Note: The location portion of the resource must be
+           * specified, but supplying the character - in place of LOCATION_ID will return all recent
+           * queries.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -38062,9 +38081,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
            * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
            * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-project/locations
-           * /us-central1Note: The location portion of the resource must be specified, but supplying
-           * the character - in place of LOCATION_ID will return all recent queries.
+           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example:projects/my-
+           * project/locations/us-central1Note: The location portion of the resource must be
+           * specified, but supplying the character - in place of LOCATION_ID will return all recent
+           * queries.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -38517,10 +38537,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
-         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
-         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
-         *        "projects/my-project/locations/-"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/us-central1" Note: The locations portion of the resource must be
+         *        specified. To get a list of all saved queries, a wildcard character - can be used for
+         *        LOCATION_ID, for example: "projects/my-project/locations/-"
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -38550,10 +38570,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]"
          *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]"
          *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-project/locations
-         *        /us-central1" Note: The locations portion of the resource must be specified. To get a list
-         *        of all saved queries, a wildcard character - can be used for LOCATION_ID, for example:
-         *        "projects/my-project/locations/-"
+         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]" For example: "projects/my-
+         *        project/locations/us-central1" Note: The locations portion of the resource must be
+         *        specified. To get a list of all saved queries, a wildcard character - can be used for
+         *        LOCATION_ID, for example: "projects/my-project/locations/-"
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -40929,9 +40949,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
-       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
-       true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent
+       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
+       is an error if the old value is true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -40958,8 +40978,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         @com.google.api.client.util.Key
@@ -40983,8 +41004,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         public Patch setUpdateMask(String updateMask) {
@@ -41196,9 +41218,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        this field on the value of writer_identity in the updated sink depends on both the old and new
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
-       true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
-       /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
-       true and the new value is set to false or defaulted to false.
+       true, then writer_identity is changed to a service agent
+       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
+       is an error if the old value is true and the new value is set to false or defaulted to false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -41225,8 +41247,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         @com.google.api.client.util.Key
@@ -41250,8 +41273,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * fields cannot be updated.An empty updateMask is temporarily treated as using the
          * following mask for backwards compatibility purposes:destination,filter,includeChildrenAt
          * some point in the future, behavior will be removed and specifying an empty updateMask
-         * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
+         * will be an error.For a detailed FieldMask definition, see
+         * https://developers.google.com/protocol-
+         * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
          * updateMask=filter
          */
         public Update setUpdateMask(String updateMask) {
@@ -42255,9 +42279,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      this field on the value of writer_identity in the updated sink depends on both the old and new
      values of this field: If the old and new values of this field are both false or both true, then
      there is no change to the sink's writer_identity. If the old value is false and the new value is
-     true, then writer_identity is changed to a service agent (https://cloud.google.com/iam/docs
-     /service-account-types#service-agents) owned by Cloud Logging. It is an error if the old value is
-     true and the new value is set to false or defaulted to false.
+     true, then writer_identity is changed to a service agent
+     (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
+     is an error if the old value is true and the new value is set to false or defaulted to false.
        */
       public java.lang.Boolean getUniqueWriterIdentity() {
         return uniqueWriterIdentity;
@@ -42350,8 +42374,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
-     * /managed-encryption) for more information.
+     * organization.See Enabling CMEK for Log Router
+     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "v2.getCmekSettings".
      *
@@ -42384,8 +42408,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Log Router (https://cloud.google.com/logging/docs/routing
-       * /managed-encryption) for more information.
+       * organization.See Enabling CMEK for Log Router
+       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "v2.getCmekSettings".
        *

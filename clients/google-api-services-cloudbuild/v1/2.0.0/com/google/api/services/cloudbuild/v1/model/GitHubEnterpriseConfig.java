@@ -44,7 +44,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
   private String createTime;
 
   /**
-   * Name to display for this config.
+   * Optional. Name to display for this config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
   private java.lang.String hostUrl;
 
   /**
-   * Optional. The full resource name for the GitHubEnterpriseConfig For example:
+   * The full resource name for the GitHubEnterpriseConfig For example:
    * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * The value may be {@code null}.
    */
@@ -79,7 +79,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
   private java.lang.String peeredNetwork;
 
   /**
-   * Names of secrets in Secret Manager.
+   * Optional. Names of secrets in Secret Manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +134,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Name to display for this config.
+   * Optional. Name to display for this config.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -142,7 +142,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Name to display for this config.
+   * Optional. Name to display for this config.
    * @param displayName displayName or {@code null} for none
    */
   public GitHubEnterpriseConfig setDisplayName(java.lang.String displayName) {
@@ -168,7 +168,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The full resource name for the GitHubEnterpriseConfig For example:
+   * The full resource name for the GitHubEnterpriseConfig For example:
    * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * @return value or {@code null} for none
    */
@@ -177,7 +177,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The full resource name for the GitHubEnterpriseConfig For example:
+   * The full resource name for the GitHubEnterpriseConfig For example:
    * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * @param name name or {@code null} for none
    */
@@ -216,7 +216,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Names of secrets in Secret Manager.
+   * Optional. Names of secrets in Secret Manager.
    * @return value or {@code null} for none
    */
   public GitHubEnterpriseSecrets getSecrets() {
@@ -224,7 +224,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Names of secrets in Secret Manager.
+   * Optional. Names of secrets in Secret Manager.
    * @param secrets secrets or {@code null} for none
    */
   public GitHubEnterpriseConfig setSecrets(GitHubEnterpriseSecrets secrets) {

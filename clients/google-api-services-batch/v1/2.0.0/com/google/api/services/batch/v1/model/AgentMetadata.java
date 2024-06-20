@@ -74,6 +74,13 @@ public final class AgentMetadata extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean instancePreemptionNoticeReceived;
 
   /**
+   * Optional. machine type of the VM
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String machineType;
+
+  /**
    * parsed contents of /etc/os-release
    * The value may be {@code null}.
    */
@@ -197,6 +204,23 @@ public final class AgentMetadata extends com.google.api.client.json.GenericJson 
    */
   public AgentMetadata setInstancePreemptionNoticeReceived(java.lang.Boolean instancePreemptionNoticeReceived) {
     this.instancePreemptionNoticeReceived = instancePreemptionNoticeReceived;
+    return this;
+  }
+
+  /**
+   * Optional. machine type of the VM
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMachineType() {
+    return machineType;
+  }
+
+  /**
+   * Optional. machine type of the VM
+   * @param machineType machineType or {@code null} for none
+   */
+  public AgentMetadata setMachineType(java.lang.String machineType) {
+    this.machineType = machineType;
     return this;
   }
 

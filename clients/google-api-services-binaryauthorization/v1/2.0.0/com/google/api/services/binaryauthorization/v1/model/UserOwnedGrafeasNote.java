@@ -44,9 +44,10 @@ public final class UserOwnedGrafeasNote extends com.google.api.client.json.Gener
 
   /**
    * Required. The Grafeas resource name of a Attestation.Authority Note, created by the user, in
-   * the format: `projects/notes`. This field may not be updated. An attestation by this attestor is
-   * stored as a Grafeas Attestation.Authority Occurrence that names a container image and that
-   * links to this Note. Grafeas is an external dependency.
+   * the format: `projects/[PROJECT_ID]/notes`. This field may not be updated. A project ID must be
+   * used, not a project number. An attestation by this attestor is stored as a Grafeas
+   * Attestation.Authority Occurrence that names a container image and that links to this Note.
+   * Grafeas is an external dependency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,9 +98,10 @@ public final class UserOwnedGrafeasNote extends com.google.api.client.json.Gener
 
   /**
    * Required. The Grafeas resource name of a Attestation.Authority Note, created by the user, in
-   * the format: `projects/notes`. This field may not be updated. An attestation by this attestor is
-   * stored as a Grafeas Attestation.Authority Occurrence that names a container image and that
-   * links to this Note. Grafeas is an external dependency.
+   * the format: `projects/[PROJECT_ID]/notes`. This field may not be updated. A project ID must be
+   * used, not a project number. An attestation by this attestor is stored as a Grafeas
+   * Attestation.Authority Occurrence that names a container image and that links to this Note.
+   * Grafeas is an external dependency.
    * @return value or {@code null} for none
    */
   public java.lang.String getNoteReference() {
@@ -108,9 +110,10 @@ public final class UserOwnedGrafeasNote extends com.google.api.client.json.Gener
 
   /**
    * Required. The Grafeas resource name of a Attestation.Authority Note, created by the user, in
-   * the format: `projects/notes`. This field may not be updated. An attestation by this attestor is
-   * stored as a Grafeas Attestation.Authority Occurrence that names a container image and that
-   * links to this Note. Grafeas is an external dependency.
+   * the format: `projects/[PROJECT_ID]/notes`. This field may not be updated. A project ID must be
+   * used, not a project number. An attestation by this attestor is stored as a Grafeas
+   * Attestation.Authority Occurrence that names a container image and that links to this Note.
+   * Grafeas is an external dependency.
    * @param noteReference noteReference or {@code null} for none
    */
   public UserOwnedGrafeasNote setNoteReference(java.lang.String noteReference) {

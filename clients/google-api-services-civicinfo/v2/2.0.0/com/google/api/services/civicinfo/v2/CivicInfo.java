@@ -470,11 +470,10 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the civicinfo server.  After setting any optional
      * parameters, call the {@link VoterInfoQuery#execute()} method to invoke the remote operation.
      *
-     * @param address The registered address of the voter to look up.
      * @return the request
      */
-    public VoterInfoQuery voterInfoQuery(java.lang.String address) throws java.io.IOException {
-      VoterInfoQuery result = new VoterInfoQuery(address);
+    public VoterInfoQuery voterInfoQuery() throws java.io.IOException {
+      VoterInfoQuery result = new VoterInfoQuery();
       initialize(result);
       return result;
     }
@@ -494,12 +493,10 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
        * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param address The registered address of the voter to look up.
        * @since 1.13
        */
-      protected VoterInfoQuery(java.lang.String address) {
+      protected VoterInfoQuery() {
         super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.VoterInfoResponse.class);
-        this.address = com.google.api.client.util.Preconditions.checkNotNull(address, "Required parameter address must be specified.");
       }
 
       @Override

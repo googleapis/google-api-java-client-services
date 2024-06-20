@@ -33,6 +33,15 @@ package com.google.api.services.fcmdata.v1beta1.model;
 public final class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends com.google.api.client.json.GenericJson {
 
   /**
+   * The percentage of accepted messages that were
+   * [collapsed](https://firebase.google.com/docs/cloud-messaging/concept-
+   * options#collapsible_and_non-collapsible_messages) by another message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float collapsed;
+
+  /**
    * The percentage of all accepted messages that were successfully delivered to the device.
    * The value may be {@code null}.
    */
@@ -60,10 +69,10 @@ public final class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends co
 
   /**
    * The percentage of accepted messages that were dropped due to [too many undelivered non-
-   * collapsible messages](https://firebase.google.com/docs/cloud-messaging/concept-options
-   * #collapsible_and_non-collapsible_messages). Specifically, each app instance can only have 100
-   * pending messages stored on our servers for a device which is disconnected. When that device
-   * reconnects, those messages are delivered. When there are more than the maximum pending
+   * collapsible messages](https://firebase.google.com/docs/cloud-messaging/concept-
+   * options#collapsible_and_non-collapsible_messages). Specifically, each app instance can only
+   * have 100 pending messages stored on our servers for a device which is disconnected. When that
+   * device reconnects, those messages are delivered. When there are more than the maximum pending
    * messages, we call [OnDeletedMessages()](https://firebase.google.com/docs/cloud-
    * messaging/android/receive#override-ondeletedmessages) in our SDK instead of delivering the
    * messages.
@@ -71,6 +80,15 @@ public final class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Float droppedTooManyPendingMessages;
+
+  /**
+   * The percentage of accepted messages that expired because [Time To Live
+   * (TTL)](https://firebase.google.com/docs/cloud-messaging/concept-options#ttl) elapsed before the
+   * target device reconnected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float droppedTtlExpired;
 
   /**
    * The percentage of messages accepted on this day that were not dropped and not delivered, due to
@@ -81,6 +99,27 @@ public final class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends co
    */
   @com.google.api.client.util.Key
   private java.lang.Float pending;
+
+  /**
+   * The percentage of accepted messages that were
+   * [collapsed](https://firebase.google.com/docs/cloud-messaging/concept-
+   * options#collapsible_and_non-collapsible_messages) by another message.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getCollapsed() {
+    return collapsed;
+  }
+
+  /**
+   * The percentage of accepted messages that were
+   * [collapsed](https://firebase.google.com/docs/cloud-messaging/concept-
+   * options#collapsible_and_non-collapsible_messages) by another message.
+   * @param collapsed collapsed or {@code null} for none
+   */
+  public GoogleFirebaseFcmDataV1beta1MessageOutcomePercents setCollapsed(java.lang.Float collapsed) {
+    this.collapsed = collapsed;
+    return this;
+  }
 
   /**
    * The percentage of all accepted messages that were successfully delivered to the device.
@@ -145,10 +184,10 @@ public final class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends co
 
   /**
    * The percentage of accepted messages that were dropped due to [too many undelivered non-
-   * collapsible messages](https://firebase.google.com/docs/cloud-messaging/concept-options
-   * #collapsible_and_non-collapsible_messages). Specifically, each app instance can only have 100
-   * pending messages stored on our servers for a device which is disconnected. When that device
-   * reconnects, those messages are delivered. When there are more than the maximum pending
+   * collapsible messages](https://firebase.google.com/docs/cloud-messaging/concept-
+   * options#collapsible_and_non-collapsible_messages). Specifically, each app instance can only
+   * have 100 pending messages stored on our servers for a device which is disconnected. When that
+   * device reconnects, those messages are delivered. When there are more than the maximum pending
    * messages, we call [OnDeletedMessages()](https://firebase.google.com/docs/cloud-
    * messaging/android/receive#override-ondeletedmessages) in our SDK instead of delivering the
    * messages.
@@ -160,10 +199,10 @@ public final class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends co
 
   /**
    * The percentage of accepted messages that were dropped due to [too many undelivered non-
-   * collapsible messages](https://firebase.google.com/docs/cloud-messaging/concept-options
-   * #collapsible_and_non-collapsible_messages). Specifically, each app instance can only have 100
-   * pending messages stored on our servers for a device which is disconnected. When that device
-   * reconnects, those messages are delivered. When there are more than the maximum pending
+   * collapsible messages](https://firebase.google.com/docs/cloud-messaging/concept-
+   * options#collapsible_and_non-collapsible_messages). Specifically, each app instance can only
+   * have 100 pending messages stored on our servers for a device which is disconnected. When that
+   * device reconnects, those messages are delivered. When there are more than the maximum pending
    * messages, we call [OnDeletedMessages()](https://firebase.google.com/docs/cloud-
    * messaging/android/receive#override-ondeletedmessages) in our SDK instead of delivering the
    * messages.
@@ -171,6 +210,27 @@ public final class GoogleFirebaseFcmDataV1beta1MessageOutcomePercents extends co
    */
   public GoogleFirebaseFcmDataV1beta1MessageOutcomePercents setDroppedTooManyPendingMessages(java.lang.Float droppedTooManyPendingMessages) {
     this.droppedTooManyPendingMessages = droppedTooManyPendingMessages;
+    return this;
+  }
+
+  /**
+   * The percentage of accepted messages that expired because [Time To Live
+   * (TTL)](https://firebase.google.com/docs/cloud-messaging/concept-options#ttl) elapsed before the
+   * target device reconnected.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getDroppedTtlExpired() {
+    return droppedTtlExpired;
+  }
+
+  /**
+   * The percentage of accepted messages that expired because [Time To Live
+   * (TTL)](https://firebase.google.com/docs/cloud-messaging/concept-options#ttl) elapsed before the
+   * target device reconnected.
+   * @param droppedTtlExpired droppedTtlExpired or {@code null} for none
+   */
+  public GoogleFirebaseFcmDataV1beta1MessageOutcomePercents setDroppedTtlExpired(java.lang.Float droppedTtlExpired) {
+    this.droppedTtlExpired = droppedTtlExpired;
     return this;
   }
 

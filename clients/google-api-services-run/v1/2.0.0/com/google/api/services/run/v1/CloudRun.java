@@ -513,7 +513,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * List configurations.
+       * List configurations. Results are sorted by creation time, descending.
        *
        * Create a request for the method "configurations.list".
        *
@@ -538,7 +538,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+$");
 
         /**
-         * List configurations.
+         * List configurations. Results are sorted by creation time, descending.
          *
          * Create a request for the method "configurations.list".
          *
@@ -2132,7 +2132,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * List executions.
+       * List executions. Results are sorted by creation time, descending.
        *
        * Create a request for the method "executions.list".
        *
@@ -2158,7 +2158,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+$");
 
         /**
-         * List executions.
+         * List executions. Results are sorted by creation time, descending.
          *
          * Create a request for the method "executions.list".
          *
@@ -2909,7 +2909,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * List jobs.
+       * List jobs. Results are sorted by creation time, descending.
        *
        * Create a request for the method "jobs.list".
        *
@@ -2934,7 +2934,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+$");
 
         /**
-         * List jobs.
+         * List jobs. Results are sorted by creation time, descending.
          *
          * Create a request for the method "jobs.list".
          *
@@ -3853,7 +3853,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * List revisions.
+       * List revisions. Results are sorted by creation time, descending.
        *
        * Create a request for the method "revisions.list".
        *
@@ -3879,7 +3879,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+$");
 
         /**
-         * List revisions.
+         * List revisions. Results are sorted by creation time, descending.
          *
          * Create a request for the method "revisions.list".
          *
@@ -4317,7 +4317,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * List routes.
+       * List routes. Results are sorted by creation time, descending.
        *
        * Create a request for the method "routes.list".
        *
@@ -4343,7 +4343,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+$");
 
         /**
-         * List routes.
+         * List routes. Results are sorted by creation time, descending.
          *
          * Create a request for the method "routes.list".
          *
@@ -5189,7 +5189,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Lists services for the given project and region.
+       * Lists services for the given project and region. Results are sorted by creation time, descending.
        *
        * Create a request for the method "services.list".
        *
@@ -5217,7 +5217,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+$");
 
         /**
-         * Lists services for the given project and region.
+         * Lists services for the given project and region. Results are sorted by creation time,
+         * descending.
          *
          * Create a request for the method "services.list".
          *
@@ -6909,7 +6910,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * List configurations.
+         * List configurations. Results are sorted by creation time, descending.
          *
          * Create a request for the method "configurations.list".
          *
@@ -6934,7 +6935,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * List configurations.
+           * List configurations. Results are sorted by creation time, descending.
            *
            * Create a request for the method "configurations.list".
            *
@@ -7556,8 +7557,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see kubernetes.io/docs/concepts/architecture
-           * /garbage-collection/ for more information.
+           * and deletes in the background. Please see
+           * kubernetes.io/docs/concepts/architecture/garbage-collection/ for more information.
            */
           @com.google.api.client.util.Key
           private java.lang.String propagationPolicy;
@@ -7572,8 +7573,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
-           * and deletes in the background. Please see kubernetes.io/docs/concepts/architecture
-           * /garbage-collection/ for more information.
+           * and deletes in the background. Please see
+           * kubernetes.io/docs/concepts/architecture/garbage-collection/ for more information.
            */
           public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
             this.propagationPolicy = propagationPolicy;
@@ -9585,7 +9586,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * List revisions.
+         * List revisions. Results are sorted by creation time, descending.
          *
          * Create a request for the method "revisions.list".
          *
@@ -9611,7 +9612,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * List revisions.
+           * List revisions. Results are sorted by creation time, descending.
            *
            * Create a request for the method "revisions.list".
            *
@@ -10049,7 +10050,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * List routes.
+         * List routes. Results are sorted by creation time, descending.
          *
          * Create a request for the method "routes.list".
          *
@@ -10075,7 +10076,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * List routes.
+           * List routes. Results are sorted by creation time, descending.
            *
            * Create a request for the method "routes.list".
            *
@@ -11119,7 +11120,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Lists services for the given project and region.
+         * Lists services for the given project and region. Results are sorted by creation time, descending.
          *
          * Create a request for the method "services.list".
          *
@@ -11147,7 +11148,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists services for the given project and region.
+           * Lists services for the given project and region. Results are sorted by creation time,
+           * descending.
            *
            * Create a request for the method "services.list".
            *

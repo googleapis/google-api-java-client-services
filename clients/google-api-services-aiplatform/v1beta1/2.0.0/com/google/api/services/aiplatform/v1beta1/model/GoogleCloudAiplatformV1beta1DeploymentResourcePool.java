@@ -45,12 +45,43 @@ public final class GoogleCloudAiplatformV1beta1DeploymentResourcePool extends co
   private GoogleCloudAiplatformV1beta1DedicatedResources dedicatedResources;
 
   /**
+   * If the DeploymentResourcePool is deployed with custom-trained Models or AutoML Tabular Models,
+   * the container(s) of the DeploymentResourcePool will send `stderr` and `stdout` streams to Cloud
+   * Logging by default. Please note that the logs incur cost, which are subject to [Cloud Logging
+   * pricing](https://cloud.google.com/logging/pricing). User can disable container logging by
+   * setting this flag to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableContainerLogging;
+
+  /**
+   * Customer-managed encryption key spec for a DeploymentResourcePool. If set, this
+   * DeploymentResourcePool will be secured by this key. Endpoints and the DeploymentResourcePool
+   * they deploy in need to have the same EncryptionSpec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec;
+
+  /**
    * Immutable. The resource name of the DeploymentResourcePool. Format:
    * `projects/{project}/locations/{location}/deploymentResourcePools/{deployment_resource_pool}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The service account that the DeploymentResourcePool's container(s) run as. Specify the email
+   * address of the service account. If this service account is not specified, the container(s) run
+   * as a service account that doesn't have access to the resource project. Users deploying the
+   * Models to this DeploymentResourcePool must have the `iam.serviceAccounts.actAs` permission on
+   * this service account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
 
   /**
    * Output only. Timestamp when this DeploymentResourcePool was created.
@@ -87,6 +118,52 @@ public final class GoogleCloudAiplatformV1beta1DeploymentResourcePool extends co
   }
 
   /**
+   * If the DeploymentResourcePool is deployed with custom-trained Models or AutoML Tabular Models,
+   * the container(s) of the DeploymentResourcePool will send `stderr` and `stdout` streams to Cloud
+   * Logging by default. Please note that the logs incur cost, which are subject to [Cloud Logging
+   * pricing](https://cloud.google.com/logging/pricing). User can disable container logging by
+   * setting this flag to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableContainerLogging() {
+    return disableContainerLogging;
+  }
+
+  /**
+   * If the DeploymentResourcePool is deployed with custom-trained Models or AutoML Tabular Models,
+   * the container(s) of the DeploymentResourcePool will send `stderr` and `stdout` streams to Cloud
+   * Logging by default. Please note that the logs incur cost, which are subject to [Cloud Logging
+   * pricing](https://cloud.google.com/logging/pricing). User can disable container logging by
+   * setting this flag to true.
+   * @param disableContainerLogging disableContainerLogging or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeploymentResourcePool setDisableContainerLogging(java.lang.Boolean disableContainerLogging) {
+    this.disableContainerLogging = disableContainerLogging;
+    return this;
+  }
+
+  /**
+   * Customer-managed encryption key spec for a DeploymentResourcePool. If set, this
+   * DeploymentResourcePool will be secured by this key. Endpoints and the DeploymentResourcePool
+   * they deploy in need to have the same EncryptionSpec.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Customer-managed encryption key spec for a DeploymentResourcePool. If set, this
+   * DeploymentResourcePool will be secured by this key. Endpoints and the DeploymentResourcePool
+   * they deploy in need to have the same EncryptionSpec.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeploymentResourcePool setEncryptionSpec(GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
+    return this;
+  }
+
+  /**
    * Immutable. The resource name of the DeploymentResourcePool. Format:
    * `projects/{project}/locations/{location}/deploymentResourcePools/{deployment_resource_pool}`
    * @return value or {@code null} for none
@@ -102,6 +179,31 @@ public final class GoogleCloudAiplatformV1beta1DeploymentResourcePool extends co
    */
   public GoogleCloudAiplatformV1beta1DeploymentResourcePool setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The service account that the DeploymentResourcePool's container(s) run as. Specify the email
+   * address of the service account. If this service account is not specified, the container(s) run
+   * as a service account that doesn't have access to the resource project. Users deploying the
+   * Models to this DeploymentResourcePool must have the `iam.serviceAccounts.actAs` permission on
+   * this service account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * The service account that the DeploymentResourcePool's container(s) run as. Specify the email
+   * address of the service account. If this service account is not specified, the container(s) run
+   * as a service account that doesn't have access to the resource project. Users deploying the
+   * Models to this DeploymentResourcePool must have the `iam.serviceAccounts.actAs` permission on
+   * this service account.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeploymentResourcePool setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

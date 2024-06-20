@@ -2384,6 +2384,142 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Returns the storage layout configuration for the specified bucket. Note that this operation
+     * requires storage.objects.list permission.
+     *
+     * Create a request for the method "buckets.getStorageLayout".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link GetStorageLayout#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of a bucket.
+     * @return the request
+     */
+    public GetStorageLayout getStorageLayout(java.lang.String bucket) throws java.io.IOException {
+      GetStorageLayout result = new GetStorageLayout(bucket);
+      initialize(result);
+      return result;
+    }
+
+    public class GetStorageLayout extends StorageRequest<com.google.api.services.storage.model.BucketStorageLayout> {
+
+      private static final String REST_PATH = "b/{bucket}/storageLayout";
+
+      /**
+       * Returns the storage layout configuration for the specified bucket. Note that this operation
+       * requires storage.objects.list permission.
+       *
+       * Create a request for the method "buckets.getStorageLayout".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link GetStorageLayout#execute()} method to invoke the remote operation.
+       * <p> {@link GetStorageLayout#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+       * ClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param bucket Name of a bucket.
+       * @since 1.13
+       */
+      protected GetStorageLayout(java.lang.String bucket) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.BucketStorageLayout.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetStorageLayout setAlt(java.lang.String alt) {
+        return (GetStorageLayout) super.setAlt(alt);
+      }
+
+      @Override
+      public GetStorageLayout setFields(java.lang.String fields) {
+        return (GetStorageLayout) super.setFields(fields);
+      }
+
+      @Override
+      public GetStorageLayout setKey(java.lang.String key) {
+        return (GetStorageLayout) super.setKey(key);
+      }
+
+      @Override
+      public GetStorageLayout setOauthToken(java.lang.String oauthToken) {
+        return (GetStorageLayout) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetStorageLayout setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetStorageLayout) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetStorageLayout setQuotaUser(java.lang.String quotaUser) {
+        return (GetStorageLayout) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetStorageLayout setUploadType(java.lang.String uploadType) {
+        return (GetStorageLayout) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetStorageLayout setUserIp(java.lang.String userIp) {
+        return (GetStorageLayout) super.setUserIp(userIp);
+      }
+
+      /** Name of a bucket. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of a bucket.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of a bucket. */
+      public GetStorageLayout setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /**
+       * An optional prefix used for permission check. It is useful when the caller only has
+       * storage.objects.list permission under a specific prefix.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String prefix;
+
+      /** An optional prefix used for permission check. It is useful when the caller only has
+     storage.objects.list permission under a specific prefix.
+       */
+      public java.lang.String getPrefix() {
+        return prefix;
+      }
+
+      /**
+       * An optional prefix used for permission check. It is useful when the caller only has
+       * storage.objects.list permission under a specific prefix.
+       */
+      public GetStorageLayout setPrefix(java.lang.String prefix) {
+        this.prefix = prefix;
+        return this;
+      }
+
+      @Override
+      public GetStorageLayout set(String parameterName, Object value) {
+        return (GetStorageLayout) super.set(parameterName, value);
+      }
+    }
+    /**
      * Creates a new bucket.
      *
      * Create a request for the method "buckets.insert".
@@ -10391,8 +10527,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Name of the object. Required when the object metadata is not otherwise provided. Overrides
        * the object metadata's name value, if any. For information about how to URL encode object
-       * names to be path safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs
-       * /request-endpoints#encoding).
+       * names to be path safe, see [Encoding URI Path
+       * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -10409,8 +10545,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Name of the object. Required when the object metadata is not otherwise provided. Overrides
        * the object metadata's name value, if any. For information about how to URL encode object
-       * names to be path safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs
-       * /request-endpoints#encoding).
+       * names to be path safe, see [Encoding URI Path
+       * Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
        */
       public Insert setName(java.lang.String name) {
         this.name = name;
@@ -11511,8 +11647,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *        value, if any.
      * @param destinationObject Name of the new object. Required when the object metadata is not otherwise provided. Overrides the
      *        object metadata's name value, if any. For information about how to URL encode object names
-     *        to be path safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs
-     *        /request-endpoints#encoding).
+     *        to be path safe, see [Encoding URI Path
+     *        Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
      * @param content the {@link com.google.api.services.storage.model.StorageObject}
      * @return the request
      */
@@ -11545,8 +11681,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *        value, if any.
        * @param destinationObject Name of the new object. Required when the object metadata is not otherwise provided. Overrides the
      *        object metadata's name value, if any. For information about how to URL encode object names
-     *        to be path safe, see [Encoding URI Path Parts](https://cloud.google.com/storage/docs
-     *        /request-endpoints#encoding).
+     *        to be path safe, see [Encoding URI Path
+     *        Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
        * @param content the {@link com.google.api.services.storage.model.StorageObject}
        * @since 1.13
        */

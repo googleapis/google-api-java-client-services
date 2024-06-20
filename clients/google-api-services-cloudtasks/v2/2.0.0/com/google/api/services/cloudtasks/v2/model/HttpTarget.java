@@ -38,11 +38,11 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * predefined headers, prefixed with "X-CloudTasks-", can be used to define properties of the
    * task. * Host: This will be computed by Cloud Tasks and derived from HttpRequest.url. * Content-
    * Length: This will be computed by Cloud Tasks. `Content-Type` won't be set by Cloud Tasks. You
-   * can explicitly set `Content-Type` to a media type when the task is created. For example
-   * ,`Content-Type` can be set to `"application/octet-stream"` or `"application/json"`. The default
-   * value is set to "application/json"`. * User-Agent: This will be set to `"Google-Cloud-Tasks"`.
-   * Headers which can have multiple values (according to RFC2616) can be specified using comma-
-   * separated values. The size of the headers must be less than 80KB. Queue-level headers to
+   * can explicitly set `Content-Type` to a media type when the task is created. For
+   * example,`Content-Type` can be set to `"application/octet-stream"` or `"application/json"`. The
+   * default value is set to "application/json"`. * User-Agent: This will be set to `"Google-Cloud-
+   * Tasks"`. Headers which can have multiple values (according to RFC2616) can be specified using
+   * comma-separated values. The size of the headers must be less than 80KB. Queue-level headers to
    * override headers of all the tasks in the queue. Do not put business sensitive or personally
    * identifying data in the HTTP Header Override Configuration or other similar fields in
    * accordance with Section 12 (Resource Fields) of the [Service Specific
@@ -102,11 +102,11 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * predefined headers, prefixed with "X-CloudTasks-", can be used to define properties of the
    * task. * Host: This will be computed by Cloud Tasks and derived from HttpRequest.url. * Content-
    * Length: This will be computed by Cloud Tasks. `Content-Type` won't be set by Cloud Tasks. You
-   * can explicitly set `Content-Type` to a media type when the task is created. For example
-   * ,`Content-Type` can be set to `"application/octet-stream"` or `"application/json"`. The default
-   * value is set to "application/json"`. * User-Agent: This will be set to `"Google-Cloud-Tasks"`.
-   * Headers which can have multiple values (according to RFC2616) can be specified using comma-
-   * separated values. The size of the headers must be less than 80KB. Queue-level headers to
+   * can explicitly set `Content-Type` to a media type when the task is created. For
+   * example,`Content-Type` can be set to `"application/octet-stream"` or `"application/json"`. The
+   * default value is set to "application/json"`. * User-Agent: This will be set to `"Google-Cloud-
+   * Tasks"`. Headers which can have multiple values (according to RFC2616) can be specified using
+   * comma-separated values. The size of the headers must be less than 80KB. Queue-level headers to
    * override headers of all the tasks in the queue. Do not put business sensitive or personally
    * identifying data in the HTTP Header Override Configuration or other similar fields in
    * accordance with Section 12 (Resource Fields) of the [Service Specific
@@ -125,11 +125,11 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * predefined headers, prefixed with "X-CloudTasks-", can be used to define properties of the
    * task. * Host: This will be computed by Cloud Tasks and derived from HttpRequest.url. * Content-
    * Length: This will be computed by Cloud Tasks. `Content-Type` won't be set by Cloud Tasks. You
-   * can explicitly set `Content-Type` to a media type when the task is created. For example
-   * ,`Content-Type` can be set to `"application/octet-stream"` or `"application/json"`. The default
-   * value is set to "application/json"`. * User-Agent: This will be set to `"Google-Cloud-Tasks"`.
-   * Headers which can have multiple values (according to RFC2616) can be specified using comma-
-   * separated values. The size of the headers must be less than 80KB. Queue-level headers to
+   * can explicitly set `Content-Type` to a media type when the task is created. For
+   * example,`Content-Type` can be set to `"application/octet-stream"` or `"application/json"`. The
+   * default value is set to "application/json"`. * User-Agent: This will be set to `"Google-Cloud-
+   * Tasks"`. Headers which can have multiple values (according to RFC2616) can be specified using
+   * comma-separated values. The size of the headers must be less than 80KB. Queue-level headers to
    * override headers of all the tasks in the queue. Do not put business sensitive or personally
    * identifying data in the HTTP Header Override Configuration or other similar fields in
    * accordance with Section 12 (Resource Fields) of the [Service Specific

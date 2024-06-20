@@ -31,16 +31,16 @@ package com.google.api.services.dfareporting.model;
 public final class FloodlightActivitiesGenerateTagResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Generated tag for this Floodlight activity. For global site tags, this is the event snippet.
+   * Generated tag for this Floodlight activity. For Google tags, this is the event snippet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String floodlightActivityTag;
 
   /**
-   * The global snippet section of a global site tag. The global site tag sets new cookies on your
-   * domain, which will store a unique identifier for a user or the ad click that brought the user
-   * to your site. Learn more.
+   * The global snippet section of a Google tag. The Google tag sets new cookies on your domain,
+   * which will store a unique identifier for a user or the ad click that brought the user to your
+   * site. Learn more.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class FloodlightActivitiesGenerateTagResponse extends com.google.ap
   private java.lang.String kind;
 
   /**
-   * Generated tag for this Floodlight activity. For global site tags, this is the event snippet.
+   * Generated tag for this Floodlight activity. For Google tags, this is the event snippet.
    * @return value or {@code null} for none
    */
   public java.lang.String getFloodlightActivityTag() {
@@ -63,7 +63,7 @@ public final class FloodlightActivitiesGenerateTagResponse extends com.google.ap
   }
 
   /**
-   * Generated tag for this Floodlight activity. For global site tags, this is the event snippet.
+   * Generated tag for this Floodlight activity. For Google tags, this is the event snippet.
    * @param floodlightActivityTag floodlightActivityTag or {@code null} for none
    */
   public FloodlightActivitiesGenerateTagResponse setFloodlightActivityTag(java.lang.String floodlightActivityTag) {
@@ -72,9 +72,9 @@ public final class FloodlightActivitiesGenerateTagResponse extends com.google.ap
   }
 
   /**
-   * The global snippet section of a global site tag. The global site tag sets new cookies on your
-   * domain, which will store a unique identifier for a user or the ad click that brought the user
-   * to your site. Learn more.
+   * The global snippet section of a Google tag. The Google tag sets new cookies on your domain,
+   * which will store a unique identifier for a user or the ad click that brought the user to your
+   * site. Learn more.
    * @return value or {@code null} for none
    */
   public java.lang.String getGlobalSiteTagGlobalSnippet() {
@@ -82,9 +82,9 @@ public final class FloodlightActivitiesGenerateTagResponse extends com.google.ap
   }
 
   /**
-   * The global snippet section of a global site tag. The global site tag sets new cookies on your
-   * domain, which will store a unique identifier for a user or the ad click that brought the user
-   * to your site. Learn more.
+   * The global snippet section of a Google tag. The Google tag sets new cookies on your domain,
+   * which will store a unique identifier for a user or the ad click that brought the user to your
+   * site. Learn more.
    * @param globalSiteTagGlobalSnippet globalSiteTagGlobalSnippet or {@code null} for none
    */
   public FloodlightActivitiesGenerateTagResponse setGlobalSiteTagGlobalSnippet(java.lang.String globalSiteTagGlobalSnippet) {

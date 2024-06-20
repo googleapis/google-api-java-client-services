@@ -74,6 +74,14 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> migrationResourcesUserTags;
 
   /**
+   * Output only. Information about the network coniguration of the source. Only gatherred upon
+   * request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkInsights networkInsights;
+
+  /**
    * Output only. The source's public IP. All communication initiated by this source will originate
    * from this IP.
    * The value may be {@code null}.
@@ -191,6 +199,25 @@ public final class AwsSourceDetails extends com.google.api.client.json.GenericJs
    */
   public AwsSourceDetails setMigrationResourcesUserTags(java.util.Map<String, java.lang.String> migrationResourcesUserTags) {
     this.migrationResourcesUserTags = migrationResourcesUserTags;
+    return this;
+  }
+
+  /**
+   * Output only. Information about the network coniguration of the source. Only gatherred upon
+   * request.
+   * @return value or {@code null} for none
+   */
+  public NetworkInsights getNetworkInsights() {
+    return networkInsights;
+  }
+
+  /**
+   * Output only. Information about the network coniguration of the source. Only gatherred upon
+   * request.
+   * @param networkInsights networkInsights or {@code null} for none
+   */
+  public AwsSourceDetails setNetworkInsights(NetworkInsights networkInsights) {
+    this.networkInsights = networkInsights;
     return this;
   }
 

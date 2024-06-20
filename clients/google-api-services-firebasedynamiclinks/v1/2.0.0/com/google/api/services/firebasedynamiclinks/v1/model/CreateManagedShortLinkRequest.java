@@ -40,7 +40,7 @@ public final class CreateManagedShortLinkRequest extends com.google.api.client.j
 
   /**
    * Full long Dynamic Link URL with desired query parameters specified. For example,
-   * "https://sample.app.goo.gl/?link=http://www.google.com=com.sample", [Learn
+   * "https://sample.app.goo.gl/?link=http://www.google.com&apn=com.sample", [Learn
    * more](https://firebase.google.com/docs/reference/dynamic-links/link-shortener).
    * The value may be {@code null}.
    */
@@ -91,7 +91,7 @@ public final class CreateManagedShortLinkRequest extends com.google.api.client.j
 
   /**
    * Full long Dynamic Link URL with desired query parameters specified. For example,
-   * "https://sample.app.goo.gl/?link=http://www.google.com=com.sample", [Learn
+   * "https://sample.app.goo.gl/?link=http://www.google.com&apn=com.sample", [Learn
    * more](https://firebase.google.com/docs/reference/dynamic-links/link-shortener).
    * @return value or {@code null} for none
    */
@@ -101,7 +101,7 @@ public final class CreateManagedShortLinkRequest extends com.google.api.client.j
 
   /**
    * Full long Dynamic Link URL with desired query parameters specified. For example,
-   * "https://sample.app.goo.gl/?link=http://www.google.com=com.sample", [Learn
+   * "https://sample.app.goo.gl/?link=http://www.google.com&apn=com.sample", [Learn
    * more](https://firebase.google.com/docs/reference/dynamic-links/link-shortener).
    * @param longDynamicLink longDynamicLink or {@code null} for none
    */

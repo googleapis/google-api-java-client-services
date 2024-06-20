@@ -31,7 +31,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
 
   /**
    * Boost specification to boost certain documents. For more information on boosting, see
-   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
+   * [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   private GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec contentSearchSpec;
 
   /**
-   * A list of data store specs to apply on a search call.
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,6 +117,16 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   private GoogleCloudDiscoveryengineV1betaSearchRequestImageQuery imageQuery;
 
   /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Standard
+   * fields](https://cloud.google.com/apis/design/standard_fields). This field helps to better
+   * interpret the query. If a value isn't specified, the query language code is automatically
+   * detected, which may not be accurate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
+
+  /**
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Documents deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an `INVALID_ARGUMENT` is
@@ -159,11 +171,11 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   /**
    * Additional search parameters. For public website search only, supported values are: *
    * `user_country_code`: string. Default empty. If set to non-empty, results are restricted or
-   * boosted based on the location provided. Example: user_country_code: "au" For available codes
-   * see [Country Codes](https://developers.google.com/custom-
+   * boosted based on the location provided. For example, `user_country_code: "au"` For available
+   * codes see [Country Codes](https://developers.google.com/custom-
    * search/docs/json_api_reference#countryCodes) * `search_type`: double. Default empty. Enables
    * non-webpage searching depending on the value. The only valid non-default value is 1, which
-   * enables image searching. Example: search_type: 1
+   * enables image searching. For example, `search_type: 1`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,6 +210,15 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
    */
   @com.google.api.client.util.Key
   private java.lang.String rankingExpression;
+
+  /**
+   * The Unicode country/region code (CLDR) of a location, such as "US" and "419". For more
+   * information, see [Standard fields](https://cloud.google.com/apis/design/standard_fields). If
+   * set, then results will be boosted based on the region_code provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String regionCode;
 
   /**
    * Whether to turn on safe search. This is only supported for website search.
@@ -253,7 +274,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
 
   /**
    * Boost specification to boost certain documents. For more information on boosting, see
-   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
+   * [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec getBoostSpec() {
@@ -262,7 +283,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
 
   /**
    * Boost specification to boost certain documents. For more information on boosting, see
-   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
+   * [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
    * @param boostSpec boostSpec or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setBoostSpec(GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec boostSpec) {
@@ -338,7 +359,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   }
 
   /**
-   * A list of data store specs to apply on a search call.
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec> getDataStoreSpecs() {
@@ -346,7 +369,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   }
 
   /**
-   * A list of data store specs to apply on a search call.
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
    * @param dataStoreSpecs dataStoreSpecs or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setDataStoreSpecs(java.util.List<GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec> dataStoreSpecs) {
@@ -449,6 +474,29 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   }
 
   /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Standard
+   * fields](https://cloud.google.com/apis/design/standard_fields). This field helps to better
+   * interpret the query. If a value isn't specified, the query language code is automatically
+   * detected, which may not be accurate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Standard
+   * fields](https://cloud.google.com/apis/design/standard_fields). This field helps to better
+   * interpret the query. If a value isn't specified, the query language code is automatically
+   * detected, which may not be accurate.
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequest setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Documents deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an `INVALID_ARGUMENT` is
@@ -547,11 +595,11 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   /**
    * Additional search parameters. For public website search only, supported values are: *
    * `user_country_code`: string. Default empty. If set to non-empty, results are restricted or
-   * boosted based on the location provided. Example: user_country_code: "au" For available codes
-   * see [Country Codes](https://developers.google.com/custom-
+   * boosted based on the location provided. For example, `user_country_code: "au"` For available
+   * codes see [Country Codes](https://developers.google.com/custom-
    * search/docs/json_api_reference#countryCodes) * `search_type`: double. Default empty. Enables
    * non-webpage searching depending on the value. The only valid non-default value is 1, which
-   * enables image searching. Example: search_type: 1
+   * enables image searching. For example, `search_type: 1`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -561,11 +609,11 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   /**
    * Additional search parameters. For public website search only, supported values are: *
    * `user_country_code`: string. Default empty. If set to non-empty, results are restricted or
-   * boosted based on the location provided. Example: user_country_code: "au" For available codes
-   * see [Country Codes](https://developers.google.com/custom-
+   * boosted based on the location provided. For example, `user_country_code: "au"` For available
+   * codes see [Country Codes](https://developers.google.com/custom-
    * search/docs/json_api_reference#countryCodes) * `search_type`: double. Default empty. Enables
    * non-webpage searching depending on the value. The only valid non-default value is 1, which
-   * enables image searching. Example: search_type: 1
+   * enables image searching. For example, `search_type: 1`
    * @param params params or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setParams(java.util.Map<String, java.lang.Object> params) {
@@ -639,6 +687,27 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setRankingExpression(java.lang.String rankingExpression) {
     this.rankingExpression = rankingExpression;
+    return this;
+  }
+
+  /**
+   * The Unicode country/region code (CLDR) of a location, such as "US" and "419". For more
+   * information, see [Standard fields](https://cloud.google.com/apis/design/standard_fields). If
+   * set, then results will be boosted based on the region_code provided.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegionCode() {
+    return regionCode;
+  }
+
+  /**
+   * The Unicode country/region code (CLDR) of a location, such as "US" and "419". For more
+   * information, see [Standard fields](https://cloud.google.com/apis/design/standard_fields). If
+   * set, then results will be boosted based on the region_code provided.
+   * @param regionCode regionCode or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequest setRegionCode(java.lang.String regionCode) {
+    this.regionCode = regionCode;
     return this;
   }
 

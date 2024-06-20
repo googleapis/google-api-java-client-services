@@ -31,8 +31,8 @@ package com.google.api.services.translate.v3.model;
 public final class BatchDocumentInputConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Google Cloud Storage location for the source input. This can be a single file (for example, `gs
-   * ://translation-test/input.docx`) or a wildcard (for example, `gs://translation-test`). File
+   * Google Cloud Storage location for the source input. This can be a single file (for example,
+   * `gs://translation-test/input.docx`) or a wildcard (for example, `gs://translation-test`). File
    * mime type is determined based on extension. Supported mime type includes: - `pdf`,
    * application/pdf - `docx`, application/vnd.openxmlformats-
    * officedocument.wordprocessingml.document - `pptx`, application/vnd.openxmlformats-
@@ -46,8 +46,8 @@ public final class BatchDocumentInputConfig extends com.google.api.client.json.G
   private GcsSource gcsSource;
 
   /**
-   * Google Cloud Storage location for the source input. This can be a single file (for example, `gs
-   * ://translation-test/input.docx`) or a wildcard (for example, `gs://translation-test`). File
+   * Google Cloud Storage location for the source input. This can be a single file (for example,
+   * `gs://translation-test/input.docx`) or a wildcard (for example, `gs://translation-test`). File
    * mime type is determined based on extension. Supported mime type includes: - `pdf`,
    * application/pdf - `docx`, application/vnd.openxmlformats-
    * officedocument.wordprocessingml.document - `pptx`, application/vnd.openxmlformats-
@@ -62,8 +62,8 @@ public final class BatchDocumentInputConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Google Cloud Storage location for the source input. This can be a single file (for example, `gs
-   * ://translation-test/input.docx`) or a wildcard (for example, `gs://translation-test`). File
+   * Google Cloud Storage location for the source input. This can be a single file (for example,
+   * `gs://translation-test/input.docx`) or a wildcard (for example, `gs://translation-test`). File
    * mime type is determined based on extension. Supported mime type includes: - `pdf`,
    * application/pdf - `docx`, application/vnd.openxmlformats-
    * officedocument.wordprocessingml.document - `pptx`, application/vnd.openxmlformats-

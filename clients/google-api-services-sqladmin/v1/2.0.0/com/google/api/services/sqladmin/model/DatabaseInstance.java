@@ -347,6 +347,19 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> suspensionReason;
 
   /**
+   * Output only. All database versions that are available for upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AvailableDatabaseVersion> upgradableDatabaseVersions;
+
+  static {
+    // hack to force ProGuard to consider AvailableDatabaseVersion used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AvailableDatabaseVersion.class);
+  }
+
+  /**
    * Output only. The dns name of the primary instance in a replication group.
    * The value may be {@code null}.
    */
@@ -1110,6 +1123,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setSuspensionReason(java.util.List<java.lang.String> suspensionReason) {
     this.suspensionReason = suspensionReason;
+    return this;
+  }
+
+  /**
+   * Output only. All database versions that are available for upgrade.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AvailableDatabaseVersion> getUpgradableDatabaseVersions() {
+    return upgradableDatabaseVersions;
+  }
+
+  /**
+   * Output only. All database versions that are available for upgrade.
+   * @param upgradableDatabaseVersions upgradableDatabaseVersions or {@code null} for none
+   */
+  public DatabaseInstance setUpgradableDatabaseVersions(java.util.List<AvailableDatabaseVersion> upgradableDatabaseVersions) {
+    this.upgradableDatabaseVersions = upgradableDatabaseVersions;
     return this;
   }
 

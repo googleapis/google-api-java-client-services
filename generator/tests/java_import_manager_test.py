@@ -17,7 +17,7 @@
 
 __author__ = 'rmistry@google.com (Ravi Mistry)'
 
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen.java_import_manager import JavaImportManager
 
 
@@ -34,7 +34,7 @@ class MockSchema(object):
     return self._template_values_dict.get(template_name)
 
 
-class JavaImportManagerTest(basetest.TestCase):
+class JavaImportManagerTest(absltest.TestCase):
 
   def setUp(self):
     super(JavaImportManagerTest, self).setUp()
@@ -62,15 +62,15 @@ class JavaImportManagerTest(basetest.TestCase):
     self.import_manager.AddImport(other_namespace_import)
 
     # Assert the contents of google, other and java imports.
-    self.assertEquals([com_google_import], self.import_manager.google_imports)
-    self.assertEquals([other_namespace_import],
+    self.assertEqual([com_google_import], self.import_manager.google_imports)
+    self.assertEqual([other_namespace_import],
                       self.import_manager.other_imports)
-    self.assertEquals([java_util_import], self.import_manager.java_imports)
+    self.assertEqual([java_util_import], self.import_manager.java_imports)
 
     # Assert the contents of class_name_to_qualified_name map.
-    self.assertEquals(java_util_import,
+    self.assertEqual(java_util_import,
                       self.import_manager._class_name_to_qualified_name['Map'])
-    self.assertEquals(
+    self.assertEqual(
         com_google_import,
         self.import_manager._class_name_to_qualified_name['DateTime'])
 
@@ -79,7 +79,7 @@ class JavaImportManagerTest(basetest.TestCase):
         [com_google_import],
         [java_util_import],
         [other_namespace_import]]
-    self.assertEquals(
+    self.assertEqual(
         expected_import_list,
         self.mock_schema.GetTemplateValue('importManager').ImportLists())
 
@@ -90,7 +90,7 @@ class JavaImportManagerTest(basetest.TestCase):
     # Adding the 2nd datetime import should return a false since the name
     # is already imported.
     self.assertFalse(self.import_manager.AddImport(datetime2_import))
-    self.assertEquals(
+    self.assertEqual(
         datetime1_import,
         self.import_manager._class_name_to_qualified_name['DateTime'])
 
@@ -100,4 +100,4 @@ class JavaImportManagerTest(basetest.TestCase):
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

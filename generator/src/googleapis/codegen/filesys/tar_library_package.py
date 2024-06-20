@@ -22,7 +22,6 @@ components generated and required by a library.
 __author__ = 'sammccall@google.com (Sam McCall)'
 
 from io import BytesIO
-import StringIO
 import tarfile
 import time
 
@@ -55,10 +54,11 @@ class TarLibraryPackage(LibraryPackage):
       A file-like object to write the contents to.
     """
     self.EndFile()
-    self._current_file_data = StringIO.StringIO()
+    self._current_file_data = BytesIO()
     name = '%s%s' % (self._file_path_prefix, name)
     # Let this explode if the name is not ascii.
-    self._current_file_name = name.encode('ascii')
+    name.encode('ascii')
+    self._current_file_name = name
     return self._current_file_data
 
   def EndFile(self):
@@ -66,9 +66,9 @@ class TarLibraryPackage(LibraryPackage):
     if self._current_file_data:
       info = tarfile.TarInfo(self._current_file_name)
       info.mtime = time.time()
-      info.mode = 0644
+      info.mode = 0o644
       data = self._current_file_data.getvalue()
-      if isinstance(data, unicode):
+      if isinstance(data, str):
         data = data.encode('utf-8')
       info.size = len(data)
       self._tar.addfile(info, BytesIO(data))

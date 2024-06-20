@@ -51,6 +51,13 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
   private GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig groundingConfig;
 
   /**
+   * Whether the prompt dataset has prompt variable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasPromptVariable;
+
+  /**
    * Value of the maximum number of tokens generated set when the dataset was saved.
    * The value may be {@code null}.
    */
@@ -77,6 +84,13 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> stopSequences;
+
+  /**
+   * The content of the prompt dataset system instruction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String systemInstruction;
 
   /**
    * The Google Cloud Storage URI that stores the system instruction, starting with gs://.
@@ -168,6 +182,23 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
   }
 
   /**
+   * Whether the prompt dataset has prompt variable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasPromptVariable() {
+    return hasPromptVariable;
+  }
+
+  /**
+   * Whether the prompt dataset has prompt variable.
+   * @param hasPromptVariable hasPromptVariable or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setHasPromptVariable(java.lang.Boolean hasPromptVariable) {
+    this.hasPromptVariable = hasPromptVariable;
+    return this;
+  }
+
+  /**
    * Value of the maximum number of tokens generated set when the dataset was saved.
    * @return value or {@code null} for none
    */
@@ -232,6 +263,23 @@ public final class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extend
    */
   public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setStopSequences(java.util.List<java.lang.String> stopSequences) {
     this.stopSequences = stopSequences;
+    return this;
+  }
+
+  /**
+   * The content of the prompt dataset system instruction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSystemInstruction() {
+    return systemInstruction;
+  }
+
+  /**
+   * The content of the prompt dataset system instruction.
+   * @param systemInstruction systemInstruction or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata setSystemInstruction(java.lang.String systemInstruction) {
+    this.systemInstruction = systemInstruction;
     return this;
   }
 

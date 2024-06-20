@@ -60,6 +60,13 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   private java.lang.String enterpriseDisplayName;
 
   /**
+   * Settings for Google-provided user authentication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAuthenticationSettings googleAuthenticationSettings;
+
+  /**
    * An image displayed as a logo during device provisioning. Supported types are: image/bmp,
    * image/gif, image/x-ico, image/jpeg, image/png, image/webp, image/vnd.wap.wbmp, image/x-adobe-
    * dng.
@@ -176,6 +183,23 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
    */
   public Enterprise setEnterpriseDisplayName(java.lang.String enterpriseDisplayName) {
     this.enterpriseDisplayName = enterpriseDisplayName;
+    return this;
+  }
+
+  /**
+   * Settings for Google-provided user authentication.
+   * @return value or {@code null} for none
+   */
+  public GoogleAuthenticationSettings getGoogleAuthenticationSettings() {
+    return googleAuthenticationSettings;
+  }
+
+  /**
+   * Settings for Google-provided user authentication.
+   * @param googleAuthenticationSettings googleAuthenticationSettings or {@code null} for none
+   */
+  public Enterprise setGoogleAuthenticationSettings(GoogleAuthenticationSettings googleAuthenticationSettings) {
+    this.googleAuthenticationSettings = googleAuthenticationSettings;
     return this;
   }
 

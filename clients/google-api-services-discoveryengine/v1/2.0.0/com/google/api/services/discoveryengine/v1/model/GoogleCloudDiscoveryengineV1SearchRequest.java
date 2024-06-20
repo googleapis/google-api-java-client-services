@@ -31,7 +31,7 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
 
   /**
    * Boost specification to boost certain documents. For more information on boosting, see
-   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
+   * [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,9 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   private GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec contentSearchSpec;
 
   /**
-   * A list of data store specs to apply on a search call.
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,6 +104,16 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1SearchRequestImageQuery imageQuery;
+
+  /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Standard
+   * fields](https://cloud.google.com/apis/design/standard_fields). This field helps to better
+   * interpret the query. If a value isn't specified, the query language code is automatically
+   * detected, which may not be accurate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
 
   /**
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
@@ -148,11 +160,11 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   /**
    * Additional search parameters. For public website search only, supported values are: *
    * `user_country_code`: string. Default empty. If set to non-empty, results are restricted or
-   * boosted based on the location provided. Example: user_country_code: "au" For available codes
-   * see [Country Codes](https://developers.google.com/custom-
+   * boosted based on the location provided. For example, `user_country_code: "au"` For available
+   * codes see [Country Codes](https://developers.google.com/custom-
    * search/docs/json_api_reference#countryCodes) * `search_type`: double. Default empty. Enables
    * non-webpage searching depending on the value. The only valid non-default value is 1, which
-   * enables image searching. Example: search_type: 1
+   * enables image searching. For example, `search_type: 1`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,7 +239,7 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
 
   /**
    * Boost specification to boost certain documents. For more information on boosting, see
-   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
+   * [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1SearchRequestBoostSpec getBoostSpec() {
@@ -236,7 +248,7 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
 
   /**
    * Boost specification to boost certain documents. For more information on boosting, see
-   * [Boosting](https://cloud.google.com/retail/docs/boosting#boost)
+   * [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
    * @param boostSpec boostSpec or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1SearchRequest setBoostSpec(GoogleCloudDiscoveryengineV1SearchRequestBoostSpec boostSpec) {
@@ -312,7 +324,9 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   }
 
   /**
-   * A list of data store specs to apply on a search call.
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec> getDataStoreSpecs() {
@@ -320,7 +334,9 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   }
 
   /**
-   * A list of data store specs to apply on a search call.
+   * Specs defining dataStores to filter on in a search call and configurations for those
+   * dataStores. This is only considered for engines with multiple dataStores use case. For single
+   * dataStore within an engine, they should use the specs at the top level.
    * @param dataStoreSpecs dataStoreSpecs or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1SearchRequest setDataStoreSpecs(java.util.List<GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec> dataStoreSpecs) {
@@ -394,6 +410,29 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
    */
   public GoogleCloudDiscoveryengineV1SearchRequest setImageQuery(GoogleCloudDiscoveryengineV1SearchRequestImageQuery imageQuery) {
     this.imageQuery = imageQuery;
+    return this;
+  }
+
+  /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Standard
+   * fields](https://cloud.google.com/apis/design/standard_fields). This field helps to better
+   * interpret the query. If a value isn't specified, the query language code is automatically
+   * detected, which may not be accurate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Standard
+   * fields](https://cloud.google.com/apis/design/standard_fields). This field helps to better
+   * interpret the query. If a value isn't specified, the query language code is automatically
+   * detected, which may not be accurate.
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequest setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
     return this;
   }
 
@@ -496,11 +535,11 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   /**
    * Additional search parameters. For public website search only, supported values are: *
    * `user_country_code`: string. Default empty. If set to non-empty, results are restricted or
-   * boosted based on the location provided. Example: user_country_code: "au" For available codes
-   * see [Country Codes](https://developers.google.com/custom-
+   * boosted based on the location provided. For example, `user_country_code: "au"` For available
+   * codes see [Country Codes](https://developers.google.com/custom-
    * search/docs/json_api_reference#countryCodes) * `search_type`: double. Default empty. Enables
    * non-webpage searching depending on the value. The only valid non-default value is 1, which
-   * enables image searching. Example: search_type: 1
+   * enables image searching. For example, `search_type: 1`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -510,11 +549,11 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   /**
    * Additional search parameters. For public website search only, supported values are: *
    * `user_country_code`: string. Default empty. If set to non-empty, results are restricted or
-   * boosted based on the location provided. Example: user_country_code: "au" For available codes
-   * see [Country Codes](https://developers.google.com/custom-
+   * boosted based on the location provided. For example, `user_country_code: "au"` For available
+   * codes see [Country Codes](https://developers.google.com/custom-
    * search/docs/json_api_reference#countryCodes) * `search_type`: double. Default empty. Enables
    * non-webpage searching depending on the value. The only valid non-default value is 1, which
-   * enables image searching. Example: search_type: 1
+   * enables image searching. For example, `search_type: 1`
    * @param params params or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1SearchRequest setParams(java.util.Map<String, java.lang.Object> params) {

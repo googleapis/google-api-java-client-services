@@ -36,8 +36,8 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * comma-delimited data. The `columnHeaders` list will begin with the dimensions specified in the
    * API request, which will be followed by the metrics specified in the API request. The order of
    * both dimensions and metrics will match the ordering in the API request. For example, if the API
-   * request contains the parameters `dimensions=ageGroup,gender=viewerPercentage`, the API response
-   * will return columns in this order: `ageGroup`, `gender`, `viewerPercentage`.
+   * request contains the parameters `dimensions=ageGroup,gender&metrics=viewerPercentage`, the API
+   * response will return columns in this order: `ageGroup`, `gender`, `viewerPercentage`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,8 +75,8 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * comma-delimited data. The `columnHeaders` list will begin with the dimensions specified in the
    * API request, which will be followed by the metrics specified in the API request. The order of
    * both dimensions and metrics will match the ordering in the API request. For example, if the API
-   * request contains the parameters `dimensions=ageGroup,gender=viewerPercentage`, the API response
-   * will return columns in this order: `ageGroup`, `gender`, `viewerPercentage`.
+   * request contains the parameters `dimensions=ageGroup,gender&metrics=viewerPercentage`, the API
+   * response will return columns in this order: `ageGroup`, `gender`, `viewerPercentage`.
    * @return value or {@code null} for none
    */
   public java.util.List<ResultTableColumnHeader> getColumnHeaders() {
@@ -89,8 +89,8 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * comma-delimited data. The `columnHeaders` list will begin with the dimensions specified in the
    * API request, which will be followed by the metrics specified in the API request. The order of
    * both dimensions and metrics will match the ordering in the API request. For example, if the API
-   * request contains the parameters `dimensions=ageGroup,gender=viewerPercentage`, the API response
-   * will return columns in this order: `ageGroup`, `gender`, `viewerPercentage`.
+   * request contains the parameters `dimensions=ageGroup,gender&metrics=viewerPercentage`, the API
+   * response will return columns in this order: `ageGroup`, `gender`, `viewerPercentage`.
    * @param columnHeaders columnHeaders or {@code null} for none
    */
   public QueryResponse setColumnHeaders(java.util.List<ResultTableColumnHeader> columnHeaders) {

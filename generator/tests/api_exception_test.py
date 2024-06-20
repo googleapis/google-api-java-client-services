@@ -15,19 +15,19 @@
 
 """Tests for api_exception.py."""
 
-from google.apputils import basetest
+from absl.testing import absltest
 
 from googleapis.codegen.api_exception import ApiException
 
 
-class ApiExceptionTest(basetest.TestCase):
+class ApiExceptionTest(absltest.TestCase):
 
   def testExceptionStr(self):
     e = ApiException('foo')
-    self.assertEquals('foo', str(e))
+    self.assertEqual('foo', str(e))
     e = ApiException('foo', {'bar': 1})
-    self.assertEquals("""foo: {'bar': 1}""", str(e))
+    self.assertEqual("""foo: {'bar': 1}""", str(e))
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

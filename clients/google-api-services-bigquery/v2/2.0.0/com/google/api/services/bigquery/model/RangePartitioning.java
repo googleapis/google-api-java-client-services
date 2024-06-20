@@ -30,8 +30,8 @@ package com.google.api.services.bigquery.model;
 public final class RangePartitioning extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. [Experimental] The table is partitioned by this field. The field must be a top-level
-   * NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
+   * Required. The name of the column to partition the table on. It must be a top-level, INT64
+   * column whose mode is NULLABLE or REQUIRED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class RangePartitioning extends com.google.api.client.json.GenericJ
   private Range range;
 
   /**
-   * Required. [Experimental] The table is partitioned by this field. The field must be a top-level
-   * NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
+   * Required. The name of the column to partition the table on. It must be a top-level, INT64
+   * column whose mode is NULLABLE or REQUIRED.
    * @return value or {@code null} for none
    */
   public java.lang.String getField() {
@@ -54,8 +54,8 @@ public final class RangePartitioning extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. [Experimental] The table is partitioned by this field. The field must be a top-level
-   * NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
+   * Required. The name of the column to partition the table on. It must be a top-level, INT64
+   * column whose mode is NULLABLE or REQUIRED.
    * @param field field or {@code null} for none
    */
   public RangePartitioning setField(java.lang.String field) {

@@ -20,8 +20,8 @@ package com.google.api.services.datacatalog.v1beta1.model;
  * Detailed statistics on the entry's usage. Usage statistics have the following limitations: - Only
  * BigQuery tables have them. - They only include BigQuery query jobs. - They might be
  * underestimated because wildcard table references are not yet counted. For more information, see
- * [Querying multiple tables using a wildcard table] (https://cloud.google.com/bigquery/docs
- * /querying-wildcard-tables)
+ * [Querying multiple tables using a wildcard table]
+ * (https://cloud.google.com/bigquery/docs/querying-wildcard-tables)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed

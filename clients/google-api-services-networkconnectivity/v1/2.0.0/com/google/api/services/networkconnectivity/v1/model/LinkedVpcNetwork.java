@@ -38,6 +38,13 @@ public final class LinkedVpcNetwork extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> excludeExportRanges;
 
   /**
+   * Optional. IP ranges allowed to be included from peering.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> includeExportRanges;
+
+  /**
    * Required. The URI of the VPC network resource.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class LinkedVpcNetwork extends com.google.api.client.json.GenericJs
    */
   public LinkedVpcNetwork setExcludeExportRanges(java.util.List<java.lang.String> excludeExportRanges) {
     this.excludeExportRanges = excludeExportRanges;
+    return this;
+  }
+
+  /**
+   * Optional. IP ranges allowed to be included from peering.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIncludeExportRanges() {
+    return includeExportRanges;
+  }
+
+  /**
+   * Optional. IP ranges allowed to be included from peering.
+   * @param includeExportRanges includeExportRanges or {@code null} for none
+   */
+  public LinkedVpcNetwork setIncludeExportRanges(java.util.List<java.lang.String> includeExportRanges) {
+    this.includeExportRanges = includeExportRanges;
     return this;
   }
 

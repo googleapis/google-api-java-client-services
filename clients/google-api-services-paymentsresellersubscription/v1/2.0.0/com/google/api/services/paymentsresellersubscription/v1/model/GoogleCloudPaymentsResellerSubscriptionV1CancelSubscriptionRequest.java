@@ -33,7 +33,9 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRe
   /**
    * Optional. If true, Google will cancel the subscription immediately, and may or may not (based
    * on the contract) issue a prorated refund for the remainder of the billing cycle. Otherwise,
-   * Google defers the cancelation at renewal_time, and will not issue a refund.
+   * Google defers the cancelation at renewal_time, and will not issue a refund. - YouTube
+   * subscriptions must use this option currently. However, the user will still have access to the
+   * subscription until the end of the billing cycle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +51,9 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRe
   /**
    * Optional. If true, Google will cancel the subscription immediately, and may or may not (based
    * on the contract) issue a prorated refund for the remainder of the billing cycle. Otherwise,
-   * Google defers the cancelation at renewal_time, and will not issue a refund.
+   * Google defers the cancelation at renewal_time, and will not issue a refund. - YouTube
+   * subscriptions must use this option currently. However, the user will still have access to the
+   * subscription until the end of the billing cycle.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCancelImmediately() {
@@ -59,7 +63,9 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRe
   /**
    * Optional. If true, Google will cancel the subscription immediately, and may or may not (based
    * on the contract) issue a prorated refund for the remainder of the billing cycle. Otherwise,
-   * Google defers the cancelation at renewal_time, and will not issue a refund.
+   * Google defers the cancelation at renewal_time, and will not issue a refund. - YouTube
+   * subscriptions must use this option currently. However, the user will still have access to the
+   * subscription until the end of the billing cycle.
    * @param cancelImmediately cancelImmediately or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest setCancelImmediately(java.lang.Boolean cancelImmediately) {

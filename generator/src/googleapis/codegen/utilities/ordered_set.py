@@ -15,7 +15,7 @@
 """Ordered set implementations."""
 
 import collections
-
+from collections.abc import Set, Hashable, MutableSet
 
 class _OrderedSetBase(object):
 
@@ -47,9 +47,9 @@ class _MutableSetBase(_OrderedSetBase):
     self._set.clear()
 
 
-class FrozenOrderedSet(_OrderedSetBase, collections.Set, collections.Hashable):
-  __hash__ = collections.Set._hash
+class FrozenOrderedSet(_OrderedSetBase, Set, Hashable):
+  __hash__ = Set._hash
 
 
-class MutableOrderedSet(_MutableSetBase, collections.MutableSet):
+class MutableOrderedSet(_MutableSetBase, MutableSet):
   pass

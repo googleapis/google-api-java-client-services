@@ -19,14 +19,14 @@ import json
 import os
 
 import gflags as flags
-from google.apputils import basetest
+from absl.testing import absltest
 from googleapis.codegen import api
 
 FLAGS = flags.FLAGS
 
 
 
-class UnicodeTest(basetest.TestCase):
+class UnicodeTest(absltest.TestCase):
 
   _TEST_DISCOVERY_DOC = 'unicode.json'
 
@@ -41,13 +41,13 @@ class UnicodeTest(basetest.TestCase):
     """
 
     with open(os.path.join(os.path.dirname(__file__), 'testdata', path)) as f:
-      discovery_doc = json.loads(f.read().decode('utf-8'))
+      discovery_doc = json.loads(f.read())
     return api.Api(discovery_doc)
 
   def testGiveMeAName(self):
     an_api = self.ApiFromDiscoveryDoc(self._TEST_DISCOVERY_DOC)
 
-    accented = u'\xdaRL'  # "URL" with an accent
+    accented = '\xdaRL'  # "URL" with an accent
 
     # An object which holds a count. This is just to have an object to
     # increment as a side-effect of a lambda.
@@ -68,7 +68,7 @@ class UnicodeTest(basetest.TestCase):
 
     url_counter = Counter()
     an_api.VisitAll(lambda x: CheckDescription(url_counter, x, accented))
-    self.assertEquals(rl_counter.value, url_counter.value)
+    self.assertEqual(rl_counter.value, url_counter.value)
 
     def CheckEnumDescription(counter, x, match):
       enum_type = x.values.get('enumType')
@@ -78,8 +78,8 @@ class UnicodeTest(basetest.TestCase):
 
     enum_counter = Counter()
     an_api.VisitAll(lambda x: CheckEnumDescription(enum_counter, x, accented))
-    self.assertEquals(2, enum_counter.value)
+    self.assertEqual(2, enum_counter.value)
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

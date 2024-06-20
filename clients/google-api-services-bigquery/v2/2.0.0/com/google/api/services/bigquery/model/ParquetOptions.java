@@ -45,7 +45,7 @@ public final class ParquetOptions extends com.google.api.client.json.GenericJson
   private java.lang.Boolean enumAsString;
 
   /**
-   * Optional. Will indicate how to represent a parquet map if present.
+   * Optional. Indicates how to represent a Parquet map if present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class ParquetOptions extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Will indicate how to represent a parquet map if present.
+   * Optional. Indicates how to represent a Parquet map if present.
    * @return value or {@code null} for none
    */
   public java.lang.String getMapTargetType() {
@@ -96,7 +96,7 @@ public final class ParquetOptions extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Will indicate how to represent a parquet map if present.
+   * Optional. Indicates how to represent a Parquet map if present.
    * @param mapTargetType mapTargetType or {@code null} for none
    */
   public ParquetOptions setMapTargetType(java.lang.String mapTargetType) {

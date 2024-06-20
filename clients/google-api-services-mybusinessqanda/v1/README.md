@@ -1,6 +1,6 @@
 # My Business Q&amp;A API Client Library for Java
 
-The My Business Q API allows questions and answers to be posted for specific listings. Note - If you have a quota of 0 after enabling the API, please request for GBP API access.
+The My Business Q&A API allows questions and answers to be posted for specific listings. Note - If you have a quota of 0 after enabling the API, please request for GBP API access.
 
 This page contains information about getting started with the My Business Q&amp;A API
 using the Google API Client Library for Java. In addition, you may be interested

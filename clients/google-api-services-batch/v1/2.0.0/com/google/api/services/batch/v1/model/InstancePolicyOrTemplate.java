@@ -32,8 +32,8 @@ package com.google.api.services.batch.v1.model;
 public final class InstancePolicyOrTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Set this field true if users want Batch to help fetch drivers from a third party location and
-   * install them for GPUs specified in policy.accelerators or instance_template on their behalf.
+   * Set this field true if you want Batch to help fetch drivers from a third party location and
+   * install them for GPUs specified in `policy.accelerators` or `instance_template` on your behalf.
    * Default is false. For Container-Optimized Image cases, Batch will install the accelerator
    * driver following milestones of https://cloud.google.com/container-optimized-os/docs/release-
    * notes. For non Container-Optimized Image cases, following
@@ -43,6 +43,14 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean installGpuDrivers;
+
+  /**
+   * Optional. Set this field true if you want Batch to install Ops Agent on your behalf. Default is
+   * false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean installOpsAgent;
 
   /**
    * Name of an instance template used to create VMs. Named the field as 'instance_template' instead
@@ -60,8 +68,8 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
   private InstancePolicy policy;
 
   /**
-   * Set this field true if users want Batch to help fetch drivers from a third party location and
-   * install them for GPUs specified in policy.accelerators or instance_template on their behalf.
+   * Set this field true if you want Batch to help fetch drivers from a third party location and
+   * install them for GPUs specified in `policy.accelerators` or `instance_template` on your behalf.
    * Default is false. For Container-Optimized Image cases, Batch will install the accelerator
    * driver following milestones of https://cloud.google.com/container-optimized-os/docs/release-
    * notes. For non Container-Optimized Image cases, following
@@ -74,8 +82,8 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
   }
 
   /**
-   * Set this field true if users want Batch to help fetch drivers from a third party location and
-   * install them for GPUs specified in policy.accelerators or instance_template on their behalf.
+   * Set this field true if you want Batch to help fetch drivers from a third party location and
+   * install them for GPUs specified in `policy.accelerators` or `instance_template` on your behalf.
    * Default is false. For Container-Optimized Image cases, Batch will install the accelerator
    * driver following milestones of https://cloud.google.com/container-optimized-os/docs/release-
    * notes. For non Container-Optimized Image cases, following
@@ -85,6 +93,25 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
    */
   public InstancePolicyOrTemplate setInstallGpuDrivers(java.lang.Boolean installGpuDrivers) {
     this.installGpuDrivers = installGpuDrivers;
+    return this;
+  }
+
+  /**
+   * Optional. Set this field true if you want Batch to install Ops Agent on your behalf. Default is
+   * false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInstallOpsAgent() {
+    return installOpsAgent;
+  }
+
+  /**
+   * Optional. Set this field true if you want Batch to install Ops Agent on your behalf. Default is
+   * false.
+   * @param installOpsAgent installOpsAgent or {@code null} for none
+   */
+  public InstancePolicyOrTemplate setInstallOpsAgent(java.lang.Boolean installOpsAgent) {
+    this.installOpsAgent = installOpsAgent;
     return this;
   }
 

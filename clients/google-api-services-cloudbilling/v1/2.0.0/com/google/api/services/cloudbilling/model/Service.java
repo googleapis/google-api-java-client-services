@@ -45,14 +45,14 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * The resource name for the service. Example: "services/DA34-426B-A397"
+   * The resource name for the service. Example: "services/6F81-5844-456A"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The identifier for the service. Example: "DA34-426B-A397"
+   * The identifier for the service. Example: "6F81-5844-456A"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name for the service. Example: "services/DA34-426B-A397"
+   * The resource name for the service. Example: "services/6F81-5844-456A"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -103,7 +103,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name for the service. Example: "services/DA34-426B-A397"
+   * The resource name for the service. Example: "services/6F81-5844-456A"
    * @param name name or {@code null} for none
    */
   public Service setName(java.lang.String name) {
@@ -112,7 +112,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The identifier for the service. Example: "DA34-426B-A397"
+   * The identifier for the service. Example: "6F81-5844-456A"
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceId() {
@@ -120,7 +120,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The identifier for the service. Example: "DA34-426B-A397"
+   * The identifier for the service. Example: "6F81-5844-456A"
    * @param serviceId serviceId or {@code null} for none
    */
   public Service setServiceId(java.lang.String serviceId) {

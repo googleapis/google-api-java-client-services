@@ -37,9 +37,9 @@ public final class VmwarePlatformDetails extends com.google.api.client.json.Gene
   private java.lang.String esxVersion;
 
   /**
-   * VMware os enum - https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910-60ac-438b-
-   * 8b9b-6122f4d14524/16b7274a-bf8b-4b4c-a05e-
-   * 746f2aa93c8c/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html.
+   * VMware os enum - https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910-60ac-438b-8b9b
+   * -6122f4d14524/16b7274a-bf8b-4b4c-a05e-746f2aa93c8c/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifi
+   * er.html.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,9 +91,9 @@ public final class VmwarePlatformDetails extends com.google.api.client.json.Gene
   }
 
   /**
-   * VMware os enum - https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910-60ac-438b-
-   * 8b9b-6122f4d14524/16b7274a-bf8b-4b4c-a05e-
-   * 746f2aa93c8c/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html.
+   * VMware os enum - https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910-60ac-438b-8b9b
+   * -6122f4d14524/16b7274a-bf8b-4b4c-a05e-746f2aa93c8c/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifi
+   * er.html.
    * @return value or {@code null} for none
    */
   public java.lang.String getOsid() {
@@ -101,9 +101,9 @@ public final class VmwarePlatformDetails extends com.google.api.client.json.Gene
   }
 
   /**
-   * VMware os enum - https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910-60ac-438b-
-   * 8b9b-6122f4d14524/16b7274a-bf8b-4b4c-a05e-
-   * 746f2aa93c8c/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html.
+   * VMware os enum - https://vdc-repo.vmware.com/vmwb-repository/dcr-public/da47f910-60ac-438b-8b9b
+   * -6122f4d14524/16b7274a-bf8b-4b4c-a05e-746f2aa93c8c/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifi
+   * er.html.
    * @param osid osid or {@code null} for none
    */
   public VmwarePlatformDetails setOsid(java.lang.String osid) {

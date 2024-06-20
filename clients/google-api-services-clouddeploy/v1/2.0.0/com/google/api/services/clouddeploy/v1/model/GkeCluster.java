@@ -49,6 +49,15 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean internalIp;
 
   /**
+   * Optional. If set, used to configure a
+   * [proxy](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-
+   * kubeconfig/#proxy) to the Kubernetes server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String proxyUrl;
+
+  /**
    * Optional. Information specifying a GKE Cluster. Format is
    * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`.
    * @return value or {@code null} for none
@@ -89,6 +98,27 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
    */
   public GkeCluster setInternalIp(java.lang.Boolean internalIp) {
     this.internalIp = internalIp;
+    return this;
+  }
+
+  /**
+   * Optional. If set, used to configure a
+   * [proxy](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-
+   * kubeconfig/#proxy) to the Kubernetes server.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProxyUrl() {
+    return proxyUrl;
+  }
+
+  /**
+   * Optional. If set, used to configure a
+   * [proxy](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-
+   * kubeconfig/#proxy) to the Kubernetes server.
+   * @param proxyUrl proxyUrl or {@code null} for none
+   */
+  public GkeCluster setProxyUrl(java.lang.String proxyUrl) {
+    this.proxyUrl = proxyUrl;
     return this;
   }
 

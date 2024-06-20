@@ -620,10 +620,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional query string using the [Cloud API list filtering syntax](https://developers.google.com
-       /authorized-buyers/apis/guides/list-filters) Supported columns for filtering are: *
-       deal.displayName * deal.dealType * deal.createTime * deal.updateTime * deal.flightStartTime *
-       deal.flightEndTime * deal.eligibleSeatIds * dealServingStatus
+        /** Optional query string using the [Cloud API list filtering
+       syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Supported columns
+       for filtering are: * deal.displayName * deal.dealType * deal.createTime * deal.updateTime *
+       deal.flightStartTime * deal.flightEndTime * deal.eligibleSeatIds * dealServingStatus
          */
         public java.lang.String getFilter() {
           return filter;
@@ -4106,10 +4106,10 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional query string using the [Cloud API list filtering syntax](https://developers.google.com
-       /authorized-buyers/apis/guides/list-filters) Supported columns for filtering are: *
-       deal.displayName * deal.dealType * deal.createTime * deal.updateTime * deal.flightStartTime *
-       deal.flightEndTime * deal.eligibleSeatIds * dealServingStatus
+        /** Optional query string using the [Cloud API list filtering
+       syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Supported columns
+       for filtering are: * deal.displayName * deal.dealType * deal.createTime * deal.updateTime *
+       deal.flightStartTime * deal.flightEndTime * deal.eligibleSeatIds * dealServingStatus
          */
         public java.lang.String getFilter() {
           return filter;
@@ -4214,7 +4214,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
       /**
        * Pauses serving of the given finalized deal. This call only pauses the serving status, and does
        * not affect other fields of the finalized deal. Calling this method for an already paused deal has
-       * no effect. This method only applies to programmatic guaranteed deals.
+       * no effect. This method only applies to programmatic guaranteed deals and preferred deals.
        *
        * Create a request for the method "finalizedDeals.pause".
        *
@@ -4242,7 +4242,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         /**
          * Pauses serving of the given finalized deal. This call only pauses the serving status, and does
          * not affect other fields of the finalized deal. Calling this method for an already paused deal
-         * has no effect. This method only applies to programmatic guaranteed deals.
+         * has no effect. This method only applies to programmatic guaranteed deals and preferred deals.
          *
          * Create a request for the method "finalizedDeals.pause".
          *
@@ -4351,7 +4351,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        * Resumes serving of the given finalized deal. Calling this method for an running deal has no
        * effect. If a deal is initially paused by the seller, calling this method will not resume serving
        * of the deal until the seller also resumes the deal. This method only applies to programmatic
-       * guaranteed deals.
+       * guaranteed deals and preferred deals.
        *
        * Create a request for the method "finalizedDeals.resume".
        *
@@ -4380,7 +4380,7 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * Resumes serving of the given finalized deal. Calling this method for an running deal has no
          * effect. If a deal is initially paused by the seller, calling this method will not resume
          * serving of the deal until the seller also resumes the deal. This method only applies to
-         * programmatic guaranteed deals.
+         * programmatic guaranteed deals and preferred deals.
          *
          * Create a request for the method "finalizedDeals.resume".
          *
@@ -4794,7 +4794,8 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
       }
       /**
-       * Creates a note for this proposal and sends to the seller.
+       * Creates a note for this proposal and sends to the seller. This method is not supported for
+       * proposals with DealType set to 'PRIVATE_AUCTION'.
        *
        * Create a request for the method "proposals.addNote".
        *
@@ -4820,7 +4821,8 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
             java.util.regex.Pattern.compile("^buyers/[^/]+/proposals/[^/]+$");
 
         /**
-         * Creates a note for this proposal and sends to the seller.
+         * Creates a note for this proposal and sends to the seller. This method is not supported for
+         * proposals with DealType set to 'PRIVATE_AUCTION'.
          *
          * Create a request for the method "proposals.addNote".
          *
@@ -5355,9 +5357,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional query string using the [Cloud API list filtering syntax](https://developers.google.com
-       /authorized-buyers/apis/guides/list-filters) Supported columns for filtering are: * displayName *
-       dealType * updateTime * state
+        /** Optional query string using the [Cloud API list filtering
+       syntax](https://developers.google.com/authorized-buyers/apis/guides/list-filters) Supported columns
+       for filtering are: * displayName * dealType * updateTime * state
          */
         public java.lang.String getFilter() {
           return filter;
@@ -6759,22 +6761,22 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
 
         /**
-         * Optional query string using the [Cloud API list filtering] (https://developers.google.com
-         * /authorized-buyers/apis/guides/list-filters) syntax.
+         * Optional query string using the [Cloud API list filtering]
+         * (https://developers.google.com/authorized-buyers/apis/guides/list-filters) syntax.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional query string using the [Cloud API list filtering] (https://developers.google.com
-       /authorized-buyers/apis/guides/list-filters) syntax.
+        /** Optional query string using the [Cloud API list filtering]
+       (https://developers.google.com/authorized-buyers/apis/guides/list-filters) syntax.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Optional query string using the [Cloud API list filtering] (https://developers.google.com
-         * /authorized-buyers/apis/guides/list-filters) syntax.
+         * Optional query string using the [Cloud API list filtering]
+         * (https://developers.google.com/authorized-buyers/apis/guides/list-filters) syntax.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

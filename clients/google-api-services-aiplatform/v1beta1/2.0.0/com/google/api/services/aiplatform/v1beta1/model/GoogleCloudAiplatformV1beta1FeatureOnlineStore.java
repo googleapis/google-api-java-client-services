@@ -62,6 +62,14 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
   private GoogleCloudAiplatformV1beta1FeatureOnlineStoreEmbeddingManagement embeddingManagement;
 
   /**
+   * Optional. Customer-managed encryption key spec for data storage. If set, online store will be
+   * secured by this key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec;
+
+  /**
    * Optional. Used to perform consistent read-modify-write updates. If not set, a blind "overwrite"
    * update happens.
    * The value may be {@code null}.
@@ -184,6 +192,25 @@ public final class GoogleCloudAiplatformV1beta1FeatureOnlineStore extends com.go
    */
   public GoogleCloudAiplatformV1beta1FeatureOnlineStore setEmbeddingManagement(GoogleCloudAiplatformV1beta1FeatureOnlineStoreEmbeddingManagement embeddingManagement) {
     this.embeddingManagement = embeddingManagement;
+    return this;
+  }
+
+  /**
+   * Optional. Customer-managed encryption key spec for data storage. If set, online store will be
+   * secured by this key.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Optional. Customer-managed encryption key spec for data storage. If set, online store will be
+   * secured by this key.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FeatureOnlineStore setEncryptionSpec(GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 

@@ -37,21 +37,21 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   private java.lang.String apiKey;
 
   /**
-   * Id of the GitHub App created from the manifest.
+   * Optional. Id of the GitHub App created from the manifest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long appId;
 
   /**
-   * ID of the installation of the GitHub App.
+   * Optional. ID of the installation of the GitHub App.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long appInstallationId;
 
   /**
-   * The URL-friendly name of the GitHub App.
+   * Optional. The URL-friendly name of the GitHub App.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   private java.lang.String hostUri;
 
   /**
-   * SecretManager resource containing the private key of the GitHub App, formatted as
+   * Optional. SecretManager resource containing the private key of the GitHub App, formatted as
    * `projects/secrets/versions`.
    * The value may be {@code null}.
    */
@@ -80,24 +80,24 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   private java.lang.String serverVersion;
 
   /**
-   * Configuration for using Service Directory to privately connect to a GitHub Enterprise server.
-   * This should only be set if the GitHub Enterprise server is hosted on-premises and not reachable
-   * by public internet. If this field is left empty, calls to the GitHub Enterprise server will be
-   * made over the public internet.
+   * Optional. Configuration for using Service Directory to privately connect to a GitHub Enterprise
+   * server. This should only be set if the GitHub Enterprise server is hosted on-premises and not
+   * reachable by public internet. If this field is left empty, calls to the GitHub Enterprise
+   * server will be made over the public internet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleDevtoolsCloudbuildV2ServiceDirectoryConfig serviceDirectoryConfig;
 
   /**
-   * SSL certificate to use for requests to GitHub Enterprise.
+   * Optional. SSL certificate to use for requests to GitHub Enterprise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sslCa;
 
   /**
-   * SecretManager resource containing the webhook secret of the GitHub App, formatted as
+   * Optional. SecretManager resource containing the webhook secret of the GitHub App, formatted as
    * `projects/secrets/versions`.
    * The value may be {@code null}.
    */
@@ -122,7 +122,7 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * Id of the GitHub App created from the manifest.
+   * Optional. Id of the GitHub App created from the manifest.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAppId() {
@@ -130,7 +130,7 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * Id of the GitHub App created from the manifest.
+   * Optional. Id of the GitHub App created from the manifest.
    * @param appId appId or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig setAppId(java.lang.Long appId) {
@@ -139,7 +139,7 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * ID of the installation of the GitHub App.
+   * Optional. ID of the installation of the GitHub App.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAppInstallationId() {
@@ -147,7 +147,7 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * ID of the installation of the GitHub App.
+   * Optional. ID of the installation of the GitHub App.
    * @param appInstallationId appInstallationId or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig setAppInstallationId(java.lang.Long appInstallationId) {
@@ -156,7 +156,7 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * The URL-friendly name of the GitHub App.
+   * Optional. The URL-friendly name of the GitHub App.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppSlug() {
@@ -164,7 +164,7 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * The URL-friendly name of the GitHub App.
+   * Optional. The URL-friendly name of the GitHub App.
    * @param appSlug appSlug or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig setAppSlug(java.lang.String appSlug) {
@@ -190,7 +190,7 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * SecretManager resource containing the private key of the GitHub App, formatted as
+   * Optional. SecretManager resource containing the private key of the GitHub App, formatted as
    * `projects/secrets/versions`.
    * @return value or {@code null} for none
    */
@@ -199,7 +199,7 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * SecretManager resource containing the private key of the GitHub App, formatted as
+   * Optional. SecretManager resource containing the private key of the GitHub App, formatted as
    * `projects/secrets/versions`.
    * @param privateKeySecretVersion privateKeySecretVersion or {@code null} for none
    */
@@ -226,10 +226,10 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * Configuration for using Service Directory to privately connect to a GitHub Enterprise server.
-   * This should only be set if the GitHub Enterprise server is hosted on-premises and not reachable
-   * by public internet. If this field is left empty, calls to the GitHub Enterprise server will be
-   * made over the public internet.
+   * Optional. Configuration for using Service Directory to privately connect to a GitHub Enterprise
+   * server. This should only be set if the GitHub Enterprise server is hosted on-premises and not
+   * reachable by public internet. If this field is left empty, calls to the GitHub Enterprise
+   * server will be made over the public internet.
    * @return value or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV2ServiceDirectoryConfig getServiceDirectoryConfig() {
@@ -237,10 +237,10 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * Configuration for using Service Directory to privately connect to a GitHub Enterprise server.
-   * This should only be set if the GitHub Enterprise server is hosted on-premises and not reachable
-   * by public internet. If this field is left empty, calls to the GitHub Enterprise server will be
-   * made over the public internet.
+   * Optional. Configuration for using Service Directory to privately connect to a GitHub Enterprise
+   * server. This should only be set if the GitHub Enterprise server is hosted on-premises and not
+   * reachable by public internet. If this field is left empty, calls to the GitHub Enterprise
+   * server will be made over the public internet.
    * @param serviceDirectoryConfig serviceDirectoryConfig or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig setServiceDirectoryConfig(GoogleDevtoolsCloudbuildV2ServiceDirectoryConfig serviceDirectoryConfig) {
@@ -249,7 +249,7 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * SSL certificate to use for requests to GitHub Enterprise.
+   * Optional. SSL certificate to use for requests to GitHub Enterprise.
    * @return value or {@code null} for none
    */
   public java.lang.String getSslCa() {
@@ -257,7 +257,7 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * SSL certificate to use for requests to GitHub Enterprise.
+   * Optional. SSL certificate to use for requests to GitHub Enterprise.
    * @param sslCa sslCa or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig setSslCa(java.lang.String sslCa) {
@@ -266,7 +266,7 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * SecretManager resource containing the webhook secret of the GitHub App, formatted as
+   * Optional. SecretManager resource containing the webhook secret of the GitHub App, formatted as
    * `projects/secrets/versions`.
    * @return value or {@code null} for none
    */
@@ -275,7 +275,7 @@ public final class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends com.
   }
 
   /**
-   * SecretManager resource containing the webhook secret of the GitHub App, formatted as
+   * Optional. SecretManager resource containing the webhook secret of the GitHub App, formatted as
    * `projects/secrets/versions`.
    * @param webhookSecretSecretVersion webhookSecretSecretVersion or {@code null} for none
    */

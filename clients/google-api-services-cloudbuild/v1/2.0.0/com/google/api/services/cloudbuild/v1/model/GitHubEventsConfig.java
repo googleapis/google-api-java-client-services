@@ -31,8 +31,8 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class GitHubEventsConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The resource name of the github enterprise config that should be applied to this
-   * installation. For example:
+   * The resource name of the github enterprise config that should be applied to this installation.
+   * For example:
    * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * The value may be {@code null}.
    */
@@ -55,8 +55,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform
-   * /cloud-builders is "googlecloudplatform".
+   * Owner of the repository. For example: The owner for
+   * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +77,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   private PushFilter push;
 
   /**
-   * Optional. The resource name of the github enterprise config that should be applied to this
-   * installation. For example:
+   * The resource name of the github enterprise config that should be applied to this installation.
+   * For example:
    * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * @return value or {@code null} for none
    */
@@ -87,8 +87,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The resource name of the github enterprise config that should be applied to this
-   * installation. For example:
+   * The resource name of the github enterprise config that should be applied to this installation.
+   * For example:
    * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * @param enterpriseConfigResourceName enterpriseConfigResourceName or {@code null} for none
    */
@@ -134,8 +134,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform
-   * /cloud-builders is "googlecloudplatform".
+   * Owner of the repository. For example: The owner for
+   * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
    * @return value or {@code null} for none
    */
   public java.lang.String getOwner() {
@@ -143,8 +143,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform
-   * /cloud-builders is "googlecloudplatform".
+   * Owner of the repository. For example: The owner for
+   * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
    * @param owner owner or {@code null} for none
    */
   public GitHubEventsConfig setOwner(java.lang.String owner) {

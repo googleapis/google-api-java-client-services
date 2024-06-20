@@ -38,9 +38,13 @@ public final class JobNotification extends com.google.api.client.json.GenericJso
   private Message message;
 
   /**
-   * The Pub/Sub topic where notifications like the job state changes will be published. The topic
-   * must exist in the same project as the job and billings will be charged to this project. If not
-   * specified, no Pub/Sub messages will be sent. Topic format: `projects/{project}/topics/{topic}`.
+   * The Pub/Sub topic where notifications for the job, like state changes, will be published. If
+   * undefined, no Pub/Sub notifications are sent for this job. Specify the topic using the
+   * following format: `projects/{project}/topics/{topic}`. Notably, if you want to specify a
+   * Pub/Sub topic that is in a different project than the job, your administrator must grant your
+   * project's Batch service agent permission to publish to that topic. For more information about
+   * configuring Pub/Sub notifications for a job, see https://cloud.google.com/batch/docs/enable-
+   * notifications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +70,13 @@ public final class JobNotification extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The Pub/Sub topic where notifications like the job state changes will be published. The topic
-   * must exist in the same project as the job and billings will be charged to this project. If not
-   * specified, no Pub/Sub messages will be sent. Topic format: `projects/{project}/topics/{topic}`.
+   * The Pub/Sub topic where notifications for the job, like state changes, will be published. If
+   * undefined, no Pub/Sub notifications are sent for this job. Specify the topic using the
+   * following format: `projects/{project}/topics/{topic}`. Notably, if you want to specify a
+   * Pub/Sub topic that is in a different project than the job, your administrator must grant your
+   * project's Batch service agent permission to publish to that topic. For more information about
+   * configuring Pub/Sub notifications for a job, see https://cloud.google.com/batch/docs/enable-
+   * notifications.
    * @return value or {@code null} for none
    */
   public java.lang.String getPubsubTopic() {
@@ -76,9 +84,13 @@ public final class JobNotification extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The Pub/Sub topic where notifications like the job state changes will be published. The topic
-   * must exist in the same project as the job and billings will be charged to this project. If not
-   * specified, no Pub/Sub messages will be sent. Topic format: `projects/{project}/topics/{topic}`.
+   * The Pub/Sub topic where notifications for the job, like state changes, will be published. If
+   * undefined, no Pub/Sub notifications are sent for this job. Specify the topic using the
+   * following format: `projects/{project}/topics/{topic}`. Notably, if you want to specify a
+   * Pub/Sub topic that is in a different project than the job, your administrator must grant your
+   * project's Batch service agent permission to publish to that topic. For more information about
+   * configuring Pub/Sub notifications for a job, see https://cloud.google.com/batch/docs/enable-
+   * notifications.
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */
   public JobNotification setPubsubTopic(java.lang.String pubsubTopic) {

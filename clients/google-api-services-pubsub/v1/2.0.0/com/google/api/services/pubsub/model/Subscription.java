@@ -68,9 +68,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A policy that specifies the conditions for dead lettering messages in this
    * subscription. If dead_letter_policy is not set, dead lettering is disabled. The Pub/Sub service
-   * account associated with this subscriptions's parent project (i.e., service-{project_number
-   * }@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this
-   * subscription.
+   * account associated with this subscriptions's parent project (i.e.,
+   * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to
+   * Acknowledge() messages on this subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -294,9 +294,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A policy that specifies the conditions for dead lettering messages in this
    * subscription. If dead_letter_policy is not set, dead lettering is disabled. The Pub/Sub service
-   * account associated with this subscriptions's parent project (i.e., service-{project_number
-   * }@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this
-   * subscription.
+   * account associated with this subscriptions's parent project (i.e.,
+   * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to
+   * Acknowledge() messages on this subscription.
    * @return value or {@code null} for none
    */
   public DeadLetterPolicy getDeadLetterPolicy() {
@@ -306,9 +306,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A policy that specifies the conditions for dead lettering messages in this
    * subscription. If dead_letter_policy is not set, dead lettering is disabled. The Pub/Sub service
-   * account associated with this subscriptions's parent project (i.e., service-{project_number
-   * }@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this
-   * subscription.
+   * account associated with this subscriptions's parent project (i.e.,
+   * service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to
+   * Acknowledge() messages on this subscription.
    * @param deadLetterPolicy deadLetterPolicy or {@code null} for none
    */
   public Subscription setDeadLetterPolicy(DeadLetterPolicy deadLetterPolicy) {

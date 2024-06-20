@@ -186,17 +186,17 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
-   * The source image to create this disk. When creating a new instance, one of
-   * initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required
-   * except for local SSD. To create a disk with one of the public operating system images, specify
-   * the image by its family name. For example, specify family/debian-9 to use the latest Debian 9
-   * image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific
-   * version of a public operating system image: projects/debian-cloud/global/images/debian-9
-   * -stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image
-   * name in the following format: global/images/my-custom-image You can also specify a custom image
-   * by its image family, which returns the latest version of the image in that family. Replace the
-   * image name with family/family-name: global/images/family/my-image-family If the source image is
-   * deleted later, this field will not be set.
+   * The source image to create this disk. When creating a new instance boot disk, one of
+   * initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required. To
+   * create a disk with one of the public operating system images, specify the image by its family
+   * name. For example, specify family/debian-9 to use the latest Debian 9 image: projects/debian-
+   * cloud/global/images/family/debian-9 Alternatively, use a specific version of a public operating
+   * system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk
+   * with a custom image that you created, specify the image name in the following format:
+   * global/images/my-custom-image You can also specify a custom image by its image family, which
+   * returns the latest version of the image in that family. Replace the image name with
+   * family/family-name: global/images/family/my-image-family If the source image is deleted later,
+   * this field will not be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,10 +213,10 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private CustomerEncryptionKey sourceImageEncryptionKey;
 
   /**
-   * The source instant-snapshot to create this disk. When creating a new instance, one of
+   * The source instant-snapshot to create this disk. When creating a new instance boot disk, one of
    * initializeParams.sourceSnapshot or initializeParams.sourceInstantSnapshot
-   * initializeParams.sourceImage or disks.source is required except for local SSD. To create a disk
-   * with a snapshot that you created, specify the snapshot name in the following format: us-
+   * initializeParams.sourceImage or disks.source is required. To create a disk with a snapshot that
+   * you created, specify the snapshot name in the following format: us-
    * central1-a/instantSnapshots/my-backup If the source instant-snapshot is deleted later, this
    * field will not be set.
    * The value may be {@code null}.
@@ -225,11 +225,11 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.String sourceInstantSnapshot;
 
   /**
-   * The source snapshot to create this disk. When creating a new instance, one of
-   * initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required
-   * except for local SSD. To create a disk with a snapshot that you created, specify the snapshot
-   * name in the following format: global/snapshots/my-backup If the source snapshot is deleted
-   * later, this field will not be set.
+   * The source snapshot to create this disk. When creating a new instance boot disk, one of
+   * initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required. To
+   * create a disk with a snapshot that you created, specify the snapshot name in the following
+   * format: global/snapshots/my-backup If the source snapshot is deleted later, this field will not
+   * be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -611,17 +611,17 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * The source image to create this disk. When creating a new instance, one of
-   * initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required
-   * except for local SSD. To create a disk with one of the public operating system images, specify
-   * the image by its family name. For example, specify family/debian-9 to use the latest Debian 9
-   * image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific
-   * version of a public operating system image: projects/debian-cloud/global/images/debian-9
-   * -stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image
-   * name in the following format: global/images/my-custom-image You can also specify a custom image
-   * by its image family, which returns the latest version of the image in that family. Replace the
-   * image name with family/family-name: global/images/family/my-image-family If the source image is
-   * deleted later, this field will not be set.
+   * The source image to create this disk. When creating a new instance boot disk, one of
+   * initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required. To
+   * create a disk with one of the public operating system images, specify the image by its family
+   * name. For example, specify family/debian-9 to use the latest Debian 9 image: projects/debian-
+   * cloud/global/images/family/debian-9 Alternatively, use a specific version of a public operating
+   * system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk
+   * with a custom image that you created, specify the image name in the following format:
+   * global/images/my-custom-image You can also specify a custom image by its image family, which
+   * returns the latest version of the image in that family. Replace the image name with
+   * family/family-name: global/images/family/my-image-family If the source image is deleted later,
+   * this field will not be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceImage() {
@@ -629,17 +629,17 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * The source image to create this disk. When creating a new instance, one of
-   * initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required
-   * except for local SSD. To create a disk with one of the public operating system images, specify
-   * the image by its family name. For example, specify family/debian-9 to use the latest Debian 9
-   * image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific
-   * version of a public operating system image: projects/debian-cloud/global/images/debian-9
-   * -stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image
-   * name in the following format: global/images/my-custom-image You can also specify a custom image
-   * by its image family, which returns the latest version of the image in that family. Replace the
-   * image name with family/family-name: global/images/family/my-image-family If the source image is
-   * deleted later, this field will not be set.
+   * The source image to create this disk. When creating a new instance boot disk, one of
+   * initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required. To
+   * create a disk with one of the public operating system images, specify the image by its family
+   * name. For example, specify family/debian-9 to use the latest Debian 9 image: projects/debian-
+   * cloud/global/images/family/debian-9 Alternatively, use a specific version of a public operating
+   * system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk
+   * with a custom image that you created, specify the image name in the following format:
+   * global/images/my-custom-image You can also specify a custom image by its image family, which
+   * returns the latest version of the image in that family. Replace the image name with
+   * family/family-name: global/images/family/my-image-family If the source image is deleted later,
+   * this field will not be set.
    * @param sourceImage sourceImage or {@code null} for none
    */
   public AttachedDiskInitializeParams setSourceImage(java.lang.String sourceImage) {
@@ -671,10 +671,10 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * The source instant-snapshot to create this disk. When creating a new instance, one of
+   * The source instant-snapshot to create this disk. When creating a new instance boot disk, one of
    * initializeParams.sourceSnapshot or initializeParams.sourceInstantSnapshot
-   * initializeParams.sourceImage or disks.source is required except for local SSD. To create a disk
-   * with a snapshot that you created, specify the snapshot name in the following format: us-
+   * initializeParams.sourceImage or disks.source is required. To create a disk with a snapshot that
+   * you created, specify the snapshot name in the following format: us-
    * central1-a/instantSnapshots/my-backup If the source instant-snapshot is deleted later, this
    * field will not be set.
    * @return value or {@code null} for none
@@ -684,10 +684,10 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * The source instant-snapshot to create this disk. When creating a new instance, one of
+   * The source instant-snapshot to create this disk. When creating a new instance boot disk, one of
    * initializeParams.sourceSnapshot or initializeParams.sourceInstantSnapshot
-   * initializeParams.sourceImage or disks.source is required except for local SSD. To create a disk
-   * with a snapshot that you created, specify the snapshot name in the following format: us-
+   * initializeParams.sourceImage or disks.source is required. To create a disk with a snapshot that
+   * you created, specify the snapshot name in the following format: us-
    * central1-a/instantSnapshots/my-backup If the source instant-snapshot is deleted later, this
    * field will not be set.
    * @param sourceInstantSnapshot sourceInstantSnapshot or {@code null} for none
@@ -698,11 +698,11 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * The source snapshot to create this disk. When creating a new instance, one of
-   * initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required
-   * except for local SSD. To create a disk with a snapshot that you created, specify the snapshot
-   * name in the following format: global/snapshots/my-backup If the source snapshot is deleted
-   * later, this field will not be set.
+   * The source snapshot to create this disk. When creating a new instance boot disk, one of
+   * initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required. To
+   * create a disk with a snapshot that you created, specify the snapshot name in the following
+   * format: global/snapshots/my-backup If the source snapshot is deleted later, this field will not
+   * be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshot() {
@@ -710,11 +710,11 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   }
 
   /**
-   * The source snapshot to create this disk. When creating a new instance, one of
-   * initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required
-   * except for local SSD. To create a disk with a snapshot that you created, specify the snapshot
-   * name in the following format: global/snapshots/my-backup If the source snapshot is deleted
-   * later, this field will not be set.
+   * The source snapshot to create this disk. When creating a new instance boot disk, one of
+   * initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required. To
+   * create a disk with a snapshot that you created, specify the snapshot name in the following
+   * format: global/snapshots/my-backup If the source snapshot is deleted later, this field will not
+   * be set.
    * @param sourceSnapshot sourceSnapshot or {@code null} for none
    */
   public AttachedDiskInitializeParams setSourceSnapshot(java.lang.String sourceSnapshot) {

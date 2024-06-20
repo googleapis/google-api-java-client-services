@@ -30,11 +30,29 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. When disable_high_latency_features_sync_delivery is true and using the AnalyzeContent
+   * API, we will not deliver the responses from high latency features in the API response. The
+   * human_agent_assistant_config.notification_config must be configured and
+   * enable_event_based_suggestion must be set to true to receive the responses from high latency
+   * features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableHighLatencyFeaturesSyncDelivery;
+
+  /**
    * Configuration of different suggestion features. One feature can have only one config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig> featureConfigs;
+
+  /**
+   * Optional. List of various generator resource names used in the conversation profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> generators;
 
   /**
    * If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event
@@ -50,6 +68,31 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   private java.lang.Boolean groupSuggestionResponses;
 
   /**
+   * Optional. When disable_high_latency_features_sync_delivery is true and using the AnalyzeContent
+   * API, we will not deliver the responses from high latency features in the API response. The
+   * human_agent_assistant_config.notification_config must be configured and
+   * enable_event_based_suggestion must be set to true to receive the responses from high latency
+   * features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableHighLatencyFeaturesSyncDelivery() {
+    return disableHighLatencyFeaturesSyncDelivery;
+  }
+
+  /**
+   * Optional. When disable_high_latency_features_sync_delivery is true and using the AnalyzeContent
+   * API, we will not deliver the responses from high latency features in the API response. The
+   * human_agent_assistant_config.notification_config must be configured and
+   * enable_event_based_suggestion must be set to true to receive the responses from high latency
+   * features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST
+   * @param disableHighLatencyFeaturesSyncDelivery disableHighLatencyFeaturesSyncDelivery or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfig setDisableHighLatencyFeaturesSyncDelivery(java.lang.Boolean disableHighLatencyFeaturesSyncDelivery) {
+    this.disableHighLatencyFeaturesSyncDelivery = disableHighLatencyFeaturesSyncDelivery;
+    return this;
+  }
+
+  /**
    * Configuration of different suggestion features. One feature can have only one config.
    * @return value or {@code null} for none
    */
@@ -63,6 +106,23 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfig setFeatureConfigs(java.util.List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig> featureConfigs) {
     this.featureConfigs = featureConfigs;
+    return this;
+  }
+
+  /**
+   * Optional. List of various generator resource names used in the conversation profile.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGenerators() {
+    return generators;
+  }
+
+  /**
+   * Optional. List of various generator resource names used in the conversation profile.
+   * @param generators generators or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfig setGenerators(java.util.List<java.lang.String> generators) {
+    this.generators = generators;
     return this;
   }
 

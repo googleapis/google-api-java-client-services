@@ -17,7 +17,7 @@
 package com.google.api.services.policyanalyzer.v1.model;
 
 /**
- * Model definition for GoogleCloudPolicyanalyzerV1Activity.
+ * Represents Activity on a GCP resource over specific observation period.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Analyzer API. For a detailed explanation see:

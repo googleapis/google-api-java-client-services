@@ -45,6 +45,13 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   private java.lang.String automatedAgentReplyType;
 
   /**
+   * The auth code for accessing Call Companion UI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String callCompanionAuthCode;
+
+  /**
    * The unique identifier of the current Dialogflow CX conversation page. Format:
    * `projects//locations//agents//flows//pages/`.
    * The value may be {@code null}.
@@ -140,6 +147,51 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentReply setAutomatedAgentReplyType(java.lang.String automatedAgentReplyType) {
     this.automatedAgentReplyType = automatedAgentReplyType;
+    return this;
+  }
+
+  /**
+   * The auth code for accessing Call Companion UI.
+   * @see #decodeCallCompanionAuthCode()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCallCompanionAuthCode() {
+    return callCompanionAuthCode;
+  }
+
+  /**
+   * The auth code for accessing Call Companion UI.
+   * @see #getCallCompanionAuthCode()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeCallCompanionAuthCode() {
+    return com.google.api.client.util.Base64.decodeBase64(callCompanionAuthCode);
+  }
+
+  /**
+   * The auth code for accessing Call Companion UI.
+   * @see #encodeCallCompanionAuthCode()
+   * @param callCompanionAuthCode callCompanionAuthCode or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AutomatedAgentReply setCallCompanionAuthCode(java.lang.String callCompanionAuthCode) {
+    this.callCompanionAuthCode = callCompanionAuthCode;
+    return this;
+  }
+
+  /**
+   * The auth code for accessing Call Companion UI.
+   * @see #setCallCompanionAuthCode()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GoogleCloudDialogflowV2beta1AutomatedAgentReply encodeCallCompanionAuthCode(byte[] callCompanionAuthCode) {
+    this.callCompanionAuthCode = com.google.api.client.util.Base64.encodeBase64URLSafeString(callCompanionAuthCode);
     return this;
   }
 

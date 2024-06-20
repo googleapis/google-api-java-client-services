@@ -95,6 +95,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkConfig> networks;
 
   /**
+   * Optional. Replicaition configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Replication replication;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -128,6 +135,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> suspensionReasons;
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> tags;
 
   /**
    * The service tier of the instance.
@@ -279,6 +294,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Replicaition configuration.
+   * @return value or {@code null} for none
+   */
+  public Replication getReplication() {
+    return replication;
+  }
+
+  /**
+   * Optional. Replicaition configuration.
+   * @param replication replication or {@code null} for none
+   */
+  public Instance setReplication(Replication replication) {
+    this.replication = replication;
+    return this;
+  }
+
+  /**
    * Output only. Reserved for future use.
    * @return value or {@code null} for none
    */
@@ -360,6 +392,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setSuspensionReasons(java.util.List<java.lang.String> suspensionReasons) {
     this.suspensionReasons = suspensionReasons;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * @param tags tags or {@code null} for none
+   */
+  public Instance setTags(java.util.Map<String, java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

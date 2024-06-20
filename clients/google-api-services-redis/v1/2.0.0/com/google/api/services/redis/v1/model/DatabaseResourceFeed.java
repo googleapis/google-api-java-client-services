@@ -50,6 +50,12 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private ObservabilityMetricData observabilityMetricData;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private DatabaseResourceRecommendationSignalData recommendationSignalData;
 
   /**
@@ -110,12 +116,27 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
    * More feed data would be added in subsequent CLs
    * @return value or {@code null} for none
    */
+  public ObservabilityMetricData getObservabilityMetricData() {
+    return observabilityMetricData;
+  }
+
+  /**
+   * More feed data would be added in subsequent CLs
+   * @param observabilityMetricData observabilityMetricData or {@code null} for none
+   */
+  public DatabaseResourceFeed setObservabilityMetricData(ObservabilityMetricData observabilityMetricData) {
+    this.observabilityMetricData = observabilityMetricData;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public DatabaseResourceRecommendationSignalData getRecommendationSignalData() {
     return recommendationSignalData;
   }
 
   /**
-   * More feed data would be added in subsequent CLs
    * @param recommendationSignalData recommendationSignalData or {@code null} for none
    */
   public DatabaseResourceFeed setRecommendationSignalData(DatabaseResourceRecommendationSignalData recommendationSignalData) {

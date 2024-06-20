@@ -5588,8 +5588,9 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
             private java.lang.String filter;
 
             /** Optional. Only include resources that match the filter in the response. For details on supported
-           filters and syntax, see [Certificates Filtering documentation](https://cloud.google.com
-           /certificate-authority-service/docs/sorting-filtering-certificates#filtering_support).
+           filters and syntax, see [Certificates Filtering
+           documentation](https://cloud.google.com/certificate-authority-service/docs/sorting-filtering-
+           certificates#filtering_support).
              */
             public java.lang.String getFilter() {
               return filter;
@@ -5608,15 +5609,16 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
 
             /**
              * Optional. Specify how the results should be sorted. For details on supported fields
-             * and syntax, see [Certificates Sorting documentation](https://cloud.google.com
-             * /certificate-authority-service/docs/sorting-filtering-certificates#sorting_support).
+             * and syntax, see [Certificates Sorting
+             * documentation](https://cloud.google.com/certificate-authority-service/docs/sorting-
+             * filtering-certificates#sorting_support).
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
             /** Optional. Specify how the results should be sorted. For details on supported fields and syntax, see
-           [Certificates Sorting documentation](https://cloud.google.com/certificate-authority-service/docs
-           /sorting-filtering-certificates#sorting_support).
+           [Certificates Sorting documentation](https://cloud.google.com/certificate-authority-
+           service/docs/sorting-filtering-certificates#sorting_support).
              */
             public java.lang.String getOrderBy() {
               return orderBy;
@@ -5624,8 +5626,9 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
 
             /**
              * Optional. Specify how the results should be sorted. For details on supported fields
-             * and syntax, see [Certificates Sorting documentation](https://cloud.google.com
-             * /certificate-authority-service/docs/sorting-filtering-certificates#sorting_support).
+             * and syntax, see [Certificates Sorting
+             * documentation](https://cloud.google.com/certificate-authority-service/docs/sorting-
+             * filtering-certificates#sorting_support).
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;

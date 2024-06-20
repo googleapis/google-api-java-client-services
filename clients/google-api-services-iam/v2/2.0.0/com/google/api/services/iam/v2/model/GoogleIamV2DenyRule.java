@@ -57,11 +57,12 @@ public final class GoogleIamV2DenyRule extends com.google.api.client.json.Generi
    * specific Google Account. Includes Gmail, Cloud Identity, and Google Workspace user accounts.
    * For example, `principal://goog/subject/alice@example.com`. *
    * `principal://iam.googleapis.com/projects/-/serviceAccounts/{service_account_id}`: A Google
-   * Cloud service account. For example, `principal://iam.googleapis.com/projects/-/serviceAccounts
-   * /my-service-account@iam.gserviceaccount.com`. * `principalSet://goog/group/{group_id}`: A
-   * Google group. For example, `principalSet://goog/group/admins@example.com`. *
-   * `principalSet://goog/public:all`: A special identifier that represents any principal that is on
-   * the internet, even if they do not have a Google Account or are not logged in. *
+   * Cloud service account. For example,
+   * `principal://iam.googleapis.com/projects/-/serviceAccounts/my-service-
+   * account@iam.gserviceaccount.com`. * `principalSet://goog/group/{group_id}`: A Google group. For
+   * example, `principalSet://goog/group/admins@example.com`. * `principalSet://goog/public:all`: A
+   * special identifier that represents any principal that is on the internet, even if they do not
+   * have a Google Account or are not logged in. *
    * `principalSet://goog/cloudIdentityCustomerId/{customer_id}`: All of the principals associated
    * with the specified Google Workspace or Cloud Identity customer ID. For example,
    * `principalSet://goog/cloudIdentityCustomerId/C01Abc35`. * `principal://iam.googleapis.com/locat
@@ -176,11 +177,12 @@ public final class GoogleIamV2DenyRule extends com.google.api.client.json.Generi
    * specific Google Account. Includes Gmail, Cloud Identity, and Google Workspace user accounts.
    * For example, `principal://goog/subject/alice@example.com`. *
    * `principal://iam.googleapis.com/projects/-/serviceAccounts/{service_account_id}`: A Google
-   * Cloud service account. For example, `principal://iam.googleapis.com/projects/-/serviceAccounts
-   * /my-service-account@iam.gserviceaccount.com`. * `principalSet://goog/group/{group_id}`: A
-   * Google group. For example, `principalSet://goog/group/admins@example.com`. *
-   * `principalSet://goog/public:all`: A special identifier that represents any principal that is on
-   * the internet, even if they do not have a Google Account or are not logged in. *
+   * Cloud service account. For example,
+   * `principal://iam.googleapis.com/projects/-/serviceAccounts/my-service-
+   * account@iam.gserviceaccount.com`. * `principalSet://goog/group/{group_id}`: A Google group. For
+   * example, `principalSet://goog/group/admins@example.com`. * `principalSet://goog/public:all`: A
+   * special identifier that represents any principal that is on the internet, even if they do not
+   * have a Google Account or are not logged in. *
    * `principalSet://goog/cloudIdentityCustomerId/{customer_id}`: All of the principals associated
    * with the specified Google Workspace or Cloud Identity customer ID. For example,
    * `principalSet://goog/cloudIdentityCustomerId/C01Abc35`. * `principal://iam.googleapis.com/locat
@@ -227,11 +229,12 @@ public final class GoogleIamV2DenyRule extends com.google.api.client.json.Generi
    * specific Google Account. Includes Gmail, Cloud Identity, and Google Workspace user accounts.
    * For example, `principal://goog/subject/alice@example.com`. *
    * `principal://iam.googleapis.com/projects/-/serviceAccounts/{service_account_id}`: A Google
-   * Cloud service account. For example, `principal://iam.googleapis.com/projects/-/serviceAccounts
-   * /my-service-account@iam.gserviceaccount.com`. * `principalSet://goog/group/{group_id}`: A
-   * Google group. For example, `principalSet://goog/group/admins@example.com`. *
-   * `principalSet://goog/public:all`: A special identifier that represents any principal that is on
-   * the internet, even if they do not have a Google Account or are not logged in. *
+   * Cloud service account. For example,
+   * `principal://iam.googleapis.com/projects/-/serviceAccounts/my-service-
+   * account@iam.gserviceaccount.com`. * `principalSet://goog/group/{group_id}`: A Google group. For
+   * example, `principalSet://goog/group/admins@example.com`. * `principalSet://goog/public:all`: A
+   * special identifier that represents any principal that is on the internet, even if they do not
+   * have a Google Account or are not logged in. *
    * `principalSet://goog/cloudIdentityCustomerId/{customer_id}`: All of the principals associated
    * with the specified Google Workspace or Cloud Identity customer ID. For example,
    * `principalSet://goog/cloudIdentityCustomerId/C01Abc35`. * `principal://iam.googleapis.com/locat

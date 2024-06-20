@@ -38,7 +38,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponseSearchResult e
   private GoogleCloudDiscoveryengineV1alphaChunk chunk;
 
   /**
-   * The document data snippet in the search response. Only fields that are marked as retrievable
+   * The document data snippet in the search response. Only fields that are marked as `retrievable`
    * are populated.
    * The value may be {@code null}.
    */
@@ -85,7 +85,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponseSearchResult e
   }
 
   /**
-   * The document data snippet in the search response. Only fields that are marked as retrievable
+   * The document data snippet in the search response. Only fields that are marked as `retrievable`
    * are populated.
    * @return value or {@code null} for none
    */
@@ -94,7 +94,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponseSearchResult e
   }
 
   /**
-   * The document data snippet in the search response. Only fields that are marked as retrievable
+   * The document data snippet in the search response. Only fields that are marked as `retrievable`
    * are populated.
    * @param document document or {@code null} for none
    */

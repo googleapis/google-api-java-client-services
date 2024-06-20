@@ -32,10 +32,10 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class LoggingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * For PosixFilesystem transfers, enables [file system transfer logs](https://cloud.google.com
-   * /storage-transfer/docs/on-prem-transfer-log-format) instead of, or in addition to, Cloud
-   * Logging. This option ignores [LoggableAction] and [LoggableActionState]. If these are set,
-   * Cloud Logging will also be enabled for this transfer.
+   * For PosixFilesystem transfers, enables [file system transfer
+   * logs](https://cloud.google.com/storage-transfer/docs/on-prem-transfer-log-format) instead of,
+   * or in addition to, Cloud Logging. This option ignores [LoggableAction] and
+   * [LoggableActionState]. If these are set, Cloud Logging will also be enabled for this transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,10 +56,10 @@ public final class LoggingConfig extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> logActions;
 
   /**
-   * For PosixFilesystem transfers, enables [file system transfer logs](https://cloud.google.com
-   * /storage-transfer/docs/on-prem-transfer-log-format) instead of, or in addition to, Cloud
-   * Logging. This option ignores [LoggableAction] and [LoggableActionState]. If these are set,
-   * Cloud Logging will also be enabled for this transfer.
+   * For PosixFilesystem transfers, enables [file system transfer
+   * logs](https://cloud.google.com/storage-transfer/docs/on-prem-transfer-log-format) instead of,
+   * or in addition to, Cloud Logging. This option ignores [LoggableAction] and
+   * [LoggableActionState]. If these are set, Cloud Logging will also be enabled for this transfer.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableOnpremGcsTransferLogs() {
@@ -67,10 +67,10 @@ public final class LoggingConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * For PosixFilesystem transfers, enables [file system transfer logs](https://cloud.google.com
-   * /storage-transfer/docs/on-prem-transfer-log-format) instead of, or in addition to, Cloud
-   * Logging. This option ignores [LoggableAction] and [LoggableActionState]. If these are set,
-   * Cloud Logging will also be enabled for this transfer.
+   * For PosixFilesystem transfers, enables [file system transfer
+   * logs](https://cloud.google.com/storage-transfer/docs/on-prem-transfer-log-format) instead of,
+   * or in addition to, Cloud Logging. This option ignores [LoggableAction] and
+   * [LoggableActionState]. If these are set, Cloud Logging will also be enabled for this transfer.
    * @param enableOnpremGcsTransferLogs enableOnpremGcsTransferLogs or {@code null} for none
    */
   public LoggingConfig setEnableOnpremGcsTransferLogs(java.lang.Boolean enableOnpremGcsTransferLogs) {

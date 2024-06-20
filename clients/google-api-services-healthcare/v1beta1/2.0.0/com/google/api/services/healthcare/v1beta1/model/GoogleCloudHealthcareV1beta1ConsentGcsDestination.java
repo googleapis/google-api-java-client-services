@@ -30,20 +30,20 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class GoogleCloudHealthcareV1beta1ConsentGcsDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * URI for a Cloud Storage directory where the server writes result files, in the format `gs
-   * ://{bucket-id}/{path/to/destination/dir}`. If there is no trailing slash, the service appends
-   * one when composing the object path. The user is responsible for creating the Cloud Storage
-   * bucket and directory referenced in `uri_prefix`.
+   * URI for a Cloud Storage directory where the server writes result files, in the format
+   * `gs://{bucket-id}/{path/to/destination/dir}`. If there is no trailing slash, the service
+   * appends one when composing the object path. The user is responsible for creating the Cloud
+   * Storage bucket and directory referenced in `uri_prefix`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uriPrefix;
 
   /**
-   * URI for a Cloud Storage directory where the server writes result files, in the format `gs
-   * ://{bucket-id}/{path/to/destination/dir}`. If there is no trailing slash, the service appends
-   * one when composing the object path. The user is responsible for creating the Cloud Storage
-   * bucket and directory referenced in `uri_prefix`.
+   * URI for a Cloud Storage directory where the server writes result files, in the format
+   * `gs://{bucket-id}/{path/to/destination/dir}`. If there is no trailing slash, the service
+   * appends one when composing the object path. The user is responsible for creating the Cloud
+   * Storage bucket and directory referenced in `uri_prefix`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUriPrefix() {
@@ -51,10 +51,10 @@ public final class GoogleCloudHealthcareV1beta1ConsentGcsDestination extends com
   }
 
   /**
-   * URI for a Cloud Storage directory where the server writes result files, in the format `gs
-   * ://{bucket-id}/{path/to/destination/dir}`. If there is no trailing slash, the service appends
-   * one when composing the object path. The user is responsible for creating the Cloud Storage
-   * bucket and directory referenced in `uri_prefix`.
+   * URI for a Cloud Storage directory where the server writes result files, in the format
+   * `gs://{bucket-id}/{path/to/destination/dir}`. If there is no trailing slash, the service
+   * appends one when composing the object path. The user is responsible for creating the Cloud
+   * Storage bucket and directory referenced in `uri_prefix`.
    * @param uriPrefix uriPrefix or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1ConsentGcsDestination setUriPrefix(java.lang.String uriPrefix) {

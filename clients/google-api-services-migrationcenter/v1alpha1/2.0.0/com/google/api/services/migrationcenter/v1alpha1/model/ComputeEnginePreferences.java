@@ -30,9 +30,9 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class ComputeEnginePreferences extends com.google.api.client.json.GenericJson {
 
   /**
-   * Overridden by os_pricing_preferences if specified. License type to consider when calculating
-   * costs for virtual machine insights and recommendations. If unspecified, costs are calculated
-   * based on the default licensing plan.
+   * If os_pricing_preferences is specified, it overrides this field. License type to consider when
+   * calculating costs for virtual machine insights and recommendations. If unspecified, costs are
+   * calculated based on the default licensing plan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,6 +46,13 @@ public final class ComputeEnginePreferences extends com.google.api.client.json.G
   private MachinePreferences machinePreferences;
 
   /**
+   * Optional. Pricing options for OS images.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OperatingSystemPricingPreferences osPricingPreferences;
+
+  /**
    * Persistent disk type to use. If unspecified (default), all types are considered, based on
    * available usage data.
    * The value may be {@code null}.
@@ -54,9 +61,9 @@ public final class ComputeEnginePreferences extends com.google.api.client.json.G
   private java.lang.String persistentDiskType;
 
   /**
-   * Overridden by os_pricing_preferences if specified. License type to consider when calculating
-   * costs for virtual machine insights and recommendations. If unspecified, costs are calculated
-   * based on the default licensing plan.
+   * If os_pricing_preferences is specified, it overrides this field. License type to consider when
+   * calculating costs for virtual machine insights and recommendations. If unspecified, costs are
+   * calculated based on the default licensing plan.
    * @return value or {@code null} for none
    */
   public java.lang.String getLicenseType() {
@@ -64,9 +71,9 @@ public final class ComputeEnginePreferences extends com.google.api.client.json.G
   }
 
   /**
-   * Overridden by os_pricing_preferences if specified. License type to consider when calculating
-   * costs for virtual machine insights and recommendations. If unspecified, costs are calculated
-   * based on the default licensing plan.
+   * If os_pricing_preferences is specified, it overrides this field. License type to consider when
+   * calculating costs for virtual machine insights and recommendations. If unspecified, costs are
+   * calculated based on the default licensing plan.
    * @param licenseType licenseType or {@code null} for none
    */
   public ComputeEnginePreferences setLicenseType(java.lang.String licenseType) {
@@ -88,6 +95,23 @@ public final class ComputeEnginePreferences extends com.google.api.client.json.G
    */
   public ComputeEnginePreferences setMachinePreferences(MachinePreferences machinePreferences) {
     this.machinePreferences = machinePreferences;
+    return this;
+  }
+
+  /**
+   * Optional. Pricing options for OS images.
+   * @return value or {@code null} for none
+   */
+  public OperatingSystemPricingPreferences getOsPricingPreferences() {
+    return osPricingPreferences;
+  }
+
+  /**
+   * Optional. Pricing options for OS images.
+   * @param osPricingPreferences osPricingPreferences or {@code null} for none
+   */
+  public ComputeEnginePreferences setOsPricingPreferences(OperatingSystemPricingPreferences osPricingPreferences) {
+    this.osPricingPreferences = osPricingPreferences;
     return this;
   }
 

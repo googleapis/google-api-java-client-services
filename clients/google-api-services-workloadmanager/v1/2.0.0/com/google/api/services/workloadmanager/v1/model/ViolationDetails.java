@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message describing the violdation in execution result
+ * Message describing the violation in an evaluation result.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,28 +30,28 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ViolationDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * the name of asset
+   * The name of the asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String asset;
 
   /**
-   * observed
+   * Details of the violation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> observed;
 
   /**
-   * the service account associate with resource
+   * The service account associated with the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
 
   /**
-   * the name of asset
+   * The name of the asset.
    * @return value or {@code null} for none
    */
   public java.lang.String getAsset() {
@@ -59,7 +59,7 @@ public final class ViolationDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * the name of asset
+   * The name of the asset.
    * @param asset asset or {@code null} for none
    */
   public ViolationDetails setAsset(java.lang.String asset) {
@@ -68,7 +68,7 @@ public final class ViolationDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * observed
+   * Details of the violation.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getObserved() {
@@ -76,7 +76,7 @@ public final class ViolationDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * observed
+   * Details of the violation.
    * @param observed observed or {@code null} for none
    */
   public ViolationDetails setObserved(java.util.Map<String, java.lang.String> observed) {
@@ -85,7 +85,7 @@ public final class ViolationDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * the service account associate with resource
+   * The service account associated with the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -93,7 +93,7 @@ public final class ViolationDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * the service account associate with resource
+   * The service account associated with the resource.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public ViolationDetails setServiceAccount(java.lang.String serviceAccount) {

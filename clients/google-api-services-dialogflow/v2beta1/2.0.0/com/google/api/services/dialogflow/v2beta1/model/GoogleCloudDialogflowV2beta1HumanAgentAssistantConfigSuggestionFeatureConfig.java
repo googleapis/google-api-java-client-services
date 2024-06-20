@@ -68,6 +68,21 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   private java.lang.Boolean enableEventBasedSuggestion;
 
   /**
+   * Optional. Enable query suggestion only. Supported features: KNOWLEDGE_ASSIST
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableQuerySuggestionOnly;
+
+  /**
+   * Optional. Enable query suggestion even if we can't find its answer. By default, queries are
+   * suggested only if we find its answer. Supported features: KNOWLEDGE_ASSIST
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableQuerySuggestionWhenNoAnswer;
+
+  /**
    * Configs of query.
    * The value may be {@code null}.
    */
@@ -177,6 +192,42 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig setEnableEventBasedSuggestion(java.lang.Boolean enableEventBasedSuggestion) {
     this.enableEventBasedSuggestion = enableEventBasedSuggestion;
+    return this;
+  }
+
+  /**
+   * Optional. Enable query suggestion only. Supported features: KNOWLEDGE_ASSIST
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableQuerySuggestionOnly() {
+    return enableQuerySuggestionOnly;
+  }
+
+  /**
+   * Optional. Enable query suggestion only. Supported features: KNOWLEDGE_ASSIST
+   * @param enableQuerySuggestionOnly enableQuerySuggestionOnly or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig setEnableQuerySuggestionOnly(java.lang.Boolean enableQuerySuggestionOnly) {
+    this.enableQuerySuggestionOnly = enableQuerySuggestionOnly;
+    return this;
+  }
+
+  /**
+   * Optional. Enable query suggestion even if we can't find its answer. By default, queries are
+   * suggested only if we find its answer. Supported features: KNOWLEDGE_ASSIST
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableQuerySuggestionWhenNoAnswer() {
+    return enableQuerySuggestionWhenNoAnswer;
+  }
+
+  /**
+   * Optional. Enable query suggestion even if we can't find its answer. By default, queries are
+   * suggested only if we find its answer. Supported features: KNOWLEDGE_ASSIST
+   * @param enableQuerySuggestionWhenNoAnswer enableQuerySuggestionWhenNoAnswer or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig setEnableQuerySuggestionWhenNoAnswer(java.lang.Boolean enableQuerySuggestionWhenNoAnswer) {
+    this.enableQuerySuggestionWhenNoAnswer = enableQuerySuggestionWhenNoAnswer;
     return this;
   }
 

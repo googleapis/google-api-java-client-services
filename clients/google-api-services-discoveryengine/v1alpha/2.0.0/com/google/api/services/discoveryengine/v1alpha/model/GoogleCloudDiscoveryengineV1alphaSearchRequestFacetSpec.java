@@ -76,9 +76,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpec exten
   private GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpecFacetKey facetKey;
 
   /**
-   * Maximum of facet values that should be returned for this facet. If unspecified, defaults to 20.
-   * The maximum allowed value is 300. Values above 300 are coerced to 300. If this field is
-   * negative, an `INVALID_ARGUMENT` is returned.
+   * Maximum facet values that are returned for this facet. If unspecified, defaults to 20. The
+   * maximum allowed value is 300. Values above 300 are coerced to 300. For aggregation in
+   * healthcare search, when the [FacetKey.key] is "healthcare_aggregation_key", the limit will be
+   * overridden to 10,000 internally, regardless of the value set here. If this field is negative,
+   * an `INVALID_ARGUMENT` is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -186,9 +188,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpec exten
   }
 
   /**
-   * Maximum of facet values that should be returned for this facet. If unspecified, defaults to 20.
-   * The maximum allowed value is 300. Values above 300 are coerced to 300. If this field is
-   * negative, an `INVALID_ARGUMENT` is returned.
+   * Maximum facet values that are returned for this facet. If unspecified, defaults to 20. The
+   * maximum allowed value is 300. Values above 300 are coerced to 300. For aggregation in
+   * healthcare search, when the [FacetKey.key] is "healthcare_aggregation_key", the limit will be
+   * overridden to 10,000 internally, regardless of the value set here. If this field is negative,
+   * an `INVALID_ARGUMENT` is returned.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLimit() {
@@ -196,9 +200,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpec exten
   }
 
   /**
-   * Maximum of facet values that should be returned for this facet. If unspecified, defaults to 20.
-   * The maximum allowed value is 300. Values above 300 are coerced to 300. If this field is
-   * negative, an `INVALID_ARGUMENT` is returned.
+   * Maximum facet values that are returned for this facet. If unspecified, defaults to 20. The
+   * maximum allowed value is 300. Values above 300 are coerced to 300. For aggregation in
+   * healthcare search, when the [FacetKey.key] is "healthcare_aggregation_key", the limit will be
+   * overridden to 10,000 internally, regardless of the value set here. If this field is negative,
+   * an `INVALID_ARGUMENT` is returned.
    * @param limit limit or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpec setLimit(java.lang.Integer limit) {

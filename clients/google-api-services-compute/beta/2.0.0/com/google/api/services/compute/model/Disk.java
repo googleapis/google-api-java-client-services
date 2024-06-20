@@ -37,6 +37,17 @@ package com.google.api.services.compute.model;
 public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
+   * The access mode of the disk. - READ_WRITE_SINGLE: The default AccessMode, means the disk can be
+   * attached to single instance in RW mode. - READ_WRITE_MANY: The AccessMode means the disk can be
+   * attached to multiple instances in RW mode. - READ_ONLY_MANY: The AccessMode means the disk can
+   * be attached to multiple instances in RO mode. The AccessMode is only valid for Hyperdisk disk
+   * types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accessMode;
+
+  /**
    * The architecture of the disk. Valid values are ARM64 or X86_64.
    * The value may be {@code null}.
    */
@@ -497,8 +508,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
    * be modified after the disk is created. This includes a list of URLs to the license resource.
-   * For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects
-   * /debian-cloud/global/licenses/debian-9-stretch
+   * For example, to provide a debian license:
+   * https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -519,6 +530,31 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * The access mode of the disk. - READ_WRITE_SINGLE: The default AccessMode, means the disk can be
+   * attached to single instance in RW mode. - READ_WRITE_MANY: The AccessMode means the disk can be
+   * attached to multiple instances in RW mode. - READ_ONLY_MANY: The AccessMode means the disk can
+   * be attached to multiple instances in RO mode. The AccessMode is only valid for Hyperdisk disk
+   * types.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccessMode() {
+    return accessMode;
+  }
+
+  /**
+   * The access mode of the disk. - READ_WRITE_SINGLE: The default AccessMode, means the disk can be
+   * attached to single instance in RW mode. - READ_WRITE_MANY: The AccessMode means the disk can be
+   * attached to multiple instances in RW mode. - READ_ONLY_MANY: The AccessMode means the disk can
+   * be attached to multiple instances in RO mode. The AccessMode is only valid for Hyperdisk disk
+   * types.
+   * @param accessMode accessMode or {@code null} for none
+   */
+  public Disk setAccessMode(java.lang.String accessMode) {
+    this.accessMode = accessMode;
+    return this;
+  }
 
   /**
    * The architecture of the disk. Valid values are ARM64 or X86_64.
@@ -1633,8 +1669,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
    * be modified after the disk is created. This includes a list of URLs to the license resource.
-   * For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects
-   * /debian-cloud/global/licenses/debian-9-stretch
+   * For example, to provide a debian license:
+   * https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUserLicenses() {
@@ -1644,8 +1680,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
    * be modified after the disk is created. This includes a list of URLs to the license resource.
-   * For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects
-   * /debian-cloud/global/licenses/debian-9-stretch
+   * For example, to provide a debian license:
+   * https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
    * @param userLicenses userLicenses or {@code null} for none
    */
   public Disk setUserLicenses(java.util.List<java.lang.String> userLicenses) {

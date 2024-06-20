@@ -54,6 +54,19 @@ public final class DnsSettings extends com.google.api.client.json.GenericJson {
   private GoogleDomainsDns googleDomainsDns;
 
   /**
+   * Output only. Indicates if this `Registration` has configured one of the following deprecated
+   * Google Domains DNS features: * Domain forwarding (HTTP `301` and `302` response status codes),
+   * * Email forwarding. See https://cloud.google.com/domains/docs/deprecations/feature-deprecations
+   * for more details. If any of these features is enabled call the
+   * `RetrieveGoogleDomainsForwardingConfig` method to get details about the feature's
+   * configuration. A forwarding configuration might not work correctly if required DNS records are
+   * not present in the domain's authoritative DNS Zone.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean googleDomainsRedirectsDataAvailable;
+
+  /**
    * An arbitrary DNS provider identified by its name servers.
    * @return value or {@code null} for none
    */
@@ -105,6 +118,35 @@ public final class DnsSettings extends com.google.api.client.json.GenericJson {
    */
   public DnsSettings setGoogleDomainsDns(GoogleDomainsDns googleDomainsDns) {
     this.googleDomainsDns = googleDomainsDns;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates if this `Registration` has configured one of the following deprecated
+   * Google Domains DNS features: * Domain forwarding (HTTP `301` and `302` response status codes),
+   * * Email forwarding. See https://cloud.google.com/domains/docs/deprecations/feature-deprecations
+   * for more details. If any of these features is enabled call the
+   * `RetrieveGoogleDomainsForwardingConfig` method to get details about the feature's
+   * configuration. A forwarding configuration might not work correctly if required DNS records are
+   * not present in the domain's authoritative DNS Zone.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGoogleDomainsRedirectsDataAvailable() {
+    return googleDomainsRedirectsDataAvailable;
+  }
+
+  /**
+   * Output only. Indicates if this `Registration` has configured one of the following deprecated
+   * Google Domains DNS features: * Domain forwarding (HTTP `301` and `302` response status codes),
+   * * Email forwarding. See https://cloud.google.com/domains/docs/deprecations/feature-deprecations
+   * for more details. If any of these features is enabled call the
+   * `RetrieveGoogleDomainsForwardingConfig` method to get details about the feature's
+   * configuration. A forwarding configuration might not work correctly if required DNS records are
+   * not present in the domain's authoritative DNS Zone.
+   * @param googleDomainsRedirectsDataAvailable googleDomainsRedirectsDataAvailable or {@code null} for none
+   */
+  public DnsSettings setGoogleDomainsRedirectsDataAvailable(java.lang.Boolean googleDomainsRedirectsDataAvailable) {
+    this.googleDomainsRedirectsDataAvailable = googleDomainsRedirectsDataAvailable;
     return this;
   }
 

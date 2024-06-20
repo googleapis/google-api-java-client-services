@@ -32,6 +32,19 @@ package com.google.api.services.chromemanagement.v1.model;
 public final class GoogleChromeManagementV1TelemetryDevice extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. App reports collected periodically sorted in a decreasing order of report_time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleChromeManagementV1AppReport> appReport;
+
+  static {
+    // hack to force ProGuard to consider GoogleChromeManagementV1AppReport used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleChromeManagementV1AppReport.class);
+  }
+
+  /**
    * Output only. Audio reports collected periodically sorted in a decreasing order of report_time.
    * The value may be {@code null}.
    */
@@ -329,6 +342,23 @@ public final class GoogleChromeManagementV1TelemetryDevice extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleChromeManagementV1ThunderboltInfo> thunderboltInfo;
+
+  /**
+   * Output only. App reports collected periodically sorted in a decreasing order of report_time.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleChromeManagementV1AppReport> getAppReport() {
+    return appReport;
+  }
+
+  /**
+   * Output only. App reports collected periodically sorted in a decreasing order of report_time.
+   * @param appReport appReport or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryDevice setAppReport(java.util.List<GoogleChromeManagementV1AppReport> appReport) {
+    this.appReport = appReport;
+    return this;
+  }
 
   /**
    * Output only. Audio reports collected periodically sorted in a decreasing order of report_time.

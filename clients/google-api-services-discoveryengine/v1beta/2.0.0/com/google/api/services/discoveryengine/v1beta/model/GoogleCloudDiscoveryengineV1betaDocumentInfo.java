@@ -54,8 +54,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentInfo extends com.goog
 
   /**
    * Quantity of the Document associated with the user event. Defaults to 1. For example, this field
-   * will be 2 if two quantities of the same Document are involved in a `add-to-cart` event.
-   * Required for events of the following event types: * `add-to-cart` * `purchase`
+   * is 2 if two quantities of the same Document are involved in a `add-to-cart` event. Required for
+   * events of the following event types: * `add-to-cart` * `purchase`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +125,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentInfo extends com.goog
 
   /**
    * Quantity of the Document associated with the user event. Defaults to 1. For example, this field
-   * will be 2 if two quantities of the same Document are involved in a `add-to-cart` event.
-   * Required for events of the following event types: * `add-to-cart` * `purchase`
+   * is 2 if two quantities of the same Document are involved in a `add-to-cart` event. Required for
+   * events of the following event types: * `add-to-cart` * `purchase`
    * @return value or {@code null} for none
    */
   public java.lang.Integer getQuantity() {
@@ -135,8 +135,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocumentInfo extends com.goog
 
   /**
    * Quantity of the Document associated with the user event. Defaults to 1. For example, this field
-   * will be 2 if two quantities of the same Document are involved in a `add-to-cart` event.
-   * Required for events of the following event types: * `add-to-cart` * `purchase`
+   * is 2 if two quantities of the same Document are involved in a `add-to-cart` event. Required for
+   * events of the following event types: * `add-to-cart` * `purchase`
    * @param quantity quantity or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocumentInfo setQuantity(java.lang.Integer quantity) {

@@ -2120,6 +2120,160 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Initiates the `Push Transfer` process to transfer the domain to another registrar. The process
+         * might complete instantly or might require confirmation or additional work. Check the emails sent
+         * to the email address of the registrant. The process is aborted after a timeout if it's not
+         * completed. This method is only supported for domains that have the `REQUIRE_PUSH_TRANSFER`
+         * property in the list of `domain_properties`. The domain must also be unlocked before it can be
+         * transferred to a different registrar. For more information, see [Transfer a registered domain to
+         * another registrar](https://cloud.google.com/domains/docs/transfer-domain-to-another-registrar).
+         *
+         * Create a request for the method "registrations.initiatePushTransfer".
+         *
+         * This request holds the parameters needed by the domains server.  After setting any optional
+         * parameters, call the {@link InitiatePushTransfer#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param registration Required. The name of the `Registration` for which the push transfer is initiated, in the format
+         *        `projects/locations/registrations`.
+         * @param content the {@link com.google.api.services.domains.v1.model.InitiatePushTransferRequest}
+         * @return the request
+         */
+        public InitiatePushTransfer initiatePushTransfer(java.lang.String registration, com.google.api.services.domains.v1.model.InitiatePushTransferRequest content) throws java.io.IOException {
+          InitiatePushTransfer result = new InitiatePushTransfer(registration, content);
+          initialize(result);
+          return result;
+        }
+
+        public class InitiatePushTransfer extends CloudDomainsRequest<com.google.api.services.domains.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+registration}:initiatePushTransfer";
+
+          private final java.util.regex.Pattern REGISTRATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+
+          /**
+           * Initiates the `Push Transfer` process to transfer the domain to another registrar. The process
+           * might complete instantly or might require confirmation or additional work. Check the emails
+           * sent to the email address of the registrant. The process is aborted after a timeout if it's not
+           * completed. This method is only supported for domains that have the `REQUIRE_PUSH_TRANSFER`
+           * property in the list of `domain_properties`. The domain must also be unlocked before it can be
+           * transferred to a different registrar. For more information, see [Transfer a registered domain
+           * to another registrar](https://cloud.google.com/domains/docs/transfer-domain-to-another-
+           * registrar).
+           *
+           * Create a request for the method "registrations.initiatePushTransfer".
+           *
+           * This request holds the parameters needed by the the domains server.  After setting any optional
+           * parameters, call the {@link InitiatePushTransfer#execute()} method to invoke the remote
+           * operation. <p> {@link InitiatePushTransfer#initialize(com.google.api.client.googleapis.services
+           * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param registration Required. The name of the `Registration` for which the push transfer is initiated, in the format
+         *        `projects/locations/registrations`.
+           * @param content the {@link com.google.api.services.domains.v1.model.InitiatePushTransferRequest}
+           * @since 1.13
+           */
+          protected InitiatePushTransfer(java.lang.String registration, com.google.api.services.domains.v1.model.InitiatePushTransferRequest content) {
+            super(CloudDomains.this, "POST", REST_PATH, content, com.google.api.services.domains.v1.model.Operation.class);
+            this.registration = com.google.api.client.util.Preconditions.checkNotNull(registration, "Required parameter registration must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGISTRATION_PATTERN.matcher(registration).matches(),
+                  "Parameter registration must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+            }
+          }
+
+          @Override
+          public InitiatePushTransfer set$Xgafv(java.lang.String $Xgafv) {
+            return (InitiatePushTransfer) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public InitiatePushTransfer setAccessToken(java.lang.String accessToken) {
+            return (InitiatePushTransfer) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public InitiatePushTransfer setAlt(java.lang.String alt) {
+            return (InitiatePushTransfer) super.setAlt(alt);
+          }
+
+          @Override
+          public InitiatePushTransfer setCallback(java.lang.String callback) {
+            return (InitiatePushTransfer) super.setCallback(callback);
+          }
+
+          @Override
+          public InitiatePushTransfer setFields(java.lang.String fields) {
+            return (InitiatePushTransfer) super.setFields(fields);
+          }
+
+          @Override
+          public InitiatePushTransfer setKey(java.lang.String key) {
+            return (InitiatePushTransfer) super.setKey(key);
+          }
+
+          @Override
+          public InitiatePushTransfer setOauthToken(java.lang.String oauthToken) {
+            return (InitiatePushTransfer) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public InitiatePushTransfer setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (InitiatePushTransfer) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public InitiatePushTransfer setQuotaUser(java.lang.String quotaUser) {
+            return (InitiatePushTransfer) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public InitiatePushTransfer setUploadType(java.lang.String uploadType) {
+            return (InitiatePushTransfer) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public InitiatePushTransfer setUploadProtocol(java.lang.String uploadProtocol) {
+            return (InitiatePushTransfer) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the `Registration` for which the push transfer is initiated, in
+           * the format `projects/locations/registrations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String registration;
+
+          /** Required. The name of the `Registration` for which the push transfer is initiated, in the format
+         `projects/locations/registrations`.
+           */
+          public java.lang.String getRegistration() {
+            return registration;
+          }
+
+          /**
+           * Required. The name of the `Registration` for which the push transfer is initiated, in
+           * the format `projects/locations/registrations`.
+           */
+          public InitiatePushTransfer setRegistration(java.lang.String registration) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGISTRATION_PATTERN.matcher(registration).matches(),
+                  "Parameter registration must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+            }
+            this.registration = registration;
+            return this;
+          }
+
+          @Override
+          public InitiatePushTransfer set(String parameterName, Object value) {
+            return (InitiatePushTransfer) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists the `Registration` resources in a project.
          *
          * Create a request for the method "registrations.list".
@@ -2668,8 +2822,155 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Renews a recently expired domain. This method can only be called on domains that expired in the
+         * previous 30 days. After the renewal, the new expiration time of the domain is one year after the
+         * old expiration time and you are charged a `yearly_price` for the renewal.
+         *
+         * Create a request for the method "registrations.renewDomain".
+         *
+         * This request holds the parameters needed by the domains server.  After setting any optional
+         * parameters, call the {@link RenewDomain#execute()} method to invoke the remote operation.
+         *
+         * @param registration Required. The name of the `Registration` whish is being renewed, in the format
+         *        `projects/locations/registrations`.
+         * @param content the {@link com.google.api.services.domains.v1.model.RenewDomainRequest}
+         * @return the request
+         */
+        public RenewDomain renewDomain(java.lang.String registration, com.google.api.services.domains.v1.model.RenewDomainRequest content) throws java.io.IOException {
+          RenewDomain result = new RenewDomain(registration, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RenewDomain extends CloudDomainsRequest<com.google.api.services.domains.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+registration}:renewDomain";
+
+          private final java.util.regex.Pattern REGISTRATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+
+          /**
+           * Renews a recently expired domain. This method can only be called on domains that expired in the
+           * previous 30 days. After the renewal, the new expiration time of the domain is one year after
+           * the old expiration time and you are charged a `yearly_price` for the renewal.
+           *
+           * Create a request for the method "registrations.renewDomain".
+           *
+           * This request holds the parameters needed by the the domains server.  After setting any optional
+           * parameters, call the {@link RenewDomain#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * RenewDomain#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param registration Required. The name of the `Registration` whish is being renewed, in the format
+         *        `projects/locations/registrations`.
+           * @param content the {@link com.google.api.services.domains.v1.model.RenewDomainRequest}
+           * @since 1.13
+           */
+          protected RenewDomain(java.lang.String registration, com.google.api.services.domains.v1.model.RenewDomainRequest content) {
+            super(CloudDomains.this, "POST", REST_PATH, content, com.google.api.services.domains.v1.model.Operation.class);
+            this.registration = com.google.api.client.util.Preconditions.checkNotNull(registration, "Required parameter registration must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGISTRATION_PATTERN.matcher(registration).matches(),
+                  "Parameter registration must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+            }
+          }
+
+          @Override
+          public RenewDomain set$Xgafv(java.lang.String $Xgafv) {
+            return (RenewDomain) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RenewDomain setAccessToken(java.lang.String accessToken) {
+            return (RenewDomain) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RenewDomain setAlt(java.lang.String alt) {
+            return (RenewDomain) super.setAlt(alt);
+          }
+
+          @Override
+          public RenewDomain setCallback(java.lang.String callback) {
+            return (RenewDomain) super.setCallback(callback);
+          }
+
+          @Override
+          public RenewDomain setFields(java.lang.String fields) {
+            return (RenewDomain) super.setFields(fields);
+          }
+
+          @Override
+          public RenewDomain setKey(java.lang.String key) {
+            return (RenewDomain) super.setKey(key);
+          }
+
+          @Override
+          public RenewDomain setOauthToken(java.lang.String oauthToken) {
+            return (RenewDomain) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RenewDomain setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RenewDomain) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RenewDomain setQuotaUser(java.lang.String quotaUser) {
+            return (RenewDomain) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RenewDomain setUploadType(java.lang.String uploadType) {
+            return (RenewDomain) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RenewDomain setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RenewDomain) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the `Registration` whish is being renewed, in the format
+           * `projects/locations/registrations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String registration;
+
+          /** Required. The name of the `Registration` whish is being renewed, in the format
+         `projects/locations/registrations`.
+           */
+          public java.lang.String getRegistration() {
+            return registration;
+          }
+
+          /**
+           * Required. The name of the `Registration` whish is being renewed, in the format
+           * `projects/locations/registrations`.
+           */
+          public RenewDomain setRegistration(java.lang.String registration) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGISTRATION_PATTERN.matcher(registration).matches(),
+                  "Parameter registration must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+            }
+            this.registration = registration;
+            return this;
+          }
+
+          @Override
+          public RenewDomain set(String parameterName, Object value) {
+            return (RenewDomain) super.set(parameterName, value);
+          }
+        }
+        /**
          * Resets the authorization code of the `Registration` to a new random string. You can call this
-         * method only after 60 days have elapsed since the initial domain registration.
+         * method only after 60 days have elapsed since the initial domain registration. Domains that have
+         * the `REQUIRE_PUSH_TRANSFER` property in the list of `domain_properties` don't support
+         * authorization codes and must use the `InitiatePushTransfer` method to initiate the process to
+         * transfer the domain to a different registrar.
          *
          * Create a request for the method "registrations.resetAuthorizationCode".
          *
@@ -2697,7 +2998,10 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
 
           /**
            * Resets the authorization code of the `Registration` to a new random string. You can call this
-           * method only after 60 days have elapsed since the initial domain registration.
+           * method only after 60 days have elapsed since the initial domain registration. Domains that have
+           * the `REQUIRE_PUSH_TRANSFER` property in the list of `domain_properties` don't support
+           * authorization codes and must use the `InitiatePushTransfer` method to initiate the process to
+           * transfer the domain to a different registrar.
            *
            * Create a request for the method "registrations.resetAuthorizationCode".
            *
@@ -2813,7 +3117,9 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
         /**
          * Gets the authorization code of the `Registration` for the purpose of transferring the domain to
          * another registrar. You can call this method only after 60 days have elapsed since the initial
-         * domain registration.
+         * domain registration. Domains that have the `REQUIRE_PUSH_TRANSFER` property in the list of
+         * `domain_properties` don't support authorization codes and must use the `InitiatePushTransfer`
+         * method to initiate the process to transfer the domain to a different registrar.
          *
          * Create a request for the method "registrations.retrieveAuthorizationCode".
          *
@@ -2841,7 +3147,9 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           /**
            * Gets the authorization code of the `Registration` for the purpose of transferring the domain to
            * another registrar. You can call this method only after 60 days have elapsed since the initial
-           * domain registration.
+           * domain registration. Domains that have the `REQUIRE_PUSH_TRANSFER` property in the list of
+           * `domain_properties` don't support authorization codes and must use the `InitiatePushTransfer`
+           * method to initiate the process to transfer the domain to a different registrar.
            *
            * Create a request for the method "registrations.retrieveAuthorizationCode".
            *
@@ -2961,6 +3269,353 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
           @Override
           public RetrieveAuthorizationCode set(String parameterName, Object value) {
             return (RetrieveAuthorizationCode) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the DNS records from the Google Domains DNS zone for domains that use the deprecated
+         * `google_domains_dns` in the `Registration`'s `dns_settings`.
+         *
+         * Create a request for the method "registrations.retrieveGoogleDomainsDnsRecords".
+         *
+         * This request holds the parameters needed by the domains server.  After setting any optional
+         * parameters, call the {@link RetrieveGoogleDomainsDnsRecords#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param registration Required. The name of the `Registration` whose Google Domains DNS records details you are
+         *        retrieving, in the format `projects/locations/registrations`.
+         * @return the request
+         */
+        public RetrieveGoogleDomainsDnsRecords retrieveGoogleDomainsDnsRecords(java.lang.String registration) throws java.io.IOException {
+          RetrieveGoogleDomainsDnsRecords result = new RetrieveGoogleDomainsDnsRecords(registration);
+          initialize(result);
+          return result;
+        }
+
+        public class RetrieveGoogleDomainsDnsRecords extends CloudDomainsRequest<com.google.api.services.domains.v1.model.RetrieveGoogleDomainsDnsRecordsResponse> {
+
+          private static final String REST_PATH = "v1/{+registration}:retrieveGoogleDomainsDnsRecords";
+
+          private final java.util.regex.Pattern REGISTRATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+
+          /**
+           * Lists the DNS records from the Google Domains DNS zone for domains that use the deprecated
+           * `google_domains_dns` in the `Registration`'s `dns_settings`.
+           *
+           * Create a request for the method "registrations.retrieveGoogleDomainsDnsRecords".
+           *
+           * This request holds the parameters needed by the the domains server.  After setting any optional
+           * parameters, call the {@link RetrieveGoogleDomainsDnsRecords#execute()} method to invoke the
+           * remote operation. <p> {@link RetrieveGoogleDomainsDnsRecords#initialize(com.google.api.client.g
+           * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param registration Required. The name of the `Registration` whose Google Domains DNS records details you are
+         *        retrieving, in the format `projects/locations/registrations`.
+           * @since 1.13
+           */
+          protected RetrieveGoogleDomainsDnsRecords(java.lang.String registration) {
+            super(CloudDomains.this, "GET", REST_PATH, null, com.google.api.services.domains.v1.model.RetrieveGoogleDomainsDnsRecordsResponse.class);
+            this.registration = com.google.api.client.util.Preconditions.checkNotNull(registration, "Required parameter registration must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGISTRATION_PATTERN.matcher(registration).matches(),
+                  "Parameter registration must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords set$Xgafv(java.lang.String $Xgafv) {
+            return (RetrieveGoogleDomainsDnsRecords) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setAccessToken(java.lang.String accessToken) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setAlt(java.lang.String alt) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setAlt(alt);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setCallback(java.lang.String callback) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setCallback(callback);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setFields(java.lang.String fields) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setFields(fields);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setKey(java.lang.String key) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setKey(key);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setOauthToken(java.lang.String oauthToken) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setQuotaUser(java.lang.String quotaUser) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setUploadType(java.lang.String uploadType) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RetrieveGoogleDomainsDnsRecords) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the `Registration` whose Google Domains DNS records details you
+           * are retrieving, in the format `projects/locations/registrations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String registration;
+
+          /** Required. The name of the `Registration` whose Google Domains DNS records details you are
+         retrieving, in the format `projects/locations/registrations`.
+           */
+          public java.lang.String getRegistration() {
+            return registration;
+          }
+
+          /**
+           * Required. The name of the `Registration` whose Google Domains DNS records details you
+           * are retrieving, in the format `projects/locations/registrations`.
+           */
+          public RetrieveGoogleDomainsDnsRecords setRegistration(java.lang.String registration) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGISTRATION_PATTERN.matcher(registration).matches(),
+                  "Parameter registration must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+            }
+            this.registration = registration;
+            return this;
+          }
+
+          /** Optional. Maximum number of results to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of results to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Maximum number of results to return. */
+          public RetrieveGoogleDomainsDnsRecords setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. When set to the `next_page_token` from a prior response, provides the next
+           * page of results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. When set to the `next_page_token` from a prior response, provides the next page of
+         results.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. When set to the `next_page_token` from a prior response, provides the next
+           * page of results.
+           */
+          public RetrieveGoogleDomainsDnsRecords setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public RetrieveGoogleDomainsDnsRecords set(String parameterName, Object value) {
+            return (RetrieveGoogleDomainsDnsRecords) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the deprecated domain and email forwarding configurations you set up in the deprecated
+         * Google Domains UI. The configuration is present only for domains with the
+         * `google_domains_redirects_data_available` set to `true` in the `Registration`'s `dns_settings`. A
+         * forwarding configuration might not work correctly if required DNS records are not present in the
+         * domain's authoritative DNS Zone.
+         *
+         * Create a request for the method "registrations.retrieveGoogleDomainsForwardingConfig".
+         *
+         * This request holds the parameters needed by the domains server.  After setting any optional
+         * parameters, call the {@link RetrieveGoogleDomainsForwardingConfig#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param registration Required. The name of the `Registration` whose Google Domains forwarding configuration details are
+         *        being retrieved, in the format `projects/locations/registrations`.
+         * @return the request
+         */
+        public RetrieveGoogleDomainsForwardingConfig retrieveGoogleDomainsForwardingConfig(java.lang.String registration) throws java.io.IOException {
+          RetrieveGoogleDomainsForwardingConfig result = new RetrieveGoogleDomainsForwardingConfig(registration);
+          initialize(result);
+          return result;
+        }
+
+        public class RetrieveGoogleDomainsForwardingConfig extends CloudDomainsRequest<com.google.api.services.domains.v1.model.RetrieveGoogleDomainsForwardingConfigResponse> {
+
+          private static final String REST_PATH = "v1/{+registration}:retrieveGoogleDomainsForwardingConfig";
+
+          private final java.util.regex.Pattern REGISTRATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+
+          /**
+           * Lists the deprecated domain and email forwarding configurations you set up in the deprecated
+           * Google Domains UI. The configuration is present only for domains with the
+           * `google_domains_redirects_data_available` set to `true` in the `Registration`'s `dns_settings`.
+           * A forwarding configuration might not work correctly if required DNS records are not present in
+           * the domain's authoritative DNS Zone.
+           *
+           * Create a request for the method "registrations.retrieveGoogleDomainsForwardingConfig".
+           *
+           * This request holds the parameters needed by the the domains server.  After setting any optional
+           * parameters, call the {@link RetrieveGoogleDomainsForwardingConfig#execute()} method to invoke
+           * the remote operation. <p> {@link RetrieveGoogleDomainsForwardingConfig#initialize(com.google.ap
+           * i.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+           * instance immediately after invoking the constructor. </p>
+           *
+           * @param registration Required. The name of the `Registration` whose Google Domains forwarding configuration details are
+         *        being retrieved, in the format `projects/locations/registrations`.
+           * @since 1.13
+           */
+          protected RetrieveGoogleDomainsForwardingConfig(java.lang.String registration) {
+            super(CloudDomains.this, "GET", REST_PATH, null, com.google.api.services.domains.v1.model.RetrieveGoogleDomainsForwardingConfigResponse.class);
+            this.registration = com.google.api.client.util.Preconditions.checkNotNull(registration, "Required parameter registration must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGISTRATION_PATTERN.matcher(registration).matches(),
+                  "Parameter registration must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public RetrieveGoogleDomainsForwardingConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (RetrieveGoogleDomainsForwardingConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsForwardingConfig setAccessToken(java.lang.String accessToken) {
+            return (RetrieveGoogleDomainsForwardingConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsForwardingConfig setAlt(java.lang.String alt) {
+            return (RetrieveGoogleDomainsForwardingConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsForwardingConfig setCallback(java.lang.String callback) {
+            return (RetrieveGoogleDomainsForwardingConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsForwardingConfig setFields(java.lang.String fields) {
+            return (RetrieveGoogleDomainsForwardingConfig) super.setFields(fields);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsForwardingConfig setKey(java.lang.String key) {
+            return (RetrieveGoogleDomainsForwardingConfig) super.setKey(key);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsForwardingConfig setOauthToken(java.lang.String oauthToken) {
+            return (RetrieveGoogleDomainsForwardingConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsForwardingConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RetrieveGoogleDomainsForwardingConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsForwardingConfig setQuotaUser(java.lang.String quotaUser) {
+            return (RetrieveGoogleDomainsForwardingConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsForwardingConfig setUploadType(java.lang.String uploadType) {
+            return (RetrieveGoogleDomainsForwardingConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RetrieveGoogleDomainsForwardingConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RetrieveGoogleDomainsForwardingConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the `Registration` whose Google Domains forwarding configuration
+           * details are being retrieved, in the format `projects/locations/registrations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String registration;
+
+          /** Required. The name of the `Registration` whose Google Domains forwarding configuration details are
+         being retrieved, in the format `projects/locations/registrations`.
+           */
+          public java.lang.String getRegistration() {
+            return registration;
+          }
+
+          /**
+           * Required. The name of the `Registration` whose Google Domains forwarding configuration
+           * details are being retrieved, in the format `projects/locations/registrations`.
+           */
+          public RetrieveGoogleDomainsForwardingConfig setRegistration(java.lang.String registration) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REGISTRATION_PATTERN.matcher(registration).matches(),
+                  "Parameter registration must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registrations/[^/]+$");
+            }
+            this.registration = registration;
+            return this;
+          }
+
+          @Override
+          public RetrieveGoogleDomainsForwardingConfig set(String parameterName, Object value) {
+            return (RetrieveGoogleDomainsForwardingConfig) super.set(parameterName, value);
           }
         }
         /**

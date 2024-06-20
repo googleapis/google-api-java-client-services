@@ -61,7 +61,7 @@ def DjangoRenderTemplate(template_path, context_dict):
     (str) The expanded template.
   """
 
-  source = files.GetFileContents(template_path).decode('utf-8')
+  source = files.GetFileContents(template_path)
   return _DjangoRenderTemplateSource(source, context_dict)
 
 

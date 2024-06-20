@@ -46,38 +46,38 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource extends
   private java.lang.String commitSha;
 
   /**
-   * Directory, relative to the source root, in which to run the build. This must be a relative
-   * path. If a step's `dir` is specified and is an absolute path, this value is ignored for that
-   * step's execution.
+   * Optional. Directory, relative to the source root, in which to run the build. This must be a
+   * relative path. If a step's `dir` is specified and is an absolute path, this value is ignored
+   * for that step's execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dir;
 
   /**
-   * Only trigger a build if the revision regex does NOT match the revision regex.
+   * Optional. Only trigger a build if the revision regex does NOT match the revision regex.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean invertRegex;
 
   /**
-   * ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting
-   * the build is assumed.
+   * Optional. ID of the project that owns the Cloud Source Repository. If omitted, the project ID
+   * requesting the build is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * Name of the Cloud Source Repository.
+   * Required. Name of the Cloud Source Repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String repoName;
 
   /**
-   * Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
+   * Optional. Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,9 +128,9 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource extends
   }
 
   /**
-   * Directory, relative to the source root, in which to run the build. This must be a relative
-   * path. If a step's `dir` is specified and is an absolute path, this value is ignored for that
-   * step's execution.
+   * Optional. Directory, relative to the source root, in which to run the build. This must be a
+   * relative path. If a step's `dir` is specified and is an absolute path, this value is ignored
+   * for that step's execution.
    * @return value or {@code null} for none
    */
   public java.lang.String getDir() {
@@ -138,9 +138,9 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource extends
   }
 
   /**
-   * Directory, relative to the source root, in which to run the build. This must be a relative
-   * path. If a step's `dir` is specified and is an absolute path, this value is ignored for that
-   * step's execution.
+   * Optional. Directory, relative to the source root, in which to run the build. This must be a
+   * relative path. If a step's `dir` is specified and is an absolute path, this value is ignored
+   * for that step's execution.
    * @param dir dir or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource setDir(java.lang.String dir) {
@@ -149,7 +149,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource extends
   }
 
   /**
-   * Only trigger a build if the revision regex does NOT match the revision regex.
+   * Optional. Only trigger a build if the revision regex does NOT match the revision regex.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInvertRegex() {
@@ -157,7 +157,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource extends
   }
 
   /**
-   * Only trigger a build if the revision regex does NOT match the revision regex.
+   * Optional. Only trigger a build if the revision regex does NOT match the revision regex.
    * @param invertRegex invertRegex or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource setInvertRegex(java.lang.Boolean invertRegex) {
@@ -166,8 +166,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource extends
   }
 
   /**
-   * ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting
-   * the build is assumed.
+   * Optional. ID of the project that owns the Cloud Source Repository. If omitted, the project ID
+   * requesting the build is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -175,8 +175,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource extends
   }
 
   /**
-   * ID of the project that owns the Cloud Source Repository. If omitted, the project ID requesting
-   * the build is assumed.
+   * Optional. ID of the project that owns the Cloud Source Repository. If omitted, the project ID
+   * requesting the build is assumed.
    * @param projectId projectId or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource setProjectId(java.lang.String projectId) {
@@ -185,7 +185,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource extends
   }
 
   /**
-   * Name of the Cloud Source Repository.
+   * Required. Name of the Cloud Source Repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getRepoName() {
@@ -193,7 +193,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource extends
   }
 
   /**
-   * Name of the Cloud Source Repository.
+   * Required. Name of the Cloud Source Repository.
    * @param repoName repoName or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource setRepoName(java.lang.String repoName) {
@@ -202,7 +202,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource extends
   }
 
   /**
-   * Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
+   * Optional. Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getSubstitutions() {
@@ -210,7 +210,7 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource extends
   }
 
   /**
-   * Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
+   * Optional. Substitutions to use in a triggered build. Should only be used with RunBuildTrigger
    * @param substitutions substitutions or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource setSubstitutions(java.util.Map<String, java.lang.String> substitutions) {

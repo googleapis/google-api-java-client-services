@@ -30,6 +30,21 @@ package com.google.api.services.dataproc.model;
 public final class RuntimeConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Autotuning configuration of the workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutotuningConfig autotuningConfig;
+
+  /**
+   * Optional. Cohort identifier. Identifies families of the workloads having the same shape, e.g.
+   * daily ETL jobs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cohort;
+
+  /**
    * Optional. Optional custom container image for the job runtime environment. If not specified, a
    * default container image will be used.
    * The value may be {@code null}.
@@ -58,6 +73,42 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * Optional. Autotuning configuration of the workload.
+   * @return value or {@code null} for none
+   */
+  public AutotuningConfig getAutotuningConfig() {
+    return autotuningConfig;
+  }
+
+  /**
+   * Optional. Autotuning configuration of the workload.
+   * @param autotuningConfig autotuningConfig or {@code null} for none
+   */
+  public RuntimeConfig setAutotuningConfig(AutotuningConfig autotuningConfig) {
+    this.autotuningConfig = autotuningConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Cohort identifier. Identifies families of the workloads having the same shape, e.g.
+   * daily ETL jobs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCohort() {
+    return cohort;
+  }
+
+  /**
+   * Optional. Cohort identifier. Identifies families of the workloads having the same shape, e.g.
+   * daily ETL jobs.
+   * @param cohort cohort or {@code null} for none
+   */
+  public RuntimeConfig setCohort(java.lang.String cohort) {
+    this.cohort = cohort;
+    return this;
+  }
 
   /**
    * Optional. Optional custom container image for the job runtime environment. If not specified, a

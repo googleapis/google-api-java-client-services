@@ -41,7 +41,7 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   /**
    * Optional. An opaque, user-specified string representing a human agent who handled all
    * conversations in the import. Note that this will be overridden if per-conversation metadata is
-   * provided via the `metadata_bucket_uri`.
+   * provided through the `metadata_bucket_uri`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   /**
    * Optional. An opaque, user-specified string representing a human agent who handled all
    * conversations in the import. Note that this will be overridden if per-conversation metadata is
-   * provided via the `metadata_bucket_uri`.
+   * provided through the `metadata_bucket_uri`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentId() {
@@ -87,7 +87,7 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   /**
    * Optional. An opaque, user-specified string representing a human agent who handled all
    * conversations in the import. Note that this will be overridden if per-conversation metadata is
-   * provided via the `metadata_bucket_uri`.
+   * provided through the `metadata_bucket_uri`.
    * @param agentId agentId or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestConversationConfig setAgentId(java.lang.String agentId) {

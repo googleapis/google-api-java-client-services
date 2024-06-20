@@ -45,6 +45,42 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The size of the boot disk for the VM in gigabytes (GB). The minimum boot disk size is
+   * `30` GB. Defaults to `50` GB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer bootDiskSizeGb;
+
+  /**
+   * Optional. Whether to enable nested virtualization on boosted Cloud Workstations VMs running
+   * using this boost configuration. Nested virtualization lets you run virtual machine (VM)
+   * instances inside your workstation. Before enabling nested virtualization, consider the
+   * following important considerations. Cloud Workstations instances are subject to the [same
+   * restrictions as Compute Engine
+   * instances](https://cloud.google.com/compute/docs/instances/nested-
+   * virtualization/overview#restrictions): * **Organization policy**: projects, folders, or
+   * organizations may be restricted from creating nested VMs if the **Disable VM nested
+   * virtualization** constraint is enforced in the organization policy. For more information, see
+   * the Compute Engine section, [Checking whether nested virtualization is
+   * allowed](https://cloud.google.com/compute/docs/instances/nested-virtualization/managing-
+   * constraint#checking_whether_nested_virtualization_is_allowed). * **Performance**: nested VMs
+   * might experience a 10% or greater decrease in performance for workloads that are CPU-bound and
+   * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
+   * Type**: nested virtualization can only be enabled on boost configurations that specify a
+   * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
+   * enabled on boost configurations with accelerators. * **Operating System**: Because [Container-
+   * Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
+   * optimized_os_cos) does not support nested virtualization, when nested virtualization is
+   * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
+   * LTS](https://cloud.google.com/compute/docs/images/os-details#ubuntu_lts) image. Defaults to
+   * false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableNestedVirtualization;
+
+  /**
    * Optional. Required. The id to be used for the boost config.
    * The value may be {@code null}.
    */
@@ -85,6 +121,84 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
    */
   public BoostConfig setAccelerators(java.util.List<Accelerator> accelerators) {
     this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
+   * Optional. The size of the boot disk for the VM in gigabytes (GB). The minimum boot disk size is
+   * `30` GB. Defaults to `50` GB.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getBootDiskSizeGb() {
+    return bootDiskSizeGb;
+  }
+
+  /**
+   * Optional. The size of the boot disk for the VM in gigabytes (GB). The minimum boot disk size is
+   * `30` GB. Defaults to `50` GB.
+   * @param bootDiskSizeGb bootDiskSizeGb or {@code null} for none
+   */
+  public BoostConfig setBootDiskSizeGb(java.lang.Integer bootDiskSizeGb) {
+    this.bootDiskSizeGb = bootDiskSizeGb;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to enable nested virtualization on boosted Cloud Workstations VMs running
+   * using this boost configuration. Nested virtualization lets you run virtual machine (VM)
+   * instances inside your workstation. Before enabling nested virtualization, consider the
+   * following important considerations. Cloud Workstations instances are subject to the [same
+   * restrictions as Compute Engine
+   * instances](https://cloud.google.com/compute/docs/instances/nested-
+   * virtualization/overview#restrictions): * **Organization policy**: projects, folders, or
+   * organizations may be restricted from creating nested VMs if the **Disable VM nested
+   * virtualization** constraint is enforced in the organization policy. For more information, see
+   * the Compute Engine section, [Checking whether nested virtualization is
+   * allowed](https://cloud.google.com/compute/docs/instances/nested-virtualization/managing-
+   * constraint#checking_whether_nested_virtualization_is_allowed). * **Performance**: nested VMs
+   * might experience a 10% or greater decrease in performance for workloads that are CPU-bound and
+   * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
+   * Type**: nested virtualization can only be enabled on boost configurations that specify a
+   * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
+   * enabled on boost configurations with accelerators. * **Operating System**: Because [Container-
+   * Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
+   * optimized_os_cos) does not support nested virtualization, when nested virtualization is
+   * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
+   * LTS](https://cloud.google.com/compute/docs/images/os-details#ubuntu_lts) image. Defaults to
+   * false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableNestedVirtualization() {
+    return enableNestedVirtualization;
+  }
+
+  /**
+   * Optional. Whether to enable nested virtualization on boosted Cloud Workstations VMs running
+   * using this boost configuration. Nested virtualization lets you run virtual machine (VM)
+   * instances inside your workstation. Before enabling nested virtualization, consider the
+   * following important considerations. Cloud Workstations instances are subject to the [same
+   * restrictions as Compute Engine
+   * instances](https://cloud.google.com/compute/docs/instances/nested-
+   * virtualization/overview#restrictions): * **Organization policy**: projects, folders, or
+   * organizations may be restricted from creating nested VMs if the **Disable VM nested
+   * virtualization** constraint is enforced in the organization policy. For more information, see
+   * the Compute Engine section, [Checking whether nested virtualization is
+   * allowed](https://cloud.google.com/compute/docs/instances/nested-virtualization/managing-
+   * constraint#checking_whether_nested_virtualization_is_allowed). * **Performance**: nested VMs
+   * might experience a 10% or greater decrease in performance for workloads that are CPU-bound and
+   * possibly greater than a 10% decrease for workloads that are input/output bound. * **Machine
+   * Type**: nested virtualization can only be enabled on boost configurations that specify a
+   * machine_type in the N1 or N2 machine series. * **GPUs**: nested virtualization may not be
+   * enabled on boost configurations with accelerators. * **Operating System**: Because [Container-
+   * Optimized OS](https://cloud.google.com/compute/docs/images/os-details#container-
+   * optimized_os_cos) does not support nested virtualization, when nested virtualization is
+   * enabled, the underlying Compute Engine VM instances boot from an [Ubuntu
+   * LTS](https://cloud.google.com/compute/docs/images/os-details#ubuntu_lts) image. Defaults to
+   * false.
+   * @param enableNestedVirtualization enableNestedVirtualization or {@code null} for none
+   */
+  public BoostConfig setEnableNestedVirtualization(java.lang.Boolean enableNestedVirtualization) {
+    this.enableNestedVirtualization = enableNestedVirtualization;
     return this;
   }
 

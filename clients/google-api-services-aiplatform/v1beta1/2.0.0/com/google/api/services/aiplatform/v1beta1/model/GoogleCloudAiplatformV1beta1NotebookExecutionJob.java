@@ -37,13 +37,6 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
   private String createTime;
 
   /**
-   * The custom compute configuration for an execution job.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1NotebookExecutionJobCustomEnvironmentSpec customEnvironmentSpec;
-
-  /**
    * The Dataform Repository pointing to a single file notebook repository.
    * The value may be {@code null}.
    */
@@ -170,23 +163,6 @@ public final class GoogleCloudAiplatformV1beta1NotebookExecutionJob extends com.
    */
   public GoogleCloudAiplatformV1beta1NotebookExecutionJob setCreateTime(String createTime) {
     this.createTime = createTime;
-    return this;
-  }
-
-  /**
-   * The custom compute configuration for an execution job.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1NotebookExecutionJobCustomEnvironmentSpec getCustomEnvironmentSpec() {
-    return customEnvironmentSpec;
-  }
-
-  /**
-   * The custom compute configuration for an execution job.
-   * @param customEnvironmentSpec customEnvironmentSpec or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1NotebookExecutionJob setCustomEnvironmentSpec(GoogleCloudAiplatformV1beta1NotebookExecutionJobCustomEnvironmentSpec customEnvironmentSpec) {
-    this.customEnvironmentSpec = customEnvironmentSpec;
     return this;
   }
 

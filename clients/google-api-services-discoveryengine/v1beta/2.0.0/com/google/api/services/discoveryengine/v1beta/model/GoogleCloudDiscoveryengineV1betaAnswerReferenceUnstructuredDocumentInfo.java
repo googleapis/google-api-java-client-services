@@ -44,6 +44,14 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerReferenceUnstructuredDo
   private java.lang.String document;
 
   /**
+   * The structured JSON metadata for the document. It is populated from the struct data from the
+   * Chunk in search result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> structData;
+
+  /**
    * Title.
    * The value may be {@code null}.
    */
@@ -88,6 +96,25 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerReferenceUnstructuredDo
    */
   public GoogleCloudDiscoveryengineV1betaAnswerReferenceUnstructuredDocumentInfo setDocument(java.lang.String document) {
     this.document = document;
+    return this;
+  }
+
+  /**
+   * The structured JSON metadata for the document. It is populated from the struct data from the
+   * Chunk in search result.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getStructData() {
+    return structData;
+  }
+
+  /**
+   * The structured JSON metadata for the document. It is populated from the struct data from the
+   * Chunk in search result.
+   * @param structData structData or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswerReferenceUnstructuredDocumentInfo setStructData(java.util.Map<String, java.lang.Object> structData) {
+    this.structData = structData;
     return this;
   }
 

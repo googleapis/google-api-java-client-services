@@ -56,30 +56,6 @@ public final class RepairRolloutRule extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> jobs;
 
   /**
-   * Required. Defines the types of automatic repair actions for failed jobs.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<RepairMode> repairModes;
-
-  static {
-    // hack to force ProGuard to consider RepairMode used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(RepairMode.class);
-  }
-
-  /**
-   * Optional. Phases within which jobs are subject to automatic repair actions on failure. Proceeds
-   * only after phase name matched any one in the list, or for all phases if unspecified. This value
-   * must consist of lower-case letters, numbers, and hyphens, start with a letter and end with a
-   * letter or a number, and have a max length of 63 characters. In other words, it must match the
-   * following regex: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> sourcePhases;
-
-  /**
    * Output only. Information around the state of the 'Automation' rule.
    * @return value or {@code null} for none
    */
@@ -137,48 +113,6 @@ public final class RepairRolloutRule extends com.google.api.client.json.GenericJ
    */
   public RepairRolloutRule setJobs(java.util.List<java.lang.String> jobs) {
     this.jobs = jobs;
-    return this;
-  }
-
-  /**
-   * Required. Defines the types of automatic repair actions for failed jobs.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<RepairMode> getRepairModes() {
-    return repairModes;
-  }
-
-  /**
-   * Required. Defines the types of automatic repair actions for failed jobs.
-   * @param repairModes repairModes or {@code null} for none
-   */
-  public RepairRolloutRule setRepairModes(java.util.List<RepairMode> repairModes) {
-    this.repairModes = repairModes;
-    return this;
-  }
-
-  /**
-   * Optional. Phases within which jobs are subject to automatic repair actions on failure. Proceeds
-   * only after phase name matched any one in the list, or for all phases if unspecified. This value
-   * must consist of lower-case letters, numbers, and hyphens, start with a letter and end with a
-   * letter or a number, and have a max length of 63 characters. In other words, it must match the
-   * following regex: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getSourcePhases() {
-    return sourcePhases;
-  }
-
-  /**
-   * Optional. Phases within which jobs are subject to automatic repair actions on failure. Proceeds
-   * only after phase name matched any one in the list, or for all phases if unspecified. This value
-   * must consist of lower-case letters, numbers, and hyphens, start with a letter and end with a
-   * letter or a number, and have a max length of 63 characters. In other words, it must match the
-   * following regex: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
-   * @param sourcePhases sourcePhases or {@code null} for none
-   */
-  public RepairRolloutRule setSourcePhases(java.util.List<java.lang.String> sourcePhases) {
-    this.sourcePhases = sourcePhases;
     return this;
   }
 

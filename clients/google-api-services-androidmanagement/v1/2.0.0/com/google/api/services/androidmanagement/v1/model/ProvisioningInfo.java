@@ -38,6 +38,14 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
   private java.lang.Integer apiLevel;
 
   /**
+   * The email address of the authenticated user (only present for Google Account provisioning
+   * method).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String authenticatedUserEmail;
+
+  /**
    * The brand of the device. For example, Google.
    * The value may be {@code null}.
    */
@@ -52,7 +60,7 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
   private java.lang.String enterprise;
 
   /**
-   * IMEI number of the GSM device. For example, A1000031212.
+   * For corporate-owned devices, IMEI number of the GSM device. For example, A1000031212.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +74,7 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
   private java.lang.String managementMode;
 
   /**
-   * MEID number of the CDMA device. For example, A00000292788E1.
+   * For corporate-owned devices, MEID number of the CDMA device. For example, A00000292788E1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +102,7 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
   private java.lang.String ownership;
 
   /**
-   * The device serial number.
+   * For corporate-owned devices, The device serial number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,6 +122,25 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
    */
   public ProvisioningInfo setApiLevel(java.lang.Integer apiLevel) {
     this.apiLevel = apiLevel;
+    return this;
+  }
+
+  /**
+   * The email address of the authenticated user (only present for Google Account provisioning
+   * method).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuthenticatedUserEmail() {
+    return authenticatedUserEmail;
+  }
+
+  /**
+   * The email address of the authenticated user (only present for Google Account provisioning
+   * method).
+   * @param authenticatedUserEmail authenticatedUserEmail or {@code null} for none
+   */
+  public ProvisioningInfo setAuthenticatedUserEmail(java.lang.String authenticatedUserEmail) {
+    this.authenticatedUserEmail = authenticatedUserEmail;
     return this;
   }
 
@@ -152,7 +179,7 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * IMEI number of the GSM device. For example, A1000031212.
+   * For corporate-owned devices, IMEI number of the GSM device. For example, A1000031212.
    * @return value or {@code null} for none
    */
   public java.lang.String getImei() {
@@ -160,7 +187,7 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * IMEI number of the GSM device. For example, A1000031212.
+   * For corporate-owned devices, IMEI number of the GSM device. For example, A1000031212.
    * @param imei imei or {@code null} for none
    */
   public ProvisioningInfo setImei(java.lang.String imei) {
@@ -186,7 +213,7 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * MEID number of the CDMA device. For example, A00000292788E1.
+   * For corporate-owned devices, MEID number of the CDMA device. For example, A00000292788E1.
    * @return value or {@code null} for none
    */
   public java.lang.String getMeid() {
@@ -194,7 +221,7 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * MEID number of the CDMA device. For example, A00000292788E1.
+   * For corporate-owned devices, MEID number of the CDMA device. For example, A00000292788E1.
    * @param meid meid or {@code null} for none
    */
   public ProvisioningInfo setMeid(java.lang.String meid) {
@@ -254,7 +281,7 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The device serial number.
+   * For corporate-owned devices, The device serial number.
    * @return value or {@code null} for none
    */
   public java.lang.String getSerialNumber() {
@@ -262,7 +289,7 @@ public final class ProvisioningInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The device serial number.
+   * For corporate-owned devices, The device serial number.
    * @param serialNumber serialNumber or {@code null} for none
    */
   public ProvisioningInfo setSerialNumber(java.lang.String serialNumber) {

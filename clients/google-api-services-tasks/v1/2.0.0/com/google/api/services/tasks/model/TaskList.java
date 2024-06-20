@@ -44,14 +44,15 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Type of the resource. This is always "tasks#taskList".
+   * Output only. Type of the resource. This is always "tasks#taskList".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * URL pointing to this task list. Used to retrieve, update, or delete this task list.
+   * Output only. URL pointing to this task list. Used to retrieve, update, or delete this task
+   * list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +66,7 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * Last modification time of the task list (as a RFC 3339 timestamp).
+   * Output only. Last modification time of the task list (as a RFC 3339 timestamp).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +107,7 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the resource. This is always "tasks#taskList".
+   * Output only. Type of the resource. This is always "tasks#taskList".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -114,7 +115,7 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the resource. This is always "tasks#taskList".
+   * Output only. Type of the resource. This is always "tasks#taskList".
    * @param kind kind or {@code null} for none
    */
   public TaskList setKind(java.lang.String kind) {
@@ -123,7 +124,8 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL pointing to this task list. Used to retrieve, update, or delete this task list.
+   * Output only. URL pointing to this task list. Used to retrieve, update, or delete this task
+   * list.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -131,7 +133,8 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL pointing to this task list. Used to retrieve, update, or delete this task list.
+   * Output only. URL pointing to this task list. Used to retrieve, update, or delete this task
+   * list.
    * @param selfLink selfLink or {@code null} for none
    */
   public TaskList setSelfLink(java.lang.String selfLink) {
@@ -157,7 +160,7 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Last modification time of the task list (as a RFC 3339 timestamp).
+   * Output only. Last modification time of the task list (as a RFC 3339 timestamp).
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdated() {
@@ -165,7 +168,7 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Last modification time of the task list (as a RFC 3339 timestamp).
+   * Output only. Last modification time of the task list (as a RFC 3339 timestamp).
    * @param updated updated or {@code null} for none
    */
   public TaskList setUpdated(java.lang.String updated) {

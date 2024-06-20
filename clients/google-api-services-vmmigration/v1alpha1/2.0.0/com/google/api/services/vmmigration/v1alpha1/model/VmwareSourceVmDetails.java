@@ -30,14 +30,14 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 public final class VmwareSourceVmDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The total size of the disks being migrated in bytes.
+   * Output only. The total size of the disks being migrated in bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long committedStorageBytes;
 
   /**
-   * The disks attached to the source VM.
+   * Output only. The disks attached to the source VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class VmwareSourceVmDetails extends com.google.api.client.json.Gene
   }
 
   /**
-   * The firmware type of the source VM.
+   * Output only. The firmware type of the source VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class VmwareSourceVmDetails extends com.google.api.client.json.Gene
   private VmCapabilities vmCapabilitiesInfo;
 
   /**
-   * The total size of the disks being migrated in bytes.
+   * Output only. The total size of the disks being migrated in bytes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCommittedStorageBytes() {
@@ -72,7 +72,7 @@ public final class VmwareSourceVmDetails extends com.google.api.client.json.Gene
   }
 
   /**
-   * The total size of the disks being migrated in bytes.
+   * Output only. The total size of the disks being migrated in bytes.
    * @param committedStorageBytes committedStorageBytes or {@code null} for none
    */
   public VmwareSourceVmDetails setCommittedStorageBytes(java.lang.Long committedStorageBytes) {
@@ -81,7 +81,7 @@ public final class VmwareSourceVmDetails extends com.google.api.client.json.Gene
   }
 
   /**
-   * The disks attached to the source VM.
+   * Output only. The disks attached to the source VM.
    * @return value or {@code null} for none
    */
   public java.util.List<VmwareDiskDetails> getDisks() {
@@ -89,7 +89,7 @@ public final class VmwareSourceVmDetails extends com.google.api.client.json.Gene
   }
 
   /**
-   * The disks attached to the source VM.
+   * Output only. The disks attached to the source VM.
    * @param disks disks or {@code null} for none
    */
   public VmwareSourceVmDetails setDisks(java.util.List<VmwareDiskDetails> disks) {
@@ -98,7 +98,7 @@ public final class VmwareSourceVmDetails extends com.google.api.client.json.Gene
   }
 
   /**
-   * The firmware type of the source VM.
+   * Output only. The firmware type of the source VM.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirmware() {
@@ -106,7 +106,7 @@ public final class VmwareSourceVmDetails extends com.google.api.client.json.Gene
   }
 
   /**
-   * The firmware type of the source VM.
+   * Output only. The firmware type of the source VM.
    * @param firmware firmware or {@code null} for none
    */
   public VmwareSourceVmDetails setFirmware(java.lang.String firmware) {

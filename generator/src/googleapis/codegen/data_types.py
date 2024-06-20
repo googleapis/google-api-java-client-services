@@ -511,7 +511,7 @@ class Enum(PrimitiveDataType):
     names = [FixName(s) for s in values]
     def FixDescription(desc):
       return self.ValidateAndSanitizeComment(self.StripHTML(desc))
-    pairs = zip(names, values, map(FixDescription, descriptions))
+    pairs = list(zip(names, values, list(map(FixDescription, descriptions))))
     self.SetTemplateValue('pairs', pairs)
 
   @property

@@ -86,8 +86,9 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   private String pointInTime;
 
   /**
-   * Optional. (Point-in-time recovery for PostgreSQL only) Clone to an instance in the specified
-   * zone. If no zone is specified, clone to the same zone as the source instance.
+   * Optional. Copy clone and point-in-time recovery clone of an instance to the specified zone. If
+   * no zone is specified, clone to the same primary zone as the source instance. This field applies
+   * to all DB types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,8 +228,9 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. (Point-in-time recovery for PostgreSQL only) Clone to an instance in the specified
-   * zone. If no zone is specified, clone to the same zone as the source instance.
+   * Optional. Copy clone and point-in-time recovery clone of an instance to the specified zone. If
+   * no zone is specified, clone to the same primary zone as the source instance. This field applies
+   * to all DB types.
    * @return value or {@code null} for none
    */
   public java.lang.String getPreferredZone() {
@@ -236,8 +238,9 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. (Point-in-time recovery for PostgreSQL only) Clone to an instance in the specified
-   * zone. If no zone is specified, clone to the same zone as the source instance.
+   * Optional. Copy clone and point-in-time recovery clone of an instance to the specified zone. If
+   * no zone is specified, clone to the same primary zone as the source instance. This field applies
+   * to all DB types.
    * @param preferredZone preferredZone or {@code null} for none
    */
   public CloneContext setPreferredZone(java.lang.String preferredZone) {

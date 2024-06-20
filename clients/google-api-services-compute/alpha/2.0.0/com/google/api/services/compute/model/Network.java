@@ -151,6 +151,16 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String networkPlacement;
 
   /**
+   * A full or partial URL of the network profile to apply to this network. This field can be set
+   * only at resource creation time. For example, the following are valid URLs: - https://www.google
+   * apis.com/compute/alpha/projects/{project_id}/global/networkProfiles/{network_profile_name} -
+   * projects/{project_id}/global/networkProfiles/{network_profile_name}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkProfile;
+
+  /**
    * [Output Only] A list of network peerings for the resource.
    * The value may be {@code null}.
    */
@@ -474,6 +484,29 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setNetworkPlacement(java.lang.String networkPlacement) {
     this.networkPlacement = networkPlacement;
+    return this;
+  }
+
+  /**
+   * A full or partial URL of the network profile to apply to this network. This field can be set
+   * only at resource creation time. For example, the following are valid URLs: - https://www.google
+   * apis.com/compute/alpha/projects/{project_id}/global/networkProfiles/{network_profile_name} -
+   * projects/{project_id}/global/networkProfiles/{network_profile_name}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkProfile() {
+    return networkProfile;
+  }
+
+  /**
+   * A full or partial URL of the network profile to apply to this network. This field can be set
+   * only at resource creation time. For example, the following are valid URLs: - https://www.google
+   * apis.com/compute/alpha/projects/{project_id}/global/networkProfiles/{network_profile_name} -
+   * projects/{project_id}/global/networkProfiles/{network_profile_name}
+   * @param networkProfile networkProfile or {@code null} for none
+   */
+  public Network setNetworkProfile(java.lang.String networkProfile) {
+    this.networkProfile = networkProfile;
     return this;
   }
 

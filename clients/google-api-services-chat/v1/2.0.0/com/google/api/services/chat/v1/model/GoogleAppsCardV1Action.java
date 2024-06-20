@@ -73,8 +73,9 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   /**
    * Indicates whether form values persist after the action. The default value is `false`. If
    * `true`, form values remain after the action is triggered. To let the user make changes while
-   * the action is being processed, set [`LoadIndicator`](https://developers.google.com/workspace
-   * /add-ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
+   * the action is being processed, set
+   * [`LoadIndicator`](https://developers.google.com/workspace/add-
+   * ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
    * messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/create#create) in
    * Chat apps, you must also set the action's [`ResponseType`](https://developers.google.com/worksp
    * ace/chat/api/reference/rest/v1/spaces.messages#responsetype) to `UPDATE_MESSAGE` and use the
@@ -179,8 +180,9 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   /**
    * Indicates whether form values persist after the action. The default value is `false`. If
    * `true`, form values remain after the action is triggered. To let the user make changes while
-   * the action is being processed, set [`LoadIndicator`](https://developers.google.com/workspace
-   * /add-ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
+   * the action is being processed, set
+   * [`LoadIndicator`](https://developers.google.com/workspace/add-
+   * ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
    * messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/create#create) in
    * Chat apps, you must also set the action's [`ResponseType`](https://developers.google.com/worksp
    * ace/chat/api/reference/rest/v1/spaces.messages#responsetype) to `UPDATE_MESSAGE` and use the
@@ -198,8 +200,9 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   /**
    * Indicates whether form values persist after the action. The default value is `false`. If
    * `true`, form values remain after the action is triggered. To let the user make changes while
-   * the action is being processed, set [`LoadIndicator`](https://developers.google.com/workspace
-   * /add-ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
+   * the action is being processed, set
+   * [`LoadIndicator`](https://developers.google.com/workspace/add-
+   * ons/reference/rpc/google.apps.card.v1#loadindicator) to `NONE`. For [card
    * messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/create#create) in
    * Chat apps, you must also set the action's [`ResponseType`](https://developers.google.com/worksp
    * ace/chat/api/reference/rest/v1/spaces.messages#responsetype) to `UPDATE_MESSAGE` and use the

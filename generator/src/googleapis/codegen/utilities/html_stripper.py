@@ -19,14 +19,14 @@
 
 __author__ = 'wclarkso@google.com (Will Clarkson)'
 
-import HTMLParser
+from html.parser import HTMLParser
 
 
-class HTMLStripper(HTMLParser.HTMLParser):
+class HTMLStripper(HTMLParser):
   """Simple class to strip tags from HTML."""
 
   def __init__(self):
-    HTMLParser.HTMLParser.__init__(self)
+    HTMLParser.__init__(self)
     self.reset()
     self.fed = []
 

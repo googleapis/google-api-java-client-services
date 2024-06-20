@@ -1672,7 +1672,9 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Creates a processor from the ProcessorType provided. The processor will be at `ENABLED` state by
-         * default after its creation.
+         * default after its creation. Note that this method requires the `documentai.processors.create`
+         * permission on the project, which is highly privileged. A user or service account with this
+         * permission can create new processors that can interact with any gcs bucket in your project.
          *
          * Create a request for the method "processors.create".
          *
@@ -1699,7 +1701,10 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Creates a processor from the ProcessorType provided. The processor will be at `ENABLED` state
-           * by default after its creation.
+           * by default after its creation. Note that this method requires the
+           * `documentai.processors.create` permission on the project, which is highly privileged. A user or
+           * service account with this permission can create new processors that can interact with any gcs
+           * bucket in your project.
            *
            * Create a request for the method "processors.create".
            *
@@ -2823,7 +2828,10 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Updates metadata associated with a dataset.
+         * Updates metadata associated with a dataset. Note that this method requires the
+         * `documentai.googleapis.com/datasets.update` permission on the project, which is highly
+         * privileged. A user or service account with this permission can create new processors that can
+         * interact with any gcs bucket in your project.
          *
          * Create a request for the method "processors.updateDataset".
          *
@@ -2849,7 +2857,10 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/processors/[^/]+/dataset$");
 
           /**
-           * Updates metadata associated with a dataset.
+           * Updates metadata associated with a dataset. Note that this method requires the
+           * `documentai.googleapis.com/datasets.update` permission on the project, which is highly
+           * privileged. A user or service account with this permission can create new processors that can
+           * interact with any gcs bucket in your project.
            *
            * Create a request for the method "processors.updateDataset".
            *

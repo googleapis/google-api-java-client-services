@@ -17,8 +17,8 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * RepairPhase tracks the repair attempts that have been made for each `RepairMode` specified in the
- * `Automation` resource.
+ * RepairPhase tracks the repair attempts that have been made for each `RepairPhaseConfig` specified
+ * in the `Automation` resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:

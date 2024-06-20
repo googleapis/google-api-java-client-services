@@ -1510,8 +1510,9 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
           /** Required. The parent resource where this phrase set will be created. Format:
          `projects/{project}/locations/{location}` Speech-to-Text supports three locations: `global`, `us`
          (US North America), and `eu` (Europe). If you are calling the `speech.googleapis.com` endpoint, use
-         the `global` location. To specify a region, use a [regional endpoint](https://cloud.google.com
-         /speech-to-text/docs/endpoints) with matching `us` or `eu` location value.
+         the `global` location. To specify a region, use a [regional
+         endpoint](https://cloud.google.com/speech-to-text/docs/endpoints) with matching `us` or `eu`
+         location value.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1980,8 +1981,9 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
           /** Required. The parent, which owns this collection of phrase set. Format:
          `projects/{project}/locations/{location}` Speech-to-Text supports three locations: `global`, `us`
          (US North America), and `eu` (Europe). If you are calling the `speech.googleapis.com` endpoint, use
-         the `global` location. To specify a region, use a [regional endpoint](https://cloud.google.com
-         /speech-to-text/docs/endpoints) with matching `us` or `eu` location value.
+         the `global` location. To specify a region, use a [regional
+         endpoint](https://cloud.google.com/speech-to-text/docs/endpoints) with matching `us` or `eu`
+         location value.
            */
           public java.lang.String getParent() {
             return parent;

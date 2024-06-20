@@ -95,9 +95,10 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private ReservationAffinity reservationAffinity;
 
   /**
-   * Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts
-   * /configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane
-   * identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-
+   * Optional. The Dataproc service account
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-
+   * accounts#service_accounts_in_dataproc) (also see VM Data Plane identity
+   * (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-
    * principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to
    * access Google Cloud Platform services.If not specified, the Compute Engine default service
    * account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
@@ -141,8 +142,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private java.lang.String subnetworkUri;
 
   /**
-   * The Compute Engine tags to add to all instances (see Tagging instances
-   * (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+   * The Compute Engine network tags to add to all instances (see Tagging instances
+   * (https://cloud.google.com/vpc/docs/add-remove-network-tags)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -309,9 +310,10 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts
-   * /configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane
-   * identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-
+   * Optional. The Dataproc service account
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-
+   * accounts#service_accounts_in_dataproc) (also see VM Data Plane identity
+   * (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-
    * principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to
    * access Google Cloud Platform services.If not specified, the Compute Engine default service
    * account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
@@ -323,9 +325,10 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts
-   * /configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane
-   * identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-
+   * Optional. The Dataproc service account
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-
+   * accounts#service_accounts_in_dataproc) (also see VM Data Plane identity
+   * (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-
    * principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to
    * access Google Cloud Platform services.If not specified, the Compute Engine default service
    * account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
@@ -413,8 +416,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The Compute Engine tags to add to all instances (see Tagging instances
-   * (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+   * The Compute Engine network tags to add to all instances (see Tagging instances
+   * (https://cloud.google.com/vpc/docs/add-remove-network-tags)).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -422,8 +425,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The Compute Engine tags to add to all instances (see Tagging instances
-   * (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+   * The Compute Engine network tags to add to all instances (see Tagging instances
+   * (https://cloud.google.com/vpc/docs/add-remove-network-tags)).
    * @param tags tags or {@code null} for none
    */
   public GceClusterConfig setTags(java.util.List<java.lang.String> tags) {

@@ -17,8 +17,8 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Partner request for entitling the previously provisioned subscription to an end user. The end
- * user identity is inferred from the request OAuth context.
+ * LINT.IfChange Partner request for entitling the previously provisioned subscription to an end
+ * user. The end user identity is inferred from the request OAuth context.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed

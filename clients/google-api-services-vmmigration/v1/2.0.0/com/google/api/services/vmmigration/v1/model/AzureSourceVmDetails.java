@@ -30,14 +30,14 @@ package com.google.api.services.vmmigration.v1.model;
 public final class AzureSourceVmDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The total size of the disks being migrated in bytes.
+   * Output only. The total size of the disks being migrated in bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long committedStorageBytes;
 
   /**
-   * The disks attached to the source VM.
+   * Output only. The disks attached to the source VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class AzureSourceVmDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * The firmware type of the source VM.
+   * Output only. The firmware type of the source VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class AzureSourceVmDetails extends com.google.api.client.json.Gener
   private VmCapabilities vmCapabilitiesInfo;
 
   /**
-   * The total size of the disks being migrated in bytes.
+   * Output only. The total size of the disks being migrated in bytes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCommittedStorageBytes() {
@@ -72,7 +72,7 @@ public final class AzureSourceVmDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total size of the disks being migrated in bytes.
+   * Output only. The total size of the disks being migrated in bytes.
    * @param committedStorageBytes committedStorageBytes or {@code null} for none
    */
   public AzureSourceVmDetails setCommittedStorageBytes(java.lang.Long committedStorageBytes) {
@@ -81,7 +81,7 @@ public final class AzureSourceVmDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * The disks attached to the source VM.
+   * Output only. The disks attached to the source VM.
    * @return value or {@code null} for none
    */
   public java.util.List<AzureDiskDetails> getDisks() {
@@ -89,7 +89,7 @@ public final class AzureSourceVmDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * The disks attached to the source VM.
+   * Output only. The disks attached to the source VM.
    * @param disks disks or {@code null} for none
    */
   public AzureSourceVmDetails setDisks(java.util.List<AzureDiskDetails> disks) {
@@ -98,7 +98,7 @@ public final class AzureSourceVmDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * The firmware type of the source VM.
+   * Output only. The firmware type of the source VM.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirmware() {
@@ -106,7 +106,7 @@ public final class AzureSourceVmDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * The firmware type of the source VM.
+   * Output only. The firmware type of the source VM.
    * @param firmware firmware or {@code null} for none
    */
   public AzureSourceVmDetails setFirmware(java.lang.String firmware) {

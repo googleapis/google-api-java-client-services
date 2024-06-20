@@ -17,7 +17,7 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * To change this message, in the same CL add a change log in go/changing-api-proto-breaks-ui
+ * Model definition for GoogleCloudApigeeV1ListSharedFlowsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:

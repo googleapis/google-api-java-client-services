@@ -16,4 +16,4 @@
 from googleapis.codegen.generate_library import main, app
 
 if __name__ == '__main__':
-  app.run()
+  app.run(main)

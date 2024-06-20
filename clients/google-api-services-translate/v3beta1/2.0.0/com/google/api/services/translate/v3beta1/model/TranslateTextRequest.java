@@ -68,11 +68,12 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Optional. The `model` type requested for this translation. The format depends on model type: -
-   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-id}/models
-   * /{model-id}` - General (built-in) models: `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/nmt`, For global (non-regionalized) requests, use `location-id` `global`.
-   * For example, `projects/{project-number-or-id}/locations/global/models/general/nmt`. If not
-   * provided, the default Google model (NMT) will be used
+   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-
+   * id}/models/{model-id}` - General (built-in) models: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/general/nmt`, For global (non-regionalized) requests, use
+   * `location-id` `global`. For example, `projects/{project-number-or-
+   * id}/locations/global/models/general/nmt`. If not provided, the default Google model (NMT) will
+   * be used
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,11 +183,12 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Optional. The `model` type requested for this translation. The format depends on model type: -
-   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-id}/models
-   * /{model-id}` - General (built-in) models: `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/nmt`, For global (non-regionalized) requests, use `location-id` `global`.
-   * For example, `projects/{project-number-or-id}/locations/global/models/general/nmt`. If not
-   * provided, the default Google model (NMT) will be used
+   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-
+   * id}/models/{model-id}` - General (built-in) models: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/general/nmt`, For global (non-regionalized) requests, use
+   * `location-id` `global`. For example, `projects/{project-number-or-
+   * id}/locations/global/models/general/nmt`. If not provided, the default Google model (NMT) will
+   * be used
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -195,11 +197,12 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Optional. The `model` type requested for this translation. The format depends on model type: -
-   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-id}/models
-   * /{model-id}` - General (built-in) models: `projects/{project-number-or-id}/locations/{location-
-   * id}/models/general/nmt`, For global (non-regionalized) requests, use `location-id` `global`.
-   * For example, `projects/{project-number-or-id}/locations/global/models/general/nmt`. If not
-   * provided, the default Google model (NMT) will be used
+   * AutoML Translation models: `projects/{project-number-or-id}/locations/{location-
+   * id}/models/{model-id}` - General (built-in) models: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/general/nmt`, For global (non-regionalized) requests, use
+   * `location-id` `global`. For example, `projects/{project-number-or-
+   * id}/locations/global/models/general/nmt`. If not provided, the default Google model (NMT) will
+   * be used
    * @param model model or {@code null} for none
    */
   public TranslateTextRequest setModel(java.lang.String model) {

@@ -31,7 +31,7 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1Probe extends com.google.api.client.json.GenericJson {
 
   /**
-   * Exec specifies the action to take.
+   * ExecAction probes the health of a container by executing a command.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GoogleCloudAiplatformV1Probe extends com.google.api.client.js
   private java.lang.Integer timeoutSeconds;
 
   /**
-   * Exec specifies the action to take.
+   * ExecAction probes the health of a container by executing a command.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1ProbeExecAction getExec() {
@@ -62,7 +62,7 @@ public final class GoogleCloudAiplatformV1Probe extends com.google.api.client.js
   }
 
   /**
-   * Exec specifies the action to take.
+   * ExecAction probes the health of a container by executing a command.
    * @param exec exec or {@code null} for none
    */
   public GoogleCloudAiplatformV1Probe setExec(GoogleCloudAiplatformV1ProbeExecAction exec) {

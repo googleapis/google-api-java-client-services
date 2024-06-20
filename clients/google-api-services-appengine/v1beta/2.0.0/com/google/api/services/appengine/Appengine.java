@@ -4842,8 +4842,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * shardBy (https://cloud.google.com/appengine/docs/admin-
          * api/reference/rest/v1beta/apps.services#ShardBy) field in the Service resource. Gradual
          * traffic migration is not supported in the App Engine flexible environment. For examples,
-         * see Migrating and Splitting Traffic (https://cloud.google.com/appengine/docs/admin-api
-         * /migrating-splitting-traffic).
+         * see Migrating and Splitting Traffic (https://cloud.google.com/appengine/docs/admin-
+         * api/migrating-splitting-traffic).
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean migrateTraffic;
@@ -4875,8 +4875,8 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * shardBy (https://cloud.google.com/appengine/docs/admin-
          * api/reference/rest/v1beta/apps.services#ShardBy) field in the Service resource. Gradual
          * traffic migration is not supported in the App Engine flexible environment. For examples,
-         * see Migrating and Splitting Traffic (https://cloud.google.com/appengine/docs/admin-api
-         * /migrating-splitting-traffic).
+         * see Migrating and Splitting Traffic (https://cloud.google.com/appengine/docs/admin-
+         * api/migrating-splitting-traffic).
          */
         public Patch setMigrateTraffic(java.lang.Boolean migrateTraffic) {
           this.migrateTraffic = migrateTraffic;
@@ -5668,9 +5668,10 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)
          * automatic_scaling.cool_down_period_sec (https://cloud.google.com/appengine/docs/admin-
          * api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)
-         * automatic_scaling.cpu_utilization.target_utilization (https://cloud.google.com/appengine/docs
-         * /admin-api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)manual
-         * scaling in the flexible environment: manual_scaling.instances
+         * automatic_scaling.cpu_utilization.target_utilization
+         * (https://cloud.google.com/appengine/docs/admin-
+         * api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)manual scaling
+         * in the flexible environment: manual_scaling.instances
          * (https://cloud.google.com/appengine/docs/admin-
          * api/reference/rest/v1beta/apps.services.versions#manualscaling)
          *
@@ -5731,8 +5732,9 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)
            * automatic_scaling.cool_down_period_sec (https://cloud.google.com/appengine/docs/admin-
            * api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)
-           * automatic_scaling.cpu_utilization.target_utilization (https://cloud.google.com/appengine/docs
-           * /admin-api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)manual
+           * automatic_scaling.cpu_utilization.target_utilization
+           * (https://cloud.google.com/appengine/docs/admin-
+           * api/reference/rest/v1beta/apps.services.versions#Version.FIELDS.automatic_scaling)manual
            * scaling in the flexible environment: manual_scaling.instances
            * (https://cloud.google.com/appengine/docs/admin-
            * api/reference/rest/v1beta/apps.services.versions#manualscaling)

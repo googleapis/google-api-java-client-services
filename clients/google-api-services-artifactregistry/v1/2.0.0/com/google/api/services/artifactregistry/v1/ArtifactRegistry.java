@@ -3256,6 +3256,137 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
         public class Files {
 
           /**
+           * Deletes a file and all of its content. It is only allowed on generic repositories. The returned
+           * operation will complete once the file has been deleted.
+           *
+           * Create a request for the method "files.delete".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the file to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/files/[^/]+$");
+
+            /**
+             * Deletes a file and all of its content. It is only allowed on generic repositories. The returned
+             * operation will complete once the file has been deleted.
+             *
+             * Create a request for the method "files.delete".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the file to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(ArtifactRegistry.this, "DELETE", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/files/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the file to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the file to delete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the file to delete. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/files/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
            * Download a file.
            *
            * Create a request for the method "files.download".
@@ -3564,8 +3695,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the artifactregistry server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The name of the repository whose files will be listed. For example: "projects/p1/locations
-           *        /us-central1/repositories/repo1
+           * @param parent Required. The name of the repository whose files will be listed. For example:
+           *        "projects/p1/locations/us-central1/repositories/repo1
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3591,8 +3722,8 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The name of the repository whose files will be listed. For example: "projects/p1/locations
-           *        /us-central1/repositories/repo1
+             * @param parent Required. The name of the repository whose files will be listed. For example:
+           *        "projects/p1/locations/us-central1/repositories/repo1
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -6641,7 +6772,13 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
                * insensitive. The fields eligible for filtering are: * `version` An example of using
                * a filter: * `version="projects/p1/locations/us-
                * central1/repositories/repo1/packages/pkg1/versions/1.0"` --> Tags that are applied
-               * to the version `1.0` in package `pkg1`.
+               * to the version `1.0` in package `pkg1`. * `name="projects/p1/locations/us-
+               * central1/repositories/repo1/packages/pkg1/tags/a%2Fb%2F*"` --> tags with an ID
+               * starting with "a/b/". * `name="projects/p1/locations/us-
+               * central1/repositories/repo1/packages/pkg1/tags%2Fb%2Fc"` --> tags with an ID ending
+               * with "/b/c". * `name="projects/p1/locations/us-
+               * central1/repositories/repo1/packages/pkg1/tags%2Fb%2F*"` --> tags with an ID
+               * containing "/b/".
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
@@ -6649,7 +6786,11 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
               /** An expression for filtering the results of the request. Filter rules are case insensitive. The
              fields eligible for filtering are: * `version` An example of using a filter: *
              `version="projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/1.0"` -->
-             Tags that are applied to the version `1.0` in package `pkg1`.
+             Tags that are applied to the version `1.0` in package `pkg1`. * `name="projects/p1/locations/us-
+             central1/repositories/repo1/packages/pkg1/tags/a%2Fb%2F*"` --> tags with an ID starting with
+             "a/b/". * `name="projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/tags%2Fb%2Fc"`
+             --> tags with an ID ending with "/b/c". * `name="projects/p1/locations/us-
+             central1/repositories/repo1/packages/pkg1/tags%2Fb%2F*"` --> tags with an ID containing "/b/".
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -6660,7 +6801,13 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
                * insensitive. The fields eligible for filtering are: * `version` An example of using
                * a filter: * `version="projects/p1/locations/us-
                * central1/repositories/repo1/packages/pkg1/versions/1.0"` --> Tags that are applied
-               * to the version `1.0` in package `pkg1`.
+               * to the version `1.0` in package `pkg1`. * `name="projects/p1/locations/us-
+               * central1/repositories/repo1/packages/pkg1/tags/a%2Fb%2F*"` --> tags with an ID
+               * starting with "a/b/". * `name="projects/p1/locations/us-
+               * central1/repositories/repo1/packages/pkg1/tags%2Fb%2Fc"` --> tags with an ID ending
+               * with "/b/c". * `name="projects/p1/locations/us-
+               * central1/repositories/repo1/packages/pkg1/tags%2Fb%2F*"` --> tags with an ID
+               * containing "/b/".
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;

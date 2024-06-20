@@ -30,8 +30,8 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaFirestoreSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Firestore collection to copy the data from with a length limit of 1,500
-   * characters.
+   * Required. The Firestore collection (or entity) to copy the data from with a length limit of
+   * 1,500 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class GoogleCloudDiscoveryengineV1alphaFirestoreSource extends com.
   private java.lang.String projectId;
 
   /**
-   * Required. The Firestore collection to copy the data from with a length limit of 1,500
-   * characters.
+   * Required. The Firestore collection (or entity) to copy the data from with a length limit of
+   * 1,500 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getCollectionId() {
@@ -72,8 +72,8 @@ public final class GoogleCloudDiscoveryengineV1alphaFirestoreSource extends com.
   }
 
   /**
-   * Required. The Firestore collection to copy the data from with a length limit of 1,500
-   * characters.
+   * Required. The Firestore collection (or entity) to copy the data from with a length limit of
+   * 1,500 characters.
    * @param collectionId collectionId or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaFirestoreSource setCollectionId(java.lang.String collectionId) {

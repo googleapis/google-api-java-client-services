@@ -17,8 +17,8 @@
 package com.google.api.services.containeranalysis.v1.model;
 
 /**
- * Common Vulnerability Scoring System version 3. For details, see https://www.first.org/cvss
- * /specification-document
+ * Common Vulnerability Scoring System version 3. For details, see
+ * https://www.first.org/cvss/specification-document
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation

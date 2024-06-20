@@ -75,15 +75,16 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
    * `CMD` is ignored. See the [Kubernetes documentation about how the `command` and `args` fields
    * interact with a container's `ENTRYPOINT` and `CMD`](https://kubernetes.io/docs/tasks/inject-
    * data-application/define-command-argument-container/#notes). In this field, you can reference
-   * [environment variables set by Vertex AI](https://cloud.google.com/vertex-ai/docs/predictions
-   * /custom-container-requirements#aip-variables) and environment variables set in the env field.
-   * You cannot reference environment variables set in the Docker image. In order for environment
-   * variables to be expanded, reference them by using the following syntax: $( VARIABLE_NAME) Note
-   * that this differs from Bash variable expansion, which does not use parentheses. If a variable
-   * cannot be resolved, the reference in the input string is used unchanged. To avoid variable
-   * expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME) This field
-   * corresponds to the `command` field of the Kubernetes Containers [v1 core
-   * API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#container-v1-core).
+   * [environment variables set by Vertex AI](https://cloud.google.com/vertex-
+   * ai/docs/predictions/custom-container-requirements#aip-variables) and environment variables set
+   * in the env field. You cannot reference environment variables set in the Docker image. In order
+   * for environment variables to be expanded, reference them by using the following syntax: $(
+   * VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use
+   * parentheses. If a variable cannot be resolved, the reference in the input string is used
+   * unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example:
+   * $$(VARIABLE_NAME) This field corresponds to the `command` field of the Kubernetes Containers
+   * [v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-
+   * api/v1.23/#container-v1-core).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,20 +139,20 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
   /**
    * Immutable. HTTP path on the container to send health checks to. Vertex AI intermittently sends
    * GET requests to this path on the container's IP address and port to check that the container is
-   * healthy. Read more about [health checks](https://cloud.google.com/vertex-ai/docs/predictions
-   * /custom-container-requirements#health). For example, if you set this field to `/bar`, then
-   * Vertex AI intermittently sends a GET request to the `/bar` path on the port of your container
-   * specified by the first value of this `ModelContainerSpec`'s ports field. If you don't specify
-   * this field, it defaults to the following value when you deploy this Model to an Endpoint:
-   * /v1/endpoints/ENDPOINT/deployedModels/ DEPLOYED_MODEL:predict The placeholders in this value
-   * are replaced as follows: * ENDPOINT: The last segment (following `endpoints/`)of the
+   * healthy. Read more about [health checks](https://cloud.google.com/vertex-
+   * ai/docs/predictions/custom-container-requirements#health). For example, if you set this field
+   * to `/bar`, then Vertex AI intermittently sends a GET request to the `/bar` path on the port of
+   * your container specified by the first value of this `ModelContainerSpec`'s ports field. If you
+   * don't specify this field, it defaults to the following value when you deploy this Model to an
+   * Endpoint: /v1/endpoints/ENDPOINT/deployedModels/ DEPLOYED_MODEL:predict The placeholders in
+   * this value are replaced as follows: * ENDPOINT: The last segment (following `endpoints/`)of the
    * Endpoint.name][] field of the Endpoint where this Model has been deployed. (Vertex AI makes
    * this value available to your container code as the [`AIP_ENDPOINT_ID` environment
-   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements
-   * #aip-variables).) * DEPLOYED_MODEL: DeployedModel.id of the `DeployedModel`. (Vertex AI makes
-   * this value available to your container code as the [`AIP_DEPLOYED_MODEL_ID` environment
-   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements
-   * #aip-variables).)
+   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-
+   * requirements#aip-variables).) * DEPLOYED_MODEL: DeployedModel.id of the `DeployedModel`.
+   * (Vertex AI makes this value available to your container code as the [`AIP_DEPLOYED_MODEL_ID`
+   * environment variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-
+   * requirements#aip-variables).)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,11 +201,11 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
    * replaced as follows: * ENDPOINT: The last segment (following `endpoints/`)of the
    * Endpoint.name][] field of the Endpoint where this Model has been deployed. (Vertex AI makes
    * this value available to your container code as the [`AIP_ENDPOINT_ID` environment
-   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements
-   * #aip-variables).) * DEPLOYED_MODEL: DeployedModel.id of the `DeployedModel`. (Vertex AI makes
-   * this value available to your container code as the [`AIP_DEPLOYED_MODEL_ID` environment
-   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements
-   * #aip-variables).)
+   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-
+   * requirements#aip-variables).) * DEPLOYED_MODEL: DeployedModel.id of the `DeployedModel`.
+   * (Vertex AI makes this value available to your container code as the [`AIP_DEPLOYED_MODEL_ID`
+   * environment variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-
+   * requirements#aip-variables).)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -299,15 +300,16 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
    * `CMD` is ignored. See the [Kubernetes documentation about how the `command` and `args` fields
    * interact with a container's `ENTRYPOINT` and `CMD`](https://kubernetes.io/docs/tasks/inject-
    * data-application/define-command-argument-container/#notes). In this field, you can reference
-   * [environment variables set by Vertex AI](https://cloud.google.com/vertex-ai/docs/predictions
-   * /custom-container-requirements#aip-variables) and environment variables set in the env field.
-   * You cannot reference environment variables set in the Docker image. In order for environment
-   * variables to be expanded, reference them by using the following syntax: $( VARIABLE_NAME) Note
-   * that this differs from Bash variable expansion, which does not use parentheses. If a variable
-   * cannot be resolved, the reference in the input string is used unchanged. To avoid variable
-   * expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME) This field
-   * corresponds to the `command` field of the Kubernetes Containers [v1 core
-   * API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#container-v1-core).
+   * [environment variables set by Vertex AI](https://cloud.google.com/vertex-
+   * ai/docs/predictions/custom-container-requirements#aip-variables) and environment variables set
+   * in the env field. You cannot reference environment variables set in the Docker image. In order
+   * for environment variables to be expanded, reference them by using the following syntax: $(
+   * VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use
+   * parentheses. If a variable cannot be resolved, the reference in the input string is used
+   * unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example:
+   * $$(VARIABLE_NAME) This field corresponds to the `command` field of the Kubernetes Containers
+   * [v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-
+   * api/v1.23/#container-v1-core).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCommand() {
@@ -329,15 +331,16 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
    * `CMD` is ignored. See the [Kubernetes documentation about how the `command` and `args` fields
    * interact with a container's `ENTRYPOINT` and `CMD`](https://kubernetes.io/docs/tasks/inject-
    * data-application/define-command-argument-container/#notes). In this field, you can reference
-   * [environment variables set by Vertex AI](https://cloud.google.com/vertex-ai/docs/predictions
-   * /custom-container-requirements#aip-variables) and environment variables set in the env field.
-   * You cannot reference environment variables set in the Docker image. In order for environment
-   * variables to be expanded, reference them by using the following syntax: $( VARIABLE_NAME) Note
-   * that this differs from Bash variable expansion, which does not use parentheses. If a variable
-   * cannot be resolved, the reference in the input string is used unchanged. To avoid variable
-   * expansion, you can escape this syntax with `$$`; for example: $$(VARIABLE_NAME) This field
-   * corresponds to the `command` field of the Kubernetes Containers [v1 core
-   * API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#container-v1-core).
+   * [environment variables set by Vertex AI](https://cloud.google.com/vertex-
+   * ai/docs/predictions/custom-container-requirements#aip-variables) and environment variables set
+   * in the env field. You cannot reference environment variables set in the Docker image. In order
+   * for environment variables to be expanded, reference them by using the following syntax: $(
+   * VARIABLE_NAME) Note that this differs from Bash variable expansion, which does not use
+   * parentheses. If a variable cannot be resolved, the reference in the input string is used
+   * unchanged. To avoid variable expansion, you can escape this syntax with `$$`; for example:
+   * $$(VARIABLE_NAME) This field corresponds to the `command` field of the Kubernetes Containers
+   * [v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-
+   * api/v1.23/#container-v1-core).
    * @param command command or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelContainerSpec setCommand(java.util.List<java.lang.String> command) {
@@ -440,20 +443,20 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
   /**
    * Immutable. HTTP path on the container to send health checks to. Vertex AI intermittently sends
    * GET requests to this path on the container's IP address and port to check that the container is
-   * healthy. Read more about [health checks](https://cloud.google.com/vertex-ai/docs/predictions
-   * /custom-container-requirements#health). For example, if you set this field to `/bar`, then
-   * Vertex AI intermittently sends a GET request to the `/bar` path on the port of your container
-   * specified by the first value of this `ModelContainerSpec`'s ports field. If you don't specify
-   * this field, it defaults to the following value when you deploy this Model to an Endpoint:
-   * /v1/endpoints/ENDPOINT/deployedModels/ DEPLOYED_MODEL:predict The placeholders in this value
-   * are replaced as follows: * ENDPOINT: The last segment (following `endpoints/`)of the
+   * healthy. Read more about [health checks](https://cloud.google.com/vertex-
+   * ai/docs/predictions/custom-container-requirements#health). For example, if you set this field
+   * to `/bar`, then Vertex AI intermittently sends a GET request to the `/bar` path on the port of
+   * your container specified by the first value of this `ModelContainerSpec`'s ports field. If you
+   * don't specify this field, it defaults to the following value when you deploy this Model to an
+   * Endpoint: /v1/endpoints/ENDPOINT/deployedModels/ DEPLOYED_MODEL:predict The placeholders in
+   * this value are replaced as follows: * ENDPOINT: The last segment (following `endpoints/`)of the
    * Endpoint.name][] field of the Endpoint where this Model has been deployed. (Vertex AI makes
    * this value available to your container code as the [`AIP_ENDPOINT_ID` environment
-   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements
-   * #aip-variables).) * DEPLOYED_MODEL: DeployedModel.id of the `DeployedModel`. (Vertex AI makes
-   * this value available to your container code as the [`AIP_DEPLOYED_MODEL_ID` environment
-   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements
-   * #aip-variables).)
+   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-
+   * requirements#aip-variables).) * DEPLOYED_MODEL: DeployedModel.id of the `DeployedModel`.
+   * (Vertex AI makes this value available to your container code as the [`AIP_DEPLOYED_MODEL_ID`
+   * environment variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-
+   * requirements#aip-variables).)
    * @return value or {@code null} for none
    */
   public java.lang.String getHealthRoute() {
@@ -463,20 +466,20 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
   /**
    * Immutable. HTTP path on the container to send health checks to. Vertex AI intermittently sends
    * GET requests to this path on the container's IP address and port to check that the container is
-   * healthy. Read more about [health checks](https://cloud.google.com/vertex-ai/docs/predictions
-   * /custom-container-requirements#health). For example, if you set this field to `/bar`, then
-   * Vertex AI intermittently sends a GET request to the `/bar` path on the port of your container
-   * specified by the first value of this `ModelContainerSpec`'s ports field. If you don't specify
-   * this field, it defaults to the following value when you deploy this Model to an Endpoint:
-   * /v1/endpoints/ENDPOINT/deployedModels/ DEPLOYED_MODEL:predict The placeholders in this value
-   * are replaced as follows: * ENDPOINT: The last segment (following `endpoints/`)of the
+   * healthy. Read more about [health checks](https://cloud.google.com/vertex-
+   * ai/docs/predictions/custom-container-requirements#health). For example, if you set this field
+   * to `/bar`, then Vertex AI intermittently sends a GET request to the `/bar` path on the port of
+   * your container specified by the first value of this `ModelContainerSpec`'s ports field. If you
+   * don't specify this field, it defaults to the following value when you deploy this Model to an
+   * Endpoint: /v1/endpoints/ENDPOINT/deployedModels/ DEPLOYED_MODEL:predict The placeholders in
+   * this value are replaced as follows: * ENDPOINT: The last segment (following `endpoints/`)of the
    * Endpoint.name][] field of the Endpoint where this Model has been deployed. (Vertex AI makes
    * this value available to your container code as the [`AIP_ENDPOINT_ID` environment
-   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements
-   * #aip-variables).) * DEPLOYED_MODEL: DeployedModel.id of the `DeployedModel`. (Vertex AI makes
-   * this value available to your container code as the [`AIP_DEPLOYED_MODEL_ID` environment
-   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements
-   * #aip-variables).)
+   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-
+   * requirements#aip-variables).) * DEPLOYED_MODEL: DeployedModel.id of the `DeployedModel`.
+   * (Vertex AI makes this value available to your container code as the [`AIP_DEPLOYED_MODEL_ID`
+   * environment variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-
+   * requirements#aip-variables).)
    * @param healthRoute healthRoute or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelContainerSpec setHealthRoute(java.lang.String healthRoute) {
@@ -564,11 +567,11 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
    * replaced as follows: * ENDPOINT: The last segment (following `endpoints/`)of the
    * Endpoint.name][] field of the Endpoint where this Model has been deployed. (Vertex AI makes
    * this value available to your container code as the [`AIP_ENDPOINT_ID` environment
-   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements
-   * #aip-variables).) * DEPLOYED_MODEL: DeployedModel.id of the `DeployedModel`. (Vertex AI makes
-   * this value available to your container code as the [`AIP_DEPLOYED_MODEL_ID` environment
-   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements
-   * #aip-variables).)
+   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-
+   * requirements#aip-variables).) * DEPLOYED_MODEL: DeployedModel.id of the `DeployedModel`.
+   * (Vertex AI makes this value available to your container code as the [`AIP_DEPLOYED_MODEL_ID`
+   * environment variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-
+   * requirements#aip-variables).)
    * @return value or {@code null} for none
    */
   public java.lang.String getPredictRoute() {
@@ -587,11 +590,11 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
    * replaced as follows: * ENDPOINT: The last segment (following `endpoints/`)of the
    * Endpoint.name][] field of the Endpoint where this Model has been deployed. (Vertex AI makes
    * this value available to your container code as the [`AIP_ENDPOINT_ID` environment
-   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements
-   * #aip-variables).) * DEPLOYED_MODEL: DeployedModel.id of the `DeployedModel`. (Vertex AI makes
-   * this value available to your container code as the [`AIP_DEPLOYED_MODEL_ID` environment
-   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements
-   * #aip-variables).)
+   * variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-
+   * requirements#aip-variables).) * DEPLOYED_MODEL: DeployedModel.id of the `DeployedModel`.
+   * (Vertex AI makes this value available to your container code as the [`AIP_DEPLOYED_MODEL_ID`
+   * environment variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-
+   * requirements#aip-variables).)
    * @param predictRoute predictRoute or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelContainerSpec setPredictRoute(java.lang.String predictRoute) {

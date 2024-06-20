@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Generate recommended DataQualityRules request.
+ * Request details for generating data quality rule recommendations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:

@@ -30,8 +30,8 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The number of rows returned by the sql statement in the SqlAssertion rule.This
-   * field is only valid for SqlAssertion rules.
+   * Output only. The number of rows returned by the SQL statement in a SQL assertion rule.This
+   * field is only valid for SQL assertion rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -92,8 +92,8 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   private GoogleCloudDataplexV1DataQualityRule rule;
 
   /**
-   * Output only. The number of rows returned by the sql statement in the SqlAssertion rule.This
-   * field is only valid for SqlAssertion rules.
+   * Output only. The number of rows returned by the SQL statement in a SQL assertion rule.This
+   * field is only valid for SQL assertion rules.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAssertionRowCount() {
@@ -101,8 +101,8 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   }
 
   /**
-   * Output only. The number of rows returned by the sql statement in the SqlAssertion rule.This
-   * field is only valid for SqlAssertion rules.
+   * Output only. The number of rows returned by the SQL statement in a SQL assertion rule.This
+   * field is only valid for SQL assertion rules.
    * @param assertionRowCount assertionRowCount or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRuleResult setAssertionRowCount(java.lang.Long assertionRowCount) {

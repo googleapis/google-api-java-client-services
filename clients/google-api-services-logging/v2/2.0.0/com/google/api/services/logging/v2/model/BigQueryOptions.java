@@ -30,11 +30,12 @@ package com.google.api.services.logging.v2.model;
 public final class BigQueryOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Whether to use BigQuery's partition tables (https://cloud.google.com/bigquery/docs
-   * /partitioned-tables). By default, Cloud Logging creates dated tables based on the log entries'
-   * timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present
-   * and special query syntax (https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
-   * has to be used instead. In both cases, tables are sharded based on UTC timezone.
+   * Optional. Whether to use BigQuery's partition tables
+   * (https://cloud.google.com/bigquery/docs/partitioned-tables). By default, Cloud Logging creates
+   * dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
+   * tables the date suffix is no longer present and special query syntax
+   * (https://cloud.google.com/bigquery/docs/querying-partitioned-tables) has to be used instead. In
+   * both cases, tables are sharded based on UTC timezone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,11 +53,12 @@ public final class BigQueryOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean usesTimestampColumnPartitioning;
 
   /**
-   * Optional. Whether to use BigQuery's partition tables (https://cloud.google.com/bigquery/docs
-   * /partitioned-tables). By default, Cloud Logging creates dated tables based on the log entries'
-   * timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present
-   * and special query syntax (https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
-   * has to be used instead. In both cases, tables are sharded based on UTC timezone.
+   * Optional. Whether to use BigQuery's partition tables
+   * (https://cloud.google.com/bigquery/docs/partitioned-tables). By default, Cloud Logging creates
+   * dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
+   * tables the date suffix is no longer present and special query syntax
+   * (https://cloud.google.com/bigquery/docs/querying-partitioned-tables) has to be used instead. In
+   * both cases, tables are sharded based on UTC timezone.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUsePartitionedTables() {
@@ -64,11 +66,12 @@ public final class BigQueryOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Whether to use BigQuery's partition tables (https://cloud.google.com/bigquery/docs
-   * /partitioned-tables). By default, Cloud Logging creates dated tables based on the log entries'
-   * timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present
-   * and special query syntax (https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
-   * has to be used instead. In both cases, tables are sharded based on UTC timezone.
+   * Optional. Whether to use BigQuery's partition tables
+   * (https://cloud.google.com/bigquery/docs/partitioned-tables). By default, Cloud Logging creates
+   * dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
+   * tables the date suffix is no longer present and special query syntax
+   * (https://cloud.google.com/bigquery/docs/querying-partitioned-tables) has to be used instead. In
+   * both cases, tables are sharded based on UTC timezone.
    * @param usePartitionedTables usePartitionedTables or {@code null} for none
    */
   public BigQueryOptions setUsePartitionedTables(java.lang.Boolean usePartitionedTables) {

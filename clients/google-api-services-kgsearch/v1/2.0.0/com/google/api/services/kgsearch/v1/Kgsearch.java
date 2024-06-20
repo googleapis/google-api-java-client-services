@@ -258,24 +258,16 @@ public class Kgsearch extends com.google.api.client.googleapis.services.json.Abs
         return (Search) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The list of entity id to be used for search instead of query string. To specify multiple
-       * ids in the HTTP request, repeat the parameter in the URL as in ...?ids=A=B
-       */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> ids;
 
-      /** The list of entity id to be used for search instead of query string. To specify multiple ids in the
-     HTTP request, repeat the parameter in the URL as in ...?ids=A=B
+      /**
+
        */
       public java.util.List<java.lang.String> getIds() {
         return ids;
       }
 
-      /**
-       * The list of entity id to be used for search instead of query string. To specify multiple
-       * ids in the HTTP request, repeat the parameter in the URL as in ...?ids=A=B
-       */
       public Search setIds(java.util.List<java.lang.String> ids) {
         this.ids = ids;
         return this;

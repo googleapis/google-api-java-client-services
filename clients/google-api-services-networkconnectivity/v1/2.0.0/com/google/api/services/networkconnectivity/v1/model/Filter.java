@@ -48,7 +48,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Internet protocol versions this policy-based route applies to. For this version, only
-   * IPV4 is supported.
+   * IPV4 is supported. IPV6 is supported in preview.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Internet protocol versions this policy-based route applies to. For this version, only
-   * IPV4 is supported.
+   * IPV4 is supported. IPV6 is supported in preview.
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocolVersion() {
@@ -111,7 +111,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Internet protocol versions this policy-based route applies to. For this version, only
-   * IPV4 is supported.
+   * IPV4 is supported. IPV6 is supported in preview.
    * @param protocolVersion protocolVersion or {@code null} for none
    */
   public Filter setProtocolVersion(java.lang.String protocolVersion) {

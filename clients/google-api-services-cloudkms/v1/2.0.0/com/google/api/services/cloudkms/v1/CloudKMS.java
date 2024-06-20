@@ -763,8 +763,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The project-specific location in which to generate random bytes. For example, "projects
-         * /my-project/locations/us-central1".
+         * The project-specific location in which to generate random bytes. For example,
+         * "projects/my-project/locations/us-central1".
          */
         @com.google.api.client.util.Key
         private java.lang.String location;
@@ -777,8 +777,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The project-specific location in which to generate random bytes. For example, "projects
-         * /my-project/locations/us-central1".
+         * The project-specific location in which to generate random bytes. For example,
+         * "projects/my-project/locations/us-central1".
          */
         public GenerateRandomBytes setLocation(java.lang.String location) {
           if (!getSuppressPatternChecks()) {
@@ -2609,8 +2609,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Only include resources that match the filter in the response. For more
-           * information, see [Sorting and filtering list results](https://cloud.google.com/kms/docs
-           * /sorting-and-filtering).
+           * information, see [Sorting and filtering list
+           * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -2624,8 +2624,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Only include resources that match the filter in the response. For more
-           * information, see [Sorting and filtering list results](https://cloud.google.com/kms/docs
-           * /sorting-and-filtering).
+           * information, see [Sorting and filtering list
+           * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -4487,8 +4487,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Only include resources that match the filter in the response. For more
-           * information, see [Sorting and filtering list results](https://cloud.google.com/kms/docs
-           * /sorting-and-filtering).
+           * information, see [Sorting and filtering list
+           * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -4502,8 +4502,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Only include resources that match the filter in the response. For more
-           * information, see [Sorting and filtering list results](https://cloud.google.com/kms/docs
-           * /sorting-and-filtering).
+           * information, see [Sorting and filtering list
+           * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

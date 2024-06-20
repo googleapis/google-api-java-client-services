@@ -35,13 +35,13 @@ then
 fi
 
 # Install the local generator without dependencies first and then install the dependencies with hash checking.
-python2 -m pip install --no-deps -e ${GENERATOR_DIR} --user -q
-python2 -m pip install --require-hashes -r generator_requirements.txt --user
+python3 -m pip install --no-deps -e ${GENERATOR_DIR} --user -q
+python3 -m pip install --require-hashes -r generator_requirements.txt --user
 
 mkdir -p ${OUTPUT_DIR}
 
 # run the local generator
-python2 -m googleapis.codegen \
+python3 -m googleapis.codegen \
     --output_dir=${OUTPUT_DIR} \
     --input=${DISCOVERY} \
     --language=java \

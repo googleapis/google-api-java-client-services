@@ -134,6 +134,346 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
   }
 
   /**
+   * An accessor for creating requests from the Accesstokens collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Games games = new Games(...);}
+   *   {@code Games.Accesstokens.List request = games.accesstokens().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Accesstokens accesstokens() {
+    return new Accesstokens();
+  }
+
+  /**
+   * The "accesstokens" collection of methods.
+   */
+  public class Accesstokens {
+
+    /**
+     * Generates a Play Grouping API token for the PGS user identified by the attached credential.
+     *
+     * Create a request for the method "accesstokens.generatePlayGroupingApiToken".
+     *
+     * This request holds the parameters needed by the games server.  After setting any optional
+     * parameters, call the {@link GeneratePlayGroupingApiToken#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public GeneratePlayGroupingApiToken generatePlayGroupingApiToken() throws java.io.IOException {
+      GeneratePlayGroupingApiToken result = new GeneratePlayGroupingApiToken();
+      initialize(result);
+      return result;
+    }
+
+    public class GeneratePlayGroupingApiToken extends GamesRequest<com.google.api.services.games.model.GeneratePlayGroupingApiTokenResponse> {
+
+      private static final String REST_PATH = "games/v1/accesstokens/generatePlayGroupingApiToken";
+
+      /**
+       * Generates a Play Grouping API token for the PGS user identified by the attached credential.
+       *
+       * Create a request for the method "accesstokens.generatePlayGroupingApiToken".
+       *
+       * This request holds the parameters needed by the the games server.  After setting any optional
+       * parameters, call the {@link GeneratePlayGroupingApiToken#execute()} method to invoke the remote
+       * operation. <p> {@link GeneratePlayGroupingApiToken#initialize(com.google.api.client.googleapis.
+       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GeneratePlayGroupingApiToken() {
+        super(Games.this, "POST", REST_PATH, null, com.google.api.services.games.model.GeneratePlayGroupingApiTokenResponse.class);
+      }
+
+      @Override
+      public GeneratePlayGroupingApiToken set$Xgafv(java.lang.String $Xgafv) {
+        return (GeneratePlayGroupingApiToken) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GeneratePlayGroupingApiToken setAccessToken(java.lang.String accessToken) {
+        return (GeneratePlayGroupingApiToken) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GeneratePlayGroupingApiToken setAlt(java.lang.String alt) {
+        return (GeneratePlayGroupingApiToken) super.setAlt(alt);
+      }
+
+      @Override
+      public GeneratePlayGroupingApiToken setCallback(java.lang.String callback) {
+        return (GeneratePlayGroupingApiToken) super.setCallback(callback);
+      }
+
+      @Override
+      public GeneratePlayGroupingApiToken setFields(java.lang.String fields) {
+        return (GeneratePlayGroupingApiToken) super.setFields(fields);
+      }
+
+      @Override
+      public GeneratePlayGroupingApiToken setKey(java.lang.String key) {
+        return (GeneratePlayGroupingApiToken) super.setKey(key);
+      }
+
+      @Override
+      public GeneratePlayGroupingApiToken setOauthToken(java.lang.String oauthToken) {
+        return (GeneratePlayGroupingApiToken) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GeneratePlayGroupingApiToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GeneratePlayGroupingApiToken) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GeneratePlayGroupingApiToken setQuotaUser(java.lang.String quotaUser) {
+        return (GeneratePlayGroupingApiToken) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GeneratePlayGroupingApiToken setUploadType(java.lang.String uploadType) {
+        return (GeneratePlayGroupingApiToken) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GeneratePlayGroupingApiToken setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GeneratePlayGroupingApiToken) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. App package name to generate the token for (e.g. com.example.mygame). */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. App package name to generate the token for (e.g. com.example.mygame).
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. App package name to generate the token for (e.g. com.example.mygame). */
+      public GeneratePlayGroupingApiToken setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      /**
+       * Required. Persona to associate with the token. Persona is a developer-provided stable
+       * identifier of the user. Must be deterministically generated (e.g. as a one-way hash) from
+       * the user account ID and user profile ID (if the app has the concept), according to the
+       * developer's own user identity system.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String persona;
+
+      /** Required. Persona to associate with the token. Persona is a developer-provided stable identifier of
+     the user. Must be deterministically generated (e.g. as a one-way hash) from the user account ID and
+     user profile ID (if the app has the concept), according to the developer's own user identity
+     system.
+       */
+      public java.lang.String getPersona() {
+        return persona;
+      }
+
+      /**
+       * Required. Persona to associate with the token. Persona is a developer-provided stable
+       * identifier of the user. Must be deterministically generated (e.g. as a one-way hash) from
+       * the user account ID and user profile ID (if the app has the concept), according to the
+       * developer's own user identity system.
+       */
+      public GeneratePlayGroupingApiToken setPersona(java.lang.String persona) {
+        this.persona = persona;
+        return this;
+      }
+
+      @Override
+      public GeneratePlayGroupingApiToken set(String parameterName, Object value) {
+        return (GeneratePlayGroupingApiToken) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Generates a Play Grouping API token for the PGS user identified by the Recall session ID provided
+     * in the request.
+     *
+     * Create a request for the method "accesstokens.generateRecallPlayGroupingApiToken".
+     *
+     * This request holds the parameters needed by the games server.  After setting any optional
+     * parameters, call the {@link GenerateRecallPlayGroupingApiToken#execute()} method to invoke the
+     * remote operation.
+     *
+     * @return the request
+     */
+    public GenerateRecallPlayGroupingApiToken generateRecallPlayGroupingApiToken() throws java.io.IOException {
+      GenerateRecallPlayGroupingApiToken result = new GenerateRecallPlayGroupingApiToken();
+      initialize(result);
+      return result;
+    }
+
+    public class GenerateRecallPlayGroupingApiToken extends GamesRequest<com.google.api.services.games.model.GenerateRecallPlayGroupingApiTokenResponse> {
+
+      private static final String REST_PATH = "games/v1/accesstokens/generateRecallPlayGroupingApiToken";
+
+      /**
+       * Generates a Play Grouping API token for the PGS user identified by the Recall session ID
+       * provided in the request.
+       *
+       * Create a request for the method "accesstokens.generateRecallPlayGroupingApiToken".
+       *
+       * This request holds the parameters needed by the the games server.  After setting any optional
+       * parameters, call the {@link GenerateRecallPlayGroupingApiToken#execute()} method to invoke the
+       * remote operation. <p> {@link GenerateRecallPlayGroupingApiToken#initialize(com.google.api.clien
+       * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GenerateRecallPlayGroupingApiToken() {
+        super(Games.this, "POST", REST_PATH, null, com.google.api.services.games.model.GenerateRecallPlayGroupingApiTokenResponse.class);
+      }
+
+      @Override
+      public GenerateRecallPlayGroupingApiToken set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateRecallPlayGroupingApiToken) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateRecallPlayGroupingApiToken setAccessToken(java.lang.String accessToken) {
+        return (GenerateRecallPlayGroupingApiToken) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GenerateRecallPlayGroupingApiToken setAlt(java.lang.String alt) {
+        return (GenerateRecallPlayGroupingApiToken) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateRecallPlayGroupingApiToken setCallback(java.lang.String callback) {
+        return (GenerateRecallPlayGroupingApiToken) super.setCallback(callback);
+      }
+
+      @Override
+      public GenerateRecallPlayGroupingApiToken setFields(java.lang.String fields) {
+        return (GenerateRecallPlayGroupingApiToken) super.setFields(fields);
+      }
+
+      @Override
+      public GenerateRecallPlayGroupingApiToken setKey(java.lang.String key) {
+        return (GenerateRecallPlayGroupingApiToken) super.setKey(key);
+      }
+
+      @Override
+      public GenerateRecallPlayGroupingApiToken setOauthToken(java.lang.String oauthToken) {
+        return (GenerateRecallPlayGroupingApiToken) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GenerateRecallPlayGroupingApiToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GenerateRecallPlayGroupingApiToken) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GenerateRecallPlayGroupingApiToken setQuotaUser(java.lang.String quotaUser) {
+        return (GenerateRecallPlayGroupingApiToken) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GenerateRecallPlayGroupingApiToken setUploadType(java.lang.String uploadType) {
+        return (GenerateRecallPlayGroupingApiToken) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateRecallPlayGroupingApiToken setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateRecallPlayGroupingApiToken) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. App package name to generate the token for (e.g. com.example.mygame). */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. App package name to generate the token for (e.g. com.example.mygame).
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. App package name to generate the token for (e.g. com.example.mygame). */
+      public GenerateRecallPlayGroupingApiToken setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      /**
+       * Required. Persona to associate with the token. Persona is a developer-provided stable
+       * identifier of the user. Must be deterministically generated (e.g. as a one-way hash) from
+       * the user account ID and user profile ID (if the app has the concept), according to the
+       * developer's own user identity system.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String persona;
+
+      /** Required. Persona to associate with the token. Persona is a developer-provided stable identifier of
+     the user. Must be deterministically generated (e.g. as a one-way hash) from the user account ID and
+     user profile ID (if the app has the concept), according to the developer's own user identity
+     system.
+       */
+      public java.lang.String getPersona() {
+        return persona;
+      }
+
+      /**
+       * Required. Persona to associate with the token. Persona is a developer-provided stable
+       * identifier of the user. Must be deterministically generated (e.g. as a one-way hash) from
+       * the user account ID and user profile ID (if the app has the concept), according to the
+       * developer's own user identity system.
+       */
+      public GenerateRecallPlayGroupingApiToken setPersona(java.lang.String persona) {
+        this.persona = persona;
+        return this;
+      }
+
+      /**
+       * Required. Opaque server-generated string that encodes all the necessary information to
+       * identify the PGS player / Google user and application. See
+       * https://developer.android.com/games/pgs/recall/recall-setup on how to integrate with Recall
+       * and get session ID.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String recallSessionId;
+
+      /** Required. Opaque server-generated string that encodes all the necessary information to identify the
+     PGS player / Google user and application. See
+     https://developer.android.com/games/pgs/recall/recall-setup on how to integrate with Recall and get
+     session ID.
+       */
+      public java.lang.String getRecallSessionId() {
+        return recallSessionId;
+      }
+
+      /**
+       * Required. Opaque server-generated string that encodes all the necessary information to
+       * identify the PGS player / Google user and application. See
+       * https://developer.android.com/games/pgs/recall/recall-setup on how to integrate with Recall
+       * and get session ID.
+       */
+      public GenerateRecallPlayGroupingApiToken setRecallSessionId(java.lang.String recallSessionId) {
+        this.recallSessionId = recallSessionId;
+        return this;
+      }
+
+      @Override
+      public GenerateRecallPlayGroupingApiToken set(String parameterName, Object value) {
+        return (GenerateRecallPlayGroupingApiToken) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the AchievementDefinitions collection.
    *
    * <p>The typical use is:</p>
@@ -3478,9 +3818,171 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
   public class Recall {
 
     /**
+     * Retrieve the Recall tokens from all requested games that is associated with the PGS Player
+     * encoded in the provided recall session id. The API is only available for users that have an
+     * active PGS Player profile.
+     *
+     * Create a request for the method "recall.gamesPlayerTokens".
+     *
+     * This request holds the parameters needed by the games server.  After setting any optional
+     * parameters, call the {@link GamesPlayerTokens#execute()} method to invoke the remote operation.
+     *
+     * @param sessionId Required. Opaque server-generated string that encodes all the necessary information to identify the
+     *        PGS player / Google user and application.
+     * @return the request
+     */
+    public GamesPlayerTokens gamesPlayerTokens(java.lang.String sessionId) throws java.io.IOException {
+      GamesPlayerTokens result = new GamesPlayerTokens(sessionId);
+      initialize(result);
+      return result;
+    }
+
+    public class GamesPlayerTokens extends GamesRequest<com.google.api.services.games.model.RetrieveGamesPlayerTokensResponse> {
+
+      private static final String REST_PATH = "games/v1/recall/gamesPlayerTokens/{sessionId}";
+
+      /**
+       * Retrieve the Recall tokens from all requested games that is associated with the PGS Player
+       * encoded in the provided recall session id. The API is only available for users that have an
+       * active PGS Player profile.
+       *
+       * Create a request for the method "recall.gamesPlayerTokens".
+       *
+       * This request holds the parameters needed by the the games server.  After setting any optional
+       * parameters, call the {@link GamesPlayerTokens#execute()} method to invoke the remote operation.
+       * <p> {@link GamesPlayerTokens#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+       * eClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param sessionId Required. Opaque server-generated string that encodes all the necessary information to identify the
+     *        PGS player / Google user and application.
+       * @since 1.13
+       */
+      protected GamesPlayerTokens(java.lang.String sessionId) {
+        super(Games.this, "GET", REST_PATH, null, com.google.api.services.games.model.RetrieveGamesPlayerTokensResponse.class);
+        this.sessionId = com.google.api.client.util.Preconditions.checkNotNull(sessionId, "Required parameter sessionId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GamesPlayerTokens set$Xgafv(java.lang.String $Xgafv) {
+        return (GamesPlayerTokens) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GamesPlayerTokens setAccessToken(java.lang.String accessToken) {
+        return (GamesPlayerTokens) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GamesPlayerTokens setAlt(java.lang.String alt) {
+        return (GamesPlayerTokens) super.setAlt(alt);
+      }
+
+      @Override
+      public GamesPlayerTokens setCallback(java.lang.String callback) {
+        return (GamesPlayerTokens) super.setCallback(callback);
+      }
+
+      @Override
+      public GamesPlayerTokens setFields(java.lang.String fields) {
+        return (GamesPlayerTokens) super.setFields(fields);
+      }
+
+      @Override
+      public GamesPlayerTokens setKey(java.lang.String key) {
+        return (GamesPlayerTokens) super.setKey(key);
+      }
+
+      @Override
+      public GamesPlayerTokens setOauthToken(java.lang.String oauthToken) {
+        return (GamesPlayerTokens) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GamesPlayerTokens setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GamesPlayerTokens) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GamesPlayerTokens setQuotaUser(java.lang.String quotaUser) {
+        return (GamesPlayerTokens) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GamesPlayerTokens setUploadType(java.lang.String uploadType) {
+        return (GamesPlayerTokens) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GamesPlayerTokens setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GamesPlayerTokens) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Opaque server-generated string that encodes all the necessary information to
+       * identify the PGS player / Google user and application.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String sessionId;
+
+      /** Required. Opaque server-generated string that encodes all the necessary information to identify the
+     PGS player / Google user and application.
+       */
+      public java.lang.String getSessionId() {
+        return sessionId;
+      }
+
+      /**
+       * Required. Opaque server-generated string that encodes all the necessary information to
+       * identify the PGS player / Google user and application.
+       */
+      public GamesPlayerTokens setSessionId(java.lang.String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+      }
+
+      /**
+       * Required. The application IDs from the Google Play developer console for the games to
+       * return scoped ids for.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> applicationIds;
+
+      /** Required. The application IDs from the Google Play developer console for the games to return scoped
+     ids for.
+       */
+      public java.util.List<java.lang.String> getApplicationIds() {
+        return applicationIds;
+      }
+
+      /**
+       * Required. The application IDs from the Google Play developer console for the games to
+       * return scoped ids for.
+       */
+      public GamesPlayerTokens setApplicationIds(java.util.List<java.lang.String> applicationIds) {
+        this.applicationIds = applicationIds;
+        return this;
+      }
+
+      @Override
+      public GamesPlayerTokens set(String parameterName, Object value) {
+        return (GamesPlayerTokens) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieve the last Recall token from all developer games that is associated with the PGS Player
-     * principal encoded in the provided recall session id. The API is only available for users that
-     * have active PGS Player profile.
+     * encoded in the provided recall session id. The API is only available for users that have active
+     * PGS Player profile.
      *
      * Create a request for the method "recall.lastTokenFromAllDeveloperGames".
      *
@@ -3504,8 +4006,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Retrieve the last Recall token from all developer games that is associated with the PGS Player
-       * principal encoded in the provided recall session id. The API is only available for users that
-       * have active PGS Player profile.
+       * encoded in the provided recall session id. The API is only available for users that have active
+       * PGS Player profile.
        *
        * Create a request for the method "recall.lastTokenFromAllDeveloperGames".
        *
@@ -3818,8 +4320,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Retrieve all Recall tokens associated with the PGS Player principal encoded in the provided
-     * recall session id. The API is only available for users that have active PGS Player profile.
+     * Retrieve all Recall tokens associated with the PGS Player encoded in the provided recall session
+     * id. The API is only available for users that have active PGS Player profile.
      *
      * Create a request for the method "recall.retrieveTokens".
      *
@@ -3841,8 +4343,8 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "games/v1/recall/tokens/{sessionId}";
 
       /**
-       * Retrieve all Recall tokens associated with the PGS Player principal encoded in the provided
-       * recall session id. The API is only available for users that have active PGS Player profile.
+       * Retrieve all Recall tokens associated with the PGS Player encoded in the provided recall
+       * session id. The API is only available for users that have active PGS Player profile.
        *
        * Create a request for the method "recall.retrieveTokens".
        *

@@ -30,20 +30,20 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class GoogleCloudHealthcareV1beta1FhirGcsDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * URI for a Cloud Storage directory where result files should be written (in the format `gs
-   * ://{bucket-id}/{path/to/destination/dir}`). If there is no trailing slash, the service appends
-   * one when composing the object path. The Cloud Storage bucket referenced in `uri_prefix` must
-   * exist or an error occurs.
+   * URI for a Cloud Storage directory where result files should be written (in the format
+   * `gs://{bucket-id}/{path/to/destination/dir}`). If there is no trailing slash, the service
+   * appends one when composing the object path. The Cloud Storage bucket referenced in `uri_prefix`
+   * must exist or an error occurs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uriPrefix;
 
   /**
-   * URI for a Cloud Storage directory where result files should be written (in the format `gs
-   * ://{bucket-id}/{path/to/destination/dir}`). If there is no trailing slash, the service appends
-   * one when composing the object path. The Cloud Storage bucket referenced in `uri_prefix` must
-   * exist or an error occurs.
+   * URI for a Cloud Storage directory where result files should be written (in the format
+   * `gs://{bucket-id}/{path/to/destination/dir}`). If there is no trailing slash, the service
+   * appends one when composing the object path. The Cloud Storage bucket referenced in `uri_prefix`
+   * must exist or an error occurs.
    * @return value or {@code null} for none
    */
   public java.lang.String getUriPrefix() {
@@ -51,10 +51,10 @@ public final class GoogleCloudHealthcareV1beta1FhirGcsDestination extends com.go
   }
 
   /**
-   * URI for a Cloud Storage directory where result files should be written (in the format `gs
-   * ://{bucket-id}/{path/to/destination/dir}`). If there is no trailing slash, the service appends
-   * one when composing the object path. The Cloud Storage bucket referenced in `uri_prefix` must
-   * exist or an error occurs.
+   * URI for a Cloud Storage directory where result files should be written (in the format
+   * `gs://{bucket-id}/{path/to/destination/dir}`). If there is no trailing slash, the service
+   * appends one when composing the object path. The Cloud Storage bucket referenced in `uri_prefix`
+   * must exist or an error occurs.
    * @param uriPrefix uriPrefix or {@code null} for none
    */
   public GoogleCloudHealthcareV1beta1FhirGcsDestination setUriPrefix(java.lang.String uriPrefix) {

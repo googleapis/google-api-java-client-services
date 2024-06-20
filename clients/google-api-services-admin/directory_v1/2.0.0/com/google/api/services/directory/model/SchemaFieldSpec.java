@@ -98,9 +98,9 @@ public final class SchemaFieldSpec extends com.google.api.client.json.GenericJso
   private NumericIndexingSpec numericIndexingSpec;
 
   /**
-   * Specifies who can view values of this field. See [Retrieve users as a non-administrator
-   * ](/admin-sdk/directory/v1/guides/manage-users#retrieve_users_non_admin) for more information.
-   * Note: It may take up to 24 hours for changes to this field to be reflected.
+   * Specifies who can view values of this field. See [Retrieve users as a non-
+   * administrator](/admin-sdk/directory/v1/guides/manage-users#retrieve_users_non_admin) for more
+   * information. Note: It may take up to 24 hours for changes to this field to be reflected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -291,9 +291,9 @@ public final class SchemaFieldSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies who can view values of this field. See [Retrieve users as a non-administrator
-   * ](/admin-sdk/directory/v1/guides/manage-users#retrieve_users_non_admin) for more information.
-   * Note: It may take up to 24 hours for changes to this field to be reflected.
+   * Specifies who can view values of this field. See [Retrieve users as a non-
+   * administrator](/admin-sdk/directory/v1/guides/manage-users#retrieve_users_non_admin) for more
+   * information. Note: It may take up to 24 hours for changes to this field to be reflected.
    * @return value or {@code null} for none
    */
   public java.lang.String getReadAccessType() {
@@ -301,9 +301,9 @@ public final class SchemaFieldSpec extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies who can view values of this field. See [Retrieve users as a non-administrator
-   * ](/admin-sdk/directory/v1/guides/manage-users#retrieve_users_non_admin) for more information.
-   * Note: It may take up to 24 hours for changes to this field to be reflected.
+   * Specifies who can view values of this field. See [Retrieve users as a non-
+   * administrator](/admin-sdk/directory/v1/guides/manage-users#retrieve_users_non_admin) for more
+   * information. Note: It may take up to 24 hours for changes to this field to be reflected.
    * @param readAccessType readAccessType or {@code null} for none
    */
   public SchemaFieldSpec setReadAccessType(java.lang.String readAccessType) {

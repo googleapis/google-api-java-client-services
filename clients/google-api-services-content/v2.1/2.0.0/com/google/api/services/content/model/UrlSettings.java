@@ -19,8 +19,9 @@ package com.google.api.services.content.model;
 /**
  * Specifications related to the `Checkout` URL. The `UriTemplate` is of the form
  * `https://www.mystore.com/checkout?item_id={id}` where `{id}` will be automatically replaced with
- * data from the merchant account with this attribute [offer_id](https://developers.google.com
- * /shopping-content/reference/rest/v2.1/products#Product.FIELDS.offer_id)
+ * data from the merchant account with this attribute
+ * [offer_id](https://developers.google.com/shopping-
+ * content/reference/rest/v2.1/products#Product.FIELDS.offer_id)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

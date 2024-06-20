@@ -76,8 +76,13 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maxRetryCount;
 
   /**
-   * Maximum duration the task should run. The task will be killed and marked as FAILED if over this
-   * limit. The valid value range for max_run_duration in seconds is [0, 315576000000.999999999],
+   * Maximum duration the task should run before being automatically retried (if enabled) or
+   * automatically failed. Format the value of this field as a time limit in seconds followed by
+   * `s`—for example, `3600s` for 1 hour. The field accepts any value between 0 and the maximum
+   * listed for the `Duration` field type at
+   * https://protobuf.dev/reference/protobuf/google.protobuf/#duration; however, the actual maximum
+   * run time for a job will be limited to the maximum run time for a job listed at
+   * https://cloud.google.com/batch/quotas#max-job-duration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,8 +210,13 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum duration the task should run. The task will be killed and marked as FAILED if over this
-   * limit. The valid value range for max_run_duration in seconds is [0, 315576000000.999999999],
+   * Maximum duration the task should run before being automatically retried (if enabled) or
+   * automatically failed. Format the value of this field as a time limit in seconds followed by
+   * `s`—for example, `3600s` for 1 hour. The field accepts any value between 0 and the maximum
+   * listed for the `Duration` field type at
+   * https://protobuf.dev/reference/protobuf/google.protobuf/#duration; however, the actual maximum
+   * run time for a job will be limited to the maximum run time for a job listed at
+   * https://cloud.google.com/batch/quotas#max-job-duration.
    * @return value or {@code null} for none
    */
   public String getMaxRunDuration() {
@@ -214,8 +224,13 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum duration the task should run. The task will be killed and marked as FAILED if over this
-   * limit. The valid value range for max_run_duration in seconds is [0, 315576000000.999999999],
+   * Maximum duration the task should run before being automatically retried (if enabled) or
+   * automatically failed. Format the value of this field as a time limit in seconds followed by
+   * `s`—for example, `3600s` for 1 hour. The field accepts any value between 0 and the maximum
+   * listed for the `Duration` field type at
+   * https://protobuf.dev/reference/protobuf/google.protobuf/#duration; however, the actual maximum
+   * run time for a job will be limited to the maximum run time for a job listed at
+   * https://cloud.google.com/batch/quotas#max-job-duration.
    * @param maxRunDuration maxRunDuration or {@code null} for none
    */
   public TaskSpec setMaxRunDuration(String maxRunDuration) {

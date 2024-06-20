@@ -3051,8 +3051,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts
-           * /regional-endpoints) to which to direct the request. E.g., us-central1, us-west1.
+           * Required. The [regional endpoint]
+           * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct
+           * the request. E.g., us-central1, us-west1.
            */
           @com.google.api.client.util.Key
           private java.lang.String location;
@@ -3065,8 +3066,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts
-           * /regional-endpoints) to which to direct the request. E.g., us-central1, us-west1.
+           * Required. The [regional endpoint]
+           * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct
+           * the request. E.g., us-central1, us-west1.
            */
           public Launch setLocation(java.lang.String location) {
             this.location = location;

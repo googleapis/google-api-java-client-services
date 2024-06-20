@@ -39,6 +39,13 @@ public final class GoogleAnalyticsAdminV1alphaAudience extends com.google.api.cl
   private java.lang.Boolean adsPersonalizationEnabled;
 
   /**
+   * Output only. Time when the Audience was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Required. The description of the Audience.
    * The value may be {@code null}.
    */
@@ -109,6 +116,23 @@ public final class GoogleAnalyticsAdminV1alphaAudience extends com.google.api.cl
    */
   public GoogleAnalyticsAdminV1alphaAudience setAdsPersonalizationEnabled(java.lang.Boolean adsPersonalizationEnabled) {
     this.adsPersonalizationEnabled = adsPersonalizationEnabled;
+    return this;
+  }
+
+  /**
+   * Output only. Time when the Audience was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. Time when the Audience was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaAudience setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 

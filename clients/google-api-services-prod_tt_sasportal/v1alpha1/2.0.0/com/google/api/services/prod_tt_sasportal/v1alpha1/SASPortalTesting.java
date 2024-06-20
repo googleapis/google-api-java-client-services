@@ -658,8 +658,8 @@ public class SASPortalTesting extends com.google.api.client.googleapis.services.
     }
     /**
      * Migrates a SAS organization to the cloud. This will create GCP projects for each deployment and
-     * associate them. The SAS Organization is linked to the gcp project that called the command. go
-     * /sas-legacy-customer-migration
+     * associate them. The SAS Organization is linked to the gcp project that called the command.
+     * go/sas-legacy-customer-migration
      *
      * Create a request for the method "customers.migrateOrganization".
      *
@@ -682,8 +682,8 @@ public class SASPortalTesting extends com.google.api.client.googleapis.services.
 
       /**
        * Migrates a SAS organization to the cloud. This will create GCP projects for each deployment and
-       * associate them. The SAS Organization is linked to the gcp project that called the command. go
-       * /sas-legacy-customer-migration
+       * associate them. The SAS Organization is linked to the gcp project that called the command.
+       * go/sas-legacy-customer-migration
        *
        * Create a request for the method "customers.migrateOrganization".
        *

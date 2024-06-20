@@ -32,7 +32,7 @@ package com.google.api.services.bigqueryconnection.v1.model;
 public final class ConnectorConfigurationAsset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Name of the database.
+   * Name of the database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class ConnectorConfigurationAsset extends com.google.api.client.jso
   private java.lang.String googleCloudResource;
 
   /**
-   * Optional. Name of the database.
+   * Name of the database.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabase() {
@@ -56,7 +56,7 @@ public final class ConnectorConfigurationAsset extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Name of the database.
+   * Name of the database.
    * @param database database or {@code null} for none
    */
   public ConnectorConfigurationAsset setDatabase(java.lang.String database) {

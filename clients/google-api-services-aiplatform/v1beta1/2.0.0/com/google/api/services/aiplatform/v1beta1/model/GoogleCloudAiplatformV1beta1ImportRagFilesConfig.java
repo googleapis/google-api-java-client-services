@@ -46,6 +46,16 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   private GoogleCloudAiplatformV1beta1GoogleDriveSource googleDriveSource;
 
   /**
+   * Optional. The max number of queries per minute that this job is allowed to make to the
+   * embedding model specified on the corpus. This value is specific to this job and not shared
+   * across other import jobs. Consult the Quotas page on the project to set an appropriate value
+   * here. If unspecified, a default value of 1,000 QPM would be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxEmbeddingRequestsPerMin;
+
+  /**
    * Specifies the size and overlap of chunks after importing RagFiles.
    * The value may be {@code null}.
    */
@@ -87,6 +97,29 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
    */
   public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setGoogleDriveSource(GoogleCloudAiplatformV1beta1GoogleDriveSource googleDriveSource) {
     this.googleDriveSource = googleDriveSource;
+    return this;
+  }
+
+  /**
+   * Optional. The max number of queries per minute that this job is allowed to make to the
+   * embedding model specified on the corpus. This value is specific to this job and not shared
+   * across other import jobs. Consult the Quotas page on the project to set an appropriate value
+   * here. If unspecified, a default value of 1,000 QPM would be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxEmbeddingRequestsPerMin() {
+    return maxEmbeddingRequestsPerMin;
+  }
+
+  /**
+   * Optional. The max number of queries per minute that this job is allowed to make to the
+   * embedding model specified on the corpus. This value is specific to this job and not shared
+   * across other import jobs. Consult the Quotas page on the project to set an appropriate value
+   * here. If unspecified, a default value of 1,000 QPM would be used.
+   * @param maxEmbeddingRequestsPerMin maxEmbeddingRequestsPerMin or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setMaxEmbeddingRequestsPerMin(java.lang.Integer maxEmbeddingRequestsPerMin) {
+    this.maxEmbeddingRequestsPerMin = maxEmbeddingRequestsPerMin;
     return this;
   }
 

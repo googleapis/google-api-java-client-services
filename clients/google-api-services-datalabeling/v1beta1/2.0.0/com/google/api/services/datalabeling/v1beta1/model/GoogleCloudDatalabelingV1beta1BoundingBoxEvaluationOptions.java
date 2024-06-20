@@ -30,18 +30,18 @@ package com.google.api.services.datalabeling.v1beta1.model;
 public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate
-   * #intersection-over-union) required for 2 bounding boxes to be considered a match. This must be
-   * a number between 0 and 1.
+   * Minimum [intersection-over-union (IOU)](/vision/automl/object-
+   * detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered
+   * a match. This must be a number between 0 and 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float iouThreshold;
 
   /**
-   * Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate
-   * #intersection-over-union) required for 2 bounding boxes to be considered a match. This must be
-   * a number between 0 and 1.
+   * Minimum [intersection-over-union (IOU)](/vision/automl/object-
+   * detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered
+   * a match. This must be a number between 0 and 1.
    * @return value or {@code null} for none
    */
   public java.lang.Float getIouThreshold() {
@@ -49,9 +49,9 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptions ex
   }
 
   /**
-   * Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate
-   * #intersection-over-union) required for 2 bounding boxes to be considered a match. This must be
-   * a number between 0 and 1.
+   * Minimum [intersection-over-union (IOU)](/vision/automl/object-
+   * detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered
+   * a match. This must be a number between 0 and 1.
    * @param iouThreshold iouThreshold or {@code null} for none
    */
   public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptions setIouThreshold(java.lang.Float iouThreshold) {

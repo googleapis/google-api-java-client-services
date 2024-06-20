@@ -30,28 +30,28 @@ package com.google.api.services.vmmigration.v1.model;
 public final class AzureDiskDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Azure disk ID.
+   * Output only. Azure disk ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String diskId;
 
   /**
-   * The ordinal number of the disk.
+   * Output only. The ordinal number of the disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer diskNumber;
 
   /**
-   * Size in GB.
+   * Output only. Size in GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long sizeGb;
 
   /**
-   * Azure disk ID.
+   * Output only. Azure disk ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskId() {
@@ -59,7 +59,7 @@ public final class AzureDiskDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Azure disk ID.
+   * Output only. Azure disk ID.
    * @param diskId diskId or {@code null} for none
    */
   public AzureDiskDetails setDiskId(java.lang.String diskId) {
@@ -68,7 +68,7 @@ public final class AzureDiskDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The ordinal number of the disk.
+   * Output only. The ordinal number of the disk.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDiskNumber() {
@@ -76,7 +76,7 @@ public final class AzureDiskDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The ordinal number of the disk.
+   * Output only. The ordinal number of the disk.
    * @param diskNumber diskNumber or {@code null} for none
    */
   public AzureDiskDetails setDiskNumber(java.lang.Integer diskNumber) {
@@ -85,7 +85,7 @@ public final class AzureDiskDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Size in GB.
+   * Output only. Size in GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSizeGb() {
@@ -93,7 +93,7 @@ public final class AzureDiskDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Size in GB.
+   * Output only. Size in GB.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public AzureDiskDetails setSizeGb(java.lang.Long sizeGb) {

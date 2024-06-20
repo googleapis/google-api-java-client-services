@@ -912,8 +912,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * equal to 2020-11-04T18:54:47Z (format of ISO 8601): `updateTime<="2020-11-04T18:54:47Z"` *
        * All advertisers with an update time greater than or equal to 2020-11-04T18:54:47Z (format
        * of ISO 8601): `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no
-       * more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
-       * /how-tos/filters) guide for more information.
+       * more than 500 characters. Reference our [filter `LIST` requests](/display-
+       * video/api/guides/how-tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
@@ -947,8 +947,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * equal to 2020-11-04T18:54:47Z (format of ISO 8601): `updateTime<="2020-11-04T18:54:47Z"` *
        * All advertisers with an update time greater than or equal to 2020-11-04T18:54:47Z (format
        * of ISO 8601): `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no
-       * more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
-       * /how-tos/filters) guide for more information.
+       * more than 500 characters. Reference our [filter `LIST` requests](/display-
+       * video/api/guides/how-tos/filters) guide for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1796,8 +1796,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /**
        * Permanently deletes a campaign. A deleted campaign cannot be recovered. The campaign should be
        * archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
-       * **This method regularly experiences high latency.** We recommend [increasing your default timeout
-       * ](/display-video/api/guides/best-practices/timeouts#client_library_timeout) to avoid errors.
+       * **This method regularly experiences high latency.** We recommend [increasing your default
+       * timeout](/display-video/api/guides/best-practices/timeouts#client_library_timeout) to avoid
+       * errors.
        *
        * Create a request for the method "campaigns.delete".
        *
@@ -2529,8 +2530,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        `targetingType="TARGETING_TYPE_LANGUAGE" OR targetingType="TARGETING_TYPE_GENDER"` *
        `AssignedTargetingOption` resources with inheritance status of `NOT_INHERITED` or
        `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The
-       length of this field should be no more than 500 characters. Reference our [filter `LIST` requests
-       ](/display-video/api/guides/how-tos/filters) guide for more information.
+       length of this field should be no more than 500 characters. Reference our [filter `LIST`
+       requests](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -5784,14 +5785,15 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        `creativeType="CREATIVE_TYPE_NATIVE"` * All active creatives with 300x400 or 50x100 dimensions:
        `entityStatus="ENTITY_STATUS_ACTIVE" AND (dimensions="300x400" OR dimensions="50x100")` * All
        dynamic creatives that are approved by AdX or AppNexus, with a minimum duration of 5 seconds and
-       200ms: `dynamic="true" AND minDuration="5.2s" AND (exchangeReviewStatus
-       ="EXCHANGE_GOOGLE_AD_MANAGER-REVIEW_STATUS_APPROVED" OR exchangeReviewStatus="EXCHANGE_APPNEXUS-
-       REVIEW_STATUS_APPROVED")` * All video creatives that are associated with line item ID 1 or 2:
-       `creativeType="CREATIVE_TYPE_VIDEO" AND (lineItemIds:1 OR lineItemIds:2)` * Find creatives by
-       multiple creative IDs: `creativeId=1 OR creativeId=2` * All creatives with an update time greater
-       than or equal to 2020-11-04T18:54:47Z (format of ISO 8601): `updateTime>="2020-11-04T18:54:47Z"`
-       The length of this field should be no more than 500 characters. Reference our [filter `LIST`
-       requests](/display-video/api/guides/how-tos/filters) guide for more information.
+       200ms: `dynamic="true" AND minDuration="5.2s" AND
+       (exchangeReviewStatus="EXCHANGE_GOOGLE_AD_MANAGER-REVIEW_STATUS_APPROVED" OR
+       exchangeReviewStatus="EXCHANGE_APPNEXUS-REVIEW_STATUS_APPROVED")` * All video creatives that are
+       associated with line item ID 1 or 2: `creativeType="CREATIVE_TYPE_VIDEO" AND (lineItemIds:1 OR
+       lineItemIds:2)` * Find creatives by multiple creative IDs: `creativeId=1 OR creativeId=2` * All
+       creatives with an update time greater than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
+       `updateTime>="2020-11-04T18:54:47Z"` The length of this field should be no more than 500
+       characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+       for more information.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -6676,8 +6678,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        orders with an update time less than or equal to 2020-11-04T18:54:47Z (format of ISO 8601):
        `updateTime<="2020-11-04T18:54:47Z"` * All insertion orders with an update time greater than or
        equal to 2020-11-04T18:54:47Z (format of ISO 8601): `updateTime>="2020-11-04T18:54:47Z"` The length
-       of this field should be no more than 500 characters. Reference our [filter `LIST` requests
-       ](/display-video/api/guides/how-tos/filters) guide for more information.
+       of this field should be no more than 500 characters. Reference our [filter `LIST`
+       requests](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -6946,8 +6948,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * targetingType="TARGETING_TYPE_CHANNEL"` * `AssignedTargetingOption` resources with
          * inheritance status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`:
          * `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this
-         * field should be no more than 500 characters. Reference our [filter `LIST` requests
-         * ](/display-video/api/guides/how-tos/filters) guide for more information.
+         * field should be no more than 500 characters. Reference our [filter `LIST`
+         * requests](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -6960,8 +6962,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR targetingType="TARGETING_TYPE_CHANNEL"`
        * `AssignedTargetingOption` resources with inheritance status of `NOT_INHERITED` or
        `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The
-       length of this field should be no more than 500 characters. Reference our [filter `LIST` requests
-       ](/display-video/api/guides/how-tos/filters) guide for more information.
+       length of this field should be no more than 500 characters. Reference our [filter `LIST`
+       requests](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -6978,8 +6980,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * targetingType="TARGETING_TYPE_CHANNEL"` * `AssignedTargetingOption` resources with
          * inheritance status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`:
          * `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this
-         * field should be no more than 500 characters. Reference our [filter `LIST` requests
-         * ](/display-video/api/guides/how-tos/filters) guide for more information.
+         * field should be no more than 500 characters. Reference our [filter `LIST`
+         * requests](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         public ListAssignedTargetingOptions setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -8402,8 +8404,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * assignedTargetingOptionId="2"` * `AssignedTargetingOption` resources with inheritance
              * status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED"
              * OR inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more
-             * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
-             * /how-tos/filters) guide for more information.
+             * than 500 characters. Reference our [filter `LIST` requests](/display-
+             * video/api/guides/how-tos/filters) guide for more information.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -8433,8 +8435,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * assignedTargetingOptionId="2"` * `AssignedTargetingOption` resources with inheritance
              * status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED"
              * OR inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more
-             * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
-             * /how-tos/filters) guide for more information.
+             * than 500 characters. Reference our [filter `LIST` requests](/display-
+             * video/api/guides/how-tos/filters) guide for more information.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -9220,8 +9222,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * targetingType="TARGETING_TYPE_CHANNEL"` * `AssignedTargetingOption` resources with
          * inheritance status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`:
          * `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this
-         * field should be no more than 500 characters. Reference our [filter `LIST` requests
-         * ](/display-video/api/guides/how-tos/filters) guide for more information.
+         * field should be no more than 500 characters. Reference our [filter `LIST`
+         * requests](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -9253,8 +9255,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * targetingType="TARGETING_TYPE_CHANNEL"` * `AssignedTargetingOption` resources with
          * inheritance status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`:
          * `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The length of this
-         * field should be no more than 500 characters. Reference our [filter `LIST` requests
-         * ](/display-video/api/guides/how-tos/filters) guide for more information.
+         * field should be no more than 500 characters. Reference our [filter `LIST`
+         * requests](/display-video/api/guides/how-tos/filters) guide for more information.
          */
         public BulkListAssignedTargetingOptions setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -11957,8 +11959,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * assignedTargetingOptionId="2"` * `AssignedTargetingOption` resources with inheritance
              * status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED"
              * OR inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more
-             * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
-             * /how-tos/filters) guide for more information.
+             * than 500 characters. Reference our [filter `LIST` requests](/display-
+             * video/api/guides/how-tos/filters) guide for more information.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -11988,8 +11990,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * assignedTargetingOptionId="2"` * `AssignedTargetingOption` resources with inheritance
              * status of `NOT_INHERITED` or `INHERITED_FROM_PARTNER`: `inheritance="NOT_INHERITED"
              * OR inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more
-             * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
-             * /how-tos/filters) guide for more information.
+             * than 500 characters. Reference our [filter `LIST` requests](/display-
+             * video/api/guides/how-tos/filters) guide for more information.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -13948,8 +13950,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
       /**
        * Gets a manual trigger. **Warning:** Line Items using manual triggers no longer serve in Display &
-       * Video 360. This method will sunset on August 1, 2023. Read our [feature deprecation announcement
-       * ](/display-video/api/deprecations#features.manual_triggers) for more information.
+       * Video 360. This method will sunset on August 1, 2023. Read our [feature deprecation
+       * announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
        *
        * Create a request for the method "manualTriggers.get".
        *
@@ -14238,8 +14240,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
          * operator. Supported fields: * `displayName` * `state` Examples: * All active manual
          * triggers under an advertiser: `state="ACTIVE"` The length of this field should be no more
-         * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
-         * /how-tos/filters) guide for more information.
+         * than 500 characters. Reference our [filter `LIST` requests](/display-
+         * video/api/guides/how-tos/filters) guide for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -14263,8 +14265,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
          * operator. Supported fields: * `displayName` * `state` Examples: * All active manual
          * triggers under an advertiser: `state="ACTIVE"` The length of this field should be no more
-         * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
-         * /how-tos/filters) guide for more information.
+         * than 500 characters. Reference our [filter `LIST` requests](/display-
+         * video/api/guides/how-tos/filters) guide for more information.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -16678,7 +16680,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
          *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-         *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
+         *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+         *        `TARGETING_TYPE_KEYWORD`
          * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this advertiser that identifies the assigned
          *        targeting option being requested.
          * @return the request
@@ -16716,7 +16719,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
          *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-         *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
+         *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+         *        `TARGETING_TYPE_KEYWORD`
            * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this advertiser that identifies the assigned
          *        targeting option being requested.
            * @since 1.13
@@ -16823,7 +16827,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * Required. Identifies the type of this assigned targeting option. Supported targeting
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
            * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-           * `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
+           * `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+           * `TARGETING_TYPE_KEYWORD`
            */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
@@ -16831,7 +16836,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID`
          * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_YOUTUBE_VIDEO` *
-         `TARGETING_TYPE_YOUTUBE_CHANNEL`
+         `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_KEYWORD`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
@@ -16841,7 +16846,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * Required. Identifies the type of this assigned targeting option. Supported targeting
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
            * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-           * `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
+           * `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+           * `TARGETING_TYPE_KEYWORD`
            */
           public Get setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {
@@ -16898,7 +16904,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
          *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-         *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
+         *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+         *        `TARGETING_TYPE_KEYWORD`
          * @return the request
          */
         public List list(java.lang.Long advertiserId, java.lang.String targetingType) throws java.io.IOException {
@@ -16931,7 +16938,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
          *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-         *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
+         *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+         *        `TARGETING_TYPE_KEYWORD`
            * @since 1.13
            */
           protected List(java.lang.Long advertiserId, java.lang.String targetingType) {
@@ -17031,7 +17039,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * targeting types: * `TARGETING_TYPE_CHANNEL` *
            * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
            * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_YOUTUBE_VIDEO` *
-           * `TARGETING_TYPE_YOUTUBE_CHANNEL`
+           * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_KEYWORD`
            */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
@@ -17039,7 +17047,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /** Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
          `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID`
          * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_YOUTUBE_VIDEO` *
-         `TARGETING_TYPE_YOUTUBE_CHANNEL`
+         `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_KEYWORD`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
@@ -17050,7 +17058,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * targeting types: * `TARGETING_TYPE_CHANNEL` *
            * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
            * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_YOUTUBE_VIDEO` *
-           * `TARGETING_TYPE_YOUTUBE_CHANNEL`
+           * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_KEYWORD`
            */
           public List setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {
@@ -18845,8 +18853,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)`
            operator. Supported fields: * `assignedTargetingOptionId` Examples: * `AssignedTargetingOption`
            resources with ID 1 or 2: `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` The
-           length of this field should be no more than 500 characters. Reference our [filter `LIST` requests
-           ](/display-video/api/guides/how-tos/filters) guide for more information.
+           length of this field should be no more than 500 characters. Reference our [filter `LIST`
+           requests](/display-video/api/guides/how-tos/filters) guide for more information.
              */
             public java.lang.String getFilter() {
               return filter;
@@ -21827,8 +21835,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * A restriction has the form of `{field} {operator} {value}`. * All fields must use the `HAS
        * (:)` operator. Supported fields: * `displayName` Examples: * All first and third party
        * audiences for which the display name contains "Google": `displayName:"Google"`. The length
-       * of this field should be no more than 500 characters. Reference our [filter `LIST` requests
-       * ](/display-video/api/guides/how-tos/filters) guide for more information.
+       * of this field should be no more than 500 characters. Reference our [filter `LIST`
+       * requests](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
@@ -21851,8 +21859,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * A restriction has the form of `{field} {operator} {value}`. * All fields must use the `HAS
        * (:)` operator. Supported fields: * `displayName` Examples: * All first and third party
        * audiences for which the display name contains "Google": `displayName:"Google"`. The length
-       * of this field should be no more than 500 characters. Reference our [filter `LIST` requests
-       * ](/display-video/api/guides/how-tos/filters) guide for more information.
+       * of this field should be no more than 500 characters. Reference our [filter `LIST`
+       * requests](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -23926,8 +23934,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
      `exchange` * `display_name` * `status.entityStatus` Examples: * All active guaranteed orders:
      `status.entityStatus="ENTITY_STATUS_ACTIVE"` * Guaranteed orders belonging to Google Ad Manager or
      Rubicon exchanges: `exchange="EXCHANGE_GOOGLE_AD_MANAGER" OR exchange="EXCHANGE_RUBICON"` The
-     length of this field should be no more than 500 characters. Reference our [filter `LIST` requests
-     ](/display-video/api/guides/how-tos/filters) guide for more information.
+     length of this field should be no more than 500 characters. Reference our [filter `LIST`
+     requests](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -24880,8 +24888,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * are made up of one or more restrictions. * Restrictions can be combined by the logical
        * operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * All fields
        * must use the `EQUALS (=)` operator. Supported fields: * `inventorySourceGroupId` The length
-       * of this field should be no more than 500 characters. Reference our [filter `LIST` requests
-       * ](/display-video/api/guides/how-tos/filters) guide for more information.
+       * of this field should be no more than 500 characters. Reference our [filter `LIST`
+       * requests](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
@@ -24902,8 +24910,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * are made up of one or more restrictions. * Restrictions can be combined by the logical
        * operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * All fields
        * must use the `EQUALS (=)` operator. Supported fields: * `inventorySourceGroupId` The length
-       * of this field should be no more than 500 characters. Reference our [filter `LIST` requests
-       * ](/display-video/api/guides/how-tos/filters) guide for more information.
+       * of this field should be no more than 500 characters. Reference our [filter `LIST`
+       * requests](/display-video/api/guides/how-tos/filters) guide for more information.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -30192,8 +30200,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
            * `assignedTargetingOptionId` Examples: * `AssignedTargetingOption` resource with ID
            * 123456: `assignedTargetingOptionId="123456"` The length of this field should be no more
-           * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
-           * /how-tos/filters) guide for more information.
+           * than 500 characters. Reference our [filter `LIST` requests](/display-
+           * video/api/guides/how-tos/filters) guide for more information.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -30217,8 +30225,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: *
            * `assignedTargetingOptionId` Examples: * `AssignedTargetingOption` resource with ID
            * 123456: `assignedTargetingOptionId="123456"` The length of this field should be no more
-           * than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides
-           * /how-tos/filters) guide for more information.
+           * than 500 characters. Reference our [filter `LIST` requests](/display-
+           * video/api/guides/how-tos/filters) guide for more information.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

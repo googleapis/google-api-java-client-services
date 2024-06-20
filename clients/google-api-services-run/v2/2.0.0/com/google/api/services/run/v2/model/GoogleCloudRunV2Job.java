@@ -93,7 +93,7 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   private java.lang.String creator;
 
   /**
-   * Output only. The deletion time.
+   * Output only. The deletion time. It is only populated as a response to a Delete request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,6 +203,15 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reconciling;
+
+  /**
+   * A unique string used as a suffix for creating a new execution. The Job will become ready when
+   * the execution is successfully completed. The sum of job name and token length must be fewer
+   * than 63 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runExecutionToken;
 
   /**
    * Output only. Reserved for future use.
@@ -384,7 +393,7 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The deletion time.
+   * Output only. The deletion time. It is only populated as a response to a Delete request.
    * @return value or {@code null} for none
    */
   public String getDeleteTime() {
@@ -392,7 +401,7 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The deletion time.
+   * Output only. The deletion time. It is only populated as a response to a Delete request.
    * @param deleteTime deleteTime or {@code null} for none
    */
   public GoogleCloudRunV2Job setDeleteTime(String deleteTime) {
@@ -640,6 +649,27 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
    */
   public GoogleCloudRunV2Job setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * A unique string used as a suffix for creating a new execution. The Job will become ready when
+   * the execution is successfully completed. The sum of job name and token length must be fewer
+   * than 63 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRunExecutionToken() {
+    return runExecutionToken;
+  }
+
+  /**
+   * A unique string used as a suffix for creating a new execution. The Job will become ready when
+   * the execution is successfully completed. The sum of job name and token length must be fewer
+   * than 63 characters.
+   * @param runExecutionToken runExecutionToken or {@code null} for none
+   */
+  public GoogleCloudRunV2Job setRunExecutionToken(java.lang.String runExecutionToken) {
+    this.runExecutionToken = runExecutionToken;
     return this;
   }
 

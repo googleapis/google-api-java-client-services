@@ -44,8 +44,8 @@ public final class ManagedZoneServiceDirectoryConfigNamespace extends com.google
   private java.lang.String kind;
 
   /**
-   * The fully qualified URL of the namespace associated with the zone. Format must be https://servi
-   * cedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
+   * The fully qualified URL of the namespace associated with the zone. Format must be `https://serv
+   * icedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,8 +86,8 @@ public final class ManagedZoneServiceDirectoryConfigNamespace extends com.google
   }
 
   /**
-   * The fully qualified URL of the namespace associated with the zone. Format must be https://servi
-   * cedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
+   * The fully qualified URL of the namespace associated with the zone. Format must be `https://serv
+   * icedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespaceUrl() {
@@ -95,8 +95,8 @@ public final class ManagedZoneServiceDirectoryConfigNamespace extends com.google
   }
 
   /**
-   * The fully qualified URL of the namespace associated with the zone. Format must be https://servi
-   * cedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}
+   * The fully qualified URL of the namespace associated with the zone. Format must be `https://serv
+   * icedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace}`
    * @param namespaceUrl namespaceUrl or {@code null} for none
    */
   public ManagedZoneServiceDirectoryConfigNamespace setNamespaceUrl(java.lang.String namespaceUrl) {

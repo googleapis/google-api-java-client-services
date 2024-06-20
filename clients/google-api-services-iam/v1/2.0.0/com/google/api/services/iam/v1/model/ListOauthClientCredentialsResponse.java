@@ -31,14 +31,14 @@ package com.google.api.services.iam.v1.model;
 public final class ListOauthClientCredentialsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of oauth client credentials.
+   * A list of OauthClientCredentials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<OauthClientCredential> oauthClientCredentials;
 
   /**
-   * A list of oauth client credentials.
+   * A list of OauthClientCredentials.
    * @return value or {@code null} for none
    */
   public java.util.List<OauthClientCredential> getOauthClientCredentials() {
@@ -46,7 +46,7 @@ public final class ListOauthClientCredentialsResponse extends com.google.api.cli
   }
 
   /**
-   * A list of oauth client credentials.
+   * A list of OauthClientCredentials.
    * @param oauthClientCredentials oauthClientCredentials or {@code null} for none
    */
   public ListOauthClientCredentialsResponse setOauthClientCredentials(java.util.List<OauthClientCredential> oauthClientCredentials) {

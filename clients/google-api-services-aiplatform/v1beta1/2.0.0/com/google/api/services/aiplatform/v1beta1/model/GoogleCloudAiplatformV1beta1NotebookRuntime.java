@@ -53,6 +53,13 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   private java.lang.String displayName;
 
   /**
+   * Output only. Customer-managed encryption key spec for the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec;
+
+  /**
    * Output only. Timestamp when this NotebookRuntime will be expired: 1. System Predefined
    * NotebookRuntime: 24 hours after creation. After expiration, system predifined runtime will be
    * deleted. 2. User created NotebookRuntime: 6 months after last upgrade. After expiration, user
@@ -68,6 +75,13 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String healthState;
+
+  /**
+   * Output only. The idle shutdown configuration of the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1NotebookIdleShutdownConfig idleShutdownConfig;
 
   /**
    * Output only. Whether NotebookRuntime is upgradable.
@@ -128,13 +142,6 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String proxyUri;
-
-  /**
-   * Output only. Reservation Affinity of the notebook runtime.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1NotebookReservationAffinity reservationAffinity;
 
   /**
    * Output only. The runtime (instance) state of the NotebookRuntime.
@@ -239,6 +246,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
   }
 
   /**
+   * Output only. Customer-managed encryption key spec for the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Output only. Customer-managed encryption key spec for the notebook runtime.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setEncryptionSpec(GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
+    return this;
+  }
+
+  /**
    * Output only. Timestamp when this NotebookRuntime will be expired: 1. System Predefined
    * NotebookRuntime: 24 hours after creation. After expiration, system predifined runtime will be
    * deleted. 2. User created NotebookRuntime: 6 months after last upgrade. After expiration, user
@@ -275,6 +299,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntime setHealthState(java.lang.String healthState) {
     this.healthState = healthState;
+    return this;
+  }
+
+  /**
+   * Output only. The idle shutdown configuration of the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookIdleShutdownConfig getIdleShutdownConfig() {
+    return idleShutdownConfig;
+  }
+
+  /**
+   * Output only. The idle shutdown configuration of the notebook runtime.
+   * @param idleShutdownConfig idleShutdownConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntime setIdleShutdownConfig(GoogleCloudAiplatformV1beta1NotebookIdleShutdownConfig idleShutdownConfig) {
+    this.idleShutdownConfig = idleShutdownConfig;
     return this;
   }
 
@@ -416,23 +457,6 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntime extends com.googl
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntime setProxyUri(java.lang.String proxyUri) {
     this.proxyUri = proxyUri;
-    return this;
-  }
-
-  /**
-   * Output only. Reservation Affinity of the notebook runtime.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1NotebookReservationAffinity getReservationAffinity() {
-    return reservationAffinity;
-  }
-
-  /**
-   * Output only. Reservation Affinity of the notebook runtime.
-   * @param reservationAffinity reservationAffinity or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1NotebookRuntime setReservationAffinity(GoogleCloudAiplatformV1beta1NotebookReservationAffinity reservationAffinity) {
-    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

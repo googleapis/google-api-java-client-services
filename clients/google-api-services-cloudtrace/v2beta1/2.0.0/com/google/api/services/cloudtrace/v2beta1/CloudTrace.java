@@ -435,8 +435,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         private java.lang.String name;
 
         /** Required. The full resource name of the sink to delete, including the parent resource and the sink
-       identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example: `"projects/12345/traceSinks
-       /my-sink-id"`.
+       identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example:
+       `"projects/12345/traceSinks/my-sink-id"`.
          */
         public java.lang.String getName() {
           return name;
@@ -931,8 +931,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         private java.lang.String name;
 
         /** Required. The full resource name of the sink to update, including the parent resource and the sink
-       identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example: `"projects/12345/traceSinks
-       /my-sink-id"`.
+       identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example:
+       `"projects/12345/traceSinks/my-sink-id"`.
          */
         public java.lang.String getName() {
           return name;

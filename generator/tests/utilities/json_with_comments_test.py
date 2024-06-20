@@ -14,12 +14,12 @@
 #  limitations under the License.
 """Tests for json_with_comments.py."""
 
-from google.apputils import basetest
+from absl.testing import absltest
 
 from googleapis.codegen.utilities import json_with_comments
 
 
-class JsonWithCommentsTest(basetest.TestCase):
+class JsonWithCommentsTest(absltest.TestCase):
 
   SOME_JSON_WITH_COMMENTS = """
     # Garlic and sapphires in the mud
@@ -41,12 +41,12 @@ class JsonWithCommentsTest(basetest.TestCase):
     # The stripped version should have the same number of line breaks as the
     # original.
     num_lines = self.SOME_JSON_WITH_COMMENTS.count('\n')
-    self.assertEquals(num_lines, stripped.count('\n'))
+    self.assertEqual(num_lines, stripped.count('\n'))
 
   def testLoads(self):
     data = json_with_comments.Loads(self.SOME_JSON_WITH_COMMENTS)
-    self.assertEquals(self.JSON_CONTENT, data)
+    self.assertEqual(self.JSON_CONTENT, data)
 
 
 if __name__ == '__main__':
-  basetest.main()
+  absltest.main()

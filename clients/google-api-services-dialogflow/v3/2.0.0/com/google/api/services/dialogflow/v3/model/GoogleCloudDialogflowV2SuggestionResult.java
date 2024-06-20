@@ -52,6 +52,13 @@ public final class GoogleCloudDialogflowV2SuggestionResult extends com.google.ap
   private GoogleCloudDialogflowV2SuggestFaqAnswersResponse suggestFaqAnswersResponse;
 
   /**
+   * SuggestKnowledgeAssistResponse if request is for KNOWLEDGE_ASSIST.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2SuggestKnowledgeAssistResponse suggestKnowledgeAssistResponse;
+
+  /**
    * SuggestSmartRepliesResponse if request is for SMART_REPLY.
    * The value may be {@code null}.
    */
@@ -106,6 +113,23 @@ public final class GoogleCloudDialogflowV2SuggestionResult extends com.google.ap
    */
   public GoogleCloudDialogflowV2SuggestionResult setSuggestFaqAnswersResponse(GoogleCloudDialogflowV2SuggestFaqAnswersResponse suggestFaqAnswersResponse) {
     this.suggestFaqAnswersResponse = suggestFaqAnswersResponse;
+    return this;
+  }
+
+  /**
+   * SuggestKnowledgeAssistResponse if request is for KNOWLEDGE_ASSIST.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SuggestKnowledgeAssistResponse getSuggestKnowledgeAssistResponse() {
+    return suggestKnowledgeAssistResponse;
+  }
+
+  /**
+   * SuggestKnowledgeAssistResponse if request is for KNOWLEDGE_ASSIST.
+   * @param suggestKnowledgeAssistResponse suggestKnowledgeAssistResponse or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SuggestionResult setSuggestKnowledgeAssistResponse(GoogleCloudDialogflowV2SuggestKnowledgeAssistResponse suggestKnowledgeAssistResponse) {
+    this.suggestKnowledgeAssistResponse = suggestKnowledgeAssistResponse;
     return this;
   }
 

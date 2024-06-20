@@ -31,11 +31,44 @@ package com.google.api.services.bigqueryconnection.v1.model;
 public final class ConnectorConfigurationAuthentication extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Google-managed service account associated with this connection, e.g.,
+   * `service-{project_number}@gcp-sa-bigqueryconnection.iam.gserviceaccount.com`. BigQuery jobs
+   * using this connection will act as `service_account` identity while connecting to the
+   * datasource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Username/password authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConnectorConfigurationUsernamePassword usernamePassword;
+
+  /**
+   * Output only. Google-managed service account associated with this connection, e.g.,
+   * `service-{project_number}@gcp-sa-bigqueryconnection.iam.gserviceaccount.com`. BigQuery jobs
+   * using this connection will act as `service_account` identity while connecting to the
+   * datasource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Output only. Google-managed service account associated with this connection, e.g.,
+   * `service-{project_number}@gcp-sa-bigqueryconnection.iam.gserviceaccount.com`. BigQuery jobs
+   * using this connection will act as `service_account` identity while connecting to the
+   * datasource.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public ConnectorConfigurationAuthentication setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
+    return this;
+  }
 
   /**
    * Username/password authentication.

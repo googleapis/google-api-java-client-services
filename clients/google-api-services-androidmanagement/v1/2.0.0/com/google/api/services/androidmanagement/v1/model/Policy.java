@@ -274,6 +274,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private DeviceRadioState deviceRadioState;
 
   /**
+   * Optional. Controls for the display settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DisplaySettings displaySettings;
+
+  /**
    * Whether encryption is enabled
    * The value may be {@code null}.
    */
@@ -716,8 +723,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * WINDOWED, the update window will automatically apply to Play app updates as well.Note: Google
    * Play system updates (https://source.android.com/docs/core/ota/modular-system) (also called
    * Mainline updates) are automatically downloaded and require a device reboot to be installed.
-   * Refer to the mainline section in Manage system updates (https://developer.android.com/work/dpc
-   * /system-updates#mainline) for further details.
+   * Refer to the mainline section in Manage system updates
+   * (https://developer.android.com/work/dpc/system-updates#mainline) for further details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1339,6 +1346,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setDeviceRadioState(DeviceRadioState deviceRadioState) {
     this.deviceRadioState = deviceRadioState;
+    return this;
+  }
+
+  /**
+   * Optional. Controls for the display settings.
+   * @return value or {@code null} for none
+   */
+  public DisplaySettings getDisplaySettings() {
+    return displaySettings;
+  }
+
+  /**
+   * Optional. Controls for the display settings.
+   * @param displaySettings displaySettings or {@code null} for none
+   */
+  public Policy setDisplaySettings(DisplaySettings displaySettings) {
+    this.displaySettings = displaySettings;
     return this;
   }
 
@@ -2331,8 +2355,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * WINDOWED, the update window will automatically apply to Play app updates as well.Note: Google
    * Play system updates (https://source.android.com/docs/core/ota/modular-system) (also called
    * Mainline updates) are automatically downloaded and require a device reboot to be installed.
-   * Refer to the mainline section in Manage system updates (https://developer.android.com/work/dpc
-   * /system-updates#mainline) for further details.
+   * Refer to the mainline section in Manage system updates
+   * (https://developer.android.com/work/dpc/system-updates#mainline) for further details.
    * @return value or {@code null} for none
    */
   public SystemUpdate getSystemUpdate() {
@@ -2344,8 +2368,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * WINDOWED, the update window will automatically apply to Play app updates as well.Note: Google
    * Play system updates (https://source.android.com/docs/core/ota/modular-system) (also called
    * Mainline updates) are automatically downloaded and require a device reboot to be installed.
-   * Refer to the mainline section in Manage system updates (https://developer.android.com/work/dpc
-   * /system-updates#mainline) for further details.
+   * Refer to the mainline section in Manage system updates
+   * (https://developer.android.com/work/dpc/system-updates#mainline) for further details.
    * @param systemUpdate systemUpdate or {@code null} for none
    */
   public Policy setSystemUpdate(SystemUpdate systemUpdate) {

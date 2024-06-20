@@ -45,9 +45,10 @@ public final class GoogleCloudApigeeV1GetAsyncQueryResultUrlResponseURLInfo exte
 
   /**
    * The signed URL of the JSON data. Will be of the form `https://storage.googleapis.com/example-
-   * bucket/cat.jpeg?X-Goog-Algorithm= GOOG4-RSA-SHA256=example%40example-
-   * project.iam.gserviceaccount .com%2F20181026%2Fus-central1%2Fstorage%2Fgoog4_request=20181026T18
-   * 1309Z=900=host=247a2aa45f16
+   * bucket/cat.jpeg?X-Goog-Algorithm= GOOG4-RSA-SHA256&X-Goog-Credential=example%40example-
+   * project.iam.gserviceaccount .com%2F20181026%2Fus-central1%2Fstorage%2Fgoog4_request&X-Goog-
+   * Date=20181026T18 1309Z&X-Goog-Expires=900&X-Goog-SignedHeaders=host&X-Goog-
+   * Signature=247a2aa45f16
    * 9edf4d187d54e7cc46e4731b1e6273242c4f4c39a1d2507a0e58706e25e3a85a7dbb891d62afa849
    * 6def8e260c1db863d9ace85ff0a184b894b117fe46d1225c82f2aa19efd52cf21d3e2022b3b868dc
    * c1aca2741951ed5bf3bb25a34f5e9316a2841e8ff4c530b22ceaa1c5ce09c7cbb5732631510c2058
@@ -96,9 +97,10 @@ public final class GoogleCloudApigeeV1GetAsyncQueryResultUrlResponseURLInfo exte
 
   /**
    * The signed URL of the JSON data. Will be of the form `https://storage.googleapis.com/example-
-   * bucket/cat.jpeg?X-Goog-Algorithm= GOOG4-RSA-SHA256=example%40example-
-   * project.iam.gserviceaccount .com%2F20181026%2Fus-central1%2Fstorage%2Fgoog4_request=20181026T18
-   * 1309Z=900=host=247a2aa45f16
+   * bucket/cat.jpeg?X-Goog-Algorithm= GOOG4-RSA-SHA256&X-Goog-Credential=example%40example-
+   * project.iam.gserviceaccount .com%2F20181026%2Fus-central1%2Fstorage%2Fgoog4_request&X-Goog-
+   * Date=20181026T18 1309Z&X-Goog-Expires=900&X-Goog-SignedHeaders=host&X-Goog-
+   * Signature=247a2aa45f16
    * 9edf4d187d54e7cc46e4731b1e6273242c4f4c39a1d2507a0e58706e25e3a85a7dbb891d62afa849
    * 6def8e260c1db863d9ace85ff0a184b894b117fe46d1225c82f2aa19efd52cf21d3e2022b3b868dc
    * c1aca2741951ed5bf3bb25a34f5e9316a2841e8ff4c530b22ceaa1c5ce09c7cbb5732631510c2058
@@ -114,9 +116,10 @@ public final class GoogleCloudApigeeV1GetAsyncQueryResultUrlResponseURLInfo exte
 
   /**
    * The signed URL of the JSON data. Will be of the form `https://storage.googleapis.com/example-
-   * bucket/cat.jpeg?X-Goog-Algorithm= GOOG4-RSA-SHA256=example%40example-
-   * project.iam.gserviceaccount .com%2F20181026%2Fus-central1%2Fstorage%2Fgoog4_request=20181026T18
-   * 1309Z=900=host=247a2aa45f16
+   * bucket/cat.jpeg?X-Goog-Algorithm= GOOG4-RSA-SHA256&X-Goog-Credential=example%40example-
+   * project.iam.gserviceaccount .com%2F20181026%2Fus-central1%2Fstorage%2Fgoog4_request&X-Goog-
+   * Date=20181026T18 1309Z&X-Goog-Expires=900&X-Goog-SignedHeaders=host&X-Goog-
+   * Signature=247a2aa45f16
    * 9edf4d187d54e7cc46e4731b1e6273242c4f4c39a1d2507a0e58706e25e3a85a7dbb891d62afa849
    * 6def8e260c1db863d9ace85ff0a184b894b117fe46d1225c82f2aa19efd52cf21d3e2022b3b868dc
    * c1aca2741951ed5bf3bb25a34f5e9316a2841e8ff4c530b22ceaa1c5ce09c7cbb5732631510c2058

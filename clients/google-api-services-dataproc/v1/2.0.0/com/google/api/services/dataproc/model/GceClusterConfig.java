@@ -142,8 +142,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private java.lang.String subnetworkUri;
 
   /**
-   * The Compute Engine tags to add to all instances (see Tagging instances
-   * (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+   * The Compute Engine network tags to add to all instances (see Tagging instances
+   * (https://cloud.google.com/vpc/docs/add-remove-network-tags)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -416,8 +416,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The Compute Engine tags to add to all instances (see Tagging instances
-   * (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+   * The Compute Engine network tags to add to all instances (see Tagging instances
+   * (https://cloud.google.com/vpc/docs/add-remove-network-tags)).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -425,8 +425,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The Compute Engine tags to add to all instances (see Tagging instances
-   * (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+   * The Compute Engine network tags to add to all instances (see Tagging instances
+   * (https://cloud.google.com/vpc/docs/add-remove-network-tags)).
    * @param tags tags or {@code null} for none
    */
   public GceClusterConfig setTags(java.util.List<java.lang.String> tags) {

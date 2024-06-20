@@ -1410,8 +1410,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the redis server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Unique name of the resource in this scope including project and location using the form:
-         *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+         * @param name Required. Identifier. Unique name of the resource in this scope including project and location using
+         *        the form: `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
          * @param content the {@link com.google.api.services.redis.v1.model.Cluster}
          * @return the request
          */
@@ -1441,8 +1441,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Unique name of the resource in this scope including project and location using the form:
-         *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+           * @param name Required. Identifier. Unique name of the resource in this scope including project and location using
+         *        the form: `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
            * @param content the {@link com.google.api.services.redis.v1.model.Cluster}
            * @since 1.13
            */
@@ -1512,22 +1512,24 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. Unique name of the resource in this scope including project and location
-           * using the form: `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+           * Required. Identifier. Unique name of the resource in this scope including project and
+           * location using the form:
+           * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Unique name of the resource in this scope including project and location using the form:
-         `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+          /** Required. Identifier. Unique name of the resource in this scope including project and location
+         using the form: `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Unique name of the resource in this scope including project and location
-           * using the form: `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+           * Required. Identifier. Unique name of the resource in this scope including project and
+           * location using the form:
+           * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

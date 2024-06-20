@@ -90,9 +90,9 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
   private java.lang.String loadBalancingScheme;
 
   /**
-   * Optional. The metadata provided here will be included in the
-   * `ProcessingRequest.metadata_context.filter_metadata` map field. The metadata will be available
-   * under the key `com.google.lb_traffic_extension.`. The following variables are supported in the
+   * Optional. The metadata provided here is included in the
+   * `ProcessingRequest.metadata_context.filter_metadata` map field. The metadata is available under
+   * the key `com.google.lb_traffic_extension.`. The following variables are supported in the
    * metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's fully qualified
    * resource name.
    * The value may be {@code null}.
@@ -238,9 +238,9 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The metadata provided here will be included in the
-   * `ProcessingRequest.metadata_context.filter_metadata` map field. The metadata will be available
-   * under the key `com.google.lb_traffic_extension.`. The following variables are supported in the
+   * Optional. The metadata provided here is included in the
+   * `ProcessingRequest.metadata_context.filter_metadata` map field. The metadata is available under
+   * the key `com.google.lb_traffic_extension.`. The following variables are supported in the
    * metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's fully qualified
    * resource name.
    * @return value or {@code null} for none
@@ -250,9 +250,9 @@ public final class LbTrafficExtension extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The metadata provided here will be included in the
-   * `ProcessingRequest.metadata_context.filter_metadata` map field. The metadata will be available
-   * under the key `com.google.lb_traffic_extension.`. The following variables are supported in the
+   * Optional. The metadata provided here is included in the
+   * `ProcessingRequest.metadata_context.filter_metadata` map field. The metadata is available under
+   * the key `com.google.lb_traffic_extension.`. The following variables are supported in the
    * metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's fully qualified
    * resource name.
    * @param metadata metadata or {@code null} for none

@@ -32,6 +32,15 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
+   * Customer-managed encryption key spec for a Dataset. If set, this Dataset and all of its sub-
+   * resources will be secured by this key. If empty, the Dataset is secured by the default Google
+   * encryption key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionSpec encryptionSpec;
+
+  /**
    * Identifier. Resource name of the dataset, of the form
    * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
    * The value may be {@code null}.
@@ -47,6 +56,27 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZone;
+
+  /**
+   * Customer-managed encryption key spec for a Dataset. If set, this Dataset and all of its sub-
+   * resources will be secured by this key. If empty, the Dataset is secured by the default Google
+   * encryption key.
+   * @return value or {@code null} for none
+   */
+  public EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Customer-managed encryption key spec for a Dataset. If set, this Dataset and all of its sub-
+   * resources will be secured by this key. If empty, the Dataset is secured by the default Google
+   * encryption key.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public Dataset setEncryptionSpec(EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
+    return this;
+  }
 
   /**
    * Identifier. Resource name of the dataset, of the form

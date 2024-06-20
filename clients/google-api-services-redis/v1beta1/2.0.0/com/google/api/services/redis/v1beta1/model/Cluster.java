@@ -61,8 +61,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.List<DiscoveryEndpoint> discoveryEndpoints;
 
   /**
-   * Required. Unique name of the resource in this scope including project and location using the
-   * form: `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+   * Required. Identifier. Unique name of the resource in this scope including project and location
+   * using the form: `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,8 +245,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Unique name of the resource in this scope including project and location using the
-   * form: `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+   * Required. Identifier. Unique name of the resource in this scope including project and location
+   * using the form: `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -254,8 +254,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Unique name of the resource in this scope including project and location using the
-   * form: `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+   * Required. Identifier. Unique name of the resource in this scope including project and location
+   * using the form: `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
    * @param name name or {@code null} for none
    */
   public Cluster setName(java.lang.String name) {

@@ -96,6 +96,13 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   private java.lang.String state;
 
   /**
+   * Output only. Type of subscriber.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subscriberType;
+
+  /**
    * Required. Type of subscription.
    * The value may be {@code null}.
    */
@@ -256,6 +263,23 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
    */
   public GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. Type of subscriber.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubscriberType() {
+    return subscriberType;
+  }
+
+  /**
+   * Output only. Type of subscriber.
+   * @param subscriberType subscriberType or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription setSubscriberType(java.lang.String subscriberType) {
+    this.subscriberType = subscriberType;
     return this;
   }
 

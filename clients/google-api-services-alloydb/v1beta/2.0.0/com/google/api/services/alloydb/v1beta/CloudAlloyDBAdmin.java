@@ -3247,6 +3247,150 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
             return (Restore) super.set(parameterName, value);
           }
         }
+        /**
+         * Switches the role of PRIMARY and SECONDARY cluster without any data loss. This promotes the
+         * SECONDARY cluster to PRIMARY and sets up original PRIMARY cluster to replicate from this newly
+         * promoted cluster.
+         *
+         * Create a request for the method "clusters.switchover".
+         *
+         * This request holds the parameters needed by the alloydb server.  After setting any optional
+         * parameters, call the {@link Switchover#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the resource. For the required format, see the comment on the Cluster.name
+         *        field
+         * @param content the {@link com.google.api.services.alloydb.v1beta.model.SwitchoverClusterRequest}
+         * @return the request
+         */
+        public Switchover switchover(java.lang.String name, com.google.api.services.alloydb.v1beta.model.SwitchoverClusterRequest content) throws java.io.IOException {
+          Switchover result = new Switchover(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Switchover extends CloudAlloyDBAdminRequest<com.google.api.services.alloydb.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+name}:switchover";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+
+          /**
+           * Switches the role of PRIMARY and SECONDARY cluster without any data loss. This promotes the
+           * SECONDARY cluster to PRIMARY and sets up original PRIMARY cluster to replicate from this newly
+           * promoted cluster.
+           *
+           * Create a request for the method "clusters.switchover".
+           *
+           * This request holds the parameters needed by the the alloydb server.  After setting any optional
+           * parameters, call the {@link Switchover#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Switchover#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the resource. For the required format, see the comment on the Cluster.name
+         *        field
+           * @param content the {@link com.google.api.services.alloydb.v1beta.model.SwitchoverClusterRequest}
+           * @since 1.13
+           */
+          protected Switchover(java.lang.String name, com.google.api.services.alloydb.v1beta.model.SwitchoverClusterRequest content) {
+            super(CloudAlloyDBAdmin.this, "POST", REST_PATH, content, com.google.api.services.alloydb.v1beta.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public Switchover set$Xgafv(java.lang.String $Xgafv) {
+            return (Switchover) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Switchover setAccessToken(java.lang.String accessToken) {
+            return (Switchover) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Switchover setAlt(java.lang.String alt) {
+            return (Switchover) super.setAlt(alt);
+          }
+
+          @Override
+          public Switchover setCallback(java.lang.String callback) {
+            return (Switchover) super.setCallback(callback);
+          }
+
+          @Override
+          public Switchover setFields(java.lang.String fields) {
+            return (Switchover) super.setFields(fields);
+          }
+
+          @Override
+          public Switchover setKey(java.lang.String key) {
+            return (Switchover) super.setKey(key);
+          }
+
+          @Override
+          public Switchover setOauthToken(java.lang.String oauthToken) {
+            return (Switchover) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Switchover setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Switchover) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Switchover setQuotaUser(java.lang.String quotaUser) {
+            return (Switchover) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Switchover setUploadType(java.lang.String uploadType) {
+            return (Switchover) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Switchover setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Switchover) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the resource. For the required format, see the comment on the
+           * Cluster.name field
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the resource. For the required format, see the comment on the Cluster.name
+         field
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the resource. For the required format, see the comment on the
+           * Cluster.name field
+           */
+          public Switchover setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Switchover set(String parameterName, Object value) {
+            return (Switchover) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Instances collection.

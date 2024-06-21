@@ -38,6 +38,13 @@ public final class GoogleCloudSecuritycenterV2Resource extends com.google.api.cl
   private GoogleCloudSecuritycenterV2AwsMetadata awsMetadata;
 
   /**
+   * The Azure metadata associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2AzureMetadata azureMetadata;
+
+  /**
    * Indicates which cloud provider the finding is from.
    * The value may be {@code null}.
    */
@@ -121,6 +128,23 @@ public final class GoogleCloudSecuritycenterV2Resource extends com.google.api.cl
    */
   public GoogleCloudSecuritycenterV2Resource setAwsMetadata(GoogleCloudSecuritycenterV2AwsMetadata awsMetadata) {
     this.awsMetadata = awsMetadata;
+    return this;
+  }
+
+  /**
+   * The Azure metadata associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2AzureMetadata getAzureMetadata() {
+    return azureMetadata;
+  }
+
+  /**
+   * The Azure metadata associated with the finding.
+   * @param azureMetadata azureMetadata or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Resource setAzureMetadata(GoogleCloudSecuritycenterV2AzureMetadata azureMetadata) {
+    this.azureMetadata = azureMetadata;
     return this;
   }
 

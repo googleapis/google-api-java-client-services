@@ -245,6 +245,15 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private java.lang.String findingClass;
 
   /**
+   * Contains details about groups of which this finding is a member. A group is a collection of
+   * findings that are related in some way. This field cannot be updated. Its value is ignored in
+   * all update requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudSecuritycenterV2GroupMembership> groupMemberships;
+
+  /**
    * Represents IAM bindings associated with the finding.
    * The value may be {@code null}.
    */
@@ -440,6 +449,16 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Contains details about a group of security issues that, when the issues occur together,
+   * represent a greater risk than when the issues occur independently. A group of such issues is
+   * referred to as a toxic combination. This field cannot be updated. Its value is ignored in all
+   * update requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2ToxicCombination toxicCombination;
 
   /**
    * Represents vulnerability-specific fields like CVE and CVSS scores. CVE stands for Common
@@ -862,6 +881,27 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setFindingClass(java.lang.String findingClass) {
     this.findingClass = findingClass;
+    return this;
+  }
+
+  /**
+   * Contains details about groups of which this finding is a member. A group is a collection of
+   * findings that are related in some way. This field cannot be updated. Its value is ignored in
+   * all update requests.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudSecuritycenterV2GroupMembership> getGroupMemberships() {
+    return groupMemberships;
+  }
+
+  /**
+   * Contains details about groups of which this finding is a member. A group is a collection of
+   * findings that are related in some way. This field cannot be updated. Its value is ignored in
+   * all update requests.
+   * @param groupMemberships groupMemberships or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setGroupMemberships(java.util.List<GoogleCloudSecuritycenterV2GroupMembership> groupMemberships) {
+    this.groupMemberships = groupMemberships;
     return this;
   }
 
@@ -1328,6 +1368,29 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Contains details about a group of security issues that, when the issues occur together,
+   * represent a greater risk than when the issues occur independently. A group of such issues is
+   * referred to as a toxic combination. This field cannot be updated. Its value is ignored in all
+   * update requests.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ToxicCombination getToxicCombination() {
+    return toxicCombination;
+  }
+
+  /**
+   * Contains details about a group of security issues that, when the issues occur together,
+   * represent a greater risk than when the issues occur independently. A group of such issues is
+   * referred to as a toxic combination. This field cannot be updated. Its value is ignored in all
+   * update requests.
+   * @param toxicCombination toxicCombination or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setToxicCombination(GoogleCloudSecuritycenterV2ToxicCombination toxicCombination) {
+    this.toxicCombination = toxicCombination;
     return this;
   }
 

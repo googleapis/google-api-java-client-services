@@ -17,8 +17,8 @@
 package com.google.api.services.cloudkms.v1.model;
 
 /**
- * A KeyAccessJustificationsPolicy specifies zero or more allowed AccessReason values for Encrypt,
- * Decrypt, and Sign requests on a CryptoKey.
+ * A KeyAccessJustificationsPolicy specifies zero or more allowed AccessReason values for encrypt,
+ * decrypt, and sign operations on a CryptoKey.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Key Management Service (KMS) API. For a
@@ -33,7 +33,7 @@ public final class KeyAccessJustificationsPolicy extends com.google.api.client.j
 
   /**
    * The list of allowed reasons for access to a CryptoKey. Zero allowed access reasons means all
-   * Encrypt, Decrypt, and Sign requests for the CryptoKey associated with this policy will fail.
+   * encrypt, decrypt, and sign operations for the CryptoKey associated with this policy will fail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class KeyAccessJustificationsPolicy extends com.google.api.client.j
 
   /**
    * The list of allowed reasons for access to a CryptoKey. Zero allowed access reasons means all
-   * Encrypt, Decrypt, and Sign requests for the CryptoKey associated with this policy will fail.
+   * encrypt, decrypt, and sign operations for the CryptoKey associated with this policy will fail.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedAccessReasons() {
@@ -50,7 +50,7 @@ public final class KeyAccessJustificationsPolicy extends com.google.api.client.j
 
   /**
    * The list of allowed reasons for access to a CryptoKey. Zero allowed access reasons means all
-   * Encrypt, Decrypt, and Sign requests for the CryptoKey associated with this policy will fail.
+   * encrypt, decrypt, and sign operations for the CryptoKey associated with this policy will fail.
    * @param allowedAccessReasons allowedAccessReasons or {@code null} for none
    */
   public KeyAccessJustificationsPolicy setAllowedAccessReasons(java.util.List<java.lang.String> allowedAccessReasons) {
